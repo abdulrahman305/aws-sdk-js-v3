@@ -3,6 +3,184 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.637.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.636.0...v3.637.0) (2024-08-22)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.632.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.631.0...v3.632.0) (2024-08-15)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.631.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.630.0...v3.631.0) (2024-08-14)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.628.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.627.0...v3.628.0) (2024-08-09)
+
+
+### Features
+
+* **client-connect:** This release supports adding RoutingCriteria via UpdateContactRoutingData public API. ([1c86676](https://github.com/aws/aws-sdk-js-v3/commit/1c86676ebc7cfd24f0fb16d3310abc98d8890ffe))
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.623.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.622.0...v3.623.0) (2024-08-02)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+## [3.620.1](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.0...v3.620.1) (2024-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.618.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.617.0...v3.618.0) (2024-07-23)
+
+
+### Features
+
+* **client-connect:** Added PostContactSummary segment type on ListRealTimeContactAnalysisSegmentsV2 API ([6f51a36](https://github.com/aws/aws-sdk-js-v3/commit/6f51a3626e04dbac8938d35894d761afc29bb575))
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+
+### Features
+
+* **client-connect:** Amazon Connect expands search API coverage for additional resources.  Search for hierarchy groups by name, ID, tag, or other criteria (new endpoint). Search for agent statuses by name, ID, tag, or other criteria (new endpoint). Search for users by their assigned proficiencies (enhanced endpoint) ([226e9c6](https://github.com/aws/aws-sdk-js-v3/commit/226e9c6fef555fcea844cff6fc002d5d3c052d9e))
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.613.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.612.0...v3.613.0) (2024-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
+# [3.608.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.607.0...v3.608.0) (2024-07-01)
+
+
+### Features
+
+* **client-connect:** Authentication profiles are Amazon Connect resources (in gated preview) that allow you to configure authentication settings for users in your contact center. This release adds support for new ListAuthenticationProfiles, DescribeAuthenticationProfile and UpdateAuthenticationProfile APIs. ([67d4def](https://github.com/aws/aws-sdk-js-v3/commit/67d4def4aa42eb682b98b53cfb0f11620c056aae))
+
+
+
+
+
+# [3.607.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.606.0...v3.607.0) (2024-06-28)
+
+
+### Features
+
+* **client-connect:** This release supports showing PreferredAgentRouting step via DescribeContact API. ([f234cff](https://github.com/aws/aws-sdk-js-v3/commit/f234cffaa0acd47dfd74abb5724aec3f2c646ff1))
+
+
+
+
+
+# [3.606.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.605.0...v3.606.0) (2024-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-connect
+
+
+
+
+
 # [3.600.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.599.0...v3.600.0) (2024-06-18)
 
 **Note:** Version bump only for package @aws-sdk/client-connect

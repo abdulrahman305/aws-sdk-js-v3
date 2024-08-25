@@ -1,4 +1,5 @@
 // smithy-typescript generated code
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
@@ -81,6 +82,23 @@ export interface DeleteObjectTaggingCommandOutput extends DeleteObjectTaggingOut
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
  * @public
+ * @example To remove tag set from an object
+ * ```javascript
+ * // The following example removes tag set associated with the specified object. If the bucket is versioning enabled, the operation removes tag set from the latest object version.
+ * const input = {
+ *   "Bucket": "examplebucket",
+ *   "Key": "HappyFace.jpg"
+ * };
+ * const command = new DeleteObjectTaggingCommand(input);
+ * const response = await client.send(command);
+ * /* response ==
+ * {
+ *   "VersionId": "null"
+ * }
+ * *\/
+ * // example id: to-remove-tag-set-from-an-object-1483145342862
+ * ```
+ *
  * @example To remove tag set from an object version
  * ```javascript
  * // The following example removes tag set associated with the specified object version. The request specifies both the object key and object version.
@@ -97,23 +115,6 @@ export interface DeleteObjectTaggingCommandOutput extends DeleteObjectTaggingOut
  * }
  * *\/
  * // example id: to-remove-tag-set-from-an-object-version-1483145285913
- * ```
- *
- * @example To remove tag set from an object
- * ```javascript
- * // The following example removes tag set associated with the specified object. If the bucket is versioning enabled, the operation removes tag set from the latest object version.
- * const input = {
- *   "Bucket": "examplebucket",
- *   "Key": "HappyFace.jpg"
- * };
- * const command = new DeleteObjectTaggingCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "VersionId": "null"
- * }
- * *\/
- * // example id: to-remove-tag-set-from-an-object-1483145342862
  * ```
  *
  */
@@ -133,6 +134,7 @@ export class DeleteObjectTaggingCommand extends $Command
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getThrow200ExceptionsPlugin(config),
     ];
   })
   .s("AmazonS3", "DeleteObjectTagging", {})

@@ -15,6 +15,7 @@ import {
   expectNonNull as __expectNonNull,
   expectObject as __expectObject,
   expectString as __expectString,
+  limitedParseDouble as __limitedParseDouble,
   map,
   resolvedPath as __resolvedPath,
   serializeFloat as __serializeFloat,
@@ -29,6 +30,7 @@ import {
   SerdeContext as __SerdeContext,
 } from "@smithy/types";
 
+import { ApplyGuardrailCommandInput, ApplyGuardrailCommandOutput } from "../commands/ApplyGuardrailCommand";
 import { ConverseCommandInput, ConverseCommandOutput } from "../commands/ConverseCommand";
 import { ConverseStreamCommandInput, ConverseStreamCommandOutput } from "../commands/ConverseStreamCommand";
 import { InvokeModelCommandInput, InvokeModelCommandOutput } from "../commands/InvokeModelCommand";
@@ -48,10 +50,22 @@ import {
   ConverseOutput,
   ConverseStreamMetadataEvent,
   ConverseStreamOutput,
+  ConverseStreamTrace,
+  ConverseTrace,
+  DocumentBlock,
+  DocumentSource,
+  GuardrailAssessment,
   GuardrailConfiguration,
+  GuardrailContentBlock,
+  GuardrailContentQualifier,
+  GuardrailContextualGroundingFilter,
+  GuardrailContextualGroundingPolicyAssessment,
   GuardrailConverseContentBlock,
+  GuardrailConverseContentQualifier,
   GuardrailConverseTextBlock,
   GuardrailStreamConfiguration,
+  GuardrailTextBlock,
+  GuardrailTraceAssessment,
   ImageBlock,
   ImageSource,
   InferenceConfiguration,
@@ -67,6 +81,7 @@ import {
   ResourceNotFoundException,
   ResponseStream,
   ServiceQuotaExceededException,
+  ServiceUnavailableException,
   SpecificToolChoice,
   SystemContentBlock,
   ThrottlingException,
@@ -80,6 +95,31 @@ import {
   ToolUseBlock,
   ValidationException,
 } from "../models/models_0";
+
+/**
+ * serializeAws_restJson1ApplyGuardrailCommand
+ */
+export const se_ApplyGuardrailCommand = async (
+  input: ApplyGuardrailCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/guardrail/{guardrailIdentifier}/version/{guardrailVersion}/apply");
+  b.p("guardrailIdentifier", () => input.guardrailIdentifier!, "{guardrailIdentifier}", false);
+  b.p("guardrailVersion", () => input.guardrailVersion!, "{guardrailVersion}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      content: (_) => _json(_),
+      source: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
 
 /**
  * serializeAws_restJson1ConverseCommand
@@ -148,7 +188,7 @@ export const se_InvokeModelCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
-    [_ct]: input[_cT]! || "application/octet-stream",
+    [_ct]: input[_cT] || "application/octet-stream",
     [_a]: input[_a]!,
     [_xabt]: input[_t]!,
     [_xabg]: input[_gI]!,
@@ -173,7 +213,7 @@ export const se_InvokeModelWithResponseStreamCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
-    [_ct]: input[_cT]! || "application/octet-stream",
+    [_ct]: input[_cT] || "application/octet-stream",
     [_xaba]: input[_a]!,
     [_xabt]: input[_t]!,
     [_xabg]: input[_gI]!,
@@ -187,6 +227,30 @@ export const se_InvokeModelWithResponseStreamCommand = async (
   }
   b.m("POST").h(headers).b(body);
   return b.build();
+};
+
+/**
+ * deserializeAws_restJson1ApplyGuardrailCommand
+ */
+export const de_ApplyGuardrailCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ApplyGuardrailCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    action: __expectString,
+    assessments: (_) => de_GuardrailAssessmentList(_, context),
+    outputs: _json,
+    usage: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
 };
 
 /**
@@ -208,7 +272,7 @@ export const de_ConverseCommand = async (
     metrics: _json,
     output: (_) => de_ConverseOutput(__expectUnion(_), context),
     stopReason: __expectString,
-    trace: _json,
+    trace: (_) => de_ConverseTrace(_, context),
     usage: _json,
   });
   Object.assign(contents, doc);
@@ -287,6 +351,18 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "InternalServerException":
     case "com.amazonaws.bedrockruntime#InternalServerException":
       throw await de_InternalServerExceptionRes(parsedOutput, context);
+    case "ResourceNotFoundException":
+    case "com.amazonaws.bedrockruntime#ResourceNotFoundException":
+      throw await de_ResourceNotFoundExceptionRes(parsedOutput, context);
+    case "ServiceQuotaExceededException":
+    case "com.amazonaws.bedrockruntime#ServiceQuotaExceededException":
+      throw await de_ServiceQuotaExceededExceptionRes(parsedOutput, context);
+    case "ThrottlingException":
+    case "com.amazonaws.bedrockruntime#ThrottlingException":
+      throw await de_ThrottlingExceptionRes(parsedOutput, context);
+    case "ValidationException":
+    case "com.amazonaws.bedrockruntime#ValidationException":
+      throw await de_ValidationExceptionRes(parsedOutput, context);
     case "ModelErrorException":
     case "com.amazonaws.bedrockruntime#ModelErrorException":
       throw await de_ModelErrorExceptionRes(parsedOutput, context);
@@ -296,18 +372,9 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "ModelTimeoutException":
     case "com.amazonaws.bedrockruntime#ModelTimeoutException":
       throw await de_ModelTimeoutExceptionRes(parsedOutput, context);
-    case "ResourceNotFoundException":
-    case "com.amazonaws.bedrockruntime#ResourceNotFoundException":
-      throw await de_ResourceNotFoundExceptionRes(parsedOutput, context);
-    case "ThrottlingException":
-    case "com.amazonaws.bedrockruntime#ThrottlingException":
-      throw await de_ThrottlingExceptionRes(parsedOutput, context);
-    case "ValidationException":
-    case "com.amazonaws.bedrockruntime#ValidationException":
-      throw await de_ValidationExceptionRes(parsedOutput, context);
-    case "ServiceQuotaExceededException":
-    case "com.amazonaws.bedrockruntime#ServiceQuotaExceededException":
-      throw await de_ServiceQuotaExceededExceptionRes(parsedOutput, context);
+    case "ServiceUnavailableException":
+    case "com.amazonaws.bedrockruntime#ServiceUnavailableException":
+      throw await de_ServiceUnavailableExceptionRes(parsedOutput, context);
     case "ModelStreamErrorException":
     case "com.amazonaws.bedrockruntime#ModelStreamErrorException":
       throw await de_ModelStreamErrorExceptionRes(parsedOutput, context);
@@ -484,6 +551,26 @@ const de_ServiceQuotaExceededExceptionRes = async (
 };
 
 /**
+ * deserializeAws_restJson1ServiceUnavailableExceptionRes
+ */
+const de_ServiceUnavailableExceptionRes = async (
+  parsedOutput: any,
+  context: __SerdeContext
+): Promise<ServiceUnavailableException> => {
+  const contents: any = map({});
+  const data: any = parsedOutput.body;
+  const doc = take(data, {
+    message: __expectString,
+  });
+  Object.assign(contents, doc);
+  const exception = new ServiceUnavailableException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...contents,
+  });
+  return __decorateServiceException(exception, parsedOutput.body);
+};
+
+/**
  * deserializeAws_restJson1ThrottlingExceptionRes
  */
 const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeContext): Promise<ThrottlingException> => {
@@ -578,6 +665,14 @@ const de_ConverseStreamOutput = (
         throttlingException: await de_ThrottlingException_event(event["throttlingException"], context),
       };
     }
+    if (event["serviceUnavailableException"] != null) {
+      return {
+        serviceUnavailableException: await de_ServiceUnavailableException_event(
+          event["serviceUnavailableException"],
+          context
+        ),
+      };
+    }
     return { $unknown: output };
   });
 };
@@ -622,6 +717,14 @@ const de_ResponseStream = (
         modelTimeoutException: await de_ModelTimeoutException_event(event["modelTimeoutException"], context),
       };
     }
+    if (event["serviceUnavailableException"] != null) {
+      return {
+        serviceUnavailableException: await de_ServiceUnavailableException_event(
+          event["serviceUnavailableException"],
+          context
+        ),
+      };
+    }
     return { $unknown: output };
   });
 };
@@ -655,7 +758,7 @@ const de_ConverseStreamMetadataEvent_event = async (
 ): Promise<ConverseStreamMetadataEvent> => {
   const contents: ConverseStreamMetadataEvent = {} as any;
   const data: any = await parseBody(output.body, context);
-  Object.assign(contents, _json(data));
+  Object.assign(contents, de_ConverseStreamMetadataEvent(data, context));
   return contents;
 };
 const de_InternalServerException_event = async (
@@ -703,6 +806,16 @@ const de_PayloadPart_event = async (output: any, context: __SerdeContext): Promi
   Object.assign(contents, de_PayloadPart(data, context));
   return contents;
 };
+const de_ServiceUnavailableException_event = async (
+  output: any,
+  context: __SerdeContext
+): Promise<ServiceUnavailableException> => {
+  const parsedOutput: any = {
+    ...output,
+    body: await parseBody(output.body, context),
+  };
+  return de_ServiceUnavailableExceptionRes(parsedOutput, context);
+};
 const de_ThrottlingException_event = async (output: any, context: __SerdeContext): Promise<ThrottlingException> => {
   const parsedOutput: any = {
     ...output,
@@ -728,6 +841,7 @@ const de_ValidationException_event = async (output: any, context: __SerdeContext
  */
 const se_ContentBlock = (input: ContentBlock, context: __SerdeContext): any => {
   return ContentBlock.visit(input, {
+    document: (value) => ({ document: se_DocumentBlock(value, context) }),
     guardContent: (value) => ({ guardContent: _json(value) }),
     image: (value) => ({ image: se_ImageBlock(value, context) }),
     text: (value) => ({ text: value }),
@@ -748,13 +862,44 @@ const se_ContentBlocks = (input: ContentBlock[], context: __SerdeContext): any =
     });
 };
 
+/**
+ * serializeAws_restJson1DocumentBlock
+ */
+const se_DocumentBlock = (input: DocumentBlock, context: __SerdeContext): any => {
+  return take(input, {
+    format: [],
+    name: [],
+    source: (_) => se_DocumentSource(_, context),
+  });
+};
+
+/**
+ * serializeAws_restJson1DocumentSource
+ */
+const se_DocumentSource = (input: DocumentSource, context: __SerdeContext): any => {
+  return DocumentSource.visit(input, {
+    bytes: (value) => ({ bytes: context.base64Encoder(value) }),
+    _: (name, value) => ({ name: value } as any),
+  });
+};
+
 // se_GuardrailConfiguration omitted.
 
+// se_GuardrailContentBlock omitted.
+
+// se_GuardrailContentBlockList omitted.
+
+// se_GuardrailContentQualifierList omitted.
+
 // se_GuardrailConverseContentBlock omitted.
+
+// se_GuardrailConverseContentQualifierList omitted.
 
 // se_GuardrailConverseTextBlock omitted.
 
 // se_GuardrailStreamConfiguration omitted.
+
+// se_GuardrailTextBlock omitted.
 
 /**
  * serializeAws_restJson1ImageBlock
@@ -865,6 +1010,7 @@ const se_ToolResultBlock = (input: ToolResultBlock, context: __SerdeContext): an
  */
 const se_ToolResultContentBlock = (input: ToolResultContentBlock, context: __SerdeContext): any => {
   return ToolResultContentBlock.visit(input, {
+    document: (value) => ({ document: se_DocumentBlock(value, context) }),
     image: (value) => ({ image: se_ImageBlock(value, context) }),
     json: (value) => ({ json: se_Document(value, context) }),
     text: (value) => ({ text: value }),
@@ -927,6 +1073,11 @@ const se_Document = (input: __DocumentType, context: __SerdeContext): any => {
  * deserializeAws_restJson1ContentBlock
  */
 const de_ContentBlock = (output: any, context: __SerdeContext): ContentBlock => {
+  if (output.document != null) {
+    return {
+      document: de_DocumentBlock(output.document, context),
+    };
+  }
   if (output.guardContent != null) {
     return {
       guardContent: _json(__expectUnion(output.guardContent)),
@@ -989,21 +1140,110 @@ const de_ConverseOutput = (output: any, context: __SerdeContext): ConverseOutput
   return { $unknown: Object.entries(output)[0] };
 };
 
-// de_ConverseStreamMetadataEvent omitted.
+/**
+ * deserializeAws_restJson1ConverseStreamMetadataEvent
+ */
+const de_ConverseStreamMetadataEvent = (output: any, context: __SerdeContext): ConverseStreamMetadataEvent => {
+  return take(output, {
+    metrics: _json,
+    trace: (_: any) => de_ConverseStreamTrace(_, context),
+    usage: _json,
+  }) as any;
+};
 
 // de_ConverseStreamMetrics omitted.
 
-// de_ConverseStreamTrace omitted.
+/**
+ * deserializeAws_restJson1ConverseStreamTrace
+ */
+const de_ConverseStreamTrace = (output: any, context: __SerdeContext): ConverseStreamTrace => {
+  return take(output, {
+    guardrail: (_: any) => de_GuardrailTraceAssessment(_, context),
+  }) as any;
+};
 
-// de_ConverseTrace omitted.
+/**
+ * deserializeAws_restJson1ConverseTrace
+ */
+const de_ConverseTrace = (output: any, context: __SerdeContext): ConverseTrace => {
+  return take(output, {
+    guardrail: (_: any) => de_GuardrailTraceAssessment(_, context),
+  }) as any;
+};
 
-// de_GuardrailAssessment omitted.
+/**
+ * deserializeAws_restJson1DocumentBlock
+ */
+const de_DocumentBlock = (output: any, context: __SerdeContext): DocumentBlock => {
+  return take(output, {
+    format: __expectString,
+    name: __expectString,
+    source: (_: any) => de_DocumentSource(__expectUnion(_), context),
+  }) as any;
+};
 
-// de_GuardrailAssessmentList omitted.
+/**
+ * deserializeAws_restJson1DocumentSource
+ */
+const de_DocumentSource = (output: any, context: __SerdeContext): DocumentSource => {
+  if (output.bytes != null) {
+    return {
+      bytes: context.base64Decoder(output.bytes),
+    };
+  }
+  return { $unknown: Object.entries(output)[0] };
+};
 
-// de_GuardrailAssessmentListMap omitted.
+/**
+ * deserializeAws_restJson1GuardrailAssessment
+ */
+const de_GuardrailAssessment = (output: any, context: __SerdeContext): GuardrailAssessment => {
+  return take(output, {
+    contentPolicy: _json,
+    contextualGroundingPolicy: (_: any) => de_GuardrailContextualGroundingPolicyAssessment(_, context),
+    sensitiveInformationPolicy: _json,
+    topicPolicy: _json,
+    wordPolicy: _json,
+  }) as any;
+};
 
-// de_GuardrailAssessmentMap omitted.
+/**
+ * deserializeAws_restJson1GuardrailAssessmentList
+ */
+const de_GuardrailAssessmentList = (output: any, context: __SerdeContext): GuardrailAssessment[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_GuardrailAssessment(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAssessmentListMap
+ */
+const de_GuardrailAssessmentListMap = (output: any, context: __SerdeContext): Record<string, GuardrailAssessment[]> => {
+  return Object.entries(output).reduce((acc: Record<string, GuardrailAssessment[]>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key as string] = de_GuardrailAssessmentList(value, context);
+    return acc;
+  }, {} as Record<string, GuardrailAssessment[]>);
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAssessmentMap
+ */
+const de_GuardrailAssessmentMap = (output: any, context: __SerdeContext): Record<string, GuardrailAssessment> => {
+  return Object.entries(output).reduce((acc: Record<string, GuardrailAssessment>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key as string] = de_GuardrailAssessment(value, context);
+    return acc;
+  }, {} as Record<string, GuardrailAssessment>);
+};
 
 // de_GuardrailContentFilter omitted.
 
@@ -1011,7 +1251,51 @@ const de_ConverseOutput = (output: any, context: __SerdeContext): ConverseOutput
 
 // de_GuardrailContentPolicyAssessment omitted.
 
+/**
+ * deserializeAws_restJson1GuardrailContextualGroundingFilter
+ */
+const de_GuardrailContextualGroundingFilter = (
+  output: any,
+  context: __SerdeContext
+): GuardrailContextualGroundingFilter => {
+  return take(output, {
+    action: __expectString,
+    score: __limitedParseDouble,
+    threshold: __limitedParseDouble,
+    type: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailContextualGroundingFilters
+ */
+const de_GuardrailContextualGroundingFilters = (
+  output: any,
+  context: __SerdeContext
+): GuardrailContextualGroundingFilter[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_GuardrailContextualGroundingFilter(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailContextualGroundingPolicyAssessment
+ */
+const de_GuardrailContextualGroundingPolicyAssessment = (
+  output: any,
+  context: __SerdeContext
+): GuardrailContextualGroundingPolicyAssessment => {
+  return take(output, {
+    filters: (_: any) => de_GuardrailContextualGroundingFilters(_, context),
+  }) as any;
+};
+
 // de_GuardrailConverseContentBlock omitted.
+
+// de_GuardrailConverseContentQualifierList omitted.
 
 // de_GuardrailConverseTextBlock omitted.
 
@@ -1022,6 +1306,10 @@ const de_ConverseOutput = (output: any, context: __SerdeContext): ConverseOutput
 // de_GuardrailManagedWord omitted.
 
 // de_GuardrailManagedWordList omitted.
+
+// de_GuardrailOutputContent omitted.
+
+// de_GuardrailOutputContentList omitted.
 
 // de_GuardrailPiiEntityFilter omitted.
 
@@ -1039,7 +1327,18 @@ const de_ConverseOutput = (output: any, context: __SerdeContext): ConverseOutput
 
 // de_GuardrailTopicPolicyAssessment omitted.
 
-// de_GuardrailTraceAssessment omitted.
+/**
+ * deserializeAws_restJson1GuardrailTraceAssessment
+ */
+const de_GuardrailTraceAssessment = (output: any, context: __SerdeContext): GuardrailTraceAssessment => {
+  return take(output, {
+    inputAssessment: (_: any) => de_GuardrailAssessmentMap(_, context),
+    modelOutput: _json,
+    outputAssessments: (_: any) => de_GuardrailAssessmentListMap(_, context),
+  }) as any;
+};
+
+// de_GuardrailUsage omitted.
 
 // de_GuardrailWordPolicyAssessment omitted.
 
@@ -1115,6 +1414,11 @@ const de_ToolResultBlock = (output: any, context: __SerdeContext): ToolResultBlo
  * deserializeAws_restJson1ToolResultContentBlock
  */
 const de_ToolResultContentBlock = (output: any, context: __SerdeContext): ToolResultContentBlock => {
+  if (output.document != null) {
+    return {
+      document: de_DocumentBlock(output.document, context),
+    };
+  }
   if (output.image != null) {
     return {
       image: de_ImageBlock(output.image, context),

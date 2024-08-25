@@ -72,8 +72,27 @@ export interface CreateModelCommandOutput extends CreateModelOutput, __MetadataB
  *         ModelAccessConfig: { // ModelAccessConfig
  *           AcceptEula: true || false, // required
  *         },
+ *         HubAccessConfig: { // InferenceHubAccessConfig
+ *           HubContentArn: "STRING_VALUE", // required
+ *         },
  *       },
  *     },
+ *     AdditionalModelDataSources: [ // AdditionalModelDataSources
+ *       { // AdditionalModelDataSource
+ *         ChannelName: "STRING_VALUE", // required
+ *         S3DataSource: {
+ *           S3Uri: "STRING_VALUE", // required
+ *           S3DataType: "S3Prefix" || "S3Object", // required
+ *           CompressionType: "None" || "Gzip", // required
+ *           ModelAccessConfig: {
+ *             AcceptEula: true || false, // required
+ *           },
+ *           HubAccessConfig: {
+ *             HubContentArn: "STRING_VALUE", // required
+ *           },
+ *         },
+ *       },
+ *     ],
  *     Environment: { // EnvironmentMap
  *       "<keys>": "STRING_VALUE",
  *     },
@@ -103,8 +122,17 @@ export interface CreateModelCommandOutput extends CreateModelOutput, __MetadataB
  *           ModelAccessConfig: {
  *             AcceptEula: true || false, // required
  *           },
+ *           HubAccessConfig: {
+ *             HubContentArn: "STRING_VALUE", // required
+ *           },
  *         },
  *       },
+ *       AdditionalModelDataSources: [
+ *         {
+ *           ChannelName: "STRING_VALUE", // required
+ *           S3DataSource: "<S3ModelDataSource>", // required
+ *         },
+ *       ],
  *       Environment: {
  *         "<keys>": "STRING_VALUE",
  *       },

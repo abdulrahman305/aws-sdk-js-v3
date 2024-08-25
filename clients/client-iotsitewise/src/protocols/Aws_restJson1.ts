@@ -303,6 +303,7 @@ import {
   ResourceNotFoundException,
   RetentionPeriod,
   ServiceUnavailableException,
+  SiemensIE,
   TargetResource,
   ThrottlingException,
   TimeInNanos,
@@ -1382,12 +1383,9 @@ export const se_DescribeDefaultEncryptionConfigurationCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {
-    "content-type": "application/json",
-  };
+  const headers: any = {};
   b.bp("/configuration/account/encryption");
   let body: any;
-  body = "";
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
     resolvedHostname = "api." + resolvedHostname;
@@ -1457,12 +1455,9 @@ export const se_DescribeLoggingOptionsCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {
-    "content-type": "application/json",
-  };
+  const headers: any = {};
   b.bp("/logging");
   let body: any;
-  body = "";
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
     resolvedHostname = "api." + resolvedHostname;
@@ -1531,12 +1526,9 @@ export const se_DescribeStorageConfigurationCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {
-    "content-type": "application/json",
-  };
+  const headers: any = {};
   b.bp("/configuration/account/storage");
   let body: any;
-  body = "";
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
     resolvedHostname = "api." + resolvedHostname;
@@ -5319,6 +5311,8 @@ const se_PutAssetPropertyValueEntry = (input: PutAssetPropertyValueEntry, contex
 
 // se_RetentionPeriod omitted.
 
+// se_SiemensIE omitted.
+
 // se_TagMap omitted.
 
 // se_TargetResource omitted.
@@ -6130,6 +6124,8 @@ const de_Rows = (output: any, context: __SerdeContext): Row[] => {
     });
   return retVal;
 };
+
+// de_SiemensIE omitted.
 
 // de_TagMap omitted.
 

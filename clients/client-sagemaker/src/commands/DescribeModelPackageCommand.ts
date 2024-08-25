@@ -9,7 +9,7 @@ import {
   DescribeModelPackageInput,
   DescribeModelPackageOutput,
   DescribeModelPackageOutputFilterSensitiveLog,
-} from "../models/models_2";
+} from "../models/models_3";
 import { de_DescribeModelPackageCommand, se_DescribeModelPackageCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -74,6 +74,9 @@ export interface DescribeModelPackageCommandOutput extends DescribeModelPackageO
  * //             ModelAccessConfig: { // ModelAccessConfig
  * //               AcceptEula: true || false, // required
  * //             },
+ * //             HubAccessConfig: { // InferenceHubAccessConfig
+ * //               HubContentArn: "STRING_VALUE", // required
+ * //             },
  * //           },
  * //         },
  * //         ProductId: "STRING_VALUE",
@@ -117,6 +120,9 @@ export interface DescribeModelPackageCommandOutput extends DescribeModelPackageO
  * //             CompressionType: "None" || "Gzip", // required
  * //             ModelAccessConfig: {
  * //               AcceptEula: true || false, // required
+ * //             },
+ * //             HubAccessConfig: {
+ * //               HubContentArn: "STRING_VALUE", // required
  * //             },
  * //           },
  * //         },
@@ -297,6 +303,9 @@ export interface DescribeModelPackageCommandOutput extends DescribeModelPackageO
  * //               CompressionType: "None" || "Gzip", // required
  * //               ModelAccessConfig: {
  * //                 AcceptEula: true || false, // required
+ * //               },
+ * //               HubAccessConfig: {
+ * //                 HubContentArn: "STRING_VALUE", // required
  * //               },
  * //             },
  * //           },

@@ -3,6 +3,108 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+
+### Bug Fixes
+
+* **core/httpAuthSchemes:** default sigv4aSigningRegionSet to undefined ([#6375](https://github.com/aws/aws-sdk-js-v3/issues/6375)) ([8cccf59](https://github.com/aws/aws-sdk-js-v3/commit/8cccf59cdb2b033b76e9903c6d50d8d274f278d1))
+
+
+### Features
+
+* **core/httpAuthSchemes:** set configuration sources for sigv4a signingRegionSet ([#6368](https://github.com/aws/aws-sdk-js-v3/issues/6368)) ([03bb39f](https://github.com/aws/aws-sdk-js-v3/commit/03bb39fe253caad974494828ffeefddc9ffded78))
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.623.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.622.0...v3.623.0) (2024-08-02)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+
+### Bug Fixes
+
+* package.json `homepage` links to use the `main` branch ([#6336](https://github.com/aws/aws-sdk-js-v3/issues/6336)) ([e332230](https://github.com/aws/aws-sdk-js-v3/commit/e33223023c48451533cc0bd8dbe3dd2c62e12317))
+
+
+
+
+
+## [3.620.1](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.0...v3.620.1) (2024-07-29)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/core
+
+
+
+
+
 # [3.598.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.597.0...v3.598.0) (2024-06-14)
 
 **Note:** Version bump only for package @aws-sdk/core

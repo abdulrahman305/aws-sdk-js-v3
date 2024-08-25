@@ -656,6 +656,14 @@ CreateCapacityReservation
 </details>
 <details>
 <summary>
+CreateCapacityReservationBySplitting
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/CreateCapacityReservationBySplittingCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/CreateCapacityReservationBySplittingCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/CreateCapacityReservationBySplittingCommandOutput/)
+
+</details>
+<details>
+<summary>
 CreateCapacityReservationFleet
 </summary>
 
@@ -812,6 +820,14 @@ CreateIpam
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/CreateIpamCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/CreateIpamCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/CreateIpamCommandOutput/)
+
+</details>
+<details>
+<summary>
+CreateIpamExternalResourceVerificationToken
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/CreateIpamExternalResourceVerificationTokenCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/CreateIpamExternalResourceVerificationTokenCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/CreateIpamExternalResourceVerificationTokenCommandOutput/)
 
 </details>
 <details>
@@ -1420,6 +1436,14 @@ DeleteIpam
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/DeleteIpamCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DeleteIpamCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DeleteIpamCommandOutput/)
+
+</details>
+<details>
+<summary>
+DeleteIpamExternalResourceVerificationToken
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/DeleteIpamExternalResourceVerificationTokenCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DeleteIpamExternalResourceVerificationTokenCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DeleteIpamExternalResourceVerificationTokenCommandOutput/)
 
 </details>
 <details>
@@ -2412,6 +2436,14 @@ DescribeIpamByoasn
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/DescribeIpamByoasnCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DescribeIpamByoasnCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DescribeIpamByoasnCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeIpamExternalResourceVerificationTokens
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/DescribeIpamExternalResourceVerificationTokensCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DescribeIpamExternalResourceVerificationTokensCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/DescribeIpamExternalResourceVerificationTokensCommandOutput/)
 
 </details>
 <details>
@@ -4644,6 +4676,14 @@ MoveByoipCidrToIpam
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/MoveByoipCidrToIpamCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/MoveByoipCidrToIpamCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/MoveByoipCidrToIpamCommandOutput/)
+
+</details>
+<details>
+<summary>
+MoveCapacityReservationInstances
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/MoveCapacityReservationInstancesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/MoveCapacityReservationInstancesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-ec2/Interface/MoveCapacityReservationInstancesCommandOutput/)
 
 </details>
 <details>

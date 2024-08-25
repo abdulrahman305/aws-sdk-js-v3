@@ -36,7 +36,7 @@ export interface PutClusterCapacityProvidersCommandOutput
  * 			strategy for the cluster. If the specified cluster has existing capacity providers
  * 			associated with it, you must specify all existing capacity providers in addition to any
  * 			new ones you want to add. Any existing capacity providers that are associated with a
- * 			cluster that are omitted from a <a>PutClusterCapacityProviders</a> API call
+ * 			cluster that are omitted from a <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutClusterCapacityProviders.html">PutClusterCapacityProviders</a> API call
  * 			will be disassociated with the cluster. You can only disassociate an existing capacity
  * 			provider from a cluster if it's not being used by any existing tasks.</p>
  *          <p>When creating a service or running a task on a cluster, if no capacity provider or
@@ -151,9 +151,19 @@ export interface PutClusterCapacityProvidersCommandOutput
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
+ *          <p>The following list includes additional causes for the error:</p>
+ *          <ul>
+ *             <li>
+ *                <p>The <code>RunTask</code> could not be processed because you use managed
+ * 					scaling and there is a capacity error because the quota of tasks in the
+ * 						<code>PROVISIONING</code> per cluster has been reached. For information
+ * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
+ * 						service quotas</a>.</p>
+ *             </li>
+ *          </ul>
  *
  * @throws {@link ClusterNotFoundException} (client fault)
- *  <p>The specified cluster wasn't found. You can view your available clusters with <a>ListClusters</a>. Amazon ECS clusters are Region specific.</p>
+ *  <p>The specified cluster wasn't found. You can view your available clusters with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListClusters.html">ListClusters</a>. Amazon ECS clusters are Region specific.</p>
  *
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API

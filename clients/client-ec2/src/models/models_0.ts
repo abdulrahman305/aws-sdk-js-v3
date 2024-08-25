@@ -170,6 +170,7 @@ export const ResourceType = {
   instance_event_window: "instance-event-window",
   internet_gateway: "internet-gateway",
   ipam: "ipam",
+  ipam_external_resource_verification_token: "ipam-external-resource-verification-token",
   ipam_pool: "ipam-pool",
   ipam_resource_discovery: "ipam-resource-discovery",
   ipam_resource_discovery_association: "ipam-resource-discovery-association",
@@ -223,7 +224,6 @@ export const ResourceType = {
   volume: "volume",
   vpc: "vpc",
   vpc_block_public_access_exclusion: "vpc-block-public-access-exclusion",
-  vpc_encryption_control: "vpc-encryption-control",
   vpc_endpoint: "vpc-endpoint",
   vpc_endpoint_connection: "vpc-endpoint-connection",
   vpc_endpoint_connection_device_type: "vpc-endpoint-connection-device-type",
@@ -1599,7 +1599,7 @@ export interface AnalysisRouteTableRoute {
   DestinationCidr?: string;
 
   /**
-   * <p>The prefix of the Amazon Web Service.</p>
+   * <p>The prefix of the Amazon Web Services service.</p>
    * @public
    */
   DestinationPrefixListId?: string;
@@ -3101,7 +3101,41 @@ export interface ByoipCidr {
   StatusMessage?: string;
 
   /**
-   * <p>The state of the address pool.</p>
+   * <p>The state of the address range.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>advertised</code>: The address range is being advertised to the internet by Amazon Web Services.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>deprovisioned</code>: The address range is deprovisioned.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>failed-deprovision</code>: The request to deprovision the address range was unsuccessful. Ensure that all EIPs from the range have been deallocated and try again.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>failed-provision</code>: The request to provision the address range was unsuccessful.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>pending-deprovision</code>: You’ve submitted a request to deprovision an address range and it's pending.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>pending-provision</code>: You’ve submitted a request to provision an address range and it's pending.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>provisioned</code>: The address range is provisioned and can be advertised. The range is not currently advertised.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>provisioned-not-publicly-advertisable</code>: The address range is provisioned and cannot be advertised.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   State?: ByoipCidrState;
@@ -4972,6 +5006,35 @@ export interface AssociateSubnetCidrBlockRequest {
  * @public
  * @enum
  */
+export const IpSource = {
+  amazon: "amazon",
+  byoip: "byoip",
+  none: "none",
+} as const;
+
+/**
+ * @public
+ */
+export type IpSource = (typeof IpSource)[keyof typeof IpSource];
+
+/**
+ * @public
+ * @enum
+ */
+export const Ipv6AddressAttribute = {
+  private: "private",
+  public: "public",
+} as const;
+
+/**
+ * @public
+ */
+export type Ipv6AddressAttribute = (typeof Ipv6AddressAttribute)[keyof typeof Ipv6AddressAttribute];
+
+/**
+ * @public
+ * @enum
+ */
 export const SubnetCidrBlockStateCode = {
   associated: "associated",
   associating: "associating",
@@ -5026,6 +5089,18 @@ export interface SubnetIpv6CidrBlockAssociation {
    * @public
    */
   Ipv6CidrBlockState?: SubnetCidrBlockState;
+
+  /**
+   * <p>Public IPv6 addresses are those advertised on the internet from Amazon Web Services. Private IP addresses are not and cannot be advertised on the internet from Amazon Web Services.</p>
+   * @public
+   */
+  Ipv6AddressAttribute?: Ipv6AddressAttribute;
+
+  /**
+   * <p>The source that allocated the IP address space. <code>byoip</code> or <code>amazon</code> indicates public IP address space allocated by Amazon or space that you have allocated with Bring your own IP (BYOIP). <code>none</code> indicates private space.</p>
+   * @public
+   */
+  IpSource?: IpSource;
 }
 
 /**
@@ -5540,6 +5615,18 @@ export interface VpcIpv6CidrBlockAssociation {
    * @public
    */
   Ipv6Pool?: string;
+
+  /**
+   * <p>Public IPv6 addresses are those advertised on the internet from Amazon Web Services. Private IP addresses are not and cannot be advertised on the internet from Amazon Web Services.</p>
+   * @public
+   */
+  Ipv6AddressAttribute?: Ipv6AddressAttribute;
+
+  /**
+   * <p>The source that allocated the IP address space. <code>byoip</code> or <code>amazon</code> indicates public IP address space allocated by Amazon or space that you have allocated with Bring your own IP (BYOIP). <code>none</code> indicates private space.</p>
+   * @public
+   */
+  IpSource?: IpSource;
 }
 
 /**
@@ -7848,8 +7935,8 @@ export interface CopyImageRequest {
    * <p>Specifies whether the destination snapshots of the copied image should be encrypted. You
    *       can encrypt a copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an
    *       encrypted snapshot. The default KMS key for Amazon EBS is used unless you specify a non-default
-   *       Key Management Service (KMS) KMS key using <code>KmsKeyId</code>. For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
-   *         <i>Amazon EBS User Guide</i>.</p>
+   *       Key Management Service (KMS) KMS key using <code>KmsKeyId</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with
+   *         EBS-backed AMIs</a> in the <i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
   Encrypted?: boolean;
@@ -8626,6 +8713,76 @@ export interface CreateCapacityReservationResult {
 
 /**
  * @public
+ */
+export interface CreateCapacityReservationBySplittingRequest {
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean;
+
+  /**
+   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure Idempotency</a>.</p>
+   * @public
+   */
+  ClientToken?: string;
+
+  /**
+   * <p>
+   * 			The ID of the Capacity Reservation from which you want to split the available capacity.
+   * 		</p>
+   * @public
+   */
+  SourceCapacityReservationId: string | undefined;
+
+  /**
+   * <p>
+   * 			The number of instances to split from the source Capacity Reservation.
+   * 		</p>
+   * @public
+   */
+  InstanceCount: number | undefined;
+
+  /**
+   * <p>
+   * 			The tags to apply to the new Capacity Reservation.
+   * 		</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[];
+}
+
+/**
+ * @public
+ */
+export interface CreateCapacityReservationBySplittingResult {
+  /**
+   * <p>
+   * 			Information about the source Capacity Reservation.
+   * 		</p>
+   * @public
+   */
+  SourceCapacityReservation?: CapacityReservation;
+
+  /**
+   * <p>
+   * 			Information about the destination Capacity Reservation.
+   * 		</p>
+   * @public
+   */
+  DestinationCapacityReservation?: CapacityReservation;
+
+  /**
+   * <p>
+   * 			The number of instances in the new Capacity Reservation. The number of instances in the source Capacity Reservation was reduced by this amount.
+   * 		</p>
+   * @public
+   */
+  InstanceCount?: number;
+}
+
+/**
+ * @public
  * @enum
  */
 export const FleetInstanceMatchCriteria = {
@@ -8805,6 +8962,7 @@ export const _InstanceType = {
   c7gn_8xlarge: "c7gn.8xlarge",
   c7gn_large: "c7gn.large",
   c7gn_medium: "c7gn.medium",
+  c7gn_metal: "c7gn.metal",
   c7gn_xlarge: "c7gn.xlarge",
   c7i_12xlarge: "c7i.12xlarge",
   c7i_16xlarge: "c7i.16xlarge",
@@ -9149,6 +9307,7 @@ export const _InstanceType = {
   m7i_metal_48xl: "m7i.metal-48xl",
   m7i_xlarge: "m7i.xlarge",
   mac1_metal: "mac1.metal",
+  mac2_m1ultra_metal: "mac2-m1ultra.metal",
   mac2_m2_metal: "mac2-m2.metal",
   mac2_m2pro_metal: "mac2-m2pro.metal",
   mac2_metal: "mac2.metal",
@@ -9354,6 +9513,18 @@ export const _InstanceType = {
   r7iz_metal_16xl: "r7iz.metal-16xl",
   r7iz_metal_32xl: "r7iz.metal-32xl",
   r7iz_xlarge: "r7iz.xlarge",
+  r8g_12xlarge: "r8g.12xlarge",
+  r8g_16xlarge: "r8g.16xlarge",
+  r8g_24xlarge: "r8g.24xlarge",
+  r8g_2xlarge: "r8g.2xlarge",
+  r8g_48xlarge: "r8g.48xlarge",
+  r8g_4xlarge: "r8g.4xlarge",
+  r8g_8xlarge: "r8g.8xlarge",
+  r8g_large: "r8g.large",
+  r8g_medium: "r8g.medium",
+  r8g_metal_24xl: "r8g.metal-24xl",
+  r8g_metal_48xl: "r8g.metal-48xl",
+  r8g_xlarge: "r8g.xlarge",
   t1_micro: "t1.micro",
   t2_2xlarge: "t2.2xlarge",
   t2_large: "t2.large",
@@ -9387,6 +9558,7 @@ export const _InstanceType = {
   trn1_32xlarge: "trn1.32xlarge",
   trn1n_32xlarge: "trn1n.32xlarge",
   u7i_12tb_224xlarge: "u7i-12tb.224xlarge",
+  u7ib_12tb_224xlarge: "u7ib-12tb.224xlarge",
   u7in_16tb_224xlarge: "u7in-16tb.224xlarge",
   u7in_24tb_224xlarge: "u7in-24tb.224xlarge",
   u7in_32tb_224xlarge: "u7in-32tb.224xlarge",
@@ -9514,265 +9686,6 @@ export interface ReservationFleetInstanceSpecification {
    * @public
    */
   Priority?: number;
-}
-
-/**
- * @public
- * @enum
- */
-export const FleetCapacityReservationTenancy = {
-  default: "default",
-} as const;
-
-/**
- * @public
- */
-export type FleetCapacityReservationTenancy =
-  (typeof FleetCapacityReservationTenancy)[keyof typeof FleetCapacityReservationTenancy];
-
-/**
- * @public
- */
-export interface CreateCapacityReservationFleetRequest {
-  /**
-   * <p>The strategy used by the Capacity Reservation Fleet to determine which of the specified
-   * 			instance types to use. Currently, only the <code>prioritized</code> allocation strategy
-   * 			is supported. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy"> Allocation
-   * 				strategy</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   *          <p>Valid values: <code>prioritized</code>
-   *          </p>
-   * @public
-   */
-  AllocationStrategy?: string;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure Idempotency</a>.</p>
-   * @public
-   */
-  ClientToken?: string;
-
-  /**
-   * <p>Information about the instance types for which to reserve the capacity.</p>
-   * @public
-   */
-  InstanceTypeSpecifications: ReservationFleetInstanceSpecification[] | undefined;
-
-  /**
-   * <p>Indicates the tenancy of the Capacity Reservation Fleet. All Capacity Reservations
-   * 			in the Fleet inherit this tenancy. The Capacity Reservation Fleet can have one of
-   * 			the following tenancy settings:</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>default</code> - The Capacity Reservation Fleet is created on hardware
-   * 					that is shared with other Amazon Web Services accounts.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>dedicated</code> - The Capacity Reservations are created on single-tenant
-   * 					hardware that is dedicated to a single Amazon Web Services account.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  Tenancy?: FleetCapacityReservationTenancy;
-
-  /**
-   * <p>The total number of capacity units to be reserved by the Capacity Reservation Fleet. This
-   * 			value, together with the instance type weights that you assign to each instance type
-   * 			used by the Fleet determine the number of instances for which the Fleet reserves
-   * 			capacity. Both values are based on units that make sense for your workload. For more
-   * 			information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-   * 				capacity</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  TotalTargetCapacity: number | undefined;
-
-  /**
-   * <p>The date and time at which the Capacity Reservation Fleet expires. When the Capacity
-   * 			Reservation Fleet expires, its state changes to <code>expired</code> and all of the Capacity
-   * 			Reservations in the Fleet expire.</p>
-   *          <p>The Capacity Reservation Fleet expires within an hour after the specified time. For example,
-   * 			if you specify <code>5/31/2019</code>, <code>13:30:55</code>, the Capacity Reservation Fleet
-   * 			is guaranteed to expire between <code>13:30:55</code> and <code>14:30:55</code> on
-   * 			<code>5/31/2019</code>.
-   * 		</p>
-   * @public
-   */
-  EndDate?: Date;
-
-  /**
-   * <p>Indicates the type of instance launches that the Capacity Reservation Fleet accepts. All
-   * 			Capacity Reservations in the Fleet inherit this instance matching criteria.</p>
-   *          <p>Currently, Capacity Reservation Fleets support <code>open</code> instance matching criteria
-   * 			only. This means that instances that have matching attributes (instance type, platform, and
-   * 			Availability Zone) run in the Capacity Reservations automatically. Instances do not need to
-   * 			explicitly target a Capacity Reservation Fleet to use its reserved capacity.</p>
-   * @public
-   */
-  InstanceMatchCriteria?: FleetInstanceMatchCriteria;
-
-  /**
-   * <p>The tags to assign to the Capacity Reservation Fleet. The tags are automatically assigned
-   * 			to the Capacity Reservations in the Fleet.</p>
-   * @public
-   */
-  TagSpecifications?: TagSpecification[];
-
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean;
-}
-
-/**
- * <p>Information about a Capacity Reservation in a Capacity Reservation Fleet.</p>
- * @public
- */
-export interface FleetCapacityReservation {
-  /**
-   * <p>The ID of the Capacity Reservation.</p>
-   * @public
-   */
-  CapacityReservationId?: string;
-
-  /**
-   * <p>The ID of the Availability Zone in which the Capacity Reservation reserves capacity.</p>
-   * @public
-   */
-  AvailabilityZoneId?: string;
-
-  /**
-   * <p>The instance type for which the Capacity Reservation reserves capacity.</p>
-   * @public
-   */
-  InstanceType?: _InstanceType;
-
-  /**
-   * <p>The type of operating system for which the Capacity Reservation reserves capacity.</p>
-   * @public
-   */
-  InstancePlatform?: CapacityReservationInstancePlatform;
-
-  /**
-   * <p>The Availability Zone in which the Capacity Reservation reserves capacity.</p>
-   * @public
-   */
-  AvailabilityZone?: string;
-
-  /**
-   * <p>The total number of instances for which the Capacity Reservation reserves capacity.</p>
-   * @public
-   */
-  TotalInstanceCount?: number;
-
-  /**
-   * <p>The number of capacity units fulfilled by the Capacity Reservation. For more information,
-   * 			see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity">Total target
-   * 				capacity</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  FulfilledCapacity?: number;
-
-  /**
-   * <p>Indicates whether the Capacity Reservation reserves capacity for EBS-optimized instance types.</p>
-   * @public
-   */
-  EbsOptimized?: boolean;
-
-  /**
-   * <p>The date and time at which the Capacity Reservation was created.</p>
-   * @public
-   */
-  CreateDate?: Date;
-
-  /**
-   * <p>The weight of the instance type in the Capacity Reservation Fleet. For more information, see
-   * 				<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-weight">Instance type
-   * 				weight</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  Weight?: number;
-
-  /**
-   * <p>The priority of the instance type in the Capacity Reservation Fleet. For more information,
-   * 			see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority">Instance type
-   * 				priority</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  Priority?: number;
-}
-
-/**
- * @public
- */
-export interface CreateCapacityReservationFleetResult {
-  /**
-   * <p>The ID of the Capacity Reservation Fleet.</p>
-   * @public
-   */
-  CapacityReservationFleetId?: string;
-
-  /**
-   * <p>The status of the Capacity Reservation Fleet.</p>
-   * @public
-   */
-  State?: CapacityReservationFleetState;
-
-  /**
-   * <p>The total number of capacity units for which the Capacity Reservation Fleet reserves capacity.</p>
-   * @public
-   */
-  TotalTargetCapacity?: number;
-
-  /**
-   * <p>The requested capacity units that have been successfully reserved.</p>
-   * @public
-   */
-  TotalFulfilledCapacity?: number;
-
-  /**
-   * <p>The instance matching criteria for the Capacity Reservation Fleet.</p>
-   * @public
-   */
-  InstanceMatchCriteria?: FleetInstanceMatchCriteria;
-
-  /**
-   * <p>The allocation strategy used by the Capacity Reservation Fleet.</p>
-   * @public
-   */
-  AllocationStrategy?: string;
-
-  /**
-   * <p>The date and time at which the Capacity Reservation Fleet was created.</p>
-   * @public
-   */
-  CreateTime?: Date;
-
-  /**
-   * <p>The date and time at which the Capacity Reservation Fleet expires.</p>
-   * @public
-   */
-  EndDate?: Date;
-
-  /**
-   * <p>Indicates the tenancy of Capacity Reservation Fleet.</p>
-   * @public
-   */
-  Tenancy?: FleetCapacityReservationTenancy;
-
-  /**
-   * <p>Information about the individual Capacity Reservations in the Capacity Reservation Fleet.</p>
-   * @public
-   */
-  FleetCapacityReservations?: FleetCapacityReservation[];
-
-  /**
-   * <p>The tags assigned to the Capacity Reservation Fleet.</p>
-   * @public
-   */
-  Tags?: Tag[];
 }
 
 /**

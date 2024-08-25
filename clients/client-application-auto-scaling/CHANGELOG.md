@@ -3,6 +3,151 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.637.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.636.0...v3.637.0) (2024-08-22)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.632.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.631.0...v3.632.0) (2024-08-15)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.631.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.630.0...v3.631.0) (2024-08-14)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.623.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.622.0...v3.623.0) (2024-08-02)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+## [3.620.1](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.0...v3.620.1) (2024-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+
+### Features
+
+* **client-application-auto-scaling:** Application Auto Scaling is now more responsive to the changes in demand of your SageMaker Inference endpoints. To get started, create or update a Target Tracking policy based on High Resolution CloudWatch metrics. ([961af9b](https://github.com/aws/aws-sdk-js-v3/commit/961af9b24f3eabd22c9fe285805c2849bf23eeb2))
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.613.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.612.0...v3.613.0) (2024-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.610.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.609.0...v3.610.0) (2024-07-03)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/client-application-auto-scaling
+
+
+
+
+
+# [3.606.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.605.0...v3.606.0) (2024-06-27)
+
+
+### Features
+
+* **client-application-auto-scaling:** Amazon WorkSpaces customers can now use Application Auto Scaling to automatically scale the number of virtual desktops in a WorkSpaces pool. ([2bd900f](https://github.com/aws/aws-sdk-js-v3/commit/2bd900fc1aec4bcc47933a7ab4918fa8a2cf701e))
+
+
+
+
+
 # [3.600.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.599.0...v3.600.0) (2024-06-18)
 
 **Note:** Version bump only for package @aws-sdk/client-application-auto-scaling

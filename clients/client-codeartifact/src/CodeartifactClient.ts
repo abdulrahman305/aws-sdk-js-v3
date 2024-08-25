@@ -452,11 +452,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type CodeartifactClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -472,11 +472,11 @@ export interface CodeartifactClientConfig extends CodeartifactClientConfigType {
 export type CodeartifactClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -529,7 +529,7 @@ export interface CodeartifactClientResolvedConfig extends CodeartifactClientReso
  *             <li>
  *                <p>
  *                   <b>Package</b>: A <i>package</i> is a bundle of software and the metadata required to
- *           resolve dependencies and install the software. CodeArtifact supports npm, PyPI, Maven, NuGet, Swift, Ruby, and generic package formats.
+ *           resolve dependencies and install the software. CodeArtifact supports npm, PyPI, Maven, NuGet, Swift, Ruby, Cargo, and generic package formats.
  *         For more information about the supported package formats and how to use CodeArtifact with them, see the
  *           <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/welcome.html">CodeArtifact User Guide</a>.</p>
  *                <p>In CodeArtifact, a package consists of:</p>
@@ -704,6 +704,11 @@ export interface CodeartifactClientResolvedConfig extends CodeartifactClientReso
  *                <ul>
  *                   <li>
  *                      <p>
+ *                         <code>cargo</code>
+ *                      </p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
  *                         <code>generic</code>
  *                      </p>
  *                   </li>
@@ -842,25 +847,28 @@ export class CodeartifactClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<CodeartifactClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultCodeartifactHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: CodeartifactClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -873,14 +881,5 @@ export class CodeartifactClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultCodeartifactHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: CodeartifactClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

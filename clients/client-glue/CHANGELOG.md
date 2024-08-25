@@ -3,6 +3,195 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.637.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.636.0...v3.637.0) (2024-08-22)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.636.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.635.0...v3.636.0) (2024-08-21)
+
+
+### Features
+
+* **client-glue:** Add optional field JobRunQueuingEnabled to CreateJob and UpdateJob APIs. ([b3bbf57](https://github.com/aws/aws-sdk-js-v3/commit/b3bbf5793df82fbb32b88b640408db99f30dcb47))
+
+
+
+
+
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.632.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.631.0...v3.632.0) (2024-08-15)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.631.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.630.0...v3.631.0) (2024-08-14)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.630.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.629.0...v3.630.0) (2024-08-13)
+
+
+### Features
+
+* **client-glue:** Add AttributesToGet parameter support for Glue GetTables ([3d999b6](https://github.com/aws/aws-sdk-js-v3/commit/3d999b614c4cbd9db561e1ea32b6bbdea00df7e2))
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.627.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.626.0...v3.627.0) (2024-08-08)
+
+
+### Features
+
+* **client-glue:** This release adds support to retrieve the validation status when creating or updating Glue Data Catalog Views. Also added is support for BasicCatalogTarget partition keys. ([be3723e](https://github.com/aws/aws-sdk-js-v3/commit/be3723ee612aa589746b3a9245f1c3a0b7f3800c))
+
+
+
+
+
+# [3.626.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.625.0...v3.626.0) (2024-08-07)
+
+
+### Features
+
+* **client-glue:** Introducing AWS Glue Data Quality anomaly detection, a new functionality that uses ML-based solutions to detect data anomalies users have not explicitly defined rules for. ([d6bd32e](https://github.com/aws/aws-sdk-js-v3/commit/d6bd32e6f12974c8f99bd93487dc0423cba9e547))
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.623.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.622.0...v3.623.0) (2024-08-02)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+## [3.620.1](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.0...v3.620.1) (2024-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+
+### Features
+
+* **client-glue:** Add recipe step support for recipe node ([c9d85d8](https://github.com/aws/aws-sdk-js-v3/commit/c9d85d8e6d0156e0a3033e7887f099501336e1f6))
+
+
+
+
+
+# [3.613.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.612.0...v3.613.0) (2024-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.607.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.606.0...v3.607.0) (2024-06-28)
+
+
+### Features
+
+* **client-glue:** Added AttributesToGet parameter to Glue GetDatabases, allowing caller to limit output to include only the database name. ([89e628f](https://github.com/aws/aws-sdk-js-v3/commit/89e628f9946c977fa36a250a972099547798448b))
+
+
+
+
+
+# [3.606.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.605.0...v3.606.0) (2024-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
 # [3.600.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.599.0...v3.600.0) (2024-06-18)
 
 **Note:** Version bump only for package @aws-sdk/client-glue

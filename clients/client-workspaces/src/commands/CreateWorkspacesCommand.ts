@@ -46,6 +46,13 @@ export interface CreateWorkspacesCommandOutput extends CreateWorkspacesResult, _
  *                   <p>User-decoupled WorkSpaces are only supported by Amazon WorkSpaces
  *                Core.</p>
  *                </li>
+ *                <li>
+ *                   <p>Review your running mode to ensure you are using one that is optimal for your needs and budget.
+ *                   For more information on switching running modes, see
+ *                   <a href="http://aws.amazon.com/workspaces-family/workspaces/faqs/#:~:text=Can%20I%20switch%20between%20hourly%20and%20monthly%20billing%20on%20WorkSpaces%20Personal%3F">
+ *                      Can I switch between hourly and monthly billing?</a>
+ *                   </p>
+ *                </li>
  *             </ul>
  *          </note>
  * @example
@@ -72,7 +79,7 @@ export interface CreateWorkspacesCommandOutput extends CreateWorkspacesResult, _
  *         Protocols: [ // ProtocolList
  *           "PCOIP" || "WSP",
  *         ],
- *         OperatingSystemName: "AMAZON_LINUX_2" || "UBUNTU_18_04" || "UBUNTU_20_04" || "UBUNTU_22_04" || "UNKNOWN" || "WINDOWS_10" || "WINDOWS_11" || "WINDOWS_7" || "WINDOWS_SERVER_2016" || "WINDOWS_SERVER_2019" || "WINDOWS_SERVER_2022",
+ *         OperatingSystemName: "AMAZON_LINUX_2" || "UBUNTU_18_04" || "UBUNTU_20_04" || "UBUNTU_22_04" || "UNKNOWN" || "WINDOWS_10" || "WINDOWS_11" || "WINDOWS_7" || "WINDOWS_SERVER_2016" || "WINDOWS_SERVER_2019" || "WINDOWS_SERVER_2022" || "RHEL_8",
  *       },
  *       Tags: [ // TagList
  *         { // Tag
@@ -105,7 +112,7 @@ export interface CreateWorkspacesCommandOutput extends CreateWorkspacesResult, _
  * //           Protocols: [ // ProtocolList
  * //             "PCOIP" || "WSP",
  * //           ],
- * //           OperatingSystemName: "AMAZON_LINUX_2" || "UBUNTU_18_04" || "UBUNTU_20_04" || "UBUNTU_22_04" || "UNKNOWN" || "WINDOWS_10" || "WINDOWS_11" || "WINDOWS_7" || "WINDOWS_SERVER_2016" || "WINDOWS_SERVER_2019" || "WINDOWS_SERVER_2022",
+ * //           OperatingSystemName: "AMAZON_LINUX_2" || "UBUNTU_18_04" || "UBUNTU_20_04" || "UBUNTU_22_04" || "UNKNOWN" || "WINDOWS_10" || "WINDOWS_11" || "WINDOWS_7" || "WINDOWS_SERVER_2016" || "WINDOWS_SERVER_2019" || "WINDOWS_SERVER_2022" || "RHEL_8",
  * //         },
  * //         Tags: [ // TagList
  * //           { // Tag
@@ -144,7 +151,7 @@ export interface CreateWorkspacesCommandOutput extends CreateWorkspacesResult, _
  * //         Protocols: [
  * //           "PCOIP" || "WSP",
  * //         ],
- * //         OperatingSystemName: "AMAZON_LINUX_2" || "UBUNTU_18_04" || "UBUNTU_20_04" || "UBUNTU_22_04" || "UNKNOWN" || "WINDOWS_10" || "WINDOWS_11" || "WINDOWS_7" || "WINDOWS_SERVER_2016" || "WINDOWS_SERVER_2019" || "WINDOWS_SERVER_2022",
+ * //         OperatingSystemName: "AMAZON_LINUX_2" || "UBUNTU_18_04" || "UBUNTU_20_04" || "UBUNTU_22_04" || "UNKNOWN" || "WINDOWS_10" || "WINDOWS_11" || "WINDOWS_7" || "WINDOWS_SERVER_2016" || "WINDOWS_SERVER_2019" || "WINDOWS_SERVER_2022" || "RHEL_8",
  * //       },
  * //       ModificationStates: [ // ModificationStateList
  * //         { // ModificationState

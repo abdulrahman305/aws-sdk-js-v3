@@ -100,6 +100,10 @@ import {
 } from "./commands/CreateWorkspaceImageCommand";
 import { CreateWorkspacesCommandInput, CreateWorkspacesCommandOutput } from "./commands/CreateWorkspacesCommand";
 import {
+  CreateWorkspacesPoolCommandInput,
+  CreateWorkspacesPoolCommandOutput,
+} from "./commands/CreateWorkspacesPoolCommand";
+import {
   DeleteAccountLinkInvitationCommandInput,
   DeleteAccountLinkInvitationCommandOutput,
 } from "./commands/DeleteAccountLinkInvitationCommand";
@@ -206,6 +210,14 @@ import {
   DescribeWorkspaceSnapshotsCommandOutput,
 } from "./commands/DescribeWorkspaceSnapshotsCommand";
 import {
+  DescribeWorkspacesPoolsCommandInput,
+  DescribeWorkspacesPoolsCommandOutput,
+} from "./commands/DescribeWorkspacesPoolsCommand";
+import {
+  DescribeWorkspacesPoolSessionsCommandInput,
+  DescribeWorkspacesPoolSessionsCommandOutput,
+} from "./commands/DescribeWorkspacesPoolSessionsCommand";
+import {
   DisassociateConnectionAliasCommandInput,
   DisassociateConnectionAliasCommandOutput,
 } from "./commands/DisassociateConnectionAliasCommand";
@@ -250,6 +262,10 @@ import {
   ModifySelfservicePermissionsCommandOutput,
 } from "./commands/ModifySelfservicePermissionsCommand";
 import {
+  ModifyStreamingPropertiesCommandInput,
+  ModifyStreamingPropertiesCommandOutput,
+} from "./commands/ModifyStreamingPropertiesCommand";
+import {
   ModifyWorkspaceAccessPropertiesCommandInput,
   ModifyWorkspaceAccessPropertiesCommandOutput,
 } from "./commands/ModifyWorkspaceAccessPropertiesCommand";
@@ -278,11 +294,24 @@ import {
 import { RestoreWorkspaceCommandInput, RestoreWorkspaceCommandOutput } from "./commands/RestoreWorkspaceCommand";
 import { RevokeIpRulesCommandInput, RevokeIpRulesCommandOutput } from "./commands/RevokeIpRulesCommand";
 import { StartWorkspacesCommandInput, StartWorkspacesCommandOutput } from "./commands/StartWorkspacesCommand";
+import {
+  StartWorkspacesPoolCommandInput,
+  StartWorkspacesPoolCommandOutput,
+} from "./commands/StartWorkspacesPoolCommand";
 import { StopWorkspacesCommandInput, StopWorkspacesCommandOutput } from "./commands/StopWorkspacesCommand";
+import { StopWorkspacesPoolCommandInput, StopWorkspacesPoolCommandOutput } from "./commands/StopWorkspacesPoolCommand";
 import {
   TerminateWorkspacesCommandInput,
   TerminateWorkspacesCommandOutput,
 } from "./commands/TerminateWorkspacesCommand";
+import {
+  TerminateWorkspacesPoolCommandInput,
+  TerminateWorkspacesPoolCommandOutput,
+} from "./commands/TerminateWorkspacesPoolCommand";
+import {
+  TerminateWorkspacesPoolSessionCommandInput,
+  TerminateWorkspacesPoolSessionCommandOutput,
+} from "./commands/TerminateWorkspacesPoolSessionCommand";
 import {
   UpdateConnectClientAddInCommandInput,
   UpdateConnectClientAddInCommandOutput,
@@ -303,6 +332,10 @@ import {
   UpdateWorkspaceImagePermissionCommandInput,
   UpdateWorkspaceImagePermissionCommandOutput,
 } from "./commands/UpdateWorkspaceImagePermissionCommand";
+import {
+  UpdateWorkspacesPoolCommandInput,
+  UpdateWorkspacesPoolCommandOutput,
+} from "./commands/UpdateWorkspacesPoolCommand";
 import {
   ClientInputEndpointParameters,
   ClientResolvedEndpointParameters,
@@ -334,6 +367,7 @@ export type ServiceInputTypes =
   | CreateWorkspaceBundleCommandInput
   | CreateWorkspaceImageCommandInput
   | CreateWorkspacesCommandInput
+  | CreateWorkspacesPoolCommandInput
   | DeleteAccountLinkInvitationCommandInput
   | DeleteClientBrandingCommandInput
   | DeleteConnectClientAddInCommandInput
@@ -365,6 +399,8 @@ export type ServiceInputTypes =
   | DescribeWorkspaceSnapshotsCommandInput
   | DescribeWorkspacesCommandInput
   | DescribeWorkspacesConnectionStatusCommandInput
+  | DescribeWorkspacesPoolSessionsCommandInput
+  | DescribeWorkspacesPoolsCommandInput
   | DisassociateConnectionAliasCommandInput
   | DisassociateIpGroupsCommandInput
   | DisassociateWorkspaceApplicationCommandInput
@@ -379,6 +415,7 @@ export type ServiceInputTypes =
   | ModifyClientPropertiesCommandInput
   | ModifySamlPropertiesCommandInput
   | ModifySelfservicePermissionsCommandInput
+  | ModifyStreamingPropertiesCommandInput
   | ModifyWorkspaceAccessPropertiesCommandInput
   | ModifyWorkspaceCreationPropertiesCommandInput
   | ModifyWorkspacePropertiesCommandInput
@@ -390,13 +427,18 @@ export type ServiceInputTypes =
   | RestoreWorkspaceCommandInput
   | RevokeIpRulesCommandInput
   | StartWorkspacesCommandInput
+  | StartWorkspacesPoolCommandInput
   | StopWorkspacesCommandInput
+  | StopWorkspacesPoolCommandInput
   | TerminateWorkspacesCommandInput
+  | TerminateWorkspacesPoolCommandInput
+  | TerminateWorkspacesPoolSessionCommandInput
   | UpdateConnectClientAddInCommandInput
   | UpdateConnectionAliasPermissionCommandInput
   | UpdateRulesOfIpGroupCommandInput
   | UpdateWorkspaceBundleCommandInput
-  | UpdateWorkspaceImagePermissionCommandInput;
+  | UpdateWorkspaceImagePermissionCommandInput
+  | UpdateWorkspacesPoolCommandInput;
 
 /**
  * @public
@@ -418,6 +460,7 @@ export type ServiceOutputTypes =
   | CreateWorkspaceBundleCommandOutput
   | CreateWorkspaceImageCommandOutput
   | CreateWorkspacesCommandOutput
+  | CreateWorkspacesPoolCommandOutput
   | DeleteAccountLinkInvitationCommandOutput
   | DeleteClientBrandingCommandOutput
   | DeleteConnectClientAddInCommandOutput
@@ -449,6 +492,8 @@ export type ServiceOutputTypes =
   | DescribeWorkspaceSnapshotsCommandOutput
   | DescribeWorkspacesCommandOutput
   | DescribeWorkspacesConnectionStatusCommandOutput
+  | DescribeWorkspacesPoolSessionsCommandOutput
+  | DescribeWorkspacesPoolsCommandOutput
   | DisassociateConnectionAliasCommandOutput
   | DisassociateIpGroupsCommandOutput
   | DisassociateWorkspaceApplicationCommandOutput
@@ -463,6 +508,7 @@ export type ServiceOutputTypes =
   | ModifyClientPropertiesCommandOutput
   | ModifySamlPropertiesCommandOutput
   | ModifySelfservicePermissionsCommandOutput
+  | ModifyStreamingPropertiesCommandOutput
   | ModifyWorkspaceAccessPropertiesCommandOutput
   | ModifyWorkspaceCreationPropertiesCommandOutput
   | ModifyWorkspacePropertiesCommandOutput
@@ -474,13 +520,18 @@ export type ServiceOutputTypes =
   | RestoreWorkspaceCommandOutput
   | RevokeIpRulesCommandOutput
   | StartWorkspacesCommandOutput
+  | StartWorkspacesPoolCommandOutput
   | StopWorkspacesCommandOutput
+  | StopWorkspacesPoolCommandOutput
   | TerminateWorkspacesCommandOutput
+  | TerminateWorkspacesPoolCommandOutput
+  | TerminateWorkspacesPoolSessionCommandOutput
   | UpdateConnectClientAddInCommandOutput
   | UpdateConnectionAliasPermissionCommandOutput
   | UpdateRulesOfIpGroupCommandOutput
   | UpdateWorkspaceBundleCommandOutput
-  | UpdateWorkspaceImagePermissionCommandOutput;
+  | UpdateWorkspaceImagePermissionCommandOutput
+  | UpdateWorkspacesPoolCommandOutput;
 
 /**
  * @public
@@ -619,11 +670,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type WorkSpacesClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -639,11 +690,11 @@ export interface WorkSpacesClientConfig extends WorkSpacesClientConfigType {}
 export type WorkSpacesClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -687,25 +738,28 @@ export class WorkSpacesClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<WorkSpacesClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultWorkSpacesHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: WorkSpacesClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -718,14 +772,5 @@ export class WorkSpacesClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultWorkSpacesHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: WorkSpacesClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

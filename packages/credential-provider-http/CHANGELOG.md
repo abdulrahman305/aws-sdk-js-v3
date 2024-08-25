@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/credential-provider-http
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/credential-provider-http
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+**Note:** Version bump only for package @aws-sdk/credential-provider-http
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+**Note:** Version bump only for package @aws-sdk/credential-provider-http
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+**Note:** Version bump only for package @aws-sdk/credential-provider-http
+
+
+
+
+
+# [3.613.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.612.0...v3.613.0) (2024-07-09)
+
+
+### Bug Fixes
+
+* **middleware-eventstream:** lowercase headers more consistently ([#6259](https://github.com/aws/aws-sdk-js-v3/issues/6259)) ([1965eb0](https://github.com/aws/aws-sdk-js-v3/commit/1965eb04406c5811173745f7493d1f653e8e3488))
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/credential-provider-http
+
+
+
+
+
 # [3.598.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.597.0...v3.598.0) (2024-06-14)
 
 **Note:** Version bump only for package @aws-sdk/credential-provider-http

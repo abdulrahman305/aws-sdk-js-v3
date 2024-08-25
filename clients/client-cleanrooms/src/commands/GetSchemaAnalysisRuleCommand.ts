@@ -38,14 +38,14 @@ export interface GetSchemaAnalysisRuleCommandOutput extends GetSchemaAnalysisRul
  * const input = { // GetSchemaAnalysisRuleInput
  *   collaborationIdentifier: "STRING_VALUE", // required
  *   name: "STRING_VALUE", // required
- *   type: "AGGREGATION" || "LIST" || "CUSTOM", // required
+ *   type: "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE", // required
  * };
  * const command = new GetSchemaAnalysisRuleCommand(input);
  * const response = await client.send(command);
  * // { // GetSchemaAnalysisRuleOutput
  * //   analysisRule: { // AnalysisRule
  * //     collaborationId: "STRING_VALUE", // required
- * //     type: "AGGREGATION" || "LIST" || "CUSTOM", // required
+ * //     type: "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE", // required
  * //     name: "STRING_VALUE", // required
  * //     createTime: new Date("TIMESTAMP"), // required
  * //     updateTime: new Date("TIMESTAMP"), // required
@@ -61,6 +61,7 @@ export interface GetSchemaAnalysisRuleCommandOutput extends GetSchemaAnalysisRul
  * //           listColumns: [ // required
  * //             "STRING_VALUE",
  * //           ],
+ * //           additionalAnalyses: "ALLOWED" || "REQUIRED" || "NOT_ALLOWED",
  * //         },
  * //         aggregation: { // AnalysisRuleAggregation
  * //           aggregateColumns: [ // AggregateColumnList // required
@@ -91,12 +92,17 @@ export interface GetSchemaAnalysisRuleCommandOutput extends GetSchemaAnalysisRul
  * //               type: "STRING_VALUE", // required
  * //             },
  * //           ],
+ * //           additionalAnalyses: "ALLOWED" || "REQUIRED" || "NOT_ALLOWED",
  * //         },
  * //         custom: { // AnalysisRuleCustom
  * //           allowedAnalyses: [ // AllowedAnalysesList // required
  * //             "STRING_VALUE",
  * //           ],
  * //           allowedAnalysisProviders: [ // AllowedAnalysisProviderList
+ * //             "STRING_VALUE",
+ * //           ],
+ * //           additionalAnalyses: "ALLOWED" || "REQUIRED" || "NOT_ALLOWED",
+ * //           disallowedOutputColumns: [
  * //             "STRING_VALUE",
  * //           ],
  * //           differentialPrivacy: { // DifferentialPrivacyConfiguration
@@ -106,6 +112,17 @@ export interface GetSchemaAnalysisRuleCommandOutput extends GetSchemaAnalysisRul
  * //               },
  * //             ],
  * //           },
+ * //         },
+ * //         idMappingTable: { // AnalysisRuleIdMappingTable
+ * //           joinColumns: "<AnalysisRuleColumnList>", // required
+ * //           queryConstraints: [ // QueryConstraintList // required
+ * //             { // QueryConstraint Union: only one key present
+ * //               requireOverlap: { // QueryConstraintRequireOverlap
+ * //                 columns: "<AnalysisRuleColumnList>",
+ * //               },
+ * //             },
+ * //           ],
+ * //           dimensionColumns: "<AnalysisRuleColumnList>",
  * //         },
  * //       },
  * //     },

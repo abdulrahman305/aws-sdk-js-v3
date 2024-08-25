@@ -502,11 +502,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type WorkSpacesWebClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -522,11 +522,11 @@ export interface WorkSpacesWebClientConfig extends WorkSpacesWebClientConfigType
 export type WorkSpacesWebClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -537,10 +537,10 @@ export type WorkSpacesWebClientResolvedConfigType = __SmithyResolvedConfiguratio
 export interface WorkSpacesWebClientResolvedConfig extends WorkSpacesWebClientResolvedConfigType {}
 
 /**
- * <p>WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate
- *          secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide
+ * <p>Amazon WorkSpaces Secure Browser is a low cost, fully managed WorkSpace built specifically to facilitate
+ *          secure, web-based workloads. WorkSpaces Secure Browser makes it easy for customers to safely provide
  *          their employees with access to internal websites and SaaS web applications without the
- *          administrative burden of appliances or specialized client software. WorkSpaces Web provides
+ *          administrative burden of appliances or specialized client software. WorkSpaces Secure Browser provides
  *          simple policy tools tailored for user interactions, while offloading common tasks like
  *          capacity management, scaling, and maintaining browser images.</p>
  * @public
@@ -559,25 +559,28 @@ export class WorkSpacesWebClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<WorkSpacesWebClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultWorkSpacesWebHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: WorkSpacesWebClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -590,14 +593,5 @@ export class WorkSpacesWebClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultWorkSpacesWebHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: WorkSpacesWebClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

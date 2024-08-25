@@ -40,6 +40,10 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *          model. </p>
  *          <p>To find out if a model supports streaming, call <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetFoundationModel.html">GetFoundationModel</a>
  *          and check the <code>responseStreamingSupported</code> field in the response.</p>
+ *          <note>
+ *             <p>The CLI doesn't support streaming operations in Amazon Bedrock, including <code>ConverseStream</code>.</p>
+ *          </note>
+ *          <p>Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The data is only used to generate the response.</p>
  *          <p>For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
  *          To use a guardrail, see  <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
  *          To use a tool with a model, see <i>Tool use (Function calling)</i> in the <i>Amazon Bedrock User Guide</i>
@@ -67,6 +71,13 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *               bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
  *             },
  *           },
+ *           document: { // DocumentBlock
+ *             format: "pdf" || "csv" || "doc" || "docx" || "xls" || "xlsx" || "html" || "txt" || "md", // required
+ *             name: "STRING_VALUE", // required
+ *             source: { // DocumentSource Union: only one key present
+ *               bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *             },
+ *           },
  *           toolUse: { // ToolUseBlock
  *             toolUseId: "STRING_VALUE", // required
  *             name: "STRING_VALUE", // required
@@ -84,6 +95,13 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *                     bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
  *                   },
  *                 },
+ *                 document: {
+ *                   format: "pdf" || "csv" || "doc" || "docx" || "xls" || "xlsx" || "html" || "txt" || "md", // required
+ *                   name: "STRING_VALUE", // required
+ *                   source: {//  Union: only one key present
+ *                     bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *                   },
+ *                 },
  *               },
  *             ],
  *             status: "success" || "error",
@@ -91,6 +109,9 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *           guardContent: { // GuardrailConverseContentBlock Union: only one key present
  *             text: { // GuardrailConverseTextBlock
  *               text: "STRING_VALUE", // required
+ *               qualifiers: [ // GuardrailConverseContentQualifierList
+ *                 "grounding_source" || "query" || "guard_content",
+ *               ],
  *             },
  *           },
  *         },
@@ -103,6 +124,9 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *       guardContent: {//  Union: only one key present
  *         text: {
  *           text: "STRING_VALUE", // required
+ *           qualifiers: [
+ *             "grounding_source" || "query" || "guard_content",
+ *           ],
  *         },
  *       },
  *     },
@@ -244,6 +268,16 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                   },
  * //                 ],
  * //               },
+ * //               contextualGroundingPolicy: { // GuardrailContextualGroundingPolicyAssessment
+ * //                 filters: [ // GuardrailContextualGroundingFilters
+ * //                   { // GuardrailContextualGroundingFilter
+ * //                     type: "GROUNDING" || "RELEVANCE", // required
+ * //                     threshold: Number("double"), // required
+ * //                     score: Number("double"), // required
+ * //                     action: "BLOCKED" || "NONE", // required
+ * //                   },
+ * //                 ],
+ * //               },
  * //             },
  * //           },
  * //           outputAssessments: { // GuardrailAssessmentListMap
@@ -299,6 +333,16 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     },
  * //                   ],
  * //                 },
+ * //                 contextualGroundingPolicy: {
+ * //                   filters: [
+ * //                     {
+ * //                       type: "GROUNDING" || "RELEVANCE", // required
+ * //                       threshold: Number("double"), // required
+ * //                       score: Number("double"), // required
+ * //                       action: "BLOCKED" || "NONE", // required
+ * //                     },
+ * //                   ],
+ * //                 },
  * //               },
  * //             ],
  * //           },
@@ -317,6 +361,9 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //       message: "STRING_VALUE",
  * //     },
  * //     throttlingException: { // ThrottlingException
+ * //       message: "STRING_VALUE",
+ * //     },
+ * //     serviceUnavailableException: { // ServiceUnavailableException
  * //       message: "STRING_VALUE",
  * //     },
  * //   },
@@ -348,8 +395,11 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The specified resource ARN was not found. Check the ARN and try your request again.</p>
  *
+ * @throws {@link ServiceUnavailableException} (server fault)
+ *  <p>The service isn't currently available. Try again later.</p>
+ *
  * @throws {@link ThrottlingException} (client fault)
- *  <p>The number of requests exceeds the limit. Resubmit your request later.</p>
+ *  <p>Your request was throttled because of service-wide limitations. Resubmit your request later or in a different region. You can also purchase <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html">Provisioned Throughput</a> to increase the rate or number of tokens you can process.</p>
  *
  * @throws {@link ValidationException} (client fault)
  *  <p>Input validation failed. Check your request parameters and retry the request.</p>

@@ -62,7 +62,7 @@ export interface CreateNodegroupCommandOutput extends CreateNodegroupResponse, _
  *   instanceTypes: [
  *     "STRING_VALUE",
  *   ],
- *   amiType: "AL2_x86_64" || "AL2_x86_64_GPU" || "AL2_ARM_64" || "CUSTOM" || "BOTTLEROCKET_ARM_64" || "BOTTLEROCKET_x86_64" || "BOTTLEROCKET_ARM_64_NVIDIA" || "BOTTLEROCKET_x86_64_NVIDIA" || "WINDOWS_CORE_2019_x86_64" || "WINDOWS_FULL_2019_x86_64" || "WINDOWS_CORE_2022_x86_64" || "WINDOWS_FULL_2022_x86_64" || "AL2023_x86_64_STANDARD" || "AL2023_ARM_64_STANDARD",
+ *   amiType: "AL2_x86_64" || "AL2_x86_64_GPU" || "AL2_ARM_64" || "CUSTOM" || "BOTTLEROCKET_ARM_64" || "BOTTLEROCKET_x86_64" || "BOTTLEROCKET_ARM_64_NVIDIA" || "BOTTLEROCKET_x86_64_NVIDIA" || "WINDOWS_CORE_2019_x86_64" || "WINDOWS_FULL_2019_x86_64" || "WINDOWS_CORE_2022_x86_64" || "WINDOWS_FULL_2022_x86_64" || "AL2023_x86_64_STANDARD" || "AL2023_ARM_64_STANDARD" || "AL2023_x86_64_NEURON" || "AL2023_x86_64_NVIDIA",
  *   remoteAccess: { // RemoteAccessConfig
  *     ec2SshKey: "STRING_VALUE",
  *     sourceSecurityGroups: [
@@ -93,7 +93,7 @@ export interface CreateNodegroupCommandOutput extends CreateNodegroupResponse, _
  *     maxUnavailable: Number("int"),
  *     maxUnavailablePercentage: Number("int"),
  *   },
- *   capacityType: "ON_DEMAND" || "SPOT",
+ *   capacityType: "ON_DEMAND" || "SPOT" || "CAPACITY_BLOCK",
  *   version: "STRING_VALUE",
  *   releaseVersion: "STRING_VALUE",
  * };
@@ -109,7 +109,7 @@ export interface CreateNodegroupCommandOutput extends CreateNodegroupResponse, _
  * //     createdAt: new Date("TIMESTAMP"),
  * //     modifiedAt: new Date("TIMESTAMP"),
  * //     status: "CREATING" || "ACTIVE" || "UPDATING" || "DELETING" || "CREATE_FAILED" || "DELETE_FAILED" || "DEGRADED",
- * //     capacityType: "ON_DEMAND" || "SPOT",
+ * //     capacityType: "ON_DEMAND" || "SPOT" || "CAPACITY_BLOCK",
  * //     scalingConfig: { // NodegroupScalingConfig
  * //       minSize: Number("int"),
  * //       maxSize: Number("int"),
@@ -127,7 +127,7 @@ export interface CreateNodegroupCommandOutput extends CreateNodegroupResponse, _
  * //         "STRING_VALUE",
  * //       ],
  * //     },
- * //     amiType: "AL2_x86_64" || "AL2_x86_64_GPU" || "AL2_ARM_64" || "CUSTOM" || "BOTTLEROCKET_ARM_64" || "BOTTLEROCKET_x86_64" || "BOTTLEROCKET_ARM_64_NVIDIA" || "BOTTLEROCKET_x86_64_NVIDIA" || "WINDOWS_CORE_2019_x86_64" || "WINDOWS_FULL_2019_x86_64" || "WINDOWS_CORE_2022_x86_64" || "WINDOWS_FULL_2022_x86_64" || "AL2023_x86_64_STANDARD" || "AL2023_ARM_64_STANDARD",
+ * //     amiType: "AL2_x86_64" || "AL2_x86_64_GPU" || "AL2_ARM_64" || "CUSTOM" || "BOTTLEROCKET_ARM_64" || "BOTTLEROCKET_x86_64" || "BOTTLEROCKET_ARM_64_NVIDIA" || "BOTTLEROCKET_x86_64_NVIDIA" || "WINDOWS_CORE_2019_x86_64" || "WINDOWS_FULL_2019_x86_64" || "WINDOWS_CORE_2022_x86_64" || "WINDOWS_FULL_2022_x86_64" || "AL2023_x86_64_STANDARD" || "AL2023_ARM_64_STANDARD" || "AL2023_x86_64_NEURON" || "AL2023_x86_64_NVIDIA",
  * //     nodeRole: "STRING_VALUE",
  * //     labels: { // labelsMap
  * //       "<keys>": "STRING_VALUE",

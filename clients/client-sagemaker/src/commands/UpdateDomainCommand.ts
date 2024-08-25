@@ -141,6 +141,10 @@ export interface UpdateDomainCommandOutput extends UpdateDomainResponse, __Metad
  *       GenerativeAiSettings: { // GenerativeAiSettings
  *         AmazonBedrockRoleArn: "STRING_VALUE",
  *       },
+ *       EmrServerlessSettings: { // EmrServerlessSettings
+ *         ExecutionRoleArn: "STRING_VALUE",
+ *         Status: "ENABLED" || "DISABLED",
+ *       },
  *     },
  *     CodeEditorAppSettings: { // CodeEditorAppSettings
  *       DefaultResourceSpec: {
@@ -178,6 +182,14 @@ export interface UpdateDomainCommandOutput extends UpdateDomainResponse, __Metad
  *           RepositoryUrl: "STRING_VALUE", // required
  *         },
  *       ],
+ *       EmrSettings: { // EmrSettings
+ *         AssumableRoleArns: [ // AssumableRoleArns
+ *           "STRING_VALUE",
+ *         ],
+ *         ExecutionRoleArns: [ // ExecutionRoleArns
+ *           "STRING_VALUE",
+ *         ],
+ *       },
  *     },
  *     SpaceStorageSettings: { // DefaultSpaceStorageSettings
  *       DefaultEbsStorageSettings: { // DefaultEbsStorageSettings
@@ -199,6 +211,14 @@ export interface UpdateDomainCommandOutput extends UpdateDomainResponse, __Metad
  *         },
  *       },
  *     ],
+ *     StudioWebPortalSettings: { // StudioWebPortalSettings
+ *       HiddenMlTools: [ // HiddenMlToolsList
+ *         "DataWrangler" || "FeatureStore" || "EmrClusters" || "AutoMl" || "Experiments" || "Training" || "ModelEvaluation" || "Pipelines" || "Models" || "JumpStart" || "InferenceRecommender" || "Endpoints" || "Projects" || "InferenceOptimization",
+ *       ],
+ *       HiddenAppTypes: [ // HiddenAppTypesList
+ *         "JupyterServer" || "KernelGateway" || "DetailedProfiler" || "TensorBoard" || "CodeEditor" || "JupyterLab" || "RStudioServerPro" || "RSessionGateway" || "Canvas",
+ *       ],
+ *     },
  *   },
  *   DomainSettingsForUpdate: { // DomainSettingsForUpdate
  *     RStudioServerProDomainSettingsForUpdate: { // RStudioServerProDomainSettingsForUpdate
@@ -216,6 +236,10 @@ export interface UpdateDomainCommandOutput extends UpdateDomainResponse, __Metad
  *       VpcOnlyTrustedAccounts: [ // VpcOnlyTrustedAccounts
  *         "STRING_VALUE",
  *       ],
+ *     },
+ *     AmazonQSettings: { // AmazonQSettings
+ *       Status: "ENABLED" || "DISABLED",
+ *       QProfileArn: "STRING_VALUE",
  *     },
  *   },
  *   AppSecurityGroupManagement: "Service" || "Customer",
@@ -255,6 +279,14 @@ export interface UpdateDomainCommandOutput extends UpdateDomainResponse, __Metad
  *           RepositoryUrl: "STRING_VALUE", // required
  *         },
  *       ],
+ *       EmrSettings: {
+ *         AssumableRoleArns: [
+ *           "STRING_VALUE",
+ *         ],
+ *         ExecutionRoleArns: [
+ *           "STRING_VALUE",
+ *         ],
+ *       },
  *     },
  *     SpaceStorageSettings: {
  *       DefaultEbsStorageSettings: {

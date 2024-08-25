@@ -44,6 +44,16 @@ export interface UpdateApplicationCommandOutput extends UpdateApplicationRespons
  *   attachmentsConfiguration: { // AttachmentsConfiguration
  *     attachmentsControlMode: "ENABLED" || "DISABLED", // required
  *   },
+ *   qAppsConfiguration: { // QAppsConfiguration
+ *     qAppsControlMode: "ENABLED" || "DISABLED", // required
+ *   },
+ *   personalizationConfiguration: { // PersonalizationConfiguration
+ *     personalizationControlMode: "ENABLED" || "DISABLED", // required
+ *   },
+ *   autoSubscriptionConfiguration: { // AutoSubscriptionConfiguration
+ *     autoSubscribe: "ENABLED" || "DISABLED", // required
+ *     defaultSubscriptionType: "Q_LITE" || "Q_BUSINESS",
+ *   },
  * };
  * const command = new UpdateApplicationCommand(input);
  * const response = await client.send(command);

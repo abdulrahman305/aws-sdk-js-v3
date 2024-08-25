@@ -113,6 +113,10 @@ import {
   CreateFlowDefinitionCommandOutput,
 } from "./commands/CreateFlowDefinitionCommand";
 import { CreateHubCommandInput, CreateHubCommandOutput } from "./commands/CreateHubCommand";
+import {
+  CreateHubContentReferenceCommandInput,
+  CreateHubContentReferenceCommandOutput,
+} from "./commands/CreateHubContentReferenceCommand";
 import { CreateHumanTaskUiCommandInput, CreateHumanTaskUiCommandOutput } from "./commands/CreateHumanTaskUiCommand";
 import {
   CreateHyperParameterTuningJobCommandInput,
@@ -172,6 +176,10 @@ import {
   CreateNotebookInstanceLifecycleConfigCommandInput,
   CreateNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/CreateNotebookInstanceLifecycleConfigCommand";
+import {
+  CreateOptimizationJobCommandInput,
+  CreateOptimizationJobCommandOutput,
+} from "./commands/CreateOptimizationJobCommand";
 import { CreatePipelineCommandInput, CreatePipelineCommandOutput } from "./commands/CreatePipelineCommand";
 import {
   CreatePresignedDomainUrlCommandInput,
@@ -251,6 +259,10 @@ import {
 } from "./commands/DeleteFlowDefinitionCommand";
 import { DeleteHubCommandInput, DeleteHubCommandOutput } from "./commands/DeleteHubCommand";
 import { DeleteHubContentCommandInput, DeleteHubContentCommandOutput } from "./commands/DeleteHubContentCommand";
+import {
+  DeleteHubContentReferenceCommandInput,
+  DeleteHubContentReferenceCommandOutput,
+} from "./commands/DeleteHubContentReferenceCommand";
 import { DeleteHumanTaskUiCommandInput, DeleteHumanTaskUiCommandOutput } from "./commands/DeleteHumanTaskUiCommand";
 import {
   DeleteHyperParameterTuningJobCommandInput,
@@ -305,6 +317,10 @@ import {
   DeleteNotebookInstanceLifecycleConfigCommandInput,
   DeleteNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/DeleteNotebookInstanceLifecycleConfigCommand";
+import {
+  DeleteOptimizationJobCommandInput,
+  DeleteOptimizationJobCommandOutput,
+} from "./commands/DeleteOptimizationJobCommand";
 import { DeletePipelineCommandInput, DeletePipelineCommandOutput } from "./commands/DeletePipelineCommand";
 import { DeleteProjectCommandInput, DeleteProjectCommandOutput } from "./commands/DeleteProjectCommand";
 import { DeleteSpaceCommandInput, DeleteSpaceCommandOutput } from "./commands/DeleteSpaceCommand";
@@ -462,6 +478,10 @@ import {
   DescribeNotebookInstanceLifecycleConfigCommandInput,
   DescribeNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/DescribeNotebookInstanceLifecycleConfigCommand";
+import {
+  DescribeOptimizationJobCommandInput,
+  DescribeOptimizationJobCommandOutput,
+} from "./commands/DescribeOptimizationJobCommand";
 import { DescribePipelineCommandInput, DescribePipelineCommandOutput } from "./commands/DescribePipelineCommand";
 import {
   DescribePipelineDefinitionForExecutionCommandInput,
@@ -685,6 +705,10 @@ import {
   ListNotebookInstancesCommandOutput,
 } from "./commands/ListNotebookInstancesCommand";
 import {
+  ListOptimizationJobsCommandInput,
+  ListOptimizationJobsCommandOutput,
+} from "./commands/ListOptimizationJobsCommand";
+import {
   ListPipelineExecutionsCommandInput,
   ListPipelineExecutionsCommandOutput,
 } from "./commands/ListPipelineExecutionsCommand";
@@ -807,6 +831,10 @@ import {
   StopNotebookInstanceCommandInput,
   StopNotebookInstanceCommandOutput,
 } from "./commands/StopNotebookInstanceCommand";
+import {
+  StopOptimizationJobCommandInput,
+  StopOptimizationJobCommandOutput,
+} from "./commands/StopOptimizationJobCommand";
 import {
   StopPipelineExecutionCommandInput,
   StopPipelineExecutionCommandOutput,
@@ -939,6 +967,7 @@ export type ServiceInputTypes =
   | CreateFeatureGroupCommandInput
   | CreateFlowDefinitionCommandInput
   | CreateHubCommandInput
+  | CreateHubContentReferenceCommandInput
   | CreateHumanTaskUiCommandInput
   | CreateHyperParameterTuningJobCommandInput
   | CreateImageCommandInput
@@ -959,6 +988,7 @@ export type ServiceInputTypes =
   | CreateMonitoringScheduleCommandInput
   | CreateNotebookInstanceCommandInput
   | CreateNotebookInstanceLifecycleConfigCommandInput
+  | CreateOptimizationJobCommandInput
   | CreatePipelineCommandInput
   | CreatePresignedDomainUrlCommandInput
   | CreatePresignedMlflowTrackingServerUrlCommandInput
@@ -996,6 +1026,7 @@ export type ServiceInputTypes =
   | DeleteFlowDefinitionCommandInput
   | DeleteHubCommandInput
   | DeleteHubContentCommandInput
+  | DeleteHubContentReferenceCommandInput
   | DeleteHumanTaskUiCommandInput
   | DeleteHyperParameterTuningJobCommandInput
   | DeleteImageCommandInput
@@ -1014,6 +1045,7 @@ export type ServiceInputTypes =
   | DeleteMonitoringScheduleCommandInput
   | DeleteNotebookInstanceCommandInput
   | DeleteNotebookInstanceLifecycleConfigCommandInput
+  | DeleteOptimizationJobCommandInput
   | DeletePipelineCommandInput
   | DeleteProjectCommandInput
   | DeleteSpaceCommandInput
@@ -1072,6 +1104,7 @@ export type ServiceInputTypes =
   | DescribeMonitoringScheduleCommandInput
   | DescribeNotebookInstanceCommandInput
   | DescribeNotebookInstanceLifecycleConfigCommandInput
+  | DescribeOptimizationJobCommandInput
   | DescribePipelineCommandInput
   | DescribePipelineDefinitionForExecutionCommandInput
   | DescribePipelineExecutionCommandInput
@@ -1153,6 +1186,7 @@ export type ServiceInputTypes =
   | ListMonitoringSchedulesCommandInput
   | ListNotebookInstanceLifecycleConfigsCommandInput
   | ListNotebookInstancesCommandInput
+  | ListOptimizationJobsCommandInput
   | ListPipelineExecutionStepsCommandInput
   | ListPipelineExecutionsCommandInput
   | ListPipelineParametersForExecutionCommandInput
@@ -1198,6 +1232,7 @@ export type ServiceInputTypes =
   | StopMlflowTrackingServerCommandInput
   | StopMonitoringScheduleCommandInput
   | StopNotebookInstanceCommandInput
+  | StopOptimizationJobCommandInput
   | StopPipelineExecutionCommandInput
   | StopProcessingJobCommandInput
   | StopTrainingJobCommandInput
@@ -1272,6 +1307,7 @@ export type ServiceOutputTypes =
   | CreateFeatureGroupCommandOutput
   | CreateFlowDefinitionCommandOutput
   | CreateHubCommandOutput
+  | CreateHubContentReferenceCommandOutput
   | CreateHumanTaskUiCommandOutput
   | CreateHyperParameterTuningJobCommandOutput
   | CreateImageCommandOutput
@@ -1292,6 +1328,7 @@ export type ServiceOutputTypes =
   | CreateMonitoringScheduleCommandOutput
   | CreateNotebookInstanceCommandOutput
   | CreateNotebookInstanceLifecycleConfigCommandOutput
+  | CreateOptimizationJobCommandOutput
   | CreatePipelineCommandOutput
   | CreatePresignedDomainUrlCommandOutput
   | CreatePresignedMlflowTrackingServerUrlCommandOutput
@@ -1329,6 +1366,7 @@ export type ServiceOutputTypes =
   | DeleteFlowDefinitionCommandOutput
   | DeleteHubCommandOutput
   | DeleteHubContentCommandOutput
+  | DeleteHubContentReferenceCommandOutput
   | DeleteHumanTaskUiCommandOutput
   | DeleteHyperParameterTuningJobCommandOutput
   | DeleteImageCommandOutput
@@ -1347,6 +1385,7 @@ export type ServiceOutputTypes =
   | DeleteMonitoringScheduleCommandOutput
   | DeleteNotebookInstanceCommandOutput
   | DeleteNotebookInstanceLifecycleConfigCommandOutput
+  | DeleteOptimizationJobCommandOutput
   | DeletePipelineCommandOutput
   | DeleteProjectCommandOutput
   | DeleteSpaceCommandOutput
@@ -1405,6 +1444,7 @@ export type ServiceOutputTypes =
   | DescribeMonitoringScheduleCommandOutput
   | DescribeNotebookInstanceCommandOutput
   | DescribeNotebookInstanceLifecycleConfigCommandOutput
+  | DescribeOptimizationJobCommandOutput
   | DescribePipelineCommandOutput
   | DescribePipelineDefinitionForExecutionCommandOutput
   | DescribePipelineExecutionCommandOutput
@@ -1486,6 +1526,7 @@ export type ServiceOutputTypes =
   | ListMonitoringSchedulesCommandOutput
   | ListNotebookInstanceLifecycleConfigsCommandOutput
   | ListNotebookInstancesCommandOutput
+  | ListOptimizationJobsCommandOutput
   | ListPipelineExecutionStepsCommandOutput
   | ListPipelineExecutionsCommandOutput
   | ListPipelineParametersForExecutionCommandOutput
@@ -1531,6 +1572,7 @@ export type ServiceOutputTypes =
   | StopMlflowTrackingServerCommandOutput
   | StopMonitoringScheduleCommandOutput
   | StopNotebookInstanceCommandOutput
+  | StopOptimizationJobCommandOutput
   | StopPipelineExecutionCommandOutput
   | StopProcessingJobCommandOutput
   | StopTrainingJobCommandOutput
@@ -1711,11 +1753,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type SageMakerClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -1731,11 +1773,11 @@ export interface SageMakerClientConfig extends SageMakerClientConfigType {}
 export type SageMakerClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -1778,25 +1820,28 @@ export class SageMakerClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<SageMakerClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultSageMakerHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: SageMakerClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -1809,14 +1854,5 @@ export class SageMakerClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultSageMakerHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: SageMakerClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

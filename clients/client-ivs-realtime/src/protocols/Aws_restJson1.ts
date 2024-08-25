@@ -44,6 +44,7 @@ import {
   DeleteEncoderConfigurationCommandInput,
   DeleteEncoderConfigurationCommandOutput,
 } from "../commands/DeleteEncoderConfigurationCommand";
+import { DeletePublicKeyCommandInput, DeletePublicKeyCommandOutput } from "../commands/DeletePublicKeyCommand";
 import { DeleteStageCommandInput, DeleteStageCommandOutput } from "../commands/DeleteStageCommand";
 import {
   DeleteStorageConfigurationCommandInput,
@@ -59,12 +60,14 @@ import {
   GetEncoderConfigurationCommandOutput,
 } from "../commands/GetEncoderConfigurationCommand";
 import { GetParticipantCommandInput, GetParticipantCommandOutput } from "../commands/GetParticipantCommand";
+import { GetPublicKeyCommandInput, GetPublicKeyCommandOutput } from "../commands/GetPublicKeyCommand";
 import { GetStageCommandInput, GetStageCommandOutput } from "../commands/GetStageCommand";
 import { GetStageSessionCommandInput, GetStageSessionCommandOutput } from "../commands/GetStageSessionCommand";
 import {
   GetStorageConfigurationCommandInput,
   GetStorageConfigurationCommandOutput,
 } from "../commands/GetStorageConfigurationCommand";
+import { ImportPublicKeyCommandInput, ImportPublicKeyCommandOutput } from "../commands/ImportPublicKeyCommand";
 import { ListCompositionsCommandInput, ListCompositionsCommandOutput } from "../commands/ListCompositionsCommand";
 import {
   ListEncoderConfigurationsCommandInput,
@@ -75,6 +78,7 @@ import {
   ListParticipantEventsCommandOutput,
 } from "../commands/ListParticipantEventsCommand";
 import { ListParticipantsCommandInput, ListParticipantsCommandOutput } from "../commands/ListParticipantsCommand";
+import { ListPublicKeysCommandInput, ListPublicKeysCommandOutput } from "../commands/ListPublicKeysCommand";
 import { ListStagesCommandInput, ListStagesCommandOutput } from "../commands/ListStagesCommand";
 import { ListStageSessionsCommandInput, ListStageSessionsCommandOutput } from "../commands/ListStageSessionsCommand";
 import {
@@ -93,6 +97,7 @@ import { UpdateStageCommandInput, UpdateStageCommandOutput } from "../commands/U
 import { IVSRealTimeServiceException as __BaseException } from "../models/IVSRealTimeServiceException";
 import {
   AccessDeniedException,
+  AutoParticipantRecordingConfiguration,
   ChannelDestinationConfiguration,
   Composition,
   CompositionSummary,
@@ -106,6 +111,7 @@ import {
   InternalServerException,
   LayoutConfiguration,
   Participant,
+  ParticipantRecordingMediaType,
   ParticipantSummary,
   ParticipantToken,
   ParticipantTokenCapability,
@@ -188,6 +194,7 @@ export const se_CreateStageCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      autoParticipantRecordingConfiguration: (_) => _json(_),
       name: [],
       participantTokenConfigurations: (_) => _json(_),
       tags: (_) => _json(_),
@@ -233,6 +240,28 @@ export const se_DeleteEncoderConfigurationCommand = async (
     "content-type": "application/json",
   };
   b.bp("/DeleteEncoderConfiguration");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      arn: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DeletePublicKeyCommand
+ */
+export const se_DeletePublicKeyCommand = async (
+  input: DeletePublicKeyCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/DeletePublicKey");
   let body: any;
   body = JSON.stringify(
     take(input, {
@@ -380,6 +409,28 @@ export const se_GetParticipantCommand = async (
 };
 
 /**
+ * serializeAws_restJson1GetPublicKeyCommand
+ */
+export const se_GetPublicKeyCommand = async (
+  input: GetPublicKeyCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/GetPublicKey");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      arn: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1GetStageCommand
  */
 export const se_GetStageCommand = async (
@@ -440,6 +491,30 @@ export const se_GetStorageConfigurationCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ImportPublicKeyCommand
+ */
+export const se_ImportPublicKeyCommand = async (
+  input: ImportPublicKeyCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/ImportPublicKey");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      name: [],
+      publicKeyMaterial: [],
+      tags: (_) => _json(_),
     })
   );
   b.m("POST").h(headers).b(body);
@@ -536,12 +611,36 @@ export const se_ListParticipantsCommand = async (
   body = JSON.stringify(
     take(input, {
       filterByPublished: [],
+      filterByRecordingState: [],
       filterByState: [],
       filterByUserId: [],
       maxResults: [],
       nextToken: [],
       sessionId: [],
       stageArn: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListPublicKeysCommand
+ */
+export const se_ListPublicKeysCommand = async (
+  input: ListPublicKeysCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/ListPublicKeys");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      maxResults: [],
+      nextToken: [],
     })
   );
   b.m("POST").h(headers).b(body);
@@ -743,6 +842,7 @@ export const se_UpdateStageCommand = async (
   body = JSON.stringify(
     take(input, {
       arn: [],
+      autoParticipantRecordingConfiguration: (_) => _json(_),
       name: [],
     })
   );
@@ -842,6 +942,23 @@ export const de_DeleteEncoderConfigurationCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteEncoderConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DeletePublicKeyCommand
+ */
+export const de_DeletePublicKeyCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeletePublicKeyCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -967,6 +1084,27 @@ export const de_GetParticipantCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1GetPublicKeyCommand
+ */
+export const de_GetPublicKeyCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetPublicKeyCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    publicKey: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1GetStageCommand
  */
 export const de_GetStageCommand = async (
@@ -1024,6 +1162,27 @@ export const de_GetStorageConfigurationCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     storageConfiguration: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ImportPublicKeyCommand
+ */
+export const de_ImportPublicKeyCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ImportPublicKeyCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    publicKey: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -1112,6 +1271,28 @@ export const de_ListParticipantsCommand = async (
   const doc = take(data, {
     nextToken: __expectString,
     participants: (_) => de_ParticipantList(_, context),
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListPublicKeysCommand
+ */
+export const de_ListPublicKeysCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListPublicKeysCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    nextToken: __expectString,
+    publicKeys: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -1470,6 +1651,8 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
   return __decorateServiceException(exception, parsedOutput.body);
 };
 
+// se_AutoParticipantRecordingConfiguration omitted.
+
 // se_ChannelDestinationConfiguration omitted.
 
 // se_DestinationConfiguration omitted.
@@ -1481,6 +1664,8 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 // se_GridConfiguration omitted.
 
 // se_LayoutConfiguration omitted.
+
+// se_ParticipantRecordingMediaTypeList omitted.
 
 // se_ParticipantTokenAttributes omitted.
 
@@ -1511,6 +1696,8 @@ const se_Video = (input: Video, context: __SerdeContext): any => {
     width: [],
   });
 };
+
+// de_AutoParticipantRecordingConfiguration omitted.
 
 // de_ChannelDestinationConfiguration omitted.
 
@@ -1672,6 +1859,9 @@ const de_Participant = (output: any, context: __SerdeContext): Participant => {
     osVersion: __expectString,
     participantId: __expectString,
     published: __expectBoolean,
+    recordingS3BucketName: __expectString,
+    recordingS3Prefix: __expectString,
+    recordingState: __expectString,
     sdkVersion: __expectString,
     state: __expectString,
     userId: __expectString,
@@ -1692,6 +1882,8 @@ const de_ParticipantList = (output: any, context: __SerdeContext): ParticipantSu
   return retVal;
 };
 
+// de_ParticipantRecordingMediaTypeList omitted.
+
 /**
  * deserializeAws_restJson1ParticipantSummary
  */
@@ -1700,6 +1892,7 @@ const de_ParticipantSummary = (output: any, context: __SerdeContext): Participan
     firstJoinTime: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     participantId: __expectString,
     published: __expectBoolean,
+    recordingState: __expectString,
     state: __expectString,
     userId: __expectString,
   }) as any;
@@ -1738,6 +1931,12 @@ const de_ParticipantTokenList = (output: any, context: __SerdeContext): Particip
 
 // de_PipConfiguration omitted.
 
+// de_PublicKey omitted.
+
+// de_PublicKeyList omitted.
+
+// de_PublicKeySummary omitted.
+
 // de_RecordingConfiguration omitted.
 
 // de_S3DestinationConfiguration omitted.
@@ -1747,6 +1946,8 @@ const de_ParticipantTokenList = (output: any, context: __SerdeContext): Particip
 // de_S3StorageConfiguration omitted.
 
 // de_Stage omitted.
+
+// de_StageEndpoints omitted.
 
 /**
  * deserializeAws_restJson1StageSession

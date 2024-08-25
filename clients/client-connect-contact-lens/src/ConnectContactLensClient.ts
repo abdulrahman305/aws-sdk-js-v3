@@ -215,11 +215,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type ConnectContactLensClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -235,11 +235,11 @@ export interface ConnectContactLensClientConfig extends ConnectContactLensClient
 export type ConnectContactLensClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -250,13 +250,26 @@ export type ConnectContactLensClientResolvedConfigType = __SmithyResolvedConfigu
 export interface ConnectContactLensClientResolvedConfig extends ConnectContactLensClientResolvedConfigType {}
 
 /**
- * <p>Contact Lens for Amazon Connect enables you to analyze conversations between customer and agents,
- *       by using speech transcription, natural language processing, and intelligent search
- *       capabilities. It performs sentiment analysis, detects issues, and enables you to automatically
- *       categorize contacts.</p>
- *          <p>Contact Lens for Amazon Connect provides both real-time and post-call analytics of customer-agent
- *       conversations. For more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html">Analyze conversations using
- *         Contact Lens</a> in the <i>Amazon Connect Administrator Guide</i>. </p>
+ * <ul>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Contact_Lens.html">Contact Lens actions</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Contact_Lens.html">Contact Lens data types</a>
+ *                </p>
+ *             </li>
+ *          </ul>
+ *          <p>Amazon Connect Contact Lens enables you to analyze conversations between customer and agents, by using
+ *             speech transcription, natural language processing, and intelligent search capabilities.
+ *             It performs sentiment analysis, detects issues, and enables you to automatically
+ *             categorize contacts.</p>
+ *          <p>Amazon Connect Contact Lens provides both real-time and post-call analytics of customer-agent
+ *             conversations. For more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html">Analyze conversations
+ *                 using speech analytics</a> in the <i>Amazon Connect Administrator
+ *             Guide</i>. </p>
  * @public
  */
 export class ConnectContactLensClient extends __Client<
@@ -273,25 +286,28 @@ export class ConnectContactLensClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<ConnectContactLensClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultConnectContactLensHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: ConnectContactLensClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -304,14 +320,5 @@ export class ConnectContactLensClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultConnectContactLensHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: ConnectContactLensClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

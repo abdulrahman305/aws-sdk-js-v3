@@ -9,7 +9,7 @@ import {
   GenerateEmbedUrlForRegisteredUserRequest,
   GenerateEmbedUrlForRegisteredUserResponse,
   GenerateEmbedUrlForRegisteredUserResponseFilterSensitiveLog,
-} from "../models/models_3";
+} from "../models/models_4";
 import {
   de_GenerateEmbedUrlForRegisteredUserCommand,
   se_GenerateEmbedUrlForRegisteredUserCommand,
@@ -75,6 +75,9 @@ export interface GenerateEmbedUrlForRegisteredUserCommandOutput
  *         StatePersistence: { // StatePersistenceConfigurations
  *           Enabled: true || false, // required
  *         },
+ *         SharedView: { // SharedViewConfigurations
+ *           Enabled: true || false, // required
+ *         },
  *         Bookmarks: { // BookmarksConfigurations
  *           Enabled: true || false, // required
  *         },
@@ -84,6 +87,9 @@ export interface GenerateEmbedUrlForRegisteredUserCommandOutput
  *       InitialPath: "STRING_VALUE",
  *       FeatureConfigurations: { // RegisteredUserConsoleFeatureConfigurations
  *         StatePersistence: {
+ *           Enabled: true || false, // required
+ *         },
+ *         SharedView: {
  *           Enabled: true || false, // required
  *         },
  *       },

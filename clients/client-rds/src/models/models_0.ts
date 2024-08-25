@@ -572,8 +572,8 @@ export class SubscriptionNotFoundFault extends __BaseException {
 /**
  * <p>Metadata assigned to an Amazon RDS resource consisting of a key-value pair.</p>
  *          <p>For more information, see
- *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide</i>
- *             or <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS Resources</a> in the <i>Amazon Aurora User Guide</i>.
+ *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+ *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
  *             </p>
  * @public
  */
@@ -1569,9 +1569,11 @@ export interface CopyDBClusterParameterGroupMessage {
   TargetDBClusterParameterGroupDescription: string | undefined;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -1809,9 +1811,11 @@ export interface CopyDBClusterSnapshotMessage {
   CopyTags?: boolean;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -1970,9 +1974,11 @@ export interface DBClusterSnapshot {
   IAMDatabaseAuthenticationEnabled?: boolean;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -2170,9 +2176,11 @@ export interface CopyDBParameterGroupMessage {
   TargetDBParameterGroupDescription: string | undefined;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -2294,9 +2302,11 @@ export interface CopyDBSnapshotMessage {
   KmsKeyId?: string;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -2462,8 +2472,8 @@ export interface CopyDBSnapshotMessage {
  *                <p>The current number CPU cores and threads is set to a non-default value.</p>
  *             </li>
  *          </ul>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html#USER_ConfigureProcessor">Configuring the
- *                 Processor of the DB Instance Class</a> in the <i>Amazon RDS User Guide.
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html#USER_ConfigureProcessor">
+ *             Configuring the processor for a DB instance class in RDS for Oracle</a> in the <i>Amazon RDS User Guide.
  *             </i>
  *          </p>
  * @public
@@ -2476,7 +2486,7 @@ export interface ProcessorFeature {
   Name?: string;
 
   /**
-   * <p>The value of a processor feature name.</p>
+   * <p>The value of a processor feature.</p>
    * @public
    */
   Value?: string;
@@ -2667,9 +2677,11 @@ export interface DBSnapshot {
   DbiResourceId?: string;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -2847,9 +2859,11 @@ export interface CopyOptionGroupMessage {
   TargetOptionGroupDescription: string | undefined;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -3490,9 +3504,11 @@ export interface BlueGreenDeployment {
   DeleteTime?: Date;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -3756,9 +3772,11 @@ export interface CreateCustomDBEngineVersionMessage {
   Manifest?: string;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -4137,9 +4155,11 @@ export interface DBEngineVersion {
   CreateTime?: Date;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -4453,9 +4473,6 @@ export interface CreateDBClusterMessage {
    *          <ul>
    *             <li>
    *                <p>Must match the name of an existing DB subnet group.</p>
-   *             </li>
-   *             <li>
-   *                <p>Must not be <code>default</code>.</p>
    *             </li>
    *          </ul>
    *          <p>Example: <code>mydbsubnetgroup</code>
@@ -5008,12 +5025,10 @@ export interface CreateDBClusterMessage {
 
   /**
    * <p>Specifies whether the DB cluster is publicly accessible.</p>
-   *          <p>When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint
-   *             resolves to the private IP address from within the DB cluster's virtual private cloud
-   *             (VPC). It resolves to the public IP address from outside of the DB cluster's VPC. Access
-   *             to the DB cluster is ultimately controlled by the security group it uses. That public
-   *             access isn't permitted if the security group assigned to the DB cluster doesn't permit
-   *             it.</p>
+   *          <p>When the DB cluster is publicly accessible and you connect from outside of the DB cluster's virtual private cloud (VPC),
+   *               its Domain Name System (DNS) endpoint resolves to the public IP address. When you connect from within the same VPC as the DB cluster,
+   *               the endpoint resolves to the private IP address. Access to the DB cluster is ultimately controlled by the security group it uses. That public
+   *               access isn't permitted if the security group assigned to the DB cluster doesn't permit it.</p>
    *          <p>When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name that resolves to a private IP address.</p>
    *          <p>Valid for Cluster Type: Multi-AZ DB clusters only</p>
    *          <p>Default: The default behavior varies depending on whether <code>DBSubnetGroupName</code> is specified.</p>
@@ -5281,7 +5296,7 @@ export interface DBClusterRole {
 }
 
 /**
- * <p>Returns the details of the DB instance’s server certificate.</p>
+ * <p>The details of the DB instance’s server certificate.</p>
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a connection to a DB
  *             instance</a> in the <i>Amazon RDS User Guide</i> and
  *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html">
@@ -5615,7 +5630,7 @@ export interface ClusterPendingModifiedValues {
   StorageType?: string;
 
   /**
-   * <p>Returns the details of the DB instance’s server certificate.</p>
+   * <p>The details of the DB instance’s server certificate.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a connection to a DB
    *             instance</a> in the <i>Amazon RDS User Guide</i> and
    *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html">
@@ -6126,9 +6141,11 @@ export interface DBCluster {
   DomainMemberships?: DomainMembership[];
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -6176,12 +6193,10 @@ export interface DBCluster {
 
   /**
    * <p>Indicates whether the DB cluster is publicly accessible.</p>
-   *          <p>When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint
-   *           resolves to the private IP address from within the DB cluster's virtual private cloud
-   *           (VPC). It resolves to the public IP address from outside of the DB cluster's VPC. Access
-   *           to the DB cluster is ultimately controlled by the security group it uses. That public
-   *           access isn't permitted if the security group assigned to the DB cluster doesn't permit
-   *           it.</p>
+   *          <p>When the DB cluster is publicly accessible and you connect from outside of the DB cluster's virtual private cloud (VPC),
+   *               its Domain Name System (DNS) endpoint resolves to the public IP address. When you connect from within the same VPC as the DB cluster,
+   *               the endpoint resolves to the private IP address. Access to the DB cluster is ultimately controlled by the security group it uses. That public
+   *               access isn't permitted if the security group assigned to the DB cluster doesn't permit it.</p>
    *          <p>When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name that resolves to a private IP address.</p>
    *          <p>For more information, see <a>CreateDBCluster</a>.</p>
    *          <p>This setting is only for non-Aurora Multi-AZ DB clusters.</p>
@@ -6325,7 +6340,7 @@ export interface DBCluster {
   StorageThroughput?: number;
 
   /**
-   * <p>Returns the details of the DB instance’s server certificate.</p>
+   * <p>The details of the DB instance’s server certificate.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html">Using SSL/TLS to encrypt a connection to a DB
    *             instance</a> in the <i>Amazon RDS User Guide</i> and
    *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL.html">
@@ -7920,10 +7935,10 @@ export interface CreateDBInstanceMessage {
 
   /**
    * <p>Specifies whether the DB instance is publicly accessible.</p>
-   *          <p>When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP address from
-   *           within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from outside of the DB instance's VPC.
-   *           Access to the DB instance is ultimately controlled by the security group it uses.
-   *           That public access is not permitted if the security group assigned to the DB instance doesn't permit it.</p>
+   *          <p>When the DB instance is publicly accessible and you connect from outside of the DB instance's virtual private cloud (VPC),
+   *               its Domain Name System (DNS) endpoint resolves to the public IP address. When you connect from within the same VPC as the DB instance,
+   *               the endpoint resolves to the private IP address. Access to the DB instance is ultimately controlled by the security group it uses.
+   *               That public access is not permitted if the security group assigned to the DB instance doesn't permit it.</p>
    *          <p>When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a private IP address.</p>
    *          <p>Default: The default behavior varies depending on whether <code>DBSubnetGroupName</code> is specified.</p>
    *          <p>If <code>DBSubnetGroupName</code> isn't specified, and <code>PubliclyAccessible</code> isn't specified, the following applies:</p>
@@ -9230,12 +9245,10 @@ export interface DBInstance {
 
   /**
    * <p>Indicates whether the DB instance is publicly accessible.</p>
-   *          <p>When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint
-   *           resolves to the private IP address from within the DB cluster's virtual private cloud
-   *           (VPC). It resolves to the public IP address from outside of the DB cluster's VPC. Access
-   *           to the DB cluster is ultimately controlled by the security group it uses. That public
-   *           access isn't permitted if the security group assigned to the DB cluster doesn't permit
-   *           it.</p>
+   *          <p>When the DB instance is publicly accessible and you connect from outside of the DB instance's virtual private cloud (VPC),
+   *               its Domain Name System (DNS) endpoint resolves to the public IP address. When you connect from within the same VPC as the DB instance,
+   *               the endpoint resolves to the private IP address. Access to the DB cluster is ultimately controlled by the security group it uses. That public
+   *               access isn't permitted if the security group assigned to the DB cluster doesn't permit it.</p>
    *          <p>When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a private IP address.</p>
    *          <p>For more information, see <a>CreateDBInstance</a>.</p>
    * @public
@@ -9455,9 +9468,11 @@ export interface DBInstance {
   MaxAllocatedStorage?: number;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -9930,9 +9945,11 @@ export interface CreateDBInstanceReadReplicaMessage {
   PubliclyAccessible?: boolean;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -11074,9 +11091,11 @@ export interface CreateDBProxyEndpointRequest {
   TargetRole?: DBProxyEndpointTargetRole;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -11412,6 +11431,12 @@ export interface CreateDBShardGroupMessage {
   MaxACU: number | undefined;
 
   /**
+   * <p>The minimum capacity of the DB shard group in Aurora capacity units (ACUs).</p>
+   * @public
+   */
+  MinACU?: number;
+
+  /**
    * <p>Specifies whether the DB shard group is publicly accessible.</p>
    *          <p>When the DB shard group is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP address from
    *             within the DB shard group's virtual private cloud (VPC). It resolves to the public IP address from outside of the DB shard group's VPC.
@@ -11469,6 +11494,12 @@ export interface DBShardGroup {
    * @public
    */
   MaxACU?: number;
+
+  /**
+   * <p>The minimum capacity of the DB shard group in Aurora capacity units (ACUs).</p>
+   * @public
+   */
+  MinACU?: number;
 
   /**
    * <p>Specifies whether to create standby instances for the DB shard group. Valid values are the following:</p>
@@ -11636,9 +11667,11 @@ export interface CreateDBSnapshotMessage {
   DBInstanceIdentifier: string | undefined;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -11867,9 +11900,11 @@ export interface CreateEventSubscriptionMessage {
   Enabled?: boolean;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -12420,9 +12455,11 @@ export interface CreateIntegrationMessage {
   AdditionalEncryptionContext?: Record<string, string>;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -12531,9 +12568,11 @@ export interface Integration {
   Status?: IntegrationStatus;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -12827,9 +12866,11 @@ export interface CreateTenantDatabaseMessage {
   NcharCharacterSetName?: string;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   Tags?: Tag[];
@@ -12933,9 +12974,11 @@ export interface TenantDatabase {
   PendingModifiedValues?: TenantDatabasePendingModifiedValues;
 
   /**
-   * <p>A list of tags.
-   *           For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS Resources</a> in the <i>Amazon RDS User Guide.</i>
-   *          </p>
+   * <p>A list of tags.</p>
+   *          <p>For more information, see
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html">Tagging Amazon RDS resources</a> in the <i>Amazon RDS User Guide</i> or
+   *             <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html">Tagging Amazon Aurora and Amazon RDS resources</a> in the <i>Amazon Aurora User Guide</i>.
+   *             </p>
    * @public
    */
   TagList?: Tag[];
@@ -13158,12 +13201,14 @@ export interface DeleteDBClusterMessage {
   DBClusterIdentifier: string | undefined;
 
   /**
-   * <p>Specifies whether to skip the creation of a final DB cluster snapshot before the DB cluster is deleted.
-   *           If skip is specified, no DB cluster snapshot is created. If skip isn't specified, a DB cluster snapshot
-   *           is created before the DB cluster is deleted. By default, skip isn't specified, and the DB cluster snapshot is created.
-   *           By default, this parameter is disabled.</p>
+   * <p>Specifies whether to skip the creation of a final DB cluster snapshot before RDS
+   *             deletes the DB cluster. If you set this value to <code>true</code>, RDS doesn't create a
+   *             final DB cluster snapshot. If you set this value to <code>false</code> or don't specify
+   *             it, RDS creates a DB cluster snapshot before it deletes the DB cluster. By default, this
+   *             parameter is disabled, so RDS creates a final DB cluster snapshot.</p>
    *          <note>
-   *             <p>You must specify a <code>FinalDBSnapshotIdentifier</code> parameter if <code>SkipFinalSnapshot</code> is disabled.</p>
+   *             <p>If <code>SkipFinalSnapshot</code> is disabled, you must specify a value for the
+   *                     <code>FinalDBSnapshotIdentifier</code> parameter.</p>
    *          </note>
    * @public
    */
@@ -13173,8 +13218,9 @@ export interface DeleteDBClusterMessage {
    * <p>The DB cluster snapshot identifier of the new DB cluster snapshot created when <code>SkipFinalSnapshot</code>
    *       is disabled.</p>
    *          <note>
-   *             <p>Specifying this parameter and also skipping the creation of a final DB cluster snapshot
-   *           with the <code>SkipFinalShapshot</code> parameter results in an error.</p>
+   *             <p>If you specify this parameter and also skip the creation of a final DB cluster
+   *                 snapshot with the <code>SkipFinalShapshot</code> parameter, the request results in
+   *                 an error.</p>
    *          </note>
    *          <p>Constraints:</p>
    *          <ul>

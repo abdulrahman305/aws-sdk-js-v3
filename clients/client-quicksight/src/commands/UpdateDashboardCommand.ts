@@ -174,6 +174,8 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *                   Visibility: "HIDDEN" || "VISIBLE",
  *                   InfoIconText: "STRING_VALUE",
  *                 },
+ *                 HelperTextVisibility: "HIDDEN" || "VISIBLE",
+ *                 DateIconVisibility: "HIDDEN" || "VISIBLE",
  *               },
  *             },
  *             List: { // ParameterListControl
@@ -362,6 +364,8 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *                 TitleOptions: "<LabelOptions>",
  *                 DateTimeFormat: "STRING_VALUE",
  *                 InfoIconLabelOptions: "<SheetControlInfoIconLabelOptions>",
+ *                 HelperTextVisibility: "HIDDEN" || "VISIBLE",
+ *                 DateIconVisibility: "HIDDEN" || "VISIBLE",
  *               },
  *               Type: "SINGLE_VALUED" || "DATE_RANGE",
  *             },
@@ -4333,6 +4337,34 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *                         Status: "ENABLED" || "DISABLED",
  *                       },
  *                     },
+ *                     RepeatConfiguration: { // BodySectionRepeatConfiguration
+ *                       DimensionConfigurations: [ // BodySectionRepeatDimensionConfigurationList
+ *                         { // BodySectionRepeatDimensionConfiguration
+ *                           DynamicCategoryDimensionConfiguration: { // BodySectionDynamicCategoryDimensionConfiguration
+ *                             Column: "<ColumnIdentifier>", // required
+ *                             Limit: Number("int"),
+ *                             SortByMetrics: [ // BodySectionDynamicDimensionSortConfigurationList
+ *                               "<ColumnSort>",
+ *                             ],
+ *                           },
+ *                           DynamicNumericDimensionConfiguration: { // BodySectionDynamicNumericDimensionConfiguration
+ *                             Column: "<ColumnIdentifier>", // required
+ *                             Limit: Number("int"),
+ *                             SortByMetrics: [
+ *                               "<ColumnSort>",
+ *                             ],
+ *                           },
+ *                         },
+ *                       ],
+ *                       PageBreakConfiguration: { // BodySectionRepeatPageBreakConfiguration
+ *                         After: {
+ *                           Status: "ENABLED" || "DISABLED",
+ *                         },
+ *                       },
+ *                       NonRepeatingVisuals: [ // NonRepeatingVisualsList
+ *                         "STRING_VALUE",
+ *                       ],
+ *                     },
  *                   },
  *                 ],
  *                 FooterSections: [ // required
@@ -4538,6 +4570,8 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *                       TitleOptions: "<LabelOptions>",
  *                       DateTimeFormat: "STRING_VALUE",
  *                       InfoIconLabelOptions: "<SheetControlInfoIconLabelOptions>",
+ *                       HelperTextVisibility: "HIDDEN" || "VISIBLE",
+ *                       DateIconVisibility: "HIDDEN" || "VISIBLE",
  *                     },
  *                   },
  *                   DefaultListOptions: { // DefaultFilterListControlOptions
@@ -4631,6 +4665,8 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *                       TitleOptions: "<LabelOptions>",
  *                       DateTimeFormat: "STRING_VALUE",
  *                       InfoIconLabelOptions: "<SheetControlInfoIconLabelOptions>",
+ *                       HelperTextVisibility: "HIDDEN" || "VISIBLE",
+ *                       DateIconVisibility: "HIDDEN" || "VISIBLE",
  *                     },
  *                   },
  *                   DefaultListOptions: {
@@ -4709,6 +4745,8 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *                       TitleOptions: "<LabelOptions>",
  *                       DateTimeFormat: "STRING_VALUE",
  *                       InfoIconLabelOptions: "<SheetControlInfoIconLabelOptions>",
+ *                       HelperTextVisibility: "HIDDEN" || "VISIBLE",
+ *                       DateIconVisibility: "HIDDEN" || "VISIBLE",
  *                     },
  *                   },
  *                   DefaultListOptions: {
@@ -4911,6 +4949,38 @@ export interface UpdateDashboardCommandOutput extends UpdateDashboardResponse, _
  *               TimeGranularity: "YEAR" || "QUARTER" || "MONTH" || "WEEK" || "DAY" || "HOUR" || "MINUTE" || "SECOND" || "MILLISECOND",
  *               ParameterName: "STRING_VALUE",
  *               DefaultFilterControlConfiguration: "<DefaultFilterControlConfiguration>",
+ *             },
+ *             NestedFilter: { // NestedFilter
+ *               FilterId: "STRING_VALUE", // required
+ *               Column: "<ColumnIdentifier>", // required
+ *               IncludeInnerSet: true || false, // required
+ *               InnerFilter: { // InnerFilter
+ *                 CategoryInnerFilter: { // CategoryInnerFilter
+ *                   Column: "<ColumnIdentifier>", // required
+ *                   Configuration: {
+ *                     FilterListConfiguration: {
+ *                       MatchOperator: "EQUALS" || "DOES_NOT_EQUAL" || "CONTAINS" || "DOES_NOT_CONTAIN" || "STARTS_WITH" || "ENDS_WITH", // required
+ *                       CategoryValues: "<CategoryValueList>",
+ *                       SelectAllOptions: "FILTER_ALL_VALUES",
+ *                       NullOption: "ALL_VALUES" || "NULLS_ONLY" || "NON_NULLS_ONLY",
+ *                     },
+ *                     CustomFilterListConfiguration: {
+ *                       MatchOperator: "EQUALS" || "DOES_NOT_EQUAL" || "CONTAINS" || "DOES_NOT_CONTAIN" || "STARTS_WITH" || "ENDS_WITH", // required
+ *                       CategoryValues: "<CategoryValueList>",
+ *                       SelectAllOptions: "FILTER_ALL_VALUES",
+ *                       NullOption: "ALL_VALUES" || "NULLS_ONLY" || "NON_NULLS_ONLY", // required
+ *                     },
+ *                     CustomFilterConfiguration: {
+ *                       MatchOperator: "EQUALS" || "DOES_NOT_EQUAL" || "CONTAINS" || "DOES_NOT_CONTAIN" || "STARTS_WITH" || "ENDS_WITH", // required
+ *                       CategoryValue: "STRING_VALUE",
+ *                       SelectAllOptions: "FILTER_ALL_VALUES",
+ *                       ParameterName: "STRING_VALUE",
+ *                       NullOption: "ALL_VALUES" || "NULLS_ONLY" || "NON_NULLS_ONLY", // required
+ *                     },
+ *                   },
+ *                   DefaultFilterControlConfiguration: "<DefaultFilterControlConfiguration>",
+ *                 },
+ *               },
  *             },
  *           },
  *         ],

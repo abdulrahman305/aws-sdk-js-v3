@@ -21,7 +21,7 @@ describe("middleware-websocket", () => {
         path: "/start-face-liveness-session-websocket",
         headers: {
           host: "streaming-rekognition.us-west-2.amazonaws.com",
-          "Content-Type": /^undefined$/,
+          "content-type": /^undefined$/,
           "x-amz-content-sha256": /^undefined$/,
           "user-agent": /^aws-sdk-js/,
         },
@@ -47,11 +47,7 @@ describe("middleware-websocket", () => {
         VideoWidth: "1024",
         VideoHeight: "1024",
         ChallengeVersions: "a,b,c",
-        LivenessRequestStream: {
-          [Symbol.asyncIterator]() {
-            return this as any;
-          },
-        },
+        LivenessRequestStream: (async function* () {})(),
       });
     });
   });

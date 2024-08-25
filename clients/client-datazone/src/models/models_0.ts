@@ -368,10 +368,79 @@ export interface SubscribedAssetListing {
 }
 
 /**
+ * <p>The listing of the asset in a data product.</p>
+ * @public
+ */
+export interface AssetInDataProductListingItem {
+  /**
+   * <p>The entity ID of the listing of the asset in a data product.</p>
+   * @public
+   */
+  entityId?: string;
+
+  /**
+   * <p>The entity revision of the listing of the asset in a data product.</p>
+   * @public
+   */
+  entityRevision?: string;
+
+  /**
+   * <p>The entity type of the listing of the asset in a data product.</p>
+   * @public
+   */
+  entityType?: string;
+}
+
+/**
+ * <p>The data product listing.</p>
+ * @public
+ */
+export interface SubscribedProductListing {
+  /**
+   * <p>The ID of the data product listing.</p>
+   * @public
+   */
+  entityId?: string;
+
+  /**
+   * <p>The revision of the data product listing.</p>
+   * @public
+   */
+  entityRevision?: string;
+
+  /**
+   * <p>The glossary terms of the data product listing.</p>
+   * @public
+   */
+  glossaryTerms?: DetailedGlossaryTerm[];
+
+  /**
+   * <p>The name of the data product listing.</p>
+   * @public
+   */
+  name?: string;
+
+  /**
+   * <p>The description of the data product listing.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The data assets of the data product listing.</p>
+   * @public
+   */
+  assetListings?: AssetInDataProductListingItem[];
+}
+
+/**
  * <p>The published asset for which the subscription grant is created.</p>
  * @public
  */
-export type SubscribedListingItem = SubscribedListingItem.AssetListingMember | SubscribedListingItem.$UnknownMember;
+export type SubscribedListingItem =
+  | SubscribedListingItem.AssetListingMember
+  | SubscribedListingItem.ProductListingMember
+  | SubscribedListingItem.$UnknownMember;
 
 /**
  * @public
@@ -383,6 +452,17 @@ export namespace SubscribedListingItem {
    */
   export interface AssetListingMember {
     assetListing: SubscribedAssetListing;
+    productListing?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The data product listing.</p>
+   * @public
+   */
+  export interface ProductListingMember {
+    assetListing?: never;
+    productListing: SubscribedProductListing;
     $unknown?: never;
   }
 
@@ -391,16 +471,19 @@ export namespace SubscribedListingItem {
    */
   export interface $UnknownMember {
     assetListing?: never;
+    productListing?: never;
     $unknown: [string, any];
   }
 
   export interface Visitor<T> {
     assetListing: (value: SubscribedAssetListing) => T;
+    productListing: (value: SubscribedProductListing) => T;
     _: (name: string, value: any) => T;
   }
 
   export const visit = <T>(value: SubscribedListingItem, visitor: Visitor<T>): T => {
     if (value.assetListing !== undefined) return visitor.assetListing(value.assetListing);
+    if (value.productListing !== undefined) return visitor.productListing(value.productListing);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -1355,6 +1438,617 @@ export interface GetAssetOutput {
 }
 
 /**
+ * <p>The column configuration of the asset filter.</p>
+ * @public
+ */
+export interface ColumnFilterConfiguration {
+  /**
+   * <p>Specifies whether to include column names.</p>
+   * @public
+   */
+  includedColumnNames?: string[];
+}
+
+/**
+ * <p>Specifies whether the value is equal to an expression.</p>
+ * @public
+ */
+export interface EqualToExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might be equal to an expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies whether the value is greater than an expression.</p>
+ * @public
+ */
+export interface GreaterThanExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might be greater than an expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies whether the value is greater than or equal to an expression.</p>
+ * @public
+ */
+export interface GreaterThanOrEqualToExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might be greater than or equal to an expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies whether values are in the expression.</p>
+ * @public
+ */
+export interface InExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The values that might be in the expression.</p>
+   * @public
+   */
+  values: string[] | undefined;
+}
+
+/**
+ * <p>Specifies that the expression is not null.</p>
+ * @public
+ */
+export interface IsNotNullExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+}
+
+/**
+ * <p>Specifies that the expression is null.</p>
+ * @public
+ */
+export interface IsNullExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+}
+
+/**
+ * <p>Specifies that a value is less than an expression.</p>
+ * @public
+ */
+export interface LessThanExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might be less than the expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies that a value is less than or equal to an expression.</p>
+ * @public
+ */
+export interface LessThanOrEqualToExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might be less than or equal to an expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies that a value is like the expression.</p>
+ * @public
+ */
+export interface LikeExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might be like the expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies that a value is not equal to the expression.</p>
+ * @public
+ */
+export interface NotEqualToExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might not be equal to the expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>Specifies that a value is not in the expression.</p>
+ * @public
+ */
+export interface NotInExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might not be in the expression.</p>
+   * @public
+   */
+  values: string[] | undefined;
+}
+
+/**
+ * <p>Specifies that a value might be not like the expression.</p>
+ * @public
+ */
+export interface NotLikeExpression {
+  /**
+   * <p>The name of the column.</p>
+   * @public
+   */
+  columnName: string | undefined;
+
+  /**
+   * <p>The value that might not be like the expression.</p>
+   * @public
+   */
+  value: string | undefined;
+}
+
+/**
+ * <p>The row filter expression.</p>
+ * @public
+ */
+export type RowFilterExpression =
+  | RowFilterExpression.EqualToMember
+  | RowFilterExpression.GreaterThanMember
+  | RowFilterExpression.GreaterThanOrEqualToMember
+  | RowFilterExpression.InMember
+  | RowFilterExpression.IsNotNullMember
+  | RowFilterExpression.IsNullMember
+  | RowFilterExpression.LessThanMember
+  | RowFilterExpression.LessThanOrEqualToMember
+  | RowFilterExpression.LikeMember
+  | RowFilterExpression.NotEqualToMember
+  | RowFilterExpression.NotInMember
+  | RowFilterExpression.NotLikeMember
+  | RowFilterExpression.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace RowFilterExpression {
+  /**
+   * <p>The 'equal to' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface EqualToMember {
+    equalTo: EqualToExpression;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'no equal to' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface NotEqualToMember {
+    equalTo?: never;
+    notEqualTo: NotEqualToExpression;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'greater than' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface GreaterThanMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan: GreaterThanExpression;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'less than' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface LessThanMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan: LessThanExpression;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'greater than or equal to' clause of the filter expression.</p>
+   * @public
+   */
+  export interface GreaterThanOrEqualToMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo: GreaterThanOrEqualToExpression;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'less than or equal to' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface LessThanOrEqualToMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo: LessThanOrEqualToExpression;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'is null' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface IsNullMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull: IsNullExpression;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'is not null' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface IsNotNullMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull: IsNotNullExpression;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'in' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface InMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in: InExpression;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'not in' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface NotInMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn: NotInExpression;
+    like?: never;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'like' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface LikeMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like: LikeExpression;
+    notLike?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The 'not like' clause of the row filter expression.</p>
+   * @public
+   */
+  export interface NotLikeMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike: NotLikeExpression;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    equalTo?: never;
+    notEqualTo?: never;
+    greaterThan?: never;
+    lessThan?: never;
+    greaterThanOrEqualTo?: never;
+    lessThanOrEqualTo?: never;
+    isNull?: never;
+    isNotNull?: never;
+    in?: never;
+    notIn?: never;
+    like?: never;
+    notLike?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    equalTo: (value: EqualToExpression) => T;
+    notEqualTo: (value: NotEqualToExpression) => T;
+    greaterThan: (value: GreaterThanExpression) => T;
+    lessThan: (value: LessThanExpression) => T;
+    greaterThanOrEqualTo: (value: GreaterThanOrEqualToExpression) => T;
+    lessThanOrEqualTo: (value: LessThanOrEqualToExpression) => T;
+    isNull: (value: IsNullExpression) => T;
+    isNotNull: (value: IsNotNullExpression) => T;
+    in: (value: InExpression) => T;
+    notIn: (value: NotInExpression) => T;
+    like: (value: LikeExpression) => T;
+    notLike: (value: NotLikeExpression) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: RowFilterExpression, visitor: Visitor<T>): T => {
+    if (value.equalTo !== undefined) return visitor.equalTo(value.equalTo);
+    if (value.notEqualTo !== undefined) return visitor.notEqualTo(value.notEqualTo);
+    if (value.greaterThan !== undefined) return visitor.greaterThan(value.greaterThan);
+    if (value.lessThan !== undefined) return visitor.lessThan(value.lessThan);
+    if (value.greaterThanOrEqualTo !== undefined) return visitor.greaterThanOrEqualTo(value.greaterThanOrEqualTo);
+    if (value.lessThanOrEqualTo !== undefined) return visitor.lessThanOrEqualTo(value.lessThanOrEqualTo);
+    if (value.isNull !== undefined) return visitor.isNull(value.isNull);
+    if (value.isNotNull !== undefined) return visitor.isNotNull(value.isNotNull);
+    if (value.in !== undefined) return visitor.in(value.in);
+    if (value.notIn !== undefined) return visitor.notIn(value.notIn);
+    if (value.like !== undefined) return visitor.like(value.like);
+    if (value.notLike !== undefined) return visitor.notLike(value.notLike);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const FilterStatus = {
+  INVALID: "INVALID",
+  VALID: "VALID",
+} as const;
+
+/**
+ * @public
+ */
+export type FilterStatus = (typeof FilterStatus)[keyof typeof FilterStatus];
+
+/**
+ * <p>The summary of the asset filter.</p>
+ * @public
+ */
+export interface AssetFilterSummary {
+  /**
+   * <p>The ID of the asset filter.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The ID of the domain where the asset filter lives.</p>
+   * @public
+   */
+  domainId: string | undefined;
+
+  /**
+   * <p>The ID of the data asset.</p>
+   * @public
+   */
+  assetId: string | undefined;
+
+  /**
+   * <p>The name of the asset filter.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The description of the asset filter.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The status of the asset filter.</p>
+   * @public
+   */
+  status?: FilterStatus;
+
+  /**
+   * <p>The effective column names of the asset filter.</p>
+   * @public
+   */
+  effectiveColumnNames?: string[];
+
+  /**
+   * <p>The effective row filter of the asset filter.</p>
+   * @public
+   */
+  effectiveRowFilter?: string;
+
+  /**
+   * <p>The timestamp at which the asset filter was created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The error message that is displayed if the action does not succeed.</p>
+   * @public
+   */
+  errorMessage?: string;
+}
+
+/**
  * <p>The additional attributes of an inventory asset.</p>
  * @public
  */
@@ -2300,6 +2994,350 @@ export interface ConfigurableEnvironmentAction {
    * @public
    */
   parameters: ConfigurableActionParameter[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const DataProductItemType = {
+  ASSET: "ASSET",
+} as const;
+
+/**
+ * @public
+ */
+export type DataProductItemType = (typeof DataProductItemType)[keyof typeof DataProductItemType];
+
+/**
+ * <p>The data product.</p>
+ * @public
+ */
+export interface DataProductItem {
+  /**
+   * <p>The type of the data product.</p>
+   * @public
+   */
+  itemType: DataProductItemType | undefined;
+
+  /**
+   * <p>The ID of the data product.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>The revision of the data product.</p>
+   * @public
+   */
+  revision?: string;
+
+  /**
+   * <p>The glossary terms of the data product.</p>
+   * @public
+   */
+  glossaryTerms?: string[];
+}
+
+/**
+ * @public
+ */
+export interface CreateDataProductInput {
+  /**
+   * <p>The ID of the domain where the data product is created.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The name of the data product.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The ID of the owning project of the data product.</p>
+   * @public
+   */
+  owningProjectIdentifier: string | undefined;
+
+  /**
+   * <p>The description of the data product.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The glossary terms of the data product.</p>
+   * @public
+   */
+  glossaryTerms?: string[];
+
+  /**
+   * <p>The metadata forms of the data product.</p>
+   * @public
+   */
+  formsInput?: FormInput[];
+
+  /**
+   * <p>The data assets of the data product.</p>
+   * @public
+   */
+  items?: DataProductItem[];
+
+  /**
+   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
+   *          request.</p>
+   * @public
+   */
+  clientToken?: string;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const DataProductStatus = {
+  CREATED: "CREATED",
+  CREATE_FAILED: "CREATE_FAILED",
+  CREATING: "CREATING",
+} as const;
+
+/**
+ * @public
+ */
+export type DataProductStatus = (typeof DataProductStatus)[keyof typeof DataProductStatus];
+
+/**
+ * @public
+ */
+export interface CreateDataProductOutput {
+  /**
+   * <p>The ID of the domain where the data product lives.</p>
+   * @public
+   */
+  domainId: string | undefined;
+
+  /**
+   * <p>The ID of the data product.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The revision of the data product.</p>
+   * @public
+   */
+  revision: string | undefined;
+
+  /**
+   * <p>The ID of the owning project of the data product.</p>
+   * @public
+   */
+  owningProjectId: string | undefined;
+
+  /**
+   * <p>The name of the data product.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The status of the data product.</p>
+   * @public
+   */
+  status: DataProductStatus | undefined;
+
+  /**
+   * <p>The description of the data product.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The glossary terms of the data product.</p>
+   * @public
+   */
+  glossaryTerms?: string[];
+
+  /**
+   * <p>The data assets of the data product.</p>
+   * @public
+   */
+  items?: DataProductItem[];
+
+  /**
+   * <p>The metadata forms of the data product.</p>
+   * @public
+   */
+  formsOutput?: FormOutput[];
+
+  /**
+   * <p>The timestamp at which the data product was created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The user who created the data product.</p>
+   * @public
+   */
+  createdBy?: string;
+
+  /**
+   * <p>The timestamp at which the first revision of the data product was created.</p>
+   * @public
+   */
+  firstRevisionCreatedAt?: Date;
+
+  /**
+   * <p>The user who created the first revision of the data product.</p>
+   * @public
+   */
+  firstRevisionCreatedBy?: string;
+}
+
+/**
+ * @public
+ */
+export interface CreateDataProductRevisionInput {
+  /**
+   * <p>The ID of the domain where the data product revision is created.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the data product revision.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>The name of the data product revision.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The description of the data product revision.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The glossary terms of the data product revision.</p>
+   * @public
+   */
+  glossaryTerms?: string[];
+
+  /**
+   * <p>The data assets of the data product revision.</p>
+   * @public
+   */
+  items?: DataProductItem[];
+
+  /**
+   * <p>The metadata forms of the data product revision.</p>
+   * @public
+   */
+  formsInput?: FormInput[];
+
+  /**
+   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
+   *          request.</p>
+   * @public
+   */
+  clientToken?: string;
+}
+
+/**
+ * @public
+ */
+export interface CreateDataProductRevisionOutput {
+  /**
+   * <p>The ID of the domain where data product revision is created.</p>
+   * @public
+   */
+  domainId: string | undefined;
+
+  /**
+   * <p>The ID of the data product revision.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The revision of the data product revision.</p>
+   * @public
+   */
+  revision: string | undefined;
+
+  /**
+   * <p>The ID of the owning project of the data product revision.</p>
+   * @public
+   */
+  owningProjectId: string | undefined;
+
+  /**
+   * <p>The name of the data product revision.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The status of the data product revision.</p>
+   * @public
+   */
+  status: DataProductStatus | undefined;
+
+  /**
+   * <p>The description of the data product revision.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The glossary terms of the data product revision.</p>
+   * @public
+   */
+  glossaryTerms?: string[];
+
+  /**
+   * <p>The data assets of the data product revision.</p>
+   * @public
+   */
+  items?: DataProductItem[];
+
+  /**
+   * <p>The metadata forms of the data product revision.</p>
+   * @public
+   */
+  formsOutput?: FormOutput[];
+
+  /**
+   * <p>The timestamp at which the data product revision is created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The user who created the data product revision.</p>
+   * @public
+   */
+  createdBy?: string;
+
+  /**
+   * <p>The timestamp at which the first revision of the data product is created.</p>
+   * @public
+   */
+  firstRevisionCreatedAt?: Date;
+
+  /**
+   * <p>The user who created the first revision of the data product.</p>
+   * @public
+   */
+  firstRevisionCreatedBy?: string;
 }
 
 /**
@@ -4426,6 +5464,7 @@ export interface CreateGroupProfileOutput {
  */
 export const EntityType = {
   ASSET: "ASSET",
+  DATA_PRODUCT: "DATA_PRODUCT",
 } as const;
 
 /**
@@ -5051,6 +6090,8 @@ export interface CreateSubscriptionGrantOutput {
   assets?: SubscribedAsset[];
 
   /**
+   * @deprecated
+   *
    * <p>The identifier of the subscription grant.</p>
    * @public
    */
@@ -5634,93 +6675,431 @@ export const DataAssetActivityStatus = {
 export type DataAssetActivityStatus = (typeof DataAssetActivityStatus)[keyof typeof DataAssetActivityStatus];
 
 /**
- * <p/>
  * @public
  */
-export interface DataProductItem {
+export interface DeleteDataProductInput {
   /**
-   * <p/>
+   * <p>The ID of the Amazon DataZone domain in which the data product is deleted.</p>
    * @public
    */
-  itemId?: string;
+  domainIdentifier: string | undefined;
 
   /**
-   * <p/>
+   * <p>The identifier of the data product that is deleted.</p>
    * @public
    */
-  domainId?: string;
+  identifier: string | undefined;
 }
 
 /**
- * <p/>
  * @public
  */
-export interface DataProductSummary {
+export interface DeleteDataProductOutput {}
+
+/**
+ * @public
+ */
+export interface GetDataProductInput {
   /**
-   * <p/>
+   * <p>The ID of the domain where the data product lives.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the data product.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>The revision of the data product.</p>
+   * @public
+   */
+  revision?: string;
+}
+
+/**
+ * @public
+ */
+export interface GetDataProductOutput {
+  /**
+   * <p>The ID of the domain where the data product lives.</p>
    * @public
    */
   domainId: string | undefined;
 
   /**
-   * <p/>
+   * <p>The ID of the data product.</p>
    * @public
    */
   id: string | undefined;
 
   /**
-   * <p/>
+   * <p>The revision of the data product.</p>
    * @public
    */
-  name: string | undefined;
+  revision: string | undefined;
 
   /**
-   * <p/>
+   * <p>The ID of the owning project of the data product.</p>
    * @public
    */
   owningProjectId: string | undefined;
 
   /**
-   * <p/>
+   * <p>The name of the data product.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The status of the data product.</p>
+   * @public
+   */
+  status: DataProductStatus | undefined;
+
+  /**
+   * <p>The description of the data product.</p>
    * @public
    */
   description?: string;
 
   /**
-   * <p/>
+   * <p>The glossary terms of the data product.</p>
    * @public
    */
   glossaryTerms?: string[];
 
   /**
-   * <p/>
+   * <p>The data assets of the data product.</p>
    * @public
    */
-  dataProductItems?: DataProductItem[];
+  items?: DataProductItem[];
 
   /**
-   * <p/>
+   * <p>The metadata forms of the data product.</p>
+   * @public
+   */
+  formsOutput?: FormOutput[];
+
+  /**
+   * <p>The timestamp at which the data product is created.</p>
    * @public
    */
   createdAt?: Date;
 
   /**
-   * <p/>
+   * <p>The user who created the data product.</p>
    * @public
    */
   createdBy?: string;
 
   /**
-   * <p/>
+   * <p>The timestamp at which the first revision of the data product is created.</p>
    * @public
    */
-  updatedAt?: Date;
+  firstRevisionCreatedAt?: Date;
 
   /**
-   * <p/>
+   * <p>The user who created the first revision of the data product.</p>
    * @public
    */
-  updatedBy?: string;
+  firstRevisionCreatedBy?: string;
+}
+
+/**
+ * <p>The summary of the listing of the data product.</p>
+ * @public
+ */
+export interface ListingSummary {
+  /**
+   * <p>The ID of the data product listing.</p>
+   * @public
+   */
+  listingId?: string;
+
+  /**
+   * <p>The revision of the data product listing.</p>
+   * @public
+   */
+  listingRevision?: string;
+
+  /**
+   * <p>The glossary terms of the data product.</p>
+   * @public
+   */
+  glossaryTerms?: DetailedGlossaryTerm[];
+}
+
+/**
+ * <p>The data product listing.</p>
+ * @public
+ */
+export interface DataProductListing {
+  /**
+   * <p>The ID of the data product listing.</p>
+   * @public
+   */
+  dataProductId?: string;
+
+  /**
+   * <p>The revision of the data product listing.</p>
+   * @public
+   */
+  dataProductRevision?: string;
+
+  /**
+   * <p>The timestamp at which the data product listing was created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The metadata forms of the data product listing.</p>
+   * @public
+   */
+  forms?: string;
+
+  /**
+   * <p>The glossary terms of the data product listing.</p>
+   * @public
+   */
+  glossaryTerms?: DetailedGlossaryTerm[];
+
+  /**
+   * <p>The ID of the owning project of the data product listing.</p>
+   * @public
+   */
+  owningProjectId?: string;
+
+  /**
+   * <p>The data assets of the data product listing.</p>
+   * @public
+   */
+  items?: ListingSummary[];
+}
+
+/**
+ * <p>The additional attributes of the asset of the data product. </p>
+ * @public
+ */
+export interface DataProductListingItemAdditionalAttributes {
+  /**
+   * <p>The metadata forms of the asset of the data product. </p>
+   * @public
+   */
+  forms?: string;
+}
+
+/**
+ * <p>The results of the data product summary.</p>
+ * @public
+ */
+export interface ListingSummaryItem {
+  /**
+   * <p>The ID of the data product listing.</p>
+   * @public
+   */
+  listingId?: string;
+
+  /**
+   * <p>The revision of the data product listing.</p>
+   * @public
+   */
+  listingRevision?: string;
+
+  /**
+   * <p>The glossary terms of the data product listing.</p>
+   * @public
+   */
+  glossaryTerms?: DetailedGlossaryTerm[];
+}
+
+/**
+ * <p>The asset of the data product listing.</p>
+ * @public
+ */
+export interface DataProductListingItem {
+  /**
+   * <p>The ID of the listing.</p>
+   * @public
+   */
+  listingId?: string;
+
+  /**
+   * <p>The revision of the listing.</p>
+   * @public
+   */
+  listingRevision?: string;
+
+  /**
+   * <p>The name of the asset of the data product. </p>
+   * @public
+   */
+  name?: string;
+
+  /**
+   * <p>The entity ID of the asset of the asset of the data product. </p>
+   * @public
+   */
+  entityId?: string;
+
+  /**
+   * <p>The revision of the asset of the asset of the data product. </p>
+   * @public
+   */
+  entityRevision?: string;
+
+  /**
+   * <p>The description of the asset of the asset of the data product. </p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The timestamp at which the asset of the data product listing was created. </p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The timestamp at which the listing was created.</p>
+   * @public
+   */
+  listingCreatedBy?: string;
+
+  /**
+   * <p>The user who updated the listing.</p>
+   * @public
+   */
+  listingUpdatedBy?: string;
+
+  /**
+   * <p>The glossary terms of the asset of the asset of the data product. </p>
+   * @public
+   */
+  glossaryTerms?: DetailedGlossaryTerm[];
+
+  /**
+   * <p>The ID of the owning project of the asset of the data product. </p>
+   * @public
+   */
+  owningProjectId?: string;
+
+  /**
+   * <p>The additional attributes of the asset of the data product.</p>
+   * @public
+   */
+  additionalAttributes?: DataProductListingItemAdditionalAttributes;
+
+  /**
+   * <p>The data of the asset of the data product. </p>
+   * @public
+   */
+  items?: ListingSummaryItem[];
+}
+
+/**
+ * <p>The data product.</p>
+ * @public
+ */
+export interface DataProductResultItem {
+  /**
+   * <p>The ID of the domain where the data product lives.</p>
+   * @public
+   */
+  domainId: string | undefined;
+
+  /**
+   * <p>The ID of the data product.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The name of the data product.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The ID of the owning project of the data product.</p>
+   * @public
+   */
+  owningProjectId: string | undefined;
+
+  /**
+   * <p>The description of the data product.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The glossary terms of the data product.</p>
+   * @public
+   */
+  glossaryTerms?: string[];
+
+  /**
+   * <p>The timestamp at which the data product was created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The user who created the data product.</p>
+   * @public
+   */
+  createdBy?: string;
+
+  /**
+   * <p>The timestamp at which first revision of the data product was created.</p>
+   * @public
+   */
+  firstRevisionCreatedAt?: Date;
+
+  /**
+   * <p>The user who created the first revision of the data product.</p>
+   * @public
+   */
+  firstRevisionCreatedBy?: string;
+}
+
+/**
+ * <p>The data product revision.</p>
+ * @public
+ */
+export interface DataProductRevision {
+  /**
+   * <p>The ID of the domain where the data product revision lives.</p>
+   * @public
+   */
+  domainId?: string;
+
+  /**
+   * <p>The ID of the data product revision.</p>
+   * @public
+   */
+  id?: string;
+
+  /**
+   * <p>The data product revision.</p>
+   * @public
+   */
+  revision?: string;
+
+  /**
+   * <p>The timestamp at which the data product revision was created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The user who created the data product revision.</p>
+   * @public
+   */
+  createdBy?: string;
 }
 
 /**
@@ -7044,6 +8423,29 @@ export interface DataSourceRunActivity {
 /**
  * @public
  */
+export interface DeleteAssetFilterInput {
+  /**
+   * <p>The ID of the domain where you want to delete an asset filter.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the data asset.</p>
+   * @public
+   */
+  assetIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the asset filter that you want to delete.</p>
+   * @public
+   */
+  identifier: string | undefined;
+}
+
+/**
+ * @public
+ */
 export interface DeleteEnvironmentInput {
   /**
    * <p>The ID of the Amazon DataZone domain in which the environment is deleted.</p>
@@ -7237,6 +8639,8 @@ export interface DeleteSubscriptionGrantOutput {
   assets?: SubscribedAsset[];
 
   /**
+   * @deprecated
+   *
    * <p>The identifier of the subsctiption whose subscription grant is to be deleted.</p>
    * @public
    */
@@ -7731,6 +9135,67 @@ export interface GetEnvironmentBlueprintConfigurationInput {
 }
 
 /**
+ * <p>The Lake Formation configuration of the Data Lake blueprint.</p>
+ * @public
+ */
+export interface LakeFormationConfiguration {
+  /**
+   * <p>The role that is used to manage read/write access to the chosen Amazon S3 bucket(s) for
+   *          Data Lake using AWS Lake Formation hybrid access mode.</p>
+   * @public
+   */
+  locationRegistrationRole?: string;
+
+  /**
+   * <p>Specifies certain Amazon S3 locations if you do not want Amazon DataZone to
+   *          automatically register them in hybrid mode. </p>
+   * @public
+   */
+  locationRegistrationExcludeS3Locations?: string[];
+}
+
+/**
+ * <p>The provisioning configuration of the blueprint.</p>
+ * @public
+ */
+export type ProvisioningConfiguration =
+  | ProvisioningConfiguration.LakeFormationConfigurationMember
+  | ProvisioningConfiguration.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace ProvisioningConfiguration {
+  /**
+   * <p>The Lake Formation configuration of the Data Lake blueprint.</p>
+   * @public
+   */
+  export interface LakeFormationConfigurationMember {
+    lakeFormationConfiguration: LakeFormationConfiguration;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    lakeFormationConfiguration?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    lakeFormationConfiguration: (value: LakeFormationConfiguration) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: ProvisioningConfiguration, visitor: Visitor<T>): T => {
+    if (value.lakeFormationConfiguration !== undefined)
+      return visitor.lakeFormationConfiguration(value.lakeFormationConfiguration);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
  * @public
  */
 export interface GetEnvironmentBlueprintConfigurationOutput {
@@ -7781,6 +9246,12 @@ export interface GetEnvironmentBlueprintConfigurationOutput {
    * @public
    */
   updatedAt?: Date;
+
+  /**
+   * <p>The provisioning configuration of a blueprint.</p>
+   * @public
+   */
+  provisioningConfigurations?: ProvisioningConfiguration[];
 }
 
 /**
@@ -7871,6 +9342,12 @@ export interface EnvironmentBlueprintConfigurationItem {
    * @public
    */
   updatedAt?: Date;
+
+  /**
+   * <p>The provisioning configuration of a blueprint.</p>
+   * @public
+   */
+  provisioningConfigurations?: ProvisioningConfiguration[];
 }
 
 /**
@@ -7935,6 +9412,12 @@ export interface PutEnvironmentBlueprintConfigurationInput {
    * @public
    */
   regionalParameters?: Record<string, Record<string, string>>;
+
+  /**
+   * <p>The provisioning configuration of a blueprint.</p>
+   * @public
+   */
+  provisioningConfigurations?: ProvisioningConfiguration[];
 }
 
 /**
@@ -7988,6 +9471,12 @@ export interface PutEnvironmentBlueprintConfigurationOutput {
    * @public
    */
   updatedAt?: Date;
+
+  /**
+   * <p>The provisioning configuration of a blueprint.</p>
+   * @public
+   */
+  provisioningConfigurations?: ProvisioningConfiguration[];
 }
 
 /**
@@ -8129,6 +9618,29 @@ export interface GetFormTypeOutput {
    * @public
    */
   imports?: Import[];
+}
+
+/**
+ * @public
+ */
+export interface GetAssetFilterInput {
+  /**
+   * <p>The ID of the domain where you want to get an asset filter.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the data asset.</p>
+   * @public
+   */
+  assetIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the asset filter.</p>
+   * @public
+   */
+  identifier: string | undefined;
 }
 
 /**
@@ -8429,6 +9941,53 @@ export interface GetEnvironmentBlueprintOutput {
 /**
  * @public
  */
+export interface GetEnvironmentCredentialsInput {
+  /**
+   * <p>The ID of the Amazon DataZone domain in which this environment and its credentials
+   *          exist.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the environment whose credentials this operation gets.</p>
+   * @public
+   */
+  environmentIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetEnvironmentCredentialsOutput {
+  /**
+   * <p>The access key ID of the environment.</p>
+   * @public
+   */
+  accessKeyId?: string;
+
+  /**
+   * <p>The secret access key of the environment credentials.</p>
+   * @public
+   */
+  secretAccessKey?: string;
+
+  /**
+   * <p>The session token of the environment credentials.</p>
+   * @public
+   */
+  sessionToken?: string;
+
+  /**
+   * <p>The expiration timestamp of the environment credentials.</p>
+   * @public
+   */
+  expiration?: Date;
+}
+
+/**
+ * @public
+ */
 export interface GetEnvironmentProfileInput {
   /**
    * <p>The ID of the Amazon DataZone domain in which this environment profile exists.</p>
@@ -8592,6 +10151,146 @@ export interface GetIamPortalLoginUrlOutput {
    * @public
    */
   userProfileId: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetLineageNodeInput {
+  /**
+   * <p>The ID of the domain in which you want to get the data lineage node.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the data lineage node that you want to get.</p>
+   *          <p>Both, a lineage node identifier generated by Amazon DataZone and a
+   *             <code>sourceIdentifier</code> of the lineage node are supported. If
+   *             <code>sourceIdentifier</code> is greater than 1800 characters, you can use lineage node
+   *          identifier generated by Amazon DataZone to get the node details.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>The event time stamp for which you want to get the data lineage node.</p>
+   * @public
+   */
+  eventTimestamp?: Date;
+}
+
+/**
+ * <p>The reference details for the data lineage node.</p>
+ * @public
+ */
+export interface LineageNodeReference {
+  /**
+   * <p>The ID of the data lineage node.</p>
+   * @public
+   */
+  id?: string;
+
+  /**
+   * <p>The event timestamp of the data lineage node.</p>
+   * @public
+   */
+  eventTimestamp?: Date;
+}
+
+/**
+ * @public
+ */
+export interface GetLineageNodeOutput {
+  /**
+   * <p>The ID of the domain where you're getting the data lineage node.</p>
+   * @public
+   */
+  domainId: string | undefined;
+
+  /**
+   * <p>The name of the data lineage node.</p>
+   * @public
+   */
+  name?: string;
+
+  /**
+   * <p>The description of the data lineage node.</p>
+   * @public
+   */
+  description?: string;
+
+  /**
+   * <p>The timestamp at which the data lineage node was created.</p>
+   * @public
+   */
+  createdAt?: Date;
+
+  /**
+   * <p>The user who created the data lineage node.</p>
+   * @public
+   */
+  createdBy?: string;
+
+  /**
+   * <p>The timestamp at which the data lineage node was updated.</p>
+   * @public
+   */
+  updatedAt?: Date;
+
+  /**
+   * <p>The user who updated the data lineage node.</p>
+   * @public
+   */
+  updatedBy?: string;
+
+  /**
+   * <p>The ID of the data lineage node.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The name of the type of the specified data lineage node.</p>
+   * @public
+   */
+  typeName: string | undefined;
+
+  /**
+   * <p>The revision type of the specified data lineage node.</p>
+   * @public
+   */
+  typeRevision?: string;
+
+  /**
+   * <p>The source identifier of the data lineage node.</p>
+   * @public
+   */
+  sourceIdentifier?: string;
+
+  /**
+   * <p>The timestamp of the event described in the data lineage node.</p>
+   * @public
+   */
+  eventTimestamp?: Date;
+
+  /**
+   * <p>The metadata of the specified data lineage node.</p>
+   * @public
+   */
+  formsOutput?: FormOutput[];
+
+  /**
+   * <p>The upstream nodes of the specified data lineage node.</p>
+   * @public
+   */
+  upstreamNodes?: LineageNodeReference[];
+
+  /**
+   * <p>The downsteam nodes of the specified data lineage node.</p>
+   * @public
+   */
+  downstreamNodes?: LineageNodeReference[];
 }
 
 /**
@@ -8847,6 +10546,8 @@ export interface GetSubscriptionGrantOutput {
   assets?: SubscribedAsset[];
 
   /**
+   * @deprecated
+   *
    * <p>The identifier of the subscription.</p>
    * @public
    */
@@ -9257,1544 +10958,6 @@ export interface DeleteGlossaryInput {
 }
 
 /**
- * @public
- */
-export interface DeleteGlossaryOutput {}
-
-/**
- * @public
- */
-export interface GetGlossaryInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which this business glossary exists.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the business glossary.</p>
-   * @public
-   */
-  identifier: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetGlossaryOutput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which this business glossary exists.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The ID of the business glossary.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The ID of the project that owns this business glossary.</p>
-   * @public
-   */
-  owningProjectId: string | undefined;
-
-  /**
-   * <p>The name of the business glossary.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The description of the business glossary.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The status of the business glossary.</p>
-   * @public
-   */
-  status: GlossaryStatus | undefined;
-
-  /**
-   * <p>The timestamp of when this business glossary was created.</p>
-   * @public
-   */
-  createdAt?: Date;
-
-  /**
-   * <p>The Amazon DataZone user who created this business glossary.</p>
-   * @public
-   */
-  createdBy?: string;
-
-  /**
-   * <p>The timestamp of when the business glossary was updated.</p>
-   * @public
-   */
-  updatedAt?: Date;
-
-  /**
-   * <p>The Amazon DataZone user who updated the business glossary.</p>
-   * @public
-   */
-  updatedBy?: string;
-}
-
-/**
- * @public
- */
-export interface UpdateGlossaryInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which a business glossary is to be
-   *          updated.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the business glossary to be updated.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The name to be updated as part of the <code>UpdateGlossary</code> action.</p>
-   * @public
-   */
-  name?: string;
-
-  /**
-   * <p>The description to be updated as part of the <code>UpdateGlossary</code> action.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The status to be updated as part of the <code>UpdateGlossary</code> action.</p>
-   * @public
-   */
-  status?: GlossaryStatus;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string;
-}
-
-/**
- * @public
- */
-export interface UpdateGlossaryOutput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which a business glossary is to be
-   *          updated.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The identifier of the business glossary that is to be updated.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The name to be updated as part of the <code>UpdateGlossary</code> action.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The identifier of the project in which to update a business glossary.</p>
-   * @public
-   */
-  owningProjectId: string | undefined;
-
-  /**
-   * <p>The description to be updated as part of the <code>UpdateGlossary</code> action.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The status to be updated as part of the <code>UpdateGlossary</code> action.</p>
-   * @public
-   */
-  status?: GlossaryStatus;
-}
-
-/**
- * @public
- */
-export interface DeleteGlossaryTermInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which the business glossary term is deleted.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the business glossary term that is deleted.</p>
-   * @public
-   */
-  identifier: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeleteGlossaryTermOutput {}
-
-/**
- * @public
- */
-export interface GetGlossaryTermInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which this business glossary term exists.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the business glossary term.</p>
-   * @public
-   */
-  identifier: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetGlossaryTermOutput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which this business glossary term exists.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The ID of the business glossary to which this term belongs.</p>
-   * @public
-   */
-  glossaryId: string | undefined;
-
-  /**
-   * <p>The ID of the business glossary term.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The name of the business glossary term.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The short decription of the business glossary term.</p>
-   * @public
-   */
-  shortDescription?: string;
-
-  /**
-   * <p>The long description of the business glossary term.</p>
-   * @public
-   */
-  longDescription?: string;
-
-  /**
-   * <p>The relations of the business glossary term.</p>
-   * @public
-   */
-  termRelations?: TermRelations;
-
-  /**
-   * <p>The status of the business glossary term.</p>
-   * @public
-   */
-  status: GlossaryTermStatus | undefined;
-
-  /**
-   * <p>The timestamp of when the business glossary term was created.</p>
-   * @public
-   */
-  createdAt?: Date;
-
-  /**
-   * <p>The Amazon DataZone user who created the business glossary.</p>
-   * @public
-   */
-  createdBy?: string;
-
-  /**
-   * <p>The timestamp of when the business glossary term was updated.</p>
-   * @public
-   */
-  updatedAt?: Date;
-
-  /**
-   * <p>The Amazon DataZone user who updated the business glossary term.</p>
-   * @public
-   */
-  updatedBy?: string;
-}
-
-/**
- * @public
- */
-export interface UpdateGlossaryTermInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which a business glossary term is to be
-   *          updated.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the business glossary in which a term is to be updated.</p>
-   * @public
-   */
-  glossaryIdentifier?: string;
-
-  /**
-   * <p>The identifier of the business glossary term that is to be updated.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The name to be updated as part of the <code>UpdateGlossaryTerm</code> action.</p>
-   * @public
-   */
-  name?: string;
-
-  /**
-   * <p>The short description to be updated as part of the <code>UpdateGlossaryTerm</code>
-   *          action.</p>
-   * @public
-   */
-  shortDescription?: string;
-
-  /**
-   * <p>The long description to be updated as part of the <code>UpdateGlossaryTerm</code>
-   *          action.</p>
-   * @public
-   */
-  longDescription?: string;
-
-  /**
-   * <p>The term relations to be updated as part of the <code>UpdateGlossaryTerm</code>
-   *          action.</p>
-   * @public
-   */
-  termRelations?: TermRelations;
-
-  /**
-   * <p>The status to be updated as part of the <code>UpdateGlossaryTerm</code> action.</p>
-   * @public
-   */
-  status?: GlossaryTermStatus;
-}
-
-/**
- * @public
- */
-export interface UpdateGlossaryTermOutput {
-  /**
-   * <p>The identifier of the business glossary term that is to be updated.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which a business glossary term is to be
-   *          updated.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The identifier of the business glossary in which a term is to be updated.</p>
-   * @public
-   */
-  glossaryId: string | undefined;
-
-  /**
-   * <p>The name to be updated as part of the <code>UpdateGlossaryTerm</code> action.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The status to be updated as part of the <code>UpdateGlossaryTerm</code> action.</p>
-   * @public
-   */
-  status: GlossaryTermStatus | undefined;
-
-  /**
-   * <p>The short description to be updated as part of the <code>UpdateGlossaryTerm</code>
-   *          action.</p>
-   * @public
-   */
-  shortDescription?: string;
-
-  /**
-   * <p>The long description to be updated as part of the <code>UpdateGlossaryTerm</code>
-   *          action.</p>
-   * @public
-   */
-  longDescription?: string;
-
-  /**
-   * <p>The term relations to be updated as part of the <code>UpdateGlossaryTerm</code>
-   *          action.</p>
-   * @public
-   */
-  termRelations?: TermRelations;
-}
-
-/**
- * @public
- */
-export interface ListAssetRevisionsInput {
-  /**
-   * <p>The identifier of the domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the asset.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>When the number of revisions is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of revisions, the response includes
-   *          a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListAssetRevisions</code> to
-   *          list the next set of revisions.</p>
-   * @public
-   */
-  nextToken?: string;
-
-  /**
-   * <p>The maximum number of revisions to return in a single call to
-   *             <code>ListAssetRevisions</code>. When the number of revisions to be listed is greater
-   *          than the value of <code>MaxResults</code>, the response contains a <code>NextToken</code>
-   *          value that you can use in a subsequent call to <code>ListAssetRevisions</code> to list the
-   *          next set of revisions.</p>
-   * @public
-   */
-  maxResults?: number;
-}
-
-/**
- * @public
- */
-export interface ListAssetRevisionsOutput {
-  /**
-   * <p>The results of the <code>ListAssetRevisions</code> action.</p>
-   * @public
-   */
-  items?: AssetRevision[];
-
-  /**
-   * <p>When the number of revisions is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of revisions, the response includes
-   *          a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListAssetRevisions</code> to
-   *          list the next set of revisions.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListDataSourceRunActivitiesInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which to list data source run
-   *          activities.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the data source run.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The status of the data source run.</p>
-   * @public
-   */
-  status?: DataAssetActivityStatus;
-
-  /**
-   * <p>When the number of activities is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of activities, the response
-   *          includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to
-   *             <code>ListDataSourceRunActivities</code> to list the next set of activities.</p>
-   * @public
-   */
-  nextToken?: string;
-
-  /**
-   * <p>The maximum number of activities to return in a single call to
-   *             <code>ListDataSourceRunActivities</code>. When the number of activities to be listed is
-   *          greater than the value of <code>MaxResults</code>, the response contains a
-   *             <code>NextToken</code> value that you can use in a subsequent call to
-   *             <code>ListDataSourceRunActivities</code> to list the next set of activities.</p>
-   * @public
-   */
-  maxResults?: number;
-}
-
-/**
- * @public
- */
-export interface ListDataSourceRunActivitiesOutput {
-  /**
-   * <p>The results of the <code>ListDataSourceRunActivities</code> action.</p>
-   * @public
-   */
-  items: DataSourceRunActivity[] | undefined;
-
-  /**
-   * <p>When the number of activities is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of activities, the response
-   *          includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to
-   *             <code>ListDataSourceRunActivities</code> to list the next set of activities.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentActionsInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which the environment actions are listed.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the envrironment whose environment actions are listed.</p>
-   * @public
-   */
-  environmentIdentifier: string | undefined;
-
-  /**
-   * <p>When the number of environment actions is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of environment actions, the
-   *          response includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListEnvironmentActions</code>
-   *          to list the next set of environment actions.</p>
-   * @public
-   */
-  nextToken?: string;
-
-  /**
-   * <p>The maximum number of environment actions to return in a single call to
-   *             <code>ListEnvironmentActions</code>. When the number of environment actions to be listed
-   *          is greater than the value of <code>MaxResults</code>, the response contains a
-   *             <code>NextToken</code> value that you can use in a subsequent call to
-   *             <code>ListEnvironmentActions</code> to list the next set of environment actions.</p>
-   * @public
-   */
-  maxResults?: number;
-}
-
-/**
- * <p>The details about the specified action configured for an environment. For example, the
- *          details of the specified console links for an analytics tool that is available in this
- *          environment.</p>
- * @public
- */
-export interface EnvironmentActionSummary {
-  /**
-   * <p>The Amazon DataZone domain ID of the environment action.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The environment ID of the environment action.</p>
-   * @public
-   */
-  environmentId: string | undefined;
-
-  /**
-   * <p>The ID of the environment action.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The name of the environment action.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The parameters of the environment action.</p>
-   * @public
-   */
-  parameters: ActionParameters | undefined;
-
-  /**
-   * <p>The environment action description.</p>
-   * @public
-   */
-  description?: string;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentActionsOutput {
-  /**
-   * <p>The results of <code>ListEnvironmentActions</code>.</p>
-   * @public
-   */
-  items?: EnvironmentActionSummary[];
-
-  /**
-   * <p>When the number of environment actions is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of environment actions, the
-   *          response includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListEnvironmentActions</code>
-   *          to list the next set of environment actions.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentBlueprintsInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The maximum number of blueprints to return in a single call to
-   *             <code>ListEnvironmentBlueprints</code>. When the number of blueprints to be listed is
-   *          greater than the value of <code>MaxResults</code>, the response contains a
-   *             <code>NextToken</code> value that you can use in a subsequent call to
-   *             <code>ListEnvironmentBlueprints</code> to list the next set of blueprints.</p>
-   * @public
-   */
-  maxResults?: number;
-
-  /**
-   * <p>When the number of blueprints in the environment is greater than the default value for
-   *          the <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of blueprints in the environment,
-   *          the response includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to
-   *             <code>ListEnvironmentBlueprints</code>to list the next set of blueprints.</p>
-   * @public
-   */
-  nextToken?: string;
-
-  /**
-   * <p>The name of the Amazon DataZone environment.</p>
-   * @public
-   */
-  name?: string;
-
-  /**
-   * <p>Specifies whether the environment blueprint is managed by Amazon DataZone.</p>
-   * @public
-   */
-  managed?: boolean;
-}
-
-/**
- * <p>The details of an environment blueprint summary.</p>
- * @public
- */
-export interface EnvironmentBlueprintSummary {
-  /**
-   * <p>The identifier of the blueprint.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The name of the blueprint.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The description of a blueprint.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The provider of the blueprint.</p>
-   * @public
-   */
-  provider: string | undefined;
-
-  /**
-   * <p>The provisioning properties of the blueprint.</p>
-   * @public
-   */
-  provisioningProperties: ProvisioningProperties | undefined;
-
-  /**
-   * <p>The timestamp of when an environment blueprint was created.</p>
-   * @public
-   */
-  createdAt?: Date;
-
-  /**
-   * <p>The timestamp of when the blueprint was enabled.</p>
-   * @public
-   */
-  updatedAt?: Date;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentBlueprintsOutput {
-  /**
-   * <p>The results of the <code>ListEnvironmentBlueprints</code> action.</p>
-   * @public
-   */
-  items: EnvironmentBlueprintSummary[] | undefined;
-
-  /**
-   * <p>When the number of blueprints in the environment is greater than the default value for
-   *          the <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of blueprints in the environment,
-   *          the response includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to
-   *             <code>ListEnvironmentBlueprints</code>to list the next set of blueprints.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentProfilesInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon Web Services account where you want to list environment
-   *          profiles.</p>
-   * @public
-   */
-  awsAccountId?: string;
-
-  /**
-   * <p>The Amazon Web Services region where you want to list environment profiles.</p>
-   * @public
-   */
-  awsAccountRegion?: string;
-
-  /**
-   * <p>The identifier of the blueprint that was used to create the environment profiles that
-   *          you want to list.</p>
-   * @public
-   */
-  environmentBlueprintIdentifier?: string;
-
-  /**
-   * <p>The identifier of the Amazon DataZone project.</p>
-   * @public
-   */
-  projectIdentifier?: string;
-
-  /**
-   * <p/>
-   * @public
-   */
-  name?: string;
-
-  /**
-   * <p>When the number of environment profiles is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of environment profiles, the
-   *          response includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to
-   *             <code>ListEnvironmentProfiles</code> to list the next set of environment
-   *          profiles.</p>
-   * @public
-   */
-  nextToken?: string;
-
-  /**
-   * <p>The maximum number of environment profiles to return in a single call to
-   *             <code>ListEnvironmentProfiles</code>. When the number of environment profiles to be
-   *          listed is greater than the value of <code>MaxResults</code>, the response contains a
-   *             <code>NextToken</code> value that you can use in a subsequent call to
-   *             <code>ListEnvironmentProfiles</code> to list the next set of environment
-   *          profiles.</p>
-   * @public
-   */
-  maxResults?: number;
-}
-
-/**
- * <p>The details of an environment profile.</p>
- * @public
- */
-export interface EnvironmentProfileSummary {
-  /**
-   * <p>The identifier of the environment profile.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which the environment profile exists.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The identifier of an Amazon Web Services account in which an environment profile exists.</p>
-   * @public
-   */
-  awsAccountId?: string;
-
-  /**
-   * <p>The Amazon Web Services Region in which an environment profile exists.</p>
-   * @public
-   */
-  awsAccountRegion?: string;
-
-  /**
-   * <p>The Amazon DataZone user who created the environment profile.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The timestamp of when an environment profile was created.</p>
-   * @public
-   */
-  createdAt?: Date;
-
-  /**
-   * <p>The timestamp of when the environment profile was updated.</p>
-   * @public
-   */
-  updatedAt?: Date;
-
-  /**
-   * <p>The name of the environment profile.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The description of the environment profile.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The identifier of a blueprint with which an environment profile is created.</p>
-   * @public
-   */
-  environmentBlueprintId: string | undefined;
-
-  /**
-   * <p>The identifier of a project in which an environment profile exists.</p>
-   * @public
-   */
-  projectId?: string;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentProfilesOutput {
-  /**
-   * <p>The results of the <code>ListEnvironmentProfiles</code> action. </p>
-   * @public
-   */
-  items: EnvironmentProfileSummary[] | undefined;
-
-  /**
-   * <p>When the number of environment profiles is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of environment profiles, the
-   *          response includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to
-   *             <code>ListEnvironmentProfiles</code> to list the next set of environment
-   *          profiles.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentsInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon Web Services account where you want to list
-   *          environments.</p>
-   * @public
-   */
-  awsAccountId?: string;
-
-  /**
-   * <p>The status of the environments that you want to list.</p>
-   * @public
-   */
-  status?: EnvironmentStatus;
-
-  /**
-   * <p>The Amazon Web Services region where you want to list environments.</p>
-   * @public
-   */
-  awsAccountRegion?: string;
-
-  /**
-   * <p>The identifier of the Amazon DataZone project.</p>
-   * @public
-   */
-  projectIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the environment profile.</p>
-   * @public
-   */
-  environmentProfileIdentifier?: string;
-
-  /**
-   * <p>The identifier of the Amazon DataZone blueprint.</p>
-   * @public
-   */
-  environmentBlueprintIdentifier?: string;
-
-  /**
-   * <p>The provider of the environment.</p>
-   * @public
-   */
-  provider?: string;
-
-  /**
-   * <p>The name of the environment.</p>
-   * @public
-   */
-  name?: string;
-
-  /**
-   * <p>The maximum number of environments to return in a single call to
-   *             <code>ListEnvironments</code>. When the number of environments to be listed is greater
-   *          than the value of <code>MaxResults</code>, the response contains a <code>NextToken</code>
-   *          value that you can use in a subsequent call to <code>ListEnvironments</code> to list the
-   *          next set of environments.</p>
-   * @public
-   */
-  maxResults?: number;
-
-  /**
-   * <p>When the number of environments is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of environments, the response
-   *          includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListEnvironments</code> to
-   *          list the next set of environments.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * <p>The details of an environment.</p>
- * @public
- */
-export interface EnvironmentSummary {
-  /**
-   * <p>The identifier of the project in which the environment exists.</p>
-   * @public
-   */
-  projectId: string | undefined;
-
-  /**
-   * <p>The identifier of the environment.</p>
-   * @public
-   */
-  id?: string;
-
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which the environment exists.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The Amazon DataZone user who created the environment.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The timestamp of when the environment was created.</p>
-   * @public
-   */
-  createdAt?: Date;
-
-  /**
-   * <p>The timestamp of when the environment was updated.</p>
-   * @public
-   */
-  updatedAt?: Date;
-
-  /**
-   * <p>The name of the environment.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The description of the environment.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The identifier of the environment profile with which the environment was created.</p>
-   * @public
-   */
-  environmentProfileId?: string;
-
-  /**
-   * <p>The identifier of the Amazon Web Services account in which an environment exists.</p>
-   * @public
-   */
-  awsAccountId?: string;
-
-  /**
-   * <p>The Amazon Web Services Region in which an environment exists.</p>
-   * @public
-   */
-  awsAccountRegion?: string;
-
-  /**
-   * <p>The provider of the environment.</p>
-   * @public
-   */
-  provider: string | undefined;
-
-  /**
-   * <p>The status of the environment.</p>
-   * @public
-   */
-  status?: EnvironmentStatus;
-}
-
-/**
- * @public
- */
-export interface ListEnvironmentsOutput {
-  /**
-   * <p>The results of the <code>ListEnvironments</code> action.</p>
-   * @public
-   */
-  items: EnvironmentSummary[] | undefined;
-
-  /**
-   * <p>When the number of environments is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of environments, the response
-   *          includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListEnvironments</code> to
-   *          list the next set of environments.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- */
-export interface DeleteListingInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the listing to be deleted.</p>
-   * @public
-   */
-  identifier: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeleteListingOutput {}
-
-/**
- * @public
- */
-export interface GetListingInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the listing.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The revision of the listing.</p>
-   * @public
-   */
-  listingRevision?: string;
-}
-
-/**
- * <p>The details of a listing (aka asset published in a Amazon DataZone catalog).</p>
- * @public
- */
-export type ListingItem = ListingItem.AssetListingMember | ListingItem.$UnknownMember;
-
-/**
- * @public
- */
-export namespace ListingItem {
-  /**
-   * <p>An asset published in an Amazon DataZone catalog.</p>
-   * @public
-   */
-  export interface AssetListingMember {
-    assetListing: AssetListing;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    assetListing?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    assetListing: (value: AssetListing) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: ListingItem, visitor: Visitor<T>): T => {
-    if (value.assetListing !== undefined) return visitor.assetListing(value.assetListing);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * @public
- */
-export interface GetListingOutput {
-  /**
-   * <p>The ID of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The ID of the listing.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The revision of a listing.</p>
-   * @public
-   */
-  listingRevision: string | undefined;
-
-  /**
-   * <p>The timestamp of when the listing was created.</p>
-   * @public
-   */
-  createdAt?: Date;
-
-  /**
-   * <p>The timestamp of when the listing was updated.</p>
-   * @public
-   */
-  updatedAt?: Date;
-
-  /**
-   * <p>The Amazon DataZone user who created the listing.</p>
-   * @public
-   */
-  createdBy?: string;
-
-  /**
-   * <p>The Amazon DataZone user who updated the listing.</p>
-   * @public
-   */
-  updatedBy?: string;
-
-  /**
-   * <p>The details of a listing.</p>
-   * @public
-   */
-  item?: ListingItem;
-
-  /**
-   * <p>The name of the listing.</p>
-   * @public
-   */
-  name?: string;
-
-  /**
-   * <p>The description of the listing.</p>
-   * @public
-   */
-  description?: string;
-
-  /**
-   * <p>The status of the listing.</p>
-   * @public
-   */
-  status?: ListingStatus;
-}
-
-/**
- * @public
- * @enum
- */
-export const TaskStatus = {
-  ACTIVE: "ACTIVE",
-  INACTIVE: "INACTIVE",
-} as const;
-
-/**
- * @public
- */
-export type TaskStatus = (typeof TaskStatus)[keyof typeof TaskStatus];
-
-/**
- * @public
- * @enum
- */
-export const NotificationType = {
-  EVENT: "EVENT",
-  TASK: "TASK",
-} as const;
-
-/**
- * @public
- */
-export type NotificationType = (typeof NotificationType)[keyof typeof NotificationType];
-
-/**
- * @public
- */
-export interface ListNotificationsInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The type of notifications.</p>
-   * @public
-   */
-  type: NotificationType | undefined;
-
-  /**
-   * <p>The time after which you want to list notifications.</p>
-   * @public
-   */
-  afterTimestamp?: Date;
-
-  /**
-   * <p>The time before which you want to list notifications.</p>
-   * @public
-   */
-  beforeTimestamp?: Date;
-
-  /**
-   * <p>The subjects of notifications.</p>
-   * @public
-   */
-  subjects?: string[];
-
-  /**
-   * <p>The task status of notifications.</p>
-   * @public
-   */
-  taskStatus?: TaskStatus;
-
-  /**
-   * <p>The maximum number of notifications to return in a single call to
-   *             <code>ListNotifications</code>. When the number of notifications to be listed is greater
-   *          than the value of <code>MaxResults</code>, the response contains a <code>NextToken</code>
-   *          value that you can use in a subsequent call to <code>ListNotifications</code> to list the
-   *          next set of notifications.</p>
-   * @public
-   */
-  maxResults?: number;
-
-  /**
-   * <p>When the number of notifications is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of notifications, the response
-   *          includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListNotifications</code> to
-   *          list the next set of notifications.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- * @enum
- */
-export const NotificationResourceType = {
-  PROJECT: "PROJECT",
-} as const;
-
-/**
- * @public
- */
-export type NotificationResourceType = (typeof NotificationResourceType)[keyof typeof NotificationResourceType];
-
-/**
- * <p>The details of the resource mentioned in a notification.</p>
- * @public
- */
-export interface NotificationResource {
-  /**
-   * <p>The type of the resource mentioned in a notification.</p>
-   * @public
-   */
-  type: NotificationResourceType | undefined;
-
-  /**
-   * <p>The ID of the resource mentioned in a notification.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The name of the resource mentioned in a notification.</p>
-   * @public
-   */
-  name?: string;
-}
-
-/**
- * @public
- * @enum
- */
-export const NotificationRole = {
-  DOMAIN_OWNER: "DOMAIN_OWNER",
-  PROJECT_CONTRIBUTOR: "PROJECT_CONTRIBUTOR",
-  PROJECT_OWNER: "PROJECT_OWNER",
-  PROJECT_SUBSCRIBER: "PROJECT_SUBSCRIBER",
-  PROJECT_VIEWER: "PROJECT_VIEWER",
-} as const;
-
-/**
- * @public
- */
-export type NotificationRole = (typeof NotificationRole)[keyof typeof NotificationRole];
-
-/**
- * <p>The topic of the notification.</p>
- * @public
- */
-export interface Topic {
-  /**
-   * <p>The subject of the resource mentioned in a notification.</p>
-   * @public
-   */
-  subject: string | undefined;
-
-  /**
-   * <p>The details of the resource mentioned in a notification.</p>
-   * @public
-   */
-  resource: NotificationResource | undefined;
-
-  /**
-   * <p>The role of the resource mentioned in a notification.</p>
-   * @public
-   */
-  role: NotificationRole | undefined;
-}
-
-/**
- * <p>The details of a notification generated in Amazon DataZone.</p>
- * @public
- */
-export interface NotificationOutput {
-  /**
-   * <p>The identifier of the notification.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The identifier of a Amazon DataZone domain in which the notification exists.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The type of the notification.</p>
-   * @public
-   */
-  type: NotificationType | undefined;
-
-  /**
-   * <p>The topic of the notification.</p>
-   * @public
-   */
-  topic: Topic | undefined;
-
-  /**
-   * <p>The title of the notification.</p>
-   * @public
-   */
-  title: string | undefined;
-
-  /**
-   * <p>The message included in the notification.</p>
-   * @public
-   */
-  message: string | undefined;
-
-  /**
-   * <p>The status included in the notification.</p>
-   * @public
-   */
-  status?: TaskStatus;
-
-  /**
-   * <p>The action link included in the notification.</p>
-   * @public
-   */
-  actionLink: string | undefined;
-
-  /**
-   * <p>The timestamp of when a notification was created.</p>
-   * @public
-   */
-  creationTimestamp: Date | undefined;
-
-  /**
-   * <p>The timestamp of when the notification was last updated.</p>
-   * @public
-   */
-  lastUpdatedTimestamp: Date | undefined;
-
-  /**
-   * <p>The metadata included in the notification.</p>
-   * @public
-   */
-  metadata?: Record<string, string>;
-}
-
-/**
- * @public
- */
-export interface ListNotificationsOutput {
-  /**
-   * <p>The results of the <code>ListNotifications</code> action.</p>
-   * @public
-   */
-  notifications?: NotificationOutput[];
-
-  /**
-   * <p>When the number of notifications is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of notifications, the response
-   *          includes a pagination token named <code>NextToken</code>. You can specify this
-   *             <code>NextToken</code> value in a subsequent call to <code>ListNotifications</code> to
-   *          list the next set of notifications.</p>
-   * @public
-   */
-  nextToken?: string;
-}
-
-/**
- * @public
- * @enum
- */
-export const SortFieldProject = {
-  NAME: "NAME",
-} as const;
-
-/**
- * @public
- */
-export type SortFieldProject = (typeof SortFieldProject)[keyof typeof SortFieldProject];
-
-/**
- * @public
- * @enum
- */
-export const SortOrder = {
-  ASCENDING: "ASCENDING",
-  DESCENDING: "DESCENDING",
-} as const;
-
-/**
- * @public
- */
-export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
-
-/**
  * @internal
  */
 export const AcceptChoiceFilterSensitiveLog = (obj: AcceptChoice): any => ({
@@ -10840,9 +11003,21 @@ export const SubscribedAssetListingFilterSensitiveLog = (obj: SubscribedAssetLis
 /**
  * @internal
  */
+export const SubscribedProductListingFilterSensitiveLog = (obj: SubscribedProductListing): any => ({
+  ...obj,
+  ...(obj.glossaryTerms && {
+    glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
 export const SubscribedListingItemFilterSensitiveLog = (obj: SubscribedListingItem): any => {
   if (obj.assetListing !== undefined)
     return { assetListing: SubscribedAssetListingFilterSensitiveLog(obj.assetListing) };
+  if (obj.productListing !== undefined)
+    return { productListing: SubscribedProductListingFilterSensitiveLog(obj.productListing) };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -10967,6 +11142,15 @@ export const GetAssetOutputFilterSensitiveLog = (obj: GetAssetOutput): any => ({
 /**
  * @internal
  */
+export const AssetFilterSummaryFilterSensitiveLog = (obj: AssetFilterSummary): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
 export const AssetItemAdditionalAttributesFilterSensitiveLog = (obj: AssetItemAdditionalAttributes): any => ({
   ...obj,
   ...(obj.formsOutput && { formsOutput: obj.formsOutput.map((item) => FormOutputFilterSensitiveLog(item)) }),
@@ -11083,6 +11267,46 @@ export const CancelSubscriptionOutputFilterSensitiveLog = (obj: CancelSubscripti
     subscribedPrincipal: SubscribedPrincipalFilterSensitiveLog(obj.subscribedPrincipal),
   }),
   ...(obj.subscribedListing && { subscribedListing: SubscribedListingFilterSensitiveLog(obj.subscribedListing) }),
+});
+
+/**
+ * @internal
+ */
+export const CreateDataProductInputFilterSensitiveLog = (obj: CreateDataProductInput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.formsInput && { formsInput: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CreateDataProductOutputFilterSensitiveLog = (obj: CreateDataProductOutput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.formsOutput && { formsOutput: obj.formsOutput.map((item) => FormOutputFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
+export const CreateDataProductRevisionInputFilterSensitiveLog = (obj: CreateDataProductRevisionInput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.formsInput && { formsInput: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CreateDataProductRevisionOutputFilterSensitiveLog = (obj: CreateDataProductRevisionOutput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.formsOutput && { formsOutput: obj.formsOutput.map((item) => FormOutputFilterSensitiveLog(item)) }),
 });
 
 /**
@@ -11321,7 +11545,59 @@ export const CreateUserProfileOutputFilterSensitiveLog = (obj: CreateUserProfile
 /**
  * @internal
  */
-export const DataProductSummaryFilterSensitiveLog = (obj: DataProductSummary): any => ({
+export const GetDataProductOutputFilterSensitiveLog = (obj: GetDataProductOutput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.formsOutput && { formsOutput: obj.formsOutput.map((item) => FormOutputFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
+export const ListingSummaryFilterSensitiveLog = (obj: ListingSummary): any => ({
+  ...obj,
+  ...(obj.glossaryTerms && {
+    glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const DataProductListingFilterSensitiveLog = (obj: DataProductListing): any => ({
+  ...obj,
+  ...(obj.glossaryTerms && {
+    glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const ListingSummaryItemFilterSensitiveLog = (obj: ListingSummaryItem): any => ({
+  ...obj,
+  ...(obj.glossaryTerms && {
+    glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const DataProductListingItemFilterSensitiveLog = (obj: DataProductListingItem): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.glossaryTerms && {
+    glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const DataProductResultItemFilterSensitiveLog = (obj: DataProductResultItem): any => ({
   ...obj,
   ...(obj.name && { name: SENSITIVE_STRING }),
   ...(obj.description && { description: SENSITIVE_STRING }),
@@ -11483,6 +11759,13 @@ export const GetEnvironmentBlueprintOutputFilterSensitiveLog = (obj: GetEnvironm
 /**
  * @internal
  */
+export const GetEnvironmentCredentialsOutputFilterSensitiveLog = (obj: GetEnvironmentCredentialsOutput): any => ({
+  ...obj,
+});
+
+/**
+ * @internal
+ */
 export const GetEnvironmentProfileOutputFilterSensitiveLog = (obj: GetEnvironmentProfileOutput): any => ({
   ...obj,
   ...(obj.name && { name: SENSITIVE_STRING }),
@@ -11498,6 +11781,14 @@ export const GetEnvironmentProfileOutputFilterSensitiveLog = (obj: GetEnvironmen
 export const GetGroupProfileOutputFilterSensitiveLog = (obj: GetGroupProfileOutput): any => ({
   ...obj,
   ...(obj.groupName && { groupName: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const GetLineageNodeOutputFilterSensitiveLog = (obj: GetLineageNodeOutput): any => ({
+  ...obj,
+  ...(obj.formsOutput && { formsOutput: obj.formsOutput.map((item) => FormOutputFilterSensitiveLog(item)) }),
 });
 
 /**
@@ -11551,165 +11842,4 @@ export const GetSubscriptionTargetOutputFilterSensitiveLog = (obj: GetSubscripti
 export const GetUserProfileOutputFilterSensitiveLog = (obj: GetUserProfileOutput): any => ({
   ...obj,
   ...(obj.details && { details: UserProfileDetailsFilterSensitiveLog(obj.details) }),
-});
-
-/**
- * @internal
- */
-export const GetGlossaryOutputFilterSensitiveLog = (obj: GetGlossaryOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const UpdateGlossaryInputFilterSensitiveLog = (obj: UpdateGlossaryInput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const UpdateGlossaryOutputFilterSensitiveLog = (obj: UpdateGlossaryOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const GetGlossaryTermOutputFilterSensitiveLog = (obj: GetGlossaryTermOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.shortDescription && { shortDescription: SENSITIVE_STRING }),
-  ...(obj.longDescription && { longDescription: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const UpdateGlossaryTermInputFilterSensitiveLog = (obj: UpdateGlossaryTermInput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.shortDescription && { shortDescription: SENSITIVE_STRING }),
-  ...(obj.longDescription && { longDescription: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const UpdateGlossaryTermOutputFilterSensitiveLog = (obj: UpdateGlossaryTermOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.shortDescription && { shortDescription: SENSITIVE_STRING }),
-  ...(obj.longDescription && { longDescription: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const ListDataSourceRunActivitiesOutputFilterSensitiveLog = (obj: ListDataSourceRunActivitiesOutput): any => ({
-  ...obj,
-  ...(obj.items && { items: obj.items.map((item) => DataSourceRunActivityFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const EnvironmentBlueprintSummaryFilterSensitiveLog = (obj: EnvironmentBlueprintSummary): any => ({
-  ...obj,
-  ...(obj.description && { description: SENSITIVE_STRING }),
-  ...(obj.provisioningProperties && { provisioningProperties: obj.provisioningProperties }),
-});
-
-/**
- * @internal
- */
-export const ListEnvironmentBlueprintsOutputFilterSensitiveLog = (obj: ListEnvironmentBlueprintsOutput): any => ({
-  ...obj,
-  ...(obj.items && { items: obj.items.map((item) => EnvironmentBlueprintSummaryFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const ListEnvironmentProfilesInputFilterSensitiveLog = (obj: ListEnvironmentProfilesInput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const EnvironmentProfileSummaryFilterSensitiveLog = (obj: EnvironmentProfileSummary): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const ListEnvironmentProfilesOutputFilterSensitiveLog = (obj: ListEnvironmentProfilesOutput): any => ({
-  ...obj,
-  ...(obj.items && { items: obj.items.map((item) => EnvironmentProfileSummaryFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const EnvironmentSummaryFilterSensitiveLog = (obj: EnvironmentSummary): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const ListEnvironmentsOutputFilterSensitiveLog = (obj: ListEnvironmentsOutput): any => ({
-  ...obj,
-  ...(obj.items && { items: obj.items.map((item) => EnvironmentSummaryFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const ListingItemFilterSensitiveLog = (obj: ListingItem): any => {
-  if (obj.assetListing !== undefined) return { assetListing: AssetListingFilterSensitiveLog(obj.assetListing) };
-  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
-};
-
-/**
- * @internal
- */
-export const GetListingOutputFilterSensitiveLog = (obj: GetListingOutput): any => ({
-  ...obj,
-  ...(obj.item && { item: ListingItemFilterSensitiveLog(obj.item) }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const NotificationOutputFilterSensitiveLog = (obj: NotificationOutput): any => ({
-  ...obj,
-  ...(obj.title && { title: SENSITIVE_STRING }),
-  ...(obj.message && { message: SENSITIVE_STRING }),
-  ...(obj.actionLink && { actionLink: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const ListNotificationsOutputFilterSensitiveLog = (obj: ListNotificationsOutput): any => ({
-  ...obj,
-  ...(obj.notifications && {
-    notifications: obj.notifications.map((item) => NotificationOutputFilterSensitiveLog(item)),
-  }),
 });

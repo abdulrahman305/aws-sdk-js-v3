@@ -485,6 +485,7 @@ export const se_CompleteMultipartUploadCommand = async (
     [_xacs_]: input[_CSHAh]!,
     [_xarp]: input[_RP]!,
     [_xaebo]: input[_EBO]!,
+    [_inm]: input[_INM]!,
     [_xasseca]: input[_SSECA]!,
     [_xasseck]: input[_SSECK]!,
     [_xasseckm]: input[_SSECKMD]!,
@@ -1758,6 +1759,12 @@ export const se_HeadObjectCommand = async (
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   b.p("Key", () => input.Key!, "{Key+}", true);
   const query: any = map({
+    [_rcc]: [, input[_RCC]!],
+    [_rcd]: [, input[_RCD]!],
+    [_rce]: [, input[_RCE]!],
+    [_rcl]: [, input[_RCL]!],
+    [_rct]: [, input[_RCT]!],
+    [_re]: [() => input.ResponseExpires !== void 0, () => __dateToUtcString(input[_RE]!).toString()],
     [_vI]: [, input[_VI]!],
     [_pN]: [() => input.PartNumber !== void 0, () => input[_PN]!.toString()],
   });
@@ -1864,15 +1871,14 @@ export const se_ListBucketsCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {
-    "content-type": "application/xml",
-  };
+  const headers: any = {};
   b.bp("/");
   const query: any = map({
     [_xi]: [, "ListBuckets"],
+    [_mb]: [() => input.MaxBuckets !== void 0, () => input[_MB]!.toString()],
+    [_ct_]: [, input[_CTo]!],
   });
   let body: any;
-  body = "";
   b.m("GET").h(headers).q(query).b(body);
   return b.build();
 };
@@ -2615,7 +2621,7 @@ export const se_PutObjectCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
-    [_ct]: input[_CT]! || "application/octet-stream",
+    [_ct]: input[_CT] || "application/octet-stream",
     [_xaa]: input[_ACL]!,
     [_cc]: input[_CC]!,
     [_cd]: input[_CD]!,
@@ -2629,6 +2635,7 @@ export const se_PutObjectCommand = async (
     [_xacs]: input[_CSHA]!,
     [_xacs_]: input[_CSHAh]!,
     [_e]: [() => isSerializableHeaderValue(input[_E]), () => __dateToUtcString(input[_E]!).toString()],
+    [_inm]: input[_INM]!,
     [_xagfc]: input[_GFC]!,
     [_xagr]: input[_GR]!,
     [_xagra]: input[_GRACP]!,
@@ -4483,6 +4490,9 @@ export const de_ListBucketsCommand = async (
     contents[_Bu] = [];
   } else if (data[_Bu] != null && data[_Bu][_B] != null) {
     contents[_Bu] = de_Buckets(__getArrayIfSingleItem(data[_Bu][_B]), context);
+  }
+  if (data[_CTo] != null) {
+    contents[_CTo] = __expectString(data[_CTo]);
   }
   if (data[_O] != null) {
     contents[_O] = de_Owner(data[_O], context);
@@ -9927,6 +9937,7 @@ const _LT = "LocationType";
 const _M = "Marker";
 const _MAO = "MetricsAndOperator";
 const _MAS = "MaxAgeSeconds";
+const _MB = "MaxBuckets";
 const _MC = "MetricsConfiguration";
 const _MCL = "MetricsConfigurationList";
 const _MD = "MetadataDirective";
@@ -10183,6 +10194,7 @@ const _log = "logging";
 const _lt = "list-type";
 const _m = "metrics";
 const _ma = "marker";
+const _mb = "max-buckets";
 const _mdb = "max-directory-buckets";
 const _me = "member";
 const _mk = "max-keys";

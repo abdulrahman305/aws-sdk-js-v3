@@ -4,6 +4,11 @@ import { HttpHandlerOptions as __HttpHandlerOptions } from "@smithy/types";
 
 import { BedrockClient, BedrockClientConfig } from "./BedrockClient";
 import {
+  BatchDeleteEvaluationJobCommand,
+  BatchDeleteEvaluationJobCommandInput,
+  BatchDeleteEvaluationJobCommandOutput,
+} from "./commands/BatchDeleteEvaluationJobCommand";
+import {
   CreateEvaluationJobCommand,
   CreateEvaluationJobCommandInput,
   CreateEvaluationJobCommandOutput,
@@ -19,10 +24,25 @@ import {
   CreateGuardrailVersionCommandOutput,
 } from "./commands/CreateGuardrailVersionCommand";
 import {
+  CreateModelCopyJobCommand,
+  CreateModelCopyJobCommandInput,
+  CreateModelCopyJobCommandOutput,
+} from "./commands/CreateModelCopyJobCommand";
+import {
   CreateModelCustomizationJobCommand,
   CreateModelCustomizationJobCommandInput,
   CreateModelCustomizationJobCommandOutput,
 } from "./commands/CreateModelCustomizationJobCommand";
+import {
+  CreateModelImportJobCommand,
+  CreateModelImportJobCommandInput,
+  CreateModelImportJobCommandOutput,
+} from "./commands/CreateModelImportJobCommand";
+import {
+  CreateModelInvocationJobCommand,
+  CreateModelInvocationJobCommandInput,
+  CreateModelInvocationJobCommandOutput,
+} from "./commands/CreateModelInvocationJobCommand";
 import {
   CreateProvisionedModelThroughputCommand,
   CreateProvisionedModelThroughputCommandInput,
@@ -38,6 +58,11 @@ import {
   DeleteGuardrailCommandInput,
   DeleteGuardrailCommandOutput,
 } from "./commands/DeleteGuardrailCommand";
+import {
+  DeleteImportedModelCommand,
+  DeleteImportedModelCommandInput,
+  DeleteImportedModelCommandOutput,
+} from "./commands/DeleteImportedModelCommand";
 import {
   DeleteModelInvocationLoggingConfigurationCommand,
   DeleteModelInvocationLoggingConfigurationCommandInput,
@@ -69,10 +94,30 @@ import {
   GetGuardrailCommandOutput,
 } from "./commands/GetGuardrailCommand";
 import {
+  GetImportedModelCommand,
+  GetImportedModelCommandInput,
+  GetImportedModelCommandOutput,
+} from "./commands/GetImportedModelCommand";
+import {
+  GetModelCopyJobCommand,
+  GetModelCopyJobCommandInput,
+  GetModelCopyJobCommandOutput,
+} from "./commands/GetModelCopyJobCommand";
+import {
   GetModelCustomizationJobCommand,
   GetModelCustomizationJobCommandInput,
   GetModelCustomizationJobCommandOutput,
 } from "./commands/GetModelCustomizationJobCommand";
+import {
+  GetModelImportJobCommand,
+  GetModelImportJobCommandInput,
+  GetModelImportJobCommandOutput,
+} from "./commands/GetModelImportJobCommand";
+import {
+  GetModelInvocationJobCommand,
+  GetModelInvocationJobCommandInput,
+  GetModelInvocationJobCommandOutput,
+} from "./commands/GetModelInvocationJobCommand";
 import {
   GetModelInvocationLoggingConfigurationCommand,
   GetModelInvocationLoggingConfigurationCommandInput,
@@ -104,10 +149,30 @@ import {
   ListGuardrailsCommandOutput,
 } from "./commands/ListGuardrailsCommand";
 import {
+  ListImportedModelsCommand,
+  ListImportedModelsCommandInput,
+  ListImportedModelsCommandOutput,
+} from "./commands/ListImportedModelsCommand";
+import {
+  ListModelCopyJobsCommand,
+  ListModelCopyJobsCommandInput,
+  ListModelCopyJobsCommandOutput,
+} from "./commands/ListModelCopyJobsCommand";
+import {
   ListModelCustomizationJobsCommand,
   ListModelCustomizationJobsCommandInput,
   ListModelCustomizationJobsCommandOutput,
 } from "./commands/ListModelCustomizationJobsCommand";
+import {
+  ListModelImportJobsCommand,
+  ListModelImportJobsCommandInput,
+  ListModelImportJobsCommandOutput,
+} from "./commands/ListModelImportJobsCommand";
+import {
+  ListModelInvocationJobsCommand,
+  ListModelInvocationJobsCommandInput,
+  ListModelInvocationJobsCommandOutput,
+} from "./commands/ListModelInvocationJobsCommand";
 import {
   ListProvisionedModelThroughputsCommand,
   ListProvisionedModelThroughputsCommandInput,
@@ -133,6 +198,11 @@ import {
   StopModelCustomizationJobCommandInput,
   StopModelCustomizationJobCommandOutput,
 } from "./commands/StopModelCustomizationJobCommand";
+import {
+  StopModelInvocationJobCommand,
+  StopModelInvocationJobCommandInput,
+  StopModelInvocationJobCommandOutput,
+} from "./commands/StopModelInvocationJobCommand";
 import { TagResourceCommand, TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import {
   UntagResourceCommand,
@@ -151,32 +221,46 @@ import {
 } from "./commands/UpdateProvisionedModelThroughputCommand";
 
 const commands = {
+  BatchDeleteEvaluationJobCommand,
   CreateEvaluationJobCommand,
   CreateGuardrailCommand,
   CreateGuardrailVersionCommand,
+  CreateModelCopyJobCommand,
   CreateModelCustomizationJobCommand,
+  CreateModelImportJobCommand,
+  CreateModelInvocationJobCommand,
   CreateProvisionedModelThroughputCommand,
   DeleteCustomModelCommand,
   DeleteGuardrailCommand,
+  DeleteImportedModelCommand,
   DeleteModelInvocationLoggingConfigurationCommand,
   DeleteProvisionedModelThroughputCommand,
   GetCustomModelCommand,
   GetEvaluationJobCommand,
   GetFoundationModelCommand,
   GetGuardrailCommand,
+  GetImportedModelCommand,
+  GetModelCopyJobCommand,
   GetModelCustomizationJobCommand,
+  GetModelImportJobCommand,
+  GetModelInvocationJobCommand,
   GetModelInvocationLoggingConfigurationCommand,
   GetProvisionedModelThroughputCommand,
   ListCustomModelsCommand,
   ListEvaluationJobsCommand,
   ListFoundationModelsCommand,
   ListGuardrailsCommand,
+  ListImportedModelsCommand,
+  ListModelCopyJobsCommand,
   ListModelCustomizationJobsCommand,
+  ListModelImportJobsCommand,
+  ListModelInvocationJobsCommand,
   ListProvisionedModelThroughputsCommand,
   ListTagsForResourceCommand,
   PutModelInvocationLoggingConfigurationCommand,
   StopEvaluationJobCommand,
   StopModelCustomizationJobCommand,
+  StopModelInvocationJobCommand,
   TagResourceCommand,
   UntagResourceCommand,
   UpdateGuardrailCommand,
@@ -184,6 +268,23 @@ const commands = {
 };
 
 export interface Bedrock {
+  /**
+   * @see {@link BatchDeleteEvaluationJobCommand}
+   */
+  batchDeleteEvaluationJob(
+    args: BatchDeleteEvaluationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<BatchDeleteEvaluationJobCommandOutput>;
+  batchDeleteEvaluationJob(
+    args: BatchDeleteEvaluationJobCommandInput,
+    cb: (err: any, data?: BatchDeleteEvaluationJobCommandOutput) => void
+  ): void;
+  batchDeleteEvaluationJob(
+    args: BatchDeleteEvaluationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: BatchDeleteEvaluationJobCommandOutput) => void
+  ): void;
+
   /**
    * @see {@link CreateEvaluationJobCommand}
    */
@@ -233,6 +334,23 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link CreateModelCopyJobCommand}
+   */
+  createModelCopyJob(
+    args: CreateModelCopyJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateModelCopyJobCommandOutput>;
+  createModelCopyJob(
+    args: CreateModelCopyJobCommandInput,
+    cb: (err: any, data?: CreateModelCopyJobCommandOutput) => void
+  ): void;
+  createModelCopyJob(
+    args: CreateModelCopyJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateModelCopyJobCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateModelCustomizationJobCommand}
    */
   createModelCustomizationJob(
@@ -247,6 +365,40 @@ export interface Bedrock {
     args: CreateModelCustomizationJobCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateModelCustomizationJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateModelImportJobCommand}
+   */
+  createModelImportJob(
+    args: CreateModelImportJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateModelImportJobCommandOutput>;
+  createModelImportJob(
+    args: CreateModelImportJobCommandInput,
+    cb: (err: any, data?: CreateModelImportJobCommandOutput) => void
+  ): void;
+  createModelImportJob(
+    args: CreateModelImportJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateModelImportJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateModelInvocationJobCommand}
+   */
+  createModelInvocationJob(
+    args: CreateModelInvocationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateModelInvocationJobCommandOutput>;
+  createModelInvocationJob(
+    args: CreateModelInvocationJobCommandInput,
+    cb: (err: any, data?: CreateModelInvocationJobCommandOutput) => void
+  ): void;
+  createModelInvocationJob(
+    args: CreateModelInvocationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateModelInvocationJobCommandOutput) => void
   ): void;
 
   /**
@@ -295,6 +447,23 @@ export interface Bedrock {
     args: DeleteGuardrailCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteGuardrailCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteImportedModelCommand}
+   */
+  deleteImportedModel(
+    args: DeleteImportedModelCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteImportedModelCommandOutput>;
+  deleteImportedModel(
+    args: DeleteImportedModelCommandInput,
+    cb: (err: any, data?: DeleteImportedModelCommandOutput) => void
+  ): void;
+  deleteImportedModel(
+    args: DeleteImportedModelCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteImportedModelCommandOutput) => void
   ): void;
 
   /**
@@ -392,6 +561,37 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link GetImportedModelCommand}
+   */
+  getImportedModel(
+    args: GetImportedModelCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetImportedModelCommandOutput>;
+  getImportedModel(
+    args: GetImportedModelCommandInput,
+    cb: (err: any, data?: GetImportedModelCommandOutput) => void
+  ): void;
+  getImportedModel(
+    args: GetImportedModelCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetImportedModelCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetModelCopyJobCommand}
+   */
+  getModelCopyJob(
+    args: GetModelCopyJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetModelCopyJobCommandOutput>;
+  getModelCopyJob(args: GetModelCopyJobCommandInput, cb: (err: any, data?: GetModelCopyJobCommandOutput) => void): void;
+  getModelCopyJob(
+    args: GetModelCopyJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetModelCopyJobCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetModelCustomizationJobCommand}
    */
   getModelCustomizationJob(
@@ -406,6 +606,40 @@ export interface Bedrock {
     args: GetModelCustomizationJobCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetModelCustomizationJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetModelImportJobCommand}
+   */
+  getModelImportJob(
+    args: GetModelImportJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetModelImportJobCommandOutput>;
+  getModelImportJob(
+    args: GetModelImportJobCommandInput,
+    cb: (err: any, data?: GetModelImportJobCommandOutput) => void
+  ): void;
+  getModelImportJob(
+    args: GetModelImportJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetModelImportJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetModelInvocationJobCommand}
+   */
+  getModelInvocationJob(
+    args: GetModelInvocationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetModelInvocationJobCommandOutput>;
+  getModelInvocationJob(
+    args: GetModelInvocationJobCommandInput,
+    cb: (err: any, data?: GetModelInvocationJobCommandOutput) => void
+  ): void;
+  getModelInvocationJob(
+    args: GetModelInvocationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetModelInvocationJobCommandOutput) => void
   ): void;
 
   /**
@@ -513,6 +747,42 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link ListImportedModelsCommand}
+   */
+  listImportedModels(): Promise<ListImportedModelsCommandOutput>;
+  listImportedModels(
+    args: ListImportedModelsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListImportedModelsCommandOutput>;
+  listImportedModels(
+    args: ListImportedModelsCommandInput,
+    cb: (err: any, data?: ListImportedModelsCommandOutput) => void
+  ): void;
+  listImportedModels(
+    args: ListImportedModelsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListImportedModelsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListModelCopyJobsCommand}
+   */
+  listModelCopyJobs(): Promise<ListModelCopyJobsCommandOutput>;
+  listModelCopyJobs(
+    args: ListModelCopyJobsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListModelCopyJobsCommandOutput>;
+  listModelCopyJobs(
+    args: ListModelCopyJobsCommandInput,
+    cb: (err: any, data?: ListModelCopyJobsCommandOutput) => void
+  ): void;
+  listModelCopyJobs(
+    args: ListModelCopyJobsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListModelCopyJobsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListModelCustomizationJobsCommand}
    */
   listModelCustomizationJobs(): Promise<ListModelCustomizationJobsCommandOutput>;
@@ -528,6 +798,42 @@ export interface Bedrock {
     args: ListModelCustomizationJobsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListModelCustomizationJobsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListModelImportJobsCommand}
+   */
+  listModelImportJobs(): Promise<ListModelImportJobsCommandOutput>;
+  listModelImportJobs(
+    args: ListModelImportJobsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListModelImportJobsCommandOutput>;
+  listModelImportJobs(
+    args: ListModelImportJobsCommandInput,
+    cb: (err: any, data?: ListModelImportJobsCommandOutput) => void
+  ): void;
+  listModelImportJobs(
+    args: ListModelImportJobsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListModelImportJobsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListModelInvocationJobsCommand}
+   */
+  listModelInvocationJobs(): Promise<ListModelInvocationJobsCommandOutput>;
+  listModelInvocationJobs(
+    args: ListModelInvocationJobsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListModelInvocationJobsCommandOutput>;
+  listModelInvocationJobs(
+    args: ListModelInvocationJobsCommandInput,
+    cb: (err: any, data?: ListModelInvocationJobsCommandOutput) => void
+  ): void;
+  listModelInvocationJobs(
+    args: ListModelInvocationJobsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListModelInvocationJobsCommandOutput) => void
   ): void;
 
   /**
@@ -614,6 +920,23 @@ export interface Bedrock {
     args: StopModelCustomizationJobCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: StopModelCustomizationJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link StopModelInvocationJobCommand}
+   */
+  stopModelInvocationJob(
+    args: StopModelInvocationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<StopModelInvocationJobCommandOutput>;
+  stopModelInvocationJob(
+    args: StopModelInvocationJobCommandInput,
+    cb: (err: any, data?: StopModelInvocationJobCommandOutput) => void
+  ): void;
+  stopModelInvocationJob(
+    args: StopModelInvocationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StopModelInvocationJobCommandOutput) => void
   ): void;
 
   /**

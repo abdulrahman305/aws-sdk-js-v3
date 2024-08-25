@@ -76,7 +76,7 @@ export interface StopBuildCommandOutput extends StopBuildOutput, __MetadataBeare
  * //       },
  * //       buildspec: "STRING_VALUE",
  * //       auth: { // SourceAuth
- * //         type: "OAUTH" || "CODECONNECTIONS", // required
+ * //         type: "OAUTH" || "CODECONNECTIONS" || "SECRETS_MANAGER", // required
  * //         resource: "STRING_VALUE",
  * //       },
  * //       reportBuildStatus: true || false,
@@ -97,7 +97,7 @@ export interface StopBuildCommandOutput extends StopBuildOutput, __MetadataBeare
  * //         },
  * //         buildspec: "STRING_VALUE",
  * //         auth: {
- * //           type: "OAUTH" || "CODECONNECTIONS", // required
+ * //           type: "OAUTH" || "CODECONNECTIONS" || "SECRETS_MANAGER", // required
  * //           resource: "STRING_VALUE",
  * //         },
  * //         reportBuildStatus: true || false,
@@ -143,7 +143,7 @@ export interface StopBuildCommandOutput extends StopBuildOutput, __MetadataBeare
  * //       ],
  * //     },
  * //     environment: { // ProjectEnvironment
- * //       type: "WINDOWS_CONTAINER" || "LINUX_CONTAINER" || "LINUX_GPU_CONTAINER" || "ARM_CONTAINER" || "WINDOWS_SERVER_2019_CONTAINER" || "LINUX_LAMBDA_CONTAINER" || "ARM_LAMBDA_CONTAINER", // required
+ * //       type: "WINDOWS_CONTAINER" || "LINUX_CONTAINER" || "LINUX_GPU_CONTAINER" || "ARM_CONTAINER" || "WINDOWS_SERVER_2019_CONTAINER" || "LINUX_LAMBDA_CONTAINER" || "ARM_LAMBDA_CONTAINER" || "MAC_ARM", // required
  * //       image: "STRING_VALUE", // required
  * //       computeType: "BUILD_GENERAL1_SMALL" || "BUILD_GENERAL1_MEDIUM" || "BUILD_GENERAL1_LARGE" || "BUILD_GENERAL1_XLARGE" || "BUILD_GENERAL1_2XLARGE" || "BUILD_LAMBDA_1GB" || "BUILD_LAMBDA_2GB" || "BUILD_LAMBDA_4GB" || "BUILD_LAMBDA_8GB" || "BUILD_LAMBDA_10GB", // required
  * //       fleet: { // ProjectFleet

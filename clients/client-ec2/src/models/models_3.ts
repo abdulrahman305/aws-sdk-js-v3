@@ -22,8 +22,6 @@ import {
   CapacityReservationTenancy,
   ClientVpnAuthorizationRuleStatus,
   CurrencyCodeValues,
-  FleetCapacityReservation,
-  FleetCapacityReservationTenancy,
   FleetInstanceMatchCriteria,
   HostMaintenance,
   HostRecovery,
@@ -52,6 +50,8 @@ import {
   DiskImageFormat,
   EgressOnlyInternetGateway,
   ExportTask,
+  FleetCapacityReservation,
+  FleetCapacityReservationTenancy,
   FleetCapacityReservationUsageStrategy,
   FleetExcessCapacityTerminationPolicy,
   FleetLaunchTemplateOverrides,
@@ -59,21 +59,27 @@ import {
   FleetOnDemandAllocationStrategy,
   FleetReplacementStrategy,
   FleetType,
-  GroupIdentifier,
   InstanceLifecycle,
   LaunchTemplateAndOverridesResponse,
+  LocalGatewayRoute,
+  LocalGatewayRouteTable,
+  LocalGatewayRouteTableVirtualInterfaceGroupAssociation,
+  LocalGatewayRouteTableVpcAssociation,
   LogDestinationType,
+  ManagedPrefixList,
   PlatformValues,
   SpotAllocationStrategy,
   SpotInstanceInterruptionBehavior,
-  StateReason,
   TargetCapacityUnitType,
   TrafficType,
   TransportProtocol,
 } from "./models_1";
 
 import {
+  DeleteLaunchTemplateVersionsResponseErrorItem,
+  DeleteLaunchTemplateVersionsResponseSuccessItem,
   FleetStateCode,
+  GroupIdentifier,
   SubnetCidrReservation,
   TransitGateway,
   TransitGatewayConnect,
@@ -87,6 +93,192 @@ import {
   VerifiedAccessEndpoint,
   VerifiedAccessGroup,
 } from "./models_2";
+
+/**
+ * @public
+ */
+export interface DeleteLaunchTemplateVersionsResult {
+  /**
+   * <p>Information about the launch template versions that were successfully deleted.</p>
+   * @public
+   */
+  SuccessfullyDeletedLaunchTemplateVersions?: DeleteLaunchTemplateVersionsResponseSuccessItem[];
+
+  /**
+   * <p>Information about the launch template versions that could not be deleted.</p>
+   * @public
+   */
+  UnsuccessfullyDeletedLaunchTemplateVersions?: DeleteLaunchTemplateVersionsResponseErrorItem[];
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteRequest {
+  /**
+   * <p>The CIDR range for the route. This must match the CIDR for the route exactly.</p>
+   * @public
+   */
+  DestinationCidrBlock?: string;
+
+  /**
+   * <p>The ID of the local gateway route table.</p>
+   * @public
+   */
+  LocalGatewayRouteTableId: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean;
+
+  /**
+   * <p>
+   *          Use a prefix list in place of <code>DestinationCidrBlock</code>. You cannot use
+   *          <code>DestinationPrefixListId</code> and <code>DestinationCidrBlock</code> in the same request.
+   *       </p>
+   * @public
+   */
+  DestinationPrefixListId?: string;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteResult {
+  /**
+   * <p>Information about the route.</p>
+   * @public
+   */
+  Route?: LocalGatewayRoute;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteTableRequest {
+  /**
+   * <p>
+   *       The ID of the local gateway route table.
+   *       </p>
+   * @public
+   */
+  LocalGatewayRouteTableId: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteTableResult {
+  /**
+   * <p>Information about the local gateway route table.</p>
+   * @public
+   */
+  LocalGatewayRouteTable?: LocalGatewayRouteTable;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest {
+  /**
+   * <p>
+   *          The ID of the local gateway route table virtual interface group association.
+   *       </p>
+   * @public
+   */
+  LocalGatewayRouteTableVirtualInterfaceGroupAssociationId: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationResult {
+  /**
+   * <p>Information about the association.</p>
+   * @public
+   */
+  LocalGatewayRouteTableVirtualInterfaceGroupAssociation?: LocalGatewayRouteTableVirtualInterfaceGroupAssociation;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteTableVpcAssociationRequest {
+  /**
+   * <p>The ID of the association.</p>
+   * @public
+   */
+  LocalGatewayRouteTableVpcAssociationId: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean;
+}
+
+/**
+ * @public
+ */
+export interface DeleteLocalGatewayRouteTableVpcAssociationResult {
+  /**
+   * <p>Information about the association.</p>
+   * @public
+   */
+  LocalGatewayRouteTableVpcAssociation?: LocalGatewayRouteTableVpcAssociation;
+}
+
+/**
+ * @public
+ */
+export interface DeleteManagedPrefixListRequest {
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean;
+
+  /**
+   * <p>The ID of the prefix list.</p>
+   * @public
+   */
+  PrefixListId: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteManagedPrefixListResult {
+  /**
+   * <p>Information about the prefix list.</p>
+   * @public
+   */
+  PrefixList?: ManagedPrefixList;
+}
 
 /**
  * @public
@@ -383,6 +575,12 @@ export interface DeletePublicIpv4PoolRequest {
    * @public
    */
   PoolId: string | undefined;
+
+  /**
+   * <p>The Availability Zone (AZ) or Local Zone (LZ) network border group that the resource that the IP address is assigned to is in. Defaults to an AZ network border group. For more information on available Local Zones, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html#byoip-zone-avail">Local Zone availability</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  NetworkBorderGroup?: string;
 }
 
 /**
@@ -8817,569 +9015,6 @@ export const DeviceType = {
 export type DeviceType = (typeof DeviceType)[keyof typeof DeviceType];
 
 /**
- * @public
- * @enum
- */
-export const ImageState = {
-  available: "available",
-  deregistered: "deregistered",
-  disabled: "disabled",
-  error: "error",
-  failed: "failed",
-  invalid: "invalid",
-  pending: "pending",
-  transient: "transient",
-} as const;
-
-/**
- * @public
- */
-export type ImageState = (typeof ImageState)[keyof typeof ImageState];
-
-/**
- * @public
- * @enum
- */
-export const TpmSupportValues = {
-  v2_0: "v2.0",
-} as const;
-
-/**
- * @public
- */
-export type TpmSupportValues = (typeof TpmSupportValues)[keyof typeof TpmSupportValues];
-
-/**
- * @public
- * @enum
- */
-export const VirtualizationType = {
-  hvm: "hvm",
-  paravirtual: "paravirtual",
-} as const;
-
-/**
- * @public
- */
-export type VirtualizationType = (typeof VirtualizationType)[keyof typeof VirtualizationType];
-
-/**
- * <p>Describes an image.</p>
- * @public
- */
-export interface Image {
-  /**
-   * <p>The architecture of the image.</p>
-   * @public
-   */
-  Architecture?: ArchitectureValues;
-
-  /**
-   * <p>The date and time the image was created.</p>
-   * @public
-   */
-  CreationDate?: string;
-
-  /**
-   * <p>The ID of the AMI.</p>
-   * @public
-   */
-  ImageId?: string;
-
-  /**
-   * <p>The location of the AMI.</p>
-   * @public
-   */
-  ImageLocation?: string;
-
-  /**
-   * <p>The type of image.</p>
-   * @public
-   */
-  ImageType?: ImageTypeValues;
-
-  /**
-   * <p>Indicates whether the image has public launch permissions. The value is <code>true</code> if
-   * 				this image has public launch permissions or <code>false</code>
-   * 				if it has only implicit and explicit launch permissions.</p>
-   * @public
-   */
-  Public?: boolean;
-
-  /**
-   * <p>The kernel associated with the image, if any. Only applicable for machine images.</p>
-   * @public
-   */
-  KernelId?: string;
-
-  /**
-   * <p>The ID of the Amazon Web Services account that owns the image.</p>
-   * @public
-   */
-  OwnerId?: string;
-
-  /**
-   * <p>This value is set to <code>windows</code> for Windows AMIs; otherwise, it is blank.</p>
-   * @public
-   */
-  Platform?: PlatformValues;
-
-  /**
-   * <p>The platform details associated with the billing code of the AMI. For more information,
-   *       see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understand
-   *         AMI billing information</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  PlatformDetails?: string;
-
-  /**
-   * <p>The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
-   *         <code>usageOperation</code> corresponds to the <a href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation">lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services Price
-   *         	List API</a>. You can view these fields on the <b>Instances</b> or
-   *     	<b>AMIs</b> pages in the Amazon EC2 console, or in the responses that are
-   *     	returned by the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a>
-   *     	command in the Amazon EC2 API, or the <a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a>
-   *     	command in the CLI.</p>
-   * @public
-   */
-  UsageOperation?: string;
-
-  /**
-   * <p>Any product codes associated with the AMI.</p>
-   * @public
-   */
-  ProductCodes?: ProductCode[];
-
-  /**
-   * <p>The RAM disk associated with the image, if any. Only applicable for machine images.</p>
-   * @public
-   */
-  RamdiskId?: string;
-
-  /**
-   * <p>The current state of the AMI. If the state is <code>available</code>, the image is successfully registered and can be used to launch an instance.</p>
-   * @public
-   */
-  State?: ImageState;
-
-  /**
-   * <p>Any block device mapping entries.</p>
-   * @public
-   */
-  BlockDeviceMappings?: BlockDeviceMapping[];
-
-  /**
-   * <p>The description of the AMI that was provided during image creation.</p>
-   * @public
-   */
-  Description?: string;
-
-  /**
-   * <p>Specifies whether enhanced networking with ENA is enabled.</p>
-   * @public
-   */
-  EnaSupport?: boolean;
-
-  /**
-   * <p>The hypervisor type of the image. Only <code>xen</code> is supported. <code>ovm</code> is
-   *       not supported.</p>
-   * @public
-   */
-  Hypervisor?: HypervisorType;
-
-  /**
-   * <p>The owner alias (<code>amazon</code> | <code>aws-marketplace</code>).</p>
-   * @public
-   */
-  ImageOwnerAlias?: string;
-
-  /**
-   * <p>The name of the AMI that was provided during image creation.</p>
-   * @public
-   */
-  Name?: string;
-
-  /**
-   * <p>The device name of the root device volume (for example, <code>/dev/sda1</code>).</p>
-   * @public
-   */
-  RootDeviceName?: string;
-
-  /**
-   * <p>The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.</p>
-   * @public
-   */
-  RootDeviceType?: DeviceType;
-
-  /**
-   * <p>Specifies whether enhanced networking with the Intel 82599 Virtual Function interface is enabled.</p>
-   * @public
-   */
-  SriovNetSupport?: string;
-
-  /**
-   * <p>The reason for the state change.</p>
-   * @public
-   */
-  StateReason?: StateReason;
-
-  /**
-   * <p>Any tags assigned to the image.</p>
-   * @public
-   */
-  Tags?: Tag[];
-
-  /**
-   * <p>The type of virtualization of the AMI.</p>
-   * @public
-   */
-  VirtualizationType?: VirtualizationType;
-
-  /**
-   * <p>The boot mode of the image. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the
-   *         <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  BootMode?: BootModeValues;
-
-  /**
-   * <p>If the image is configured for NitroTPM support, the value is <code>v2.0</code>.
-   *       For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nitrotpm.html">NitroTPM</a> in the
-   *       <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  TpmSupport?: TpmSupportValues;
-
-  /**
-   * <p>The date and time to deprecate the AMI, in UTC, in the following format:
-   *      <i>YYYY</i>-<i>MM</i>-<i>DD</i>T<i>HH</i>:<i>MM</i>:<i>SS</i>Z.
-   *       If you specified a value for seconds, Amazon EC2 rounds the seconds to the
-   *       nearest minute.</p>
-   * @public
-   */
-  DeprecationTime?: string;
-
-  /**
-   * <p>If <code>v2.0</code>, it indicates that IMDSv2 is specified in the AMI. Instances launched
-   *       from this AMI will have <code>HttpTokens</code> automatically set to <code>required</code> so
-   *       that, by default, the instance requires that IMDSv2 is used when requesting instance metadata.
-   *       In addition, <code>HttpPutResponseHopLimit</code> is set to <code>2</code>. For more
-   *       information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-new-instances.html#configure-IMDS-new-instances-ami-configuration">Configure
-   *         the AMI</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  ImdsSupport?: ImdsSupportValues;
-
-  /**
-   * <p>The ID of the instance that the AMI was created from if the AMI was created using <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateImage.html">CreateImage</a>. This field only appears if the AMI was created using
-   *       CreateImage.</p>
-   * @public
-   */
-  SourceInstanceId?: string;
-
-  /**
-   * <p>Indicates whether deregistration protection is enabled for the AMI.</p>
-   * @public
-   */
-  DeregistrationProtection?: string;
-
-  /**
-   * <p>The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time
-   *       format</a>, when the AMI was last used to launch an EC2 instance. When the AMI is used
-   *       to launch an instance, there is a 24-hour delay before that usage is reported.</p>
-   *          <note>
-   *             <p>
-   *                <code>lastLaunchedTime</code> data is available starting April 2017.</p>
-   *          </note>
-   * @public
-   */
-  LastLaunchedTime?: string;
-}
-
-/**
- * @public
- */
-export interface DescribeImagesResult {
-  /**
-   * <p>Information about the images.</p>
-   * @public
-   */
-  Images?: Image[];
-
-  /**
-   * <p>The token to include in another request to get the next page of items. This value is <code>null</code> when there
-   *          are no more items to return.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
- * @public
- */
-export interface DescribeImportImageTasksRequest {
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean;
-
-  /**
-   * <p>Filter tasks using the <code>task-state</code> filter and one of the following values: <code>active</code>,
-   *     <code>completed</code>, <code>deleting</code>, or <code>deleted</code>.</p>
-   * @public
-   */
-  Filters?: Filter[];
-
-  /**
-   * <p>The IDs of the import image tasks.</p>
-   * @public
-   */
-  ImportTaskIds?: string[];
-
-  /**
-   * <p>The maximum number of results to return in a single call.</p>
-   * @public
-   */
-  MaxResults?: number;
-
-  /**
-   * <p>A token that indicates the next page of results.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
- * <p> The response information for license configurations.</p>
- * @public
- */
-export interface ImportImageLicenseConfigurationResponse {
-  /**
-   * <p>The ARN of a license configuration.</p>
-   * @public
-   */
-  LicenseConfigurationArn?: string;
-}
-
-/**
- * <p>Describes the Amazon S3 bucket for the disk image.</p>
- * @public
- */
-export interface UserBucketDetails {
-  /**
-   * <p>The Amazon S3 bucket from which the disk image was created.</p>
-   * @public
-   */
-  S3Bucket?: string;
-
-  /**
-   * <p>The file name of the disk image.</p>
-   * @public
-   */
-  S3Key?: string;
-}
-
-/**
- * <p>Describes the snapshot created from the imported disk.</p>
- * @public
- */
-export interface SnapshotDetail {
-  /**
-   * <p>A description for the snapshot.</p>
-   * @public
-   */
-  Description?: string;
-
-  /**
-   * <p>The block device mapping for the snapshot.</p>
-   * @public
-   */
-  DeviceName?: string;
-
-  /**
-   * <p>The size of the disk in the snapshot, in GiB.</p>
-   * @public
-   */
-  DiskImageSize?: number;
-
-  /**
-   * <p>The format of the disk image from which the snapshot is created.</p>
-   * @public
-   */
-  Format?: string;
-
-  /**
-   * <p>The percentage of progress for the task.</p>
-   * @public
-   */
-  Progress?: string;
-
-  /**
-   * <p>The snapshot ID of the disk being imported.</p>
-   * @public
-   */
-  SnapshotId?: string;
-
-  /**
-   * <p>A brief status of the snapshot creation.</p>
-   * @public
-   */
-  Status?: string;
-
-  /**
-   * <p>A detailed status message for the snapshot creation.</p>
-   * @public
-   */
-  StatusMessage?: string;
-
-  /**
-   * <p>The URL used to access the disk image.</p>
-   * @public
-   */
-  Url?: string;
-
-  /**
-   * <p>The Amazon S3 bucket for the disk image.</p>
-   * @public
-   */
-  UserBucket?: UserBucketDetails;
-}
-
-/**
- * <p>Describes an import image task.</p>
- * @public
- */
-export interface ImportImageTask {
-  /**
-   * <p>The architecture of the virtual machine.</p>
-   *          <p>Valid values: <code>i386</code> | <code>x86_64</code> | <code>arm64</code>
-   *          </p>
-   * @public
-   */
-  Architecture?: string;
-
-  /**
-   * <p>A description of the import task.</p>
-   * @public
-   */
-  Description?: string;
-
-  /**
-   * <p>Indicates whether the image is encrypted.</p>
-   * @public
-   */
-  Encrypted?: boolean;
-
-  /**
-   * <p>The target hypervisor for the import task.</p>
-   *          <p>Valid values: <code>xen</code>
-   *          </p>
-   * @public
-   */
-  Hypervisor?: string;
-
-  /**
-   * <p>The ID of the Amazon Machine Image (AMI) of the imported virtual machine.</p>
-   * @public
-   */
-  ImageId?: string;
-
-  /**
-   * <p>The ID of the import image task.</p>
-   * @public
-   */
-  ImportTaskId?: string;
-
-  /**
-   * <p>The identifier for the KMS key that was used to create the encrypted image.</p>
-   * @public
-   */
-  KmsKeyId?: string;
-
-  /**
-   * <p>The license type of the virtual machine.</p>
-   * @public
-   */
-  LicenseType?: string;
-
-  /**
-   * <p>The description string for the import image task.</p>
-   * @public
-   */
-  Platform?: string;
-
-  /**
-   * <p>The percentage of progress of the import image task.</p>
-   * @public
-   */
-  Progress?: string;
-
-  /**
-   * <p>Information about the snapshots.</p>
-   * @public
-   */
-  SnapshotDetails?: SnapshotDetail[];
-
-  /**
-   * <p>A brief status for the import image task.</p>
-   * @public
-   */
-  Status?: string;
-
-  /**
-   * <p>A descriptive status message for the import image task.</p>
-   * @public
-   */
-  StatusMessage?: string;
-
-  /**
-   * <p>The tags for the import image task.</p>
-   * @public
-   */
-  Tags?: Tag[];
-
-  /**
-   * <p>The ARNs of the license configurations that are associated with the import image task.</p>
-   * @public
-   */
-  LicenseSpecifications?: ImportImageLicenseConfigurationResponse[];
-
-  /**
-   * <p>The usage operation value.</p>
-   * @public
-   */
-  UsageOperation?: string;
-
-  /**
-   * <p>The boot mode of the virtual machine.</p>
-   * @public
-   */
-  BootMode?: BootModeValues;
-}
-
-/**
- * @public
- */
-export interface DescribeImportImageTasksResult {
-  /**
-   * <p>A list of zero or more import image tasks that are currently active or were completed or canceled in the
-   *    previous 7 days.</p>
-   * @public
-   */
-  ImportImageTasks?: ImportImageTask[];
-
-  /**
-   * <p>The token to use to get the next page of results. This value is <code>null</code> when there are no more results
-   *    to return.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
  * @internal
  */
 export const DeleteVerifiedAccessTrustProviderResultFilterSensitiveLog = (
@@ -9448,29 +9083,4 @@ export const DescribeConversionTasksResultFilterSensitiveLog = (obj: DescribeCon
   ...(obj.ConversionTasks && {
     ConversionTasks: obj.ConversionTasks.map((item) => ConversionTaskFilterSensitiveLog(item)),
   }),
-});
-
-/**
- * @internal
- */
-export const SnapshotDetailFilterSensitiveLog = (obj: SnapshotDetail): any => ({
-  ...obj,
-  ...(obj.Url && { Url: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const ImportImageTaskFilterSensitiveLog = (obj: ImportImageTask): any => ({
-  ...obj,
-  ...(obj.SnapshotDetails && {
-    SnapshotDetails: obj.SnapshotDetails.map((item) => SnapshotDetailFilterSensitiveLog(item)),
-  }),
-});
-
-/**
- * @internal
- */
-export const DescribeImportImageTasksResultFilterSensitiveLog = (obj: DescribeImportImageTasksResult): any => ({
-  ...obj,
 });

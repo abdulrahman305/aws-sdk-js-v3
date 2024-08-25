@@ -3,6 +3,185 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.637.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.636.0...v3.637.0) (2024-08-22)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.636.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.635.0...v3.636.0) (2024-08-21)
+
+
+### Features
+
+* **client-ec2:** DescribeInstanceStatus now returns health information on EBS volumes attached to Nitro instances ([1baa7ea](https://github.com/aws/aws-sdk-js-v3/commit/1baa7ea8b6561e800c4d9895862bc3f6b4bf1f1b))
+
+
+
+
+
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.632.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.631.0...v3.632.0) (2024-08-15)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.631.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.630.0...v3.631.0) (2024-08-14)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+
+### Features
+
+* **client-ec2:** This release adds new capabilities to manage On-Demand Capacity Reservations including the ability to split your reservation, move capacity between reservations, and modify the instance eligibility of your reservation. ([6e0db43](https://github.com/aws/aws-sdk-js-v3/commit/6e0db432b8b0f0e85123c972640c2df1cb77c29d))
+
+
+
+
+
+# [3.627.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.626.0...v3.627.0) (2024-08-08)
+
+
+### Features
+
+* **client-ec2:** Launch of private IPv6 addressing for VPCs and Subnets. VPC IPAM supports the planning and monitoring of private IPv6 usage. ([94af5dd](https://github.com/aws/aws-sdk-js-v3/commit/94af5ddc7f131af9a7258bcf802ea9b9d2a1e7d3))
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.623.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.622.0...v3.623.0) (2024-08-02)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+## [3.620.1](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.0...v3.620.1) (2024-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+
+### Features
+
+* **client-ec2:** EC2 Fleet now supports using custom identifiers to reference Amazon Machine Images (AMI) in launch requests that are configured to choose from a diversified list of instance types. ([88cbe69](https://github.com/aws/aws-sdk-js-v3/commit/88cbe697deec217c20b874a5208a763a4f89143d))
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+
+### Features
+
+* **client-ec2:** Amazon VPC IP Address Manager (IPAM) now supports Bring-Your-Own-IP (BYOIP) for IP addresses registered with any Internet Registry. This feature uses DNS TXT records to validate ownership of a public IP address range. ([337c43d](https://github.com/aws/aws-sdk-js-v3/commit/337c43d0ad9dcd59b12a9d338c76c19a9e8bf11a))
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+
+### Features
+
+* **client-ec2:** Add parameters to enable provisioning IPAM BYOIPv4 space at a Local Zone Network Border Group level ([d835dbb](https://github.com/aws/aws-sdk-js-v3/commit/d835dbb9b6eaa07b851e5eb826bcd947a45ee1ec))
+
+
+
+
+
+# [3.613.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.612.0...v3.613.0) (2024-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+
+### Features
+
+* **client-ec2:** Documentation updates for Elastic Compute Cloud (EC2). ([c155b9e](https://github.com/aws/aws-sdk-js-v3/commit/c155b9e2ca52f81da287efb0c184de8f5388884d))
+
+
+
+
+
+# [3.606.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.605.0...v3.606.0) (2024-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-ec2
+
+
+
+
+
+# [3.604.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.603.0...v3.604.0) (2024-06-25)
+
+
+### Features
+
+* **client-ec2:** This release is for the launch of the new u7ib-12tb.224xlarge, R8g, c7gn.metal and mac2-m1ultra.metal instance types ([50f2aa7](https://github.com/aws/aws-sdk-js-v3/commit/50f2aa73483c58a071914efc256fefeb81cf3128))
+
+
+
+
+
 # [3.600.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.599.0...v3.600.0) (2024-06-18)
 
 **Note:** Version bump only for package @aws-sdk/client-ec2

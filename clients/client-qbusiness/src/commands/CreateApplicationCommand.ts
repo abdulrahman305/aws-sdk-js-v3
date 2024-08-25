@@ -36,9 +36,8 @@ export interface CreateApplicationCommandOutput extends CreateApplicationRespons
  *          <note>
  *             <p>There are new tiers for Amazon Q Business. Not all features in Amazon Q Business Pro are
  *                 also available in Amazon Q Business Lite. For information on what's included in
- *                 Amazon Q Business Lite and what's included in
- *                 Amazon Q Business Pro, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html#tiers">Amazon Q Business tiers</a>.
- *                 You must use the Amazon Q Business console to assign subscription tiers to users.</p>
+ *                 Amazon Q Business Lite and what's included in Amazon Q Business Pro, see <a href="https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/tiers.html#user-sub-tiers">Amazon Q Business tiers</a>. You must use the Amazon Q Business console to assign
+ *                 subscription tiers to users.</p>
  *          </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -49,7 +48,12 @@ export interface CreateApplicationCommandOutput extends CreateApplicationRespons
  * const input = { // CreateApplicationRequest
  *   displayName: "STRING_VALUE", // required
  *   roleArn: "STRING_VALUE",
+ *   identityType: "AWS_IAM_IDP_SAML" || "AWS_IAM_IDP_OIDC" || "AWS_IAM_IDC",
+ *   iamIdentityProviderArn: "STRING_VALUE",
  *   identityCenterInstanceArn: "STRING_VALUE",
+ *   clientIdsForOIDC: [ // ClientIdsForOIDC
+ *     "STRING_VALUE",
+ *   ],
  *   description: "STRING_VALUE",
  *   encryptionConfiguration: { // EncryptionConfiguration
  *     kmsKeyId: "STRING_VALUE",
@@ -63,6 +67,12 @@ export interface CreateApplicationCommandOutput extends CreateApplicationRespons
  *   clientToken: "STRING_VALUE",
  *   attachmentsConfiguration: { // AttachmentsConfiguration
  *     attachmentsControlMode: "ENABLED" || "DISABLED", // required
+ *   },
+ *   qAppsConfiguration: { // QAppsConfiguration
+ *     qAppsControlMode: "ENABLED" || "DISABLED", // required
+ *   },
+ *   personalizationConfiguration: { // PersonalizationConfiguration
+ *     personalizationControlMode: "ENABLED" || "DISABLED", // required
  *   },
  * };
  * const command = new CreateApplicationCommand(input);

@@ -955,10 +955,82 @@ export namespace EncryptionDecryptionAttributes {
 
 /**
  * @public
+ * @enum
+ */
+export const KeyCheckValueAlgorithm = {
+  ANSI_X9_24: "ANSI_X9_24",
+  CMAC: "CMAC",
+} as const;
+
+/**
+ * @public
+ */
+export type KeyCheckValueAlgorithm = (typeof KeyCheckValueAlgorithm)[keyof typeof KeyCheckValueAlgorithm];
+
+/**
+ * <p>Parameter information of a WrappedKeyBlock for encryption key exchange.</p>
+ * @public
+ */
+export type WrappedKeyMaterial = WrappedKeyMaterial.Tr31KeyBlockMember | WrappedKeyMaterial.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace WrappedKeyMaterial {
+  /**
+   * <p>The TR-31 wrapped key block.</p>
+   * @public
+   */
+  export interface Tr31KeyBlockMember {
+    Tr31KeyBlock: string;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    Tr31KeyBlock?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    Tr31KeyBlock: (value: string) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: WrappedKeyMaterial, visitor: Visitor<T>): T => {
+    if (value.Tr31KeyBlock !== undefined) return visitor.Tr31KeyBlock(value.Tr31KeyBlock);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>Parameter information of a WrappedKeyBlock for encryption key exchange.</p>
+ * @public
+ */
+export interface WrappedKey {
+  /**
+   * <p>Parameter information of a WrappedKeyBlock for encryption key exchange.</p>
+   * @public
+   */
+  WrappedKeyMaterial: WrappedKeyMaterial | undefined;
+
+  /**
+   * <p>The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is used to validate the key integrity.</p>
+   *          <p>For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted result.</p>
+   * @public
+   */
+  KeyCheckValueAlgorithm?: KeyCheckValueAlgorithm;
+}
+
+/**
+ * @public
  */
 export interface DecryptDataInput {
   /**
    * <p>The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext decryption.</p>
+   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   KeyIdentifier: string | undefined;
@@ -974,6 +1046,12 @@ export interface DecryptDataInput {
    * @public
    */
   DecryptionAttributes: EncryptionDecryptionAttributes | undefined;
+
+  /**
+   * <p>The WrappedKeyBlock containing the encryption key for ciphertext decryption.</p>
+   * @public
+   */
+  WrappedKey?: WrappedKey;
 }
 
 /**
@@ -1164,6 +1242,7 @@ export interface DukptDerivationAttributes {
 export interface EncryptDataInput {
   /**
    * <p>The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext encryption.</p>
+   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   KeyIdentifier: string | undefined;
@@ -1182,6 +1261,12 @@ export interface EncryptDataInput {
    * @public
    */
   EncryptionAttributes: EncryptionDecryptionAttributes | undefined;
+
+  /**
+   * <p>The WrappedKeyBlock containing the encryption key for plaintext encryption.</p>
+   * @public
+   */
+  WrappedKey?: WrappedKey;
 }
 
 /**
@@ -2109,6 +2194,7 @@ export namespace ReEncryptionAttributes {
 export interface ReEncryptDataInput {
   /**
    * <p>The <code>keyARN</code> of the encryption key of incoming ciphertext data.</p>
+   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   IncomingKeyIdentifier: string | undefined;
@@ -2136,6 +2222,18 @@ export interface ReEncryptDataInput {
    * @public
    */
   OutgoingEncryptionAttributes: ReEncryptionAttributes | undefined;
+
+  /**
+   * <p>The WrappedKeyBlock containing the encryption key of incoming ciphertext data.</p>
+   * @public
+   */
+  IncomingWrappedKey?: WrappedKey;
+
+  /**
+   * <p>The WrappedKeyBlock containing the encryption key of outgoing ciphertext data after encryption by Amazon Web Services Payment Cryptography.</p>
+   * @public
+   */
+  OutgoingWrappedKey?: WrappedKey;
 }
 
 /**
@@ -2277,6 +2375,7 @@ export namespace TranslationIsoFormats {
 export interface TranslatePinDataInput {
   /**
    * <p>The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can be PEK or BDK.</p>
+   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key for PIN block. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   IncomingKeyIdentifier: string | undefined;
@@ -2316,6 +2415,18 @@ export interface TranslatePinDataInput {
    * @public
    */
   OutgoingDukptAttributes?: DukptDerivationAttributes;
+
+  /**
+   * <p>The WrappedKeyBlock containing the encryption key under which incoming PIN block data is encrypted.</p>
+   * @public
+   */
+  IncomingWrappedKey?: WrappedKey;
+
+  /**
+   * <p>The WrappedKeyBlock containing the encryption key for encrypting outgoing PIN block data.</p>
+   * @public
+   */
+  OutgoingWrappedKey?: WrappedKey;
 }
 
 /**
@@ -2940,6 +3051,149 @@ export interface VerifyPinDataOutput {
 /**
  * @internal
  */
+export const AmexCardSecurityCodeVersion1FilterSensitiveLog = (obj: AmexCardSecurityCodeVersion1): any => ({
+  ...obj,
+  ...(obj.CardExpiryDate && { CardExpiryDate: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const AmexCardSecurityCodeVersion2FilterSensitiveLog = (obj: AmexCardSecurityCodeVersion2): any => ({
+  ...obj,
+  ...(obj.CardExpiryDate && { CardExpiryDate: SENSITIVE_STRING }),
+  ...(obj.ServiceCode && { ServiceCode: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CardVerificationValue1FilterSensitiveLog = (obj: CardVerificationValue1): any => ({
+  ...obj,
+  ...(obj.CardExpiryDate && { CardExpiryDate: SENSITIVE_STRING }),
+  ...(obj.ServiceCode && { ServiceCode: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CardVerificationValue2FilterSensitiveLog = (obj: CardVerificationValue2): any => ({
+  ...obj,
+  ...(obj.CardExpiryDate && { CardExpiryDate: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const DynamicCardVerificationCodeFilterSensitiveLog = (obj: DynamicCardVerificationCode): any => ({
+  ...obj,
+  ...(obj.TrackData && { TrackData: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const DynamicCardVerificationValueFilterSensitiveLog = (obj: DynamicCardVerificationValue): any => ({
+  ...obj,
+  ...(obj.CardExpiryDate && { CardExpiryDate: SENSITIVE_STRING }),
+  ...(obj.ServiceCode && { ServiceCode: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CardGenerationAttributesFilterSensitiveLog = (obj: CardGenerationAttributes): any => {
+  if (obj.AmexCardSecurityCodeVersion1 !== undefined)
+    return {
+      AmexCardSecurityCodeVersion1: AmexCardSecurityCodeVersion1FilterSensitiveLog(obj.AmexCardSecurityCodeVersion1),
+    };
+  if (obj.AmexCardSecurityCodeVersion2 !== undefined)
+    return {
+      AmexCardSecurityCodeVersion2: AmexCardSecurityCodeVersion2FilterSensitiveLog(obj.AmexCardSecurityCodeVersion2),
+    };
+  if (obj.CardVerificationValue1 !== undefined)
+    return { CardVerificationValue1: CardVerificationValue1FilterSensitiveLog(obj.CardVerificationValue1) };
+  if (obj.CardVerificationValue2 !== undefined)
+    return { CardVerificationValue2: CardVerificationValue2FilterSensitiveLog(obj.CardVerificationValue2) };
+  if (obj.CardHolderVerificationValue !== undefined)
+    return { CardHolderVerificationValue: obj.CardHolderVerificationValue };
+  if (obj.DynamicCardVerificationCode !== undefined)
+    return {
+      DynamicCardVerificationCode: DynamicCardVerificationCodeFilterSensitiveLog(obj.DynamicCardVerificationCode),
+    };
+  if (obj.DynamicCardVerificationValue !== undefined)
+    return {
+      DynamicCardVerificationValue: DynamicCardVerificationValueFilterSensitiveLog(obj.DynamicCardVerificationValue),
+    };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const DiscoverDynamicCardVerificationCodeFilterSensitiveLog = (
+  obj: DiscoverDynamicCardVerificationCode
+): any => ({
+  ...obj,
+  ...(obj.CardExpiryDate && { CardExpiryDate: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CardVerificationAttributesFilterSensitiveLog = (obj: CardVerificationAttributes): any => {
+  if (obj.AmexCardSecurityCodeVersion1 !== undefined)
+    return {
+      AmexCardSecurityCodeVersion1: AmexCardSecurityCodeVersion1FilterSensitiveLog(obj.AmexCardSecurityCodeVersion1),
+    };
+  if (obj.AmexCardSecurityCodeVersion2 !== undefined)
+    return {
+      AmexCardSecurityCodeVersion2: AmexCardSecurityCodeVersion2FilterSensitiveLog(obj.AmexCardSecurityCodeVersion2),
+    };
+  if (obj.CardVerificationValue1 !== undefined)
+    return { CardVerificationValue1: CardVerificationValue1FilterSensitiveLog(obj.CardVerificationValue1) };
+  if (obj.CardVerificationValue2 !== undefined)
+    return { CardVerificationValue2: CardVerificationValue2FilterSensitiveLog(obj.CardVerificationValue2) };
+  if (obj.CardHolderVerificationValue !== undefined)
+    return { CardHolderVerificationValue: obj.CardHolderVerificationValue };
+  if (obj.DynamicCardVerificationCode !== undefined)
+    return {
+      DynamicCardVerificationCode: DynamicCardVerificationCodeFilterSensitiveLog(obj.DynamicCardVerificationCode),
+    };
+  if (obj.DynamicCardVerificationValue !== undefined)
+    return {
+      DynamicCardVerificationValue: DynamicCardVerificationValueFilterSensitiveLog(obj.DynamicCardVerificationValue),
+    };
+  if (obj.DiscoverDynamicCardVerificationCode !== undefined)
+    return {
+      DiscoverDynamicCardVerificationCode: DiscoverDynamicCardVerificationCodeFilterSensitiveLog(
+        obj.DiscoverDynamicCardVerificationCode
+      ),
+    };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const CryptogramVerificationArpcMethod2FilterSensitiveLog = (obj: CryptogramVerificationArpcMethod2): any => ({
+  ...obj,
+  ...(obj.ProprietaryAuthenticationData && { ProprietaryAuthenticationData: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const CryptogramAuthResponseFilterSensitiveLog = (obj: CryptogramAuthResponse): any => {
+  if (obj.ArpcMethod1 !== undefined) return { ArpcMethod1: obj.ArpcMethod1 };
+  if (obj.ArpcMethod2 !== undefined)
+    return { ArpcMethod2: CryptogramVerificationArpcMethod2FilterSensitiveLog(obj.ArpcMethod2) };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
 export const DukptEncryptionAttributesFilterSensitiveLog = (obj: DukptEncryptionAttributes): any => ({
   ...obj,
   ...(obj.InitializationVector && { InitializationVector: SENSITIVE_STRING }),
@@ -2951,6 +3205,7 @@ export const DukptEncryptionAttributesFilterSensitiveLog = (obj: DukptEncryption
 export const EmvEncryptionAttributesFilterSensitiveLog = (obj: EmvEncryptionAttributes): any => ({
   ...obj,
   ...(obj.PrimaryAccountNumber && { PrimaryAccountNumber: SENSITIVE_STRING }),
+  ...(obj.SessionDerivationData && { SessionDerivationData: SENSITIVE_STRING }),
   ...(obj.InitializationVector && { InitializationVector: SENSITIVE_STRING }),
 });
 
@@ -2976,12 +3231,29 @@ export const EncryptionDecryptionAttributesFilterSensitiveLog = (obj: Encryption
 /**
  * @internal
  */
+export const WrappedKeyMaterialFilterSensitiveLog = (obj: WrappedKeyMaterial): any => {
+  if (obj.Tr31KeyBlock !== undefined) return { Tr31KeyBlock: SENSITIVE_STRING };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const WrappedKeyFilterSensitiveLog = (obj: WrappedKey): any => ({
+  ...obj,
+  ...(obj.WrappedKeyMaterial && { WrappedKeyMaterial: WrappedKeyMaterialFilterSensitiveLog(obj.WrappedKeyMaterial) }),
+});
+
+/**
+ * @internal
+ */
 export const DecryptDataInputFilterSensitiveLog = (obj: DecryptDataInput): any => ({
   ...obj,
   ...(obj.CipherText && { CipherText: SENSITIVE_STRING }),
   ...(obj.DecryptionAttributes && {
     DecryptionAttributes: EncryptionDecryptionAttributesFilterSensitiveLog(obj.DecryptionAttributes),
   }),
+  ...(obj.WrappedKey && { WrappedKey: WrappedKeyFilterSensitiveLog(obj.WrappedKey) }),
 });
 
 /**
@@ -3001,6 +3273,7 @@ export const EncryptDataInputFilterSensitiveLog = (obj: EncryptDataInput): any =
   ...(obj.EncryptionAttributes && {
     EncryptionAttributes: EncryptionDecryptionAttributesFilterSensitiveLog(obj.EncryptionAttributes),
   }),
+  ...(obj.WrappedKey && { WrappedKey: WrappedKeyFilterSensitiveLog(obj.WrappedKey) }),
 });
 
 /**
@@ -3017,8 +3290,28 @@ export const EncryptDataOutputFilterSensitiveLog = (obj: EncryptDataOutput): any
 export const GenerateCardValidationDataInputFilterSensitiveLog = (obj: GenerateCardValidationDataInput): any => ({
   ...obj,
   ...(obj.PrimaryAccountNumber && { PrimaryAccountNumber: SENSITIVE_STRING }),
-  ...(obj.GenerationAttributes && { GenerationAttributes: obj.GenerationAttributes }),
+  ...(obj.GenerationAttributes && {
+    GenerationAttributes: CardGenerationAttributesFilterSensitiveLog(obj.GenerationAttributes),
+  }),
 });
+
+/**
+ * @internal
+ */
+export const GenerateCardValidationDataOutputFilterSensitiveLog = (obj: GenerateCardValidationDataOutput): any => ({
+  ...obj,
+  ...(obj.ValidationData && { ValidationData: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const SessionKeyDerivationValueFilterSensitiveLog = (obj: SessionKeyDerivationValue): any => {
+  if (obj.ApplicationCryptogram !== undefined) return { ApplicationCryptogram: SENSITIVE_STRING };
+  if (obj.ApplicationTransactionCounter !== undefined)
+    return { ApplicationTransactionCounter: obj.ApplicationTransactionCounter };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
 
 /**
  * @internal
@@ -3026,7 +3319,9 @@ export const GenerateCardValidationDataInputFilterSensitiveLog = (obj: GenerateC
 export const MacAlgorithmEmvFilterSensitiveLog = (obj: MacAlgorithmEmv): any => ({
   ...obj,
   ...(obj.PrimaryAccountNumber && { PrimaryAccountNumber: SENSITIVE_STRING }),
-  ...(obj.SessionKeyDerivationValue && { SessionKeyDerivationValue: obj.SessionKeyDerivationValue }),
+  ...(obj.SessionKeyDerivationValue && {
+    SessionKeyDerivationValue: SessionKeyDerivationValueFilterSensitiveLog(obj.SessionKeyDerivationValue),
+  }),
 });
 
 /**
@@ -3053,10 +3348,112 @@ export const GenerateMacInputFilterSensitiveLog = (obj: GenerateMacInput): any =
 /**
  * @internal
  */
+export const GenerateMacOutputFilterSensitiveLog = (obj: GenerateMacOutput): any => ({
+  ...obj,
+  ...(obj.Mac && { Mac: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const Ibm3624NaturalPinFilterSensitiveLog = (obj: Ibm3624NaturalPin): any => ({
+  ...obj,
+  ...(obj.DecimalizationTable && { DecimalizationTable: SENSITIVE_STRING }),
+  ...(obj.PinValidationData && { PinValidationData: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const Ibm3624PinFromOffsetFilterSensitiveLog = (obj: Ibm3624PinFromOffset): any => ({
+  ...obj,
+  ...(obj.DecimalizationTable && { DecimalizationTable: SENSITIVE_STRING }),
+  ...(obj.PinValidationData && { PinValidationData: SENSITIVE_STRING }),
+  ...(obj.PinOffset && { PinOffset: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const Ibm3624PinOffsetFilterSensitiveLog = (obj: Ibm3624PinOffset): any => ({
+  ...obj,
+  ...(obj.EncryptedPinBlock && { EncryptedPinBlock: SENSITIVE_STRING }),
+  ...(obj.DecimalizationTable && { DecimalizationTable: SENSITIVE_STRING }),
+  ...(obj.PinValidationData && { PinValidationData: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const Ibm3624RandomPinFilterSensitiveLog = (obj: Ibm3624RandomPin): any => ({
+  ...obj,
+  ...(obj.DecimalizationTable && { DecimalizationTable: SENSITIVE_STRING }),
+  ...(obj.PinValidationData && { PinValidationData: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const VisaPinVerificationValueFilterSensitiveLog = (obj: VisaPinVerificationValue): any => ({
+  ...obj,
+  ...(obj.EncryptedPinBlock && { EncryptedPinBlock: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const PinGenerationAttributesFilterSensitiveLog = (obj: PinGenerationAttributes): any => {
+  if (obj.VisaPin !== undefined) return { VisaPin: obj.VisaPin };
+  if (obj.VisaPinVerificationValue !== undefined)
+    return { VisaPinVerificationValue: VisaPinVerificationValueFilterSensitiveLog(obj.VisaPinVerificationValue) };
+  if (obj.Ibm3624PinOffset !== undefined)
+    return { Ibm3624PinOffset: Ibm3624PinOffsetFilterSensitiveLog(obj.Ibm3624PinOffset) };
+  if (obj.Ibm3624NaturalPin !== undefined)
+    return { Ibm3624NaturalPin: Ibm3624NaturalPinFilterSensitiveLog(obj.Ibm3624NaturalPin) };
+  if (obj.Ibm3624RandomPin !== undefined)
+    return { Ibm3624RandomPin: Ibm3624RandomPinFilterSensitiveLog(obj.Ibm3624RandomPin) };
+  if (obj.Ibm3624PinFromOffset !== undefined)
+    return { Ibm3624PinFromOffset: Ibm3624PinFromOffsetFilterSensitiveLog(obj.Ibm3624PinFromOffset) };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
 export const GeneratePinDataInputFilterSensitiveLog = (obj: GeneratePinDataInput): any => ({
   ...obj,
-  ...(obj.GenerationAttributes && { GenerationAttributes: obj.GenerationAttributes }),
+  ...(obj.GenerationAttributes && {
+    GenerationAttributes: PinGenerationAttributesFilterSensitiveLog(obj.GenerationAttributes),
+  }),
   ...(obj.PrimaryAccountNumber && { PrimaryAccountNumber: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const PinDataFilterSensitiveLog = (obj: PinData): any => {
+  if (obj.PinOffset !== undefined) return { PinOffset: SENSITIVE_STRING };
+  if (obj.VerificationValue !== undefined) return { VerificationValue: SENSITIVE_STRING };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const GeneratePinDataOutputFilterSensitiveLog = (obj: GeneratePinDataOutput): any => ({
+  ...obj,
+  ...(obj.EncryptedPinBlock && { EncryptedPinBlock: SENSITIVE_STRING }),
+  ...(obj.PinData && { PinData: PinDataFilterSensitiveLog(obj.PinData) }),
+});
+
+/**
+ * @internal
+ */
+export const Ibm3624PinVerificationFilterSensitiveLog = (obj: Ibm3624PinVerification): any => ({
+  ...obj,
+  ...(obj.DecimalizationTable && { DecimalizationTable: SENSITIVE_STRING }),
+  ...(obj.PinValidationData && { PinValidationData: SENSITIVE_STRING }),
+  ...(obj.PinOffset && { PinOffset: SENSITIVE_STRING }),
 });
 
 /**
@@ -3080,6 +3477,8 @@ export const ReEncryptDataInputFilterSensitiveLog = (obj: ReEncryptDataInput): a
   ...(obj.OutgoingEncryptionAttributes && {
     OutgoingEncryptionAttributes: ReEncryptionAttributesFilterSensitiveLog(obj.OutgoingEncryptionAttributes),
   }),
+  ...(obj.IncomingWrappedKey && { IncomingWrappedKey: WrappedKeyFilterSensitiveLog(obj.IncomingWrappedKey) }),
+  ...(obj.OutgoingWrappedKey && { OutgoingWrappedKey: WrappedKeyFilterSensitiveLog(obj.OutgoingWrappedKey) }),
 });
 
 /**
@@ -3124,6 +3523,16 @@ export const TranslatePinDataInputFilterSensitiveLog = (obj: TranslatePinDataInp
     OutgoingTranslationAttributes: TranslationIsoFormatsFilterSensitiveLog(obj.OutgoingTranslationAttributes),
   }),
   ...(obj.EncryptedPinBlock && { EncryptedPinBlock: SENSITIVE_STRING }),
+  ...(obj.IncomingWrappedKey && { IncomingWrappedKey: WrappedKeyFilterSensitiveLog(obj.IncomingWrappedKey) }),
+  ...(obj.OutgoingWrappedKey && { OutgoingWrappedKey: WrappedKeyFilterSensitiveLog(obj.OutgoingWrappedKey) }),
+});
+
+/**
+ * @internal
+ */
+export const TranslatePinDataOutputFilterSensitiveLog = (obj: TranslatePinDataOutput): any => ({
+  ...obj,
+  ...(obj.PinBlock && { PinBlock: SENSITIVE_STRING }),
 });
 
 /**
@@ -3183,10 +3592,22 @@ export const SessionKeyDerivationFilterSensitiveLog = (obj: SessionKeyDerivation
  */
 export const VerifyAuthRequestCryptogramInputFilterSensitiveLog = (obj: VerifyAuthRequestCryptogramInput): any => ({
   ...obj,
+  ...(obj.TransactionData && { TransactionData: SENSITIVE_STRING }),
+  ...(obj.AuthRequestCryptogram && { AuthRequestCryptogram: SENSITIVE_STRING }),
   ...(obj.SessionKeyDerivationAttributes && {
     SessionKeyDerivationAttributes: SessionKeyDerivationFilterSensitiveLog(obj.SessionKeyDerivationAttributes),
   }),
-  ...(obj.AuthResponseAttributes && { AuthResponseAttributes: obj.AuthResponseAttributes }),
+  ...(obj.AuthResponseAttributes && {
+    AuthResponseAttributes: CryptogramAuthResponseFilterSensitiveLog(obj.AuthResponseAttributes),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const VerifyAuthRequestCryptogramOutputFilterSensitiveLog = (obj: VerifyAuthRequestCryptogramOutput): any => ({
+  ...obj,
+  ...(obj.AuthResponseValue && { AuthResponseValue: SENSITIVE_STRING }),
 });
 
 /**
@@ -3195,7 +3616,10 @@ export const VerifyAuthRequestCryptogramInputFilterSensitiveLog = (obj: VerifyAu
 export const VerifyCardValidationDataInputFilterSensitiveLog = (obj: VerifyCardValidationDataInput): any => ({
   ...obj,
   ...(obj.PrimaryAccountNumber && { PrimaryAccountNumber: SENSITIVE_STRING }),
-  ...(obj.VerificationAttributes && { VerificationAttributes: obj.VerificationAttributes }),
+  ...(obj.VerificationAttributes && {
+    VerificationAttributes: CardVerificationAttributesFilterSensitiveLog(obj.VerificationAttributes),
+  }),
+  ...(obj.ValidationData && { ValidationData: SENSITIVE_STRING }),
 });
 
 /**
@@ -3213,8 +3637,28 @@ export const VerifyMacInputFilterSensitiveLog = (obj: VerifyMacInput): any => ({
 /**
  * @internal
  */
+export const VisaPinVerificationFilterSensitiveLog = (obj: VisaPinVerification): any => ({
+  ...obj,
+  ...(obj.VerificationValue && { VerificationValue: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const PinVerificationAttributesFilterSensitiveLog = (obj: PinVerificationAttributes): any => {
+  if (obj.VisaPin !== undefined) return { VisaPin: VisaPinVerificationFilterSensitiveLog(obj.VisaPin) };
+  if (obj.Ibm3624Pin !== undefined) return { Ibm3624Pin: Ibm3624PinVerificationFilterSensitiveLog(obj.Ibm3624Pin) };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
 export const VerifyPinDataInputFilterSensitiveLog = (obj: VerifyPinDataInput): any => ({
   ...obj,
-  ...(obj.VerificationAttributes && { VerificationAttributes: obj.VerificationAttributes }),
+  ...(obj.VerificationAttributes && {
+    VerificationAttributes: PinVerificationAttributesFilterSensitiveLog(obj.VerificationAttributes),
+  }),
+  ...(obj.EncryptedPinBlock && { EncryptedPinBlock: SENSITIVE_STRING }),
   ...(obj.PrimaryAccountNumber && { PrimaryAccountNumber: SENSITIVE_STRING }),
 });

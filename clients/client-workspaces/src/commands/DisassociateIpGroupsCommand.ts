@@ -62,6 +62,9 @@ export interface DisassociateIpGroupsCommandOutput extends DisassociateIpGroupsR
  * @throws {@link InvalidResourceStateException} (client fault)
  *  <p>The state of the resource is not valid for this operation.</p>
  *
+ * @throws {@link OperationNotSupportedException} (client fault)
+ *  <p>This operation is not supported.</p>
+ *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The resource could not be found.</p>
  *

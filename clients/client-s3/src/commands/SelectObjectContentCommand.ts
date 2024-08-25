@@ -1,4 +1,5 @@
 // smithy-typescript generated code
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getSsecPlugin } from "@aws-sdk/middleware-ssec";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
@@ -37,6 +38,10 @@ export interface SelectObjectContentCommandOutput extends SelectObjectContentOut
  * <note>
  *             <p>This operation is not supported by directory buckets.</p>
  *          </note>
+ *          <important>
+ *             <p>The SelectObjectContent operation is no longer available to new customers. Existing customers of Amazon S3 Select can continue to use the operation as usual. <a href="http://aws.amazon.com/blogs/storage/how-to-optimize-querying-your-data-in-amazon-s3/">Learn more</a>
+ *             </p>
+ *          </important>
  *          <p>This action filters the contents of an Amazon S3 object based on a simple structured query
  *          language (SQL) statement. In the request, along with the SQL expression, you must also
  *          specify a data serialization format (JSON, CSV, or Apache Parquet) of the object. Amazon S3 uses
@@ -262,6 +267,7 @@ export class SelectObjectContentCommand extends $Command
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getThrow200ExceptionsPlugin(config),
       getSsecPlugin(config),
     ];
   })

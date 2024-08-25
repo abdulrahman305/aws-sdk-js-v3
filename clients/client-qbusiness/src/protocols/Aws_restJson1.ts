@@ -146,6 +146,7 @@ import {
   AuthChallengeRequestEvent,
   AuthChallengeResponse,
   AuthChallengeResponseEvent,
+  AutoSubscriptionConfiguration,
   BasicAuthConfiguration,
   BlockedPhrasesConfigurationUpdate,
   ChatInputStream,
@@ -180,6 +181,7 @@ import {
   GroupMembers,
   GroupStatusDetail,
   HookConfiguration,
+  IdentityProviderConfiguration,
   Index,
   IndexCapacityConfiguration,
   InlineDocumentEnrichmentConfiguration,
@@ -195,18 +197,22 @@ import {
   NoAuthConfiguration,
   NumberAttributeBoostingConfiguration,
   OAuth2ClientCredentialConfiguration,
+  OpenIDConnectProviderConfiguration,
+  PersonalizationConfiguration,
   Plugin,
   PluginAuthConfiguration,
   PluginConfiguration,
   Principal,
   PrincipalGroup,
   PrincipalUser,
+  QAppsConfiguration,
   ResourceNotFoundException,
   RetrieverConfiguration,
   Rule,
   RuleConfiguration,
   S3,
   SamlConfiguration,
+  SamlProviderConfiguration,
   ServiceQuotaExceededException,
   SourceAttribution,
   StringAttributeBoostingConfiguration,
@@ -284,7 +290,9 @@ export const se_ChatCommand = async (
   context: __SerdeContext & __EventStreamSerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {};
+  const headers: any = {
+    "content-type": "application/json",
+  };
   b.bp("/applications/{applicationId}/conversations");
   b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
   const query: any = map({
@@ -355,11 +363,16 @@ export const se_CreateApplicationCommand = async (
   body = JSON.stringify(
     take(input, {
       attachmentsConfiguration: (_) => _json(_),
+      clientIdsForOIDC: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       description: [],
       displayName: [],
       encryptionConfiguration: (_) => _json(_),
+      iamIdentityProviderArn: [],
       identityCenterInstanceArn: [],
+      identityType: [],
+      personalizationConfiguration: (_) => _json(_),
+      qAppsConfiguration: (_) => _json(_),
       roleArn: [],
       tags: (_) => _json(_),
     })
@@ -527,6 +540,7 @@ export const se_CreateWebExperienceCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      identityProviderConfiguration: (_) => _json(_),
       roleArn: [],
       samplePromptsControlMode: [],
       subtitle: [],
@@ -1281,9 +1295,12 @@ export const se_UpdateApplicationCommand = async (
   body = JSON.stringify(
     take(input, {
       attachmentsConfiguration: (_) => _json(_),
+      autoSubscriptionConfiguration: (_) => _json(_),
       description: [],
       displayName: [],
       identityCenterInstanceArn: [],
+      personalizationConfiguration: (_) => _json(_),
+      qAppsConfiguration: (_) => _json(_),
       roleArn: [],
     })
   );
@@ -1474,6 +1491,7 @@ export const se_UpdateWebExperienceCommand = async (
   body = JSON.stringify(
     take(input, {
       authenticationConfiguration: (_) => _json(_),
+      identityProviderConfiguration: (_) => _json(_),
       roleArn: [],
       samplePromptsControlMode: [],
       subtitle: [],
@@ -1911,12 +1929,18 @@ export const de_GetApplicationCommand = async (
     applicationArn: __expectString,
     applicationId: __expectString,
     attachmentsConfiguration: _json,
+    autoSubscriptionConfiguration: _json,
+    clientIdsForOIDC: _json,
     createdAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     description: __expectString,
     displayName: __expectString,
     encryptionConfiguration: _json,
     error: _json,
+    iamIdentityProviderArn: __expectString,
     identityCenterApplicationArn: __expectString,
+    identityType: __expectString,
+    personalizationConfiguration: _json,
+    qAppsConfiguration: _json,
     roleArn: __expectString,
     status: __expectString,
     updatedAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -2144,6 +2168,7 @@ export const de_GetWebExperienceCommand = async (
     createdAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     defaultEndpoint: __expectString,
     error: _json,
+    identityProviderConfiguration: (_) => _json(__expectUnion(_)),
     roleArn: __expectString,
     samplePromptsControlMode: __expectString,
     status: __expectString,
@@ -2891,7 +2916,7 @@ const se_ChatInputStream = (input: any, context: __SerdeContext & __EventStreamS
 };
 const se_ActionExecutionEvent_event = (input: ActionExecutionEvent, context: __SerdeContext): __Message => {
   const headers: __MessageHeaders = {
-    ":event-type": { type: "string", value: "ActionExecutionEvent" },
+    ":event-type": { type: "string", value: "actionExecutionEvent" },
     ":message-type": { type: "string", value: "event" },
     ":content-type": { type: "string", value: "application/json" },
   };
@@ -2902,7 +2927,7 @@ const se_ActionExecutionEvent_event = (input: ActionExecutionEvent, context: __S
 };
 const se_AttachmentInputEvent_event = (input: AttachmentInputEvent, context: __SerdeContext): __Message => {
   const headers: __MessageHeaders = {
-    ":event-type": { type: "string", value: "AttachmentInputEvent" },
+    ":event-type": { type: "string", value: "attachmentEvent" },
     ":message-type": { type: "string", value: "event" },
     ":content-type": { type: "string", value: "application/json" },
   };
@@ -2913,7 +2938,7 @@ const se_AttachmentInputEvent_event = (input: AttachmentInputEvent, context: __S
 };
 const se_AuthChallengeResponseEvent_event = (input: AuthChallengeResponseEvent, context: __SerdeContext): __Message => {
   const headers: __MessageHeaders = {
-    ":event-type": { type: "string", value: "AuthChallengeResponseEvent" },
+    ":event-type": { type: "string", value: "authChallengeResponseEvent" },
     ":message-type": { type: "string", value: "event" },
     ":content-type": { type: "string", value: "application/json" },
   };
@@ -2924,7 +2949,7 @@ const se_AuthChallengeResponseEvent_event = (input: AuthChallengeResponseEvent, 
 };
 const se_ConfigurationEvent_event = (input: ConfigurationEvent, context: __SerdeContext): __Message => {
   const headers: __MessageHeaders = {
-    ":event-type": { type: "string", value: "ConfigurationEvent" },
+    ":event-type": { type: "string", value: "configurationEvent" },
     ":message-type": { type: "string", value: "event" },
     ":content-type": { type: "string", value: "application/json" },
   };
@@ -2935,7 +2960,7 @@ const se_ConfigurationEvent_event = (input: ConfigurationEvent, context: __Serde
 };
 const se_EndOfInputEvent_event = (input: EndOfInputEvent, context: __SerdeContext): __Message => {
   const headers: __MessageHeaders = {
-    ":event-type": { type: "string", value: "EndOfInputEvent" },
+    ":event-type": { type: "string", value: "endOfInputEvent" },
     ":message-type": { type: "string", value: "event" },
     ":content-type": { type: "string", value: "application/json" },
   };
@@ -2946,7 +2971,7 @@ const se_EndOfInputEvent_event = (input: EndOfInputEvent, context: __SerdeContex
 };
 const se_TextInputEvent_event = (input: TextInputEvent, context: __SerdeContext): __Message => {
   const headers: __MessageHeaders = {
-    ":event-type": { type: "string", value: "TextInputEvent" },
+    ":event-type": { type: "string", value: "textEvent" },
     ":message-type": { type: "string", value: "event" },
     ":content-type": { type: "string", value: "application/json" },
   };
@@ -3156,6 +3181,8 @@ const se_AttributeFilters = (input: AttributeFilter[], context: __SerdeContext):
 
 // se_AuthorizationResponseMap omitted.
 
+// se_AutoSubscriptionConfiguration omitted.
+
 // se_BasicAuthConfiguration omitted.
 
 // se_BlockedPhrases omitted.
@@ -3163,6 +3190,8 @@ const se_AttributeFilters = (input: AttributeFilter[], context: __SerdeContext):
 // se_BlockedPhrasesConfigurationUpdate omitted.
 
 // se_ChatModeConfiguration omitted.
+
+// se_ClientIdsForOIDC omitted.
 
 /**
  * serializeAws_restJson1ConfigurationEvent
@@ -3336,6 +3365,8 @@ const se_HookConfiguration = (input: HookConfiguration, context: __SerdeContext)
   });
 };
 
+// se_IdentityProviderConfiguration omitted.
+
 // se_IndexCapacityConfiguration omitted.
 
 /**
@@ -3396,6 +3427,10 @@ const se_MessageUsefulnessFeedback = (input: MessageUsefulnessFeedback, context:
 
 // se_OAuth2ClientCredentialConfiguration omitted.
 
+// se_OpenIDConnectProviderConfiguration omitted.
+
+// se_PersonalizationConfiguration omitted.
+
 // se_PluginAuthConfiguration omitted.
 
 // se_PluginConfiguration omitted.
@@ -3408,6 +3443,8 @@ const se_MessageUsefulnessFeedback = (input: MessageUsefulnessFeedback, context:
 
 // se_PrincipalUser omitted.
 
+// se_QAppsConfiguration omitted.
+
 // se_RetrieverConfiguration omitted.
 
 // se_Rule omitted.
@@ -3419,6 +3456,8 @@ const se_MessageUsefulnessFeedback = (input: MessageUsefulnessFeedback, context:
 // se_S3 omitted.
 
 // se_SamlConfiguration omitted.
+
+// se_SamlProviderConfiguration omitted.
 
 // se_SecurityGroupIds omitted.
 
@@ -3592,6 +3631,7 @@ const de_Application = (output: any, context: __SerdeContext): Application => {
     applicationId: __expectString,
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     displayName: __expectString,
+    identityType: __expectString,
     status: __expectString,
     updatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   }) as any;
@@ -3621,11 +3661,15 @@ const de_Applications = (output: any, context: __SerdeContext): Application[] =>
 
 // de_AuthChallengeRequestEvent omitted.
 
+// de_AutoSubscriptionConfiguration omitted.
+
 // de_BasicAuthConfiguration omitted.
 
 // de_BlockedPhrases omitted.
 
 // de_BlockedPhrasesConfiguration omitted.
+
+// de_ClientIdsForOIDC omitted.
 
 // de_ContentBlockerRule omitted.
 
@@ -3868,6 +3912,8 @@ const de_HookConfiguration = (output: any, context: __SerdeContext): HookConfigu
   }) as any;
 };
 
+// de_IdentityProviderConfiguration omitted.
+
 /**
  * deserializeAws_restJson1Index
  */
@@ -3977,6 +4023,10 @@ const de_MetadataEvent = (output: any, context: __SerdeContext): MetadataEvent =
 
 // de_OAuth2ClientCredentialConfiguration omitted.
 
+// de_OpenIDConnectProviderConfiguration omitted.
+
+// de_PersonalizationConfiguration omitted.
+
 /**
  * deserializeAws_restJson1Plugin
  */
@@ -4007,6 +4057,8 @@ const de_Plugins = (output: any, context: __SerdeContext): Plugin[] => {
   return retVal;
 };
 
+// de_QAppsConfiguration omitted.
+
 // de_Retriever omitted.
 
 // de_RetrieverConfiguration omitted.
@@ -4022,6 +4074,8 @@ const de_Plugins = (output: any, context: __SerdeContext): Plugin[] => {
 // de_S3 omitted.
 
 // de_SamlConfiguration omitted.
+
+// de_SamlProviderConfiguration omitted.
 
 // de_SecurityGroupIds omitted.
 

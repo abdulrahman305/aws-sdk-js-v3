@@ -6,6 +6,19 @@
 
 AWS SDK for JavaScript Connect Client for Node.js, Browser and React Native.
 
+<ul>
+<li>
+<p>
+<a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon Connect actions</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon Connect
+data types</a>
+</p>
+</li>
+</ul>
 <p>Amazon Connect is a cloud-based contact center solution that you use to set up and
 manage a customer contact center and provide reliable customer engagement at any scale.</p>
 <p>Amazon Connect provides metrics and real-time reporting that enable you to optimize
@@ -783,6 +796,14 @@ DescribeAgentStatus
 </details>
 <details>
 <summary>
+DescribeAuthenticationProfile
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/DescribeAuthenticationProfileCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/DescribeAuthenticationProfileCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/DescribeAuthenticationProfileCommandOutput/)
+
+</details>
+<details>
+<summary>
 DescribeContact
 </summary>
 
@@ -1199,6 +1220,14 @@ ListApprovedOrigins
 </details>
 <details>
 <summary>
+ListAuthenticationProfiles
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/ListAuthenticationProfilesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/ListAuthenticationProfilesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/ListAuthenticationProfilesCommandOutput/)
+
+</details>
+<details>
+<summary>
 ListBots
 </summary>
 
@@ -1583,6 +1612,14 @@ ResumeContactRecording
 </details>
 <details>
 <summary>
+SearchAgentStatuses
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/SearchAgentStatusesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/SearchAgentStatusesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/SearchAgentStatusesCommandOutput/)
+
+</details>
+<details>
+<summary>
 SearchAvailablePhoneNumbers
 </summary>
 
@@ -1675,6 +1712,14 @@ SearchSecurityProfiles
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/SearchSecurityProfilesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/SearchSecurityProfilesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/SearchSecurityProfilesCommandOutput/)
+
+</details>
+<details>
+<summary>
+SearchUserHierarchyGroups
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/SearchUserHierarchyGroupsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/SearchUserHierarchyGroupsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/SearchUserHierarchyGroupsCommandOutput/)
 
 </details>
 <details>
@@ -1851,6 +1896,14 @@ UpdateAgentStatus
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/UpdateAgentStatusCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/UpdateAgentStatusCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/UpdateAgentStatusCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateAuthenticationProfile
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/connect/command/UpdateAuthenticationProfileCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/UpdateAuthenticationProfileCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-connect/Interface/UpdateAuthenticationProfileCommandOutput/)
 
 </details>
 <details>

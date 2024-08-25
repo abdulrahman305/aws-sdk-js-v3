@@ -326,6 +326,11 @@ import {
   DescribeAgentStatusCommandOutput,
 } from "./commands/DescribeAgentStatusCommand";
 import {
+  DescribeAuthenticationProfileCommand,
+  DescribeAuthenticationProfileCommandInput,
+  DescribeAuthenticationProfileCommandOutput,
+} from "./commands/DescribeAuthenticationProfileCommand";
+import {
   DescribeContactCommand,
   DescribeContactCommandInput,
   DescribeContactCommandOutput,
@@ -585,6 +590,11 @@ import {
   ListApprovedOriginsCommandInput,
   ListApprovedOriginsCommandOutput,
 } from "./commands/ListApprovedOriginsCommand";
+import {
+  ListAuthenticationProfilesCommand,
+  ListAuthenticationProfilesCommandInput,
+  ListAuthenticationProfilesCommandOutput,
+} from "./commands/ListAuthenticationProfilesCommand";
 import { ListBotsCommand, ListBotsCommandInput, ListBotsCommandOutput } from "./commands/ListBotsCommand";
 import {
   ListContactEvaluationsCommand,
@@ -798,6 +808,11 @@ import {
   ResumeContactRecordingCommandOutput,
 } from "./commands/ResumeContactRecordingCommand";
 import {
+  SearchAgentStatusesCommand,
+  SearchAgentStatusesCommandInput,
+  SearchAgentStatusesCommandOutput,
+} from "./commands/SearchAgentStatusesCommand";
+import {
   SearchAvailablePhoneNumbersCommand,
   SearchAvailablePhoneNumbersCommandInput,
   SearchAvailablePhoneNumbersCommandOutput,
@@ -857,6 +872,11 @@ import {
   SearchSecurityProfilesCommandInput,
   SearchSecurityProfilesCommandOutput,
 } from "./commands/SearchSecurityProfilesCommand";
+import {
+  SearchUserHierarchyGroupsCommand,
+  SearchUserHierarchyGroupsCommandInput,
+  SearchUserHierarchyGroupsCommandOutput,
+} from "./commands/SearchUserHierarchyGroupsCommand";
 import { SearchUsersCommand, SearchUsersCommandInput, SearchUsersCommandOutput } from "./commands/SearchUsersCommand";
 import {
   SearchVocabulariesCommand,
@@ -951,6 +971,11 @@ import {
   UpdateAgentStatusCommandInput,
   UpdateAgentStatusCommandOutput,
 } from "./commands/UpdateAgentStatusCommand";
+import {
+  UpdateAuthenticationProfileCommand,
+  UpdateAuthenticationProfileCommandInput,
+  UpdateAuthenticationProfileCommandOutput,
+} from "./commands/UpdateAuthenticationProfileCommand";
 import {
   UpdateContactAttributesCommand,
   UpdateContactAttributesCommandInput,
@@ -1246,6 +1271,7 @@ const commands = {
   DeleteViewVersionCommand,
   DeleteVocabularyCommand,
   DescribeAgentStatusCommand,
+  DescribeAuthenticationProfileCommand,
   DescribeContactCommand,
   DescribeContactEvaluationCommand,
   DescribeContactFlowCommand,
@@ -1298,6 +1324,7 @@ const commands = {
   ListAgentStatusesCommand,
   ListAnalyticsDataAssociationsCommand,
   ListApprovedOriginsCommand,
+  ListAuthenticationProfilesCommand,
   ListBotsCommand,
   ListContactEvaluationsCommand,
   ListContactFlowModulesCommand,
@@ -1346,6 +1373,7 @@ const commands = {
   ReplicateInstanceCommand,
   ResumeContactCommand,
   ResumeContactRecordingCommand,
+  SearchAgentStatusesCommand,
   SearchAvailablePhoneNumbersCommand,
   SearchContactFlowModulesCommand,
   SearchContactFlowsCommand,
@@ -1358,6 +1386,7 @@ const commands = {
   SearchResourceTagsCommand,
   SearchRoutingProfilesCommand,
   SearchSecurityProfilesCommand,
+  SearchUserHierarchyGroupsCommand,
   SearchUsersCommand,
   SearchVocabulariesCommand,
   SendChatIntegrationEventCommand,
@@ -1380,6 +1409,7 @@ const commands = {
   UntagContactCommand,
   UntagResourceCommand,
   UpdateAgentStatusCommand,
+  UpdateAuthenticationProfileCommand,
   UpdateContactCommand,
   UpdateContactAttributesCommand,
   UpdateContactEvaluationCommand,
@@ -2540,6 +2570,23 @@ export interface Connect {
   ): void;
 
   /**
+   * @see {@link DescribeAuthenticationProfileCommand}
+   */
+  describeAuthenticationProfile(
+    args: DescribeAuthenticationProfileCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeAuthenticationProfileCommandOutput>;
+  describeAuthenticationProfile(
+    args: DescribeAuthenticationProfileCommandInput,
+    cb: (err: any, data?: DescribeAuthenticationProfileCommandOutput) => void
+  ): void;
+  describeAuthenticationProfile(
+    args: DescribeAuthenticationProfileCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeAuthenticationProfileCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeContactCommand}
    */
   describeContact(
@@ -3370,6 +3417,23 @@ export interface Connect {
   ): void;
 
   /**
+   * @see {@link ListAuthenticationProfilesCommand}
+   */
+  listAuthenticationProfiles(
+    args: ListAuthenticationProfilesCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListAuthenticationProfilesCommandOutput>;
+  listAuthenticationProfiles(
+    args: ListAuthenticationProfilesCommandInput,
+    cb: (err: any, data?: ListAuthenticationProfilesCommandOutput) => void
+  ): void;
+  listAuthenticationProfiles(
+    args: ListAuthenticationProfilesCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListAuthenticationProfilesCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListBotsCommand}
    */
   listBots(args: ListBotsCommandInput, options?: __HttpHandlerOptions): Promise<ListBotsCommandOutput>;
@@ -4114,6 +4178,23 @@ export interface Connect {
   ): void;
 
   /**
+   * @see {@link SearchAgentStatusesCommand}
+   */
+  searchAgentStatuses(
+    args: SearchAgentStatusesCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<SearchAgentStatusesCommandOutput>;
+  searchAgentStatuses(
+    args: SearchAgentStatusesCommandInput,
+    cb: (err: any, data?: SearchAgentStatusesCommandOutput) => void
+  ): void;
+  searchAgentStatuses(
+    args: SearchAgentStatusesCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: SearchAgentStatusesCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link SearchAvailablePhoneNumbersCommand}
    */
   searchAvailablePhoneNumbers(
@@ -4300,6 +4381,23 @@ export interface Connect {
     args: SearchSecurityProfilesCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: SearchSecurityProfilesCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link SearchUserHierarchyGroupsCommand}
+   */
+  searchUserHierarchyGroups(
+    args: SearchUserHierarchyGroupsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<SearchUserHierarchyGroupsCommandOutput>;
+  searchUserHierarchyGroups(
+    args: SearchUserHierarchyGroupsCommandInput,
+    cb: (err: any, data?: SearchUserHierarchyGroupsCommandOutput) => void
+  ): void;
+  searchUserHierarchyGroups(
+    args: SearchUserHierarchyGroupsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: SearchUserHierarchyGroupsCommandOutput) => void
   ): void;
 
   /**
@@ -4635,6 +4733,23 @@ export interface Connect {
     args: UpdateAgentStatusCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateAgentStatusCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateAuthenticationProfileCommand}
+   */
+  updateAuthenticationProfile(
+    args: UpdateAuthenticationProfileCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateAuthenticationProfileCommandOutput>;
+  updateAuthenticationProfile(
+    args: UpdateAuthenticationProfileCommandInput,
+    cb: (err: any, data?: UpdateAuthenticationProfileCommandOutput) => void
+  ): void;
+  updateAuthenticationProfile(
+    args: UpdateAuthenticationProfileCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateAuthenticationProfileCommandOutput) => void
   ): void;
 
   /**
@@ -5383,7 +5498,20 @@ export interface Connect {
 }
 
 /**
- * <p>Amazon Connect is a cloud-based contact center solution that you use to set up and
+ * <ul>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon Connect actions</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon Connect
+ *       data types</a>
+ *                </p>
+ *             </li>
+ *          </ul>
+ *          <p>Amazon Connect is a cloud-based contact center solution that you use to set up and
  *    manage a customer contact center and provide reliable customer engagement at any scale.</p>
  *          <p>Amazon Connect provides metrics and real-time reporting that enable you to optimize
  *    contact routing. You can also resolve customer issues more efficiently by getting customers in

@@ -38,7 +38,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
 
 /**
  * <note>
- *             <p>The CLI doesn't support <code>InvokeAgent</code>.</p>
+ *             <p>The CLI doesn't support streaming operations in Amazon Bedrock, including <code>InvokeAgent</code>.</p>
  *          </note>
  *          <p>Sends a prompt for the agent to process and respond to. Note the following fields for the request:</p>
  *          <ul>
@@ -90,6 +90,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  *           actionGroup: "STRING_VALUE", // required
  *           httpMethod: "STRING_VALUE",
  *           apiPath: "STRING_VALUE",
+ *           confirmationState: "CONFIRM" || "DENY",
  *           responseBody: { // ResponseBody
  *             "<keys>": { // ContentBody
  *               body: "STRING_VALUE",
@@ -100,6 +101,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  *         },
  *         functionResult: { // FunctionResult
  *           actionGroup: "STRING_VALUE", // required
+ *           confirmationState: "CONFIRM" || "DENY",
  *           function: "STRING_VALUE",
  *           responseBody: {
  *             "<keys>": {
@@ -111,6 +113,85 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  *       },
  *     ],
  *     invocationId: "STRING_VALUE",
+ *     files: [ // InputFiles
+ *       { // InputFile
+ *         name: "STRING_VALUE", // required
+ *         source: { // FileSource
+ *           sourceType: "S3" || "BYTE_CONTENT", // required
+ *           s3Location: { // S3ObjectFile
+ *             uri: "STRING_VALUE", // required
+ *           },
+ *           byteContent: { // ByteContentFile
+ *             mediaType: "STRING_VALUE", // required
+ *             data: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")             // required
+ *           },
+ *         },
+ *         useCase: "CODE_INTERPRETER" || "CHAT", // required
+ *       },
+ *     ],
+ *     knowledgeBaseConfigurations: [ // KnowledgeBaseConfigurations
+ *       { // KnowledgeBaseConfiguration
+ *         knowledgeBaseId: "STRING_VALUE", // required
+ *         retrievalConfiguration: { // KnowledgeBaseRetrievalConfiguration
+ *           vectorSearchConfiguration: { // KnowledgeBaseVectorSearchConfiguration
+ *             numberOfResults: Number("int"),
+ *             overrideSearchType: "HYBRID" || "SEMANTIC",
+ *             filter: { // RetrievalFilter Union: only one key present
+ *               equals: { // FilterAttribute
+ *                 key: "STRING_VALUE", // required
+ *                 value: "DOCUMENT_VALUE", // required
+ *               },
+ *               notEquals: {
+ *                 key: "STRING_VALUE", // required
+ *                 value: "DOCUMENT_VALUE", // required
+ *               },
+ *               greaterThan: {
+ *                 key: "STRING_VALUE", // required
+ *                 value: "DOCUMENT_VALUE", // required
+ *               },
+ *               greaterThanOrEquals: {
+ *                 key: "STRING_VALUE", // required
+ *                 value: "DOCUMENT_VALUE", // required
+ *               },
+ *               lessThan: {
+ *                 key: "STRING_VALUE", // required
+ *                 value: "DOCUMENT_VALUE", // required
+ *               },
+ *               lessThanOrEquals: "<FilterAttribute>",
+ *               in: "<FilterAttribute>",
+ *               notIn: "<FilterAttribute>",
+ *               startsWith: "<FilterAttribute>",
+ *               listContains: "<FilterAttribute>",
+ *               stringContains: "<FilterAttribute>",
+ *               andAll: [ // RetrievalFilterList
+ *                 {//  Union: only one key present
+ *                   equals: "<FilterAttribute>",
+ *                   notEquals: "<FilterAttribute>",
+ *                   greaterThan: "<FilterAttribute>",
+ *                   greaterThanOrEquals: "<FilterAttribute>",
+ *                   lessThan: "<FilterAttribute>",
+ *                   lessThanOrEquals: "<FilterAttribute>",
+ *                   in: "<FilterAttribute>",
+ *                   notIn: "<FilterAttribute>",
+ *                   startsWith: "<FilterAttribute>",
+ *                   listContains: "<FilterAttribute>",
+ *                   stringContains: "<FilterAttribute>",
+ *                   andAll: [
+ *                     "<RetrievalFilter>",
+ *                   ],
+ *                   orAll: [
+ *                     "<RetrievalFilter>",
+ *                   ],
+ *                 },
+ *               ],
+ *               orAll: [
+ *                 "<RetrievalFilter>",
+ *               ],
+ *             },
+ *           },
+ *         },
+ *       },
+ *     ],
  *   },
  *   agentId: "STRING_VALUE", // required
  *   agentAliasId: "STRING_VALUE", // required
@@ -118,6 +199,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  *   endSession: true || false,
  *   enableTrace: true || false,
  *   inputText: "STRING_VALUE",
+ *   memoryId: "STRING_VALUE",
  * };
  * const command = new InvokeAgentCommand(input);
  * const response = await client.send(command);
@@ -143,9 +225,21 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //                   text: "STRING_VALUE", // required
  * //                 },
  * //                 location: { // RetrievalResultLocation
- * //                   type: "S3", // required
+ * //                   type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT", // required
  * //                   s3Location: { // RetrievalResultS3Location
  * //                     uri: "STRING_VALUE",
+ * //                   },
+ * //                   webLocation: { // RetrievalResultWebLocation
+ * //                     url: "STRING_VALUE",
+ * //                   },
+ * //                   confluenceLocation: { // RetrievalResultConfluenceLocation
+ * //                     url: "STRING_VALUE",
+ * //                   },
+ * //                   salesforceLocation: { // RetrievalResultSalesforceLocation
+ * //                     url: "STRING_VALUE",
+ * //                   },
+ * //                   sharePointLocation: { // RetrievalResultSharePointLocation
+ * //                     url: "STRING_VALUE",
  * //                   },
  * //                 },
  * //                 metadata: { // RetrievalResultMetadata
@@ -308,7 +402,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //           },
  * //           invocationInput: { // InvocationInput
  * //             traceId: "STRING_VALUE",
- * //             invocationType: "ACTION_GROUP" || "KNOWLEDGE_BASE" || "FINISH",
+ * //             invocationType: "ACTION_GROUP" || "KNOWLEDGE_BASE" || "FINISH" || "ACTION_GROUP_CODE_INTERPRETER",
  * //             actionGroupInvocationInput: { // ActionGroupInvocationInput
  * //               actionGroupName: "STRING_VALUE",
  * //               verb: "STRING_VALUE",
@@ -332,10 +426,18 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //                 },
  * //               },
  * //               function: "STRING_VALUE",
+ * //               executionType: "LAMBDA" || "RETURN_CONTROL",
+ * //               invocationId: "STRING_VALUE",
  * //             },
  * //             knowledgeBaseLookupInput: { // KnowledgeBaseLookupInput
  * //               text: "STRING_VALUE",
  * //               knowledgeBaseId: "STRING_VALUE",
+ * //             },
+ * //             codeInterpreterInvocationInput: { // CodeInterpreterInvocationInput
+ * //               code: "STRING_VALUE",
+ * //               files: [ // Files
+ * //                 "STRING_VALUE",
+ * //               ],
  * //             },
  * //           },
  * //           observation: { // Observation
@@ -351,9 +453,21 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //                     text: "STRING_VALUE", // required
  * //                   },
  * //                   location: {
- * //                     type: "S3", // required
+ * //                     type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT", // required
  * //                     s3Location: {
  * //                       uri: "STRING_VALUE",
+ * //                     },
+ * //                     webLocation: {
+ * //                       url: "STRING_VALUE",
+ * //                     },
+ * //                     confluenceLocation: {
+ * //                       url: "STRING_VALUE",
+ * //                     },
+ * //                     salesforceLocation: {
+ * //                       url: "STRING_VALUE",
+ * //                     },
+ * //                     sharePointLocation: {
+ * //                       url: "STRING_VALUE",
  * //                     },
  * //                   },
  * //                   metadata: {
@@ -368,6 +482,14 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //             repromptResponse: { // RepromptResponse
  * //               text: "STRING_VALUE",
  * //               source: "ACTION_GROUP" || "KNOWLEDGE_BASE" || "PARSER",
+ * //             },
+ * //             codeInterpreterInvocationOutput: { // CodeInterpreterInvocationOutput
+ * //               executionOutput: "STRING_VALUE",
+ * //               executionError: "STRING_VALUE",
+ * //               files: [
+ * //                 "STRING_VALUE",
+ * //               ],
+ * //               executionTimeout: true || false,
  * //             },
  * //           },
  * //           modelInvocationInput: {
@@ -386,6 +508,18 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //             overrideLambda: "STRING_VALUE",
  * //             promptCreationMode: "DEFAULT" || "OVERRIDDEN",
  * //             parserMode: "DEFAULT" || "OVERRIDDEN",
+ * //           },
+ * //           modelInvocationOutput: { // OrchestrationModelInvocationOutput
+ * //             traceId: "STRING_VALUE",
+ * //             rawResponse: { // RawResponse
+ * //               content: "STRING_VALUE",
+ * //             },
+ * //             metadata: { // Metadata
+ * //               usage: { // Usage
+ * //                 inputTokens: Number("int"),
+ * //                 outputTokens: Number("int"),
+ * //               },
+ * //             },
  * //           },
  * //         },
  * //         postProcessingTrace: { // PostProcessingTrace Union: only one key present
@@ -446,6 +580,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //                 },
  * //               },
  * //             },
+ * //             actionInvocationType: "RESULT" || "USER_CONFIRMATION" || "USER_CONFIRMATION_AND_RESULT",
  * //           },
  * //           functionInvocationInput: { // FunctionInvocationInput
  * //             actionGroup: "STRING_VALUE", // required
@@ -457,6 +592,7 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //               },
  * //             ],
  * //             function: "STRING_VALUE",
+ * //             actionInvocationType: "RESULT" || "USER_CONFIRMATION" || "USER_CONFIRMATION_AND_RESULT",
  * //           },
  * //         },
  * //       ],
@@ -491,9 +627,19 @@ export interface InvokeAgentCommandOutput extends InvokeAgentResponse, __Metadat
  * //       message: "STRING_VALUE",
  * //       resourceName: "STRING_VALUE",
  * //     },
+ * //     files: { // FilePart
+ * //       files: [ // OutputFiles
+ * //         { // OutputFile
+ * //           name: "STRING_VALUE",
+ * //           type: "STRING_VALUE",
+ * //           bytes: new Uint8Array(),
+ * //         },
+ * //       ],
+ * //     },
  * //   },
  * //   contentType: "STRING_VALUE", // required
  * //   sessionId: "STRING_VALUE", // required
+ * //   memoryId: "STRING_VALUE",
  * // };
  *
  * ```

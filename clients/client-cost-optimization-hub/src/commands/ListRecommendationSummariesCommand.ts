@@ -60,7 +60,7 @@ export interface ListRecommendationSummariesCommandOutput
  *       "STRING_VALUE",
  *     ],
  *     resourceTypes: [ // ResourceTypeList
- *       "Ec2Instance" || "LambdaFunction" || "EbsVolume" || "EcsService" || "Ec2AutoScalingGroup" || "Ec2InstanceSavingsPlans" || "ComputeSavingsPlans" || "SageMakerSavingsPlans" || "Ec2ReservedInstances" || "RdsReservedInstances" || "OpenSearchReservedInstances" || "RedshiftReservedInstances" || "ElastiCacheReservedInstances",
+ *       "Ec2Instance" || "LambdaFunction" || "EbsVolume" || "EcsService" || "Ec2AutoScalingGroup" || "Ec2InstanceSavingsPlans" || "ComputeSavingsPlans" || "SageMakerSavingsPlans" || "Ec2ReservedInstances" || "RdsReservedInstances" || "OpenSearchReservedInstances" || "RedshiftReservedInstances" || "ElastiCacheReservedInstances" || "RdsDbInstanceStorage" || "RdsDbInstance",
  *     ],
  *     actionTypes: [ // ActionTypeList
  *       "Rightsize" || "Stop" || "Upgrade" || "PurchaseSavingsPlans" || "PurchaseReservedInstances" || "MigrateToGraviton",
@@ -83,6 +83,9 @@ export interface ListRecommendationSummariesCommandOutput
  *   },
  *   groupBy: "STRING_VALUE", // required
  *   maxResults: Number("int"),
+ *   metrics: [ // SummaryMetricsList
+ *     "SavingsPercentage",
+ *   ],
  *   nextToken: "STRING_VALUE",
  * };
  * const command = new ListRecommendationSummariesCommand(input);
@@ -98,6 +101,9 @@ export interface ListRecommendationSummariesCommandOutput
  * //   ],
  * //   groupBy: "STRING_VALUE",
  * //   currencyCode: "STRING_VALUE",
+ * //   metrics: { // SummaryMetricsResult
+ * //     savingsPercentage: "STRING_VALUE",
+ * //   },
  * //   nextToken: "STRING_VALUE",
  * // };
  *

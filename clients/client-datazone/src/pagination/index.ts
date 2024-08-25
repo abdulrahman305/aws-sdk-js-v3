@@ -1,6 +1,8 @@
 // smithy-typescript generated code
 export * from "./Interfaces";
+export * from "./ListAssetFiltersPaginator";
 export * from "./ListAssetRevisionsPaginator";
+export * from "./ListDataProductRevisionsPaginator";
 export * from "./ListDataSourceRunActivitiesPaginator";
 export * from "./ListDataSourceRunsPaginator";
 export * from "./ListDataSourcesPaginator";
@@ -10,6 +12,7 @@ export * from "./ListEnvironmentBlueprintConfigurationsPaginator";
 export * from "./ListEnvironmentBlueprintsPaginator";
 export * from "./ListEnvironmentProfilesPaginator";
 export * from "./ListEnvironmentsPaginator";
+export * from "./ListLineageNodeHistoryPaginator";
 export * from "./ListMetadataGenerationRunsPaginator";
 export * from "./ListNotificationsPaginator";
 export * from "./ListProjectMembershipsPaginator";

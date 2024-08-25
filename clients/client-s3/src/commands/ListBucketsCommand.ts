@@ -1,11 +1,12 @@
 // smithy-typescript generated code
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListBucketsOutput } from "../models/models_0";
+import { ListBucketsOutput, ListBucketsRequest } from "../models/models_0";
 import { de_ListBucketsCommand, se_ListBucketsCommand } from "../protocols/Aws_restXml";
 import { S3ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../S3Client";
 
@@ -19,7 +20,7 @@ export { $Command };
  *
  * The input for {@link ListBucketsCommand}.
  */
-export interface ListBucketsCommandInput {}
+export interface ListBucketsCommandInput extends ListBucketsRequest {}
 /**
  * @public
  *
@@ -41,7 +42,10 @@ export interface ListBucketsCommandOutput extends ListBucketsOutput, __MetadataB
  * import { S3Client, ListBucketsCommand } from "@aws-sdk/client-s3"; // ES Modules import
  * // const { S3Client, ListBucketsCommand } = require("@aws-sdk/client-s3"); // CommonJS import
  * const client = new S3Client(config);
- * const input = {};
+ * const input = { // ListBucketsRequest
+ *   MaxBuckets: Number("int"),
+ *   ContinuationToken: "STRING_VALUE",
+ * };
  * const command = new ListBucketsCommand(input);
  * const response = await client.send(command);
  * // { // ListBucketsOutput
@@ -55,6 +59,7 @@ export interface ListBucketsCommandOutput extends ListBucketsOutput, __MetadataB
  * //     DisplayName: "STRING_VALUE",
  * //     ID: "STRING_VALUE",
  * //   },
+ * //   ContinuationToken: "STRING_VALUE",
  * // };
  *
  * ```
@@ -116,6 +121,7 @@ export class ListBucketsCommand extends $Command
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getThrow200ExceptionsPlugin(config),
     ];
   })
   .s("AmazonS3", "ListBuckets", {})

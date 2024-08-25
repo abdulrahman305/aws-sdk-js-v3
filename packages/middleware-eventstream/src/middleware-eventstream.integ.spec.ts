@@ -20,7 +20,7 @@ describe("middleware-eventstream", () => {
 
       requireRequestsFrom(client).toMatch({
         headers: {
-          "Content-Type": "application/vnd.amazon.eventstream",
+          "content-type": "application/vnd.amazon.eventstream",
           "x-amz-content-sha256": "STREAMING-AWS4-HMAC-SHA256-EVENTS",
         },
       });
@@ -30,15 +30,7 @@ describe("middleware-eventstream", () => {
         botAliasId: "undefined",
         localeId: "undefined",
         sessionId: "undefined",
-        requestEventStream: {
-          [Symbol.asyncIterator]() {
-            return {
-              next() {
-                return this as any;
-              },
-            };
-          },
-        },
+        requestEventStream: (async function* () {})(),
       });
 
       expect.assertions(2);
@@ -51,7 +43,7 @@ describe("middleware-eventstream", () => {
 
       requireRequestsFrom(client).toMatch({
         headers: {
-          "Content-Type": "application/vnd.amazon.eventstream",
+          "content-type": "application/vnd.amazon.eventstream",
           "x-amz-content-sha256": "STREAMING-AWS4-HMAC-SHA256-EVENTS",
         },
       });
@@ -61,15 +53,7 @@ describe("middleware-eventstream", () => {
         VideoWidth: "undefined",
         VideoHeight: "undefined",
         ChallengeVersions: "undefined",
-        LivenessRequestStream: {
-          [Symbol.asyncIterator]() {
-            return {
-              next() {
-                return this as any;
-              },
-            };
-          },
-        },
+        LivenessRequestStream: (async function* () {})(),
       });
 
       expect.assertions(2);
@@ -83,7 +67,7 @@ describe("middleware-eventstream", () => {
 
       requireRequestsFrom(client).toMatch({
         headers: {
-          "Content-Type": "application/vnd.amazon.eventstream",
+          "content-type": "application/vnd.amazon.eventstream",
           "x-amz-content-sha256": "STREAMING-AWS4-HMAC-SHA256-EVENTS",
         },
       });
@@ -91,15 +75,7 @@ describe("middleware-eventstream", () => {
       await client.startStreamTranscription({
         MediaSampleRateHertz: 144,
         MediaEncoding: "ogg-opus",
-        AudioStream: {
-          [Symbol.asyncIterator]() {
-            return {
-              next() {
-                return this as any;
-              },
-            };
-          },
-        },
+        AudioStream: (async function* () {})(),
       });
 
       expect.assertions(2);

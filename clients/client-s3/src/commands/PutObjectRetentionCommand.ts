@@ -1,5 +1,6 @@
 // smithy-typescript generated code
 import { getFlexibleChecksumsPlugin } from "@aws-sdk/middleware-flexible-checksums";
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
@@ -97,6 +98,7 @@ export class PutObjectRetentionCommand extends $Command
         requestAlgorithmMember: "ChecksumAlgorithm",
         requestChecksumRequired: true,
       }),
+      getThrow200ExceptionsPlugin(config),
     ];
   })
   .s("AmazonS3", "PutObjectRetention", {})

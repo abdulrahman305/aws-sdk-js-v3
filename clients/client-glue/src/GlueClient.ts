@@ -92,6 +92,10 @@ import {
 } from "./commands/BatchGetTableOptimizerCommand";
 import { BatchGetTriggersCommandInput, BatchGetTriggersCommandOutput } from "./commands/BatchGetTriggersCommand";
 import { BatchGetWorkflowsCommandInput, BatchGetWorkflowsCommandOutput } from "./commands/BatchGetWorkflowsCommand";
+import {
+  BatchPutDataQualityStatisticAnnotationCommandInput,
+  BatchPutDataQualityStatisticAnnotationCommandOutput,
+} from "./commands/BatchPutDataQualityStatisticAnnotationCommand";
 import { BatchStopJobRunCommandInput, BatchStopJobRunCommandOutput } from "./commands/BatchStopJobRunCommand";
 import {
   BatchUpdatePartitionCommandInput,
@@ -251,6 +255,14 @@ import {
 } from "./commands/GetDataCatalogEncryptionSettingsCommand";
 import { GetDataflowGraphCommandInput, GetDataflowGraphCommandOutput } from "./commands/GetDataflowGraphCommand";
 import {
+  GetDataQualityModelCommandInput,
+  GetDataQualityModelCommandOutput,
+} from "./commands/GetDataQualityModelCommand";
+import {
+  GetDataQualityModelResultCommandInput,
+  GetDataQualityModelResultCommandOutput,
+} from "./commands/GetDataQualityModelResultCommand";
+import {
   GetDataQualityResultCommandInput,
   GetDataQualityResultCommandOutput,
 } from "./commands/GetDataQualityResultCommand";
@@ -378,6 +390,14 @@ import {
   ListDataQualityRulesetsCommandInput,
   ListDataQualityRulesetsCommandOutput,
 } from "./commands/ListDataQualityRulesetsCommand";
+import {
+  ListDataQualityStatisticAnnotationsCommandInput,
+  ListDataQualityStatisticAnnotationsCommandOutput,
+} from "./commands/ListDataQualityStatisticAnnotationsCommand";
+import {
+  ListDataQualityStatisticsCommandInput,
+  ListDataQualityStatisticsCommandOutput,
+} from "./commands/ListDataQualityStatisticsCommand";
 import { ListDevEndpointsCommandInput, ListDevEndpointsCommandOutput } from "./commands/ListDevEndpointsCommand";
 import { ListJobsCommandInput, ListJobsCommandOutput } from "./commands/ListJobsCommand";
 import { ListMLTransformsCommandInput, ListMLTransformsCommandOutput } from "./commands/ListMLTransformsCommand";
@@ -397,6 +417,10 @@ import {
   PutDataCatalogEncryptionSettingsCommandInput,
   PutDataCatalogEncryptionSettingsCommandOutput,
 } from "./commands/PutDataCatalogEncryptionSettingsCommand";
+import {
+  PutDataQualityProfileAnnotationCommandInput,
+  PutDataQualityProfileAnnotationCommandOutput,
+} from "./commands/PutDataQualityProfileAnnotationCommand";
 import { PutResourcePolicyCommandInput, PutResourcePolicyCommandOutput } from "./commands/PutResourcePolicyCommand";
 import {
   PutSchemaVersionMetadataCommandInput,
@@ -550,6 +574,7 @@ export type ServiceInputTypes =
   | BatchGetTableOptimizerCommandInput
   | BatchGetTriggersCommandInput
   | BatchGetWorkflowsCommandInput
+  | BatchPutDataQualityStatisticAnnotationCommandInput
   | BatchStopJobRunCommandInput
   | BatchUpdatePartitionCommandInput
   | CancelDataQualityRuleRecommendationRunCommandInput
@@ -624,6 +649,8 @@ export type ServiceInputTypes =
   | GetCrawlersCommandInput
   | GetCustomEntityTypeCommandInput
   | GetDataCatalogEncryptionSettingsCommandInput
+  | GetDataQualityModelCommandInput
+  | GetDataQualityModelResultCommandInput
   | GetDataQualityResultCommandInput
   | GetDataQualityRuleRecommendationRunCommandInput
   | GetDataQualityRulesetCommandInput
@@ -686,6 +713,8 @@ export type ServiceInputTypes =
   | ListDataQualityRuleRecommendationRunsCommandInput
   | ListDataQualityRulesetEvaluationRunsCommandInput
   | ListDataQualityRulesetsCommandInput
+  | ListDataQualityStatisticAnnotationsCommandInput
+  | ListDataQualityStatisticsCommandInput
   | ListDevEndpointsCommandInput
   | ListJobsCommandInput
   | ListMLTransformsCommandInput
@@ -699,6 +728,7 @@ export type ServiceInputTypes =
   | ListUsageProfilesCommandInput
   | ListWorkflowsCommandInput
   | PutDataCatalogEncryptionSettingsCommandInput
+  | PutDataQualityProfileAnnotationCommandInput
   | PutResourcePolicyCommandInput
   | PutSchemaVersionMetadataCommandInput
   | PutWorkflowRunPropertiesCommandInput
@@ -773,6 +803,7 @@ export type ServiceOutputTypes =
   | BatchGetTableOptimizerCommandOutput
   | BatchGetTriggersCommandOutput
   | BatchGetWorkflowsCommandOutput
+  | BatchPutDataQualityStatisticAnnotationCommandOutput
   | BatchStopJobRunCommandOutput
   | BatchUpdatePartitionCommandOutput
   | CancelDataQualityRuleRecommendationRunCommandOutput
@@ -847,6 +878,8 @@ export type ServiceOutputTypes =
   | GetCrawlersCommandOutput
   | GetCustomEntityTypeCommandOutput
   | GetDataCatalogEncryptionSettingsCommandOutput
+  | GetDataQualityModelCommandOutput
+  | GetDataQualityModelResultCommandOutput
   | GetDataQualityResultCommandOutput
   | GetDataQualityRuleRecommendationRunCommandOutput
   | GetDataQualityRulesetCommandOutput
@@ -909,6 +942,8 @@ export type ServiceOutputTypes =
   | ListDataQualityRuleRecommendationRunsCommandOutput
   | ListDataQualityRulesetEvaluationRunsCommandOutput
   | ListDataQualityRulesetsCommandOutput
+  | ListDataQualityStatisticAnnotationsCommandOutput
+  | ListDataQualityStatisticsCommandOutput
   | ListDevEndpointsCommandOutput
   | ListJobsCommandOutput
   | ListMLTransformsCommandOutput
@@ -922,6 +957,7 @@ export type ServiceOutputTypes =
   | ListUsageProfilesCommandOutput
   | ListWorkflowsCommandOutput
   | PutDataCatalogEncryptionSettingsCommandOutput
+  | PutDataQualityProfileAnnotationCommandOutput
   | PutResourcePolicyCommandOutput
   | PutSchemaVersionMetadataCommandOutput
   | PutWorkflowRunPropertiesCommandOutput
@@ -1114,11 +1150,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type GlueClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -1134,11 +1170,11 @@ export interface GlueClientConfig extends GlueClientConfigType {}
 export type GlueClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -1167,25 +1203,28 @@ export class GlueClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<GlueClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultGlueHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: GlueClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -1198,14 +1237,5 @@ export class GlueClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultGlueHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: GlueClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

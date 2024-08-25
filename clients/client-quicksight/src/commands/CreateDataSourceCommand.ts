@@ -9,7 +9,7 @@ import {
   CreateDataSourceRequest,
   CreateDataSourceRequestFilterSensitiveLog,
   CreateDataSourceResponse,
-} from "../models/models_2";
+} from "../models/models_3";
 import { de_CreateDataSourceCommand, se_CreateDataSourceCommand } from "../protocols/Aws_restJson1";
 import { QuickSightClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../QuickSightClient";
 
@@ -366,6 +366,9 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  *
  * @throws {@link ConflictException} (client fault)
  *  <p>Updating or deleting a resource can cause an inconsistent state.</p>
+ *
+ * @throws {@link CustomerManagedKeyUnavailableException} (client fault)
+ *  <p>The customer managed key that is registered to your Amazon QuickSight account is unavailable.</p>
  *
  * @throws {@link InternalFailureException} (server fault)
  *  <p>An internal failure occurred.</p>

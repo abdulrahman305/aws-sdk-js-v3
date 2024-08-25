@@ -1,5 +1,6 @@
 // smithy-typescript generated code
 import { getLocationConstraintPlugin } from "@aws-sdk/middleware-location-constraint";
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
@@ -218,22 +219,6 @@ export interface CreateBucketCommandOutput extends CreateBucketOutput, __Metadat
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
  * @public
- * @example To create a bucket
- * ```javascript
- * // The following example creates a bucket.
- * const input = {
- *   "Bucket": "examplebucket"
- * };
- * const command = new CreateBucketCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "Location": "/examplebucket"
- * }
- * *\/
- * // example id: to-create-a-bucket--1472851826060
- * ```
- *
  * @example To create a bucket in a specific region
  * ```javascript
  * // The following example creates a bucket. The request specifies an AWS region where to create the bucket.
@@ -251,6 +236,22 @@ export interface CreateBucketCommandOutput extends CreateBucketOutput, __Metadat
  * }
  * *\/
  * // example id: to-create-a-bucket-in-a-specific-region-1483399072992
+ * ```
+ *
+ * @example To create a bucket
+ * ```javascript
+ * // The following example creates a bucket.
+ * const input = {
+ *   "Bucket": "examplebucket"
+ * };
+ * const command = new CreateBucketCommand(input);
+ * const response = await client.send(command);
+ * /* response ==
+ * {
+ *   "Location": "/examplebucket"
+ * }
+ * *\/
+ * // example id: to-create-a-bucket--1472851826060
  * ```
  *
  */
@@ -272,6 +273,7 @@ export class CreateBucketCommand extends $Command
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getThrow200ExceptionsPlugin(config),
       getLocationConstraintPlugin(config),
     ];
   })

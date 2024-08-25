@@ -976,6 +976,12 @@ export interface CreateComputeEnvironmentRequest {
    * @public
    */
   eksConfiguration?: EksConfiguration;
+
+  /**
+   * <p>Reserved.</p>
+   * @public
+   */
+  context?: string;
 }
 
 /**
@@ -1606,6 +1612,12 @@ export interface ComputeEnvironmentDetail {
    * @public
    */
   uuid?: string;
+
+  /**
+   * <p>Reserved.</p>
+   * @public
+   */
+  context?: string;
 }
 
 /**
@@ -3865,6 +3877,12 @@ export interface NodeRangeProperty {
    * @public
    */
   ecsProperties?: EcsProperties;
+
+  /**
+   * <p>This is an object that represents the properties of the node range for a multi-node parallel job.</p>
+   * @public
+   */
+  eksProperties?: EksProperties;
 }
 
 /**
@@ -5046,6 +5064,12 @@ export interface EksAttemptDetail {
    * @public
    */
   initContainers?: EksAttemptContainerDetail[];
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Amazon EKS cluster.</p>
+   * @public
+   */
+  eksClusterArn?: string;
 
   /**
    * <p>The name of the pod for this job attempt.</p>
@@ -6544,6 +6568,12 @@ export interface NodePropertyOverride {
    * @public
    */
   instanceTypes?: string[];
+
+  /**
+   * <p>An object that contains the properties that you want to replace for the existing Amazon EKS resources of a job.</p>
+   * @public
+   */
+  eksPropertiesOverride?: EksPropertiesOverride;
 }
 
 /**
@@ -7281,6 +7311,12 @@ export interface UpdateComputeEnvironmentRequest {
    * @public
    */
   updatePolicy?: UpdatePolicy;
+
+  /**
+   * <p>Reserved.</p>
+   * @public
+   */
+  context?: string;
 }
 
 /**

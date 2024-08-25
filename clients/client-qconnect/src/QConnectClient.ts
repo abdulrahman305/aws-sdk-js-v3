@@ -58,6 +58,10 @@ import {
   CreateAssistantAssociationCommandOutput,
 } from "./commands/CreateAssistantAssociationCommand";
 import { CreateAssistantCommandInput, CreateAssistantCommandOutput } from "./commands/CreateAssistantCommand";
+import {
+  CreateContentAssociationCommandInput,
+  CreateContentAssociationCommandOutput,
+} from "./commands/CreateContentAssociationCommand";
 import { CreateContentCommandInput, CreateContentCommandOutput } from "./commands/CreateContentCommand";
 import {
   CreateKnowledgeBaseCommandInput,
@@ -73,6 +77,10 @@ import {
   DeleteAssistantAssociationCommandOutput,
 } from "./commands/DeleteAssistantAssociationCommand";
 import { DeleteAssistantCommandInput, DeleteAssistantCommandOutput } from "./commands/DeleteAssistantCommand";
+import {
+  DeleteContentAssociationCommandInput,
+  DeleteContentAssociationCommandOutput,
+} from "./commands/DeleteContentAssociationCommand";
 import { DeleteContentCommandInput, DeleteContentCommandOutput } from "./commands/DeleteContentCommand";
 import { DeleteImportJobCommandInput, DeleteImportJobCommandOutput } from "./commands/DeleteImportJobCommand";
 import {
@@ -88,6 +96,10 @@ import {
   GetAssistantAssociationCommandOutput,
 } from "./commands/GetAssistantAssociationCommand";
 import { GetAssistantCommandInput, GetAssistantCommandOutput } from "./commands/GetAssistantCommand";
+import {
+  GetContentAssociationCommandInput,
+  GetContentAssociationCommandOutput,
+} from "./commands/GetContentAssociationCommand";
 import { GetContentCommandInput, GetContentCommandOutput } from "./commands/GetContentCommand";
 import { GetContentSummaryCommandInput, GetContentSummaryCommandOutput } from "./commands/GetContentSummaryCommand";
 import { GetImportJobCommandInput, GetImportJobCommandOutput } from "./commands/GetImportJobCommand";
@@ -100,6 +112,10 @@ import {
   ListAssistantAssociationsCommandOutput,
 } from "./commands/ListAssistantAssociationsCommand";
 import { ListAssistantsCommandInput, ListAssistantsCommandOutput } from "./commands/ListAssistantsCommand";
+import {
+  ListContentAssociationsCommandInput,
+  ListContentAssociationsCommandOutput,
+} from "./commands/ListContentAssociationsCommand";
 import { ListContentsCommandInput, ListContentsCommandOutput } from "./commands/ListContentsCommand";
 import { ListImportJobsCommandInput, ListImportJobsCommandOutput } from "./commands/ListImportJobsCommand";
 import { ListKnowledgeBasesCommandInput, ListKnowledgeBasesCommandOutput } from "./commands/ListKnowledgeBasesCommand";
@@ -155,18 +171,21 @@ export { __Client };
 export type ServiceInputTypes =
   | CreateAssistantAssociationCommandInput
   | CreateAssistantCommandInput
+  | CreateContentAssociationCommandInput
   | CreateContentCommandInput
   | CreateKnowledgeBaseCommandInput
   | CreateQuickResponseCommandInput
   | CreateSessionCommandInput
   | DeleteAssistantAssociationCommandInput
   | DeleteAssistantCommandInput
+  | DeleteContentAssociationCommandInput
   | DeleteContentCommandInput
   | DeleteImportJobCommandInput
   | DeleteKnowledgeBaseCommandInput
   | DeleteQuickResponseCommandInput
   | GetAssistantAssociationCommandInput
   | GetAssistantCommandInput
+  | GetContentAssociationCommandInput
   | GetContentCommandInput
   | GetContentSummaryCommandInput
   | GetImportJobCommandInput
@@ -176,6 +195,7 @@ export type ServiceInputTypes =
   | GetSessionCommandInput
   | ListAssistantAssociationsCommandInput
   | ListAssistantsCommandInput
+  | ListContentAssociationsCommandInput
   | ListContentsCommandInput
   | ListImportJobsCommandInput
   | ListKnowledgeBasesCommandInput
@@ -203,18 +223,21 @@ export type ServiceInputTypes =
 export type ServiceOutputTypes =
   | CreateAssistantAssociationCommandOutput
   | CreateAssistantCommandOutput
+  | CreateContentAssociationCommandOutput
   | CreateContentCommandOutput
   | CreateKnowledgeBaseCommandOutput
   | CreateQuickResponseCommandOutput
   | CreateSessionCommandOutput
   | DeleteAssistantAssociationCommandOutput
   | DeleteAssistantCommandOutput
+  | DeleteContentAssociationCommandOutput
   | DeleteContentCommandOutput
   | DeleteImportJobCommandOutput
   | DeleteKnowledgeBaseCommandOutput
   | DeleteQuickResponseCommandOutput
   | GetAssistantAssociationCommandOutput
   | GetAssistantCommandOutput
+  | GetContentAssociationCommandOutput
   | GetContentCommandOutput
   | GetContentSummaryCommandOutput
   | GetImportJobCommandOutput
@@ -224,6 +247,7 @@ export type ServiceOutputTypes =
   | GetSessionCommandOutput
   | ListAssistantAssociationsCommandOutput
   | ListAssistantsCommandOutput
+  | ListContentAssociationsCommandOutput
   | ListContentsCommandOutput
   | ListImportJobsCommandOutput
   | ListKnowledgeBasesCommandOutput
@@ -382,11 +406,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type QConnectClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -402,11 +426,11 @@ export interface QConnectClientConfig extends QConnectClientConfigType {}
 export type QConnectClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -453,25 +477,28 @@ export class QConnectClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<QConnectClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultQConnectHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: QConnectClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -484,14 +511,5 @@ export class QConnectClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultQConnectHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: QConnectClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

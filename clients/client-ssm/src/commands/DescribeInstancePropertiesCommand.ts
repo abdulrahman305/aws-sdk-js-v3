@@ -5,7 +5,11 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeInstancePropertiesRequest, DescribeInstancePropertiesResult } from "../models/models_0";
+import {
+  DescribeInstancePropertiesRequest,
+  DescribeInstancePropertiesResult,
+  DescribeInstancePropertiesResultFilterSensitiveLog,
+} from "../models/models_0";
 import { de_DescribeInstancePropertiesCommand, se_DescribeInstancePropertiesCommand } from "../protocols/Aws_json1_1";
 import { ServiceInputTypes, ServiceOutputTypes, SSMClientResolvedConfig } from "../SSMClient";
 
@@ -28,7 +32,8 @@ export interface DescribeInstancePropertiesCommandInput extends DescribeInstance
 export interface DescribeInstancePropertiesCommandOutput extends DescribeInstancePropertiesResult, __MetadataBearer {}
 
 /**
- * <p>An API operation used by the Systems Manager console to display information about Systems Manager managed nodes.</p>
+ * <p>An API operation used by the Systems Manager console to display information about Systems Manager managed
+ *    nodes.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -168,7 +173,7 @@ export class DescribeInstancePropertiesCommand extends $Command
   })
   .s("AmazonSSM", "DescribeInstanceProperties", {})
   .n("SSMClient", "DescribeInstancePropertiesCommand")
-  .f(void 0, void 0)
+  .f(void 0, DescribeInstancePropertiesResultFilterSensitiveLog)
   .ser(se_DescribeInstancePropertiesCommand)
   .de(de_DescribeInstancePropertiesCommand)
   .build() {}

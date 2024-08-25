@@ -414,7 +414,7 @@ export interface AgentHierarchyGroup {
 /**
  * <p>A structure that defines search criteria for contacts using agent hierarchy group levels.
  *    For more information about agent hierarchies, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/agent-hierarchy.html">Set Up Agent Hierarchies</a> in the
- *     <i>Amazon Connect Administrator Guide</i>.</p>
+ *      <i>Amazon Connect Administrator Guide</i>.</p>
  * @public
  */
 export interface AgentHierarchyGroups {
@@ -501,7 +501,8 @@ export interface DeviceInfo {
 }
 
 /**
- * <p>Information about the agent hierarchy. Hierarchies can be configured with up to five levels.</p>
+ * <p>Information about the agent hierarchy. Hierarchies can be configured with up to five
+ *    levels.</p>
  * @public
  */
 export interface HierarchyGroups {
@@ -591,8 +592,10 @@ export interface AudioQualityMetricsInfo {
   QualityScore?: number;
 
   /**
-   * <p>List of potential issues causing degradation of quality on a media connection. If the service did not detect any potential quality issues the list is empty.</p>
-   *          <p>Valid values: <code>HighPacketLoss</code> | <code>HighRoundTripTime</code> | <code>HighJitterBuffer</code>
+   * <p>List of potential issues causing degradation of quality on a media connection. If the
+   *    service did not detect any potential quality issues the list is empty.</p>
+   *          <p>Valid values: <code>HighPacketLoss</code> | <code>HighRoundTripTime</code> |
+   *     <code>HighJitterBuffer</code>
    *          </p>
    * @public
    */
@@ -609,6 +612,20 @@ export interface AgentQualityMetrics {
    * @public
    */
   Audio?: AudioQualityMetricsInfo;
+}
+
+/**
+ * <p>Can be used to define a list of preferred agents to target the contact to within the queue.
+ *    Note that agents must have the queue in their routing profile in order to be offered the
+ *    contact.</p>
+ * @public
+ */
+export interface AgentsCriteria {
+  /**
+   * <p>An object to specify a list of agents, by user ID.</p>
+   * @public
+   */
+  AgentIds?: string[];
 }
 
 /**
@@ -728,6 +745,138 @@ export interface AgentStatusReference {
    * @public
    */
   StatusName?: string;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const StringComparisonType = {
+  CONTAINS: "CONTAINS",
+  EXACT: "EXACT",
+  STARTS_WITH: "STARTS_WITH",
+} as const;
+
+/**
+ * @public
+ */
+export type StringComparisonType = (typeof StringComparisonType)[keyof typeof StringComparisonType];
+
+/**
+ * <p>A leaf node condition which can be used to specify a string condition.</p>
+ * @public
+ */
+export interface StringCondition {
+  /**
+   * <p>The name of the field in the string condition.</p>
+   * @public
+   */
+  FieldName?: string;
+
+  /**
+   * <p>The value of the string.</p>
+   * @public
+   */
+  Value?: string;
+
+  /**
+   * <p>The type of comparison to be made when evaluating the string condition.</p>
+   * @public
+   */
+  ComparisonType?: StringComparisonType;
+}
+
+/**
+ * <p>A leaf node condition which can be used to specify a tag condition, for example, <code>HAVE
+ *     BPO = 123</code>. </p>
+ * @public
+ */
+export interface TagCondition {
+  /**
+   * <p>The tag key in the tag condition.</p>
+   * @public
+   */
+  TagKey?: string;
+
+  /**
+   * <p>The tag value in the tag condition.</p>
+   * @public
+   */
+  TagValue?: string;
+}
+
+/**
+ * <p>A list of conditions which would be applied together with an <code>AND</code>
+ *    condition.</p>
+ * @public
+ */
+export interface CommonAttributeAndCondition {
+  /**
+   * <p>A leaf node condition which can be used to specify a tag condition.</p>
+   * @public
+   */
+  TagConditions?: TagCondition[];
+}
+
+/**
+ * <p>An object that can be used to specify Tag conditions inside the <code>SearchFilter</code>.
+ *    This accepts an <code>OR</code> or <code>AND</code> (List of List) input where: </p>
+ *          <ul>
+ *             <li>
+ *                <p>The top level list specifies conditions that need to be applied with <code>OR</code>
+ *      operator.</p>
+ *             </li>
+ *             <li>
+ *                <p>The inner list specifies conditions that need to be applied with <code>AND</code>
+ *      operator.</p>
+ *             </li>
+ *          </ul>
+ * @public
+ */
+export interface ControlPlaneAttributeFilter {
+  /**
+   * <p>A list of conditions which would be applied together with an <code>OR</code>
+   *    condition.</p>
+   * @public
+   */
+  OrConditions?: CommonAttributeAndCondition[];
+
+  /**
+   * <p>A list of conditions which would be applied together with an <code>AND</code>
+   *    condition.</p>
+   * @public
+   */
+  AndCondition?: CommonAttributeAndCondition;
+
+  /**
+   * <p>A leaf node condition which can be used to specify a tag condition, for example, <code>HAVE
+   *     BPO = 123</code>. </p>
+   * @public
+   */
+  TagCondition?: TagCondition;
+}
+
+/**
+ * <p>Filters to be applied to search results.</p>
+ * @public
+ */
+export interface AgentStatusSearchFilter {
+  /**
+   * <p>An object that can be used to specify Tag conditions inside the <code>SearchFilter</code>.
+   *    This accepts an <code>OR</code> of <code>AND</code> (List of List) input where: </p>
+   *          <ul>
+   *             <li>
+   *                <p>The top level list specifies conditions that need to be applied with <code>OR</code>
+   *      operator.</p>
+   *             </li>
+   *             <li>
+   *                <p>The inner list specifies conditions that need to be applied with <code>AND</code>
+   *      operator.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  AttributeFilter?: ControlPlaneAttributeFilter;
 }
 
 /**
@@ -2415,7 +2564,7 @@ export interface ClaimPhoneNumberResponse {
  */
 export interface CompleteAttachedFileUploadRequest {
   /**
-   * <p>The unique identifier of the Connect instance.</p>
+   * <p>The unique identifier of the Amazon Connect instance.</p>
    * @public
    */
   InstanceId: string | undefined;
@@ -4360,7 +4509,7 @@ export interface FieldValueUnion {
   BooleanValue?: boolean;
 
   /**
-   * <p>a Double number value type.</p>
+   * <p>A Double number value type.</p>
    * @public
    */
   DoubleValue?: number;
@@ -6623,6 +6772,131 @@ export interface DescribeAgentStatusResponse {
 /**
  * @public
  */
+export interface DescribeAuthenticationProfileRequest {
+  /**
+   * <p>A unique identifier for the authentication profile. </p>
+   * @public
+   */
+  AuthenticationProfileId: string | undefined;
+
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+}
+
+/**
+ * <p>This API is in preview release for Amazon Connect and is subject to change. To
+ * request access to this API, contact Amazon Web Services Support.</p>
+ *          <p>Information about an authentication profile. An authentication profile is a resource that
+ *    stores the authentication settings for users in your contact center. You use authentication
+ *    profiles to set up IP address range restrictions and session timeouts. For more information, see
+ *     <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html">Set IP
+ *     address restrictions or session timeouts</a>. </p>
+ * @public
+ */
+export interface AuthenticationProfile {
+  /**
+   * <p>A unique identifier for the authentication profile. </p>
+   * @public
+   */
+  Id?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) for the authentication profile.</p>
+   * @public
+   */
+  Arn?: string;
+
+  /**
+   * <p>The name for the authentication profile.</p>
+   * @public
+   */
+  Name?: string;
+
+  /**
+   * <p>The description for the authentication profile.</p>
+   * @public
+   */
+  Description?: string;
+
+  /**
+   * <p>A list of IP address range strings that are allowed to access the Amazon Connect
+   *    instance. For more information about how to configure IP addresses, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-ip-based-ac">Configure IP
+   *     address based access control</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>.</p>
+   * @public
+   */
+  AllowedIps?: string[];
+
+  /**
+   * <p>A list of IP address range strings that are blocked from accessing the Amazon Connect
+   *    instance. For more information about how to configure IP addresses, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-ip-based-ac">Configure IP
+   *     address based access control</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>.</p>
+   * @public
+   */
+  BlockedIps?: string[];
+
+  /**
+   * <p>Shows whether the authentication profile is the default authentication profile for the
+   *     Amazon Connect instance. The default authentication profile applies to all agents in an
+   *     Amazon Connect instance, unless overridden by another authentication profile.</p>
+   * @public
+   */
+  IsDefault?: boolean;
+
+  /**
+   * <p>The timestamp when the authentication profile was created.</p>
+   * @public
+   */
+  CreatedTime?: Date;
+
+  /**
+   * <p>The timestamp when the authentication profile was last modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date;
+
+  /**
+   * <p>The Amazon Web Services Region where the authentication profile was last modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string;
+
+  /**
+   * <p>The short lived session duration configuration for users logged in to Amazon Connect, in
+   *    minutes. This value determines the maximum possible time before an agent is authenticated. For
+   *    more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-session-timeouts">Configure the session duration</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>.</p>
+   * @public
+   */
+  PeriodicSessionDuration?: number;
+
+  /**
+   * <p>The long lived session duration for users logged in to Amazon Connect, in minutes. After
+   *    this time period, users must log in again. For more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-session-timeouts">Configure the session duration</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>.</p>
+   * @public
+   */
+  MaxSessionDuration?: number;
+}
+
+/**
+ * @public
+ */
+export interface DescribeAuthenticationProfileResponse {
+  /**
+   * <p>The authentication profile object being described.</p>
+   * @public
+   */
+  AuthenticationProfile?: AuthenticationProfile;
+}
+
+/**
+ * @public
+ */
 export interface DescribeContactRequest {
   /**
    * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
@@ -6689,7 +6963,8 @@ export interface Customer {
  */
 export interface CustomerVoiceActivity {
   /**
-   * <p>Timestamp that measures the beginning of the customer greeting from an outbound voice call.</p>
+   * <p>Timestamp that measures the beginning of the customer greeting from an outbound voice
+   *    call.</p>
    * @public
    */
   GreetingStartTimestamp?: Date;
@@ -6707,7 +6982,8 @@ export interface CustomerVoiceActivity {
  */
 export interface DisconnectDetails {
   /**
-   * <p>Indicates the potential disconnection issues for a call. This field is not populated if the service does not detect potential issues.</p>
+   * <p>Indicates the potential disconnection issues for a call. This field is not populated if the
+   *    service does not detect potential issues.</p>
    * @public
    */
   PotentialDisconnectIssue?: string;
@@ -6780,6 +7056,18 @@ export interface Expiry {
 }
 
 /**
+ * <p>An object to define AgentsCriteria.</p>
+ * @public
+ */
+export interface MatchCriteria {
+  /**
+   * <p>An object to define agentIds.</p>
+   * @public
+   */
+  AgentsCriteria?: AgentsCriteria;
+}
+
+/**
  * <p>An object to specify the predefined attribute condition.</p>
  * @public
  */
@@ -6803,312 +7091,16 @@ export interface AttributeCondition {
   ProficiencyLevel?: number;
 
   /**
+   * <p>An object to define <code>AgentsCriteria</code>.</p>
+   * @public
+   */
+  MatchCriteria?: MatchCriteria;
+
+  /**
    * <p>The operator of the condition.</p>
    * @public
    */
   ComparisonOperator?: string;
-}
-
-/**
- * @public
- * @enum
- */
-export const RoutingCriteriaStepStatus = {
-  ACTIVE: "ACTIVE",
-  EXPIRED: "EXPIRED",
-  INACTIVE: "INACTIVE",
-  JOINED: "JOINED",
-} as const;
-
-/**
- * @public
- */
-export type RoutingCriteriaStepStatus = (typeof RoutingCriteriaStepStatus)[keyof typeof RoutingCriteriaStepStatus];
-
-/**
- * <p>A value for a segment attribute. This is structured as a map where the key is
- *     <code>valueString</code> and the value is a string.</p>
- * @public
- */
-export interface SegmentAttributeValue {
-  /**
-   * <p>The value of a segment attribute.</p>
-   * @public
-   */
-  ValueString?: string;
-}
-
-/**
- * <p>Information about Amazon Connect Wisdom.</p>
- * @public
- */
-export interface WisdomInfo {
-  /**
-   * <p>The Amazon Resource Name (ARN) of the Wisdom session.</p>
-   * @public
-   */
-  SessionArn?: string;
-}
-
-/**
- * @public
- */
-export interface DescribeContactEvaluationRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>A unique identifier for the contact evaluation.</p>
-   * @public
-   */
-  EvaluationId: string | undefined;
-}
-
-/**
- * <p>Information about answer data for a contact evaluation. Answer data must be either string,
- *    numeric, or not applicable.</p>
- * @public
- */
-export type EvaluationAnswerData =
-  | EvaluationAnswerData.NotApplicableMember
-  | EvaluationAnswerData.NumericValueMember
-  | EvaluationAnswerData.StringValueMember
-  | EvaluationAnswerData.$UnknownMember;
-
-/**
- * @public
- */
-export namespace EvaluationAnswerData {
-  /**
-   * <p>The string value for an answer in a contact evaluation.</p>
-   * @public
-   */
-  export interface StringValueMember {
-    StringValue: string;
-    NumericValue?: never;
-    NotApplicable?: never;
-    $unknown?: never;
-  }
-
-  /**
-   * <p>The numeric value for an answer in a contact evaluation.</p>
-   * @public
-   */
-  export interface NumericValueMember {
-    StringValue?: never;
-    NumericValue: number;
-    NotApplicable?: never;
-    $unknown?: never;
-  }
-
-  /**
-   * <p>The flag to mark the question as not applicable.</p>
-   * @public
-   */
-  export interface NotApplicableMember {
-    StringValue?: never;
-    NumericValue?: never;
-    NotApplicable: boolean;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    StringValue?: never;
-    NumericValue?: never;
-    NotApplicable?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    StringValue: (value: string) => T;
-    NumericValue: (value: number) => T;
-    NotApplicable: (value: boolean) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: EvaluationAnswerData, visitor: Visitor<T>): T => {
-    if (value.StringValue !== undefined) return visitor.StringValue(value.StringValue);
-    if (value.NumericValue !== undefined) return visitor.NumericValue(value.NumericValue);
-    if (value.NotApplicable !== undefined) return visitor.NotApplicable(value.NotApplicable);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * <p>Information about output answers for a contact evaluation.</p>
- * @public
- */
-export interface EvaluationAnswerOutput {
-  /**
-   * <p>The value for an answer in a contact evaluation.</p>
-   * @public
-   */
-  Value?: EvaluationAnswerData;
-
-  /**
-   * <p>The system suggested value for an answer in a contact evaluation.</p>
-   * @public
-   */
-  SystemSuggestedValue?: EvaluationAnswerData;
-}
-
-/**
- * <p>Information about scores of a contact evaluation item (section or question).</p>
- * @public
- */
-export interface EvaluationScore {
-  /**
-   * <p>The score percentage for an item in a contact evaluation.</p>
-   * @public
-   */
-  Percentage?: number;
-
-  /**
-   * <p>The flag to mark the item as not applicable for scoring.</p>
-   * @public
-   */
-  NotApplicable?: boolean;
-
-  /**
-   * <p>The flag that marks the item as automatic fail. If the item or a child item gets an
-   *    automatic fail answer, this flag will be true.</p>
-   * @public
-   */
-  AutomaticFail?: boolean;
-}
-
-/**
- * <p>Metadata information about a contact evaluation.</p>
- * @public
- */
-export interface EvaluationMetadata {
-  /**
-   * <p>The identifier of the contact in this instance of Amazon Connect. </p>
-   * @public
-   */
-  ContactId: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the user who last updated the evaluation.</p>
-   * @public
-   */
-  EvaluatorArn: string | undefined;
-
-  /**
-   * <p>The identifier of the agent who performed the contact.</p>
-   * @public
-   */
-  ContactAgentId?: string;
-
-  /**
-   * <p>The overall score of the contact evaluation.</p>
-   * @public
-   */
-  Score?: EvaluationScore;
-}
-
-/**
- * <p>Information about notes for a contact evaluation.</p>
- * @public
- */
-export interface EvaluationNote {
-  /**
-   * <p>The note for an item (section or question) in a contact evaluation.</p>
-   *          <note>
-   *             <p>Even though a note in an evaluation can have up to 3072 chars, there is also a limit on the
-   *     total number of chars for all the notes in the evaluation combined. Assuming there are N
-   *     questions in the evaluation being submitted, then the max char limit for all notes combined is N
-   *     x 1024.</p>
-   *          </note>
-   * @public
-   */
-  Value?: string;
-}
-
-/**
- * @public
- * @enum
- */
-export const EvaluationStatus = {
-  DRAFT: "DRAFT",
-  SUBMITTED: "SUBMITTED",
-} as const;
-
-/**
- * @public
- */
-export type EvaluationStatus = (typeof EvaluationStatus)[keyof typeof EvaluationStatus];
-
-/**
- * <p>Information about a contact evaluation.</p>
- * @public
- */
-export interface Evaluation {
-  /**
-   * <p>A unique identifier for the contact evaluation.</p>
-   * @public
-   */
-  EvaluationId: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) for the contact evaluation resource.</p>
-   * @public
-   */
-  EvaluationArn: string | undefined;
-
-  /**
-   * <p>Metadata about the contact evaluation.</p>
-   * @public
-   */
-  Metadata: EvaluationMetadata | undefined;
-
-  /**
-   * <p>A map of question identifiers to answer value.</p>
-   * @public
-   */
-  Answers: Record<string, EvaluationAnswerOutput> | undefined;
-
-  /**
-   * <p>A map of question identifiers to note value.</p>
-   * @public
-   */
-  Notes: Record<string, EvaluationNote> | undefined;
-
-  /**
-   * <p>The status of the contact evaluation.</p>
-   * @public
-   */
-  Status: EvaluationStatus | undefined;
-
-  /**
-   * <p>A map of item (section or question) identifiers to score value.</p>
-   * @public
-   */
-  Scores?: Record<string, EvaluationScore>;
-
-  /**
-   * <p>The timestamp for when the evaluation was created.</p>
-   * @public
-   */
-  CreatedTime: Date | undefined;
-
-  /**
-   * <p>The timestamp for when the evaluation was last updated.</p>
-   * @public
-   */
-  LastModifiedTime: Date | undefined;
-
-  /**
-   * <p>The tags used to organize, track, or control access for this resource. For example, \{ "Tags": \{"key1":"value1", "key2":"value2"\} \}.</p>
-   * @public
-   */
-  Tags?: Record<string, string>;
 }
 
 /**

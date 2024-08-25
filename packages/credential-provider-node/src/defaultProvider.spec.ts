@@ -34,6 +34,12 @@ describe(defaultProvider.name, () => {
 
   const mockInit = {
     profile: "mockProfile",
+    logger: {
+      debug() {},
+      info() {},
+      warn() {},
+      error() {},
+    },
   };
 
   const mockEnvFn = jest.fn().mockImplementation(() => credentials());
@@ -43,7 +49,17 @@ describe(defaultProvider.name, () => {
   const mockTokenFileFn = jest.fn().mockImplementation(() => credentials());
   const mockRemoteProviderFn = jest.fn().mockImplementation(() => finalCredentials());
 
+  const ORIGINAL_ENV = {
+    ...process.env,
+  };
+
   beforeEach(() => {
+    process.env = {
+      ...ORIGINAL_ENV,
+    };
+    delete process.env.AWS_PROFILE;
+    delete process.env.AWS_ACCESS_KEY_ID;
+    delete process.env.AWS_SECRET_ACCESS_KEY;
     [
       [fromEnv, mockEnvFn],
       [fromSSO, mockSsoFn],
@@ -58,6 +74,7 @@ describe(defaultProvider.name, () => {
 
   afterEach(async () => {
     jest.clearAllMocks();
+    process.env = ORIGINAL_ENV;
   });
 
   describe("without fromEnv", () => {
@@ -96,9 +113,7 @@ describe(defaultProvider.name, () => {
     });
 
     it(`if env['${ENV_PROFILE}'] is set`, async () => {
-      const ORIGINAL_ENV = process.env;
       process.env = {
-        ...ORIGINAL_ENV,
         [ENV_PROFILE]: "envProfile",
       };
 
@@ -111,8 +126,6 @@ describe(defaultProvider.name, () => {
         expect(fromFn).toHaveBeenCalledWith(mockInitWithoutProfile);
       }
       expect(fromSSO).not.toHaveBeenCalled();
-
-      process.env = ORIGINAL_ENV;
     });
   });
 

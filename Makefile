@@ -12,6 +12,13 @@ login:
 sync:
 	make -f Makefile.private.mk sync
 
+# removes nested node_modules folders
+clean-nested:
+	rm -rf ./lib/*/node_modules
+	rm -rf ./packages/*/node_modules
+	rm -rf ./clients/*/node_modules
+	rm -rf ./private/*/node_modules
+
 link-smithy:
 	rm -rf ./node_modules/\@smithy
 	ln -s ../../smithy-typescript/packages/ ./node_modules/\@smithy
@@ -46,6 +53,12 @@ turbo-build:
 # run turbo build for packages only.
 tpk:
 	npx turbo run build --filter='./packages/*'
+
+# Clears the Turborepo local build cache
+turbo-clean: 
+	@read -p "Are you sure you want to delete your local cache? [y/N]: " ans && [ $${ans:-N} = y ]
+	@echo "\nDeleted cache folders: \n--------" 
+	@find . -name '.turbo' -type d -prune -print -exec rm -rf '{}' + && echo '\n'
 
 server-protocols:
 	yarn generate-clients -s

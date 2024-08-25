@@ -157,6 +157,10 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //       GenerativeAiSettings: { // GenerativeAiSettings
  * //         AmazonBedrockRoleArn: "STRING_VALUE",
  * //       },
+ * //       EmrServerlessSettings: { // EmrServerlessSettings
+ * //         ExecutionRoleArn: "STRING_VALUE",
+ * //         Status: "ENABLED" || "DISABLED",
+ * //       },
  * //     },
  * //     CodeEditorAppSettings: { // CodeEditorAppSettings
  * //       DefaultResourceSpec: {
@@ -194,6 +198,14 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //           RepositoryUrl: "STRING_VALUE", // required
  * //         },
  * //       ],
+ * //       EmrSettings: { // EmrSettings
+ * //         AssumableRoleArns: [ // AssumableRoleArns
+ * //           "STRING_VALUE",
+ * //         ],
+ * //         ExecutionRoleArns: [ // ExecutionRoleArns
+ * //           "STRING_VALUE",
+ * //         ],
+ * //       },
  * //     },
  * //     SpaceStorageSettings: { // DefaultSpaceStorageSettings
  * //       DefaultEbsStorageSettings: { // DefaultEbsStorageSettings
@@ -215,6 +227,14 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //         },
  * //       },
  * //     ],
+ * //     StudioWebPortalSettings: { // StudioWebPortalSettings
+ * //       HiddenMlTools: [ // HiddenMlToolsList
+ * //         "DataWrangler" || "FeatureStore" || "EmrClusters" || "AutoMl" || "Experiments" || "Training" || "ModelEvaluation" || "Pipelines" || "Models" || "JumpStart" || "InferenceRecommender" || "Endpoints" || "Projects" || "InferenceOptimization",
+ * //       ],
+ * //       HiddenAppTypes: [ // HiddenAppTypesList
+ * //         "JupyterServer" || "KernelGateway" || "DetailedProfiler" || "TensorBoard" || "CodeEditor" || "JupyterLab" || "RStudioServerPro" || "RSessionGateway" || "Canvas",
+ * //       ],
+ * //     },
  * //   },
  * //   DomainSettings: { // DomainSettings
  * //     SecurityGroupIds: [ // DomainSecurityGroupIds
@@ -232,6 +252,10 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //       VpcOnlyTrustedAccounts: [ // VpcOnlyTrustedAccounts
  * //         "STRING_VALUE",
  * //       ],
+ * //     },
+ * //     AmazonQSettings: { // AmazonQSettings
+ * //       Status: "ENABLED" || "DISABLED",
+ * //       QProfileArn: "STRING_VALUE",
  * //     },
  * //   },
  * //   AppNetworkAccessType: "PublicInternetOnly" || "VpcOnly",
@@ -279,6 +303,14 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //           RepositoryUrl: "STRING_VALUE", // required
  * //         },
  * //       ],
+ * //       EmrSettings: {
+ * //         AssumableRoleArns: [
+ * //           "STRING_VALUE",
+ * //         ],
+ * //         ExecutionRoleArns: [
+ * //           "STRING_VALUE",
+ * //         ],
+ * //       },
  * //     },
  * //     SpaceStorageSettings: {
  * //       DefaultEbsStorageSettings: {

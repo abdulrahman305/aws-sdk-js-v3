@@ -1,4 +1,5 @@
 // smithy-typescript generated code
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
@@ -35,6 +36,8 @@ export interface ListMultipartUploadsCommandOutput extends ListMultipartUploadsO
  *             <p>
  *                <b>Directory buckets</b> -
  *             If multipart uploads in a directory bucket are in progress, you can't delete the bucket until all the in-progress multipart uploads are aborted or completed.
+ *             To delete these in-progress multipart uploads, use the <code>ListMultipartUploads</code> operation to list the in-progress multipart
+ *             uploads in the bucket and use the <code>AbortMultupartUpload</code> operation to abort all the in-progress multipart uploads.
  *             </p>
  *          </note>
  *          <p>The <code>ListMultipartUploads</code> operation returns a maximum of 1,000 multipart uploads in the response. The limit of 1,000 multipart
@@ -327,6 +330,7 @@ export class ListMultipartUploadsCommand extends $Command
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getThrow200ExceptionsPlugin(config),
     ];
   })
   .s("AmazonS3", "ListMultipartUploads", {})

@@ -156,6 +156,10 @@ export interface DescribeUserProfileCommandOutput extends DescribeUserProfileRes
  * //       GenerativeAiSettings: { // GenerativeAiSettings
  * //         AmazonBedrockRoleArn: "STRING_VALUE",
  * //       },
+ * //       EmrServerlessSettings: { // EmrServerlessSettings
+ * //         ExecutionRoleArn: "STRING_VALUE",
+ * //         Status: "ENABLED" || "DISABLED",
+ * //       },
  * //     },
  * //     CodeEditorAppSettings: { // CodeEditorAppSettings
  * //       DefaultResourceSpec: {
@@ -193,6 +197,14 @@ export interface DescribeUserProfileCommandOutput extends DescribeUserProfileRes
  * //           RepositoryUrl: "STRING_VALUE", // required
  * //         },
  * //       ],
+ * //       EmrSettings: { // EmrSettings
+ * //         AssumableRoleArns: [ // AssumableRoleArns
+ * //           "STRING_VALUE",
+ * //         ],
+ * //         ExecutionRoleArns: [ // ExecutionRoleArns
+ * //           "STRING_VALUE",
+ * //         ],
+ * //       },
  * //     },
  * //     SpaceStorageSettings: { // DefaultSpaceStorageSettings
  * //       DefaultEbsStorageSettings: { // DefaultEbsStorageSettings
@@ -214,6 +226,14 @@ export interface DescribeUserProfileCommandOutput extends DescribeUserProfileRes
  * //         },
  * //       },
  * //     ],
+ * //     StudioWebPortalSettings: { // StudioWebPortalSettings
+ * //       HiddenMlTools: [ // HiddenMlToolsList
+ * //         "DataWrangler" || "FeatureStore" || "EmrClusters" || "AutoMl" || "Experiments" || "Training" || "ModelEvaluation" || "Pipelines" || "Models" || "JumpStart" || "InferenceRecommender" || "Endpoints" || "Projects" || "InferenceOptimization",
+ * //       ],
+ * //       HiddenAppTypes: [ // HiddenAppTypesList
+ * //         "JupyterServer" || "KernelGateway" || "DetailedProfiler" || "TensorBoard" || "CodeEditor" || "JupyterLab" || "RStudioServerPro" || "RSessionGateway" || "Canvas",
+ * //       ],
+ * //     },
  * //   },
  * // };
  *

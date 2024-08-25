@@ -8,6 +8,8 @@ import {
   AgentConfig,
   AgentHierarchyGroups,
   AgentInfo,
+  AgentStatus,
+  AgentStatusSearchFilter,
   AgentStatusState,
   AllowedCapabilities,
   AnsweringMachineDetectionStatus,
@@ -18,15 +20,13 @@ import {
   ContactFlowStatus,
   ContactFlowType,
   ContactInitiationMethod,
+  ControlPlaneAttributeFilter,
   CreatedByInfo,
   Customer,
   CustomerVoiceActivity,
   DisconnectDetails,
-  Evaluation,
-  EvaluationAnswerData,
   EvaluationFormQuestion,
   EvaluationFormScoringStrategy,
-  EvaluationNote,
   Expiry,
   FileStatusType,
   FileUseCaseType,
@@ -43,15 +43,17 @@ import {
   QuickConnectConfig,
   Reference,
   RehydrationType,
-  RoutingCriteriaStepStatus,
   RoutingProfileQueueConfig,
   RuleAction,
   RulePublishStatus,
-  SegmentAttributeValue,
+  StringComparisonType,
+  StringCondition,
+  TagCondition,
   TaskTemplateConstraints,
   TaskTemplateDefaults,
   TaskTemplateField,
   TaskTemplateStatus,
+  UseCaseType,
   UserIdentityInfo,
   UserIdentityInfoFilterSensitiveLog,
   UserPhoneConfig,
@@ -64,7 +66,6 @@ import {
   ViewType,
   VocabularyLanguageCode,
   VocabularyState,
-  WisdomInfo,
 } from "./models_0";
 
 import {
@@ -72,7 +73,12 @@ import {
   ContactFlowModule,
   ContactFlowModuleState,
   ContactFlowState,
+  Evaluation,
+  EvaluationAnswerData,
   EvaluationFormVersionStatus,
+  EvaluationNote,
+  HierarchyGroup,
+  HierarchyGroupSummary,
   HoursOfOperation,
   InstanceAttributeType,
   PhoneNumberCountryCode,
@@ -82,11 +88,472 @@ import {
   Queue,
   QueueStatus,
   QuickConnect,
+  RoutingCriteriaStepStatus,
   RoutingProfile,
+  SegmentAttributeValue,
   SignInConfig,
   SortOrder,
   TelephonyConfig,
+  TrafficDistributionGroupStatus,
+  WisdomInfo,
 } from "./models_1";
+
+/**
+ * @public
+ */
+export interface ListTrafficDistributionGroupsRequest {
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId?: string;
+}
+
+/**
+ * <p>Information about traffic distribution groups.</p>
+ * @public
+ */
+export interface TrafficDistributionGroupSummary {
+  /**
+   * <p>The identifier of the traffic distribution group.
+   * This can be the ID or the ARN if the API is being called in the Region where the traffic distribution group was created.
+   * The ARN must be provided if the call is from the replicated Region.</p>
+   * @public
+   */
+  Id?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the traffic distribution group.</p>
+   * @public
+   */
+  Arn?: string;
+
+  /**
+   * <p>The name of the traffic distribution group.</p>
+   * @public
+   */
+  Name?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the traffic distribution group.</p>
+   * @public
+   */
+  InstanceArn?: string;
+
+  /**
+   * <p>The status of the traffic distribution group. </p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>CREATION_IN_PROGRESS</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTrafficDistributionGroup.html">CreateTrafficDistributionGroup</a> operation is still in progress and has not yet
+   *      completed.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>ACTIVE</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTrafficDistributionGroup.html">CreateTrafficDistributionGroup</a> operation has succeeded.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>CREATION_FAILED</code> indicates that the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTrafficDistributionGroup.html">CreateTrafficDistributionGroup</a> operation has failed.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>PENDING_DELETION</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteTrafficDistributionGroup.html">DeleteTrafficDistributionGroup</a> operation is still in progress and has not yet
+   *      completed.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>DELETION_FAILED</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteTrafficDistributionGroup.html">DeleteTrafficDistributionGroup</a> operation has failed.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>UPDATE_IN_PROGRESS</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html">UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet
+   *      completed.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  Status?: TrafficDistributionGroupStatus;
+
+  /**
+   * <p>Whether this is the default traffic distribution group created during instance
+   *    replication. The default traffic distribution group cannot be deleted by the
+   *    <code>DeleteTrafficDistributionGroup</code> API. The default traffic distribution group is deleted as
+   *    part of the process for deleting a replica.</p>
+   * @public
+   */
+  IsDefault?: boolean;
+}
+
+/**
+ * @public
+ */
+export interface ListTrafficDistributionGroupsResponse {
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>A list of traffic distribution groups.</p>
+   * @public
+   */
+  TrafficDistributionGroupSummaryList?: TrafficDistributionGroupSummary[];
+}
+
+/**
+ * @public
+ */
+export interface ListTrafficDistributionGroupUsersRequest {
+  /**
+   * <p>The identifier of the traffic distribution group.
+   * This can be the ID or the ARN if the API is being called in the Region where the traffic distribution group was created.
+   * The ARN must be provided if the call is from the replicated Region.</p>
+   * @public
+   */
+  TrafficDistributionGroupId: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+}
+
+/**
+ * <p>Summary information about a traffic distribution group user.</p>
+ * @public
+ */
+export interface TrafficDistributionGroupUserSummary {
+  /**
+   * <p>The identifier for the user. This can be the ID or the ARN of the user.</p>
+   * @public
+   */
+  UserId?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListTrafficDistributionGroupUsersResponse {
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>A list of traffic distribution group users.</p>
+   * @public
+   */
+  TrafficDistributionGroupUserSummaryList?: TrafficDistributionGroupUserSummary[];
+}
+
+/**
+ * <p>Provides summary information about the use cases for the specified integration
+ *    association.</p>
+ * @public
+ */
+export interface ListUseCasesRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The identifier for the integration association.</p>
+   * @public
+   */
+  IntegrationAssociationId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+}
+
+/**
+ * <p>Contains the
+ *    use
+ *    case.</p>
+ * @public
+ */
+export interface UseCase {
+  /**
+   * <p>The identifier for the use case.</p>
+   * @public
+   */
+  UseCaseId?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) for the use case.</p>
+   * @public
+   */
+  UseCaseArn?: string;
+
+  /**
+   * <p>The type of use case to associate to the integration association. Each integration
+   *    association can have only one of each use case type.</p>
+   * @public
+   */
+  UseCaseType?: UseCaseType;
+}
+
+/**
+ * @public
+ */
+export interface ListUseCasesResponse {
+  /**
+   * <p>The use cases.</p>
+   * @public
+   */
+  UseCaseSummaryList?: UseCase[];
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListUserHierarchyGroupsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number;
+}
+
+/**
+ * @public
+ */
+export interface ListUserHierarchyGroupsResponse {
+  /**
+   * <p>Information about the hierarchy groups.</p>
+   * @public
+   */
+  UserHierarchyGroupSummaryList?: HierarchyGroupSummary[];
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListUserProficienciesRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource
+   *    Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The identifier of the user account.</p>
+   * @public
+   */
+  UserId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous response in
+   *    the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+}
+
+/**
+ * @public
+ */
+export interface ListUserProficienciesResponse {
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>Information about the user proficiencies.</p>
+   * @public
+   */
+  UserProficiencyList?: UserProficiency[];
+
+  /**
+   * <p>The last time that the user's proficiencies are were modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date;
+
+  /**
+   * <p>The region in which a user's proficiencies were last modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListUsersRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number;
+}
+
+/**
+ * <p>Contains summary information about a user.</p>
+ * @public
+ */
+export interface UserSummary {
+  /**
+   * <p>The identifier of the user account.</p>
+   * @public
+   */
+  Id?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the user account.</p>
+   * @public
+   */
+  Arn?: string;
+
+  /**
+   * <p>The Amazon Connect user name of the user account.</p>
+   * @public
+   */
+  Username?: string;
+
+  /**
+   * <p>The timestamp when this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date;
+
+  /**
+   * <p>The Amazon Web Services Region where this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListUsersResponse {
+  /**
+   * <p>Information about the users.</p>
+   * @public
+   */
+  UserSummaryList?: UserSummary[];
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListViewsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of
+   *    the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The type of the view.</p>
+   * @public
+   */
+  Type?: ViewType;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous response in
+   *    the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number;
+}
 
 /**
  * <p>A summary of a view's metadata.</p>
@@ -517,6 +984,29 @@ export interface ResumeContactRecordingResponse {}
 /**
  * @public
  */
+export interface SearchAgentStatusesResponse {
+  /**
+   * <p>The search criteria to be used to return agent statuses.</p>
+   * @public
+   */
+  AgentStatuses?: AgentStatus[];
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The total number of agent statuses which matched your search query.</p>
+   * @public
+   */
+  ApproximateTotalCount?: number;
+}
+
+/**
+ * @public
+ */
 export interface SearchAvailablePhoneNumbersRequest {
   /**
    * <p>The Amazon Resource Name (ARN) for Amazon Connect instances or traffic distribution groups that phone number inbound traffic is routed through. You must enter <code>InstanceId</code> or <code>TargetArn</code>. </p>
@@ -603,68 +1093,6 @@ export interface SearchAvailablePhoneNumbersResponse {
    * @public
    */
   AvailableNumbersList?: AvailableNumberSummary[];
-}
-
-/**
- * @public
- * @enum
- */
-export const StringComparisonType = {
-  CONTAINS: "CONTAINS",
-  EXACT: "EXACT",
-  STARTS_WITH: "STARTS_WITH",
-} as const;
-
-/**
- * @public
- */
-export type StringComparisonType = (typeof StringComparisonType)[keyof typeof StringComparisonType];
-
-/**
- * <p>A leaf node condition which can be used to specify a string condition.</p>
- *          <note>
- *             <p>The currently supported values for <code>FieldName</code> are <code>name</code> and
- *      <code>description</code>.</p>
- *          </note>
- * @public
- */
-export interface StringCondition {
-  /**
-   * <p>The name of the field in the string condition.</p>
-   * @public
-   */
-  FieldName?: string;
-
-  /**
-   * <p>The value of the string.</p>
-   * @public
-   */
-  Value?: string;
-
-  /**
-   * <p>The type of comparison to be made when evaluating the string condition.</p>
-   * @public
-   */
-  ComparisonType?: StringComparisonType;
-}
-
-/**
- * <p>A leaf node condition which can be used to specify a tag condition, for example, <code>HAVE
- *     BPO = 123</code>. </p>
- * @public
- */
-export interface TagCondition {
-  /**
-   * <p>The tag key in the tag condition.</p>
-   * @public
-   */
-  TagKey?: string;
-
-  /**
-   * <p>The tag value in the tag condition.</p>
-   * @public
-   */
-  TagValue?: string;
 }
 
 /**
@@ -778,7 +1206,7 @@ export interface ContactFlowSearchFilter {
  */
 export interface SearchContactFlowsResponse {
   /**
-   * <p>Information about the contact flows.</p>
+   * <p>Information about the flows.</p>
    * @public
    */
   ContactFlows?: ContactFlow[];
@@ -952,7 +1380,7 @@ export interface SearchCriteria {
 
   /**
    * <p>The search criteria based on user-defined contact attributes that have been configured for
-   *    contact search. For more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by customer contact
+   *    contact search. For more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes.html">Search by custom contact
    *     attributes</a> in the <i>Amazon Connect Administrator Guide</i>.</p>
    *          <important>
    *             <p>To use <code>SearchableContactAttributes</code> in a search request, the
@@ -983,7 +1411,7 @@ export const SortableFieldName = {
 export type SortableFieldName = (typeof SortableFieldName)[keyof typeof SortableFieldName];
 
 /**
- * <p>A structure that defineds the field name to sort by and a sort order.</p>
+ * <p>A structure that defines the field name to sort by and a sort order.</p>
  * @public
  */
 export interface Sort {
@@ -1523,6 +1951,35 @@ export interface SearchResourceTagsRequest {
   /**
    * <p>The list of resource types to be used to search tags from. If not provided or if any empty
    *    list is provided, this API will search from all supported resource types.</p>
+   *          <p class="title">
+   *             <b>Supported resource types</b>
+   *          </p>
+   *          <ul>
+   *             <li>
+   *                <p>AGENT</p>
+   *             </li>
+   *             <li>
+   *                <p>ROUTING_PROFILE</p>
+   *             </li>
+   *             <li>
+   *                <p>STANDARD_QUEUE</p>
+   *             </li>
+   *             <li>
+   *                <p>SECURITY_PROFILE</p>
+   *             </li>
+   *             <li>
+   *                <p>OPERATING_HOURS</p>
+   *             </li>
+   *             <li>
+   *                <p>PROMPT</p>
+   *             </li>
+   *             <li>
+   *                <p>CONTACT_FLOW</p>
+   *             </li>
+   *             <li>
+   *                <p>FLOW_MODULE</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   ResourceTypes?: string[];
@@ -1717,6 +2174,52 @@ export interface SearchSecurityProfilesResponse {
 }
 
 /**
+ * <p>Filters to be applied to search results.</p>
+ * @public
+ */
+export interface UserHierarchyGroupSearchFilter {
+  /**
+   * <p>An object that can be used to specify Tag conditions inside the SearchFilter. This accepts
+   *    an OR or AND (List of List) input where:</p>
+   *          <ul>
+   *             <li>
+   *                <p>The top level list specifies conditions that need to be applied with <code>OR</code>
+   *      operator.</p>
+   *             </li>
+   *             <li>
+   *                <p>The inner list specifies conditions that need to be applied with <code>AND</code>
+   *      operator.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  AttributeFilter?: ControlPlaneAttributeFilter;
+}
+
+/**
+ * @public
+ */
+export interface SearchUserHierarchyGroupsResponse {
+  /**
+   * <p>Information about the userHierarchyGroups.</p>
+   * @public
+   */
+  UserHierarchyGroups?: HierarchyGroup[];
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The total number of userHierarchyGroups which matched your search query.</p>
+   * @public
+   */
+  ApproximateTotalCount?: number;
+}
+
+/**
  * @public
  * @enum
  */
@@ -1746,6 +2249,113 @@ export interface HierarchyGroupCondition {
    * @public
    */
   HierarchyGroupMatchType?: HierarchyGroupMatchType;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const NumberComparisonType = {
+  EQUAL: "EQUAL",
+  GREATER: "GREATER",
+  GREATER_OR_EQUAL: "GREATER_OR_EQUAL",
+  LESSER: "LESSER",
+  LESSER_OR_EQUAL: "LESSER_OR_EQUAL",
+  NOT_EQUAL: "NOT_EQUAL",
+  RANGE: "RANGE",
+} as const;
+
+/**
+ * @public
+ */
+export type NumberComparisonType = (typeof NumberComparisonType)[keyof typeof NumberComparisonType];
+
+/**
+ * <p>A leaf node condition which can be used to specify a numeric condition.</p>
+ *          <note>
+ *             <p>The currently supported value for <code>FieldName</code> is <code>limit</code>.</p>
+ *          </note>
+ * @public
+ */
+export interface NumberCondition {
+  /**
+   * <p>The name of the field in the number condition.</p>
+   * @public
+   */
+  FieldName?: string;
+
+  /**
+   * <p>The minValue to be used while evaluating the number condition.</p>
+   * @public
+   */
+  MinValue?: number;
+
+  /**
+   * <p>The maxValue to be used while evaluating the number condition.</p>
+   * @public
+   */
+  MaxValue?: number;
+
+  /**
+   * <p>The type of comparison to be made when evaluating the number condition.</p>
+   * @public
+   */
+  ComparisonType?: NumberComparisonType;
+}
+
+/**
+ * <p>A leaf node condition which can be used to specify a ProficiencyName, ProficiencyValue and
+ *    ProficiencyLimit.</p>
+ * @public
+ */
+export interface Condition {
+  /**
+   * <p>A leaf node condition which can be used to specify a string condition.</p>
+   *          <note>
+   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code> and
+   *      <code>value</code>.</p>
+   *          </note>
+   * @public
+   */
+  StringCondition?: StringCondition;
+
+  /**
+   * <p>A leaf node condition which can be used to specify a numeric condition.</p>
+   * @public
+   */
+  NumberCondition?: NumberCondition;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const TargetListType = {
+  PROFICIENCIES: "PROFICIENCIES",
+} as const;
+
+/**
+ * @public
+ */
+export type TargetListType = (typeof TargetListType)[keyof typeof TargetListType];
+
+/**
+ * <p>A leaf node condition which can be used to specify a List condition to search users with
+ *    attributes included in Lists like Proficiencies.</p>
+ * @public
+ */
+export interface ListCondition {
+  /**
+   * <p>The type of target list that will be used to filter the users.</p>
+   * @public
+   */
+  TargetListType?: TargetListType;
+
+  /**
+   * <p>A list of Condition objects which would be applied together with an AND condition.</p>
+   * @public
+   */
+  Conditions?: Condition[];
 }
 
 /**
@@ -2294,7 +2904,7 @@ export interface StartAttachedFileUploadRequest {
   ClientToken?: string;
 
   /**
-   * <p>The unique identifier of the Connect instance.</p>
+   * <p>The unique identifier of the Amazon Connect instance.</p>
    * @public
    */
   InstanceId: string | undefined;
@@ -3143,8 +3753,7 @@ export interface StartWebRTCContactRequest {
 
   /**
    * <p>The identifier of the flow for the call. To see the ContactFlowId in the Amazon Connect admin website, on the
-   *    navigation menu go to <b>Routing</b>, <b>Contact
-   *     Flows</b>. Choose the flow. On the flow page, under the name of the flow, choose
+   *    navigation menu go to <b>Routing</b>, <b>Flows</b>. Choose the flow. On the flow page, under the name of the flow, choose
    *     <b>Show additional flow information</b>. The ContactFlowId is the last
    *    part of the ARN, shown here in bold: </p>
    *          <p>arn:aws:connect:us-west-2:xxxxxxxxxxxx:instance/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/contact-flow/<b>846ec553-a005-41c0-8341-xxxxxxxxxxxx</b>
@@ -3788,6 +4397,62 @@ export interface UpdateAgentStatusRequest {
 /**
  * @public
  */
+export interface UpdateAuthenticationProfileRequest {
+  /**
+   * <p>A unique identifier for the authentication profile. </p>
+   * @public
+   */
+  AuthenticationProfileId: string | undefined;
+
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The name for the authentication profile.</p>
+   * @public
+   */
+  Name?: string;
+
+  /**
+   * <p>The description for the authentication profile.</p>
+   * @public
+   */
+  Description?: string;
+
+  /**
+   * <p>A list of IP address range strings that are allowed to access the instance. For more
+   *    information on how to configure IP addresses, see<a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-session-timeouts">Configure session timeouts</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>.</p>
+   * @public
+   */
+  AllowedIps?: string[];
+
+  /**
+   * <p>A list of IP address range strings that are blocked from accessing the instance. For more
+   *    information on how to configure IP addresses, For more information on how to configure IP
+   *    addresses, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-ip-based-ac">Configure
+   *     IP-based access control</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>. </p>
+   * @public
+   */
+  BlockedIps?: string[];
+
+  /**
+   * <p>The short lived session duration configuration for users logged in to Amazon Connect, in
+   *    minutes. This value determines the maximum possible time before an agent is authenticated. For
+   *    more information, For more information on how to configure IP addresses, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/authentication-profiles.html#configure-session-timeouts">Configure session timeouts</a> in the <i>Amazon Connect Administrator
+   *     Guide</i>. </p>
+   * @public
+   */
+  PeriodicSessionDuration?: number;
+}
+
+/**
+ * @public
+ */
 export interface UpdateContactRequest {
   /**
    * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
@@ -4092,36 +4757,17 @@ export interface UpdateContactFlowNameRequest {
 export interface UpdateContactFlowNameResponse {}
 
 /**
+ * <p>Specify whether this routing criteria step should apply for only a limited amount of time,  or if it should
+ *    never expire.</p>
  * @public
  */
-export interface UpdateContactRoutingDataRequest {
+export interface RoutingCriteriaInputStepExpiry {
   /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * <p>The number of seconds that the contact will be routed only to agents matching this routing  step, if expiry
+   *    was configured for this routing step.</p>
    * @public
    */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier of the contact in this instance of Amazon Connect. </p>
-   * @public
-   */
-  ContactId: string | undefined;
-
-  /**
-   * <p>The number of seconds to add or subtract from the contact's routing age. Contacts are routed
-   *    to agents on a first-come, first-serve basis. This means that changing their amount of time in
-   *    queue compared to others also changes their position in queue.</p>
-   * @public
-   */
-  QueueTimeAdjustmentSeconds?: number;
-
-  /**
-   * <p>Priority of the contact in the queue. The default priority for new contacts is 5. You can
-   *    raise the priority of a contact compared to other contacts in the queue by assigning them a
-   *    higher priority, such as 1 or 2.</p>
-   * @public
-   */
-  QueuePriority?: number;
+  DurationInSeconds?: number;
 }
 
 /**
@@ -5632,6 +6278,41 @@ export interface EvaluationFormSection {
 }
 
 /**
+ * <p>The search criteria to be used to return agent statuses.</p>
+ * @public
+ */
+export interface AgentStatusSearchCriteria {
+  /**
+   * <p>A list of conditions which would be applied together with an <code>OR</code>
+   *    condition.</p>
+   * @public
+   */
+  OrConditions?: AgentStatusSearchCriteria[];
+
+  /**
+   * <p>A leaf node condition which can be used to specify a string condition.</p>
+   *          <note>
+   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code>,
+   *      <code>description</code>, <code>state</code>, <code>type</code>, <code>displayOrder</code>,
+   *     and <code>resourceID</code>.</p>
+   *          </note>
+   * @public
+   */
+  AndConditions?: AgentStatusSearchCriteria[];
+
+  /**
+   * <p>A leaf node condition which can be used to specify a string condition.</p>
+   *          <note>
+   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code>,
+   *      <code>description</code>, <code>state</code>, <code>type</code>, <code>displayOrder</code>,
+   *     and <code>resourceID</code>.</p>
+   *          </note>
+   * @public
+   */
+  StringCondition?: StringCondition;
+}
+
+/**
  * <p>The search criteria to be used to return flow modules.</p>
  * @public
  */
@@ -5652,10 +6333,6 @@ export interface ContactFlowModuleSearchCriteria {
 
   /**
    * <p>A leaf node condition which can be used to specify a string condition.</p>
-   *          <note>
-   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code> and
-   *      <code>description</code>.</p>
-   *          </note>
    * @public
    */
   StringCondition?: StringCondition;
@@ -5682,10 +6359,6 @@ export interface ContactFlowSearchCriteria {
 
   /**
    * <p>A leaf node condition which can be used to specify a string condition.</p>
-   *          <note>
-   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code> and
-   *      <code>description</code>.</p>
-   *          </note>
    * @public
    */
   StringCondition?: StringCondition;
@@ -5964,10 +6637,6 @@ export interface PredefinedAttributeSearchCriteria {
 
   /**
    * <p>A leaf node condition which can be used to specify a string condition.</p>
-   *          <note>
-   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code> and
-   *      <code>description</code>.</p>
-   *          </note>
    * @public
    */
   StringCondition?: StringCondition;
@@ -6094,7 +6763,8 @@ export interface RoutingProfileSearchCriteria {
    * <p>A leaf node condition which can be used to specify a string condition.</p>
    *          <note>
    *             <p>The currently supported values for <code>FieldName</code> are
-   *      <code>associatedQueueIds</code>, <code>name</code>, <code>description</code>, and <code>resourceID</code>.</p>
+   *      <code>associatedQueueIds</code>, <code>name</code>, <code>description</code>, and
+   *      <code>resourceID</code>.</p>
    *          </note>
    * @public
    */
@@ -6125,10 +6795,6 @@ export interface SecurityProfileSearchCriteria {
 
   /**
    * <p>A leaf node condition which can be used to specify a string condition.</p>
-   *          <note>
-   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code> and
-   *      <code>description</code>.</p>
-   *          </note>
    * @public
    */
   StringCondition?: StringCondition;
@@ -6197,6 +6863,34 @@ export interface UpdateEvaluationFormRequest {
 }
 
 /**
+ * <p>The search criteria to be used to return userHierarchyGroup.</p>
+ * @public
+ */
+export interface UserHierarchyGroupSearchCriteria {
+  /**
+   * <p>A list of conditions which would be applied together with an OR condition.</p>
+   * @public
+   */
+  OrConditions?: UserHierarchyGroupSearchCriteria[];
+
+  /**
+   * <p>A list of conditions which would be applied together with an AND condition.</p>
+   * @public
+   */
+  AndConditions?: UserHierarchyGroupSearchCriteria[];
+
+  /**
+   * <p>A leaf node condition which can be used to specify a string condition.</p>
+   *          <note>
+   *             <p>The currently supported values for <code>FieldName</code> are <code>name</code>,
+   *      <code>parentId</code>, <code>levelId</code>, and <code>resourceID</code>.</p>
+   *          </note>
+   * @public
+   */
+  StringCondition?: StringCondition;
+}
+
+/**
  * <p>The search criteria to be used to return users.</p>
  *          <note>
  *             <p>The <code>name</code> and <code>description</code> fields support "contains" queries with
@@ -6228,6 +6922,13 @@ export interface UserSearchCriteria {
    * @public
    */
   StringCondition?: StringCondition;
+
+  /**
+   * <p>A leaf node condition which can be used to specify a List condition to search users with
+   *    attributes included in Lists like Proficiencies.</p>
+   * @public
+   */
+  ListCondition?: ListCondition;
 
   /**
    * <p>A leaf node condition which can be used to specify a hierarchy group condition.</p>
@@ -6262,6 +6963,62 @@ export interface DescribeEvaluationFormResponse {
    * @public
    */
   EvaluationForm: EvaluationForm | undefined;
+}
+
+/**
+ * <p>Step defines the list of agents to be routed or route based on the agent requirements such as ProficiencyLevel,
+ *    Name, or Value.</p>
+ * @public
+ */
+export interface RoutingCriteriaInputStep {
+  /**
+   * <p>An object to specify the expiration of a routing step.</p>
+   * @public
+   */
+  Expiry?: RoutingCriteriaInputStepExpiry;
+
+  /**
+   * <p>A tagged union to specify expression for a routing step.</p>
+   * @public
+   */
+  Expression?: Expression;
+}
+
+/**
+ * @public
+ */
+export interface SearchAgentStatusesRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of
+   *    the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous response in
+   *    the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+
+  /**
+   * <p>Filters to be applied to search results.</p>
+   * @public
+   */
+  SearchFilter?: AgentStatusSearchFilter;
+
+  /**
+   * <p>The search criteria to be used to return agent statuses.</p>
+   * @public
+   */
+  SearchCriteria?: AgentStatusSearchCriteria;
 }
 
 /**
@@ -6617,6 +7374,43 @@ export interface SearchSecurityProfilesRequest {
 /**
  * @public
  */
+export interface SearchUserHierarchyGroupsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of
+   *    the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous response in
+   *    the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+
+  /**
+   * <p>Filters to be applied to search results.</p>
+   * @public
+   */
+  SearchFilter?: UserHierarchyGroupSearchFilter;
+
+  /**
+   * <p>The search criteria to be used to return UserHierarchyGroups.</p>
+   * @public
+   */
+  SearchCriteria?: UserHierarchyGroupSearchCriteria;
+}
+
+/**
+ * @public
+ */
 export interface SearchUsersRequest {
   /**
    * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
@@ -6688,13 +7482,19 @@ export interface Step {
  */
 export interface RoutingCriteria {
   /**
-   * <p>List of routing steps. When Amazon Connect does not find an available agent meeting the requirements in a step for a given step duration, the routing criteria will move on to the next step sequentially until a join is completed with an agent. When all steps are exhausted, the contact will be offered to any agent in the queue.</p>
+   * <p>List of routing steps. When Amazon Connect does not find an available agent meeting the
+   *    requirements in a step for a given step duration, the routing criteria will move on to the next
+   *    step sequentially until a join is completed with an agent. When all steps are exhausted, the
+   *    contact will be offered to any agent in the queue.</p>
    * @public
    */
   Steps?: Step[];
 
   /**
-   * <p>The timestamp indicating when the routing criteria is set to active. A routing criteria is activated when contact is transferred to a queue. ActivationTimestamp will be set on routing criteria for contacts in agent queue even though Routing criteria is never activated for contacts in agent queue.</p>
+   * <p>The timestamp indicating when the routing criteria is set to active. A routing criteria is
+   *    activated when contact is transferred to a queue. ActivationTimestamp will be set on routing
+   *    criteria for contacts in agent queue even though Routing criteria is never activated for contacts
+   *    in agent queue.</p>
    * @public
    */
   ActivationTimestamp?: Date;
@@ -6704,6 +7504,21 @@ export interface RoutingCriteria {
    * @public
    */
   Index?: number;
+}
+
+/**
+ * <p>An object to define the RoutingCriteria.</p>
+ * @public
+ */
+export interface RoutingCriteriaInput {
+  /**
+   * <p>When Amazon Connect does not find an available agent meeting the requirements in a step for
+   *    a given step duration, the routing criteria will move on to the next step sequentially until a
+   *    join is completed with an agent. When all steps are exhausted, the contact will be offered to any agent
+   *    in the queue.</p>
+   * @public
+   */
+  Steps?: RoutingCriteriaInputStep[];
 }
 
 /**
@@ -6888,7 +7703,8 @@ export interface Contact {
   Campaign?: Campaign;
 
   /**
-   * <p>Indicates how an <a href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a> call is actually disposed if the contact is connected to Amazon Connect.</p>
+   * <p>Indicates how an <a href="https://docs.aws.amazon.com/connect/latest/adminguide/how-to-create-campaigns.html">outbound campaign</a> call is
+   *    actually disposed if the contact is connected to Amazon Connect.</p>
    * @public
    */
   AnsweringMachineDetectionStatus?: AnsweringMachineDetectionStatus;
@@ -6912,10 +7728,54 @@ export interface Contact {
   DisconnectDetails?: DisconnectDetails;
 
   /**
-   * <p>A set of system defined key-value pairs stored on individual contact segments using an attribute map. The attributes are standard Amazon Connect attributes and can be accessed in flows. Attribute keys can include only alphanumeric, -, and _ characters. This field can be used to show channel subtype. For example, <code>connect:Guide</code> or <code>connect:SMS</code>.</p>
+   * <p>A set of system defined key-value pairs stored on individual contact segments using an
+   *    attribute map. The attributes are standard Amazon Connect attributes and can be accessed in
+   *    flows. Attribute keys can include only alphanumeric, -, and _ characters. This field can be used
+   *    to show channel subtype. For example, <code>connect:Guide</code> or
+   *    <code>connect:SMS</code>.</p>
    * @public
    */
   SegmentAttributes?: Record<string, SegmentAttributeValue>;
+}
+
+/**
+ * @public
+ */
+export interface UpdateContactRoutingDataRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The identifier of the contact in this instance of Amazon Connect. </p>
+   * @public
+   */
+  ContactId: string | undefined;
+
+  /**
+   * <p>The number of seconds to add or subtract from the contact's routing age. Contacts are routed
+   *    to agents on a first-come, first-serve basis. This means that changing their amount of time in
+   *    queue compared to others also changes their position in queue.</p>
+   * @public
+   */
+  QueueTimeAdjustmentSeconds?: number;
+
+  /**
+   * <p>Priority of the contact in the queue. The default priority for new contacts is 5. You can
+   *    raise the priority of a contact compared to other contacts in the queue by assigning them a
+   *    higher priority, such as 1 or 2.</p>
+   * @public
+   */
+  QueuePriority?: number;
+
+  /**
+   * <p>Updates the routing criteria on the contact. These properties can be used to change how a
+   *    contact is routed within the queue.</p>
+   * @public
+   */
+  RoutingCriteria?: RoutingCriteriaInput;
 }
 
 /**

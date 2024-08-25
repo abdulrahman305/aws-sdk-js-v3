@@ -73,6 +73,10 @@ import {
   ConstantQueryStringCommandInput,
   ConstantQueryStringCommandOutput,
 } from "./commands/ConstantQueryStringCommand";
+import {
+  ContentTypeParametersCommandInput,
+  ContentTypeParametersCommandOutput,
+} from "./commands/ContentTypeParametersCommand";
 import { DatetimeOffsetsCommandInput, DatetimeOffsetsCommandOutput } from "./commands/DatetimeOffsetsCommand";
 import {
   EmptyInputAndEmptyOutputCommandInput,
@@ -227,6 +231,7 @@ export type ServiceInputTypes =
   | BodyWithXmlNameCommandInput
   | ConstantAndVariableQueryStringCommandInput
   | ConstantQueryStringCommandInput
+  | ContentTypeParametersCommandInput
   | DatetimeOffsetsCommandInput
   | EmptyInputAndEmptyOutputCommandInput
   | EndpointOperationCommandInput
@@ -293,6 +298,7 @@ export type ServiceOutputTypes =
   | BodyWithXmlNameCommandOutput
   | ConstantAndVariableQueryStringCommandOutput
   | ConstantQueryStringCommandOutput
+  | ContentTypeParametersCommandOutput
   | DatetimeOffsetsCommandOutput
   | EmptyInputAndEmptyOutputCommandOutput
   | EndpointOperationCommandOutput
@@ -494,11 +500,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type RestXmlProtocolClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointsInputConfig &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointsInputConfig &
   HttpAuthSchemeInputConfig &
   CompressionInputConfig;
 /**
@@ -514,11 +520,11 @@ export interface RestXmlProtocolClientConfig extends RestXmlProtocolClientConfig
 export type RestXmlProtocolClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointsResolvedConfig &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointsResolvedConfig &
   HttpAuthSchemeResolvedConfig &
   CompressionResolvedConfig;
 /**
@@ -545,26 +551,29 @@ export class RestXmlProtocolClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<RestXmlProtocolClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
-    const _config_1 = resolveRegionConfig(_config_0);
-    const _config_2 = resolveEndpointsConfig(_config_1);
-    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_1 = resolveUserAgentConfig(_config_0);
+    const _config_2 = resolveRetryConfig(_config_1);
+    const _config_3 = resolveRegionConfig(_config_2);
     const _config_4 = resolveHostHeaderConfig(_config_3);
-    const _config_5 = resolveUserAgentConfig(_config_4);
+    const _config_5 = resolveEndpointsConfig(_config_4);
     const _config_6 = resolveHttpAuthSchemeConfig(_config_5);
     const _config_7 = resolveCompressionConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemePlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultRestXmlProtocolHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: RestXmlProtocolClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -577,14 +586,5 @@ export class RestXmlProtocolClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultRestXmlProtocolHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: RestXmlProtocolClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

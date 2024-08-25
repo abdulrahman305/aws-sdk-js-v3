@@ -38,7 +38,7 @@ export interface ListEvaluationJobsCommandOutput extends ListEvaluationJobsRespo
  * const input = { // ListEvaluationJobsRequest
  *   creationTimeAfter: new Date("TIMESTAMP"),
  *   creationTimeBefore: new Date("TIMESTAMP"),
- *   statusEquals: "InProgress" || "Completed" || "Failed" || "Stopping" || "Stopped",
+ *   statusEquals: "InProgress" || "Completed" || "Failed" || "Stopping" || "Stopped" || "Deleting",
  *   nameContains: "STRING_VALUE",
  *   maxResults: Number("int"),
  *   nextToken: "STRING_VALUE",
@@ -53,7 +53,7 @@ export interface ListEvaluationJobsCommandOutput extends ListEvaluationJobsRespo
  * //     { // EvaluationSummary
  * //       jobArn: "STRING_VALUE", // required
  * //       jobName: "STRING_VALUE", // required
- * //       status: "InProgress" || "Completed" || "Failed" || "Stopping" || "Stopped", // required
+ * //       status: "InProgress" || "Completed" || "Failed" || "Stopping" || "Stopped" || "Deleting", // required
  * //       creationTime: new Date("TIMESTAMP"), // required
  * //       jobType: "Human" || "Automated", // required
  * //       evaluationTaskTypes: [ // EvaluationTaskTypes // required

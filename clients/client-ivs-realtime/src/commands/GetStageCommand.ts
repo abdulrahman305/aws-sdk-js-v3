@@ -48,6 +48,16 @@ export interface GetStageCommandOutput extends GetStageResponse, __MetadataBeare
  * //     tags: { // Tags
  * //       "<keys>": "STRING_VALUE",
  * //     },
+ * //     autoParticipantRecordingConfiguration: { // AutoParticipantRecordingConfiguration
+ * //       storageConfigurationArn: "STRING_VALUE", // required
+ * //       mediaTypes: [ // ParticipantRecordingMediaTypeList
+ * //         "STRING_VALUE",
+ * //       ],
+ * //     },
+ * //     endpoints: { // StageEndpoints
+ * //       events: "STRING_VALUE",
+ * //       whip: "STRING_VALUE",
+ * //     },
  * //   },
  * // };
  *

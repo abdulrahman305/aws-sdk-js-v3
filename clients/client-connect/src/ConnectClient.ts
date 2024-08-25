@@ -241,6 +241,10 @@ import {
   DescribeAgentStatusCommandInput,
   DescribeAgentStatusCommandOutput,
 } from "./commands/DescribeAgentStatusCommand";
+import {
+  DescribeAuthenticationProfileCommandInput,
+  DescribeAuthenticationProfileCommandOutput,
+} from "./commands/DescribeAuthenticationProfileCommand";
 import { DescribeContactCommandInput, DescribeContactCommandOutput } from "./commands/DescribeContactCommand";
 import {
   DescribeContactEvaluationCommandInput,
@@ -383,6 +387,10 @@ import {
   ListApprovedOriginsCommandInput,
   ListApprovedOriginsCommandOutput,
 } from "./commands/ListApprovedOriginsCommand";
+import {
+  ListAuthenticationProfilesCommandInput,
+  ListAuthenticationProfilesCommandOutput,
+} from "./commands/ListAuthenticationProfilesCommand";
 import { ListBotsCommandInput, ListBotsCommandOutput } from "./commands/ListBotsCommand";
 import {
   ListContactEvaluationsCommandInput,
@@ -510,6 +518,10 @@ import {
   ResumeContactRecordingCommandOutput,
 } from "./commands/ResumeContactRecordingCommand";
 import {
+  SearchAgentStatusesCommandInput,
+  SearchAgentStatusesCommandOutput,
+} from "./commands/SearchAgentStatusesCommand";
+import {
   SearchAvailablePhoneNumbersCommandInput,
   SearchAvailablePhoneNumbersCommandOutput,
 } from "./commands/SearchAvailablePhoneNumbersCommand";
@@ -542,6 +554,10 @@ import {
   SearchSecurityProfilesCommandInput,
   SearchSecurityProfilesCommandOutput,
 } from "./commands/SearchSecurityProfilesCommand";
+import {
+  SearchUserHierarchyGroupsCommandInput,
+  SearchUserHierarchyGroupsCommandOutput,
+} from "./commands/SearchUserHierarchyGroupsCommand";
 import { SearchUsersCommandInput, SearchUsersCommandOutput } from "./commands/SearchUsersCommand";
 import { SearchVocabulariesCommandInput, SearchVocabulariesCommandOutput } from "./commands/SearchVocabulariesCommand";
 import {
@@ -594,6 +610,10 @@ import { TransferContactCommandInput, TransferContactCommandOutput } from "./com
 import { UntagContactCommandInput, UntagContactCommandOutput } from "./commands/UntagContactCommand";
 import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
 import { UpdateAgentStatusCommandInput, UpdateAgentStatusCommandOutput } from "./commands/UpdateAgentStatusCommand";
+import {
+  UpdateAuthenticationProfileCommandInput,
+  UpdateAuthenticationProfileCommandOutput,
+} from "./commands/UpdateAuthenticationProfileCommand";
 import {
   UpdateContactAttributesCommandInput,
   UpdateContactAttributesCommandOutput,
@@ -833,6 +853,7 @@ export type ServiceInputTypes =
   | DeleteViewVersionCommandInput
   | DeleteVocabularyCommandInput
   | DescribeAgentStatusCommandInput
+  | DescribeAuthenticationProfileCommandInput
   | DescribeContactCommandInput
   | DescribeContactEvaluationCommandInput
   | DescribeContactFlowCommandInput
@@ -885,6 +906,7 @@ export type ServiceInputTypes =
   | ListAgentStatusesCommandInput
   | ListAnalyticsDataAssociationsCommandInput
   | ListApprovedOriginsCommandInput
+  | ListAuthenticationProfilesCommandInput
   | ListBotsCommandInput
   | ListContactEvaluationsCommandInput
   | ListContactFlowModulesCommandInput
@@ -933,6 +955,7 @@ export type ServiceInputTypes =
   | ReplicateInstanceCommandInput
   | ResumeContactCommandInput
   | ResumeContactRecordingCommandInput
+  | SearchAgentStatusesCommandInput
   | SearchAvailablePhoneNumbersCommandInput
   | SearchContactFlowModulesCommandInput
   | SearchContactFlowsCommandInput
@@ -945,6 +968,7 @@ export type ServiceInputTypes =
   | SearchResourceTagsCommandInput
   | SearchRoutingProfilesCommandInput
   | SearchSecurityProfilesCommandInput
+  | SearchUserHierarchyGroupsCommandInput
   | SearchUsersCommandInput
   | SearchVocabulariesCommandInput
   | SendChatIntegrationEventCommandInput
@@ -967,6 +991,7 @@ export type ServiceInputTypes =
   | UntagContactCommandInput
   | UntagResourceCommandInput
   | UpdateAgentStatusCommandInput
+  | UpdateAuthenticationProfileCommandInput
   | UpdateContactAttributesCommandInput
   | UpdateContactCommandInput
   | UpdateContactEvaluationCommandInput
@@ -1088,6 +1113,7 @@ export type ServiceOutputTypes =
   | DeleteViewVersionCommandOutput
   | DeleteVocabularyCommandOutput
   | DescribeAgentStatusCommandOutput
+  | DescribeAuthenticationProfileCommandOutput
   | DescribeContactCommandOutput
   | DescribeContactEvaluationCommandOutput
   | DescribeContactFlowCommandOutput
@@ -1140,6 +1166,7 @@ export type ServiceOutputTypes =
   | ListAgentStatusesCommandOutput
   | ListAnalyticsDataAssociationsCommandOutput
   | ListApprovedOriginsCommandOutput
+  | ListAuthenticationProfilesCommandOutput
   | ListBotsCommandOutput
   | ListContactEvaluationsCommandOutput
   | ListContactFlowModulesCommandOutput
@@ -1188,6 +1215,7 @@ export type ServiceOutputTypes =
   | ReplicateInstanceCommandOutput
   | ResumeContactCommandOutput
   | ResumeContactRecordingCommandOutput
+  | SearchAgentStatusesCommandOutput
   | SearchAvailablePhoneNumbersCommandOutput
   | SearchContactFlowModulesCommandOutput
   | SearchContactFlowsCommandOutput
@@ -1200,6 +1228,7 @@ export type ServiceOutputTypes =
   | SearchResourceTagsCommandOutput
   | SearchRoutingProfilesCommandOutput
   | SearchSecurityProfilesCommandOutput
+  | SearchUserHierarchyGroupsCommandOutput
   | SearchUsersCommandOutput
   | SearchVocabulariesCommandOutput
   | SendChatIntegrationEventCommandOutput
@@ -1222,6 +1251,7 @@ export type ServiceOutputTypes =
   | UntagContactCommandOutput
   | UntagResourceCommandOutput
   | UpdateAgentStatusCommandOutput
+  | UpdateAuthenticationProfileCommandOutput
   | UpdateContactAttributesCommandOutput
   | UpdateContactCommandOutput
   | UpdateContactEvaluationCommandOutput
@@ -1405,11 +1435,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type ConnectClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -1425,11 +1455,11 @@ export interface ConnectClientConfig extends ConnectClientConfigType {}
 export type ConnectClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -1440,7 +1470,20 @@ export type ConnectClientResolvedConfigType = __SmithyResolvedConfiguration<__Ht
 export interface ConnectClientResolvedConfig extends ConnectClientResolvedConfigType {}
 
 /**
- * <p>Amazon Connect is a cloud-based contact center solution that you use to set up and
+ * <ul>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Connect_Service.html">Amazon Connect actions</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_Connect_Service.html">Amazon Connect
+ *       data types</a>
+ *                </p>
+ *             </li>
+ *          </ul>
+ *          <p>Amazon Connect is a cloud-based contact center solution that you use to set up and
  *    manage a customer contact center and provide reliable customer engagement at any scale.</p>
  *          <p>Amazon Connect provides metrics and real-time reporting that enable you to optimize
  *    contact routing. You can also resolve customer issues more efficiently by getting customers in
@@ -1467,25 +1510,28 @@ export class ConnectClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<ConnectClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultConnectHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: ConnectClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -1498,14 +1544,5 @@ export class ConnectClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultConnectHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: ConnectClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

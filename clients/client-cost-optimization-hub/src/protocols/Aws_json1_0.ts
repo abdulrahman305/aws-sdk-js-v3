@@ -80,6 +80,9 @@ import {
   ListRecommendationSummariesResponse,
   OpenSearchReservedInstances,
   OrderBy,
+  RdsDbInstance,
+  RdsDbInstanceStorage,
+  RdsDbInstanceStorageConfiguration,
   RdsReservedInstances,
   Recommendation,
   RecommendationSummary,
@@ -95,6 +98,7 @@ import {
   SavingsPlansCostCalculation,
   SavingsPlansPricing,
   StorageConfiguration,
+  SummaryMetrics,
   Tag,
   ThrottlingException,
   UpdateEnrollmentStatusRequest,
@@ -473,6 +477,8 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_ResourceTypeList omitted.
 
+// se_SummaryMetricsList omitted.
+
 // se_Tag omitted.
 
 // se_TagList omitted.
@@ -543,6 +549,8 @@ const de_ComputeSavingsPlans = (output: any, context: __SerdeContext): ComputeSa
 };
 
 // de_ComputeSavingsPlansConfiguration omitted.
+
+// de_DbInstanceConfiguration omitted.
 
 /**
  * deserializeAws_json1_0EbsVolume
@@ -744,6 +752,7 @@ const de_ListRecommendationSummariesResponse = (
     estimatedTotalDedupedSavings: __limitedParseDouble,
     groupBy: __expectString,
     items: (_: any) => de_RecommendationSummariesList(_, context),
+    metrics: _json,
     nextToken: __expectString,
   }) as any;
 };
@@ -759,6 +768,43 @@ const de_OpenSearchReservedInstances = (output: any, context: __SerdeContext): O
 };
 
 // de_OpenSearchReservedInstancesConfiguration omitted.
+
+/**
+ * deserializeAws_json1_0RdsDbInstance
+ */
+const de_RdsDbInstance = (output: any, context: __SerdeContext): RdsDbInstance => {
+  return take(output, {
+    configuration: _json,
+    costCalculation: (_: any) => de_ResourceCostCalculation(_, context),
+  }) as any;
+};
+
+// de_RdsDbInstanceConfiguration omitted.
+
+/**
+ * deserializeAws_json1_0RdsDbInstanceStorage
+ */
+const de_RdsDbInstanceStorage = (output: any, context: __SerdeContext): RdsDbInstanceStorage => {
+  return take(output, {
+    configuration: (_: any) => de_RdsDbInstanceStorageConfiguration(_, context),
+    costCalculation: (_: any) => de_ResourceCostCalculation(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_0RdsDbInstanceStorageConfiguration
+ */
+const de_RdsDbInstanceStorageConfiguration = (
+  output: any,
+  context: __SerdeContext
+): RdsDbInstanceStorageConfiguration => {
+  return take(output, {
+    allocatedStorageInGb: __limitedParseDouble,
+    iops: __limitedParseDouble,
+    storageThroughput: __limitedParseDouble,
+    storageType: __expectString,
+  }) as any;
+};
 
 /**
  * deserializeAws_json1_0RdsReservedInstances
@@ -936,6 +982,16 @@ const de_ResourceDetails = (output: any, context: __SerdeContext): ResourceDetai
       openSearchReservedInstances: de_OpenSearchReservedInstances(output.openSearchReservedInstances, context),
     };
   }
+  if (output.rdsDbInstance != null) {
+    return {
+      rdsDbInstance: de_RdsDbInstance(output.rdsDbInstance, context),
+    };
+  }
+  if (output.rdsDbInstanceStorage != null) {
+    return {
+      rdsDbInstanceStorage: de_RdsDbInstanceStorage(output.rdsDbInstanceStorage, context),
+    };
+  }
   if (output.rdsReservedInstances != null) {
     return {
       rdsReservedInstances: de_RdsReservedInstances(output.rdsReservedInstances, context),
@@ -1010,6 +1066,8 @@ const de_StorageConfiguration = (output: any, context: __SerdeContext): StorageC
     type: __expectString,
   }) as any;
 };
+
+// de_SummaryMetricsResult omitted.
 
 // de_Tag omitted.
 

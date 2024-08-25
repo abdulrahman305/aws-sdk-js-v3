@@ -36,13 +36,14 @@ export interface ListCertificateAuthoritiesCommandOutput extends ListCertificate
  * // const { ACMPCAClient, ListCertificateAuthoritiesCommand } = require("@aws-sdk/client-acm-pca"); // CommonJS import
  * const client = new ACMPCAClient(config);
  * const input = { // ListCertificateAuthoritiesRequest
- *   NextToken: "STRING_VALUE",
  *   MaxResults: Number("int"),
+ *   NextToken: "STRING_VALUE",
  *   ResourceOwner: "SELF" || "OTHER_ACCOUNTS",
  * };
  * const command = new ListCertificateAuthoritiesCommand(input);
  * const response = await client.send(command);
  * // { // ListCertificateAuthoritiesResponse
+ * //   NextToken: "STRING_VALUE",
  * //   CertificateAuthorities: [ // CertificateAuthorities
  * //     { // CertificateAuthority
  * //       Arn: "STRING_VALUE",
@@ -56,8 +57,8 @@ export interface ListCertificateAuthoritiesCommandOutput extends ListCertificate
  * //       NotAfter: new Date("TIMESTAMP"),
  * //       FailureReason: "REQUEST_TIMED_OUT" || "UNSUPPORTED_ALGORITHM" || "OTHER",
  * //       CertificateAuthorityConfiguration: { // CertificateAuthorityConfiguration
- * //         KeyAlgorithm: "RSA_2048" || "RSA_4096" || "EC_prime256v1" || "EC_secp384r1", // required
- * //         SigningAlgorithm: "SHA256WITHECDSA" || "SHA384WITHECDSA" || "SHA512WITHECDSA" || "SHA256WITHRSA" || "SHA384WITHRSA" || "SHA512WITHRSA", // required
+ * //         KeyAlgorithm: "RSA_2048" || "RSA_4096" || "EC_prime256v1" || "EC_secp384r1" || "SM2", // required
+ * //         SigningAlgorithm: "SHA256WITHECDSA" || "SHA384WITHECDSA" || "SHA512WITHECDSA" || "SHA256WITHRSA" || "SHA384WITHRSA" || "SHA512WITHRSA" || "SM3WITHSM2", // required
  * //         Subject: { // ASN1Subject
  * //           Country: "STRING_VALUE",
  * //           Organization: "STRING_VALUE",
@@ -156,11 +157,10 @@ export interface ListCertificateAuthoritiesCommandOutput extends ListCertificate
  * //         },
  * //       },
  * //       RestorableUntil: new Date("TIMESTAMP"),
- * //       KeyStorageSecurityStandard: "FIPS_140_2_LEVEL_2_OR_HIGHER" || "FIPS_140_2_LEVEL_3_OR_HIGHER",
+ * //       KeyStorageSecurityStandard: "FIPS_140_2_LEVEL_2_OR_HIGHER" || "FIPS_140_2_LEVEL_3_OR_HIGHER" || "CCPC_LEVEL_1_OR_HIGHER",
  * //       UsageMode: "GENERAL_PURPOSE" || "SHORT_LIVED_CERTIFICATE",
  * //     },
  * //   ],
- * //   NextToken: "STRING_VALUE",
  * // };
  *
  * ```

@@ -70,6 +70,10 @@ import { CreateTrustStoreCommandInput, CreateTrustStoreCommandOutput } from "./c
 import { DeleteListenerCommandInput, DeleteListenerCommandOutput } from "./commands/DeleteListenerCommand";
 import { DeleteLoadBalancerCommandInput, DeleteLoadBalancerCommandOutput } from "./commands/DeleteLoadBalancerCommand";
 import { DeleteRuleCommandInput, DeleteRuleCommandOutput } from "./commands/DeleteRuleCommand";
+import {
+  DeleteSharedTrustStoreAssociationCommandInput,
+  DeleteSharedTrustStoreAssociationCommandOutput,
+} from "./commands/DeleteSharedTrustStoreAssociationCommand";
 import { DeleteTargetGroupCommandInput, DeleteTargetGroupCommandOutput } from "./commands/DeleteTargetGroupCommand";
 import { DeleteTrustStoreCommandInput, DeleteTrustStoreCommandOutput } from "./commands/DeleteTrustStoreCommand";
 import { DeregisterTargetsCommandInput, DeregisterTargetsCommandOutput } from "./commands/DeregisterTargetsCommand";
@@ -120,6 +124,7 @@ import {
   DescribeTrustStoresCommandInput,
   DescribeTrustStoresCommandOutput,
 } from "./commands/DescribeTrustStoresCommand";
+import { GetResourcePolicyCommandInput, GetResourcePolicyCommandOutput } from "./commands/GetResourcePolicyCommand";
 import {
   GetTrustStoreCaCertificatesBundleCommandInput,
   GetTrustStoreCaCertificatesBundleCommandOutput,
@@ -180,6 +185,7 @@ export type ServiceInputTypes =
   | DeleteListenerCommandInput
   | DeleteLoadBalancerCommandInput
   | DeleteRuleCommandInput
+  | DeleteSharedTrustStoreAssociationCommandInput
   | DeleteTargetGroupCommandInput
   | DeleteTrustStoreCommandInput
   | DeregisterTargetsCommandInput
@@ -197,6 +203,7 @@ export type ServiceInputTypes =
   | DescribeTrustStoreAssociationsCommandInput
   | DescribeTrustStoreRevocationsCommandInput
   | DescribeTrustStoresCommandInput
+  | GetResourcePolicyCommandInput
   | GetTrustStoreCaCertificatesBundleCommandInput
   | GetTrustStoreRevocationContentCommandInput
   | ModifyListenerCommandInput
@@ -229,6 +236,7 @@ export type ServiceOutputTypes =
   | DeleteListenerCommandOutput
   | DeleteLoadBalancerCommandOutput
   | DeleteRuleCommandOutput
+  | DeleteSharedTrustStoreAssociationCommandOutput
   | DeleteTargetGroupCommandOutput
   | DeleteTrustStoreCommandOutput
   | DeregisterTargetsCommandOutput
@@ -246,6 +254,7 @@ export type ServiceOutputTypes =
   | DescribeTrustStoreAssociationsCommandOutput
   | DescribeTrustStoreRevocationsCommandOutput
   | DescribeTrustStoresCommandOutput
+  | GetResourcePolicyCommandOutput
   | GetTrustStoreCaCertificatesBundleCommandOutput
   | GetTrustStoreRevocationContentCommandOutput
   | ModifyListenerCommandOutput
@@ -400,11 +409,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type ElasticLoadBalancingV2ClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -420,11 +429,11 @@ export interface ElasticLoadBalancingV2ClientConfig extends ElasticLoadBalancing
 export type ElasticLoadBalancingV2ClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -480,25 +489,28 @@ export class ElasticLoadBalancingV2Client extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<ElasticLoadBalancingV2ClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultElasticLoadBalancingV2HttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: ElasticLoadBalancingV2ClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -511,14 +523,5 @@ export class ElasticLoadBalancingV2Client extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultElasticLoadBalancingV2HttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: ElasticLoadBalancingV2ClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

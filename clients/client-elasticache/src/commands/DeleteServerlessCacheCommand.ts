@@ -29,6 +29,11 @@ export interface DeleteServerlessCacheCommandOutput extends DeleteServerlessCach
 
 /**
  * <p>Deletes a specified existing serverless cache.</p>
+ *          <note>
+ *             <p>
+ *                <code>CreateServerlessCacheSnapshot</code> permission is required to create a final snapshot.
+ *            Without this permission, the API call will fail with an <code>Access Denied</code> exception.</p>
+ *          </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -107,7 +112,7 @@ export interface DeleteServerlessCacheCommandOutput extends DeleteServerlessCach
  *  <p>The serverless cache was not found or does not exist.</p>
  *
  * @throws {@link ServerlessCacheSnapshotAlreadyExistsFault} (client fault)
- *  <p>A serverless cache snapshot with this name already exists. Available for Redis only.</p>
+ *  <p>A serverless cache snapshot with this name already exists. Available for Redis OSS and Serverless Memcached only.</p>
  *
  * @throws {@link ServiceLinkedRoleNotFoundFault} (client fault)
  *  <p>The specified service linked role (SLR) was not found.</p>

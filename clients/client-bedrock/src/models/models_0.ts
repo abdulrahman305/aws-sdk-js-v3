@@ -24,6 +24,94 @@ export class AccessDeniedException extends __BaseException {
 }
 
 /**
+ * @public
+ */
+export interface BatchDeleteEvaluationJobRequest {
+  /**
+   * <p>An array of model evaluation job ARNs to be deleted.</p>
+   * @public
+   */
+  jobIdentifiers: string[] | undefined;
+}
+
+/**
+ * <p>A JSON array that provides the status of the model evaluation jobs being deleted.</p>
+ * @public
+ */
+export interface BatchDeleteEvaluationJobError {
+  /**
+   * <p>The ARN of the model evaluation job being deleted.</p>
+   * @public
+   */
+  jobIdentifier: string | undefined;
+
+  /**
+   * <p>A HTTP status code of the model evaluation job being deleted.</p>
+   * @public
+   */
+  code: string | undefined;
+
+  /**
+   * <p>A status message about the model evaluation job deletion.</p>
+   * @public
+   */
+  message?: string;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const EvaluationJobStatus = {
+  COMPLETED: "Completed",
+  DELETING: "Deleting",
+  FAILED: "Failed",
+  IN_PROGRESS: "InProgress",
+  STOPPED: "Stopped",
+  STOPPING: "Stopping",
+} as const;
+
+/**
+ * @public
+ */
+export type EvaluationJobStatus = (typeof EvaluationJobStatus)[keyof typeof EvaluationJobStatus];
+
+/**
+ * <p>An array of model evaluation jobs to be deleted, and their associated statuses.</p>
+ * @public
+ */
+export interface BatchDeleteEvaluationJobItem {
+  /**
+   * <p>The ARN of model evaluation job to be deleted.</p>
+   * @public
+   */
+  jobIdentifier: string | undefined;
+
+  /**
+   * <p>The status of the job's deletion.</p>
+   * @public
+   */
+  jobStatus: EvaluationJobStatus | undefined;
+}
+
+/**
+ * @public
+ */
+export interface BatchDeleteEvaluationJobResponse {
+  /**
+   * <p>A JSON object containing the HTTP status codes and the ARNs of model evaluation jobs that failed to be deleted.</p>
+   * @public
+   */
+  errors: BatchDeleteEvaluationJobError[] | undefined;
+
+  /**
+   * <p>The list of model evaluation jobs to be deleted.</p>
+   * @public
+   */
+  evaluationJobs: BatchDeleteEvaluationJobItem[] | undefined;
+}
+
+/**
  * <p>Error occurred because of a conflict while performing an operation.</p>
  * @public
  */
@@ -40,6 +128,86 @@ export class ConflictException extends __BaseException {
       ...opts,
     });
     Object.setPrototypeOf(this, ConflictException.prototype);
+  }
+}
+
+/**
+ * <p>An internal server error occurred. Retry your request.</p>
+ * @public
+ */
+export class InternalServerException extends __BaseException {
+  readonly name: "InternalServerException" = "InternalServerException";
+  readonly $fault: "server" = "server";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<InternalServerException, __BaseException>) {
+    super({
+      name: "InternalServerException",
+      $fault: "server",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, InternalServerException.prototype);
+  }
+}
+
+/**
+ * <p>The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and try your request again.</p>
+ * @public
+ */
+export class ResourceNotFoundException extends __BaseException {
+  readonly name: "ResourceNotFoundException" = "ResourceNotFoundException";
+  readonly $fault: "client" = "client";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ResourceNotFoundException, __BaseException>) {
+    super({
+      name: "ResourceNotFoundException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ResourceNotFoundException.prototype);
+  }
+}
+
+/**
+ * <p>The number of requests exceeds the limit. Resubmit your request later.</p>
+ * @public
+ */
+export class ThrottlingException extends __BaseException {
+  readonly name: "ThrottlingException" = "ThrottlingException";
+  readonly $fault: "client" = "client";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ThrottlingException, __BaseException>) {
+    super({
+      name: "ThrottlingException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ThrottlingException.prototype);
+  }
+}
+
+/**
+ * <p>Input validation failed. Check your request parameters and retry the request.</p>
+ * @public
+ */
+export class ValidationException extends __BaseException {
+  readonly name: "ValidationException" = "ValidationException";
+  readonly $fault: "client" = "client";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ValidationException, __BaseException>) {
+    super({
+      name: "ValidationException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ValidationException.prototype);
   }
 }
 
@@ -89,7 +257,7 @@ export namespace EvaluationDatasetLocation {
  */
 export interface EvaluationDataset {
   /**
-   * <p>Used to specify supported built-in prompt datasets. Valid values are <code>Builtin.Bold</code>, <code>Builtin.BoolQ</code>, <code>Builtin.NaturalQuestions</code>, <code>Builtin.Gigaword</code>, <code>Builtin.RealToxicityPrompts</code>, <code>Builtin.TriviaQa</code>, <code>Builtin.T-Rex</code>, <code>Builtin.WomensEcommerceClothingReviews</code> and <code>Builtin.Wikitext2</code>.</p>
+   * <p>Used to specify supported built-in prompt datasets. Valid values are <code>Builtin.Bold</code>, <code>Builtin.BoolQ</code>, <code>Builtin.NaturalQuestions</code>, <code>Builtin.Gigaword</code>, <code>Builtin.RealToxicityPrompts</code>, <code>Builtin.TriviaQA</code>, <code>Builtin.T-Rex</code>, <code>Builtin.WomensEcommerceClothingReviews</code> and <code>Builtin.Wikitext2</code>.</p>
    * @public
    */
   name: string | undefined;
@@ -281,7 +449,7 @@ export namespace EvaluationConfig {
 }
 
 /**
- * <p>Contains the ARN of the Amazon Bedrock models specified in your model evaluation job. Each Amazon Bedrock model supports different <code>inferenceParams</code>. To learn more about supported inference parameters for Amazon Bedrock models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-evaluation-prompt-datasets-custom.html">Inference parameters for foundation models</a>.</p>
+ * <p>Contains the ARN of the Amazon Bedrock models specified in your model evaluation job. Each Amazon Bedrock model supports different <code>inferenceParams</code>. To learn more about supported inference parameters for Amazon Bedrock models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>.</p>
  *          <p>The <code>inferenceParams</code> are specified using JSON. To successfully insert JSON as string make sure that all quotations are properly escaped. For example, <code>"temperature":"0.25"</code> key value pair would need to be formatted as <code>\"temperature\":\"0.25\"</code> to successfully accepted in the request.</p>
  * @public
  */
@@ -479,46 +647,6 @@ export interface CreateEvaluationJobResponse {
 }
 
 /**
- * <p>An internal server error occurred. Retry your request.</p>
- * @public
- */
-export class InternalServerException extends __BaseException {
-  readonly name: "InternalServerException" = "InternalServerException";
-  readonly $fault: "server" = "server";
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<InternalServerException, __BaseException>) {
-    super({
-      name: "InternalServerException",
-      $fault: "server",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, InternalServerException.prototype);
-  }
-}
-
-/**
- * <p>The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and try your request again.</p>
- * @public
- */
-export class ResourceNotFoundException extends __BaseException {
-  readonly name: "ResourceNotFoundException" = "ResourceNotFoundException";
-  readonly $fault: "client" = "client";
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<ResourceNotFoundException, __BaseException>) {
-    super({
-      name: "ResourceNotFoundException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, ResourceNotFoundException.prototype);
-  }
-}
-
-/**
  * <p>The number of requests exceeds the service quota. Resubmit your request later.</p>
  * @public
  */
@@ -535,46 +663,6 @@ export class ServiceQuotaExceededException extends __BaseException {
       ...opts,
     });
     Object.setPrototypeOf(this, ServiceQuotaExceededException.prototype);
-  }
-}
-
-/**
- * <p>The number of requests exceeds the limit. Resubmit your request later.</p>
- * @public
- */
-export class ThrottlingException extends __BaseException {
-  readonly name: "ThrottlingException" = "ThrottlingException";
-  readonly $fault: "client" = "client";
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<ThrottlingException, __BaseException>) {
-    super({
-      name: "ThrottlingException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, ThrottlingException.prototype);
-  }
-}
-
-/**
- * <p>Input validation failed. Check your request parameters and retry the request.</p>
- * @public
- */
-export class ValidationException extends __BaseException {
-  readonly name: "ValidationException" = "ValidationException";
-  readonly $fault: "client" = "client";
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<ValidationException, __BaseException>) {
-    super({
-      name: "ValidationException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, ValidationException.prototype);
   }
 }
 
@@ -602,23 +690,6 @@ export const EvaluationJobType = {
  * @public
  */
 export type EvaluationJobType = (typeof EvaluationJobType)[keyof typeof EvaluationJobType];
-
-/**
- * @public
- * @enum
- */
-export const EvaluationJobStatus = {
-  COMPLETED: "Completed",
-  FAILED: "Failed",
-  IN_PROGRESS: "InProgress",
-  STOPPED: "Stopped",
-  STOPPING: "Stopping",
-} as const;
-
-/**
- * @public
- */
-export type EvaluationJobStatus = (typeof EvaluationJobStatus)[keyof typeof EvaluationJobStatus];
 
 /**
  * @public
@@ -927,19 +998,6 @@ export type GuardrailContentFilterType = (typeof GuardrailContentFilterType)[key
  *          multiple categories with varying confidence levels. For example, a single statement
  *          can be classified as <i>Hate</i> with HIGH confidence, <i>Insults</i> with LOW confidence, <i>Sexual</i> with NONE confidence, and <i>Violence</i> with MEDIUM confidence.</p>
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-filters.html">Guardrails content filters</a>.</p>
- *          <p>This data type is used in the following API operations:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateGuardrail.html#API_CreateGuardrail_RequestSyntax">CreateGuardrail request body</a>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_UpdateGuardrail.html#API_UpdateGuardrail_RequestSyntax">UpdateGuardrail request body</a>
- *                </p>
- *             </li>
- *          </ul>
  * @public
  */
 export interface GuardrailContentFilterConfig {
@@ -968,19 +1026,6 @@ export interface GuardrailContentFilterConfig {
 
 /**
  * <p>Contains details about how to handle harmful content.</p>
- *          <p>This data type is used in the following API operations:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateGuardrail.html#API_CreateGuardrail_RequestSyntax">CreateGuardrail request body</a>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_UpdateGuardrail.html#API_UpdateGuardrail_RequestSyntax">UpdateGuardrail request body</a>
- *                </p>
- *             </li>
- *          </ul>
  * @public
  */
 export interface GuardrailContentPolicyConfig {
@@ -989,6 +1034,51 @@ export interface GuardrailContentPolicyConfig {
    * @public
    */
   filtersConfig: GuardrailContentFilterConfig[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const GuardrailContextualGroundingFilterType = {
+  GROUNDING: "GROUNDING",
+  RELEVANCE: "RELEVANCE",
+} as const;
+
+/**
+ * @public
+ */
+export type GuardrailContextualGroundingFilterType =
+  (typeof GuardrailContextualGroundingFilterType)[keyof typeof GuardrailContextualGroundingFilterType];
+
+/**
+ * <p>The filter configuration details for the guardrails contextual grounding filter.</p>
+ * @public
+ */
+export interface GuardrailContextualGroundingFilterConfig {
+  /**
+   * <p>The filter details for the guardrails contextual grounding filter.</p>
+   * @public
+   */
+  type: GuardrailContextualGroundingFilterType | undefined;
+
+  /**
+   * <p>The threshold details for the guardrails contextual grounding filter.</p>
+   * @public
+   */
+  threshold: number | undefined;
+}
+
+/**
+ * <p>The policy configuration details for the guardrails contextual grounding policy.</p>
+ * @public
+ */
+export interface GuardrailContextualGroundingPolicyConfig {
+  /**
+   * <p>The filter configuration details for the guardrails contextual grounding policy.</p>
+   * @public
+   */
+  filtersConfig: GuardrailContextualGroundingFilterConfig[] | undefined;
 }
 
 /**
@@ -1056,6 +1146,329 @@ export type GuardrailPiiEntityType = (typeof GuardrailPiiEntityType)[keyof typeo
 export interface GuardrailPiiEntityConfig {
   /**
    * <p>Configure guardrail type when the PII entity is detected.</p>
+   *          <p>The following PIIs are used to block or mask sensitive information:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <b>General</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>ADDRESS</b>
+   *                      </p>
+   *                      <p>A physical address, such as "100 Main Street, Anytown, USA"
+   *                      or "Suite #12, Building 123". An address can include information
+   *                      such as the street, building, location, city, state, country, county,
+   *                      zip code, precinct, and neighborhood. </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>AGE</b>
+   *                      </p>
+   *                      <p>An individual's age, including the quantity and unit of time. For
+   *                      example, in the phrase "I am 40 years old," Guarrails recognizes "40 years"
+   *                      as an age.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>NAME</b>
+   *                      </p>
+   *                      <p>An individual's name. This entity type does not include titles, such as
+   *                      Dr., Mr., Mrs., or Miss. guardrails doesn't apply this entity type to names that
+   *                      are part of organizations or addresses. For example, guardrails recognizes
+   *                      the "John Doe Organization" as an organization, and it recognizes "Jane Doe
+   *                      Street" as an address.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>EMAIL</b>
+   *                      </p>
+   *                      <p>An email address, such as <i>marymajor@email.com</i>.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>PHONE</b>
+   *                      </p>
+   *                      <p>A phone number. This entity type also includes fax and pager numbers.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>USERNAME</b>
+   *                      </p>
+   *                      <p>A user name that identifies an account, such as a login name, screen name,
+   *                      nick name, or handle.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>PASSWORD</b>
+   *                      </p>
+   *                      <p>An alphanumeric string that is used as a password, such as
+   *                      "*<i>very20special#pass*</i>".
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>DRIVER_ID</b>
+   *                      </p>
+   *                      <p>The number assigned to a driver's license, which is an official
+   *                      document permitting an individual to operate one or more motorized
+   *                      vehicles on a public road. A driver's license number consists of
+   *                      alphanumeric characters.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>LICENSE_PLATE</b>
+   *                      </p>
+   *                      <p>A license plate for a vehicle is issued by the state or country where
+   *                      the vehicle is registered. The format for passenger vehicles is typically
+   *                      five to eight digits, consisting of upper-case letters and numbers. The
+   *                      format varies depending on the location of the issuing state or country.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>VEHICLE_IDENTIFICATION_NUMBER</b>
+   *                      </p>
+   *                      <p>A Vehicle Identification Number (VIN) uniquely identifies a vehicle.
+   *                      VIN content and format are defined in the <i>ISO 3779</i> specification.
+   *                      Each country has specific codes and formats for VINs.
+   *                   </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>Finance</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>REDIT_DEBIT_CARD_CVV</b>
+   *                      </p>
+   *                      <p>A three-digit card verification code (CVV) that is present on VISA,
+   *                   MasterCard, and Discover credit and debit cards. For American Express
+   *                   credit or debit cards, the CVV is a four-digit numeric code.
+   *                </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>CREDIT_DEBIT_CARD_EXPIRY</b>
+   *                      </p>
+   *                      <p>The expiration date for a credit or debit card. This number is usually
+   *                      four digits long and is often formatted as <i>month/year</i> or
+   *                      <i>MM/YY</i>. Guardrails recognizes expiration dates such as
+   *                      <i>01/21</i>, <i>01/2021</i>, and <i>Jan 2021</i>.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>CREDIT_DEBIT_CARD_NUMBER</b>
+   *                      </p>
+   *                      <p>The number for a credit or debit card. These numbers can vary from 13 to 16
+   *                      digits in length. However, Amazon Comprehend also recognizes credit or debit
+   *                      card numbers when only the last four digits are present.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>PIN</b>
+   *                      </p>
+   *                      <p>A four-digit personal identification number (PIN) with which you can
+   *                      access your bank account.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>INTERNATIONAL_BANK_ACCOUNT_NUMBER</b>
+   *                      </p>
+   *                      <p>An International Bank Account Number has specific formats in each country.
+   *                      For more information, see <a href="https://www.iban.com/structure">www.iban.com/structure</a>.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>SWIFT_CODE</b>
+   *                      </p>
+   *                      <p>A SWIFT code is a standard format of Bank Identifier Code (BIC) used to specify
+   *                      a particular bank or branch. Banks use these codes for money transfers such as
+   *                      international wire transfers.</p>
+   *                      <p>SWIFT codes consist of eight or 11 characters. The 11-digit codes refer to specific
+   *                      branches, while eight-digit codes (or 11-digit codes ending in 'XXX') refer to the
+   *                      head or primary office.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>IT</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>IP_ADDRESS</b>
+   *                      </p>
+   *                      <p>An IPv4 address, such as <i>198.51.100.0</i>.
+   *                </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>MAC_ADDRESS</b>
+   *                      </p>
+   *                      <p>A <i>media access control</i> (MAC) address is a unique identifier
+   *                      assigned to a network interface controller (NIC).
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>URL</b>
+   *                      </p>
+   *                      <p>A web address, such as <i>www.example.com</i>.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>AWS_ACCESS_KEY</b>
+   *                      </p>
+   *                      <p>A unique identifier that's associated with a secret access key;
+   *                      you use the access key ID and secret access key to sign programmatic
+   *                      Amazon Web Services requests cryptographically.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>AWS_SECRET_KEY</b>
+   *                      </p>
+   *                      <p>A unique identifier that's associated with an access key. You use the
+   *                      access key ID and secret access key to sign programmatic Amazon Web Services
+   *                      requests cryptographically.
+   *                   </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>USA specific</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>US_BANK_ACCOUNT_NUMBER</b>
+   *                      </p>
+   *                      <p>A US bank account number, which is typically 10 to 12 digits long.
+   *                </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>US_BANK_ROUTING_NUMBER</b>
+   *                      </p>
+   *                      <p>A US bank account routing number. These are typically nine digits long,
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER</b>
+   *                      </p>
+   *                      <p>A US Individual Taxpayer Identification Number (ITIN) is a nine-digit number
+   *                      that starts with a "9" and contain a "7" or "8" as the fourth digit. An ITIN
+   *                      can be formatted with a space or a dash after the third and forth digits.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>US_PASSPORT_NUMBER</b>
+   *                      </p>
+   *                      <p>A US passport number. Passport numbers range from six to nine alphanumeric
+   *                      characters.
+   *                   </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>US_SOCIAL_SECURITY_NUMBER</b>
+   *                      </p>
+   *                      <p>A US Social Security Number (SSN) is a nine-digit number that is issued to
+   *                      US citizens, permanent residents, and temporary working residents.
+   *                   </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>Canada specific</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>CA_HEALTH_NUMBER</b>
+   *                      </p>
+   *                      <p>A Canadian Health Service Number is a 10-digit unique identifier,
+   *                   required for individuals to access healthcare benefits.
+   *                </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>CA_SOCIAL_INSURANCE_NUMBER</b>
+   *                      </p>
+   *                      <p>A Canadian Social Insurance Number (SIN) is a nine-digit unique identifier,
+   *                      required for individuals to access government programs and benefits.</p>
+   *                      <p>The SIN is formatted as three groups of three digits, such as
+   *                      <i>123-456-789</i>. A SIN can be validated through a simple
+   *                      check-digit process called the <a href="https://www.wikipedia.org/wiki/Luhn_algorithm">Luhn algorithm</a>.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>UK Specific</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>UK_NATIONAL_HEALTH_SERVICE_NUMBER</b>
+   *                      </p>
+   *                      <p>A UK National Health Service Number is a 10-17 digit number,
+   *                   such as <i>485 777 3456</i>. The current system formats the 10-digit
+   *                   number with spaces after the third and sixth digits. The final digit is an
+   *                   error-detecting checksum.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>UK_NATIONAL_INSURANCE_NUMBER</b>
+   *                      </p>
+   *                      <p>A UK National Insurance Number (NINO) provides individuals with access to National
+   *                      Insurance (social security) benefits. It is also used for some purposes in the UK
+   *                      tax system.</p>
+   *                      <p>The number is nine digits long and starts with two letters, followed by six
+   *                      numbers and one letter. A NINO can be formatted with a space or a dash after
+   *                      the two letters and after the second, forth, and sixth digits.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER</b>
+   *                      </p>
+   *                      <p>A UK Unique Taxpayer Reference (UTR) is a 10-digit number that identifies a taxpayer or a business.
+   *                   </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>Custom</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>Regex filter</b> - You can use
+   *                   a regular expressions to define patterns for a guardrail to recognize
+   *                   and act upon such as serial number, booking ID etc..</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *          </ul>
    * @public
    */
   type: GuardrailPiiEntityType | undefined;
@@ -1130,19 +1543,6 @@ export type GuardrailTopicType = (typeof GuardrailTopicType)[keyof typeof Guardr
 
 /**
  * <p>Details about topics for the guardrail to identify and deny.</p>
- *          <p>This data type is used in the following API operations:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateGuardrail.html#API_CreateGuardrail_RequestSyntax">CreateGuardrail request body</a>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_UpdateGuardrail.html#API_UpdateGuardrail_RequestSyntax">UpdateGuardrail request body</a>
- *                </p>
- *             </li>
- *          </ul>
  * @public
  */
 export interface GuardrailTopicConfig {
@@ -1173,19 +1573,6 @@ export interface GuardrailTopicConfig {
 
 /**
  * <p>Contains details about topics that the guardrail should identify and deny.</p>
- *          <p>This data type is used in the following API operations:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateGuardrail.html#API_CreateGuardrail_RequestSyntax">CreateGuardrail request body</a>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_UpdateGuardrail.html#API_UpdateGuardrail_RequestSyntax">UpdateGuardrail request body</a>
- *                </p>
- *             </li>
- *          </ul>
  * @public
  */
 export interface GuardrailTopicPolicyConfig {
@@ -1292,6 +1679,12 @@ export interface CreateGuardrailRequest {
   sensitiveInformationPolicyConfig?: GuardrailSensitiveInformationPolicyConfig;
 
   /**
+   * <p>The contextual grounding policy configuration used to create a guardrail.</p>
+   * @public
+   */
+  contextualGroundingPolicyConfig?: GuardrailContextualGroundingPolicyConfig;
+
+  /**
    * <p>The message to return when the guardrail blocks a prompt.</p>
    * @public
    */
@@ -1337,13 +1730,14 @@ export interface CreateGuardrailResponse {
   guardrailId: string | undefined;
 
   /**
-   * <p>The ARN of the guardrail that was created.</p>
+   * <p>The ARN of the guardrail.</p>
    * @public
    */
   guardrailArn: string | undefined;
 
   /**
-   * <p>The version of the guardrail that was created. This value should be 1.</p>
+   * <p>The version of the guardrail that was created.
+   *          This value will always be <code>DRAFT</code>.</p>
    * @public
    */
   version: string | undefined;
@@ -1388,7 +1782,7 @@ export class TooManyTagsException extends __BaseException {
  */
 export interface CreateGuardrailVersionRequest {
   /**
-   * <p>The unique identifier of the guardrail.</p>
+   * <p>The unique identifier of the guardrail. This can be an ID or the ARN.</p>
    * @public
    */
   guardrailIdentifier: string | undefined;
@@ -1432,7 +1826,7 @@ export interface CreateGuardrailVersionResponse {
  */
 export interface DeleteGuardrailRequest {
   /**
-   * <p>The unique identifier of the guardrail.</p>
+   * <p>The unique identifier of the guardrail.  This can be an ID or the ARN.</p>
    * @public
    */
   guardrailIdentifier: string | undefined;
@@ -1454,7 +1848,7 @@ export interface DeleteGuardrailResponse {}
  */
 export interface GetGuardrailRequest {
   /**
-   * <p>The unique identifier of the guardrail for which to get details.</p>
+   * <p>The unique identifier of the guardrail for which to get details.  This can be an ID or the ARN.</p>
    * @public
    */
   guardrailIdentifier: string | undefined;
@@ -1550,12 +1944,42 @@ export interface GuardrailContentPolicy {
 }
 
 /**
+ * <p>The details for the guardrails contextual grounding filter.</p>
+ * @public
+ */
+export interface GuardrailContextualGroundingFilter {
+  /**
+   * <p>The filter type details for the guardrails contextual grounding filter.</p>
+   * @public
+   */
+  type: GuardrailContextualGroundingFilterType | undefined;
+
+  /**
+   * <p>The threshold details for the guardrails contextual grounding filter.</p>
+   * @public
+   */
+  threshold: number | undefined;
+}
+
+/**
+ * <p>The details for the guardrails contextual grounding policy.</p>
+ * @public
+ */
+export interface GuardrailContextualGroundingPolicy {
+  /**
+   * <p>The filter details for the guardrails contextual grounding policy.</p>
+   * @public
+   */
+  filters: GuardrailContextualGroundingFilter[] | undefined;
+}
+
+/**
  * <p>The PII entity configured for the guardrail.</p>
  * @public
  */
 export interface GuardrailPiiEntity {
   /**
-   * <p>The type of PII entity. For example, Social Security Number.</p>
+   * <p>The type of PII entity. For exampvle, Social Security Number.</p>
    * @public
    */
   type: GuardrailPiiEntityType | undefined;
@@ -1693,7 +2117,7 @@ export interface GuardrailTopicPolicy {
 
 /**
  * <p>The managed word list that was configured for the guardrail.
- *          (This is a list of words that are pre-defined and managed by Guardrails only.)</p>
+ *          (This is a list of words that are pre-defined and managed by guardrails only.)</p>
  * @public
  */
 export interface GuardrailManagedWords {
@@ -1759,7 +2183,7 @@ export interface GetGuardrailResponse {
   guardrailId: string | undefined;
 
   /**
-   * <p>The ARN of the guardrail that was created.</p>
+   * <p>The ARN of the guardrail.</p>
    * @public
    */
   guardrailArn: string | undefined;
@@ -1799,6 +2223,12 @@ export interface GetGuardrailResponse {
    * @public
    */
   sensitiveInformationPolicy?: GuardrailSensitiveInformationPolicy;
+
+  /**
+   * <p>The contextual grounding policy used in the guardrail.</p>
+   * @public
+   */
+  contextualGroundingPolicy?: GuardrailContextualGroundingPolicy;
 
   /**
    * <p>The date and time at which the guardrail was created.</p>
@@ -1848,7 +2278,7 @@ export interface GetGuardrailResponse {
  */
 export interface ListGuardrailsRequest {
   /**
-   * <p>The unique identifier of the guardrail.</p>
+   * <p>The unique identifier of the guardrail.  This can be an ID or the ARN.</p>
    * @public
    */
   guardrailIdentifier?: string;
@@ -1950,7 +2380,7 @@ export interface ListGuardrailsResponse {
  */
 export interface UpdateGuardrailRequest {
   /**
-   * <p>The unique identifier of the guardrail</p>
+   * <p>The unique identifier of the guardrail.  This can be an ID or the ARN.</p>
    * @public
    */
   guardrailIdentifier: string | undefined;
@@ -1992,6 +2422,12 @@ export interface UpdateGuardrailRequest {
   sensitiveInformationPolicyConfig?: GuardrailSensitiveInformationPolicyConfig;
 
   /**
+   * <p>The contextual grounding policy configuration used to update a guardrail.</p>
+   * @public
+   */
+  contextualGroundingPolicyConfig?: GuardrailContextualGroundingPolicyConfig;
+
+  /**
    * <p>The message to return when the guardrail blocks a prompt.</p>
    * @public
    */
@@ -2021,7 +2457,7 @@ export interface UpdateGuardrailResponse {
   guardrailId: string | undefined;
 
   /**
-   * <p>The ARN of the guardrail that was created.</p>
+   * <p>The ARN of the guardrail.</p>
    * @public
    */
   guardrailArn: string | undefined;
@@ -2158,6 +2594,1366 @@ export interface PutModelInvocationLoggingConfigurationRequest {
  * @public
  */
 export interface PutModelInvocationLoggingConfigurationResponse {}
+
+/**
+ * @public
+ */
+export interface CreateModelCopyJobRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the model to be copied.</p>
+   * @public
+   */
+  sourceModelArn: string | undefined;
+
+  /**
+   * <p>A name for the copied model.</p>
+   * @public
+   */
+  targetModelName: string | undefined;
+
+  /**
+   * <p>The ARN of the KMS key that you use to encrypt the model copy.</p>
+   * @public
+   */
+  modelKmsKeyId?: string;
+
+  /**
+   * <p>Tags to associate with the target model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/tagging.html">Tag resources</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
+   * @public
+   */
+  targetModelTags?: Tag[];
+
+  /**
+   * <p>A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token matches a previous request,
+   * 	       Amazon Bedrock ignores the request, but does not return an error. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>.</p>
+   * @public
+   */
+  clientRequestToken?: string;
+}
+
+/**
+ * @public
+ */
+export interface CreateModelCopyJobResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the model copy job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetModelCopyJobRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the model copy job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const ModelCopyJobStatus = {
+  COMPLETED: "Completed",
+  FAILED: "Failed",
+  IN_PROGRESS: "InProgress",
+} as const;
+
+/**
+ * @public
+ */
+export type ModelCopyJobStatus = (typeof ModelCopyJobStatus)[keyof typeof ModelCopyJobStatus];
+
+/**
+ * @public
+ */
+export interface GetModelCopyJobResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the model copy job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+
+  /**
+   * <p>The status of the model copy job.</p>
+   * @public
+   */
+  status: ModelCopyJobStatus | undefined;
+
+  /**
+   * <p>The time at which the model copy job was created.</p>
+   * @public
+   */
+  creationTime: Date | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the copied model.</p>
+   * @public
+   */
+  targetModelArn: string | undefined;
+
+  /**
+   * <p>The name of the copied model.</p>
+   * @public
+   */
+  targetModelName?: string;
+
+  /**
+   * <p>The unique identifier of the account that the model being copied originated from.</p>
+   * @public
+   */
+  sourceAccountId: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the original model being copied.</p>
+   * @public
+   */
+  sourceModelArn: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the KMS key encrypting the copied model.</p>
+   * @public
+   */
+  targetModelKmsKeyArn?: string;
+
+  /**
+   * <p>The tags associated with the copied model.</p>
+   * @public
+   */
+  targetModelTags?: Tag[];
+
+  /**
+   * <p>An error message for why the model copy job failed.</p>
+   * @public
+   */
+  failureMessage?: string;
+
+  /**
+   * <p>The name of the original model being copied.</p>
+   * @public
+   */
+  sourceModelName?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListModelCopyJobsRequest {
+  /**
+   * <p>Filters for model copy jobs created after the specified time.</p>
+   * @public
+   */
+  creationTimeAfter?: Date;
+
+  /**
+   * <p>Filters for model copy jobs created before the specified time. </p>
+   * @public
+   */
+  creationTimeBefore?: Date;
+
+  /**
+   * <p>Filters for model copy jobs whose status matches the value that you specify.</p>
+   * @public
+   */
+  statusEquals?: ModelCopyJobStatus;
+
+  /**
+   * <p>Filters for model copy jobs in which the account that the source model belongs to is equal to the value that you specify.</p>
+   * @public
+   */
+  sourceAccountEquals?: string;
+
+  /**
+   * <p>Filters for model copy jobs in which the Amazon Resource Name (ARN) of the source model to is equal to the value that you specify.</p>
+   * @public
+   */
+  sourceModelArnEquals?: string;
+
+  /**
+   * <p>Filters for model copy jobs in which the name of the copied model contains the string that you specify.</p>
+   * @public
+   */
+  targetModelNameContains?: string;
+
+  /**
+   * <p>The maximum number of results to return in the response. If the total number of results is greater than this value, use the token returned in the response in the <code>nextToken</code> field when making another request to return the next batch of results.</p>
+   * @public
+   */
+  maxResults?: number;
+
+  /**
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>The field to sort by in the returned list of model copy jobs.</p>
+   * @public
+   */
+  sortBy?: SortJobsBy;
+
+  /**
+   * <p>Specifies whether to sort the results in ascending or descending order.</p>
+   * @public
+   */
+  sortOrder?: SortOrder;
+}
+
+/**
+ * <p>Contains details about each model copy job.</p>
+ *          <p>This data type is used in the following API operations:</p>
+ *          <ul>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListModelCopyJobs.html#API_ListModelCopyJobs_ResponseSyntax">ListModelCopyJobs response</a>
+ *                </p>
+ *             </li>
+ *          </ul>
+ * @public
+ */
+export interface ModelCopyJobSummary {
+  /**
+   * <p>The Amazon Resoource Name (ARN) of the model copy job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+
+  /**
+   * <p>The status of the model copy job.</p>
+   * @public
+   */
+  status: ModelCopyJobStatus | undefined;
+
+  /**
+   * <p>The time that the model copy job was created.</p>
+   * @public
+   */
+  creationTime: Date | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the copied model.</p>
+   * @public
+   */
+  targetModelArn: string | undefined;
+
+  /**
+   * <p>The name of the copied model.</p>
+   * @public
+   */
+  targetModelName?: string;
+
+  /**
+   * <p>The unique identifier of the account that the model being copied originated from.</p>
+   * @public
+   */
+  sourceAccountId: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the original model being copied.</p>
+   * @public
+   */
+  sourceModelArn: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the KMS key used to encrypt the copied model.</p>
+   * @public
+   */
+  targetModelKmsKeyArn?: string;
+
+  /**
+   * <p>Tags associated with the copied model.</p>
+   * @public
+   */
+  targetModelTags?: Tag[];
+
+  /**
+   * <p>If a model fails to be copied, a message describing why the job failed is included here.</p>
+   * @public
+   */
+  failureMessage?: string;
+
+  /**
+   * <p>The name of the original model being copied.</p>
+   * @public
+   */
+  sourceModelName?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListModelCopyJobsResponse {
+  /**
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, use this token when making another request in the <code>nextToken</code> field to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>A list of information about each model copy job.</p>
+   * @public
+   */
+  modelCopyJobSummaries?: ModelCopyJobSummary[];
+}
+
+/**
+ * <p>The Amazon S3 data source of the imported job.</p>
+ * @public
+ */
+export interface S3DataSource {
+  /**
+   * <p>The URI of the Amazon S3 data source.</p>
+   * @public
+   */
+  s3Uri: string | undefined;
+}
+
+/**
+ * <p>Data source for the imported model.</p>
+ * @public
+ */
+export type ModelDataSource = ModelDataSource.S3DataSourceMember | ModelDataSource.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace ModelDataSource {
+  /**
+   * <p>The Amazon S3 data source of the imported model.</p>
+   * @public
+   */
+  export interface S3DataSourceMember {
+    s3DataSource: S3DataSource;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    s3DataSource?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    s3DataSource: (value: S3DataSource) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: ModelDataSource, visitor: Visitor<T>): T => {
+    if (value.s3DataSource !== undefined) return visitor.s3DataSource(value.s3DataSource);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>VPC configuration.</p>
+ * @public
+ */
+export interface VpcConfig {
+  /**
+   * <p>VPC configuration subnets.</p>
+   * @public
+   */
+  subnetIds: string[] | undefined;
+
+  /**
+   * <p>VPC configuration security group Ids.</p>
+   * @public
+   */
+  securityGroupIds: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateModelImportJobRequest {
+  /**
+   * <p>The name of the import job.</p>
+   * @public
+   */
+  jobName: string | undefined;
+
+  /**
+   * <p>The name of the imported model.</p>
+   * @public
+   */
+  importedModelName: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the model import job.</p>
+   * @public
+   */
+  roleArn: string | undefined;
+
+  /**
+   * <p>The data source for the imported model.</p>
+   * @public
+   */
+  modelDataSource: ModelDataSource | undefined;
+
+  /**
+   * <p>Tags to attach to this import job. </p>
+   * @public
+   */
+  jobTags?: Tag[];
+
+  /**
+   * <p>Tags to attach to the imported model.</p>
+   * @public
+   */
+  importedModelTags?: Tag[];
+
+  /**
+   * <p>A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token matches a previous request,
+   *         Amazon Bedrock ignores the request, but does not return an error. For more information,
+   *         see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>.</p>
+   * @public
+   */
+  clientRequestToken?: string;
+
+  /**
+   * <p>VPC configuration parameters for the
+   *         private Virtual Private Cloud (VPC) that contains the resources you are using for the import job.</p>
+   * @public
+   */
+  vpcConfig?: VpcConfig;
+
+  /**
+   * <p>The imported model is encrypted at rest using this key.</p>
+   * @public
+   */
+  importedModelKmsKeyId?: string;
+}
+
+/**
+ * @public
+ */
+export interface CreateModelImportJobResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the model import job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteImportedModelRequest {
+  /**
+   * <p>Name of the imported model to delete.</p>
+   * @public
+   */
+  modelIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteImportedModelResponse {}
+
+/**
+ * @public
+ */
+export interface GetImportedModelRequest {
+  /**
+   * <p>Name or Amazon Resource Name (ARN) of the imported model.</p>
+   * @public
+   */
+  modelIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetImportedModelResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) associated with this imported model.</p>
+   * @public
+   */
+  modelArn?: string;
+
+  /**
+   * <p>The name of the imported model.</p>
+   * @public
+   */
+  modelName?: string;
+
+  /**
+   * <p>Job name associated with the imported model.</p>
+   * @public
+   */
+  jobName?: string;
+
+  /**
+   * <p>Job Amazon Resource Name (ARN) associated with the imported model.</p>
+   * @public
+   */
+  jobArn?: string;
+
+  /**
+   * <p>The data source for this imported model.</p>
+   * @public
+   */
+  modelDataSource?: ModelDataSource;
+
+  /**
+   * <p>Creation time of the imported model.</p>
+   * @public
+   */
+  creationTime?: Date;
+
+  /**
+   * <p>The architecture of the imported model.</p>
+   * @public
+   */
+  modelArchitecture?: string;
+
+  /**
+   * <p>The imported model is encrypted at rest using this key.</p>
+   * @public
+   */
+  modelKmsKeyArn?: string;
+}
+
+/**
+ * @public
+ */
+export interface GetModelImportJobRequest {
+  /**
+   * <p>The identifier of the import job.</p>
+   * @public
+   */
+  jobIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const ModelImportJobStatus = {
+  COMPLETED: "Completed",
+  FAILED: "Failed",
+  IN_PROGRESS: "InProgress",
+} as const;
+
+/**
+ * @public
+ */
+export type ModelImportJobStatus = (typeof ModelImportJobStatus)[keyof typeof ModelImportJobStatus];
+
+/**
+ * @public
+ */
+export interface GetModelImportJobResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the import job.</p>
+   * @public
+   */
+  jobArn?: string;
+
+  /**
+   * <p>The name of the import job.</p>
+   * @public
+   */
+  jobName?: string;
+
+  /**
+   * <p>The name of the imported model.</p>
+   * @public
+   */
+  importedModelName?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the imported model.</p>
+   * @public
+   */
+  importedModelArn?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the IAM role associated with this job.</p>
+   * @public
+   */
+  roleArn?: string;
+
+  /**
+   * <p>The data source for the imported model.</p>
+   * @public
+   */
+  modelDataSource?: ModelDataSource;
+
+  /**
+   * <p>The status of the job. A successful job transitions from in-progress to completed when the imported model is ready to use.
+   *         If the job failed, the failure message contains information about why the job failed.</p>
+   * @public
+   */
+  status?: ModelImportJobStatus;
+
+  /**
+   * <p>Information about why the import job failed.</p>
+   * @public
+   */
+  failureMessage?: string;
+
+  /**
+   * <p>The time the resource was created.</p>
+   * @public
+   */
+  creationTime?: Date;
+
+  /**
+   * <p>Time the resource was last modified.</p>
+   * @public
+   */
+  lastModifiedTime?: Date;
+
+  /**
+   * <p>Time that the resource transitioned to terminal state.</p>
+   * @public
+   */
+  endTime?: Date;
+
+  /**
+   * <p>The Virtual Private Cloud (VPC) configuration of the import model job.</p>
+   * @public
+   */
+  vpcConfig?: VpcConfig;
+
+  /**
+   * <p>The imported model is encrypted at rest using this key.</p>
+   * @public
+   */
+  importedModelKmsKeyArn?: string;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SortModelsBy = {
+  CREATION_TIME: "CreationTime",
+} as const;
+
+/**
+ * @public
+ */
+export type SortModelsBy = (typeof SortModelsBy)[keyof typeof SortModelsBy];
+
+/**
+ * @public
+ */
+export interface ListImportedModelsRequest {
+  /**
+   * <p>Return imported models that created before the specified time.</p>
+   * @public
+   */
+  creationTimeBefore?: Date;
+
+  /**
+   * <p>Return imported models that were created after the specified time.</p>
+   * @public
+   */
+  creationTimeAfter?: Date;
+
+  /**
+   * <p>Return imported models only if the model name contains these characters.</p>
+   * @public
+   */
+  nameContains?: string;
+
+  /**
+   * <p>The maximum number of results to return in the response. If the total number of results is greater than this value, use the token returned in the response in the <code>nextToken</code> field when making another request to return the next batch of results.</p>
+   * @public
+   */
+  maxResults?: number;
+
+  /**
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>The field to sort by in the returned list of imported models.</p>
+   * @public
+   */
+  sortBy?: SortModelsBy;
+
+  /**
+   * <p>Specifies whetehr to sort the results in ascending or descending order.</p>
+   * @public
+   */
+  sortOrder?: SortOrder;
+}
+
+/**
+ * <p>Information about tne imported model.</p>
+ * @public
+ */
+export interface ImportedModelSummary {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the imported model.</p>
+   * @public
+   */
+  modelArn: string | undefined;
+
+  /**
+   * <p>Name of the imported model.</p>
+   * @public
+   */
+  modelName: string | undefined;
+
+  /**
+   * <p>Creation time of the imported model.</p>
+   * @public
+   */
+  creationTime: Date | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListImportedModelsResponse {
+  /**
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, use this token when making another request in the <code>nextToken</code> field to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>Model summaries.</p>
+   * @public
+   */
+  modelSummaries?: ImportedModelSummary[];
+}
+
+/**
+ * @public
+ */
+export interface ListModelImportJobsRequest {
+  /**
+   * <p>Return import jobs that were created after the specified time.</p>
+   * @public
+   */
+  creationTimeAfter?: Date;
+
+  /**
+   * <p>Return import jobs that were created before the specified time.</p>
+   * @public
+   */
+  creationTimeBefore?: Date;
+
+  /**
+   * <p>Return imported jobs with the specified status.</p>
+   * @public
+   */
+  statusEquals?: ModelImportJobStatus;
+
+  /**
+   * <p>Return imported jobs only if the job name contains these characters.</p>
+   * @public
+   */
+  nameContains?: string;
+
+  /**
+   * <p>The maximum number of results to return in the response. If the total number of results is greater than this value, use the token returned in the response in the <code>nextToken</code> field when making another request to return the next batch of results.</p>
+   * @public
+   */
+  maxResults?: number;
+
+  /**
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>The field to sort by in the returned list of imported jobs.</p>
+   * @public
+   */
+  sortBy?: SortJobsBy;
+
+  /**
+   * <p>Specifies whether to sort the results in ascending or descending order.</p>
+   * @public
+   */
+  sortOrder?: SortOrder;
+}
+
+/**
+ * <p>Information about the import job.</p>
+ * @public
+ */
+export interface ModelImportJobSummary {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the import job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+
+  /**
+   * <p>The name of the import job.</p>
+   * @public
+   */
+  jobName: string | undefined;
+
+  /**
+   * <p>The status of the imported job. </p>
+   * @public
+   */
+  status: ModelImportJobStatus | undefined;
+
+  /**
+   * <p>The time when the import job was last modified.</p>
+   * @public
+   */
+  lastModifiedTime?: Date;
+
+  /**
+   * <p>The time import job was created.</p>
+   * @public
+   */
+  creationTime: Date | undefined;
+
+  /**
+   * <p>The time when import job ended.</p>
+   * @public
+   */
+  endTime?: Date;
+
+  /**
+   * <p>The Amazon resource Name (ARN) of the imported model.</p>
+   * @public
+   */
+  importedModelArn?: string;
+
+  /**
+   * <p>The name of the imported model.</p>
+   * @public
+   */
+  importedModelName?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListModelImportJobsResponse {
+  /**
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>Import job summaries.</p>
+   * @public
+   */
+  modelImportJobSummaries?: ModelImportJobSummary[];
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const S3InputFormat = {
+  JSONL: "JSONL",
+} as const;
+
+/**
+ * @public
+ */
+export type S3InputFormat = (typeof S3InputFormat)[keyof typeof S3InputFormat];
+
+/**
+ * <p>Contains the configuration of the S3 location of the output data.</p>
+ * @public
+ */
+export interface ModelInvocationJobS3InputDataConfig {
+  /**
+   * <p>The format of the input data.</p>
+   * @public
+   */
+  s3InputFormat?: S3InputFormat;
+
+  /**
+   * <p>The S3 location of the input data.</p>
+   * @public
+   */
+  s3Uri: string | undefined;
+}
+
+/**
+ * <p>Details about the location of the input to the batch inference job.</p>
+ * @public
+ */
+export type ModelInvocationJobInputDataConfig =
+  | ModelInvocationJobInputDataConfig.S3InputDataConfigMember
+  | ModelInvocationJobInputDataConfig.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace ModelInvocationJobInputDataConfig {
+  /**
+   * <p>Contains the configuration of the S3 location of the input data.</p>
+   * @public
+   */
+  export interface S3InputDataConfigMember {
+    s3InputDataConfig: ModelInvocationJobS3InputDataConfig;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    s3InputDataConfig?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    s3InputDataConfig: (value: ModelInvocationJobS3InputDataConfig) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: ModelInvocationJobInputDataConfig, visitor: Visitor<T>): T => {
+    if (value.s3InputDataConfig !== undefined) return visitor.s3InputDataConfig(value.s3InputDataConfig);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>Contains the configuration of the S3 location of the output data.</p>
+ * @public
+ */
+export interface ModelInvocationJobS3OutputDataConfig {
+  /**
+   * <p>The S3 location of the output data.</p>
+   * @public
+   */
+  s3Uri: string | undefined;
+
+  /**
+   * <p>The unique identifier of the key that encrypts the S3 location of the output data.</p>
+   * @public
+   */
+  s3EncryptionKeyId?: string;
+}
+
+/**
+ * <p>Contains the configuration of the S3 location of the output data.</p>
+ * @public
+ */
+export type ModelInvocationJobOutputDataConfig =
+  | ModelInvocationJobOutputDataConfig.S3OutputDataConfigMember
+  | ModelInvocationJobOutputDataConfig.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace ModelInvocationJobOutputDataConfig {
+  /**
+   * <p>Contains the configuration of the S3 location of the output data.</p>
+   * @public
+   */
+  export interface S3OutputDataConfigMember {
+    s3OutputDataConfig: ModelInvocationJobS3OutputDataConfig;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    s3OutputDataConfig?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    s3OutputDataConfig: (value: ModelInvocationJobS3OutputDataConfig) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: ModelInvocationJobOutputDataConfig, visitor: Visitor<T>): T => {
+    if (value.s3OutputDataConfig !== undefined) return visitor.s3OutputDataConfig(value.s3OutputDataConfig);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ */
+export interface CreateModelInvocationJobRequest {
+  /**
+   * <p>A name to give the batch inference job.</p>
+   * @public
+   */
+  jobName: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the service role with permissions to carry out and manage batch inference. You can use the console to create a default service role or follow the steps at <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-iam-sr.html">Create a service role for batch inference</a>.</p>
+   * @public
+   */
+  roleArn: string | undefined;
+
+  /**
+   * <p>A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token matches a previous request,
+   * 	       Amazon Bedrock ignores the request, but does not return an error. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>.</p>
+   * @public
+   */
+  clientRequestToken?: string;
+
+  /**
+   * <p>The unique identifier of the foundation model to use for the batch inference job.</p>
+   * @public
+   */
+  modelId: string | undefined;
+
+  /**
+   * <p>Details about the location of the input to the batch inference job.</p>
+   * @public
+   */
+  inputDataConfig: ModelInvocationJobInputDataConfig | undefined;
+
+  /**
+   * <p>Details about the location of the output of the batch inference job.</p>
+   * @public
+   */
+  outputDataConfig: ModelInvocationJobOutputDataConfig | undefined;
+
+  /**
+   * <p>The number of hours after which to force the batch inference job to time out.</p>
+   * @public
+   */
+  timeoutDurationInHours?: number;
+
+  /**
+   * <p>Any tags to associate with the batch inference job. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/tagging.html">Tagging Amazon Bedrock resources</a>.</p>
+   * @public
+   */
+  tags?: Tag[];
+}
+
+/**
+ * @public
+ */
+export interface CreateModelInvocationJobResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the batch inference job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetModelInvocationJobRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the batch inference job.</p>
+   * @public
+   */
+  jobIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const ModelInvocationJobStatus = {
+  COMPLETED: "Completed",
+  EXPIRED: "Expired",
+  FAILED: "Failed",
+  IN_PROGRESS: "InProgress",
+  PARTIALLY_COMPLETED: "PartiallyCompleted",
+  SCHEDULED: "Scheduled",
+  STOPPED: "Stopped",
+  STOPPING: "Stopping",
+  SUBMITTED: "Submitted",
+  VALIDATING: "Validating",
+} as const;
+
+/**
+ * @public
+ */
+export type ModelInvocationJobStatus = (typeof ModelInvocationJobStatus)[keyof typeof ModelInvocationJobStatus];
+
+/**
+ * @public
+ */
+export interface GetModelInvocationJobResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the batch inference job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+
+  /**
+   * <p>The name of the batch inference job.</p>
+   * @public
+   */
+  jobName?: string;
+
+  /**
+   * <p>The unique identifier of the foundation model used for model inference.</p>
+   * @public
+   */
+  modelId: string | undefined;
+
+  /**
+   * <p>A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token matches a previous request,
+   * 	       Amazon Bedrock ignores the request, but does not return an error. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>.</p>
+   * @public
+   */
+  clientRequestToken?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the service role with permissions to carry out and manage batch inference. You can use the console to create a default service role or follow the steps at <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-iam-sr.html">Create a service role for batch inference</a>.</p>
+   * @public
+   */
+  roleArn: string | undefined;
+
+  /**
+   * <p>The status of the batch inference job.</p>
+   * @public
+   */
+  status?: ModelInvocationJobStatus;
+
+  /**
+   * <p>If the batch inference job failed, this field contains a message describing why the job failed.</p>
+   * @public
+   */
+  message?: string;
+
+  /**
+   * <p>The time at which the batch inference job was submitted.</p>
+   * @public
+   */
+  submitTime: Date | undefined;
+
+  /**
+   * <p>The time at which the batch inference job was last modified.</p>
+   * @public
+   */
+  lastModifiedTime?: Date;
+
+  /**
+   * <p>The time at which the batch inference job ended.</p>
+   * @public
+   */
+  endTime?: Date;
+
+  /**
+   * <p>Details about the location of the input to the batch inference job.</p>
+   * @public
+   */
+  inputDataConfig: ModelInvocationJobInputDataConfig | undefined;
+
+  /**
+   * <p>Details about the location of the output of the batch inference job.</p>
+   * @public
+   */
+  outputDataConfig: ModelInvocationJobOutputDataConfig | undefined;
+
+  /**
+   * <p>The number of hours after which batch inference job was set to time out.</p>
+   * @public
+   */
+  timeoutDurationInHours?: number;
+
+  /**
+   * <p>The time at which the batch inference job times or timed out.</p>
+   * @public
+   */
+  jobExpirationTime?: Date;
+}
+
+/**
+ * @public
+ */
+export interface ListModelInvocationJobsRequest {
+  /**
+   * <p>Specify a time to filter for batch inference jobs that were submitted after the time you specify.</p>
+   * @public
+   */
+  submitTimeAfter?: Date;
+
+  /**
+   * <p>Specify a time to filter for batch inference jobs that were submitted before the time you specify.</p>
+   * @public
+   */
+  submitTimeBefore?: Date;
+
+  /**
+   * <p>Specify a status to filter for batch inference jobs whose statuses match the string you specify.</p>
+   * @public
+   */
+  statusEquals?: ModelInvocationJobStatus;
+
+  /**
+   * <p>Specify a string to filter for batch inference jobs whose names contain the string.</p>
+   * @public
+   */
+  nameContains?: string;
+
+  /**
+   * <p>The maximum number of results to return. If there are more results than the number that you specify, a <code>nextToken</code> value is returned. Use the <code>nextToken</code> in a request to return the next batch of results.</p>
+   * @public
+   */
+  maxResults?: number;
+
+  /**
+   * <p>If there were more results than the value you specified
+   *             in the <code>maxResults</code> field in a previous <code>ListModelInvocationJobs</code> request, the response would have returned a <code>nextToken</code>
+   *             value. To see the next batch of results, send the
+   *             <code>nextToken</code> value in another
+   *             request.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>An attribute by which to sort the results.</p>
+   * @public
+   */
+  sortBy?: SortJobsBy;
+
+  /**
+   * <p>Specifies whether to sort the results by ascending or descending order.</p>
+   * @public
+   */
+  sortOrder?: SortOrder;
+}
+
+/**
+ * <p>A summary of a batch inference job.</p>
+ * @public
+ */
+export interface ModelInvocationJobSummary {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the batch inference job.</p>
+   * @public
+   */
+  jobArn: string | undefined;
+
+  /**
+   * <p>The name of the batch inference job.</p>
+   * @public
+   */
+  jobName: string | undefined;
+
+  /**
+   * <p>The unique identifier of the foundation model used for model inference.</p>
+   * @public
+   */
+  modelId: string | undefined;
+
+  /**
+   * <p>A unique, case-sensitive identifier to ensure that the API request completes no more than one time. If this token matches a previous request,
+   * 	       Amazon Bedrock ignores the request, but does not return an error. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>.</p>
+   * @public
+   */
+  clientRequestToken?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the service role with permissions to carry out and manage batch inference. You can use the console to create a default service role or follow the steps at <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-iam-sr.html">Create a service role for batch inference</a>.</p>
+   * @public
+   */
+  roleArn: string | undefined;
+
+  /**
+   * <p>The status of the batch inference job.</p>
+   * @public
+   */
+  status?: ModelInvocationJobStatus;
+
+  /**
+   * <p>If the batch inference job failed, this field contains a message describing why the job failed.</p>
+   * @public
+   */
+  message?: string;
+
+  /**
+   * <p>The time at which the batch inference job was submitted.</p>
+   * @public
+   */
+  submitTime: Date | undefined;
+
+  /**
+   * <p>The time at which the batch inference job was last modified.</p>
+   * @public
+   */
+  lastModifiedTime?: Date;
+
+  /**
+   * <p>The time at which the batch inference job ended.</p>
+   * @public
+   */
+  endTime?: Date;
+
+  /**
+   * <p>Details about the location of the input to the batch inference job.</p>
+   * @public
+   */
+  inputDataConfig: ModelInvocationJobInputDataConfig | undefined;
+
+  /**
+   * <p>Details about the location of the output of the batch inference job.</p>
+   * @public
+   */
+  outputDataConfig: ModelInvocationJobOutputDataConfig | undefined;
+
+  /**
+   * <p>The number of hours after which the batch inference job was set to time out.</p>
+   * @public
+   */
+  timeoutDurationInHours?: number;
+
+  /**
+   * <p>The time at which the batch inference job times or timed out.</p>
+   * @public
+   */
+  jobExpirationTime?: Date;
+}
+
+/**
+ * @public
+ */
+export interface ListModelInvocationJobsResponse {
+  /**
+   * <p>If there are more results than can fit in the response, a <code>nextToken</code> is returned. Use the <code>nextToken</code> in a request to return the next batch of results.</p>
+   * @public
+   */
+  nextToken?: string;
+
+  /**
+   * <p>A list of items, each of which contains a summary about a batch inference job.</p>
+   * @public
+   */
+  invocationJobSummaries?: ModelInvocationJobSummary[];
+}
+
+/**
+ * @public
+ */
+export interface StopModelInvocationJobRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the batch inference job to stop.</p>
+   * @public
+   */
+  jobIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface StopModelInvocationJobResponse {}
 
 /**
  * @public
@@ -2521,19 +4317,6 @@ export interface GetFoundationModelResponse {
 
 /**
  * @public
- * @enum
- */
-export const SortModelsBy = {
-  CREATION_TIME: "CreationTime",
-} as const;
-
-/**
- * @public
- */
-export type SortModelsBy = (typeof SortModelsBy)[keyof typeof SortModelsBy];
-
-/**
- * @public
  */
 export interface ListCustomModelsRequest {
   /**
@@ -2567,13 +4350,13 @@ export interface ListCustomModelsRequest {
   foundationModelArnEquals?: string;
 
   /**
-   * <p>Maximum number of results to return in the response.</p>
+   * <p>The maximum number of results to return in the response. If the total number of results is greater than this value, use the token returned in the response in the <code>nextToken</code> field when making another request to return the next batch of results.</p>
    * @public
    */
   maxResults?: number;
 
   /**
-   * <p>Continuation token from the previous response, for Amazon Bedrock to list the next set of results.</p>
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of results.</p>
    * @public
    */
   nextToken?: string;
@@ -2589,6 +4372,12 @@ export interface ListCustomModelsRequest {
    * @public
    */
   sortOrder?: SortOrder;
+
+  /**
+   * <p>Return custom models depending on if the current account owns them (<code>true</code>) or if they were shared with the current account (<code>false</code>).</p>
+   * @public
+   */
+  isOwned?: boolean;
 }
 
 /**
@@ -2631,6 +4420,12 @@ export interface CustomModelSummary {
    * @public
    */
   customizationType?: CustomizationType;
+
+  /**
+   * <p>The unique identifier of the account that owns the model.</p>
+   * @public
+   */
+  ownerAccountId?: string;
 }
 
 /**
@@ -2638,7 +4433,7 @@ export interface CustomModelSummary {
  */
 export interface ListCustomModelsResponse {
   /**
-   * <p>Continuation token for the next request to list the next set of results.</p>
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, use this token when making another request in the <code>nextToken</code> field to return the next batch of results.</p>
    * @public
    */
   nextToken?: string;
@@ -2661,7 +4456,7 @@ export interface ListFoundationModelsRequest {
   byProvider?: string;
 
   /**
-   * <p>Return models that support the customization type that you specify. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the Amazon Bedrock User Guide.</p>
+   * <p>Return models that support the customization type that you specify. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
    * @public
    */
   byCustomizationType?: ModelCustomization;
@@ -2673,7 +4468,7 @@ export interface ListFoundationModelsRequest {
   byOutputModality?: ModelModality;
 
   /**
-   * <p>Return models that support the inference type that you specify. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html">Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p>
+   * <p>Return models that support the inference type that you specify. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html">Provisioned Throughput</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
    * @public
    */
   byInferenceType?: InferenceType;
@@ -2783,7 +4578,7 @@ export interface CreateProvisionedModelThroughputRequest {
 
   /**
    * <p>Number of model units to allocate. A model unit delivers a specific throughput level for the specified model. The throughput level of a model unit specifies the total number of input and output tokens that it can process and generate within a span of one minute. By default, your account has no model units for purchasing Provisioned Throughputs with commitment. You must first visit the <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase">Amazon Web Services support center</a> to request MUs.</p>
-   *          <p>For model unit quotas, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/quotas.html#prov-thru-quotas">Provisioned Throughput quotas</a> in the Amazon Bedrock User Guide.</p>
+   *          <p>For model unit quotas, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/quotas.html#prov-thru-quotas">Provisioned Throughput quotas</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
    *          <p>For more information about what an MU specifies, contact your Amazon Web Services account manager.</p>
    * @public
    */
@@ -2796,14 +4591,15 @@ export interface CreateProvisionedModelThroughputRequest {
   provisionedModelName: string | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) or name of the model to associate with this Provisioned Throughput. For a list of models for which you can purchase Provisioned Throughput, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#prov-throughput-models">Amazon Bedrock model IDs for purchasing Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p>
+   * <p>The Amazon Resource Name (ARN) or name of the model to associate with this Provisioned Throughput. For a list of models for which you can purchase Provisioned Throughput, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#prov-throughput-models">Amazon Bedrock model IDs for purchasing Provisioned Throughput</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
    * @public
    */
   modelId: string | undefined;
 
   /**
    * <p>The commitment duration requested for the Provisioned Throughput. Billing occurs hourly and is discounted for longer commitment terms. To request a no-commit Provisioned Throughput, omit this field.</p>
-   *          <p>Custom models support all levels of commitment. To see which base models support no commitment, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/pt-supported.html">Supported regions and models for Provisioned Throughput</a> in the Amazon Bedrock User Guide</p>
+   *          <p>Custom models support all levels of commitment. To see which base models support no commitment, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/pt-supported.html">Supported regions and models for Provisioned Throughput</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>
+   *          </p>
    * @public
    */
   commitmentDuration?: CommitmentDuration;
@@ -3233,24 +5029,6 @@ export interface UntagResourceRequest {
 export interface UntagResourceResponse {}
 
 /**
- * <p>VPC configuration.</p>
- * @public
- */
-export interface VpcConfig {
-  /**
-   * <p>VPC configuration subnets.</p>
-   * @public
-   */
-  subnetIds: string[] | undefined;
-
-  /**
-   * <p>VPC configuration security group Ids.</p>
-   * @public
-   */
-  securityGroupIds: string[] | undefined;
-}
-
-/**
  * @public
  */
 export interface CreateModelCustomizationJobRequest {
@@ -3338,7 +5116,7 @@ export interface CreateModelCustomizationJobRequest {
 
   /**
    * <p>VPC configuration (optional). Configuration parameters for the
-   *          private Virtual Private Cloud (VPC) that contains the resources you are using for this job.</p>
+   *            private Virtual Private Cloud (VPC) that contains the resources you are using for this job.</p>
    * @public
    */
   vpcConfig?: VpcConfig;
@@ -3426,7 +5204,7 @@ export interface GetModelCustomizationJobResponse {
 
   /**
    * <p>The status of the job. A successful job transitions from in-progress to completed when the output model is ready to use.
-   *          If the job failed, the failure message contains information about why the job failed.</p>
+   *       If the job failed, the failure message contains information about why the job failed.</p>
    * @public
    */
   status?: ModelCustomizationJobStatus;
@@ -3562,13 +5340,13 @@ export interface ListModelCustomizationJobsRequest {
   nameContains?: string;
 
   /**
-   * <p>Maximum number of results to return in the response.</p>
+   * <p>The maximum number of results to return in the response. If the total number of results is greater than this value, use the token returned in the response in the <code>nextToken</code> field when making another request to return the next batch of results.</p>
    * @public
    */
   maxResults?: number;
 
   /**
-   * <p>Continuation token from the previous response, for Amazon Bedrock to list the next set of results.</p>
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, enter the token returned in the <code>nextToken</code> field in the response in this field to return the next batch of results.</p>
    * @public
    */
   nextToken?: string;
@@ -3657,7 +5435,7 @@ export interface ModelCustomizationJobSummary {
  */
 export interface ListModelCustomizationJobsResponse {
   /**
-   * <p>Page continuation token to use in the next request.</p>
+   * <p>If the total number of results is greater than the <code>maxResults</code> value provided in the request, use this token when making another request in the <code>nextToken</code> field to return the next batch of results.</p>
    * @public
    */
   nextToken?: string;
@@ -3684,6 +5462,41 @@ export interface StopModelCustomizationJobRequest {
  * @public
  */
 export interface StopModelCustomizationJobResponse {}
+
+/**
+ * @internal
+ */
+export const BatchDeleteEvaluationJobRequestFilterSensitiveLog = (obj: BatchDeleteEvaluationJobRequest): any => ({
+  ...obj,
+  ...(obj.jobIdentifiers && { jobIdentifiers: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const BatchDeleteEvaluationJobErrorFilterSensitiveLog = (obj: BatchDeleteEvaluationJobError): any => ({
+  ...obj,
+  ...(obj.jobIdentifier && { jobIdentifier: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const BatchDeleteEvaluationJobItemFilterSensitiveLog = (obj: BatchDeleteEvaluationJobItem): any => ({
+  ...obj,
+  ...(obj.jobIdentifier && { jobIdentifier: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const BatchDeleteEvaluationJobResponseFilterSensitiveLog = (obj: BatchDeleteEvaluationJobResponse): any => ({
+  ...obj,
+  ...(obj.errors && { errors: obj.errors.map((item) => BatchDeleteEvaluationJobErrorFilterSensitiveLog(item)) }),
+  ...(obj.evaluationJobs && {
+    evaluationJobs: obj.evaluationJobs.map((item) => BatchDeleteEvaluationJobItemFilterSensitiveLog(item)),
+  }),
+});
 
 /**
  * @internal
@@ -3920,4 +5733,34 @@ export const UpdateGuardrailRequestFilterSensitiveLog = (obj: UpdateGuardrailReq
   }),
   ...(obj.blockedInputMessaging && { blockedInputMessaging: SENSITIVE_STRING }),
   ...(obj.blockedOutputsMessaging && { blockedOutputsMessaging: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const GetModelInvocationJobResponseFilterSensitiveLog = (obj: GetModelInvocationJobResponse): any => ({
+  ...obj,
+  ...(obj.message && { message: SENSITIVE_STRING }),
+  ...(obj.inputDataConfig && { inputDataConfig: obj.inputDataConfig }),
+  ...(obj.outputDataConfig && { outputDataConfig: obj.outputDataConfig }),
+});
+
+/**
+ * @internal
+ */
+export const ModelInvocationJobSummaryFilterSensitiveLog = (obj: ModelInvocationJobSummary): any => ({
+  ...obj,
+  ...(obj.message && { message: SENSITIVE_STRING }),
+  ...(obj.inputDataConfig && { inputDataConfig: obj.inputDataConfig }),
+  ...(obj.outputDataConfig && { outputDataConfig: obj.outputDataConfig }),
+});
+
+/**
+ * @internal
+ */
+export const ListModelInvocationJobsResponseFilterSensitiveLog = (obj: ListModelInvocationJobsResponse): any => ({
+  ...obj,
+  ...(obj.invocationJobSummaries && {
+    invocationJobSummaries: obj.invocationJobSummaries.map((item) => ModelInvocationJobSummaryFilterSensitiveLog(item)),
+  }),
 });

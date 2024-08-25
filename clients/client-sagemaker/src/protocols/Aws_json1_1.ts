@@ -92,6 +92,10 @@ import {
   CreateFlowDefinitionCommandOutput,
 } from "../commands/CreateFlowDefinitionCommand";
 import { CreateHubCommandInput, CreateHubCommandOutput } from "../commands/CreateHubCommand";
+import {
+  CreateHubContentReferenceCommandInput,
+  CreateHubContentReferenceCommandOutput,
+} from "../commands/CreateHubContentReferenceCommand";
 import { CreateHumanTaskUiCommandInput, CreateHumanTaskUiCommandOutput } from "../commands/CreateHumanTaskUiCommand";
 import {
   CreateHyperParameterTuningJobCommandInput,
@@ -151,6 +155,10 @@ import {
   CreateNotebookInstanceLifecycleConfigCommandInput,
   CreateNotebookInstanceLifecycleConfigCommandOutput,
 } from "../commands/CreateNotebookInstanceLifecycleConfigCommand";
+import {
+  CreateOptimizationJobCommandInput,
+  CreateOptimizationJobCommandOutput,
+} from "../commands/CreateOptimizationJobCommand";
 import { CreatePipelineCommandInput, CreatePipelineCommandOutput } from "../commands/CreatePipelineCommand";
 import {
   CreatePresignedDomainUrlCommandInput,
@@ -230,6 +238,10 @@ import {
 } from "../commands/DeleteFlowDefinitionCommand";
 import { DeleteHubCommandInput, DeleteHubCommandOutput } from "../commands/DeleteHubCommand";
 import { DeleteHubContentCommandInput, DeleteHubContentCommandOutput } from "../commands/DeleteHubContentCommand";
+import {
+  DeleteHubContentReferenceCommandInput,
+  DeleteHubContentReferenceCommandOutput,
+} from "../commands/DeleteHubContentReferenceCommand";
 import { DeleteHumanTaskUiCommandInput, DeleteHumanTaskUiCommandOutput } from "../commands/DeleteHumanTaskUiCommand";
 import {
   DeleteHyperParameterTuningJobCommandInput,
@@ -284,6 +296,10 @@ import {
   DeleteNotebookInstanceLifecycleConfigCommandInput,
   DeleteNotebookInstanceLifecycleConfigCommandOutput,
 } from "../commands/DeleteNotebookInstanceLifecycleConfigCommand";
+import {
+  DeleteOptimizationJobCommandInput,
+  DeleteOptimizationJobCommandOutput,
+} from "../commands/DeleteOptimizationJobCommand";
 import { DeletePipelineCommandInput, DeletePipelineCommandOutput } from "../commands/DeletePipelineCommand";
 import { DeleteProjectCommandInput, DeleteProjectCommandOutput } from "../commands/DeleteProjectCommand";
 import { DeleteSpaceCommandInput, DeleteSpaceCommandOutput } from "../commands/DeleteSpaceCommand";
@@ -441,6 +457,10 @@ import {
   DescribeNotebookInstanceLifecycleConfigCommandInput,
   DescribeNotebookInstanceLifecycleConfigCommandOutput,
 } from "../commands/DescribeNotebookInstanceLifecycleConfigCommand";
+import {
+  DescribeOptimizationJobCommandInput,
+  DescribeOptimizationJobCommandOutput,
+} from "../commands/DescribeOptimizationJobCommand";
 import { DescribePipelineCommandInput, DescribePipelineCommandOutput } from "../commands/DescribePipelineCommand";
 import {
   DescribePipelineDefinitionForExecutionCommandInput,
@@ -664,6 +684,10 @@ import {
   ListNotebookInstancesCommandOutput,
 } from "../commands/ListNotebookInstancesCommand";
 import {
+  ListOptimizationJobsCommandInput,
+  ListOptimizationJobsCommandOutput,
+} from "../commands/ListOptimizationJobsCommand";
+import {
   ListPipelineExecutionsCommandInput,
   ListPipelineExecutionsCommandOutput,
 } from "../commands/ListPipelineExecutionsCommand";
@@ -787,6 +811,10 @@ import {
   StopNotebookInstanceCommandOutput,
 } from "../commands/StopNotebookInstanceCommand";
 import {
+  StopOptimizationJobCommandInput,
+  StopOptimizationJobCommandOutput,
+} from "../commands/StopOptimizationJobCommand";
+import {
   StopPipelineExecutionCommandInput,
   StopPipelineExecutionCommandOutput,
 } from "../commands/StopPipelineExecutionCommand";
@@ -882,6 +910,7 @@ import {
   AddAssociationRequest,
   AddAssociationResponse,
   AdditionalInferenceSpecificationDefinition,
+  AdditionalModelDataSource,
   AdditionalS3DataSource,
   AddTagsInput,
   AddTagsOutput,
@@ -894,10 +923,12 @@ import {
   AlgorithmSummary,
   AlgorithmValidationProfile,
   AlgorithmValidationSpecification,
+  AmazonQSettings,
   AnnotationConsolidationConfig,
   AppDetails,
   AppImageConfigDetails,
   AppSpecification,
+  AppType,
   ArtifactSource,
   ArtifactSourceType,
   ArtifactSummary,
@@ -916,6 +947,7 @@ import {
   AutoMLCandidateGenerationConfig,
   AutoMLCandidateStep,
   AutoMLChannel,
+  AutoMLComputeConfig,
   AutoMLContainerDefinition,
   AutoMLDataSource,
   AutoMLDataSplitConfig,
@@ -1010,15 +1042,11 @@ import {
   CreateArtifactResponse,
   CreateAutoMLJobRequest,
   CreateAutoMLJobResponse,
-  CreateAutoMLJobV2Request,
-  CreateAutoMLJobV2Response,
-  CreateClusterRequest,
-  CreateClusterResponse,
-  CreateCodeRepositoryInput,
-  CreateCodeRepositoryOutput,
   CustomImage,
   DataSource,
   DirectDeploySettings,
+  EmrServerlessComputeConfig,
+  EmrServerlessSettings,
   FileSystemConfig,
   FileSystemDataSource,
   FillingType,
@@ -1032,6 +1060,7 @@ import {
   IdentityProviderOAuthSetting,
   ImageClassificationJobConfig,
   ImageConfig,
+  InferenceHubAccessConfig,
   InferenceSpecification,
   InstanceGroup,
   IntegerParameterRangeSpecification,
@@ -1098,6 +1127,12 @@ import {
   WorkspaceSettings,
 } from "../models/models_0";
 import {
+  CreateAutoMLJobV2Request,
+  CreateAutoMLJobV2Response,
+  CreateClusterRequest,
+  CreateClusterResponse,
+  CreateCodeRepositoryInput,
+  CreateCodeRepositoryOutput,
   CreateCompilationJobRequest,
   CreateCompilationJobResponse,
   CreateContextRequest,
@@ -1121,6 +1156,8 @@ import {
   CreateFeatureGroupResponse,
   CreateFlowDefinitionRequest,
   CreateFlowDefinitionResponse,
+  CreateHubContentReferenceRequest,
+  CreateHubContentReferenceResponse,
   CreateHubRequest,
   CreateHubResponse,
   CreateHumanTaskUiRequest,
@@ -1163,6 +1200,8 @@ import {
   CreateNotebookInstanceLifecycleConfigInput,
   CreateNotebookInstanceLifecycleConfigOutput,
   CreateNotebookInstanceOutput,
+  CreateOptimizationJobRequest,
+  CreateOptimizationJobResponse,
   CreatePipelineRequest,
   CreatePipelineResponse,
   CreatePresignedDomainUrlRequest,
@@ -1171,10 +1210,6 @@ import {
   CreatePresignedMlflowTrackingServerUrlResponse,
   CreatePresignedNotebookInstanceUrlInput,
   CreatePresignedNotebookInstanceUrlOutput,
-  CreateProcessingJobRequest,
-  CreateProcessingJobResponse,
-  CreateProjectInput,
-  CreateProjectOutput,
   CustomFileSystemConfig,
   CustomPosixUserConfig,
   DataCaptureConfig,
@@ -1182,7 +1217,6 @@ import {
   DataQualityAppSpecification,
   DataQualityBaselineConfig,
   DataQualityJobInput,
-  DatasetDefinition,
   DefaultEbsStorageSettings,
   DefaultSpaceSettings,
   DefaultSpaceStorageSettings,
@@ -1199,8 +1233,8 @@ import {
   EdgeDeploymentConfig,
   EdgeDeploymentModelConfig,
   EdgeOutputConfig,
-  EFSFileSystem,
   EFSFileSystemConfig,
+  EmrSettings,
   EndpointInfo,
   EndpointInput,
   EndpointInputConfiguration,
@@ -1248,11 +1282,13 @@ import {
   LabelingJobS3DataSource,
   LabelingJobSnsDataSource,
   LabelingJobStoppingConditions,
+  MlTools,
   ModelBiasAppSpecification,
   ModelBiasBaselineConfig,
   ModelBiasJobInput,
   ModelCardExportOutputConfig,
   ModelCardSecurityConfig,
+  ModelCompilationConfig,
   ModelDataQuality,
   ModelExplainabilityAppSpecification,
   ModelExplainabilityBaselineConfig,
@@ -1268,6 +1304,7 @@ import {
   ModelQualityAppSpecification,
   ModelQualityBaselineConfig,
   ModelQualityJobInput,
+  ModelQuantizationConfig,
   ModelVariantConfig,
   MonitoringAppSpecification,
   MonitoringBaselineConfig,
@@ -1291,28 +1328,23 @@ import {
   OfflineStoreConfig,
   OnlineStoreConfig,
   OnlineStoreSecurityConfig,
+  OptimizationConfig,
+  OptimizationJobModelSource,
+  OptimizationJobModelSourceS3,
+  OptimizationJobOutputConfig,
+  OptimizationModelAccessConfig,
+  OptimizationVpcConfig,
   OutputConfig,
-  OwnershipSettings,
   ParallelismConfiguration,
   ParameterRanges,
   ParentHyperParameterTuningJob,
   Phase,
   PipelineDefinitionS3Location,
-  ProcessingClusterConfig,
-  ProcessingFeatureStoreOutput,
-  ProcessingInput,
-  ProcessingOutput,
-  ProcessingOutputConfig,
-  ProcessingResources,
-  ProcessingS3Input,
-  ProcessingS3Output,
-  ProcessingStoppingCondition,
   ProductionVariant,
   ProductionVariantCoreDumpConfig,
   ProductionVariantManagedInstanceScaling,
   ProductionVariantRoutingConfig,
   ProductionVariantServerlessConfig,
-  ProvisioningParameter,
   PublicWorkforceTaskPrice,
   RealTimeInferenceConfig,
   RecommendationJobCompiledOutputConfig,
@@ -1323,7 +1355,6 @@ import {
   RecommendationJobResourceLimit,
   RecommendationJobStoppingConditions,
   RecommendationJobVpcConfig,
-  RedshiftDatasetDefinition,
   ResourceLimits,
   RetryStrategy,
   RollingUpdatePolicy,
@@ -1332,14 +1363,13 @@ import {
   RStudioServerProDomainSettings,
   S3StorageConfig,
   ScheduleConfig,
-  ServiceCatalogProvisioningDetails,
   ShadowModeConfig,
   ShadowModelVariantConfig,
   SharingSettings,
   SourceAlgorithm,
   SourceAlgorithmSpecification,
-  SpaceCodeEditorAppSettings,
   Stairs,
+  StudioWebPortalSettings,
   TargetPlatform,
   TensorBoardAppSettings,
   ThroughputConfig,
@@ -1352,6 +1382,10 @@ import {
   UserSettings,
 } from "../models/models_1";
 import {
+  CreateProcessingJobRequest,
+  CreateProcessingJobResponse,
+  CreateProjectInput,
+  CreateProjectOutput,
   CreateSpaceRequest,
   CreateSpaceResponse,
   CreateStudioLifecycleConfigRequest,
@@ -1374,6 +1408,7 @@ import {
   CustomizedMetricSpecification,
   DataCaptureConfigSummary,
   DataProcessing,
+  DatasetDefinition,
   DebugHookConfig,
   DebugRuleConfiguration,
   DebugRuleEvaluationStatus,
@@ -1404,6 +1439,7 @@ import {
   DeleteFeatureGroupRequest,
   DeleteFlowDefinitionRequest,
   DeleteFlowDefinitionResponse,
+  DeleteHubContentReferenceRequest,
   DeleteHubContentRequest,
   DeleteHubRequest,
   DeleteHumanTaskUiRequest,
@@ -1429,6 +1465,7 @@ import {
   DeleteMonitoringScheduleRequest,
   DeleteNotebookInstanceInput,
   DeleteNotebookInstanceLifecycleConfigInput,
+  DeleteOptimizationJobRequest,
   DeletePipelineRequest,
   DeletePipelineResponse,
   DeleteProjectInput,
@@ -1524,28 +1561,14 @@ import {
   DescribeMlflowTrackingServerResponse,
   DescribeModelBiasJobDefinitionRequest,
   DescribeModelBiasJobDefinitionResponse,
-  DescribeModelCardExportJobRequest,
-  DescribeModelCardExportJobResponse,
   DescribeModelCardRequest,
-  DescribeModelCardResponse,
-  DescribeModelExplainabilityJobDefinitionRequest,
-  DescribeModelExplainabilityJobDefinitionResponse,
   DescribeModelInput,
   DescribeModelOutput,
-  DescribeModelPackageGroupInput,
-  DescribeModelPackageGroupOutput,
-  DescribeModelPackageInput,
-  DescribeModelPackageOutput,
-  DescribeModelQualityJobDefinitionRequest,
-  DescribeModelQualityJobDefinitionResponse,
-  DescribeMonitoringScheduleRequest,
-  DescribeMonitoringScheduleResponse,
-  DescribeNotebookInstanceInput,
-  DescribeNotebookInstanceOutput,
   EbsStorageSettings,
   EdgeDeploymentStatus,
   EdgeModel,
   EdgePresetDeploymentOutput,
+  EFSFileSystem,
   EndpointMetadata,
   EndpointOutputConfiguration,
   EndpointPerformance,
@@ -1569,34 +1592,44 @@ import {
   LastUpdateStatus,
   MemberDefinition,
   ModelArtifacts,
-  ModelCardExportArtifacts,
   ModelClientConfig,
   ModelConfiguration,
   ModelDeployResult,
   ModelDigests,
-  ModelPackageStatusDetails,
-  ModelPackageStatusItem,
   ModelVariantConfigSummary,
-  MonitoringExecutionSummary,
   NotificationConfiguration,
   ObjectiveStatusCounters,
   OfflineStoreStatus,
   OidcConfig,
   OidcMemberDefinition,
+  OwnershipSettings,
   PendingDeploymentSummary,
   PendingProductionVariantSummary,
+  ProcessingClusterConfig,
+  ProcessingFeatureStoreOutput,
+  ProcessingInput,
+  ProcessingOutput,
+  ProcessingOutputConfig,
+  ProcessingResources,
+  ProcessingS3Input,
+  ProcessingS3Output,
+  ProcessingStoppingCondition,
   ProductionVariantStatus,
   ProductionVariantSummary,
   ProfilerConfig,
   ProfilerRuleConfiguration,
+  ProvisioningParameter,
   RealTimeInferenceRecommendation,
   RecommendationMetrics,
+  RedshiftDatasetDefinition,
   RemoteDebugConfig,
   ResolvedAttributes,
   RetentionPolicy,
   S3Presign,
+  ServiceCatalogProvisioningDetails,
   SessionChainingConfig,
   SourceIpConfig,
+  SpaceCodeEditorAppSettings,
   SpaceJupyterLabAppSettings,
   SpaceSettings,
   SpaceSharingSettings,
@@ -1612,8 +1645,25 @@ import {
   WorkforceVpcConfigRequest,
 } from "../models/models_2";
 import {
+  DescribeModelCardExportJobRequest,
+  DescribeModelCardExportJobResponse,
+  DescribeModelCardResponse,
+  DescribeModelExplainabilityJobDefinitionRequest,
+  DescribeModelExplainabilityJobDefinitionResponse,
+  DescribeModelPackageGroupInput,
+  DescribeModelPackageGroupOutput,
+  DescribeModelPackageInput,
+  DescribeModelPackageOutput,
+  DescribeModelQualityJobDefinitionRequest,
+  DescribeModelQualityJobDefinitionResponse,
+  DescribeMonitoringScheduleRequest,
+  DescribeMonitoringScheduleResponse,
+  DescribeNotebookInstanceInput,
   DescribeNotebookInstanceLifecycleConfigInput,
   DescribeNotebookInstanceLifecycleConfigOutput,
+  DescribeNotebookInstanceOutput,
+  DescribeOptimizationJobRequest,
+  DescribeOptimizationJobResponse,
   DescribePipelineDefinitionForExecutionRequest,
   DescribePipelineDefinitionForExecutionResponse,
   DescribePipelineExecutionRequest,
@@ -1666,7 +1716,9 @@ import {
   EnableSagemakerServicecatalogPortfolioInput,
   EnableSagemakerServicecatalogPortfolioOutput,
   Endpoint,
+  EndpointConfigStepMetadata,
   EndpointConfigSummary,
+  EndpointStepMetadata,
   EndpointSummary,
   Experiment,
   ExperimentSummary,
@@ -1795,37 +1847,18 @@ import {
   ListModelCardsRequest,
   ListModelCardsResponse,
   ListModelCardVersionsRequest,
-  ListModelCardVersionsResponse,
-  ListModelExplainabilityJobDefinitionsRequest,
-  ListModelExplainabilityJobDefinitionsResponse,
-  ListModelMetadataRequest,
-  ListModelMetadataResponse,
-  ListModelPackageGroupsInput,
-  ListModelPackageGroupsOutput,
-  ListModelPackagesInput,
-  ListModelPackagesOutput,
-  ListModelQualityJobDefinitionsRequest,
-  ListModelQualityJobDefinitionsResponse,
-  ListModelsInput,
-  ListModelsOutput,
-  ListMonitoringAlertHistoryRequest,
-  ListMonitoringAlertHistoryResponse,
-  ListMonitoringAlertsRequest,
   MetricData,
   MetricSpecification,
+  ModelCardExportArtifacts,
   ModelCardExportJobSummary,
   ModelCardSummary,
-  ModelCardVersionSummary,
-  ModelMetadataFilter,
-  ModelMetadataSearchExpression,
-  ModelMetadataSummary,
-  ModelPackageGroupSummary,
-  ModelPackageSummary,
-  ModelSummary,
-  MonitoringAlertHistorySummary,
+  ModelPackageStatusDetails,
+  ModelPackageStatusItem,
+  MonitoringExecutionSummary,
   MonitoringJobDefinitionSummary,
   MonitoringSchedule,
   OidcConfigForResponse,
+  OptimizationOutput,
   PipelineExperimentConfig,
   PredefinedMetricSpecification,
   ProductionVariantServerlessUpdateConfig,
@@ -1854,6 +1887,22 @@ import {
   Workteam,
 } from "../models/models_3";
 import {
+  ListModelCardVersionsResponse,
+  ListModelExplainabilityJobDefinitionsRequest,
+  ListModelExplainabilityJobDefinitionsResponse,
+  ListModelMetadataRequest,
+  ListModelMetadataResponse,
+  ListModelPackageGroupsInput,
+  ListModelPackageGroupsOutput,
+  ListModelPackagesInput,
+  ListModelPackagesOutput,
+  ListModelQualityJobDefinitionsRequest,
+  ListModelQualityJobDefinitionsResponse,
+  ListModelsInput,
+  ListModelsOutput,
+  ListMonitoringAlertHistoryRequest,
+  ListMonitoringAlertHistoryResponse,
+  ListMonitoringAlertsRequest,
   ListMonitoringAlertsResponse,
   ListMonitoringExecutionsRequest,
   ListMonitoringExecutionsResponse,
@@ -1863,6 +1912,8 @@ import {
   ListNotebookInstanceLifecycleConfigsOutput,
   ListNotebookInstancesInput,
   ListNotebookInstancesOutput,
+  ListOptimizationJobsRequest,
+  ListOptimizationJobsResponse,
   ListPipelineExecutionsRequest,
   ListPipelineExecutionsResponse,
   ListPipelineExecutionStepsRequest,
@@ -1905,22 +1956,31 @@ import {
   ListWorkteamsResponse,
   Model,
   ModelCard,
+  ModelCardVersionSummary,
   ModelDashboardEndpoint,
   ModelDashboardIndicatorAction,
   ModelDashboardModel,
   ModelDashboardModelCard,
   ModelDashboardMonitoringSchedule,
+  ModelMetadataFilter,
+  ModelMetadataSearchExpression,
+  ModelMetadataSummary,
   ModelPackage,
   ModelPackageGroup,
+  ModelPackageGroupSummary,
+  ModelPackageSummary,
   ModelStepMetadata,
+  ModelSummary,
   ModelVariantAction,
   MonitoringAlertActions,
+  MonitoringAlertHistorySummary,
   MonitoringAlertSummary,
   MonitoringScheduleSummary,
   NestedFilters,
   NotebookInstanceLifecycleConfigSummary,
   NotebookInstanceSummary,
   OnlineStoreConfigUpdate,
+  OptimizationJobSummary,
   OwnershipSettingsSummary,
   Parameter,
   Parent,
@@ -1988,6 +2048,7 @@ import {
   StopMlflowTrackingServerResponse,
   StopMonitoringScheduleRequest,
   StopNotebookInstanceInput,
+  StopOptimizationJobRequest,
   StopPipelineExecutionRequest,
   StopPipelineExecutionResponse,
   StopProcessingJobRequest,
@@ -2440,6 +2501,19 @@ export const se_CreateHubCommand = async (
 };
 
 /**
+ * serializeAws_json1_1CreateHubContentReferenceCommand
+ */
+export const se_CreateHubContentReferenceCommand = async (
+  input: CreateHubContentReferenceCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("CreateHubContentReference");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1CreateHumanTaskUiCommand
  */
 export const se_CreateHumanTaskUiCommand = async (
@@ -2694,6 +2768,19 @@ export const se_CreateNotebookInstanceLifecycleConfigCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateNotebookInstanceLifecycleConfig");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1CreateOptimizationJobCommand
+ */
+export const se_CreateOptimizationJobCommand = async (
+  input: CreateOptimizationJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("CreateOptimizationJob");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -3181,6 +3268,19 @@ export const se_DeleteHubContentCommand = async (
 };
 
 /**
+ * serializeAws_json1_1DeleteHubContentReferenceCommand
+ */
+export const se_DeleteHubContentReferenceCommand = async (
+  input: DeleteHubContentReferenceCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DeleteHubContentReference");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1DeleteHumanTaskUiCommand
  */
 export const se_DeleteHumanTaskUiCommand = async (
@@ -3409,6 +3509,19 @@ export const se_DeleteNotebookInstanceLifecycleConfigCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteNotebookInstanceLifecycleConfig");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1DeleteOptimizationJobCommand
+ */
+export const se_DeleteOptimizationJobCommand = async (
+  input: DeleteOptimizationJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DeleteOptimizationJob");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -4163,6 +4276,19 @@ export const se_DescribeNotebookInstanceLifecycleConfigCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeNotebookInstanceLifecycleConfig");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1DescribeOptimizationJobCommand
+ */
+export const se_DescribeOptimizationJobCommand = async (
+  input: DescribeOptimizationJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DescribeOptimizationJob");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -5222,6 +5348,19 @@ export const se_ListNotebookInstancesCommand = async (
 };
 
 /**
+ * serializeAws_json1_1ListOptimizationJobsCommand
+ */
+export const se_ListOptimizationJobsCommand = async (
+  input: ListOptimizationJobsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("ListOptimizationJobs");
+  let body: any;
+  body = JSON.stringify(se_ListOptimizationJobsRequest(input, context));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1ListPipelineExecutionsCommand
  */
 export const se_ListPipelineExecutionsCommand = async (
@@ -5798,6 +5937,19 @@ export const se_StopNotebookInstanceCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("StopNotebookInstance");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1StopOptimizationJobCommand
+ */
+export const se_StopOptimizationJobCommand = async (
+  input: StopOptimizationJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("StopOptimizationJob");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -6881,6 +7033,26 @@ export const de_CreateHubCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1CreateHubContentReferenceCommand
+ */
+export const de_CreateHubContentReferenceCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateHubContentReferenceCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_CreateHubContentReferenceResponse(data, context);
+  const response: CreateHubContentReferenceCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1CreateHumanTaskUiCommand
  */
 export const de_CreateHumanTaskUiCommand = async (
@@ -7274,6 +7446,26 @@ export const de_CreateNotebookInstanceLifecycleConfigCommand = async (
   let contents: any = {};
   contents = de_CreateNotebookInstanceLifecycleConfigOutput(data, context);
   const response: CreateNotebookInstanceLifecycleConfigCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1CreateOptimizationJobCommand
+ */
+export const de_CreateOptimizationJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateOptimizationJobCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_CreateOptimizationJobResponse(data, context);
+  const response: CreateOptimizationJobCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -7976,6 +8168,23 @@ export const de_DeleteHubContentCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1DeleteHubContentReferenceCommand
+ */
+export const de_DeleteHubContentReferenceCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteHubContentReferenceCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  await collectBody(output.body, context);
+  const response: DeleteHubContentReferenceCommandOutput = {
+    $metadata: deserializeMetadata(output),
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1DeleteHumanTaskUiCommand
  */
 export const de_DeleteHumanTaskUiCommand = async (
@@ -8291,6 +8500,23 @@ export const de_DeleteNotebookInstanceLifecycleConfigCommand = async (
   }
   await collectBody(output.body, context);
   const response: DeleteNotebookInstanceLifecycleConfigCommandOutput = {
+    $metadata: deserializeMetadata(output),
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1DeleteOptimizationJobCommand
+ */
+export const de_DeleteOptimizationJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteOptimizationJobCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  await collectBody(output.body, context);
+  const response: DeleteOptimizationJobCommandOutput = {
     $metadata: deserializeMetadata(output),
   };
   return response;
@@ -9435,6 +9661,26 @@ export const de_DescribeNotebookInstanceLifecycleConfigCommand = async (
   let contents: any = {};
   contents = de_DescribeNotebookInstanceLifecycleConfigOutput(data, context);
   const response: DescribeNotebookInstanceLifecycleConfigCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1DescribeOptimizationJobCommand
+ */
+export const de_DescribeOptimizationJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeOptimizationJobCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_DescribeOptimizationJobResponse(data, context);
+  const response: DescribeOptimizationJobCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -11062,6 +11308,26 @@ export const de_ListNotebookInstancesCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1ListOptimizationJobsCommand
+ */
+export const de_ListOptimizationJobsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListOptimizationJobsCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_ListOptimizationJobsResponse(data, context);
+  const response: ListOptimizationJobsCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1ListPipelineExecutionsCommand
  */
 export const de_ListPipelineExecutionsCommand = async (
@@ -11917,6 +12183,23 @@ export const de_StopNotebookInstanceCommand = async (
   }
   await collectBody(output.body, context);
   const response: StopNotebookInstanceCommandOutput = {
+    $metadata: deserializeMetadata(output),
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1StopOptimizationJobCommand
+ */
+export const de_StopOptimizationJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<StopOptimizationJobCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  await collectBody(output.body, context);
+  const response: StopOptimizationJobCommandOutput = {
     $metadata: deserializeMetadata(output),
   };
   return response;
@@ -12841,6 +13124,10 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 
 // se_AdditionalInferenceSpecifications omitted.
 
+// se_AdditionalModelDataSource omitted.
+
+// se_AdditionalModelDataSources omitted.
+
 // se_AdditionalS3DataSource omitted.
 
 // se_AddTagsInput omitted.
@@ -12859,6 +13146,8 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 
 // se_AlgorithmValidationSpecification omitted.
 
+// se_AmazonQSettings omitted.
+
 // se_AnnotationConsolidationConfig omitted.
 
 // se_AppSpecification omitted.
@@ -12872,6 +13161,8 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 // se_ArtifactSourceTypes omitted.
 
 // se_AssociateTrialComponentRequest omitted.
+
+// se_AssumableRoleArns omitted.
 
 // se_AsyncInferenceClientConfig omitted.
 
@@ -12898,6 +13189,8 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 // se_AutoMLCandidateGenerationConfig omitted.
 
 // se_AutoMLChannel omitted.
+
+// se_AutoMLComputeConfig omitted.
 
 // se_AutoMLDataSource omitted.
 
@@ -13120,6 +13413,7 @@ const se_CreateAutoMLJobRequest = (input: CreateAutoMLJobRequest, context: __Ser
  */
 const se_CreateAutoMLJobV2Request = (input: CreateAutoMLJobV2Request, context: __SerdeContext): any => {
   return take(input, {
+    AutoMLComputeConfig: _json,
     AutoMLJobInputDataConfig: _json,
     AutoMLJobName: [],
     AutoMLJobObjective: _json,
@@ -13211,6 +13505,8 @@ const se_CreateFlowDefinitionRequest = (input: CreateFlowDefinitionRequest, cont
     Tags: _json,
   });
 };
+
+// se_CreateHubContentReferenceRequest omitted.
 
 // se_CreateHubRequest omitted.
 
@@ -13410,6 +13706,8 @@ const se_CreateMonitoringScheduleRequest = (input: CreateMonitoringScheduleReque
 
 // se_CreateNotebookInstanceLifecycleConfigInput omitted.
 
+// se_CreateOptimizationJobRequest omitted.
+
 /**
  * serializeAws_json1_1CreatePipelineRequest
  */
@@ -13573,6 +13871,8 @@ const se_DataQualityJobInput = (input: DataQualityJobInput, context: __SerdeCont
 
 // se_DeleteFlowDefinitionRequest omitted.
 
+// se_DeleteHubContentReferenceRequest omitted.
+
 // se_DeleteHubContentRequest omitted.
 
 // se_DeleteHubRequest omitted.
@@ -13612,6 +13912,8 @@ const se_DataQualityJobInput = (input: DataQualityJobInput, context: __SerdeCont
 // se_DeleteNotebookInstanceInput omitted.
 
 // se_DeleteNotebookInstanceLifecycleConfigInput omitted.
+
+// se_DeleteOptimizationJobRequest omitted.
 
 /**
  * serializeAws_json1_1DeletePipelineRequest
@@ -13743,6 +14045,8 @@ const se_DeletePipelineRequest = (input: DeletePipelineRequest, context: __Serde
 
 // se_DescribeNotebookInstanceLifecycleConfigInput omitted.
 
+// se_DescribeOptimizationJobRequest omitted.
+
 // se_DescribePipelineDefinitionForExecutionRequest omitted.
 
 // se_DescribePipelineExecutionRequest omitted.
@@ -13842,6 +14146,12 @@ const se_DesiredWeightAndCapacityList = (input: DesiredWeightAndCapacity[], cont
 
 // se_EFSFileSystemConfig omitted.
 
+// se_EmrServerlessComputeConfig omitted.
+
+// se_EmrServerlessSettings omitted.
+
+// se_EmrSettings omitted.
+
 // se_EnableSagemakerServicecatalogPortfolioInput omitted.
 
 // se_EndpointInfo omitted.
@@ -13874,6 +14184,8 @@ const se_EndpointInput = (input: EndpointInput, context: __SerdeContext): any =>
 // se_EnvironmentMap omitted.
 
 // se_EnvironmentParameterRanges omitted.
+
+// se_ExecutionRoleArns omitted.
 
 // se_ExperimentConfig omitted.
 
@@ -13934,6 +14246,10 @@ const se_EndpointInput = (input: EndpointInput, context: __SerdeContext): any =>
 // se_GroupingAttributeNames omitted.
 
 // se_Groups omitted.
+
+// se_HiddenAppTypesList omitted.
+
+// se_HiddenMlToolsList omitted.
 
 // se_HolidayConfig omitted.
 
@@ -14080,6 +14396,8 @@ const se_InferenceExperimentSchedule = (input: InferenceExperimentSchedule, cont
     StartTime: (_) => _.getTime() / 1_000,
   });
 };
+
+// se_InferenceHubAccessConfig omitted.
 
 // se_InferenceSpecification omitted.
 
@@ -15020,6 +15338,25 @@ const se_ListNotebookInstancesInput = (input: ListNotebookInstancesInput, contex
 };
 
 /**
+ * serializeAws_json1_1ListOptimizationJobsRequest
+ */
+const se_ListOptimizationJobsRequest = (input: ListOptimizationJobsRequest, context: __SerdeContext): any => {
+  return take(input, {
+    CreationTimeAfter: (_) => _.getTime() / 1_000,
+    CreationTimeBefore: (_) => _.getTime() / 1_000,
+    LastModifiedTimeAfter: (_) => _.getTime() / 1_000,
+    LastModifiedTimeBefore: (_) => _.getTime() / 1_000,
+    MaxResults: [],
+    NameContains: [],
+    NextToken: [],
+    OptimizationContains: [],
+    SortBy: [],
+    SortOrder: [],
+    StatusEquals: [],
+  });
+};
+
+/**
  * serializeAws_json1_1ListPipelineExecutionsRequest
  */
 const se_ListPipelineExecutionsRequest = (input: ListPipelineExecutionsRequest, context: __SerdeContext): any => {
@@ -15245,6 +15582,8 @@ const se_ModelBiasJobInput = (input: ModelBiasJobInput, context: __SerdeContext)
 
 // se_ModelClientConfig omitted.
 
+// se_ModelCompilationConfig omitted.
+
 // se_ModelDataQuality omitted.
 
 // se_ModelDataSource omitted.
@@ -15313,6 +15652,8 @@ const se_ModelQualityJobInput = (input: ModelQualityJobInput, context: __SerdeCo
     GroundTruthS3Input: _json,
   });
 };
+
+// se_ModelQuantizationConfig omitted.
 
 // se_ModelRegisterSettings omitted.
 
@@ -15443,6 +15784,26 @@ const se_MonitoringScheduleConfig = (input: MonitoringScheduleConfig, context: _
 // se_OnlineStoreConfigUpdate omitted.
 
 // se_OnlineStoreSecurityConfig omitted.
+
+// se_OptimizationConfig omitted.
+
+// se_OptimizationConfigs omitted.
+
+// se_OptimizationJobEnvironmentVariables omitted.
+
+// se_OptimizationJobModelSource omitted.
+
+// se_OptimizationJobModelSourceS3 omitted.
+
+// se_OptimizationJobOutputConfig omitted.
+
+// se_OptimizationModelAccessConfig omitted.
+
+// se_OptimizationVpcConfig omitted.
+
+// se_OptimizationVpcSecurityGroupIds omitted.
+
+// se_OptimizationVpcSubnets omitted.
 
 // se_OutputConfig omitted.
 
@@ -15855,6 +16216,8 @@ const se_StartPipelineExecutionRequest = (input: StartPipelineExecutionRequest, 
 
 // se_StopNotebookInstanceInput omitted.
 
+// se_StopOptimizationJobRequest omitted.
+
 // se_StoppingCondition omitted.
 
 /**
@@ -15872,6 +16235,8 @@ const se_StopPipelineExecutionRequest = (input: StopPipelineExecutionRequest, co
 // se_StopTrainingJobRequest omitted.
 
 // se_StopTransformJobRequest omitted.
+
+// se_StudioWebPortalSettings omitted.
 
 // se_Subnets omitted.
 
@@ -16254,6 +16619,28 @@ const de_AdditionalInferenceSpecifications = (
 };
 
 /**
+ * deserializeAws_json1_1AdditionalModelDataSource
+ */
+const de_AdditionalModelDataSource = (output: any, context: __SerdeContext): AdditionalModelDataSource => {
+  return take(output, {
+    ChannelName: __expectString,
+    S3DataSource: (_: any) => de_S3ModelDataSource(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1AdditionalModelDataSources
+ */
+const de_AdditionalModelDataSources = (output: any, context: __SerdeContext): AdditionalModelDataSource[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_AdditionalModelDataSource(entry, context);
+    });
+  return retVal;
+};
+
+/**
  * deserializeAws_json1_1AdditionalS3DataSource
  */
 const de_AdditionalS3DataSource = (output: any, context: __SerdeContext): AdditionalS3DataSource => {
@@ -16446,6 +16833,16 @@ const de_AlgorithmValidationSpecification = (
 };
 
 /**
+ * deserializeAws_json1_1AmazonQSettings
+ */
+const de_AmazonQSettings = (output: any, context: __SerdeContext): AmazonQSettings => {
+  return take(output, {
+    QProfileArn: __expectString,
+    Status: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1AnnotationConsolidationConfig
  */
 const de_AnnotationConsolidationConfig = (output: any, context: __SerdeContext): AnnotationConsolidationConfig => {
@@ -16615,6 +17012,18 @@ const de_AssociationSummary = (output: any, context: __SerdeContext): Associatio
     SourceName: __expectString,
     SourceType: __expectString,
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1AssumableRoleArns
+ */
+const de_AssumableRoleArns = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
 };
 
 /**
@@ -16812,6 +17221,15 @@ const de_AutoMLChannel = (output: any, context: __SerdeContext): AutoMLChannel =
     DataSource: (_: any) => de_AutoMLDataSource(_, context),
     SampleWeightAttributeName: __expectString,
     TargetAttributeName: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1AutoMLComputeConfig
+ */
+const de_AutoMLComputeConfig = (output: any, context: __SerdeContext): AutoMLComputeConfig => {
+  return take(output, {
+    EmrServerlessComputeConfig: (_: any) => de_EmrServerlessComputeConfig(_, context),
   }) as any;
 };
 
@@ -17338,6 +17756,7 @@ const de_CandidateSteps = (output: any, context: __SerdeContext): AutoMLCandidat
 const de_CanvasAppSettings = (output: any, context: __SerdeContext): CanvasAppSettings => {
   return take(output, {
     DirectDeploySettings: (_: any) => de_DirectDeploySettings(_, context),
+    EmrServerlessSettings: (_: any) => de_EmrServerlessSettings(_, context),
     GenerativeAiSettings: (_: any) => de_GenerativeAiSettings(_, context),
     IdentityProviderOAuthSettings: (_: any) => de_IdentityProviderOAuthSettings(_, context),
     KendraSettings: (_: any) => de_KendraSettings(_, context),
@@ -18018,6 +18437,7 @@ const de_ContainerConfig = (output: any, context: __SerdeContext): ContainerConf
  */
 const de_ContainerDefinition = (output: any, context: __SerdeContext): ContainerDefinition => {
   return take(output, {
+    AdditionalModelDataSources: (_: any) => de_AdditionalModelDataSources(_, context),
     ContainerHostname: __expectString,
     Environment: (_: any) => de_EnvironmentMap(_, context),
     Image: __expectString,
@@ -18341,6 +18761,19 @@ const de_CreateFlowDefinitionResponse = (output: any, context: __SerdeContext): 
 };
 
 /**
+ * deserializeAws_json1_1CreateHubContentReferenceResponse
+ */
+const de_CreateHubContentReferenceResponse = (
+  output: any,
+  context: __SerdeContext
+): CreateHubContentReferenceResponse => {
+  return take(output, {
+    HubArn: __expectString,
+    HubContentArn: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1CreateHubResponse
  */
 const de_CreateHubResponse = (output: any, context: __SerdeContext): CreateHubResponse => {
@@ -18556,6 +18989,15 @@ const de_CreateNotebookInstanceLifecycleConfigOutput = (
 const de_CreateNotebookInstanceOutput = (output: any, context: __SerdeContext): CreateNotebookInstanceOutput => {
   return take(output, {
     NotebookInstanceArn: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1CreateOptimizationJobResponse
+ */
+const de_CreateOptimizationJobResponse = (output: any, context: __SerdeContext): CreateOptimizationJobResponse => {
+  return take(output, {
+    OptimizationJobArn: __expectString,
   }) as any;
 };
 
@@ -19429,6 +19871,7 @@ const de_DescribeAutoMLJobResponse = (output: any, context: __SerdeContext): Des
  */
 const de_DescribeAutoMLJobV2Response = (output: any, context: __SerdeContext): DescribeAutoMLJobV2Response => {
   return take(output, {
+    AutoMLComputeConfig: (_: any) => de_AutoMLComputeConfig(_, context),
     AutoMLJobArn: __expectString,
     AutoMLJobArtifacts: (_: any) => de_AutoMLJobArtifacts(_, context),
     AutoMLJobInputDataConfig: (_: any) => de_AutoMLJobInputDataConfig(_, context),
@@ -19811,6 +20254,9 @@ const de_DescribeHubContentResponse = (output: any, context: __SerdeContext): De
     HubContentType: __expectString,
     HubContentVersion: __expectString,
     HubName: __expectString,
+    ReferenceMinVersion: __expectString,
+    SageMakerPublicHubContentArn: __expectString,
+    SupportStatus: __expectString,
   }) as any;
 };
 
@@ -20297,6 +20743,31 @@ const de_DescribeNotebookInstanceOutput = (output: any, context: __SerdeContext)
     SubnetId: __expectString,
     Url: __expectString,
     VolumeSizeInGB: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1DescribeOptimizationJobResponse
+ */
+const de_DescribeOptimizationJobResponse = (output: any, context: __SerdeContext): DescribeOptimizationJobResponse => {
+  return take(output, {
+    CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    DeploymentInstanceType: __expectString,
+    FailureReason: __expectString,
+    LastModifiedTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    ModelSource: (_: any) => de_OptimizationJobModelSource(_, context),
+    OptimizationConfigs: (_: any) => de_OptimizationConfigs(_, context),
+    OptimizationEndTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    OptimizationEnvironment: (_: any) => de_OptimizationJobEnvironmentVariables(_, context),
+    OptimizationJobArn: __expectString,
+    OptimizationJobName: __expectString,
+    OptimizationJobStatus: __expectString,
+    OptimizationOutput: (_: any) => de_OptimizationOutput(_, context),
+    OptimizationStartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    OutputConfig: (_: any) => de_OptimizationJobOutputConfig(_, context),
+    RoleArn: __expectString,
+    StoppingCondition: (_: any) => de_StoppingCondition(_, context),
+    VpcConfig: (_: any) => de_OptimizationVpcConfig(_, context),
   }) as any;
 };
 
@@ -20821,6 +21292,7 @@ const de_DomainSecurityGroupIds = (output: any, context: __SerdeContext): string
  */
 const de_DomainSettings = (output: any, context: __SerdeContext): DomainSettings => {
   return take(output, {
+    AmazonQSettings: (_: any) => de_AmazonQSettings(_, context),
     DockerSettings: (_: any) => de_DockerSettings(_, context),
     ExecutionRoleIdentityConfig: __expectString,
     RStudioServerProDomainSettings: (_: any) => de_RStudioServerProDomainSettings(_, context),
@@ -21143,6 +21615,35 @@ const de_EFSFileSystemConfig = (output: any, context: __SerdeContext): EFSFileSy
 };
 
 /**
+ * deserializeAws_json1_1EmrServerlessComputeConfig
+ */
+const de_EmrServerlessComputeConfig = (output: any, context: __SerdeContext): EmrServerlessComputeConfig => {
+  return take(output, {
+    ExecutionRoleARN: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1EmrServerlessSettings
+ */
+const de_EmrServerlessSettings = (output: any, context: __SerdeContext): EmrServerlessSettings => {
+  return take(output, {
+    ExecutionRoleArn: __expectString,
+    Status: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1EmrSettings
+ */
+const de_EmrSettings = (output: any, context: __SerdeContext): EmrSettings => {
+  return take(output, {
+    AssumableRoleArns: (_: any) => de_AssumableRoleArns(_, context),
+    ExecutionRoleArns: (_: any) => de_ExecutionRoleArns(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1EMRStepMetadata
  */
 const de_EMRStepMetadata = (output: any, context: __SerdeContext): EMRStepMetadata => {
@@ -21181,6 +21682,15 @@ const de_Endpoint = (output: any, context: __SerdeContext): Endpoint => {
     ProductionVariants: (_: any) => de_ProductionVariantSummaryList(_, context),
     ShadowProductionVariants: (_: any) => de_ProductionVariantSummaryList(_, context),
     Tags: (_: any) => de_TagList(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1EndpointConfigStepMetadata
+ */
+const de_EndpointConfigStepMetadata = (output: any, context: __SerdeContext): EndpointConfigStepMetadata => {
+  return take(output, {
+    Arn: __expectString,
   }) as any;
 };
 
@@ -21319,6 +21829,15 @@ const de_Endpoints = (output: any, context: __SerdeContext): EndpointInfo[] => {
 };
 
 /**
+ * deserializeAws_json1_1EndpointStepMetadata
+ */
+const de_EndpointStepMetadata = (output: any, context: __SerdeContext): EndpointStepMetadata => {
+  return take(output, {
+    Arn: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1EndpointSummary
  */
 const de_EndpointSummary = (output: any, context: __SerdeContext): EndpointSummary => {
@@ -21384,6 +21903,18 @@ const de_EnvironmentParameters = (output: any, context: __SerdeContext): Environ
     .filter((e: any) => e != null)
     .map((entry: any) => {
       return de_EnvironmentParameter(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1ExecutionRoleArns
+ */
+const de_ExecutionRoleArns = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
     });
   return retVal;
 };
@@ -21877,6 +22408,30 @@ const de_Groups = (output: any, context: __SerdeContext): string[] => {
 };
 
 /**
+ * deserializeAws_json1_1HiddenAppTypesList
+ */
+const de_HiddenAppTypesList = (output: any, context: __SerdeContext): AppType[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1HiddenMlToolsList
+ */
+const de_HiddenMlToolsList = (output: any, context: __SerdeContext): MlTools[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
  * deserializeAws_json1_1HolidayConfig
  */
 const de_HolidayConfig = (output: any, context: __SerdeContext): HolidayConfigAttributes[] => {
@@ -21947,6 +22502,9 @@ const de_HubContentInfo = (output: any, context: __SerdeContext): HubContentInfo
     HubContentStatus: __expectString,
     HubContentType: __expectString,
     HubContentVersion: __expectString,
+    OriginalCreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    SageMakerPublicHubContentArn: __expectString,
+    SupportStatus: __expectString,
   }) as any;
 };
 
@@ -22765,6 +23323,15 @@ const de_InferenceExperimentSummary = (output: any, context: __SerdeContext): In
 };
 
 /**
+ * deserializeAws_json1_1InferenceHubAccessConfig
+ */
+const de_InferenceHubAccessConfig = (output: any, context: __SerdeContext): InferenceHubAccessConfig => {
+  return take(output, {
+    HubContentArn: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1InferenceMetrics
  */
 const de_InferenceMetrics = (output: any, context: __SerdeContext): InferenceMetrics => {
@@ -23032,6 +23599,7 @@ const de_JupyterLabAppSettings = (output: any, context: __SerdeContext): Jupyter
     CodeRepositories: (_: any) => de_CodeRepositories(_, context),
     CustomImages: (_: any) => de_CustomImages(_, context),
     DefaultResourceSpec: (_: any) => de_ResourceSpec(_, context),
+    EmrSettings: (_: any) => de_EmrSettings(_, context),
     LifecycleConfigArns: (_: any) => de_LifecycleConfigArns(_, context),
   }) as any;
 };
@@ -23956,6 +24524,16 @@ const de_ListNotebookInstancesOutput = (output: any, context: __SerdeContext): L
 };
 
 /**
+ * deserializeAws_json1_1ListOptimizationJobsResponse
+ */
+const de_ListOptimizationJobsResponse = (output: any, context: __SerdeContext): ListOptimizationJobsResponse => {
+  return take(output, {
+    NextToken: __expectString,
+    OptimizationJobSummaries: (_: any) => de_OptimizationJobSummaries(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1ListPipelineExecutionsResponse
  */
 const de_ListPipelineExecutionsResponse = (output: any, context: __SerdeContext): ListPipelineExecutionsResponse => {
@@ -24489,6 +25067,16 @@ const de_ModelClientConfig = (output: any, context: __SerdeContext): ModelClient
   return take(output, {
     InvocationsMaxRetries: __expectInt32,
     InvocationsTimeoutInSeconds: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ModelCompilationConfig
+ */
+const de_ModelCompilationConfig = (output: any, context: __SerdeContext): ModelCompilationConfig => {
+  return take(output, {
+    Image: __expectString,
+    OverrideEnvironment: (_: any) => de_OptimizationJobEnvironmentVariables(_, context),
   }) as any;
 };
 
@@ -25060,6 +25648,16 @@ const de_ModelQualityJobInput = (output: any, context: __SerdeContext): ModelQua
     BatchTransformInput: (_: any) => de_BatchTransformInput(_, context),
     EndpointInput: (_: any) => de_EndpointInput(_, context),
     GroundTruthS3Input: (_: any) => de_MonitoringGroundTruthS3Input(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ModelQuantizationConfig
+ */
+const de_ModelQuantizationConfig = (output: any, context: __SerdeContext): ModelQuantizationConfig => {
+  return take(output, {
+    Image: __expectString,
+    OverrideEnvironment: (_: any) => de_OptimizationJobEnvironmentVariables(_, context),
   }) as any;
 };
 
@@ -25794,6 +26392,170 @@ const de_OnlineStoreSecurityConfig = (output: any, context: __SerdeContext): Onl
 };
 
 /**
+ * deserializeAws_json1_1OptimizationConfig
+ */
+const de_OptimizationConfig = (output: any, context: __SerdeContext): OptimizationConfig => {
+  if (output.ModelCompilationConfig != null) {
+    return {
+      ModelCompilationConfig: de_ModelCompilationConfig(output.ModelCompilationConfig, context),
+    };
+  }
+  if (output.ModelQuantizationConfig != null) {
+    return {
+      ModelQuantizationConfig: de_ModelQuantizationConfig(output.ModelQuantizationConfig, context),
+    };
+  }
+  return { $unknown: Object.entries(output)[0] };
+};
+
+/**
+ * deserializeAws_json1_1OptimizationConfigs
+ */
+const de_OptimizationConfigs = (output: any, context: __SerdeContext): OptimizationConfig[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_OptimizationConfig(__expectUnion(entry), context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationJobEnvironmentVariables
+ */
+const de_OptimizationJobEnvironmentVariables = (output: any, context: __SerdeContext): Record<string, string> => {
+  return Object.entries(output).reduce((acc: Record<string, string>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key as string] = __expectString(value) as any;
+    return acc;
+  }, {} as Record<string, string>);
+};
+
+/**
+ * deserializeAws_json1_1OptimizationJobModelSource
+ */
+const de_OptimizationJobModelSource = (output: any, context: __SerdeContext): OptimizationJobModelSource => {
+  return take(output, {
+    S3: (_: any) => de_OptimizationJobModelSourceS3(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationJobModelSourceS3
+ */
+const de_OptimizationJobModelSourceS3 = (output: any, context: __SerdeContext): OptimizationJobModelSourceS3 => {
+  return take(output, {
+    ModelAccessConfig: (_: any) => de_OptimizationModelAccessConfig(_, context),
+    S3Uri: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationJobOutputConfig
+ */
+const de_OptimizationJobOutputConfig = (output: any, context: __SerdeContext): OptimizationJobOutputConfig => {
+  return take(output, {
+    KmsKeyId: __expectString,
+    S3OutputLocation: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationJobSummaries
+ */
+const de_OptimizationJobSummaries = (output: any, context: __SerdeContext): OptimizationJobSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_OptimizationJobSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationJobSummary
+ */
+const de_OptimizationJobSummary = (output: any, context: __SerdeContext): OptimizationJobSummary => {
+  return take(output, {
+    CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    DeploymentInstanceType: __expectString,
+    LastModifiedTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    OptimizationEndTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    OptimizationJobArn: __expectString,
+    OptimizationJobName: __expectString,
+    OptimizationJobStatus: __expectString,
+    OptimizationStartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    OptimizationTypes: (_: any) => de_OptimizationTypes(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationModelAccessConfig
+ */
+const de_OptimizationModelAccessConfig = (output: any, context: __SerdeContext): OptimizationModelAccessConfig => {
+  return take(output, {
+    AcceptEula: __expectBoolean,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationOutput
+ */
+const de_OptimizationOutput = (output: any, context: __SerdeContext): OptimizationOutput => {
+  return take(output, {
+    RecommendedInferenceImage: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationTypes
+ */
+const de_OptimizationTypes = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationVpcConfig
+ */
+const de_OptimizationVpcConfig = (output: any, context: __SerdeContext): OptimizationVpcConfig => {
+  return take(output, {
+    SecurityGroupIds: (_: any) => de_OptimizationVpcSecurityGroupIds(_, context),
+    Subnets: (_: any) => de_OptimizationVpcSubnets(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationVpcSecurityGroupIds
+ */
+const de_OptimizationVpcSecurityGroupIds = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1OptimizationVpcSubnets
+ */
+const de_OptimizationVpcSubnets = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
  * deserializeAws_json1_1OutputConfig
  */
 const de_OutputConfig = (output: any, context: __SerdeContext): OutputConfig => {
@@ -26121,6 +26883,8 @@ const de_PipelineExecutionStepMetadata = (output: any, context: __SerdeContext):
     ClarifyCheck: (_: any) => de_ClarifyCheckStepMetadata(_, context),
     Condition: (_: any) => de_ConditionStepMetadata(_, context),
     EMR: (_: any) => de_EMRStepMetadata(_, context),
+    Endpoint: (_: any) => de_EndpointStepMetadata(_, context),
+    EndpointConfig: (_: any) => de_EndpointConfigStepMetadata(_, context),
     Fail: (_: any) => de_FailStepMetadata(_, context),
     Lambda: (_: any) => de_LambdaStepMetadata(_, context),
     Model: (_: any) => de_ModelStepMetadata(_, context),
@@ -27278,6 +28042,7 @@ const de_S3DataSource = (output: any, context: __SerdeContext): S3DataSource => 
 const de_S3ModelDataSource = (output: any, context: __SerdeContext): S3ModelDataSource => {
   return take(output, {
     CompressionType: __expectString,
+    HubAccessConfig: (_: any) => de_InferenceHubAccessConfig(_, context),
     ModelAccessConfig: (_: any) => de_ModelAccessConfig(_, context),
     S3DataType: __expectString,
     S3Uri: __expectString,
@@ -27845,6 +28610,16 @@ const de_StudioLifecycleConfigsList = (output: any, context: __SerdeContext): St
       return de_StudioLifecycleConfigDetails(entry, context);
     });
   return retVal;
+};
+
+/**
+ * deserializeAws_json1_1StudioWebPortalSettings
+ */
+const de_StudioWebPortalSettings = (output: any, context: __SerdeContext): StudioWebPortalSettings => {
+  return take(output, {
+    HiddenAppTypes: (_: any) => de_HiddenAppTypesList(_, context),
+    HiddenMlTools: (_: any) => de_HiddenMlToolsList(_, context),
+  }) as any;
 };
 
 /**
@@ -29215,6 +29990,7 @@ const de_UserSettings = (output: any, context: __SerdeContext): UserSettings => 
     SharingSettings: (_: any) => de_SharingSettings(_, context),
     SpaceStorageSettings: (_: any) => de_DefaultSpaceStorageSettings(_, context),
     StudioWebPortal: __expectString,
+    StudioWebPortalSettings: (_: any) => de_StudioWebPortalSettings(_, context),
     TensorBoardAppSettings: (_: any) => de_TensorBoardAppSettings(_, context),
   }) as any;
 };

@@ -29,12 +29,12 @@ export interface CreateUserProfileCommandOutput extends CreateUserProfileRespons
 
 /**
  * <p>Creates a user profile. A user profile represents a single user within a domain, and is
- *      the main way to reference a "person" for the purposes of sharing, reporting, and other
- *      user-oriented features. This entity is created when a user onboards to a domain. If an
- *      administrator invites a person by email or imports them from IAM Identity Center, a user profile is
- *      automatically created. A user profile is the primary holder of settings for an individual
- *      user and has a reference to the user's private Amazon Elastic File System home directory.
- *    </p>
+ *       the main way to reference a "person" for the purposes of sharing, reporting, and other
+ *       user-oriented features. This entity is created when a user onboards to a domain. If an
+ *       administrator invites a person by email or imports them from IAM Identity Center, a user
+ *       profile is automatically created. A user profile is the primary holder of settings for an
+ *       individual user and has a reference to the user's private Amazon Elastic File System home
+ *       directory. </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -156,6 +156,10 @@ export interface CreateUserProfileCommandOutput extends CreateUserProfileRespons
  *       GenerativeAiSettings: { // GenerativeAiSettings
  *         AmazonBedrockRoleArn: "STRING_VALUE",
  *       },
+ *       EmrServerlessSettings: { // EmrServerlessSettings
+ *         ExecutionRoleArn: "STRING_VALUE",
+ *         Status: "ENABLED" || "DISABLED",
+ *       },
  *     },
  *     CodeEditorAppSettings: { // CodeEditorAppSettings
  *       DefaultResourceSpec: {
@@ -193,6 +197,14 @@ export interface CreateUserProfileCommandOutput extends CreateUserProfileRespons
  *           RepositoryUrl: "STRING_VALUE", // required
  *         },
  *       ],
+ *       EmrSettings: { // EmrSettings
+ *         AssumableRoleArns: [ // AssumableRoleArns
+ *           "STRING_VALUE",
+ *         ],
+ *         ExecutionRoleArns: [ // ExecutionRoleArns
+ *           "STRING_VALUE",
+ *         ],
+ *       },
  *     },
  *     SpaceStorageSettings: { // DefaultSpaceStorageSettings
  *       DefaultEbsStorageSettings: { // DefaultEbsStorageSettings
@@ -214,6 +226,14 @@ export interface CreateUserProfileCommandOutput extends CreateUserProfileRespons
  *         },
  *       },
  *     ],
+ *     StudioWebPortalSettings: { // StudioWebPortalSettings
+ *       HiddenMlTools: [ // HiddenMlToolsList
+ *         "DataWrangler" || "FeatureStore" || "EmrClusters" || "AutoMl" || "Experiments" || "Training" || "ModelEvaluation" || "Pipelines" || "Models" || "JumpStart" || "InferenceRecommender" || "Endpoints" || "Projects" || "InferenceOptimization",
+ *       ],
+ *       HiddenAppTypes: [ // HiddenAppTypesList
+ *         "JupyterServer" || "KernelGateway" || "DetailedProfiler" || "TensorBoard" || "CodeEditor" || "JupyterLab" || "RStudioServerPro" || "RSessionGateway" || "Canvas",
+ *       ],
+ *     },
  *   },
  * };
  * const command = new CreateUserProfileCommand(input);

@@ -59,8 +59,13 @@ import { CreateHsmCommandInput, CreateHsmCommandOutput } from "./commands/Create
 import { DeleteBackupCommandInput, DeleteBackupCommandOutput } from "./commands/DeleteBackupCommand";
 import { DeleteClusterCommandInput, DeleteClusterCommandOutput } from "./commands/DeleteClusterCommand";
 import { DeleteHsmCommandInput, DeleteHsmCommandOutput } from "./commands/DeleteHsmCommand";
+import {
+  DeleteResourcePolicyCommandInput,
+  DeleteResourcePolicyCommandOutput,
+} from "./commands/DeleteResourcePolicyCommand";
 import { DescribeBackupsCommandInput, DescribeBackupsCommandOutput } from "./commands/DescribeBackupsCommand";
 import { DescribeClustersCommandInput, DescribeClustersCommandOutput } from "./commands/DescribeClustersCommand";
+import { GetResourcePolicyCommandInput, GetResourcePolicyCommandOutput } from "./commands/GetResourcePolicyCommand";
 import { InitializeClusterCommandInput, InitializeClusterCommandOutput } from "./commands/InitializeClusterCommand";
 import { ListTagsCommandInput, ListTagsCommandOutput } from "./commands/ListTagsCommand";
 import {
@@ -68,6 +73,7 @@ import {
   ModifyBackupAttributesCommandOutput,
 } from "./commands/ModifyBackupAttributesCommand";
 import { ModifyClusterCommandInput, ModifyClusterCommandOutput } from "./commands/ModifyClusterCommand";
+import { PutResourcePolicyCommandInput, PutResourcePolicyCommandOutput } from "./commands/PutResourcePolicyCommand";
 import { RestoreBackupCommandInput, RestoreBackupCommandOutput } from "./commands/RestoreBackupCommand";
 import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
@@ -92,12 +98,15 @@ export type ServiceInputTypes =
   | DeleteBackupCommandInput
   | DeleteClusterCommandInput
   | DeleteHsmCommandInput
+  | DeleteResourcePolicyCommandInput
   | DescribeBackupsCommandInput
   | DescribeClustersCommandInput
+  | GetResourcePolicyCommandInput
   | InitializeClusterCommandInput
   | ListTagsCommandInput
   | ModifyBackupAttributesCommandInput
   | ModifyClusterCommandInput
+  | PutResourcePolicyCommandInput
   | RestoreBackupCommandInput
   | TagResourceCommandInput
   | UntagResourceCommandInput;
@@ -112,12 +121,15 @@ export type ServiceOutputTypes =
   | DeleteBackupCommandOutput
   | DeleteClusterCommandOutput
   | DeleteHsmCommandOutput
+  | DeleteResourcePolicyCommandOutput
   | DescribeBackupsCommandOutput
   | DescribeClustersCommandOutput
+  | GetResourcePolicyCommandOutput
   | InitializeClusterCommandOutput
   | ListTagsCommandOutput
   | ModifyBackupAttributesCommandOutput
   | ModifyClusterCommandOutput
+  | PutResourcePolicyCommandOutput
   | RestoreBackupCommandOutput
   | TagResourceCommandOutput
   | UntagResourceCommandOutput;
@@ -259,11 +271,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type CloudHSMV2ClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -279,11 +291,11 @@ export interface CloudHSMV2ClientConfig extends CloudHSMV2ClientConfigType {}
 export type CloudHSMV2ClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -294,7 +306,7 @@ export type CloudHSMV2ClientResolvedConfigType = __SmithyResolvedConfiguration<_
 export interface CloudHSMV2ClientResolvedConfig extends CloudHSMV2ClientResolvedConfigType {}
 
 /**
- * <p>For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS
+ * <p>For more information about CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">CloudHSM</a> and the <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/">
  *       CloudHSM User Guide</a>.</p>
  * @public
  */
@@ -312,25 +324,28 @@ export class CloudHSMV2Client extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<CloudHSMV2ClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultCloudHSMV2HttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: CloudHSMV2ClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -343,14 +358,5 @@ export class CloudHSMV2Client extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultCloudHSMV2HttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: CloudHSMV2ClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

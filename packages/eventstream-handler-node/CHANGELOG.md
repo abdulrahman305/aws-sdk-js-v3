@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+
+### Bug Fixes
+
+* **eventstream-handler-node:** start streaming without waiting for response ([#6311](https://github.com/aws/aws-sdk-js-v3/issues/6311)) ([0072f42](https://github.com/aws/aws-sdk-js-v3/commit/0072f426732e3e361839ea0b34545ff1f6e800da))
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/eventstream-handler-node
+
+
+
+
+
+# [3.605.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.604.0...v3.605.0) (2024-06-26)
+
+
+### Bug Fixes
+
+* **eventstream-handler-node:** add system clock offset to event signing streams ([#6227](https://github.com/aws/aws-sdk-js-v3/issues/6227)) ([4687f53](https://github.com/aws/aws-sdk-js-v3/commit/4687f53df8cfb397f04fa10865918b36cb4f0f33))
+
+
+
+
+
 # [3.598.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.597.0...v3.598.0) (2024-06-14)
 
 **Note:** Version bump only for package @aws-sdk/eventstream-handler-node

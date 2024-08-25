@@ -257,6 +257,14 @@ CreateAsset
 </details>
 <details>
 <summary>
+CreateAssetFilter
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/CreateAssetFilterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateAssetFilterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateAssetFilterCommandOutput/)
+
+</details>
+<details>
+<summary>
 CreateAssetRevision
 </summary>
 
@@ -269,6 +277,22 @@ CreateAssetType
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/CreateAssetTypeCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateAssetTypeCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateAssetTypeCommandOutput/)
+
+</details>
+<details>
+<summary>
+CreateDataProduct
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/CreateDataProductCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateDataProductCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateDataProductCommandOutput/)
+
+</details>
+<details>
+<summary>
+CreateDataProductRevision
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/CreateDataProductRevisionCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateDataProductRevisionCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/CreateDataProductRevisionCommandOutput/)
 
 </details>
 <details>
@@ -409,10 +433,26 @@ DeleteAsset
 </details>
 <details>
 <summary>
+DeleteAssetFilter
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/DeleteAssetFilterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/DeleteAssetFilterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/DeleteAssetFilterCommandOutput/)
+
+</details>
+<details>
+<summary>
 DeleteAssetType
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/DeleteAssetTypeCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/DeleteAssetTypeCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/DeleteAssetTypeCommandOutput/)
+
+</details>
+<details>
+<summary>
+DeleteDataProduct
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/DeleteDataProductCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/DeleteDataProductCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/DeleteDataProductCommandOutput/)
 
 </details>
 <details>
@@ -561,10 +601,26 @@ GetAsset
 </details>
 <details>
 <summary>
+GetAssetFilter
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/GetAssetFilterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetAssetFilterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetAssetFilterCommandOutput/)
+
+</details>
+<details>
+<summary>
 GetAssetType
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/GetAssetTypeCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetAssetTypeCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetAssetTypeCommandOutput/)
+
+</details>
+<details>
+<summary>
+GetDataProduct
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/GetDataProductCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetDataProductCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetDataProductCommandOutput/)
 
 </details>
 <details>
@@ -625,6 +681,14 @@ GetEnvironmentBlueprintConfiguration
 </details>
 <details>
 <summary>
+GetEnvironmentCredentials
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/GetEnvironmentCredentialsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetEnvironmentCredentialsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetEnvironmentCredentialsCommandOutput/)
+
+</details>
+<details>
+<summary>
 GetEnvironmentProfile
 </summary>
 
@@ -669,6 +733,14 @@ GetIamPortalLoginUrl
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/GetIamPortalLoginUrlCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetIamPortalLoginUrlCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetIamPortalLoginUrlCommandOutput/)
+
+</details>
+<details>
+<summary>
+GetLineageNode
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/GetLineageNodeCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetLineageNodeCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/GetLineageNodeCommandOutput/)
 
 </details>
 <details>
@@ -745,10 +817,26 @@ GetUserProfile
 </details>
 <details>
 <summary>
+ListAssetFilters
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/ListAssetFiltersCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListAssetFiltersCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListAssetFiltersCommandOutput/)
+
+</details>
+<details>
+<summary>
 ListAssetRevisions
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/ListAssetRevisionsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListAssetRevisionsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListAssetRevisionsCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListDataProductRevisions
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/ListDataProductRevisionsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListDataProductRevisionsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListDataProductRevisionsCommandOutput/)
 
 </details>
 <details>
@@ -821,6 +909,14 @@ ListEnvironments
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/ListEnvironmentsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListEnvironmentsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListEnvironmentsCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListLineageNodeHistory
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/ListLineageNodeHistoryCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListLineageNodeHistoryCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListLineageNodeHistoryCommandOutput/)
 
 </details>
 <details>
@@ -901,6 +997,14 @@ ListTimeSeriesDataPoints
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/ListTimeSeriesDataPointsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListTimeSeriesDataPointsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/ListTimeSeriesDataPointsCommandOutput/)
+
+</details>
+<details>
+<summary>
+PostLineageEvent
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/PostLineageEventCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/PostLineageEventCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/PostLineageEventCommandOutput/)
 
 </details>
 <details>
@@ -1013,6 +1117,14 @@ UntagResource
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/UntagResourceCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/UntagResourceCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/UntagResourceCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateAssetFilter
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/datazone/command/UpdateAssetFilterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/UpdateAssetFilterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-datazone/Interface/UpdateAssetFilterCommandOutput/)
 
 </details>
 <details>

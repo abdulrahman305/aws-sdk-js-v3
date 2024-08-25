@@ -40,7 +40,7 @@ export interface BatchGetSchemaAnalysisRuleCommandOutput extends BatchGetSchemaA
  *   schemaAnalysisRuleRequests: [ // SchemaAnalysisRuleRequestList // required
  *     { // SchemaAnalysisRuleRequest
  *       name: "STRING_VALUE", // required
- *       type: "AGGREGATION" || "LIST" || "CUSTOM", // required
+ *       type: "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE", // required
  *     },
  *   ],
  * };
@@ -50,7 +50,7 @@ export interface BatchGetSchemaAnalysisRuleCommandOutput extends BatchGetSchemaA
  * //   analysisRules: [ // SchemaAnalysisRuleList // required
  * //     { // AnalysisRule
  * //       collaborationId: "STRING_VALUE", // required
- * //       type: "AGGREGATION" || "LIST" || "CUSTOM", // required
+ * //       type: "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE", // required
  * //       name: "STRING_VALUE", // required
  * //       createTime: new Date("TIMESTAMP"), // required
  * //       updateTime: new Date("TIMESTAMP"), // required
@@ -66,6 +66,7 @@ export interface BatchGetSchemaAnalysisRuleCommandOutput extends BatchGetSchemaA
  * //             listColumns: [ // required
  * //               "STRING_VALUE",
  * //             ],
+ * //             additionalAnalyses: "ALLOWED" || "REQUIRED" || "NOT_ALLOWED",
  * //           },
  * //           aggregation: { // AnalysisRuleAggregation
  * //             aggregateColumns: [ // AggregateColumnList // required
@@ -96,12 +97,17 @@ export interface BatchGetSchemaAnalysisRuleCommandOutput extends BatchGetSchemaA
  * //                 type: "STRING_VALUE", // required
  * //               },
  * //             ],
+ * //             additionalAnalyses: "ALLOWED" || "REQUIRED" || "NOT_ALLOWED",
  * //           },
  * //           custom: { // AnalysisRuleCustom
  * //             allowedAnalyses: [ // AllowedAnalysesList // required
  * //               "STRING_VALUE",
  * //             ],
  * //             allowedAnalysisProviders: [ // AllowedAnalysisProviderList
+ * //               "STRING_VALUE",
+ * //             ],
+ * //             additionalAnalyses: "ALLOWED" || "REQUIRED" || "NOT_ALLOWED",
+ * //             disallowedOutputColumns: [
  * //               "STRING_VALUE",
  * //             ],
  * //             differentialPrivacy: { // DifferentialPrivacyConfiguration
@@ -112,6 +118,17 @@ export interface BatchGetSchemaAnalysisRuleCommandOutput extends BatchGetSchemaA
  * //               ],
  * //             },
  * //           },
+ * //           idMappingTable: { // AnalysisRuleIdMappingTable
+ * //             joinColumns: "<AnalysisRuleColumnList>", // required
+ * //             queryConstraints: [ // QueryConstraintList // required
+ * //               { // QueryConstraint Union: only one key present
+ * //                 requireOverlap: { // QueryConstraintRequireOverlap
+ * //                   columns: "<AnalysisRuleColumnList>",
+ * //                 },
+ * //               },
+ * //             ],
+ * //             dimensionColumns: "<AnalysisRuleColumnList>",
+ * //           },
  * //         },
  * //       },
  * //     },
@@ -119,7 +136,7 @@ export interface BatchGetSchemaAnalysisRuleCommandOutput extends BatchGetSchemaA
  * //   errors: [ // BatchGetSchemaAnalysisRuleErrorList // required
  * //     { // BatchGetSchemaAnalysisRuleError
  * //       name: "STRING_VALUE", // required
- * //       type: "AGGREGATION" || "LIST" || "CUSTOM", // required
+ * //       type: "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE", // required
  * //       code: "STRING_VALUE", // required
  * //       message: "STRING_VALUE", // required
  * //     },

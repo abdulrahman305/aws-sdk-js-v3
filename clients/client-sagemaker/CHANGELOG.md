@@ -3,6 +3,174 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.637.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.636.0...v3.637.0) (2024-08-22)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.633.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.632.0...v3.633.0) (2024-08-16)
+
+
+### Features
+
+* **client-sagemaker:** Introduce Endpoint and EndpointConfig Arns in sagemaker:ListPipelineExecutionSteps API response ([cbc6a87](https://github.com/aws/aws-sdk-js-v3/commit/cbc6a8735822a0d9618b11bf913436daea301582))
+
+
+
+
+
+# [3.632.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.631.0...v3.632.0) (2024-08-15)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.631.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.630.0...v3.631.0) (2024-08-14)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+
+### Features
+
+* **client-sagemaker:** Releasing large data support as part of CreateAutoMLJobV2 in SageMaker Autopilot and CreateDomain API for SageMaker Canvas. ([014f34c](https://github.com/aws/aws-sdk-js-v3/commit/014f34c3c59c8bd89a632b46c2282ee8329acda7))
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.623.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.622.0...v3.623.0) (2024-08-02)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+
+### Features
+
+* **client-sagemaker:** This release adds support for Amazon EMR Serverless applications in SageMaker Studio for running data processing jobs. ([b43bb89](https://github.com/aws/aws-sdk-js-v3/commit/b43bb894c4a1689f1863e7d1aa09beecf9311840))
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+## [3.620.1](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.0...v3.620.1) (2024-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+
+### Features
+
+* **client-sagemaker:** SageMaker Training supports R5, T3 and R5D instances family. And SageMaker Processing supports G5 and R5D instances family. ([709db60](https://github.com/aws/aws-sdk-js-v3/commit/709db6085de9f0b28b8e91671bc8a4494ca0f095))
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.613.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.612.0...v3.613.0) (2024-07-09)
+
+
+### Features
+
+* **client-sagemaker:** This release 1/ enables optimization jobs that allows customers to perform Ahead-of-time compilation and quantization. 2/ allows customers to control access to Amazon Q integration in SageMaker Studio. 3/ enables AdditionalModelDataSources for CreateModel action. ([ec13654](https://github.com/aws/aws-sdk-js-v3/commit/ec13654a44164c68d565efd45cb232b73e09884e))
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.606.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.605.0...v3.606.0) (2024-06-27)
+
+
+### Features
+
+* **client-sagemaker:** Add capability for Admins to customize Studio experience for the user by showing or hiding Apps and MLTools. ([c8b653f](https://github.com/aws/aws-sdk-js-v3/commit/c8b653f9aa6937aea45353337aa15d4f1eaff06c))
+
+
+
+
+
+# [3.602.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.601.0...v3.602.0) (2024-06-20)
+
+
+### Features
+
+* **client-sagemaker:** Adds support for model references in Hub service, and adds support for cross-account access of Hubs ([1048205](https://github.com/aws/aws-sdk-js-v3/commit/10482051cc1f13c67f077e7258571fbd0ae8f230))
+
+
+
+
+
 # [3.600.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.599.0...v3.600.0) (2024-06-18)
 
 

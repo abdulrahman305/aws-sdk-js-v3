@@ -103,10 +103,13 @@ to add and import following polyfills in your react-native application:
 
 - [react-native-get-random-values](https://www.npmjs.com/package/react-native-get-random-values)
 - [react-native-url-polyfill](https://www.npmjs.com/package/react-native-url-polyfill)
+- [web-streams-polyfill](https://www.npmjs.com/package/web-streams-polyfill)
 
 ```js
 import "react-native-get-random-values";
 import "react-native-url-polyfill/auto";
+import "web-streams-polyfill/dist/polyfill";
+
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
 ```
 
@@ -643,6 +646,7 @@ bindings to be included as a dependency with your application. This functionalit
 
 - [Amazon S3 Multi-Region Access Points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPoints.html)
 - [Amazon S3 Object Integrity](https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html)
+- [Amazon CloudFront-KeyValueStore](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/kvs-with-functions-kvp.html)
 
 If the required AWS Common Runtime components are not installed, you will receive an error like:
 

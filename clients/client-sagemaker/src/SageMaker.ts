@@ -126,6 +126,11 @@ import {
 } from "./commands/CreateFlowDefinitionCommand";
 import { CreateHubCommand, CreateHubCommandInput, CreateHubCommandOutput } from "./commands/CreateHubCommand";
 import {
+  CreateHubContentReferenceCommand,
+  CreateHubContentReferenceCommandInput,
+  CreateHubContentReferenceCommandOutput,
+} from "./commands/CreateHubContentReferenceCommand";
+import {
   CreateHumanTaskUiCommand,
   CreateHumanTaskUiCommandInput,
   CreateHumanTaskUiCommandOutput,
@@ -217,6 +222,11 @@ import {
   CreateNotebookInstanceLifecycleConfigCommandInput,
   CreateNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/CreateNotebookInstanceLifecycleConfigCommand";
+import {
+  CreateOptimizationJobCommand,
+  CreateOptimizationJobCommandInput,
+  CreateOptimizationJobCommandOutput,
+} from "./commands/CreateOptimizationJobCommand";
 import {
   CreatePipelineCommand,
   CreatePipelineCommandInput,
@@ -387,6 +397,11 @@ import {
   DeleteHubContentCommandOutput,
 } from "./commands/DeleteHubContentCommand";
 import {
+  DeleteHubContentReferenceCommand,
+  DeleteHubContentReferenceCommandInput,
+  DeleteHubContentReferenceCommandOutput,
+} from "./commands/DeleteHubContentReferenceCommand";
+import {
   DeleteHumanTaskUiCommand,
   DeleteHumanTaskUiCommandInput,
   DeleteHumanTaskUiCommandOutput,
@@ -468,6 +483,11 @@ import {
   DeleteNotebookInstanceLifecycleConfigCommandInput,
   DeleteNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/DeleteNotebookInstanceLifecycleConfigCommand";
+import {
+  DeleteOptimizationJobCommand,
+  DeleteOptimizationJobCommandInput,
+  DeleteOptimizationJobCommandOutput,
+} from "./commands/DeleteOptimizationJobCommand";
 import {
   DeletePipelineCommand,
   DeletePipelineCommandInput,
@@ -738,6 +758,11 @@ import {
   DescribeNotebookInstanceLifecycleConfigCommandInput,
   DescribeNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/DescribeNotebookInstanceLifecycleConfigCommand";
+import {
+  DescribeOptimizationJobCommand,
+  DescribeOptimizationJobCommandInput,
+  DescribeOptimizationJobCommandOutput,
+} from "./commands/DescribeOptimizationJobCommand";
 import {
   DescribePipelineCommand,
   DescribePipelineCommandInput,
@@ -1112,6 +1137,11 @@ import {
   ListNotebookInstancesCommandOutput,
 } from "./commands/ListNotebookInstancesCommand";
 import {
+  ListOptimizationJobsCommand,
+  ListOptimizationJobsCommandInput,
+  ListOptimizationJobsCommandOutput,
+} from "./commands/ListOptimizationJobsCommand";
+import {
   ListPipelineExecutionsCommand,
   ListPipelineExecutionsCommandInput,
   ListPipelineExecutionsCommandOutput,
@@ -1320,6 +1350,11 @@ import {
   StopNotebookInstanceCommandInput,
   StopNotebookInstanceCommandOutput,
 } from "./commands/StopNotebookInstanceCommand";
+import {
+  StopOptimizationJobCommand,
+  StopOptimizationJobCommandInput,
+  StopOptimizationJobCommandOutput,
+} from "./commands/StopOptimizationJobCommand";
 import {
   StopPipelineExecutionCommand,
   StopPipelineExecutionCommandInput,
@@ -1544,6 +1579,7 @@ const commands = {
   CreateFeatureGroupCommand,
   CreateFlowDefinitionCommand,
   CreateHubCommand,
+  CreateHubContentReferenceCommand,
   CreateHumanTaskUiCommand,
   CreateHyperParameterTuningJobCommand,
   CreateImageCommand,
@@ -1564,6 +1600,7 @@ const commands = {
   CreateMonitoringScheduleCommand,
   CreateNotebookInstanceCommand,
   CreateNotebookInstanceLifecycleConfigCommand,
+  CreateOptimizationJobCommand,
   CreatePipelineCommand,
   CreatePresignedDomainUrlCommand,
   CreatePresignedMlflowTrackingServerUrlCommand,
@@ -1601,6 +1638,7 @@ const commands = {
   DeleteFlowDefinitionCommand,
   DeleteHubCommand,
   DeleteHubContentCommand,
+  DeleteHubContentReferenceCommand,
   DeleteHumanTaskUiCommand,
   DeleteHyperParameterTuningJobCommand,
   DeleteImageCommand,
@@ -1619,6 +1657,7 @@ const commands = {
   DeleteMonitoringScheduleCommand,
   DeleteNotebookInstanceCommand,
   DeleteNotebookInstanceLifecycleConfigCommand,
+  DeleteOptimizationJobCommand,
   DeletePipelineCommand,
   DeleteProjectCommand,
   DeleteSpaceCommand,
@@ -1677,6 +1716,7 @@ const commands = {
   DescribeMonitoringScheduleCommand,
   DescribeNotebookInstanceCommand,
   DescribeNotebookInstanceLifecycleConfigCommand,
+  DescribeOptimizationJobCommand,
   DescribePipelineCommand,
   DescribePipelineDefinitionForExecutionCommand,
   DescribePipelineExecutionCommand,
@@ -1758,6 +1798,7 @@ const commands = {
   ListMonitoringSchedulesCommand,
   ListNotebookInstanceLifecycleConfigsCommand,
   ListNotebookInstancesCommand,
+  ListOptimizationJobsCommand,
   ListPipelineExecutionsCommand,
   ListPipelineExecutionStepsCommand,
   ListPipelineParametersForExecutionCommand,
@@ -1803,6 +1844,7 @@ const commands = {
   StopMlflowTrackingServerCommand,
   StopMonitoringScheduleCommand,
   StopNotebookInstanceCommand,
+  StopOptimizationJobCommand,
   StopPipelineExecutionCommand,
   StopProcessingJobCommand,
   StopTrainingJobCommand,
@@ -2251,6 +2293,23 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link CreateHubContentReferenceCommand}
+   */
+  createHubContentReference(
+    args: CreateHubContentReferenceCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateHubContentReferenceCommandOutput>;
+  createHubContentReference(
+    args: CreateHubContentReferenceCommandInput,
+    cb: (err: any, data?: CreateHubContentReferenceCommandOutput) => void
+  ): void;
+  createHubContentReference(
+    args: CreateHubContentReferenceCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateHubContentReferenceCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateHumanTaskUiCommand}
    */
   createHumanTaskUi(
@@ -2574,6 +2633,23 @@ export interface SageMaker {
     args: CreateNotebookInstanceLifecycleConfigCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateNotebookInstanceLifecycleConfigCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateOptimizationJobCommand}
+   */
+  createOptimizationJob(
+    args: CreateOptimizationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateOptimizationJobCommandOutput>;
+  createOptimizationJob(
+    args: CreateOptimizationJobCommandInput,
+    cb: (err: any, data?: CreateOptimizationJobCommandOutput) => void
+  ): void;
+  createOptimizationJob(
+    args: CreateOptimizationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateOptimizationJobCommandOutput) => void
   ): void;
 
   /**
@@ -3135,6 +3211,23 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link DeleteHubContentReferenceCommand}
+   */
+  deleteHubContentReference(
+    args: DeleteHubContentReferenceCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteHubContentReferenceCommandOutput>;
+  deleteHubContentReference(
+    args: DeleteHubContentReferenceCommandInput,
+    cb: (err: any, data?: DeleteHubContentReferenceCommandOutput) => void
+  ): void;
+  deleteHubContentReference(
+    args: DeleteHubContentReferenceCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteHubContentReferenceCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteHumanTaskUiCommand}
    */
   deleteHumanTaskUi(
@@ -3423,6 +3516,23 @@ export interface SageMaker {
     args: DeleteNotebookInstanceLifecycleConfigCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteNotebookInstanceLifecycleConfigCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteOptimizationJobCommand}
+   */
+  deleteOptimizationJob(
+    args: DeleteOptimizationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteOptimizationJobCommandOutput>;
+  deleteOptimizationJob(
+    args: DeleteOptimizationJobCommandInput,
+    cb: (err: any, data?: DeleteOptimizationJobCommandOutput) => void
+  ): void;
+  deleteOptimizationJob(
+    args: DeleteOptimizationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteOptimizationJobCommandOutput) => void
   ): void;
 
   /**
@@ -4337,6 +4447,23 @@ export interface SageMaker {
     args: DescribeNotebookInstanceLifecycleConfigCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeNotebookInstanceLifecycleConfigCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeOptimizationJobCommand}
+   */
+  describeOptimizationJob(
+    args: DescribeOptimizationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeOptimizationJobCommandOutput>;
+  describeOptimizationJob(
+    args: DescribeOptimizationJobCommandInput,
+    cb: (err: any, data?: DescribeOptimizationJobCommandOutput) => void
+  ): void;
+  describeOptimizationJob(
+    args: DescribeOptimizationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeOptimizationJobCommandOutput) => void
   ): void;
 
   /**
@@ -5663,6 +5790,24 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link ListOptimizationJobsCommand}
+   */
+  listOptimizationJobs(): Promise<ListOptimizationJobsCommandOutput>;
+  listOptimizationJobs(
+    args: ListOptimizationJobsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListOptimizationJobsCommandOutput>;
+  listOptimizationJobs(
+    args: ListOptimizationJobsCommandInput,
+    cb: (err: any, data?: ListOptimizationJobsCommandOutput) => void
+  ): void;
+  listOptimizationJobs(
+    args: ListOptimizationJobsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListOptimizationJobsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListPipelineExecutionsCommand}
    */
   listPipelineExecutions(
@@ -6378,6 +6523,23 @@ export interface SageMaker {
     args: StopNotebookInstanceCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: StopNotebookInstanceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link StopOptimizationJobCommand}
+   */
+  stopOptimizationJob(
+    args: StopOptimizationJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<StopOptimizationJobCommandOutput>;
+  stopOptimizationJob(
+    args: StopOptimizationJobCommandInput,
+    cb: (err: any, data?: StopOptimizationJobCommandOutput) => void
+  ): void;
+  stopOptimizationJob(
+    args: StopOptimizationJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StopOptimizationJobCommandOutput) => void
   ): void;
 
   /**

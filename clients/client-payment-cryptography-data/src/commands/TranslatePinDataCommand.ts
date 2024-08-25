@@ -9,6 +9,7 @@ import {
   TranslatePinDataInput,
   TranslatePinDataInputFilterSensitiveLog,
   TranslatePinDataOutput,
+  TranslatePinDataOutputFilterSensitiveLog,
 } from "../models/models_0";
 import {
   PaymentCryptographyDataClientResolvedConfig,
@@ -102,6 +103,18 @@ export interface TranslatePinDataCommandOutput extends TranslatePinDataOutput, _
  *     DukptKeyDerivationType: "STRING_VALUE",
  *     DukptKeyVariant: "STRING_VALUE",
  *   },
+ *   IncomingWrappedKey: { // WrappedKey
+ *     WrappedKeyMaterial: { // WrappedKeyMaterial Union: only one key present
+ *       Tr31KeyBlock: "STRING_VALUE",
+ *     },
+ *     KeyCheckValueAlgorithm: "STRING_VALUE",
+ *   },
+ *   OutgoingWrappedKey: {
+ *     WrappedKeyMaterial: {//  Union: only one key present
+ *       Tr31KeyBlock: "STRING_VALUE",
+ *     },
+ *     KeyCheckValueAlgorithm: "STRING_VALUE",
+ *   },
  * };
  * const command = new TranslatePinDataCommand(input);
  * const response = await client.send(command);
@@ -158,7 +171,7 @@ export class TranslatePinDataCommand extends $Command
   })
   .s("PaymentCryptographyDataPlane", "TranslatePinData", {})
   .n("PaymentCryptographyDataClient", "TranslatePinDataCommand")
-  .f(TranslatePinDataInputFilterSensitiveLog, void 0)
+  .f(TranslatePinDataInputFilterSensitiveLog, TranslatePinDataOutputFilterSensitiveLog)
   .ser(se_TranslatePinDataCommand)
   .de(de_TranslatePinDataCommand)
   .build() {}

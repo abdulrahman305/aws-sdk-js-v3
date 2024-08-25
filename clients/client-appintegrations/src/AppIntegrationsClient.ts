@@ -55,6 +55,10 @@ import {
 } from "./auth/httpAuthSchemeProvider";
 import { CreateApplicationCommandInput, CreateApplicationCommandOutput } from "./commands/CreateApplicationCommand";
 import {
+  CreateDataIntegrationAssociationCommandInput,
+  CreateDataIntegrationAssociationCommandOutput,
+} from "./commands/CreateDataIntegrationAssociationCommand";
+import {
   CreateDataIntegrationCommandInput,
   CreateDataIntegrationCommandOutput,
 } from "./commands/CreateDataIntegrationCommand";
@@ -106,6 +110,10 @@ import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/Ta
 import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
 import { UpdateApplicationCommandInput, UpdateApplicationCommandOutput } from "./commands/UpdateApplicationCommand";
 import {
+  UpdateDataIntegrationAssociationCommandInput,
+  UpdateDataIntegrationAssociationCommandOutput,
+} from "./commands/UpdateDataIntegrationAssociationCommand";
+import {
   UpdateDataIntegrationCommandInput,
   UpdateDataIntegrationCommandOutput,
 } from "./commands/UpdateDataIntegrationCommand";
@@ -129,6 +137,7 @@ export { __Client };
  */
 export type ServiceInputTypes =
   | CreateApplicationCommandInput
+  | CreateDataIntegrationAssociationCommandInput
   | CreateDataIntegrationCommandInput
   | CreateEventIntegrationCommandInput
   | DeleteApplicationCommandInput
@@ -147,6 +156,7 @@ export type ServiceInputTypes =
   | TagResourceCommandInput
   | UntagResourceCommandInput
   | UpdateApplicationCommandInput
+  | UpdateDataIntegrationAssociationCommandInput
   | UpdateDataIntegrationCommandInput
   | UpdateEventIntegrationCommandInput;
 
@@ -155,6 +165,7 @@ export type ServiceInputTypes =
  */
 export type ServiceOutputTypes =
   | CreateApplicationCommandOutput
+  | CreateDataIntegrationAssociationCommandOutput
   | CreateDataIntegrationCommandOutput
   | CreateEventIntegrationCommandOutput
   | DeleteApplicationCommandOutput
@@ -173,6 +184,7 @@ export type ServiceOutputTypes =
   | TagResourceCommandOutput
   | UntagResourceCommandOutput
   | UpdateApplicationCommandOutput
+  | UpdateDataIntegrationAssociationCommandOutput
   | UpdateDataIntegrationCommandOutput
   | UpdateEventIntegrationCommandOutput;
 
@@ -313,11 +325,11 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
  */
 export type AppIntegrationsClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
-  RegionInputConfig &
-  EndpointInputConfig<EndpointParameters> &
-  RetryInputConfig &
-  HostHeaderInputConfig &
   UserAgentInputConfig &
+  RetryInputConfig &
+  RegionInputConfig &
+  HostHeaderInputConfig &
+  EndpointInputConfig<EndpointParameters> &
   HttpAuthSchemeInputConfig &
   ClientInputEndpointParameters;
 /**
@@ -333,11 +345,11 @@ export interface AppIntegrationsClientConfig extends AppIntegrationsClientConfig
 export type AppIntegrationsClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpHandlerOptions> &
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
-  RegionResolvedConfig &
-  EndpointResolvedConfig<EndpointParameters> &
-  RetryResolvedConfig &
-  HostHeaderResolvedConfig &
   UserAgentResolvedConfig &
+  RetryResolvedConfig &
+  RegionResolvedConfig &
+  HostHeaderResolvedConfig &
+  EndpointResolvedConfig<EndpointParameters> &
   HttpAuthSchemeResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
@@ -348,13 +360,40 @@ export type AppIntegrationsClientResolvedConfigType = __SmithyResolvedConfigurat
 export interface AppIntegrationsClientResolvedConfig extends AppIntegrationsClientResolvedConfigType {}
 
 /**
- * <p>The Amazon AppIntegrations service enables you to configure and reuse connections to external
+ * <ul>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_AppIntegrations_Service.html">Amazon AppIntegrations
+ *             actions</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_Types_Amazon_AppIntegrations_Service.html">Amazon AppIntegrations
+ *             data types</a>
+ *                </p>
+ *             </li>
+ *          </ul>
+ *          <p>The Amazon AppIntegrations service enables you to configure and reuse connections to external
  *       applications.</p>
  *          <p>For information about how you can use external applications with Amazon Connect, see
- *         <a href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built
- *         integrations</a> and <a href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html">Deliver information to agents
- *         using Amazon Connect Wisdom</a> in the <i>Amazon Connect Administrator
- *         Guide</i>.</p>
+ *       the following topics in the <i>Amazon Connect Administrator
+ *       Guide</i>:</p>
+ *          <ul>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/adminguide/3p-apps.html">Third-party
+ *             applications (3p apps) in the agent workspace</a>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <a href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-q-connect.html">Use
+ *             Amazon Q in Connect for generative AI–powered agent assistance in
+ *           real-time</a>
+ *                </p>
+ *             </li>
+ *          </ul>
  * @public
  */
 export class AppIntegrationsClient extends __Client<
@@ -371,25 +410,28 @@ export class AppIntegrationsClient extends __Client<
   constructor(...[configuration]: __CheckOptionalClientConfig<AppIntegrationsClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
     const _config_1 = resolveClientEndpointParameters(_config_0);
-    const _config_2 = resolveRegionConfig(_config_1);
-    const _config_3 = resolveEndpointConfig(_config_2);
-    const _config_4 = resolveRetryConfig(_config_3);
+    const _config_2 = resolveUserAgentConfig(_config_1);
+    const _config_3 = resolveRetryConfig(_config_2);
+    const _config_4 = resolveRegionConfig(_config_3);
     const _config_5 = resolveHostHeaderConfig(_config_4);
-    const _config_6 = resolveUserAgentConfig(_config_5);
+    const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
     super(_config_8);
     this.config = _config_8;
+    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
     this.middlewareStack.use(getHostHeaderPlugin(this.config));
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
-    this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(
       getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
-        httpAuthSchemeParametersProvider: this.getDefaultHttpAuthSchemeParametersProvider(),
-        identityProviderConfigProvider: this.getIdentityProviderConfigProvider(),
+        httpAuthSchemeParametersProvider: defaultAppIntegrationsHttpAuthSchemeParametersProvider,
+        identityProviderConfigProvider: async (config: AppIntegrationsClientResolvedConfig) =>
+          new DefaultIdentityProviderConfig({
+            "aws.auth#sigv4": config.credentials,
+          }),
       })
     );
     this.middlewareStack.use(getHttpSigningPlugin(this.config));
@@ -402,14 +444,5 @@ export class AppIntegrationsClient extends __Client<
    */
   destroy(): void {
     super.destroy();
-  }
-  private getDefaultHttpAuthSchemeParametersProvider() {
-    return defaultAppIntegrationsHttpAuthSchemeParametersProvider;
-  }
-  private getIdentityProviderConfigProvider() {
-    return async (config: AppIntegrationsClientResolvedConfig) =>
-      new DefaultIdentityProviderConfig({
-        "aws.auth#sigv4": config.credentials,
-      });
   }
 }

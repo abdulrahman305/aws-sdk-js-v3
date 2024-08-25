@@ -20,8 +20,6 @@ import {
   CreatedByInfo,
   DirectoryType,
   Distribution,
-  EvaluationScore,
-  EvaluationStatus,
   EventSourceName,
   FileStatusType,
   FileUseCaseType,
@@ -51,17 +49,316 @@ import {
   TaskTemplateDefaults,
   TaskTemplateField,
   TaskTemplateStatus,
-  UseCaseType,
   UserIdentityInfo,
   UserIdentityInfoFilterSensitiveLog,
   UserPhoneConfig,
-  UserProficiency,
   View,
   ViewFilterSensitiveLog,
-  ViewType,
   VocabularyLanguageCode,
   VocabularyState,
 } from "./models_0";
+
+/**
+ * @public
+ * @enum
+ */
+export const RoutingCriteriaStepStatus = {
+  ACTIVE: "ACTIVE",
+  EXPIRED: "EXPIRED",
+  INACTIVE: "INACTIVE",
+  JOINED: "JOINED",
+} as const;
+
+/**
+ * @public
+ */
+export type RoutingCriteriaStepStatus = (typeof RoutingCriteriaStepStatus)[keyof typeof RoutingCriteriaStepStatus];
+
+/**
+ * <p>A value for a segment attribute. This is structured as a map where the key is
+ *     <code>valueString</code> and the value is a string.</p>
+ * @public
+ */
+export interface SegmentAttributeValue {
+  /**
+   * <p>The value of a segment attribute.</p>
+   * @public
+   */
+  ValueString?: string;
+}
+
+/**
+ * <p>Information about Amazon Connect Wisdom.</p>
+ * @public
+ */
+export interface WisdomInfo {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Wisdom session.</p>
+   * @public
+   */
+  SessionArn?: string;
+}
+
+/**
+ * @public
+ */
+export interface DescribeContactEvaluationRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>A unique identifier for the contact evaluation.</p>
+   * @public
+   */
+  EvaluationId: string | undefined;
+}
+
+/**
+ * <p>Information about answer data for a contact evaluation. Answer data must be either string,
+ *    numeric, or not applicable.</p>
+ * @public
+ */
+export type EvaluationAnswerData =
+  | EvaluationAnswerData.NotApplicableMember
+  | EvaluationAnswerData.NumericValueMember
+  | EvaluationAnswerData.StringValueMember
+  | EvaluationAnswerData.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace EvaluationAnswerData {
+  /**
+   * <p>The string value for an answer in a contact evaluation.</p>
+   * @public
+   */
+  export interface StringValueMember {
+    StringValue: string;
+    NumericValue?: never;
+    NotApplicable?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The numeric value for an answer in a contact evaluation.</p>
+   * @public
+   */
+  export interface NumericValueMember {
+    StringValue?: never;
+    NumericValue: number;
+    NotApplicable?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The flag to mark the question as not applicable.</p>
+   * @public
+   */
+  export interface NotApplicableMember {
+    StringValue?: never;
+    NumericValue?: never;
+    NotApplicable: boolean;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    StringValue?: never;
+    NumericValue?: never;
+    NotApplicable?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    StringValue: (value: string) => T;
+    NumericValue: (value: number) => T;
+    NotApplicable: (value: boolean) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: EvaluationAnswerData, visitor: Visitor<T>): T => {
+    if (value.StringValue !== undefined) return visitor.StringValue(value.StringValue);
+    if (value.NumericValue !== undefined) return visitor.NumericValue(value.NumericValue);
+    if (value.NotApplicable !== undefined) return visitor.NotApplicable(value.NotApplicable);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>Information about output answers for a contact evaluation.</p>
+ * @public
+ */
+export interface EvaluationAnswerOutput {
+  /**
+   * <p>The value for an answer in a contact evaluation.</p>
+   * @public
+   */
+  Value?: EvaluationAnswerData;
+
+  /**
+   * <p>The system suggested value for an answer in a contact evaluation.</p>
+   * @public
+   */
+  SystemSuggestedValue?: EvaluationAnswerData;
+}
+
+/**
+ * <p>Information about scores of a contact evaluation item (section or question).</p>
+ * @public
+ */
+export interface EvaluationScore {
+  /**
+   * <p>The score percentage for an item in a contact evaluation.</p>
+   * @public
+   */
+  Percentage?: number;
+
+  /**
+   * <p>The flag to mark the item as not applicable for scoring.</p>
+   * @public
+   */
+  NotApplicable?: boolean;
+
+  /**
+   * <p>The flag that marks the item as automatic fail. If the item or a child item gets an
+   *    automatic fail answer, this flag will be true.</p>
+   * @public
+   */
+  AutomaticFail?: boolean;
+}
+
+/**
+ * <p>Metadata information about a contact evaluation.</p>
+ * @public
+ */
+export interface EvaluationMetadata {
+  /**
+   * <p>The identifier of the contact in this instance of Amazon Connect. </p>
+   * @public
+   */
+  ContactId: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the user who last updated the evaluation.</p>
+   * @public
+   */
+  EvaluatorArn: string | undefined;
+
+  /**
+   * <p>The identifier of the agent who performed the contact.</p>
+   * @public
+   */
+  ContactAgentId?: string;
+
+  /**
+   * <p>The overall score of the contact evaluation.</p>
+   * @public
+   */
+  Score?: EvaluationScore;
+}
+
+/**
+ * <p>Information about notes for a contact evaluation.</p>
+ * @public
+ */
+export interface EvaluationNote {
+  /**
+   * <p>The note for an item (section or question) in a contact evaluation.</p>
+   *          <note>
+   *             <p>Even though a note in an evaluation can have up to 3072 chars, there is also a limit on the
+   *     total number of chars for all the notes in the evaluation combined. Assuming there are N
+   *     questions in the evaluation being submitted, then the max char limit for all notes combined is N
+   *     x 1024.</p>
+   *          </note>
+   * @public
+   */
+  Value?: string;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const EvaluationStatus = {
+  DRAFT: "DRAFT",
+  SUBMITTED: "SUBMITTED",
+} as const;
+
+/**
+ * @public
+ */
+export type EvaluationStatus = (typeof EvaluationStatus)[keyof typeof EvaluationStatus];
+
+/**
+ * <p>Information about a contact evaluation.</p>
+ * @public
+ */
+export interface Evaluation {
+  /**
+   * <p>A unique identifier for the contact evaluation.</p>
+   * @public
+   */
+  EvaluationId: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) for the contact evaluation resource.</p>
+   * @public
+   */
+  EvaluationArn: string | undefined;
+
+  /**
+   * <p>Metadata about the contact evaluation.</p>
+   * @public
+   */
+  Metadata: EvaluationMetadata | undefined;
+
+  /**
+   * <p>A map of question identifiers to answer value.</p>
+   * @public
+   */
+  Answers: Record<string, EvaluationAnswerOutput> | undefined;
+
+  /**
+   * <p>A map of question identifiers to note value.</p>
+   * @public
+   */
+  Notes: Record<string, EvaluationNote> | undefined;
+
+  /**
+   * <p>The status of the contact evaluation.</p>
+   * @public
+   */
+  Status: EvaluationStatus | undefined;
+
+  /**
+   * <p>A map of item (section or question) identifiers to score value.</p>
+   * @public
+   */
+  Scores?: Record<string, EvaluationScore>;
+
+  /**
+   * <p>The timestamp for when the evaluation was created.</p>
+   * @public
+   */
+  CreatedTime: Date | undefined;
+
+  /**
+   * <p>The timestamp for when the evaluation was last updated.</p>
+   * @public
+   */
+  LastModifiedTime: Date | undefined;
+
+  /**
+   * <p>The tags used to organize, track, or control access for this resource. For example, \{ "Tags": \{"key1":"value1", "key2":"value2"\} \}.</p>
+   * @public
+   */
+  Tags?: Record<string, string>;
+}
 
 /**
  * <p>The flow has not been published.</p>
@@ -4273,7 +4570,8 @@ export interface MetricFilterV2 {
  */
 export interface ThresholdV2 {
   /**
-   * <p>The type of comparison. Only "less than" (LT) comparisons are supported.</p>
+   * <p>The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are
+   *    supported.</p>
    * @public
    */
   Comparison?: string;
@@ -4403,6 +4701,9 @@ export interface GetMetricDataV2Request {
    *                <p>Agents</p>
    *             </li>
    *             <li>
+   *                <p>Campaigns</p>
+   *             </li>
+   *             <li>
    *                <p>Channels</p>
    *             </li>
    *             <li>
@@ -4423,6 +4724,8 @@ export interface GetMetricDataV2Request {
    *          </ul>
    *          <p>At least one filter must be passed from queues, routing profiles, agents, or user hierarchy
    *    groups.</p>
+   *          <p>For metrics for outbound campaigns analytics, you can also use campaigns to satisfy at least
+   *    one filter requirement.</p>
    *          <p>To filter by phone number, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/create-historical-metrics-report.html">Create a historical
    *     metrics report</a> in the <i>Amazon Connect Administrator
    *    Guide</i>.</p>
@@ -4434,15 +4737,15 @@ export interface GetMetricDataV2Request {
    *      a single request. Valid filter keys: <code>AGENT</code> |
    *       <code>AGENT_HIERARCHY_LEVEL_ONE</code> | <code>AGENT_HIERARCHY_LEVEL_TWO</code> |
    *       <code>AGENT_HIERARCHY_LEVEL_THREE</code> | <code>AGENT_HIERARCHY_LEVEL_FOUR</code> |
-   *       <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>CASE_TEMPLATE_ARN</code> |
-   *       <code>CASE_STATUS</code> | <code>CHANNEL</code> |
-   *       <code>contact/segmentAttributes/connect:Subtype</code> | <code>FEATURE</code> |
-   *       <code>FLOW_TYPE</code> | <code>FLOWS_NEXT_RESOURCE_ID</code> |
-   *       <code>FLOWS_NEXT_RESOURCE_QUEUE_ID</code> | <code>FLOWS_OUTCOME_TYPE</code> |
-   *       <code>FLOWS_RESOURCE_ID</code> | <code>INITIATION_METHOD</code> |
-   *       <code>RESOURCE_PUBLISHED_TIMESTAMP</code> | <code>ROUTING_PROFILE</code> |
-   *       <code>ROUTING_STEP_EXPRESSION</code> | <code>QUEUE</code> | <code>Q_CONNECT_ENABLED</code> |
-   *     </p>
+   *       <code>AGENT_HIERARCHY_LEVEL_FIVE</code> | <code>ANSWERING_MACHINE_DETECTION_STATUS</code> |
+   *       <code>CAMPAIGN</code> | <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> |
+   *       <code>CHANNEL</code> | <code>contact/segmentAttributes/connect:Subtype</code> |
+   *       <code>DISCONNECT_REASON</code> | <code>FEATURE</code> | <code>FLOW_TYPE</code> |
+   *       <code>FLOWS_NEXT_RESOURCE_ID</code> | <code>FLOWS_NEXT_RESOURCE_QUEUE_ID</code> |
+   *       <code>FLOWS_OUTCOME_TYPE</code> | <code>FLOWS_RESOURCE_ID</code> |
+   *       <code>INITIATION_METHOD</code> | <code>RESOURCE_PUBLISHED_TIMESTAMP</code> |
+   *       <code>ROUTING_PROFILE</code> | <code>ROUTING_STEP_EXPRESSION</code> | <code>QUEUE</code> |
+   *       <code>Q_CONNECT_ENABLED</code> | </p>
    *             </li>
    *             <li>
    *                <p>
@@ -4475,6 +4778,9 @@ export interface GetMetricDataV2Request {
    *                   </li>
    *                </ul>
    *                <p>This filter is available only for contact record-driven metrics. </p>
+   *                <p>
+   *                   <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-outbound-campaigns_Campaign.html">Campaign</a> ARNs are valid <code>filterValues</code> for the <code>CAMPAIGN</code>
+   *      filter key.</p>
    *             </li>
    *          </ul>
    * @public
@@ -4489,12 +4795,13 @@ export interface GetMetricDataV2Request {
    *          <p>Valid grouping keys: <code>AGENT</code> | <code>AGENT_HIERARCHY_LEVEL_ONE</code> |
    *     <code>AGENT_HIERARCHY_LEVEL_TWO</code> | <code>AGENT_HIERARCHY_LEVEL_THREE</code> |
    *     <code>AGENT_HIERARCHY_LEVEL_FOUR</code> | <code>AGENT_HIERARCHY_LEVEL_FIVE</code> |
+   *     <code>ANSWERING_MACHINE_DETECTION_STATUS</code> | <code>CAMPAIGN</code> |
    *     <code>CASE_TEMPLATE_ARN</code> | <code>CASE_STATUS</code> | <code>CHANNEL</code> |
-   *     <code>contact/segmentAttributes/connect:Subtype</code> | <code>FLOWS_RESOURCE_ID</code> |
-   *     <code>FLOWS_MODULE_RESOURCE_ID</code> | <code>FLOW_TYPE</code> | <code>FLOWS_OUTCOME_TYPE</code>
-   *    | <code>INITIATION_METHOD</code> | <code>Q_CONNECT_ENABLED</code> | <code>QUEUE</code> |
-   *     <code>RESOURCE_PUBLISHED_TIMESTAMP</code> | <code>ROUTING_PROFILE</code> |
-   *     <code>ROUTING_STEP_EXPRESSION</code>
+   *     <code>contact/segmentAttributes/connect:Subtype</code> | <code>DISCONNECT_REASON</code> |
+   *     <code>FLOWS_RESOURCE_ID</code> | <code>FLOWS_MODULE_RESOURCE_ID</code> | <code>FLOW_TYPE</code>
+   *    | <code>FLOWS_OUTCOME_TYPE</code> | <code>INITIATION_METHOD</code> |
+   *     <code>Q_CONNECT_ENABLED</code> | <code>QUEUE</code> | <code>RESOURCE_PUBLISHED_TIMESTAMP</code>
+   *    | <code>ROUTING_PROFILE</code> | <code>ROUTING_STEP_EXPRESSION</code>
    *          </p>
    * @public
    */
@@ -4659,6 +4966,15 @@ export interface GetMetricDataV2Request {
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-conversation-duration-historical">Average conversation duration</a>
    *                </p>
    *             </dd>
+   *             <dt>AVG_DIALS_PER_MINUTE</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns
+   *       analytics.</p>
+   *                <p>Unit: Count</p>
+   *                <p>Valid groupings and filters: Campaign, Agent, Queue, Routing Profile</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-dials-historical">Average dials per minute</a>
+   *                </p>
+   *             </dd>
    *             <dt>AVG_FLOW_TIME</dt>
    *             <dd>
    *                <p>Unit: Seconds</p>
@@ -4819,51 +5135,45 @@ export interface GetMetricDataV2Request {
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-talk-time-customer-historical">Average customer talk time</a>
    *                </p>
    *             </dd>
+   *             <dt>AVG_WAIT_TIME_AFTER_CUSTOMER_CONNECTION</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns
+   *       analytics.</p>
+   *                <p>Unit: Seconds</p>
+   *                <p>Valid groupings and filters: Campaign</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#average-wait-time-historical">Average wait time after customer connection</a>
+   *                </p>
+   *             </dd>
+   *             <dt>CAMPAIGN_CONTACTS_ABANDONED_AFTER_X</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns
+   *       analytics.</p>
+   *                <p>Unit: Count</p>
+   *                <p>Valid groupings and filters: Campaign, Agent </p>
+   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
+   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>GT</code> (for
+   *        <i>Greater than</i>).</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#campaign-contacts-abandoned-historical">Campaign contacts abandoned after X</a>
+   *                </p>
+   *             </dd>
+   *             <dt>CAMPAIGN_CONTACTS_ABANDONED_AFTER_X_RATE</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns
+   *       analytics.</p>
+   *                <p>Unit: Percent</p>
+   *                <p>Valid groupings and filters: Campaign, Agent </p>
+   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
+   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>GT</code> (for
+   *        <i>Greater than</i>).</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#campaign-contacts-abandoned-rate-historical">Campaign contacts abandoned after X rate</a>
+   *                </p>
+   *             </dd>
    *             <dt>CASES_CREATED</dt>
    *             <dd>
    *                <p>Unit: Count</p>
    *                <p>Required filter key: CASE_TEMPLATE_ARN</p>
    *                <p>Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS</p>
-   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html##cases-created-historical">Cases created</a>
-   *                </p>
-   *             </dd>
-   *             <dt>CONTACTS_ABANDONED</dt>
-   *             <dd>
-   *                <p>Unit: Count</p>
-   *                <p>Metric filter: </p>
-   *                <ul>
-   *                   <li>
-   *                      <p>Valid values: <code>API</code>| <code>Incoming</code> | <code>Outbound</code> |
-   *          <code>Transfer</code> | <code>Callback</code> | <code>Queue_Transfer</code>|
-   *          <code>Disconnect</code>
-   *                      </p>
-   *                   </li>
-   *                </ul>
-   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
-   *       contact/segmentAttributes/connect:Subtype, RoutingStepExpression, Q in Connect</p>
-   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical">Contact abandoned</a>
-   *                </p>
-   *             </dd>
-   *             <dt>CONTACTS_ABANDONED_IN_X</dt>
-   *             <dd>
-   *                <p>Unit: Count</p>
-   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype,
-   *       Q in Connect</p>
-   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
-   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for
-   *       "Less than"). </p>
-   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical">Contacts abandoned in X seconds</a>
-   *                </p>
-   *             </dd>
-   *             <dt>CONTACTS_ANSWERED_IN_X</dt>
-   *             <dd>
-   *                <p>Unit: Count</p>
-   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype,
-   *       Q in Connect</p>
-   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
-   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for
-   *       "Less than"). </p>
-   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical">Contacts answered in X seconds</a>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-created-historical">Cases created</a>
    *                </p>
    *             </dd>
    *             <dt>CONTACTS_CREATED</dt>
@@ -4962,6 +5272,16 @@ export interface GetMetricDataV2Request {
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-queued-by-enqueue-historical">Contacts queued (enqueue timestamp)</a>
    *                </p>
    *             </dd>
+   *             <dt>CONTACTS_REMOVED_FROM_QUEUE_IN_X</dt>
+   *             <dd>
+   *                <p>Unit: Count</p>
+   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, Q in Connect</p>
+   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
+   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for
+   *       "Less than").</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-removed-historical">Contacts removed from queue in X seconds</a>
+   *                </p>
+   *             </dd>
    *             <dt>CONTACTS_RESOLVED_IN_X</dt>
    *             <dd>
    *                <p>Unit: Count</p>
@@ -5008,6 +5328,35 @@ export interface GetMetricDataV2Request {
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#current-cases-historical">Current cases</a>
    *                </p>
    *             </dd>
+   *             <dt>DELIVERY_ATTEMPTS</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns
+   *       analytics.</p>
+   *                <p>Unit: Count</p>
+   *                <p>Valid metric filter key: <code>ANSWERING_MACHINE_DETECTION_STATUS</code>,
+   *        <code>DISCONNECT_REASON</code>
+   *                </p>
+   *                <p>Valid groupings and filters: Campaign, Agent, Queue, Routing Profile, Answering Machine Detection Status,
+   *       Disconnect Reason</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#delivery-attempts-historical">Delivery attempts</a>
+   *                </p>
+   *             </dd>
+   *             <dt>DELIVERY_ATTEMPT_DISPOSITION_RATE</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns analytics, and
+   *       with the answering machine detection enabled.</p>
+   *                <p>Unit: Percent</p>
+   *                <p>Valid metric filter key: <code>ANSWERING_MACHINE_DETECTION_STATUS</code>,
+   *        <code>DISCONNECT_REASON</code>
+   *                </p>
+   *                <p>Valid groupings and filters: Campaign, Agent, Answering Machine Detection Status, Disconnect Reason</p>
+   *                <note>
+   *                   <p>Answering Machine Detection Status and Disconnect Reason are valid filters but not valid
+   *        groupings.</p>
+   *                </note>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#delivery-attempt-disposition-rate-historical">Delivery attempt disposition rate</a>
+   *                </p>
+   *             </dd>
    *             <dt>FLOWS_OUTCOME</dt>
    *             <dd>
    *                <p>Unit: Count</p>
@@ -5023,6 +5372,15 @@ export interface GetMetricDataV2Request {
    *                <p>Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module
    *       resource ID, Flows resource ID, Initiation method, Resource published timestamp</p>
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#flows-started-historical">Flows started</a>
+   *                </p>
+   *             </dd>
+   *             <dt>HUMAN_ANSWERED_CALLS</dt>
+   *             <dd>
+   *                <p>This metric is available only for contacts analyzed by outbound campaigns analytics, and
+   *       with the answering machine detection enabled.</p>
+   *                <p>Unit: Count</p>
+   *                <p>Valid groupings and filters: Campaign, Agent</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#human-answered-historical">Human answered</a>
    *                </p>
    *             </dd>
    *             <dt>MAX_FLOW_TIME</dt>
@@ -5063,13 +5421,15 @@ export interface GetMetricDataV2Request {
    *             <dd>
    *                <p>Unit: Percent</p>
    *                <p>Valid groupings and filters: Queue, RoutingStepExpression</p>
-   *                <p>UI name: Not available </p>
+   *                <p>UI name: This metric is available in Real-time Metrics UI but not on the Historical
+   *       Metrics UI.</p>
    *             </dd>
    *             <dt>PERCENT_CONTACTS_STEP_JOINED</dt>
    *             <dd>
    *                <p>Unit: Percent</p>
    *                <p>Valid groupings and filters: Queue, RoutingStepExpression</p>
-   *                <p>UI name: Not available </p>
+   *                <p>UI name: This metric is available in Real-time Metrics UI but not on the Historical
+   *       Metrics UI.</p>
    *             </dd>
    *             <dt>PERCENT_FLOWS_OUTCOME</dt>
    *             <dd>
@@ -5140,7 +5500,7 @@ export interface GetMetricDataV2Request {
    *                <p>Unit: Count</p>
    *                <p>Required filter key: CASE_TEMPLATE_ARN</p>
    *                <p>Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS</p>
-   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historicall">Cases resolved</a>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#cases-resolved-historical">Cases resolved</a>
    *                </p>
    *             </dd>
    *             <dt>SERVICE_LEVEL</dt>
@@ -5158,7 +5518,8 @@ export interface GetMetricDataV2Request {
    *             <dd>
    *                <p>Unit: Count</p>
    *                <p>Valid groupings and filters: Queue, RoutingStepExpression</p>
-   *                <p>UI name: Not available</p>
+   *                <p>UI name: This metric is available in Real-time Metrics UI but not on the Historical
+   *       Metrics UI.</p>
    *             </dd>
    *             <dt>SUM_AFTER_CONTACT_WORK_TIME</dt>
    *             <dd>
@@ -5183,6 +5544,45 @@ export interface GetMetricDataV2Request {
    *        metric.</p>
    *                </note>
    *             </dd>
+   *             <dt>SUM_CONTACTS_ABANDONED</dt>
+   *             <dd>
+   *                <p>Unit: Count</p>
+   *                <p>Metric filter: </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>Valid values: <code>API</code>| <code>Incoming</code> | <code>Outbound</code> |
+   *          <code>Transfer</code> | <code>Callback</code> | <code>Queue_Transfer</code>|
+   *          <code>Disconnect</code>
+   *                      </p>
+   *                   </li>
+   *                </ul>
+   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy,
+   *       contact/segmentAttributes/connect:Subtype, RoutingStepExpression, Q in Connect</p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-historical">Contact abandoned</a>
+   *                </p>
+   *             </dd>
+   *             <dt>SUM_CONTACTS_ABANDONED_IN_X</dt>
+   *             <dd>
+   *                <p>Unit: Count</p>
+   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype,
+   *       Q in Connect</p>
+   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
+   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for
+   *       "Less than"). </p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-abandoned-x-historical">Contacts abandoned in X seconds</a>
+   *                </p>
+   *             </dd>
+   *             <dt>SUM_CONTACTS_ANSWERED_IN_X</dt>
+   *             <dd>
+   *                <p>Unit: Count</p>
+   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype,
+   *       Q in Connect</p>
+   *                <p>Threshold: For <code>ThresholdValue</code>, enter any whole number from 1 to 604800
+   *       (inclusive), in seconds. For <code>Comparison</code>, you must enter <code>LT</code> (for
+   *       "Less than"). </p>
+   *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contacts-answered-x-historical">Contacts answered in X seconds</a>
+   *                </p>
+   *             </dd>
    *             <dt>SUM_CONTACT_FLOW_TIME</dt>
    *             <dd>
    *                <p>Unit: Seconds</p>
@@ -5193,7 +5593,7 @@ export interface GetMetricDataV2Request {
    *             <dt>SUM_CONTACT_TIME_AGENT</dt>
    *             <dd>
    *                <p>Unit: Seconds</p>
-   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy</p>
+   *                <p>Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy</p>
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#agent-on-contact-time-historical">Agent on contact time</a>
    *                </p>
    *             </dd>
@@ -5210,7 +5610,7 @@ export interface GetMetricDataV2Request {
    *             <dt>SUM_ERROR_STATUS_TIME_AGENT</dt>
    *             <dd>
    *                <p>Unit: Seconds</p>
-   *                <p>Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy</p>
+   *                <p>Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy</p>
    *                <p>UI name: <a href="https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#error-status-time-historical">Error status time</a>
    *                </p>
    *             </dd>
@@ -5808,6 +6208,94 @@ export interface ListApprovedOriginsResponse {
    * @public
    */
   Origins?: string[];
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListAuthenticationProfilesRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string;
+}
+
+/**
+ * <p>This API is in preview release for Amazon Connect and is subject to change. To
+ * request access to this API, contact Amazon Web Services Support.</p>
+ *          <p>A summary of a given authentication profile.</p>
+ * @public
+ */
+export interface AuthenticationProfileSummary {
+  /**
+   * <p>The unique identifier of the authentication profile.</p>
+   * @public
+   */
+  Id?: string;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the authentication profile summary.</p>
+   * @public
+   */
+  Arn?: string;
+
+  /**
+   * <p>The name of the authentication profile summary.</p>
+   * @public
+   */
+  Name?: string;
+
+  /**
+   * <p>Shows whether the authentication profile is the default authentication profile for the
+   *     Amazon Connect instance. The default authentication profile applies to all agents in an
+   *     Amazon Connect instance, unless overridden by another authentication profile.</p>
+   * @public
+   */
+  IsDefault?: boolean;
+
+  /**
+   * <p>The timestamp when the authentication profile summary was last modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date;
+
+  /**
+   * <p>The Amazon Web Services Region when the authentication profile summary was last
+   *    modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string;
+}
+
+/**
+ * @public
+ */
+export interface ListAuthenticationProfilesResponse {
+  /**
+   * <p>A summary of a given authentication profile.</p>
+   * @public
+   */
+  AuthenticationProfileSummaryList?: AuthenticationProfileSummary[];
 
   /**
    * <p>If there are additional results, this is the token for the next set of results.</p>
@@ -7958,6 +8446,7 @@ export const RealTimeContactAnalysisSegmentType = {
   Categories: "Categories",
   Event: "Event",
   Issues: "Issues",
+  PostContactSummary: "PostContactSummary",
   Transcript: "Transcript",
 } as const;
 
@@ -8330,6 +8819,90 @@ export interface RealTimeContactAnalysisSegmentIssues {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const RealTimeContactAnalysisPostContactSummaryFailureCode = {
+  FAILED_SAFETY_GUIDELINES: "FAILED_SAFETY_GUIDELINES",
+  INSUFFICIENT_CONVERSATION_CONTENT: "INSUFFICIENT_CONVERSATION_CONTENT",
+  INTERNAL_ERROR: "INTERNAL_ERROR",
+  INVALID_ANALYSIS_CONFIGURATION: "INVALID_ANALYSIS_CONFIGURATION",
+  QUOTA_EXCEEDED: "QUOTA_EXCEEDED",
+} as const;
+
+/**
+ * @public
+ */
+export type RealTimeContactAnalysisPostContactSummaryFailureCode =
+  (typeof RealTimeContactAnalysisPostContactSummaryFailureCode)[keyof typeof RealTimeContactAnalysisPostContactSummaryFailureCode];
+
+/**
+ * @public
+ * @enum
+ */
+export const RealTimeContactAnalysisPostContactSummaryStatus = {
+  COMPLETED: "COMPLETED",
+  FAILED: "FAILED",
+} as const;
+
+/**
+ * @public
+ */
+export type RealTimeContactAnalysisPostContactSummaryStatus =
+  (typeof RealTimeContactAnalysisPostContactSummaryStatus)[keyof typeof RealTimeContactAnalysisPostContactSummaryStatus];
+
+/**
+ * <p>Information about the post-contact summary for a real-time contact segment.</p>
+ * @public
+ */
+export interface RealTimeContactAnalysisSegmentPostContactSummary {
+  /**
+   * <p>The content of the summary.</p>
+   * @public
+   */
+  Content?: string;
+
+  /**
+   * <p>Whether the summary was successfully COMPLETED or FAILED to be generated.</p>
+   * @public
+   */
+  Status: RealTimeContactAnalysisPostContactSummaryStatus | undefined;
+
+  /**
+   * <p>If the summary failed to be generated, one of the following failure codes occurs:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>QUOTA_EXCEEDED</code>: The number of concurrent analytics jobs reached your service
+   *      quota.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>INSUFFICIENT_CONVERSATION_CONTENT</code>: The conversation needs to have at least
+   *      one turn from both the participants in order to generate the summary.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>FAILED_SAFETY_GUIDELINES</code>: The generated summary cannot be provided because it
+   *      failed to meet system safety guidelines.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>INVALID_ANALYSIS_CONFIGURATION</code>: This code occurs when, for example, you're
+   *      using a <a href="https://docs.aws.amazon.com/connect/latest/adminguide/supported-languages.html#supported-languages-contact-lens">language</a> that isn't supported by generative AI-powered post-contact summaries.
+   *     </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>INTERNAL_ERROR</code>: Internal system error.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  FailureCode?: RealTimeContactAnalysisPostContactSummaryFailureCode;
+}
+
+/**
  * <p>Object describing redaction applied to the segment.</p>
  * @public
  */
@@ -8429,6 +9002,7 @@ export type RealtimeContactAnalysisSegment =
   | RealtimeContactAnalysisSegment.CategoriesMember
   | RealtimeContactAnalysisSegment.EventMember
   | RealtimeContactAnalysisSegment.IssuesMember
+  | RealtimeContactAnalysisSegment.PostContactSummaryMember
   | RealtimeContactAnalysisSegment.TranscriptMember
   | RealtimeContactAnalysisSegment.$UnknownMember;
 
@@ -8446,6 +9020,7 @@ export namespace RealtimeContactAnalysisSegment {
     Issues?: never;
     Event?: never;
     Attachments?: never;
+    PostContactSummary?: never;
     $unknown?: never;
   }
 
@@ -8459,6 +9034,7 @@ export namespace RealtimeContactAnalysisSegment {
     Issues?: never;
     Event?: never;
     Attachments?: never;
+    PostContactSummary?: never;
     $unknown?: never;
   }
 
@@ -8472,6 +9048,7 @@ export namespace RealtimeContactAnalysisSegment {
     Issues: RealTimeContactAnalysisSegmentIssues;
     Event?: never;
     Attachments?: never;
+    PostContactSummary?: never;
     $unknown?: never;
   }
 
@@ -8485,6 +9062,7 @@ export namespace RealtimeContactAnalysisSegment {
     Issues?: never;
     Event: RealTimeContactAnalysisSegmentEvent;
     Attachments?: never;
+    PostContactSummary?: never;
     $unknown?: never;
   }
 
@@ -8498,6 +9076,21 @@ export namespace RealtimeContactAnalysisSegment {
     Issues?: never;
     Event?: never;
     Attachments: RealTimeContactAnalysisSegmentAttachments;
+    PostContactSummary?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Information about the post-contact summary.</p>
+   * @public
+   */
+  export interface PostContactSummaryMember {
+    Transcript?: never;
+    Categories?: never;
+    Issues?: never;
+    Event?: never;
+    Attachments?: never;
+    PostContactSummary: RealTimeContactAnalysisSegmentPostContactSummary;
     $unknown?: never;
   }
 
@@ -8510,6 +9103,7 @@ export namespace RealtimeContactAnalysisSegment {
     Issues?: never;
     Event?: never;
     Attachments?: never;
+    PostContactSummary?: never;
     $unknown: [string, any];
   }
 
@@ -8519,6 +9113,7 @@ export namespace RealtimeContactAnalysisSegment {
     Issues: (value: RealTimeContactAnalysisSegmentIssues) => T;
     Event: (value: RealTimeContactAnalysisSegmentEvent) => T;
     Attachments: (value: RealTimeContactAnalysisSegmentAttachments) => T;
+    PostContactSummary: (value: RealTimeContactAnalysisSegmentPostContactSummary) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -8528,6 +9123,7 @@ export namespace RealtimeContactAnalysisSegment {
     if (value.Issues !== undefined) return visitor.Issues(value.Issues);
     if (value.Event !== undefined) return visitor.Event(value.Event);
     if (value.Attachments !== undefined) return visitor.Attachments(value.Attachments);
+    if (value.PostContactSummary !== undefined) return visitor.PostContactSummary(value.PostContactSummary);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -9288,463 +9884,6 @@ export interface ListTaskTemplatesResponse {
    * @public
    */
   NextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListTrafficDistributionGroupsRequest {
-  /**
-   * <p>The maximum number of results to return per page.</p>
-   * @public
-   */
-  MaxResults?: number;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous
-   * response in the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId?: string;
-}
-
-/**
- * <p>Information about traffic distribution groups.</p>
- * @public
- */
-export interface TrafficDistributionGroupSummary {
-  /**
-   * <p>The identifier of the traffic distribution group.
-   * This can be the ID or the ARN if the API is being called in the Region where the traffic distribution group was created.
-   * The ARN must be provided if the call is from the replicated Region.</p>
-   * @public
-   */
-  Id?: string;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the traffic distribution group.</p>
-   * @public
-   */
-  Arn?: string;
-
-  /**
-   * <p>The name of the traffic distribution group.</p>
-   * @public
-   */
-  Name?: string;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the traffic distribution group.</p>
-   * @public
-   */
-  InstanceArn?: string;
-
-  /**
-   * <p>The status of the traffic distribution group. </p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>CREATION_IN_PROGRESS</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTrafficDistributionGroup.html">CreateTrafficDistributionGroup</a> operation is still in progress and has not yet
-   *      completed.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>ACTIVE</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTrafficDistributionGroup.html">CreateTrafficDistributionGroup</a> operation has succeeded.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>CREATION_FAILED</code> indicates that the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTrafficDistributionGroup.html">CreateTrafficDistributionGroup</a> operation has failed.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>PENDING_DELETION</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteTrafficDistributionGroup.html">DeleteTrafficDistributionGroup</a> operation is still in progress and has not yet
-   *      completed.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>DELETION_FAILED</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteTrafficDistributionGroup.html">DeleteTrafficDistributionGroup</a> operation has failed.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>UPDATE_IN_PROGRESS</code> means the previous <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateTrafficDistributionGroup.html">UpdateTrafficDistributionGroup</a> operation is still in progress and has not yet
-   *      completed.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  Status?: TrafficDistributionGroupStatus;
-
-  /**
-   * <p>Whether this is the default traffic distribution group created during instance
-   *    replication. The default traffic distribution group cannot be deleted by the
-   *    <code>DeleteTrafficDistributionGroup</code> API. The default traffic distribution group is deleted as
-   *    part of the process for deleting a replica.</p>
-   * @public
-   */
-  IsDefault?: boolean;
-}
-
-/**
- * @public
- */
-export interface ListTrafficDistributionGroupsResponse {
-  /**
-   * <p>If there are additional results, this is the token for the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>A list of traffic distribution groups.</p>
-   * @public
-   */
-  TrafficDistributionGroupSummaryList?: TrafficDistributionGroupSummary[];
-}
-
-/**
- * @public
- */
-export interface ListTrafficDistributionGroupUsersRequest {
-  /**
-   * <p>The identifier of the traffic distribution group.
-   * This can be the ID or the ARN if the API is being called in the Region where the traffic distribution group was created.
-   * The ARN must be provided if the call is from the replicated Region.</p>
-   * @public
-   */
-  TrafficDistributionGroupId: string | undefined;
-
-  /**
-   * <p>The maximum number of results to return per page.</p>
-   * @public
-   */
-  MaxResults?: number;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous
-   * response in the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
- * <p>Summary information about a traffic distribution group user.</p>
- * @public
- */
-export interface TrafficDistributionGroupUserSummary {
-  /**
-   * <p>The identifier for the user. This can be the ID or the ARN of the user.</p>
-   * @public
-   */
-  UserId?: string;
-}
-
-/**
- * @public
- */
-export interface ListTrafficDistributionGroupUsersResponse {
-  /**
-   * <p>If there are additional results, this is the token for the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>A list of traffic distribution group users.</p>
-   * @public
-   */
-  TrafficDistributionGroupUserSummaryList?: TrafficDistributionGroupUserSummary[];
-}
-
-/**
- * <p>Provides summary information about the use cases for the specified integration
- *    association.</p>
- * @public
- */
-export interface ListUseCasesRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the integration association.</p>
-   * @public
-   */
-  IntegrationAssociationId: string | undefined;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous
-   * response in the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>The maximum number of results to return per page.</p>
-   * @public
-   */
-  MaxResults?: number;
-}
-
-/**
- * <p>Contains the
- *    use
- *    case.</p>
- * @public
- */
-export interface UseCase {
-  /**
-   * <p>The identifier for the use case.</p>
-   * @public
-   */
-  UseCaseId?: string;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) for the use case.</p>
-   * @public
-   */
-  UseCaseArn?: string;
-
-  /**
-   * <p>The type of use case to associate to the integration association. Each integration
-   *    association can have only one of each use case type.</p>
-   * @public
-   */
-  UseCaseType?: UseCaseType;
-}
-
-/**
- * @public
- */
-export interface ListUseCasesResponse {
-  /**
-   * <p>The use cases.</p>
-   * @public
-   */
-  UseCaseSummaryList?: UseCase[];
-
-  /**
-   * <p>If there are additional results, this is the token for the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListUserHierarchyGroupsRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous
-   * response in the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
-   * @public
-   */
-  MaxResults?: number;
-}
-
-/**
- * @public
- */
-export interface ListUserHierarchyGroupsResponse {
-  /**
-   * <p>Information about the hierarchy groups.</p>
-   * @public
-   */
-  UserHierarchyGroupSummaryList?: HierarchyGroupSummary[];
-
-  /**
-   * <p>If there are additional results, this is the token for the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListUserProficienciesRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource
-   *    Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier of the user account.</p>
-   * @public
-   */
-  UserId: string | undefined;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous response in
-   *    the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>The maximum number of results to return per page.</p>
-   * @public
-   */
-  MaxResults?: number;
-}
-
-/**
- * @public
- */
-export interface ListUserProficienciesResponse {
-  /**
-   * <p>If there are additional results, this is the token for the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>Information about the user proficiencies.</p>
-   * @public
-   */
-  UserProficiencyList?: UserProficiency[];
-
-  /**
-   * <p>The last time that the user's proficiencies are were modified.</p>
-   * @public
-   */
-  LastModifiedTime?: Date;
-
-  /**
-   * <p>The region in which a user's proficiencies were last modified.</p>
-   * @public
-   */
-  LastModifiedRegion?: string;
-}
-
-/**
- * @public
- */
-export interface ListUsersRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous
-   * response in the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
-   * @public
-   */
-  MaxResults?: number;
-}
-
-/**
- * <p>Contains summary information about a user.</p>
- * @public
- */
-export interface UserSummary {
-  /**
-   * <p>The identifier of the user account.</p>
-   * @public
-   */
-  Id?: string;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the user account.</p>
-   * @public
-   */
-  Arn?: string;
-
-  /**
-   * <p>The Amazon Connect user name of the user account.</p>
-   * @public
-   */
-  Username?: string;
-
-  /**
-   * <p>The timestamp when this resource was last modified.</p>
-   * @public
-   */
-  LastModifiedTime?: Date;
-
-  /**
-   * <p>The Amazon Web Services Region where this resource was last modified.</p>
-   * @public
-   */
-  LastModifiedRegion?: string;
-}
-
-/**
- * @public
- */
-export interface ListUsersResponse {
-  /**
-   * <p>Information about the users.</p>
-   * @public
-   */
-  UserSummaryList?: UserSummary[];
-
-  /**
-   * <p>If there are additional results, this is the token for the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-}
-
-/**
- * @public
- */
-export interface ListViewsRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of
-   *    the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The type of the view.</p>
-   * @public
-   */
-  Type?: ViewType;
-
-  /**
-   * <p>The token for the next set of results. Use the value returned in the previous response in
-   *    the next request to retrieve the next set of results.</p>
-   * @public
-   */
-  NextToken?: string;
-
-  /**
-   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
-   * @public
-   */
-  MaxResults?: number;
 }
 
 /**

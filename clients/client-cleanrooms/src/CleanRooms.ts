@@ -39,6 +39,11 @@ import {
   CreateConfiguredTableAnalysisRuleCommandOutput,
 } from "./commands/CreateConfiguredTableAnalysisRuleCommand";
 import {
+  CreateConfiguredTableAssociationAnalysisRuleCommand,
+  CreateConfiguredTableAssociationAnalysisRuleCommandInput,
+  CreateConfiguredTableAssociationAnalysisRuleCommandOutput,
+} from "./commands/CreateConfiguredTableAssociationAnalysisRuleCommand";
+import {
   CreateConfiguredTableAssociationCommand,
   CreateConfiguredTableAssociationCommandInput,
   CreateConfiguredTableAssociationCommandOutput,
@@ -48,6 +53,16 @@ import {
   CreateConfiguredTableCommandInput,
   CreateConfiguredTableCommandOutput,
 } from "./commands/CreateConfiguredTableCommand";
+import {
+  CreateIdMappingTableCommand,
+  CreateIdMappingTableCommandInput,
+  CreateIdMappingTableCommandOutput,
+} from "./commands/CreateIdMappingTableCommand";
+import {
+  CreateIdNamespaceAssociationCommand,
+  CreateIdNamespaceAssociationCommandInput,
+  CreateIdNamespaceAssociationCommandOutput,
+} from "./commands/CreateIdNamespaceAssociationCommand";
 import {
   CreateMembershipCommand,
   CreateMembershipCommandInput,
@@ -79,6 +94,11 @@ import {
   DeleteConfiguredTableAnalysisRuleCommandOutput,
 } from "./commands/DeleteConfiguredTableAnalysisRuleCommand";
 import {
+  DeleteConfiguredTableAssociationAnalysisRuleCommand,
+  DeleteConfiguredTableAssociationAnalysisRuleCommandInput,
+  DeleteConfiguredTableAssociationAnalysisRuleCommandOutput,
+} from "./commands/DeleteConfiguredTableAssociationAnalysisRuleCommand";
+import {
   DeleteConfiguredTableAssociationCommand,
   DeleteConfiguredTableAssociationCommandInput,
   DeleteConfiguredTableAssociationCommandOutput,
@@ -88,6 +108,16 @@ import {
   DeleteConfiguredTableCommandInput,
   DeleteConfiguredTableCommandOutput,
 } from "./commands/DeleteConfiguredTableCommand";
+import {
+  DeleteIdMappingTableCommand,
+  DeleteIdMappingTableCommandInput,
+  DeleteIdMappingTableCommandOutput,
+} from "./commands/DeleteIdMappingTableCommand";
+import {
+  DeleteIdNamespaceAssociationCommand,
+  DeleteIdNamespaceAssociationCommandInput,
+  DeleteIdNamespaceAssociationCommandOutput,
+} from "./commands/DeleteIdNamespaceAssociationCommand";
 import {
   DeleteMemberCommand,
   DeleteMemberCommandInput,
@@ -124,6 +154,11 @@ import {
   GetCollaborationConfiguredAudienceModelAssociationCommandOutput,
 } from "./commands/GetCollaborationConfiguredAudienceModelAssociationCommand";
 import {
+  GetCollaborationIdNamespaceAssociationCommand,
+  GetCollaborationIdNamespaceAssociationCommandInput,
+  GetCollaborationIdNamespaceAssociationCommandOutput,
+} from "./commands/GetCollaborationIdNamespaceAssociationCommand";
+import {
   GetCollaborationPrivacyBudgetTemplateCommand,
   GetCollaborationPrivacyBudgetTemplateCommandInput,
   GetCollaborationPrivacyBudgetTemplateCommandOutput,
@@ -139,6 +174,11 @@ import {
   GetConfiguredTableAnalysisRuleCommandOutput,
 } from "./commands/GetConfiguredTableAnalysisRuleCommand";
 import {
+  GetConfiguredTableAssociationAnalysisRuleCommand,
+  GetConfiguredTableAssociationAnalysisRuleCommandInput,
+  GetConfiguredTableAssociationAnalysisRuleCommandOutput,
+} from "./commands/GetConfiguredTableAssociationAnalysisRuleCommand";
+import {
   GetConfiguredTableAssociationCommand,
   GetConfiguredTableAssociationCommandInput,
   GetConfiguredTableAssociationCommandOutput,
@@ -148,6 +188,16 @@ import {
   GetConfiguredTableCommandInput,
   GetConfiguredTableCommandOutput,
 } from "./commands/GetConfiguredTableCommand";
+import {
+  GetIdMappingTableCommand,
+  GetIdMappingTableCommandInput,
+  GetIdMappingTableCommandOutput,
+} from "./commands/GetIdMappingTableCommand";
+import {
+  GetIdNamespaceAssociationCommand,
+  GetIdNamespaceAssociationCommandInput,
+  GetIdNamespaceAssociationCommandOutput,
+} from "./commands/GetIdNamespaceAssociationCommand";
 import {
   GetMembershipCommand,
   GetMembershipCommandInput,
@@ -185,6 +235,11 @@ import {
   ListCollaborationConfiguredAudienceModelAssociationsCommandOutput,
 } from "./commands/ListCollaborationConfiguredAudienceModelAssociationsCommand";
 import {
+  ListCollaborationIdNamespaceAssociationsCommand,
+  ListCollaborationIdNamespaceAssociationsCommandInput,
+  ListCollaborationIdNamespaceAssociationsCommandOutput,
+} from "./commands/ListCollaborationIdNamespaceAssociationsCommand";
+import {
   ListCollaborationPrivacyBudgetsCommand,
   ListCollaborationPrivacyBudgetsCommandInput,
   ListCollaborationPrivacyBudgetsCommandOutput,
@@ -214,6 +269,16 @@ import {
   ListConfiguredTablesCommandInput,
   ListConfiguredTablesCommandOutput,
 } from "./commands/ListConfiguredTablesCommand";
+import {
+  ListIdMappingTablesCommand,
+  ListIdMappingTablesCommandInput,
+  ListIdMappingTablesCommandOutput,
+} from "./commands/ListIdMappingTablesCommand";
+import {
+  ListIdNamespaceAssociationsCommand,
+  ListIdNamespaceAssociationsCommandInput,
+  ListIdNamespaceAssociationsCommandOutput,
+} from "./commands/ListIdNamespaceAssociationsCommand";
 import { ListMembersCommand, ListMembersCommandInput, ListMembersCommandOutput } from "./commands/ListMembersCommand";
 import {
   ListMembershipsCommand,
@@ -241,6 +306,11 @@ import {
   ListTagsForResourceCommandInput,
   ListTagsForResourceCommandOutput,
 } from "./commands/ListTagsForResourceCommand";
+import {
+  PopulateIdMappingTableCommand,
+  PopulateIdMappingTableCommandInput,
+  PopulateIdMappingTableCommandOutput,
+} from "./commands/PopulateIdMappingTableCommand";
 import {
   PreviewPrivacyImpactCommand,
   PreviewPrivacyImpactCommandInput,
@@ -278,6 +348,11 @@ import {
   UpdateConfiguredTableAnalysisRuleCommandOutput,
 } from "./commands/UpdateConfiguredTableAnalysisRuleCommand";
 import {
+  UpdateConfiguredTableAssociationAnalysisRuleCommand,
+  UpdateConfiguredTableAssociationAnalysisRuleCommandInput,
+  UpdateConfiguredTableAssociationAnalysisRuleCommandOutput,
+} from "./commands/UpdateConfiguredTableAssociationAnalysisRuleCommand";
+import {
   UpdateConfiguredTableAssociationCommand,
   UpdateConfiguredTableAssociationCommandInput,
   UpdateConfiguredTableAssociationCommandOutput,
@@ -287,6 +362,16 @@ import {
   UpdateConfiguredTableCommandInput,
   UpdateConfiguredTableCommandOutput,
 } from "./commands/UpdateConfiguredTableCommand";
+import {
+  UpdateIdMappingTableCommand,
+  UpdateIdMappingTableCommandInput,
+  UpdateIdMappingTableCommandOutput,
+} from "./commands/UpdateIdMappingTableCommand";
+import {
+  UpdateIdNamespaceAssociationCommand,
+  UpdateIdNamespaceAssociationCommandInput,
+  UpdateIdNamespaceAssociationCommandOutput,
+} from "./commands/UpdateIdNamespaceAssociationCommand";
 import {
   UpdateMembershipCommand,
   UpdateMembershipCommandInput,
@@ -313,6 +398,9 @@ const commands = {
   CreateConfiguredTableCommand,
   CreateConfiguredTableAnalysisRuleCommand,
   CreateConfiguredTableAssociationCommand,
+  CreateConfiguredTableAssociationAnalysisRuleCommand,
+  CreateIdMappingTableCommand,
+  CreateIdNamespaceAssociationCommand,
   CreateMembershipCommand,
   CreatePrivacyBudgetTemplateCommand,
   DeleteAnalysisTemplateCommand,
@@ -321,6 +409,9 @@ const commands = {
   DeleteConfiguredTableCommand,
   DeleteConfiguredTableAnalysisRuleCommand,
   DeleteConfiguredTableAssociationCommand,
+  DeleteConfiguredTableAssociationAnalysisRuleCommand,
+  DeleteIdMappingTableCommand,
+  DeleteIdNamespaceAssociationCommand,
   DeleteMemberCommand,
   DeleteMembershipCommand,
   DeletePrivacyBudgetTemplateCommand,
@@ -328,11 +419,15 @@ const commands = {
   GetCollaborationCommand,
   GetCollaborationAnalysisTemplateCommand,
   GetCollaborationConfiguredAudienceModelAssociationCommand,
+  GetCollaborationIdNamespaceAssociationCommand,
   GetCollaborationPrivacyBudgetTemplateCommand,
   GetConfiguredAudienceModelAssociationCommand,
   GetConfiguredTableCommand,
   GetConfiguredTableAnalysisRuleCommand,
   GetConfiguredTableAssociationCommand,
+  GetConfiguredTableAssociationAnalysisRuleCommand,
+  GetIdMappingTableCommand,
+  GetIdNamespaceAssociationCommand,
   GetMembershipCommand,
   GetPrivacyBudgetTemplateCommand,
   GetProtectedQueryCommand,
@@ -341,12 +436,15 @@ const commands = {
   ListAnalysisTemplatesCommand,
   ListCollaborationAnalysisTemplatesCommand,
   ListCollaborationConfiguredAudienceModelAssociationsCommand,
+  ListCollaborationIdNamespaceAssociationsCommand,
   ListCollaborationPrivacyBudgetsCommand,
   ListCollaborationPrivacyBudgetTemplatesCommand,
   ListCollaborationsCommand,
   ListConfiguredAudienceModelAssociationsCommand,
   ListConfiguredTableAssociationsCommand,
   ListConfiguredTablesCommand,
+  ListIdMappingTablesCommand,
+  ListIdNamespaceAssociationsCommand,
   ListMembersCommand,
   ListMembershipsCommand,
   ListPrivacyBudgetsCommand,
@@ -354,6 +452,7 @@ const commands = {
   ListProtectedQueriesCommand,
   ListSchemasCommand,
   ListTagsForResourceCommand,
+  PopulateIdMappingTableCommand,
   PreviewPrivacyImpactCommand,
   StartProtectedQueryCommand,
   TagResourceCommand,
@@ -364,6 +463,9 @@ const commands = {
   UpdateConfiguredTableCommand,
   UpdateConfiguredTableAnalysisRuleCommand,
   UpdateConfiguredTableAssociationCommand,
+  UpdateConfiguredTableAssociationAnalysisRuleCommand,
+  UpdateIdMappingTableCommand,
+  UpdateIdNamespaceAssociationCommand,
   UpdateMembershipCommand,
   UpdatePrivacyBudgetTemplateCommand,
   UpdateProtectedQueryCommand,
@@ -521,6 +623,57 @@ export interface CleanRooms {
   ): void;
 
   /**
+   * @see {@link CreateConfiguredTableAssociationAnalysisRuleCommand}
+   */
+  createConfiguredTableAssociationAnalysisRule(
+    args: CreateConfiguredTableAssociationAnalysisRuleCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateConfiguredTableAssociationAnalysisRuleCommandOutput>;
+  createConfiguredTableAssociationAnalysisRule(
+    args: CreateConfiguredTableAssociationAnalysisRuleCommandInput,
+    cb: (err: any, data?: CreateConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+  createConfiguredTableAssociationAnalysisRule(
+    args: CreateConfiguredTableAssociationAnalysisRuleCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateIdMappingTableCommand}
+   */
+  createIdMappingTable(
+    args: CreateIdMappingTableCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateIdMappingTableCommandOutput>;
+  createIdMappingTable(
+    args: CreateIdMappingTableCommandInput,
+    cb: (err: any, data?: CreateIdMappingTableCommandOutput) => void
+  ): void;
+  createIdMappingTable(
+    args: CreateIdMappingTableCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateIdMappingTableCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateIdNamespaceAssociationCommand}
+   */
+  createIdNamespaceAssociation(
+    args: CreateIdNamespaceAssociationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateIdNamespaceAssociationCommandOutput>;
+  createIdNamespaceAssociation(
+    args: CreateIdNamespaceAssociationCommandInput,
+    cb: (err: any, data?: CreateIdNamespaceAssociationCommandOutput) => void
+  ): void;
+  createIdNamespaceAssociation(
+    args: CreateIdNamespaceAssociationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateIdNamespaceAssociationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateMembershipCommand}
    */
   createMembership(
@@ -657,6 +810,57 @@ export interface CleanRooms {
   ): void;
 
   /**
+   * @see {@link DeleteConfiguredTableAssociationAnalysisRuleCommand}
+   */
+  deleteConfiguredTableAssociationAnalysisRule(
+    args: DeleteConfiguredTableAssociationAnalysisRuleCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteConfiguredTableAssociationAnalysisRuleCommandOutput>;
+  deleteConfiguredTableAssociationAnalysisRule(
+    args: DeleteConfiguredTableAssociationAnalysisRuleCommandInput,
+    cb: (err: any, data?: DeleteConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+  deleteConfiguredTableAssociationAnalysisRule(
+    args: DeleteConfiguredTableAssociationAnalysisRuleCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteIdMappingTableCommand}
+   */
+  deleteIdMappingTable(
+    args: DeleteIdMappingTableCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteIdMappingTableCommandOutput>;
+  deleteIdMappingTable(
+    args: DeleteIdMappingTableCommandInput,
+    cb: (err: any, data?: DeleteIdMappingTableCommandOutput) => void
+  ): void;
+  deleteIdMappingTable(
+    args: DeleteIdMappingTableCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteIdMappingTableCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteIdNamespaceAssociationCommand}
+   */
+  deleteIdNamespaceAssociation(
+    args: DeleteIdNamespaceAssociationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteIdNamespaceAssociationCommandOutput>;
+  deleteIdNamespaceAssociation(
+    args: DeleteIdNamespaceAssociationCommandInput,
+    cb: (err: any, data?: DeleteIdNamespaceAssociationCommandOutput) => void
+  ): void;
+  deleteIdNamespaceAssociation(
+    args: DeleteIdNamespaceAssociationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteIdNamespaceAssociationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteMemberCommand}
    */
   deleteMember(args: DeleteMemberCommandInput, options?: __HttpHandlerOptions): Promise<DeleteMemberCommandOutput>;
@@ -770,6 +974,23 @@ export interface CleanRooms {
   ): void;
 
   /**
+   * @see {@link GetCollaborationIdNamespaceAssociationCommand}
+   */
+  getCollaborationIdNamespaceAssociation(
+    args: GetCollaborationIdNamespaceAssociationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetCollaborationIdNamespaceAssociationCommandOutput>;
+  getCollaborationIdNamespaceAssociation(
+    args: GetCollaborationIdNamespaceAssociationCommandInput,
+    cb: (err: any, data?: GetCollaborationIdNamespaceAssociationCommandOutput) => void
+  ): void;
+  getCollaborationIdNamespaceAssociation(
+    args: GetCollaborationIdNamespaceAssociationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetCollaborationIdNamespaceAssociationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetCollaborationPrivacyBudgetTemplateCommand}
    */
   getCollaborationPrivacyBudgetTemplate(
@@ -852,6 +1073,57 @@ export interface CleanRooms {
     args: GetConfiguredTableAssociationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetConfiguredTableAssociationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetConfiguredTableAssociationAnalysisRuleCommand}
+   */
+  getConfiguredTableAssociationAnalysisRule(
+    args: GetConfiguredTableAssociationAnalysisRuleCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetConfiguredTableAssociationAnalysisRuleCommandOutput>;
+  getConfiguredTableAssociationAnalysisRule(
+    args: GetConfiguredTableAssociationAnalysisRuleCommandInput,
+    cb: (err: any, data?: GetConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+  getConfiguredTableAssociationAnalysisRule(
+    args: GetConfiguredTableAssociationAnalysisRuleCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetIdMappingTableCommand}
+   */
+  getIdMappingTable(
+    args: GetIdMappingTableCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetIdMappingTableCommandOutput>;
+  getIdMappingTable(
+    args: GetIdMappingTableCommandInput,
+    cb: (err: any, data?: GetIdMappingTableCommandOutput) => void
+  ): void;
+  getIdMappingTable(
+    args: GetIdMappingTableCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetIdMappingTableCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetIdNamespaceAssociationCommand}
+   */
+  getIdNamespaceAssociation(
+    args: GetIdNamespaceAssociationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetIdNamespaceAssociationCommandOutput>;
+  getIdNamespaceAssociation(
+    args: GetIdNamespaceAssociationCommandInput,
+    cb: (err: any, data?: GetIdNamespaceAssociationCommandOutput) => void
+  ): void;
+  getIdNamespaceAssociation(
+    args: GetIdNamespaceAssociationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetIdNamespaceAssociationCommandOutput) => void
   ): void;
 
   /**
@@ -979,6 +1251,23 @@ export interface CleanRooms {
   ): void;
 
   /**
+   * @see {@link ListCollaborationIdNamespaceAssociationsCommand}
+   */
+  listCollaborationIdNamespaceAssociations(
+    args: ListCollaborationIdNamespaceAssociationsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListCollaborationIdNamespaceAssociationsCommandOutput>;
+  listCollaborationIdNamespaceAssociations(
+    args: ListCollaborationIdNamespaceAssociationsCommandInput,
+    cb: (err: any, data?: ListCollaborationIdNamespaceAssociationsCommandOutput) => void
+  ): void;
+  listCollaborationIdNamespaceAssociations(
+    args: ListCollaborationIdNamespaceAssociationsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListCollaborationIdNamespaceAssociationsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListCollaborationPrivacyBudgetsCommand}
    */
   listCollaborationPrivacyBudgets(
@@ -1080,6 +1369,40 @@ export interface CleanRooms {
     args: ListConfiguredTablesCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListConfiguredTablesCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListIdMappingTablesCommand}
+   */
+  listIdMappingTables(
+    args: ListIdMappingTablesCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListIdMappingTablesCommandOutput>;
+  listIdMappingTables(
+    args: ListIdMappingTablesCommandInput,
+    cb: (err: any, data?: ListIdMappingTablesCommandOutput) => void
+  ): void;
+  listIdMappingTables(
+    args: ListIdMappingTablesCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListIdMappingTablesCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListIdNamespaceAssociationsCommand}
+   */
+  listIdNamespaceAssociations(
+    args: ListIdNamespaceAssociationsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListIdNamespaceAssociationsCommandOutput>;
+  listIdNamespaceAssociations(
+    args: ListIdNamespaceAssociationsCommandInput,
+    cb: (err: any, data?: ListIdNamespaceAssociationsCommandOutput) => void
+  ): void;
+  listIdNamespaceAssociations(
+    args: ListIdNamespaceAssociationsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListIdNamespaceAssociationsCommandOutput) => void
   ): void;
 
   /**
@@ -1185,6 +1508,23 @@ export interface CleanRooms {
     args: ListTagsForResourceCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListTagsForResourceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link PopulateIdMappingTableCommand}
+   */
+  populateIdMappingTable(
+    args: PopulateIdMappingTableCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<PopulateIdMappingTableCommandOutput>;
+  populateIdMappingTable(
+    args: PopulateIdMappingTableCommandInput,
+    cb: (err: any, data?: PopulateIdMappingTableCommandOutput) => void
+  ): void;
+  populateIdMappingTable(
+    args: PopulateIdMappingTableCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: PopulateIdMappingTableCommandOutput) => void
   ): void;
 
   /**
@@ -1343,6 +1683,57 @@ export interface CleanRooms {
     args: UpdateConfiguredTableAssociationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateConfiguredTableAssociationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateConfiguredTableAssociationAnalysisRuleCommand}
+   */
+  updateConfiguredTableAssociationAnalysisRule(
+    args: UpdateConfiguredTableAssociationAnalysisRuleCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateConfiguredTableAssociationAnalysisRuleCommandOutput>;
+  updateConfiguredTableAssociationAnalysisRule(
+    args: UpdateConfiguredTableAssociationAnalysisRuleCommandInput,
+    cb: (err: any, data?: UpdateConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+  updateConfiguredTableAssociationAnalysisRule(
+    args: UpdateConfiguredTableAssociationAnalysisRuleCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateConfiguredTableAssociationAnalysisRuleCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateIdMappingTableCommand}
+   */
+  updateIdMappingTable(
+    args: UpdateIdMappingTableCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateIdMappingTableCommandOutput>;
+  updateIdMappingTable(
+    args: UpdateIdMappingTableCommandInput,
+    cb: (err: any, data?: UpdateIdMappingTableCommandOutput) => void
+  ): void;
+  updateIdMappingTable(
+    args: UpdateIdMappingTableCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateIdMappingTableCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateIdNamespaceAssociationCommand}
+   */
+  updateIdNamespaceAssociation(
+    args: UpdateIdNamespaceAssociationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateIdNamespaceAssociationCommandOutput>;
+  updateIdNamespaceAssociation(
+    args: UpdateIdNamespaceAssociationCommandInput,
+    cb: (err: any, data?: UpdateIdNamespaceAssociationCommandOutput) => void
+  ): void;
+  updateIdNamespaceAssociation(
+    args: UpdateIdNamespaceAssociationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateIdNamespaceAssociationCommandOutput) => void
   ): void;
 
   /**

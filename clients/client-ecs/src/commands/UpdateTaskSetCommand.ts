@@ -6,7 +6,8 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ECSClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ECSClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateTaskSetRequest, UpdateTaskSetResponse } from "../models/models_0";
+import { UpdateTaskSetRequest } from "../models/models_0";
+import { UpdateTaskSetResponse } from "../models/models_1";
 import { de_UpdateTaskSetCommand, se_UpdateTaskSetCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -133,9 +134,19 @@ export interface UpdateTaskSetCommandOutput extends UpdateTaskSetResponse, __Met
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
+ *          <p>The following list includes additional causes for the error:</p>
+ *          <ul>
+ *             <li>
+ *                <p>The <code>RunTask</code> could not be processed because you use managed
+ * 					scaling and there is a capacity error because the quota of tasks in the
+ * 						<code>PROVISIONING</code> per cluster has been reached. For information
+ * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
+ * 						service quotas</a>.</p>
+ *             </li>
+ *          </ul>
  *
  * @throws {@link ClusterNotFoundException} (client fault)
- *  <p>The specified cluster wasn't found. You can view your available clusters with <a>ListClusters</a>. Amazon ECS clusters are Region specific.</p>
+ *  <p>The specified cluster wasn't found. You can view your available clusters with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListClusters.html">ListClusters</a>. Amazon ECS clusters are Region specific.</p>
  *
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
@@ -146,14 +157,14 @@ export interface UpdateTaskSetCommandOutput extends UpdateTaskSetResponse, __Met
  *
  * @throws {@link ServiceNotActiveException} (client fault)
  *  <p>The specified service isn't active. You can't update a service that's inactive. If you
- * 			have previously deleted a service, you can re-create it with <a>CreateService</a>.</p>
+ * 			have previously deleted a service, you can re-create it with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html">CreateService</a>.</p>
  *
  * @throws {@link ServiceNotFoundException} (client fault)
- *  <p>The specified service wasn't found. You can view your available services with <a>ListServices</a>. Amazon ECS services are cluster specific and Region
+ *  <p>The specified service wasn't found. You can view your available services with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListServices.html">ListServices</a>. Amazon ECS services are cluster specific and Region
  * 			specific.</p>
  *
  * @throws {@link TaskSetNotFoundException} (client fault)
- *  <p>The specified task set wasn't found. You can view your available task sets with <a>DescribeTaskSets</a>. Task sets are specific to each cluster, service and
+ *  <p>The specified task set wasn't found. You can view your available task sets with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeTaskSets.html">DescribeTaskSets</a>. Task sets are specific to each cluster, service and
  * 			Region.</p>
  *
  * @throws {@link UnsupportedFeatureException} (client fault)

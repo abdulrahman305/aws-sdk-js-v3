@@ -5,7 +5,11 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeInstanceInformationRequest, DescribeInstanceInformationResult } from "../models/models_0";
+import {
+  DescribeInstanceInformationRequest,
+  DescribeInstanceInformationResult,
+  DescribeInstanceInformationResultFilterSensitiveLog,
+} from "../models/models_0";
 import { de_DescribeInstanceInformationCommand, se_DescribeInstanceInformationCommand } from "../protocols/Aws_json1_1";
 import { ServiceInputTypes, ServiceOutputTypes, SSMClientResolvedConfig } from "../SSMClient";
 
@@ -35,8 +39,9 @@ export interface DescribeInstanceInformationCommandOutput extends DescribeInstan
  *    nodes. If you don't specify node IDs, it returns information for all your managed nodes. If you
  *    specify a node ID that isn't valid or a node that you don't own, you receive an error.</p>
  *          <note>
- *             <p>The <code>IamRole</code> field returned for this API operation is the Identity and Access Management (IAM) role assigned to on-premises managed nodes. This operation does not
- *     return the IAM role for EC2 instances.</p>
+ *             <p>The <code>IamRole</code> field returned for this API operation is the role assigned to an
+ *     Amazon EC2 instance configured with a Systems Manager Quick Setup host management configuration or
+ *     the role assigned to an on-premises managed node.</p>
  *          </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -164,7 +169,7 @@ export class DescribeInstanceInformationCommand extends $Command
   })
   .s("AmazonSSM", "DescribeInstanceInformation", {})
   .n("SSMClient", "DescribeInstanceInformationCommand")
-  .f(void 0, void 0)
+  .f(void 0, DescribeInstanceInformationResultFilterSensitiveLog)
   .ser(se_DescribeInstanceInformationCommand)
   .de(de_DescribeInstanceInformationCommand)
   .build() {}

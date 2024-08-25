@@ -62,6 +62,9 @@ export interface RetryStageExecutionCommandOutput extends RetryStageExecutionOut
  * @see {@link RetryStageExecutionCommandOutput} for command's `response` shape.
  * @see {@link CodePipelineClientResolvedConfig | config} for CodePipelineClient's `config` shape.
  *
+ * @throws {@link ConcurrentPipelineExecutionsLimitExceededException} (client fault)
+ *  <p>The pipeline has reached the limit for concurrent pipeline executions.</p>
+ *
  * @throws {@link ConflictException} (client fault)
  *  <p>Your request cannot be handled because the pipeline is busy handling ongoing
  *             activities. Try again later.</p>

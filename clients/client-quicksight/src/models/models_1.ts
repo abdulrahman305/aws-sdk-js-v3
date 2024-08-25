@@ -2,11 +2,11 @@
 import { SENSITIVE_STRING } from "@smithy/smithy-client";
 
 import {
+  AggregationFunction,
   AxisBinding,
   AxisDisplayOptions,
   BarChartFieldWells,
   BarChartOrientation,
-  BarChartSortConfiguration,
   BarsArrangement,
   ChartAxisLabelOptions,
   ColumnIdentifier,
@@ -15,20 +15,17 @@ import {
   DataLabelOptions,
   DataLabelOptionsFilterSensitiveLog,
   DataLabelPosition,
-  DataPathType,
   DimensionField,
-  FieldSort,
-  FieldSortOptions,
   FontConfiguration,
   FormatConfiguration,
   FormatConfigurationFilterSensitiveLog,
   HorizontalTextAlignment,
-  ItemsLimitConfiguration,
   LegendOptions,
   MeasureField,
   MeasureFieldFilterSensitiveLog,
   NumberDisplayFormatConfiguration,
   NumberDisplayFormatConfigurationFilterSensitiveLog,
+  OtherCategories,
   PercentageDisplayFormatConfiguration,
   PercentageDisplayFormatConfigurationFilterSensitiveLog,
   ReferenceLine,
@@ -36,13 +33,377 @@ import {
   SmallMultiplesOptions,
   SortDirection,
   TimeGranularity,
-  TooltipOptions,
   URLTargetConfiguration,
   Visibility,
   VisualCustomAction,
   VisualInteractionOptions,
   WidgetStatus,
 } from "./models_0";
+
+/**
+ * <p>The limit configuration of the visual display for an axis.</p>
+ * @public
+ */
+export interface ItemsLimitConfiguration {
+  /**
+   * <p>The limit on how many items of a field are showed in the chart. For
+   *             example, the number of slices that are displayed in a pie chart.</p>
+   * @public
+   */
+  ItemsLimit?: number;
+
+  /**
+   * <p>The <code>Show
+   *                 other</code> of an axis in the chart. Choose one of the following options:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>INCLUDE</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>EXCLUDE</code>
+   *                </p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  OtherCategories?: OtherCategories;
+}
+
+/**
+ * <p>The sort configuration for a field in a
+ *             field well.</p>
+ * @public
+ */
+export interface FieldSort {
+  /**
+   * <p>The sort configuration target field.</p>
+   * @public
+   */
+  FieldId: string | undefined;
+
+  /**
+   * <p>The sort direction. Choose one of the following
+   *             options:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>ASC</code>: Ascending</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>DESC</code>: Descending</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  Direction: SortDirection | undefined;
+}
+
+/**
+ * <p>The field sort options in a chart configuration.</p>
+ * @public
+ */
+export interface FieldSortOptions {
+  /**
+   * <p>The sort configuration for a field in a field well.</p>
+   * @public
+   */
+  FieldSort?: FieldSort;
+
+  /**
+   * <p>The sort configuration for a column that is not used in a field well.</p>
+   * @public
+   */
+  ColumnSort?: ColumnSort;
+}
+
+/**
+ * <p>sort-configuration-description</p>
+ * @public
+ */
+export interface BarChartSortConfiguration {
+  /**
+   * <p>The sort configuration of category fields.</p>
+   * @public
+   */
+  CategorySort?: FieldSortOptions[];
+
+  /**
+   * <p>The limit on the number of categories displayed in a bar chart.</p>
+   * @public
+   */
+  CategoryItemsLimit?: ItemsLimitConfiguration;
+
+  /**
+   * <p>The sort configuration of color fields in a bar chart.</p>
+   * @public
+   */
+  ColorSort?: FieldSortOptions[];
+
+  /**
+   * <p>The limit on the number of values displayed in a bar chart.</p>
+   * @public
+   */
+  ColorItemsLimit?: ItemsLimitConfiguration;
+
+  /**
+   * <p>The sort configuration of the small multiples field.</p>
+   * @public
+   */
+  SmallMultiplesSort?: FieldSortOptions[];
+
+  /**
+   * <p>The limit on the number of small multiples panels that are displayed.</p>
+   * @public
+   */
+  SmallMultiplesLimitConfiguration?: ItemsLimitConfiguration;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const TooltipTarget = {
+  BAR: "BAR",
+  BOTH: "BOTH",
+  LINE: "LINE",
+} as const;
+
+/**
+ * @public
+ */
+export type TooltipTarget = (typeof TooltipTarget)[keyof typeof TooltipTarget];
+
+/**
+ * <p>The tooltip item for the columns that are not part of a field well.</p>
+ * @public
+ */
+export interface ColumnTooltipItem {
+  /**
+   * <p>The target column of the tooltip item.</p>
+   * @public
+   */
+  Column: ColumnIdentifier | undefined;
+
+  /**
+   * <p>The label of the tooltip item.</p>
+   * @public
+   */
+  Label?: string;
+
+  /**
+   * <p>The visibility of the tooltip item.</p>
+   * @public
+   */
+  Visibility?: Visibility;
+
+  /**
+   * <p>The aggregation function of the column tooltip item.</p>
+   * @public
+   */
+  Aggregation?: AggregationFunction;
+
+  /**
+   * <p>Determines the target of the column tooltip item in a combo chart visual.</p>
+   * @public
+   */
+  TooltipTarget?: TooltipTarget;
+}
+
+/**
+ * <p>The tooltip item for the fields.</p>
+ * @public
+ */
+export interface FieldTooltipItem {
+  /**
+   * <p>The unique ID of the field that is targeted by the tooltip.</p>
+   * @public
+   */
+  FieldId: string | undefined;
+
+  /**
+   * <p>The label of the tooltip item.</p>
+   * @public
+   */
+  Label?: string;
+
+  /**
+   * <p>The visibility of the tooltip item.</p>
+   * @public
+   */
+  Visibility?: Visibility;
+
+  /**
+   * <p>Determines the target of the field tooltip item in a combo chart visual.</p>
+   * @public
+   */
+  TooltipTarget?: TooltipTarget;
+}
+
+/**
+ * <p>The tooltip.</p>
+ *          <p>This is a union type structure. For this structure to be valid, only one of the attributes can be defined.</p>
+ * @public
+ */
+export interface TooltipItem {
+  /**
+   * <p>The tooltip item for the fields.</p>
+   * @public
+   */
+  FieldTooltipItem?: FieldTooltipItem;
+
+  /**
+   * <p>The tooltip item for the columns that are not part of a field well.</p>
+   * @public
+   */
+  ColumnTooltipItem?: ColumnTooltipItem;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const TooltipTitleType = {
+  NONE: "NONE",
+  PRIMARY_VALUE: "PRIMARY_VALUE",
+} as const;
+
+/**
+ * @public
+ */
+export type TooltipTitleType = (typeof TooltipTitleType)[keyof typeof TooltipTitleType];
+
+/**
+ * <p>The setup for the detailed tooltip.</p>
+ * @public
+ */
+export interface FieldBasedTooltip {
+  /**
+   * <p>The visibility of <code>Show aggregations</code>.</p>
+   * @public
+   */
+  AggregationVisibility?: Visibility;
+
+  /**
+   * <p>The type for the >tooltip title. Choose one of the following options:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>NONE</code>: Doesn't use the primary value as the title.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>PRIMARY_VALUE</code>: Uses primary value as the title.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  TooltipTitleType?: TooltipTitleType;
+
+  /**
+   * <p>The fields configuration in the
+   *             tooltip.</p>
+   * @public
+   */
+  TooltipFields?: TooltipItem[];
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SelectedTooltipType = {
+  BASIC: "BASIC",
+  DETAILED: "DETAILED",
+} as const;
+
+/**
+ * @public
+ */
+export type SelectedTooltipType = (typeof SelectedTooltipType)[keyof typeof SelectedTooltipType];
+
+/**
+ * <p>The display options for the visual tooltip.</p>
+ * @public
+ */
+export interface TooltipOptions {
+  /**
+   * <p>Determines whether or not the tooltip is visible.</p>
+   * @public
+   */
+  TooltipVisibility?: Visibility;
+
+  /**
+   * <p>The selected type for the tooltip. Choose one of the following options:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>BASIC</code>: A basic tooltip.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>DETAILED</code>: A detailed tooltip.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  SelectedTooltipType?: SelectedTooltipType;
+
+  /**
+   * <p>The setup for the detailed tooltip. The tooltip setup is always saved. The display type is decided based on the tooltip type.</p>
+   * @public
+   */
+  FieldBasedTooltip?: FieldBasedTooltip;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const PivotTableDataPathType = {
+  COUNT_METRIC_COLUMN: "COUNT_METRIC_COLUMN",
+  EMPTY_COLUMN_HEADER: "EMPTY_COLUMN_HEADER",
+  HIERARCHY_ROWS_LAYOUT_COLUMN: "HIERARCHY_ROWS_LAYOUT_COLUMN",
+  MULTIPLE_ROW_METRICS_COLUMN: "MULTIPLE_ROW_METRICS_COLUMN",
+} as const;
+
+/**
+ * @public
+ */
+export type PivotTableDataPathType = (typeof PivotTableDataPathType)[keyof typeof PivotTableDataPathType];
+
+/**
+ * <p>The type of the data path value.</p>
+ * @public
+ */
+export interface DataPathType {
+  /**
+   * <p>The type of data path value utilized in a pivot table. Choose one of the following options:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>HIERARCHY_ROWS_LAYOUT_COLUMN</code> - The type of data path for the rows layout column, when <code>RowsLayout</code> is set to <code>HIERARCHY</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>MULTIPLE_ROW_METRICS_COLUMN</code> - The type of data path for the metric column when the row is set to Metric Placement.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>EMPTY_COLUMN_HEADER</code> - The type of data path for the column with empty column header, when there is no field in <code>ColumnsFieldWell</code> and the row is set to Metric Placement.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>COUNT_METRIC_COLUMN</code> - The type of data path for the column with <code>COUNT</code> as the metric, when there is no field in the <code>ValuesFieldWell</code>.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  PivotTableDataPathType?: PivotTableDataPathType;
+}
 
 /**
  * <p>The data path that needs to be sorted.</p>
@@ -7456,349 +7817,6 @@ export interface TreeMapConfiguration {
 }
 
 /**
- * <p>A tree map.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/tree-map.html">Using tree maps</a> in the <i>Amazon QuickSight User Guide</i>.</p>
- * @public
- */
-export interface TreeMapVisual {
-  /**
-   * <p>The unique identifier of a visual. This identifier must be unique within the context of a dashboard, template, or analysis. Two dashboards, analyses, or templates can have visuals with the same identifiers..</p>
-   * @public
-   */
-  VisualId: string | undefined;
-
-  /**
-   * <p>The title that is displayed on the visual.</p>
-   * @public
-   */
-  Title?: VisualTitleLabelOptions;
-
-  /**
-   * <p>The subtitle that is displayed on the visual.</p>
-   * @public
-   */
-  Subtitle?: VisualSubtitleLabelOptions;
-
-  /**
-   * <p>The configuration settings of the visual.</p>
-   * @public
-   */
-  ChartConfiguration?: TreeMapConfiguration;
-
-  /**
-   * <p>The list of custom actions that are configured for a visual.</p>
-   * @public
-   */
-  Actions?: VisualCustomAction[];
-
-  /**
-   * <p>The column hierarchy that is used during drill-downs and drill-ups.</p>
-   * @public
-   */
-  ColumnHierarchies?: ColumnHierarchy[];
-}
-
-/**
- * <p>The color configuration for individual groups within a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartGroupColorConfiguration {
-  /**
-   * <p>Defines the color for the positive bars of a waterfall chart.</p>
-   * @public
-   */
-  PositiveBarColor?: string;
-
-  /**
-   * <p>Defines the color for the negative bars of a waterfall chart.</p>
-   * @public
-   */
-  NegativeBarColor?: string;
-
-  /**
-   * <p>Defines the color for the total bars of a waterfall chart.</p>
-   * @public
-   */
-  TotalBarColor?: string;
-}
-
-/**
- * <p>The color configuration of a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartColorConfiguration {
-  /**
-   * <p>The color configuration for individual groups within a waterfall visual.</p>
-   * @public
-   */
-  GroupColorConfiguration?: WaterfallChartGroupColorConfiguration;
-}
-
-/**
- * <p>The field well configuration of a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartAggregatedFieldWells {
-  /**
-   * <p>The category field wells of a waterfall visual.</p>
-   * @public
-   */
-  Categories?: DimensionField[];
-
-  /**
-   * <p>The value field wells of a waterfall visual.</p>
-   * @public
-   */
-  Values?: MeasureField[];
-
-  /**
-   * <p>The breakdown field wells of a waterfall visual.</p>
-   * @public
-   */
-  Breakdowns?: DimensionField[];
-}
-
-/**
- * <p>The field well configuration of a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartFieldWells {
-  /**
-   * <p>The field well configuration of a waterfall visual.</p>
-   * @public
-   */
-  WaterfallChartAggregatedFieldWells?: WaterfallChartAggregatedFieldWells;
-}
-
-/**
- * <p>The sort configuration of a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartSortConfiguration {
-  /**
-   * <p>The sort configuration of the category fields.</p>
-   * @public
-   */
-  CategorySort?: FieldSortOptions[];
-
-  /**
-   * <p>The limit on the number of bar groups that are displayed.</p>
-   * @public
-   */
-  BreakdownItemsLimit?: ItemsLimitConfiguration;
-}
-
-/**
- * <p>The options that determine the presentation of a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartOptions {
-  /**
-   * <p>This option determines the total bar label of a waterfall visual.</p>
-   * @public
-   */
-  TotalBarLabel?: string;
-}
-
-/**
- * <p>The configuration for a waterfall visual.</p>
- * @public
- */
-export interface WaterfallChartConfiguration {
-  /**
-   * <p>The field well configuration of a waterfall visual.</p>
-   * @public
-   */
-  FieldWells?: WaterfallChartFieldWells;
-
-  /**
-   * <p>The sort configuration of a waterfall visual.</p>
-   * @public
-   */
-  SortConfiguration?: WaterfallChartSortConfiguration;
-
-  /**
-   * <p>The options that determine the presentation of a waterfall visual.</p>
-   * @public
-   */
-  WaterfallChartOptions?: WaterfallChartOptions;
-
-  /**
-   * <p>The options that determine the presentation of the category axis label.</p>
-   * @public
-   */
-  CategoryAxisLabelOptions?: ChartAxisLabelOptions;
-
-  /**
-   * <p>The options that determine the presentation of the category axis.</p>
-   * @public
-   */
-  CategoryAxisDisplayOptions?: AxisDisplayOptions;
-
-  /**
-   * <p>The options that determine the presentation of the y-axis label.</p>
-   * @public
-   */
-  PrimaryYAxisLabelOptions?: ChartAxisLabelOptions;
-
-  /**
-   * <p>The options that determine the presentation of the y-axis.</p>
-   * @public
-   */
-  PrimaryYAxisDisplayOptions?: AxisDisplayOptions;
-
-  /**
-   * <p>The legend configuration of a waterfall visual.</p>
-   * @public
-   */
-  Legend?: LegendOptions;
-
-  /**
-   * <p>The data label configuration of a waterfall visual.</p>
-   * @public
-   */
-  DataLabels?: DataLabelOptions;
-
-  /**
-   * <p>The visual palette configuration of a waterfall visual.</p>
-   * @public
-   */
-  VisualPalette?: VisualPalette;
-
-  /**
-   * <p>The color configuration of a waterfall visual.</p>
-   * @public
-   */
-  ColorConfiguration?: WaterfallChartColorConfiguration;
-
-  /**
-   * <p>The general visual interactions setup for a visual.</p>
-   * @public
-   */
-  Interactions?: VisualInteractionOptions;
-}
-
-/**
- * <p>A waterfall chart.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/waterfall-chart.html">Using waterfall charts</a> in the <i>Amazon QuickSight User Guide</i>.</p>
- * @public
- */
-export interface WaterfallVisual {
-  /**
-   * <p>The unique identifier of a visual. This identifier must be unique within the context of a dashboard, template, or analysis. Two dashboards, analyses, or templates can have visuals with the same identifiers.</p>
-   * @public
-   */
-  VisualId: string | undefined;
-
-  /**
-   * <p>The title that is displayed on the visual.</p>
-   * @public
-   */
-  Title?: VisualTitleLabelOptions;
-
-  /**
-   * <p>The subtitle that is displayed on the visual.</p>
-   * @public
-   */
-  Subtitle?: VisualSubtitleLabelOptions;
-
-  /**
-   * <p>The configuration for a waterfall visual.</p>
-   * @public
-   */
-  ChartConfiguration?: WaterfallChartConfiguration;
-
-  /**
-   * <p>The list of custom actions that are configured for a visual.</p>
-   * @public
-   */
-  Actions?: VisualCustomAction[];
-
-  /**
-   * <p>The column hierarchy that is used during drill-downs and drill-ups.</p>
-   * @public
-   */
-  ColumnHierarchies?: ColumnHierarchy[];
-}
-
-/**
- * <p>The aggregated field wells of a word cloud.</p>
- * @public
- */
-export interface WordCloudAggregatedFieldWells {
-  /**
-   * <p>The group by field well of a word cloud. Values are grouped by group by fields.</p>
-   * @public
-   */
-  GroupBy?: DimensionField[];
-
-  /**
-   * <p>The size field well of a word cloud. Values are aggregated based on group by fields.</p>
-   * @public
-   */
-  Size?: MeasureField[];
-}
-
-/**
- * <p>The field wells of a word cloud visual.</p>
- *          <p>This is a union type structure. For this structure to be valid, only one of the attributes can be defined.</p>
- * @public
- */
-export interface WordCloudFieldWells {
-  /**
-   * <p>The aggregated field wells of a word cloud.</p>
-   * @public
-   */
-  WordCloudAggregatedFieldWells?: WordCloudAggregatedFieldWells;
-}
-
-/**
- * <p>The sort configuration of a word cloud visual.</p>
- * @public
- */
-export interface WordCloudSortConfiguration {
-  /**
-   * <p>The limit on the number of groups that are displayed in a word cloud.</p>
-   * @public
-   */
-  CategoryItemsLimit?: ItemsLimitConfiguration;
-
-  /**
-   * <p>The sort configuration of group by fields.</p>
-   * @public
-   */
-  CategorySort?: FieldSortOptions[];
-}
-
-/**
- * @public
- * @enum
- */
-export const WordCloudCloudLayout = {
-  FLUID: "FLUID",
-  NORMAL: "NORMAL",
-} as const;
-
-/**
- * @public
- */
-export type WordCloudCloudLayout = (typeof WordCloudCloudLayout)[keyof typeof WordCloudCloudLayout];
-
-/**
- * @public
- * @enum
- */
-export const WordCloudWordCasing = {
-  EXISTING_CASE: "EXISTING_CASE",
-  LOWER_CASE: "LOWER_CASE",
-} as const;
-
-/**
- * @public
- */
-export type WordCloudWordCasing = (typeof WordCloudWordCasing)[keyof typeof WordCloudWordCasing];
-
-/**
  * @internal
  */
 export const DataPathValueFilterSensitiveLog = (obj: DataPathValue): any => ({
@@ -8962,57 +8980,4 @@ export const TreeMapFieldWellsFilterSensitiveLog = (obj: TreeMapFieldWells): any
 export const TreeMapConfigurationFilterSensitiveLog = (obj: TreeMapConfiguration): any => ({
   ...obj,
   ...(obj.DataLabels && { DataLabels: DataLabelOptionsFilterSensitiveLog(obj.DataLabels) }),
-});
-
-/**
- * @internal
- */
-export const TreeMapVisualFilterSensitiveLog = (obj: TreeMapVisual): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const WaterfallChartAggregatedFieldWellsFilterSensitiveLog = (obj: WaterfallChartAggregatedFieldWells): any => ({
-  ...obj,
-  ...(obj.Values && { Values: obj.Values.map((item) => MeasureFieldFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const WaterfallChartFieldWellsFilterSensitiveLog = (obj: WaterfallChartFieldWells): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const WaterfallChartConfigurationFilterSensitiveLog = (obj: WaterfallChartConfiguration): any => ({
-  ...obj,
-  ...(obj.DataLabels && { DataLabels: DataLabelOptionsFilterSensitiveLog(obj.DataLabels) }),
-  ...(obj.VisualPalette && { VisualPalette: VisualPaletteFilterSensitiveLog(obj.VisualPalette) }),
-});
-
-/**
- * @internal
- */
-export const WaterfallVisualFilterSensitiveLog = (obj: WaterfallVisual): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const WordCloudAggregatedFieldWellsFilterSensitiveLog = (obj: WordCloudAggregatedFieldWells): any => ({
-  ...obj,
-  ...(obj.Size && { Size: obj.Size.map((item) => MeasureFieldFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const WordCloudFieldWellsFilterSensitiveLog = (obj: WordCloudFieldWells): any => ({
-  ...obj,
 });

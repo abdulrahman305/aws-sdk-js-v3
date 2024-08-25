@@ -10,7 +10,7 @@ import {
   GenerateEmbedUrlForAnonymousUserRequestFilterSensitiveLog,
   GenerateEmbedUrlForAnonymousUserResponse,
   GenerateEmbedUrlForAnonymousUserResponseFilterSensitiveLog,
-} from "../models/models_3";
+} from "../models/models_4";
 import {
   de_GenerateEmbedUrlForAnonymousUserCommand,
   se_GenerateEmbedUrlForAnonymousUserCommand,
@@ -78,6 +78,17 @@ export interface GenerateEmbedUrlForAnonymousUserCommandOutput
  *   ExperienceConfiguration: { // AnonymousUserEmbeddingExperienceConfiguration
  *     Dashboard: { // AnonymousUserDashboardEmbeddingConfiguration
  *       InitialDashboardId: "STRING_VALUE", // required
+ *       EnabledFeatures: [ // AnonymousUserDashboardEmbeddingConfigurationEnabledFeatures
+ *         "SHARED_VIEW",
+ *       ],
+ *       DisabledFeatures: [ // AnonymousUserDashboardEmbeddingConfigurationDisabledFeatures
+ *         "SHARED_VIEW",
+ *       ],
+ *       FeatureConfigurations: { // AnonymousUserDashboardFeatureConfigurations
+ *         SharedView: { // SharedViewConfigurations
+ *           Enabled: true || false, // required
+ *         },
+ *       },
  *     },
  *     DashboardVisual: { // AnonymousUserDashboardVisualEmbeddingConfiguration
  *       InitialDashboardVisualId: { // DashboardVisualId

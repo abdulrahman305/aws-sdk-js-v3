@@ -3,6 +3,114 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.635.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.634.0...v3.635.0) (2024-08-20)
+
+
+### Features
+
+* **codegen:** add Smithy RPCv2 CBOR to list of protocols ([#6096](https://github.com/aws/aws-sdk-js-v3/issues/6096)) ([5154d4f](https://github.com/aws/aws-sdk-js-v3/commit/5154d4f19bc77a7bad075b35ce135d3b5f60ad1d))
+
+
+
+
+
+# [3.633.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.632.0...v3.633.0) (2024-08-16)
+
+
+### Bug Fixes
+
+* **middleware-sdk-s3:** skip stream inspection if non-stream-like body ([#6333](https://github.com/aws/aws-sdk-js-v3/issues/6333)) ([5f85b5f](https://github.com/aws/aws-sdk-js-v3/commit/5f85b5fdd487a92a6fd788b4363f1a946805f511))
+
+
+
+
+
+# [3.629.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.628.0...v3.629.0) (2024-08-12)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.626.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.625.0...v3.626.0) (2024-08-07)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.624.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.623.0...v3.624.0) (2024-08-05)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.622.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.621.0...v3.622.0) (2024-08-01)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.621.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.620.1...v3.621.0) (2024-07-30)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.620.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.619.0...v3.620.0) (2024-07-25)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.617.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.616.0...v3.617.0) (2024-07-22)
+
+
+### Bug Fixes
+
+* **middleware-sdk-s3:** fix error with partially-read Node.js streams ([#6294](https://github.com/aws/aws-sdk-js-v3/issues/6294)) ([e11de23](https://github.com/aws/aws-sdk-js-v3/commit/e11de230e80b6df2fa0a8a4d444604e49d6194bf))
+
+
+
+
+
+# [3.616.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.615.0...v3.616.0) (2024-07-18)
+
+
+### Bug Fixes
+
+* **middleware-sdk-s3:** set consistent dependency versions ([#6287](https://github.com/aws/aws-sdk-js-v3/issues/6287)) ([207cd84](https://github.com/aws/aws-sdk-js-v3/commit/207cd845f93181a7d6578b987d6670ccd4a6d435))
+
+
+
+
+
+# [3.614.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.613.0...v3.614.0) (2024-07-10)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
+# [3.609.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.608.0...v3.609.0) (2024-07-02)
+
+**Note:** Version bump only for package @aws-sdk/middleware-sdk-s3
+
+
+
+
+
 # [3.598.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.597.0...v3.598.0) (2024-06-14)
 
 **Note:** Version bump only for package @aws-sdk/middleware-sdk-s3

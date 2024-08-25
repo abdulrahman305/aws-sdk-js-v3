@@ -180,7 +180,7 @@ export const se_RecognizeUtteranceCommand = async (
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
     "x-amz-content-sha256": "UNSIGNED-PAYLOAD",
-    [_ct]: input[_rCTe]! || "application/octet-stream",
+    [_ct]: input[_rCTe] || "application/octet-stream",
     [_xalss]: input[_sS]!,
     [_xalra]: input[_rA]!,
     [_rct]: input[_rCT]!,
@@ -207,6 +207,7 @@ export const se_StartConversationCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
+    "content-type": "application/json",
     [_xalcm]: input[_cM]!,
   });
   b.bp("/bots/{botId}/botAliases/{botAliasId}/botLocales/{localeId}/sessions/{sessionId}/conversation");

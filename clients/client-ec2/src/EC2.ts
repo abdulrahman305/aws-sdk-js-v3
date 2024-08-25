@@ -274,6 +274,11 @@ import {
   CopySnapshotCommandOutput,
 } from "./commands/CopySnapshotCommand";
 import {
+  CreateCapacityReservationBySplittingCommand,
+  CreateCapacityReservationBySplittingCommandInput,
+  CreateCapacityReservationBySplittingCommandOutput,
+} from "./commands/CreateCapacityReservationBySplittingCommand";
+import {
   CreateCapacityReservationCommand,
   CreateCapacityReservationCommandInput,
   CreateCapacityReservationCommandOutput,
@@ -366,6 +371,11 @@ import {
   CreateInternetGatewayCommandOutput,
 } from "./commands/CreateInternetGatewayCommand";
 import { CreateIpamCommand, CreateIpamCommandInput, CreateIpamCommandOutput } from "./commands/CreateIpamCommand";
+import {
+  CreateIpamExternalResourceVerificationTokenCommand,
+  CreateIpamExternalResourceVerificationTokenCommandInput,
+  CreateIpamExternalResourceVerificationTokenCommandOutput,
+} from "./commands/CreateIpamExternalResourceVerificationTokenCommand";
 import {
   CreateIpamPoolCommand,
   CreateIpamPoolCommandInput,
@@ -730,6 +740,11 @@ import {
   DeleteInternetGatewayCommandOutput,
 } from "./commands/DeleteInternetGatewayCommand";
 import { DeleteIpamCommand, DeleteIpamCommandInput, DeleteIpamCommandOutput } from "./commands/DeleteIpamCommand";
+import {
+  DeleteIpamExternalResourceVerificationTokenCommand,
+  DeleteIpamExternalResourceVerificationTokenCommandInput,
+  DeleteIpamExternalResourceVerificationTokenCommandOutput,
+} from "./commands/DeleteIpamExternalResourceVerificationTokenCommand";
 import {
   DeleteIpamPoolCommand,
   DeleteIpamPoolCommandInput,
@@ -1338,6 +1353,11 @@ import {
   DescribeIpamByoasnCommandInput,
   DescribeIpamByoasnCommandOutput,
 } from "./commands/DescribeIpamByoasnCommand";
+import {
+  DescribeIpamExternalResourceVerificationTokensCommand,
+  DescribeIpamExternalResourceVerificationTokensCommandInput,
+  DescribeIpamExternalResourceVerificationTokensCommandOutput,
+} from "./commands/DescribeIpamExternalResourceVerificationTokensCommand";
 import {
   DescribeIpamPoolsCommand,
   DescribeIpamPoolsCommandInput,
@@ -2710,6 +2730,11 @@ import {
   MoveByoipCidrToIpamCommandOutput,
 } from "./commands/MoveByoipCidrToIpamCommand";
 import {
+  MoveCapacityReservationInstancesCommand,
+  MoveCapacityReservationInstancesCommandInput,
+  MoveCapacityReservationInstancesCommandOutput,
+} from "./commands/MoveCapacityReservationInstancesCommand";
+import {
   ProvisionByoipCidrCommand,
   ProvisionByoipCidrCommandInput,
   ProvisionByoipCidrCommandOutput,
@@ -3103,6 +3128,7 @@ const commands = {
   CopyImageCommand,
   CopySnapshotCommand,
   CreateCapacityReservationCommand,
+  CreateCapacityReservationBySplittingCommand,
   CreateCapacityReservationFleetCommand,
   CreateCarrierGatewayCommand,
   CreateClientVpnEndpointCommand,
@@ -3123,6 +3149,7 @@ const commands = {
   CreateInstanceExportTaskCommand,
   CreateInternetGatewayCommand,
   CreateIpamCommand,
+  CreateIpamExternalResourceVerificationTokenCommand,
   CreateIpamPoolCommand,
   CreateIpamResourceDiscoveryCommand,
   CreateIpamScopeCommand,
@@ -3199,6 +3226,7 @@ const commands = {
   DeleteInstanceEventWindowCommand,
   DeleteInternetGatewayCommand,
   DeleteIpamCommand,
+  DeleteIpamExternalResourceVerificationTokenCommand,
   DeleteIpamPoolCommand,
   DeleteIpamResourceDiscoveryCommand,
   DeleteIpamScopeCommand,
@@ -3323,6 +3351,7 @@ const commands = {
   DescribeInstanceTypesCommand,
   DescribeInternetGatewaysCommand,
   DescribeIpamByoasnCommand,
+  DescribeIpamExternalResourceVerificationTokensCommand,
   DescribeIpamPoolsCommand,
   DescribeIpamResourceDiscoveriesCommand,
   DescribeIpamResourceDiscoveryAssociationsCommand,
@@ -3602,6 +3631,7 @@ const commands = {
   MonitorInstancesCommand,
   MoveAddressToVpcCommand,
   MoveByoipCidrToIpamCommand,
+  MoveCapacityReservationInstancesCommand,
   ProvisionByoipCidrCommand,
   ProvisionIpamByoasnCommand,
   ProvisionIpamPoolCidrCommand,
@@ -4594,6 +4624,23 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link CreateCapacityReservationBySplittingCommand}
+   */
+  createCapacityReservationBySplitting(
+    args: CreateCapacityReservationBySplittingCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateCapacityReservationBySplittingCommandOutput>;
+  createCapacityReservationBySplitting(
+    args: CreateCapacityReservationBySplittingCommandInput,
+    cb: (err: any, data?: CreateCapacityReservationBySplittingCommandOutput) => void
+  ): void;
+  createCapacityReservationBySplitting(
+    args: CreateCapacityReservationBySplittingCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateCapacityReservationBySplittingCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateCapacityReservationFleetCommand}
    */
   createCapacityReservationFleet(
@@ -4905,6 +4952,23 @@ export interface EC2 {
     args: CreateIpamCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateIpamCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateIpamExternalResourceVerificationTokenCommand}
+   */
+  createIpamExternalResourceVerificationToken(
+    args: CreateIpamExternalResourceVerificationTokenCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateIpamExternalResourceVerificationTokenCommandOutput>;
+  createIpamExternalResourceVerificationToken(
+    args: CreateIpamExternalResourceVerificationTokenCommandInput,
+    cb: (err: any, data?: CreateIpamExternalResourceVerificationTokenCommandOutput) => void
+  ): void;
+  createIpamExternalResourceVerificationToken(
+    args: CreateIpamExternalResourceVerificationTokenCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateIpamExternalResourceVerificationTokenCommandOutput) => void
   ): void;
 
   /**
@@ -6134,6 +6198,23 @@ export interface EC2 {
     args: DeleteIpamCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteIpamCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteIpamExternalResourceVerificationTokenCommand}
+   */
+  deleteIpamExternalResourceVerificationToken(
+    args: DeleteIpamExternalResourceVerificationTokenCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteIpamExternalResourceVerificationTokenCommandOutput>;
+  deleteIpamExternalResourceVerificationToken(
+    args: DeleteIpamExternalResourceVerificationTokenCommandInput,
+    cb: (err: any, data?: DeleteIpamExternalResourceVerificationTokenCommandOutput) => void
+  ): void;
+  deleteIpamExternalResourceVerificationToken(
+    args: DeleteIpamExternalResourceVerificationTokenCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteIpamExternalResourceVerificationTokenCommandOutput) => void
   ): void;
 
   /**
@@ -8233,6 +8314,24 @@ export interface EC2 {
     args: DescribeIpamByoasnCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeIpamByoasnCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeIpamExternalResourceVerificationTokensCommand}
+   */
+  describeIpamExternalResourceVerificationTokens(): Promise<DescribeIpamExternalResourceVerificationTokensCommandOutput>;
+  describeIpamExternalResourceVerificationTokens(
+    args: DescribeIpamExternalResourceVerificationTokensCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeIpamExternalResourceVerificationTokensCommandOutput>;
+  describeIpamExternalResourceVerificationTokens(
+    args: DescribeIpamExternalResourceVerificationTokensCommandInput,
+    cb: (err: any, data?: DescribeIpamExternalResourceVerificationTokensCommandOutput) => void
+  ): void;
+  describeIpamExternalResourceVerificationTokens(
+    args: DescribeIpamExternalResourceVerificationTokensCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeIpamExternalResourceVerificationTokensCommandOutput) => void
   ): void;
 
   /**
@@ -12966,6 +13065,23 @@ export interface EC2 {
     args: MoveByoipCidrToIpamCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: MoveByoipCidrToIpamCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link MoveCapacityReservationInstancesCommand}
+   */
+  moveCapacityReservationInstances(
+    args: MoveCapacityReservationInstancesCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<MoveCapacityReservationInstancesCommandOutput>;
+  moveCapacityReservationInstances(
+    args: MoveCapacityReservationInstancesCommandInput,
+    cb: (err: any, data?: MoveCapacityReservationInstancesCommandOutput) => void
+  ): void;
+  moveCapacityReservationInstances(
+    args: MoveCapacityReservationInstancesCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: MoveCapacityReservationInstancesCommandOutput) => void
   ): void;
 
   /**

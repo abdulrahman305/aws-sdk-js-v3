@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/cloudfront-signer",
-  "version": "3.598.0",
+  "version": "3.621.0",
   "scripts": {
     "build": "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
     "build:cjs": "node ../../scripts/compilation/inline cloudfront-signer",
@@ -21,7 +21,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@smithy/url-parser": "^3.0.1",
+    "@smithy/url-parser": "^3.0.3",
     "tslib": "^2.6.2"
   },
   "files": [
@@ -44,7 +44,7 @@
       ]
     }
   },
-  "homepage": "https://github.com/aws/aws-sdk-js-v3/tree/master/packages/cloudfront-signer",
+  "homepage": "https://github.com/aws/aws-sdk-js-v3/tree/main/packages/cloudfront-signer",
   "repository": {
     "type": "git",
     "url": "https://github.com/aws/aws-sdk-js-v3.git",

@@ -367,12 +367,9 @@ export const se_StartDiscoveryCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {
-    "content-type": "application/json",
-  };
+  const headers: any = {};
   b.bp("/start-discovery");
   let body: any;
-  body = "";
   b.m("POST").h(headers).b(body);
   return b.build();
 };
@@ -525,6 +522,7 @@ export const de_GetServiceCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     EndTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    LogGroupReferences: _json,
     Service: _json,
     StartTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   });
@@ -1034,6 +1032,8 @@ const de_Interval = (output: any, context: __SerdeContext): Interval => {
   }
   return { $unknown: Object.entries(output)[0] };
 };
+
+// de_LogGroupReferences omitted.
 
 // de_Metric omitted.
 

@@ -1,4 +1,4 @@
-import { NodeHttpHandler, streamCollector } from "@smithy/node-http-handler";
+import { NodeHttp2Handler, NodeHttpHandler, streamCollector } from "@smithy/node-http-handler";
 import { HttpResponse } from "@smithy/protocol-http";
 import { Readable } from "stream";
 
@@ -87,6 +87,17 @@ describe("getDefaultRoleAssumer", () => {
     );
   });
 
+  it("should return accountId in the credentials", async () => {
+    const roleAssumer = getDefaultRoleAssumer();
+    const params: AssumeRoleCommandInput = {
+      RoleArn: "arn:aws:foo",
+      RoleSessionName: "session",
+    };
+    const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
+    const assumedRole = await roleAssumer(sourceCred, params);
+    expect(assumedRole.accountId).toEqual("123");
+  });
+
   it("should use the STS client config", async () => {
     const logger = console;
     const region = "some-region";
@@ -105,7 +116,7 @@ describe("getDefaultRoleAssumer", () => {
       RoleArn: "arn:aws:foo",
       RoleSessionName: "session",
     };
-    const sourceCred = { accessKeyId: "key", secretAccessKey: "secrete" };
+    const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
     await roleAssumer(sourceCred, params);
     expect(mockConstructorInput).toHaveBeenCalledTimes(1);
     expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
@@ -130,12 +141,37 @@ describe("getDefaultRoleAssumer", () => {
       RoleArn: "arn:aws:foo",
       RoleSessionName: "session",
     };
-    const sourceCred = { accessKeyId: "key", secretAccessKey: "secrete" };
+    const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
     await roleAssumer(sourceCred, params);
     expect(mockConstructorInput).toHaveBeenCalledTimes(1);
     expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
       logger,
       requestHandler: handler,
+      region,
+    });
+  });
+
+  it("should not pass through an Http2 requestHandler", async () => {
+    const logger = console;
+    const region = "some-region";
+    const handler = new NodeHttp2Handler();
+    const roleAssumer = getDefaultRoleAssumer({
+      parentClientConfig: {
+        region,
+        logger,
+        requestHandler: handler,
+      },
+    });
+    const params: AssumeRoleCommandInput = {
+      RoleArn: "arn:aws:foo",
+      RoleSessionName: "session",
+    };
+    const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
+    await roleAssumer(sourceCred, params);
+    expect(mockConstructorInput).toHaveBeenCalledTimes(1);
+    expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
+      logger,
+      requestHandler: undefined,
       region,
     });
   });
@@ -156,7 +192,7 @@ describe("getDefaultRoleAssumer", () => {
       RoleArn: "arn:aws:foo",
       RoleSessionName: "session",
     };
-    const sourceCred = { accessKeyId: "key", secretAccessKey: "secrete" };
+    const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
     await Promise.all([roleAssumer(sourceCred, params), roleAssumer(sourceCred, params)]);
     expect(customMiddlewareFunction).toHaveBeenCalledTimes(2); // make sure the middleware is not added to stack multiple times.
     expect(customMiddlewareFunction).toHaveBeenNthCalledWith(1, expect.objectContaining({ input: params }));
@@ -167,6 +203,10 @@ describe("getDefaultRoleAssumer", () => {
 describe("getDefaultRoleAssumerWithWebIdentity", () => {
   const assumeRoleResponse = `<Response xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
   <AssumeRoleWithWebIdentityResult>
+  <AssumedRoleUser>
+      <AssumedRoleId>AROAZOX2IL27GNRBJHWC2:session</AssumedRoleId>
+      <Arn>arn:aws:sts::123456789012:assumed-role/assume-role-test/session</Arn>
+    </AssumedRoleUser>
     <Credentials>
       <AccessKeyId>key</AccessKeyId>
       <SecretAccessKey>secrete</SecretAccessKey>
@@ -205,6 +245,17 @@ describe("getDefaultRoleAssumerWithWebIdentity", () => {
       requestHandler: handler,
       region,
     });
+  });
+
+  it("should return accountId in the credentials", async () => {
+    const roleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdentity();
+    const params: AssumeRoleWithWebIdentityCommandInput = {
+      RoleArn: "arn:aws:foo",
+      RoleSessionName: "session",
+      WebIdentityToken: "token",
+    };
+    const assumedRole = await roleAssumerWithWebIdentity(params);
+    expect(assumedRole.accountId).toEqual("123456789012");
   });
 
   it("should use the STS client middleware", async () => {

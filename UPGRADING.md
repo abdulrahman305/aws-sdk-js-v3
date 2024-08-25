@@ -8,7 +8,7 @@ these changes in our [blog posts](https://aws.amazon.com/blogs/developer/categor
 The following blog posts will get you up to speed:
 
 - [Modular packages in AWS SDK for JavaScript](https://aws.amazon.com/blogs/developer/modular-packages-in-aws-sdk-for-javascript/)
-- [Introducing Middleware Stack in Modular AWS SDK for JavaScript](https://aws.amazon.com/blogs/developer/first-class-typescript-support-in-modular-aws-sdk-for-javascript/)
+- [Introducing Middleware Stack in Modular AWS SDK for JavaScript](https://aws.amazon.com/blogs/developer/middleware-stack-modular-aws-sdk-js/)
 
 The summary of interface changes from AWS SDK for JavaScript v2 to v3 is given below.
 The goal is to help you easily find the v3 equivalents of the v2 APIs you are already familiar with.
@@ -52,7 +52,7 @@ This list is indexed by [v2 config parameters](https://docs.aws.amazon.com/AWSJa
 
   A set of options to pass to the low-level HTTP request. These options are aggregated differently in v3. You can
   configure them by supplying a new `requestHandler`. Here's the example of setting http options in Node.js runtime. You
-  can find more in [v3 reference for NodeHttpHandler](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/classes/_aws_sdk_node_http_handler.nodehttphandler-1.html).
+  can find more in [v3 reference for NodeHttpHandler](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-smithy-node-http-handler/).
 
   All v3 requests use HTTPS by default. You only need to provide custom httpsAgent.
 
@@ -88,7 +88,7 @@ This list is indexed by [v2 config parameters](https://docs.aws.amazon.com/AWSJa
   ```
 
   If the client is running in browsers, a different set of options is available. You can find more in [v3
-  reference for FetchHttpHandler](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/classes/_aws_sdk_fetch_http_handler.fetchhttphandler-1.html).
+  reference for FetchHttpHandler](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-smithy-fetch-http-handler/).
 
   ```javascript
   const { FetchHttpHandler } = require("@smithy/fetch-http-handler");
@@ -112,10 +112,10 @@ This list is indexed by [v2 config parameters](https://docs.aws.amazon.com/AWSJa
   - `connectTimeout`
     - **v2**: Sets the socket to timeout after failing to establish a connection with the server after connectTimeout
       milliseconds.
-    - **v3**: `connectionTimeout` is available [in `NodeHttpHandler` options](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/classes/_aws_sdk_node_http_handler.nodehttphandler-1.html).
+    - **v3**: `connectionTimeout` is available [in `NodeHttpHandler` options](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-smithy-node-http-handler/).
   - `timeout`
     - **v2**: The number of milliseconds a request can take before automatically being terminated.
-    - **v3**: `socketTimeout` is available [in `NodeHttpHandler` options](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/classes/_aws_sdk_node_http_handler.nodehttphandler-1.html).
+    - **v3**: `socketTimeout` is available [in `NodeHttpHandler` options](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-smithy-node-http-handler/).
   - `xhrAsync`
     - **v2**: Whether the SDK will send asynchronous HTTP requests.
     - **v3**: **Deprecated**. Requests are _always_ asynchronous.
@@ -131,7 +131,7 @@ This list is indexed by [v2 config parameters](https://docs.aws.amazon.com/AWSJa
   - **v3**: **Deprecated**. SDK _does not_ follow redirects to avoid unintentional cross-region requests.
 - [`maxRetries`](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html#maxRetries-property)
   - **v2**: The maximum amount of retries to perform for a service request.
-  - **v3**: Changed to `maxAttempts`. See more in [v3 reference for RetryInputConfig](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/interfaces/_aws_sdk_middleware_retry.retryinputconfig-2.html#maxattempts).
+  - **v3**: Changed to `maxAttempts`. See more in [v3 reference for RetryInputConfig](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-smithy-middleware-retry/#maxattempts).
     Note that the `maxAttempt` should be `maxRetries + 1`.
 - [`paramValidation`](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html#paramValidation-property)
   - **v2**: Whether input parameters should be validated against the operation description before sending the request.

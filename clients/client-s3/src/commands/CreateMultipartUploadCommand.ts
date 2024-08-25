@@ -1,4 +1,5 @@
 // smithy-typescript generated code
+import { getThrow200ExceptionsPlugin } from "@aws-sdk/middleware-sdk-s3";
 import { getSsecPlugin } from "@aws-sdk/middleware-ssec";
 import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
@@ -77,17 +78,20 @@ export interface CreateMultipartUploadCommandOutput extends CreateMultipartUploa
  *                <ul>
  *                   <li>
  *                      <p>
- *                         <b>General purpose bucket permissions</b> - For information about the permissions required to use the multipart upload API, see
- *                         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuAndPermissions.html">Multipart
- *                            upload and permissions</a> in the <i>Amazon S3 User Guide</i>. </p>
- *                      <p>To perform a multipart upload with encryption by using an Amazon Web Services KMS key, the requester
- *                         must have permission to the <code>kms:Decrypt</code> and <code>kms:GenerateDataKey*</code>
- *                         actions on the key. These permissions are required because Amazon S3 must decrypt and read data
- *                         from the encrypted file parts before it completes the multipart upload. For more
- *                         information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html#mpuAndPermissions">Multipart upload API
- *                            and permissions</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html">Protecting data using
- *                               server-side encryption with Amazon Web Services KMS</a> in the
- *                         <i>Amazon S3 User Guide</i>.</p>
+ *                         <b>General purpose bucket permissions</b> - To
+ *                         perform a multipart upload with encryption using an Key Management Service (KMS)
+ *                         KMS key, the requester must have permission to the
+ *                            <code>kms:Decrypt</code> and <code>kms:GenerateDataKey</code> actions on
+ *                         the key. The requester must also have permissions for the
+ *                            <code>kms:GenerateDataKey</code> action for the
+ *                            <code>CreateMultipartUpload</code> API. Then, the requester needs
+ *                         permissions for the <code>kms:Decrypt</code> action on the
+ *                            <code>UploadPart</code> and <code>UploadPartCopy</code> APIs. These
+ *                         permissions are required because Amazon S3 must decrypt and read data from the
+ *                         encrypted file parts before it completes the multipart upload. For more
+ *                         information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html#mpuAndPermissions">Multipart upload API and permissions</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html">Protecting data
+ *                            using server-side encryption with Amazon Web Services KMS</a> in the
+ *                            <i>Amazon S3 User Guide</i>.</p>
  *                   </li>
  *                   <li>
  *                      <p>
@@ -358,6 +362,7 @@ export class CreateMultipartUploadCommand extends $Command
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getThrow200ExceptionsPlugin(config),
       getSsecPlugin(config),
     ];
   })
