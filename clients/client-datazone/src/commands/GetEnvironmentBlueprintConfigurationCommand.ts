@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   GetEnvironmentBlueprintConfigurationInput,
   GetEnvironmentBlueprintConfigurationOutput,
-} from "../models/models_0";
+} from "../models/models_1";
 import {
   de_GetEnvironmentBlueprintConfigurationCommand,
   se_GetEnvironmentBlueprintConfigurationCommand,

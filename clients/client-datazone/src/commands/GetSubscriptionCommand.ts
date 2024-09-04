@@ -10,7 +10,7 @@ import {
   GetSubscriptionInput,
   GetSubscriptionOutput,
   GetSubscriptionOutputFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_GetSubscriptionCommand, se_GetSubscriptionCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -76,6 +76,14 @@ export interface GetSubscriptionCommandOutput extends GetSubscriptionOutput, __M
  * //             shortDescription: "STRING_VALUE",
  * //           },
  * //         ],
+ * //         assetScope: { // AssetScope
+ * //           assetId: "STRING_VALUE", // required
+ * //           filterIds: [ // FilterIds // required
+ * //             "STRING_VALUE",
+ * //           ],
+ * //           status: "STRING_VALUE", // required
+ * //           errorMessage: "STRING_VALUE",
+ * //         },
  * //       },
  * //       productListing: { // SubscribedProductListing
  * //         entityId: "STRING_VALUE",

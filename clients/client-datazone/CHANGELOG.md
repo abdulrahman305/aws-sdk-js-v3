@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.644.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.643.0...v3.644.0) (2024-09-03)
+
+
+### Features
+
+* **client-datazone:** Add support to let data publisher specify a subset of the data asset that a subscriber will have access to based on the asset filters provided, when accepting a subscription request. ([da060f0](https://github.com/aws/aws-sdk-js-v3/commit/da060f0ddddaa26febb9f1e0b8b7cb56a7af1d9a))
+
+
+
+
+
+# [3.643.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.642.0...v3.643.0) (2024-08-30)
+
+
+### Features
+
+* **client-datazone:** Amazon DataZone now adds new governance capabilities of Domain Units for organization within your Data Domains, and Authorization Policies for tighter controls. ([a30b03e](https://github.com/aws/aws-sdk-js-v3/commit/a30b03e9a0d658839ab82b451b21c5c73dce62ff))
+
+
+
+
+
+# [3.641.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.640.0...v3.641.0) (2024-08-28)
+
+
+### Features
+
+* **client-datazone:** Update regex to include dot character to be consistent with IAM role creation in the authorized principal field for create and update subscription target. ([535c1a3](https://github.com/aws/aws-sdk-js-v3/commit/535c1a32e18ec8f9c9e7a3c3f42dc0efd678e4fa))
+
+
+
+
+
 # [3.637.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.636.0...v3.637.0) (2024-08-22)
 
 **Note:** Version bump only for package @aws-sdk/client-datazone

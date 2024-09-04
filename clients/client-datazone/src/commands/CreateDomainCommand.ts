@@ -53,6 +53,7 @@ export interface CreateDomainCommandOutput extends CreateDomainOutput, __Metadat
  * const response = await client.send(command);
  * // { // CreateDomainOutput
  * //   id: "STRING_VALUE", // required
+ * //   rootDomainUnitId: "STRING_VALUE",
  * //   name: "STRING_VALUE",
  * //   description: "STRING_VALUE",
  * //   singleSignOn: { // SingleSignOn

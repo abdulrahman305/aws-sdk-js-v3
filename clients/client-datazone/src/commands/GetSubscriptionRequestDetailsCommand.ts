@@ -10,7 +10,7 @@ import {
   GetSubscriptionRequestDetailsInput,
   GetSubscriptionRequestDetailsOutput,
   GetSubscriptionRequestDetailsOutputFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import {
   de_GetSubscriptionRequestDetailsCommand,
   se_GetSubscriptionRequestDetailsCommand,
@@ -85,6 +85,14 @@ export interface GetSubscriptionRequestDetailsCommandOutput
  * //               shortDescription: "STRING_VALUE",
  * //             },
  * //           ],
+ * //           assetScope: { // AssetScope
+ * //             assetId: "STRING_VALUE", // required
+ * //             filterIds: [ // FilterIds // required
+ * //               "STRING_VALUE",
+ * //             ],
+ * //             status: "STRING_VALUE", // required
+ * //             errorMessage: "STRING_VALUE",
+ * //           },
  * //         },
  * //         productListing: { // SubscribedProductListing
  * //           entityId: "STRING_VALUE",

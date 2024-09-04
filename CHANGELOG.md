@@ -3,6 +3,103 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.644.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.643.0...v3.644.0) (2024-09-03)
+
+
+### Features
+
+* **client-connect:** Release ReplicaConfiguration as part of DescribeInstance ([3ac8b18](https://github.com/aws/aws-sdk-js-v3/commit/3ac8b18d1cd4f18a27198337e254e64b2bd85887))
+* **client-datazone:** Add support to let data publisher specify a subset of the data asset that a subscriber will have access to based on the asset filters provided, when accepting a subscription request. ([da060f0](https://github.com/aws/aws-sdk-js-v3/commit/da060f0ddddaa26febb9f1e0b8b7cb56a7af1d9a))
+* **client-elastic-load-balancing-v2:** This release adds support for configuring TCP idle timeout on NLB and GWLB listeners. ([594c589](https://github.com/aws/aws-sdk-js-v3/commit/594c589036f0d702e92dfb3daec680971534290a))
+* **client-mediaconnect:** AWS Elemental MediaConnect introduces thumbnails for Flow source monitoring. Thumbnails provide still image previews of the live content feeding your MediaConnect Flow allowing you to easily verify that your source is operating as expected. ([7f6b5df](https://github.com/aws/aws-sdk-js-v3/commit/7f6b5df43d5f73273c25af090125f6329fa3728f))
+* **client-medialive:** Added MinQP as a Rate Control option for H264 and H265 encodes. ([c4db70b](https://github.com/aws/aws-sdk-js-v3/commit/c4db70bf921d7cfa1793293059a35b87955ea427))
+* **client-sagemaker:** Amazon SageMaker now supports automatic mounting of a user's home folder in the Amazon Elastic File System (EFS) associated with the SageMaker Studio domain to their Studio Spaces to enable users to share data between their own private spaces. ([202fdf2](https://github.com/aws/aws-sdk-js-v3/commit/202fdf2de5d5f187e33e10824c33a6f7e808f9f7))
+* **client-timestream-influxdb:** Timestream for InfluxDB now supports compute scaling and deployment type conversion. This release adds the DbInstanceType and DeploymentType parameters to the UpdateDbInstance API. ([4e6cb80](https://github.com/aws/aws-sdk-js-v3/commit/4e6cb80fdff0f0e071870f103098bae1f8b107b6))
+
+
+
+
+
+# [3.643.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.642.0...v3.643.0) (2024-08-30)
+
+
+### Features
+
+* **client-backup:** The latest update introduces two new attributes, VaultType and VaultState, to the DescribeBackupVault and ListBackupVaults APIs. The VaultState attribute reflects the current status of the vault, while the VaultType attribute indicates the specific category of the vault. ([abd2514](https://github.com/aws/aws-sdk-js-v3/commit/abd2514fc74bce33a88ae476dd5f570a0d1ad22d))
+* **client-cloudwatch-logs:** This release introduces a new optional parameter: Entity, in PutLogEvents request ([4723f34](https://github.com/aws/aws-sdk-js-v3/commit/4723f34a90ec4c0d6729b45c9cd50cdc9c458c2e))
+* **client-datazone:** Amazon DataZone now adds new governance capabilities of Domain Units for organization within your Data Domains, and Authorization Policies for tighter controls. ([a30b03e](https://github.com/aws/aws-sdk-js-v3/commit/a30b03e9a0d658839ab82b451b21c5c73dce62ff))
+* **client-redshift-data:** The release include the new Redshift DataAPI feature for session use, customer execute query with --session-keep-alive-seconds parameter and can submit follow-up queries to same sessions with returned`session-id` ([fd2bbc5](https://github.com/aws/aws-sdk-js-v3/commit/fd2bbc5a6e174ee912aaf94cfb0ab7a767b27f75))
+* **clients:** update client endpoints as of 2024-08-30 ([7926037](https://github.com/aws/aws-sdk-js-v3/commit/79260371deea778aef77a604701b895633d3818e))
+
+
+
+
+
+# [3.642.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.641.0...v3.642.0) (2024-08-29)
+
+
+### Features
+
+* **client-bedrock-agent-runtime:** Lifting the maximum length on Bedrock KnowledgeBase RetrievalFilter array ([aec4d2b](https://github.com/aws/aws-sdk-js-v3/commit/aec4d2b7c063036932a383dec72d51764cd6105a))
+* **client-bedrock-runtime:** Add support for imported-model in invokeModel and InvokeModelWithResponseStream. ([54243d5](https://github.com/aws/aws-sdk-js-v3/commit/54243d570a7f34853f3555be3920409b2af7183d))
+* **client-personalize:** This releases ability to update automatic training scheduler for customer solutions ([238987e](https://github.com/aws/aws-sdk-js-v3/commit/238987ef7dffc42f0cd148c9fee2e8b7caa6ebb3))
+* **client-quicksight:** Increased Character Limit for Dataset Calculation Field expressions ([d336f9a](https://github.com/aws/aws-sdk-js-v3/commit/d336f9ad35aceafdcaa64f2823d2a0e2316ebf9f))
+* **client-sfn:** This release adds support for static analysis to ValidateStateMachineDefinition API, which can now return optional WARNING diagnostics for semantic errors on the definition of an Amazon States Language (ASL) state machine. ([3a7b177](https://github.com/aws/aws-sdk-js-v3/commit/3a7b1777323c1f9924f3a3b5aedb69946630a455))
+* **client-wafv2:** The minimum request rate for a rate-based rule is now 10. Before this, it was 100. ([7c99350](https://github.com/aws/aws-sdk-js-v3/commit/7c99350cfbddd43be8f4f17c1cfaa98f8265e26a))
+
+
+
+
+
+# [3.641.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.640.0...v3.641.0) (2024-08-28)
+
+
+### Bug Fixes
+
+* **codegen:** pass through sha256 in non-AWS sigv4 generated client ([#6415](https://github.com/aws/aws-sdk-js-v3/issues/6415)) ([0a561ee](https://github.com/aws/aws-sdk-js-v3/commit/0a561eef2019412028f1c41654784b97c92b342c))
+
+
+### Features
+
+* **client-appconfig:** This release adds support for deletion protection, which is a safety guardrail to prevent the unintentional deletion of a recently used AWS AppConfig Configuration Profile or Environment. This also includes a change to increase the maximum length of the Name parameter in UpdateConfigurationProfile. ([950682d](https://github.com/aws/aws-sdk-js-v3/commit/950682d34cf17f946a8f1aa9625a720827d04864))
+* **client-datazone:** Update regex to include dot character to be consistent with IAM role creation in the authorized principal field for create and update subscription target. ([535c1a3](https://github.com/aws/aws-sdk-js-v3/commit/535c1a32e18ec8f9c9e7a3c3f42dc0efd678e4fa))
+* **client-device-farm:** This release removed support for Calabash, UI Automation, Built-in Explorer, remote access record, remote access replay, and web performance profile framework in ScheduleRun API. ([5a8ca89](https://github.com/aws/aws-sdk-js-v3/commit/5a8ca89d4a67380865331db0ff5f3c28556f0316))
+* **client-ec2:** Amazon VPC IP Address Manager (IPAM) now allows customers to provision IPv4 CIDR blocks and allocate Elastic IP Addresses directly from IPAM pools with public IPv4 space ([4f1d59b](https://github.com/aws/aws-sdk-js-v3/commit/4f1d59bf3763bc9b84108cc4e5b2910a9b3ddc33))
+* **client-internetmonitor:** Adds new querying types to show overall traffic suggestion information for monitors ([8603f16](https://github.com/aws/aws-sdk-js-v3/commit/8603f16d8086dd3a0a70dbcde8d9774f8377e694))
+* **client-pcs:** Introducing AWS Parallel Computing Service (AWS PCS), a new service makes it easy to setup and manage high performance computing (HPC) clusters, and build scientific and engineering models at virtually any scale on AWS. ([2dc87af](https://github.com/aws/aws-sdk-js-v3/commit/2dc87af02a3ee3d8270f89b29cab7fd0c0a893d0))
+* **clients:** update client endpoints as of 2024-08-28 ([6f849c1](https://github.com/aws/aws-sdk-js-v3/commit/6f849c1dc1578593b8269a165ee8b34dfa70f817))
+
+
+
+
+
+# [3.640.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.639.0...v3.640.0) (2024-08-27)
+
+
+### Features
+
+* **client-bedrock-runtime:** Amazon Bedrock SDK updates for Inference Profile. ([fbc89ce](https://github.com/aws/aws-sdk-js-v3/commit/fbc89ce65683b6e10787a9074ae59b03253ee089))
+* **client-bedrock:** Amazon Bedrock SDK updates for Inference Profile. ([d49f2f3](https://github.com/aws/aws-sdk-js-v3/commit/d49f2f3cc35ee2a77e04ba5c1fed3cdad046be26))
+* **client-chatbot:** Update documentation to be consistent with the API docs ([a4046ab](https://github.com/aws/aws-sdk-js-v3/commit/a4046ab5fe821efff28020425a972c6a23ee142d))
+* **client-omics:** Adds data provenance to import jobs from read sets and references ([b752120](https://github.com/aws/aws-sdk-js-v3/commit/b752120b379dcba7cdf574cd5615b23baad6efb6))
+* **client-polly:** Amazon Polly adds 2 new voices: Jitka (cs-CZ) and Sabrina (de-CH). ([eb0b2ee](https://github.com/aws/aws-sdk-js-v3/commit/eb0b2ee146e940d52d9c59f11f727a26c72b9f92))
+
+
+
+
+
+# [3.639.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.638.0...v3.639.0) (2024-08-26)
+
+
+### Features
+
+* **client-iotsitewise:** AWS IoT SiteWise now supports versioning for asset models. It enables users to retrieve active version of their asset model and perform asset model writes with optimistic lock. ([ebc9981](https://github.com/aws/aws-sdk-js-v3/commit/ebc9981fc23253adbd350039f8e0d5012fa73732))
+* **client-workspaces:** This release adds support for creating and managing directories that use AWS IAM Identity Center as user identity source. Such directories can be used to create non-Active Directory domain joined WorkSpaces Personal.Updated RegisterWorkspaceDirectory and DescribeWorkspaceDirectories APIs. ([206a25b](https://github.com/aws/aws-sdk-js-v3/commit/206a25b7f8d801a1bd7b81ae237f76d9e6a0ba5b))
+
+
+
+
+
 # [3.638.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.637.0...v3.638.0) (2024-08-23)
 
 

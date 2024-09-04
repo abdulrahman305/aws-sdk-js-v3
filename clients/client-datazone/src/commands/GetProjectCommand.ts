@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { DataZoneClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../DataZoneClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { GetProjectInput, GetProjectOutput, GetProjectOutputFilterSensitiveLog } from "../models/models_0";
+import { GetProjectInput, GetProjectOutput, GetProjectOutputFilterSensitiveLog } from "../models/models_1";
 import { de_GetProjectCommand, se_GetProjectCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -59,6 +59,7 @@ export interface GetProjectCommandOutput extends GetProjectOutput, __MetadataBea
  * //   glossaryTerms: [ // GlossaryTerms
  * //     "STRING_VALUE",
  * //   ],
+ * //   domainUnitId: "STRING_VALUE",
  * // };
  *
  * ```

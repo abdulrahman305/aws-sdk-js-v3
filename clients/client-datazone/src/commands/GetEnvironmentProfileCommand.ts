@@ -10,7 +10,7 @@ import {
   GetEnvironmentProfileInput,
   GetEnvironmentProfileOutput,
   GetEnvironmentProfileOutputFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_GetEnvironmentProfileCommand, se_GetEnvironmentProfileCommand } from "../protocols/Aws_restJson1";
 
 /**
