@@ -36,9 +36,7 @@ export interface AdminConfirmSignUpCommandInput extends AdminConfirmSignUpReques
 export interface AdminConfirmSignUpCommandOutput extends AdminConfirmSignUpResponse, __MetadataBearer {}
 
 /**
- * <p>This IAM-authenticated API operation confirms user sign-up as an administrator.
- *             Unlike <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ConfirmSignUp.html">ConfirmSignUp</a>, your IAM credentials authorize user account confirmation.
- *             No confirmation code is required.</p>
+ * <p>Confirms user sign-up as an administrator. </p>
  *          <p>This request sets a user account active in a user pool that <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/signing-up-users-in-your-app.html#signing-up-users-in-your-app-and-confirming-them-as-admin">requires confirmation of new user accounts</a> before they can sign in. You can
  *             configure your user pool to not send confirmation codes to new users and instead confirm
  *             them with this API operation on the back end.</p>
@@ -62,6 +60,9 @@ export interface AdminConfirmSignUpCommandOutput extends AdminConfirmSignUpRespo
  *                </li>
  *             </ul>
  *          </note>
+ *          <p>To configure your user pool to require administrative confirmation of users, set
+ *                 <code>AllowAdminCreateUserOnly</code> to <code>true</code> in a
+ *                 <code>CreateUserPool</code> or <code>UpdateUserPool</code> request.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -130,6 +131,7 @@ export interface AdminConfirmSignUpCommandOutput extends AdminConfirmSignUpRespo
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class AdminConfirmSignUpCommand extends $Command
@@ -140,9 +142,7 @@ export class AdminConfirmSignUpCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -154,4 +154,16 @@ export class AdminConfirmSignUpCommand extends $Command
   .f(AdminConfirmSignUpRequestFilterSensitiveLog, void 0)
   .ser(se_AdminConfirmSignUpCommand)
   .de(de_AdminConfirmSignUpCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: AdminConfirmSignUpRequest;
+      output: {};
+    };
+    sdk: {
+      input: AdminConfirmSignUpCommandInput;
+      output: AdminConfirmSignUpCommandOutput;
+    };
+  };
+}

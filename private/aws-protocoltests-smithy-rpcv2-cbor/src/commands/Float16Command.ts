@@ -52,6 +52,7 @@ export interface Float16CommandOutput extends Float16Output, __MetadataBearer {}
  * @throws {@link RpcV2ProtocolServiceException}
  * <p>Base exception class for all service exceptions from RpcV2Protocol service.</p>
  *
+ *
  */
 export class Float16Command extends $Command
   .classBuilder<
@@ -69,4 +70,16 @@ export class Float16Command extends $Command
   .f(void 0, void 0)
   .ser(se_Float16Command)
   .de(de_Float16Command)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: {};
+      output: Float16Output;
+    };
+    sdk: {
+      input: Float16CommandInput;
+      output: Float16CommandOutput;
+    };
+  };
+}

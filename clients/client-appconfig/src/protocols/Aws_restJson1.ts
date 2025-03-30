@@ -16,6 +16,7 @@ import {
   expectObject as __expectObject,
   expectString as __expectString,
   extendedEncodeURIComponent as __extendedEncodeURIComponent,
+  isSerializableHeaderValue,
   limitedParseFloat32 as __limitedParseFloat32,
   map,
   parseRfc3339DateTimeWithOffset as __parseRfc3339DateTimeWithOffset,
@@ -867,7 +868,9 @@ export const se_StopDeploymentCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {};
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_ar]: [() => isSerializableHeaderValue(input[_AR]), () => input[_AR]!.toString()],
+  });
   b.bp("/applications/{ApplicationId}/environments/{EnvironmentId}/deployments/{DeploymentNumber}");
   b.p("ApplicationId", () => input.ApplicationId!, "{ApplicationId}", false);
   b.p("EnvironmentId", () => input.EnvironmentId!, "{EnvironmentId}", false);
@@ -912,10 +915,7 @@ export const se_UntagResourceCommand = async (
   b.bp("/tags/{ResourceArn}");
   b.p("ResourceArn", () => input.ResourceArn!, "{ResourceArn}", false);
   const query: any = map({
-    [_tK]: [
-      __expectNonNull(input.TagKeys, `TagKeys`) != null,
-      () => (input[_TK]! || []).map((_entry) => _entry as any),
-    ],
+    [_tK]: [__expectNonNull(input.TagKeys, `TagKeys`) != null, () => input[_TK]! || []],
   });
   let body: any;
   b.m("DELETE").h(headers).q(query).b(body);
@@ -2549,14 +2549,8 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> =>
   collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
 
-const isSerializableHeaderValue = (value: any): boolean =>
-  value !== undefined &&
-  value !== null &&
-  value !== "" &&
-  (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
-  (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
-
 const _AI = "ApplicationId";
+const _AR = "AllowRevert";
 const _CCV = "ClientConfigurationVersion";
 const _CI = "ClientId";
 const _CPI = "ConfigurationProfileId";
@@ -2577,6 +2571,7 @@ const _TK = "TagKeys";
 const _VL = "VersionLabel";
 const _VN = "VersionNumber";
 const _ai = "application-id";
+const _ar = "allow-revert";
 const _ccv = "client_configuration_version";
 const _ci = "client_id";
 const _cpi = "configuration-profile-id";

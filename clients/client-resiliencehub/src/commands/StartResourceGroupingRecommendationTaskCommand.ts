@@ -52,7 +52,7 @@ export interface StartResourceGroupingRecommendationTaskCommandOutput
  * // { // StartResourceGroupingRecommendationTaskResponse
  * //   appArn: "STRING_VALUE", // required
  * //   groupingId: "STRING_VALUE", // required
- * //   status: "STRING_VALUE", // required
+ * //   status: "Pending" || "InProgress" || "Failed" || "Success", // required
  * //   errorMessage: "STRING_VALUE",
  * // };
  *
@@ -91,6 +91,7 @@ export interface StartResourceGroupingRecommendationTaskCommandOutput
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class StartResourceGroupingRecommendationTaskCommand extends $Command
@@ -101,9 +102,7 @@ export class StartResourceGroupingRecommendationTaskCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -115,4 +114,16 @@ export class StartResourceGroupingRecommendationTaskCommand extends $Command
   .f(void 0, void 0)
   .ser(se_StartResourceGroupingRecommendationTaskCommand)
   .de(de_StartResourceGroupingRecommendationTaskCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StartResourceGroupingRecommendationTaskRequest;
+      output: StartResourceGroupingRecommendationTaskResponse;
+    };
+    sdk: {
+      input: StartResourceGroupingRecommendationTaskCommandInput;
+      output: StartResourceGroupingRecommendationTaskCommandOutput;
+    };
+  };
+}

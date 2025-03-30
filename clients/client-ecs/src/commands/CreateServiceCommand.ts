@@ -35,6 +35,9 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  *          <note>
  *             <p>On March 21, 2024, a change was made to resolve the task definition revision before authorization. When a task definition revision is not specified, authorization will occur using the latest revision of a task definition.</p>
  *          </note>
+ *          <note>
+ *             <p>Amazon Elastic Inference (EI) is no longer available to customers.</p>
+ *          </note>
  *          <p>In addition to maintaining the desired count of tasks in your service, you can
  * 			optionally run your service behind one or more load balancers. The load balancers
  * 			distribute traffic across the tasks that are associated with the service. For more
@@ -112,7 +115,6 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  * 			information about task placement and task placement strategies, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html">Amazon ECS
  * 				task placement</a> in the <i>Amazon Elastic Container Service Developer Guide</i>
  *          </p>
- *          <p>Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and will help current customers migrate their workloads to options that offer better price and performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past 30-day period are considered current customers and will be able to continue using the service. </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -123,6 +125,7 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  *   cluster: "STRING_VALUE",
  *   serviceName: "STRING_VALUE", // required
  *   taskDefinition: "STRING_VALUE",
+ *   availabilityZoneRebalancing: "ENABLED" || "DISABLED",
  *   loadBalancers: [ // LoadBalancers
  *     { // LoadBalancer
  *       targetGroupArn: "STRING_VALUE",
@@ -162,8 +165,8 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  *       alarmNames: [ // StringList // required
  *         "STRING_VALUE",
  *       ],
- *       enable: true || false, // required
  *       rollback: true || false, // required
+ *       enable: true || false, // required
  *     },
  *   },
  *   placementConstraints: [ // PlacementConstraints
@@ -267,8 +270,15 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  *           },
  *         ],
  *         roleArn: "STRING_VALUE", // required
- *         filesystemType: "ext3" || "ext4" || "xfs",
+ *         filesystemType: "ext3" || "ext4" || "xfs" || "ntfs",
  *       },
+ *     },
+ *   ],
+ *   vpcLatticeConfigurations: [ // VpcLatticeConfigurations
+ *     { // VpcLatticeConfiguration
+ *       roleArn: "STRING_VALUE", // required
+ *       targetGroupArn: "STRING_VALUE", // required
+ *       portName: "STRING_VALUE", // required
  *     },
  *   ],
  * };
@@ -321,8 +331,8 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  * //         alarmNames: [ // StringList // required
  * //           "STRING_VALUE",
  * //         ],
- * //         enable: true || false, // required
  * //         rollback: true || false, // required
+ * //         enable: true || false, // required
  * //       },
  * //     },
  * //     taskSets: [ // TaskSets
@@ -498,13 +508,20 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  * //                 },
  * //               ],
  * //               roleArn: "STRING_VALUE", // required
- * //               filesystemType: "ext3" || "ext4" || "xfs",
+ * //               filesystemType: "ext3" || "ext4" || "xfs" || "ntfs",
  * //             },
  * //           },
  * //         ],
  * //         fargateEphemeralStorage: {
  * //           kmsKeyId: "STRING_VALUE",
  * //         },
+ * //         vpcLatticeConfigurations: [ // VpcLatticeConfigurations
+ * //           { // VpcLatticeConfiguration
+ * //             roleArn: "STRING_VALUE", // required
+ * //             targetGroupArn: "STRING_VALUE", // required
+ * //             portName: "STRING_VALUE", // required
+ * //           },
+ * //         ],
  * //       },
  * //     ],
  * //     roleArn: "STRING_VALUE",
@@ -545,6 +562,7 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  * //     enableECSManagedTags: true || false,
  * //     propagateTags: "TASK_DEFINITION" || "SERVICE" || "NONE",
  * //     enableExecuteCommand: true || false,
+ * //     availabilityZoneRebalancing: "ENABLED" || "DISABLED",
  * //   },
  * // };
  *
@@ -580,6 +598,7 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link NamespaceNotFoundException} (client fault)
  *  <p>The specified namespace wasn't found.</p>
@@ -600,124 +619,123 @@ export interface CreateServiceCommandOutput extends CreateServiceResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
- * @public
+ *
  * @example To create a new service
  * ```javascript
  * // This example creates a service in your default region called ``ecs-simple-service``. The service uses the ``hello_world`` task definition and it maintains 10 copies of that task.
  * const input = {
- *   "desiredCount": 10,
- *   "serviceName": "ecs-simple-service",
- *   "taskDefinition": "hello_world"
+ *   desiredCount: 10,
+ *   serviceName: "ecs-simple-service",
+ *   taskDefinition: "hello_world"
  * };
  * const command = new CreateServiceCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "service": {
- *     "clusterArn": "arn:aws:ecs:us-east-1:012345678910:cluster/default",
- *     "createdAt": "2016-08-29T16:13:47.298Z",
- *     "deploymentConfiguration": {
- *       "maximumPercent": 200,
- *       "minimumHealthyPercent": 100
+ *   service: {
+ *     clusterArn: "arn:aws:ecs:us-east-1:012345678910:cluster/default",
+ *     createdAt: "2016-08-29T16:13:47.298Z",
+ *     deploymentConfiguration: {
+ *       maximumPercent: 200,
+ *       minimumHealthyPercent: 100
  *     },
- *     "deployments": [
+ *     deployments: [
  *       {
- *         "createdAt": "2016-08-29T16:13:47.298Z",
- *         "desiredCount": 10,
- *         "id": "ecs-svc/9223370564342348388",
- *         "pendingCount": 0,
- *         "runningCount": 0,
- *         "status": "PRIMARY",
- *         "taskDefinition": "arn:aws:ecs:us-east-1:012345678910:task-definition/hello_world:6",
- *         "updatedAt": "2016-08-29T16:13:47.298Z"
+ *         createdAt: "2016-08-29T16:13:47.298Z",
+ *         desiredCount: 10,
+ *         id: "ecs-svc/9223370564342348388",
+ *         pendingCount: 0,
+ *         runningCount: 0,
+ *         status: "PRIMARY",
+ *         taskDefinition: "arn:aws:ecs:us-east-1:012345678910:task-definition/hello_world:6",
+ *         updatedAt: "2016-08-29T16:13:47.298Z"
  *       },
  *       {
- *         "createdAt": "2016-08-29T15:52:44.481Z",
- *         "desiredCount": 0,
- *         "id": "ecs-svc/9223370564343611322",
- *         "pendingCount": 0,
- *         "runningCount": 0,
- *         "status": "ACTIVE",
- *         "taskDefinition": "arn:aws:ecs:us-east-1:012345678910:task-definition/hello_world:6",
- *         "updatedAt": "2016-08-29T16:11:38.941Z"
+ *         createdAt: "2016-08-29T15:52:44.481Z",
+ *         desiredCount: 0,
+ *         id: "ecs-svc/9223370564343611322",
+ *         pendingCount: 0,
+ *         runningCount: 0,
+ *         status: "ACTIVE",
+ *         taskDefinition: "arn:aws:ecs:us-east-1:012345678910:task-definition/hello_world:6",
+ *         updatedAt: "2016-08-29T16:11:38.941Z"
  *       }
  *     ],
- *     "desiredCount": 10,
- *     "events": [],
- *     "loadBalancers": [],
- *     "pendingCount": 0,
- *     "runningCount": 0,
- *     "serviceArn": "arn:aws:ecs:us-east-1:012345678910:service/default/ecs-simple-service",
- *     "serviceName": "ecs-simple-service",
- *     "status": "ACTIVE",
- *     "taskDefinition": "arn:aws:ecs:us-east-1:012345678910:task-definition/default/hello_world:6"
+ *     desiredCount: 10,
+ *     events:     [],
+ *     loadBalancers:     [],
+ *     pendingCount: 0,
+ *     runningCount: 0,
+ *     serviceArn: "arn:aws:ecs:us-east-1:012345678910:service/default/ecs-simple-service",
+ *     serviceName: "ecs-simple-service",
+ *     status: "ACTIVE",
+ *     taskDefinition: "arn:aws:ecs:us-east-1:012345678910:task-definition/default/hello_world:6"
  *   }
  * }
  * *\/
- * // example id: to-create-a-new-service-1472512584282
  * ```
  *
  * @example To create a new service behind a load balancer
  * ```javascript
  * // This example creates a service in your default region called ``ecs-simple-service-elb``. The service uses the ``ecs-demo`` task definition and it maintains 10 copies of that task. You must reference an existing load balancer in the same region by its name.
  * const input = {
- *   "desiredCount": 10,
- *   "loadBalancers": [
+ *   desiredCount: 10,
+ *   loadBalancers: [
  *     {
- *       "containerName": "simple-app",
- *       "containerPort": 80,
- *       "loadBalancerName": "EC2Contai-EcsElast-15DCDAURT3ZO2"
+ *       containerName: "simple-app",
+ *       containerPort: 80,
+ *       loadBalancerName: "EC2Contai-EcsElast-15DCDAURT3ZO2"
  *     }
  *   ],
- *   "role": "ecsServiceRole",
- *   "serviceName": "ecs-simple-service-elb",
- *   "taskDefinition": "console-sample-app-static"
+ *   role: "ecsServiceRole",
+ *   serviceName: "ecs-simple-service-elb",
+ *   taskDefinition: "console-sample-app-static"
  * };
  * const command = new CreateServiceCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "service": {
- *     "clusterArn": "arn:aws:ecs:us-east-1:012345678910:cluster/default",
- *     "createdAt": "2016-08-29T16:02:54.884Z",
- *     "deploymentConfiguration": {
- *       "maximumPercent": 200,
- *       "minimumHealthyPercent": 100
+ *   service: {
+ *     clusterArn: "arn:aws:ecs:us-east-1:012345678910:cluster/default",
+ *     createdAt: "2016-08-29T16:02:54.884Z",
+ *     deploymentConfiguration: {
+ *       maximumPercent: 200,
+ *       minimumHealthyPercent: 100
  *     },
- *     "deployments": [
+ *     deployments: [
  *       {
- *         "createdAt": "2016-08-29T16:02:54.884Z",
- *         "desiredCount": 10,
- *         "id": "ecs-svc/9223370564343000923",
- *         "pendingCount": 0,
- *         "runningCount": 0,
- *         "status": "PRIMARY",
- *         "taskDefinition": "arn:aws:ecs:us-east-1:012345678910:task-definition/console-sample-app-static:6",
- *         "updatedAt": "2016-08-29T16:02:54.884Z"
+ *         createdAt: "2016-08-29T16:02:54.884Z",
+ *         desiredCount: 10,
+ *         id: "ecs-svc/9223370564343000923",
+ *         pendingCount: 0,
+ *         runningCount: 0,
+ *         status: "PRIMARY",
+ *         taskDefinition: "arn:aws:ecs:us-east-1:012345678910:task-definition/console-sample-app-static:6",
+ *         updatedAt: "2016-08-29T16:02:54.884Z"
  *       }
  *     ],
- *     "desiredCount": 10,
- *     "events": [],
- *     "loadBalancers": [
+ *     desiredCount: 10,
+ *     events:     [],
+ *     loadBalancers: [
  *       {
- *         "containerName": "simple-app",
- *         "containerPort": 80,
- *         "loadBalancerName": "EC2Contai-EcsElast-15DCDAURT3ZO2"
+ *         containerName: "simple-app",
+ *         containerPort: 80,
+ *         loadBalancerName: "EC2Contai-EcsElast-15DCDAURT3ZO2"
  *       }
  *     ],
- *     "pendingCount": 0,
- *     "roleArn": "arn:aws:iam::012345678910:role/ecsServiceRole",
- *     "runningCount": 0,
- *     "serviceArn": "arn:aws:ecs:us-east-1:012345678910:service/default/ecs-simple-service-elb",
- *     "serviceName": "ecs-simple-service-elb",
- *     "status": "ACTIVE",
- *     "taskDefinition": "arn:aws:ecs:us-east-1:012345678910:task-definition/default/console-sample-app-static:6"
+ *     pendingCount: 0,
+ *     roleArn: "arn:aws:iam::012345678910:role/ecsServiceRole",
+ *     runningCount: 0,
+ *     serviceArn: "arn:aws:ecs:us-east-1:012345678910:service/default/ecs-simple-service-elb",
+ *     serviceName: "ecs-simple-service-elb",
+ *     status: "ACTIVE",
+ *     taskDefinition: "arn:aws:ecs:us-east-1:012345678910:task-definition/default/console-sample-app-static:6"
  *   }
  * }
  * *\/
- * // example id: to-create-a-new-service-behind-a-load-balancer-1472512484823
  * ```
  *
+ * @public
  */
 export class CreateServiceCommand extends $Command
   .classBuilder<
@@ -727,9 +745,7 @@ export class CreateServiceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -741,4 +757,16 @@ export class CreateServiceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateServiceCommand)
   .de(de_CreateServiceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateServiceRequest;
+      output: CreateServiceResponse;
+    };
+    sdk: {
+      input: CreateServiceCommandInput;
+      output: CreateServiceCommandOutput;
+    };
+  };
+}

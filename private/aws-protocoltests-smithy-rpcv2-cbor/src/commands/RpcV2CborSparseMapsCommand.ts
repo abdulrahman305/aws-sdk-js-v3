@@ -95,6 +95,7 @@ export interface RpcV2CborSparseMapsCommandOutput extends RpcV2CborSparseMapsInp
  * @throws {@link RpcV2ProtocolServiceException}
  * <p>Base exception class for all service exceptions from RpcV2Protocol service.</p>
  *
+ *
  */
 export class RpcV2CborSparseMapsCommand extends $Command
   .classBuilder<
@@ -112,4 +113,16 @@ export class RpcV2CborSparseMapsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RpcV2CborSparseMapsCommand)
   .de(de_RpcV2CborSparseMapsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RpcV2CborSparseMapsInputOutput;
+      output: RpcV2CborSparseMapsInputOutput;
+    };
+    sdk: {
+      input: RpcV2CborSparseMapsCommandInput;
+      output: RpcV2CborSparseMapsCommandOutput;
+    };
+  };
+}

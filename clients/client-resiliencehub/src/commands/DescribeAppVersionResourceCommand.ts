@@ -86,7 +86,7 @@ export interface DescribeAppVersionResourceCommandOutput extends DescribeAppVers
  * //     },
  * //     physicalResourceId: { // PhysicalResourceId
  * //       identifier: "STRING_VALUE", // required
- * //       type: "STRING_VALUE", // required
+ * //       type: "Arn" || "Native", // required
  * //       awsRegion: "STRING_VALUE",
  * //       awsAccountId: "STRING_VALUE",
  * //     },
@@ -109,7 +109,7 @@ export interface DescribeAppVersionResourceCommandOutput extends DescribeAppVers
  * //       ],
  * //     },
  * //     excluded: true || false,
- * //     sourceType: "STRING_VALUE",
+ * //     sourceType: "AppTemplate" || "Discovered",
  * //     parentResourceName: "STRING_VALUE",
  * //   },
  * // };
@@ -149,6 +149,7 @@ export interface DescribeAppVersionResourceCommandOutput extends DescribeAppVers
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class DescribeAppVersionResourceCommand extends $Command
@@ -159,9 +160,7 @@ export class DescribeAppVersionResourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -173,4 +172,16 @@ export class DescribeAppVersionResourceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeAppVersionResourceCommand)
   .de(de_DescribeAppVersionResourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeAppVersionResourceRequest;
+      output: DescribeAppVersionResourceResponse;
+    };
+    sdk: {
+      input: DescribeAppVersionResourceCommandInput;
+      output: DescribeAppVersionResourceCommandOutput;
+    };
+  };
+}

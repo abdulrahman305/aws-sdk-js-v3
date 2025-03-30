@@ -72,7 +72,7 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * //           Message: "STRING_VALUE",
  * //         },
  * //         StorageCapacity: Number("int"),
- * //         StorageType: "SSD" || "HDD",
+ * //         StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //         VpcId: "STRING_VALUE",
  * //         SubnetIds: [ // SubnetIds
  * //           "STRING_VALUE",
@@ -162,6 +162,7 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * //             Iops: Number("int"),
  * //             Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //           },
+ * //           EfaEnabled: true || false,
  * //         },
  * //         AdministrativeActions: [
  * //           {
@@ -179,7 +180,7 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * //                 Message: "STRING_VALUE",
  * //               },
  * //               StorageCapacity: Number("int"),
- * //               StorageType: "SSD" || "HDD",
+ * //               StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //               VpcId: "STRING_VALUE",
  * //               SubnetIds: [
  * //                 "STRING_VALUE",
@@ -269,6 +270,7 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * //                   Iops: Number("int"),
  * //                   Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //                 },
+ * //                 EfaEnabled: true || false,
  * //               },
  * //               AdministrativeActions: "<AdministrativeActions>",
  * //               OntapConfiguration: { // OntapFileSystemConfiguration
@@ -324,6 +326,10 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * //                   "STRING_VALUE",
  * //                 ],
  * //                 EndpointIpAddress: "STRING_VALUE",
+ * //                 ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //                   SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //                   SizeGiB: Number("int"),
+ * //                 },
  * //               },
  * //             },
  * //             FailureDetails: { // AdministrativeActionFailureDetails
@@ -509,6 +515,10 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * //             "STRING_VALUE",
  * //           ],
  * //           EndpointIpAddress: "STRING_VALUE",
+ * //           ReadCacheConfiguration: {
+ * //             SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //             SizeGiB: Number("int"),
+ * //           },
  * //         },
  * //       },
  * //       FailureDetails: {
@@ -664,6 +674,7 @@ export interface CopySnapshotAndUpdateVolumeCommandOutput
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
+ *
  * @public
  */
 export class CopySnapshotAndUpdateVolumeCommand extends $Command
@@ -674,9 +685,7 @@ export class CopySnapshotAndUpdateVolumeCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -688,4 +697,16 @@ export class CopySnapshotAndUpdateVolumeCommand extends $Command
   .f(void 0, CopySnapshotAndUpdateVolumeResponseFilterSensitiveLog)
   .ser(se_CopySnapshotAndUpdateVolumeCommand)
   .de(de_CopySnapshotAndUpdateVolumeCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CopySnapshotAndUpdateVolumeRequest;
+      output: CopySnapshotAndUpdateVolumeResponse;
+    };
+    sdk: {
+      input: CopySnapshotAndUpdateVolumeCommandInput;
+      output: CopySnapshotAndUpdateVolumeCommandOutput;
+    };
+  };
+}

@@ -40,6 +40,7 @@ import { HttpStringPayloadCommand } from "../../src/commands/HttpStringPayloadCo
 import { IgnoreQueryParamsInResponseCommand } from "../../src/commands/IgnoreQueryParamsInResponseCommand";
 import { InputAndOutputWithHeadersCommand } from "../../src/commands/InputAndOutputWithHeadersCommand";
 import { NestedXmlMapsCommand } from "../../src/commands/NestedXmlMapsCommand";
+import { NestedXmlMapWithXmlNameCommand } from "../../src/commands/NestedXmlMapWithXmlNameCommand";
 import { NoInputAndNoOutputCommand } from "../../src/commands/NoInputAndNoOutputCommand";
 import { NoInputAndOutputCommand } from "../../src/commands/NoInputAndOutputCommand";
 import { NullAndEmptyHeadersClientCommand } from "../../src/commands/NullAndEmptyHeadersClientCommand";
@@ -347,7 +348,7 @@ it("AllQueryStringTypes:Request", async () => {
     expect(queryString).toContain("IntegerEnumList=1");
     expect(queryString).toContain("IntegerEnumList=2");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -383,7 +384,7 @@ it("RestXmlQueryStringMap:Request", async () => {
     expect(queryString).toContain("QueryParamsStringKeyA=Foo");
     expect(queryString).toContain("QueryParamsStringKeyB=Bar");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -415,7 +416,7 @@ it("RestXmlQueryStringEscaping:Request", async () => {
     const queryString = buildQueryString(r.query);
     expect(queryString).toContain("String=%20%25%3A%2F%3F%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D%F0%9F%98%B9");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -449,7 +450,7 @@ it("RestXmlSupportsNaNFloatQueryValues:Request", async () => {
     expect(queryString).toContain("Float=NaN");
     expect(queryString).toContain("Double=NaN");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -483,7 +484,7 @@ it("RestXmlSupportsInfinityFloatQueryValues:Request", async () => {
     expect(queryString).toContain("Float=Infinity");
     expect(queryString).toContain("Double=Infinity");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -517,7 +518,7 @@ it("RestXmlSupportsNegativeInfinityFloatQueryValues:Request", async () => {
     expect(queryString).toContain("Float=-Infinity");
     expect(queryString).toContain("Double=-Infinity");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -551,7 +552,7 @@ it("RestXmlZeroAndFalseQueryValues:Request", async () => {
     expect(queryString).toContain("Integer=0");
     expect(queryString).toContain("Boolean=false");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -665,7 +666,7 @@ it("ConstantAndVariableQueryStringMissingOneValue:Request", async () => {
     expect(queryString).toContain("foo=bar");
     expect(queryString).toContain("baz=bam");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -700,7 +701,7 @@ it("ConstantAndVariableQueryStringAllValues:Request", async () => {
     expect(queryString).toContain("baz=bam");
     expect(queryString).toContain("maybeSet=yes");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -733,7 +734,7 @@ it("ConstantQueryString:Request", async () => {
     expect(queryString).toContain("foo=bar");
     expect(queryString).toContain("hello");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -842,7 +843,7 @@ it("EmptyInputAndEmptyOutput:Request", async () => {
     expect(r.method).toBe("POST");
     expect(r.path).toBe("/EmptyInputAndEmptyOutput");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -896,7 +897,7 @@ it("RestXmlEndpointTrait:Request", async () => {
     expect(r.headers["host"]).toBeDefined();
     expect(r.headers["host"]).toBe("foo.example.com");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -936,7 +937,7 @@ it("RestXmlEndpointTraitWithHostLabelAndHttpBinding:Request", async () => {
     expect(r.headers["host"]).toBeDefined();
     expect(r.headers["host"]).toBe("bar.example.com");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -1550,7 +1551,7 @@ it("HttpPayloadTraitsWithNoBlobBody:Request", async () => {
     expect(r.headers["x-foo"]).toBeDefined();
     expect(r.headers["x-foo"]).toBe("Foo");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -1923,7 +1924,7 @@ it("RestXmlHttpPayloadWithUnion:Request", async () => {
 /**
  * No payload is sent if the union has no value.
  */
-it.skip("RestXmlHttpPayloadWithUnsetUnion:Request", async () => {
+it("RestXmlHttpPayloadWithUnsetUnion:Request", async () => {
   const client = new RestXmlProtocolClient({
     ...clientParams,
     requestHandler: new RequestSerializationTestHandler(),
@@ -1943,7 +1944,7 @@ it.skip("RestXmlHttpPayloadWithUnsetUnion:Request", async () => {
     expect(r.method).toBe("PUT");
     expect(r.path).toBe("/HttpPayloadWithUnion");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -1992,7 +1993,7 @@ it("RestXmlHttpPayloadWithUnion:Response", async () => {
 /**
  * No payload is sent if the union has no value.
  */
-it.skip("RestXmlHttpPayloadWithUnsetUnion:Response", async () => {
+it("RestXmlHttpPayloadWithUnsetUnion:Response", async () => {
   const client = new RestXmlProtocolClient({
     ...clientParams,
     requestHandler: new ResponseDeserializationTestHandler(
@@ -2275,8 +2276,8 @@ it("HttpPrefixHeadersArePresent:Request", async () => {
   const command = new HttpPrefixHeadersCommand({
     foo: "Foo",
     fooMap: {
-      Abc: "Abc value",
-      Def: "Def value",
+      abc: "Abc value",
+      def: "Def value",
     } as any,
   } as any);
   try {
@@ -2299,12 +2300,12 @@ it("HttpPrefixHeadersArePresent:Request", async () => {
     expect(r.headers["x-foo-def"]).toBeDefined();
     expect(r.headers["x-foo-def"]).toBe("Def value");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
 /**
- * No prefix headers are serialized because the value is empty
+ * No prefix headers are serialized because the value is not present
  */
 it("HttpPrefixHeadersAreNotPresent:Request", async () => {
   const client = new RestXmlProtocolClient({
@@ -2332,7 +2333,41 @@ it("HttpPrefixHeadersAreNotPresent:Request", async () => {
     expect(r.headers["x-foo"]).toBeDefined();
     expect(r.headers["x-foo"]).toBe("Foo");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
+  }
+});
+
+/**
+ * Serialize prefix headers were the value is present but empty
+ */
+it("HttpPrefixEmptyHeaders:Request", async () => {
+  const client = new RestXmlProtocolClient({
+    ...clientParams,
+    requestHandler: new RequestSerializationTestHandler(),
+  });
+
+  const command = new HttpPrefixHeadersCommand({
+    fooMap: {
+      abc: "",
+    } as any,
+  } as any);
+  try {
+    await client.send(command);
+    fail("Expected an EXPECTED_REQUEST_SERIALIZATION_ERROR to be thrown");
+    return;
+  } catch (err) {
+    if (!(err instanceof EXPECTED_REQUEST_SERIALIZATION_ERROR)) {
+      fail(err);
+      return;
+    }
+    const r = err.request;
+    expect(r.method).toBe("GET");
+    expect(r.path).toBe("/HttpPrefixHeaders");
+
+    expect(r.headers["x-foo-abc"]).toBeDefined();
+    expect(r.headers["x-foo-abc"]).toBe("");
+
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2445,7 +2480,7 @@ it("RestXmlSupportsNaNFloatLabels:Request", async () => {
     expect(r.method).toBe("GET");
     expect(r.path).toBe("/FloatHttpLabels/NaN/NaN");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2475,7 +2510,7 @@ it("RestXmlSupportsInfinityFloatLabels:Request", async () => {
     expect(r.method).toBe("GET");
     expect(r.path).toBe("/FloatHttpLabels/Infinity/Infinity");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2505,7 +2540,7 @@ it("RestXmlSupportsNegativeInfinityFloatLabels:Request", async () => {
     expect(r.method).toBe("GET");
     expect(r.path).toBe("/FloatHttpLabels/-Infinity/-Infinity");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2535,7 +2570,7 @@ it("HttpRequestWithGreedyLabelInPath:Request", async () => {
     expect(r.method).toBe("GET");
     expect(r.path).toBe("/HttpRequestWithGreedyLabelInPath/foo/hello/baz/there/guy");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2571,7 +2606,7 @@ it("InputWithHeadersAndAllParams:Request", async () => {
     expect(r.method).toBe("GET");
     expect(r.path).toBe("/HttpRequestWithLabels/string/1/2/3/4.1/5.1/true/2019-12-16T23%3A48%3A18Z");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2609,7 +2644,7 @@ it("HttpRequestLabelEscaping:Request", async () => {
       "/HttpRequestWithLabels/%20%25%3A%2F%3F%23%5B%5D%40%21%24%26%27%28%29%2A%2B%2C%3B%3D%F0%9F%98%B9/1/2/3/4.1/5.1/true/2019-12-16T23%3A48%3A18Z"
     );
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2646,7 +2681,7 @@ it("HttpRequestWithLabelsAndTimestampFormat:Request", async () => {
       "/HttpRequestWithLabelsAndTimestampFormat/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z/2019-12-16T23%3A48%3A18Z/1576540098/Mon%2C%2016%20Dec%202019%2023%3A48%3A18%20GMT/2019-12-16T23%3A48%3A18Z"
     );
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2828,7 +2863,7 @@ it("InputAndOutputWithStringHeaders:Request", async () => {
     expect(r.headers["x-stringset"]).toBeDefined();
     expect(r.headers["x-stringset"]).toBe("a, b, c");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2878,7 +2913,7 @@ it("InputAndOutputWithNumericHeaders:Request", async () => {
     expect(r.headers["x-short"]).toBeDefined();
     expect(r.headers["x-short"]).toBe("123");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2916,7 +2951,7 @@ it("InputAndOutputWithBooleanHeaders:Request", async () => {
     expect(r.headers["x-booleanlist"]).toBeDefined();
     expect(r.headers["x-booleanlist"]).toBe("true, false, true");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2948,7 +2983,7 @@ it("InputAndOutputWithTimestampHeaders:Request", async () => {
     expect(r.headers["x-timestamplist"]).toBeDefined();
     expect(r.headers["x-timestamplist"]).toBe("Mon, 16 Dec 2019 23:48:18 GMT, Mon, 16 Dec 2019 23:48:18 GMT");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -2983,7 +3018,7 @@ it("InputAndOutputWithEnumHeaders:Request", async () => {
     expect(r.headers["x-enumlist"]).toBeDefined();
     expect(r.headers["x-enumlist"]).toBe("Foo, Bar, Baz");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3018,7 +3053,7 @@ it("RestXmlSupportsNaNFloatHeaderInputs:Request", async () => {
     expect(r.headers["x-float"]).toBeDefined();
     expect(r.headers["x-float"]).toBe("NaN");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3053,7 +3088,7 @@ it("RestXmlSupportsInfinityFloatHeaderInputs:Request", async () => {
     expect(r.headers["x-float"]).toBeDefined();
     expect(r.headers["x-float"]).toBe("Infinity");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3088,7 +3123,7 @@ it("RestXmlSupportsNegativeInfinityFloatHeaderInputs:Request", async () => {
     expect(r.headers["x-float"]).toBeDefined();
     expect(r.headers["x-float"]).toBe("-Infinity");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3635,6 +3670,158 @@ it("FlatNestedXmlMapResponse:Response", async () => {
 });
 
 /**
+ * Serializes nested XML Maps in requests that have xmlName on members
+ */
+it.skip("NestedXmlMapWithXmlNameSerializes:Request", async () => {
+  const client = new RestXmlProtocolClient({
+    ...clientParams,
+    requestHandler: new RequestSerializationTestHandler(),
+  });
+
+  const command = new NestedXmlMapWithXmlNameCommand({
+    nestedXmlMapWithXmlNameMap: {
+      foo: {
+        bar: "Baz",
+        fizz: "Buzz",
+      } as any,
+      qux: {
+        foobar: "Bar",
+        fizzbuzz: "Buzz",
+      } as any,
+    } as any,
+  } as any);
+  try {
+    await client.send(command);
+    fail("Expected an EXPECTED_REQUEST_SERIALIZATION_ERROR to be thrown");
+    return;
+  } catch (err) {
+    if (!(err instanceof EXPECTED_REQUEST_SERIALIZATION_ERROR)) {
+      fail(err);
+      return;
+    }
+    const r = err.request;
+    expect(r.method).toBe("POST");
+    expect(r.path).toBe("/NestedXmlMapWithXmlName");
+
+    expect(r.headers["content-type"]).toBeDefined();
+    expect(r.headers["content-type"]).toBe("application/xml");
+
+    expect(r.body).toBeDefined();
+    const utf8Encoder = client.config.utf8Encoder;
+    const bodyString = `    <NestedXmlMapWithXmlNameInputOutput>
+            <nestedXmlMapWithXmlNameMap>
+                <entry>
+                    <OuterKey>foo</OuterKey>
+                    <value>
+                        <entry>
+                            <InnerKey>bar</InnerKey>
+                            <InnerValue>Baz</InnerValue>
+                        </entry>
+                        <entry>
+                            <InnerKey>fizz</InnerKey>
+                            <InnerValue>Buzz</InnerValue>
+                        </entry>
+                    </value>
+                </entry>
+                <entry>
+                    <OuterKey>qux</OuterKey>
+                    <value>
+                        <entry>
+                            <InnerKey>foobar</InnerKey>
+                            <InnerValue>Bar</InnerValue>
+                        </entry>
+                        <entry>
+                            <InnerKey>fizzbuzz</InnerKey>
+                            <InnerValue>Buzz</InnerValue>
+                        </entry>
+                    </value>
+                </entry>
+            </nestedXmlMapWithXmlNameMap>
+        </NestedXmlMapWithXmlNameInputOutput>
+    `;
+    const unequalParts: any = compareEquivalentXmlBodies(bodyString, r.body.toString());
+    expect(unequalParts).toBeUndefined();
+  }
+});
+
+/**
+ * Serializes nested XML maps in responses that have xmlName on members
+ */
+it("NestedXmlMapWithXmlNameDeserializes:Response", async () => {
+  const client = new RestXmlProtocolClient({
+    ...clientParams,
+    requestHandler: new ResponseDeserializationTestHandler(
+      true,
+      200,
+      {
+        "content-type": "application/xml",
+      },
+      `    <NestedXmlMapWithXmlNameInputOutput>
+              <nestedXmlMapWithXmlNameMap>
+                  <entry>
+                      <OuterKey>foo</OuterKey>
+                      <value>
+                          <entry>
+                              <InnerKey>bar</InnerKey>
+                              <InnerValue>Baz</InnerValue>
+                          </entry>
+                          <entry>
+                              <InnerKey>fizz</InnerKey>
+                              <InnerValue>Buzz</InnerValue>
+                          </entry>
+                      </value>
+                  </entry>
+                  <entry>
+                      <OuterKey>qux</OuterKey>
+                      <value>
+                          <entry>
+                              <InnerKey>foobar</InnerKey>
+                              <InnerValue>Bar</InnerValue>
+                          </entry>
+                          <entry>
+                              <InnerKey>fizzbuzz</InnerKey>
+                              <InnerValue>Buzz</InnerValue>
+                          </entry>
+                      </value>
+                  </entry>
+              </nestedXmlMapWithXmlNameMap>
+          </NestedXmlMapWithXmlNameInputOutput>
+      `
+    ),
+  });
+
+  const params: any = {};
+  const command = new NestedXmlMapWithXmlNameCommand(params);
+
+  let r: any;
+  try {
+    r = await client.send(command);
+  } catch (err) {
+    fail("Expected a valid response to be returned, got " + err);
+    return;
+  }
+  expect(r["$metadata"].httpStatusCode).toBe(200);
+  const paramsToValidate: any = [
+    {
+      nestedXmlMapWithXmlNameMap: {
+        foo: {
+          bar: "Baz",
+          fizz: "Buzz",
+        },
+        qux: {
+          foobar: "Bar",
+          fizzbuzz: "Buzz",
+        },
+      },
+    },
+  ][0];
+  Object.keys(paramsToValidate).forEach((param) => {
+    expect(r[param]).toBeDefined();
+    expect(equivalentContents(paramsToValidate[param], r[param])).toBe(true);
+  });
+});
+
+/**
  * No input serializes no payload
  */
 it("NoInputAndNoOutput:Request", async () => {
@@ -3657,7 +3844,7 @@ it("NoInputAndNoOutput:Request", async () => {
     expect(r.method).toBe("POST");
     expect(r.path).toBe("/NoInputAndNoOutput");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3706,7 +3893,7 @@ it("NoInputAndOutput:Request", async () => {
     expect(r.method).toBe("POST");
     expect(r.path).toBe("/NoInputAndOutputOutput");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3733,9 +3920,9 @@ it("NoInputAndOutput:Response", async () => {
 });
 
 /**
- * Do not send null values, empty strings, or empty lists over the wire in headers
+ * Do not send null values, but do send empty strings and empty lists over the wire in headers
  */
-it("NullAndEmptyHeaders:Request", async () => {
+it.skip("NullAndEmptyHeaders:Request", async () => {
   const client = new RestXmlProtocolClient({
     ...clientParams,
     requestHandler: new RequestSerializationTestHandler(),
@@ -3760,10 +3947,13 @@ it("NullAndEmptyHeaders:Request", async () => {
     expect(r.path).toBe("/NullAndEmptyHeadersClient");
 
     expect(r.headers["x-a"]).toBeUndefined();
-    expect(r.headers["x-b"]).toBeUndefined();
-    expect(r.headers["x-c"]).toBeUndefined();
 
-    expect(r.body).toBeFalsy();
+    expect(r.headers["x-b"]).toBeDefined();
+    expect(r.headers["x-b"]).toBe("");
+    expect(r.headers["x-c"]).toBeDefined();
+    expect(r.headers["x-c"]).toBe("");
+
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3792,7 +3982,7 @@ it("RestXmlOmitsNullQuery:Request", async () => {
     expect(r.method).toBe("GET");
     expect(r.path).toBe("/OmitsNullSerializesEmptyString");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3824,14 +4014,14 @@ it("RestXmlSerializesEmptyString:Request", async () => {
     const queryString = buildQueryString(r.query);
     expect(queryString).toContain("Empty=");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
 /**
  * Compression algorithm encoding is appended to the Content-Encoding header.
  */
-it.skip("SDKAppliedContentEncoding_restXml:Request", async () => {
+it("SDKAppliedContentEncoding_restXml:Request", async () => {
   const client = new RestXmlProtocolClient({
     ...clientParams,
     requestHandler: new RequestSerializationTestHandler(),
@@ -3864,7 +4054,7 @@ it.skip("SDKAppliedContentEncoding_restXml:Request", async () => {
  * request compression encoding from the HTTP binding.
  *
  */
-it.skip("SDKAppendedGzipAfterProvidedEncoding_restXml:Request", async () => {
+it("SDKAppendedGzipAfterProvidedEncoding_restXml:Request", async () => {
   const client = new RestXmlProtocolClient({
     ...clientParams,
     requestHandler: new RequestSerializationTestHandler(),
@@ -3920,7 +4110,7 @@ it("QueryIdempotencyTokenAutoFill:Request", async () => {
     const queryString = buildQueryString(r.query);
     expect(queryString).toContain("token=00000000-0000-4000-8000-000000000000");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3952,7 +4142,7 @@ it("QueryIdempotencyTokenAutoFillIsSet:Request", async () => {
     const queryString = buildQueryString(r.query);
     expect(queryString).toContain("token=00000000-0000-4000-8000-000000000000");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -3989,7 +4179,7 @@ it("RestXmlQueryParamsStringListMap:Request", async () => {
     expect(queryString).toContain("baz=bar");
     expect(queryString).toContain("baz=qux");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -4026,7 +4216,7 @@ it("RestXmlQueryPrecedence:Request", async () => {
     expect(queryString).toContain("bar=named");
     expect(queryString).toContain("qux=alsoFromMap");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 
@@ -4921,7 +5111,7 @@ it("TimestampFormatHeaders:Request", async () => {
     expect(r.headers["x-targethttpdate"]).toBeDefined();
     expect(r.headers["x-targethttpdate"]).toBe("Mon, 16 Dec 2019 23:48:18 GMT");
 
-    expect(r.body).toBeFalsy();
+    expect(!r.body || r.body === `{}`).toBeTruthy();
   }
 });
 

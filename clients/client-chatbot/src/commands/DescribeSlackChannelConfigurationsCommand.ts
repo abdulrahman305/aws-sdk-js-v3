@@ -76,6 +76,8 @@ export interface DescribeSlackChannelConfigurationsCommandOutput
  * //           TagValue: "STRING_VALUE", // required
  * //         },
  * //       ],
+ * //       State: "STRING_VALUE",
+ * //       StateReason: "STRING_VALUE",
  * //     },
  * //   ],
  * // };
@@ -100,6 +102,7 @@ export interface DescribeSlackChannelConfigurationsCommandOutput
  * @throws {@link ChatbotServiceException}
  * <p>Base exception class for all service exceptions from Chatbot service.</p>
  *
+ *
  * @public
  */
 export class DescribeSlackChannelConfigurationsCommand extends $Command
@@ -110,9 +113,7 @@ export class DescribeSlackChannelConfigurationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ChatbotClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -124,4 +125,16 @@ export class DescribeSlackChannelConfigurationsCommand extends $Command
   .f(void 0, DescribeSlackChannelConfigurationsResultFilterSensitiveLog)
   .ser(se_DescribeSlackChannelConfigurationsCommand)
   .de(de_DescribeSlackChannelConfigurationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeSlackChannelConfigurationsRequest;
+      output: DescribeSlackChannelConfigurationsResult;
+    };
+    sdk: {
+      input: DescribeSlackChannelConfigurationsCommandInput;
+      output: DescribeSlackChannelConfigurationsCommandOutput;
+    };
+  };
+}

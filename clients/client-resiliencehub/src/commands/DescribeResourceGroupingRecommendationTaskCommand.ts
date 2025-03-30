@@ -52,7 +52,7 @@ export interface DescribeResourceGroupingRecommendationTaskCommandOutput
  * const response = await client.send(command);
  * // { // DescribeResourceGroupingRecommendationTaskResponse
  * //   groupingId: "STRING_VALUE", // required
- * //   status: "STRING_VALUE", // required
+ * //   status: "Pending" || "InProgress" || "Failed" || "Success", // required
  * //   errorMessage: "STRING_VALUE",
  * // };
  *
@@ -85,6 +85,7 @@ export interface DescribeResourceGroupingRecommendationTaskCommandOutput
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class DescribeResourceGroupingRecommendationTaskCommand extends $Command
@@ -95,9 +96,7 @@ export class DescribeResourceGroupingRecommendationTaskCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -109,4 +108,16 @@ export class DescribeResourceGroupingRecommendationTaskCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeResourceGroupingRecommendationTaskCommand)
   .de(de_DescribeResourceGroupingRecommendationTaskCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeResourceGroupingRecommendationTaskRequest;
+      output: DescribeResourceGroupingRecommendationTaskResponse;
+    };
+    sdk: {
+      input: DescribeResourceGroupingRecommendationTaskCommandInput;
+      output: DescribeResourceGroupingRecommendationTaskCommandOutput;
+    };
+  };
+}

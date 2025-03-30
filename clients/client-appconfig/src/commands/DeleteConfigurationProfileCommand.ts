@@ -71,19 +71,22 @@ export interface DeleteConfigurationProfileCommandOutput extends __MetadataBeare
  * @throws {@link AppConfigServiceException}
  * <p>Base exception class for all service exceptions from AppConfig service.</p>
  *
- * @public
+ *
  * @example To delete a configuration profile
  * ```javascript
  * // The following delete-configuration-profile example deletes the specified configuration profile.
  * const input = {
- *   "ApplicationId": "339ohji",
- *   "ConfigurationProfileId": "ur8hx2f"
+ *   ApplicationId: "339ohji",
+ *   ConfigurationProfileId: "ur8hx2f"
  * };
  * const command = new DeleteConfigurationProfileCommand(input);
- * await client.send(command);
- * // example id: to-delete-a-configuration-profile-1632265401308
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class DeleteConfigurationProfileCommand extends $Command
   .classBuilder<
@@ -93,9 +96,7 @@ export class DeleteConfigurationProfileCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: AppConfigClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -107,4 +108,16 @@ export class DeleteConfigurationProfileCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteConfigurationProfileCommand)
   .de(de_DeleteConfigurationProfileCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteConfigurationProfileRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteConfigurationProfileCommandInput;
+      output: DeleteConfigurationProfileCommandOutput;
+    };
+  };
+}

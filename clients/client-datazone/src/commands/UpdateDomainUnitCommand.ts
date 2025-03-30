@@ -11,7 +11,7 @@ import {
   UpdateDomainUnitInputFilterSensitiveLog,
   UpdateDomainUnitOutput,
   UpdateDomainUnitOutputFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_UpdateDomainUnitCommand, se_UpdateDomainUnitCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -102,6 +102,7 @@ export interface UpdateDomainUnitCommandOutput extends UpdateDomainUnitOutput, _
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class UpdateDomainUnitCommand extends $Command
@@ -112,9 +113,7 @@ export class UpdateDomainUnitCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -126,4 +125,16 @@ export class UpdateDomainUnitCommand extends $Command
   .f(UpdateDomainUnitInputFilterSensitiveLog, UpdateDomainUnitOutputFilterSensitiveLog)
   .ser(se_UpdateDomainUnitCommand)
   .de(de_UpdateDomainUnitCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateDomainUnitInput;
+      output: UpdateDomainUnitOutput;
+    };
+    sdk: {
+      input: UpdateDomainUnitCommandInput;
+      output: UpdateDomainUnitCommandOutput;
+    };
+  };
+}

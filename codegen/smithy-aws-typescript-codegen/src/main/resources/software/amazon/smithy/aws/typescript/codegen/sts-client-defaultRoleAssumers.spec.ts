@@ -1,18 +1,19 @@
 import { NodeHttp2Handler, NodeHttpHandler, streamCollector } from "@smithy/node-http-handler";
 import { HttpResponse } from "@smithy/protocol-http";
 import { Readable } from "stream";
+import { beforeAll, beforeEach, describe, expect, test as it, vi } from "vitest";
 
 import type { AssumeRoleCommandInput } from "../src/commands/AssumeRoleCommand";
 import { AssumeRoleWithWebIdentityCommandInput } from "../src/commands/AssumeRoleWithWebIdentityCommand";
 import { getDefaultRoleAssumer, getDefaultRoleAssumerWithWebIdentity } from "../src/defaultRoleAssumers";
 
-const mockHandle = jest.fn().mockResolvedValue({
+const mockHandle = vi.fn().mockResolvedValue({
   response: new HttpResponse({
     statusCode: 200,
     body: Readable.from([""]),
   }),
 });
-jest.mock("@smithy/node-http-handler", () => {
+vi.mock("@smithy/node-http-handler", () => {
   class MockNodeHttpHandler {
     static create(instanceOrOptions?: any) {
       if (typeof instanceOrOptions?.handle === "function") {
@@ -23,20 +24,42 @@ jest.mock("@smithy/node-http-handler", () => {
     destroy() {}
     handle = mockHandle;
   }
+  class MockNodeHttp2Handler {
+    public metadata = {
+      handlerProtocol: "h2",
+    };
+    static create(instanceOrOptions?: any) {
+      if (typeof instanceOrOptions?.handle === "function") {
+        return instanceOrOptions;
+      }
+      return new MockNodeHttp2Handler();
+    }
+    destroy() {}
+    handle = mockHandle;
+  }
   return {
     NodeHttpHandler: MockNodeHttpHandler,
-    streamCollector: jest.fn(),
+    NodeHttp2Handler: MockNodeHttp2Handler,
+    streamCollector: vi.fn(),
   };
 });
 
-const mockConstructorInput = jest.fn();
-jest.mock("../src/STSClient", () => ({
-  STSClient: function (params: any) {
-    mockConstructorInput(params);
-    //@ts-ignore
-    return new (jest.requireActual("../src/STSClient").STSClient)(params);
-  },
-}));
+const STSCtor = vi.fn();
+
+vi.mock("../src/STSClient", async () => {
+  const actual: any = await vi.importActual("../src/STSClient");
+
+  const pkg = {
+    ...actual,
+    STSClient: class STSClient extends actual.STSClient {
+      constructor(...args: any[]) {
+        super(...args);
+        STSCtor(...args);
+      }
+    },
+  };
+  return pkg;
+});
 
 describe("getDefaultRoleAssumer", () => {
   const assumeRoleResponse = `<AssumeRoleResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
@@ -58,11 +81,11 @@ describe("getDefaultRoleAssumer", () => {
 </AssumeRoleResponse>`;
 
   beforeAll(() => {
-    (streamCollector as jest.Mock).mockImplementation(async () => Buffer.from(assumeRoleResponse));
+    vi.mocked(streamCollector).mockImplementation(async () => Buffer.from(assumeRoleResponse));
   });
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it("should use supplied source credentials", async () => {
@@ -99,7 +122,13 @@ describe("getDefaultRoleAssumer", () => {
   });
 
   it("should use the STS client config", async () => {
-    const logger = console;
+    const logger = {
+      trace() {},
+      debug() {},
+      info() {},
+      warn() {},
+      error() {},
+    };
     const region = "some-region";
     const handler = new NodeHttpHandler();
     const roleAssumer = getDefaultRoleAssumer({
@@ -118,8 +147,8 @@ describe("getDefaultRoleAssumer", () => {
     };
     const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
     await roleAssumer(sourceCred, params);
-    expect(mockConstructorInput).toHaveBeenCalledTimes(1);
-    expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
+    expect(vi.mocked(STSCtor)).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(STSCtor).mock.calls[0][0]).toMatchObject({
       logger,
       requestHandler: handler,
       region,
@@ -127,7 +156,13 @@ describe("getDefaultRoleAssumer", () => {
   });
 
   it("should use the parent client config", async () => {
-    const logger = console;
+    const logger = {
+      trace() {},
+      debug() {},
+      info() {},
+      warn() {},
+      error() {},
+    };
     const region = "some-region";
     const handler = new NodeHttpHandler();
     const roleAssumer = getDefaultRoleAssumer({
@@ -143,8 +178,8 @@ describe("getDefaultRoleAssumer", () => {
     };
     const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
     await roleAssumer(sourceCred, params);
-    expect(mockConstructorInput).toHaveBeenCalledTimes(1);
-    expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
+    expect(vi.mocked(STSCtor)).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(STSCtor).mock.calls[0][0]).toMatchObject({
       logger,
       requestHandler: handler,
       region,
@@ -152,7 +187,13 @@ describe("getDefaultRoleAssumer", () => {
   });
 
   it("should not pass through an Http2 requestHandler", async () => {
-    const logger = console;
+    const logger = {
+      trace() {},
+      debug() {},
+      info() {},
+      warn() {},
+      error() {},
+    };
     const region = "some-region";
     const handler = new NodeHttp2Handler();
     const roleAssumer = getDefaultRoleAssumer({
@@ -168,8 +209,8 @@ describe("getDefaultRoleAssumer", () => {
     };
     const sourceCred = { accessKeyId: "key", secretAccessKey: "secret" };
     await roleAssumer(sourceCred, params);
-    expect(mockConstructorInput).toHaveBeenCalledTimes(1);
-    expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
+    expect(vi.mocked(STSCtor)).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(STSCtor).mock.calls[0][0]).toMatchObject({
       logger,
       requestHandler: undefined,
       region,
@@ -177,7 +218,7 @@ describe("getDefaultRoleAssumer", () => {
   });
 
   it("should use the STS client middleware", async () => {
-    const customMiddlewareFunction = jest.fn();
+    const customMiddlewareFunction = vi.fn();
     const roleAssumer = getDefaultRoleAssumer({}, [
       {
         applyToStack: (stack) => {
@@ -217,15 +258,21 @@ describe("getDefaultRoleAssumerWithWebIdentity", () => {
   </Response>`;
 
   beforeAll(() => {
-    (streamCollector as jest.Mock).mockImplementation(async () => Buffer.from(assumeRoleResponse));
+    vi.mocked(streamCollector).mockImplementation(async () => Buffer.from(assumeRoleResponse));
   });
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it("should use the STS client config", async () => {
-    const logger = console;
+    const logger = {
+      trace() {},
+      debug() {},
+      info() {},
+      warn() {},
+      error() {},
+    };
     const region = "some-region";
     const handler = new NodeHttpHandler();
     const roleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdentity({
@@ -239,8 +286,8 @@ describe("getDefaultRoleAssumerWithWebIdentity", () => {
       WebIdentityToken: "token",
     };
     await roleAssumerWithWebIdentity(params);
-    expect(mockConstructorInput).toHaveBeenCalledTimes(1);
-    expect(mockConstructorInput.mock.calls[0][0]).toMatchObject({
+    expect(vi.mocked(STSCtor)).toHaveBeenCalledTimes(1);
+    expect(vi.mocked(STSCtor).mock.calls[0][0]).toMatchObject({
       logger,
       requestHandler: handler,
       region,
@@ -259,7 +306,7 @@ describe("getDefaultRoleAssumerWithWebIdentity", () => {
   });
 
   it("should use the STS client middleware", async () => {
-    const customMiddlewareFunction = jest.fn();
+    const customMiddlewareFunction = vi.fn();
     const roleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdentity({}, [
       {
         applyToStack: (stack) => {

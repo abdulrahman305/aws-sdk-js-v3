@@ -109,6 +109,7 @@ export interface GetSubscriptionGrantCommandOutput extends GetSubscriptionGrantO
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class GetSubscriptionGrantCommand extends $Command
@@ -119,9 +120,7 @@ export class GetSubscriptionGrantCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -133,4 +132,16 @@ export class GetSubscriptionGrantCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetSubscriptionGrantCommand)
   .de(de_GetSubscriptionGrantCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetSubscriptionGrantInput;
+      output: GetSubscriptionGrantOutput;
+    };
+    sdk: {
+      input: GetSubscriptionGrantCommandInput;
+      output: GetSubscriptionGrantCommandOutput;
+    };
+  };
+}

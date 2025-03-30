@@ -11,7 +11,7 @@ import {
   CreatePromptRequestFilterSensitiveLog,
   CreatePromptResponse,
   CreatePromptResponseFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_CreatePromptCommand, se_CreatePromptCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -48,15 +48,65 @@ export interface CreatePromptCommandOutput extends CreatePromptResponse, __Metad
  *   variants: [ // PromptVariantList
  *     { // PromptVariant
  *       name: "STRING_VALUE", // required
- *       templateType: "TEXT", // required
+ *       templateType: "TEXT" || "CHAT", // required
  *       templateConfiguration: { // PromptTemplateConfiguration Union: only one key present
  *         text: { // TextPromptTemplateConfiguration
  *           text: "STRING_VALUE", // required
+ *           cachePoint: { // CachePointBlock
+ *             type: "default", // required
+ *           },
  *           inputVariables: [ // PromptInputVariablesList
  *             { // PromptInputVariable
  *               name: "STRING_VALUE",
  *             },
  *           ],
+ *         },
+ *         chat: { // ChatPromptTemplateConfiguration
+ *           messages: [ // Messages // required
+ *             { // Message
+ *               role: "user" || "assistant", // required
+ *               content: [ // ContentBlocks // required
+ *                 { // ContentBlock Union: only one key present
+ *                   text: "STRING_VALUE",
+ *                   cachePoint: {
+ *                     type: "default", // required
+ *                   },
+ *                 },
+ *               ],
+ *             },
+ *           ],
+ *           system: [ // SystemContentBlocks
+ *             { // SystemContentBlock Union: only one key present
+ *               text: "STRING_VALUE",
+ *               cachePoint: "<CachePointBlock>",
+ *             },
+ *           ],
+ *           inputVariables: [
+ *             {
+ *               name: "STRING_VALUE",
+ *             },
+ *           ],
+ *           toolConfiguration: { // ToolConfiguration
+ *             tools: [ // Tools // required
+ *               { // Tool Union: only one key present
+ *                 toolSpec: { // ToolSpecification
+ *                   name: "STRING_VALUE", // required
+ *                   description: "STRING_VALUE",
+ *                   inputSchema: { // ToolInputSchema Union: only one key present
+ *                     json: "DOCUMENT_VALUE",
+ *                   },
+ *                 },
+ *                 cachePoint: "<CachePointBlock>",
+ *               },
+ *             ],
+ *             toolChoice: { // ToolChoice Union: only one key present
+ *               auto: {},
+ *               any: {},
+ *               tool: { // SpecificToolChoice
+ *                 name: "STRING_VALUE", // required
+ *               },
+ *             },
+ *           },
  *         },
  *       },
  *       modelId: "STRING_VALUE",
@@ -64,11 +114,22 @@ export interface CreatePromptCommandOutput extends CreatePromptResponse, __Metad
  *         text: { // PromptModelInferenceConfiguration
  *           temperature: Number("float"),
  *           topP: Number("float"),
- *           topK: Number("int"),
  *           maxTokens: Number("int"),
  *           stopSequences: [ // StopSequences
  *             "STRING_VALUE",
  *           ],
+ *         },
+ *       },
+ *       metadata: [ // PromptMetadataList
+ *         { // PromptMetadataEntry
+ *           key: "STRING_VALUE", // required
+ *           value: "STRING_VALUE", // required
+ *         },
+ *       ],
+ *       additionalModelRequestFields: "DOCUMENT_VALUE",
+ *       genAiResource: { // PromptGenAiResource Union: only one key present
+ *         agent: { // PromptAgentResource
+ *           agentIdentifier: "STRING_VALUE", // required
  *         },
  *       },
  *     },
@@ -88,15 +149,65 @@ export interface CreatePromptCommandOutput extends CreatePromptResponse, __Metad
  * //   variants: [ // PromptVariantList
  * //     { // PromptVariant
  * //       name: "STRING_VALUE", // required
- * //       templateType: "TEXT", // required
+ * //       templateType: "TEXT" || "CHAT", // required
  * //       templateConfiguration: { // PromptTemplateConfiguration Union: only one key present
  * //         text: { // TextPromptTemplateConfiguration
  * //           text: "STRING_VALUE", // required
+ * //           cachePoint: { // CachePointBlock
+ * //             type: "default", // required
+ * //           },
  * //           inputVariables: [ // PromptInputVariablesList
  * //             { // PromptInputVariable
  * //               name: "STRING_VALUE",
  * //             },
  * //           ],
+ * //         },
+ * //         chat: { // ChatPromptTemplateConfiguration
+ * //           messages: [ // Messages // required
+ * //             { // Message
+ * //               role: "user" || "assistant", // required
+ * //               content: [ // ContentBlocks // required
+ * //                 { // ContentBlock Union: only one key present
+ * //                   text: "STRING_VALUE",
+ * //                   cachePoint: {
+ * //                     type: "default", // required
+ * //                   },
+ * //                 },
+ * //               ],
+ * //             },
+ * //           ],
+ * //           system: [ // SystemContentBlocks
+ * //             { // SystemContentBlock Union: only one key present
+ * //               text: "STRING_VALUE",
+ * //               cachePoint: "<CachePointBlock>",
+ * //             },
+ * //           ],
+ * //           inputVariables: [
+ * //             {
+ * //               name: "STRING_VALUE",
+ * //             },
+ * //           ],
+ * //           toolConfiguration: { // ToolConfiguration
+ * //             tools: [ // Tools // required
+ * //               { // Tool Union: only one key present
+ * //                 toolSpec: { // ToolSpecification
+ * //                   name: "STRING_VALUE", // required
+ * //                   description: "STRING_VALUE",
+ * //                   inputSchema: { // ToolInputSchema Union: only one key present
+ * //                     json: "DOCUMENT_VALUE",
+ * //                   },
+ * //                 },
+ * //                 cachePoint: "<CachePointBlock>",
+ * //               },
+ * //             ],
+ * //             toolChoice: { // ToolChoice Union: only one key present
+ * //               auto: {},
+ * //               any: {},
+ * //               tool: { // SpecificToolChoice
+ * //                 name: "STRING_VALUE", // required
+ * //               },
+ * //             },
+ * //           },
  * //         },
  * //       },
  * //       modelId: "STRING_VALUE",
@@ -104,11 +215,22 @@ export interface CreatePromptCommandOutput extends CreatePromptResponse, __Metad
  * //         text: { // PromptModelInferenceConfiguration
  * //           temperature: Number("float"),
  * //           topP: Number("float"),
- * //           topK: Number("int"),
  * //           maxTokens: Number("int"),
  * //           stopSequences: [ // StopSequences
  * //             "STRING_VALUE",
  * //           ],
+ * //         },
+ * //       },
+ * //       metadata: [ // PromptMetadataList
+ * //         { // PromptMetadataEntry
+ * //           key: "STRING_VALUE", // required
+ * //           value: "STRING_VALUE", // required
+ * //         },
+ * //       ],
+ * //       additionalModelRequestFields: "DOCUMENT_VALUE",
+ * //       genAiResource: { // PromptGenAiResource Union: only one key present
+ * //         agent: { // PromptAgentResource
+ * //           agentIdentifier: "STRING_VALUE", // required
  * //         },
  * //       },
  * //     },
@@ -149,6 +271,7 @@ export interface CreatePromptCommandOutput extends CreatePromptResponse, __Metad
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class CreatePromptCommand extends $Command
@@ -159,9 +282,7 @@ export class CreatePromptCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -173,4 +294,16 @@ export class CreatePromptCommand extends $Command
   .f(CreatePromptRequestFilterSensitiveLog, CreatePromptResponseFilterSensitiveLog)
   .ser(se_CreatePromptCommand)
   .de(de_CreatePromptCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreatePromptRequest;
+      output: CreatePromptResponse;
+    };
+    sdk: {
+      input: CreatePromptCommandInput;
+      output: CreatePromptCommandOutput;
+    };
+  };
+}

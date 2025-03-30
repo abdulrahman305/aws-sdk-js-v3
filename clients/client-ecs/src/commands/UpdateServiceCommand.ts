@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ECSClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ECSClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateServiceRequest, UpdateServiceResponse } from "../models/models_0";
+import { UpdateServiceRequest, UpdateServiceResponse } from "../models/models_1";
 import { de_UpdateServiceCommand, se_UpdateServiceCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -95,12 +95,12 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * 					(provided that the cluster resources required to do this are available).</p>
  *             </li>
  *          </ul>
- *          <p>When <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateService.html">UpdateService</a> stops a task during a deployment, the equivalent
- * 			of <code>docker stop</code> is issued to the containers running in the task. This
- * 			results in a <code>SIGTERM</code> and a 30-second timeout. After this,
- * 				<code>SIGKILL</code> is sent and the containers are forcibly stopped. If the
- * 			container handles the <code>SIGTERM</code> gracefully and exits within 30 seconds from
- * 			receiving it, no <code>SIGKILL</code> is sent.</p>
+ *          <p>When <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateService.html">UpdateService</a>
+ * 			stops a task during a deployment, the equivalent of <code>docker stop</code> is issued
+ * 			to the containers running in the task. This results in a <code>SIGTERM</code> and a
+ * 			30-second timeout. After this, <code>SIGKILL</code> is sent and the containers are
+ * 			forcibly stopped. If the container handles the <code>SIGTERM</code> gracefully and exits
+ * 			within 30 seconds from receiving it, no <code>SIGKILL</code> is sent.</p>
  *          <p>When the service scheduler launches new tasks, it determines task placement in your
  * 			cluster with the following logic.</p>
  *          <ul>
@@ -193,10 +193,11 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *       alarmNames: [ // StringList // required
  *         "STRING_VALUE",
  *       ],
- *       enable: true || false, // required
  *       rollback: true || false, // required
+ *       enable: true || false, // required
  *     },
  *   },
+ *   availabilityZoneRebalancing: "ENABLED" || "DISABLED",
  *   networkConfiguration: { // NetworkConfiguration
  *     awsvpcConfiguration: { // AwsVpcConfiguration
  *       subnets: [ // required
@@ -306,8 +307,15 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *           },
  *         ],
  *         roleArn: "STRING_VALUE", // required
- *         filesystemType: "ext3" || "ext4" || "xfs",
+ *         filesystemType: "ext3" || "ext4" || "xfs" || "ntfs",
  *       },
+ *     },
+ *   ],
+ *   vpcLatticeConfigurations: [ // VpcLatticeConfigurations
+ *     { // VpcLatticeConfiguration
+ *       roleArn: "STRING_VALUE", // required
+ *       targetGroupArn: "STRING_VALUE", // required
+ *       portName: "STRING_VALUE", // required
  *     },
  *   ],
  * };
@@ -360,8 +368,8 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //         alarmNames: [ // StringList // required
  * //           "STRING_VALUE",
  * //         ],
- * //         enable: true || false, // required
  * //         rollback: true || false, // required
+ * //         enable: true || false, // required
  * //       },
  * //     },
  * //     taskSets: [ // TaskSets
@@ -537,13 +545,20 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //                 },
  * //               ],
  * //               roleArn: "STRING_VALUE", // required
- * //               filesystemType: "ext3" || "ext4" || "xfs",
+ * //               filesystemType: "ext3" || "ext4" || "xfs" || "ntfs",
  * //             },
  * //           },
  * //         ],
  * //         fargateEphemeralStorage: {
  * //           kmsKeyId: "STRING_VALUE",
  * //         },
+ * //         vpcLatticeConfigurations: [ // VpcLatticeConfigurations
+ * //           { // VpcLatticeConfiguration
+ * //             roleArn: "STRING_VALUE", // required
+ * //             targetGroupArn: "STRING_VALUE", // required
+ * //             portName: "STRING_VALUE", // required
+ * //           },
+ * //         ],
  * //       },
  * //     ],
  * //     roleArn: "STRING_VALUE",
@@ -584,6 +599,7 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //     enableECSManagedTags: true || false,
  * //     propagateTags: "TASK_DEFINITION" || "SERVICE" || "NONE",
  * //     enableExecuteCommand: true || false,
+ * //     availabilityZoneRebalancing: "ENABLED" || "DISABLED",
  * //   },
  * // };
  *
@@ -619,6 +635,7 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link NamespaceNotFoundException} (client fault)
  *  <p>The specified namespace wasn't found.</p>
@@ -647,31 +664,36 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
- * @public
- * @example To change the task definition used in a service
- * ```javascript
- * // This example updates the my-http-service service to use the amazon-ecs-sample task definition.
- * const input = {
- *   "service": "my-http-service",
- *   "taskDefinition": "amazon-ecs-sample"
- * };
- * const command = new UpdateServiceCommand(input);
- * await client.send(command);
- * // example id: cc9e8900-0cc2-44d2-8491-64d1d3d37887
- * ```
  *
  * @example To change the number of tasks in a service
  * ```javascript
  * // This example updates the desired count of the my-http-service service to 10.
  * const input = {
- *   "desiredCount": 10,
- *   "service": "my-http-service"
+ *   desiredCount: 10,
+ *   service: "my-http-service"
  * };
  * const command = new UpdateServiceCommand(input);
- * await client.send(command);
- * // example id: 9581d6c5-02e3-4140-8cc1-5a4301586633
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
  * ```
  *
+ * @example To change the task definition used in a service
+ * ```javascript
+ * // This example updates the my-http-service service to use the amazon-ecs-sample task definition.
+ * const input = {
+ *   service: "my-http-service",
+ *   taskDefinition: "amazon-ecs-sample"
+ * };
+ * const command = new UpdateServiceCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
+ * ```
+ *
+ * @public
  */
 export class UpdateServiceCommand extends $Command
   .classBuilder<
@@ -681,9 +703,7 @@ export class UpdateServiceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -695,4 +715,16 @@ export class UpdateServiceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateServiceCommand)
   .de(de_UpdateServiceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateServiceRequest;
+      output: UpdateServiceResponse;
+    };
+    sdk: {
+      input: UpdateServiceCommandInput;
+      output: UpdateServiceCommandOutput;
+    };
+  };
+}

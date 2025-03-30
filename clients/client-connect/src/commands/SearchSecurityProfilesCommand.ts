@@ -6,7 +6,8 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ConnectClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ConnectClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { SearchSecurityProfilesRequest, SearchSecurityProfilesResponse } from "../models/models_2";
+import { SearchSecurityProfilesResponse } from "../models/models_2";
+import { SearchSecurityProfilesRequest } from "../models/models_3";
 import { de_SearchSecurityProfilesCommand, se_SearchSecurityProfilesCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -134,6 +135,7 @@ export interface SearchSecurityProfilesCommandOutput extends SearchSecurityProfi
  * @throws {@link ConnectServiceException}
  * <p>Base exception class for all service exceptions from Connect service.</p>
  *
+ *
  * @public
  */
 export class SearchSecurityProfilesCommand extends $Command
@@ -144,9 +146,7 @@ export class SearchSecurityProfilesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -158,4 +158,16 @@ export class SearchSecurityProfilesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_SearchSecurityProfilesCommand)
   .de(de_SearchSecurityProfilesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SearchSecurityProfilesRequest;
+      output: SearchSecurityProfilesResponse;
+    };
+    sdk: {
+      input: SearchSecurityProfilesCommandInput;
+      output: SearchSecurityProfilesCommandOutput;
+    };
+  };
+}

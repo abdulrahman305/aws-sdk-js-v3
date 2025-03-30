@@ -74,6 +74,39 @@ export interface UpdateSolNetworkPackageCommandOutput extends UpdateSolNetworkPa
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example Enable a network package's Operational State
+ * ```javascript
+ * //
+ * const input = {
+ *   nsdInfoId: "np-0d5b823eb5c2a9241",
+ *   nsdOperationalState: "ENABLED"
+ * };
+ * const command = new UpdateSolNetworkPackageCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   nsdOperationalState: "ENABLED"
+ * }
+ * *\/
+ * ```
+ *
+ * @example Disable a network package's Operational State
+ * ```javascript
+ * //
+ * const input = {
+ *   nsdInfoId: "np-0d5b823eb5c2a9241",
+ *   nsdOperationalState: "DISABLED"
+ * };
+ * const command = new UpdateSolNetworkPackageCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   nsdOperationalState: "DISABLED"
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class UpdateSolNetworkPackageCommand extends $Command
@@ -84,9 +117,7 @@ export class UpdateSolNetworkPackageCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -98,4 +129,16 @@ export class UpdateSolNetworkPackageCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateSolNetworkPackageCommand)
   .de(de_UpdateSolNetworkPackageCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateSolNetworkPackageInput;
+      output: UpdateSolNetworkPackageOutput;
+    };
+    sdk: {
+      input: UpdateSolNetworkPackageCommandInput;
+      output: UpdateSolNetworkPackageCommandOutput;
+    };
+  };
+}

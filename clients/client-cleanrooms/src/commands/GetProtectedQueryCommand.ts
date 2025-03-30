@@ -10,7 +10,7 @@ import {
   GetProtectedQueryInput,
   GetProtectedQueryOutput,
   GetProtectedQueryOutputFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_GetProtectedQueryCommand, se_GetProtectedQueryCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -65,6 +65,7 @@ export interface GetProtectedQueryCommandOutput extends GetProtectedQueryOutput,
  * //           resultFormat: "STRING_VALUE", // required
  * //           bucket: "STRING_VALUE", // required
  * //           keyPrefix: "STRING_VALUE",
+ * //           singleFileOutput: true || false,
  * //         },
  * //         member: { // ProtectedQueryMemberOutputConfiguration
  * //           accountId: "STRING_VALUE", // required
@@ -73,6 +74,9 @@ export interface GetProtectedQueryCommandOutput extends GetProtectedQueryOutput,
  * //     },
  * //     statistics: { // ProtectedQueryStatistics
  * //       totalDurationInMillis: Number("long"),
+ * //       billedResourceUtilization: { // BilledResourceUtilization
+ * //         units: Number("double"), // required
+ * //       },
  * //     },
  * //     result: { // ProtectedQueryResult
  * //       output: { // ProtectedQueryOutput Union: only one key present
@@ -100,6 +104,12 @@ export interface GetProtectedQueryCommandOutput extends GetProtectedQueryOutput,
  * //           maxColumnValue: Number("float"),
  * //         },
  * //       ],
+ * //     },
+ * //     computeConfiguration: { // ComputeConfiguration Union: only one key present
+ * //       worker: { // WorkerComputeConfiguration
+ * //         type: "CR.1X" || "CR.4X",
+ * //         number: Number("int"),
+ * //       },
  * //     },
  * //   },
  * // };
@@ -130,6 +140,7 @@ export interface GetProtectedQueryCommandOutput extends GetProtectedQueryOutput,
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class GetProtectedQueryCommand extends $Command
@@ -140,9 +151,7 @@ export class GetProtectedQueryCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -154,4 +163,16 @@ export class GetProtectedQueryCommand extends $Command
   .f(void 0, GetProtectedQueryOutputFilterSensitiveLog)
   .ser(se_GetProtectedQueryCommand)
   .de(de_GetProtectedQueryCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetProtectedQueryInput;
+      output: GetProtectedQueryOutput;
+    };
+    sdk: {
+      input: GetProtectedQueryCommandInput;
+      output: GetProtectedQueryCommandOutput;
+    };
+  };
+}

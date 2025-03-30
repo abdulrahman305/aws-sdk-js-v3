@@ -137,6 +137,7 @@ export interface BatchGetDataQualityResultCommandOutput extends BatchGetDataQual
  * @throws {@link GlueServiceException}
  * <p>Base exception class for all service exceptions from Glue service.</p>
  *
+ *
  * @public
  */
 export class BatchGetDataQualityResultCommand extends $Command
@@ -147,9 +148,7 @@ export class BatchGetDataQualityResultCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: GlueClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -161,4 +160,16 @@ export class BatchGetDataQualityResultCommand extends $Command
   .f(void 0, BatchGetDataQualityResultResponseFilterSensitiveLog)
   .ser(se_BatchGetDataQualityResultCommand)
   .de(de_BatchGetDataQualityResultCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: BatchGetDataQualityResultRequest;
+      output: BatchGetDataQualityResultResponse;
+    };
+    sdk: {
+      input: BatchGetDataQualityResultCommandInput;
+      output: BatchGetDataQualityResultCommandOutput;
+    };
+  };
+}

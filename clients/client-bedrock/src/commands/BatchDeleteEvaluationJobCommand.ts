@@ -33,7 +33,9 @@ export interface BatchDeleteEvaluationJobCommandInput extends BatchDeleteEvaluat
 export interface BatchDeleteEvaluationJobCommandOutput extends BatchDeleteEvaluationJobResponse, __MetadataBearer {}
 
 /**
- * <p>Creates a batch deletion job. A model evaluation job can only be deleted if it has following status <code>FAILED</code>, <code>COMPLETED</code>, and <code>STOPPED</code>. You can request up to 25 model evaluation jobs be deleted in a single request.</p>
+ * <p>Deletes a batch of evaluation jobs. An evaluation job can only be deleted if it has
+ *          following status <code>FAILED</code>, <code>COMPLETED</code>, and <code>STOPPED</code>.
+ *          You can request up to 25 model evaluation jobs be deleted in a single request.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -92,6 +94,7 @@ export interface BatchDeleteEvaluationJobCommandOutput extends BatchDeleteEvalua
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class BatchDeleteEvaluationJobCommand extends $Command
@@ -102,9 +105,7 @@ export class BatchDeleteEvaluationJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -116,4 +117,16 @@ export class BatchDeleteEvaluationJobCommand extends $Command
   .f(BatchDeleteEvaluationJobRequestFilterSensitiveLog, BatchDeleteEvaluationJobResponseFilterSensitiveLog)
   .ser(se_BatchDeleteEvaluationJobCommand)
   .de(de_BatchDeleteEvaluationJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: BatchDeleteEvaluationJobRequest;
+      output: BatchDeleteEvaluationJobResponse;
+    };
+    sdk: {
+      input: BatchDeleteEvaluationJobCommandInput;
+      output: BatchDeleteEvaluationJobCommandOutput;
+    };
+  };
+}

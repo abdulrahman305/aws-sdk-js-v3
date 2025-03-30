@@ -94,6 +94,8 @@ export interface CreateMicrosoftTeamsChannelConfigurationCommandOutput
  * //         TagValue: "STRING_VALUE", // required
  * //       },
  * //     ],
+ * //     State: "STRING_VALUE",
+ * //     StateReason: "STRING_VALUE",
  * //   },
  * // };
  *
@@ -123,6 +125,7 @@ export interface CreateMicrosoftTeamsChannelConfigurationCommandOutput
  * @throws {@link ChatbotServiceException}
  * <p>Base exception class for all service exceptions from Chatbot service.</p>
  *
+ *
  * @public
  */
 export class CreateMicrosoftTeamsChannelConfigurationCommand extends $Command
@@ -133,9 +136,7 @@ export class CreateMicrosoftTeamsChannelConfigurationCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ChatbotClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -147,4 +148,16 @@ export class CreateMicrosoftTeamsChannelConfigurationCommand extends $Command
   .f(CreateTeamsChannelConfigurationRequestFilterSensitiveLog, CreateTeamsChannelConfigurationResultFilterSensitiveLog)
   .ser(se_CreateMicrosoftTeamsChannelConfigurationCommand)
   .de(de_CreateMicrosoftTeamsChannelConfigurationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateTeamsChannelConfigurationRequest;
+      output: CreateTeamsChannelConfigurationResult;
+    };
+    sdk: {
+      input: CreateMicrosoftTeamsChannelConfigurationCommandInput;
+      output: CreateMicrosoftTeamsChannelConfigurationCommandOutput;
+    };
+  };
+}

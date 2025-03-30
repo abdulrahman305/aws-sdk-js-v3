@@ -52,8 +52,8 @@ export interface UpdateResiliencyPolicyCommandOutput extends UpdateResiliencyPol
  *   policyArn: "STRING_VALUE", // required
  *   policyName: "STRING_VALUE",
  *   policyDescription: "STRING_VALUE",
- *   dataLocationConstraint: "STRING_VALUE",
- *   tier: "STRING_VALUE",
+ *   dataLocationConstraint: "AnyLocation" || "SameContinent" || "SameCountry",
+ *   tier: "MissionCritical" || "Critical" || "Important" || "CoreServices" || "NonCritical" || "NotApplicable",
  *   policy: { // DisruptionPolicy
  *     "<keys>": { // FailurePolicy
  *       rtoInSecs: Number("int"), // required
@@ -68,9 +68,9 @@ export interface UpdateResiliencyPolicyCommandOutput extends UpdateResiliencyPol
  * //     policyArn: "STRING_VALUE",
  * //     policyName: "STRING_VALUE",
  * //     policyDescription: "STRING_VALUE",
- * //     dataLocationConstraint: "STRING_VALUE",
- * //     tier: "STRING_VALUE",
- * //     estimatedCostTier: "STRING_VALUE",
+ * //     dataLocationConstraint: "AnyLocation" || "SameContinent" || "SameCountry",
+ * //     tier: "MissionCritical" || "Critical" || "Important" || "CoreServices" || "NonCritical" || "NotApplicable",
+ * //     estimatedCostTier: "L1" || "L2" || "L3" || "L4",
  * //     policy: { // DisruptionPolicy
  * //       "<keys>": { // FailurePolicy
  * //         rtoInSecs: Number("int"), // required
@@ -119,6 +119,7 @@ export interface UpdateResiliencyPolicyCommandOutput extends UpdateResiliencyPol
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class UpdateResiliencyPolicyCommand extends $Command
@@ -129,9 +130,7 @@ export class UpdateResiliencyPolicyCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -143,4 +142,16 @@ export class UpdateResiliencyPolicyCommand extends $Command
   .f(void 0, UpdateResiliencyPolicyResponseFilterSensitiveLog)
   .ser(se_UpdateResiliencyPolicyCommand)
   .de(de_UpdateResiliencyPolicyCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateResiliencyPolicyRequest;
+      output: UpdateResiliencyPolicyResponse;
+    };
+    sdk: {
+      input: UpdateResiliencyPolicyCommandInput;
+      output: UpdateResiliencyPolicyCommandOutput;
+    };
+  };
+}

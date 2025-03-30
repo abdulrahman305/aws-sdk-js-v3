@@ -91,23 +91,23 @@ export interface GetTestCommandOutput extends GetTestResult, __MetadataBearer {}
  * @throws {@link DeviceFarmServiceException}
  * <p>Base exception class for all service exceptions from DeviceFarm service.</p>
  *
- * @public
+ *
  * @example To get information about a specific test
  * ```javascript
  * // The following example gets information about a specific test.
  * const input = {
- *   "arn": "arn:aws:devicefarm:us-west-2:123456789101:test:EXAMPLE-GUID-123-456"
+ *   arn: "arn:aws:devicefarm:us-west-2:123456789101:test:EXAMPLE-GUID-123-456"
  * };
  * const command = new GetTestCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "test": {}
+ *   test:   { /* empty *\/ }
  * }
  * *\/
- * // example id: to-get-information-about-a-specific-test-1471025744238
  * ```
  *
+ * @public
  */
 export class GetTestCommand extends $Command
   .classBuilder<
@@ -117,9 +117,7 @@ export class GetTestCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DeviceFarmClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -131,4 +129,16 @@ export class GetTestCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetTestCommand)
   .de(de_GetTestCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetTestRequest;
+      output: GetTestResult;
+    };
+    sdk: {
+      input: GetTestCommandInput;
+      output: GetTestCommandOutput;
+    };
+  };
+}

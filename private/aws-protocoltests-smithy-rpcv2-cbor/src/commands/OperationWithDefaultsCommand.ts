@@ -118,6 +118,7 @@ export interface OperationWithDefaultsCommandOutput extends OperationWithDefault
  * @throws {@link RpcV2ProtocolServiceException}
  * <p>Base exception class for all service exceptions from RpcV2Protocol service.</p>
  *
+ *
  */
 export class OperationWithDefaultsCommand extends $Command
   .classBuilder<
@@ -135,4 +136,16 @@ export class OperationWithDefaultsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_OperationWithDefaultsCommand)
   .de(de_OperationWithDefaultsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: OperationWithDefaultsInput;
+      output: OperationWithDefaultsOutput;
+    };
+    sdk: {
+      input: OperationWithDefaultsCommandInput;
+      output: OperationWithDefaultsCommandOutput;
+    };
+  };
+}

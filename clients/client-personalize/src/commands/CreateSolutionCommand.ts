@@ -236,6 +236,7 @@ export interface CreateSolutionCommandOutput extends CreateSolutionResponse, __M
  * @throws {@link PersonalizeServiceException}
  * <p>Base exception class for all service exceptions from Personalize service.</p>
  *
+ *
  * @public
  */
 export class CreateSolutionCommand extends $Command
@@ -246,9 +247,7 @@ export class CreateSolutionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: PersonalizeClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -260,4 +259,16 @@ export class CreateSolutionCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateSolutionCommand)
   .de(de_CreateSolutionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateSolutionRequest;
+      output: CreateSolutionResponse;
+    };
+    sdk: {
+      input: CreateSolutionCommandInput;
+      output: CreateSolutionCommandOutput;
+    };
+  };
+}

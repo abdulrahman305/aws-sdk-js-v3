@@ -73,6 +73,7 @@ export interface GetAccessPointPolicyCommandOutput extends GetAccessPointPolicyR
  * @throws {@link S3ControlServiceException}
  * <p>Base exception class for all service exceptions from S3Control service.</p>
  *
+ *
  * @public
  */
 export class GetAccessPointPolicyCommand extends $Command
@@ -101,4 +102,16 @@ export class GetAccessPointPolicyCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetAccessPointPolicyCommand)
   .de(de_GetAccessPointPolicyCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetAccessPointPolicyRequest;
+      output: GetAccessPointPolicyResult;
+    };
+    sdk: {
+      input: GetAccessPointPolicyCommandInput;
+      output: GetAccessPointPolicyCommandOutput;
+    };
+  };
+}

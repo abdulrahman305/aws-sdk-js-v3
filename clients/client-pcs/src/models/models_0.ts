@@ -129,7 +129,7 @@ export interface InstanceConfig {
    *          </p>
    * @public
    */
-  instanceType?: string;
+  instanceType?: string | undefined;
 }
 
 /**
@@ -170,13 +170,56 @@ export interface ScalingConfigurationRequest {
  */
 export interface SlurmCustomSetting {
   /**
-   * <p>Amazon Web Services PCS supports configuration of the following Slurm parameters: <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Prolog_1">
-   *                <code>Prolog</code>
-   *             </a>, <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Epilog_1">
-   *                <code>Epilog</code>
-   *             </a>, and <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_SelectTypeParameters">
-   *                <code>SelectTypeParameters</code>
-   *             </a>.</p>
+   * <p>Amazon Web Services PCS supports configuration of the following Slurm parameters:</p>
+   *          <ul>
+   *             <li>
+   *                <p>For <b>clusters</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Prolog_1">
+   *                            <code>Prolog</code>
+   *                         </a>
+   *                      </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Epilog_1">
+   *                            <code>Epilog</code>
+   *                         </a>
+   *                      </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_SelectTypeParameters">
+   *                            <code>SelectTypeParameters</code>
+   *                         </a>
+   *                      </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>For <b>compute node groups</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Weight">
+   *                            <code>Weight</code>
+   *                         </a>
+   *                      </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Weight">
+   *                            <code>RealMemory</code>
+   *                         </a>
+   *                      </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *          </ul>
    * @public
    */
   parameterName: string | undefined;
@@ -197,7 +240,7 @@ export interface ComputeNodeGroupSlurmConfigurationRequest {
    * <p>Additional Slurm-specific configuration that directly maps to Slurm settings.</p>
    * @public
    */
-  slurmCustomSettings?: SlurmCustomSetting[];
+  slurmCustomSettings?: SlurmCustomSetting[] | undefined;
 }
 
 /**
@@ -232,7 +275,7 @@ export interface SpotOptions {
    *             it defaults to <b>price capacity optimized</b>.</p>
    * @public
    */
-  allocationStrategy?: SpotAllocationStrategy;
+  allocationStrategy?: SpotAllocationStrategy | undefined;
 }
 
 /**
@@ -258,7 +301,7 @@ export interface CreateComputeNodeGroupRequest {
    *          in the custom launch template.</p>
    * @public
    */
-  amiId?: string;
+  amiId?: string | undefined;
 
   /**
    * <p>The list of subnet IDs where the compute node group launches instances.
@@ -274,7 +317,7 @@ export interface CreateComputeNodeGroupRequest {
    *          option, it defaults to On-Demand.</p>
    * @public
    */
-  purchaseOption?: PurchaseOption;
+  purchaseOption?: PurchaseOption | undefined;
 
   /**
    * <p>An Amazon EC2 launch template Amazon Web Services PCS uses to launch compute nodes.</p>
@@ -283,12 +326,26 @@ export interface CreateComputeNodeGroupRequest {
   customLaunchTemplate: CustomLaunchTemplate | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the
-   *    IAM instance profile used to pass an IAM role when launching EC2 instances. The role contained in your instance profile must have
-   *             <code>pcs:RegisterComputeNodeGroupInstance</code> permissions attached in order to
-   *          provision instances correctly. The resource identifier of the ARN must start with
-   *          <code>AWSPCS</code>. For example, <code>arn:aws:iam:123456789012:instance-profile/AWSPCSMyComputeNodeInstanceProfile</code>.
+   * <p>The Amazon Resource Name (ARN) of the IAM instance
+   *    profile used to pass an IAM role when launching EC2 instances. The role contained
+   *    in your instance profile must have the <code>pcs:RegisterComputeNodeGroupInstance</code>
+   *    permission. The resource identifier of the ARN must start with
+   *    <code>AWSPCS</code> or it must have <code>/aws-pcs/</code> in its path.</p>
+   *          <p class="title">
+   *             <b>Examples</b>
    *          </p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>arn:aws:iam::111122223333:instance-profile/AWSPCS-example-role-1</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>arn:aws:iam::111122223333:instance-profile/aws-pcs/example-role-2</code>
+   *                </p>
+   *             </li>
+   *          </ul>
    * @public
    */
   iamInstanceProfileArn: string | undefined;
@@ -310,13 +367,13 @@ export interface CreateComputeNodeGroupRequest {
    *          <code>purchaseOption</code> for the <code>CreateComputeNodeGroup</code> API action.</p>
    * @public
    */
-  spotOptions?: SpotOptions;
+  spotOptions?: SpotOptions | undefined;
 
   /**
    * <p>Additional options related to the Slurm scheduler.</p>
    * @public
    */
-  slurmConfiguration?: ComputeNodeGroupSlurmConfigurationRequest;
+  slurmConfiguration?: ComputeNodeGroupSlurmConfigurationRequest | undefined;
 
   /**
    * <p>A unique, case-sensitive identifier that you provide to
@@ -328,7 +385,7 @@ export interface CreateComputeNodeGroupRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 
   /**
    * <p>1 or more tags added to the resource. Each tag consists of a
@@ -336,7 +393,7 @@ export interface CreateComputeNodeGroupRequest {
    *    string.</p>
    * @public
    */
-  tags?: Record<string, string>;
+  tags?: Record<string, string> | undefined;
 }
 
 /**
@@ -348,13 +405,13 @@ export interface ErrorInfo {
    * <p>The short-form error code.</p>
    * @public
    */
-  code?: string;
+  code?: string | undefined;
 
   /**
    * <p>The detailed error information.</p>
    * @public
    */
-  message?: string;
+  message?: string | undefined;
 }
 
 /**
@@ -384,7 +441,7 @@ export interface ComputeNodeGroupSlurmConfiguration {
    * <p>Additional Slurm-specific configuration that directly maps to Slurm settings.</p>
    * @public
    */
-  slurmCustomSettings?: SlurmCustomSetting[];
+  slurmCustomSettings?: SlurmCustomSetting[] | undefined;
 }
 
 /**
@@ -463,7 +520,7 @@ export interface ComputeNodeGroup {
    *          If not provided, Amazon Web Services PCS uses the AMI ID specified in the custom launch template.</p>
    * @public
    */
-  amiId?: string;
+  amiId?: string | undefined;
 
   /**
    * <p>The list of subnet IDs where instances are provisioned by the compute node group.
@@ -479,7 +536,7 @@ export interface ComputeNodeGroup {
    *          option, it defaults to On-Demand.</p>
    * @public
    */
-  purchaseOption?: PurchaseOption;
+  purchaseOption?: PurchaseOption | undefined;
 
   /**
    * <p>An Amazon EC2 launch template Amazon Web Services PCS uses to launch compute nodes.</p>
@@ -488,10 +545,26 @@ export interface ComputeNodeGroup {
   customLaunchTemplate: CustomLaunchTemplate | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the
-   *    IAM instance profile used to pass an IAM role when launching EC2 instances. The role contained in your instance profile must have
-   *          <code>pcs:RegisterComputeNodeGroupInstance</code> permissions attached to provision instances
-   *          correctly.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM instance
+   *    profile used to pass an IAM role when launching EC2 instances. The role contained
+   *    in your instance profile must have the <code>pcs:RegisterComputeNodeGroupInstance</code>
+   *    permission. The resource identifier of the ARN must start with
+   *    <code>AWSPCS</code> or it must have <code>/aws-pcs/</code> in its path.</p>
+   *          <p class="title">
+   *             <b>Examples</b>
+   *          </p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>arn:aws:iam::111122223333:instance-profile/AWSPCS-example-role-1</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>arn:aws:iam::111122223333:instance-profile/aws-pcs/example-role-2</code>
+   *                </p>
+   *             </li>
+   *          </ul>
    * @public
    */
   iamInstanceProfileArn: string | undefined;
@@ -513,19 +586,19 @@ export interface ComputeNodeGroup {
    *          <code>purchaseOption</code> for the <code>CreateComputeNodeGroup</code> API action.</p>
    * @public
    */
-  spotOptions?: SpotOptions;
+  spotOptions?: SpotOptions | undefined;
 
   /**
    * <p>Additional options related to the Slurm scheduler.</p>
    * @public
    */
-  slurmConfiguration?: ComputeNodeGroupSlurmConfiguration;
+  slurmConfiguration?: ComputeNodeGroupSlurmConfiguration | undefined;
 
   /**
    * <p>The list of errors that occurred during compute node group provisioning.</p>
    * @public
    */
-  errorInfo?: ErrorInfo[];
+  errorInfo?: ErrorInfo[] | undefined;
 }
 
 /**
@@ -536,7 +609,7 @@ export interface CreateComputeNodeGroupResponse {
    * <p>A compute node group associated with a cluster.</p>
    * @public
    */
-  computeNodeGroup?: ComputeNodeGroup;
+  computeNodeGroup?: ComputeNodeGroup | undefined;
 }
 
 /**
@@ -643,7 +716,7 @@ export class ServiceQuotaExceededException extends __BaseException {
    *       </p>
    * @public
    */
-  resourceId?: string;
+  resourceId?: string | undefined;
 
   /**
    * <p>
@@ -651,7 +724,7 @@ export class ServiceQuotaExceededException extends __BaseException {
    *       </p>
    * @public
    */
-  resourceType?: string;
+  resourceType?: string | undefined;
 
   /**
    * <p>
@@ -659,7 +732,7 @@ export class ServiceQuotaExceededException extends __BaseException {
    *       </p>
    * @public
    */
-  quotaCode?: string;
+  quotaCode?: string | undefined;
 
   /**
    * @internal
@@ -692,7 +765,7 @@ export class ThrottlingException extends __BaseException {
    *       </p>
    * @public
    */
-  retryAfterSeconds?: number;
+  retryAfterSeconds?: number | undefined;
 
   /**
    * @internal
@@ -781,7 +854,7 @@ export class ValidationException extends __BaseException {
    *       </p>
    * @public
    */
-  fieldList?: ValidationExceptionField[];
+  fieldList?: ValidationExceptionField[] | undefined;
 
   /**
    * @internal
@@ -824,7 +897,7 @@ export interface DeleteComputeNodeGroupRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 }
 
 /**
@@ -857,7 +930,7 @@ export interface GetComputeNodeGroupResponse {
    * <p>A compute node group associated with a cluster.</p>
    * @public
    */
-  computeNodeGroup?: ComputeNodeGroup;
+  computeNodeGroup?: ComputeNodeGroup | undefined;
 }
 
 /**
@@ -879,7 +952,7 @@ export interface ListComputeNodeGroupsRequest {
    *    error.</p>
    * @public
    */
-  nextToken?: string;
+  nextToken?: string | undefined;
 
   /**
    * <p>The maximum number of results that are returned per call.
@@ -888,7 +961,7 @@ export interface ListComputeNodeGroupsRequest {
    *    the default.</p>
    * @public
    */
-  maxResults?: number;
+  maxResults?: number | undefined;
 }
 
 /**
@@ -962,7 +1035,7 @@ export interface ListComputeNodeGroupsResponse {
    *    error.</p>
    * @public
    */
-  nextToken?: string;
+  nextToken?: string | undefined;
 }
 
 /**
@@ -974,7 +1047,7 @@ export interface UpdateComputeNodeGroupSlurmConfigurationRequest {
    * <p>Additional Slurm-specific configuration that directly maps to Slurm settings.</p>
    * @public
    */
-  slurmCustomSettings?: SlurmCustomSetting[];
+  slurmCustomSettings?: SlurmCustomSetting[] | undefined;
 }
 
 /**
@@ -999,20 +1072,20 @@ export interface UpdateComputeNodeGroupRequest {
    *          template.</p>
    * @public
    */
-  amiId?: string;
+  amiId?: string | undefined;
 
   /**
    * <p>The list of subnet IDs where the compute node group provisions instances.
    *          The subnets must be in the same VPC as the cluster.</p>
    * @public
    */
-  subnetIds?: string[];
+  subnetIds?: string[] | undefined;
 
   /**
    * <p>An Amazon EC2 launch template Amazon Web Services PCS uses to launch compute nodes.</p>
    * @public
    */
-  customLaunchTemplate?: CustomLaunchTemplate;
+  customLaunchTemplate?: CustomLaunchTemplate | undefined;
 
   /**
    * <p>Specifies how EC2 instances are purchased on your behalf. Amazon Web Services PCS supports On-Demand
@@ -1021,35 +1094,51 @@ export interface UpdateComputeNodeGroupRequest {
    *          option, it defaults to On-Demand.</p>
    * @public
    */
-  purchaseOption?: PurchaseOption;
+  purchaseOption?: PurchaseOption | undefined;
 
   /**
    * <p>Additional configuration when you specify <code>SPOT</code> as the
    *          <code>purchaseOption</code> for the <code>CreateComputeNodeGroup</code> API action.</p>
    * @public
    */
-  spotOptions?: SpotOptions;
+  spotOptions?: SpotOptions | undefined;
 
   /**
    * <p>Specifies the boundaries of the compute node group auto scaling.</p>
    * @public
    */
-  scalingConfiguration?: ScalingConfigurationRequest;
+  scalingConfiguration?: ScalingConfigurationRequest | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the
-   *    IAM instance profile used to pass an IAM role when launching EC2 instances. The role contained in your instance profile must have
-   *          <code>pcs:RegisterComputeNodeGroupInstance</code> permissions attached to provision instances
-   *          correctly.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM instance
+   *    profile used to pass an IAM role when launching EC2 instances. The role contained
+   *    in your instance profile must have the <code>pcs:RegisterComputeNodeGroupInstance</code>
+   *    permission. The resource identifier of the ARN must start with
+   *    <code>AWSPCS</code> or it must have <code>/aws-pcs/</code> in its path.</p>
+   *          <p class="title">
+   *             <b>Examples</b>
+   *          </p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>arn:aws:iam::111122223333:instance-profile/AWSPCS-example-role-1</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>arn:aws:iam::111122223333:instance-profile/aws-pcs/example-role-2</code>
+   *                </p>
+   *             </li>
+   *          </ul>
    * @public
    */
-  iamInstanceProfileArn?: string;
+  iamInstanceProfileArn?: string | undefined;
 
   /**
    * <p>Additional options related to the Slurm scheduler.</p>
    * @public
    */
-  slurmConfiguration?: UpdateComputeNodeGroupSlurmConfigurationRequest;
+  slurmConfiguration?: UpdateComputeNodeGroupSlurmConfigurationRequest | undefined;
 
   /**
    * <p>A unique, case-sensitive identifier that you provide to
@@ -1061,7 +1150,7 @@ export interface UpdateComputeNodeGroupRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 }
 
 /**
@@ -1072,7 +1161,7 @@ export interface UpdateComputeNodeGroupResponse {
    * <p>A compute node group associated with a cluster.</p>
    * @public
    */
-  computeNodeGroup?: ComputeNodeGroup;
+  computeNodeGroup?: ComputeNodeGroup | undefined;
 }
 
 /**
@@ -1090,13 +1179,13 @@ export interface NetworkingRequest {
    *          </note>
    * @public
    */
-  subnetIds?: string[];
+  subnetIds?: string[] | undefined;
 
   /**
    * <p>A list of security group IDs associated with the Elastic Network Interface (ENI) created in subnets.</p>
    * @public
    */
-  securityGroupIds?: string[];
+  securityGroupIds?: string[] | undefined;
 }
 
 /**
@@ -1151,16 +1240,18 @@ export type Size = (typeof Size)[keyof typeof Size];
  */
 export interface ClusterSlurmConfigurationRequest {
   /**
-   * <p>The time before an idle node is scaled down.</p>
+   * <p>The time (in seconds) before an idle node is scaled down.</p>
+   *          <p>Default: <code>600</code>
+   *          </p>
    * @public
    */
-  scaleDownIdleTimeInSeconds?: number;
+  scaleDownIdleTimeInSeconds?: number | undefined;
 
   /**
    * <p>Additional Slurm-specific configuration that directly maps to Slurm settings.</p>
    * @public
    */
-  slurmCustomSettings?: SlurmCustomSetting[];
+  slurmCustomSettings?: SlurmCustomSetting[] | undefined;
 }
 
 /**
@@ -1211,7 +1302,7 @@ export interface CreateClusterRequest {
    * <p>Additional options related to the Slurm scheduler.</p>
    * @public
    */
-  slurmConfiguration?: ClusterSlurmConfigurationRequest;
+  slurmConfiguration?: ClusterSlurmConfigurationRequest | undefined;
 
   /**
    * <p>A unique, case-sensitive identifier that you provide to
@@ -1223,7 +1314,7 @@ export interface CreateClusterRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 
   /**
    * <p>1 or more tags added to the resource. Each tag consists of a
@@ -1231,7 +1322,7 @@ export interface CreateClusterRequest {
    *    string.</p>
    * @public
    */
-  tags?: Record<string, string>;
+  tags?: Record<string, string> | undefined;
 }
 
 /**
@@ -1273,7 +1364,7 @@ export interface Endpoint {
    *          </p>
    * @public
    */
-  publicIpAddress?: string;
+  publicIpAddress?: string | undefined;
 
   /**
    * <p>The endpoint's connection port number.</p>
@@ -1298,7 +1389,7 @@ export interface Networking {
    *          </p>
    * @public
    */
-  subnetIds?: string[];
+  subnetIds?: string[] | undefined;
 
   /**
    * <p>The list of security group IDs associated
@@ -1350,7 +1441,7 @@ export interface Networking {
    *          </ul>
    * @public
    */
-  securityGroupIds?: string[];
+  securityGroupIds?: string[] | undefined;
 }
 
 /**
@@ -1395,22 +1486,24 @@ export interface SlurmAuthKey {
  */
 export interface ClusterSlurmConfiguration {
   /**
-   * <p>The time before an idle node is scaled down.</p>
+   * <p>The time (in seconds) before an idle node is scaled down.</p>
+   *          <p>Default: <code>600</code>
+   *          </p>
    * @public
    */
-  scaleDownIdleTimeInSeconds?: number;
+  scaleDownIdleTimeInSeconds?: number | undefined;
 
   /**
    * <p>Additional Slurm-specific configuration that directly maps to Slurm settings.</p>
    * @public
    */
-  slurmCustomSettings?: SlurmCustomSetting[];
+  slurmCustomSettings?: SlurmCustomSetting[] | undefined;
 
   /**
    * <p>The shared Slurm key for authentication, also known as the <b>cluster secret</b>.</p>
    * @public
    */
-  authKey?: SlurmAuthKey;
+  authKey?: SlurmAuthKey | undefined;
 }
 
 /**
@@ -1506,7 +1599,7 @@ export interface Cluster {
    * <p>Additional options related to the Slurm scheduler.</p>
    * @public
    */
-  slurmConfiguration?: ClusterSlurmConfiguration;
+  slurmConfiguration?: ClusterSlurmConfiguration | undefined;
 
   /**
    * <p>The networking configuration for the cluster's control plane.</p>
@@ -1518,13 +1611,13 @@ export interface Cluster {
    * <p>The list of endpoints available for interaction with the scheduler.</p>
    * @public
    */
-  endpoints?: Endpoint[];
+  endpoints?: Endpoint[] | undefined;
 
   /**
    * <p>The list of errors that occurred during cluster provisioning.</p>
    * @public
    */
-  errorInfo?: ErrorInfo[];
+  errorInfo?: ErrorInfo[] | undefined;
 }
 
 /**
@@ -1535,7 +1628,7 @@ export interface CreateClusterResponse {
    * <p>The cluster resource.</p>
    * @public
    */
-  cluster?: Cluster;
+  cluster?: Cluster | undefined;
 }
 
 /**
@@ -1558,7 +1651,7 @@ export interface DeleteClusterRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 }
 
 /**
@@ -1585,7 +1678,7 @@ export interface GetClusterResponse {
    * <p>The cluster resource.</p>
    * @public
    */
-  cluster?: Cluster;
+  cluster?: Cluster | undefined;
 }
 
 /**
@@ -1601,7 +1694,7 @@ export interface ListClustersRequest {
    *    error.</p>
    * @public
    */
-  nextToken?: string;
+  nextToken?: string | undefined;
 
   /**
    * <p>The maximum number of results that are returned per call.
@@ -1610,7 +1703,7 @@ export interface ListClustersRequest {
    *    the default.</p>
    * @public
    */
-  maxResults?: number;
+  maxResults?: number | undefined;
 }
 
 /**
@@ -1677,7 +1770,7 @@ export interface ListClustersResponse {
    *    error.</p>
    * @public
    */
-  nextToken?: string;
+  nextToken?: string | undefined;
 }
 
 /**
@@ -1689,7 +1782,7 @@ export interface ComputeNodeGroupConfiguration {
    * <p>The compute node group ID for the compute node group configuration.</p>
    * @public
    */
-  computeNodeGroupId?: string;
+  computeNodeGroupId?: string | undefined;
 }
 
 /**
@@ -1713,7 +1806,7 @@ export interface CreateQueueRequest {
    *          assign jobs to associated compute node groups.</p>
    * @public
    */
-  computeNodeGroupConfigurations?: ComputeNodeGroupConfiguration[];
+  computeNodeGroupConfigurations?: ComputeNodeGroupConfiguration[] | undefined;
 
   /**
    * <p>A unique, case-sensitive identifier that you provide to
@@ -1725,7 +1818,7 @@ export interface CreateQueueRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 
   /**
    * <p>1 or more tags added to the resource. Each tag consists of a
@@ -1733,7 +1826,7 @@ export interface CreateQueueRequest {
    *    string.</p>
    * @public
    */
-  tags?: Record<string, string>;
+  tags?: Record<string, string> | undefined;
 }
 
 /**
@@ -1816,7 +1909,7 @@ export interface Queue {
    * <p>The list of errors that occurred during queue provisioning.</p>
    * @public
    */
-  errorInfo?: ErrorInfo[];
+  errorInfo?: ErrorInfo[] | undefined;
 }
 
 /**
@@ -1827,7 +1920,7 @@ export interface CreateQueueResponse {
    * <p>A queue resource.</p>
    * @public
    */
-  queue?: Queue;
+  queue?: Queue | undefined;
 }
 
 /**
@@ -1856,7 +1949,7 @@ export interface DeleteQueueRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 }
 
 /**
@@ -1889,7 +1982,7 @@ export interface GetQueueResponse {
    * <p>A queue resource.</p>
    * @public
    */
-  queue?: Queue;
+  queue?: Queue | undefined;
 }
 
 /**
@@ -1911,7 +2004,7 @@ export interface ListQueuesRequest {
    *    error.</p>
    * @public
    */
-  nextToken?: string;
+  nextToken?: string | undefined;
 
   /**
    * <p>The maximum number of results that are returned per call.
@@ -1920,7 +2013,7 @@ export interface ListQueuesRequest {
    *    the default.</p>
    * @public
    */
-  maxResults?: number;
+  maxResults?: number | undefined;
 }
 
 /**
@@ -1993,7 +2086,7 @@ export interface ListQueuesResponse {
    *    error.</p>
    * @public
    */
-  nextToken?: string;
+  nextToken?: string | undefined;
 }
 
 /**
@@ -2017,7 +2110,7 @@ export interface UpdateQueueRequest {
    *          assign jobs to associated compute node groups.</p>
    * @public
    */
-  computeNodeGroupConfigurations?: ComputeNodeGroupConfiguration[];
+  computeNodeGroupConfigurations?: ComputeNodeGroupConfiguration[] | undefined;
 
   /**
    * <p>A unique, case-sensitive identifier that you provide to
@@ -2029,7 +2122,7 @@ export interface UpdateQueueRequest {
    *    CLI and SDK automatically generate 1 for you.</p>
    * @public
    */
-  clientToken?: string;
+  clientToken?: string | undefined;
 }
 
 /**
@@ -2040,7 +2133,7 @@ export interface UpdateQueueResponse {
    * <p>A queue resource.</p>
    * @public
    */
-  queue?: Queue;
+  queue?: Queue | undefined;
 }
 
 /**
@@ -2105,7 +2198,7 @@ export interface ListTagsForResourceResponse {
    *    string.</p>
    * @public
    */
-  tags?: Record<string, string>;
+  tags?: Record<string, string> | undefined;
 }
 
 /**

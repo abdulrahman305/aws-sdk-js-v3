@@ -179,6 +179,7 @@ export interface GetComputeNodeGroupCommandOutput extends GetComputeNodeGroupRes
  * @throws {@link PCSServiceException}
  * <p>Base exception class for all service exceptions from PCS service.</p>
  *
+ *
  * @public
  */
 export class GetComputeNodeGroupCommand extends $Command
@@ -189,9 +190,7 @@ export class GetComputeNodeGroupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: PCSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -203,4 +202,16 @@ export class GetComputeNodeGroupCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetComputeNodeGroupCommand)
   .de(de_GetComputeNodeGroupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetComputeNodeGroupRequest;
+      output: GetComputeNodeGroupResponse;
+    };
+    sdk: {
+      input: GetComputeNodeGroupCommandInput;
+      output: GetComputeNodeGroupCommandOutput;
+    };
+  };
+}

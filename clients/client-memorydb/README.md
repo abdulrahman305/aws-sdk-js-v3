@@ -12,7 +12,7 @@ MemoryDB stores the entire database in-memory, enabling low latency and high thr
 
 ## Installing
 
-To install the this package, simply type add or install @aws-sdk/client-memorydb
+To install this package, simply type add or install @aws-sdk/client-memorydb
 using your favorite package manager:
 
 - `npm install @aws-sdk/client-memorydb`
@@ -239,6 +239,14 @@ CreateCluster
 </details>
 <details>
 <summary>
+CreateMultiRegionCluster
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/CreateMultiRegionClusterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/CreateMultiRegionClusterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/CreateMultiRegionClusterCommandOutput/)
+
+</details>
+<details>
+<summary>
 CreateParameterGroup
 </summary>
 
@@ -283,6 +291,14 @@ DeleteCluster
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/DeleteClusterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DeleteClusterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DeleteClusterCommandOutput/)
+
+</details>
+<details>
+<summary>
+DeleteMultiRegionCluster
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/DeleteMultiRegionClusterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DeleteMultiRegionClusterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DeleteMultiRegionClusterCommandOutput/)
 
 </details>
 <details>
@@ -347,6 +363,14 @@ DescribeEvents
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/DescribeEventsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DescribeEventsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DescribeEventsCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeMultiRegionClusters
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/DescribeMultiRegionClustersCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DescribeMultiRegionClustersCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/DescribeMultiRegionClustersCommandOutput/)
 
 </details>
 <details>
@@ -423,6 +447,14 @@ FailoverShard
 </details>
 <details>
 <summary>
+ListAllowedMultiRegionClusterUpdates
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/ListAllowedMultiRegionClusterUpdatesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/ListAllowedMultiRegionClusterUpdatesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/ListAllowedMultiRegionClusterUpdatesCommandOutput/)
+
+</details>
+<details>
+<summary>
 ListAllowedNodeTypeUpdates
 </summary>
 
@@ -483,6 +515,14 @@ UpdateCluster
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/UpdateClusterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/UpdateClusterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/UpdateClusterCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateMultiRegionCluster
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/memorydb/command/UpdateMultiRegionClusterCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/UpdateMultiRegionClusterCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-memorydb/Interface/UpdateMultiRegionClusterCommandOutput/)
 
 </details>
 <details>

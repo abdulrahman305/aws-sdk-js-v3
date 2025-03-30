@@ -136,6 +136,7 @@ export interface GetListingCommandOutput extends GetListingOutput, __MetadataBea
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class GetListingCommand extends $Command
@@ -146,9 +147,7 @@ export class GetListingCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -160,4 +159,16 @@ export class GetListingCommand extends $Command
   .f(void 0, GetListingOutputFilterSensitiveLog)
   .ser(se_GetListingCommand)
   .de(de_GetListingCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetListingInput;
+      output: GetListingOutput;
+    };
+    sdk: {
+      input: GetListingCommandInput;
+      output: GetListingCommandOutput;
+    };
+  };
+}

@@ -86,6 +86,22 @@ export interface RemoveLayerVersionPermissionCommandOutput extends __MetadataBea
  * @throws {@link LambdaServiceException}
  * <p>Base exception class for all service exceptions from Lambda service.</p>
  *
+ *
+ * @example To delete layer-version permissions
+ * ```javascript
+ * // The following example deletes permission for an account to configure a layer version.
+ * const input = {
+ *   LayerName: "my-layer",
+ *   StatementId: "xaccount",
+ *   VersionNumber: 1
+ * };
+ * const command = new RemoveLayerVersionPermissionCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class RemoveLayerVersionPermissionCommand extends $Command
@@ -96,9 +112,7 @@ export class RemoveLayerVersionPermissionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: LambdaClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -110,4 +124,16 @@ export class RemoveLayerVersionPermissionCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RemoveLayerVersionPermissionCommand)
   .de(de_RemoveLayerVersionPermissionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RemoveLayerVersionPermissionRequest;
+      output: {};
+    };
+    sdk: {
+      input: RemoveLayerVersionPermissionCommandInput;
+      output: RemoveLayerVersionPermissionCommandOutput;
+    };
+  };
+}

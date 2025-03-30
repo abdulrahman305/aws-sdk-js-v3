@@ -60,6 +60,7 @@ export interface SendTextMessageCommandOutput extends SendTextMessageResult, __M
  *   },
  *   DryRun: true || false,
  *   ProtectConfigurationId: "STRING_VALUE",
+ *   MessageFeedbackEnabled: true || false,
  * };
  * const command = new SendTextMessageCommand(input);
  * const response = await client.send(command);
@@ -105,6 +106,7 @@ export interface SendTextMessageCommandOutput extends SendTextMessageResult, __M
  * @throws {@link PinpointSMSVoiceV2ServiceException}
  * <p>Base exception class for all service exceptions from PinpointSMSVoiceV2 service.</p>
  *
+ *
  * @public
  */
 export class SendTextMessageCommand extends $Command
@@ -115,9 +117,7 @@ export class SendTextMessageCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: PinpointSMSVoiceV2ClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -129,4 +129,16 @@ export class SendTextMessageCommand extends $Command
   .f(void 0, void 0)
   .ser(se_SendTextMessageCommand)
   .de(de_SendTextMessageCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SendTextMessageRequest;
+      output: SendTextMessageResult;
+    };
+    sdk: {
+      input: SendTextMessageCommandInput;
+      output: SendTextMessageCommandOutput;
+    };
+  };
+}

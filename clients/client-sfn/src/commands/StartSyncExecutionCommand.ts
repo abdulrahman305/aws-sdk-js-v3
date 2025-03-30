@@ -123,6 +123,7 @@ export interface StartSyncExecutionCommandOutput extends StartSyncExecutionOutpu
  * @throws {@link SFNServiceException}
  * <p>Base exception class for all service exceptions from SFN service.</p>
  *
+ *
  * @public
  */
 export class StartSyncExecutionCommand extends $Command
@@ -133,9 +134,7 @@ export class StartSyncExecutionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SFNClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -147,4 +146,16 @@ export class StartSyncExecutionCommand extends $Command
   .f(StartSyncExecutionInputFilterSensitiveLog, StartSyncExecutionOutputFilterSensitiveLog)
   .ser(se_StartSyncExecutionCommand)
   .de(de_StartSyncExecutionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StartSyncExecutionInput;
+      output: StartSyncExecutionOutput;
+    };
+    sdk: {
+      input: StartSyncExecutionCommandInput;
+      output: StartSyncExecutionCommandOutput;
+    };
+  };
+}

@@ -94,6 +94,7 @@ export interface GetIdMappingJobCommandOutput extends GetIdMappingJobOutput, __M
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class GetIdMappingJobCommand extends $Command
@@ -104,9 +105,7 @@ export class GetIdMappingJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -118,4 +117,16 @@ export class GetIdMappingJobCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetIdMappingJobCommand)
   .de(de_GetIdMappingJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetIdMappingJobInput;
+      output: GetIdMappingJobOutput;
+    };
+    sdk: {
+      input: GetIdMappingJobCommandInput;
+      output: GetIdMappingJobCommandOutput;
+    };
+  };
+}

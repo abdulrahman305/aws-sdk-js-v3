@@ -124,6 +124,7 @@ export interface GetMatchingWorkflowCommandOutput extends GetMatchingWorkflowOut
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class GetMatchingWorkflowCommand extends $Command
@@ -134,9 +135,7 @@ export class GetMatchingWorkflowCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -148,4 +147,16 @@ export class GetMatchingWorkflowCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetMatchingWorkflowCommand)
   .de(de_GetMatchingWorkflowCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetMatchingWorkflowInput;
+      output: GetMatchingWorkflowOutput;
+    };
+    sdk: {
+      input: GetMatchingWorkflowCommandInput;
+      output: GetMatchingWorkflowCommandOutput;
+    };
+  };
+}

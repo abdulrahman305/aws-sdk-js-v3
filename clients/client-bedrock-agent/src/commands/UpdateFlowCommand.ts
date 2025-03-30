@@ -56,6 +56,10 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  *           knowledgeBase: { // KnowledgeBaseFlowNodeConfiguration
  *             knowledgeBaseId: "STRING_VALUE", // required
  *             modelId: "STRING_VALUE",
+ *             guardrailConfiguration: { // GuardrailConfiguration
+ *               guardrailIdentifier: "STRING_VALUE",
+ *               guardrailVersion: "STRING_VALUE",
+ *             },
  *           },
  *           condition: { // ConditionFlowNodeConfiguration
  *             conditions: [ // FlowConditions // required
@@ -75,15 +79,65 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  *                 promptArn: "STRING_VALUE", // required
  *               },
  *               inline: { // PromptFlowNodeInlineConfiguration
- *                 templateType: "TEXT", // required
+ *                 templateType: "TEXT" || "CHAT", // required
  *                 templateConfiguration: { // PromptTemplateConfiguration Union: only one key present
  *                   text: { // TextPromptTemplateConfiguration
  *                     text: "STRING_VALUE", // required
+ *                     cachePoint: { // CachePointBlock
+ *                       type: "default", // required
+ *                     },
  *                     inputVariables: [ // PromptInputVariablesList
  *                       { // PromptInputVariable
  *                         name: "STRING_VALUE",
  *                       },
  *                     ],
+ *                   },
+ *                   chat: { // ChatPromptTemplateConfiguration
+ *                     messages: [ // Messages // required
+ *                       { // Message
+ *                         role: "user" || "assistant", // required
+ *                         content: [ // ContentBlocks // required
+ *                           { // ContentBlock Union: only one key present
+ *                             text: "STRING_VALUE",
+ *                             cachePoint: {
+ *                               type: "default", // required
+ *                             },
+ *                           },
+ *                         ],
+ *                       },
+ *                     ],
+ *                     system: [ // SystemContentBlocks
+ *                       { // SystemContentBlock Union: only one key present
+ *                         text: "STRING_VALUE",
+ *                         cachePoint: "<CachePointBlock>",
+ *                       },
+ *                     ],
+ *                     inputVariables: [
+ *                       {
+ *                         name: "STRING_VALUE",
+ *                       },
+ *                     ],
+ *                     toolConfiguration: { // ToolConfiguration
+ *                       tools: [ // Tools // required
+ *                         { // Tool Union: only one key present
+ *                           toolSpec: { // ToolSpecification
+ *                             name: "STRING_VALUE", // required
+ *                             description: "STRING_VALUE",
+ *                             inputSchema: { // ToolInputSchema Union: only one key present
+ *                               json: "DOCUMENT_VALUE",
+ *                             },
+ *                           },
+ *                           cachePoint: "<CachePointBlock>",
+ *                         },
+ *                       ],
+ *                       toolChoice: { // ToolChoice Union: only one key present
+ *                         auto: {},
+ *                         any: {},
+ *                         tool: { // SpecificToolChoice
+ *                           name: "STRING_VALUE", // required
+ *                         },
+ *                       },
+ *                     },
  *                   },
  *                 },
  *                 modelId: "STRING_VALUE", // required
@@ -91,14 +145,18 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  *                   text: { // PromptModelInferenceConfiguration
  *                     temperature: Number("float"),
  *                     topP: Number("float"),
- *                     topK: Number("int"),
  *                     maxTokens: Number("int"),
  *                     stopSequences: [ // StopSequences
  *                       "STRING_VALUE",
  *                     ],
  *                   },
  *                 },
+ *                 additionalModelRequestFields: "DOCUMENT_VALUE",
  *               },
+ *             },
+ *             guardrailConfiguration: {
+ *               guardrailIdentifier: "STRING_VALUE",
+ *               guardrailVersion: "STRING_VALUE",
  *             },
  *           },
  *           lambdaFunction: { // LambdaFunctionFlowNodeConfiguration
@@ -183,6 +241,10 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  * //           knowledgeBase: { // KnowledgeBaseFlowNodeConfiguration
  * //             knowledgeBaseId: "STRING_VALUE", // required
  * //             modelId: "STRING_VALUE",
+ * //             guardrailConfiguration: { // GuardrailConfiguration
+ * //               guardrailIdentifier: "STRING_VALUE",
+ * //               guardrailVersion: "STRING_VALUE",
+ * //             },
  * //           },
  * //           condition: { // ConditionFlowNodeConfiguration
  * //             conditions: [ // FlowConditions // required
@@ -202,15 +264,65 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  * //                 promptArn: "STRING_VALUE", // required
  * //               },
  * //               inline: { // PromptFlowNodeInlineConfiguration
- * //                 templateType: "TEXT", // required
+ * //                 templateType: "TEXT" || "CHAT", // required
  * //                 templateConfiguration: { // PromptTemplateConfiguration Union: only one key present
  * //                   text: { // TextPromptTemplateConfiguration
  * //                     text: "STRING_VALUE", // required
+ * //                     cachePoint: { // CachePointBlock
+ * //                       type: "default", // required
+ * //                     },
  * //                     inputVariables: [ // PromptInputVariablesList
  * //                       { // PromptInputVariable
  * //                         name: "STRING_VALUE",
  * //                       },
  * //                     ],
+ * //                   },
+ * //                   chat: { // ChatPromptTemplateConfiguration
+ * //                     messages: [ // Messages // required
+ * //                       { // Message
+ * //                         role: "user" || "assistant", // required
+ * //                         content: [ // ContentBlocks // required
+ * //                           { // ContentBlock Union: only one key present
+ * //                             text: "STRING_VALUE",
+ * //                             cachePoint: {
+ * //                               type: "default", // required
+ * //                             },
+ * //                           },
+ * //                         ],
+ * //                       },
+ * //                     ],
+ * //                     system: [ // SystemContentBlocks
+ * //                       { // SystemContentBlock Union: only one key present
+ * //                         text: "STRING_VALUE",
+ * //                         cachePoint: "<CachePointBlock>",
+ * //                       },
+ * //                     ],
+ * //                     inputVariables: [
+ * //                       {
+ * //                         name: "STRING_VALUE",
+ * //                       },
+ * //                     ],
+ * //                     toolConfiguration: { // ToolConfiguration
+ * //                       tools: [ // Tools // required
+ * //                         { // Tool Union: only one key present
+ * //                           toolSpec: { // ToolSpecification
+ * //                             name: "STRING_VALUE", // required
+ * //                             description: "STRING_VALUE",
+ * //                             inputSchema: { // ToolInputSchema Union: only one key present
+ * //                               json: "DOCUMENT_VALUE",
+ * //                             },
+ * //                           },
+ * //                           cachePoint: "<CachePointBlock>",
+ * //                         },
+ * //                       ],
+ * //                       toolChoice: { // ToolChoice Union: only one key present
+ * //                         auto: {},
+ * //                         any: {},
+ * //                         tool: { // SpecificToolChoice
+ * //                           name: "STRING_VALUE", // required
+ * //                         },
+ * //                       },
+ * //                     },
  * //                   },
  * //                 },
  * //                 modelId: "STRING_VALUE", // required
@@ -218,14 +330,18 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  * //                   text: { // PromptModelInferenceConfiguration
  * //                     temperature: Number("float"),
  * //                     topP: Number("float"),
- * //                     topK: Number("int"),
  * //                     maxTokens: Number("int"),
  * //                     stopSequences: [ // StopSequences
  * //                       "STRING_VALUE",
  * //                     ],
  * //                   },
  * //                 },
+ * //                 additionalModelRequestFields: "DOCUMENT_VALUE",
  * //               },
+ * //             },
+ * //             guardrailConfiguration: {
+ * //               guardrailIdentifier: "STRING_VALUE",
+ * //               guardrailVersion: "STRING_VALUE",
  * //             },
  * //           },
  * //           lambdaFunction: { // LambdaFunctionFlowNodeConfiguration
@@ -318,6 +434,7 @@ export interface UpdateFlowCommandOutput extends UpdateFlowResponse, __MetadataB
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class UpdateFlowCommand extends $Command
@@ -328,9 +445,7 @@ export class UpdateFlowCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -342,4 +457,16 @@ export class UpdateFlowCommand extends $Command
   .f(UpdateFlowRequestFilterSensitiveLog, UpdateFlowResponseFilterSensitiveLog)
   .ser(se_UpdateFlowCommand)
   .de(de_UpdateFlowCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateFlowRequest;
+      output: UpdateFlowResponse;
+    };
+    sdk: {
+      input: UpdateFlowCommandInput;
+      output: UpdateFlowCommandOutput;
+    };
+  };
+}

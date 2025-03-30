@@ -28,7 +28,7 @@ export interface StopModelInvocationJobCommandInput extends StopModelInvocationJ
 export interface StopModelInvocationJobCommandOutput extends StopModelInvocationJobResponse, __MetadataBearer {}
 
 /**
- * <p>Stops a batch inference job. You're only charged for tokens that were already processed. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-inference-manage.html#batch-inference-stop">Stop a batch inference job</a>.</p>
+ * <p>Stops a batch inference job. You're only charged for tokens that were already processed. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-inference-stop.html">Stop a batch inference job</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -71,6 +71,7 @@ export interface StopModelInvocationJobCommandOutput extends StopModelInvocation
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class StopModelInvocationJobCommand extends $Command
@@ -81,9 +82,7 @@ export class StopModelInvocationJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -95,4 +94,16 @@ export class StopModelInvocationJobCommand extends $Command
   .f(void 0, void 0)
   .ser(se_StopModelInvocationJobCommand)
   .de(de_StopModelInvocationJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StopModelInvocationJobRequest;
+      output: {};
+    };
+    sdk: {
+      input: StopModelInvocationJobCommandInput;
+      output: StopModelInvocationJobCommandOutput;
+    };
+  };
+}

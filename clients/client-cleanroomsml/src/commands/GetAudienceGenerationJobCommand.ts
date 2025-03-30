@@ -68,6 +68,12 @@ export interface GetAudienceGenerationJobCommandOutput extends GetAudienceGenera
  * //         "<keys>": "STRING_VALUE",
  * //       },
  * //     },
+ * //     sqlComputeConfiguration: { // ComputeConfiguration Union: only one key present
+ * //       worker: { // WorkerComputeConfiguration
+ * //         type: "CR.1X" || "CR.4X",
+ * //         number: Number("int"),
+ * //       },
+ * //     },
  * //   },
  * //   includeSeedInOutput: true || false,
  * //   collaborationId: "STRING_VALUE",
@@ -110,6 +116,7 @@ export interface GetAudienceGenerationJobCommandOutput extends GetAudienceGenera
  * @throws {@link CleanRoomsMLServiceException}
  * <p>Base exception class for all service exceptions from CleanRoomsML service.</p>
  *
+ *
  * @public
  */
 export class GetAudienceGenerationJobCommand extends $Command
@@ -120,9 +127,7 @@ export class GetAudienceGenerationJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsMLClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -134,4 +139,16 @@ export class GetAudienceGenerationJobCommand extends $Command
   .f(void 0, GetAudienceGenerationJobResponseFilterSensitiveLog)
   .ser(se_GetAudienceGenerationJobCommand)
   .de(de_GetAudienceGenerationJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetAudienceGenerationJobRequest;
+      output: GetAudienceGenerationJobResponse;
+    };
+    sdk: {
+      input: GetAudienceGenerationJobCommandInput;
+      output: GetAudienceGenerationJobCommandOutput;
+    };
+  };
+}

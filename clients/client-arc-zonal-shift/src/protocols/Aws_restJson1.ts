@@ -924,6 +924,7 @@ const de_ZonalShiftInResource = (output: any, context: __SerdeContext): ZonalShi
     expiryTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     practiceRunOutcome: __expectString,
     resourceIdentifier: __expectString,
+    shiftType: __expectString,
     startTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     zonalShiftId: __expectString,
   }) as any;
@@ -963,6 +964,7 @@ const de_ZonalShiftSummary = (output: any, context: __SerdeContext): ZonalShiftS
     expiryTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     practiceRunOutcome: __expectString,
     resourceIdentifier: __expectString,
+    shiftType: __expectString,
     startTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     status: __expectString,
     zonalShiftId: __expectString,
@@ -980,13 +982,6 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> =>
   collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
-
-const isSerializableHeaderValue = (value: any): boolean =>
-  value !== undefined &&
-  value !== null &&
-  value !== "" &&
-  (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
-  (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
 
 const _mR = "maxResults";
 const _nT = "nextToken";

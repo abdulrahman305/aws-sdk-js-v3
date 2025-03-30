@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { DataZoneClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../DataZoneClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { SearchInput, SearchOutput, SearchOutputFilterSensitiveLog } from "../models/models_1";
+import { SearchInput, SearchOutput, SearchOutputFilterSensitiveLog } from "../models/models_2";
 import { de_SearchCommand, se_SearchCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -207,6 +207,7 @@ export interface SearchCommandOutput extends SearchOutput, __MetadataBearer {}
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class SearchCommand extends $Command
@@ -217,9 +218,7 @@ export class SearchCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -231,4 +230,16 @@ export class SearchCommand extends $Command
   .f(void 0, SearchOutputFilterSensitiveLog)
   .ser(se_SearchCommand)
   .de(de_SearchCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SearchInput;
+      output: SearchOutput;
+    };
+    sdk: {
+      input: SearchCommandInput;
+      output: SearchCommandOutput;
+    };
+  };
+}

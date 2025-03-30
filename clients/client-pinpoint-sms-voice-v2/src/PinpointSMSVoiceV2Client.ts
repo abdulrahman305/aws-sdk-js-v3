@@ -128,6 +128,10 @@ import {
   DeleteProtectConfigurationCommandOutput,
 } from "./commands/DeleteProtectConfigurationCommand";
 import {
+  DeleteProtectConfigurationRuleSetNumberOverrideCommandInput,
+  DeleteProtectConfigurationRuleSetNumberOverrideCommandOutput,
+} from "./commands/DeleteProtectConfigurationRuleSetNumberOverrideCommand";
+import {
   DeleteRegistrationAttachmentCommandInput,
   DeleteRegistrationAttachmentCommandOutput,
 } from "./commands/DeleteRegistrationAttachmentCommand";
@@ -136,6 +140,10 @@ import {
   DeleteRegistrationFieldValueCommandInput,
   DeleteRegistrationFieldValueCommandOutput,
 } from "./commands/DeleteRegistrationFieldValueCommand";
+import {
+  DeleteResourcePolicyCommandInput,
+  DeleteResourcePolicyCommandOutput,
+} from "./commands/DeleteResourcePolicyCommand";
 import {
   DeleteTextMessageSpendLimitOverrideCommandInput,
   DeleteTextMessageSpendLimitOverrideCommandOutput,
@@ -231,10 +239,15 @@ import {
   GetProtectConfigurationCountryRuleSetCommandInput,
   GetProtectConfigurationCountryRuleSetCommandOutput,
 } from "./commands/GetProtectConfigurationCountryRuleSetCommand";
+import { GetResourcePolicyCommandInput, GetResourcePolicyCommandOutput } from "./commands/GetResourcePolicyCommand";
 import {
   ListPoolOriginationIdentitiesCommandInput,
   ListPoolOriginationIdentitiesCommandOutput,
 } from "./commands/ListPoolOriginationIdentitiesCommand";
+import {
+  ListProtectConfigurationRuleSetNumberOverridesCommandInput,
+  ListProtectConfigurationRuleSetNumberOverridesCommandOutput,
+} from "./commands/ListProtectConfigurationRuleSetNumberOverridesCommand";
 import {
   ListRegistrationAssociationsCommandInput,
   ListRegistrationAssociationsCommandOutput,
@@ -244,11 +257,17 @@ import {
   ListTagsForResourceCommandOutput,
 } from "./commands/ListTagsForResourceCommand";
 import { PutKeywordCommandInput, PutKeywordCommandOutput } from "./commands/PutKeywordCommand";
+import { PutMessageFeedbackCommandInput, PutMessageFeedbackCommandOutput } from "./commands/PutMessageFeedbackCommand";
 import { PutOptedOutNumberCommandInput, PutOptedOutNumberCommandOutput } from "./commands/PutOptedOutNumberCommand";
+import {
+  PutProtectConfigurationRuleSetNumberOverrideCommandInput,
+  PutProtectConfigurationRuleSetNumberOverrideCommandOutput,
+} from "./commands/PutProtectConfigurationRuleSetNumberOverrideCommand";
 import {
   PutRegistrationFieldValueCommandInput,
   PutRegistrationFieldValueCommandOutput,
 } from "./commands/PutRegistrationFieldValueCommand";
+import { PutResourcePolicyCommandInput, PutResourcePolicyCommandOutput } from "./commands/PutResourcePolicyCommand";
 import { ReleasePhoneNumberCommandInput, ReleasePhoneNumberCommandOutput } from "./commands/ReleasePhoneNumberCommand";
 import { ReleaseSenderIdCommandInput, ReleaseSenderIdCommandOutput } from "./commands/ReleaseSenderIdCommand";
 import { RequestPhoneNumberCommandInput, RequestPhoneNumberCommandOutput } from "./commands/RequestPhoneNumberCommand";
@@ -264,6 +283,10 @@ import {
   SetAccountDefaultProtectConfigurationCommandInput,
   SetAccountDefaultProtectConfigurationCommandOutput,
 } from "./commands/SetAccountDefaultProtectConfigurationCommand";
+import {
+  SetDefaultMessageFeedbackEnabledCommandInput,
+  SetDefaultMessageFeedbackEnabledCommandOutput,
+} from "./commands/SetDefaultMessageFeedbackEnabledCommand";
 import {
   SetDefaultMessageTypeCommandInput,
   SetDefaultMessageTypeCommandOutput,
@@ -344,9 +367,11 @@ export type ServiceInputTypes =
   | DeleteOptedOutNumberCommandInput
   | DeletePoolCommandInput
   | DeleteProtectConfigurationCommandInput
+  | DeleteProtectConfigurationRuleSetNumberOverrideCommandInput
   | DeleteRegistrationAttachmentCommandInput
   | DeleteRegistrationCommandInput
   | DeleteRegistrationFieldValueCommandInput
+  | DeleteResourcePolicyCommandInput
   | DeleteTextMessageSpendLimitOverrideCommandInput
   | DeleteVerifiedDestinationNumberCommandInput
   | DeleteVoiceMessageSpendLimitOverrideCommandInput
@@ -373,12 +398,17 @@ export type ServiceInputTypes =
   | DisassociateProtectConfigurationCommandInput
   | DiscardRegistrationVersionCommandInput
   | GetProtectConfigurationCountryRuleSetCommandInput
+  | GetResourcePolicyCommandInput
   | ListPoolOriginationIdentitiesCommandInput
+  | ListProtectConfigurationRuleSetNumberOverridesCommandInput
   | ListRegistrationAssociationsCommandInput
   | ListTagsForResourceCommandInput
   | PutKeywordCommandInput
+  | PutMessageFeedbackCommandInput
   | PutOptedOutNumberCommandInput
+  | PutProtectConfigurationRuleSetNumberOverrideCommandInput
   | PutRegistrationFieldValueCommandInput
+  | PutResourcePolicyCommandInput
   | ReleasePhoneNumberCommandInput
   | ReleaseSenderIdCommandInput
   | RequestPhoneNumberCommandInput
@@ -388,6 +418,7 @@ export type ServiceInputTypes =
   | SendTextMessageCommandInput
   | SendVoiceMessageCommandInput
   | SetAccountDefaultProtectConfigurationCommandInput
+  | SetDefaultMessageFeedbackEnabledCommandInput
   | SetDefaultMessageTypeCommandInput
   | SetDefaultSenderIdCommandInput
   | SetMediaMessageSpendLimitOverrideCommandInput
@@ -431,9 +462,11 @@ export type ServiceOutputTypes =
   | DeleteOptedOutNumberCommandOutput
   | DeletePoolCommandOutput
   | DeleteProtectConfigurationCommandOutput
+  | DeleteProtectConfigurationRuleSetNumberOverrideCommandOutput
   | DeleteRegistrationAttachmentCommandOutput
   | DeleteRegistrationCommandOutput
   | DeleteRegistrationFieldValueCommandOutput
+  | DeleteResourcePolicyCommandOutput
   | DeleteTextMessageSpendLimitOverrideCommandOutput
   | DeleteVerifiedDestinationNumberCommandOutput
   | DeleteVoiceMessageSpendLimitOverrideCommandOutput
@@ -460,12 +493,17 @@ export type ServiceOutputTypes =
   | DisassociateProtectConfigurationCommandOutput
   | DiscardRegistrationVersionCommandOutput
   | GetProtectConfigurationCountryRuleSetCommandOutput
+  | GetResourcePolicyCommandOutput
   | ListPoolOriginationIdentitiesCommandOutput
+  | ListProtectConfigurationRuleSetNumberOverridesCommandOutput
   | ListRegistrationAssociationsCommandOutput
   | ListTagsForResourceCommandOutput
   | PutKeywordCommandOutput
+  | PutMessageFeedbackCommandOutput
   | PutOptedOutNumberCommandOutput
+  | PutProtectConfigurationRuleSetNumberOverrideCommandOutput
   | PutRegistrationFieldValueCommandOutput
+  | PutResourcePolicyCommandOutput
   | ReleasePhoneNumberCommandOutput
   | ReleaseSenderIdCommandOutput
   | RequestPhoneNumberCommandOutput
@@ -475,6 +513,7 @@ export type ServiceOutputTypes =
   | SendTextMessageCommandOutput
   | SendVoiceMessageCommandOutput
   | SetAccountDefaultProtectConfigurationCommandOutput
+  | SetDefaultMessageFeedbackEnabledCommandOutput
   | SetDefaultMessageTypeCommandOutput
   | SetDefaultSenderIdCommandOutput
   | SetMediaMessageSpendLimitOverrideCommandOutput
@@ -581,6 +620,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -711,6 +769,8 @@ export class PinpointSMSVoiceV2Client extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<PinpointSMSVoiceV2ClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -719,7 +779,6 @@ export class PinpointSMSVoiceV2Client extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

@@ -108,6 +108,7 @@ export interface ListEndpointAccessCommandOutput extends ListEndpointAccessRespo
  * @throws {@link RedshiftServerlessServiceException}
  * <p>Base exception class for all service exceptions from RedshiftServerless service.</p>
  *
+ *
  * @public
  */
 export class ListEndpointAccessCommand extends $Command
@@ -118,9 +119,7 @@ export class ListEndpointAccessCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: RedshiftServerlessClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -132,4 +131,16 @@ export class ListEndpointAccessCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListEndpointAccessCommand)
   .de(de_ListEndpointAccessCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListEndpointAccessRequest;
+      output: ListEndpointAccessResponse;
+    };
+    sdk: {
+      input: ListEndpointAccessCommandInput;
+      output: ListEndpointAccessCommandOutput;
+    };
+  };
+}

@@ -1168,6 +1168,7 @@ export interface BatchGetJobsCommandOutput extends BatchGetJobsResponse, __Metad
  * @throws {@link GlueServiceException}
  * <p>Base exception class for all service exceptions from Glue service.</p>
  *
+ *
  * @public
  */
 export class BatchGetJobsCommand extends $Command
@@ -1178,9 +1179,7 @@ export class BatchGetJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: GlueClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -1192,4 +1191,16 @@ export class BatchGetJobsCommand extends $Command
   .f(void 0, BatchGetJobsResponseFilterSensitiveLog)
   .ser(se_BatchGetJobsCommand)
   .de(de_BatchGetJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: BatchGetJobsRequest;
+      output: BatchGetJobsResponse;
+    };
+    sdk: {
+      input: BatchGetJobsCommandInput;
+      output: BatchGetJobsCommandOutput;
+    };
+  };
+}

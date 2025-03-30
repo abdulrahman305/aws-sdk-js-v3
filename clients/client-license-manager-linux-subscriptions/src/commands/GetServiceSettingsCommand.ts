@@ -79,6 +79,7 @@ export interface GetServiceSettingsCommandOutput extends GetServiceSettingsRespo
  * @throws {@link LicenseManagerLinuxSubscriptionsServiceException}
  * <p>Base exception class for all service exceptions from LicenseManagerLinuxSubscriptions service.</p>
  *
+ *
  * @public
  */
 export class GetServiceSettingsCommand extends $Command
@@ -89,9 +90,7 @@ export class GetServiceSettingsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: LicenseManagerLinuxSubscriptionsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -103,4 +102,16 @@ export class GetServiceSettingsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetServiceSettingsCommand)
   .de(de_GetServiceSettingsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: {};
+      output: GetServiceSettingsResponse;
+    };
+    sdk: {
+      input: GetServiceSettingsCommandInput;
+      output: GetServiceSettingsCommandOutput;
+    };
+  };
+}

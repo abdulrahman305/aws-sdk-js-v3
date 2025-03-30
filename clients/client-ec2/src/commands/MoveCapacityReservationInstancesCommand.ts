@@ -33,8 +33,9 @@ export interface MoveCapacityReservationInstancesCommandOutput
     __MetadataBearer {}
 
 /**
- * <p>Move available capacity from a source Capacity Reservation to a destination Capacity Reservation. The source Capacity Reservation and the destination Capacity Reservation must be <code>active</code>, owned by your Amazon Web Services account, and share the following:
- * 		</p>
+ * <p>Move available capacity from a source Capacity Reservation to a destination Capacity
+ * 			Reservation. The source Capacity Reservation and the destination Capacity Reservation
+ * 			must be <code>active</code>, owned by your Amazon Web Services account, and share the following: </p>
  *          <ul>
  *             <li>
  *                <p>Instance type</p>
@@ -52,7 +53,8 @@ export interface MoveCapacityReservationInstancesCommandOutput
  *                <p>Placement group</p>
  *             </li>
  *             <li>
- *                <p>Capacity Reservation end time - <code>At specific time</code> or <code>Manually</code>.</p>
+ *                <p>Capacity Reservation end time - <code>At specific time</code> or
+ * 						<code>Manually</code>.</p>
  *             </li>
  *          </ul>
  * @example
@@ -84,7 +86,7 @@ export interface MoveCapacityReservationInstancesCommandOutput
  * //     AvailableInstanceCount: Number("int"),
  * //     EbsOptimized: true || false,
  * //     EphemeralStorage: true || false,
- * //     State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed",
+ * //     State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed" || "assessing" || "delayed" || "unsupported",
  * //     StartDate: new Date("TIMESTAMP"),
  * //     EndDate: new Date("TIMESTAMP"),
  * //     EndDateType: "unlimited" || "limited",
@@ -101,11 +103,17 @@ export interface MoveCapacityReservationInstancesCommandOutput
  * //     PlacementGroupArn: "STRING_VALUE",
  * //     CapacityAllocations: [ // CapacityAllocations
  * //       { // CapacityAllocation
- * //         AllocationType: "used",
+ * //         AllocationType: "used" || "future",
  * //         Count: Number("int"),
  * //       },
  * //     ],
  * //     ReservationType: "default" || "capacity-block",
+ * //     UnusedReservationBillingOwnerId: "STRING_VALUE",
+ * //     CommitmentInfo: { // CapacityReservationCommitmentInfo
+ * //       CommittedInstanceCount: Number("int"),
+ * //       CommitmentEndDate: new Date("TIMESTAMP"),
+ * //     },
+ * //     DeliveryPreference: "fixed" || "incremental",
  * //   },
  * //   DestinationCapacityReservation: {
  * //     CapacityReservationId: "STRING_VALUE",
@@ -120,7 +128,7 @@ export interface MoveCapacityReservationInstancesCommandOutput
  * //     AvailableInstanceCount: Number("int"),
  * //     EbsOptimized: true || false,
  * //     EphemeralStorage: true || false,
- * //     State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed",
+ * //     State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed" || "assessing" || "delayed" || "unsupported",
  * //     StartDate: new Date("TIMESTAMP"),
  * //     EndDate: new Date("TIMESTAMP"),
  * //     EndDateType: "unlimited" || "limited",
@@ -137,11 +145,17 @@ export interface MoveCapacityReservationInstancesCommandOutput
  * //     PlacementGroupArn: "STRING_VALUE",
  * //     CapacityAllocations: [
  * //       {
- * //         AllocationType: "used",
+ * //         AllocationType: "used" || "future",
  * //         Count: Number("int"),
  * //       },
  * //     ],
  * //     ReservationType: "default" || "capacity-block",
+ * //     UnusedReservationBillingOwnerId: "STRING_VALUE",
+ * //     CommitmentInfo: {
+ * //       CommittedInstanceCount: Number("int"),
+ * //       CommitmentEndDate: new Date("TIMESTAMP"),
+ * //     },
+ * //     DeliveryPreference: "fixed" || "incremental",
  * //   },
  * //   InstanceCount: Number("int"),
  * // };
@@ -157,6 +171,7 @@ export interface MoveCapacityReservationInstancesCommandOutput
  * @throws {@link EC2ServiceException}
  * <p>Base exception class for all service exceptions from EC2 service.</p>
  *
+ *
  * @public
  */
 export class MoveCapacityReservationInstancesCommand extends $Command
@@ -167,9 +182,7 @@ export class MoveCapacityReservationInstancesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EC2ClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -181,4 +194,16 @@ export class MoveCapacityReservationInstancesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_MoveCapacityReservationInstancesCommand)
   .de(de_MoveCapacityReservationInstancesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: MoveCapacityReservationInstancesRequest;
+      output: MoveCapacityReservationInstancesResult;
+    };
+    sdk: {
+      input: MoveCapacityReservationInstancesCommandInput;
+      output: MoveCapacityReservationInstancesCommandOutput;
+    };
+  };
+}

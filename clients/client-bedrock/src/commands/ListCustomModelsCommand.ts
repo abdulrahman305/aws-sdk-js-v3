@@ -59,7 +59,7 @@ export interface ListCustomModelsCommandOutput extends ListCustomModelsResponse,
  * //       creationTime: new Date("TIMESTAMP"), // required
  * //       baseModelArn: "STRING_VALUE", // required
  * //       baseModelName: "STRING_VALUE", // required
- * //       customizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING",
+ * //       customizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING" || "DISTILLATION",
  * //       ownerAccountId: "STRING_VALUE",
  * //     },
  * //   ],
@@ -88,6 +88,7 @@ export interface ListCustomModelsCommandOutput extends ListCustomModelsResponse,
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class ListCustomModelsCommand extends $Command
@@ -98,9 +99,7 @@ export class ListCustomModelsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -112,4 +111,16 @@ export class ListCustomModelsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListCustomModelsCommand)
   .de(de_ListCustomModelsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListCustomModelsRequest;
+      output: ListCustomModelsResponse;
+    };
+    sdk: {
+      input: ListCustomModelsCommandInput;
+      output: ListCustomModelsCommandOutput;
+    };
+  };
+}

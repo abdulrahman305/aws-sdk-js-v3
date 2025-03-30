@@ -139,6 +139,7 @@ export interface UpdateTableCommandOutput extends UpdateTableResponse, __Metadat
  * @throws {@link TimestreamWriteServiceException}
  * <p>Base exception class for all service exceptions from TimestreamWrite service.</p>
  *
+ *
  * @public
  */
 export class UpdateTableCommand extends $Command
@@ -149,9 +150,7 @@ export class UpdateTableCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TimestreamWriteClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -168,4 +167,16 @@ export class UpdateTableCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateTableCommand)
   .de(de_UpdateTableCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateTableRequest;
+      output: UpdateTableResponse;
+    };
+    sdk: {
+      input: UpdateTableCommandInput;
+      output: UpdateTableCommandOutput;
+    };
+  };
+}

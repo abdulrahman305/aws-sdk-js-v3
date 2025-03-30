@@ -36,12 +36,8 @@ export interface SelectObjectContentCommandOutput extends SelectObjectContentOut
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
- *          <important>
- *             <p>The SelectObjectContent operation is no longer available to new customers. Existing customers of Amazon S3 Select can continue to use the operation as usual. <a href="http://aws.amazon.com/blogs/storage/how-to-optimize-querying-your-data-in-amazon-s3/">Learn more</a>
- *             </p>
- *          </important>
  *          <p>This action filters the contents of an Amazon S3 object based on a simple structured query
  *          language (SQL) statement. In the request, along with the SQL expression, you must also
  *          specify a data serialization format (JSON, CSV, or Apache Parquet) of the object. Amazon S3 uses
@@ -249,6 +245,7 @@ export interface SelectObjectContentCommandOutput extends SelectObjectContentOut
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
+ *
  * @public
  */
 export class SelectObjectContentCommand extends $Command
@@ -283,4 +280,16 @@ export class SelectObjectContentCommand extends $Command
   .f(SelectObjectContentRequestFilterSensitiveLog, SelectObjectContentOutputFilterSensitiveLog)
   .ser(se_SelectObjectContentCommand)
   .de(de_SelectObjectContentCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SelectObjectContentRequest;
+      output: SelectObjectContentOutput;
+    };
+    sdk: {
+      input: SelectObjectContentCommandInput;
+      output: SelectObjectContentCommandOutput;
+    };
+  };
+}

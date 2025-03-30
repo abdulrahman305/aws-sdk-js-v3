@@ -70,6 +70,13 @@ export interface UpdateBackupPlanCommandOutput extends UpdateBackupPlanOutput, _
  *         ],
  *         EnableContinuousBackup: true || false,
  *         ScheduleExpressionTimezone: "STRING_VALUE",
+ *         IndexActions: [ // IndexActions
+ *           { // IndexAction
+ *             ResourceTypes: [ // ResourceTypes
+ *               "STRING_VALUE",
+ *             ],
+ *           },
+ *         ],
  *       },
  *     ],
  *     AdvancedBackupSettings: [ // AdvancedBackupSettings
@@ -123,6 +130,7 @@ export interface UpdateBackupPlanCommandOutput extends UpdateBackupPlanOutput, _
  * @throws {@link BackupServiceException}
  * <p>Base exception class for all service exceptions from Backup service.</p>
  *
+ *
  * @public
  */
 export class UpdateBackupPlanCommand extends $Command
@@ -133,9 +141,7 @@ export class UpdateBackupPlanCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BackupClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -147,4 +153,16 @@ export class UpdateBackupPlanCommand extends $Command
   .f(UpdateBackupPlanInputFilterSensitiveLog, void 0)
   .ser(se_UpdateBackupPlanCommand)
   .de(de_UpdateBackupPlanCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateBackupPlanInput;
+      output: UpdateBackupPlanOutput;
+    };
+    sdk: {
+      input: UpdateBackupPlanCommandInput;
+      output: UpdateBackupPlanCommandOutput;
+    };
+  };
+}

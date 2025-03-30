@@ -104,6 +104,7 @@ export interface CreateDataIntegrationAssociationCommandOutput
  * @throws {@link AppIntegrationsServiceException}
  * <p>Base exception class for all service exceptions from AppIntegrations service.</p>
  *
+ *
  * @public
  */
 export class CreateDataIntegrationAssociationCommand extends $Command
@@ -114,9 +115,7 @@ export class CreateDataIntegrationAssociationCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: AppIntegrationsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -128,4 +127,16 @@ export class CreateDataIntegrationAssociationCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateDataIntegrationAssociationCommand)
   .de(de_CreateDataIntegrationAssociationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateDataIntegrationAssociationRequest;
+      output: CreateDataIntegrationAssociationResponse;
+    };
+    sdk: {
+      input: CreateDataIntegrationAssociationCommandInput;
+      output: CreateDataIntegrationAssociationCommandOutput;
+    };
+  };
+}

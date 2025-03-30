@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { StopOptimizationJobRequest } from "../models/models_4";
+import { StopOptimizationJobRequest } from "../models/models_5";
 import { de_StopOptimizationJobCommand, se_StopOptimizationJobCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -56,6 +56,7 @@ export interface StopOptimizationJobCommandOutput extends __MetadataBearer {}
  * @throws {@link SageMakerServiceException}
  * <p>Base exception class for all service exceptions from SageMaker service.</p>
  *
+ *
  * @public
  */
 export class StopOptimizationJobCommand extends $Command
@@ -66,9 +67,7 @@ export class StopOptimizationJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SageMakerClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -80,4 +79,16 @@ export class StopOptimizationJobCommand extends $Command
   .f(void 0, void 0)
   .ser(se_StopOptimizationJobCommand)
   .de(de_StopOptimizationJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StopOptimizationJobRequest;
+      output: {};
+    };
+    sdk: {
+      input: StopOptimizationJobCommandInput;
+      output: StopOptimizationJobCommandOutput;
+    };
+  };
+}

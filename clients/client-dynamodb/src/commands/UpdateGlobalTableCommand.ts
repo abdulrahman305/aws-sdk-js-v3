@@ -95,6 +95,11 @@ export interface UpdateGlobalTableCommandOutput extends UpdateGlobalTableOutput,
  * //         OnDemandThroughputOverride: { // OnDemandThroughputOverride
  * //           MaxReadRequestUnits: Number("long"),
  * //         },
+ * //         WarmThroughput: { // TableWarmThroughputDescription
+ * //           ReadUnitsPerSecond: Number("long"),
+ * //           WriteUnitsPerSecond: Number("long"),
+ * //           Status: "CREATING" || "UPDATING" || "DELETING" || "ACTIVE" || "INACCESSIBLE_ENCRYPTION_CREDENTIALS" || "ARCHIVING" || "ARCHIVED",
+ * //         },
  * //         GlobalSecondaryIndexes: [ // ReplicaGlobalSecondaryIndexDescriptionList
  * //           { // ReplicaGlobalSecondaryIndexDescription
  * //             IndexName: "STRING_VALUE",
@@ -103,6 +108,11 @@ export interface UpdateGlobalTableCommandOutput extends UpdateGlobalTableOutput,
  * //             },
  * //             OnDemandThroughputOverride: {
  * //               MaxReadRequestUnits: Number("long"),
+ * //             },
+ * //             WarmThroughput: { // GlobalSecondaryIndexWarmThroughputDescription
+ * //               ReadUnitsPerSecond: Number("long"),
+ * //               WriteUnitsPerSecond: Number("long"),
+ * //               Status: "CREATING" || "UPDATING" || "DELETING" || "ACTIVE",
  * //             },
  * //           },
  * //         ],
@@ -149,6 +159,7 @@ export interface UpdateGlobalTableCommandOutput extends UpdateGlobalTableOutput,
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>
  *
+ *
  * @public
  */
 export class UpdateGlobalTableCommand extends $Command
@@ -161,6 +172,7 @@ export class UpdateGlobalTableCommand extends $Command
   >()
   .ep({
     ...commonParams,
+    ResourceArn: { type: "contextParams", name: "GlobalTableName" },
   })
   .m(function (this: any, Command: any, cs: any, config: DynamoDBClientResolvedConfig, o: any) {
     return [
@@ -173,4 +185,16 @@ export class UpdateGlobalTableCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateGlobalTableCommand)
   .de(de_UpdateGlobalTableCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateGlobalTableInput;
+      output: UpdateGlobalTableOutput;
+    };
+    sdk: {
+      input: UpdateGlobalTableCommandInput;
+      output: UpdateGlobalTableCommandOutput;
+    };
+  };
+}

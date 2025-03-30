@@ -58,7 +58,10 @@ export interface GetSchemaCommandOutput extends GetSchemaOutput, __MetadataBeare
  * //     analysisRuleTypes: [ // AnalysisRuleTypeList // required
  * //       "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE",
  * //     ],
- * //     analysisMethod: "STRING_VALUE",
+ * //     analysisMethod: "DIRECT_QUERY" || "DIRECT_JOB" || "MULTIPLE",
+ * //     selectedAnalysisMethods: [ // SelectedAnalysisMethods
+ * //       "DIRECT_QUERY" || "DIRECT_JOB",
+ * //     ],
  * //     creatorAccountId: "STRING_VALUE", // required
  * //     name: "STRING_VALUE", // required
  * //     collaborationId: "STRING_VALUE", // required
@@ -122,6 +125,7 @@ export interface GetSchemaCommandOutput extends GetSchemaOutput, __MetadataBeare
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class GetSchemaCommand extends $Command
@@ -132,9 +136,7 @@ export class GetSchemaCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -146,4 +148,16 @@ export class GetSchemaCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetSchemaCommand)
   .de(de_GetSchemaCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetSchemaInput;
+      output: GetSchemaOutput;
+    };
+    sdk: {
+      input: GetSchemaCommandInput;
+      output: GetSchemaCommandOutput;
+    };
+  };
+}

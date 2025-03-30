@@ -35,7 +35,9 @@ export interface SetLogDeliveryConfigurationCommandOutput
 
 /**
  * <p>Sets up or modifies the logging configuration of a user pool. User pools can export
- *             user notification logs and advanced security features user activity logs.</p>
+ *             user notification logs and, when threat protection is active, user-activity logs. For
+ *             more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/exporting-quotas-and-usage.html">Exporting user
+ *                 pool logs</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -91,6 +93,10 @@ export interface SetLogDeliveryConfigurationCommandOutput
  * @see {@link SetLogDeliveryConfigurationCommandOutput} for command's `response` shape.
  * @see {@link CognitoIdentityProviderClientResolvedConfig | config} for CognitoIdentityProviderClient's `config` shape.
  *
+ * @throws {@link FeatureUnavailableInTierException} (client fault)
+ *  <p>This exception is thrown when a feature you attempted to configure isn't
+ *             available in your current feature plan.</p>
+ *
  * @throws {@link InternalErrorException} (server fault)
  *  <p>This exception is thrown when Amazon Cognito encounters an internal error.</p>
  *
@@ -112,6 +118,7 @@ export interface SetLogDeliveryConfigurationCommandOutput
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class SetLogDeliveryConfigurationCommand extends $Command
@@ -122,9 +129,7 @@ export class SetLogDeliveryConfigurationCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -136,4 +141,16 @@ export class SetLogDeliveryConfigurationCommand extends $Command
   .f(void 0, void 0)
   .ser(se_SetLogDeliveryConfigurationCommand)
   .de(de_SetLogDeliveryConfigurationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SetLogDeliveryConfigurationRequest;
+      output: SetLogDeliveryConfigurationResponse;
+    };
+    sdk: {
+      input: SetLogDeliveryConfigurationCommandInput;
+      output: SetLogDeliveryConfigurationCommandOutput;
+    };
+  };
+}

@@ -90,6 +90,28 @@ export interface TerminateSolNetworkInstanceCommandOutput extends TerminateSolNe
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example Terminate a Sol Network Instance
+ * ```javascript
+ * //
+ * const input = {
+ *   nsInstanceId: "ni-0d5b823eb5c2a9241",
+ *   tags: {
+ *     Name: "Resource"
+ *   }
+ * };
+ * const command = new TerminateSolNetworkInstanceCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   nsLcmOpOccId: "no-0d5b823eb5c2a9241",
+ *   tags: {
+ *     Name: "Resource"
+ *   }
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class TerminateSolNetworkInstanceCommand extends $Command
@@ -100,9 +122,7 @@ export class TerminateSolNetworkInstanceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -114,4 +134,16 @@ export class TerminateSolNetworkInstanceCommand extends $Command
   .f(TerminateSolNetworkInstanceInputFilterSensitiveLog, TerminateSolNetworkInstanceOutputFilterSensitiveLog)
   .ser(se_TerminateSolNetworkInstanceCommand)
   .de(de_TerminateSolNetworkInstanceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: TerminateSolNetworkInstanceInput;
+      output: TerminateSolNetworkInstanceOutput;
+    };
+    sdk: {
+      input: TerminateSolNetworkInstanceCommandInput;
+      output: TerminateSolNetworkInstanceCommandOutput;
+    };
+  };
+}

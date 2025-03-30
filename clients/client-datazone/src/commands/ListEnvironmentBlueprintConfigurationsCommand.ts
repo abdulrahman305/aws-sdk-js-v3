@@ -57,6 +57,7 @@ export interface ListEnvironmentBlueprintConfigurationsCommandOutput
  * //       domainId: "STRING_VALUE", // required
  * //       environmentBlueprintId: "STRING_VALUE", // required
  * //       provisioningRoleArn: "STRING_VALUE",
+ * //       environmentRolePermissionBoundary: "STRING_VALUE",
  * //       manageAccessRoleArn: "STRING_VALUE",
  * //       enabledRegions: [ // EnabledRegionList
  * //         "STRING_VALUE",
@@ -112,6 +113,7 @@ export interface ListEnvironmentBlueprintConfigurationsCommandOutput
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListEnvironmentBlueprintConfigurationsCommand extends $Command
@@ -122,9 +124,7 @@ export class ListEnvironmentBlueprintConfigurationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -136,4 +136,16 @@ export class ListEnvironmentBlueprintConfigurationsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListEnvironmentBlueprintConfigurationsCommand)
   .de(de_ListEnvironmentBlueprintConfigurationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListEnvironmentBlueprintConfigurationsInput;
+      output: ListEnvironmentBlueprintConfigurationsOutput;
+    };
+    sdk: {
+      input: ListEnvironmentBlueprintConfigurationsCommandInput;
+      output: ListEnvironmentBlueprintConfigurationsCommandOutput;
+    };
+  };
+}

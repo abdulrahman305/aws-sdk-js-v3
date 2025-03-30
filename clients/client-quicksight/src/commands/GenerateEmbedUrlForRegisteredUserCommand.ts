@@ -81,6 +81,20 @@ export interface GenerateEmbedUrlForRegisteredUserCommandOutput
  *         Bookmarks: { // BookmarksConfigurations
  *           Enabled: true || false, // required
  *         },
+ *         AmazonQInQuickSight: { // AmazonQInQuickSightDashboardConfigurations
+ *           ExecutiveSummary: { // ExecutiveSummaryConfigurations
+ *             Enabled: true || false, // required
+ *           },
+ *         },
+ *         Schedules: { // SchedulesConfigurations
+ *           Enabled: true || false, // required
+ *         },
+ *         RecentSnapshots: { // RecentSnapshotsConfigurations
+ *           Enabled: true || false, // required
+ *         },
+ *         ThresholdAlerts: { // ThresholdAlertsConfigurations
+ *           Enabled: true || false, // required
+ *         },
  *       },
  *     },
  *     QuickSightConsole: { // RegisteredUserQuickSightConsoleEmbeddingConfiguration
@@ -90,6 +104,29 @@ export interface GenerateEmbedUrlForRegisteredUserCommandOutput
  *           Enabled: true || false, // required
  *         },
  *         SharedView: {
+ *           Enabled: true || false, // required
+ *         },
+ *         AmazonQInQuickSight: { // AmazonQInQuickSightConsoleConfigurations
+ *           DataQnA: { // DataQnAConfigurations
+ *             Enabled: true || false, // required
+ *           },
+ *           GenerativeAuthoring: { // GenerativeAuthoringConfigurations
+ *             Enabled: true || false, // required
+ *           },
+ *           ExecutiveSummary: {
+ *             Enabled: true || false, // required
+ *           },
+ *           DataStories: { // DataStoriesConfigurations
+ *             Enabled: true || false, // required
+ *           },
+ *         },
+ *         Schedules: {
+ *           Enabled: true || false, // required
+ *         },
+ *         RecentSnapshots: {
+ *           Enabled: true || false, // required
+ *         },
+ *         ThresholdAlerts: {
  *           Enabled: true || false, // required
  *         },
  *       },
@@ -175,6 +212,7 @@ export interface GenerateEmbedUrlForRegisteredUserCommandOutput
  * @throws {@link QuickSightServiceException}
  * <p>Base exception class for all service exceptions from QuickSight service.</p>
  *
+ *
  * @public
  */
 export class GenerateEmbedUrlForRegisteredUserCommand extends $Command
@@ -185,9 +223,7 @@ export class GenerateEmbedUrlForRegisteredUserCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: QuickSightClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -199,4 +235,16 @@ export class GenerateEmbedUrlForRegisteredUserCommand extends $Command
   .f(void 0, GenerateEmbedUrlForRegisteredUserResponseFilterSensitiveLog)
   .ser(se_GenerateEmbedUrlForRegisteredUserCommand)
   .de(de_GenerateEmbedUrlForRegisteredUserCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GenerateEmbedUrlForRegisteredUserRequest;
+      output: GenerateEmbedUrlForRegisteredUserResponse;
+    };
+    sdk: {
+      input: GenerateEmbedUrlForRegisteredUserCommandInput;
+      output: GenerateEmbedUrlForRegisteredUserCommandOutput;
+    };
+  };
+}

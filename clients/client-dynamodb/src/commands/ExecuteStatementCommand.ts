@@ -225,6 +225,7 @@ export interface ExecuteStatementCommandOutput extends ExecuteStatementOutput, _
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>
  *
+ *
  * @public
  */
 export class ExecuteStatementCommand extends $Command
@@ -235,9 +236,7 @@ export class ExecuteStatementCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DynamoDBClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -249,4 +248,16 @@ export class ExecuteStatementCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ExecuteStatementCommand)
   .de(de_ExecuteStatementCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ExecuteStatementInput;
+      output: ExecuteStatementOutput;
+    };
+    sdk: {
+      input: ExecuteStatementCommandInput;
+      output: ExecuteStatementCommandOutput;
+    };
+  };
+}

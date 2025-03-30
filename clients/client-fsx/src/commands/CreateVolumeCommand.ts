@@ -209,7 +209,7 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * //             Message: "STRING_VALUE",
  * //           },
  * //           StorageCapacity: Number("int"),
- * //           StorageType: "SSD" || "HDD",
+ * //           StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //           VpcId: "STRING_VALUE",
  * //           SubnetIds: [ // SubnetIds
  * //             "STRING_VALUE",
@@ -299,6 +299,7 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * //               Iops: Number("int"),
  * //               Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //             },
+ * //             EfaEnabled: true || false,
  * //           },
  * //           AdministrativeActions: [
  * //             {
@@ -316,7 +317,7 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * //                   Message: "STRING_VALUE",
  * //                 },
  * //                 StorageCapacity: Number("int"),
- * //                 StorageType: "SSD" || "HDD",
+ * //                 StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //                 VpcId: "STRING_VALUE",
  * //                 SubnetIds: [
  * //                   "STRING_VALUE",
@@ -401,6 +402,7 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * //                     Iops: Number("int"),
  * //                     Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //                   },
+ * //                   EfaEnabled: true || false,
  * //                 },
  * //                 AdministrativeActions: "<AdministrativeActions>",
  * //                 OntapConfiguration: { // OntapFileSystemConfiguration
@@ -456,6 +458,10 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * //                     "STRING_VALUE",
  * //                   ],
  * //                   EndpointIpAddress: "STRING_VALUE",
+ * //                   ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //                     SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //                     SizeGiB: Number("int"),
+ * //                   },
  * //                 },
  * //               },
  * //               FailureDetails: { // AdministrativeActionFailureDetails
@@ -628,6 +634,10 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * //               "STRING_VALUE",
  * //             ],
  * //             EndpointIpAddress: "STRING_VALUE",
+ * //             ReadCacheConfiguration: {
+ * //               SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //               SizeGiB: Number("int"),
+ * //             },
  * //           },
  * //         },
  * //         FailureDetails: {
@@ -730,6 +740,7 @@ export interface CreateVolumeCommandOutput extends CreateVolumeResponse, __Metad
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
+ *
  * @public
  */
 export class CreateVolumeCommand extends $Command
@@ -740,9 +751,7 @@ export class CreateVolumeCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -754,4 +763,16 @@ export class CreateVolumeCommand extends $Command
   .f(void 0, CreateVolumeResponseFilterSensitiveLog)
   .ser(se_CreateVolumeCommand)
   .de(de_CreateVolumeCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateVolumeRequest;
+      output: CreateVolumeResponse;
+    };
+    sdk: {
+      input: CreateVolumeCommandInput;
+      output: CreateVolumeCommandOutput;
+    };
+  };
+}

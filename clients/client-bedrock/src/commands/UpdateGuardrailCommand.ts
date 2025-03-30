@@ -97,6 +97,12 @@ export interface UpdateGuardrailCommandOutput extends UpdateGuardrailResponse, _
  *         type: "SEXUAL" || "VIOLENCE" || "HATE" || "INSULTS" || "MISCONDUCT" || "PROMPT_ATTACK", // required
  *         inputStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
  *         outputStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
+ *         inputModalities: [ // GuardrailModalities
+ *           "TEXT" || "IMAGE",
+ *         ],
+ *         outputModalities: [
+ *           "TEXT" || "IMAGE",
+ *         ],
  *       },
  *     ],
  *   },
@@ -181,6 +187,7 @@ export interface UpdateGuardrailCommandOutput extends UpdateGuardrailResponse, _
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class UpdateGuardrailCommand extends $Command
@@ -191,9 +198,7 @@ export class UpdateGuardrailCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -205,4 +210,16 @@ export class UpdateGuardrailCommand extends $Command
   .f(UpdateGuardrailRequestFilterSensitiveLog, void 0)
   .ser(se_UpdateGuardrailCommand)
   .de(de_UpdateGuardrailCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateGuardrailRequest;
+      output: UpdateGuardrailResponse;
+    };
+    sdk: {
+      input: UpdateGuardrailCommandInput;
+      output: UpdateGuardrailCommandOutput;
+    };
+  };
+}

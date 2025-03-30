@@ -31,7 +31,7 @@ export interface PutObjectRetentionCommandOutput extends PutObjectRetentionOutpu
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
  *          <p>Places an Object Retention configuration on an object. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking Objects</a>.
  *          Users or accounts require the <code>s3:PutObjectRetention</code> permission in order to
@@ -55,7 +55,7 @@ export interface PutObjectRetentionCommandOutput extends PutObjectRetentionOutpu
  *   VersionId: "STRING_VALUE",
  *   BypassGovernanceRetention: true || false,
  *   ContentMD5: "STRING_VALUE",
- *   ChecksumAlgorithm: "CRC32" || "CRC32C" || "SHA1" || "SHA256",
+ *   ChecksumAlgorithm: "CRC32" || "CRC32C" || "SHA1" || "SHA256" || "CRC64NVME",
  *   ExpectedBucketOwner: "STRING_VALUE",
  * };
  * const command = new PutObjectRetentionCommand(input);
@@ -74,6 +74,7 @@ export interface PutObjectRetentionCommandOutput extends PutObjectRetentionOutpu
  *
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
+ *
  *
  * @public
  */
@@ -94,8 +95,7 @@ export class PutObjectRetentionCommand extends $Command
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
       getFlexibleChecksumsPlugin(config, {
-        input: this.input,
-        requestAlgorithmMember: "ChecksumAlgorithm",
+        requestAlgorithmMember: { httpHeader: "x-amz-sdk-checksum-algorithm", name: "ChecksumAlgorithm" },
         requestChecksumRequired: true,
       }),
       getThrow200ExceptionsPlugin(config),
@@ -106,4 +106,16 @@ export class PutObjectRetentionCommand extends $Command
   .f(void 0, void 0)
   .ser(se_PutObjectRetentionCommand)
   .de(de_PutObjectRetentionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: PutObjectRetentionRequest;
+      output: PutObjectRetentionOutput;
+    };
+    sdk: {
+      input: PutObjectRetentionCommandInput;
+      output: PutObjectRetentionCommandOutput;
+    };
+  };
+}

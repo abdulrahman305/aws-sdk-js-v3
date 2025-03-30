@@ -95,6 +95,7 @@ export interface GetActivityTaskCommandOutput extends GetActivityTaskOutput, __M
  * @throws {@link SFNServiceException}
  * <p>Base exception class for all service exceptions from SFN service.</p>
  *
+ *
  * @public
  */
 export class GetActivityTaskCommand extends $Command
@@ -105,9 +106,7 @@ export class GetActivityTaskCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SFNClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -119,4 +118,16 @@ export class GetActivityTaskCommand extends $Command
   .f(void 0, GetActivityTaskOutputFilterSensitiveLog)
   .ser(se_GetActivityTaskCommand)
   .de(de_GetActivityTaskCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetActivityTaskInput;
+      output: GetActivityTaskOutput;
+    };
+    sdk: {
+      input: GetActivityTaskCommandInput;
+      output: GetActivityTaskCommandOutput;
+    };
+  };
+}

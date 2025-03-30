@@ -88,6 +88,7 @@ export interface DescribePredefinedAttributeCommandOutput
  * @throws {@link ConnectServiceException}
  * <p>Base exception class for all service exceptions from Connect service.</p>
  *
+ *
  * @public
  */
 export class DescribePredefinedAttributeCommand extends $Command
@@ -98,9 +99,7 @@ export class DescribePredefinedAttributeCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -112,4 +111,16 @@ export class DescribePredefinedAttributeCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribePredefinedAttributeCommand)
   .de(de_DescribePredefinedAttributeCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribePredefinedAttributeRequest;
+      output: DescribePredefinedAttributeResponse;
+    };
+    sdk: {
+      input: DescribePredefinedAttributeCommandInput;
+      output: DescribePredefinedAttributeCommandOutput;
+    };
+  };
+}

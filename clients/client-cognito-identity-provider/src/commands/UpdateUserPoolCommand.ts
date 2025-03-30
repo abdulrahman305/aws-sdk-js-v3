@@ -32,7 +32,13 @@ export interface UpdateUserPoolCommandInput extends UpdateUserPoolRequest {}
 export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __MetadataBearer {}
 
 /**
- * <note>
+ * <p>Updates the configuration of a user pool. To avoid setting parameters to Amazon Cognito
+ *             defaults, construct this API request to pass the existing configuration of your user
+ *             pool, modified to include the changes that you want to make.</p>
+ *          <important>
+ *             <p>If you don't provide a value for an attribute, Amazon Cognito sets it to its default value.</p>
+ *          </important>
+ *          <note>
  *             <p>This action might generate an SMS text message. Starting June 1, 2021, US telecom carriers
  *             require you to register an origination phone number before you can send SMS messages
  *             to US phone numbers. If you use SMS text messages in Amazon Cognito, you must register a
@@ -49,11 +55,6 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  *             of the sandbox and into production. For more information, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-sms-settings.html"> SMS message settings for Amazon Cognito user pools</a> in the <i>Amazon Cognito
  *                 Developer Guide</i>.</p>
  *          </note>
- *          <p>Updates the specified user pool with the specified attributes. You can get a list of
- *             the current user pool settings using <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html">DescribeUserPool</a>.</p>
- *          <important>
- *             <p>If you don't provide a value for an attribute, Amazon Cognito sets it to its default value.</p>
- *          </important>
  *          <note>
  *             <p>Amazon Cognito evaluates Identity and Access Management (IAM) policies in requests for this API operation. For
  *     this operation, you must use IAM credentials to authorize requests, and you must
@@ -92,6 +93,11 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  *       PasswordHistorySize: Number("int"),
  *       TemporaryPasswordValidityDays: Number("int"),
  *     },
+ *     SignInPolicy: { // SignInPolicyType
+ *       AllowedFirstAuthFactors: [ // AllowedFirstAuthFactorsListType
+ *         "PASSWORD" || "EMAIL_OTP" || "SMS_OTP" || "WEB_AUTHN",
+ *       ],
+ *     },
  *   },
  *   DeletionProtection: "ACTIVE" || "INACTIVE",
  *   LambdaConfig: { // LambdaConfigType
@@ -106,7 +112,7 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  *     PreTokenGeneration: "STRING_VALUE",
  *     UserMigration: "STRING_VALUE",
  *     PreTokenGenerationConfig: { // PreTokenGenerationVersionConfigType
- *       LambdaVersion: "V1_0" || "V2_0", // required
+ *       LambdaVersion: "V1_0" || "V2_0" || "V3_0", // required
  *       LambdaArn: "STRING_VALUE", // required
  *     },
  *     CustomSMSSender: { // CustomSMSLambdaVersionConfigType
@@ -182,6 +188,8 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  *       },
  *     ],
  *   },
+ *   PoolName: "STRING_VALUE",
+ *   UserPoolTier: "LITE" || "ESSENTIALS" || "PLUS",
  * };
  * const command = new UpdateUserPoolCommand(input);
  * const response = await client.send(command);
@@ -198,6 +206,10 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  * @throws {@link ConcurrentModificationException} (client fault)
  *  <p>This exception is thrown if two or more modifications are happening
  *             concurrently.</p>
+ *
+ * @throws {@link FeatureUnavailableInTierException} (client fault)
+ *  <p>This exception is thrown when a feature you attempted to configure isn't
+ *             available in your current feature plan.</p>
  *
  * @throws {@link InternalErrorException} (server fault)
  *  <p>This exception is thrown when Amazon Cognito encounters an internal error.</p>
@@ -217,7 +229,7 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  * @throws {@link InvalidSmsRoleTrustRelationshipException} (client fault)
  *  <p>This exception is thrown when the trust relationship is not valid for the role
  *             provided for SMS configuration. This can happen if you don't trust
- *             <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
+ *                 <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
  *             not match what is provided in the SMS configuration for the user pool.</p>
  *
  * @throws {@link NotAuthorizedException} (client fault)
@@ -226,6 +238,10 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>This exception is thrown when the Amazon Cognito service can't find the requested
  *             resource.</p>
+ *
+ * @throws {@link TierChangeNotAllowedException} (client fault)
+ *  <p>This exception is thrown when you've attempted to change your feature plan but
+ *             the operation isn't permitted.</p>
  *
  * @throws {@link TooManyRequestsException} (client fault)
  *  <p>This exception is thrown when the user has made too many requests for a given
@@ -241,6 +257,7 @@ export interface UpdateUserPoolCommandOutput extends UpdateUserPoolResponse, __M
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class UpdateUserPoolCommand extends $Command
@@ -251,9 +268,7 @@ export class UpdateUserPoolCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -265,4 +280,16 @@ export class UpdateUserPoolCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateUserPoolCommand)
   .de(de_UpdateUserPoolCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateUserPoolRequest;
+      output: {};
+    };
+    sdk: {
+      input: UpdateUserPoolCommandInput;
+      output: UpdateUserPoolCommandOutput;
+    };
+  };
+}

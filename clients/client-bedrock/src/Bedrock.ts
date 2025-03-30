@@ -24,6 +24,16 @@ import {
   CreateGuardrailVersionCommandOutput,
 } from "./commands/CreateGuardrailVersionCommand";
 import {
+  CreateInferenceProfileCommand,
+  CreateInferenceProfileCommandInput,
+  CreateInferenceProfileCommandOutput,
+} from "./commands/CreateInferenceProfileCommand";
+import {
+  CreateMarketplaceModelEndpointCommand,
+  CreateMarketplaceModelEndpointCommandInput,
+  CreateMarketplaceModelEndpointCommandOutput,
+} from "./commands/CreateMarketplaceModelEndpointCommand";
+import {
   CreateModelCopyJobCommand,
   CreateModelCopyJobCommandInput,
   CreateModelCopyJobCommandOutput,
@@ -43,6 +53,11 @@ import {
   CreateModelInvocationJobCommandInput,
   CreateModelInvocationJobCommandOutput,
 } from "./commands/CreateModelInvocationJobCommand";
+import {
+  CreatePromptRouterCommand,
+  CreatePromptRouterCommandInput,
+  CreatePromptRouterCommandOutput,
+} from "./commands/CreatePromptRouterCommand";
 import {
   CreateProvisionedModelThroughputCommand,
   CreateProvisionedModelThroughputCommandInput,
@@ -64,15 +79,35 @@ import {
   DeleteImportedModelCommandOutput,
 } from "./commands/DeleteImportedModelCommand";
 import {
+  DeleteInferenceProfileCommand,
+  DeleteInferenceProfileCommandInput,
+  DeleteInferenceProfileCommandOutput,
+} from "./commands/DeleteInferenceProfileCommand";
+import {
+  DeleteMarketplaceModelEndpointCommand,
+  DeleteMarketplaceModelEndpointCommandInput,
+  DeleteMarketplaceModelEndpointCommandOutput,
+} from "./commands/DeleteMarketplaceModelEndpointCommand";
+import {
   DeleteModelInvocationLoggingConfigurationCommand,
   DeleteModelInvocationLoggingConfigurationCommandInput,
   DeleteModelInvocationLoggingConfigurationCommandOutput,
 } from "./commands/DeleteModelInvocationLoggingConfigurationCommand";
 import {
+  DeletePromptRouterCommand,
+  DeletePromptRouterCommandInput,
+  DeletePromptRouterCommandOutput,
+} from "./commands/DeletePromptRouterCommand";
+import {
   DeleteProvisionedModelThroughputCommand,
   DeleteProvisionedModelThroughputCommandInput,
   DeleteProvisionedModelThroughputCommandOutput,
 } from "./commands/DeleteProvisionedModelThroughputCommand";
+import {
+  DeregisterMarketplaceModelEndpointCommand,
+  DeregisterMarketplaceModelEndpointCommandInput,
+  DeregisterMarketplaceModelEndpointCommandOutput,
+} from "./commands/DeregisterMarketplaceModelEndpointCommand";
 import {
   GetCustomModelCommand,
   GetCustomModelCommandInput,
@@ -104,6 +139,11 @@ import {
   GetInferenceProfileCommandOutput,
 } from "./commands/GetInferenceProfileCommand";
 import {
+  GetMarketplaceModelEndpointCommand,
+  GetMarketplaceModelEndpointCommandInput,
+  GetMarketplaceModelEndpointCommandOutput,
+} from "./commands/GetMarketplaceModelEndpointCommand";
+import {
   GetModelCopyJobCommand,
   GetModelCopyJobCommandInput,
   GetModelCopyJobCommandOutput,
@@ -128,6 +168,11 @@ import {
   GetModelInvocationLoggingConfigurationCommandInput,
   GetModelInvocationLoggingConfigurationCommandOutput,
 } from "./commands/GetModelInvocationLoggingConfigurationCommand";
+import {
+  GetPromptRouterCommand,
+  GetPromptRouterCommandInput,
+  GetPromptRouterCommandOutput,
+} from "./commands/GetPromptRouterCommand";
 import {
   GetProvisionedModelThroughputCommand,
   GetProvisionedModelThroughputCommandInput,
@@ -164,6 +209,11 @@ import {
   ListInferenceProfilesCommandOutput,
 } from "./commands/ListInferenceProfilesCommand";
 import {
+  ListMarketplaceModelEndpointsCommand,
+  ListMarketplaceModelEndpointsCommandInput,
+  ListMarketplaceModelEndpointsCommandOutput,
+} from "./commands/ListMarketplaceModelEndpointsCommand";
+import {
   ListModelCopyJobsCommand,
   ListModelCopyJobsCommandInput,
   ListModelCopyJobsCommandOutput,
@@ -184,6 +234,11 @@ import {
   ListModelInvocationJobsCommandOutput,
 } from "./commands/ListModelInvocationJobsCommand";
 import {
+  ListPromptRoutersCommand,
+  ListPromptRoutersCommandInput,
+  ListPromptRoutersCommandOutput,
+} from "./commands/ListPromptRoutersCommand";
+import {
   ListProvisionedModelThroughputsCommand,
   ListProvisionedModelThroughputsCommandInput,
   ListProvisionedModelThroughputsCommandOutput,
@@ -198,6 +253,11 @@ import {
   PutModelInvocationLoggingConfigurationCommandInput,
   PutModelInvocationLoggingConfigurationCommandOutput,
 } from "./commands/PutModelInvocationLoggingConfigurationCommand";
+import {
+  RegisterMarketplaceModelEndpointCommand,
+  RegisterMarketplaceModelEndpointCommandInput,
+  RegisterMarketplaceModelEndpointCommandOutput,
+} from "./commands/RegisterMarketplaceModelEndpointCommand";
 import {
   StopEvaluationJobCommand,
   StopEvaluationJobCommandInput,
@@ -225,6 +285,11 @@ import {
   UpdateGuardrailCommandOutput,
 } from "./commands/UpdateGuardrailCommand";
 import {
+  UpdateMarketplaceModelEndpointCommand,
+  UpdateMarketplaceModelEndpointCommandInput,
+  UpdateMarketplaceModelEndpointCommandOutput,
+} from "./commands/UpdateMarketplaceModelEndpointCommand";
+import {
   UpdateProvisionedModelThroughputCommand,
   UpdateProvisionedModelThroughputCommandInput,
   UpdateProvisionedModelThroughputCommandOutput,
@@ -235,27 +300,36 @@ const commands = {
   CreateEvaluationJobCommand,
   CreateGuardrailCommand,
   CreateGuardrailVersionCommand,
+  CreateInferenceProfileCommand,
+  CreateMarketplaceModelEndpointCommand,
   CreateModelCopyJobCommand,
   CreateModelCustomizationJobCommand,
   CreateModelImportJobCommand,
   CreateModelInvocationJobCommand,
+  CreatePromptRouterCommand,
   CreateProvisionedModelThroughputCommand,
   DeleteCustomModelCommand,
   DeleteGuardrailCommand,
   DeleteImportedModelCommand,
+  DeleteInferenceProfileCommand,
+  DeleteMarketplaceModelEndpointCommand,
   DeleteModelInvocationLoggingConfigurationCommand,
+  DeletePromptRouterCommand,
   DeleteProvisionedModelThroughputCommand,
+  DeregisterMarketplaceModelEndpointCommand,
   GetCustomModelCommand,
   GetEvaluationJobCommand,
   GetFoundationModelCommand,
   GetGuardrailCommand,
   GetImportedModelCommand,
   GetInferenceProfileCommand,
+  GetMarketplaceModelEndpointCommand,
   GetModelCopyJobCommand,
   GetModelCustomizationJobCommand,
   GetModelImportJobCommand,
   GetModelInvocationJobCommand,
   GetModelInvocationLoggingConfigurationCommand,
+  GetPromptRouterCommand,
   GetProvisionedModelThroughputCommand,
   ListCustomModelsCommand,
   ListEvaluationJobsCommand,
@@ -263,19 +337,23 @@ const commands = {
   ListGuardrailsCommand,
   ListImportedModelsCommand,
   ListInferenceProfilesCommand,
+  ListMarketplaceModelEndpointsCommand,
   ListModelCopyJobsCommand,
   ListModelCustomizationJobsCommand,
   ListModelImportJobsCommand,
   ListModelInvocationJobsCommand,
+  ListPromptRoutersCommand,
   ListProvisionedModelThroughputsCommand,
   ListTagsForResourceCommand,
   PutModelInvocationLoggingConfigurationCommand,
+  RegisterMarketplaceModelEndpointCommand,
   StopEvaluationJobCommand,
   StopModelCustomizationJobCommand,
   StopModelInvocationJobCommand,
   TagResourceCommand,
   UntagResourceCommand,
   UpdateGuardrailCommand,
+  UpdateMarketplaceModelEndpointCommand,
   UpdateProvisionedModelThroughputCommand,
 };
 
@@ -343,6 +421,40 @@ export interface Bedrock {
     args: CreateGuardrailVersionCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateGuardrailVersionCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateInferenceProfileCommand}
+   */
+  createInferenceProfile(
+    args: CreateInferenceProfileCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateInferenceProfileCommandOutput>;
+  createInferenceProfile(
+    args: CreateInferenceProfileCommandInput,
+    cb: (err: any, data?: CreateInferenceProfileCommandOutput) => void
+  ): void;
+  createInferenceProfile(
+    args: CreateInferenceProfileCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateInferenceProfileCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateMarketplaceModelEndpointCommand}
+   */
+  createMarketplaceModelEndpoint(
+    args: CreateMarketplaceModelEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateMarketplaceModelEndpointCommandOutput>;
+  createMarketplaceModelEndpoint(
+    args: CreateMarketplaceModelEndpointCommandInput,
+    cb: (err: any, data?: CreateMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+  createMarketplaceModelEndpoint(
+    args: CreateMarketplaceModelEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateMarketplaceModelEndpointCommandOutput) => void
   ): void;
 
   /**
@@ -414,6 +526,23 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link CreatePromptRouterCommand}
+   */
+  createPromptRouter(
+    args: CreatePromptRouterCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreatePromptRouterCommandOutput>;
+  createPromptRouter(
+    args: CreatePromptRouterCommandInput,
+    cb: (err: any, data?: CreatePromptRouterCommandOutput) => void
+  ): void;
+  createPromptRouter(
+    args: CreatePromptRouterCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreatePromptRouterCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateProvisionedModelThroughputCommand}
    */
   createProvisionedModelThroughput(
@@ -479,6 +608,40 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link DeleteInferenceProfileCommand}
+   */
+  deleteInferenceProfile(
+    args: DeleteInferenceProfileCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteInferenceProfileCommandOutput>;
+  deleteInferenceProfile(
+    args: DeleteInferenceProfileCommandInput,
+    cb: (err: any, data?: DeleteInferenceProfileCommandOutput) => void
+  ): void;
+  deleteInferenceProfile(
+    args: DeleteInferenceProfileCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteInferenceProfileCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteMarketplaceModelEndpointCommand}
+   */
+  deleteMarketplaceModelEndpoint(
+    args: DeleteMarketplaceModelEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteMarketplaceModelEndpointCommandOutput>;
+  deleteMarketplaceModelEndpoint(
+    args: DeleteMarketplaceModelEndpointCommandInput,
+    cb: (err: any, data?: DeleteMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+  deleteMarketplaceModelEndpoint(
+    args: DeleteMarketplaceModelEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteModelInvocationLoggingConfigurationCommand}
    */
   deleteModelInvocationLoggingConfiguration(): Promise<DeleteModelInvocationLoggingConfigurationCommandOutput>;
@@ -497,6 +660,23 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link DeletePromptRouterCommand}
+   */
+  deletePromptRouter(
+    args: DeletePromptRouterCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeletePromptRouterCommandOutput>;
+  deletePromptRouter(
+    args: DeletePromptRouterCommandInput,
+    cb: (err: any, data?: DeletePromptRouterCommandOutput) => void
+  ): void;
+  deletePromptRouter(
+    args: DeletePromptRouterCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeletePromptRouterCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteProvisionedModelThroughputCommand}
    */
   deleteProvisionedModelThroughput(
@@ -511,6 +691,23 @@ export interface Bedrock {
     args: DeleteProvisionedModelThroughputCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteProvisionedModelThroughputCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeregisterMarketplaceModelEndpointCommand}
+   */
+  deregisterMarketplaceModelEndpoint(
+    args: DeregisterMarketplaceModelEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeregisterMarketplaceModelEndpointCommandOutput>;
+  deregisterMarketplaceModelEndpoint(
+    args: DeregisterMarketplaceModelEndpointCommandInput,
+    cb: (err: any, data?: DeregisterMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+  deregisterMarketplaceModelEndpoint(
+    args: DeregisterMarketplaceModelEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeregisterMarketplaceModelEndpointCommandOutput) => void
   ): void;
 
   /**
@@ -607,6 +804,23 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link GetMarketplaceModelEndpointCommand}
+   */
+  getMarketplaceModelEndpoint(
+    args: GetMarketplaceModelEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetMarketplaceModelEndpointCommandOutput>;
+  getMarketplaceModelEndpoint(
+    args: GetMarketplaceModelEndpointCommandInput,
+    cb: (err: any, data?: GetMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+  getMarketplaceModelEndpoint(
+    args: GetMarketplaceModelEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetModelCopyJobCommand}
    */
   getModelCopyJob(
@@ -687,6 +901,20 @@ export interface Bedrock {
     args: GetModelInvocationLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetModelInvocationLoggingConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetPromptRouterCommand}
+   */
+  getPromptRouter(
+    args: GetPromptRouterCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetPromptRouterCommandOutput>;
+  getPromptRouter(args: GetPromptRouterCommandInput, cb: (err: any, data?: GetPromptRouterCommandOutput) => void): void;
+  getPromptRouter(
+    args: GetPromptRouterCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetPromptRouterCommandOutput) => void
   ): void;
 
   /**
@@ -812,6 +1040,24 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link ListMarketplaceModelEndpointsCommand}
+   */
+  listMarketplaceModelEndpoints(): Promise<ListMarketplaceModelEndpointsCommandOutput>;
+  listMarketplaceModelEndpoints(
+    args: ListMarketplaceModelEndpointsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListMarketplaceModelEndpointsCommandOutput>;
+  listMarketplaceModelEndpoints(
+    args: ListMarketplaceModelEndpointsCommandInput,
+    cb: (err: any, data?: ListMarketplaceModelEndpointsCommandOutput) => void
+  ): void;
+  listMarketplaceModelEndpoints(
+    args: ListMarketplaceModelEndpointsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListMarketplaceModelEndpointsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListModelCopyJobsCommand}
    */
   listModelCopyJobs(): Promise<ListModelCopyJobsCommandOutput>;
@@ -884,6 +1130,24 @@ export interface Bedrock {
   ): void;
 
   /**
+   * @see {@link ListPromptRoutersCommand}
+   */
+  listPromptRouters(): Promise<ListPromptRoutersCommandOutput>;
+  listPromptRouters(
+    args: ListPromptRoutersCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListPromptRoutersCommandOutput>;
+  listPromptRouters(
+    args: ListPromptRoutersCommandInput,
+    cb: (err: any, data?: ListPromptRoutersCommandOutput) => void
+  ): void;
+  listPromptRouters(
+    args: ListPromptRoutersCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListPromptRoutersCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListProvisionedModelThroughputsCommand}
    */
   listProvisionedModelThroughputs(): Promise<ListProvisionedModelThroughputsCommandOutput>;
@@ -933,6 +1197,23 @@ export interface Bedrock {
     args: PutModelInvocationLoggingConfigurationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: PutModelInvocationLoggingConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link RegisterMarketplaceModelEndpointCommand}
+   */
+  registerMarketplaceModelEndpoint(
+    args: RegisterMarketplaceModelEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<RegisterMarketplaceModelEndpointCommandOutput>;
+  registerMarketplaceModelEndpoint(
+    args: RegisterMarketplaceModelEndpointCommandInput,
+    cb: (err: any, data?: RegisterMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+  registerMarketplaceModelEndpoint(
+    args: RegisterMarketplaceModelEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: RegisterMarketplaceModelEndpointCommandOutput) => void
   ): void;
 
   /**
@@ -1020,6 +1301,23 @@ export interface Bedrock {
     args: UpdateGuardrailCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateGuardrailCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateMarketplaceModelEndpointCommand}
+   */
+  updateMarketplaceModelEndpoint(
+    args: UpdateMarketplaceModelEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateMarketplaceModelEndpointCommandOutput>;
+  updateMarketplaceModelEndpoint(
+    args: UpdateMarketplaceModelEndpointCommandInput,
+    cb: (err: any, data?: UpdateMarketplaceModelEndpointCommandOutput) => void
+  ): void;
+  updateMarketplaceModelEndpoint(
+    args: UpdateMarketplaceModelEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateMarketplaceModelEndpointCommandOutput) => void
   ): void;
 
   /**

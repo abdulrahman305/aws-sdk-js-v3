@@ -1,12 +1,13 @@
 import { EventStreamCodec } from "@smithy/eventstream-codec";
 import { Decoder, Encoder, FinalizeHandler, FinalizeHandlerArguments, HttpRequest, MessageSigner } from "@smithy/types";
 import { PassThrough, Readable } from "stream";
+import { afterEach, beforeEach, describe, expect, test as it, vi } from "vitest";
 
 import { EventSigningStream } from "./EventSigningStream";
 import { EventStreamPayloadHandler } from "./EventStreamPayloadHandler";
 
-jest.mock("./EventSigningStream");
-jest.mock("@smithy/eventstream-codec");
+vi.mock("./EventSigningStream");
+vi.mock("@smithy/eventstream-codec");
 
 describe(EventStreamPayloadHandler.name, () => {
   const collectData = (stream: Readable) => {
@@ -19,29 +20,29 @@ describe(EventStreamPayloadHandler.name, () => {
   };
 
   const mockMessageSigner: MessageSigner = {
-    sign: jest.fn(),
-    signMessage: jest.fn(),
+    sign: vi.fn(),
+    signMessage: vi.fn(),
   };
-  const mockUtf8Decoder: Decoder = jest.fn();
-  const mockUtf8encoder: Encoder = jest.fn();
-  const mockNextHandler: FinalizeHandler<any, any> = jest.fn();
+  const mockUtf8Decoder: Decoder = vi.fn();
+  const mockUtf8encoder: Encoder = vi.fn();
+  const mockNextHandler: FinalizeHandler<any, any> = vi.fn();
 
   beforeEach(() => {
-    (EventSigningStream as unknown as jest.Mock).mockImplementation(() => new PassThrough());
-    (EventStreamCodec as jest.Mock).mockImplementation(() => {});
+    (EventSigningStream as unknown as any).mockImplementation(() => new PassThrough());
+    vi.mocked(EventStreamCodec).mockImplementation((() => {}) as any);
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
-  it("should throw if request payload is not a stream", () => {
+  it("should throw if request payload is not a stream", async () => {
     const handler = new EventStreamPayloadHandler({
       messageSigner: () => Promise.resolve(mockMessageSigner),
       utf8Decoder: mockUtf8Decoder,
       utf8Encoder: mockUtf8encoder,
     });
-    expect(
+    await expect(
       handler.handle(mockNextHandler, {
         request: { body: "body" } as HttpRequest,
         input: {},

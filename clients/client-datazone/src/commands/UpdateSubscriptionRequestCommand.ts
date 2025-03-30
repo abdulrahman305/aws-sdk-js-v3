@@ -11,7 +11,7 @@ import {
   UpdateSubscriptionRequestInputFilterSensitiveLog,
   UpdateSubscriptionRequestOutput,
   UpdateSubscriptionRequestOutputFilterSensitiveLog,
-} from "../models/models_1";
+} from "../models/models_2";
 import { de_UpdateSubscriptionRequestCommand, se_UpdateSubscriptionRequestCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -117,6 +117,15 @@ export interface UpdateSubscriptionRequestCommandOutput extends UpdateSubscripti
  * //   ],
  * //   reviewerId: "STRING_VALUE",
  * //   decisionComment: "STRING_VALUE",
+ * //   existingSubscriptionId: "STRING_VALUE",
+ * //   metadataForms: [ // MetadataForms
+ * //     { // FormOutput
+ * //       formName: "STRING_VALUE", // required
+ * //       typeName: "STRING_VALUE",
+ * //       typeRevision: "STRING_VALUE",
+ * //       content: "STRING_VALUE",
+ * //     },
+ * //   ],
  * // };
  *
  * ```
@@ -151,6 +160,7 @@ export interface UpdateSubscriptionRequestCommandOutput extends UpdateSubscripti
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class UpdateSubscriptionRequestCommand extends $Command
@@ -161,9 +171,7 @@ export class UpdateSubscriptionRequestCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -175,4 +183,16 @@ export class UpdateSubscriptionRequestCommand extends $Command
   .f(UpdateSubscriptionRequestInputFilterSensitiveLog, UpdateSubscriptionRequestOutputFilterSensitiveLog)
   .ser(se_UpdateSubscriptionRequestCommand)
   .de(de_UpdateSubscriptionRequestCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateSubscriptionRequestInput;
+      output: UpdateSubscriptionRequestOutput;
+    };
+    sdk: {
+      input: UpdateSubscriptionRequestCommandInput;
+      output: UpdateSubscriptionRequestCommandOutput;
+    };
+  };
+}

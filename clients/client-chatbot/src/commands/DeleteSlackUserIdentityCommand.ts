@@ -64,6 +64,7 @@ export interface DeleteSlackUserIdentityCommandOutput extends DeleteSlackUserIde
  * @throws {@link ChatbotServiceException}
  * <p>Base exception class for all service exceptions from Chatbot service.</p>
  *
+ *
  * @public
  */
 export class DeleteSlackUserIdentityCommand extends $Command
@@ -74,9 +75,7 @@ export class DeleteSlackUserIdentityCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ChatbotClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -88,4 +87,16 @@ export class DeleteSlackUserIdentityCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteSlackUserIdentityCommand)
   .de(de_DeleteSlackUserIdentityCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteSlackUserIdentityRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteSlackUserIdentityCommandInput;
+      output: DeleteSlackUserIdentityCommandOutput;
+    };
+  };
+}

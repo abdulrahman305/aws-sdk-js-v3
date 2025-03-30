@@ -124,7 +124,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *       swappiness: Number("int"),
  *     },
  *     logConfiguration: { // LogConfiguration
- *       logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk", // required
+ *       logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk" || "awsfirelens", // required
  *       options: { // LogConfigurationOptionsMap
  *         "<keys>": "STRING_VALUE",
  *       },
@@ -147,6 +147,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *     fargatePlatformConfiguration: { // FargatePlatformConfiguration
  *       platformVersion: "STRING_VALUE",
  *     },
+ *     enableExecuteCommand: true || false,
  *     ephemeralStorage: { // EphemeralStorage
  *       sizeInGiB: Number("int"), // required
  *     },
@@ -244,7 +245,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *             swappiness: Number("int"),
  *           },
  *           logConfiguration: {
- *             logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk", // required
+ *             logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk" || "awsfirelens", // required
  *             options: {
  *               "<keys>": "STRING_VALUE",
  *             },
@@ -257,6 +258,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *           fargatePlatformConfiguration: {
  *             platformVersion: "STRING_VALUE",
  *           },
+ *           enableExecuteCommand: true || false,
  *           ephemeralStorage: {
  *             sizeInGiB: Number("int"), // required
  *           },
@@ -283,6 +285,12 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *                   ],
  *                   environment: "<EnvironmentVariables>",
  *                   essential: true || false,
+ *                   firelensConfiguration: { // FirelensConfiguration
+ *                     type: "fluentd" || "fluentbit", // required
+ *                     options: { // FirelensConfigurationOptionsMap
+ *                       "<keys>": "STRING_VALUE",
+ *                     },
+ *                   },
  *                   image: "STRING_VALUE", // required
  *                   linuxParameters: "<LinuxParameters>",
  *                   logConfiguration: "<LogConfiguration>",
@@ -306,6 +314,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *               networkConfiguration: "<NetworkConfiguration>",
  *               runtimePlatform: "<RuntimePlatform>",
  *               volumes: "<Volumes>",
+ *               enableExecuteCommand: true || false,
  *             },
  *           ],
  *         },
@@ -344,6 +353,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *                   { // EksContainerVolumeMount
  *                     name: "STRING_VALUE",
  *                     mountPath: "STRING_VALUE",
+ *                     subPath: "STRING_VALUE",
  *                     readOnly: true || false,
  *                   },
  *                 ],
@@ -382,6 +392,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *                   {
  *                     name: "STRING_VALUE",
  *                     mountPath: "STRING_VALUE",
+ *                     subPath: "STRING_VALUE",
  *                     readOnly: true || false,
  *                   },
  *                 ],
@@ -409,15 +420,31 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *                   secretName: "STRING_VALUE", // required
  *                   optional: true || false,
  *                 },
+ *                 persistentVolumeClaim: { // EksPersistentVolumeClaim
+ *                   claimName: "STRING_VALUE", // required
+ *                   readOnly: true || false,
+ *                 },
  *               },
  *             ],
  *             metadata: { // EksMetadata
  *               labels: { // EksLabelsMap
  *                 "<keys>": "STRING_VALUE",
  *               },
+ *               annotations: { // EksAnnotationsMap
+ *                 "<keys>": "STRING_VALUE",
+ *               },
+ *               namespace: "STRING_VALUE",
  *             },
  *             shareProcessNamespace: true || false,
  *           },
+ *         },
+ *         consumableResourceProperties: { // ConsumableResourceProperties
+ *           consumableResourceList: [ // ConsumableResourceList
+ *             { // ConsumableResourceRequirement
+ *               consumableResource: "STRING_VALUE",
+ *               quantity: Number("long"),
+ *             },
+ *           ],
  *         },
  *       },
  *     ],
@@ -478,6 +505,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *             {
  *               name: "STRING_VALUE",
  *               mountPath: "STRING_VALUE",
+ *               subPath: "STRING_VALUE",
  *               readOnly: true || false,
  *             },
  *           ],
@@ -516,6 +544,7 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *             {
  *               name: "STRING_VALUE",
  *               mountPath: "STRING_VALUE",
+ *               subPath: "STRING_VALUE",
  *               readOnly: true || false,
  *             },
  *           ],
@@ -543,12 +572,20 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *             secretName: "STRING_VALUE", // required
  *             optional: true || false,
  *           },
+ *           persistentVolumeClaim: {
+ *             claimName: "STRING_VALUE", // required
+ *             readOnly: true || false,
+ *           },
  *         },
  *       ],
  *       metadata: {
  *         labels: {
  *           "<keys>": "STRING_VALUE",
  *         },
+ *         annotations: {
+ *           "<keys>": "STRING_VALUE",
+ *         },
+ *         namespace: "STRING_VALUE",
  *       },
  *       shareProcessNamespace: true || false,
  *     },
@@ -567,6 +604,12 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *             ],
  *             environment: "<EnvironmentVariables>",
  *             essential: true || false,
+ *             firelensConfiguration: {
+ *               type: "fluentd" || "fluentbit", // required
+ *               options: {
+ *                 "<keys>": "STRING_VALUE",
+ *               },
+ *             },
  *             image: "STRING_VALUE", // required
  *             linuxParameters: "<LinuxParameters>",
  *             logConfiguration: "<LogConfiguration>",
@@ -590,6 +633,15 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  *         networkConfiguration: "<NetworkConfiguration>",
  *         runtimePlatform: "<RuntimePlatform>",
  *         volumes: "<Volumes>",
+ *         enableExecuteCommand: true || false,
+ *       },
+ *     ],
+ *   },
+ *   consumableResourceProperties: {
+ *     consumableResourceList: [
+ *       {
+ *         consumableResource: "STRING_VALUE",
+ *         quantity: Number("long"),
  *       },
  *     ],
  *   },
@@ -621,83 +673,82 @@ export interface RegisterJobDefinitionCommandOutput extends RegisterJobDefinitio
  * @throws {@link BatchServiceException}
  * <p>Base exception class for all service exceptions from Batch service.</p>
  *
- * @public
- * @example To register a job definition
- * ```javascript
- * // This example registers a job definition for a simple container job.
- * const input = {
- *   "type": "container",
- *   "containerProperties": {
- *     "command": [
- *       "sleep",
- *       "10"
- *     ],
- *     "image": "busybox",
- *     "resourceRequirements": [
- *       {
- *         "type": "MEMORY",
- *         "value": "128"
- *       },
- *       {
- *         "type": "VCPU",
- *         "value": "1"
- *       }
- *     ]
- *   },
- *   "jobDefinitionName": "sleep10"
- * };
- * const command = new RegisterJobDefinitionCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "jobDefinitionArn": "arn:aws:batch:us-east-1:012345678910:job-definition/sleep10:1",
- *   "jobDefinitionName": "sleep10",
- *   "revision": 1
- * }
- * *\/
- * // example id: to-register-a-job-definition-1481154325325
- * ```
  *
  * @example RegisterJobDefinition with tags
  * ```javascript
  * // This demonstrates calling the RegisterJobDefinition action, including tags.
  * const input = {
- *   "type": "container",
- *   "containerProperties": {
- *     "command": [
+ *   containerProperties: {
+ *     command: [
  *       "sleep",
  *       "30"
  *     ],
- *     "image": "busybox",
- *     "resourceRequirements": [
+ *     image: "busybox",
+ *     resourceRequirements: [
  *       {
- *         "type": "MEMORY",
- *         "value": "128"
+ *         type: "MEMORY",
+ *         value: "128"
  *       },
  *       {
- *         "type": "VCPU",
- *         "value": "1"
+ *         type: "VCPU",
+ *         value: "1"
  *       }
  *     ]
  *   },
- *   "jobDefinitionName": "sleep30",
- *   "tags": {
- *     "Department": "Engineering",
- *     "User": "JaneDoe"
- *   }
+ *   jobDefinitionName: "sleep30",
+ *   tags: {
+ *     Department: "Engineering",
+ *     User: "JaneDoe"
+ *   },
+ *   type: "container"
  * };
  * const command = new RegisterJobDefinitionCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "jobDefinitionArn": "arn:aws:batch:us-east-1:012345678910:job-definition/sleep30:1",
- *   "jobDefinitionName": "sleep30",
- *   "revision": 1
+ *   jobDefinitionArn: "arn:aws:batch:us-east-1:012345678910:job-definition/sleep30:1",
+ *   jobDefinitionName: "sleep30",
+ *   revision: 1
  * }
  * *\/
- * // example id: registerjobdefinition-with-tags-1591290509028
  * ```
  *
+ * @example To register a job definition
+ * ```javascript
+ * // This example registers a job definition for a simple container job.
+ * const input = {
+ *   containerProperties: {
+ *     command: [
+ *       "sleep",
+ *       "10"
+ *     ],
+ *     image: "busybox",
+ *     resourceRequirements: [
+ *       {
+ *         type: "MEMORY",
+ *         value: "128"
+ *       },
+ *       {
+ *         type: "VCPU",
+ *         value: "1"
+ *       }
+ *     ]
+ *   },
+ *   jobDefinitionName: "sleep10",
+ *   type: "container"
+ * };
+ * const command = new RegisterJobDefinitionCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   jobDefinitionArn: "arn:aws:batch:us-east-1:012345678910:job-definition/sleep10:1",
+ *   jobDefinitionName: "sleep10",
+ *   revision: 1
+ * }
+ * *\/
+ * ```
+ *
+ * @public
  */
 export class RegisterJobDefinitionCommand extends $Command
   .classBuilder<
@@ -707,9 +758,7 @@ export class RegisterJobDefinitionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BatchClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -721,4 +770,16 @@ export class RegisterJobDefinitionCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RegisterJobDefinitionCommand)
   .de(de_RegisterJobDefinitionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RegisterJobDefinitionRequest;
+      output: RegisterJobDefinitionResponse;
+    };
+    sdk: {
+      input: RegisterJobDefinitionCommandInput;
+      output: RegisterJobDefinitionCommandOutput;
+    };
+  };
+}

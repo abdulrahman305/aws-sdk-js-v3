@@ -62,7 +62,7 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * //       Message: "STRING_VALUE",
  * //     },
  * //     StorageCapacity: Number("int"),
- * //     StorageType: "SSD" || "HDD",
+ * //     StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //     VpcId: "STRING_VALUE",
  * //     SubnetIds: [ // SubnetIds
  * //       "STRING_VALUE",
@@ -152,6 +152,7 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * //         Iops: Number("int"),
  * //         Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //       },
+ * //       EfaEnabled: true || false,
  * //     },
  * //     AdministrativeActions: [ // AdministrativeActions
  * //       { // AdministrativeAction
@@ -169,7 +170,7 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * //             Message: "STRING_VALUE",
  * //           },
  * //           StorageCapacity: Number("int"),
- * //           StorageType: "SSD" || "HDD",
+ * //           StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //           VpcId: "STRING_VALUE",
  * //           SubnetIds: [
  * //             "STRING_VALUE",
@@ -259,6 +260,7 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * //               Iops: Number("int"),
  * //               Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //             },
+ * //             EfaEnabled: true || false,
  * //           },
  * //           AdministrativeActions: [
  * //             {
@@ -443,6 +445,10 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * //               "STRING_VALUE",
  * //             ],
  * //             EndpointIpAddress: "STRING_VALUE",
+ * //             ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //               SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //               SizeGiB: Number("int"),
+ * //             },
  * //           },
  * //         },
  * //         FailureDetails: {
@@ -615,6 +621,10 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * //         "STRING_VALUE",
  * //       ],
  * //       EndpointIpAddress: "STRING_VALUE",
+ * //       ReadCacheConfiguration: {
+ * //         SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //         SizeGiB: Number("int"),
+ * //       },
  * //     },
  * //   },
  * // };
@@ -639,6 +649,7 @@ export interface StartMisconfiguredStateRecoveryCommandOutput
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
+ *
  * @public
  */
 export class StartMisconfiguredStateRecoveryCommand extends $Command
@@ -649,9 +660,7 @@ export class StartMisconfiguredStateRecoveryCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -663,4 +672,16 @@ export class StartMisconfiguredStateRecoveryCommand extends $Command
   .f(void 0, StartMisconfiguredStateRecoveryResponseFilterSensitiveLog)
   .ser(se_StartMisconfiguredStateRecoveryCommand)
   .de(de_StartMisconfiguredStateRecoveryCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StartMisconfiguredStateRecoveryRequest;
+      output: StartMisconfiguredStateRecoveryResponse;
+    };
+    sdk: {
+      input: StartMisconfiguredStateRecoveryCommandInput;
+      output: StartMisconfiguredStateRecoveryCommandOutput;
+    };
+  };
+}

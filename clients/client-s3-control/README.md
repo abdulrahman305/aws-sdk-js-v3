@@ -10,7 +10,7 @@ AWS SDK for JavaScript S3Control Client for Node.js, Browser and React Native.
 
 ## Installing
 
-To install the this package, simply type add or install @aws-sdk/client-s3-control
+To install this package, simply type add or install @aws-sdk/client-s3-control
 using your favorite package manager:
 
 - `npm install @aws-sdk/client-s3-control`
@@ -721,6 +721,14 @@ ListAccessPointsForObjectLambda
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/s3-control/command/ListAccessPointsForObjectLambdaCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-s3-control/Interface/ListAccessPointsForObjectLambdaCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-s3-control/Interface/ListAccessPointsForObjectLambdaCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListCallerAccessGrants
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/s3-control/command/ListCallerAccessGrantsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-s3-control/Interface/ListCallerAccessGrantsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-s3-control/Interface/ListCallerAccessGrantsCommandOutput/)
 
 </details>
 <details>

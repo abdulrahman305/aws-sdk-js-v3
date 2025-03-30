@@ -81,6 +81,7 @@ export interface ListFlowVersionsCommandOutput extends ListFlowVersionsResponse,
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class ListFlowVersionsCommand extends $Command
@@ -91,9 +92,7 @@ export class ListFlowVersionsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -105,4 +104,16 @@ export class ListFlowVersionsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListFlowVersionsCommand)
   .de(de_ListFlowVersionsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListFlowVersionsRequest;
+      output: ListFlowVersionsResponse;
+    };
+    sdk: {
+      input: ListFlowVersionsCommandInput;
+      output: ListFlowVersionsCommandOutput;
+    };
+  };
+}

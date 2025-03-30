@@ -95,6 +95,7 @@ export interface UpdateFlowAliasCommandOutput extends UpdateFlowAliasResponse, _
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class UpdateFlowAliasCommand extends $Command
@@ -105,9 +106,7 @@ export class UpdateFlowAliasCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -119,4 +118,16 @@ export class UpdateFlowAliasCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateFlowAliasCommand)
   .de(de_UpdateFlowAliasCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateFlowAliasRequest;
+      output: UpdateFlowAliasResponse;
+    };
+    sdk: {
+      input: UpdateFlowAliasCommandInput;
+      output: UpdateFlowAliasCommandOutput;
+    };
+  };
+}

@@ -28,8 +28,7 @@ export interface PutAccountSettingCommandInput extends PutAccountSettingRequest 
 export interface PutAccountSettingCommandOutput extends PutAccountSettingResponse, __MetadataBearer {}
 
 /**
- * <p>Allows you to change the basic scan type version by setting the <code>name</code>
- *             parameter to either <code>CLAIR</code> to <code>AWS_NATIVE</code>.</p>
+ * <p>Allows you to change the basic scan type version or registry policy scope.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -73,6 +72,7 @@ export interface PutAccountSettingCommandOutput extends PutAccountSettingRespons
  * @throws {@link ECRServiceException}
  * <p>Base exception class for all service exceptions from ECR service.</p>
  *
+ *
  * @public
  */
 export class PutAccountSettingCommand extends $Command
@@ -83,9 +83,7 @@ export class PutAccountSettingCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECRClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -97,4 +95,16 @@ export class PutAccountSettingCommand extends $Command
   .f(void 0, void 0)
   .ser(se_PutAccountSettingCommand)
   .de(de_PutAccountSettingCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: PutAccountSettingRequest;
+      output: PutAccountSettingResponse;
+    };
+    sdk: {
+      input: PutAccountSettingCommandInput;
+      output: PutAccountSettingCommandOutput;
+    };
+  };
+}

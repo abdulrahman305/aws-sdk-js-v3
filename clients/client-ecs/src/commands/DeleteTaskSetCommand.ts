@@ -146,6 +146,7 @@ export interface DeleteTaskSetCommandOutput extends DeleteTaskSetResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
@@ -168,6 +169,55 @@ export interface DeleteTaskSetCommandOutput extends DeleteTaskSetResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
+ *
+ * @example To delete a task set within a service that uses the EXTERNAL deployment controller type
+ * ```javascript
+ * // This example deletes a task set and uses the force flag to force deletion if it hasn't scaled to zero.
+ * const input = {
+ *   cluster: "MyCluster",
+ *   force: true,
+ *   service: "MyService",
+ *   taskSet: "arn:aws:ecs:us-west-2:123456789012:task-set/MyCluster/MyService/ecs-svc/1234567890123456789"
+ * };
+ * const command = new DeleteTaskSetCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   taskSet: {
+ *     computedDesiredCount: 0,
+ *     createdAt: 1.557130260276E9,
+ *     id: "ecs-svc/1234567890123456789",
+ *     launchType: "EC2",
+ *     loadBalancers:     [],
+ *     networkConfiguration: {
+ *       awsvpcConfiguration: {
+ *         assignPublicIp: "DISABLED",
+ *         securityGroups: [
+ *           "sg-12345678"
+ *         ],
+ *         subnets: [
+ *           "subnet-12345678"
+ *         ]
+ *       }
+ *     },
+ *     pendingCount: 0,
+ *     runningCount: 0,
+ *     scale: {
+ *       unit: "PERCENT",
+ *       value: 0
+ *     },
+ *     serviceRegistries:     [],
+ *     stabilityStatus: "STABILIZING",
+ *     stabilityStatusAt: 1.557130290707E9,
+ *     status: "DRAINING",
+ *     taskDefinition: "arn:aws:ecs:us-west-2:123456789012:task-definition/sample-fargate:2",
+ *     taskSetArn: "arn:aws:ecs:us-west-2:123456789012:task-set/MyCluster/MyService/ecs-svc/1234567890123456789",
+ *     updatedAt: 1.557130290707E9
+ *   }
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class DeleteTaskSetCommand extends $Command
@@ -178,9 +228,7 @@ export class DeleteTaskSetCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -192,4 +240,16 @@ export class DeleteTaskSetCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteTaskSetCommand)
   .de(de_DeleteTaskSetCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteTaskSetRequest;
+      output: DeleteTaskSetResponse;
+    };
+    sdk: {
+      input: DeleteTaskSetCommandInput;
+      output: DeleteTaskSetCommandOutput;
+    };
+  };
+}

@@ -49,7 +49,7 @@ export interface ListAppInputSourcesCommandOutput extends ListAppInputSourcesRes
  * //   appInputSources: [ // AppInputSourceList // required
  * //     { // AppInputSource
  * //       sourceName: "STRING_VALUE",
- * //       importType: "STRING_VALUE", // required
+ * //       importType: "CfnStack" || "Resource" || "AppRegistryApp" || "ResourceGroup" || "Terraform" || "EKS", // required
  * //       sourceArn: "STRING_VALUE",
  * //       terraformSource: { // TerraformSource
  * //         s3StateFileUrl: "STRING_VALUE", // required
@@ -93,6 +93,7 @@ export interface ListAppInputSourcesCommandOutput extends ListAppInputSourcesRes
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class ListAppInputSourcesCommand extends $Command
@@ -103,9 +104,7 @@ export class ListAppInputSourcesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -117,4 +116,16 @@ export class ListAppInputSourcesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListAppInputSourcesCommand)
   .de(de_ListAppInputSourcesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListAppInputSourcesRequest;
+      output: ListAppInputSourcesResponse;
+    };
+    sdk: {
+      input: ListAppInputSourcesCommandInput;
+      output: ListAppInputSourcesCommandOutput;
+    };
+  };
+}

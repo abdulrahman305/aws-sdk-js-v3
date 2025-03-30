@@ -62,6 +62,7 @@ export interface DeleteThemeForStackCommandOutput extends DeleteThemeForStackRes
  * @throws {@link AppStreamServiceException}
  * <p>Base exception class for all service exceptions from AppStream service.</p>
  *
+ *
  * @public
  */
 export class DeleteThemeForStackCommand extends $Command
@@ -72,9 +73,7 @@ export class DeleteThemeForStackCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: AppStreamClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -86,4 +85,16 @@ export class DeleteThemeForStackCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteThemeForStackCommand)
   .de(de_DeleteThemeForStackCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteThemeForStackRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteThemeForStackCommandInput;
+      output: DeleteThemeForStackCommandOutput;
+    };
+  };
+}

@@ -77,6 +77,14 @@ import {
   ConcurrentModificationException,
   CopyCommand,
   CreateDeliveryStreamInput,
+  DatabaseColumnList,
+  DatabaseList,
+  DatabaseSnapshotInfo,
+  DatabaseSourceAuthenticationConfiguration,
+  DatabaseSourceConfiguration,
+  DatabaseSourceDescription,
+  DatabaseSourceVPCConfiguration,
+  DatabaseTableList,
   DataFormatConversionConfiguration,
   DeleteDeliveryStreamInput,
   DeliveryStreamDescription,
@@ -86,6 +94,7 @@ import {
   Deserializer,
   DestinationDescription,
   DestinationTableConfiguration,
+  DirectPutSourceConfiguration,
   DocumentIdOptions,
   DynamicPartitioningConfiguration,
   ElasticsearchBufferingHints,
@@ -122,6 +131,8 @@ import {
   OrcSerDe,
   OutputFormatConfiguration,
   ParquetSerDe,
+  PartitionField,
+  PartitionSpec,
   ProcessingConfiguration,
   Processor,
   ProcessorParameter,
@@ -136,6 +147,7 @@ import {
   S3DestinationConfiguration,
   S3DestinationUpdate,
   SchemaConfiguration,
+  SchemaEvolutionConfiguration,
   SecretsManagerConfiguration,
   Serializer,
   ServiceUnavailableException,
@@ -152,6 +164,7 @@ import {
   SplunkRetryOptions,
   StartDeliveryStreamEncryptionInput,
   StopDeliveryStreamEncryptionInput,
+  TableCreationConfiguration,
   Tag,
   TagDeliveryStreamInput,
   UntagDeliveryStreamInput,
@@ -762,9 +775,11 @@ const se_CreateDeliveryStreamInput = (input: CreateDeliveryStreamInput, context:
   return take(input, {
     AmazonOpenSearchServerlessDestinationConfiguration: _json,
     AmazonopensearchserviceDestinationConfiguration: _json,
+    DatabaseSourceConfiguration: _json,
     DeliveryStreamEncryptionConfigurationInput: _json,
     DeliveryStreamName: [],
     DeliveryStreamType: [],
+    DirectPutSourceConfiguration: _json,
     ElasticsearchDestinationConfiguration: _json,
     ExtendedS3DestinationConfiguration: (_) => se_ExtendedS3DestinationConfiguration(_, context),
     HttpEndpointDestinationConfiguration: _json,
@@ -778,6 +793,26 @@ const se_CreateDeliveryStreamInput = (input: CreateDeliveryStreamInput, context:
     Tags: _json,
   });
 };
+
+// se_DatabaseColumnIncludeOrExcludeList omitted.
+
+// se_DatabaseColumnList omitted.
+
+// se_DatabaseIncludeOrExcludeList omitted.
+
+// se_DatabaseList omitted.
+
+// se_DatabaseSourceAuthenticationConfiguration omitted.
+
+// se_DatabaseSourceConfiguration omitted.
+
+// se_DatabaseSourceVPCConfiguration omitted.
+
+// se_DatabaseSurrogateKeyList omitted.
+
+// se_DatabaseTableIncludeOrExcludeList omitted.
+
+// se_DatabaseTableList omitted.
 
 /**
  * serializeAws_json1_1DataFormatConversionConfiguration
@@ -805,6 +840,8 @@ const se_DataFormatConversionConfiguration = (
 // se_DestinationTableConfiguration omitted.
 
 // se_DestinationTableConfigurationList omitted.
+
+// se_DirectPutSourceConfiguration omitted.
 
 // se_DocumentIdOptions omitted.
 
@@ -948,6 +985,12 @@ const se_OutputFormatConfiguration = (input: OutputFormatConfiguration, context:
 
 // se_ParquetSerDe omitted.
 
+// se_PartitionField omitted.
+
+// se_PartitionFields omitted.
+
+// se_PartitionSpec omitted.
+
 // se_ProcessingConfiguration omitted.
 
 // se_Processor omitted.
@@ -1012,6 +1055,8 @@ const se__Record = (input: _Record, context: __SerdeContext): any => {
 
 // se_SchemaConfiguration omitted.
 
+// se_SchemaEvolutionConfiguration omitted.
+
 // se_SecretsManagerConfiguration omitted.
 
 // se_SecurityGroupIdList omitted.
@@ -1051,6 +1096,8 @@ const se_Serializer = (input: Serializer, context: __SerdeContext): any => {
 // se_StopDeliveryStreamEncryptionInput omitted.
 
 // se_SubnetIdList omitted.
+
+// se_TableCreationConfiguration omitted.
 
 // se_Tag omitted.
 
@@ -1112,6 +1159,68 @@ const se_UpdateDestinationInput = (input: UpdateDestinationInput, context: __Ser
 // de_CopyCommand omitted.
 
 // de_CreateDeliveryStreamOutput omitted.
+
+// de_DatabaseColumnIncludeOrExcludeList omitted.
+
+// de_DatabaseColumnList omitted.
+
+// de_DatabaseIncludeOrExcludeList omitted.
+
+// de_DatabaseList omitted.
+
+/**
+ * deserializeAws_json1_1DatabaseSnapshotInfo
+ */
+const de_DatabaseSnapshotInfo = (output: any, context: __SerdeContext): DatabaseSnapshotInfo => {
+  return take(output, {
+    FailureDescription: _json,
+    Id: __expectString,
+    RequestTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    RequestedBy: __expectString,
+    Status: __expectString,
+    Table: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1DatabaseSnapshotInfoList
+ */
+const de_DatabaseSnapshotInfoList = (output: any, context: __SerdeContext): DatabaseSnapshotInfo[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_DatabaseSnapshotInfo(entry, context);
+    });
+  return retVal;
+};
+
+// de_DatabaseSourceAuthenticationConfiguration omitted.
+
+/**
+ * deserializeAws_json1_1DatabaseSourceDescription
+ */
+const de_DatabaseSourceDescription = (output: any, context: __SerdeContext): DatabaseSourceDescription => {
+  return take(output, {
+    Columns: _json,
+    DatabaseSourceAuthenticationConfiguration: _json,
+    DatabaseSourceVPCConfiguration: _json,
+    Databases: _json,
+    Endpoint: __expectString,
+    Port: __expectInt32,
+    SSLMode: __expectString,
+    SnapshotInfo: (_: any) => de_DatabaseSnapshotInfoList(_, context),
+    SnapshotWatermarkTable: __expectString,
+    SurrogateKeys: _json,
+    Tables: _json,
+    Type: __expectString,
+  }) as any;
+};
+
+// de_DatabaseSourceVPCConfiguration omitted.
+
+// de_DatabaseTableIncludeOrExcludeList omitted.
+
+// de_DatabaseTableList omitted.
 
 /**
  * deserializeAws_json1_1DataFormatConversionConfiguration
@@ -1199,6 +1308,8 @@ const de_DestinationDescriptionList = (output: any, context: __SerdeContext): De
 // de_DestinationTableConfiguration omitted.
 
 // de_DestinationTableConfigurationList omitted.
+
+// de_DirectPutSourceDescription omitted.
 
 // de_DocumentIdOptions omitted.
 
@@ -1335,6 +1446,12 @@ const de_OutputFormatConfiguration = (output: any, context: __SerdeContext): Out
 
 // de_ParquetSerDe omitted.
 
+// de_PartitionField omitted.
+
+// de_PartitionFields omitted.
+
+// de_PartitionSpec omitted.
+
 // de_ProcessingConfiguration omitted.
 
 // de_Processor omitted.
@@ -1367,6 +1484,8 @@ const de_OutputFormatConfiguration = (output: any, context: __SerdeContext): Out
 
 // de_SchemaConfiguration omitted.
 
+// de_SchemaEvolutionConfiguration omitted.
+
 // de_SecretsManagerConfiguration omitted.
 
 // de_SecurityGroupIdList omitted.
@@ -1398,6 +1517,8 @@ const de_Serializer = (output: any, context: __SerdeContext): Serializer => {
  */
 const de_SourceDescription = (output: any, context: __SerdeContext): SourceDescription => {
   return take(output, {
+    DatabaseSourceDescription: (_: any) => de_DatabaseSourceDescription(_, context),
+    DirectPutSourceDescription: _json,
     KinesisStreamSourceDescription: (_: any) => de_KinesisStreamSourceDescription(_, context),
     MSKSourceDescription: (_: any) => de_MSKSourceDescription(_, context),
   }) as any;
@@ -1414,6 +1535,8 @@ const de_SourceDescription = (output: any, context: __SerdeContext): SourceDescr
 // de_StopDeliveryStreamEncryptionOutput omitted.
 
 // de_SubnetIdList omitted.
+
+// de_TableCreationConfiguration omitted.
 
 // de_Tag omitted.
 

@@ -26,9 +26,6 @@ interface PreviouslyResolved {}
  * @internal
  */
 export interface AccountIdEndpointModeResolvedConfig {
-  /**
-   * Resolved value for input config {config.accountIdEndpointMode}
-   */
   accountIdEndpointMode: Provider<AccountIdEndpointMode>;
 }
 
@@ -38,12 +35,10 @@ export interface AccountIdEndpointModeResolvedConfig {
 export const resolveAccountIdEndpointModeConfig = <T>(
   input: T & AccountIdEndpointModeInputConfig & PreviouslyResolved
 ): T & AccountIdEndpointModeResolvedConfig => {
-  return {
-    ...input,
+  const { accountIdEndpointMode } = input;
+  const accountIdEndpointModeProvider = normalizeProvider(accountIdEndpointMode ?? DEFAULT_ACCOUNT_ID_ENDPOINT_MODE);
+  return Object.assign(input, {
     accountIdEndpointMode: async () => {
-      const accountIdEndpointModeProvider = normalizeProvider(
-        input.accountIdEndpointMode ?? DEFAULT_ACCOUNT_ID_ENDPOINT_MODE
-      );
       const accIdMode = await accountIdEndpointModeProvider();
       if (!validateAccountIdEndpointMode(accIdMode)) {
         throw new Error(
@@ -52,5 +47,5 @@ export const resolveAccountIdEndpointModeConfig = <T>(
       }
       return accIdMode;
     },
-  };
+  });
 };

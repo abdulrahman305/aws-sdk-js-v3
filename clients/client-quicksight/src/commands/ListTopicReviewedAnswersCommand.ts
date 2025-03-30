@@ -5,11 +5,11 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
+import { ListTopicReviewedAnswersRequest } from "../models/models_4";
 import {
-  ListTopicReviewedAnswersRequest,
   ListTopicReviewedAnswersResponse,
   ListTopicReviewedAnswersResponseFilterSensitiveLog,
-} from "../models/models_4";
+} from "../models/models_5";
 import { de_ListTopicReviewedAnswersCommand, se_ListTopicReviewedAnswersCommand } from "../protocols/Aws_restJson1";
 import { QuickSightClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../QuickSightClient";
 
@@ -95,7 +95,7 @@ export interface ListTopicReviewedAnswersCommandOutput extends ListTopicReviewed
  * //               FractionDigits: Number("int"),
  * //               Prefix: "STRING_VALUE",
  * //               Suffix: "STRING_VALUE",
- * //               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ * //               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  * //               NegativeFormat: { // NegativeFormat
  * //                 Prefix: "STRING_VALUE",
  * //                 Suffix: "STRING_VALUE",
@@ -130,7 +130,7 @@ export interface ListTopicReviewedAnswersCommandOutput extends ListTopicReviewed
  * //               FractionDigits: Number("int"),
  * //               Prefix: "STRING_VALUE",
  * //               Suffix: "STRING_VALUE",
- * //               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ * //               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  * //               NegativeFormat: {
  * //                 Prefix: "STRING_VALUE",
  * //                 Suffix: "STRING_VALUE",
@@ -369,7 +369,7 @@ export interface ListTopicReviewedAnswersCommandOutput extends ListTopicReviewed
  * //                 FractionDigits: Number("int"),
  * //                 Prefix: "STRING_VALUE",
  * //                 Suffix: "STRING_VALUE",
- * //                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ * //                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  * //                 NegativeFormat: {
  * //                   Prefix: "STRING_VALUE",
  * //                   Suffix: "STRING_VALUE",
@@ -397,7 +397,7 @@ export interface ListTopicReviewedAnswersCommandOutput extends ListTopicReviewed
  * //                 FractionDigits: Number("int"),
  * //                 Prefix: "STRING_VALUE",
  * //                 Suffix: "STRING_VALUE",
- * //                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ * //                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  * //                 NegativeFormat: {
  * //                   Prefix: "STRING_VALUE",
  * //                   Suffix: "STRING_VALUE",
@@ -555,6 +555,7 @@ export interface ListTopicReviewedAnswersCommandOutput extends ListTopicReviewed
  * @throws {@link QuickSightServiceException}
  * <p>Base exception class for all service exceptions from QuickSight service.</p>
  *
+ *
  * @public
  */
 export class ListTopicReviewedAnswersCommand extends $Command
@@ -565,9 +566,7 @@ export class ListTopicReviewedAnswersCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: QuickSightClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -579,4 +578,16 @@ export class ListTopicReviewedAnswersCommand extends $Command
   .f(void 0, ListTopicReviewedAnswersResponseFilterSensitiveLog)
   .ser(se_ListTopicReviewedAnswersCommand)
   .de(de_ListTopicReviewedAnswersCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListTopicReviewedAnswersRequest;
+      output: ListTopicReviewedAnswersResponse;
+    };
+    sdk: {
+      input: ListTopicReviewedAnswersCommandInput;
+      output: ListTopicReviewedAnswersCommandOutput;
+    };
+  };
+}

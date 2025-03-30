@@ -1,6 +1,8 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "remoteCache": {},
+  "remoteCache": {
+    "signature": true
+  },
   "tasks": {
     "build": {
       "outputs": ["dist-types/**", "dist-cjs/**", "dist-es/**"],
@@ -38,7 +40,13 @@
       "inputs": []
     },
     "test": {
-      "dependsOn": ["^build:cjs"]
+      "cache": false
+    },
+    "test:integration": {
+      "cache": false
+    },
+    "test:e2e": {
+      "cache": false
     }
   }
 }

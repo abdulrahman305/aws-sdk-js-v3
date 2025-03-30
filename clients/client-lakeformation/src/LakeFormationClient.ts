@@ -86,6 +86,10 @@ import {
 } from "./commands/CreateLakeFormationOptInCommand";
 import { CreateLFTagCommandInput, CreateLFTagCommandOutput } from "./commands/CreateLFTagCommand";
 import {
+  CreateLFTagExpressionCommandInput,
+  CreateLFTagExpressionCommandOutput,
+} from "./commands/CreateLFTagExpressionCommand";
+import {
   DeleteDataCellsFilterCommandInput,
   DeleteDataCellsFilterCommandOutput,
 } from "./commands/DeleteDataCellsFilterCommand";
@@ -98,6 +102,10 @@ import {
   DeleteLakeFormationOptInCommandOutput,
 } from "./commands/DeleteLakeFormationOptInCommand";
 import { DeleteLFTagCommandInput, DeleteLFTagCommandOutput } from "./commands/DeleteLFTagCommand";
+import {
+  DeleteLFTagExpressionCommandInput,
+  DeleteLFTagExpressionCommandOutput,
+} from "./commands/DeleteLFTagExpressionCommand";
 import {
   DeleteObjectsOnCancelCommandInput,
   DeleteObjectsOnCancelCommandOutput,
@@ -127,6 +135,7 @@ import {
   GetEffectivePermissionsForPathCommandOutput,
 } from "./commands/GetEffectivePermissionsForPathCommand";
 import { GetLFTagCommandInput, GetLFTagCommandOutput } from "./commands/GetLFTagCommand";
+import { GetLFTagExpressionCommandInput, GetLFTagExpressionCommandOutput } from "./commands/GetLFTagExpressionCommand";
 import { GetQueryStateCommandInput, GetQueryStateCommandOutput } from "./commands/GetQueryStateCommand";
 import { GetQueryStatisticsCommandInput, GetQueryStatisticsCommandOutput } from "./commands/GetQueryStatisticsCommand";
 import { GetResourceLFTagsCommandInput, GetResourceLFTagsCommandOutput } from "./commands/GetResourceLFTagsCommand";
@@ -150,6 +159,10 @@ import {
   ListLakeFormationOptInsCommandInput,
   ListLakeFormationOptInsCommandOutput,
 } from "./commands/ListLakeFormationOptInsCommand";
+import {
+  ListLFTagExpressionsCommandInput,
+  ListLFTagExpressionsCommandOutput,
+} from "./commands/ListLFTagExpressionsCommand";
 import { ListLFTagsCommandInput, ListLFTagsCommandOutput } from "./commands/ListLFTagsCommand";
 import { ListPermissionsCommandInput, ListPermissionsCommandOutput } from "./commands/ListPermissionsCommand";
 import { ListResourcesCommandInput, ListResourcesCommandOutput } from "./commands/ListResourcesCommand";
@@ -187,6 +200,10 @@ import {
   UpdateLakeFormationIdentityCenterConfigurationCommandOutput,
 } from "./commands/UpdateLakeFormationIdentityCenterConfigurationCommand";
 import { UpdateLFTagCommandInput, UpdateLFTagCommandOutput } from "./commands/UpdateLFTagCommand";
+import {
+  UpdateLFTagExpressionCommandInput,
+  UpdateLFTagExpressionCommandOutput,
+} from "./commands/UpdateLFTagExpressionCommand";
 import { UpdateResourceCommandInput, UpdateResourceCommandOutput } from "./commands/UpdateResourceCommand";
 import { UpdateTableObjectsCommandInput, UpdateTableObjectsCommandOutput } from "./commands/UpdateTableObjectsCommand";
 import {
@@ -216,10 +233,12 @@ export type ServiceInputTypes =
   | CommitTransactionCommandInput
   | CreateDataCellsFilterCommandInput
   | CreateLFTagCommandInput
+  | CreateLFTagExpressionCommandInput
   | CreateLakeFormationIdentityCenterConfigurationCommandInput
   | CreateLakeFormationOptInCommandInput
   | DeleteDataCellsFilterCommandInput
   | DeleteLFTagCommandInput
+  | DeleteLFTagExpressionCommandInput
   | DeleteLakeFormationIdentityCenterConfigurationCommandInput
   | DeleteLakeFormationOptInCommandInput
   | DeleteObjectsOnCancelCommandInput
@@ -233,6 +252,7 @@ export type ServiceInputTypes =
   | GetDataLakeSettingsCommandInput
   | GetEffectivePermissionsForPathCommandInput
   | GetLFTagCommandInput
+  | GetLFTagExpressionCommandInput
   | GetQueryStateCommandInput
   | GetQueryStatisticsCommandInput
   | GetResourceLFTagsCommandInput
@@ -243,6 +263,7 @@ export type ServiceInputTypes =
   | GetWorkUnitsCommandInput
   | GrantPermissionsCommandInput
   | ListDataCellsFilterCommandInput
+  | ListLFTagExpressionsCommandInput
   | ListLFTagsCommandInput
   | ListLakeFormationOptInsCommandInput
   | ListPermissionsCommandInput
@@ -259,6 +280,7 @@ export type ServiceInputTypes =
   | StartTransactionCommandInput
   | UpdateDataCellsFilterCommandInput
   | UpdateLFTagCommandInput
+  | UpdateLFTagExpressionCommandInput
   | UpdateLakeFormationIdentityCenterConfigurationCommandInput
   | UpdateResourceCommandInput
   | UpdateTableObjectsCommandInput
@@ -276,10 +298,12 @@ export type ServiceOutputTypes =
   | CommitTransactionCommandOutput
   | CreateDataCellsFilterCommandOutput
   | CreateLFTagCommandOutput
+  | CreateLFTagExpressionCommandOutput
   | CreateLakeFormationIdentityCenterConfigurationCommandOutput
   | CreateLakeFormationOptInCommandOutput
   | DeleteDataCellsFilterCommandOutput
   | DeleteLFTagCommandOutput
+  | DeleteLFTagExpressionCommandOutput
   | DeleteLakeFormationIdentityCenterConfigurationCommandOutput
   | DeleteLakeFormationOptInCommandOutput
   | DeleteObjectsOnCancelCommandOutput
@@ -293,6 +317,7 @@ export type ServiceOutputTypes =
   | GetDataLakeSettingsCommandOutput
   | GetEffectivePermissionsForPathCommandOutput
   | GetLFTagCommandOutput
+  | GetLFTagExpressionCommandOutput
   | GetQueryStateCommandOutput
   | GetQueryStatisticsCommandOutput
   | GetResourceLFTagsCommandOutput
@@ -303,6 +328,7 @@ export type ServiceOutputTypes =
   | GetWorkUnitsCommandOutput
   | GrantPermissionsCommandOutput
   | ListDataCellsFilterCommandOutput
+  | ListLFTagExpressionsCommandOutput
   | ListLFTagsCommandOutput
   | ListLakeFormationOptInsCommandOutput
   | ListPermissionsCommandOutput
@@ -319,6 +345,7 @@ export type ServiceOutputTypes =
   | StartTransactionCommandOutput
   | UpdateDataCellsFilterCommandOutput
   | UpdateLFTagCommandOutput
+  | UpdateLFTagExpressionCommandOutput
   | UpdateLakeFormationIdentityCenterConfigurationCommandOutput
   | UpdateResourceCommandOutput
   | UpdateTableObjectsCommandOutput
@@ -414,6 +441,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -519,6 +565,8 @@ export class LakeFormationClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<LakeFormationClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -527,7 +575,6 @@ export class LakeFormationClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

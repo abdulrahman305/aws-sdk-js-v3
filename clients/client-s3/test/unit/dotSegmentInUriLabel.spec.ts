@@ -1,12 +1,8 @@
-/// <reference types="mocha" />
 import { HttpHandler, HttpRequest, HttpResponse } from "@smithy/protocol-http";
 import { HttpHandlerOptions } from "@smithy/types";
-import { S3 } from "../../src/S3";
-import chai from "chai";
-import chaiAsPromised from "chai-as-promised";
+import { describe, expect, test as it } from "vitest";
 
-chai.use(chaiAsPromised);
-const { expect } = chai;
+import { S3 } from "../../src/S3";
 
 /**
  * Throws an expected exception that contains the serialized request.
@@ -29,6 +25,7 @@ class RequestSerializationTestHandler implements HttpHandler {
 
 describe("Dot Segment in URI Label", () => {
   const client = new S3({
+    region: "us-west-2",
     credentials: { accessKeyId: "mockAccessKeyId", secretAccessKey: "mockSecretAccessKey" },
     requestHandler: new RequestSerializationTestHandler(),
   });
@@ -39,10 +36,10 @@ describe("Dot Segment in URI Label", () => {
         Bucket: "mybucket",
         Key: "../key.txt",
       });
-      fail("Expected an EXPECTED_REQUEST_SERIALIZATION_ERROR to be thrown");
+      throw new Error("Expected an EXPECTED_REQUEST_SERIALIZATION_ERROR to be thrown");
     } catch (err) {
       if (!(err instanceof ExpectedRequestSerializationError)) {
-        fail(err);
+        throw new Error(err);
       }
       const r = err.request;
       expect(r.method).to.eql("GET");
@@ -56,10 +53,10 @@ describe("Dot Segment in URI Label", () => {
         Bucket: "mybucket",
         Key: "foo/../key.txt",
       });
-      fail("Expected an EXPECTED_REQUEST_SERIALIZATION_ERROR to be thrown");
+      throw new Error("Expected an EXPECTED_REQUEST_SERIALIZATION_ERROR to be thrown");
     } catch (err) {
       if (!(err instanceof ExpectedRequestSerializationError)) {
-        fail(err);
+        throw new Error(err);
       }
       const r = err.request;
       expect(r.method).to.eql("GET");

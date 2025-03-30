@@ -31,12 +31,8 @@ export interface RestoreObjectCommandOutput extends RestoreObjectOutput, __Metad
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
- *          <important>
- *             <p>The <code>SELECT</code> job type for the RestoreObject operation is no longer available to new customers. Existing customers of Amazon S3 Select can continue to use the feature as usual. <a href="http://aws.amazon.com/blogs/storage/how-to-optimize-querying-your-data-in-amazon-s3/">Learn more</a>
- *             </p>
- *          </important>
  *          <p>Restores an archived copy of an object back into Amazon S3</p>
  *          <p>This functionality is not supported for Amazon S3 on Outposts.</p>
  *          <p>This action performs the following types of requests: </p>
@@ -331,7 +327,7 @@ export interface RestoreObjectCommandOutput extends RestoreObjectOutput, __Metad
  *     },
  *   },
  *   RequestPayer: "requester",
- *   ChecksumAlgorithm: "CRC32" || "CRC32C" || "SHA1" || "SHA256",
+ *   ChecksumAlgorithm: "CRC32" || "CRC32C" || "SHA1" || "SHA256" || "CRC64NVME",
  *   ExpectedBucketOwner: "STRING_VALUE",
  * };
  * const command = new RestoreObjectCommand(input);
@@ -355,25 +351,28 @@ export interface RestoreObjectCommandOutput extends RestoreObjectOutput, __Metad
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
- * @public
+ *
  * @example To restore an archived object
  * ```javascript
  * // The following example restores for one day an archived copy of an object back into Amazon S3 bucket.
  * const input = {
- *   "Bucket": "examplebucket",
- *   "Key": "archivedobjectkey",
- *   "RestoreRequest": {
- *     "Days": 1,
- *     "GlacierJobParameters": {
- *       "Tier": "Expedited"
+ *   Bucket: "examplebucket",
+ *   Key: "archivedobjectkey",
+ *   RestoreRequest: {
+ *     Days: 1,
+ *     GlacierJobParameters: {
+ *       Tier: "Expedited"
  *     }
  *   }
  * };
  * const command = new RestoreObjectCommand(input);
- * await client.send(command);
- * // example id: to-restore-an-archived-object-1483049329953
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class RestoreObjectCommand extends $Command
   .classBuilder<
@@ -392,8 +391,7 @@ export class RestoreObjectCommand extends $Command
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
       getFlexibleChecksumsPlugin(config, {
-        input: this.input,
-        requestAlgorithmMember: "ChecksumAlgorithm",
+        requestAlgorithmMember: { httpHeader: "x-amz-sdk-checksum-algorithm", name: "ChecksumAlgorithm" },
         requestChecksumRequired: false,
       }),
       getThrow200ExceptionsPlugin(config),
@@ -404,4 +402,16 @@ export class RestoreObjectCommand extends $Command
   .f(RestoreObjectRequestFilterSensitiveLog, void 0)
   .ser(se_RestoreObjectCommand)
   .de(de_RestoreObjectCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RestoreObjectRequest;
+      output: RestoreObjectOutput;
+    };
+    sdk: {
+      input: RestoreObjectCommandInput;
+      output: RestoreObjectCommandOutput;
+    };
+  };
+}

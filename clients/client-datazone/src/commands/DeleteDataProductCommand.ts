@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { DataZoneClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../DataZoneClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DeleteDataProductInput, DeleteDataProductOutput } from "../models/models_0";
+import { DeleteDataProductInput, DeleteDataProductOutput } from "../models/models_1";
 import { de_DeleteDataProductCommand, se_DeleteDataProductCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -75,6 +75,7 @@ export interface DeleteDataProductCommandOutput extends DeleteDataProductOutput,
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class DeleteDataProductCommand extends $Command
@@ -85,9 +86,7 @@ export class DeleteDataProductCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -99,4 +98,16 @@ export class DeleteDataProductCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteDataProductCommand)
   .de(de_DeleteDataProductCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteDataProductInput;
+      output: {};
+    };
+    sdk: {
+      input: DeleteDataProductCommandInput;
+      output: DeleteDataProductCommandOutput;
+    };
+  };
+}

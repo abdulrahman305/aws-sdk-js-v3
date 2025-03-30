@@ -199,6 +199,7 @@ export interface DescribeAssetModelCompositeModelCommandOutput
  * @throws {@link IoTSiteWiseServiceException}
  * <p>Base exception class for all service exceptions from IoTSiteWise service.</p>
  *
+ *
  * @public
  */
 export class DescribeAssetModelCompositeModelCommand extends $Command
@@ -209,9 +210,7 @@ export class DescribeAssetModelCompositeModelCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: IoTSiteWiseClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -223,4 +222,16 @@ export class DescribeAssetModelCompositeModelCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeAssetModelCompositeModelCommand)
   .de(de_DescribeAssetModelCompositeModelCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeAssetModelCompositeModelRequest;
+      output: DescribeAssetModelCompositeModelResponse;
+    };
+    sdk: {
+      input: DescribeAssetModelCompositeModelCommandInput;
+      output: DescribeAssetModelCompositeModelCommandOutput;
+    };
+  };
+}

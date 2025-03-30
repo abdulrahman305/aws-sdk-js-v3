@@ -88,6 +88,7 @@ export interface GetTimeSeriesDataPointCommandOutput extends GetTimeSeriesDataPo
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class GetTimeSeriesDataPointCommand extends $Command
@@ -98,9 +99,7 @@ export class GetTimeSeriesDataPointCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -112,4 +111,16 @@ export class GetTimeSeriesDataPointCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetTimeSeriesDataPointCommand)
   .de(de_GetTimeSeriesDataPointCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetTimeSeriesDataPointInput;
+      output: GetTimeSeriesDataPointOutput;
+    };
+    sdk: {
+      input: GetTimeSeriesDataPointCommandInput;
+      output: GetTimeSeriesDataPointCommandOutput;
+    };
+  };
+}

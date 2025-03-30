@@ -41,9 +41,9 @@ export interface UpdateAutoshiftObserverNotificationStatusCommandOutput
  * 			notification enables you to be notified, through Amazon EventBridge, when
  * 			there is an autoshift event for zonal autoshift.</p>
  *          <p>If the status is <code>ENABLED</code>,
- * 			Route 53 ARC includes all autoshift events when you use the EventBridge pattern
+ * 			ARC includes all autoshift events when you use the EventBridge pattern
  * 			<code>Autoshift In Progress</code>. When the status is <code>DISABLED</code>,
- * 			Route 53 ARC includes only autoshift events for autoshifts when one or more of your
+ * 			ARC includes only autoshift events for autoshifts when one or more of your
  * 			resources is included in the autoshift.</p>
  *          <p>For more information, see
  * 			<a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-autoshift.how-it-works.html#ZAShiftNotification">
@@ -86,6 +86,7 @@ export interface UpdateAutoshiftObserverNotificationStatusCommandOutput
  * @throws {@link ARCZonalShiftServiceException}
  * <p>Base exception class for all service exceptions from ARCZonalShift service.</p>
  *
+ *
  * @public
  */
 export class UpdateAutoshiftObserverNotificationStatusCommand extends $Command
@@ -96,9 +97,7 @@ export class UpdateAutoshiftObserverNotificationStatusCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ARCZonalShiftClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -110,4 +109,16 @@ export class UpdateAutoshiftObserverNotificationStatusCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateAutoshiftObserverNotificationStatusCommand)
   .de(de_UpdateAutoshiftObserverNotificationStatusCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateAutoshiftObserverNotificationStatusRequest;
+      output: UpdateAutoshiftObserverNotificationStatusResponse;
+    };
+    sdk: {
+      input: UpdateAutoshiftObserverNotificationStatusCommandInput;
+      output: UpdateAutoshiftObserverNotificationStatusCommandOutput;
+    };
+  };
+}

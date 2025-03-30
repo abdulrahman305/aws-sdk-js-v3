@@ -35,7 +35,7 @@ export interface SubmitJobCommandOutput extends SubmitJobResponse, __MetadataBea
  *       parameters in a <code>resourceRequirements</code> object that's included in the
  *         <code>containerOverrides</code> parameter.</p>
  *          <note>
- *             <p>Job queues with a scheduling policy are limited to 500 active fair share identifiers at
+ *             <p>Job queues with a scheduling policy are limited to 500 active share identifiers at
  *         a time. </p>
  *          </note>
  *          <important>
@@ -177,8 +177,20 @@ export interface SubmitJobCommandOutput extends SubmitJobResponse, __MetadataBea
  *               labels: { // EksLabelsMap
  *                 "<keys>": "STRING_VALUE",
  *               },
+ *               annotations: { // EksAnnotationsMap
+ *                 "<keys>": "STRING_VALUE",
+ *               },
+ *               namespace: "STRING_VALUE",
  *             },
  *           },
+ *         },
+ *         consumableResourcePropertiesOverride: { // ConsumableResourceProperties
+ *           consumableResourceList: [ // ConsumableResourceList
+ *             { // ConsumableResourceRequirement
+ *               consumableResource: "STRING_VALUE",
+ *               quantity: Number("long"),
+ *             },
+ *           ],
  *         },
  *       },
  *     ],
@@ -251,6 +263,10 @@ export interface SubmitJobCommandOutput extends SubmitJobResponse, __MetadataBea
  *         labels: {
  *           "<keys>": "STRING_VALUE",
  *         },
+ *         annotations: {
+ *           "<keys>": "STRING_VALUE",
+ *         },
+ *         namespace: "STRING_VALUE",
  *       },
  *     },
  *   },
@@ -265,6 +281,14 @@ export interface SubmitJobCommandOutput extends SubmitJobResponse, __MetadataBea
  *             resourceRequirements: "<ResourceRequirements>",
  *           },
  *         ],
+ *       },
+ *     ],
+ *   },
+ *   consumableResourcePropertiesOverride: {
+ *     consumableResourceList: [
+ *       {
+ *         consumableResource: "STRING_VALUE",
+ *         quantity: Number("long"),
  *       },
  *     ],
  *   },
@@ -296,26 +320,26 @@ export interface SubmitJobCommandOutput extends SubmitJobResponse, __MetadataBea
  * @throws {@link BatchServiceException}
  * <p>Base exception class for all service exceptions from Batch service.</p>
  *
- * @public
+ *
  * @example To submit a job to a queue
  * ```javascript
  * // This example submits a simple container job called example to the HighPriority job queue.
  * const input = {
- *   "jobDefinition": "sleep60",
- *   "jobName": "example",
- *   "jobQueue": "HighPriority"
+ *   jobDefinition: "sleep60",
+ *   jobName: "example",
+ *   jobQueue: "HighPriority"
  * };
  * const command = new SubmitJobCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "jobId": "876da822-4198-45f2-a252-6cea32512ea8",
- *   "jobName": "example"
+ *   jobId: "876da822-4198-45f2-a252-6cea32512ea8",
+ *   jobName: "example"
  * }
  * *\/
- * // example id: to-submit-a-job-to-a-queue-1481154481673
  * ```
  *
+ * @public
  */
 export class SubmitJobCommand extends $Command
   .classBuilder<
@@ -325,9 +349,7 @@ export class SubmitJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BatchClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -339,4 +361,16 @@ export class SubmitJobCommand extends $Command
   .f(void 0, void 0)
   .ser(se_SubmitJobCommand)
   .de(de_SubmitJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SubmitJobRequest;
+      output: SubmitJobResponse;
+    };
+    sdk: {
+      input: SubmitJobCommandInput;
+      output: SubmitJobCommandOutput;
+    };
+  };
+}

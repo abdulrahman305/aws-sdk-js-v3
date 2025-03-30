@@ -144,23 +144,23 @@ export interface GetJobCommandOutput extends GetJobResult, __MetadataBearer {}
  * @throws {@link DeviceFarmServiceException}
  * <p>Base exception class for all service exceptions from DeviceFarm service.</p>
  *
- * @public
+ *
  * @example To get information about a job
  * ```javascript
  * // The following example returns information about a specific job.
  * const input = {
- *   "arn": "arn:aws:devicefarm:us-west-2::job:123-456-EXAMPLE-GUID"
+ *   arn: "arn:aws:devicefarm:us-west-2::job:123-456-EXAMPLE-GUID"
  * };
  * const command = new GetJobCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "job": {}
+ *   job:   { /* empty *\/ }
  * }
  * *\/
- * // example id: getjob-example-1470928294268
  * ```
  *
+ * @public
  */
 export class GetJobCommand extends $Command
   .classBuilder<
@@ -170,9 +170,7 @@ export class GetJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DeviceFarmClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -184,4 +182,16 @@ export class GetJobCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetJobCommand)
   .de(de_GetJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetJobRequest;
+      output: GetJobResult;
+    };
+    sdk: {
+      input: GetJobCommandInput;
+      output: GetJobCommandOutput;
+    };
+  };
+}

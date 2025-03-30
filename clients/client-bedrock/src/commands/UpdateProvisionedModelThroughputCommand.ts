@@ -75,6 +75,7 @@ export interface UpdateProvisionedModelThroughputCommandOutput
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class UpdateProvisionedModelThroughputCommand extends $Command
@@ -85,9 +86,7 @@ export class UpdateProvisionedModelThroughputCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -99,4 +98,16 @@ export class UpdateProvisionedModelThroughputCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateProvisionedModelThroughputCommand)
   .de(de_UpdateProvisionedModelThroughputCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateProvisionedModelThroughputRequest;
+      output: {};
+    };
+    sdk: {
+      input: UpdateProvisionedModelThroughputCommandInput;
+      output: UpdateProvisionedModelThroughputCommandOutput;
+    };
+  };
+}

@@ -62,7 +62,7 @@ export interface CreateGuardrailCommandOutput extends CreateGuardrailResponse, _
  *          </ul>
  *          <p>In addition to the above policies, you can also configure the messages to be returned to
  *         the user if a user input or model response is in violation of the policies defined in the guardrail.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html">Guardrails for Amazon Bedrock</a> in
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html">Amazon Bedrock Guardrails</a> in
  *          the <i>Amazon Bedrock User Guide</i>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -91,6 +91,12 @@ export interface CreateGuardrailCommandOutput extends CreateGuardrailResponse, _
  *         type: "SEXUAL" || "VIOLENCE" || "HATE" || "INSULTS" || "MISCONDUCT" || "PROMPT_ATTACK", // required
  *         inputStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
  *         outputStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
+ *         inputModalities: [ // GuardrailModalities
+ *           "TEXT" || "IMAGE",
+ *         ],
+ *         outputModalities: [
+ *           "TEXT" || "IMAGE",
+ *         ],
  *       },
  *     ],
  *   },
@@ -186,6 +192,7 @@ export interface CreateGuardrailCommandOutput extends CreateGuardrailResponse, _
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class CreateGuardrailCommand extends $Command
@@ -196,9 +203,7 @@ export class CreateGuardrailCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -210,4 +215,16 @@ export class CreateGuardrailCommand extends $Command
   .f(CreateGuardrailRequestFilterSensitiveLog, void 0)
   .ser(se_CreateGuardrailCommand)
   .de(de_CreateGuardrailCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateGuardrailRequest;
+      output: CreateGuardrailResponse;
+    };
+    sdk: {
+      input: CreateGuardrailCommandInput;
+      output: CreateGuardrailCommandOutput;
+    };
+  };
+}

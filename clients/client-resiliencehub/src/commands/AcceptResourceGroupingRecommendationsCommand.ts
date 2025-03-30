@@ -93,6 +93,7 @@ export interface AcceptResourceGroupingRecommendationsCommandOutput
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class AcceptResourceGroupingRecommendationsCommand extends $Command
@@ -103,9 +104,7 @@ export class AcceptResourceGroupingRecommendationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -117,4 +116,16 @@ export class AcceptResourceGroupingRecommendationsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_AcceptResourceGroupingRecommendationsCommand)
   .de(de_AcceptResourceGroupingRecommendationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: AcceptResourceGroupingRecommendationsRequest;
+      output: AcceptResourceGroupingRecommendationsResponse;
+    };
+    sdk: {
+      input: AcceptResourceGroupingRecommendationsCommandInput;
+      output: AcceptResourceGroupingRecommendationsCommandOutput;
+    };
+  };
+}

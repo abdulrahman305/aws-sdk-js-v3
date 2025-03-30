@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { RegisterWorkspaceDirectoryRequest, RegisterWorkspaceDirectoryResult } from "../models/models_0";
+import { RegisterWorkspaceDirectoryRequest, RegisterWorkspaceDirectoryResult } from "../models/models_1";
 import { de_RegisterWorkspaceDirectoryCommand, se_RegisterWorkspaceDirectoryCommand } from "../protocols/Aws_json1_1";
 import { ServiceInputTypes, ServiceOutputTypes, WorkSpacesClientResolvedConfig } from "../WorkSpacesClient";
 
@@ -116,6 +116,7 @@ export interface RegisterWorkspaceDirectoryCommandOutput extends RegisterWorkspa
  * @throws {@link WorkSpacesServiceException}
  * <p>Base exception class for all service exceptions from WorkSpaces service.</p>
  *
+ *
  * @public
  */
 export class RegisterWorkspaceDirectoryCommand extends $Command
@@ -126,9 +127,7 @@ export class RegisterWorkspaceDirectoryCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: WorkSpacesClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -140,4 +139,16 @@ export class RegisterWorkspaceDirectoryCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RegisterWorkspaceDirectoryCommand)
   .de(de_RegisterWorkspaceDirectoryCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RegisterWorkspaceDirectoryRequest;
+      output: RegisterWorkspaceDirectoryResult;
+    };
+    sdk: {
+      input: RegisterWorkspaceDirectoryCommandInput;
+      output: RegisterWorkspaceDirectoryCommandOutput;
+    };
+  };
+}

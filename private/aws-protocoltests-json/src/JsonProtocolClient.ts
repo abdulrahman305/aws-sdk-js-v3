@@ -78,6 +78,7 @@ import {
   HostWithPathOperationCommandOutput,
 } from "./commands/HostWithPathOperationCommand";
 import { JsonEnumsCommandInput, JsonEnumsCommandOutput } from "./commands/JsonEnumsCommand";
+import { JsonIntEnumsCommandInput, JsonIntEnumsCommandOutput } from "./commands/JsonIntEnumsCommand";
 import { JsonUnionsCommandInput, JsonUnionsCommandOutput } from "./commands/JsonUnionsCommand";
 import {
   KitchenSinkOperationCommandInput,
@@ -122,6 +123,7 @@ export type ServiceInputTypes =
   | GreetingWithErrorsCommandInput
   | HostWithPathOperationCommandInput
   | JsonEnumsCommandInput
+  | JsonIntEnumsCommandInput
   | JsonUnionsCommandInput
   | KitchenSinkOperationCommandInput
   | NullOperationCommandInput
@@ -144,6 +146,7 @@ export type ServiceOutputTypes =
   | GreetingWithErrorsCommandOutput
   | HostWithPathOperationCommandOutput
   | JsonEnumsCommandOutput
+  | JsonIntEnumsCommandOutput
   | JsonUnionsCommandOutput
   | KitchenSinkOperationCommandOutput
   | NullOperationCommandOutput
@@ -243,6 +246,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * Fetch related hostname, signing name or signing region with given region.
@@ -346,6 +368,8 @@ export class JsonProtocolClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<JsonProtocolClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveUserAgentConfig(_config_0);
     const _config_2 = resolveRetryConfig(_config_1);
     const _config_3 = resolveRegionConfig(_config_2);
@@ -354,7 +378,6 @@ export class JsonProtocolClient extends __Client<
     const _config_6 = resolveHttpAuthSchemeConfig(_config_5);
     const _config_7 = resolveCompressionConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

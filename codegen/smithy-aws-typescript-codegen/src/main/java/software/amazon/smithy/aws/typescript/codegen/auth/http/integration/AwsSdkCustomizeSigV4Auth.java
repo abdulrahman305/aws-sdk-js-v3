@@ -17,7 +17,6 @@ import java.util.TreeMap;
 import java.util.function.Consumer;
 import software.amazon.smithy.aws.traits.auth.SigV4ATrait;
 import software.amazon.smithy.aws.traits.auth.SigV4Trait;
-import software.amazon.smithy.aws.typescript.codegen.AwsCredentialProviderUtils;
 import software.amazon.smithy.aws.typescript.codegen.AwsDependency;
 import software.amazon.smithy.codegen.core.Symbol;
 import software.amazon.smithy.codegen.core.SymbolProvider;
@@ -102,6 +101,11 @@ public class AwsSdkCustomizeSigV4Auth implements HttpAuthTypeScriptIntegration {
                         "credentialDefaultProvider", w ->
                             w.write("((_: unknown) => () => Promise.reject(new Error(\"Credential is missing\")))")
                     );
+                } else {
+                    return MapUtils.of(
+                        "credentials", w ->
+                            w.write("(() => () => Promise.reject(new Error(\"Credentials are missing\")))")
+                    );
                 }
             case NODE:
                 if (isAwsService(service)) {
@@ -113,7 +117,6 @@ public class AwsSdkCustomizeSigV4Auth implements HttpAuthTypeScriptIntegration {
                                 .addImport("defaultProvider", "credentialDefaultProvider",
                                     AwsDependency.CREDENTIAL_PROVIDER_NODE)
                                 .write("credentialDefaultProvider");
-                            AwsCredentialProviderUtils.addAwsCredentialProviderDependencies(service, writer);
                         }
                     );
                     if (isSigV4AsymmetricService(model, settings)) {
@@ -128,11 +131,22 @@ public class AwsSdkCustomizeSigV4Auth implements HttpAuthTypeScriptIntegration {
                                     null,
                                     AwsDependency.AWS_SDK_CORE
                                 );
-                                writer.write("loadNodeConfig(NODE_SIGV4A_CONFIG_OPTIONS)");
+                                writer.write("loadNodeConfig(NODE_SIGV4A_CONFIG_OPTIONS, profileConfig)");
                             }
                         );
                     }
                     return map;
+                } else {
+                    // isSigV4Service and !isAwsService are implied here.
+                    return MapUtils.of(
+                        "credentials", writer -> {
+                            writer
+                                .addDependency(AwsDependency.CREDENTIAL_PROVIDER_NODE)
+                                .addImport("defaultProvider", "credentialDefaultProvider",
+                                    AwsDependency.CREDENTIAL_PROVIDER_NODE)
+                                .write("credentialDefaultProvider()");
+                        }
+                    );
                 }
             default:
                 return Collections.emptyMap();

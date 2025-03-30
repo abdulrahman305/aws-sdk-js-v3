@@ -148,18 +148,21 @@ export interface ListJobsCommandOutput extends ListJobsResult, __MetadataBearer 
  * @throws {@link DeviceFarmServiceException}
  * <p>Base exception class for all service exceptions from DeviceFarm service.</p>
  *
- * @public
+ *
  * @example To get information about jobs
  * ```javascript
  * // The following example returns information about jobs in a specific project.
  * const input = {
- *   "arn": "arn:aws:devicefarm:us-west-2:123456789101:project:EXAMPLE-GUID-123-456"
+ *   arn: "arn:aws:devicefarm:us-west-2:123456789101:project:EXAMPLE-GUID-123-456"
  * };
  * const command = new ListJobsCommand(input);
- * await client.send(command);
- * // example id: to-get-information-about-jobs-1471642228071
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class ListJobsCommand extends $Command
   .classBuilder<
@@ -169,9 +172,7 @@ export class ListJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DeviceFarmClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -183,4 +184,16 @@ export class ListJobsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListJobsCommand)
   .de(de_ListJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListJobsRequest;
+      output: ListJobsResult;
+    };
+    sdk: {
+      input: ListJobsCommandInput;
+      output: ListJobsCommandOutput;
+    };
+  };
+}

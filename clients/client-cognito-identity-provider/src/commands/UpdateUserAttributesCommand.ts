@@ -36,11 +36,10 @@ export interface UpdateUserAttributesCommandInput extends UpdateUserAttributesRe
 export interface UpdateUserAttributesCommandOutput extends UpdateUserAttributesResponse, __MetadataBearer {}
 
 /**
- * <p>With this operation, your users can update one or more of their attributes with their
- *             own credentials. You authorize this API request with the user's access token. To delete
- *             an attribute from your user, submit the attribute in your API request with a blank
- *             value. Custom attribute values in this request must include the <code>custom:</code>
- *             prefix.</p>
+ * <p>Updates the currently signed-in user's attributes. To delete an attribute from
+ *             the user, submit the attribute in your API request with a blank value.</p>
+ *          <p>For custom attributes, you must add a <code>custom:</code> prefix to the attribute
+ *             name, for example <code>custom:department</code>.</p>
  *          <p>Authorize this action with a signed-in user's access token. It must include the scope <code>aws.cognito.signin.user.admin</code>.</p>
  *          <note>
  *             <p>Amazon Cognito doesn't evaluate Identity and Access Management (IAM) policies in requests for this API operation. For
@@ -146,7 +145,7 @@ export interface UpdateUserAttributesCommandOutput extends UpdateUserAttributesR
  * @throws {@link InvalidSmsRoleTrustRelationshipException} (client fault)
  *  <p>This exception is thrown when the trust relationship is not valid for the role
  *             provided for SMS configuration. This can happen if you don't trust
- *             <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
+ *                 <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
  *             not match what is provided in the SMS configuration for the user pool.</p>
  *
  * @throws {@link NotAuthorizedException} (client fault)
@@ -180,6 +179,7 @@ export interface UpdateUserAttributesCommandOutput extends UpdateUserAttributesR
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class UpdateUserAttributesCommand extends $Command
@@ -190,9 +190,7 @@ export class UpdateUserAttributesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -204,4 +202,16 @@ export class UpdateUserAttributesCommand extends $Command
   .f(UpdateUserAttributesRequestFilterSensitiveLog, void 0)
   .ser(se_UpdateUserAttributesCommand)
   .de(de_UpdateUserAttributesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateUserAttributesRequest;
+      output: UpdateUserAttributesResponse;
+    };
+    sdk: {
+      input: UpdateUserAttributesCommandInput;
+      output: UpdateUserAttributesCommandOutput;
+    };
+  };
+}

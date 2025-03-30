@@ -28,7 +28,8 @@ export interface OverrideStageConditionCommandInput extends OverrideStageConditi
 export interface OverrideStageConditionCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>Used to override a stage condition.</p>
+ * <p>Used to override a stage condition. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
+ *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -80,6 +81,7 @@ export interface OverrideStageConditionCommandOutput extends __MetadataBearer {}
  * @throws {@link CodePipelineServiceException}
  * <p>Base exception class for all service exceptions from CodePipeline service.</p>
  *
+ *
  * @public
  */
 export class OverrideStageConditionCommand extends $Command
@@ -90,9 +92,7 @@ export class OverrideStageConditionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CodePipelineClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -104,4 +104,16 @@ export class OverrideStageConditionCommand extends $Command
   .f(void 0, void 0)
   .ser(se_OverrideStageConditionCommand)
   .de(de_OverrideStageConditionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: OverrideStageConditionInput;
+      output: {};
+    };
+    sdk: {
+      input: OverrideStageConditionCommandInput;
+      output: OverrideStageConditionCommandOutput;
+    };
+  };
+}

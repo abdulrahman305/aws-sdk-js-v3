@@ -77,6 +77,7 @@ export interface ListUseCasesCommandOutput extends ListUseCasesResponse, __Metad
  * @throws {@link ConnectServiceException}
  * <p>Base exception class for all service exceptions from Connect service.</p>
  *
+ *
  * @public
  */
 export class ListUseCasesCommand extends $Command
@@ -87,9 +88,7 @@ export class ListUseCasesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -101,4 +100,16 @@ export class ListUseCasesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListUseCasesCommand)
   .de(de_ListUseCasesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListUseCasesRequest;
+      output: ListUseCasesResponse;
+    };
+    sdk: {
+      input: ListUseCasesCommandInput;
+      output: ListUseCasesCommandOutput;
+    };
+  };
+}

@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockAgentClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockAgentClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DeletePromptRequest, DeletePromptResponse } from "../models/models_0";
+import { DeletePromptRequest, DeletePromptResponse } from "../models/models_1";
 import { de_DeletePromptCommand, se_DeletePromptCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -75,6 +75,7 @@ export interface DeletePromptCommandOutput extends DeletePromptResponse, __Metad
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class DeletePromptCommand extends $Command
@@ -85,9 +86,7 @@ export class DeletePromptCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -99,4 +98,16 @@ export class DeletePromptCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeletePromptCommand)
   .de(de_DeletePromptCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeletePromptRequest;
+      output: DeletePromptResponse;
+    };
+    sdk: {
+      input: DeletePromptCommandInput;
+      output: DeletePromptCommandOutput;
+    };
+  };
+}

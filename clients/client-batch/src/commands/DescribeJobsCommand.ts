@@ -207,7 +207,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //           swappiness: Number("int"),
  * //         },
  * //         logConfiguration: { // LogConfiguration
- * //           logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk", // required
+ * //           logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk" || "awsfirelens", // required
  * //           options: { // LogConfigurationOptionsMap
  * //             "<keys>": "STRING_VALUE",
  * //           },
@@ -240,6 +240,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //         repositoryCredentials: { // RepositoryCredentials
  * //           credentialsParameter: "STRING_VALUE", // required
  * //         },
+ * //         enableExecuteCommand: true || false,
  * //       },
  * //       nodeDetails: { // NodeDetails
  * //         nodeIndex: Number("int"),
@@ -331,7 +332,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                 swappiness: Number("int"),
  * //               },
  * //               logConfiguration: {
- * //                 logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk", // required
+ * //                 logDriver: "json-file" || "syslog" || "journald" || "gelf" || "fluentd" || "awslogs" || "splunk" || "awsfirelens", // required
  * //                 options: {
  * //                   "<keys>": "STRING_VALUE",
  * //                 },
@@ -344,6 +345,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //               fargatePlatformConfiguration: {
  * //                 platformVersion: "STRING_VALUE",
  * //               },
+ * //               enableExecuteCommand: true || false,
  * //               ephemeralStorage: {
  * //                 sizeInGiB: Number("int"), // required
  * //               },
@@ -370,6 +372,12 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                       ],
  * //                       environment: "<EnvironmentVariables>",
  * //                       essential: true || false,
+ * //                       firelensConfiguration: { // FirelensConfiguration
+ * //                         type: "fluentd" || "fluentbit", // required
+ * //                         options: { // FirelensConfigurationOptionsMap
+ * //                           "<keys>": "STRING_VALUE",
+ * //                         },
+ * //                       },
  * //                       image: "STRING_VALUE", // required
  * //                       linuxParameters: "<LinuxParameters>",
  * //                       logConfiguration: "<LogConfiguration>",
@@ -393,6 +401,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                   networkConfiguration: "<NetworkConfiguration>",
  * //                   runtimePlatform: "<RuntimePlatform>",
  * //                   volumes: "<Volumes>",
+ * //                   enableExecuteCommand: true || false,
  * //                 },
  * //               ],
  * //             },
@@ -431,6 +440,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                       { // EksContainerVolumeMount
  * //                         name: "STRING_VALUE",
  * //                         mountPath: "STRING_VALUE",
+ * //                         subPath: "STRING_VALUE",
  * //                         readOnly: true || false,
  * //                       },
  * //                     ],
@@ -469,6 +479,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                       {
  * //                         name: "STRING_VALUE",
  * //                         mountPath: "STRING_VALUE",
+ * //                         subPath: "STRING_VALUE",
  * //                         readOnly: true || false,
  * //                       },
  * //                     ],
@@ -496,15 +507,31 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                       secretName: "STRING_VALUE", // required
  * //                       optional: true || false,
  * //                     },
+ * //                     persistentVolumeClaim: { // EksPersistentVolumeClaim
+ * //                       claimName: "STRING_VALUE", // required
+ * //                       readOnly: true || false,
+ * //                     },
  * //                   },
  * //                 ],
  * //                 metadata: { // EksMetadata
  * //                   labels: { // EksLabelsMap
  * //                     "<keys>": "STRING_VALUE",
  * //                   },
+ * //                   annotations: { // EksAnnotationsMap
+ * //                     "<keys>": "STRING_VALUE",
+ * //                   },
+ * //                   namespace: "STRING_VALUE",
  * //                 },
  * //                 shareProcessNamespace: true || false,
  * //               },
+ * //             },
+ * //             consumableResourceProperties: { // ConsumableResourceProperties
+ * //               consumableResourceList: [ // ConsumableResourceList
+ * //                 { // ConsumableResourceRequirement
+ * //                   consumableResource: "STRING_VALUE",
+ * //                   quantity: Number("long"),
+ * //                 },
+ * //               ],
  * //             },
  * //           },
  * //         ],
@@ -563,6 +590,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                 {
  * //                   name: "STRING_VALUE",
  * //                   mountPath: "STRING_VALUE",
+ * //                   subPath: "STRING_VALUE",
  * //                   readOnly: true || false,
  * //                 },
  * //               ],
@@ -603,6 +631,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                 {
  * //                   name: "STRING_VALUE",
  * //                   mountPath: "STRING_VALUE",
+ * //                   subPath: "STRING_VALUE",
  * //                   readOnly: true || false,
  * //                 },
  * //               ],
@@ -630,6 +659,10 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                 secretName: "STRING_VALUE", // required
  * //                 optional: true || false,
  * //               },
+ * //               persistentVolumeClaim: {
+ * //                 claimName: "STRING_VALUE", // required
+ * //                 readOnly: true || false,
+ * //               },
  * //             },
  * //           ],
  * //           podName: "STRING_VALUE",
@@ -638,6 +671,10 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //             labels: {
  * //               "<keys>": "STRING_VALUE",
  * //             },
+ * //             annotations: {
+ * //               "<keys>": "STRING_VALUE",
+ * //             },
+ * //             namespace: "STRING_VALUE",
  * //           },
  * //           shareProcessNamespace: true || false,
  * //         },
@@ -647,6 +684,7 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //           containers: [ // EksAttemptContainerDetails
  * //             { // EksAttemptContainerDetail
  * //               name: "STRING_VALUE",
+ * //               containerID: "STRING_VALUE",
  * //               exitCode: Number("int"),
  * //               reason: "STRING_VALUE",
  * //             },
@@ -654,12 +692,14 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //           initContainers: [
  * //             {
  * //               name: "STRING_VALUE",
+ * //               containerID: "STRING_VALUE",
  * //               exitCode: Number("int"),
  * //               reason: "STRING_VALUE",
  * //             },
  * //           ],
  * //           eksClusterArn: "STRING_VALUE",
  * //           podName: "STRING_VALUE",
+ * //           podNamespace: "STRING_VALUE",
  * //           nodeName: "STRING_VALUE",
  * //           startedAt: Number("long"),
  * //           stoppedAt: Number("long"),
@@ -680,6 +720,12 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //                 ],
  * //                 environment: "<EnvironmentVariables>",
  * //                 essential: true || false,
+ * //                 firelensConfiguration: {
+ * //                   type: "fluentd" || "fluentbit", // required
+ * //                   options: {
+ * //                     "<keys>": "STRING_VALUE",
+ * //                   },
+ * //                 },
  * //                 image: "STRING_VALUE",
  * //                 linuxParameters: "<LinuxParameters>",
  * //                 logConfiguration: "<LogConfiguration>",
@@ -709,11 +755,20 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * //             networkConfiguration: "<NetworkConfiguration>",
  * //             runtimePlatform: "<RuntimePlatform>",
  * //             volumes: "<Volumes>",
+ * //             enableExecuteCommand: true || false,
  * //           },
  * //         ],
  * //       },
  * //       isCancelled: true || false,
  * //       isTerminated: true || false,
+ * //       consumableResourceProperties: {
+ * //         consumableResourceList: [
+ * //           {
+ * //             consumableResource: "STRING_VALUE",
+ * //             quantity: Number("long"),
+ * //           },
+ * //         ],
+ * //       },
  * //     },
  * //   ],
  * // };
@@ -737,53 +792,53 @@ export interface DescribeJobsCommandOutput extends DescribeJobsResponse, __Metad
  * @throws {@link BatchServiceException}
  * <p>Base exception class for all service exceptions from Batch service.</p>
  *
- * @public
+ *
  * @example To describe a specific job
  * ```javascript
  * // This example describes a job with the specified job ID.
  * const input = {
- *   "jobs": [
+ *   jobs: [
  *     "24fa2d7a-64c4-49d2-8b47-f8da4fbde8e9"
  *   ]
  * };
  * const command = new DescribeJobsCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "jobs": [
+ *   jobs: [
  *     {
- *       "container": {
- *         "command": [
+ *       container: {
+ *         command: [
  *           "sleep",
  *           "60"
  *         ],
- *         "containerInstanceArn": "arn:aws:ecs:us-east-1:012345678910:container-instance/5406d7cd-58bd-4b8f-9936-48d7c6b1526c",
- *         "environment": [],
- *         "exitCode": 0,
- *         "image": "busybox",
- *         "memory": 128,
- *         "mountPoints": [],
- *         "ulimits": [],
- *         "vcpus": 1,
- *         "volumes": []
+ *         containerInstanceArn: "arn:aws:ecs:us-east-1:012345678910:container-instance/5406d7cd-58bd-4b8f-9936-48d7c6b1526c",
+ *         environment:         [],
+ *         exitCode: 0,
+ *         image: "busybox",
+ *         memory: 128,
+ *         mountPoints:         [],
+ *         ulimits:         [],
+ *         vcpus: 1,
+ *         volumes:         []
  *       },
- *       "createdAt": 1480460782010,
- *       "dependsOn": [],
- *       "jobDefinition": "sleep60",
- *       "jobId": "24fa2d7a-64c4-49d2-8b47-f8da4fbde8e9",
- *       "jobName": "example",
- *       "jobQueue": "arn:aws:batch:us-east-1:012345678910:job-queue/HighPriority",
- *       "parameters": {},
- *       "startedAt": 1480460816500,
- *       "status": "SUCCEEDED",
- *       "stoppedAt": 1480460880699
+ *       createdAt: 1480460782010,
+ *       dependsOn:       [],
+ *       jobDefinition: "sleep60",
+ *       jobId: "24fa2d7a-64c4-49d2-8b47-f8da4fbde8e9",
+ *       jobName: "example",
+ *       jobQueue: "arn:aws:batch:us-east-1:012345678910:job-queue/HighPriority",
+ *       parameters:       { /* empty *\/ },
+ *       startedAt: 1480460816500,
+ *       status: "SUCCEEDED",
+ *       stoppedAt: 1480460880699
  *     }
  *   ]
  * }
  * *\/
- * // example id: to-describe-a-specific-job-1481154090490
  * ```
  *
+ * @public
  */
 export class DescribeJobsCommand extends $Command
   .classBuilder<
@@ -793,9 +848,7 @@ export class DescribeJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BatchClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -807,4 +860,16 @@ export class DescribeJobsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeJobsCommand)
   .de(de_DescribeJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeJobsRequest;
+      output: DescribeJobsResponse;
+    };
+    sdk: {
+      input: DescribeJobsCommandInput;
+      output: DescribeJobsCommandOutput;
+    };
+  };
+}

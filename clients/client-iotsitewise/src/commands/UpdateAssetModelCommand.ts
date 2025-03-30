@@ -269,7 +269,8 @@ export interface UpdateAssetModelCommandOutput extends UpdateAssetModelResponse,
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT SiteWise User Guide</i>.</p>
  *
  * @throws {@link PreconditionFailedException} (client fault)
- *  <p>The precondition in one or more of the request-header fields evaluated to <code>FALSE</code>.</p>
+ *  <p>The precondition in one or more of the request-header fields evaluated to
+ *         <code>FALSE</code>.</p>
  *
  * @throws {@link ResourceAlreadyExistsException} (client fault)
  *  <p>The resource already exists.</p>
@@ -286,6 +287,7 @@ export interface UpdateAssetModelCommandOutput extends UpdateAssetModelResponse,
  * @throws {@link IoTSiteWiseServiceException}
  * <p>Base exception class for all service exceptions from IoTSiteWise service.</p>
  *
+ *
  * @public
  */
 export class UpdateAssetModelCommand extends $Command
@@ -296,9 +298,7 @@ export class UpdateAssetModelCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: IoTSiteWiseClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -310,4 +310,16 @@ export class UpdateAssetModelCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateAssetModelCommand)
   .de(de_UpdateAssetModelCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateAssetModelRequest;
+      output: UpdateAssetModelResponse;
+    };
+    sdk: {
+      input: UpdateAssetModelCommandInput;
+      output: UpdateAssetModelCommandOutput;
+    };
+  };
+}

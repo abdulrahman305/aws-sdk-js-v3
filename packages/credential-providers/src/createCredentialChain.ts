@@ -1,4 +1,9 @@
-import { chain as propertyProviderChain } from "@smithy/property-provider";
+import type {
+  AwsIdentityProperties,
+  RuntimeConfigAwsCredentialIdentityProvider,
+  RuntimeConfigIdentityProvider,
+} from "@aws-sdk/types";
+import { ProviderError } from "@smithy/property-provider";
 import type { AwsCredentialIdentityProvider } from "@smithy/types";
 
 export interface CustomCredentialChainOptions {
@@ -50,13 +55,15 @@ type Mutable<Type> = {
  * @param credentialProviders - one or more credential providers.
  * @returns a single AwsCredentialIdentityProvider that calls the given
  * providers in sequence until one succeeds or all fail.
+ *
+ * @public
  */
 export const createCredentialChain = (
-  ...credentialProviders: AwsCredentialIdentityProvider[]
-): AwsCredentialIdentityProvider & CustomCredentialChainOptions => {
+  ...credentialProviders: RuntimeConfigAwsCredentialIdentityProvider[]
+): RuntimeConfigAwsCredentialIdentityProvider & CustomCredentialChainOptions => {
   let expireAfter = -1;
-  const baseFunction = async () => {
-    const credentials = await propertyProviderChain(...credentialProviders)();
+  const baseFunction = async (awsIdentityProperties?: AwsIdentityProperties) => {
+    const credentials = await propertyProviderChain(...credentialProviders)(awsIdentityProperties);
     if (!credentials.expiration && expireAfter !== -1) {
       (credentials as Mutable<typeof credentials>).expiration = new Date(Date.now() + expireAfter);
     }
@@ -75,3 +82,29 @@ export const createCredentialChain = (
   });
   return withOptions;
 };
+
+/**
+ * @internal
+ */
+export const propertyProviderChain =
+  <T>(...providers: Array<RuntimeConfigIdentityProvider<T>>): RuntimeConfigIdentityProvider<T> =>
+  async (awsIdentityProperties?: AwsIdentityProperties) => {
+    if (providers.length === 0) {
+      throw new ProviderError("No providers in chain");
+    }
+
+    let lastProviderError: Error | undefined;
+    for (const provider of providers) {
+      try {
+        const credentials = await provider(awsIdentityProperties);
+        return credentials;
+      } catch (err) {
+        lastProviderError = err;
+        if (err?.tryNextLink) {
+          continue;
+        }
+        throw err;
+      }
+    }
+    throw lastProviderError;
+  };

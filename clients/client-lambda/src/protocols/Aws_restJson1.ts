@@ -14,6 +14,7 @@ import {
   expectObject as __expectObject,
   expectString as __expectString,
   extendedEncodeURIComponent as __extendedEncodeURIComponent,
+  isSerializableHeaderValue,
   limitedParseDouble as __limitedParseDouble,
   map,
   parseEpochTimestamp as __parseEpochTimestamp,
@@ -256,6 +257,8 @@ import {
   Environment,
   EphemeralStorage,
   EventSourceMappingConfiguration,
+  EventSourceMappingMetric,
+  EventSourceMappingMetricsConfig,
   FileSystemConfig,
   Filter,
   FilterCriteria,
@@ -284,6 +287,7 @@ import {
   PolicyLengthExceededException,
   PreconditionFailedException,
   ProvisionedConcurrencyConfigNotFoundException,
+  ProvisionedPollerConfig,
   RecursiveInvocationException,
   RequestTooLargeException,
   ResourceConflictException,
@@ -415,6 +419,7 @@ export const se_CreateCodeSigningConfigCommand = async (
       AllowedPublishers: (_) => _json(_),
       CodeSigningPolicies: (_) => _json(_),
       Description: [],
+      Tags: (_) => _json(_),
     })
   );
   b.m("POST").h(headers).b(body);
@@ -450,7 +455,9 @@ export const se_CreateEventSourceMappingCommand = async (
       MaximumBatchingWindowInSeconds: [],
       MaximumRecordAgeInSeconds: [],
       MaximumRetryAttempts: [],
+      MetricsConfig: (_) => _json(_),
       ParallelizationFactor: [],
+      ProvisionedPollerConfig: (_) => _json(_),
       Queues: (_) => _json(_),
       ScalingConfig: (_) => _json(_),
       SelfManagedEventSource: (_) => _json(_),
@@ -458,6 +465,7 @@ export const se_CreateEventSourceMappingCommand = async (
       SourceAccessConfigurations: (_) => _json(_),
       StartingPosition: [],
       StartingPositionTimestamp: (_) => _.getTime() / 1_000,
+      Tags: (_) => _json(_),
       Topics: (_) => _json(_),
       TumblingWindowInSeconds: [],
     })
@@ -1604,10 +1612,7 @@ export const se_UntagResourceCommand = async (
   b.bp("/2017-03-31/tags/{Resource}");
   b.p("Resource", () => input.Resource!, "{Resource}", false);
   const query: any = map({
-    [_tK]: [
-      __expectNonNull(input.TagKeys, `TagKeys`) != null,
-      () => (input[_TK]! || []).map((_entry) => _entry as any),
-    ],
+    [_tK]: [__expectNonNull(input.TagKeys, `TagKeys`) != null, () => input[_TK]! || []],
   });
   let body: any;
   b.m("DELETE").h(headers).q(query).b(body);
@@ -1694,7 +1699,9 @@ export const se_UpdateEventSourceMappingCommand = async (
       MaximumBatchingWindowInSeconds: [],
       MaximumRecordAgeInSeconds: [],
       MaximumRetryAttempts: [],
+      MetricsConfig: (_) => _json(_),
       ParallelizationFactor: [],
+      ProvisionedPollerConfig: (_) => _json(_),
       ScalingConfig: (_) => _json(_),
       SourceAccessConfigurations: (_) => _json(_),
       TumblingWindowInSeconds: [],
@@ -1728,6 +1735,7 @@ export const se_UpdateFunctionCodeCommand = async (
       S3Bucket: [],
       S3Key: [],
       S3ObjectVersion: [],
+      SourceKMSKeyArn: [],
       ZipFile: (_) => context.base64Encoder(_),
     })
   );
@@ -1942,6 +1950,7 @@ export const de_CreateEventSourceMappingCommand = async (
     DestinationConfig: _json,
     DocumentDBEventSourceConfig: _json,
     EventSourceArn: __expectString,
+    EventSourceMappingArn: __expectString,
     FilterCriteria: _json,
     FilterCriteriaError: _json,
     FunctionArn: __expectString,
@@ -1952,7 +1961,9 @@ export const de_CreateEventSourceMappingCommand = async (
     MaximumBatchingWindowInSeconds: __expectInt32,
     MaximumRecordAgeInSeconds: __expectInt32,
     MaximumRetryAttempts: __expectInt32,
+    MetricsConfig: _json,
     ParallelizationFactor: __expectInt32,
+    ProvisionedPollerConfig: _json,
     Queues: _json,
     ScalingConfig: _json,
     SelfManagedEventSource: _json,
@@ -2107,6 +2118,7 @@ export const de_DeleteEventSourceMappingCommand = async (
     DestinationConfig: _json,
     DocumentDBEventSourceConfig: _json,
     EventSourceArn: __expectString,
+    EventSourceMappingArn: __expectString,
     FilterCriteria: _json,
     FilterCriteriaError: _json,
     FunctionArn: __expectString,
@@ -2117,7 +2129,9 @@ export const de_DeleteEventSourceMappingCommand = async (
     MaximumBatchingWindowInSeconds: __expectInt32,
     MaximumRecordAgeInSeconds: __expectInt32,
     MaximumRetryAttempts: __expectInt32,
+    MetricsConfig: _json,
     ParallelizationFactor: __expectInt32,
+    ProvisionedPollerConfig: _json,
     Queues: _json,
     ScalingConfig: _json,
     SelfManagedEventSource: _json,
@@ -2344,6 +2358,7 @@ export const de_GetEventSourceMappingCommand = async (
     DestinationConfig: _json,
     DocumentDBEventSourceConfig: _json,
     EventSourceArn: __expectString,
+    EventSourceMappingArn: __expectString,
     FilterCriteria: _json,
     FilterCriteriaError: _json,
     FunctionArn: __expectString,
@@ -2354,7 +2369,9 @@ export const de_GetEventSourceMappingCommand = async (
     MaximumBatchingWindowInSeconds: __expectInt32,
     MaximumRecordAgeInSeconds: __expectInt32,
     MaximumRetryAttempts: __expectInt32,
+    MetricsConfig: _json,
     ParallelizationFactor: __expectInt32,
+    ProvisionedPollerConfig: _json,
     Queues: _json,
     ScalingConfig: _json,
     SelfManagedEventSource: _json,
@@ -2391,6 +2408,7 @@ export const de_GetFunctionCommand = async (
     Concurrency: _json,
     Configuration: _json,
     Tags: _json,
+    TagsError: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -3408,6 +3426,7 @@ export const de_UpdateEventSourceMappingCommand = async (
     DestinationConfig: _json,
     DocumentDBEventSourceConfig: _json,
     EventSourceArn: __expectString,
+    EventSourceMappingArn: __expectString,
     FilterCriteria: _json,
     FilterCriteriaError: _json,
     FunctionArn: __expectString,
@@ -3418,7 +3437,9 @@ export const de_UpdateEventSourceMappingCommand = async (
     MaximumBatchingWindowInSeconds: __expectInt32,
     MaximumRecordAgeInSeconds: __expectInt32,
     MaximumRetryAttempts: __expectInt32,
+    MetricsConfig: _json,
     ParallelizationFactor: __expectInt32,
+    ProvisionedPollerConfig: _json,
     Queues: _json,
     ScalingConfig: _json,
     SelfManagedEventSource: _json,
@@ -4622,6 +4643,10 @@ const se_AliasRoutingConfiguration = (input: AliasRoutingConfiguration, context:
 
 // se_EphemeralStorage omitted.
 
+// se_EventSourceMappingMetricList omitted.
+
+// se_EventSourceMappingMetricsConfig omitted.
+
 // se_FileSystemConfig omitted.
 
 // se_FileSystemConfigList omitted.
@@ -4641,6 +4666,7 @@ const se_FunctionCode = (input: FunctionCode, context: __SerdeContext): any => {
     S3Bucket: [],
     S3Key: [],
     S3ObjectVersion: [],
+    SourceKMSKeyArn: [],
     ZipFile: context.base64Encoder,
   });
 };
@@ -4670,6 +4696,8 @@ const se_LayerVersionContentInput = (input: LayerVersionContentInput, context: _
 // se_OnFailure omitted.
 
 // se_OnSuccess omitted.
+
+// se_ProvisionedPollerConfig omitted.
 
 // se_Queues omitted.
 
@@ -4806,6 +4834,7 @@ const de_EventSourceMappingConfiguration = (output: any, context: __SerdeContext
     DestinationConfig: _json,
     DocumentDBEventSourceConfig: _json,
     EventSourceArn: __expectString,
+    EventSourceMappingArn: __expectString,
     FilterCriteria: _json,
     FilterCriteriaError: _json,
     FunctionArn: __expectString,
@@ -4816,7 +4845,9 @@ const de_EventSourceMappingConfiguration = (output: any, context: __SerdeContext
     MaximumBatchingWindowInSeconds: __expectInt32,
     MaximumRecordAgeInSeconds: __expectInt32,
     MaximumRetryAttempts: __expectInt32,
+    MetricsConfig: _json,
     ParallelizationFactor: __expectInt32,
+    ProvisionedPollerConfig: _json,
     Queues: _json,
     ScalingConfig: _json,
     SelfManagedEventSource: _json,
@@ -4831,6 +4862,10 @@ const de_EventSourceMappingConfiguration = (output: any, context: __SerdeContext
     UUID: __expectString,
   }) as any;
 };
+
+// de_EventSourceMappingMetricList omitted.
+
+// de_EventSourceMappingMetricsConfig omitted.
 
 /**
  * deserializeAws_restJson1EventSourceMappingsList
@@ -4929,6 +4964,8 @@ const de_FunctionEventInvokeConfigList = (output: any, context: __SerdeContext):
 
 // de_ProvisionedConcurrencyConfigListItem omitted.
 
+// de_ProvisionedPollerConfig omitted.
+
 // de_Queues omitted.
 
 // de_RuntimeVersionConfig omitted.
@@ -4957,6 +4994,8 @@ const de_FunctionEventInvokeConfigList = (output: any, context: __SerdeContext):
 
 // de_Tags omitted.
 
+// de_TagsError omitted.
+
 // de_Topics omitted.
 
 // de_TracingConfigResponse omitted.
@@ -4974,13 +5013,6 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> =>
   collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
-
-const isSerializableHeaderValue = (value: any): boolean =>
-  value !== undefined &&
-  value !== null &&
-  value !== "" &&
-  (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
-  (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
 
 const _A = "Arn";
 const _CA = "CompatibleArchitecture";

@@ -67,23 +67,23 @@ export interface ListAccountAliasesCommandOutput extends ListAccountAliasesRespo
  * @throws {@link IAMServiceException}
  * <p>Base exception class for all service exceptions from IAM service.</p>
  *
- * @public
+ *
  * @example To list account aliases
  * ```javascript
  * // The following command lists the aliases for the current account.
- * const input = {};
+ * const input = { /* empty *\/ };
  * const command = new ListAccountAliasesCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "AccountAliases": [
+ *   AccountAliases: [
  *     "exmaple-corporation"
  *   ]
  * }
  * *\/
- * // example id: e27b457a-16f9-4e05-a006-3df7b3472741
  * ```
  *
+ * @public
  */
 export class ListAccountAliasesCommand extends $Command
   .classBuilder<
@@ -93,9 +93,7 @@ export class ListAccountAliasesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: IAMClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -107,4 +105,16 @@ export class ListAccountAliasesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListAccountAliasesCommand)
   .de(de_ListAccountAliasesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListAccountAliasesRequest;
+      output: ListAccountAliasesResponse;
+    };
+    sdk: {
+      input: ListAccountAliasesCommandInput;
+      output: ListAccountAliasesCommandOutput;
+    };
+  };
+}

@@ -103,6 +103,7 @@ export interface UpdateCustomRoutingAcceleratorCommandOutput
  * @throws {@link GlobalAcceleratorServiceException}
  * <p>Base exception class for all service exceptions from GlobalAccelerator service.</p>
  *
+ *
  * @public
  */
 export class UpdateCustomRoutingAcceleratorCommand extends $Command
@@ -113,9 +114,7 @@ export class UpdateCustomRoutingAcceleratorCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: GlobalAcceleratorClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -127,4 +126,16 @@ export class UpdateCustomRoutingAcceleratorCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateCustomRoutingAcceleratorCommand)
   .de(de_UpdateCustomRoutingAcceleratorCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateCustomRoutingAcceleratorRequest;
+      output: UpdateCustomRoutingAcceleratorResponse;
+    };
+    sdk: {
+      input: UpdateCustomRoutingAcceleratorCommandInput;
+      output: UpdateCustomRoutingAcceleratorCommandOutput;
+    };
+  };
+}

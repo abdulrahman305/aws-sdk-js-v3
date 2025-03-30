@@ -14,7 +14,6 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.logging.Logger;
 import software.amazon.smithy.aws.traits.auth.SigV4Trait;
-import software.amazon.smithy.aws.typescript.codegen.AwsCredentialProviderUtils;
 import software.amazon.smithy.aws.typescript.codegen.AwsDependency;
 import software.amazon.smithy.aws.typescript.codegen.AwsTraitsUtils;
 import software.amazon.smithy.codegen.core.Symbol;
@@ -113,8 +112,6 @@ public final class AddSTSAuthCustomizations implements HttpAuthTypeScriptIntegra
                             .addImport("defaultProvider", "credentialDefaultProvider",
                                 AwsDependency.CREDENTIAL_PROVIDER_NODE)
                             .write("credentialDefaultProvider");
-                        AwsCredentialProviderUtils.addAwsCredentialProviderDependencies(
-                            settings.getService(model), writer);
                     }
                 );
             default:
@@ -197,10 +194,9 @@ public final class AddSTSAuthCustomizations implements HttpAuthTypeScriptIntegra
             w.openBlock("""
                 export const resolveStsAuthConfig = <T>(
                   input: T & StsAuthInputConfig
-                ): T & StsAuthResolvedConfig => ({
+                ): T & StsAuthResolvedConfig => Object.assign(input, {
                 """, "});", () -> {
                     w.write("""
-                        ...input,
                         stsClientCtor: STSClient,
                         """);
                 });

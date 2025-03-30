@@ -95,24 +95,24 @@ export interface ListSuitesCommandOutput extends ListSuitesResult, __MetadataBea
  * @throws {@link DeviceFarmServiceException}
  * <p>Base exception class for all service exceptions from DeviceFarm service.</p>
  *
- * @public
+ *
  * @example To get information about suites
  * ```javascript
  * // The following example returns information about suites, given a specific Device Farm job.
  * const input = {
- *   "arn": "arn:aws:devicefarm:us-west-2:123456789101:job:EXAMPLE-GUID-123-456",
- *   "nextToken": "RW5DdDJkMWYwZjM2MzM2VHVpOHJIUXlDUXlhc2QzRGViYnc9SEXAMPLE"
+ *   arn: "arn:aws:devicefarm:us-west-2:123456789101:job:EXAMPLE-GUID-123-456",
+ *   nextToken: "RW5DdDJkMWYwZjM2MzM2VHVpOHJIUXlDUXlhc2QzRGViYnc9SEXAMPLE"
  * };
  * const command = new ListSuitesCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "suites": []
+ *   suites:   []
  * }
  * *\/
- * // example id: to-get-information-about-suites-1472583038218
  * ```
  *
+ * @public
  */
 export class ListSuitesCommand extends $Command
   .classBuilder<
@@ -122,9 +122,7 @@ export class ListSuitesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DeviceFarmClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -136,4 +134,16 @@ export class ListSuitesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListSuitesCommand)
   .de(de_ListSuitesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListSuitesRequest;
+      output: ListSuitesResult;
+    };
+    sdk: {
+      input: ListSuitesCommandInput;
+      output: ListSuitesCommandOutput;
+    };
+  };
+}

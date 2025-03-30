@@ -14,7 +14,7 @@ import {
   ResendConfirmationCodeRequest,
   ResendConfirmationCodeRequestFilterSensitiveLog,
   ResendConfirmationCodeResponse,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_ResendConfirmationCodeCommand, se_ResendConfirmationCodeCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -36,8 +36,11 @@ export interface ResendConfirmationCodeCommandInput extends ResendConfirmationCo
 export interface ResendConfirmationCodeCommandOutput extends ResendConfirmationCodeResponse, __MetadataBearer {}
 
 /**
- * <p>Resends the confirmation (for confirmation of registration) to a specific user in the
- *             user pool.</p>
+ * <p>Resends the code that confirms a new account for a user who has signed up in your user
+ *             pool. Amazon Cognito sends confirmation codes to the user attribute in the
+ *                 <code>AutoVerifiedAttributes</code> property of your user pool. When you prompt new
+ *             users for the confirmation code, include a "Resend code" option that generates a call to
+ *             this API operation.</p>
  *          <note>
  *             <p>Amazon Cognito doesn't evaluate Identity and Access Management (IAM) policies in requests for this API operation. For
  *     this operation, you can't use IAM credentials to authorize requests, and you can't
@@ -129,7 +132,7 @@ export interface ResendConfirmationCodeCommandOutput extends ResendConfirmationC
  * @throws {@link InvalidSmsRoleTrustRelationshipException} (client fault)
  *  <p>This exception is thrown when the trust relationship is not valid for the role
  *             provided for SMS configuration. This can happen if you don't trust
- *             <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
+ *                 <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
  *             not match what is provided in the SMS configuration for the user pool.</p>
  *
  * @throws {@link LimitExceededException} (client fault)
@@ -161,6 +164,7 @@ export interface ResendConfirmationCodeCommandOutput extends ResendConfirmationC
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class ResendConfirmationCodeCommand extends $Command
@@ -171,9 +175,7 @@ export class ResendConfirmationCodeCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -185,4 +187,16 @@ export class ResendConfirmationCodeCommand extends $Command
   .f(ResendConfirmationCodeRequestFilterSensitiveLog, void 0)
   .ser(se_ResendConfirmationCodeCommand)
   .de(de_ResendConfirmationCodeCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ResendConfirmationCodeRequest;
+      output: ResendConfirmationCodeResponse;
+    };
+    sdk: {
+      input: ResendConfirmationCodeCommandInput;
+      output: ResendConfirmationCodeCommandOutput;
+    };
+  };
+}

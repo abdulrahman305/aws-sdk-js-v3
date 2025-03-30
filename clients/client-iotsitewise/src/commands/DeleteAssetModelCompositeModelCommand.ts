@@ -90,7 +90,8 @@ export interface DeleteAssetModelCompositeModelCommandOutput
  *       unsupported characters. Check your request and try again.</p>
  *
  * @throws {@link PreconditionFailedException} (client fault)
- *  <p>The precondition in one or more of the request-header fields evaluated to <code>FALSE</code>.</p>
+ *  <p>The precondition in one or more of the request-header fields evaluated to
+ *         <code>FALSE</code>.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The requested resource can't be found.</p>
@@ -104,6 +105,7 @@ export interface DeleteAssetModelCompositeModelCommandOutput
  * @throws {@link IoTSiteWiseServiceException}
  * <p>Base exception class for all service exceptions from IoTSiteWise service.</p>
  *
+ *
  * @public
  */
 export class DeleteAssetModelCompositeModelCommand extends $Command
@@ -114,9 +116,7 @@ export class DeleteAssetModelCompositeModelCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: IoTSiteWiseClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -128,4 +128,16 @@ export class DeleteAssetModelCompositeModelCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteAssetModelCompositeModelCommand)
   .de(de_DeleteAssetModelCompositeModelCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteAssetModelCompositeModelRequest;
+      output: DeleteAssetModelCompositeModelResponse;
+    };
+    sdk: {
+      input: DeleteAssetModelCompositeModelCommandInput;
+      output: DeleteAssetModelCompositeModelCommandOutput;
+    };
+  };
+}

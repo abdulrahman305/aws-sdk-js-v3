@@ -87,6 +87,7 @@ export interface DeleteDatabaseCommandOutput extends __MetadataBearer {}
  * @throws {@link TimestreamWriteServiceException}
  * <p>Base exception class for all service exceptions from TimestreamWrite service.</p>
  *
+ *
  * @public
  */
 export class DeleteDatabaseCommand extends $Command
@@ -97,9 +98,7 @@ export class DeleteDatabaseCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TimestreamWriteClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -116,4 +115,16 @@ export class DeleteDatabaseCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteDatabaseCommand)
   .de(de_DeleteDatabaseCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteDatabaseRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteDatabaseCommandInput;
+      output: DeleteDatabaseCommandOutput;
+    };
+  };
+}

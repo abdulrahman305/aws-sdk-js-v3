@@ -85,6 +85,11 @@ export interface DescribeStateMachineForExecutionCommandOutput
  * //     kmsDataKeyReusePeriodSeconds: Number("int"),
  * //     type: "AWS_OWNED_KEY" || "CUSTOMER_MANAGED_KMS_KEY", // required
  * //   },
+ * //   variableReferences: { // VariableReferences
+ * //     "<keys>": [ // VariableNameList
+ * //       "STRING_VALUE",
+ * //     ],
+ * //   },
  * // };
  *
  * ```
@@ -113,6 +118,7 @@ export interface DescribeStateMachineForExecutionCommandOutput
  * @throws {@link SFNServiceException}
  * <p>Base exception class for all service exceptions from SFN service.</p>
  *
+ *
  * @public
  */
 export class DescribeStateMachineForExecutionCommand extends $Command
@@ -123,9 +129,7 @@ export class DescribeStateMachineForExecutionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SFNClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -137,4 +141,16 @@ export class DescribeStateMachineForExecutionCommand extends $Command
   .f(void 0, DescribeStateMachineForExecutionOutputFilterSensitiveLog)
   .ser(se_DescribeStateMachineForExecutionCommand)
   .de(de_DescribeStateMachineForExecutionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeStateMachineForExecutionInput;
+      output: DescribeStateMachineForExecutionOutput;
+    };
+    sdk: {
+      input: DescribeStateMachineForExecutionCommandInput;
+      output: DescribeStateMachineForExecutionCommandOutput;
+    };
+  };
+}

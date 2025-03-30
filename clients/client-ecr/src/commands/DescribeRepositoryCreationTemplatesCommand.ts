@@ -61,7 +61,7 @@ export interface DescribeRepositoryCreationTemplatesCommandOutput
  * //       prefix: "STRING_VALUE",
  * //       description: "STRING_VALUE",
  * //       encryptionConfiguration: { // EncryptionConfigurationForRepositoryCreationTemplate
- * //         encryptionType: "AES256" || "KMS", // required
+ * //         encryptionType: "AES256" || "KMS" || "KMS_DSSE", // required
  * //         kmsKey: "STRING_VALUE",
  * //       },
  * //       resourceTags: [ // TagList
@@ -105,55 +105,8 @@ export interface DescribeRepositoryCreationTemplatesCommandOutput
  * @throws {@link ECRServiceException}
  * <p>Base exception class for all service exceptions from ECR service.</p>
  *
- * @public
- * @example Describe a repository creation template
- * ```javascript
- * // This example describes the contents of a repository creation template.
- * const input = {
- *   "maxResults": 123,
- *   "nextToken": "",
- *   "prefixes": [
- *     "eng"
- *   ]
- * };
- * const command = new DescribeRepositoryCreationTemplatesCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "nextToken": "",
- *   "registryId": "012345678901",
- *   "repositoryCreationTemplates": [
- *     {
- *       "appliedFor": [
- *         "PULL_THROUGH_CACHE",
- *         "REPLICATION"
- *       ],
- *       "createdAt": "2023-12-16T17:29:02-07:00",
- *       "encryptionConfiguration": {
- *         "encryptionType": "AES256"
- *       },
- *       "imageTagMutability": "MUTABLE",
- *       "prefix": "eng/test",
- *       "updatedAt": "2023-12-16T19:55:02-07:00"
- *     },
- *     {
- *       "appliedFor": [
- *         "REPLICATION"
- *       ],
- *       "createdAt": "2023-12-14T17:29:02-07:00",
- *       "encryptionConfiguration": {
- *         "encryptionType": "AES256"
- *       },
- *       "imageTagMutability": "IMMUTABLE",
- *       "prefix": "eng/replication-test",
- *       "updatedAt": "2023-12-14T19:55:02-07:00"
- *     }
- *   ]
- * }
- * *\/
- * // example id: describe-a-repository-creation-template-1713298784302
- * ```
  *
+ * @public
  */
 export class DescribeRepositoryCreationTemplatesCommand extends $Command
   .classBuilder<
@@ -163,9 +116,7 @@ export class DescribeRepositoryCreationTemplatesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECRClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -177,4 +128,16 @@ export class DescribeRepositoryCreationTemplatesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeRepositoryCreationTemplatesCommand)
   .de(de_DescribeRepositoryCreationTemplatesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeRepositoryCreationTemplatesRequest;
+      output: DescribeRepositoryCreationTemplatesResponse;
+    };
+    sdk: {
+      input: DescribeRepositoryCreationTemplatesCommandInput;
+      output: DescribeRepositoryCreationTemplatesCommandOutput;
+    };
+  };
+}

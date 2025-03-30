@@ -199,6 +199,7 @@ export interface WriteRecordsCommandOutput extends WriteRecordsResponse, __Metad
  * @throws {@link TimestreamWriteServiceException}
  * <p>Base exception class for all service exceptions from TimestreamWrite service.</p>
  *
+ *
  * @public
  */
 export class WriteRecordsCommand extends $Command
@@ -209,9 +210,7 @@ export class WriteRecordsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TimestreamWriteClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -228,4 +227,16 @@ export class WriteRecordsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_WriteRecordsCommand)
   .de(de_WriteRecordsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: WriteRecordsRequest;
+      output: WriteRecordsResponse;
+    };
+    sdk: {
+      input: WriteRecordsCommandInput;
+      output: WriteRecordsCommandOutput;
+    };
+  };
+}

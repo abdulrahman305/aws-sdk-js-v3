@@ -58,13 +58,61 @@ import {
   CreateBillOfMaterialsImportJobCommandOutput,
 } from "./commands/CreateBillOfMaterialsImportJobCommand";
 import {
+  CreateDataIntegrationFlowCommandInput,
+  CreateDataIntegrationFlowCommandOutput,
+} from "./commands/CreateDataIntegrationFlowCommand";
+import {
+  CreateDataLakeDatasetCommandInput,
+  CreateDataLakeDatasetCommandOutput,
+} from "./commands/CreateDataLakeDatasetCommand";
+import { CreateInstanceCommandInput, CreateInstanceCommandOutput } from "./commands/CreateInstanceCommand";
+import {
+  DeleteDataIntegrationFlowCommandInput,
+  DeleteDataIntegrationFlowCommandOutput,
+} from "./commands/DeleteDataIntegrationFlowCommand";
+import {
+  DeleteDataLakeDatasetCommandInput,
+  DeleteDataLakeDatasetCommandOutput,
+} from "./commands/DeleteDataLakeDatasetCommand";
+import { DeleteInstanceCommandInput, DeleteInstanceCommandOutput } from "./commands/DeleteInstanceCommand";
+import {
   GetBillOfMaterialsImportJobCommandInput,
   GetBillOfMaterialsImportJobCommandOutput,
 } from "./commands/GetBillOfMaterialsImportJobCommand";
 import {
+  GetDataIntegrationFlowCommandInput,
+  GetDataIntegrationFlowCommandOutput,
+} from "./commands/GetDataIntegrationFlowCommand";
+import { GetDataLakeDatasetCommandInput, GetDataLakeDatasetCommandOutput } from "./commands/GetDataLakeDatasetCommand";
+import { GetInstanceCommandInput, GetInstanceCommandOutput } from "./commands/GetInstanceCommand";
+import {
+  ListDataIntegrationFlowsCommandInput,
+  ListDataIntegrationFlowsCommandOutput,
+} from "./commands/ListDataIntegrationFlowsCommand";
+import {
+  ListDataLakeDatasetsCommandInput,
+  ListDataLakeDatasetsCommandOutput,
+} from "./commands/ListDataLakeDatasetsCommand";
+import { ListInstancesCommandInput, ListInstancesCommandOutput } from "./commands/ListInstancesCommand";
+import {
+  ListTagsForResourceCommandInput,
+  ListTagsForResourceCommandOutput,
+} from "./commands/ListTagsForResourceCommand";
+import {
   SendDataIntegrationEventCommandInput,
   SendDataIntegrationEventCommandOutput,
 } from "./commands/SendDataIntegrationEventCommand";
+import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
+import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
+import {
+  UpdateDataIntegrationFlowCommandInput,
+  UpdateDataIntegrationFlowCommandOutput,
+} from "./commands/UpdateDataIntegrationFlowCommand";
+import {
+  UpdateDataLakeDatasetCommandInput,
+  UpdateDataLakeDatasetCommandOutput,
+} from "./commands/UpdateDataLakeDatasetCommand";
+import { UpdateInstanceCommandInput, UpdateInstanceCommandOutput } from "./commands/UpdateInstanceCommand";
 import {
   ClientInputEndpointParameters,
   ClientResolvedEndpointParameters,
@@ -81,16 +129,52 @@ export { __Client };
  */
 export type ServiceInputTypes =
   | CreateBillOfMaterialsImportJobCommandInput
+  | CreateDataIntegrationFlowCommandInput
+  | CreateDataLakeDatasetCommandInput
+  | CreateInstanceCommandInput
+  | DeleteDataIntegrationFlowCommandInput
+  | DeleteDataLakeDatasetCommandInput
+  | DeleteInstanceCommandInput
   | GetBillOfMaterialsImportJobCommandInput
-  | SendDataIntegrationEventCommandInput;
+  | GetDataIntegrationFlowCommandInput
+  | GetDataLakeDatasetCommandInput
+  | GetInstanceCommandInput
+  | ListDataIntegrationFlowsCommandInput
+  | ListDataLakeDatasetsCommandInput
+  | ListInstancesCommandInput
+  | ListTagsForResourceCommandInput
+  | SendDataIntegrationEventCommandInput
+  | TagResourceCommandInput
+  | UntagResourceCommandInput
+  | UpdateDataIntegrationFlowCommandInput
+  | UpdateDataLakeDatasetCommandInput
+  | UpdateInstanceCommandInput;
 
 /**
  * @public
  */
 export type ServiceOutputTypes =
   | CreateBillOfMaterialsImportJobCommandOutput
+  | CreateDataIntegrationFlowCommandOutput
+  | CreateDataLakeDatasetCommandOutput
+  | CreateInstanceCommandOutput
+  | DeleteDataIntegrationFlowCommandOutput
+  | DeleteDataLakeDatasetCommandOutput
+  | DeleteInstanceCommandOutput
   | GetBillOfMaterialsImportJobCommandOutput
-  | SendDataIntegrationEventCommandOutput;
+  | GetDataIntegrationFlowCommandOutput
+  | GetDataLakeDatasetCommandOutput
+  | GetInstanceCommandOutput
+  | ListDataIntegrationFlowsCommandOutput
+  | ListDataLakeDatasetsCommandOutput
+  | ListInstancesCommandOutput
+  | ListTagsForResourceCommandOutput
+  | SendDataIntegrationEventCommandOutput
+  | TagResourceCommandOutput
+  | UntagResourceCommandOutput
+  | UpdateDataIntegrationFlowCommandOutput
+  | UpdateDataLakeDatasetCommandOutput
+  | UpdateInstanceCommandOutput;
 
 /**
  * @public
@@ -182,6 +266,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -286,6 +389,8 @@ export class SupplyChainClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<SupplyChainClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -294,7 +399,6 @@ export class SupplyChainClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

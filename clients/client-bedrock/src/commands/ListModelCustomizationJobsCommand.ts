@@ -62,7 +62,7 @@ export interface ListModelCustomizationJobsCommandOutput extends ListModelCustom
  * //       endTime: new Date("TIMESTAMP"),
  * //       customModelArn: "STRING_VALUE",
  * //       customModelName: "STRING_VALUE",
- * //       customizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING",
+ * //       customizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING" || "DISTILLATION",
  * //     },
  * //   ],
  * // };
@@ -90,6 +90,7 @@ export interface ListModelCustomizationJobsCommandOutput extends ListModelCustom
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class ListModelCustomizationJobsCommand extends $Command
@@ -100,9 +101,7 @@ export class ListModelCustomizationJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -114,4 +113,16 @@ export class ListModelCustomizationJobsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListModelCustomizationJobsCommand)
   .de(de_ListModelCustomizationJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListModelCustomizationJobsRequest;
+      output: ListModelCustomizationJobsResponse;
+    };
+    sdk: {
+      input: ListModelCustomizationJobsCommandInput;
+      output: ListModelCustomizationJobsCommandOutput;
+    };
+  };
+}

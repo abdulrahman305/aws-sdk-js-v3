@@ -30,7 +30,7 @@ export interface GetBucketLoggingCommandOutput extends GetBucketLoggingOutput, _
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
  *          <p>Returns the logging status of a bucket and the permissions users have to view and modify
  *          that status.</p>
@@ -95,6 +95,7 @@ export interface GetBucketLoggingCommandOutput extends GetBucketLoggingOutput, _
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
+ *
  * @public
  */
 export class GetBucketLoggingCommand extends $Command
@@ -122,4 +123,16 @@ export class GetBucketLoggingCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetBucketLoggingCommand)
   .de(de_GetBucketLoggingCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetBucketLoggingRequest;
+      output: GetBucketLoggingOutput;
+    };
+    sdk: {
+      input: GetBucketLoggingCommandInput;
+      output: GetBucketLoggingCommandOutput;
+    };
+  };
+}

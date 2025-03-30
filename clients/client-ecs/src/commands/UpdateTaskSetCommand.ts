@@ -6,8 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ECSClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ECSClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateTaskSetRequest } from "../models/models_0";
-import { UpdateTaskSetResponse } from "../models/models_1";
+import { UpdateTaskSetRequest, UpdateTaskSetResponse } from "../models/models_1";
 import { de_UpdateTaskSetCommand, se_UpdateTaskSetCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -151,6 +150,7 @@ export interface UpdateTaskSetCommandOutput extends UpdateTaskSetResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
@@ -173,6 +173,58 @@ export interface UpdateTaskSetCommandOutput extends UpdateTaskSetResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
+ *
+ * @example To update a task set
+ * ```javascript
+ * // This example updates the task set to adjust the scale.
+ * const input = {
+ *   cluster: "MyCluster",
+ *   scale: {
+ *     unit: "PERCENT",
+ *     value: 50
+ *   },
+ *   service: "MyService",
+ *   taskSet: "arn:aws:ecs:us-west-2:123456789012:task-set/MyCluster/MyService/ecs-svc/1234567890123456789"
+ * };
+ * const command = new UpdateTaskSetCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   taskSet: {
+ *     computedDesiredCount: 0,
+ *     createdAt: 1.557128360711E9,
+ *     id: "ecs-svc/1234567890123456789",
+ *     launchType: "EC2",
+ *     loadBalancers:     [],
+ *     networkConfiguration: {
+ *       awsvpcConfiguration: {
+ *         assignPublicIp: "DISABLED",
+ *         securityGroups: [
+ *           "sg-12344321"
+ *         ],
+ *         subnets: [
+ *           "subnet-12344321"
+ *         ]
+ *       }
+ *     },
+ *     pendingCount: 0,
+ *     runningCount: 0,
+ *     scale: {
+ *       unit: "PERCENT",
+ *       value: 50
+ *     },
+ *     serviceRegistries:     [],
+ *     stabilityStatus: "STABILIZING",
+ *     stabilityStatusAt: 1.557129279914E9,
+ *     status: "ACTIVE",
+ *     taskDefinition: "arn:aws:ecs:us-west-2:123456789012:task-definition/sample-fargate:2",
+ *     taskSetArn: "arn:aws:ecs:us-west-2:123456789012:task-set/MyCluster/MyService/ecs-svc/1234567890123456789",
+ *     updatedAt: 1.557129279914E9
+ *   }
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class UpdateTaskSetCommand extends $Command
@@ -183,9 +235,7 @@ export class UpdateTaskSetCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -197,4 +247,16 @@ export class UpdateTaskSetCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateTaskSetCommand)
   .de(de_UpdateTaskSetCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateTaskSetRequest;
+      output: UpdateTaskSetResponse;
+    };
+    sdk: {
+      input: UpdateTaskSetCommandInput;
+      output: UpdateTaskSetCommandOutput;
+    };
+  };
+}

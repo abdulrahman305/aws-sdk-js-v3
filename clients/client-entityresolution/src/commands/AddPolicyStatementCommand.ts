@@ -88,6 +88,7 @@ export interface AddPolicyStatementCommandOutput extends AddPolicyStatementOutpu
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class AddPolicyStatementCommand extends $Command
@@ -98,9 +99,7 @@ export class AddPolicyStatementCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -112,4 +111,16 @@ export class AddPolicyStatementCommand extends $Command
   .f(void 0, void 0)
   .ser(se_AddPolicyStatementCommand)
   .de(de_AddPolicyStatementCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: AddPolicyStatementInput;
+      output: AddPolicyStatementOutput;
+    };
+    sdk: {
+      input: AddPolicyStatementCommandInput;
+      output: AddPolicyStatementCommandOutput;
+    };
+  };
+}

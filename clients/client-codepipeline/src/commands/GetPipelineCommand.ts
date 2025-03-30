@@ -78,7 +78,7 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //           { // ActionDeclaration
  * //             name: "STRING_VALUE", // required
  * //             actionTypeId: { // ActionTypeId
- * //               category: "Source" || "Build" || "Deploy" || "Test" || "Invoke" || "Approval", // required
+ * //               category: "Source" || "Build" || "Deploy" || "Test" || "Invoke" || "Approval" || "Compute", // required
  * //               owner: "AWS" || "ThirdParty" || "Custom", // required
  * //               provider: "STRING_VALUE", // required
  * //               version: "STRING_VALUE", // required
@@ -87,9 +87,15 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //             configuration: { // ActionConfigurationMap
  * //               "<keys>": "STRING_VALUE",
  * //             },
+ * //             commands: [ // CommandList
+ * //               "STRING_VALUE",
+ * //             ],
  * //             outputArtifacts: [ // OutputArtifactList
  * //               { // OutputArtifact
  * //                 name: "STRING_VALUE", // required
+ * //                 files: [ // FilePathList
+ * //                   "STRING_VALUE",
+ * //                 ],
  * //               },
  * //             ],
  * //             inputArtifacts: [ // InputArtifactList
@@ -97,17 +103,29 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //                 name: "STRING_VALUE", // required
  * //               },
  * //             ],
+ * //             outputVariables: [ // OutputVariableList
+ * //               "STRING_VALUE",
+ * //             ],
  * //             roleArn: "STRING_VALUE",
  * //             region: "STRING_VALUE",
  * //             namespace: "STRING_VALUE",
  * //             timeoutInMinutes: Number("int"),
+ * //             environmentVariables: [ // EnvironmentVariableList
+ * //               { // EnvironmentVariable
+ * //                 name: "STRING_VALUE", // required
+ * //                 value: "STRING_VALUE", // required
+ * //               },
+ * //             ],
  * //           },
  * //         ],
  * //         onFailure: { // FailureConditions
- * //           result: "ROLLBACK" || "FAIL",
+ * //           result: "ROLLBACK" || "FAIL" || "RETRY" || "SKIP",
+ * //           retryConfiguration: { // RetryConfiguration
+ * //             retryMode: "FAILED_ACTIONS" || "ALL_ACTIONS",
+ * //           },
  * //           conditions: [ // ConditionList
  * //             { // Condition
- * //               result: "ROLLBACK" || "FAIL",
+ * //               result: "ROLLBACK" || "FAIL" || "RETRY" || "SKIP",
  * //               rules: [ // RuleDeclarationList
  * //                 { // RuleDeclaration
  * //                   name: "STRING_VALUE", // required
@@ -120,6 +138,9 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //                   configuration: { // RuleConfigurationMap
  * //                     "<keys>": "STRING_VALUE",
  * //                   },
+ * //                   commands: [
+ * //                     "STRING_VALUE",
+ * //                   ],
  * //                   inputArtifacts: [
  * //                     {
  * //                       name: "STRING_VALUE", // required
@@ -136,7 +157,7 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //         onSuccess: { // SuccessConditions
  * //           conditions: [ // required
  * //             {
- * //               result: "ROLLBACK" || "FAIL",
+ * //               result: "ROLLBACK" || "FAIL" || "RETRY" || "SKIP",
  * //               rules: [
  * //                 {
  * //                   name: "STRING_VALUE", // required
@@ -149,6 +170,9 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //                   configuration: {
  * //                     "<keys>": "STRING_VALUE",
  * //                   },
+ * //                   commands: [
+ * //                     "STRING_VALUE",
+ * //                   ],
  * //                   inputArtifacts: [
  * //                     {
  * //                       name: "STRING_VALUE", // required
@@ -165,7 +189,7 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //         beforeEntry: { // BeforeEntryConditions
  * //           conditions: [ // required
  * //             {
- * //               result: "ROLLBACK" || "FAIL",
+ * //               result: "ROLLBACK" || "FAIL" || "RETRY" || "SKIP",
  * //               rules: [
  * //                 {
  * //                   name: "STRING_VALUE", // required
@@ -178,6 +202,9 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * //                   configuration: {
  * //                     "<keys>": "STRING_VALUE",
  * //                   },
+ * //                   commands: [
+ * //                     "STRING_VALUE",
+ * //                   ],
  * //                   inputArtifacts: [
  * //                     {
  * //                       name: "STRING_VALUE", // required
@@ -292,6 +319,7 @@ export interface GetPipelineCommandOutput extends GetPipelineOutput, __MetadataB
  * @throws {@link CodePipelineServiceException}
  * <p>Base exception class for all service exceptions from CodePipeline service.</p>
  *
+ *
  * @public
  */
 export class GetPipelineCommand extends $Command
@@ -302,9 +330,7 @@ export class GetPipelineCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CodePipelineClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -316,4 +342,16 @@ export class GetPipelineCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetPipelineCommand)
   .de(de_GetPipelineCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetPipelineInput;
+      output: GetPipelineOutput;
+    };
+    sdk: {
+      input: GetPipelineCommandInput;
+      output: GetPipelineCommandOutput;
+    };
+  };
+}

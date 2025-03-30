@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { GlueClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../GlueClient";
-import { GetJobsRequest } from "../models/models_1";
+import { GetJobsRequest } from "../models/models_2";
 import { GetJobsResponse, GetJobsResponseFilterSensitiveLog } from "../models/models_3";
 import { de_GetJobsCommand, se_GetJobsCommand } from "../protocols/Aws_json1_1";
 
@@ -1167,6 +1167,7 @@ export interface GetJobsCommandOutput extends GetJobsResponse, __MetadataBearer 
  * @throws {@link GlueServiceException}
  * <p>Base exception class for all service exceptions from Glue service.</p>
  *
+ *
  * @public
  */
 export class GetJobsCommand extends $Command
@@ -1177,9 +1178,7 @@ export class GetJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: GlueClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -1191,4 +1190,16 @@ export class GetJobsCommand extends $Command
   .f(void 0, GetJobsResponseFilterSensitiveLog)
   .ser(se_GetJobsCommand)
   .de(de_GetJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetJobsRequest;
+      output: GetJobsResponse;
+    };
+    sdk: {
+      input: GetJobsCommandInput;
+      output: GetJobsCommandOutput;
+    };
+  };
+}

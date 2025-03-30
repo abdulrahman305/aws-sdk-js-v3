@@ -104,6 +104,7 @@ export interface DescribeExecutionCommandOutput extends DescribeExecutionOutput,
  * @throws {@link SFNServiceException}
  * <p>Base exception class for all service exceptions from SFN service.</p>
  *
+ *
  * @public
  */
 export class DescribeExecutionCommand extends $Command
@@ -114,9 +115,7 @@ export class DescribeExecutionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SFNClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -128,4 +127,16 @@ export class DescribeExecutionCommand extends $Command
   .f(void 0, DescribeExecutionOutputFilterSensitiveLog)
   .ser(se_DescribeExecutionCommand)
   .de(de_DescribeExecutionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeExecutionInput;
+      output: DescribeExecutionOutput;
+    };
+    sdk: {
+      input: DescribeExecutionCommandInput;
+      output: DescribeExecutionCommandOutput;
+    };
+  };
+}

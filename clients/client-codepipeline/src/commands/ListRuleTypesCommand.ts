@@ -28,7 +28,8 @@ export interface ListRuleTypesCommandInput extends ListRuleTypesInput {}
 export interface ListRuleTypesCommandOutput extends ListRuleTypesOutput, __MetadataBearer {}
 
 /**
- * <p>Lists the rules for the condition.</p>
+ * <p>Lists the rules for the condition. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
+ *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>.For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule reference</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -93,6 +94,7 @@ export interface ListRuleTypesCommandOutput extends ListRuleTypesOutput, __Metad
  * @throws {@link CodePipelineServiceException}
  * <p>Base exception class for all service exceptions from CodePipeline service.</p>
  *
+ *
  * @public
  */
 export class ListRuleTypesCommand extends $Command
@@ -103,9 +105,7 @@ export class ListRuleTypesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CodePipelineClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -117,4 +117,16 @@ export class ListRuleTypesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListRuleTypesCommand)
   .de(de_ListRuleTypesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListRuleTypesInput;
+      output: ListRuleTypesOutput;
+    };
+    sdk: {
+      input: ListRuleTypesCommandInput;
+      output: ListRuleTypesCommandOutput;
+    };
+  };
+}

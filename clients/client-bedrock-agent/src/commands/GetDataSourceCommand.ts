@@ -53,7 +53,7 @@ export interface GetDataSourceCommandOutput extends GetDataSourceResponse, __Met
  * //     status: "AVAILABLE" || "DELETING" || "DELETE_UNSUCCESSFUL", // required
  * //     description: "STRING_VALUE",
  * //     dataSourceConfiguration: { // DataSourceConfiguration
- * //       type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT", // required
+ * //       type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT" || "CUSTOM" || "REDSHIFT_METADATA", // required
  * //       s3Configuration: { // S3DataSourceConfiguration
  * //         bucketArn: "STRING_VALUE", // required
  * //         inclusionPrefixes: [ // S3Prefixes
@@ -74,6 +74,7 @@ export interface GetDataSourceCommandOutput extends GetDataSourceResponse, __Met
  * //         crawlerConfiguration: { // WebCrawlerConfiguration
  * //           crawlerLimits: { // WebCrawlerLimits
  * //             rateLimit: Number("int"),
+ * //             maxPages: Number("int"),
  * //           },
  * //           inclusionFilters: [ // FilterList
  * //             "STRING_VALUE",
@@ -82,6 +83,8 @@ export interface GetDataSourceCommandOutput extends GetDataSourceResponse, __Met
  * //             "STRING_VALUE",
  * //           ],
  * //           scope: "HOST_ONLY" || "SUBDOMAINS",
+ * //           userAgent: "STRING_VALUE",
+ * //           userAgentHeader: "STRING_VALUE",
  * //         },
  * //       },
  * //       confluenceConfiguration: { // ConfluenceDataSourceConfiguration
@@ -141,7 +144,7 @@ export interface GetDataSourceCommandOutput extends GetDataSourceResponse, __Met
  * //             "STRING_VALUE",
  * //           ],
  * //           hostType: "ONLINE", // required
- * //           authType: "OAUTH2_CLIENT_CREDENTIALS", // required
+ * //           authType: "OAUTH2_CLIENT_CREDENTIALS" || "OAUTH2_SHAREPOINT_APP_ONLY_CLIENT_CREDENTIALS", // required
  * //           credentialsSecretArn: "STRING_VALUE", // required
  * //         },
  * //         crawlerConfiguration: { // SharePointCrawlerConfiguration
@@ -202,12 +205,25 @@ export interface GetDataSourceCommandOutput extends GetDataSourceResponse, __Met
  * //         ],
  * //       },
  * //       parsingConfiguration: { // ParsingConfiguration
- * //         parsingStrategy: "BEDROCK_FOUNDATION_MODEL", // required
+ * //         parsingStrategy: "BEDROCK_FOUNDATION_MODEL" || "BEDROCK_DATA_AUTOMATION", // required
  * //         bedrockFoundationModelConfiguration: { // BedrockFoundationModelConfiguration
  * //           modelArn: "STRING_VALUE", // required
  * //           parsingPrompt: { // ParsingPrompt
  * //             parsingPromptText: "STRING_VALUE", // required
  * //           },
+ * //           parsingModality: "MULTIMODAL",
+ * //         },
+ * //         bedrockDataAutomationConfiguration: { // BedrockDataAutomationConfiguration
+ * //           parsingModality: "MULTIMODAL",
+ * //         },
+ * //       },
+ * //       contextEnrichmentConfiguration: { // ContextEnrichmentConfiguration
+ * //         type: "BEDROCK_FOUNDATION_MODEL", // required
+ * //         bedrockFoundationModelConfiguration: { // BedrockFoundationModelContextEnrichmentConfiguration
+ * //           enrichmentStrategyConfiguration: { // EnrichmentStrategyConfiguration
+ * //             method: "CHUNK_ENTITY_EXTRACTION", // required
+ * //           },
+ * //           modelArn: "STRING_VALUE", // required
  * //         },
  * //       },
  * //     },
@@ -246,6 +262,7 @@ export interface GetDataSourceCommandOutput extends GetDataSourceResponse, __Met
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class GetDataSourceCommand extends $Command
@@ -256,9 +273,7 @@ export class GetDataSourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -270,4 +285,16 @@ export class GetDataSourceCommand extends $Command
   .f(void 0, GetDataSourceResponseFilterSensitiveLog)
   .ser(se_GetDataSourceCommand)
   .de(de_GetDataSourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetDataSourceRequest;
+      output: GetDataSourceResponse;
+    };
+    sdk: {
+      input: GetDataSourceCommandInput;
+      output: GetDataSourceCommandOutput;
+    };
+  };
+}

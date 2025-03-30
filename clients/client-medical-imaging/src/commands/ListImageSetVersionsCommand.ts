@@ -91,6 +91,7 @@ export interface ListImageSetVersionsCommandOutput extends ListImageSetVersionsR
  * @throws {@link MedicalImagingServiceException}
  * <p>Base exception class for all service exceptions from MedicalImaging service.</p>
  *
+ *
  * @public
  */
 export class ListImageSetVersionsCommand extends $Command
@@ -101,9 +102,7 @@ export class ListImageSetVersionsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: MedicalImagingClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -115,4 +114,16 @@ export class ListImageSetVersionsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListImageSetVersionsCommand)
   .de(de_ListImageSetVersionsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListImageSetVersionsRequest;
+      output: ListImageSetVersionsResponse;
+    };
+    sdk: {
+      input: ListImageSetVersionsCommandInput;
+      output: ListImageSetVersionsCommandOutput;
+    };
+  };
+}

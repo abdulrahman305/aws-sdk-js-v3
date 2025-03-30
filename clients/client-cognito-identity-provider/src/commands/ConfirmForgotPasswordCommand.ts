@@ -36,7 +36,8 @@ export interface ConfirmForgotPasswordCommandInput extends ConfirmForgotPassword
 export interface ConfirmForgotPasswordCommandOutput extends ConfirmForgotPasswordResponse, __MetadataBearer {}
 
 /**
- * <p>Allows a user to enter a confirmation code to reset a forgotten password.</p>
+ * <p>This public API operation accepts a confirmation code that Amazon Cognito sent to a user and
+ *             accepts a new password for that user.</p>
  *          <note>
  *             <p>Amazon Cognito doesn't evaluate Identity and Access Management (IAM) policies in requests for this API operation. For
  *     this operation, you can't use IAM credentials to authorize requests, and you can't
@@ -142,6 +143,7 @@ export interface ConfirmForgotPasswordCommandOutput extends ConfirmForgotPasswor
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class ConfirmForgotPasswordCommand extends $Command
@@ -152,9 +154,7 @@ export class ConfirmForgotPasswordCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -166,4 +166,16 @@ export class ConfirmForgotPasswordCommand extends $Command
   .f(ConfirmForgotPasswordRequestFilterSensitiveLog, void 0)
   .ser(se_ConfirmForgotPasswordCommand)
   .de(de_ConfirmForgotPasswordCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ConfirmForgotPasswordRequest;
+      output: {};
+    };
+    sdk: {
+      input: ConfirmForgotPasswordCommandInput;
+      output: ConfirmForgotPasswordCommandOutput;
+    };
+  };
+}

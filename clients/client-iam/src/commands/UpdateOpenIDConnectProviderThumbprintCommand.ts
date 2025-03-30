@@ -93,6 +93,7 @@ export interface UpdateOpenIDConnectProviderThumbprintCommandOutput extends __Me
  * @throws {@link IAMServiceException}
  * <p>Base exception class for all service exceptions from IAM service.</p>
  *
+ *
  * @public
  */
 export class UpdateOpenIDConnectProviderThumbprintCommand extends $Command
@@ -103,9 +104,7 @@ export class UpdateOpenIDConnectProviderThumbprintCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: IAMClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -117,4 +116,16 @@ export class UpdateOpenIDConnectProviderThumbprintCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateOpenIDConnectProviderThumbprintCommand)
   .de(de_UpdateOpenIDConnectProviderThumbprintCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateOpenIDConnectProviderThumbprintRequest;
+      output: {};
+    };
+    sdk: {
+      input: UpdateOpenIDConnectProviderThumbprintCommandInput;
+      output: UpdateOpenIDConnectProviderThumbprintCommandOutput;
+    };
+  };
+}

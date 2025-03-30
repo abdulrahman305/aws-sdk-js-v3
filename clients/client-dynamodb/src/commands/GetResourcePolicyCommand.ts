@@ -104,6 +104,7 @@ export interface GetResourcePolicyCommandOutput extends GetResourcePolicyOutput,
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>
  *
+ *
  * @public
  */
 export class GetResourcePolicyCommand extends $Command
@@ -116,6 +117,7 @@ export class GetResourcePolicyCommand extends $Command
   >()
   .ep({
     ...commonParams,
+    ResourceArn: { type: "contextParams", name: "ResourceArn" },
   })
   .m(function (this: any, Command: any, cs: any, config: DynamoDBClientResolvedConfig, o: any) {
     return [
@@ -128,4 +130,16 @@ export class GetResourcePolicyCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetResourcePolicyCommand)
   .de(de_GetResourcePolicyCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetResourcePolicyInput;
+      output: GetResourcePolicyOutput;
+    };
+    sdk: {
+      input: GetResourcePolicyCommandInput;
+      output: GetResourcePolicyCommandOutput;
+    };
+  };
+}

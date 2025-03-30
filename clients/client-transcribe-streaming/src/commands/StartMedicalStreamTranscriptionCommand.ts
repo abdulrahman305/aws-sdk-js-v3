@@ -76,7 +76,7 @@ export interface StartMedicalStreamTranscriptionCommandOutput
  * // const { TranscribeStreamingClient, StartMedicalStreamTranscriptionCommand } = require("@aws-sdk/client-transcribe-streaming"); // CommonJS import
  * const client = new TranscribeStreamingClient(config);
  * const input = { // StartMedicalStreamTranscriptionRequest
- *   LanguageCode: "en-US" || "en-GB" || "es-US" || "fr-CA" || "fr-FR" || "en-AU" || "it-IT" || "de-DE" || "pt-BR" || "ja-JP" || "ko-KR" || "zh-CN" || "hi-IN" || "th-TH", // required
+ *   LanguageCode: "en-US" || "en-GB" || "es-US" || "fr-CA" || "fr-FR" || "en-AU" || "it-IT" || "de-DE" || "pt-BR" || "ja-JP" || "ko-KR" || "zh-CN" || "th-TH" || "es-ES" || "ar-SA" || "pt-PT" || "ca-ES" || "ar-AE" || "hi-IN" || "zh-HK" || "nl-NL" || "no-NO" || "sv-SE" || "pl-PL" || "fi-FI" || "zh-TW" || "en-IN" || "en-IE" || "en-NZ" || "en-AB" || "en-ZA" || "en-WL" || "de-CH" || "af-ZA" || "eu-ES" || "hr-HR" || "cs-CZ" || "da-DK" || "fa-IR" || "gl-ES" || "el-GR" || "he-IL" || "id-ID" || "lv-LV" || "ms-MY" || "ro-RO" || "ru-RU" || "sr-RS" || "sk-SK" || "so-SO" || "tl-PH" || "uk-UA" || "vi-VN" || "zu-ZA", // required
  *   MediaSampleRateHertz: Number("int"), // required
  *   MediaEncoding: "pcm" || "ogg-opus" || "flac", // required
  *   VocabularyName: "STRING_VALUE",
@@ -111,7 +111,7 @@ export interface StartMedicalStreamTranscriptionCommandOutput
  * const response = await client.send(command);
  * // { // StartMedicalStreamTranscriptionResponse
  * //   RequestId: "STRING_VALUE",
- * //   LanguageCode: "en-US" || "en-GB" || "es-US" || "fr-CA" || "fr-FR" || "en-AU" || "it-IT" || "de-DE" || "pt-BR" || "ja-JP" || "ko-KR" || "zh-CN" || "hi-IN" || "th-TH",
+ * //   LanguageCode: "en-US" || "en-GB" || "es-US" || "fr-CA" || "fr-FR" || "en-AU" || "it-IT" || "de-DE" || "pt-BR" || "ja-JP" || "ko-KR" || "zh-CN" || "th-TH" || "es-ES" || "ar-SA" || "pt-PT" || "ca-ES" || "ar-AE" || "hi-IN" || "zh-HK" || "nl-NL" || "no-NO" || "sv-SE" || "pl-PL" || "fi-FI" || "zh-TW" || "en-IN" || "en-IE" || "en-NZ" || "en-AB" || "en-ZA" || "en-WL" || "de-CH" || "af-ZA" || "eu-ES" || "hr-HR" || "cs-CZ" || "da-DK" || "fa-IR" || "gl-ES" || "el-GR" || "he-IL" || "id-ID" || "lv-LV" || "ms-MY" || "ro-RO" || "ru-RU" || "sr-RS" || "sk-SK" || "so-SO" || "tl-PH" || "uk-UA" || "vi-VN" || "zu-ZA",
  * //   MediaSampleRateHertz: Number("int"),
  * //   MediaEncoding: "pcm" || "ogg-opus" || "flac",
  * //   VocabularyName: "STRING_VALUE",
@@ -190,7 +190,7 @@ export interface StartMedicalStreamTranscriptionCommandOutput
  *  <p>One or more arguments to the <code>StartStreamTranscription</code>,
  *       <code>StartMedicalStreamTranscription</code>, or <code>StartCallAnalyticsStreamTranscription</code>
  *       operation was not valid. For example, <code>MediaEncoding</code> or <code>LanguageCode</code>
- *       used not valid values. Check the specified parameters and try your request again.</p>
+ *       used unsupported values. Check the specified parameters and try your request again.</p>
  *
  * @throws {@link ConflictException} (client fault)
  *  <p>A new stream started with the same session ID. The current stream has been terminated.</p>
@@ -209,6 +209,7 @@ export interface StartMedicalStreamTranscriptionCommandOutput
  * @throws {@link TranscribeStreamingServiceException}
  * <p>Base exception class for all service exceptions from TranscribeStreaming service.</p>
  *
+ *
  * @public
  */
 export class StartMedicalStreamTranscriptionCommand extends $Command
@@ -219,9 +220,7 @@ export class StartMedicalStreamTranscriptionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TranscribeStreamingClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -249,4 +248,16 @@ export class StartMedicalStreamTranscriptionCommand extends $Command
   )
   .ser(se_StartMedicalStreamTranscriptionCommand)
   .de(de_StartMedicalStreamTranscriptionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StartMedicalStreamTranscriptionRequest;
+      output: StartMedicalStreamTranscriptionResponse;
+    };
+    sdk: {
+      input: StartMedicalStreamTranscriptionCommandInput;
+      output: StartMedicalStreamTranscriptionCommandOutput;
+    };
+  };
+}

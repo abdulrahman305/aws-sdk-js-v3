@@ -32,6 +32,12 @@ import {
   CreateAnalysisCommandInput,
   CreateAnalysisCommandOutput,
 } from "./commands/CreateAnalysisCommand";
+import { CreateBrandCommand, CreateBrandCommandInput, CreateBrandCommandOutput } from "./commands/CreateBrandCommand";
+import {
+  CreateCustomPermissionsCommand,
+  CreateCustomPermissionsCommandInput,
+  CreateCustomPermissionsCommandOutput,
+} from "./commands/CreateCustomPermissionsCommand";
 import {
   CreateDashboardCommand,
   CreateDashboardCommandInput,
@@ -131,6 +137,17 @@ import {
   DeleteAnalysisCommandOutput,
 } from "./commands/DeleteAnalysisCommand";
 import {
+  DeleteBrandAssignmentCommand,
+  DeleteBrandAssignmentCommandInput,
+  DeleteBrandAssignmentCommandOutput,
+} from "./commands/DeleteBrandAssignmentCommand";
+import { DeleteBrandCommand, DeleteBrandCommandInput, DeleteBrandCommandOutput } from "./commands/DeleteBrandCommand";
+import {
+  DeleteCustomPermissionsCommand,
+  DeleteCustomPermissionsCommandInput,
+  DeleteCustomPermissionsCommandOutput,
+} from "./commands/DeleteCustomPermissionsCommand";
+import {
   DeleteDashboardCommand,
   DeleteDashboardCommandInput,
   DeleteDashboardCommandOutput,
@@ -150,6 +167,11 @@ import {
   DeleteDataSourceCommandInput,
   DeleteDataSourceCommandOutput,
 } from "./commands/DeleteDataSourceCommand";
+import {
+  DeleteDefaultQBusinessApplicationCommand,
+  DeleteDefaultQBusinessApplicationCommandInput,
+  DeleteDefaultQBusinessApplicationCommandOutput,
+} from "./commands/DeleteDefaultQBusinessApplicationCommand";
 import {
   DeleteFolderCommand,
   DeleteFolderCommandInput,
@@ -225,6 +247,11 @@ import {
 } from "./commands/DeleteUserByPrincipalIdCommand";
 import { DeleteUserCommand, DeleteUserCommandInput, DeleteUserCommandOutput } from "./commands/DeleteUserCommand";
 import {
+  DeleteUserCustomPermissionCommand,
+  DeleteUserCustomPermissionCommandInput,
+  DeleteUserCustomPermissionCommandOutput,
+} from "./commands/DeleteUserCustomPermissionCommand";
+import {
   DeleteVPCConnectionCommand,
   DeleteVPCConnectionCommandInput,
   DeleteVPCConnectionCommandOutput,
@@ -270,6 +297,26 @@ import {
   DescribeAssetBundleImportJobCommandOutput,
 } from "./commands/DescribeAssetBundleImportJobCommand";
 import {
+  DescribeBrandAssignmentCommand,
+  DescribeBrandAssignmentCommandInput,
+  DescribeBrandAssignmentCommandOutput,
+} from "./commands/DescribeBrandAssignmentCommand";
+import {
+  DescribeBrandCommand,
+  DescribeBrandCommandInput,
+  DescribeBrandCommandOutput,
+} from "./commands/DescribeBrandCommand";
+import {
+  DescribeBrandPublishedVersionCommand,
+  DescribeBrandPublishedVersionCommandInput,
+  DescribeBrandPublishedVersionCommandOutput,
+} from "./commands/DescribeBrandPublishedVersionCommand";
+import {
+  DescribeCustomPermissionsCommand,
+  DescribeCustomPermissionsCommandInput,
+  DescribeCustomPermissionsCommandOutput,
+} from "./commands/DescribeCustomPermissionsCommand";
+import {
   DescribeDashboardCommand,
   DescribeDashboardCommandInput,
   DescribeDashboardCommandOutput,
@@ -295,6 +342,11 @@ import {
   DescribeDashboardSnapshotJobResultCommandOutput,
 } from "./commands/DescribeDashboardSnapshotJobResultCommand";
 import {
+  DescribeDashboardsQAConfigurationCommand,
+  DescribeDashboardsQAConfigurationCommandInput,
+  DescribeDashboardsQAConfigurationCommandOutput,
+} from "./commands/DescribeDashboardsQAConfigurationCommand";
+import {
   DescribeDataSetCommand,
   DescribeDataSetCommandInput,
   DescribeDataSetCommandOutput,
@@ -319,6 +371,11 @@ import {
   DescribeDataSourcePermissionsCommandInput,
   DescribeDataSourcePermissionsCommandOutput,
 } from "./commands/DescribeDataSourcePermissionsCommand";
+import {
+  DescribeDefaultQBusinessApplicationCommand,
+  DescribeDefaultQBusinessApplicationCommandInput,
+  DescribeDefaultQBusinessApplicationCommandOutput,
+} from "./commands/DescribeDefaultQBusinessApplicationCommand";
 import {
   DescribeFolderCommand,
   DescribeFolderCommandInput,
@@ -369,6 +426,16 @@ import {
   DescribeNamespaceCommandInput,
   DescribeNamespaceCommandOutput,
 } from "./commands/DescribeNamespaceCommand";
+import {
+  DescribeQPersonalizationConfigurationCommand,
+  DescribeQPersonalizationConfigurationCommandInput,
+  DescribeQPersonalizationConfigurationCommandOutput,
+} from "./commands/DescribeQPersonalizationConfigurationCommand";
+import {
+  DescribeQuickSightQSearchConfigurationCommand,
+  DescribeQuickSightQSearchConfigurationCommandInput,
+  DescribeQuickSightQSearchConfigurationCommandOutput,
+} from "./commands/DescribeQuickSightQSearchConfigurationCommand";
 import {
   DescribeRefreshScheduleCommand,
   DescribeRefreshScheduleCommandInput,
@@ -455,6 +522,11 @@ import {
   GenerateEmbedUrlForRegisteredUserCommandOutput,
 } from "./commands/GenerateEmbedUrlForRegisteredUserCommand";
 import {
+  GenerateEmbedUrlForRegisteredUserWithIdentityCommand,
+  GenerateEmbedUrlForRegisteredUserWithIdentityCommandInput,
+  GenerateEmbedUrlForRegisteredUserWithIdentityCommandOutput,
+} from "./commands/GenerateEmbedUrlForRegisteredUserWithIdentityCommand";
+import {
   GetDashboardEmbedUrlCommand,
   GetDashboardEmbedUrlCommandInput,
   GetDashboardEmbedUrlCommandOutput,
@@ -479,6 +551,12 @@ import {
   ListAssetBundleImportJobsCommandInput,
   ListAssetBundleImportJobsCommandOutput,
 } from "./commands/ListAssetBundleImportJobsCommand";
+import { ListBrandsCommand, ListBrandsCommandInput, ListBrandsCommandOutput } from "./commands/ListBrandsCommand";
+import {
+  ListCustomPermissionsCommand,
+  ListCustomPermissionsCommandInput,
+  ListCustomPermissionsCommandOutput,
+} from "./commands/ListCustomPermissionsCommand";
 import {
   ListDashboardsCommand,
   ListDashboardsCommandInput,
@@ -505,6 +583,11 @@ import {
   ListFolderMembersCommandOutput,
 } from "./commands/ListFolderMembersCommand";
 import { ListFoldersCommand, ListFoldersCommandInput, ListFoldersCommandOutput } from "./commands/ListFoldersCommand";
+import {
+  ListFoldersForResourceCommand,
+  ListFoldersForResourceCommandInput,
+  ListFoldersForResourceCommandOutput,
+} from "./commands/ListFoldersForResourceCommand";
 import {
   ListGroupMembershipsCommand,
   ListGroupMembershipsCommandInput,
@@ -600,6 +683,11 @@ import {
   ListVPCConnectionsCommandOutput,
 } from "./commands/ListVPCConnectionsCommand";
 import {
+  PredictQAResultsCommand,
+  PredictQAResultsCommandInput,
+  PredictQAResultsCommandOutput,
+} from "./commands/PredictQAResultsCommand";
+import {
   PutDataSetRefreshPropertiesCommand,
   PutDataSetRefreshPropertiesCommandInput,
   PutDataSetRefreshPropertiesCommandOutput,
@@ -645,6 +733,11 @@ import {
   SearchGroupsCommandOutput,
 } from "./commands/SearchGroupsCommand";
 import {
+  SearchTopicsCommand,
+  SearchTopicsCommandInput,
+  SearchTopicsCommandOutput,
+} from "./commands/SearchTopicsCommand";
+import {
   StartAssetBundleExportJobCommand,
   StartAssetBundleExportJobCommandInput,
   StartAssetBundleExportJobCommandOutput,
@@ -659,6 +752,11 @@ import {
   StartDashboardSnapshotJobCommandInput,
   StartDashboardSnapshotJobCommandOutput,
 } from "./commands/StartDashboardSnapshotJobCommand";
+import {
+  StartDashboardSnapshotJobScheduleCommand,
+  StartDashboardSnapshotJobScheduleCommandInput,
+  StartDashboardSnapshotJobScheduleCommandOutput,
+} from "./commands/StartDashboardSnapshotJobScheduleCommand";
 import { TagResourceCommand, TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import {
   UntagResourceCommand,
@@ -686,6 +784,27 @@ import {
   UpdateAnalysisPermissionsCommandOutput,
 } from "./commands/UpdateAnalysisPermissionsCommand";
 import {
+  UpdateApplicationWithTokenExchangeGrantCommand,
+  UpdateApplicationWithTokenExchangeGrantCommandInput,
+  UpdateApplicationWithTokenExchangeGrantCommandOutput,
+} from "./commands/UpdateApplicationWithTokenExchangeGrantCommand";
+import {
+  UpdateBrandAssignmentCommand,
+  UpdateBrandAssignmentCommandInput,
+  UpdateBrandAssignmentCommandOutput,
+} from "./commands/UpdateBrandAssignmentCommand";
+import { UpdateBrandCommand, UpdateBrandCommandInput, UpdateBrandCommandOutput } from "./commands/UpdateBrandCommand";
+import {
+  UpdateBrandPublishedVersionCommand,
+  UpdateBrandPublishedVersionCommandInput,
+  UpdateBrandPublishedVersionCommandOutput,
+} from "./commands/UpdateBrandPublishedVersionCommand";
+import {
+  UpdateCustomPermissionsCommand,
+  UpdateCustomPermissionsCommandInput,
+  UpdateCustomPermissionsCommandOutput,
+} from "./commands/UpdateCustomPermissionsCommand";
+import {
   UpdateDashboardCommand,
   UpdateDashboardCommandInput,
   UpdateDashboardCommandOutput,
@@ -706,6 +825,11 @@ import {
   UpdateDashboardPublishedVersionCommandOutput,
 } from "./commands/UpdateDashboardPublishedVersionCommand";
 import {
+  UpdateDashboardsQAConfigurationCommand,
+  UpdateDashboardsQAConfigurationCommandInput,
+  UpdateDashboardsQAConfigurationCommandOutput,
+} from "./commands/UpdateDashboardsQAConfigurationCommand";
+import {
   UpdateDataSetCommand,
   UpdateDataSetCommandInput,
   UpdateDataSetCommandOutput,
@@ -725,6 +849,11 @@ import {
   UpdateDataSourcePermissionsCommandInput,
   UpdateDataSourcePermissionsCommandOutput,
 } from "./commands/UpdateDataSourcePermissionsCommand";
+import {
+  UpdateDefaultQBusinessApplicationCommand,
+  UpdateDefaultQBusinessApplicationCommandInput,
+  UpdateDefaultQBusinessApplicationCommandOutput,
+} from "./commands/UpdateDefaultQBusinessApplicationCommand";
 import {
   UpdateFolderCommand,
   UpdateFolderCommandInput,
@@ -761,6 +890,16 @@ import {
   UpdatePublicSharingSettingsCommandInput,
   UpdatePublicSharingSettingsCommandOutput,
 } from "./commands/UpdatePublicSharingSettingsCommand";
+import {
+  UpdateQPersonalizationConfigurationCommand,
+  UpdateQPersonalizationConfigurationCommandInput,
+  UpdateQPersonalizationConfigurationCommandOutput,
+} from "./commands/UpdateQPersonalizationConfigurationCommand";
+import {
+  UpdateQuickSightQSearchConfigurationCommand,
+  UpdateQuickSightQSearchConfigurationCommandInput,
+  UpdateQuickSightQSearchConfigurationCommandOutput,
+} from "./commands/UpdateQuickSightQSearchConfigurationCommand";
 import {
   UpdateRefreshScheduleCommand,
   UpdateRefreshScheduleCommandInput,
@@ -815,6 +954,11 @@ import {
 } from "./commands/UpdateTopicRefreshScheduleCommand";
 import { UpdateUserCommand, UpdateUserCommandInput, UpdateUserCommandOutput } from "./commands/UpdateUserCommand";
 import {
+  UpdateUserCustomPermissionCommand,
+  UpdateUserCustomPermissionCommandInput,
+  UpdateUserCustomPermissionCommandOutput,
+} from "./commands/UpdateUserCustomPermissionCommand";
+import {
   UpdateVPCConnectionCommand,
   UpdateVPCConnectionCommandInput,
   UpdateVPCConnectionCommandOutput,
@@ -828,6 +972,8 @@ const commands = {
   CreateAccountCustomizationCommand,
   CreateAccountSubscriptionCommand,
   CreateAnalysisCommand,
+  CreateBrandCommand,
+  CreateCustomPermissionsCommand,
   CreateDashboardCommand,
   CreateDataSetCommand,
   CreateDataSourceCommand,
@@ -850,10 +996,14 @@ const commands = {
   DeleteAccountCustomizationCommand,
   DeleteAccountSubscriptionCommand,
   DeleteAnalysisCommand,
+  DeleteBrandCommand,
+  DeleteBrandAssignmentCommand,
+  DeleteCustomPermissionsCommand,
   DeleteDashboardCommand,
   DeleteDataSetCommand,
   DeleteDataSetRefreshPropertiesCommand,
   DeleteDataSourceCommand,
+  DeleteDefaultQBusinessApplicationCommand,
   DeleteFolderCommand,
   DeleteFolderMembershipCommand,
   DeleteGroupCommand,
@@ -872,6 +1022,7 @@ const commands = {
   DeleteTopicRefreshScheduleCommand,
   DeleteUserCommand,
   DeleteUserByPrincipalIdCommand,
+  DeleteUserCustomPermissionCommand,
   DeleteVPCConnectionCommand,
   DescribeAccountCustomizationCommand,
   DescribeAccountSettingsCommand,
@@ -881,16 +1032,22 @@ const commands = {
   DescribeAnalysisPermissionsCommand,
   DescribeAssetBundleExportJobCommand,
   DescribeAssetBundleImportJobCommand,
+  DescribeBrandCommand,
+  DescribeBrandAssignmentCommand,
+  DescribeBrandPublishedVersionCommand,
+  DescribeCustomPermissionsCommand,
   DescribeDashboardCommand,
   DescribeDashboardDefinitionCommand,
   DescribeDashboardPermissionsCommand,
   DescribeDashboardSnapshotJobCommand,
   DescribeDashboardSnapshotJobResultCommand,
+  DescribeDashboardsQAConfigurationCommand,
   DescribeDataSetCommand,
   DescribeDataSetPermissionsCommand,
   DescribeDataSetRefreshPropertiesCommand,
   DescribeDataSourceCommand,
   DescribeDataSourcePermissionsCommand,
+  DescribeDefaultQBusinessApplicationCommand,
   DescribeFolderCommand,
   DescribeFolderPermissionsCommand,
   DescribeFolderResolvedPermissionsCommand,
@@ -901,6 +1058,8 @@ const commands = {
   DescribeIpRestrictionCommand,
   DescribeKeyRegistrationCommand,
   DescribeNamespaceCommand,
+  DescribeQPersonalizationConfigurationCommand,
+  DescribeQuickSightQSearchConfigurationCommand,
   DescribeRefreshScheduleCommand,
   DescribeRoleCustomPermissionCommand,
   DescribeTemplateCommand,
@@ -918,17 +1077,21 @@ const commands = {
   DescribeVPCConnectionCommand,
   GenerateEmbedUrlForAnonymousUserCommand,
   GenerateEmbedUrlForRegisteredUserCommand,
+  GenerateEmbedUrlForRegisteredUserWithIdentityCommand,
   GetDashboardEmbedUrlCommand,
   GetSessionEmbedUrlCommand,
   ListAnalysesCommand,
   ListAssetBundleExportJobsCommand,
   ListAssetBundleImportJobsCommand,
+  ListBrandsCommand,
+  ListCustomPermissionsCommand,
   ListDashboardsCommand,
   ListDashboardVersionsCommand,
   ListDataSetsCommand,
   ListDataSourcesCommand,
   ListFolderMembersCommand,
   ListFoldersCommand,
+  ListFoldersForResourceCommand,
   ListGroupMembershipsCommand,
   ListGroupsCommand,
   ListIAMPolicyAssignmentsCommand,
@@ -951,6 +1114,7 @@ const commands = {
   ListUserGroupsCommand,
   ListUsersCommand,
   ListVPCConnectionsCommand,
+  PredictQAResultsCommand,
   PutDataSetRefreshPropertiesCommand,
   RegisterUserCommand,
   RestoreAnalysisCommand,
@@ -960,23 +1124,32 @@ const commands = {
   SearchDataSourcesCommand,
   SearchFoldersCommand,
   SearchGroupsCommand,
+  SearchTopicsCommand,
   StartAssetBundleExportJobCommand,
   StartAssetBundleImportJobCommand,
   StartDashboardSnapshotJobCommand,
+  StartDashboardSnapshotJobScheduleCommand,
   TagResourceCommand,
   UntagResourceCommand,
   UpdateAccountCustomizationCommand,
   UpdateAccountSettingsCommand,
   UpdateAnalysisCommand,
   UpdateAnalysisPermissionsCommand,
+  UpdateApplicationWithTokenExchangeGrantCommand,
+  UpdateBrandCommand,
+  UpdateBrandAssignmentCommand,
+  UpdateBrandPublishedVersionCommand,
+  UpdateCustomPermissionsCommand,
   UpdateDashboardCommand,
   UpdateDashboardLinksCommand,
   UpdateDashboardPermissionsCommand,
   UpdateDashboardPublishedVersionCommand,
+  UpdateDashboardsQAConfigurationCommand,
   UpdateDataSetCommand,
   UpdateDataSetPermissionsCommand,
   UpdateDataSourceCommand,
   UpdateDataSourcePermissionsCommand,
+  UpdateDefaultQBusinessApplicationCommand,
   UpdateFolderCommand,
   UpdateFolderPermissionsCommand,
   UpdateGroupCommand,
@@ -985,6 +1158,8 @@ const commands = {
   UpdateIpRestrictionCommand,
   UpdateKeyRegistrationCommand,
   UpdatePublicSharingSettingsCommand,
+  UpdateQPersonalizationConfigurationCommand,
+  UpdateQuickSightQSearchConfigurationCommand,
   UpdateRefreshScheduleCommand,
   UpdateRoleCustomPermissionCommand,
   UpdateSPICECapacityConfigurationCommand,
@@ -998,6 +1173,7 @@ const commands = {
   UpdateTopicPermissionsCommand,
   UpdateTopicRefreshScheduleCommand,
   UpdateUserCommand,
+  UpdateUserCustomPermissionCommand,
   UpdateVPCConnectionCommand,
 };
 
@@ -1096,6 +1272,34 @@ export interface QuickSight {
     args: CreateAnalysisCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateAnalysisCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateBrandCommand}
+   */
+  createBrand(args: CreateBrandCommandInput, options?: __HttpHandlerOptions): Promise<CreateBrandCommandOutput>;
+  createBrand(args: CreateBrandCommandInput, cb: (err: any, data?: CreateBrandCommandOutput) => void): void;
+  createBrand(
+    args: CreateBrandCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateBrandCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateCustomPermissionsCommand}
+   */
+  createCustomPermissions(
+    args: CreateCustomPermissionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateCustomPermissionsCommandOutput>;
+  createCustomPermissions(
+    args: CreateCustomPermissionsCommandInput,
+    cb: (err: any, data?: CreateCustomPermissionsCommandOutput) => void
+  ): void;
+  createCustomPermissions(
+    args: CreateCustomPermissionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateCustomPermissionsCommandOutput) => void
   ): void;
 
   /**
@@ -1428,6 +1632,51 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link DeleteBrandCommand}
+   */
+  deleteBrand(args: DeleteBrandCommandInput, options?: __HttpHandlerOptions): Promise<DeleteBrandCommandOutput>;
+  deleteBrand(args: DeleteBrandCommandInput, cb: (err: any, data?: DeleteBrandCommandOutput) => void): void;
+  deleteBrand(
+    args: DeleteBrandCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteBrandCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteBrandAssignmentCommand}
+   */
+  deleteBrandAssignment(
+    args: DeleteBrandAssignmentCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteBrandAssignmentCommandOutput>;
+  deleteBrandAssignment(
+    args: DeleteBrandAssignmentCommandInput,
+    cb: (err: any, data?: DeleteBrandAssignmentCommandOutput) => void
+  ): void;
+  deleteBrandAssignment(
+    args: DeleteBrandAssignmentCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteBrandAssignmentCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteCustomPermissionsCommand}
+   */
+  deleteCustomPermissions(
+    args: DeleteCustomPermissionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteCustomPermissionsCommandOutput>;
+  deleteCustomPermissions(
+    args: DeleteCustomPermissionsCommandInput,
+    cb: (err: any, data?: DeleteCustomPermissionsCommandOutput) => void
+  ): void;
+  deleteCustomPermissions(
+    args: DeleteCustomPermissionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteCustomPermissionsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteDashboardCommand}
    */
   deleteDashboard(
@@ -1484,6 +1733,23 @@ export interface QuickSight {
     args: DeleteDataSourceCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteDataSourceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteDefaultQBusinessApplicationCommand}
+   */
+  deleteDefaultQBusinessApplication(
+    args: DeleteDefaultQBusinessApplicationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteDefaultQBusinessApplicationCommandOutput>;
+  deleteDefaultQBusinessApplication(
+    args: DeleteDefaultQBusinessApplicationCommandInput,
+    cb: (err: any, data?: DeleteDefaultQBusinessApplicationCommandOutput) => void
+  ): void;
+  deleteDefaultQBusinessApplication(
+    args: DeleteDefaultQBusinessApplicationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteDefaultQBusinessApplicationCommandOutput) => void
   ): void;
 
   /**
@@ -1757,6 +2023,23 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link DeleteUserCustomPermissionCommand}
+   */
+  deleteUserCustomPermission(
+    args: DeleteUserCustomPermissionCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteUserCustomPermissionCommandOutput>;
+  deleteUserCustomPermission(
+    args: DeleteUserCustomPermissionCommandInput,
+    cb: (err: any, data?: DeleteUserCustomPermissionCommandOutput) => void
+  ): void;
+  deleteUserCustomPermission(
+    args: DeleteUserCustomPermissionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteUserCustomPermissionCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteVPCConnectionCommand}
    */
   deleteVPCConnection(
@@ -1910,6 +2193,68 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link DescribeBrandCommand}
+   */
+  describeBrand(args: DescribeBrandCommandInput, options?: __HttpHandlerOptions): Promise<DescribeBrandCommandOutput>;
+  describeBrand(args: DescribeBrandCommandInput, cb: (err: any, data?: DescribeBrandCommandOutput) => void): void;
+  describeBrand(
+    args: DescribeBrandCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeBrandCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeBrandAssignmentCommand}
+   */
+  describeBrandAssignment(
+    args: DescribeBrandAssignmentCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeBrandAssignmentCommandOutput>;
+  describeBrandAssignment(
+    args: DescribeBrandAssignmentCommandInput,
+    cb: (err: any, data?: DescribeBrandAssignmentCommandOutput) => void
+  ): void;
+  describeBrandAssignment(
+    args: DescribeBrandAssignmentCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeBrandAssignmentCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeBrandPublishedVersionCommand}
+   */
+  describeBrandPublishedVersion(
+    args: DescribeBrandPublishedVersionCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeBrandPublishedVersionCommandOutput>;
+  describeBrandPublishedVersion(
+    args: DescribeBrandPublishedVersionCommandInput,
+    cb: (err: any, data?: DescribeBrandPublishedVersionCommandOutput) => void
+  ): void;
+  describeBrandPublishedVersion(
+    args: DescribeBrandPublishedVersionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeBrandPublishedVersionCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeCustomPermissionsCommand}
+   */
+  describeCustomPermissions(
+    args: DescribeCustomPermissionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeCustomPermissionsCommandOutput>;
+  describeCustomPermissions(
+    args: DescribeCustomPermissionsCommandInput,
+    cb: (err: any, data?: DescribeCustomPermissionsCommandOutput) => void
+  ): void;
+  describeCustomPermissions(
+    args: DescribeCustomPermissionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeCustomPermissionsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeDashboardCommand}
    */
   describeDashboard(
@@ -1995,6 +2340,23 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link DescribeDashboardsQAConfigurationCommand}
+   */
+  describeDashboardsQAConfiguration(
+    args: DescribeDashboardsQAConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeDashboardsQAConfigurationCommandOutput>;
+  describeDashboardsQAConfiguration(
+    args: DescribeDashboardsQAConfigurationCommandInput,
+    cb: (err: any, data?: DescribeDashboardsQAConfigurationCommandOutput) => void
+  ): void;
+  describeDashboardsQAConfiguration(
+    args: DescribeDashboardsQAConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeDashboardsQAConfigurationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeDataSetCommand}
    */
   describeDataSet(
@@ -2074,6 +2436,23 @@ export interface QuickSight {
     args: DescribeDataSourcePermissionsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeDataSourcePermissionsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeDefaultQBusinessApplicationCommand}
+   */
+  describeDefaultQBusinessApplication(
+    args: DescribeDefaultQBusinessApplicationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeDefaultQBusinessApplicationCommandOutput>;
+  describeDefaultQBusinessApplication(
+    args: DescribeDefaultQBusinessApplicationCommandInput,
+    cb: (err: any, data?: DescribeDefaultQBusinessApplicationCommandOutput) => void
+  ): void;
+  describeDefaultQBusinessApplication(
+    args: DescribeDefaultQBusinessApplicationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeDefaultQBusinessApplicationCommandOutput) => void
   ): void;
 
   /**
@@ -2235,6 +2614,40 @@ export interface QuickSight {
     args: DescribeNamespaceCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeNamespaceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeQPersonalizationConfigurationCommand}
+   */
+  describeQPersonalizationConfiguration(
+    args: DescribeQPersonalizationConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeQPersonalizationConfigurationCommandOutput>;
+  describeQPersonalizationConfiguration(
+    args: DescribeQPersonalizationConfigurationCommandInput,
+    cb: (err: any, data?: DescribeQPersonalizationConfigurationCommandOutput) => void
+  ): void;
+  describeQPersonalizationConfiguration(
+    args: DescribeQPersonalizationConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeQPersonalizationConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeQuickSightQSearchConfigurationCommand}
+   */
+  describeQuickSightQSearchConfiguration(
+    args: DescribeQuickSightQSearchConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeQuickSightQSearchConfigurationCommandOutput>;
+  describeQuickSightQSearchConfiguration(
+    args: DescribeQuickSightQSearchConfigurationCommandInput,
+    cb: (err: any, data?: DescribeQuickSightQSearchConfigurationCommandOutput) => void
+  ): void;
+  describeQuickSightQSearchConfiguration(
+    args: DescribeQuickSightQSearchConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeQuickSightQSearchConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -2509,6 +2922,23 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link GenerateEmbedUrlForRegisteredUserWithIdentityCommand}
+   */
+  generateEmbedUrlForRegisteredUserWithIdentity(
+    args: GenerateEmbedUrlForRegisteredUserWithIdentityCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GenerateEmbedUrlForRegisteredUserWithIdentityCommandOutput>;
+  generateEmbedUrlForRegisteredUserWithIdentity(
+    args: GenerateEmbedUrlForRegisteredUserWithIdentityCommandInput,
+    cb: (err: any, data?: GenerateEmbedUrlForRegisteredUserWithIdentityCommandOutput) => void
+  ): void;
+  generateEmbedUrlForRegisteredUserWithIdentity(
+    args: GenerateEmbedUrlForRegisteredUserWithIdentityCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GenerateEmbedUrlForRegisteredUserWithIdentityCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetDashboardEmbedUrlCommand}
    */
   getDashboardEmbedUrl(
@@ -2585,6 +3015,34 @@ export interface QuickSight {
     args: ListAssetBundleImportJobsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListAssetBundleImportJobsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListBrandsCommand}
+   */
+  listBrands(args: ListBrandsCommandInput, options?: __HttpHandlerOptions): Promise<ListBrandsCommandOutput>;
+  listBrands(args: ListBrandsCommandInput, cb: (err: any, data?: ListBrandsCommandOutput) => void): void;
+  listBrands(
+    args: ListBrandsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListBrandsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListCustomPermissionsCommand}
+   */
+  listCustomPermissions(
+    args: ListCustomPermissionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListCustomPermissionsCommandOutput>;
+  listCustomPermissions(
+    args: ListCustomPermissionsCommandInput,
+    cb: (err: any, data?: ListCustomPermissionsCommandOutput) => void
+  ): void;
+  listCustomPermissions(
+    args: ListCustomPermissionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListCustomPermissionsCommandOutput) => void
   ): void;
 
   /**
@@ -2669,6 +3127,23 @@ export interface QuickSight {
     args: ListFoldersCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListFoldersCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListFoldersForResourceCommand}
+   */
+  listFoldersForResource(
+    args: ListFoldersForResourceCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListFoldersForResourceCommandOutput>;
+  listFoldersForResource(
+    args: ListFoldersForResourceCommandInput,
+    cb: (err: any, data?: ListFoldersForResourceCommandOutput) => void
+  ): void;
+  listFoldersForResource(
+    args: ListFoldersForResourceCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListFoldersForResourceCommandOutput) => void
   ): void;
 
   /**
@@ -3007,6 +3482,23 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link PredictQAResultsCommand}
+   */
+  predictQAResults(
+    args: PredictQAResultsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<PredictQAResultsCommandOutput>;
+  predictQAResults(
+    args: PredictQAResultsCommandInput,
+    cb: (err: any, data?: PredictQAResultsCommandOutput) => void
+  ): void;
+  predictQAResults(
+    args: PredictQAResultsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: PredictQAResultsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link PutDataSetRefreshPropertiesCommand}
    */
   putDataSetRefreshProperties(
@@ -3133,6 +3625,17 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link SearchTopicsCommand}
+   */
+  searchTopics(args: SearchTopicsCommandInput, options?: __HttpHandlerOptions): Promise<SearchTopicsCommandOutput>;
+  searchTopics(args: SearchTopicsCommandInput, cb: (err: any, data?: SearchTopicsCommandOutput) => void): void;
+  searchTopics(
+    args: SearchTopicsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: SearchTopicsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link StartAssetBundleExportJobCommand}
    */
   startAssetBundleExportJob(
@@ -3181,6 +3684,23 @@ export interface QuickSight {
     args: StartDashboardSnapshotJobCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: StartDashboardSnapshotJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link StartDashboardSnapshotJobScheduleCommand}
+   */
+  startDashboardSnapshotJobSchedule(
+    args: StartDashboardSnapshotJobScheduleCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<StartDashboardSnapshotJobScheduleCommandOutput>;
+  startDashboardSnapshotJobSchedule(
+    args: StartDashboardSnapshotJobScheduleCommandInput,
+    cb: (err: any, data?: StartDashboardSnapshotJobScheduleCommandOutput) => void
+  ): void;
+  startDashboardSnapshotJobSchedule(
+    args: StartDashboardSnapshotJobScheduleCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StartDashboardSnapshotJobScheduleCommandOutput) => void
   ): void;
 
   /**
@@ -3271,6 +3791,85 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link UpdateApplicationWithTokenExchangeGrantCommand}
+   */
+  updateApplicationWithTokenExchangeGrant(
+    args: UpdateApplicationWithTokenExchangeGrantCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateApplicationWithTokenExchangeGrantCommandOutput>;
+  updateApplicationWithTokenExchangeGrant(
+    args: UpdateApplicationWithTokenExchangeGrantCommandInput,
+    cb: (err: any, data?: UpdateApplicationWithTokenExchangeGrantCommandOutput) => void
+  ): void;
+  updateApplicationWithTokenExchangeGrant(
+    args: UpdateApplicationWithTokenExchangeGrantCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateApplicationWithTokenExchangeGrantCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateBrandCommand}
+   */
+  updateBrand(args: UpdateBrandCommandInput, options?: __HttpHandlerOptions): Promise<UpdateBrandCommandOutput>;
+  updateBrand(args: UpdateBrandCommandInput, cb: (err: any, data?: UpdateBrandCommandOutput) => void): void;
+  updateBrand(
+    args: UpdateBrandCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateBrandCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateBrandAssignmentCommand}
+   */
+  updateBrandAssignment(
+    args: UpdateBrandAssignmentCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateBrandAssignmentCommandOutput>;
+  updateBrandAssignment(
+    args: UpdateBrandAssignmentCommandInput,
+    cb: (err: any, data?: UpdateBrandAssignmentCommandOutput) => void
+  ): void;
+  updateBrandAssignment(
+    args: UpdateBrandAssignmentCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateBrandAssignmentCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateBrandPublishedVersionCommand}
+   */
+  updateBrandPublishedVersion(
+    args: UpdateBrandPublishedVersionCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateBrandPublishedVersionCommandOutput>;
+  updateBrandPublishedVersion(
+    args: UpdateBrandPublishedVersionCommandInput,
+    cb: (err: any, data?: UpdateBrandPublishedVersionCommandOutput) => void
+  ): void;
+  updateBrandPublishedVersion(
+    args: UpdateBrandPublishedVersionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateBrandPublishedVersionCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateCustomPermissionsCommand}
+   */
+  updateCustomPermissions(
+    args: UpdateCustomPermissionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateCustomPermissionsCommandOutput>;
+  updateCustomPermissions(
+    args: UpdateCustomPermissionsCommandInput,
+    cb: (err: any, data?: UpdateCustomPermissionsCommandOutput) => void
+  ): void;
+  updateCustomPermissions(
+    args: UpdateCustomPermissionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateCustomPermissionsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link UpdateDashboardCommand}
    */
   updateDashboard(
@@ -3336,6 +3935,23 @@ export interface QuickSight {
   ): void;
 
   /**
+   * @see {@link UpdateDashboardsQAConfigurationCommand}
+   */
+  updateDashboardsQAConfiguration(
+    args: UpdateDashboardsQAConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateDashboardsQAConfigurationCommandOutput>;
+  updateDashboardsQAConfiguration(
+    args: UpdateDashboardsQAConfigurationCommandInput,
+    cb: (err: any, data?: UpdateDashboardsQAConfigurationCommandOutput) => void
+  ): void;
+  updateDashboardsQAConfiguration(
+    args: UpdateDashboardsQAConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateDashboardsQAConfigurationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link UpdateDataSetCommand}
    */
   updateDataSet(args: UpdateDataSetCommandInput, options?: __HttpHandlerOptions): Promise<UpdateDataSetCommandOutput>;
@@ -3395,6 +4011,23 @@ export interface QuickSight {
     args: UpdateDataSourcePermissionsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateDataSourcePermissionsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateDefaultQBusinessApplicationCommand}
+   */
+  updateDefaultQBusinessApplication(
+    args: UpdateDefaultQBusinessApplicationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateDefaultQBusinessApplicationCommandOutput>;
+  updateDefaultQBusinessApplication(
+    args: UpdateDefaultQBusinessApplicationCommandInput,
+    cb: (err: any, data?: UpdateDefaultQBusinessApplicationCommandOutput) => void
+  ): void;
+  updateDefaultQBusinessApplication(
+    args: UpdateDefaultQBusinessApplicationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateDefaultQBusinessApplicationCommandOutput) => void
   ): void;
 
   /**
@@ -3519,6 +4152,40 @@ export interface QuickSight {
     args: UpdatePublicSharingSettingsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdatePublicSharingSettingsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateQPersonalizationConfigurationCommand}
+   */
+  updateQPersonalizationConfiguration(
+    args: UpdateQPersonalizationConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateQPersonalizationConfigurationCommandOutput>;
+  updateQPersonalizationConfiguration(
+    args: UpdateQPersonalizationConfigurationCommandInput,
+    cb: (err: any, data?: UpdateQPersonalizationConfigurationCommandOutput) => void
+  ): void;
+  updateQPersonalizationConfiguration(
+    args: UpdateQPersonalizationConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateQPersonalizationConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateQuickSightQSearchConfigurationCommand}
+   */
+  updateQuickSightQSearchConfiguration(
+    args: UpdateQuickSightQSearchConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateQuickSightQSearchConfigurationCommandOutput>;
+  updateQuickSightQSearchConfiguration(
+    args: UpdateQuickSightQSearchConfigurationCommandInput,
+    cb: (err: any, data?: UpdateQuickSightQSearchConfigurationCommandOutput) => void
+  ): void;
+  updateQuickSightQSearchConfiguration(
+    args: UpdateQuickSightQSearchConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateQuickSightQSearchConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -3719,6 +4386,23 @@ export interface QuickSight {
     args: UpdateUserCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateUserCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateUserCustomPermissionCommand}
+   */
+  updateUserCustomPermission(
+    args: UpdateUserCustomPermissionCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateUserCustomPermissionCommandOutput>;
+  updateUserCustomPermission(
+    args: UpdateUserCustomPermissionCommandInput,
+    cb: (err: any, data?: UpdateUserCustomPermissionCommandOutput) => void
+  ): void;
+  updateUserCustomPermission(
+    args: UpdateUserCustomPermissionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateUserCustomPermissionCommandOutput) => void
   ): void;
 
   /**

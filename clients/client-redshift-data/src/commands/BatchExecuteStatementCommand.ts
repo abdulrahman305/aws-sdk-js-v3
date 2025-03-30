@@ -85,6 +85,7 @@ export interface BatchExecuteStatementCommandOutput extends BatchExecuteStatemen
  *   ClientToken: "STRING_VALUE",
  *   SessionKeepAliveSeconds: Number("int"),
  *   SessionId: "STRING_VALUE",
+ *   ResultFormat: "STRING_VALUE",
  * };
  * const command = new BatchExecuteStatementCommand(input);
  * const response = await client.send(command);
@@ -128,6 +129,7 @@ export interface BatchExecuteStatementCommandOutput extends BatchExecuteStatemen
  * @throws {@link RedshiftDataServiceException}
  * <p>Base exception class for all service exceptions from RedshiftData service.</p>
  *
+ *
  * @public
  */
 export class BatchExecuteStatementCommand extends $Command
@@ -138,9 +140,7 @@ export class BatchExecuteStatementCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: RedshiftDataClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -152,4 +152,16 @@ export class BatchExecuteStatementCommand extends $Command
   .f(void 0, void 0)
   .ser(se_BatchExecuteStatementCommand)
   .de(de_BatchExecuteStatementCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: BatchExecuteStatementInput;
+      output: BatchExecuteStatementOutput;
+    };
+    sdk: {
+      input: BatchExecuteStatementCommandInput;
+      output: BatchExecuteStatementCommandOutput;
+    };
+  };
+}

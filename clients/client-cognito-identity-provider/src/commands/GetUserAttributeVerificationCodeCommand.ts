@@ -41,9 +41,8 @@ export interface GetUserAttributeVerificationCodeCommandOutput
     __MetadataBearer {}
 
 /**
- * <p>Generates a user attribute verification code for the specified attribute name. Sends a
- *             message to a user with a code that they must return in a VerifyUserAttribute
- *             request.</p>
+ * <p>Given an attribute name, sends a user attribute verification code for the specified
+ *             attribute name to the currently signed-in user.</p>
  *          <p>Authorize this action with a signed-in user's access token. It must include the scope <code>aws.cognito.signin.user.admin</code>.</p>
  *          <note>
  *             <p>Amazon Cognito doesn't evaluate Identity and Access Management (IAM) policies in requests for this API operation. For
@@ -128,7 +127,7 @@ export interface GetUserAttributeVerificationCodeCommandOutput
  * @throws {@link InvalidSmsRoleTrustRelationshipException} (client fault)
  *  <p>This exception is thrown when the trust relationship is not valid for the role
  *             provided for SMS configuration. This can happen if you don't trust
- *             <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
+ *                 <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
  *             not match what is provided in the SMS configuration for the user pool.</p>
  *
  * @throws {@link LimitExceededException} (client fault)
@@ -166,6 +165,7 @@ export interface GetUserAttributeVerificationCodeCommandOutput
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class GetUserAttributeVerificationCodeCommand extends $Command
@@ -176,9 +176,7 @@ export class GetUserAttributeVerificationCodeCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -190,4 +188,16 @@ export class GetUserAttributeVerificationCodeCommand extends $Command
   .f(GetUserAttributeVerificationCodeRequestFilterSensitiveLog, void 0)
   .ser(se_GetUserAttributeVerificationCodeCommand)
   .de(de_GetUserAttributeVerificationCodeCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetUserAttributeVerificationCodeRequest;
+      output: GetUserAttributeVerificationCodeResponse;
+    };
+    sdk: {
+      input: GetUserAttributeVerificationCodeCommandInput;
+      output: GetUserAttributeVerificationCodeCommandOutput;
+    };
+  };
+}

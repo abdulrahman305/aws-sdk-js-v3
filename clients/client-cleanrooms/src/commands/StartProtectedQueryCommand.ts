@@ -11,7 +11,7 @@ import {
   StartProtectedQueryInputFilterSensitiveLog,
   StartProtectedQueryOutput,
   StartProtectedQueryOutputFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_StartProtectedQueryCommand, se_StartProtectedQueryCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -56,10 +56,17 @@ export interface StartProtectedQueryCommandOutput extends StartProtectedQueryOut
  *         resultFormat: "STRING_VALUE", // required
  *         bucket: "STRING_VALUE", // required
  *         keyPrefix: "STRING_VALUE",
+ *         singleFileOutput: true || false,
  *       },
  *       member: { // ProtectedQueryMemberOutputConfiguration
  *         accountId: "STRING_VALUE", // required
  *       },
+ *     },
+ *   },
+ *   computeConfiguration: { // ComputeConfiguration Union: only one key present
+ *     worker: { // WorkerComputeConfiguration
+ *       type: "CR.1X" || "CR.4X",
+ *       number: Number("int"),
  *     },
  *   },
  * };
@@ -85,6 +92,7 @@ export interface StartProtectedQueryCommandOutput extends StartProtectedQueryOut
  * //           resultFormat: "STRING_VALUE", // required
  * //           bucket: "STRING_VALUE", // required
  * //           keyPrefix: "STRING_VALUE",
+ * //           singleFileOutput: true || false,
  * //         },
  * //         member: { // ProtectedQueryMemberOutputConfiguration
  * //           accountId: "STRING_VALUE", // required
@@ -93,6 +101,9 @@ export interface StartProtectedQueryCommandOutput extends StartProtectedQueryOut
  * //     },
  * //     statistics: { // ProtectedQueryStatistics
  * //       totalDurationInMillis: Number("long"),
+ * //       billedResourceUtilization: { // BilledResourceUtilization
+ * //         units: Number("double"), // required
+ * //       },
  * //     },
  * //     result: { // ProtectedQueryResult
  * //       output: { // ProtectedQueryOutput Union: only one key present
@@ -120,6 +131,12 @@ export interface StartProtectedQueryCommandOutput extends StartProtectedQueryOut
  * //           maxColumnValue: Number("float"),
  * //         },
  * //       ],
+ * //     },
+ * //     computeConfiguration: { // ComputeConfiguration Union: only one key present
+ * //       worker: { // WorkerComputeConfiguration
+ * //         type: "CR.1X" || "CR.4X",
+ * //         number: Number("int"),
+ * //       },
  * //     },
  * //   },
  * // };
@@ -153,6 +170,7 @@ export interface StartProtectedQueryCommandOutput extends StartProtectedQueryOut
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class StartProtectedQueryCommand extends $Command
@@ -163,9 +181,7 @@ export class StartProtectedQueryCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -177,4 +193,16 @@ export class StartProtectedQueryCommand extends $Command
   .f(StartProtectedQueryInputFilterSensitiveLog, StartProtectedQueryOutputFilterSensitiveLog)
   .ser(se_StartProtectedQueryCommand)
   .de(de_StartProtectedQueryCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StartProtectedQueryInput;
+      output: StartProtectedQueryOutput;
+    };
+    sdk: {
+      input: StartProtectedQueryCommandInput;
+      output: StartProtectedQueryCommandOutput;
+    };
+  };
+}

@@ -48,6 +48,7 @@ export interface PutEnvironmentBlueprintConfigurationCommandOutput
  *   environmentBlueprintIdentifier: "STRING_VALUE", // required
  *   provisioningRoleArn: "STRING_VALUE",
  *   manageAccessRoleArn: "STRING_VALUE",
+ *   environmentRolePermissionBoundary: "STRING_VALUE",
  *   enabledRegions: [ // EnabledRegionList // required
  *     "STRING_VALUE",
  *   ],
@@ -73,6 +74,7 @@ export interface PutEnvironmentBlueprintConfigurationCommandOutput
  * //   domainId: "STRING_VALUE", // required
  * //   environmentBlueprintId: "STRING_VALUE", // required
  * //   provisioningRoleArn: "STRING_VALUE",
+ * //   environmentRolePermissionBoundary: "STRING_VALUE",
  * //   manageAccessRoleArn: "STRING_VALUE",
  * //   enabledRegions: [ // EnabledRegionList
  * //     "STRING_VALUE",
@@ -128,6 +130,7 @@ export interface PutEnvironmentBlueprintConfigurationCommandOutput
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class PutEnvironmentBlueprintConfigurationCommand extends $Command
@@ -138,9 +141,7 @@ export class PutEnvironmentBlueprintConfigurationCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -152,4 +153,16 @@ export class PutEnvironmentBlueprintConfigurationCommand extends $Command
   .f(void 0, void 0)
   .ser(se_PutEnvironmentBlueprintConfigurationCommand)
   .de(de_PutEnvironmentBlueprintConfigurationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: PutEnvironmentBlueprintConfigurationInput;
+      output: PutEnvironmentBlueprintConfigurationOutput;
+    };
+    sdk: {
+      input: PutEnvironmentBlueprintConfigurationCommandInput;
+      output: PutEnvironmentBlueprintConfigurationCommandOutput;
+    };
+  };
+}

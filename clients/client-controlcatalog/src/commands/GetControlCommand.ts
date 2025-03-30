@@ -52,6 +52,14 @@ export interface GetControlCommandOutput extends GetControlResponse, __MetadataB
  * //       "STRING_VALUE",
  * //     ],
  * //   },
+ * //   Implementation: { // ImplementationDetails
+ * //     Type: "STRING_VALUE", // required
+ * //   },
+ * //   Parameters: [ // ControlParameters
+ * //     { // ControlParameter
+ * //       Name: "STRING_VALUE", // required
+ * //     },
+ * //   ],
  * // };
  *
  * ```
@@ -80,6 +88,7 @@ export interface GetControlCommandOutput extends GetControlResponse, __MetadataB
  * @throws {@link ControlCatalogServiceException}
  * <p>Base exception class for all service exceptions from ControlCatalog service.</p>
  *
+ *
  * @public
  */
 export class GetControlCommand extends $Command
@@ -90,9 +99,7 @@ export class GetControlCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ControlCatalogClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -104,4 +111,16 @@ export class GetControlCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetControlCommand)
   .de(de_GetControlCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetControlRequest;
+      output: GetControlResponse;
+    };
+    sdk: {
+      input: GetControlCommandInput;
+      output: GetControlCommandOutput;
+    };
+  };
+}

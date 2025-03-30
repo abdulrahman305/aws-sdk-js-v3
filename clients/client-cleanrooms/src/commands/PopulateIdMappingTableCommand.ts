@@ -65,6 +65,9 @@ export interface PopulateIdMappingTableCommandOutput extends PopulateIdMappingTa
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>Request references a resource which does not exist.</p>
  *
+ * @throws {@link ServiceQuotaExceededException} (client fault)
+ *  <p>Request denied because service quota has been exceeded.</p>
+ *
  * @throws {@link ThrottlingException} (client fault)
  *  <p>Request was denied due to request throttling.</p>
  *
@@ -73,6 +76,7 @@ export interface PopulateIdMappingTableCommandOutput extends PopulateIdMappingTa
  *
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
+ *
  *
  * @public
  */
@@ -84,9 +88,7 @@ export class PopulateIdMappingTableCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -98,4 +100,16 @@ export class PopulateIdMappingTableCommand extends $Command
   .f(void 0, void 0)
   .ser(se_PopulateIdMappingTableCommand)
   .de(de_PopulateIdMappingTableCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: PopulateIdMappingTableInput;
+      output: PopulateIdMappingTableOutput;
+    };
+    sdk: {
+      input: PopulateIdMappingTableCommandInput;
+      output: PopulateIdMappingTableCommandOutput;
+    };
+  };
+}

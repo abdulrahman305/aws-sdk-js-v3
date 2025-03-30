@@ -28,7 +28,7 @@ and application names within dashboards and maps.</p>
 
 ## Installing
 
-To install the this package, simply type add or install @aws-sdk/client-application-signals
+To install this package, simply type add or install @aws-sdk/client-application-signals
 using your favorite package manager:
 
 - `npm install @aws-sdk/client-application-signals`
@@ -231,6 +231,14 @@ BatchGetServiceLevelObjectiveBudgetReport
 </details>
 <details>
 <summary>
+BatchUpdateExclusionWindows
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/application-signals/command/BatchUpdateExclusionWindowsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-application-signals/Interface/BatchUpdateExclusionWindowsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-application-signals/Interface/BatchUpdateExclusionWindowsCommandOutput/)
+
+</details>
+<details>
+<summary>
 CreateServiceLevelObjective
 </summary>
 
@@ -275,6 +283,14 @@ ListServiceDependents
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/application-signals/command/ListServiceDependentsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-application-signals/Interface/ListServiceDependentsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-application-signals/Interface/ListServiceDependentsCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListServiceLevelObjectiveExclusionWindows
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/application-signals/command/ListServiceLevelObjectiveExclusionWindowsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-application-signals/Interface/ListServiceLevelObjectiveExclusionWindowsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-application-signals/Interface/ListServiceLevelObjectiveExclusionWindowsCommandOutput/)
 
 </details>
 <details>

@@ -51,7 +51,10 @@ export interface CreateAgentActionGroupCommandOutput extends CreateAgentActionGr
  *   actionGroupName: "STRING_VALUE", // required
  *   clientToken: "STRING_VALUE",
  *   description: "STRING_VALUE",
- *   parentActionGroupSignature: "AMAZON.UserInput" || "AMAZON.CodeInterpreter",
+ *   parentActionGroupSignature: "AMAZON.UserInput" || "AMAZON.CodeInterpreter" || "ANTHROPIC.Computer" || "ANTHROPIC.Bash" || "ANTHROPIC.TextEditor",
+ *   parentActionGroupSignatureParams: { // ActionGroupSignatureParams
+ *     "<keys>": "STRING_VALUE",
+ *   },
  *   actionGroupExecutor: { // ActionGroupExecutor Union: only one key present
  *     lambda: "STRING_VALUE",
  *     customControl: "RETURN_CONTROL",
@@ -93,7 +96,10 @@ export interface CreateAgentActionGroupCommandOutput extends CreateAgentActionGr
  * //     description: "STRING_VALUE",
  * //     createdAt: new Date("TIMESTAMP"), // required
  * //     updatedAt: new Date("TIMESTAMP"), // required
- * //     parentActionSignature: "AMAZON.UserInput" || "AMAZON.CodeInterpreter",
+ * //     parentActionSignature: "AMAZON.UserInput" || "AMAZON.CodeInterpreter" || "ANTHROPIC.Computer" || "ANTHROPIC.Bash" || "ANTHROPIC.TextEditor",
+ * //     parentActionGroupSignatureParams: { // ActionGroupSignatureParams
+ * //       "<keys>": "STRING_VALUE",
+ * //     },
  * //     actionGroupExecutor: { // ActionGroupExecutor Union: only one key present
  * //       lambda: "STRING_VALUE",
  * //       customControl: "RETURN_CONTROL",
@@ -157,6 +163,7 @@ export interface CreateAgentActionGroupCommandOutput extends CreateAgentActionGr
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class CreateAgentActionGroupCommand extends $Command
@@ -167,9 +174,7 @@ export class CreateAgentActionGroupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -181,4 +186,16 @@ export class CreateAgentActionGroupCommand extends $Command
   .f(CreateAgentActionGroupRequestFilterSensitiveLog, CreateAgentActionGroupResponseFilterSensitiveLog)
   .ser(se_CreateAgentActionGroupCommand)
   .de(de_CreateAgentActionGroupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateAgentActionGroupRequest;
+      output: CreateAgentActionGroupResponse;
+    };
+    sdk: {
+      input: CreateAgentActionGroupCommandInput;
+      output: CreateAgentActionGroupCommandOutput;
+    };
+  };
+}

@@ -107,6 +107,7 @@ export interface CreateSecurityProfileCommandOutput extends CreateSecurityProfil
  * @throws {@link ConnectServiceException}
  * <p>Base exception class for all service exceptions from Connect service.</p>
  *
+ *
  * @public
  */
 export class CreateSecurityProfileCommand extends $Command
@@ -117,9 +118,7 @@ export class CreateSecurityProfileCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -131,4 +130,16 @@ export class CreateSecurityProfileCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateSecurityProfileCommand)
   .de(de_CreateSecurityProfileCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateSecurityProfileRequest;
+      output: CreateSecurityProfileResponse;
+    };
+    sdk: {
+      input: CreateSecurityProfileCommandInput;
+      output: CreateSecurityProfileCommandOutput;
+    };
+  };
+}

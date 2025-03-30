@@ -112,6 +112,7 @@ export interface ListDatabasesCommandOutput extends ListDatabasesResponse, __Met
  * @throws {@link RedshiftDataServiceException}
  * <p>Base exception class for all service exceptions from RedshiftData service.</p>
  *
+ *
  * @public
  */
 export class ListDatabasesCommand extends $Command
@@ -122,9 +123,7 @@ export class ListDatabasesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: RedshiftDataClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -136,4 +135,16 @@ export class ListDatabasesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListDatabasesCommand)
   .de(de_ListDatabasesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListDatabasesRequest;
+      output: ListDatabasesResponse;
+    };
+    sdk: {
+      input: ListDatabasesCommandInput;
+      output: ListDatabasesCommandOutput;
+    };
+  };
+}

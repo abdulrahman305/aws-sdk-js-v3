@@ -67,6 +67,20 @@ export interface DescribeListenerAttributesCommandOutput extends DescribeListene
  * @throws {@link ElasticLoadBalancingV2ServiceException}
  * <p>Base exception class for all service exceptions from ElasticLoadBalancingV2 service.</p>
  *
+ *
+ * @example Describe listener attributes
+ * ```javascript
+ * // This example describes the attributes of the specified listener.
+ * const input = {
+ *   ListenerArn: "aws:elasticloadbalancing:us-east-1:123456789012:listener/net/my-listener/73e2d6bc24d8a067/d5dc06411fa5bcea"
+ * };
+ * const command = new DescribeListenerAttributesCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class DescribeListenerAttributesCommand extends $Command
@@ -77,9 +91,7 @@ export class DescribeListenerAttributesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ElasticLoadBalancingV2ClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -91,4 +103,16 @@ export class DescribeListenerAttributesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeListenerAttributesCommand)
   .de(de_DescribeListenerAttributesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeListenerAttributesInput;
+      output: DescribeListenerAttributesOutput;
+    };
+    sdk: {
+      input: DescribeListenerAttributesCommandInput;
+      output: DescribeListenerAttributesCommandOutput;
+    };
+  };
+}

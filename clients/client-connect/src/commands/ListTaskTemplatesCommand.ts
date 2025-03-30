@@ -85,6 +85,7 @@ export interface ListTaskTemplatesCommandOutput extends ListTaskTemplatesRespons
  * @throws {@link ConnectServiceException}
  * <p>Base exception class for all service exceptions from Connect service.</p>
  *
+ *
  * @public
  */
 export class ListTaskTemplatesCommand extends $Command
@@ -95,9 +96,7 @@ export class ListTaskTemplatesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -109,4 +108,16 @@ export class ListTaskTemplatesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListTaskTemplatesCommand)
   .de(de_ListTaskTemplatesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListTaskTemplatesRequest;
+      output: ListTaskTemplatesResponse;
+    };
+    sdk: {
+      input: ListTaskTemplatesCommandInput;
+      output: ListTaskTemplatesCommandOutput;
+    };
+  };
+}

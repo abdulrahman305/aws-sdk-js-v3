@@ -92,6 +92,124 @@ export interface ListSolNetworkOperationsCommandOutput extends ListSolNetworkOpe
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example List Sol Network Instantiate operations
+ * ```javascript
+ * //
+ * const input = { /* empty *\/ };
+ * const command = new ListSolNetworkOperationsCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   networkOperations: [
+ *     {
+ *       arn: "arn:aws:tnb:us-west-2:123456789000:network-operation/no-0d5b823eb5c2a9241",
+ *       id: "no-0d5b823eb5c2a9241",
+ *       lcmOperationType: "INSTANTIATE",
+ *       metadata: {
+ *         createdAt: "2022-06-10T19:48:34Z",
+ *         lastModified: "2022-06-10T21:48:33Z",
+ *         nsdInfoId: "np-0d0f3e2eae4fc1ac1"
+ *       },
+ *       nsInstanceId: "ni-0d5b823eb5c2a9241",
+ *       operationState: "COMPLETED"
+ *     }
+ *   ]
+ * }
+ * *\/
+ * ```
+ *
+ * @example List Sol Network Instantiate operations with nextToken and maxResults
+ * ```javascript
+ * //
+ * const input = {
+ *   maxResults: 25,
+ *   nextToken: ""
+ * };
+ * const command = new ListSolNetworkOperationsCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   networkOperations: [
+ *     {
+ *       arn: "arn:aws:tnb:us-west-2:123456789000:network-operation/no-0d5b823eb5c2a9241",
+ *       error: {
+ *         detail: "An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 4). We currently do not have sufficient capacity in the Availability Zone you requested",
+ *         title: "InsufficientInstanceCapacity"
+ *       },
+ *       id: "no-0d5b823eb5c2a9241",
+ *       lcmOperationType: "INSTANTIATE",
+ *       metadata: {
+ *         createdAt: "2022-06-10T19:48:33Z",
+ *         lastModified: "2022-06-10T19:48:33Z",
+ *         nsdInfoId: "np-0d0f3e2eae4fc1ac1"
+ *       },
+ *       nsInstanceId: "ni-0d5b823eb5c2a9241",
+ *       operationState: "COMPLETED"
+ *     }
+ *   ]
+ * }
+ * *\/
+ * ```
+ *
+ * @example List Sol Network Update operations
+ * ```javascript
+ * //
+ * const input = {
+ *   nsInstanceId: "ni-0d5b823eb5c2a9241"
+ * };
+ * const command = new ListSolNetworkOperationsCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   networkOperations: [
+ *     {
+ *       arn: "arn:aws:tnb:us-west-2:123456789000:network-operation/no-0d5b823eb5c2a9241",
+ *       id: "no-0d5b823eb5c2a9241",
+ *       lcmOperationType: "UPDATE",
+ *       metadata: {
+ *         createdAt: "2022-06-10T19:48:34Z",
+ *         lastModified: "2022-06-10T21:48:33Z",
+ *         vnfInstanceId: "fi-0d5b823eb5c2a9241"
+ *       },
+ *       nsInstanceId: "ni-0d5b823eb5c2a9241",
+ *       operationState: "COMPLETED",
+ *       updateType: "MODIFY_VNF_INFORMATION"
+ *     }
+ *   ]
+ * }
+ * *\/
+ * ```
+ *
+ * @example List Sol Network Update operations
+ * ```javascript
+ * //
+ * const input = {
+ *   nsInstanceId: "ni-0d5b823eb5c2a9241"
+ * };
+ * const command = new ListSolNetworkOperationsCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   networkOperations: [
+ *     {
+ *       arn: "arn:aws:tnb:us-west-2:123456789000:network-operation/no-0d5b823eb5c2a9241",
+ *       id: "no-0d5b823eb5c2a9241",
+ *       lcmOperationType: "UPDATE",
+ *       metadata: {
+ *         createdAt: "2022-06-10T19:48:34Z",
+ *         lastModified: "2022-06-10T21:48:33Z",
+ *         nsdInfoId: "np-0d0f3e2eae4fc1ac1"
+ *       },
+ *       nsInstanceId: "ni-0d5b823eb5c2a9241",
+ *       operationState: "COMPLETED",
+ *       updateType: "UPDATE_NS"
+ *     }
+ *   ]
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class ListSolNetworkOperationsCommand extends $Command
@@ -102,9 +220,7 @@ export class ListSolNetworkOperationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -116,4 +232,16 @@ export class ListSolNetworkOperationsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListSolNetworkOperationsCommand)
   .de(de_ListSolNetworkOperationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListSolNetworkOperationsInput;
+      output: ListSolNetworkOperationsOutput;
+    };
+    sdk: {
+      input: ListSolNetworkOperationsCommandInput;
+      output: ListSolNetworkOperationsCommandOutput;
+    };
+  };
+}

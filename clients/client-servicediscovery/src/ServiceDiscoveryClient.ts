@@ -67,6 +67,10 @@ import {
 } from "./commands/CreatePublicDnsNamespaceCommand";
 import { CreateServiceCommandInput, CreateServiceCommandOutput } from "./commands/CreateServiceCommand";
 import { DeleteNamespaceCommandInput, DeleteNamespaceCommandOutput } from "./commands/DeleteNamespaceCommand";
+import {
+  DeleteServiceAttributesCommandInput,
+  DeleteServiceAttributesCommandOutput,
+} from "./commands/DeleteServiceAttributesCommand";
 import { DeleteServiceCommandInput, DeleteServiceCommandOutput } from "./commands/DeleteServiceCommand";
 import { DeregisterInstanceCommandInput, DeregisterInstanceCommandOutput } from "./commands/DeregisterInstanceCommand";
 import { DiscoverInstancesCommandInput, DiscoverInstancesCommandOutput } from "./commands/DiscoverInstancesCommand";
@@ -81,6 +85,10 @@ import {
 } from "./commands/GetInstancesHealthStatusCommand";
 import { GetNamespaceCommandInput, GetNamespaceCommandOutput } from "./commands/GetNamespaceCommand";
 import { GetOperationCommandInput, GetOperationCommandOutput } from "./commands/GetOperationCommand";
+import {
+  GetServiceAttributesCommandInput,
+  GetServiceAttributesCommandOutput,
+} from "./commands/GetServiceAttributesCommand";
 import { GetServiceCommandInput, GetServiceCommandOutput } from "./commands/GetServiceCommand";
 import { ListInstancesCommandInput, ListInstancesCommandOutput } from "./commands/ListInstancesCommand";
 import { ListNamespacesCommandInput, ListNamespacesCommandOutput } from "./commands/ListNamespacesCommand";
@@ -109,6 +117,10 @@ import {
   UpdatePublicDnsNamespaceCommandInput,
   UpdatePublicDnsNamespaceCommandOutput,
 } from "./commands/UpdatePublicDnsNamespaceCommand";
+import {
+  UpdateServiceAttributesCommandInput,
+  UpdateServiceAttributesCommandOutput,
+} from "./commands/UpdateServiceAttributesCommand";
 import { UpdateServiceCommandInput, UpdateServiceCommandOutput } from "./commands/UpdateServiceCommand";
 import {
   ClientInputEndpointParameters,
@@ -130,6 +142,7 @@ export type ServiceInputTypes =
   | CreatePublicDnsNamespaceCommandInput
   | CreateServiceCommandInput
   | DeleteNamespaceCommandInput
+  | DeleteServiceAttributesCommandInput
   | DeleteServiceCommandInput
   | DeregisterInstanceCommandInput
   | DiscoverInstancesCommandInput
@@ -138,6 +151,7 @@ export type ServiceInputTypes =
   | GetInstancesHealthStatusCommandInput
   | GetNamespaceCommandInput
   | GetOperationCommandInput
+  | GetServiceAttributesCommandInput
   | GetServiceCommandInput
   | ListInstancesCommandInput
   | ListNamespacesCommandInput
@@ -151,6 +165,7 @@ export type ServiceInputTypes =
   | UpdateInstanceCustomHealthStatusCommandInput
   | UpdatePrivateDnsNamespaceCommandInput
   | UpdatePublicDnsNamespaceCommandInput
+  | UpdateServiceAttributesCommandInput
   | UpdateServiceCommandInput;
 
 /**
@@ -162,6 +177,7 @@ export type ServiceOutputTypes =
   | CreatePublicDnsNamespaceCommandOutput
   | CreateServiceCommandOutput
   | DeleteNamespaceCommandOutput
+  | DeleteServiceAttributesCommandOutput
   | DeleteServiceCommandOutput
   | DeregisterInstanceCommandOutput
   | DiscoverInstancesCommandOutput
@@ -170,6 +186,7 @@ export type ServiceOutputTypes =
   | GetInstancesHealthStatusCommandOutput
   | GetNamespaceCommandOutput
   | GetOperationCommandOutput
+  | GetServiceAttributesCommandOutput
   | GetServiceCommandOutput
   | ListInstancesCommandOutput
   | ListNamespacesCommandOutput
@@ -183,6 +200,7 @@ export type ServiceOutputTypes =
   | UpdateInstanceCustomHealthStatusCommandOutput
   | UpdatePrivateDnsNamespaceCommandOutput
   | UpdatePublicDnsNamespaceCommandOutput
+  | UpdateServiceAttributesCommandOutput
   | UpdateServiceCommandOutput;
 
 /**
@@ -275,6 +293,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -378,6 +415,8 @@ export class ServiceDiscoveryClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<ServiceDiscoveryClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -386,7 +425,6 @@ export class ServiceDiscoveryClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

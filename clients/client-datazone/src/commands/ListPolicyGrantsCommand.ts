@@ -39,7 +39,7 @@ export interface ListPolicyGrantsCommandOutput extends ListPolicyGrantsOutput, _
  *   domainIdentifier: "STRING_VALUE", // required
  *   entityType: "DOMAIN_UNIT" || "ENVIRONMENT_BLUEPRINT_CONFIGURATION" || "ENVIRONMENT_PROFILE", // required
  *   entityIdentifier: "STRING_VALUE", // required
- *   policyType: "CREATE_DOMAIN_UNIT" || "OVERRIDE_DOMAIN_UNIT_OWNERS" || "ADD_TO_PROJECT_MEMBER_POOL" || "OVERRIDE_PROJECT_OWNERS" || "CREATE_GLOSSARY" || "CREATE_FORM_TYPE" || "CREATE_ASSET_TYPE" || "CREATE_PROJECT" || "CREATE_ENVIRONMENT_PROFILE" || "DELEGATE_CREATE_ENVIRONMENT_PROFILE" || "CREATE_ENVIRONMENT", // required
+ *   policyType: "CREATE_DOMAIN_UNIT" || "OVERRIDE_DOMAIN_UNIT_OWNERS" || "ADD_TO_PROJECT_MEMBER_POOL" || "OVERRIDE_PROJECT_OWNERS" || "CREATE_GLOSSARY" || "CREATE_FORM_TYPE" || "CREATE_ASSET_TYPE" || "CREATE_PROJECT" || "CREATE_ENVIRONMENT_PROFILE" || "DELEGATE_CREATE_ENVIRONMENT_PROFILE" || "CREATE_ENVIRONMENT" || "CREATE_ENVIRONMENT_FROM_BLUEPRINT" || "CREATE_PROJECT_FROM_PROJECT_PROFILE", // required
  *   maxResults: Number("int"),
  *   nextToken: "STRING_VALUE",
  * };
@@ -57,7 +57,7 @@ export interface ListPolicyGrantsCommandOutput extends ListPolicyGrantsOutput, _
  * //           groupIdentifier: "STRING_VALUE",
  * //         },
  * //         project: { // ProjectPolicyGrantPrincipal
- * //           projectDesignation: "OWNER" || "CONTRIBUTOR", // required
+ * //           projectDesignation: "OWNER" || "CONTRIBUTOR" || "PROJECT_CATALOG_STEWARD", // required
  * //           projectIdentifier: "STRING_VALUE",
  * //           projectGrantFilter: { // ProjectGrantFilter Union: only one key present
  * //             domainUnitFilter: { // DomainUnitFilterForProject
@@ -104,6 +104,13 @@ export interface ListPolicyGrantsCommandOutput extends ListPolicyGrantsOutput, _
  * //         },
  * //         delegateCreateEnvironmentProfile: {},
  * //         createEnvironment: {},
+ * //         createEnvironmentFromBlueprint: {},
+ * //         createProjectFromProjectProfile: { // CreateProjectFromProjectProfilePolicyGrantDetail
+ * //           includeChildDomainUnits: true || false,
+ * //           projectProfiles: [ // ProjectProfileList
+ * //             "STRING_VALUE",
+ * //           ],
+ * //         },
  * //       },
  * //       createdAt: new Date("TIMESTAMP"),
  * //       createdBy: "STRING_VALUE",
@@ -138,6 +145,7 @@ export interface ListPolicyGrantsCommandOutput extends ListPolicyGrantsOutput, _
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListPolicyGrantsCommand extends $Command
@@ -148,9 +156,7 @@ export class ListPolicyGrantsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -162,4 +168,16 @@ export class ListPolicyGrantsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListPolicyGrantsCommand)
   .de(de_ListPolicyGrantsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListPolicyGrantsInput;
+      output: ListPolicyGrantsOutput;
+    };
+    sdk: {
+      input: ListPolicyGrantsCommandInput;
+      output: ListPolicyGrantsCommandOutput;
+    };
+  };
+}

@@ -176,6 +176,7 @@ import {
   DuplicatedStopRequestException,
   EnableStageTransitionInput,
   EncryptionKey,
+  EnvironmentVariable,
   ExecutionDetails,
   ExecutorConfiguration,
   FailureConditions,
@@ -263,6 +264,7 @@ import {
   RegisterWebhookWithThirdPartyInput,
   RequestFailedException,
   ResourceNotFoundException,
+  RetryConfiguration,
   RetryStageExecutionInput,
   RollbackStageInput,
   RuleDeclaration,
@@ -2514,6 +2516,8 @@ const se_ActionRevision = (input: ActionRevision, context: __SerdeContext): any 
 
 // se_BlockerDeclaration omitted.
 
+// se_CommandList omitted.
+
 // se_Condition omitted.
 
 // se_ConditionList omitted.
@@ -2556,6 +2560,10 @@ const se_CurrentRevision = (input: CurrentRevision, context: __SerdeContext): an
 
 // se_EncryptionKey omitted.
 
+// se_EnvironmentVariable omitted.
+
+// se_EnvironmentVariableList omitted.
+
 // se_ExecutionDetails omitted.
 
 // se_ExecutorConfiguration omitted.
@@ -2563,6 +2571,8 @@ const se_CurrentRevision = (input: CurrentRevision, context: __SerdeContext): an
 // se_FailureConditions omitted.
 
 // se_FailureDetails omitted.
+
+// se_FilePathList omitted.
 
 // se_GetActionTypeInput omitted.
 
@@ -2629,6 +2639,8 @@ const se_CurrentRevision = (input: CurrentRevision, context: __SerdeContext): an
 // se_OutputArtifact omitted.
 
 // se_OutputArtifactList omitted.
+
+// se_OutputVariableList omitted.
 
 // se_OutputVariablesMap omitted.
 
@@ -2712,6 +2724,8 @@ const se_PutThirdPartyJobSuccessResultInput = (
 // se_QueryParamMap omitted.
 
 // se_RegisterWebhookWithThirdPartyInput omitted.
+
+// se_RetryConfiguration omitted.
 
 // se_RetryStageExecutionInput omitted.
 
@@ -2811,6 +2825,7 @@ const de_ActionExecution = (output: any, context: __SerdeContext): ActionExecuti
     externalExecutionUrl: __expectString,
     lastStatusChange: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     lastUpdatedBy: __expectString,
+    logStreamARN: __expectString,
     percentComplete: __expectInt32,
     status: __expectString,
     summary: __expectString,
@@ -2971,6 +2986,8 @@ const de_ArtifactRevisionList = (output: any, context: __SerdeContext): Artifact
 
 // de_BlockerDeclaration omitted.
 
+// de_CommandList omitted.
+
 // de_ConcurrentModificationException omitted.
 
 // de_ConcurrentPipelineExecutionsLimitExceededException omitted.
@@ -3036,6 +3053,10 @@ const de_CreatePipelineOutput = (output: any, context: __SerdeContext): CreatePi
 
 // de_EncryptionKey omitted.
 
+// de_EnvironmentVariable omitted.
+
+// de_EnvironmentVariableList omitted.
+
 // de_ErrorDetails omitted.
 
 // de_ExecutionTrigger omitted.
@@ -3043,6 +3064,8 @@ const de_CreatePipelineOutput = (output: any, context: __SerdeContext): CreatePi
 // de_ExecutorConfiguration omitted.
 
 // de_FailureConditions omitted.
+
+// de_FilePathList omitted.
 
 // de_GetActionTypeOutput omitted.
 
@@ -3231,6 +3254,8 @@ const de_ListWebhooksOutput = (output: any, context: __SerdeContext): ListWebhoo
 
 // de_OutputArtifactList omitted.
 
+// de_OutputVariableList omitted.
+
 // de_OutputVariablesMap omitted.
 
 // de_OutputVariablesSizeExceededException omitted.
@@ -3393,7 +3418,11 @@ const de_PutWebhookOutput = (output: any, context: __SerdeContext): PutWebhookOu
 
 // de_ResourceNotFoundException omitted.
 
+// de_RetryConfiguration omitted.
+
 // de_RetryStageExecutionOutput omitted.
+
+// de_RetryStageMetadata omitted.
 
 // de_RollbackStageOutput omitted.
 
@@ -3554,6 +3583,7 @@ const de_StageState = (output: any, context: __SerdeContext): StageState => {
     latestExecution: _json,
     onFailureConditionState: (_: any) => de_StageConditionState(_, context),
     onSuccessConditionState: (_: any) => de_StageConditionState(_, context),
+    retryStageMetadata: _json,
     stageName: __expectString,
   }) as any;
 };

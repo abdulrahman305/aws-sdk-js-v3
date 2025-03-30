@@ -13,6 +13,7 @@ import {
   decorateServiceException as __decorateServiceException,
   expectBoolean as __expectBoolean,
   expectInt32 as __expectInt32,
+  expectLong as __expectLong,
   expectNonNull as __expectNonNull,
   expectNumber as __expectNumber,
   expectObject as __expectObject,
@@ -173,6 +174,7 @@ import {
   GetPrivacyBudgetTemplateCommandInput,
   GetPrivacyBudgetTemplateCommandOutput,
 } from "../commands/GetPrivacyBudgetTemplateCommand";
+import { GetProtectedJobCommandInput, GetProtectedJobCommandOutput } from "../commands/GetProtectedJobCommand";
 import { GetProtectedQueryCommandInput, GetProtectedQueryCommandOutput } from "../commands/GetProtectedQueryCommand";
 import {
   GetSchemaAnalysisRuleCommandInput,
@@ -231,6 +233,7 @@ import {
   ListPrivacyBudgetTemplatesCommandInput,
   ListPrivacyBudgetTemplatesCommandOutput,
 } from "../commands/ListPrivacyBudgetTemplatesCommand";
+import { ListProtectedJobsCommandInput, ListProtectedJobsCommandOutput } from "../commands/ListProtectedJobsCommand";
 import {
   ListProtectedQueriesCommandInput,
   ListProtectedQueriesCommandOutput,
@@ -248,6 +251,7 @@ import {
   PreviewPrivacyImpactCommandInput,
   PreviewPrivacyImpactCommandOutput,
 } from "../commands/PreviewPrivacyImpactCommand";
+import { StartProtectedJobCommandInput, StartProtectedJobCommandOutput } from "../commands/StartProtectedJobCommand";
 import {
   StartProtectedQueryCommandInput,
   StartProtectedQueryCommandOutput,
@@ -295,6 +299,7 @@ import {
   UpdatePrivacyBudgetTemplateCommandInput,
   UpdatePrivacyBudgetTemplateCommandOutput,
 } from "../commands/UpdatePrivacyBudgetTemplateCommand";
+import { UpdateProtectedJobCommandInput, UpdateProtectedJobCommandOutput } from "../commands/UpdateProtectedJobCommand";
 import {
   UpdateProtectedQueryCommandInput,
   UpdateProtectedQueryCommandOutput,
@@ -309,9 +314,13 @@ import {
   AnalysisRuleAggregation,
   AnalysisRuleCustom,
   AnalysisRuleList,
+  AnalysisSchema,
   AnalysisSource,
   AnalysisTemplate,
+  AnalysisTemplateArtifact,
+  AnalysisTemplateArtifacts,
   AnalysisTemplateSummary,
+  AthenaTableReference,
   Collaboration,
   CollaborationAnalysisTemplate,
   CollaborationAnalysisTemplateSummary,
@@ -339,12 +348,10 @@ import {
   ConfiguredTableAssociationSummary,
   ConfiguredTableSummary,
   ConflictException,
+  CustomMLMemberAbility,
   DataEncryptionMetadata,
   DifferentialPrivacyColumn,
   DifferentialPrivacyConfiguration,
-  DifferentialPrivacyParameters,
-  DifferentialPrivacyPreviewParametersInput,
-  DifferentialPrivacySensitivityParameters,
   GlueTableReference,
   IdMappingConfig,
   IdMappingTable,
@@ -355,44 +362,76 @@ import {
   IdNamespaceAssociationInputReferenceProperties,
   IdNamespaceAssociationSummary,
   InternalServerException,
+  JobComputePaymentConfig,
   JoinOperator,
   MemberAbility,
   Membership,
+  MembershipJobComputePaymentConfig,
+  MembershipMLPaymentConfig,
+  MembershipModelInferencePaymentConfig,
+  MembershipModelTrainingPaymentConfig,
   MembershipPaymentConfiguration,
+  MembershipProtectedJobOutputConfiguration,
+  MembershipProtectedJobResultConfiguration,
   MembershipProtectedQueryOutputConfiguration,
   MembershipProtectedQueryResultConfiguration,
   MembershipQueryComputePaymentConfig,
-  MembershipSummary,
   MemberSpecification,
   MemberSummary,
+  MLMemberAbilities,
+  MLPaymentConfig,
+  ModelInferencePaymentConfig,
+  ModelTrainingPaymentConfig,
   PaymentConfiguration,
-  PreviewPrivacyImpactParametersInput,
-  PrivacyBudgetSummary,
-  ProtectedQuery,
-  ProtectedQueryMemberOutputConfiguration,
-  ProtectedQueryOutputConfiguration,
-  ProtectedQueryResultConfiguration,
+  ProtectedJobParameters,
+  ProtectedJobS3OutputConfigurationInput,
   ProtectedQueryS3OutputConfiguration,
-  ProtectedQuerySQLParameters,
-  ProtectedQuerySummary,
   QueryComputePaymentConfig,
   ResourceNotFoundException,
+  S3Location,
   ScalarFunctions,
   Schema,
   SchemaAnalysisRuleRequest,
   SchemaSummary,
+  SelectedAnalysisMethod,
   ServiceQuotaExceededException,
+  SnowflakeTableReference,
+  SnowflakeTableSchema,
+  SnowflakeTableSchemaV1,
   TableReference,
   ThrottlingException,
   ValidationException,
 } from "../models/models_0";
 import {
+  BilledJobResourceUtilization,
+  BilledResourceUtilization,
+  ComputeConfiguration,
+  DifferentialPrivacyParameters,
+  DifferentialPrivacyPreviewParametersInput,
+  DifferentialPrivacySensitivityParameters,
   DifferentialPrivacyTemplateParametersInput,
   DifferentialPrivacyTemplateUpdateParameters,
+  MembershipSummary,
+  PreviewPrivacyImpactParametersInput,
+  PrivacyBudgetSummary,
   PrivacyBudgetTemplate,
   PrivacyBudgetTemplateParametersInput,
   PrivacyBudgetTemplateSummary,
   PrivacyBudgetTemplateUpdateParameters,
+  ProtectedJob,
+  ProtectedJobMemberOutputConfigurationInput,
+  ProtectedJobOutputConfigurationInput,
+  ProtectedJobResultConfigurationInput,
+  ProtectedJobStatistics,
+  ProtectedJobSummary,
+  ProtectedQuery,
+  ProtectedQueryMemberOutputConfiguration,
+  ProtectedQueryOutputConfiguration,
+  ProtectedQueryResultConfiguration,
+  ProtectedQuerySQLParameters,
+  ProtectedQueryStatistics,
+  ProtectedQuerySummary,
+  WorkerComputeConfiguration,
 } from "../models/models_1";
 
 /**
@@ -484,6 +523,7 @@ export const se_CreateAnalysisTemplateCommand = async (
       description: [],
       format: [],
       name: [],
+      schema: (_) => _json(_),
       source: (_) => _json(_),
       tags: (_) => _json(_),
     })
@@ -507,11 +547,14 @@ export const se_CreateCollaborationCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      analyticsEngine: [],
       creatorDisplayName: [],
+      creatorMLMemberAbilities: (_) => _json(_),
       creatorMemberAbilities: (_) => _json(_),
       creatorPaymentConfiguration: (_) => _json(_),
       dataEncryptionMetadata: (_) => _json(_),
       description: [],
+      jobLogStatus: [],
       members: (_) => _json(_),
       name: [],
       queryLogStatus: [],
@@ -568,6 +611,7 @@ export const se_CreateConfiguredTableCommand = async (
       analysisMethod: [],
       description: [],
       name: [],
+      selectedAnalysisMethods: (_) => _json(_),
       tableReference: (_) => _json(_),
       tags: (_) => _json(_),
     })
@@ -729,7 +773,9 @@ export const se_CreateMembershipCommand = async (
   body = JSON.stringify(
     take(input, {
       collaborationIdentifier: [],
+      defaultJobResultConfiguration: (_) => _json(_),
       defaultResultConfiguration: (_) => _json(_),
+      jobLogStatus: [],
       paymentConfiguration: (_) => _json(_),
       queryLogStatus: [],
       tags: (_) => _json(_),
@@ -1296,6 +1342,23 @@ export const se_GetPrivacyBudgetTemplateCommand = async (
 };
 
 /**
+ * serializeAws_restJson1GetProtectedJobCommand
+ */
+export const se_GetProtectedJobCommand = async (
+  input: GetProtectedJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/memberships/{membershipIdentifier}/protectedJobs/{protectedJobIdentifier}");
+  b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
+  b.p("protectedJobIdentifier", () => input.protectedJobIdentifier!, "{protectedJobIdentifier}", false);
+  let body: any;
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1GetProtectedQueryCommand
  */
 export const se_GetProtectedQueryCommand = async (
@@ -1669,6 +1732,27 @@ export const se_ListPrivacyBudgetTemplatesCommand = async (
 };
 
 /**
+ * serializeAws_restJson1ListProtectedJobsCommand
+ */
+export const se_ListProtectedJobsCommand = async (
+  input: ListProtectedJobsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/memberships/{membershipIdentifier}/protectedJobs");
+  b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
+  const query: any = map({
+    [_s]: [, input[_s]!],
+    [_nT]: [, input[_nT]!],
+    [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1ListProtectedQueriesCommand
  */
 export const se_ListProtectedQueriesCommand = async (
@@ -1767,6 +1851,31 @@ export const se_PreviewPrivacyImpactCommand = async (
 };
 
 /**
+ * serializeAws_restJson1StartProtectedJobCommand
+ */
+export const se_StartProtectedJobCommand = async (
+  input: StartProtectedJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/memberships/{membershipIdentifier}/protectedJobs");
+  b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      jobParameters: (_) => _json(_),
+      resultConfiguration: (_) => _json(_),
+      type: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1StartProtectedQueryCommand
  */
 export const se_StartProtectedQueryCommand = async (
@@ -1782,6 +1891,7 @@ export const se_StartProtectedQueryCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      computeConfiguration: (_) => _json(_),
       resultConfiguration: (_) => _json(_),
       sqlParameters: (_) => _json(_),
       type: [],
@@ -1826,10 +1936,7 @@ export const se_UntagResourceCommand = async (
   b.bp("/tags/{resourceArn}");
   b.p("resourceArn", () => input.resourceArn!, "{resourceArn}", false);
   const query: any = map({
-    [_tK]: [
-      __expectNonNull(input.tagKeys, `tagKeys`) != null,
-      () => (input[_tK]! || []).map((_entry) => _entry as any),
-    ],
+    [_tK]: [__expectNonNull(input.tagKeys, `tagKeys`) != null, () => input[_tK]! || []],
   });
   let body: any;
   b.m("DELETE").h(headers).q(query).b(body);
@@ -1932,8 +2039,10 @@ export const se_UpdateConfiguredTableCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      analysisMethod: [],
       description: [],
       name: [],
+      selectedAnalysisMethods: (_) => _json(_),
     })
   );
   b.m("PATCH").h(headers).b(body);
@@ -2098,7 +2207,9 @@ export const se_UpdateMembershipCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      defaultJobResultConfiguration: (_) => _json(_),
       defaultResultConfiguration: (_) => _json(_),
+      jobLogStatus: [],
       queryLogStatus: [],
     })
   );
@@ -2130,6 +2241,30 @@ export const se_UpdatePrivacyBudgetTemplateCommand = async (
     take(input, {
       parameters: (_) => _json(_),
       privacyBudgetType: [],
+    })
+  );
+  b.m("PATCH").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1UpdateProtectedJobCommand
+ */
+export const se_UpdateProtectedJobCommand = async (
+  input: UpdateProtectedJobCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/memberships/{membershipIdentifier}/protectedJobs/{protectedJobIdentifier}");
+  b.p("membershipIdentifier", () => input.membershipIdentifier!, "{membershipIdentifier}", false);
+  b.p("protectedJobIdentifier", () => input.protectedJobIdentifier!, "{protectedJobIdentifier}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      targetStatus: [],
     })
   );
   b.m("PATCH").h(headers).b(body);
@@ -2978,6 +3113,27 @@ export const de_GetPrivacyBudgetTemplateCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1GetProtectedJobCommand
+ */
+export const de_GetProtectedJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetProtectedJobCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    protectedJob: (_) => de_ProtectedJob(_, context),
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1GetProtectedQueryCommand
  */
 export const de_GetProtectedQueryCommand = async (
@@ -3394,6 +3550,28 @@ export const de_ListPrivacyBudgetTemplatesCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1ListProtectedJobsCommand
+ */
+export const de_ListProtectedJobsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListProtectedJobsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    nextToken: __expectString,
+    protectedJobs: (_) => de_ProtectedJobSummaryList(_, context),
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1ListProtectedQueriesCommand
  */
 export const de_ListProtectedQueriesCommand = async (
@@ -3495,6 +3673,27 @@ export const de_PreviewPrivacyImpactCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     privacyImpact: (_) => _json(__expectUnion(_)),
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1StartProtectedJobCommand
+ */
+export const de_StartProtectedJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<StartProtectedJobCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    protectedJob: (_) => de_ProtectedJob(_, context),
   });
   Object.assign(contents, doc);
   return contents;
@@ -3787,6 +3986,27 @@ export const de_UpdatePrivacyBudgetTemplateCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1UpdateProtectedJobCommand
+ */
+export const de_UpdateProtectedJobCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateProtectedJobCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    protectedJob: (_) => de_ProtectedJob(_, context),
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1UpdateProtectedQueryCommand
  */
 export const de_UpdateProtectedQueryCommand = async (
@@ -4022,9 +4242,21 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_AnalysisRuleList omitted.
 
+// se_AnalysisSchema omitted.
+
 // se_AnalysisSource omitted.
 
 // se_AnalysisTemplateArnList omitted.
+
+// se_AnalysisTemplateArtifact omitted.
+
+// se_AnalysisTemplateArtifactList omitted.
+
+// se_AnalysisTemplateArtifacts omitted.
+
+// se_AthenaTableReference omitted.
+
+// se_ComputeConfiguration omitted.
 
 // se_ConfiguredTableAnalysisRulePolicy omitted.
 
@@ -4039,6 +4271,8 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 // se_ConfiguredTableAssociationAnalysisRulePolicy omitted.
 
 // se_ConfiguredTableAssociationAnalysisRulePolicyV1 omitted.
+
+// se_CustomMLMemberAbilities omitted.
 
 // se_DataEncryptionMetadata omitted.
 
@@ -4062,13 +4296,27 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_IdNamespaceAssociationInputReferenceConfig omitted.
 
+// se_JobComputePaymentConfig omitted.
+
 // se_JoinOperatorsList omitted.
 
 // se_MemberAbilities omitted.
 
 // se_MemberList omitted.
 
+// se_MembershipJobComputePaymentConfig omitted.
+
+// se_MembershipMLPaymentConfig omitted.
+
+// se_MembershipModelInferencePaymentConfig omitted.
+
+// se_MembershipModelTrainingPaymentConfig omitted.
+
 // se_MembershipPaymentConfiguration omitted.
+
+// se_MembershipProtectedJobOutputConfiguration omitted.
+
+// se_MembershipProtectedJobResultConfiguration omitted.
 
 // se_MembershipProtectedQueryOutputConfiguration omitted.
 
@@ -4077,6 +4325,14 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 // se_MembershipQueryComputePaymentConfig omitted.
 
 // se_MemberSpecification omitted.
+
+// se_MLMemberAbilities omitted.
+
+// se_MLPaymentConfig omitted.
+
+// se_ModelInferencePaymentConfig omitted.
+
+// se_ModelTrainingPaymentConfig omitted.
 
 // se_ParameterMap omitted.
 
@@ -4087,6 +4343,16 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 // se_PrivacyBudgetTemplateParametersInput omitted.
 
 // se_PrivacyBudgetTemplateUpdateParameters omitted.
+
+// se_ProtectedJobMemberOutputConfigurationInput omitted.
+
+// se_ProtectedJobOutputConfigurationInput omitted.
+
+// se_ProtectedJobParameters omitted.
+
+// se_ProtectedJobResultConfigurationInput omitted.
+
+// se_ProtectedJobS3OutputConfigurationInput omitted.
 
 // se_ProtectedQueryMemberOutputConfiguration omitted.
 
@@ -4100,17 +4366,33 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_QueryComputePaymentConfig omitted.
 
+// se_QueryTables omitted.
+
+// se_S3Location omitted.
+
 // se_ScalarFunctionsList omitted.
 
 // se_SchemaAnalysisRuleRequest omitted.
 
 // se_SchemaAnalysisRuleRequestList omitted.
 
+// se_SelectedAnalysisMethods omitted.
+
+// se_SnowflakeTableReference omitted.
+
+// se_SnowflakeTableSchema omitted.
+
+// se_SnowflakeTableSchemaList omitted.
+
+// se_SnowflakeTableSchemaV1 omitted.
+
 // se_TableAliasList omitted.
 
 // se_TableReference omitted.
 
 // se_TagMap omitted.
+
+// se_WorkerComputeConfiguration omitted.
 
 // de_AggregateColumn omitted.
 
@@ -4140,6 +4422,8 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 const de_AnalysisRule = (output: any, context: __SerdeContext): AnalysisRule => {
   return take(output, {
     collaborationId: __expectString,
+    collaborationPolicy: (_: any) => _json(__expectUnion(_)),
+    consolidatedPolicy: (_: any) => _json(__expectUnion(_)),
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     name: __expectString,
     policy: (_: any) => _json(__expectUnion(_)),
@@ -4170,6 +4454,8 @@ const de_AnalysisRule = (output: any, context: __SerdeContext): AnalysisRule => 
 
 // de_AnalysisSource omitted.
 
+// de_AnalysisSourceMetadata omitted.
+
 /**
  * deserializeAws_restJson1AnalysisTemplate
  */
@@ -4188,10 +4474,19 @@ const de_AnalysisTemplate = (output: any, context: __SerdeContext): AnalysisTemp
     name: __expectString,
     schema: _json,
     source: (_: any) => _json(__expectUnion(_)),
+    sourceMetadata: (_: any) => _json(__expectUnion(_)),
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     validations: _json,
   }) as any;
 };
+
+// de_AnalysisTemplateArtifact omitted.
+
+// de_AnalysisTemplateArtifactList omitted.
+
+// de_AnalysisTemplateArtifactMetadata omitted.
+
+// de_AnalysisTemplateArtifacts omitted.
 
 /**
  * deserializeAws_restJson1AnalysisTemplateSummary
@@ -4231,6 +4526,8 @@ const de_AnalysisTemplateSummaryList = (output: any, context: __SerdeContext): A
 
 // de_AnalysisTemplateValidationStatusReasonList omitted.
 
+// de_AthenaTableReference omitted.
+
 // de_BatchGetCollaborationAnalysisTemplateError omitted.
 
 // de_BatchGetCollaborationAnalysisTemplateErrorList omitted.
@@ -4244,10 +4541,29 @@ const de_AnalysisTemplateSummaryList = (output: any, context: __SerdeContext): A
 // de_BatchGetSchemaErrorList omitted.
 
 /**
+ * deserializeAws_restJson1BilledJobResourceUtilization
+ */
+const de_BilledJobResourceUtilization = (output: any, context: __SerdeContext): BilledJobResourceUtilization => {
+  return take(output, {
+    units: __limitedParseDouble,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1BilledResourceUtilization
+ */
+const de_BilledResourceUtilization = (output: any, context: __SerdeContext): BilledResourceUtilization => {
+  return take(output, {
+    units: __limitedParseDouble,
+  }) as any;
+};
+
+/**
  * deserializeAws_restJson1Collaboration
  */
 const de_Collaboration = (output: any, context: __SerdeContext): Collaboration => {
   return take(output, {
+    analyticsEngine: __expectString,
     arn: __expectString,
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     creatorAccountId: __expectString,
@@ -4255,6 +4571,7 @@ const de_Collaboration = (output: any, context: __SerdeContext): Collaboration =
     dataEncryptionMetadata: _json,
     description: __expectString,
     id: __expectString,
+    jobLogStatus: __expectString,
     memberStatus: __expectString,
     membershipArn: __expectString,
     membershipId: __expectString,
@@ -4281,6 +4598,7 @@ const de_CollaborationAnalysisTemplate = (output: any, context: __SerdeContext):
     name: __expectString,
     schema: _json,
     source: (_: any) => _json(__expectUnion(_)),
+    sourceMetadata: (_: any) => _json(__expectUnion(_)),
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     validations: _json,
   }) as any;
@@ -4548,6 +4866,7 @@ const de_CollaborationPrivacyBudgetTemplateSummaryList = (
  */
 const de_CollaborationSummary = (output: any, context: __SerdeContext): CollaborationSummary => {
   return take(output, {
+    analyticsEngine: __expectString,
     arn: __expectString,
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     creatorAccountId: __expectString,
@@ -4576,6 +4895,8 @@ const de_CollaborationSummaryList = (output: any, context: __SerdeContext): Coll
 // de_Column omitted.
 
 // de_ColumnList omitted.
+
+// de_ComputeConfiguration omitted.
 
 // de_ConfigurationDetails omitted.
 
@@ -4652,6 +4973,7 @@ const de_ConfiguredTable = (output: any, context: __SerdeContext): ConfiguredTab
     description: __expectString,
     id: __expectString,
     name: __expectString,
+    selectedAnalysisMethods: _json,
     tableReference: (_: any) => _json(__expectUnion(_)),
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   }) as any;
@@ -4735,6 +5057,7 @@ const de_ConfiguredTableAssociationSummary = (
   context: __SerdeContext
 ): ConfiguredTableAssociationSummary => {
   return take(output, {
+    analysisRuleTypes: _json,
     arn: __expectString,
     configuredTableId: __expectString,
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -4772,6 +5095,7 @@ const de_ConfiguredTableSummary = (output: any, context: __SerdeContext): Config
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     id: __expectString,
     name: __expectString,
+    selectedAnalysisMethods: _json,
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   }) as any;
 };
@@ -4787,6 +5111,18 @@ const de_ConfiguredTableSummaryList = (output: any, context: __SerdeContext): Co
     });
   return retVal;
 };
+
+// de_ConsolidatedPolicy omitted.
+
+// de_ConsolidatedPolicyAggregation omitted.
+
+// de_ConsolidatedPolicyCustom omitted.
+
+// de_ConsolidatedPolicyList omitted.
+
+// de_ConsolidatedPolicyV1 omitted.
+
+// de_CustomMLMemberAbilities omitted.
 
 // de_DataEncryptionMetadata omitted.
 
@@ -4853,6 +5189,10 @@ const de_DifferentialPrivacySensitivityParametersList = (
 // de_DirectAnalysisConfigurationDetails omitted.
 
 // de_GlueTableReference omitted.
+
+// de_Hash omitted.
+
+// de_HashList omitted.
 
 // de_IdMappingConfig omitted.
 
@@ -5003,6 +5343,8 @@ const de_IdNamespaceAssociationSummaryList = (
   return retVal;
 };
 
+// de_JobComputePaymentConfig omitted.
+
 // de_JoinOperatorsList omitted.
 
 // de_MemberAbilities omitted.
@@ -5019,9 +5361,12 @@ const de_Membership = (output: any, context: __SerdeContext): Membership => {
     collaborationId: __expectString,
     collaborationName: __expectString,
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    defaultJobResultConfiguration: _json,
     defaultResultConfiguration: _json,
     id: __expectString,
+    jobLogStatus: __expectString,
     memberAbilities: _json,
+    mlMemberAbilities: _json,
     paymentConfiguration: _json,
     queryLogStatus: __expectString,
     status: __expectString,
@@ -5029,7 +5374,19 @@ const de_Membership = (output: any, context: __SerdeContext): Membership => {
   }) as any;
 };
 
+// de_MembershipJobComputePaymentConfig omitted.
+
+// de_MembershipMLPaymentConfig omitted.
+
+// de_MembershipModelInferencePaymentConfig omitted.
+
+// de_MembershipModelTrainingPaymentConfig omitted.
+
 // de_MembershipPaymentConfiguration omitted.
+
+// de_MembershipProtectedJobOutputConfiguration omitted.
+
+// de_MembershipProtectedJobResultConfiguration omitted.
 
 // de_MembershipProtectedQueryOutputConfiguration omitted.
 
@@ -5051,6 +5408,7 @@ const de_MembershipSummary = (output: any, context: __SerdeContext): MembershipS
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     id: __expectString,
     memberAbilities: _json,
+    mlMemberAbilities: _json,
     paymentConfiguration: _json,
     status: __expectString,
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -5080,6 +5438,7 @@ const de_MemberSummary = (output: any, context: __SerdeContext): MemberSummary =
     displayName: __expectString,
     membershipArn: __expectString,
     membershipId: __expectString,
+    mlAbilities: _json,
     paymentConfiguration: _json,
     status: __expectString,
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -5097,6 +5456,14 @@ const de_MemberSummaryList = (output: any, context: __SerdeContext): MemberSumma
     });
   return retVal;
 };
+
+// de_MLMemberAbilities omitted.
+
+// de_MLPaymentConfig omitted.
+
+// de_ModelInferencePaymentConfig omitted.
+
+// de_ModelTrainingPaymentConfig omitted.
 
 // de_ParameterMap omitted.
 
@@ -5188,10 +5555,99 @@ const de_PrivacyBudgetTemplateSummaryList = (output: any, context: __SerdeContex
 // de_PrivacyImpact omitted.
 
 /**
+ * deserializeAws_restJson1ProtectedJob
+ */
+const de_ProtectedJob = (output: any, context: __SerdeContext): ProtectedJob => {
+  return take(output, {
+    createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    error: _json,
+    id: __expectString,
+    jobParameters: _json,
+    membershipArn: __expectString,
+    membershipId: __expectString,
+    result: _json,
+    resultConfiguration: _json,
+    statistics: (_: any) => de_ProtectedJobStatistics(_, context),
+    status: __expectString,
+  }) as any;
+};
+
+// de_ProtectedJobConfigurationDetails omitted.
+
+// de_ProtectedJobDirectAnalysisConfigurationDetails omitted.
+
+// de_ProtectedJobError omitted.
+
+// de_ProtectedJobMemberOutputConfigurationOutput omitted.
+
+// de_ProtectedJobMemberOutputList omitted.
+
+// de_ProtectedJobOutput omitted.
+
+// de_ProtectedJobOutputConfigurationOutput omitted.
+
+// de_ProtectedJobParameters omitted.
+
+// de_ProtectedJobReceiverAccountIds omitted.
+
+// de_ProtectedJobReceiverConfiguration omitted.
+
+// de_ProtectedJobReceiverConfigurations omitted.
+
+// de_ProtectedJobResult omitted.
+
+// de_ProtectedJobResultConfigurationOutput omitted.
+
+// de_ProtectedJobS3Output omitted.
+
+// de_ProtectedJobS3OutputConfigurationInput omitted.
+
+// de_ProtectedJobS3OutputConfigurationOutput omitted.
+
+// de_ProtectedJobSingleMemberOutput omitted.
+
+/**
+ * deserializeAws_restJson1ProtectedJobStatistics
+ */
+const de_ProtectedJobStatistics = (output: any, context: __SerdeContext): ProtectedJobStatistics => {
+  return take(output, {
+    billedResourceUtilization: (_: any) => de_BilledJobResourceUtilization(_, context),
+    totalDurationInMillis: __expectLong,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ProtectedJobSummary
+ */
+const de_ProtectedJobSummary = (output: any, context: __SerdeContext): ProtectedJobSummary => {
+  return take(output, {
+    createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    id: __expectString,
+    membershipArn: __expectString,
+    membershipId: __expectString,
+    receiverConfigurations: _json,
+    status: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ProtectedJobSummaryList
+ */
+const de_ProtectedJobSummaryList = (output: any, context: __SerdeContext): ProtectedJobSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ProtectedJobSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
  * deserializeAws_restJson1ProtectedQuery
  */
 const de_ProtectedQuery = (output: any, context: __SerdeContext): ProtectedQuery => {
   return take(output, {
+    computeConfiguration: (_: any) => _json(__expectUnion(_)),
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     differentialPrivacy: (_: any) => de_DifferentialPrivacyParameters(_, context),
     error: _json,
@@ -5201,7 +5657,7 @@ const de_ProtectedQuery = (output: any, context: __SerdeContext): ProtectedQuery
     result: _json,
     resultConfiguration: _json,
     sqlParameters: _json,
-    statistics: _json,
+    statistics: (_: any) => de_ProtectedQueryStatistics(_, context),
     status: __expectString,
   }) as any;
 };
@@ -5228,7 +5684,15 @@ const de_ProtectedQuery = (output: any, context: __SerdeContext): ProtectedQuery
 
 // de_ProtectedQuerySQLParameters omitted.
 
-// de_ProtectedQueryStatistics omitted.
+/**
+ * deserializeAws_restJson1ProtectedQueryStatistics
+ */
+const de_ProtectedQueryStatistics = (output: any, context: __SerdeContext): ProtectedQueryStatistics => {
+  return take(output, {
+    billedResourceUtilization: (_: any) => de_BilledResourceUtilization(_, context),
+    totalDurationInMillis: __expectLong,
+  }) as any;
+};
 
 /**
  * deserializeAws_restJson1ProtectedQuerySummary
@@ -5272,6 +5736,8 @@ const de_ProtectedQuerySummaryList = (output: any, context: __SerdeContext): Pro
 
 // de_ReceiverConfigurationsList omitted.
 
+// de_S3Location omitted.
+
 // de_ScalarFunctionsList omitted.
 
 /**
@@ -5291,6 +5757,7 @@ const de_Schema = (output: any, context: __SerdeContext): Schema => {
     partitionKeys: _json,
     schemaStatusDetails: _json,
     schemaTypeProperties: (_: any) => _json(__expectUnion(_)),
+    selectedAnalysisMethods: _json,
     type: __expectString,
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   }) as any;
@@ -5342,6 +5809,7 @@ const de_SchemaSummary = (output: any, context: __SerdeContext): SchemaSummary =
     createTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     creatorAccountId: __expectString,
     name: __expectString,
+    selectedAnalysisMethods: _json,
     type: __expectString,
     updateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   }) as any;
@@ -5361,6 +5829,16 @@ const de_SchemaSummaryList = (output: any, context: __SerdeContext): SchemaSumma
 
 // de_SchemaTypeProperties omitted.
 
+// de_SelectedAnalysisMethods omitted.
+
+// de_SnowflakeTableReference omitted.
+
+// de_SnowflakeTableSchema omitted.
+
+// de_SnowflakeTableSchemaList omitted.
+
+// de_SnowflakeTableSchemaV1 omitted.
+
 // de_TableReference omitted.
 
 // de_TagMap omitted.
@@ -5368,6 +5846,8 @@ const de_SchemaSummaryList = (output: any, context: __SerdeContext): SchemaSumma
 // de_ValidationExceptionField omitted.
 
 // de_ValidationExceptionFieldList omitted.
+
+// de_WorkerComputeConfiguration omitted.
 
 /**
  * deserializeAws_restJson1Document
@@ -5387,13 +5867,6 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> =>
   collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
-
-const isSerializableHeaderValue = (value: any): boolean =>
-  value !== undefined &&
-  value !== null &&
-  value !== "" &&
-  (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
-  (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
 
 const _mR = "maxResults";
 const _mS = "memberStatus";

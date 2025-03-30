@@ -30,7 +30,7 @@ export interface GetObjectAclCommandOutput extends GetObjectAclOutput, __Metadat
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
  *          <p>Returns the access control list (ACL) of an object. To use this operation, you must have
  *             <code>s3:GetObjectAcl</code> permissions or <code>READ_ACP</code> access to the object.
@@ -120,61 +120,61 @@ export interface GetObjectAclCommandOutput extends GetObjectAclOutput, __Metadat
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
- * @public
+ *
  * @example To retrieve object ACL
  * ```javascript
  * // The following example retrieves access control list (ACL) of an object.
  * const input = {
- *   "Bucket": "examplebucket",
- *   "Key": "HappyFace.jpg"
+ *   Bucket: "examplebucket",
+ *   Key: "HappyFace.jpg"
  * };
  * const command = new GetObjectAclCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "Grants": [
+ *   Grants: [
  *     {
- *       "Grantee": {
- *         "DisplayName": "owner-display-name",
- *         "ID": "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
- *         "Type": "CanonicalUser"
+ *       Grantee: {
+ *         DisplayName: "owner-display-name",
+ *         ID: "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
+ *         Type: "CanonicalUser"
  *       },
- *       "Permission": "WRITE"
+ *       Permission: "WRITE"
  *     },
  *     {
- *       "Grantee": {
- *         "DisplayName": "owner-display-name",
- *         "ID": "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
- *         "Type": "CanonicalUser"
+ *       Grantee: {
+ *         DisplayName: "owner-display-name",
+ *         ID: "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
+ *         Type: "CanonicalUser"
  *       },
- *       "Permission": "WRITE_ACP"
+ *       Permission: "WRITE_ACP"
  *     },
  *     {
- *       "Grantee": {
- *         "DisplayName": "owner-display-name",
- *         "ID": "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
- *         "Type": "CanonicalUser"
+ *       Grantee: {
+ *         DisplayName: "owner-display-name",
+ *         ID: "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
+ *         Type: "CanonicalUser"
  *       },
- *       "Permission": "READ"
+ *       Permission: "READ"
  *     },
  *     {
- *       "Grantee": {
- *         "DisplayName": "owner-display-name",
- *         "ID": "852b113eexamplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
- *         "Type": "CanonicalUser"
+ *       Grantee: {
+ *         DisplayName: "owner-display-name",
+ *         ID: "852b113eexamplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc",
+ *         Type: "CanonicalUser"
  *       },
- *       "Permission": "READ_ACP"
+ *       Permission: "READ_ACP"
  *     }
  *   ],
- *   "Owner": {
- *     "DisplayName": "owner-display-name",
- *     "ID": "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc"
+ *   Owner: {
+ *     DisplayName: "owner-display-name",
+ *     ID: "examplee7a2f25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc"
  *   }
  * }
  * *\/
- * // example id: to-retrieve-object-acl-1481833557740
  * ```
  *
+ * @public
  */
 export class GetObjectAclCommand extends $Command
   .classBuilder<
@@ -201,4 +201,16 @@ export class GetObjectAclCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetObjectAclCommand)
   .de(de_GetObjectAclCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetObjectAclRequest;
+      output: GetObjectAclOutput;
+    };
+    sdk: {
+      input: GetObjectAclCommandInput;
+      output: GetObjectAclCommandOutput;
+    };
+  };
+}

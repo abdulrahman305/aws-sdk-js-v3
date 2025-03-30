@@ -131,7 +131,7 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //         Message: "STRING_VALUE",
  * //       },
  * //       StorageCapacity: Number("int"),
- * //       StorageType: "SSD" || "HDD",
+ * //       StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //       VpcId: "STRING_VALUE",
  * //       SubnetIds: [ // SubnetIds
  * //         "STRING_VALUE",
@@ -221,6 +221,7 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //           Iops: Number("int"),
  * //           Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //         },
+ * //         EfaEnabled: true || false,
  * //       },
  * //       AdministrativeActions: [ // AdministrativeActions
  * //         { // AdministrativeAction
@@ -238,7 +239,7 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //               Message: "STRING_VALUE",
  * //             },
  * //             StorageCapacity: Number("int"),
- * //             StorageType: "SSD" || "HDD",
+ * //             StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //             VpcId: "STRING_VALUE",
  * //             SubnetIds: [
  * //               "STRING_VALUE",
@@ -323,6 +324,7 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //                 Iops: Number("int"),
  * //                 Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //               },
+ * //               EfaEnabled: true || false,
  * //             },
  * //             AdministrativeActions: [
  * //               {
@@ -507,6 +509,10 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //                 "STRING_VALUE",
  * //               ],
  * //               EndpointIpAddress: "STRING_VALUE",
+ * //               ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //                 SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //                 SizeGiB: Number("int"),
+ * //               },
  * //             },
  * //           },
  * //           FailureDetails: {
@@ -679,6 +685,10 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //           "STRING_VALUE",
  * //         ],
  * //         EndpointIpAddress: "STRING_VALUE",
+ * //         ReadCacheConfiguration: {
+ * //           SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //           SizeGiB: Number("int"),
+ * //         },
  * //       },
  * //     },
  * //     DirectoryInformation: { // ActiveDirectoryBackupAttributes
@@ -691,6 +701,7 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * //     SourceBackupRegion: "STRING_VALUE",
  * //     ResourceType: "FILE_SYSTEM" || "VOLUME",
  * //     Volume: "<Volume>",
+ * //     SizeInBytes: Number("long"),
  * //   },
  * // };
  *
@@ -733,53 +744,8 @@ export interface CreateBackupCommandOutput extends CreateBackupResponse, __Metad
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
- * @public
- * @example To create a new backup
- * ```javascript
- * // This operation creates a new backup.
- * const input = {
- *   "FileSystemId": "fs-0498eed5fe91001ec",
- *   "Tags": [
- *     {
- *       "Key": "Name",
- *       "Value": "MyBackup"
- *     }
- *   ]
- * };
- * const command = new CreateBackupCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "Backup": {
- *     "BackupId": "backup-03e3c82e0183b7b6b",
- *     "CreationTime": "1481841524.0",
- *     "FileSystem": {
- *       "FileSystemId": "fs-0498eed5fe91001ec",
- *       "OwnerId": "012345678912",
- *       "StorageCapacity": 300,
- *       "WindowsConfiguration": {
- *         "ActiveDirectoryId": "d-1234abcd12",
- *         "AutomaticBackupRetentionDays": 30,
- *         "DailyAutomaticBackupStartTime": "05:00",
- *         "WeeklyMaintenanceStartTime": "1:05:00"
- *       }
- *     },
- *     "Lifecycle": "CREATING",
- *     "ProgressPercent": 0,
- *     "ResourceARN": "arn:aws:fsx:us-east-1:012345678912:backup/backup-03e3c82e0183b7b6b",
- *     "Tags": [
- *       {
- *         "Key": "Name",
- *         "Value": "MyBackup"
- *       }
- *     ],
- *     "Type": "USER_INITIATED"
- *   }
- * }
- * *\/
- * // example id: to-create-a-new-backup-1481840798597
- * ```
  *
+ * @public
  */
 export class CreateBackupCommand extends $Command
   .classBuilder<
@@ -789,9 +755,7 @@ export class CreateBackupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -803,4 +767,16 @@ export class CreateBackupCommand extends $Command
   .f(void 0, CreateBackupResponseFilterSensitiveLog)
   .ser(se_CreateBackupCommand)
   .de(de_CreateBackupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateBackupRequest;
+      output: CreateBackupResponse;
+    };
+    sdk: {
+      input: CreateBackupCommandInput;
+      output: CreateBackupCommandOutput;
+    };
+  };
+}

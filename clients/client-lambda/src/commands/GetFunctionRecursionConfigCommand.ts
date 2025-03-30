@@ -68,6 +68,7 @@ export interface GetFunctionRecursionConfigCommandOutput extends GetFunctionRecu
  * @throws {@link LambdaServiceException}
  * <p>Base exception class for all service exceptions from Lambda service.</p>
  *
+ *
  * @public
  */
 export class GetFunctionRecursionConfigCommand extends $Command
@@ -78,9 +79,7 @@ export class GetFunctionRecursionConfigCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: LambdaClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -92,4 +91,16 @@ export class GetFunctionRecursionConfigCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetFunctionRecursionConfigCommand)
   .de(de_GetFunctionRecursionConfigCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetFunctionRecursionConfigRequest;
+      output: GetFunctionRecursionConfigResponse;
+    };
+    sdk: {
+      input: GetFunctionRecursionConfigCommandInput;
+      output: GetFunctionRecursionConfigCommandOutput;
+    };
+  };
+}

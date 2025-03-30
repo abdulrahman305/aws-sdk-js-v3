@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { GetConsoleOutputRequest, GetConsoleOutputResult } from "../models/models_5";
+import { GetConsoleOutputRequest, GetConsoleOutputResult } from "../models/models_6";
 import { de_GetConsoleOutputCommand, se_GetConsoleOutputCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -42,15 +42,15 @@ export interface GetConsoleOutputCommandOutput extends GetConsoleOutputResult, _
  * const client = new EC2Client(config);
  * const input = { // GetConsoleOutputRequest
  *   InstanceId: "STRING_VALUE", // required
- *   DryRun: true || false,
  *   Latest: true || false,
+ *   DryRun: true || false,
  * };
  * const command = new GetConsoleOutputCommand(input);
  * const response = await client.send(command);
  * // { // GetConsoleOutputResult
  * //   InstanceId: "STRING_VALUE",
- * //   Output: "STRING_VALUE",
  * //   Timestamp: new Date("TIMESTAMP"),
+ * //   Output: "STRING_VALUE",
  * // };
  *
  * ```
@@ -64,25 +64,25 @@ export interface GetConsoleOutputCommandOutput extends GetConsoleOutputResult, _
  * @throws {@link EC2ServiceException}
  * <p>Base exception class for all service exceptions from EC2 service.</p>
  *
- * @public
+ *
  * @example To get the console output
  * ```javascript
  * // This example gets the console output for the specified instance.
  * const input = {
- *   "InstanceId": "i-1234567890abcdef0"
+ *   InstanceId: "i-1234567890abcdef0"
  * };
  * const command = new GetConsoleOutputCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "InstanceId": "i-1234567890abcdef0",
- *   "Output": "...",
- *   "Timestamp": "2018-05-25T21:23:53.000Z"
+ *   InstanceId: "i-1234567890abcdef0",
+ *   Output: "...",
+ *   Timestamp: "2018-05-25T21:23:53.000Z"
  * }
  * *\/
- * // example id: to-get-the-console-output-1529355683194
  * ```
  *
+ * @public
  */
 export class GetConsoleOutputCommand extends $Command
   .classBuilder<
@@ -92,9 +92,7 @@ export class GetConsoleOutputCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EC2ClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -106,4 +104,16 @@ export class GetConsoleOutputCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetConsoleOutputCommand)
   .de(de_GetConsoleOutputCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetConsoleOutputRequest;
+      output: GetConsoleOutputResult;
+    };
+    sdk: {
+      input: GetConsoleOutputCommandInput;
+      output: GetConsoleOutputCommandOutput;
+    };
+  };
+}

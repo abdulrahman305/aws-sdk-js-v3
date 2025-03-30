@@ -126,6 +126,7 @@ export interface ListRealtimeContactAnalysisSegmentsCommandOutput
  * @throws {@link ConnectContactLensServiceException}
  * <p>Base exception class for all service exceptions from ConnectContactLens service.</p>
  *
+ *
  * @public
  */
 export class ListRealtimeContactAnalysisSegmentsCommand extends $Command
@@ -136,9 +137,7 @@ export class ListRealtimeContactAnalysisSegmentsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectContactLensClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -150,4 +149,16 @@ export class ListRealtimeContactAnalysisSegmentsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListRealtimeContactAnalysisSegmentsCommand)
   .de(de_ListRealtimeContactAnalysisSegmentsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListRealtimeContactAnalysisSegmentsRequest;
+      output: ListRealtimeContactAnalysisSegmentsResponse;
+    };
+    sdk: {
+      input: ListRealtimeContactAnalysisSegmentsCommandInput;
+      output: ListRealtimeContactAnalysisSegmentsCommandOutput;
+    };
+  };
+}

@@ -36,6 +36,7 @@ export interface DescribeEngineVersionsCommandOutput extends DescribeEngineVersi
  * // const { MemoryDBClient, DescribeEngineVersionsCommand } = require("@aws-sdk/client-memorydb"); // CommonJS import
  * const client = new MemoryDBClient(config);
  * const input = { // DescribeEngineVersionsRequest
+ *   Engine: "STRING_VALUE",
  *   EngineVersion: "STRING_VALUE",
  *   ParameterGroupFamily: "STRING_VALUE",
  *   MaxResults: Number("int"),
@@ -48,6 +49,7 @@ export interface DescribeEngineVersionsCommandOutput extends DescribeEngineVersi
  * //   NextToken: "STRING_VALUE",
  * //   EngineVersions: [ // EngineVersionInfoList
  * //     { // EngineVersionInfo
+ * //       Engine: "STRING_VALUE",
  * //       EngineVersion: "STRING_VALUE",
  * //       EnginePatchVersion: "STRING_VALUE",
  * //       ParameterGroupFamily: "STRING_VALUE",
@@ -75,6 +77,7 @@ export interface DescribeEngineVersionsCommandOutput extends DescribeEngineVersi
  * @throws {@link MemoryDBServiceException}
  * <p>Base exception class for all service exceptions from MemoryDB service.</p>
  *
+ *
  * @public
  */
 export class DescribeEngineVersionsCommand extends $Command
@@ -85,9 +88,7 @@ export class DescribeEngineVersionsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: MemoryDBClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -99,4 +100,16 @@ export class DescribeEngineVersionsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeEngineVersionsCommand)
   .de(de_DescribeEngineVersionsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeEngineVersionsRequest;
+      output: DescribeEngineVersionsResponse;
+    };
+    sdk: {
+      input: DescribeEngineVersionsCommandInput;
+      output: DescribeEngineVersionsCommandOutput;
+    };
+  };
+}

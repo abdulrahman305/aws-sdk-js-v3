@@ -54,7 +54,7 @@ export interface DeleteAppInputSourceCommandOutput extends DeleteAppInputSourceR
  * //   appArn: "STRING_VALUE",
  * //   appInputSource: { // AppInputSource
  * //     sourceName: "STRING_VALUE",
- * //     importType: "STRING_VALUE", // required
+ * //     importType: "CfnStack" || "Resource" || "AppRegistryApp" || "ResourceGroup" || "Terraform" || "EKS", // required
  * //     sourceArn: "STRING_VALUE",
  * //     terraformSource: { // TerraformSource
  * //       s3StateFileUrl: "STRING_VALUE", // required
@@ -102,6 +102,7 @@ export interface DeleteAppInputSourceCommandOutput extends DeleteAppInputSourceR
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class DeleteAppInputSourceCommand extends $Command
@@ -112,9 +113,7 @@ export class DeleteAppInputSourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -126,4 +125,16 @@ export class DeleteAppInputSourceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteAppInputSourceCommand)
   .de(de_DeleteAppInputSourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteAppInputSourceRequest;
+      output: DeleteAppInputSourceResponse;
+    };
+    sdk: {
+      input: DeleteAppInputSourceCommandInput;
+      output: DeleteAppInputSourceCommandOutput;
+    };
+  };
+}

@@ -115,6 +115,9 @@ action categories are:</p>
 <li>
 <p>Invoke</p>
 </li>
+<li>
+<p>Compute</p>
+</li>
 </ul>
 <p>Pipelines also include <i>transitions</i>, which allow the transition
 of artifacts from one stage to the next in a pipeline after the actions in one stage
@@ -204,7 +207,7 @@ success.</p>
 
 ## Installing
 
-To install the this package, simply type add or install @aws-sdk/client-codepipeline
+To install this package, simply type add or install @aws-sdk/client-codepipeline
 using your favorite package manager:
 
 - `npm install @aws-sdk/client-codepipeline`

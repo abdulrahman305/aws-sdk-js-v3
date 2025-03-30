@@ -1,4 +1,5 @@
 import { CredentialsProviderError } from "@smithy/property-provider";
+import { afterEach, beforeEach, describe, expect, test as it } from "vitest";
 
 import { ENV_ACCOUNT_ID, ENV_EXPIRATION, ENV_KEY, ENV_SECRET, ENV_SESSION, fromEnv } from "./fromEnv";
 
@@ -33,6 +34,9 @@ describe(fromEnv.name, () => {
       sessionToken: mockSessionToken,
       expiration: new Date(mockExpiration),
       accountId: mockAccountId,
+      $source: {
+        CREDENTIALS_ENV_VARS: "g",
+      },
     });
   });
 
@@ -44,6 +48,9 @@ describe(fromEnv.name, () => {
     expect(receivedCreds).toStrictEqual({
       accessKeyId: mockAccessKeyId,
       secretAccessKey: mockSecretAccessKey,
+      $source: {
+        CREDENTIALS_ENV_VARS: "g",
+      },
     });
   });
 

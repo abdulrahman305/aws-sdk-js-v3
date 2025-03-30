@@ -62,19 +62,22 @@ export interface SetInstanceHealthCommandOutput extends __MetadataBearer {}
  * @throws {@link AutoScalingServiceException}
  * <p>Base exception class for all service exceptions from AutoScaling service.</p>
  *
- * @public
+ *
  * @example To set the health status of an instance
  * ```javascript
  * // This example sets the health status of the specified instance to Unhealthy.
  * const input = {
- *   "HealthStatus": "Unhealthy",
- *   "InstanceId": "i-93633f9b"
+ *   HealthStatus: "Unhealthy",
+ *   InstanceId: "i-93633f9b"
  * };
  * const command = new SetInstanceHealthCommand(input);
- * await client.send(command);
- * // example id: autoscaling-set-instance-health-1
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class SetInstanceHealthCommand extends $Command
   .classBuilder<
@@ -84,9 +87,7 @@ export class SetInstanceHealthCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: AutoScalingClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -98,4 +99,16 @@ export class SetInstanceHealthCommand extends $Command
   .f(void 0, void 0)
   .ser(se_SetInstanceHealthCommand)
   .de(de_SetInstanceHealthCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SetInstanceHealthQuery;
+      output: {};
+    };
+    sdk: {
+      input: SetInstanceHealthCommandInput;
+      output: SetInstanceHealthCommandOutput;
+    };
+  };
+}

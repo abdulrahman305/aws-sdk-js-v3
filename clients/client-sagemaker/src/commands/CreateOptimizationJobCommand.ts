@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { CreateOptimizationJobRequest, CreateOptimizationJobResponse } from "../models/models_1";
+import { CreateOptimizationJobRequest, CreateOptimizationJobResponse } from "../models/models_2";
 import { de_CreateOptimizationJobCommand, se_CreateOptimizationJobCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -51,7 +51,7 @@ export interface CreateOptimizationJobCommandOutput extends CreateOptimizationJo
  *       },
  *     },
  *   },
- *   DeploymentInstanceType: "ml.p4d.24xlarge" || "ml.p4de.24xlarge" || "ml.p5.48xlarge" || "ml.g5.xlarge" || "ml.g5.2xlarge" || "ml.g5.4xlarge" || "ml.g5.8xlarge" || "ml.g5.12xlarge" || "ml.g5.16xlarge" || "ml.g5.24xlarge" || "ml.g5.48xlarge" || "ml.g6.xlarge" || "ml.g6.2xlarge" || "ml.g6.4xlarge" || "ml.g6.8xlarge" || "ml.g6.12xlarge" || "ml.g6.16xlarge" || "ml.g6.24xlarge" || "ml.g6.48xlarge" || "ml.inf2.xlarge" || "ml.inf2.8xlarge" || "ml.inf2.24xlarge" || "ml.inf2.48xlarge" || "ml.trn1.2xlarge" || "ml.trn1.32xlarge" || "ml.trn1n.32xlarge", // required
+ *   DeploymentInstanceType: "ml.p4d.24xlarge" || "ml.p4de.24xlarge" || "ml.p5.48xlarge" || "ml.g5.xlarge" || "ml.g5.2xlarge" || "ml.g5.4xlarge" || "ml.g5.8xlarge" || "ml.g5.12xlarge" || "ml.g5.16xlarge" || "ml.g5.24xlarge" || "ml.g5.48xlarge" || "ml.g6.xlarge" || "ml.g6.2xlarge" || "ml.g6.4xlarge" || "ml.g6.8xlarge" || "ml.g6.12xlarge" || "ml.g6.16xlarge" || "ml.g6.24xlarge" || "ml.g6.48xlarge" || "ml.g6e.xlarge" || "ml.g6e.2xlarge" || "ml.g6e.4xlarge" || "ml.g6e.8xlarge" || "ml.g6e.12xlarge" || "ml.g6e.16xlarge" || "ml.g6e.24xlarge" || "ml.g6e.48xlarge" || "ml.inf2.xlarge" || "ml.inf2.8xlarge" || "ml.inf2.24xlarge" || "ml.inf2.48xlarge" || "ml.trn1.2xlarge" || "ml.trn1.32xlarge" || "ml.trn1n.32xlarge", // required
  *   OptimizationEnvironment: { // OptimizationJobEnvironmentVariables
  *     "<keys>": "STRING_VALUE",
  *   },
@@ -64,6 +64,12 @@ export interface CreateOptimizationJobCommandOutput extends CreateOptimizationJo
  *         },
  *       },
  *       ModelCompilationConfig: { // ModelCompilationConfig
+ *         Image: "STRING_VALUE",
+ *         OverrideEnvironment: {
+ *           "<keys>": "STRING_VALUE",
+ *         },
+ *       },
+ *       ModelShardingConfig: { // ModelShardingConfig
  *         Image: "STRING_VALUE",
  *         OverrideEnvironment: {
  *           "<keys>": "STRING_VALUE",
@@ -119,6 +125,7 @@ export interface CreateOptimizationJobCommandOutput extends CreateOptimizationJo
  * @throws {@link SageMakerServiceException}
  * <p>Base exception class for all service exceptions from SageMaker service.</p>
  *
+ *
  * @public
  */
 export class CreateOptimizationJobCommand extends $Command
@@ -129,9 +136,7 @@ export class CreateOptimizationJobCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SageMakerClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -143,4 +148,16 @@ export class CreateOptimizationJobCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateOptimizationJobCommand)
   .de(de_CreateOptimizationJobCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateOptimizationJobRequest;
+      output: CreateOptimizationJobResponse;
+    };
+    sdk: {
+      input: CreateOptimizationJobCommandInput;
+      output: CreateOptimizationJobCommandOutput;
+    };
+  };
+}

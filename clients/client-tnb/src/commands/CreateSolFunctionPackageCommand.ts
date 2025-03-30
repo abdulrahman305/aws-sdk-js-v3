@@ -90,6 +90,31 @@ export interface CreateSolFunctionPackageCommandOutput extends CreateSolFunction
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example Create a Sol function package
+ * ```javascript
+ * //
+ * const input = {
+ *   tags: {
+ *     Name: "Resource"
+ *   }
+ * };
+ * const command = new CreateSolFunctionPackageCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   arn: "arn:aws:tnb:us-west-2:123456789000:function-package/fp-07aa863e53460a2a6",
+ *   id: "fp-07aa863e53460a2a6",
+ *   onboardingState: "CREATED",
+ *   operationalState: "DISABLED",
+ *   tags: {
+ *     Name: "Resource"
+ *   },
+ *   usageState: "NOT_IN_USE"
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class CreateSolFunctionPackageCommand extends $Command
@@ -100,9 +125,7 @@ export class CreateSolFunctionPackageCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -114,4 +137,16 @@ export class CreateSolFunctionPackageCommand extends $Command
   .f(CreateSolFunctionPackageInputFilterSensitiveLog, CreateSolFunctionPackageOutputFilterSensitiveLog)
   .ser(se_CreateSolFunctionPackageCommand)
   .de(de_CreateSolFunctionPackageCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateSolFunctionPackageInput;
+      output: CreateSolFunctionPackageOutput;
+    };
+    sdk: {
+      input: CreateSolFunctionPackageCommandInput;
+      output: CreateSolFunctionPackageCommandOutput;
+    };
+  };
+}

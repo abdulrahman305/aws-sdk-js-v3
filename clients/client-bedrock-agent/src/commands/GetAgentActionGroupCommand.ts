@@ -56,7 +56,10 @@ export interface GetAgentActionGroupCommandOutput extends GetAgentActionGroupRes
  * //     description: "STRING_VALUE",
  * //     createdAt: new Date("TIMESTAMP"), // required
  * //     updatedAt: new Date("TIMESTAMP"), // required
- * //     parentActionSignature: "AMAZON.UserInput" || "AMAZON.CodeInterpreter",
+ * //     parentActionSignature: "AMAZON.UserInput" || "AMAZON.CodeInterpreter" || "ANTHROPIC.Computer" || "ANTHROPIC.Bash" || "ANTHROPIC.TextEditor",
+ * //     parentActionGroupSignatureParams: { // ActionGroupSignatureParams
+ * //       "<keys>": "STRING_VALUE",
+ * //     },
  * //     actionGroupExecutor: { // ActionGroupExecutor Union: only one key present
  * //       lambda: "STRING_VALUE",
  * //       customControl: "RETURN_CONTROL",
@@ -114,6 +117,7 @@ export interface GetAgentActionGroupCommandOutput extends GetAgentActionGroupRes
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class GetAgentActionGroupCommand extends $Command
@@ -124,9 +128,7 @@ export class GetAgentActionGroupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -138,4 +140,16 @@ export class GetAgentActionGroupCommand extends $Command
   .f(void 0, GetAgentActionGroupResponseFilterSensitiveLog)
   .ser(se_GetAgentActionGroupCommand)
   .de(de_GetAgentActionGroupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetAgentActionGroupRequest;
+      output: GetAgentActionGroupResponse;
+    };
+    sdk: {
+      input: GetAgentActionGroupCommandInput;
+      output: GetAgentActionGroupCommandOutput;
+    };
+  };
+}

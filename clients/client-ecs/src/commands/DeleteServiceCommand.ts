@@ -39,9 +39,9 @@ export interface DeleteServiceCommandOutput extends DeleteServiceResponse, __Met
  * 				API operation. After all tasks have transitioned to either <code>STOPPING</code> or
  * 					<code>STOPPED</code> status, the service status moves from <code>DRAINING</code>
  * 				to <code>INACTIVE</code>. Services in the <code>DRAINING</code> or
- * 				<code>INACTIVE</code> status can still be viewed with the <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeServices.html">DescribeServices</a> API operation. However, in the future,
+ * 					<code>INACTIVE</code> status can still be viewed with the <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeServices.html">DescribeServices</a> API operation. However, in the future,
  * 					<code>INACTIVE</code> services may be cleaned up and purged from Amazon ECS record
- * 				keeping, and <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeServices.html">DescribeServices</a>  calls on those services return a
+ * 				keeping, and <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeServices.html">DescribeServices</a> calls on those services return a
  * 					<code>ServiceNotFoundException</code> error.</p>
  *          </note>
  *          <important>
@@ -109,8 +109,8 @@ export interface DeleteServiceCommandOutput extends DeleteServiceResponse, __Met
  * //         alarmNames: [ // StringList // required
  * //           "STRING_VALUE",
  * //         ],
- * //         enable: true || false, // required
  * //         rollback: true || false, // required
+ * //         enable: true || false, // required
  * //       },
  * //     },
  * //     taskSets: [ // TaskSets
@@ -286,13 +286,20 @@ export interface DeleteServiceCommandOutput extends DeleteServiceResponse, __Met
  * //                 },
  * //               ],
  * //               roleArn: "STRING_VALUE", // required
- * //               filesystemType: "ext3" || "ext4" || "xfs",
+ * //               filesystemType: "ext3" || "ext4" || "xfs" || "ntfs",
  * //             },
  * //           },
  * //         ],
  * //         fargateEphemeralStorage: {
  * //           kmsKeyId: "STRING_VALUE",
  * //         },
+ * //         vpcLatticeConfigurations: [ // VpcLatticeConfigurations
+ * //           { // VpcLatticeConfiguration
+ * //             roleArn: "STRING_VALUE", // required
+ * //             targetGroupArn: "STRING_VALUE", // required
+ * //             portName: "STRING_VALUE", // required
+ * //           },
+ * //         ],
  * //       },
  * //     ],
  * //     roleArn: "STRING_VALUE",
@@ -333,6 +340,7 @@ export interface DeleteServiceCommandOutput extends DeleteServiceResponse, __Met
  * //     enableECSManagedTags: true || false,
  * //     propagateTags: "TASK_DEFINITION" || "SERVICE" || "NONE",
  * //     enableExecuteCommand: true || false,
+ * //     availabilityZoneRebalancing: "ENABLED" || "DISABLED",
  * //   },
  * // };
  *
@@ -365,6 +373,7 @@ export interface DeleteServiceCommandOutput extends DeleteServiceResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
@@ -376,18 +385,21 @@ export interface DeleteServiceCommandOutput extends DeleteServiceResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
- * @public
+ *
  * @example To delete a service
  * ```javascript
  * // This example deletes the my-http-service service. The service must have a desired count and running count of 0 before you can delete it.
  * const input = {
- *   "service": "my-http-service"
+ *   service: "my-http-service"
  * };
  * const command = new DeleteServiceCommand(input);
- * await client.send(command);
- * // example id: e8183e38-f86e-4390-b811-f74f30a6007d
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class DeleteServiceCommand extends $Command
   .classBuilder<
@@ -397,9 +409,7 @@ export class DeleteServiceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -411,4 +421,16 @@ export class DeleteServiceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteServiceCommand)
   .de(de_DeleteServiceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteServiceRequest;
+      output: DeleteServiceResponse;
+    };
+    sdk: {
+      input: DeleteServiceCommandInput;
+      output: DeleteServiceCommandOutput;
+    };
+  };
+}

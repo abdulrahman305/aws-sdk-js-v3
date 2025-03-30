@@ -209,6 +209,9 @@ export interface CreateConfiguredTableAnalysisRuleCommandOutput
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>Request references a resource which does not exist.</p>
  *
+ * @throws {@link ServiceQuotaExceededException} (client fault)
+ *  <p>Request denied because service quota has been exceeded.</p>
+ *
  * @throws {@link ThrottlingException} (client fault)
  *  <p>Request was denied due to request throttling.</p>
  *
@@ -217,6 +220,7 @@ export interface CreateConfiguredTableAnalysisRuleCommandOutput
  *
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
+ *
  *
  * @public
  */
@@ -228,9 +232,7 @@ export class CreateConfiguredTableAnalysisRuleCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -242,4 +244,16 @@ export class CreateConfiguredTableAnalysisRuleCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateConfiguredTableAnalysisRuleCommand)
   .de(de_CreateConfiguredTableAnalysisRuleCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateConfiguredTableAnalysisRuleInput;
+      output: CreateConfiguredTableAnalysisRuleOutput;
+    };
+    sdk: {
+      input: CreateConfiguredTableAnalysisRuleCommandInput;
+      output: CreateConfiguredTableAnalysisRuleCommandOutput;
+    };
+  };
+}

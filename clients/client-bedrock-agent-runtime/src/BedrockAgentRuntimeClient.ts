@@ -59,15 +59,43 @@ import {
   HttpAuthSchemeResolvedConfig,
   resolveHttpAuthSchemeConfig,
 } from "./auth/httpAuthSchemeProvider";
+import { CreateInvocationCommandInput, CreateInvocationCommandOutput } from "./commands/CreateInvocationCommand";
+import { CreateSessionCommandInput, CreateSessionCommandOutput } from "./commands/CreateSessionCommand";
 import { DeleteAgentMemoryCommandInput, DeleteAgentMemoryCommandOutput } from "./commands/DeleteAgentMemoryCommand";
+import { DeleteSessionCommandInput, DeleteSessionCommandOutput } from "./commands/DeleteSessionCommand";
+import { EndSessionCommandInput, EndSessionCommandOutput } from "./commands/EndSessionCommand";
+import { GenerateQueryCommandInput, GenerateQueryCommandOutput } from "./commands/GenerateQueryCommand";
 import { GetAgentMemoryCommandInput, GetAgentMemoryCommandOutput } from "./commands/GetAgentMemoryCommand";
+import { GetInvocationStepCommandInput, GetInvocationStepCommandOutput } from "./commands/GetInvocationStepCommand";
+import { GetSessionCommandInput, GetSessionCommandOutput } from "./commands/GetSessionCommand";
 import { InvokeAgentCommandInput, InvokeAgentCommandOutput } from "./commands/InvokeAgentCommand";
 import { InvokeFlowCommandInput, InvokeFlowCommandOutput } from "./commands/InvokeFlowCommand";
+import { InvokeInlineAgentCommandInput, InvokeInlineAgentCommandOutput } from "./commands/InvokeInlineAgentCommand";
+import { ListInvocationsCommandInput, ListInvocationsCommandOutput } from "./commands/ListInvocationsCommand";
+import {
+  ListInvocationStepsCommandInput,
+  ListInvocationStepsCommandOutput,
+} from "./commands/ListInvocationStepsCommand";
+import { ListSessionsCommandInput, ListSessionsCommandOutput } from "./commands/ListSessionsCommand";
+import {
+  ListTagsForResourceCommandInput,
+  ListTagsForResourceCommandOutput,
+} from "./commands/ListTagsForResourceCommand";
+import { OptimizePromptCommandInput, OptimizePromptCommandOutput } from "./commands/OptimizePromptCommand";
+import { PutInvocationStepCommandInput, PutInvocationStepCommandOutput } from "./commands/PutInvocationStepCommand";
+import { RerankCommandInput, RerankCommandOutput } from "./commands/RerankCommand";
 import {
   RetrieveAndGenerateCommandInput,
   RetrieveAndGenerateCommandOutput,
 } from "./commands/RetrieveAndGenerateCommand";
+import {
+  RetrieveAndGenerateStreamCommandInput,
+  RetrieveAndGenerateStreamCommandOutput,
+} from "./commands/RetrieveAndGenerateStreamCommand";
 import { RetrieveCommandInput, RetrieveCommandOutput } from "./commands/RetrieveCommand";
+import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
+import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
+import { UpdateSessionCommandInput, UpdateSessionCommandOutput } from "./commands/UpdateSessionCommand";
 import {
   ClientInputEndpointParameters,
   ClientResolvedEndpointParameters,
@@ -83,23 +111,61 @@ export { __Client };
  * @public
  */
 export type ServiceInputTypes =
+  | CreateInvocationCommandInput
+  | CreateSessionCommandInput
   | DeleteAgentMemoryCommandInput
+  | DeleteSessionCommandInput
+  | EndSessionCommandInput
+  | GenerateQueryCommandInput
   | GetAgentMemoryCommandInput
+  | GetInvocationStepCommandInput
+  | GetSessionCommandInput
   | InvokeAgentCommandInput
   | InvokeFlowCommandInput
+  | InvokeInlineAgentCommandInput
+  | ListInvocationStepsCommandInput
+  | ListInvocationsCommandInput
+  | ListSessionsCommandInput
+  | ListTagsForResourceCommandInput
+  | OptimizePromptCommandInput
+  | PutInvocationStepCommandInput
+  | RerankCommandInput
   | RetrieveAndGenerateCommandInput
-  | RetrieveCommandInput;
+  | RetrieveAndGenerateStreamCommandInput
+  | RetrieveCommandInput
+  | TagResourceCommandInput
+  | UntagResourceCommandInput
+  | UpdateSessionCommandInput;
 
 /**
  * @public
  */
 export type ServiceOutputTypes =
+  | CreateInvocationCommandOutput
+  | CreateSessionCommandOutput
   | DeleteAgentMemoryCommandOutput
+  | DeleteSessionCommandOutput
+  | EndSessionCommandOutput
+  | GenerateQueryCommandOutput
   | GetAgentMemoryCommandOutput
+  | GetInvocationStepCommandOutput
+  | GetSessionCommandOutput
   | InvokeAgentCommandOutput
   | InvokeFlowCommandOutput
+  | InvokeInlineAgentCommandOutput
+  | ListInvocationStepsCommandOutput
+  | ListInvocationsCommandOutput
+  | ListSessionsCommandOutput
+  | ListTagsForResourceCommandOutput
+  | OptimizePromptCommandOutput
+  | PutInvocationStepCommandOutput
+  | RerankCommandOutput
   | RetrieveAndGenerateCommandOutput
-  | RetrieveCommandOutput;
+  | RetrieveAndGenerateStreamCommandOutput
+  | RetrieveCommandOutput
+  | TagResourceCommandOutput
+  | UntagResourceCommandOutput
+  | UpdateSessionCommandOutput;
 
 /**
  * @public
@@ -191,6 +257,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -296,6 +381,8 @@ export class BedrockAgentRuntimeClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<BedrockAgentRuntimeClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -305,7 +392,6 @@ export class BedrockAgentRuntimeClient extends __Client<
     const _config_7 = resolveEventStreamSerdeConfig(_config_6);
     const _config_8 = resolveHttpAuthSchemeConfig(_config_7);
     const _config_9 = resolveRuntimeExtensions(_config_8, configuration?.extensions || []);
-    super(_config_9);
     this.config = _config_9;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

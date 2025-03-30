@@ -77,6 +77,7 @@ export interface GetMatchIdCommandOutput extends GetMatchIdOutput, __MetadataBea
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class GetMatchIdCommand extends $Command
@@ -87,9 +88,7 @@ export class GetMatchIdCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -101,4 +100,16 @@ export class GetMatchIdCommand extends $Command
   .f(GetMatchIdInputFilterSensitiveLog, void 0)
   .ser(se_GetMatchIdCommand)
   .de(de_GetMatchIdCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetMatchIdInput;
+      output: GetMatchIdOutput;
+    };
+    sdk: {
+      input: GetMatchIdCommandInput;
+      output: GetMatchIdCommandOutput;
+    };
+  };
+}

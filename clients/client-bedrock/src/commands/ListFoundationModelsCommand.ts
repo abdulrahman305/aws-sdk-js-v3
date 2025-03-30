@@ -37,7 +37,7 @@ export interface ListFoundationModelsCommandOutput extends ListFoundationModelsR
  * const client = new BedrockClient(config);
  * const input = { // ListFoundationModelsRequest
  *   byProvider: "STRING_VALUE",
- *   byCustomizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING",
+ *   byCustomizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING" || "DISTILLATION",
  *   byOutputModality: "TEXT" || "IMAGE" || "EMBEDDING",
  *   byInferenceType: "ON_DEMAND" || "PROVISIONED",
  * };
@@ -58,7 +58,7 @@ export interface ListFoundationModelsCommandOutput extends ListFoundationModelsR
  * //       ],
  * //       responseStreamingSupported: true || false,
  * //       customizationsSupported: [ // ModelCustomizationList
- * //         "FINE_TUNING" || "CONTINUED_PRE_TRAINING",
+ * //         "FINE_TUNING" || "CONTINUED_PRE_TRAINING" || "DISTILLATION",
  * //       ],
  * //       inferenceTypesSupported: [ // InferenceTypeList
  * //         "ON_DEMAND" || "PROVISIONED",
@@ -93,6 +93,7 @@ export interface ListFoundationModelsCommandOutput extends ListFoundationModelsR
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class ListFoundationModelsCommand extends $Command
@@ -103,9 +104,7 @@ export class ListFoundationModelsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -117,4 +116,16 @@ export class ListFoundationModelsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListFoundationModelsCommand)
   .de(de_ListFoundationModelsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListFoundationModelsRequest;
+      output: ListFoundationModelsResponse;
+    };
+    sdk: {
+      input: ListFoundationModelsCommandInput;
+      output: ListFoundationModelsCommandOutput;
+    };
+  };
+}

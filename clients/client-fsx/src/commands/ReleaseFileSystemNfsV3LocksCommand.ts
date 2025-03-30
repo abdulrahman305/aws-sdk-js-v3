@@ -59,7 +59,7 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * //       Message: "STRING_VALUE",
  * //     },
  * //     StorageCapacity: Number("int"),
- * //     StorageType: "SSD" || "HDD",
+ * //     StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //     VpcId: "STRING_VALUE",
  * //     SubnetIds: [ // SubnetIds
  * //       "STRING_VALUE",
@@ -149,6 +149,7 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * //         Iops: Number("int"),
  * //         Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //       },
+ * //       EfaEnabled: true || false,
  * //     },
  * //     AdministrativeActions: [ // AdministrativeActions
  * //       { // AdministrativeAction
@@ -166,7 +167,7 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * //             Message: "STRING_VALUE",
  * //           },
  * //           StorageCapacity: Number("int"),
- * //           StorageType: "SSD" || "HDD",
+ * //           StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //           VpcId: "STRING_VALUE",
  * //           SubnetIds: [
  * //             "STRING_VALUE",
@@ -256,6 +257,7 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * //               Iops: Number("int"),
  * //               Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //             },
+ * //             EfaEnabled: true || false,
  * //           },
  * //           AdministrativeActions: [
  * //             {
@@ -440,6 +442,10 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * //               "STRING_VALUE",
  * //             ],
  * //             EndpointIpAddress: "STRING_VALUE",
+ * //             ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //               SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //               SizeGiB: Number("int"),
+ * //             },
  * //           },
  * //         },
  * //         FailureDetails: {
@@ -612,6 +618,10 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * //         "STRING_VALUE",
  * //       ],
  * //       EndpointIpAddress: "STRING_VALUE",
+ * //       ReadCacheConfiguration: {
+ * //         SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //         SizeGiB: Number("int"),
+ * //       },
  * //     },
  * //   },
  * // };
@@ -645,6 +655,7 @@ export interface ReleaseFileSystemNfsV3LocksCommandOutput
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
+ *
  * @public
  */
 export class ReleaseFileSystemNfsV3LocksCommand extends $Command
@@ -655,9 +666,7 @@ export class ReleaseFileSystemNfsV3LocksCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -669,4 +678,16 @@ export class ReleaseFileSystemNfsV3LocksCommand extends $Command
   .f(void 0, ReleaseFileSystemNfsV3LocksResponseFilterSensitiveLog)
   .ser(se_ReleaseFileSystemNfsV3LocksCommand)
   .de(de_ReleaseFileSystemNfsV3LocksCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ReleaseFileSystemNfsV3LocksRequest;
+      output: ReleaseFileSystemNfsV3LocksResponse;
+    };
+    sdk: {
+      input: ReleaseFileSystemNfsV3LocksCommandInput;
+      output: ReleaseFileSystemNfsV3LocksCommandOutput;
+    };
+  };
+}

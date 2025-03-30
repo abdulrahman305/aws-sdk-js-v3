@@ -97,6 +97,7 @@ export interface ListAssetFiltersCommandOutput extends ListAssetFiltersOutput, _
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListAssetFiltersCommand extends $Command
@@ -107,9 +108,7 @@ export class ListAssetFiltersCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -121,4 +120,16 @@ export class ListAssetFiltersCommand extends $Command
   .f(void 0, ListAssetFiltersOutputFilterSensitiveLog)
   .ser(se_ListAssetFiltersCommand)
   .de(de_ListAssetFiltersCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListAssetFiltersInput;
+      output: ListAssetFiltersOutput;
+    };
+    sdk: {
+      input: ListAssetFiltersCommandInput;
+      output: ListAssetFiltersCommandOutput;
+    };
+  };
+}

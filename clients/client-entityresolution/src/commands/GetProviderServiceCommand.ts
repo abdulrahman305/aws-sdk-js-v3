@@ -116,6 +116,7 @@ export interface GetProviderServiceCommandOutput extends GetProviderServiceOutpu
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class GetProviderServiceCommand extends $Command
@@ -126,9 +127,7 @@ export class GetProviderServiceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -140,4 +139,16 @@ export class GetProviderServiceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetProviderServiceCommand)
   .de(de_GetProviderServiceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetProviderServiceInput;
+      output: GetProviderServiceOutput;
+    };
+    sdk: {
+      input: GetProviderServiceCommandInput;
+      output: GetProviderServiceCommandOutput;
+    };
+  };
+}

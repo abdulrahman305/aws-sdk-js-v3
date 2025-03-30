@@ -62,6 +62,7 @@ export interface GetAccountPreferencesCommandOutput extends GetAccountPreference
  * @throws {@link ChatbotServiceException}
  * <p>Base exception class for all service exceptions from Chatbot service.</p>
  *
+ *
  * @public
  */
 export class GetAccountPreferencesCommand extends $Command
@@ -72,9 +73,7 @@ export class GetAccountPreferencesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ChatbotClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -86,4 +85,16 @@ export class GetAccountPreferencesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetAccountPreferencesCommand)
   .de(de_GetAccountPreferencesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: {};
+      output: GetAccountPreferencesResult;
+    };
+    sdk: {
+      input: GetAccountPreferencesCommandInput;
+      output: GetAccountPreferencesCommandOutput;
+    };
+  };
+}

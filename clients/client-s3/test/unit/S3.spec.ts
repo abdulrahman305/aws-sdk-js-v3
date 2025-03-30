@@ -1,14 +1,9 @@
-/// <reference types="mocha" />
 import { HttpHandler, HttpRequest, HttpResponse } from "@smithy/protocol-http";
 import { BuildMiddleware, FinalizeRequestMiddleware, SerializeMiddleware } from "@smithy/types";
-import chai from "chai";
-import chaiAsPromised from "chai-as-promised";
 import { PassThrough, Readable } from "stream";
+import { beforeEach, describe, expect, test as it } from "vitest";
 
 import { S3 } from "../../src/S3";
-
-chai.use(chaiAsPromised);
-const { expect } = chai;
 
 describe("endpoint", () => {
   it("users can override endpoint from client.", async () => {
@@ -22,7 +17,15 @@ describe("endpoint", () => {
       expect(request.path).to.equal("/path/bucket/key");
       return Promise.resolve({ output: {} as any, response: {} as any });
     };
-    const client = new S3({ endpoint: "http://localhost:8080/path", forcePathStyle: true });
+    const client = new S3({
+      endpoint: "http://localhost:8080/path",
+      forcePathStyle: true,
+      region: "us-west-2",
+      credentials: {
+        accessKeyId: "CLIENT_TEST",
+        secretAccessKey: "CLIENT_TEST",
+      },
+    });
 
     client.middlewareStack.add(endpointValidator, {
       step: "serialize",
@@ -53,7 +56,13 @@ describe("Endpoints from ARN", () => {
 
   describe("Accesspoint ARN", async () => {
     it("should succeed with access point ARN", async () => {
-      const client = new S3({ region: "us-west-2" });
+      const client = new S3({
+        region: "us-west-2",
+        credentials: {
+          accessKeyId: "CLIENT_TEST",
+          secretAccessKey: "CLIENT_TEST",
+        },
+      });
       client.middlewareStack.add(endpointValidator, { step: "build", priority: "low" });
       const result: any = await client.putObject({
         Bucket: "arn:aws:s3:us-west-2:123456789012:accesspoint:myendpoint",
@@ -156,6 +165,10 @@ describe("Throw 200 response", () => {
 
   const client = new S3({
     region: "us-west-2",
+    credentials: {
+      accessKeyId: "CLIENT_TEST",
+      secretAccessKey: "CLIENT_TEST",
+    },
     requestHandler: {
       handle: async () => ({
         response,
@@ -178,19 +191,15 @@ describe("Throw 200 response", () => {
     });
 
     it("should throw if CopyObject() return with 200 and empty payload", async () => {
-      return expect(client.copyObject(params)).to.eventually.be.rejectedWith(errorMsg);
+      return expect(client.copyObject(params)).rejects.toThrowError(errorMsg);
     });
 
     it("should throw if UploadPartCopy() return with 200 and empty payload", async () => {
-      return expect(client.uploadPartCopy({ ...params, UploadId: "id", PartNumber: 1 })).to.eventually.be.rejectedWith(
-        errorMsg
-      );
+      return expect(client.uploadPartCopy({ ...params, UploadId: "id", PartNumber: 1 })).rejects.toThrowError(errorMsg);
     });
 
     it("should throw if CompleteMultipartUpload() return with 200 and empty payload", async () => {
-      return expect(client.completeMultipartUpload({ ...params, UploadId: "id" })).to.eventually.be.rejectedWith(
-        errorMsg
-      );
+      return expect(client.completeMultipartUpload({ ...params, UploadId: "id" })).rejects.toThrowError(errorMsg);
     });
   });
 
@@ -209,19 +218,15 @@ describe("Throw 200 response", () => {
     });
 
     it("should throw if CopyObject() return with 200 and error preamble", async () => {
-      return expect(client.copyObject(params)).to.eventually.be.rejectedWith(errorMsg);
+      return expect(client.copyObject(params)).rejects.toThrowError(errorMsg);
     });
 
     it("should throw if UploadPartCopy() return with 200 and error preamble", async () => {
-      return expect(client.uploadPartCopy({ ...params, UploadId: "id", PartNumber: 1 })).to.eventually.be.rejectedWith(
-        errorMsg
-      );
+      return expect(client.uploadPartCopy({ ...params, UploadId: "id", PartNumber: 1 })).rejects.toThrowError(errorMsg);
     });
 
     it("should throw if CompleteMultipartUpload() return with 200 and error preamble", async () => {
-      return expect(client.completeMultipartUpload({ ...params, UploadId: "id" })).to.eventually.be.rejectedWith(
-        errorMsg
-      );
+      return expect(client.completeMultipartUpload({ ...params, UploadId: "id" })).rejects.toThrowError(errorMsg);
     });
   });
 });
@@ -241,7 +246,13 @@ describe("regional endpoints", () => {
   };
 
   it("should use regional endpoints if region is us-east-1", async () => {
-    const client = new S3({ region: "us-east-1" });
+    const client = new S3({
+      region: "us-east-1",
+      credentials: {
+        accessKeyId: "CLIENT_TEST",
+        secretAccessKey: "CLIENT_TEST",
+      },
+    });
     client.middlewareStack.add(endpointValidator, { step: "finalizeRequest", priority: "low" });
     const result: any = await client.putObject({
       Bucket: "bucket",
@@ -252,7 +263,13 @@ describe("regional endpoints", () => {
   });
 
   it("should use global endpoints if region is aws-global", async () => {
-    const client = new S3({ region: "aws-global" });
+    const client = new S3({
+      region: "aws-global",
+      credentials: {
+        accessKeyId: "CLIENT_TEST",
+        secretAccessKey: "CLIENT_TEST",
+      },
+    });
     client.middlewareStack.add(endpointValidator, { step: "finalizeRequest", priority: "low" });
     const result: any = await client.putObject({
       Bucket: "bucket",
@@ -270,12 +287,24 @@ describe("signing", () => {
         expect(request.path).to.equal("/some%20file.txt");
         return { response: new HttpResponse({ statusCode: 200 }) };
       },
+      updateHttpClientConfig(key: keyof any, value: any[typeof key]): void {},
+      httpHandlerConfigs(): any {
+        return {} as any;
+      },
     };
 
-    const client = new S3({ requestHandler });
+    const client = new S3({
+      region: "us-west-2",
+      credentials: {
+        accessKeyId: "CLIENT_TEST",
+        secretAccessKey: "CLIENT_TEST",
+      },
+      requestHandler,
+    });
     return await client.putObject({
       Bucket: "bucket",
       Key: "some file.txt",
+      Body: "abcd",
     });
   });
 });

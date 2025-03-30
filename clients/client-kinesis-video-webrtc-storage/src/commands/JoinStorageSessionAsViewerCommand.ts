@@ -89,6 +89,7 @@ export interface JoinStorageSessionAsViewerCommandOutput extends __MetadataBeare
  * @throws {@link KinesisVideoWebRTCStorageServiceException}
  * <p>Base exception class for all service exceptions from KinesisVideoWebRTCStorage service.</p>
  *
+ *
  * @public
  */
 export class JoinStorageSessionAsViewerCommand extends $Command
@@ -99,9 +100,7 @@ export class JoinStorageSessionAsViewerCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: KinesisVideoWebRTCStorageClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -113,4 +112,16 @@ export class JoinStorageSessionAsViewerCommand extends $Command
   .f(void 0, void 0)
   .ser(se_JoinStorageSessionAsViewerCommand)
   .de(de_JoinStorageSessionAsViewerCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: JoinStorageSessionAsViewerInput;
+      output: {};
+    };
+    sdk: {
+      input: JoinStorageSessionAsViewerCommandInput;
+      output: JoinStorageSessionAsViewerCommandOutput;
+    };
+  };
+}

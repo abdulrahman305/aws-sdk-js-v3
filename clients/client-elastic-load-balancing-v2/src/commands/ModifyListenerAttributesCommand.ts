@@ -76,6 +76,7 @@ export interface ModifyListenerAttributesCommandOutput extends ModifyListenerAtt
  * @throws {@link ElasticLoadBalancingV2ServiceException}
  * <p>Base exception class for all service exceptions from ElasticLoadBalancingV2 service.</p>
  *
+ *
  * @public
  */
 export class ModifyListenerAttributesCommand extends $Command
@@ -86,9 +87,7 @@ export class ModifyListenerAttributesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ElasticLoadBalancingV2ClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -100,4 +99,16 @@ export class ModifyListenerAttributesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ModifyListenerAttributesCommand)
   .de(de_ModifyListenerAttributesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ModifyListenerAttributesInput;
+      output: ModifyListenerAttributesOutput;
+    };
+    sdk: {
+      input: ModifyListenerAttributesCommandInput;
+      output: ModifyListenerAttributesCommandOutput;
+    };
+  };
+}

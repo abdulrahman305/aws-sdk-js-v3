@@ -88,6 +88,7 @@ export interface ListModelImportJobsCommandOutput extends ListModelImportJobsRes
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class ListModelImportJobsCommand extends $Command
@@ -98,9 +99,7 @@ export class ListModelImportJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -112,4 +111,16 @@ export class ListModelImportJobsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListModelImportJobsCommand)
   .de(de_ListModelImportJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListModelImportJobsRequest;
+      output: ListModelImportJobsResponse;
+    };
+    sdk: {
+      input: ListModelImportJobsCommandInput;
+      output: ListModelImportJobsCommandOutput;
+    };
+  };
+}

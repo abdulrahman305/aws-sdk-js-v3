@@ -68,6 +68,7 @@ export interface StopWorkspacesCommandOutput extends StopWorkspacesResult, __Met
  * @throws {@link WorkSpacesServiceException}
  * <p>Base exception class for all service exceptions from WorkSpaces service.</p>
  *
+ *
  * @public
  */
 export class StopWorkspacesCommand extends $Command
@@ -78,9 +79,7 @@ export class StopWorkspacesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: WorkSpacesClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -92,4 +91,16 @@ export class StopWorkspacesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_StopWorkspacesCommand)
   .de(de_StopWorkspacesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StopWorkspacesRequest;
+      output: StopWorkspacesResult;
+    };
+    sdk: {
+      input: StopWorkspacesCommandInput;
+      output: StopWorkspacesCommandOutput;
+    };
+  };
+}

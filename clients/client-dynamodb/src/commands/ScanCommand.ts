@@ -265,54 +265,54 @@ export interface ScanCommandOutput extends ScanOutput, __MetadataBearer {}
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>
  *
- * @public
+ *
  * @example To scan a table
  * ```javascript
  * // This example scans the entire Music table, and then narrows the results to songs by the artist "No One You Know". For each item, only the album title and song title are returned.
  * const input = {
- *   "ExpressionAttributeNames": {
- *     "#AT": "AlbumTitle",
- *     "#ST": "SongTitle"
+ *   ExpressionAttributeNames: {
+ *     #AT: "AlbumTitle",
+ *     #ST: "SongTitle"
  *   },
- *   "ExpressionAttributeValues": {
- *     ":a": {
- *       "S": "No One You Know"
+ *   ExpressionAttributeValues: {
+ *     :a: {
+ *       S: "No One You Know"
  *     }
  *   },
- *   "FilterExpression": "Artist = :a",
- *   "ProjectionExpression": "#ST, #AT",
- *   "TableName": "Music"
+ *   FilterExpression: "Artist = :a",
+ *   ProjectionExpression: "#ST, #AT",
+ *   TableName: "Music"
  * };
  * const command = new ScanCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "ConsumedCapacity": {},
- *   "Count": 2,
- *   "Items": [
+ *   ConsumedCapacity:   { /* empty *\/ },
+ *   Count: 2,
+ *   Items: [
  *     {
- *       "AlbumTitle": {
- *         "S": "Somewhat Famous"
+ *       AlbumTitle: {
+ *         S: "Somewhat Famous"
  *       },
- *       "SongTitle": {
- *         "S": "Call Me Today"
+ *       SongTitle: {
+ *         S: "Call Me Today"
  *       }
  *     },
  *     {
- *       "AlbumTitle": {
- *         "S": "Blue Sky Blues"
+ *       AlbumTitle: {
+ *         S: "Blue Sky Blues"
  *       },
- *       "SongTitle": {
- *         "S": "Scared of My Shadow"
+ *       SongTitle: {
+ *         S: "Scared of My Shadow"
  *       }
  *     }
  *   ],
- *   "ScannedCount": 3
+ *   ScannedCount: 3
  * }
  * *\/
- * // example id: to-scan-a-table-1475883652470
  * ```
  *
+ * @public
  */
 export class ScanCommand extends $Command
   .classBuilder<
@@ -324,6 +324,7 @@ export class ScanCommand extends $Command
   >()
   .ep({
     ...commonParams,
+    ResourceArn: { type: "contextParams", name: "TableName" },
   })
   .m(function (this: any, Command: any, cs: any, config: DynamoDBClientResolvedConfig, o: any) {
     return [
@@ -336,4 +337,16 @@ export class ScanCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ScanCommand)
   .de(de_ScanCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ScanInput;
+      output: ScanOutput;
+    };
+    sdk: {
+      input: ScanCommandInput;
+      output: ScanCommandOutput;
+    };
+  };
+}

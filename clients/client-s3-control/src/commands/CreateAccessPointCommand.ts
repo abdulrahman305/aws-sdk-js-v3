@@ -102,6 +102,7 @@ export interface CreateAccessPointCommandOutput extends CreateAccessPointResult,
  * @throws {@link S3ControlServiceException}
  * <p>Base exception class for all service exceptions from S3Control service.</p>
  *
+ *
  * @public
  */
 export class CreateAccessPointCommand extends $Command
@@ -130,4 +131,16 @@ export class CreateAccessPointCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateAccessPointCommand)
   .de(de_CreateAccessPointCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateAccessPointRequest;
+      output: CreateAccessPointResult;
+    };
+    sdk: {
+      input: CreateAccessPointCommandInput;
+      output: CreateAccessPointCommandOutput;
+    };
+  };
+}

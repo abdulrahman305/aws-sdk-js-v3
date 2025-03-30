@@ -72,6 +72,20 @@ export interface DeleteSolFunctionPackageCommandOutput extends __MetadataBearer 
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example Delete a function package
+ * ```javascript
+ * //
+ * const input = {
+ *   vnfPkgId: "fp-07aa863e53460a2a6"
+ * };
+ * const command = new DeleteSolFunctionPackageCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class DeleteSolFunctionPackageCommand extends $Command
@@ -82,9 +96,7 @@ export class DeleteSolFunctionPackageCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -96,4 +108,16 @@ export class DeleteSolFunctionPackageCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteSolFunctionPackageCommand)
   .de(de_DeleteSolFunctionPackageCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteSolFunctionPackageInput;
+      output: {};
+    };
+    sdk: {
+      input: DeleteSolFunctionPackageCommandInput;
+      output: DeleteSolFunctionPackageCommandOutput;
+    };
+  };
+}

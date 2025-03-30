@@ -67,9 +67,17 @@ import {
   resolveHttpAuthSchemeConfig,
 } from "./auth/httpAuthSchemeProvider";
 import {
+  GetMedicalScribeStreamCommandInput,
+  GetMedicalScribeStreamCommandOutput,
+} from "./commands/GetMedicalScribeStreamCommand";
+import {
   StartCallAnalyticsStreamTranscriptionCommandInput,
   StartCallAnalyticsStreamTranscriptionCommandOutput,
 } from "./commands/StartCallAnalyticsStreamTranscriptionCommand";
+import {
+  StartMedicalScribeStreamCommandInput,
+  StartMedicalScribeStreamCommandOutput,
+} from "./commands/StartMedicalScribeStreamCommand";
 import {
   StartMedicalStreamTranscriptionCommandInput,
   StartMedicalStreamTranscriptionCommandOutput,
@@ -93,7 +101,9 @@ export { __Client };
  * @public
  */
 export type ServiceInputTypes =
+  | GetMedicalScribeStreamCommandInput
   | StartCallAnalyticsStreamTranscriptionCommandInput
+  | StartMedicalScribeStreamCommandInput
   | StartMedicalStreamTranscriptionCommandInput
   | StartStreamTranscriptionCommandInput;
 
@@ -101,7 +111,9 @@ export type ServiceInputTypes =
  * @public
  */
 export type ServiceOutputTypes =
+  | GetMedicalScribeStreamCommandOutput
   | StartCallAnalyticsStreamTranscriptionCommandOutput
+  | StartMedicalScribeStreamCommandOutput
   | StartMedicalStreamTranscriptionCommandOutput
   | StartStreamTranscriptionCommandOutput;
 
@@ -195,6 +207,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -294,9 +325,10 @@ export type TranscribeStreamingClientResolvedConfigType = __SmithyResolvedConfig
 export interface TranscribeStreamingClientResolvedConfig extends TranscribeStreamingClientResolvedConfigType {}
 
 /**
- * <p>Amazon Transcribe streaming offers three main types of real-time transcription:
- *       <b>Standard</b>, <b>Medical</b>, and
- *       <b>Call Analytics</b>.</p>
+ * <p>Amazon Transcribe streaming offers four main types of real-time transcription:
+ *       <b>Standard</b>, <b>Medical</b>,
+ *       <b>Call Analytics</b>,
+ *       and <b>Health Scribe</b>.</p>
  *          <ul>
  *             <li>
  *                <p>
@@ -316,6 +348,12 @@ export interface TranscribeStreamingClientResolvedConfig extends TranscribeStrea
  *           center audio on two different channels; if you're looking for insight into customer service calls, use this
  *           option. Refer to  for details.</p>
  *             </li>
+ *             <li>
+ *                <p>
+ *                   <b>HealthScribe transcriptions</b> are designed to
+ *           automatically create clinical notes from patient-clinician conversations using generative AI.
+ *           Refer to [here] for details.</p>
+ *             </li>
  *          </ul>
  * @public
  */
@@ -332,6 +370,8 @@ export class TranscribeStreamingClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<TranscribeStreamingClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -343,7 +383,6 @@ export class TranscribeStreamingClient extends __Client<
     const _config_9 = resolveEventStreamConfig(_config_8);
     const _config_10 = resolveWebSocketConfig(_config_9);
     const _config_11 = resolveRuntimeExtensions(_config_10, configuration?.extensions || []);
-    super(_config_11);
     this.config = _config_11;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

@@ -88,6 +88,7 @@ export interface GetPrivacyBudgetTemplateCommandOutput extends GetPrivacyBudgetT
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class GetPrivacyBudgetTemplateCommand extends $Command
@@ -98,9 +99,7 @@ export class GetPrivacyBudgetTemplateCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -112,4 +111,16 @@ export class GetPrivacyBudgetTemplateCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetPrivacyBudgetTemplateCommand)
   .de(de_GetPrivacyBudgetTemplateCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetPrivacyBudgetTemplateInput;
+      output: GetPrivacyBudgetTemplateOutput;
+    };
+    sdk: {
+      input: GetPrivacyBudgetTemplateCommandInput;
+      output: GetPrivacyBudgetTemplateCommandOutput;
+    };
+  };
+}

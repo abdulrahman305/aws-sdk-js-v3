@@ -28,7 +28,8 @@ export interface ListRuleExecutionsCommandInput extends ListRuleExecutionsInput 
 export interface ListRuleExecutionsCommandOutput extends ListRuleExecutionsOutput, __MetadataBearer {}
 
 /**
- * <p>Lists the rule executions that have occurred in a pipeline configured for conditions with rules.</p>
+ * <p>Lists the rule executions that have occurred in a pipeline configured for conditions
+ *             with rules.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -127,6 +128,7 @@ export interface ListRuleExecutionsCommandOutput extends ListRuleExecutionsOutpu
  * @throws {@link CodePipelineServiceException}
  * <p>Base exception class for all service exceptions from CodePipeline service.</p>
  *
+ *
  * @public
  */
 export class ListRuleExecutionsCommand extends $Command
@@ -137,9 +139,7 @@ export class ListRuleExecutionsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CodePipelineClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -151,4 +151,16 @@ export class ListRuleExecutionsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListRuleExecutionsCommand)
   .de(de_ListRuleExecutionsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListRuleExecutionsInput;
+      output: ListRuleExecutionsOutput;
+    };
+    sdk: {
+      input: ListRuleExecutionsCommandInput;
+      output: ListRuleExecutionsCommandOutput;
+    };
+  };
+}

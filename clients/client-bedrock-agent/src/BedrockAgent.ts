@@ -4,6 +4,11 @@ import { HttpHandlerOptions as __HttpHandlerOptions } from "@smithy/types";
 
 import { BedrockAgentClient, BedrockAgentClientConfig } from "./BedrockAgentClient";
 import {
+  AssociateAgentCollaboratorCommand,
+  AssociateAgentCollaboratorCommandInput,
+  AssociateAgentCollaboratorCommandOutput,
+} from "./commands/AssociateAgentCollaboratorCommand";
+import {
   AssociateAgentKnowledgeBaseCommand,
   AssociateAgentKnowledgeBaseCommandInput,
   AssociateAgentKnowledgeBaseCommandOutput,
@@ -88,10 +93,20 @@ import {
   DeleteKnowledgeBaseCommandOutput,
 } from "./commands/DeleteKnowledgeBaseCommand";
 import {
+  DeleteKnowledgeBaseDocumentsCommand,
+  DeleteKnowledgeBaseDocumentsCommandInput,
+  DeleteKnowledgeBaseDocumentsCommandOutput,
+} from "./commands/DeleteKnowledgeBaseDocumentsCommand";
+import {
   DeletePromptCommand,
   DeletePromptCommandInput,
   DeletePromptCommandOutput,
 } from "./commands/DeletePromptCommand";
+import {
+  DisassociateAgentCollaboratorCommand,
+  DisassociateAgentCollaboratorCommandInput,
+  DisassociateAgentCollaboratorCommandOutput,
+} from "./commands/DisassociateAgentCollaboratorCommand";
 import {
   DisassociateAgentKnowledgeBaseCommand,
   DisassociateAgentKnowledgeBaseCommandInput,
@@ -107,6 +122,11 @@ import {
   GetAgentAliasCommandInput,
   GetAgentAliasCommandOutput,
 } from "./commands/GetAgentAliasCommand";
+import {
+  GetAgentCollaboratorCommand,
+  GetAgentCollaboratorCommandInput,
+  GetAgentCollaboratorCommandOutput,
+} from "./commands/GetAgentCollaboratorCommand";
 import { GetAgentCommand, GetAgentCommandInput, GetAgentCommandOutput } from "./commands/GetAgentCommand";
 import {
   GetAgentKnowledgeBaseCommand,
@@ -144,7 +164,17 @@ import {
   GetKnowledgeBaseCommandInput,
   GetKnowledgeBaseCommandOutput,
 } from "./commands/GetKnowledgeBaseCommand";
+import {
+  GetKnowledgeBaseDocumentsCommand,
+  GetKnowledgeBaseDocumentsCommandInput,
+  GetKnowledgeBaseDocumentsCommandOutput,
+} from "./commands/GetKnowledgeBaseDocumentsCommand";
 import { GetPromptCommand, GetPromptCommandInput, GetPromptCommandOutput } from "./commands/GetPromptCommand";
+import {
+  IngestKnowledgeBaseDocumentsCommand,
+  IngestKnowledgeBaseDocumentsCommandInput,
+  IngestKnowledgeBaseDocumentsCommandOutput,
+} from "./commands/IngestKnowledgeBaseDocumentsCommand";
 import {
   ListAgentActionGroupsCommand,
   ListAgentActionGroupsCommandInput,
@@ -155,6 +185,11 @@ import {
   ListAgentAliasesCommandInput,
   ListAgentAliasesCommandOutput,
 } from "./commands/ListAgentAliasesCommand";
+import {
+  ListAgentCollaboratorsCommand,
+  ListAgentCollaboratorsCommandInput,
+  ListAgentCollaboratorsCommandOutput,
+} from "./commands/ListAgentCollaboratorsCommand";
 import {
   ListAgentKnowledgeBasesCommand,
   ListAgentKnowledgeBasesCommandInput,
@@ -188,6 +223,11 @@ import {
   ListIngestionJobsCommandOutput,
 } from "./commands/ListIngestionJobsCommand";
 import {
+  ListKnowledgeBaseDocumentsCommand,
+  ListKnowledgeBaseDocumentsCommandInput,
+  ListKnowledgeBaseDocumentsCommandOutput,
+} from "./commands/ListKnowledgeBaseDocumentsCommand";
+import {
   ListKnowledgeBasesCommand,
   ListKnowledgeBasesCommandInput,
   ListKnowledgeBasesCommandOutput,
@@ -209,6 +249,11 @@ import {
   StartIngestionJobCommandInput,
   StartIngestionJobCommandOutput,
 } from "./commands/StartIngestionJobCommand";
+import {
+  StopIngestionJobCommand,
+  StopIngestionJobCommandInput,
+  StopIngestionJobCommandOutput,
+} from "./commands/StopIngestionJobCommand";
 import { TagResourceCommand, TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import {
   UntagResourceCommand,
@@ -225,6 +270,11 @@ import {
   UpdateAgentAliasCommandInput,
   UpdateAgentAliasCommandOutput,
 } from "./commands/UpdateAgentAliasCommand";
+import {
+  UpdateAgentCollaboratorCommand,
+  UpdateAgentCollaboratorCommandInput,
+  UpdateAgentCollaboratorCommandOutput,
+} from "./commands/UpdateAgentCollaboratorCommand";
 import { UpdateAgentCommand, UpdateAgentCommandInput, UpdateAgentCommandOutput } from "./commands/UpdateAgentCommand";
 import {
   UpdateAgentKnowledgeBaseCommand,
@@ -252,8 +302,14 @@ import {
   UpdatePromptCommandInput,
   UpdatePromptCommandOutput,
 } from "./commands/UpdatePromptCommand";
+import {
+  ValidateFlowDefinitionCommand,
+  ValidateFlowDefinitionCommandInput,
+  ValidateFlowDefinitionCommandOutput,
+} from "./commands/ValidateFlowDefinitionCommand";
 
 const commands = {
+  AssociateAgentCollaboratorCommand,
   AssociateAgentKnowledgeBaseCommand,
   CreateAgentCommand,
   CreateAgentActionGroupCommand,
@@ -274,11 +330,14 @@ const commands = {
   DeleteFlowAliasCommand,
   DeleteFlowVersionCommand,
   DeleteKnowledgeBaseCommand,
+  DeleteKnowledgeBaseDocumentsCommand,
   DeletePromptCommand,
+  DisassociateAgentCollaboratorCommand,
   DisassociateAgentKnowledgeBaseCommand,
   GetAgentCommand,
   GetAgentActionGroupCommand,
   GetAgentAliasCommand,
+  GetAgentCollaboratorCommand,
   GetAgentKnowledgeBaseCommand,
   GetAgentVersionCommand,
   GetDataSourceCommand,
@@ -287,9 +346,12 @@ const commands = {
   GetFlowVersionCommand,
   GetIngestionJobCommand,
   GetKnowledgeBaseCommand,
+  GetKnowledgeBaseDocumentsCommand,
   GetPromptCommand,
+  IngestKnowledgeBaseDocumentsCommand,
   ListAgentActionGroupsCommand,
   ListAgentAliasesCommand,
+  ListAgentCollaboratorsCommand,
   ListAgentKnowledgeBasesCommand,
   ListAgentsCommand,
   ListAgentVersionsCommand,
@@ -298,26 +360,47 @@ const commands = {
   ListFlowsCommand,
   ListFlowVersionsCommand,
   ListIngestionJobsCommand,
+  ListKnowledgeBaseDocumentsCommand,
   ListKnowledgeBasesCommand,
   ListPromptsCommand,
   ListTagsForResourceCommand,
   PrepareAgentCommand,
   PrepareFlowCommand,
   StartIngestionJobCommand,
+  StopIngestionJobCommand,
   TagResourceCommand,
   UntagResourceCommand,
   UpdateAgentCommand,
   UpdateAgentActionGroupCommand,
   UpdateAgentAliasCommand,
+  UpdateAgentCollaboratorCommand,
   UpdateAgentKnowledgeBaseCommand,
   UpdateDataSourceCommand,
   UpdateFlowCommand,
   UpdateFlowAliasCommand,
   UpdateKnowledgeBaseCommand,
   UpdatePromptCommand,
+  ValidateFlowDefinitionCommand,
 };
 
 export interface BedrockAgent {
+  /**
+   * @see {@link AssociateAgentCollaboratorCommand}
+   */
+  associateAgentCollaborator(
+    args: AssociateAgentCollaboratorCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<AssociateAgentCollaboratorCommandOutput>;
+  associateAgentCollaborator(
+    args: AssociateAgentCollaboratorCommandInput,
+    cb: (err: any, data?: AssociateAgentCollaboratorCommandOutput) => void
+  ): void;
+  associateAgentCollaborator(
+    args: AssociateAgentCollaboratorCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: AssociateAgentCollaboratorCommandOutput) => void
+  ): void;
+
   /**
    * @see {@link AssociateAgentKnowledgeBaseCommand}
    */
@@ -623,6 +706,23 @@ export interface BedrockAgent {
   ): void;
 
   /**
+   * @see {@link DeleteKnowledgeBaseDocumentsCommand}
+   */
+  deleteKnowledgeBaseDocuments(
+    args: DeleteKnowledgeBaseDocumentsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteKnowledgeBaseDocumentsCommandOutput>;
+  deleteKnowledgeBaseDocuments(
+    args: DeleteKnowledgeBaseDocumentsCommandInput,
+    cb: (err: any, data?: DeleteKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+  deleteKnowledgeBaseDocuments(
+    args: DeleteKnowledgeBaseDocumentsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeletePromptCommand}
    */
   deletePrompt(args: DeletePromptCommandInput, options?: __HttpHandlerOptions): Promise<DeletePromptCommandOutput>;
@@ -631,6 +731,23 @@ export interface BedrockAgent {
     args: DeletePromptCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeletePromptCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DisassociateAgentCollaboratorCommand}
+   */
+  disassociateAgentCollaborator(
+    args: DisassociateAgentCollaboratorCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DisassociateAgentCollaboratorCommandOutput>;
+  disassociateAgentCollaborator(
+    args: DisassociateAgentCollaboratorCommandInput,
+    cb: (err: any, data?: DisassociateAgentCollaboratorCommandOutput) => void
+  ): void;
+  disassociateAgentCollaborator(
+    args: DisassociateAgentCollaboratorCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DisassociateAgentCollaboratorCommandOutput) => void
   ): void;
 
   /**
@@ -687,6 +804,23 @@ export interface BedrockAgent {
     args: GetAgentAliasCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetAgentAliasCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetAgentCollaboratorCommand}
+   */
+  getAgentCollaborator(
+    args: GetAgentCollaboratorCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetAgentCollaboratorCommandOutput>;
+  getAgentCollaborator(
+    args: GetAgentCollaboratorCommandInput,
+    cb: (err: any, data?: GetAgentCollaboratorCommandOutput) => void
+  ): void;
+  getAgentCollaborator(
+    args: GetAgentCollaboratorCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetAgentCollaboratorCommandOutput) => void
   ): void;
 
   /**
@@ -799,6 +933,23 @@ export interface BedrockAgent {
   ): void;
 
   /**
+   * @see {@link GetKnowledgeBaseDocumentsCommand}
+   */
+  getKnowledgeBaseDocuments(
+    args: GetKnowledgeBaseDocumentsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetKnowledgeBaseDocumentsCommandOutput>;
+  getKnowledgeBaseDocuments(
+    args: GetKnowledgeBaseDocumentsCommandInput,
+    cb: (err: any, data?: GetKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+  getKnowledgeBaseDocuments(
+    args: GetKnowledgeBaseDocumentsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetPromptCommand}
    */
   getPrompt(args: GetPromptCommandInput, options?: __HttpHandlerOptions): Promise<GetPromptCommandOutput>;
@@ -807,6 +958,23 @@ export interface BedrockAgent {
     args: GetPromptCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetPromptCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link IngestKnowledgeBaseDocumentsCommand}
+   */
+  ingestKnowledgeBaseDocuments(
+    args: IngestKnowledgeBaseDocumentsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<IngestKnowledgeBaseDocumentsCommandOutput>;
+  ingestKnowledgeBaseDocuments(
+    args: IngestKnowledgeBaseDocumentsCommandInput,
+    cb: (err: any, data?: IngestKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+  ingestKnowledgeBaseDocuments(
+    args: IngestKnowledgeBaseDocumentsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: IngestKnowledgeBaseDocumentsCommandOutput) => void
   ): void;
 
   /**
@@ -841,6 +1009,23 @@ export interface BedrockAgent {
     args: ListAgentAliasesCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListAgentAliasesCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListAgentCollaboratorsCommand}
+   */
+  listAgentCollaborators(
+    args: ListAgentCollaboratorsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListAgentCollaboratorsCommandOutput>;
+  listAgentCollaborators(
+    args: ListAgentCollaboratorsCommandInput,
+    cb: (err: any, data?: ListAgentCollaboratorsCommandOutput) => void
+  ): void;
+  listAgentCollaborators(
+    args: ListAgentCollaboratorsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListAgentCollaboratorsCommandOutput) => void
   ): void;
 
   /**
@@ -964,6 +1149,23 @@ export interface BedrockAgent {
   ): void;
 
   /**
+   * @see {@link ListKnowledgeBaseDocumentsCommand}
+   */
+  listKnowledgeBaseDocuments(
+    args: ListKnowledgeBaseDocumentsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListKnowledgeBaseDocumentsCommandOutput>;
+  listKnowledgeBaseDocuments(
+    args: ListKnowledgeBaseDocumentsCommandInput,
+    cb: (err: any, data?: ListKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+  listKnowledgeBaseDocuments(
+    args: ListKnowledgeBaseDocumentsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListKnowledgeBaseDocumentsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListKnowledgeBasesCommand}
    */
   listKnowledgeBases(): Promise<ListKnowledgeBasesCommandOutput>;
@@ -1050,6 +1252,23 @@ export interface BedrockAgent {
   ): void;
 
   /**
+   * @see {@link StopIngestionJobCommand}
+   */
+  stopIngestionJob(
+    args: StopIngestionJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<StopIngestionJobCommandOutput>;
+  stopIngestionJob(
+    args: StopIngestionJobCommandInput,
+    cb: (err: any, data?: StopIngestionJobCommandOutput) => void
+  ): void;
+  stopIngestionJob(
+    args: StopIngestionJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StopIngestionJobCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link TagResourceCommand}
    */
   tagResource(args: TagResourceCommandInput, options?: __HttpHandlerOptions): Promise<TagResourceCommandOutput>;
@@ -1114,6 +1333,23 @@ export interface BedrockAgent {
     args: UpdateAgentAliasCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateAgentAliasCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateAgentCollaboratorCommand}
+   */
+  updateAgentCollaborator(
+    args: UpdateAgentCollaboratorCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateAgentCollaboratorCommandOutput>;
+  updateAgentCollaborator(
+    args: UpdateAgentCollaboratorCommandInput,
+    cb: (err: any, data?: UpdateAgentCollaboratorCommandOutput) => void
+  ): void;
+  updateAgentCollaborator(
+    args: UpdateAgentCollaboratorCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateAgentCollaboratorCommandOutput) => void
   ): void;
 
   /**
@@ -1201,6 +1437,23 @@ export interface BedrockAgent {
     args: UpdatePromptCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdatePromptCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ValidateFlowDefinitionCommand}
+   */
+  validateFlowDefinition(
+    args: ValidateFlowDefinitionCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ValidateFlowDefinitionCommandOutput>;
+  validateFlowDefinition(
+    args: ValidateFlowDefinitionCommandInput,
+    cb: (err: any, data?: ValidateFlowDefinitionCommandOutput) => void
+  ): void;
+  validateFlowDefinition(
+    args: ValidateFlowDefinitionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ValidateFlowDefinitionCommandOutput) => void
   ): void;
 }
 

@@ -73,6 +73,7 @@ export interface DeleteImportedModelCommandOutput extends DeleteImportedModelRes
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class DeleteImportedModelCommand extends $Command
@@ -83,9 +84,7 @@ export class DeleteImportedModelCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -97,4 +96,16 @@ export class DeleteImportedModelCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteImportedModelCommand)
   .de(de_DeleteImportedModelCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteImportedModelRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteImportedModelCommandInput;
+      output: DeleteImportedModelCommandOutput;
+    };
+  };
+}

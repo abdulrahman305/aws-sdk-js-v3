@@ -60,6 +60,10 @@ import {
   AssociateTrialComponentCommandOutput,
 } from "./commands/AssociateTrialComponentCommand";
 import {
+  BatchDeleteClusterNodesCommandInput,
+  BatchDeleteClusterNodesCommandOutput,
+} from "./commands/BatchDeleteClusterNodesCommand";
+import {
   BatchDescribeModelPackageCommandInput,
   BatchDescribeModelPackageCommandOutput,
 } from "./commands/BatchDescribeModelPackageCommand";
@@ -75,6 +79,10 @@ import { CreateAutoMLJobCommandInput, CreateAutoMLJobCommandOutput } from "./com
 import { CreateAutoMLJobV2CommandInput, CreateAutoMLJobV2CommandOutput } from "./commands/CreateAutoMLJobV2Command";
 import { CreateClusterCommandInput, CreateClusterCommandOutput } from "./commands/CreateClusterCommand";
 import {
+  CreateClusterSchedulerConfigCommandInput,
+  CreateClusterSchedulerConfigCommandOutput,
+} from "./commands/CreateClusterSchedulerConfigCommand";
+import {
   CreateCodeRepositoryCommandInput,
   CreateCodeRepositoryCommandOutput,
 } from "./commands/CreateCodeRepositoryCommand";
@@ -82,6 +90,7 @@ import {
   CreateCompilationJobCommandInput,
   CreateCompilationJobCommandOutput,
 } from "./commands/CreateCompilationJobCommand";
+import { CreateComputeQuotaCommandInput, CreateComputeQuotaCommandOutput } from "./commands/CreateComputeQuotaCommand";
 import { CreateContextCommandInput, CreateContextCommandOutput } from "./commands/CreateContextCommand";
 import {
   CreateDataQualityJobDefinitionCommandInput,
@@ -180,6 +189,11 @@ import {
   CreateOptimizationJobCommandInput,
   CreateOptimizationJobCommandOutput,
 } from "./commands/CreateOptimizationJobCommand";
+import { CreatePartnerAppCommandInput, CreatePartnerAppCommandOutput } from "./commands/CreatePartnerAppCommand";
+import {
+  CreatePartnerAppPresignedUrlCommandInput,
+  CreatePartnerAppPresignedUrlCommandOutput,
+} from "./commands/CreatePartnerAppPresignedUrlCommand";
 import { CreatePipelineCommandInput, CreatePipelineCommandOutput } from "./commands/CreatePipelineCommand";
 import {
   CreatePresignedDomainUrlCommandInput,
@@ -204,6 +218,7 @@ import {
   CreateStudioLifecycleConfigCommandOutput,
 } from "./commands/CreateStudioLifecycleConfigCommand";
 import { CreateTrainingJobCommandInput, CreateTrainingJobCommandOutput } from "./commands/CreateTrainingJobCommand";
+import { CreateTrainingPlanCommandInput, CreateTrainingPlanCommandOutput } from "./commands/CreateTrainingPlanCommand";
 import { CreateTransformJobCommandInput, CreateTransformJobCommandOutput } from "./commands/CreateTransformJobCommand";
 import { CreateTrialCommandInput, CreateTrialCommandOutput } from "./commands/CreateTrialCommand";
 import {
@@ -224,6 +239,10 @@ import { DeleteArtifactCommandInput, DeleteArtifactCommandOutput } from "./comma
 import { DeleteAssociationCommandInput, DeleteAssociationCommandOutput } from "./commands/DeleteAssociationCommand";
 import { DeleteClusterCommandInput, DeleteClusterCommandOutput } from "./commands/DeleteClusterCommand";
 import {
+  DeleteClusterSchedulerConfigCommandInput,
+  DeleteClusterSchedulerConfigCommandOutput,
+} from "./commands/DeleteClusterSchedulerConfigCommand";
+import {
   DeleteCodeRepositoryCommandInput,
   DeleteCodeRepositoryCommandOutput,
 } from "./commands/DeleteCodeRepositoryCommand";
@@ -231,6 +250,7 @@ import {
   DeleteCompilationJobCommandInput,
   DeleteCompilationJobCommandOutput,
 } from "./commands/DeleteCompilationJobCommand";
+import { DeleteComputeQuotaCommandInput, DeleteComputeQuotaCommandOutput } from "./commands/DeleteComputeQuotaCommand";
 import { DeleteContextCommandInput, DeleteContextCommandOutput } from "./commands/DeleteContextCommand";
 import {
   DeleteDataQualityJobDefinitionCommandInput,
@@ -321,6 +341,7 @@ import {
   DeleteOptimizationJobCommandInput,
   DeleteOptimizationJobCommandOutput,
 } from "./commands/DeleteOptimizationJobCommand";
+import { DeletePartnerAppCommandInput, DeletePartnerAppCommandOutput } from "./commands/DeletePartnerAppCommand";
 import { DeletePipelineCommandInput, DeletePipelineCommandOutput } from "./commands/DeletePipelineCommand";
 import { DeleteProjectCommandInput, DeleteProjectCommandOutput } from "./commands/DeleteProjectCommand";
 import { DeleteSpaceCommandInput, DeleteSpaceCommandOutput } from "./commands/DeleteSpaceCommand";
@@ -357,6 +378,10 @@ import {
   DescribeClusterNodeCommandOutput,
 } from "./commands/DescribeClusterNodeCommand";
 import {
+  DescribeClusterSchedulerConfigCommandInput,
+  DescribeClusterSchedulerConfigCommandOutput,
+} from "./commands/DescribeClusterSchedulerConfigCommand";
+import {
   DescribeCodeRepositoryCommandInput,
   DescribeCodeRepositoryCommandOutput,
 } from "./commands/DescribeCodeRepositoryCommand";
@@ -364,6 +389,10 @@ import {
   DescribeCompilationJobCommandInput,
   DescribeCompilationJobCommandOutput,
 } from "./commands/DescribeCompilationJobCommand";
+import {
+  DescribeComputeQuotaCommandInput,
+  DescribeComputeQuotaCommandOutput,
+} from "./commands/DescribeComputeQuotaCommand";
 import { DescribeContextCommandInput, DescribeContextCommandOutput } from "./commands/DescribeContextCommand";
 import {
   DescribeDataQualityJobDefinitionCommandInput,
@@ -482,6 +511,7 @@ import {
   DescribeOptimizationJobCommandInput,
   DescribeOptimizationJobCommandOutput,
 } from "./commands/DescribeOptimizationJobCommand";
+import { DescribePartnerAppCommandInput, DescribePartnerAppCommandOutput } from "./commands/DescribePartnerAppCommand";
 import { DescribePipelineCommandInput, DescribePipelineCommandOutput } from "./commands/DescribePipelineCommand";
 import {
   DescribePipelineDefinitionForExecutionCommandInput,
@@ -509,6 +539,10 @@ import {
   DescribeTrainingJobCommandInput,
   DescribeTrainingJobCommandOutput,
 } from "./commands/DescribeTrainingJobCommand";
+import {
+  DescribeTrainingPlanCommandInput,
+  DescribeTrainingPlanCommandOutput,
+} from "./commands/DescribeTrainingPlanCommand";
 import {
   DescribeTransformJobCommandInput,
   DescribeTransformJobCommandOutput,
@@ -577,6 +611,10 @@ import {
   ListCandidatesForAutoMLJobCommandOutput,
 } from "./commands/ListCandidatesForAutoMLJobCommand";
 import { ListClusterNodesCommandInput, ListClusterNodesCommandOutput } from "./commands/ListClusterNodesCommand";
+import {
+  ListClusterSchedulerConfigsCommandInput,
+  ListClusterSchedulerConfigsCommandOutput,
+} from "./commands/ListClusterSchedulerConfigsCommand";
 import { ListClustersCommandInput, ListClustersCommandOutput } from "./commands/ListClustersCommand";
 import {
   ListCodeRepositoriesCommandInput,
@@ -586,6 +624,7 @@ import {
   ListCompilationJobsCommandInput,
   ListCompilationJobsCommandOutput,
 } from "./commands/ListCompilationJobsCommand";
+import { ListComputeQuotasCommandInput, ListComputeQuotasCommandOutput } from "./commands/ListComputeQuotasCommand";
 import { ListContextsCommandInput, ListContextsCommandOutput } from "./commands/ListContextsCommand";
 import {
   ListDataQualityJobDefinitionsCommandInput,
@@ -708,6 +747,7 @@ import {
   ListOptimizationJobsCommandInput,
   ListOptimizationJobsCommandOutput,
 } from "./commands/ListOptimizationJobsCommand";
+import { ListPartnerAppsCommandInput, ListPartnerAppsCommandOutput } from "./commands/ListPartnerAppsCommand";
 import {
   ListPipelineExecutionsCommandInput,
   ListPipelineExecutionsCommandOutput,
@@ -743,6 +783,7 @@ import {
   ListTrainingJobsForHyperParameterTuningJobCommandInput,
   ListTrainingJobsForHyperParameterTuningJobCommandOutput,
 } from "./commands/ListTrainingJobsForHyperParameterTuningJobCommand";
+import { ListTrainingPlansCommandInput, ListTrainingPlansCommandOutput } from "./commands/ListTrainingPlansCommand";
 import { ListTransformJobsCommandInput, ListTransformJobsCommandOutput } from "./commands/ListTransformJobsCommand";
 import {
   ListTrialComponentsCommandInput,
@@ -764,6 +805,10 @@ import {
   RetryPipelineExecutionCommandOutput,
 } from "./commands/RetryPipelineExecutionCommand";
 import { SearchCommandInput, SearchCommandOutput } from "./commands/SearchCommand";
+import {
+  SearchTrainingPlanOfferingsCommandInput,
+  SearchTrainingPlanOfferingsCommandOutput,
+} from "./commands/SearchTrainingPlanOfferingsCommand";
 import {
   SendPipelineExecutionStepFailureCommandInput,
   SendPipelineExecutionStepFailureCommandOutput,
@@ -850,6 +895,10 @@ import {
 import { UpdateArtifactCommandInput, UpdateArtifactCommandOutput } from "./commands/UpdateArtifactCommand";
 import { UpdateClusterCommandInput, UpdateClusterCommandOutput } from "./commands/UpdateClusterCommand";
 import {
+  UpdateClusterSchedulerConfigCommandInput,
+  UpdateClusterSchedulerConfigCommandOutput,
+} from "./commands/UpdateClusterSchedulerConfigCommand";
+import {
   UpdateClusterSoftwareCommandInput,
   UpdateClusterSoftwareCommandOutput,
 } from "./commands/UpdateClusterSoftwareCommand";
@@ -857,6 +906,7 @@ import {
   UpdateCodeRepositoryCommandInput,
   UpdateCodeRepositoryCommandOutput,
 } from "./commands/UpdateCodeRepositoryCommand";
+import { UpdateComputeQuotaCommandInput, UpdateComputeQuotaCommandOutput } from "./commands/UpdateComputeQuotaCommand";
 import { UpdateContextCommandInput, UpdateContextCommandOutput } from "./commands/UpdateContextCommand";
 import { UpdateDeviceFleetCommandInput, UpdateDeviceFleetCommandOutput } from "./commands/UpdateDeviceFleetCommand";
 import { UpdateDevicesCommandInput, UpdateDevicesCommandOutput } from "./commands/UpdateDevicesCommand";
@@ -873,6 +923,11 @@ import {
   UpdateFeatureMetadataCommandOutput,
 } from "./commands/UpdateFeatureMetadataCommand";
 import { UpdateHubCommandInput, UpdateHubCommandOutput } from "./commands/UpdateHubCommand";
+import { UpdateHubContentCommandInput, UpdateHubContentCommandOutput } from "./commands/UpdateHubContentCommand";
+import {
+  UpdateHubContentReferenceCommandInput,
+  UpdateHubContentReferenceCommandOutput,
+} from "./commands/UpdateHubContentReferenceCommand";
 import { UpdateImageCommandInput, UpdateImageCommandOutput } from "./commands/UpdateImageCommand";
 import { UpdateImageVersionCommandInput, UpdateImageVersionCommandOutput } from "./commands/UpdateImageVersionCommand";
 import {
@@ -909,6 +964,7 @@ import {
   UpdateNotebookInstanceLifecycleConfigCommandInput,
   UpdateNotebookInstanceLifecycleConfigCommandOutput,
 } from "./commands/UpdateNotebookInstanceLifecycleConfigCommand";
+import { UpdatePartnerAppCommandInput, UpdatePartnerAppCommandOutput } from "./commands/UpdatePartnerAppCommand";
 import { UpdatePipelineCommandInput, UpdatePipelineCommandOutput } from "./commands/UpdatePipelineCommand";
 import {
   UpdatePipelineExecutionCommandInput,
@@ -943,6 +999,7 @@ export type ServiceInputTypes =
   | AddAssociationCommandInput
   | AddTagsCommandInput
   | AssociateTrialComponentCommandInput
+  | BatchDeleteClusterNodesCommandInput
   | BatchDescribeModelPackageCommandInput
   | CreateActionCommandInput
   | CreateAlgorithmCommandInput
@@ -952,8 +1009,10 @@ export type ServiceInputTypes =
   | CreateAutoMLJobCommandInput
   | CreateAutoMLJobV2CommandInput
   | CreateClusterCommandInput
+  | CreateClusterSchedulerConfigCommandInput
   | CreateCodeRepositoryCommandInput
   | CreateCompilationJobCommandInput
+  | CreateComputeQuotaCommandInput
   | CreateContextCommandInput
   | CreateDataQualityJobDefinitionCommandInput
   | CreateDeviceFleetCommandInput
@@ -989,6 +1048,8 @@ export type ServiceInputTypes =
   | CreateNotebookInstanceCommandInput
   | CreateNotebookInstanceLifecycleConfigCommandInput
   | CreateOptimizationJobCommandInput
+  | CreatePartnerAppCommandInput
+  | CreatePartnerAppPresignedUrlCommandInput
   | CreatePipelineCommandInput
   | CreatePresignedDomainUrlCommandInput
   | CreatePresignedMlflowTrackingServerUrlCommandInput
@@ -998,6 +1059,7 @@ export type ServiceInputTypes =
   | CreateSpaceCommandInput
   | CreateStudioLifecycleConfigCommandInput
   | CreateTrainingJobCommandInput
+  | CreateTrainingPlanCommandInput
   | CreateTransformJobCommandInput
   | CreateTrialCommandInput
   | CreateTrialComponentCommandInput
@@ -1011,8 +1073,10 @@ export type ServiceInputTypes =
   | DeleteArtifactCommandInput
   | DeleteAssociationCommandInput
   | DeleteClusterCommandInput
+  | DeleteClusterSchedulerConfigCommandInput
   | DeleteCodeRepositoryCommandInput
   | DeleteCompilationJobCommandInput
+  | DeleteComputeQuotaCommandInput
   | DeleteContextCommandInput
   | DeleteDataQualityJobDefinitionCommandInput
   | DeleteDeviceFleetCommandInput
@@ -1046,6 +1110,7 @@ export type ServiceInputTypes =
   | DeleteNotebookInstanceCommandInput
   | DeleteNotebookInstanceLifecycleConfigCommandInput
   | DeleteOptimizationJobCommandInput
+  | DeletePartnerAppCommandInput
   | DeletePipelineCommandInput
   | DeleteProjectCommandInput
   | DeleteSpaceCommandInput
@@ -1066,8 +1131,10 @@ export type ServiceInputTypes =
   | DescribeAutoMLJobV2CommandInput
   | DescribeClusterCommandInput
   | DescribeClusterNodeCommandInput
+  | DescribeClusterSchedulerConfigCommandInput
   | DescribeCodeRepositoryCommandInput
   | DescribeCompilationJobCommandInput
+  | DescribeComputeQuotaCommandInput
   | DescribeContextCommandInput
   | DescribeDataQualityJobDefinitionCommandInput
   | DescribeDeviceCommandInput
@@ -1105,6 +1172,7 @@ export type ServiceInputTypes =
   | DescribeNotebookInstanceCommandInput
   | DescribeNotebookInstanceLifecycleConfigCommandInput
   | DescribeOptimizationJobCommandInput
+  | DescribePartnerAppCommandInput
   | DescribePipelineCommandInput
   | DescribePipelineDefinitionForExecutionCommandInput
   | DescribePipelineExecutionCommandInput
@@ -1114,6 +1182,7 @@ export type ServiceInputTypes =
   | DescribeStudioLifecycleConfigCommandInput
   | DescribeSubscribedWorkteamCommandInput
   | DescribeTrainingJobCommandInput
+  | DescribeTrainingPlanCommandInput
   | DescribeTransformJobCommandInput
   | DescribeTrialCommandInput
   | DescribeTrialComponentCommandInput
@@ -1140,9 +1209,11 @@ export type ServiceInputTypes =
   | ListAutoMLJobsCommandInput
   | ListCandidatesForAutoMLJobCommandInput
   | ListClusterNodesCommandInput
+  | ListClusterSchedulerConfigsCommandInput
   | ListClustersCommandInput
   | ListCodeRepositoriesCommandInput
   | ListCompilationJobsCommandInput
+  | ListComputeQuotasCommandInput
   | ListContextsCommandInput
   | ListDataQualityJobDefinitionsCommandInput
   | ListDeviceFleetsCommandInput
@@ -1187,6 +1258,7 @@ export type ServiceInputTypes =
   | ListNotebookInstanceLifecycleConfigsCommandInput
   | ListNotebookInstancesCommandInput
   | ListOptimizationJobsCommandInput
+  | ListPartnerAppsCommandInput
   | ListPipelineExecutionStepsCommandInput
   | ListPipelineExecutionsCommandInput
   | ListPipelineParametersForExecutionCommandInput
@@ -1201,6 +1273,7 @@ export type ServiceInputTypes =
   | ListTagsCommandInput
   | ListTrainingJobsCommandInput
   | ListTrainingJobsForHyperParameterTuningJobCommandInput
+  | ListTrainingPlansCommandInput
   | ListTransformJobsCommandInput
   | ListTrialComponentsCommandInput
   | ListTrialsCommandInput
@@ -1213,6 +1286,7 @@ export type ServiceInputTypes =
   | RenderUiTemplateCommandInput
   | RetryPipelineExecutionCommandInput
   | SearchCommandInput
+  | SearchTrainingPlanOfferingsCommandInput
   | SendPipelineExecutionStepFailureCommandInput
   | SendPipelineExecutionStepSuccessCommandInput
   | StartEdgeDeploymentStageCommandInput
@@ -1241,8 +1315,10 @@ export type ServiceInputTypes =
   | UpdateAppImageConfigCommandInput
   | UpdateArtifactCommandInput
   | UpdateClusterCommandInput
+  | UpdateClusterSchedulerConfigCommandInput
   | UpdateClusterSoftwareCommandInput
   | UpdateCodeRepositoryCommandInput
+  | UpdateComputeQuotaCommandInput
   | UpdateContextCommandInput
   | UpdateDeviceFleetCommandInput
   | UpdateDevicesCommandInput
@@ -1253,6 +1329,8 @@ export type ServiceInputTypes =
   | UpdateFeatureGroupCommandInput
   | UpdateFeatureMetadataCommandInput
   | UpdateHubCommandInput
+  | UpdateHubContentCommandInput
+  | UpdateHubContentReferenceCommandInput
   | UpdateImageCommandInput
   | UpdateImageVersionCommandInput
   | UpdateInferenceComponentCommandInput
@@ -1265,6 +1343,7 @@ export type ServiceInputTypes =
   | UpdateMonitoringScheduleCommandInput
   | UpdateNotebookInstanceCommandInput
   | UpdateNotebookInstanceLifecycleConfigCommandInput
+  | UpdatePartnerAppCommandInput
   | UpdatePipelineCommandInput
   | UpdatePipelineExecutionCommandInput
   | UpdateProjectCommandInput
@@ -1283,6 +1362,7 @@ export type ServiceOutputTypes =
   | AddAssociationCommandOutput
   | AddTagsCommandOutput
   | AssociateTrialComponentCommandOutput
+  | BatchDeleteClusterNodesCommandOutput
   | BatchDescribeModelPackageCommandOutput
   | CreateActionCommandOutput
   | CreateAlgorithmCommandOutput
@@ -1292,8 +1372,10 @@ export type ServiceOutputTypes =
   | CreateAutoMLJobCommandOutput
   | CreateAutoMLJobV2CommandOutput
   | CreateClusterCommandOutput
+  | CreateClusterSchedulerConfigCommandOutput
   | CreateCodeRepositoryCommandOutput
   | CreateCompilationJobCommandOutput
+  | CreateComputeQuotaCommandOutput
   | CreateContextCommandOutput
   | CreateDataQualityJobDefinitionCommandOutput
   | CreateDeviceFleetCommandOutput
@@ -1329,6 +1411,8 @@ export type ServiceOutputTypes =
   | CreateNotebookInstanceCommandOutput
   | CreateNotebookInstanceLifecycleConfigCommandOutput
   | CreateOptimizationJobCommandOutput
+  | CreatePartnerAppCommandOutput
+  | CreatePartnerAppPresignedUrlCommandOutput
   | CreatePipelineCommandOutput
   | CreatePresignedDomainUrlCommandOutput
   | CreatePresignedMlflowTrackingServerUrlCommandOutput
@@ -1338,6 +1422,7 @@ export type ServiceOutputTypes =
   | CreateSpaceCommandOutput
   | CreateStudioLifecycleConfigCommandOutput
   | CreateTrainingJobCommandOutput
+  | CreateTrainingPlanCommandOutput
   | CreateTransformJobCommandOutput
   | CreateTrialCommandOutput
   | CreateTrialComponentCommandOutput
@@ -1351,8 +1436,10 @@ export type ServiceOutputTypes =
   | DeleteArtifactCommandOutput
   | DeleteAssociationCommandOutput
   | DeleteClusterCommandOutput
+  | DeleteClusterSchedulerConfigCommandOutput
   | DeleteCodeRepositoryCommandOutput
   | DeleteCompilationJobCommandOutput
+  | DeleteComputeQuotaCommandOutput
   | DeleteContextCommandOutput
   | DeleteDataQualityJobDefinitionCommandOutput
   | DeleteDeviceFleetCommandOutput
@@ -1386,6 +1473,7 @@ export type ServiceOutputTypes =
   | DeleteNotebookInstanceCommandOutput
   | DeleteNotebookInstanceLifecycleConfigCommandOutput
   | DeleteOptimizationJobCommandOutput
+  | DeletePartnerAppCommandOutput
   | DeletePipelineCommandOutput
   | DeleteProjectCommandOutput
   | DeleteSpaceCommandOutput
@@ -1406,8 +1494,10 @@ export type ServiceOutputTypes =
   | DescribeAutoMLJobV2CommandOutput
   | DescribeClusterCommandOutput
   | DescribeClusterNodeCommandOutput
+  | DescribeClusterSchedulerConfigCommandOutput
   | DescribeCodeRepositoryCommandOutput
   | DescribeCompilationJobCommandOutput
+  | DescribeComputeQuotaCommandOutput
   | DescribeContextCommandOutput
   | DescribeDataQualityJobDefinitionCommandOutput
   | DescribeDeviceCommandOutput
@@ -1445,6 +1535,7 @@ export type ServiceOutputTypes =
   | DescribeNotebookInstanceCommandOutput
   | DescribeNotebookInstanceLifecycleConfigCommandOutput
   | DescribeOptimizationJobCommandOutput
+  | DescribePartnerAppCommandOutput
   | DescribePipelineCommandOutput
   | DescribePipelineDefinitionForExecutionCommandOutput
   | DescribePipelineExecutionCommandOutput
@@ -1454,6 +1545,7 @@ export type ServiceOutputTypes =
   | DescribeStudioLifecycleConfigCommandOutput
   | DescribeSubscribedWorkteamCommandOutput
   | DescribeTrainingJobCommandOutput
+  | DescribeTrainingPlanCommandOutput
   | DescribeTransformJobCommandOutput
   | DescribeTrialCommandOutput
   | DescribeTrialComponentCommandOutput
@@ -1480,9 +1572,11 @@ export type ServiceOutputTypes =
   | ListAutoMLJobsCommandOutput
   | ListCandidatesForAutoMLJobCommandOutput
   | ListClusterNodesCommandOutput
+  | ListClusterSchedulerConfigsCommandOutput
   | ListClustersCommandOutput
   | ListCodeRepositoriesCommandOutput
   | ListCompilationJobsCommandOutput
+  | ListComputeQuotasCommandOutput
   | ListContextsCommandOutput
   | ListDataQualityJobDefinitionsCommandOutput
   | ListDeviceFleetsCommandOutput
@@ -1527,6 +1621,7 @@ export type ServiceOutputTypes =
   | ListNotebookInstanceLifecycleConfigsCommandOutput
   | ListNotebookInstancesCommandOutput
   | ListOptimizationJobsCommandOutput
+  | ListPartnerAppsCommandOutput
   | ListPipelineExecutionStepsCommandOutput
   | ListPipelineExecutionsCommandOutput
   | ListPipelineParametersForExecutionCommandOutput
@@ -1541,6 +1636,7 @@ export type ServiceOutputTypes =
   | ListTagsCommandOutput
   | ListTrainingJobsCommandOutput
   | ListTrainingJobsForHyperParameterTuningJobCommandOutput
+  | ListTrainingPlansCommandOutput
   | ListTransformJobsCommandOutput
   | ListTrialComponentsCommandOutput
   | ListTrialsCommandOutput
@@ -1553,6 +1649,7 @@ export type ServiceOutputTypes =
   | RenderUiTemplateCommandOutput
   | RetryPipelineExecutionCommandOutput
   | SearchCommandOutput
+  | SearchTrainingPlanOfferingsCommandOutput
   | SendPipelineExecutionStepFailureCommandOutput
   | SendPipelineExecutionStepSuccessCommandOutput
   | StartEdgeDeploymentStageCommandOutput
@@ -1581,8 +1678,10 @@ export type ServiceOutputTypes =
   | UpdateAppImageConfigCommandOutput
   | UpdateArtifactCommandOutput
   | UpdateClusterCommandOutput
+  | UpdateClusterSchedulerConfigCommandOutput
   | UpdateClusterSoftwareCommandOutput
   | UpdateCodeRepositoryCommandOutput
+  | UpdateComputeQuotaCommandOutput
   | UpdateContextCommandOutput
   | UpdateDeviceFleetCommandOutput
   | UpdateDevicesCommandOutput
@@ -1593,6 +1692,8 @@ export type ServiceOutputTypes =
   | UpdateFeatureGroupCommandOutput
   | UpdateFeatureMetadataCommandOutput
   | UpdateHubCommandOutput
+  | UpdateHubContentCommandOutput
+  | UpdateHubContentReferenceCommandOutput
   | UpdateImageCommandOutput
   | UpdateImageVersionCommandOutput
   | UpdateInferenceComponentCommandOutput
@@ -1605,6 +1706,7 @@ export type ServiceOutputTypes =
   | UpdateMonitoringScheduleCommandOutput
   | UpdateNotebookInstanceCommandOutput
   | UpdateNotebookInstanceLifecycleConfigCommandOutput
+  | UpdatePartnerAppCommandOutput
   | UpdatePipelineCommandOutput
   | UpdatePipelineExecutionCommandOutput
   | UpdateProjectCommandOutput
@@ -1706,6 +1808,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -1819,6 +1940,8 @@ export class SageMakerClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<SageMakerClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -1827,7 +1950,6 @@ export class SageMakerClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

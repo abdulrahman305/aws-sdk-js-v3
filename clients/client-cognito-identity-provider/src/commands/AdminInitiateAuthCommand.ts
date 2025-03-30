@@ -37,7 +37,11 @@ export interface AdminInitiateAuthCommandInput extends AdminInitiateAuthRequest 
 export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthResponse, __MetadataBearer {}
 
 /**
- * <p>Initiates the authentication flow, as an administrator.</p>
+ * <p>Starts sign-in for applications with a server-side component, for example a
+ *             traditional web application. This operation specifies the authentication flow that
+ *             you'd like to begin. The authentication flow that you specify must be supported in
+ *             your app client configuration. For more information about authentication flows, see
+ *                 <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow-methods.html">Authentication flows</a>.</p>
  *          <note>
  *             <p>This action might generate an SMS text message. Starting June 1, 2021, US telecom carriers
  *             require you to register an origination phone number before you can send SMS messages
@@ -84,7 +88,7 @@ export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthRespons
  * const input = { // AdminInitiateAuthRequest
  *   UserPoolId: "STRING_VALUE", // required
  *   ClientId: "STRING_VALUE", // required
- *   AuthFlow: "USER_SRP_AUTH" || "REFRESH_TOKEN_AUTH" || "REFRESH_TOKEN" || "CUSTOM_AUTH" || "ADMIN_NO_SRP_AUTH" || "USER_PASSWORD_AUTH" || "ADMIN_USER_PASSWORD_AUTH", // required
+ *   AuthFlow: "USER_SRP_AUTH" || "REFRESH_TOKEN_AUTH" || "REFRESH_TOKEN" || "CUSTOM_AUTH" || "ADMIN_NO_SRP_AUTH" || "USER_PASSWORD_AUTH" || "ADMIN_USER_PASSWORD_AUTH" || "USER_AUTH", // required
  *   AuthParameters: { // AuthParametersType
  *     "<keys>": "STRING_VALUE",
  *   },
@@ -106,11 +110,12 @@ export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthRespons
  *     ],
  *     EncodedData: "STRING_VALUE",
  *   },
+ *   Session: "STRING_VALUE",
  * };
  * const command = new AdminInitiateAuthCommand(input);
  * const response = await client.send(command);
  * // { // AdminInitiateAuthResponse
- * //   ChallengeName: "SMS_MFA" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED",
+ * //   ChallengeName: "SMS_MFA" || "EMAIL_OTP" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "SELECT_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED" || "SMS_OTP" || "PASSWORD" || "WEB_AUTHN" || "PASSWORD_SRP",
  * //   Session: "STRING_VALUE",
  * //   ChallengeParameters: { // ChallengeParametersType
  * //     "<keys>": "STRING_VALUE",
@@ -126,6 +131,9 @@ export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthRespons
  * //       DeviceGroupKey: "STRING_VALUE",
  * //     },
  * //   },
+ * //   AvailableChallenges: [ // AvailableChallengeListType
+ * //     "SMS_MFA" || "EMAIL_OTP" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "SELECT_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED" || "SMS_OTP" || "PASSWORD" || "WEB_AUTHN" || "PASSWORD_SRP",
+ * //   ],
  * // };
  *
  * ```
@@ -138,6 +146,10 @@ export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthRespons
  *
  * @throws {@link InternalErrorException} (server fault)
  *  <p>This exception is thrown when Amazon Cognito encounters an internal error.</p>
+ *
+ * @throws {@link InvalidEmailRoleAccessPolicyException} (client fault)
+ *  <p>This exception is thrown when Amazon Cognito isn't allowed to use your email identity. HTTP
+ *             status code: 400.</p>
  *
  * @throws {@link InvalidLambdaResponseException} (client fault)
  *  <p>This exception is thrown when Amazon Cognito encounters an invalid Lambda response.</p>
@@ -153,7 +165,7 @@ export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthRespons
  * @throws {@link InvalidSmsRoleTrustRelationshipException} (client fault)
  *  <p>This exception is thrown when the trust relationship is not valid for the role
  *             provided for SMS configuration. This can happen if you don't trust
- *             <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
+ *                 <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
  *             not match what is provided in the SMS configuration for the user pool.</p>
  *
  * @throws {@link InvalidUserPoolConfigurationException} (client fault)
@@ -194,6 +206,7 @@ export interface AdminInitiateAuthCommandOutput extends AdminInitiateAuthRespons
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class AdminInitiateAuthCommand extends $Command
@@ -204,9 +217,7 @@ export class AdminInitiateAuthCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -218,4 +229,16 @@ export class AdminInitiateAuthCommand extends $Command
   .f(AdminInitiateAuthRequestFilterSensitiveLog, AdminInitiateAuthResponseFilterSensitiveLog)
   .ser(se_AdminInitiateAuthCommand)
   .de(de_AdminInitiateAuthCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: AdminInitiateAuthRequest;
+      output: AdminInitiateAuthResponse;
+    };
+    sdk: {
+      input: AdminInitiateAuthCommandInput;
+      output: AdminInitiateAuthCommandOutput;
+    };
+  };
+}

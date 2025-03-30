@@ -80,6 +80,7 @@ export interface TagResourceCommandOutput extends TagResourceResponse, __Metadat
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The specified resource wasn't found.</p>
@@ -90,24 +91,27 @@ export interface TagResourceCommandOutput extends TagResourceResponse, __Metadat
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
- * @public
+ *
  * @example To tag a cluster.
  * ```javascript
  * // This example tags the 'dev' cluster with key 'team' and value 'dev'.
  * const input = {
- *   "resourceArn": "arn:aws:ecs:region:aws_account_id:cluster/dev",
- *   "tags": [
+ *   resourceArn: "arn:aws:ecs:region:aws_account_id:cluster/dev",
+ *   tags: [
  *     {
- *       "key": "team",
- *       "value": "dev"
+ *       key: "team",
+ *       value: "dev"
  *     }
  *   ]
  * };
  * const command = new TagResourceCommand(input);
- * await client.send(command);
- * // example id: to-tag-a-cluster-1540581863751
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class TagResourceCommand extends $Command
   .classBuilder<
@@ -117,9 +121,7 @@ export class TagResourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -131,4 +133,16 @@ export class TagResourceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_TagResourceCommand)
   .de(de_TagResourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: TagResourceRequest;
+      output: {};
+    };
+    sdk: {
+      input: TagResourceCommandInput;
+      output: TagResourceCommandOutput;
+    };
+  };
+}

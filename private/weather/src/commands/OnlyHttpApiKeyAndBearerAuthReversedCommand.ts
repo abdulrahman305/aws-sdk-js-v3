@@ -51,6 +51,7 @@ export interface OnlyHttpApiKeyAndBearerAuthReversedCommandOutput extends __Meta
  * @throws {@link WeatherServiceException}
  * <p>Base exception class for all service exceptions from Weather service.</p>
  *
+ *
  */
 export class OnlyHttpApiKeyAndBearerAuthReversedCommand extends $Command
   .classBuilder<
@@ -68,4 +69,16 @@ export class OnlyHttpApiKeyAndBearerAuthReversedCommand extends $Command
   .f(void 0, void 0)
   .ser(se_OnlyHttpApiKeyAndBearerAuthReversedCommand)
   .de(de_OnlyHttpApiKeyAndBearerAuthReversedCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: {};
+      output: {};
+    };
+    sdk: {
+      input: OnlyHttpApiKeyAndBearerAuthReversedCommandInput;
+      output: OnlyHttpApiKeyAndBearerAuthReversedCommandOutput;
+    };
+  };
+}

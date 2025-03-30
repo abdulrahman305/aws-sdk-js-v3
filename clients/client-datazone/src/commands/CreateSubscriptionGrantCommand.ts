@@ -38,7 +38,7 @@ export interface CreateSubscriptionGrantCommandOutput extends CreateSubscription
  * const input = { // CreateSubscriptionGrantInput
  *   domainIdentifier: "STRING_VALUE", // required
  *   environmentIdentifier: "STRING_VALUE", // required
- *   subscriptionTargetIdentifier: "STRING_VALUE", // required
+ *   subscriptionTargetIdentifier: "STRING_VALUE",
  *   grantedEntity: { // GrantedEntityInput Union: only one key present
  *     listing: { // ListingRevisionInput
  *       identifier: "STRING_VALUE", // required
@@ -126,6 +126,7 @@ export interface CreateSubscriptionGrantCommandOutput extends CreateSubscription
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class CreateSubscriptionGrantCommand extends $Command
@@ -136,9 +137,7 @@ export class CreateSubscriptionGrantCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -150,4 +149,16 @@ export class CreateSubscriptionGrantCommand extends $Command
   .f(void 0, void 0)
   .ser(se_CreateSubscriptionGrantCommand)
   .de(de_CreateSubscriptionGrantCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateSubscriptionGrantInput;
+      output: CreateSubscriptionGrantOutput;
+    };
+    sdk: {
+      input: CreateSubscriptionGrantCommandInput;
+      output: CreateSubscriptionGrantCommandOutput;
+    };
+  };
+}

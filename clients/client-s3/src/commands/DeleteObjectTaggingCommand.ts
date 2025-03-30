@@ -30,7 +30,7 @@ export interface DeleteObjectTaggingCommandOutput extends DeleteObjectTaggingOut
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
  *          <p>Removes the entire tag set from the specified object. For more information about
  *          managing object tags, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html"> Object Tagging</a>.</p>
@@ -81,42 +81,41 @@ export interface DeleteObjectTaggingCommandOutput extends DeleteObjectTaggingOut
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
- * @public
+ *
  * @example To remove tag set from an object
  * ```javascript
  * // The following example removes tag set associated with the specified object. If the bucket is versioning enabled, the operation removes tag set from the latest object version.
  * const input = {
- *   "Bucket": "examplebucket",
- *   "Key": "HappyFace.jpg"
+ *   Bucket: "examplebucket",
+ *   Key: "HappyFace.jpg"
  * };
  * const command = new DeleteObjectTaggingCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "VersionId": "null"
+ *   VersionId: "null"
  * }
  * *\/
- * // example id: to-remove-tag-set-from-an-object-1483145342862
  * ```
  *
  * @example To remove tag set from an object version
  * ```javascript
  * // The following example removes tag set associated with the specified object version. The request specifies both the object key and object version.
  * const input = {
- *   "Bucket": "examplebucket",
- *   "Key": "HappyFace.jpg",
- *   "VersionId": "ydlaNkwWm0SfKJR.T1b1fIdPRbldTYRI"
+ *   Bucket: "examplebucket",
+ *   Key: "HappyFace.jpg",
+ *   VersionId: "ydlaNkwWm0SfKJR.T1b1fIdPRbldTYRI"
  * };
  * const command = new DeleteObjectTaggingCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "VersionId": "ydlaNkwWm0SfKJR.T1b1fIdPRbldTYRI"
+ *   VersionId: "ydlaNkwWm0SfKJR.T1b1fIdPRbldTYRI"
  * }
  * *\/
- * // example id: to-remove-tag-set-from-an-object-version-1483145285913
  * ```
  *
+ * @public
  */
 export class DeleteObjectTaggingCommand extends $Command
   .classBuilder<
@@ -142,4 +141,16 @@ export class DeleteObjectTaggingCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteObjectTaggingCommand)
   .de(de_DeleteObjectTaggingCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteObjectTaggingRequest;
+      output: DeleteObjectTaggingOutput;
+    };
+    sdk: {
+      input: DeleteObjectTaggingCommandInput;
+      output: DeleteObjectTaggingCommandOutput;
+    };
+  };
+}

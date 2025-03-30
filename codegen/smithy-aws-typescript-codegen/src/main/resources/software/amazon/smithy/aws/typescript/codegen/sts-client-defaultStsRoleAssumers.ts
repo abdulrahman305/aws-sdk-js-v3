@@ -1,3 +1,4 @@
+import { setCredentialFeature } from "@aws-sdk/core/client";
 import type { CredentialProviderOptions } from "@aws-sdk/types";
 import { AwsCredentialIdentity, Logger, Provider } from "@smithy/types";
 
@@ -80,7 +81,7 @@ const resolveRegion = async (
  */
 export const getDefaultRoleAssumer = (
   stsOptions: STSRoleAssumerOptions,
-  stsClientCtor: new (options: STSClientConfig) => STSClient
+  STSClient: new (options: STSClientConfig) => STSClient
 ): RoleAssumer => {
   let stsClient: STSClient;
   let closureSourceCreds: AwsCredentialIdentity;
@@ -100,7 +101,8 @@ export const getDefaultRoleAssumer = (
       );
       const isCompatibleRequestHandler = !isH2(requestHandler);
 
-      stsClient = new stsClientCtor({
+      stsClient = new STSClient({
+        profile: stsOptions?.parentClientConfig?.profile,
         // A hack to make sts client uses the credential in current closure.
         credentialDefaultProvider: () => async () => closureSourceCreds,
         region: resolvedRegion,
@@ -115,7 +117,7 @@ export const getDefaultRoleAssumer = (
 
     const accountId = getAccountIdFromAssumedRoleUser(AssumedRoleUser);
 
-    return {
+    const credentials = {
       accessKeyId: Credentials.AccessKeyId,
       secretAccessKey: Credentials.SecretAccessKey,
       sessionToken: Credentials.SessionToken,
@@ -124,6 +126,8 @@ export const getDefaultRoleAssumer = (
       ...((Credentials as any).CredentialScope && { credentialScope: (Credentials as any).CredentialScope }),
       ...(accountId && { accountId }),
     };
+    setCredentialFeature(credentials, "CREDENTIALS_STS_ASSUME_ROLE", "i");
+    return credentials;
   };
 };
 
@@ -140,7 +144,7 @@ export type RoleAssumerWithWebIdentity = (
  */
 export const getDefaultRoleAssumerWithWebIdentity = (
   stsOptions: STSRoleAssumerOptions,
-  stsClientCtor: new (options: STSClientConfig) => STSClient
+  STSClient: new (options: STSClientConfig) => STSClient
 ): RoleAssumerWithWebIdentity => {
   let stsClient: STSClient;
   return async (params) => {
@@ -158,7 +162,8 @@ export const getDefaultRoleAssumerWithWebIdentity = (
       );
       const isCompatibleRequestHandler = !isH2(requestHandler);
 
-      stsClient = new stsClientCtor({
+      stsClient = new STSClient({
+        profile: stsOptions?.parentClientConfig?.profile,
         region: resolvedRegion,
         requestHandler: isCompatibleRequestHandler ? (requestHandler as any) : undefined,
         logger: logger as any,
@@ -171,7 +176,7 @@ export const getDefaultRoleAssumerWithWebIdentity = (
 
     const accountId = getAccountIdFromAssumedRoleUser(AssumedRoleUser);
 
-    return {
+    const credentials = {
       accessKeyId: Credentials.AccessKeyId,
       secretAccessKey: Credentials.SecretAccessKey,
       sessionToken: Credentials.SessionToken,
@@ -180,6 +185,11 @@ export const getDefaultRoleAssumerWithWebIdentity = (
       ...((Credentials as any).CredentialScope && { credentialScope: (Credentials as any).CredentialScope }),
       ...(accountId && { accountId }),
     };
+    if (accountId) {
+      setCredentialFeature(credentials, "RESOLVED_ACCOUNT_ID", "T");
+    }
+    setCredentialFeature(credentials, "CREDENTIALS_STS_ASSUME_ROLE_WEB_ID", "k");
+    return credentials;
   };
 };
 

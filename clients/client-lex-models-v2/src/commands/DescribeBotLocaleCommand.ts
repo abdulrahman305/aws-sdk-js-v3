@@ -52,7 +52,7 @@ export interface DescribeBotLocaleCommandOutput extends DescribeBotLocaleRespons
  * //   nluIntentConfidenceThreshold: Number("double"),
  * //   voiceSettings: { // VoiceSettings
  * //     voiceId: "STRING_VALUE", // required
- * //     engine: "standard" || "neural",
+ * //     engine: "standard" || "neural" || "long-form" || "generative",
  * //   },
  * //   intentsCount: Number("int"),
  * //   slotTypesCount: Number("int"),
@@ -146,6 +146,7 @@ export interface DescribeBotLocaleCommandOutput extends DescribeBotLocaleRespons
  * @throws {@link LexModelsV2ServiceException}
  * <p>Base exception class for all service exceptions from LexModelsV2 service.</p>
  *
+ *
  * @public
  */
 export class DescribeBotLocaleCommand extends $Command
@@ -156,9 +157,7 @@ export class DescribeBotLocaleCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: LexModelsV2ClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -170,4 +169,16 @@ export class DescribeBotLocaleCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeBotLocaleCommand)
   .de(de_DescribeBotLocaleCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeBotLocaleRequest;
+      output: DescribeBotLocaleResponse;
+    };
+    sdk: {
+      input: DescribeBotLocaleCommandInput;
+      output: DescribeBotLocaleCommandOutput;
+    };
+  };
+}

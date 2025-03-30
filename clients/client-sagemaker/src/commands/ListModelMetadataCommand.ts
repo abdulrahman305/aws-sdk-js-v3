@@ -74,6 +74,7 @@ export interface ListModelMetadataCommandOutput extends ListModelMetadataRespons
  * @throws {@link SageMakerServiceException}
  * <p>Base exception class for all service exceptions from SageMaker service.</p>
  *
+ *
  * @public
  */
 export class ListModelMetadataCommand extends $Command
@@ -84,9 +85,7 @@ export class ListModelMetadataCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SageMakerClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -98,4 +97,16 @@ export class ListModelMetadataCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListModelMetadataCommand)
   .de(de_ListModelMetadataCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListModelMetadataRequest;
+      output: ListModelMetadataResponse;
+    };
+    sdk: {
+      input: ListModelMetadataCommandInput;
+      output: ListModelMetadataCommandOutput;
+    };
+  };
+}

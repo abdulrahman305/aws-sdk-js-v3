@@ -118,6 +118,7 @@ export interface GetCommandInvocationCommandOutput extends GetCommandInvocationR
  * @throws {@link SSMServiceException}
  * <p>Base exception class for all service exceptions from SSM service.</p>
  *
+ *
  * @public
  */
 export class GetCommandInvocationCommand extends $Command
@@ -128,9 +129,7 @@ export class GetCommandInvocationCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SSMClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -142,4 +141,16 @@ export class GetCommandInvocationCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetCommandInvocationCommand)
   .de(de_GetCommandInvocationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetCommandInvocationRequest;
+      output: GetCommandInvocationResult;
+    };
+    sdk: {
+      input: GetCommandInvocationCommandInput;
+      output: GetCommandInvocationCommandOutput;
+    };
+  };
+}

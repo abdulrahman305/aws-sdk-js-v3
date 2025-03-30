@@ -249,12 +249,76 @@ export interface StopTaskCommandOutput extends StopTaskResponse, __MetadataBeare
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
  *
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
+ *
+ *
+ * @example To stop a task
+ * ```javascript
+ * // This example stops a task with ID "1dc5c17a-422b-4dc4-b493-371970c6c4d6" in cluster "MyCluster".
+ * const input = {
+ *   cluster: "MyCluster",
+ *   reason: "testing stop task.",
+ *   task: "1dc5c17a-422b-4dc4-b493-371970c6c4d6"
+ * };
+ * const command = new StopTaskCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   task: {
+ *     clusterArn: "arn:aws:ecs:us-east-1:012345678910:cluster/MyCluster",
+ *     containerInstanceArn: "arn:aws:ecs:us-east-1:012345678910:container-instance/MyCluster/5991d8da-1d59-49d2-a31f-4230f9e73140",
+ *     containers: [
+ *       {
+ *         containerArn: "arn:aws:ecs:us-east-1:012345678910:container/4df26bb4-f057-467b-a079-961675296e64",
+ *         lastStatus: "RUNNING",
+ *         name: "simple-app",
+ *         networkBindings: [
+ *           {
+ *             bindIP: "0.0.0.0",
+ *             containerPort: 80,
+ *             hostPort: 32774,
+ *             protocol: "tcp"
+ *           }
+ *         ],
+ *         taskArn: "arn:aws:ecs:us-east-1:012345678910:task/MyCluster/1dc5c17a-422b-4dc4-b493-371970c6c4d6"
+ *       },
+ *       {
+ *         containerArn: "arn:aws:ecs:us-east-1:012345678910:container/e09064f7-7361-4c87-8ab9-8d073bbdbcb9",
+ *         lastStatus: "RUNNING",
+ *         name: "busybox",
+ *         networkBindings:         [],
+ *         taskArn: "arn:aws:ecs:us-east-1:012345678910:task/MyCluster/1dc5c17a-422b-4dc4-b493-371970c6c4d6"
+ *       }
+ *     ],
+ *     createdAt: 1.476822811295E9,
+ *     desiredStatus: "STOPPED",
+ *     lastStatus: "RUNNING",
+ *     overrides: {
+ *       containerOverrides: [
+ *         {
+ *           name: "simple-app"
+ *         },
+ *         {
+ *           name: "busybox"
+ *         }
+ *       ]
+ *     },
+ *     startedAt: 1.476822833998E9,
+ *     startedBy: "ecs-svc/9223370560032507596",
+ *     stoppedReason: "testing stop task.",
+ *     taskArn: "arn:aws:ecs:us-east-1:012345678910:task/1dc5c17a-422b-4dc4-b493-371970c6c4d6",
+ *     taskDefinitionArn: "arn:aws:ecs:us-east-1:012345678910:task-definition/console-sample-app-dynamic-ports:1",
+ *     version: 0
+ *   }
+ * }
+ * *\/
+ * ```
  *
  * @public
  */
@@ -266,9 +330,7 @@ export class StopTaskCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -280,4 +342,16 @@ export class StopTaskCommand extends $Command
   .f(void 0, void 0)
   .ser(se_StopTaskCommand)
   .de(de_StopTaskCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StopTaskRequest;
+      output: StopTaskResponse;
+    };
+    sdk: {
+      input: StopTaskCommandInput;
+      output: StopTaskCommandOutput;
+    };
+  };
+}

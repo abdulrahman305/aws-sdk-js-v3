@@ -91,23 +91,23 @@ export interface GetSuiteCommandOutput extends GetSuiteResult, __MetadataBearer 
  * @throws {@link DeviceFarmServiceException}
  * <p>Base exception class for all service exceptions from DeviceFarm service.</p>
  *
- * @public
+ *
  * @example To get information about a test suite
  * ```javascript
  * // The following example gets information about a specific test suite.
  * const input = {
- *   "arn": "arn:aws:devicefarm:us-west-2:123456789101:suite:EXAMPLE-GUID-123-456"
+ *   arn: "arn:aws:devicefarm:us-west-2:123456789101:suite:EXAMPLE-GUID-123-456"
  * };
  * const command = new GetSuiteCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "suite": {}
+ *   suite:   { /* empty *\/ }
  * }
  * *\/
- * // example id: to-get-information-about-a-test-suite-1471016525008
  * ```
  *
+ * @public
  */
 export class GetSuiteCommand extends $Command
   .classBuilder<
@@ -117,9 +117,7 @@ export class GetSuiteCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DeviceFarmClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -131,4 +129,16 @@ export class GetSuiteCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetSuiteCommand)
   .de(de_GetSuiteCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetSuiteRequest;
+      output: GetSuiteResult;
+    };
+    sdk: {
+      input: GetSuiteCommandInput;
+      output: GetSuiteCommandOutput;
+    };
+  };
+}

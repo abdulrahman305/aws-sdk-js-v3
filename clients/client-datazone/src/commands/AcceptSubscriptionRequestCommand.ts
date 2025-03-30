@@ -125,6 +125,15 @@ export interface AcceptSubscriptionRequestCommandOutput extends AcceptSubscripti
  * //   ],
  * //   reviewerId: "STRING_VALUE",
  * //   decisionComment: "STRING_VALUE",
+ * //   existingSubscriptionId: "STRING_VALUE",
+ * //   metadataForms: [ // MetadataForms
+ * //     { // FormOutput
+ * //       formName: "STRING_VALUE", // required
+ * //       typeName: "STRING_VALUE",
+ * //       typeRevision: "STRING_VALUE",
+ * //       content: "STRING_VALUE",
+ * //     },
+ * //   ],
  * // };
  *
  * ```
@@ -159,6 +168,7 @@ export interface AcceptSubscriptionRequestCommandOutput extends AcceptSubscripti
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class AcceptSubscriptionRequestCommand extends $Command
@@ -169,9 +179,7 @@ export class AcceptSubscriptionRequestCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -183,4 +191,16 @@ export class AcceptSubscriptionRequestCommand extends $Command
   .f(AcceptSubscriptionRequestInputFilterSensitiveLog, AcceptSubscriptionRequestOutputFilterSensitiveLog)
   .ser(se_AcceptSubscriptionRequestCommand)
   .de(de_AcceptSubscriptionRequestCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: AcceptSubscriptionRequestInput;
+      output: AcceptSubscriptionRequestOutput;
+    };
+    sdk: {
+      input: AcceptSubscriptionRequestCommandInput;
+      output: AcceptSubscriptionRequestCommandOutput;
+    };
+  };
+}

@@ -132,6 +132,7 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  *     CopyTagsToBackups: true || false,
  *     DriveCacheType: "NONE" || "READ",
  *     DataCompressionType: "NONE" || "LZ4",
+ *     EfaEnabled: true || false,
  *     LogConfiguration: { // LustreLogCreateConfiguration
  *       Level: "DISABLED" || "WARN_ONLY" || "ERROR_ONLY" || "WARN_ERROR", // required
  *       Destination: "STRING_VALUE",
@@ -147,7 +148,7 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  *       Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  *     },
  *   },
- *   StorageType: "SSD" || "HDD",
+ *   StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  *   KmsKeyId: "STRING_VALUE",
  *   FileSystemTypeVersion: "STRING_VALUE",
  *   OpenZFSConfiguration: { // CreateFileSystemOpenZFSConfiguration
@@ -192,6 +193,10 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  *     RouteTableIds: [ // RouteTableIds
  *       "STRING_VALUE",
  *     ],
+ *     ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ *       SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ *       SizeGiB: Number("int"),
+ *     },
  *   },
  *   StorageCapacity: Number("int"),
  * };
@@ -208,7 +213,7 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * //       Message: "STRING_VALUE",
  * //     },
  * //     StorageCapacity: Number("int"),
- * //     StorageType: "SSD" || "HDD",
+ * //     StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //     VpcId: "STRING_VALUE",
  * //     SubnetIds: [ // SubnetIds
  * //       "STRING_VALUE",
@@ -298,6 +303,7 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * //         Iops: Number("int"),
  * //         Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //       },
+ * //       EfaEnabled: true || false,
  * //     },
  * //     AdministrativeActions: [ // AdministrativeActions
  * //       { // AdministrativeAction
@@ -315,7 +321,7 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * //             Message: "STRING_VALUE",
  * //           },
  * //           StorageCapacity: Number("int"),
- * //           StorageType: "SSD" || "HDD",
+ * //           StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //           VpcId: "STRING_VALUE",
  * //           SubnetIds: [
  * //             "STRING_VALUE",
@@ -405,6 +411,7 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * //               Iops: Number("int"),
  * //               Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //             },
+ * //             EfaEnabled: true || false,
  * //           },
  * //           AdministrativeActions: [
  * //             {
@@ -589,6 +596,10 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * //               "STRING_VALUE",
  * //             ],
  * //             EndpointIpAddress: "STRING_VALUE",
+ * //             ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //               SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //               SizeGiB: Number("int"),
+ * //             },
  * //           },
  * //         },
  * //         FailureDetails: {
@@ -761,6 +772,10 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * //         "STRING_VALUE",
  * //       ],
  * //       EndpointIpAddress: "STRING_VALUE",
+ * //       ReadCacheConfiguration: {
+ * //         SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //         SizeGiB: Number("int"),
+ * //       },
  * //     },
  * //   },
  * // };
@@ -806,65 +821,8 @@ export interface CreateFileSystemFromBackupCommandOutput extends CreateFileSyste
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
- * @public
- * @example To create a new file system from backup
- * ```javascript
- * // This operation creates a new file system from backup.
- * const input = {
- *   "BackupId": "backup-03e3c82e0183b7b6b",
- *   "ClientRequestToken": "f4c94ed7-238d-4c46-93db-48cd62ec33b7",
- *   "SecurityGroupIds": [
- *     "sg-edcd9784"
- *   ],
- *   "SubnetIds": [
- *     "subnet-1234abcd"
- *   ],
- *   "Tags": [
- *     {
- *       "Key": "Name",
- *       "Value": "MyFileSystem"
- *     }
- *   ],
- *   "WindowsConfiguration": {
- *     "ThroughputCapacity": 8
- *   }
- * };
- * const command = new CreateFileSystemFromBackupCommand(input);
- * const response = await client.send(command);
- * /* response ==
- * {
- *   "FileSystem": {
- *     "CreationTime": "1481841524.0",
- *     "DNSName": "fs-0498eed5fe91001ec.fsx.com",
- *     "FileSystemId": "fs-0498eed5fe91001ec",
- *     "KmsKeyId": "arn:aws:kms:us-east-1:012345678912:key/0ff3ea8d-130e-4133-877f-93908b6fdbd6",
- *     "Lifecycle": "CREATING",
- *     "OwnerId": "012345678912",
- *     "ResourceARN": "arn:aws:fsx:us-east-1:012345678912:file-system/fs-0498eed5fe91001ec",
- *     "StorageCapacity": 300,
- *     "SubnetIds": [
- *       "subnet-1234abcd"
- *     ],
- *     "Tags": [
- *       {
- *         "Key": "Name",
- *         "Value": "MyFileSystem"
- *       }
- *     ],
- *     "VpcId": "vpc-ab1234cd",
- *     "WindowsConfiguration": {
- *       "ActiveDirectoryId": "d-1234abcd12",
- *       "AutomaticBackupRetentionDays": 30,
- *       "DailyAutomaticBackupStartTime": "05:00",
- *       "ThroughputCapacity": 8,
- *       "WeeklyMaintenanceStartTime": "1:05:00"
- *     }
- *   }
- * }
- * *\/
- * // example id: to-create-a-new-file-system-from-backup-1481840798598
- * ```
  *
+ * @public
  */
 export class CreateFileSystemFromBackupCommand extends $Command
   .classBuilder<
@@ -874,9 +832,7 @@ export class CreateFileSystemFromBackupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -888,4 +844,16 @@ export class CreateFileSystemFromBackupCommand extends $Command
   .f(CreateFileSystemFromBackupRequestFilterSensitiveLog, CreateFileSystemFromBackupResponseFilterSensitiveLog)
   .ser(se_CreateFileSystemFromBackupCommand)
   .de(de_CreateFileSystemFromBackupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateFileSystemFromBackupRequest;
+      output: CreateFileSystemFromBackupResponse;
+    };
+    sdk: {
+      input: CreateFileSystemFromBackupCommandInput;
+      output: CreateFileSystemFromBackupCommandOutput;
+    };
+  };
+}

@@ -30,6 +30,7 @@ import {
   DeleteConfigurationManagerCommandInput,
   DeleteConfigurationManagerCommandOutput,
 } from "../commands/DeleteConfigurationManagerCommand";
+import { GetConfigurationCommandInput, GetConfigurationCommandOutput } from "../commands/GetConfigurationCommand";
 import {
   GetConfigurationManagerCommandInput,
   GetConfigurationManagerCommandOutput,
@@ -39,6 +40,7 @@ import {
   ListConfigurationManagersCommandInput,
   ListConfigurationManagersCommandOutput,
 } from "../commands/ListConfigurationManagersCommand";
+import { ListConfigurationsCommandInput, ListConfigurationsCommandOutput } from "../commands/ListConfigurationsCommand";
 import {
   ListQuickSetupTypesCommandInput,
   ListQuickSetupTypesCommandOutput,
@@ -65,6 +67,7 @@ import {
   AccessDeniedException,
   ConfigurationDefinitionInput,
   ConfigurationManagerSummary,
+  ConfigurationSummary,
   ConflictException,
   Filter,
   InternalServerException,
@@ -117,6 +120,22 @@ export const se_DeleteConfigurationManagerCommand = async (
 };
 
 /**
+ * serializeAws_restJson1GetConfigurationCommand
+ */
+export const se_GetConfigurationCommand = async (
+  input: GetConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/getConfiguration/{ConfigurationId}");
+  b.p("ConfigurationId", () => input.ConfigurationId!, "{ConfigurationId}", false);
+  let body: any;
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1GetConfigurationManagerCommand
  */
 export const se_GetConfigurationManagerCommand = async (
@@ -163,6 +182,32 @@ export const se_ListConfigurationManagersCommand = async (
   body = JSON.stringify(
     take(input, {
       Filters: (_) => _json(_),
+      MaxItems: [],
+      StartingToken: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListConfigurationsCommand
+ */
+export const se_ListConfigurationsCommand = async (
+  input: ListConfigurationsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/listConfigurations");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      ConfigurationDefinitionId: [],
+      Filters: (_) => _json(_),
+      ManagerArn: [],
       MaxItems: [],
       StartingToken: [],
     })
@@ -237,10 +282,7 @@ export const se_UntagResourceCommand = async (
   b.bp("/tags/{ResourceArn}");
   b.p("ResourceArn", () => input.ResourceArn!, "{ResourceArn}", false);
   const query: any = map({
-    [_tK]: [
-      __expectNonNull(input.TagKeys, `TagKeys`) != null,
-      () => (input[_TK]! || []).map((_entry) => _entry as any),
-    ],
+    [_tK]: [__expectNonNull(input.TagKeys, `TagKeys`) != null, () => input[_TK]! || []],
   });
   let body: any;
   b.m("DELETE").h(headers).q(query).b(body);
@@ -359,6 +401,37 @@ export const de_DeleteConfigurationManagerCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1GetConfigurationCommand
+ */
+export const de_GetConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    Account: __expectString,
+    ConfigurationDefinitionId: __expectString,
+    CreatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    Id: __expectString,
+    LastModifiedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    ManagerArn: __expectString,
+    Parameters: _json,
+    Region: __expectString,
+    StatusSummaries: (_) => de_StatusSummariesList(_, context),
+    Type: __expectString,
+    TypeVersion: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1GetConfigurationManagerCommand
  */
 export const de_GetConfigurationManagerCommand = async (
@@ -423,6 +496,28 @@ export const de_ListConfigurationManagersCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     ConfigurationManagersList: (_) => de_ConfigurationManagerList(_, context),
+    NextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListConfigurationsCommand
+ */
+export const de_ListConfigurationsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListConfigurationsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    ConfigurationsList: (_) => de_ConfigurationsList(_, context),
     NextToken: __expectString,
   });
   Object.assign(contents, doc);
@@ -755,6 +850,36 @@ const de_ConfigurationManagerSummary = (output: any, context: __SerdeContext): C
 
 // de_ConfigurationParametersMap omitted.
 
+/**
+ * deserializeAws_restJson1ConfigurationsList
+ */
+const de_ConfigurationsList = (output: any, context: __SerdeContext): ConfigurationSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ConfigurationSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1ConfigurationSummary
+ */
+const de_ConfigurationSummary = (output: any, context: __SerdeContext): ConfigurationSummary => {
+  return take(output, {
+    Account: __expectString,
+    ConfigurationDefinitionId: __expectString,
+    CreatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    FirstClassParameters: _json,
+    Id: __expectString,
+    ManagerArn: __expectString,
+    Region: __expectString,
+    StatusSummaries: (_: any) => de_StatusSummariesList(_, context),
+    Type: __expectString,
+    TypeVersion: __expectString,
+  }) as any;
+};
+
 // de_QuickSetupTypeList omitted.
 
 // de_QuickSetupTypeOutput omitted.
@@ -805,13 +930,6 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> =>
   collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
-
-const isSerializableHeaderValue = (value: any): boolean =>
-  value !== undefined &&
-  value !== null &&
-  value !== "" &&
-  (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
-  (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
 
 const _TK = "TagKeys";
 const _tK = "tagKeys";

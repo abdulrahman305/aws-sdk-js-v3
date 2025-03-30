@@ -11,7 +11,7 @@ import {
   CreateAssetFilterInputFilterSensitiveLog,
   CreateAssetFilterOutput,
   CreateAssetFilterOutputFilterSensitiveLog,
-} from "../models/models_1";
+} from "../models/models_2";
 import { de_CreateAssetFilterCommand, se_CreateAssetFilterCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -357,6 +357,7 @@ export interface CreateAssetFilterCommandOutput extends CreateAssetFilterOutput,
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class CreateAssetFilterCommand extends $Command
@@ -367,9 +368,7 @@ export class CreateAssetFilterCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -381,4 +380,16 @@ export class CreateAssetFilterCommand extends $Command
   .f(CreateAssetFilterInputFilterSensitiveLog, CreateAssetFilterOutputFilterSensitiveLog)
   .ser(se_CreateAssetFilterCommand)
   .de(de_CreateAssetFilterCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateAssetFilterInput;
+      output: CreateAssetFilterOutput;
+    };
+    sdk: {
+      input: CreateAssetFilterCommandInput;
+      output: CreateAssetFilterCommandOutput;
+    };
+  };
+}

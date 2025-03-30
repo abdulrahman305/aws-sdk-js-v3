@@ -2928,10 +2928,12 @@ const de_CreatePullThroughCacheRuleResponse = (
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     credentialArn: __expectString,
+    customRoleArn: __expectString,
     ecrRepositoryPrefix: __expectString,
     registryId: __expectString,
     upstreamRegistry: __expectString,
     upstreamRegistryUrl: __expectString,
+    upstreamRepositoryPrefix: __expectString,
   }) as any;
 };
 
@@ -3020,9 +3022,11 @@ const de_DeletePullThroughCacheRuleResponse = (
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     credentialArn: __expectString,
+    customRoleArn: __expectString,
     ecrRepositoryPrefix: __expectString,
     registryId: __expectString,
     upstreamRegistryUrl: __expectString,
+    upstreamRepositoryPrefix: __expectString,
   }) as any;
 };
 
@@ -3133,8 +3137,10 @@ const de_EnhancedImageScanFinding = (output: any, context: __SerdeContext): Enha
   return take(output, {
     awsAccountId: __expectString,
     description: __expectString,
+    exploitAvailable: __expectString,
     findingArn: __expectString,
     firstObservedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    fixAvailable: __expectString,
     lastObservedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     packageVulnerabilityDetails: (_: any) => de_PackageVulnerabilityDetails(_, context),
     remediation: _json,
@@ -3397,11 +3403,13 @@ const de_PullThroughCacheRule = (output: any, context: __SerdeContext): PullThro
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     credentialArn: __expectString,
+    customRoleArn: __expectString,
     ecrRepositoryPrefix: __expectString,
     registryId: __expectString,
     updatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     upstreamRegistry: __expectString,
     upstreamRegistryUrl: __expectString,
+    upstreamRepositoryPrefix: __expectString,
   }) as any;
 };
 
@@ -3641,9 +3649,11 @@ const de_UpdatePullThroughCacheRuleResponse = (
 ): UpdatePullThroughCacheRuleResponse => {
   return take(output, {
     credentialArn: __expectString,
+    customRoleArn: __expectString,
     ecrRepositoryPrefix: __expectString,
     registryId: __expectString,
     updatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    upstreamRepositoryPrefix: __expectString,
   }) as any;
 };
 

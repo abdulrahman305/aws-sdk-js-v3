@@ -75,6 +75,7 @@ export interface DeleteAssetCommandOutput extends DeleteAssetOutput, __MetadataB
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class DeleteAssetCommand extends $Command
@@ -85,9 +86,7 @@ export class DeleteAssetCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -99,4 +98,16 @@ export class DeleteAssetCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteAssetCommand)
   .de(de_DeleteAssetCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteAssetInput;
+      output: {};
+    };
+    sdk: {
+      input: DeleteAssetCommandInput;
+      output: DeleteAssetCommandOutput;
+    };
+  };
+}

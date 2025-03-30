@@ -57,7 +57,7 @@ export interface ListProjectsCommandOutput extends ListProjectsOutput, __Metadat
  * //       id: "STRING_VALUE", // required
  * //       name: "STRING_VALUE", // required
  * //       description: "STRING_VALUE",
- * //       projectStatus: "ACTIVE" || "DELETING" || "DELETE_FAILED",
+ * //       projectStatus: "ACTIVE" || "DELETING" || "DELETE_FAILED" || "UPDATING" || "UPDATE_FAILED",
  * //       failureReasons: [ // FailureReasons
  * //         { // ProjectDeletionError
  * //           code: "STRING_VALUE",
@@ -99,6 +99,7 @@ export interface ListProjectsCommandOutput extends ListProjectsOutput, __Metadat
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListProjectsCommand extends $Command
@@ -109,9 +110,7 @@ export class ListProjectsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -123,4 +122,16 @@ export class ListProjectsCommand extends $Command
   .f(ListProjectsInputFilterSensitiveLog, ListProjectsOutputFilterSensitiveLog)
   .ser(se_ListProjectsCommand)
   .de(de_ListProjectsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListProjectsInput;
+      output: ListProjectsOutput;
+    };
+    sdk: {
+      input: ListProjectsCommandInput;
+      output: ListProjectsCommandOutput;
+    };
+  };
+}

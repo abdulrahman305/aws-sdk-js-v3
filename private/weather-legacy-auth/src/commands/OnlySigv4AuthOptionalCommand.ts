@@ -48,6 +48,7 @@ export interface OnlySigv4AuthOptionalCommandOutput extends __MetadataBearer {}
  * @throws {@link WeatherServiceException}
  * <p>Base exception class for all service exceptions from Weather service.</p>
  *
+ *
  */
 export class OnlySigv4AuthOptionalCommand extends $Command
   .classBuilder<
@@ -65,4 +66,16 @@ export class OnlySigv4AuthOptionalCommand extends $Command
   .f(void 0, void 0)
   .ser(se_OnlySigv4AuthOptionalCommand)
   .de(de_OnlySigv4AuthOptionalCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: {};
+      output: {};
+    };
+    sdk: {
+      input: OnlySigv4AuthOptionalCommandInput;
+      output: OnlySigv4AuthOptionalCommandOutput;
+    };
+  };
+}

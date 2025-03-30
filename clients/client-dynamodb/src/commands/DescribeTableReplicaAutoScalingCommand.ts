@@ -154,6 +154,7 @@ export interface DescribeTableReplicaAutoScalingCommandOutput
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>
  *
+ *
  * @public
  */
 export class DescribeTableReplicaAutoScalingCommand extends $Command
@@ -166,6 +167,7 @@ export class DescribeTableReplicaAutoScalingCommand extends $Command
   >()
   .ep({
     ...commonParams,
+    ResourceArn: { type: "contextParams", name: "TableName" },
   })
   .m(function (this: any, Command: any, cs: any, config: DynamoDBClientResolvedConfig, o: any) {
     return [
@@ -178,4 +180,16 @@ export class DescribeTableReplicaAutoScalingCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeTableReplicaAutoScalingCommand)
   .de(de_DescribeTableReplicaAutoScalingCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeTableReplicaAutoScalingInput;
+      output: DescribeTableReplicaAutoScalingOutput;
+    };
+    sdk: {
+      input: DescribeTableReplicaAutoScalingCommandInput;
+      output: DescribeTableReplicaAutoScalingCommandOutput;
+    };
+  };
+}

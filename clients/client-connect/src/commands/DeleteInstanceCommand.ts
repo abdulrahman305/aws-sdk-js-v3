@@ -43,6 +43,7 @@ export interface DeleteInstanceCommandOutput extends __MetadataBearer {}
  * const client = new ConnectClient(config);
  * const input = { // DeleteInstanceRequest
  *   InstanceId: "STRING_VALUE", // required
+ *   ClientToken: "STRING_VALUE",
  * };
  * const command = new DeleteInstanceCommand(input);
  * const response = await client.send(command);
@@ -68,6 +69,7 @@ export interface DeleteInstanceCommandOutput extends __MetadataBearer {}
  * @throws {@link ConnectServiceException}
  * <p>Base exception class for all service exceptions from Connect service.</p>
  *
+ *
  * @public
  */
 export class DeleteInstanceCommand extends $Command
@@ -78,9 +80,7 @@ export class DeleteInstanceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ConnectClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -92,4 +92,16 @@ export class DeleteInstanceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteInstanceCommand)
   .de(de_DeleteInstanceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteInstanceRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteInstanceCommandInput;
+      output: DeleteInstanceCommandOutput;
+    };
+  };
+}

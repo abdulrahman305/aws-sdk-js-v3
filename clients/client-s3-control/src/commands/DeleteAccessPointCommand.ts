@@ -77,6 +77,7 @@ export interface DeleteAccessPointCommandOutput extends __MetadataBearer {}
  * @throws {@link S3ControlServiceException}
  * <p>Base exception class for all service exceptions from S3Control service.</p>
  *
+ *
  * @public
  */
 export class DeleteAccessPointCommand extends $Command
@@ -105,4 +106,16 @@ export class DeleteAccessPointCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteAccessPointCommand)
   .de(de_DeleteAccessPointCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteAccessPointRequest;
+      output: {};
+    };
+    sdk: {
+      input: DeleteAccessPointCommandInput;
+      output: DeleteAccessPointCommandOutput;
+    };
+  };
+}

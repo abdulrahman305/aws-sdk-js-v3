@@ -74,6 +74,7 @@ export interface UpdateConfigurationManagerCommandOutput extends __MetadataBeare
  * @throws {@link SSMQuickSetupServiceException}
  * <p>Base exception class for all service exceptions from SSMQuickSetup service.</p>
  *
+ *
  * @public
  */
 export class UpdateConfigurationManagerCommand extends $Command
@@ -84,9 +85,7 @@ export class UpdateConfigurationManagerCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SSMQuickSetupClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -98,4 +97,16 @@ export class UpdateConfigurationManagerCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateConfigurationManagerCommand)
   .de(de_UpdateConfigurationManagerCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateConfigurationManagerInput;
+      output: {};
+    };
+    sdk: {
+      input: UpdateConfigurationManagerCommandInput;
+      output: UpdateConfigurationManagerCommandOutput;
+    };
+  };
+}

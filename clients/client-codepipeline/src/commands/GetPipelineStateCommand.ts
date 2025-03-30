@@ -54,13 +54,13 @@ export interface GetPipelineStateCommandOutput extends GetPipelineStateOutput, _
  * //       stageName: "STRING_VALUE",
  * //       inboundExecution: { // StageExecution
  * //         pipelineExecutionId: "STRING_VALUE", // required
- * //         status: "Cancelled" || "InProgress" || "Failed" || "Stopped" || "Stopping" || "Succeeded", // required
+ * //         status: "Cancelled" || "InProgress" || "Failed" || "Stopped" || "Stopping" || "Succeeded" || "Skipped", // required
  * //         type: "STANDARD" || "ROLLBACK",
  * //       },
  * //       inboundExecutions: [ // StageExecutionList
  * //         {
  * //           pipelineExecutionId: "STRING_VALUE", // required
- * //           status: "Cancelled" || "InProgress" || "Failed" || "Stopped" || "Stopping" || "Succeeded", // required
+ * //           status: "Cancelled" || "InProgress" || "Failed" || "Stopped" || "Stopping" || "Succeeded" || "Skipped", // required
  * //           type: "STANDARD" || "ROLLBACK",
  * //         },
  * //       ],
@@ -92,6 +92,7 @@ export interface GetPipelineStateCommandOutput extends GetPipelineStateOutput, _
  * //               code: "STRING_VALUE",
  * //               message: "STRING_VALUE",
  * //             },
+ * //             logStreamARN: "STRING_VALUE",
  * //           },
  * //           entityUrl: "STRING_VALUE",
  * //           revisionUrl: "STRING_VALUE",
@@ -99,7 +100,7 @@ export interface GetPipelineStateCommandOutput extends GetPipelineStateOutput, _
  * //       ],
  * //       latestExecution: {
  * //         pipelineExecutionId: "STRING_VALUE", // required
- * //         status: "Cancelled" || "InProgress" || "Failed" || "Stopped" || "Stopping" || "Succeeded", // required
+ * //         status: "Cancelled" || "InProgress" || "Failed" || "Stopped" || "Stopping" || "Succeeded" || "Skipped", // required
  * //         type: "STANDARD" || "ROLLBACK",
  * //       },
  * //       beforeEntryConditionState: { // StageConditionState
@@ -225,6 +226,11 @@ export interface GetPipelineStateCommandOutput extends GetPipelineStateOutput, _
  * //           },
  * //         ],
  * //       },
+ * //       retryStageMetadata: { // RetryStageMetadata
+ * //         autoStageRetryAttempt: Number("int"),
+ * //         manualStageRetryAttempt: Number("int"),
+ * //         latestRetryTrigger: "AutomatedStageRetry" || "ManualStageRetry",
+ * //       },
  * //     },
  * //   ],
  * //   created: new Date("TIMESTAMP"),
@@ -248,6 +254,7 @@ export interface GetPipelineStateCommandOutput extends GetPipelineStateOutput, _
  * @throws {@link CodePipelineServiceException}
  * <p>Base exception class for all service exceptions from CodePipeline service.</p>
  *
+ *
  * @public
  */
 export class GetPipelineStateCommand extends $Command
@@ -258,9 +265,7 @@ export class GetPipelineStateCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CodePipelineClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -272,4 +277,16 @@ export class GetPipelineStateCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetPipelineStateCommand)
   .de(de_GetPipelineStateCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetPipelineStateInput;
+      output: GetPipelineStateOutput;
+    };
+    sdk: {
+      input: GetPipelineStateCommandInput;
+      output: GetPipelineStateCommandOutput;
+    };
+  };
+}

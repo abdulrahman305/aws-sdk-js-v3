@@ -56,11 +56,16 @@ import {
 import { CreateCapabilityCommandInput, CreateCapabilityCommandOutput } from "./commands/CreateCapabilityCommand";
 import { CreatePartnershipCommandInput, CreatePartnershipCommandOutput } from "./commands/CreatePartnershipCommand";
 import { CreateProfileCommandInput, CreateProfileCommandOutput } from "./commands/CreateProfileCommand";
+import {
+  CreateStarterMappingTemplateCommandInput,
+  CreateStarterMappingTemplateCommandOutput,
+} from "./commands/CreateStarterMappingTemplateCommand";
 import { CreateTransformerCommandInput, CreateTransformerCommandOutput } from "./commands/CreateTransformerCommand";
 import { DeleteCapabilityCommandInput, DeleteCapabilityCommandOutput } from "./commands/DeleteCapabilityCommand";
 import { DeletePartnershipCommandInput, DeletePartnershipCommandOutput } from "./commands/DeletePartnershipCommand";
 import { DeleteProfileCommandInput, DeleteProfileCommandOutput } from "./commands/DeleteProfileCommand";
 import { DeleteTransformerCommandInput, DeleteTransformerCommandOutput } from "./commands/DeleteTransformerCommand";
+import { GenerateMappingCommandInput, GenerateMappingCommandOutput } from "./commands/GenerateMappingCommand";
 import { GetCapabilityCommandInput, GetCapabilityCommandOutput } from "./commands/GetCapabilityCommand";
 import { GetPartnershipCommandInput, GetPartnershipCommandOutput } from "./commands/GetPartnershipCommand";
 import { GetProfileCommandInput, GetProfileCommandOutput } from "./commands/GetProfileCommand";
@@ -79,6 +84,7 @@ import {
   StartTransformerJobCommandOutput,
 } from "./commands/StartTransformerJobCommand";
 import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
+import { TestConversionCommandInput, TestConversionCommandOutput } from "./commands/TestConversionCommand";
 import { TestMappingCommandInput, TestMappingCommandOutput } from "./commands/TestMappingCommand";
 import { TestParsingCommandInput, TestParsingCommandOutput } from "./commands/TestParsingCommand";
 import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
@@ -104,11 +110,13 @@ export type ServiceInputTypes =
   | CreateCapabilityCommandInput
   | CreatePartnershipCommandInput
   | CreateProfileCommandInput
+  | CreateStarterMappingTemplateCommandInput
   | CreateTransformerCommandInput
   | DeleteCapabilityCommandInput
   | DeletePartnershipCommandInput
   | DeleteProfileCommandInput
   | DeleteTransformerCommandInput
+  | GenerateMappingCommandInput
   | GetCapabilityCommandInput
   | GetPartnershipCommandInput
   | GetProfileCommandInput
@@ -121,6 +129,7 @@ export type ServiceInputTypes =
   | ListTransformersCommandInput
   | StartTransformerJobCommandInput
   | TagResourceCommandInput
+  | TestConversionCommandInput
   | TestMappingCommandInput
   | TestParsingCommandInput
   | UntagResourceCommandInput
@@ -136,11 +145,13 @@ export type ServiceOutputTypes =
   | CreateCapabilityCommandOutput
   | CreatePartnershipCommandOutput
   | CreateProfileCommandOutput
+  | CreateStarterMappingTemplateCommandOutput
   | CreateTransformerCommandOutput
   | DeleteCapabilityCommandOutput
   | DeletePartnershipCommandOutput
   | DeleteProfileCommandOutput
   | DeleteTransformerCommandOutput
+  | GenerateMappingCommandOutput
   | GetCapabilityCommandOutput
   | GetPartnershipCommandOutput
   | GetProfileCommandOutput
@@ -153,6 +164,7 @@ export type ServiceOutputTypes =
   | ListTransformersCommandOutput
   | StartTransformerJobCommandOutput
   | TagResourceCommandOutput
+  | TestConversionCommandOutput
   | TestMappingCommandOutput
   | TestParsingCommandOutput
   | UntagResourceCommandOutput
@@ -251,6 +263,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -359,6 +390,8 @@ export class B2biClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<B2biClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -367,7 +400,6 @@ export class B2biClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

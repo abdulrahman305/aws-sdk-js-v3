@@ -148,6 +148,7 @@ export interface DescribeInstanceInformationCommandOutput extends DescribeInstan
  * @throws {@link SSMServiceException}
  * <p>Base exception class for all service exceptions from SSM service.</p>
  *
+ *
  * @public
  */
 export class DescribeInstanceInformationCommand extends $Command
@@ -158,9 +159,7 @@ export class DescribeInstanceInformationCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SSMClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -172,4 +171,16 @@ export class DescribeInstanceInformationCommand extends $Command
   .f(void 0, DescribeInstanceInformationResultFilterSensitiveLog)
   .ser(se_DescribeInstanceInformationCommand)
   .de(de_DescribeInstanceInformationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeInstanceInformationRequest;
+      output: DescribeInstanceInformationResult;
+    };
+    sdk: {
+      input: DescribeInstanceInformationCommandInput;
+      output: DescribeInstanceInformationCommandOutput;
+    };
+  };
+}

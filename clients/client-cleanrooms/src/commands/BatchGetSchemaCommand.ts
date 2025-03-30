@@ -61,7 +61,10 @@ export interface BatchGetSchemaCommandOutput extends BatchGetSchemaOutput, __Met
  * //       analysisRuleTypes: [ // AnalysisRuleTypeList // required
  * //         "AGGREGATION" || "LIST" || "CUSTOM" || "ID_MAPPING_TABLE",
  * //       ],
- * //       analysisMethod: "STRING_VALUE",
+ * //       analysisMethod: "DIRECT_QUERY" || "DIRECT_JOB" || "MULTIPLE",
+ * //       selectedAnalysisMethods: [ // SelectedAnalysisMethods
+ * //         "DIRECT_QUERY" || "DIRECT_JOB",
+ * //       ],
  * //       creatorAccountId: "STRING_VALUE", // required
  * //       name: "STRING_VALUE", // required
  * //       collaborationId: "STRING_VALUE", // required
@@ -133,6 +136,7 @@ export interface BatchGetSchemaCommandOutput extends BatchGetSchemaOutput, __Met
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class BatchGetSchemaCommand extends $Command
@@ -143,9 +147,7 @@ export class BatchGetSchemaCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -157,4 +159,16 @@ export class BatchGetSchemaCommand extends $Command
   .f(void 0, void 0)
   .ser(se_BatchGetSchemaCommand)
   .de(de_BatchGetSchemaCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: BatchGetSchemaInput;
+      output: BatchGetSchemaOutput;
+    };
+    sdk: {
+      input: BatchGetSchemaCommandInput;
+      output: BatchGetSchemaCommandOutput;
+    };
+  };
+}

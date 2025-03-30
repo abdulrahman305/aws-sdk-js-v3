@@ -140,6 +140,7 @@ export interface CreateDataProductCommandOutput extends CreateDataProductOutput,
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class CreateDataProductCommand extends $Command
@@ -150,9 +151,7 @@ export class CreateDataProductCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -164,4 +163,16 @@ export class CreateDataProductCommand extends $Command
   .f(CreateDataProductInputFilterSensitiveLog, CreateDataProductOutputFilterSensitiveLog)
   .ser(se_CreateDataProductCommand)
   .de(de_CreateDataProductCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateDataProductInput;
+      output: CreateDataProductOutput;
+    };
+    sdk: {
+      input: CreateDataProductCommandInput;
+      output: CreateDataProductCommandOutput;
+    };
+  };
+}

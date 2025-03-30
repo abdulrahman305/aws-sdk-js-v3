@@ -33,7 +33,7 @@ export interface CreateDataSourceCommandInput extends CreateDataSourceRequest {}
 export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse, __MetadataBearer {}
 
 /**
- * <p>Creates a data source connector for a knowledge base.</p>
+ * <p>Connects a knowledge base to a data source. You specify the configuration for the specific data source service in the <code>dataSourceConfiguration</code> field.</p>
  *          <important>
  *             <p>You can't change the <code>chunkingConfiguration</code> after you create the data source connector.</p>
  *          </important>
@@ -49,7 +49,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  *   name: "STRING_VALUE", // required
  *   description: "STRING_VALUE",
  *   dataSourceConfiguration: { // DataSourceConfiguration
- *     type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT", // required
+ *     type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT" || "CUSTOM" || "REDSHIFT_METADATA", // required
  *     s3Configuration: { // S3DataSourceConfiguration
  *       bucketArn: "STRING_VALUE", // required
  *       inclusionPrefixes: [ // S3Prefixes
@@ -70,6 +70,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  *       crawlerConfiguration: { // WebCrawlerConfiguration
  *         crawlerLimits: { // WebCrawlerLimits
  *           rateLimit: Number("int"),
+ *           maxPages: Number("int"),
  *         },
  *         inclusionFilters: [ // FilterList
  *           "STRING_VALUE",
@@ -78,6 +79,8 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  *           "STRING_VALUE",
  *         ],
  *         scope: "HOST_ONLY" || "SUBDOMAINS",
+ *         userAgent: "STRING_VALUE",
+ *         userAgentHeader: "STRING_VALUE",
  *       },
  *     },
  *     confluenceConfiguration: { // ConfluenceDataSourceConfiguration
@@ -137,7 +140,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  *           "STRING_VALUE",
  *         ],
  *         hostType: "ONLINE", // required
- *         authType: "OAUTH2_CLIENT_CREDENTIALS", // required
+ *         authType: "OAUTH2_CLIENT_CREDENTIALS" || "OAUTH2_SHAREPOINT_APP_ONLY_CLIENT_CREDENTIALS", // required
  *         credentialsSecretArn: "STRING_VALUE", // required
  *       },
  *       crawlerConfiguration: { // SharePointCrawlerConfiguration
@@ -199,12 +202,25 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  *       ],
  *     },
  *     parsingConfiguration: { // ParsingConfiguration
- *       parsingStrategy: "BEDROCK_FOUNDATION_MODEL", // required
+ *       parsingStrategy: "BEDROCK_FOUNDATION_MODEL" || "BEDROCK_DATA_AUTOMATION", // required
  *       bedrockFoundationModelConfiguration: { // BedrockFoundationModelConfiguration
  *         modelArn: "STRING_VALUE", // required
  *         parsingPrompt: { // ParsingPrompt
  *           parsingPromptText: "STRING_VALUE", // required
  *         },
+ *         parsingModality: "MULTIMODAL",
+ *       },
+ *       bedrockDataAutomationConfiguration: { // BedrockDataAutomationConfiguration
+ *         parsingModality: "MULTIMODAL",
+ *       },
+ *     },
+ *     contextEnrichmentConfiguration: { // ContextEnrichmentConfiguration
+ *       type: "BEDROCK_FOUNDATION_MODEL", // required
+ *       bedrockFoundationModelConfiguration: { // BedrockFoundationModelContextEnrichmentConfiguration
+ *         enrichmentStrategyConfiguration: { // EnrichmentStrategyConfiguration
+ *           method: "CHUNK_ENTITY_EXTRACTION", // required
+ *         },
+ *         modelArn: "STRING_VALUE", // required
  *       },
  *     },
  *   },
@@ -219,7 +235,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  * //     status: "AVAILABLE" || "DELETING" || "DELETE_UNSUCCESSFUL", // required
  * //     description: "STRING_VALUE",
  * //     dataSourceConfiguration: { // DataSourceConfiguration
- * //       type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT", // required
+ * //       type: "S3" || "WEB" || "CONFLUENCE" || "SALESFORCE" || "SHAREPOINT" || "CUSTOM" || "REDSHIFT_METADATA", // required
  * //       s3Configuration: { // S3DataSourceConfiguration
  * //         bucketArn: "STRING_VALUE", // required
  * //         inclusionPrefixes: [ // S3Prefixes
@@ -240,6 +256,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  * //         crawlerConfiguration: { // WebCrawlerConfiguration
  * //           crawlerLimits: { // WebCrawlerLimits
  * //             rateLimit: Number("int"),
+ * //             maxPages: Number("int"),
  * //           },
  * //           inclusionFilters: [ // FilterList
  * //             "STRING_VALUE",
@@ -248,6 +265,8 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  * //             "STRING_VALUE",
  * //           ],
  * //           scope: "HOST_ONLY" || "SUBDOMAINS",
+ * //           userAgent: "STRING_VALUE",
+ * //           userAgentHeader: "STRING_VALUE",
  * //         },
  * //       },
  * //       confluenceConfiguration: { // ConfluenceDataSourceConfiguration
@@ -307,7 +326,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  * //             "STRING_VALUE",
  * //           ],
  * //           hostType: "ONLINE", // required
- * //           authType: "OAUTH2_CLIENT_CREDENTIALS", // required
+ * //           authType: "OAUTH2_CLIENT_CREDENTIALS" || "OAUTH2_SHAREPOINT_APP_ONLY_CLIENT_CREDENTIALS", // required
  * //           credentialsSecretArn: "STRING_VALUE", // required
  * //         },
  * //         crawlerConfiguration: { // SharePointCrawlerConfiguration
@@ -368,12 +387,25 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  * //         ],
  * //       },
  * //       parsingConfiguration: { // ParsingConfiguration
- * //         parsingStrategy: "BEDROCK_FOUNDATION_MODEL", // required
+ * //         parsingStrategy: "BEDROCK_FOUNDATION_MODEL" || "BEDROCK_DATA_AUTOMATION", // required
  * //         bedrockFoundationModelConfiguration: { // BedrockFoundationModelConfiguration
  * //           modelArn: "STRING_VALUE", // required
  * //           parsingPrompt: { // ParsingPrompt
  * //             parsingPromptText: "STRING_VALUE", // required
  * //           },
+ * //           parsingModality: "MULTIMODAL",
+ * //         },
+ * //         bedrockDataAutomationConfiguration: { // BedrockDataAutomationConfiguration
+ * //           parsingModality: "MULTIMODAL",
+ * //         },
+ * //       },
+ * //       contextEnrichmentConfiguration: { // ContextEnrichmentConfiguration
+ * //         type: "BEDROCK_FOUNDATION_MODEL", // required
+ * //         bedrockFoundationModelConfiguration: { // BedrockFoundationModelContextEnrichmentConfiguration
+ * //           enrichmentStrategyConfiguration: { // EnrichmentStrategyConfiguration
+ * //             method: "CHUNK_ENTITY_EXTRACTION", // required
+ * //           },
+ * //           modelArn: "STRING_VALUE", // required
  * //         },
  * //       },
  * //     },
@@ -418,6 +450,7 @@ export interface CreateDataSourceCommandOutput extends CreateDataSourceResponse,
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class CreateDataSourceCommand extends $Command
@@ -428,9 +461,7 @@ export class CreateDataSourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -442,4 +473,16 @@ export class CreateDataSourceCommand extends $Command
   .f(CreateDataSourceRequestFilterSensitiveLog, CreateDataSourceResponseFilterSensitiveLog)
   .ser(se_CreateDataSourceCommand)
   .de(de_CreateDataSourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateDataSourceRequest;
+      output: CreateDataSourceResponse;
+    };
+    sdk: {
+      input: CreateDataSourceCommandInput;
+      output: CreateDataSourceCommandOutput;
+    };
+  };
+}

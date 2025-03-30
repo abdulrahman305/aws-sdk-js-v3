@@ -92,6 +92,7 @@ export interface CreateConfigurationManagerCommandOutput extends CreateConfigura
  * @throws {@link SSMQuickSetupServiceException}
  * <p>Base exception class for all service exceptions from SSMQuickSetup service.</p>
  *
+ *
  * @public
  */
 export class CreateConfigurationManagerCommand extends $Command
@@ -102,9 +103,7 @@ export class CreateConfigurationManagerCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SSMQuickSetupClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -116,4 +115,16 @@ export class CreateConfigurationManagerCommand extends $Command
   .f(CreateConfigurationManagerInputFilterSensitiveLog, void 0)
   .ser(se_CreateConfigurationManagerCommand)
   .de(de_CreateConfigurationManagerCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CreateConfigurationManagerInput;
+      output: CreateConfigurationManagerOutput;
+    };
+    sdk: {
+      input: CreateConfigurationManagerCommandInput;
+      output: CreateConfigurationManagerCommandOutput;
+    };
+  };
+}

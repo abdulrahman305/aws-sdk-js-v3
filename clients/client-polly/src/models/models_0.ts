@@ -103,6 +103,7 @@ export const LanguageCode = {
   en_IE: "en-IE",
   en_IN: "en-IN",
   en_NZ: "en-NZ",
+  en_SG: "en-SG",
   en_US: "en-US",
   en_ZA: "en-ZA",
   es_ES: "es-ES",
@@ -145,7 +146,7 @@ export interface DescribeVoicesInput {
    *       processing input text for speech synthesis. </p>
    * @public
    */
-  Engine?: Engine;
+  Engine?: Engine | undefined;
 
   /**
    * <p> The language identification tag (ISO 639 code for the language
@@ -154,7 +155,7 @@ export interface DescribeVoicesInput {
    *       returned. </p>
    * @public
    */
-  LanguageCode?: LanguageCode;
+  LanguageCode?: LanguageCode | undefined;
 
   /**
    * <p>Boolean value indicating whether to return any bilingual voices that
@@ -165,7 +166,7 @@ export interface DescribeVoicesInput {
    *         <code>no</code>.</p>
    * @public
    */
-  IncludeAdditionalLanguageCodes?: boolean;
+  IncludeAdditionalLanguageCodes?: boolean | undefined;
 
   /**
    * <p>An opaque pagination token returned from the previous
@@ -173,7 +174,7 @@ export interface DescribeVoicesInput {
    *       to continue the listing.</p>
    * @public
    */
-  NextToken?: string;
+  NextToken?: string | undefined;
 }
 
 /**
@@ -237,6 +238,8 @@ export const VoiceId = {
   Ivy: "Ivy",
   Jacek: "Jacek",
   Jan: "Jan",
+  Jasmine: "Jasmine",
+  Jihye: "Jihye",
   Jitka: "Jitka",
   Joanna: "Joanna",
   Joey: "Joey",
@@ -309,26 +312,26 @@ export interface Voice {
    * <p>Gender of the voice.</p>
    * @public
    */
-  Gender?: Gender;
+  Gender?: Gender | undefined;
 
   /**
    * <p>Amazon Polly assigned voice ID. This is the ID that you specify when
    *       calling the <code>SynthesizeSpeech</code> operation.</p>
    * @public
    */
-  Id?: VoiceId;
+  Id?: VoiceId | undefined;
 
   /**
    * <p>Language code of the voice.</p>
    * @public
    */
-  LanguageCode?: LanguageCode;
+  LanguageCode?: LanguageCode | undefined;
 
   /**
    * <p>Human readable name of the language in English.</p>
    * @public
    */
-  LanguageName?: string;
+  LanguageName?: string | undefined;
 
   /**
    * <p>Name of the voice (for example, Salli, Kendra, etc.). This provides
@@ -336,7 +339,7 @@ export interface Voice {
    *       application.</p>
    * @public
    */
-  Name?: string;
+  Name?: string | undefined;
 
   /**
    * <p>Additional codes for languages available for the specified voice in
@@ -347,14 +350,14 @@ export interface Voice {
    *       code <code>hi-IN</code>.</p>
    * @public
    */
-  AdditionalLanguageCodes?: LanguageCode[];
+  AdditionalLanguageCodes?: LanguageCode[] | undefined;
 
   /**
    * <p>Specifies which engines (<code>standard</code>, <code>neural</code>,
    *       <code>long-form</code> or <code>generative</code>) are supported by a given voice.</p>
    * @public
    */
-  SupportedEngines?: Engine[];
+  SupportedEngines?: Engine[] | undefined;
 }
 
 /**
@@ -365,7 +368,7 @@ export interface DescribeVoicesOutput {
    * <p>A list of voices with their properties.</p>
    * @public
    */
-  Voices?: Voice[];
+  Voices?: Voice[] | undefined;
 
   /**
    * <p>The pagination token to use in the next request to continue the
@@ -373,7 +376,7 @@ export interface DescribeVoicesOutput {
    *       is truncated.</p>
    * @public
    */
-  NextToken?: string;
+  NextToken?: string | undefined;
 }
 
 /**
@@ -442,13 +445,13 @@ export interface Lexicon {
    *       in PLS format.</p>
    * @public
    */
-  Content?: string;
+  Content?: string | undefined;
 
   /**
    * <p>Name of the lexicon.</p>
    * @public
    */
-  Name?: string;
+  Name?: string | undefined;
 }
 
 /**
@@ -462,7 +465,7 @@ export interface LexiconAttributes {
    *         <code>ipa</code> and <code>x-sampa</code>.</p>
    * @public
    */
-  Alphabet?: string;
+  Alphabet?: string | undefined;
 
   /**
    * <p>Language code that the lexicon applies to. A lexicon with a
@@ -470,31 +473,31 @@ export interface LexiconAttributes {
    *       (en-GB, en-US, en-AUS, en-WLS, and so on.</p>
    * @public
    */
-  LanguageCode?: LanguageCode;
+  LanguageCode?: LanguageCode | undefined;
 
   /**
    * <p>Date lexicon was last modified (a timestamp value).</p>
    * @public
    */
-  LastModified?: Date;
+  LastModified?: Date | undefined;
 
   /**
    * <p>Amazon Resource Name (ARN) of the lexicon.</p>
    * @public
    */
-  LexiconArn?: string;
+  LexiconArn?: string | undefined;
 
   /**
    * <p>Number of lexemes in the lexicon.</p>
    * @public
    */
-  LexemesCount?: number;
+  LexemesCount?: number | undefined;
 
   /**
    * <p>Total size of the lexicon, in characters.</p>
    * @public
    */
-  Size?: number;
+  Size?: number | undefined;
 }
 
 /**
@@ -506,7 +509,7 @@ export interface GetLexiconOutput {
    *       lexicon. </p>
    * @public
    */
-  Lexicon?: Lexicon;
+  Lexicon?: Lexicon | undefined;
 
   /**
    * <p>Metadata of the lexicon, including phonetic alphabetic used,
@@ -514,7 +517,7 @@ export interface GetLexiconOutput {
    *       size of lexicon in bytes.</p>
    * @public
    */
-  LexiconAttributes?: LexiconAttributes;
+  LexiconAttributes?: LexiconAttributes | undefined;
 }
 
 /**
@@ -603,51 +606,51 @@ export interface SynthesisTask {
    *       is not supported for the engine selected will result in an error.</p>
    * @public
    */
-  Engine?: Engine;
+  Engine?: Engine | undefined;
 
   /**
    * <p>The Amazon Polly generated identifier for a speech synthesis task.</p>
    * @public
    */
-  TaskId?: string;
+  TaskId?: string | undefined;
 
   /**
    * <p>Current status of the individual speech synthesis task.</p>
    * @public
    */
-  TaskStatus?: TaskStatus;
+  TaskStatus?: TaskStatus | undefined;
 
   /**
    * <p>Reason for the current status of a specific speech synthesis task,
    *       including errors if the task has failed.</p>
    * @public
    */
-  TaskStatusReason?: string;
+  TaskStatusReason?: string | undefined;
 
   /**
    * <p>Pathway for the output speech file.</p>
    * @public
    */
-  OutputUri?: string;
+  OutputUri?: string | undefined;
 
   /**
    * <p>Timestamp for the time the synthesis task was started.</p>
    * @public
    */
-  CreationTime?: Date;
+  CreationTime?: Date | undefined;
 
   /**
    * <p>Number of billable characters synthesized.</p>
    * @public
    */
-  RequestCharacters?: number;
+  RequestCharacters?: number | undefined;
 
   /**
    * <p>ARN for the SNS topic optionally used for providing status
    *       notification for a speech synthesis task.</p>
    * @public
    */
-  SnsTopicArn?: string;
+  SnsTopicArn?: string | undefined;
 
   /**
    * <p>List of one or more pronunciation lexicon names you want the service
@@ -655,7 +658,7 @@ export interface SynthesisTask {
    *       the lexicon is the same as the language of the voice. </p>
    * @public
    */
-  LexiconNames?: string[];
+  LexiconNames?: string[] | undefined;
 
   /**
    * <p>The format in which the returned output will be encoded. For audio
@@ -663,7 +666,7 @@ export interface SynthesisTask {
    *       be json. </p>
    * @public
    */
-  OutputFormat?: OutputFormat;
+  OutputFormat?: OutputFormat | undefined;
 
   /**
    * <p>The audio frequency specified in Hz.</p>
@@ -675,26 +678,26 @@ export interface SynthesisTask {
    *       "16000". </p>
    * @public
    */
-  SampleRate?: string;
+  SampleRate?: string | undefined;
 
   /**
    * <p>The type of speech marks returned for the input text.</p>
    * @public
    */
-  SpeechMarkTypes?: SpeechMarkType[];
+  SpeechMarkTypes?: SpeechMarkType[] | undefined;
 
   /**
    * <p>Specifies whether the input text is plain text or SSML. The default
    *       value is plain text. </p>
    * @public
    */
-  TextType?: TextType;
+  TextType?: TextType | undefined;
 
   /**
    * <p>Voice ID to use for the synthesis. </p>
    * @public
    */
-  VoiceId?: VoiceId;
+  VoiceId?: VoiceId | undefined;
 
   /**
    * <p>Optional language code for a synthesis task. This is only necessary if
@@ -707,7 +710,7 @@ export interface SynthesisTask {
    *       Indian English rather than Hindi.</p>
    * @public
    */
-  LanguageCode?: LanguageCode;
+  LanguageCode?: LanguageCode | undefined;
 }
 
 /**
@@ -720,7 +723,7 @@ export interface GetSpeechSynthesisTaskOutput {
    *       on.</p>
    * @public
    */
-  SynthesisTask?: SynthesisTask;
+  SynthesisTask?: SynthesisTask | undefined;
 }
 
 /**
@@ -920,13 +923,13 @@ export interface LexiconDescription {
    * <p>Name of the lexicon.</p>
    * @public
    */
-  Name?: string;
+  Name?: string | undefined;
 
   /**
    * <p>Provides lexicon metadata.</p>
    * @public
    */
-  Attributes?: LexiconAttributes;
+  Attributes?: LexiconAttributes | undefined;
 }
 
 /**
@@ -960,7 +963,7 @@ export interface ListLexiconsInput {
    *       continue the list of lexicons.</p>
    * @public
    */
-  NextToken?: string;
+  NextToken?: string | undefined;
 }
 
 /**
@@ -971,7 +974,7 @@ export interface ListLexiconsOutput {
    * <p>A list of lexicon names and attributes.</p>
    * @public
    */
-  Lexicons?: LexiconDescription[];
+  Lexicons?: LexiconDescription[] | undefined;
 
   /**
    * <p>The pagination token to use in the next request to continue the
@@ -979,7 +982,7 @@ export interface ListLexiconsOutput {
    *       response is truncated.</p>
    * @public
    */
-  NextToken?: string;
+  NextToken?: string | undefined;
 }
 
 /**
@@ -991,21 +994,21 @@ export interface ListSpeechSynthesisTasksInput {
    *       operation.</p>
    * @public
    */
-  MaxResults?: number;
+  MaxResults?: number | undefined;
 
   /**
    * <p>The pagination token to use in the next request to continue the
    *       listing of speech synthesis tasks. </p>
    * @public
    */
-  NextToken?: string;
+  NextToken?: string | undefined;
 
   /**
    * <p>Status of the speech synthesis tasks returned in a List
    *       operation</p>
    * @public
    */
-  Status?: TaskStatus;
+  Status?: TaskStatus | undefined;
 }
 
 /**
@@ -1018,7 +1021,7 @@ export interface ListSpeechSynthesisTasksOutput {
    *       listing.</p>
    * @public
    */
-  NextToken?: string;
+  NextToken?: string | undefined;
 
   /**
    * <p>List of SynthesisTask objects that provides information from the
@@ -1026,7 +1029,7 @@ export interface ListSpeechSynthesisTasksOutput {
    *       time, task status, and so on.</p>
    * @public
    */
-  SynthesisTasks?: SynthesisTask[];
+  SynthesisTasks?: SynthesisTask[] | undefined;
 }
 
 /**
@@ -1191,7 +1194,7 @@ export interface StartSpeechSynthesisTaskInput {
    *       is not supported for the engine selected will result in an error.</p>
    * @public
    */
-  Engine?: Engine;
+  Engine?: Engine | undefined;
 
   /**
    * <p>Optional language code for the Speech Synthesis request. This is only
@@ -1204,7 +1207,7 @@ export interface StartSpeechSynthesisTaskInput {
    *       Indian English rather than Hindi.</p>
    * @public
    */
-  LanguageCode?: LanguageCode;
+  LanguageCode?: LanguageCode | undefined;
 
   /**
    * <p>List of one or more pronunciation lexicon names you want the service
@@ -1212,7 +1215,7 @@ export interface StartSpeechSynthesisTaskInput {
    *       the lexicon is the same as the language of the voice. </p>
    * @public
    */
-  LexiconNames?: string[];
+  LexiconNames?: string[] | undefined;
 
   /**
    * <p>The format in which the returned output will be encoded. For audio
@@ -1232,7 +1235,7 @@ export interface StartSpeechSynthesisTaskInput {
    * <p>The Amazon S3 key prefix for the output speech file.</p>
    * @public
    */
-  OutputS3KeyPrefix?: string;
+  OutputS3KeyPrefix?: string | undefined;
 
   /**
    * <p>The audio frequency specified in Hz.</p>
@@ -1244,20 +1247,20 @@ export interface StartSpeechSynthesisTaskInput {
    *       "16000". </p>
    * @public
    */
-  SampleRate?: string;
+  SampleRate?: string | undefined;
 
   /**
    * <p>ARN for the SNS topic optionally used for providing status
    *       notification for a speech synthesis task.</p>
    * @public
    */
-  SnsTopicArn?: string;
+  SnsTopicArn?: string | undefined;
 
   /**
    * <p>The type of speech marks returned for the input text.</p>
    * @public
    */
-  SpeechMarkTypes?: SpeechMarkType[];
+  SpeechMarkTypes?: SpeechMarkType[] | undefined;
 
   /**
    * <p>The input text to synthesize. If you specify ssml as the TextType,
@@ -1271,7 +1274,7 @@ export interface StartSpeechSynthesisTaskInput {
    *       value is plain text. </p>
    * @public
    */
-  TextType?: TextType;
+  TextType?: TextType | undefined;
 
   /**
    * <p>Voice ID to use for the synthesis. </p>
@@ -1289,7 +1292,7 @@ export interface StartSpeechSynthesisTaskOutput {
    *       newly submitted speech synthesis task.</p>
    * @public
    */
-  SynthesisTask?: SynthesisTask;
+  SynthesisTask?: SynthesisTask | undefined;
 }
 
 /**
@@ -1337,7 +1340,7 @@ export interface SynthesizeSpeechInput {
    *          <p>Required: Yes</p>
    * @public
    */
-  Engine?: Engine;
+  Engine?: Engine | undefined;
 
   /**
    * <p>Optional language code for the Synthesize Speech request. This is only
@@ -1350,7 +1353,7 @@ export interface SynthesizeSpeechInput {
    *       Indian English rather than Hindi.</p>
    * @public
    */
-  LanguageCode?: LanguageCode;
+  LanguageCode?: LanguageCode | undefined;
 
   /**
    * <p>List of one or more pronunciation lexicon names you want the
@@ -1359,7 +1362,7 @@ export interface SynthesizeSpeechInput {
    *       information about storing lexicons, see <a href="https://docs.aws.amazon.com/polly/latest/dg/API_PutLexicon.html">PutLexicon</a>.</p>
    * @public
    */
-  LexiconNames?: string[];
+  LexiconNames?: string[] | undefined;
 
   /**
    * <p> The format in which the returned output will be encoded. For audio
@@ -1381,13 +1384,13 @@ export interface SynthesizeSpeechInput {
    *       "16000". </p>
    * @public
    */
-  SampleRate?: string;
+  SampleRate?: string | undefined;
 
   /**
    * <p>The type of speech marks returned for the input text.</p>
    * @public
    */
-  SpeechMarkTypes?: SpeechMarkType[];
+  SpeechMarkTypes?: SpeechMarkType[] | undefined;
 
   /**
    * <p> Input text to synthesize. If you specify <code>ssml</code> as the
@@ -1403,7 +1406,7 @@ export interface SynthesizeSpeechInput {
    *         SSML</a>.</p>
    * @public
    */
-  TextType?: TextType;
+  TextType?: TextType | undefined;
 
   /**
    * <p> Voice ID to use for the synthesis. You can get a list of available
@@ -1421,7 +1424,7 @@ export interface SynthesizeSpeechOutput {
    * <p> Stream containing the synthesized speech. </p>
    * @public
    */
-  AudioStream?: StreamingBlobTypes;
+  AudioStream?: StreamingBlobTypes | undefined;
 
   /**
    * <p> Specifies the type audio stream. This should reflect the
@@ -1452,13 +1455,13 @@ export interface SynthesizeSpeechOutput {
    *          <p> </p>
    * @public
    */
-  ContentType?: string;
+  ContentType?: string | undefined;
 
   /**
    * <p>Number of characters synthesized.</p>
    * @public
    */
-  RequestCharacters?: number;
+  RequestCharacters?: number | undefined;
 }
 
 /**

@@ -72,6 +72,20 @@ export interface DeleteSolNetworkPackageCommandOutput extends __MetadataBearer {
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example Delete a Sol network package
+ * ```javascript
+ * //
+ * const input = {
+ *   nsdInfoId: "np-0d5b823eb5c2a9241"
+ * };
+ * const command = new DeleteSolNetworkPackageCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class DeleteSolNetworkPackageCommand extends $Command
@@ -82,9 +96,7 @@ export class DeleteSolNetworkPackageCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -96,4 +108,16 @@ export class DeleteSolNetworkPackageCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteSolNetworkPackageCommand)
   .de(de_DeleteSolNetworkPackageCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteSolNetworkPackageInput;
+      output: {};
+    };
+    sdk: {
+      input: DeleteSolNetworkPackageCommandInput;
+      output: DeleteSolNetworkPackageCommandOutput;
+    };
+  };
+}

@@ -99,6 +99,7 @@ export interface DescribeWorkspaceDirectoriesCommandOutput
  * //         DeviceTypeChromeOs: "ALLOW" || "DENY",
  * //         DeviceTypeZeroClient: "ALLOW" || "DENY",
  * //         DeviceTypeLinux: "ALLOW" || "DENY",
+ * //         DeviceTypeWorkSpacesThinClient: "ALLOW" || "DENY",
  * //       },
  * //       Tenancy: "DEDICATED" || "SHARED",
  * //       SelfservicePermissions: { // SelfservicePermissions
@@ -117,6 +118,7 @@ export interface DescribeWorkspaceDirectoriesCommandOutput
  * //         Status: "DISABLED" || "ENABLED",
  * //         CertificateAuthorityArn: "STRING_VALUE",
  * //       },
+ * //       EndpointEncryptionMode: "STANDARD_TLS" || "FIPS_VALIDATED",
  * //       MicrosoftEntraConfig: { // MicrosoftEntraConfig
  * //         TenantId: "STRING_VALUE",
  * //         ApplicationConfigSecretArn: "STRING_VALUE",
@@ -148,6 +150,10 @@ export interface DescribeWorkspaceDirectoriesCommandOutput
  * //             Status: "ENABLED" || "DISABLED", // required
  * //           },
  * //         ],
+ * //         GlobalAccelerator: { // GlobalAcceleratorForDirectory
+ * //           Mode: "ENABLED_AUTO" || "DISABLED", // required
+ * //           PreferredProtocol: "TCP" || "NONE",
+ * //         },
  * //       },
  * //       ErrorMessage: "STRING_VALUE",
  * //     },
@@ -169,6 +175,7 @@ export interface DescribeWorkspaceDirectoriesCommandOutput
  * @throws {@link WorkSpacesServiceException}
  * <p>Base exception class for all service exceptions from WorkSpaces service.</p>
  *
+ *
  * @public
  */
 export class DescribeWorkspaceDirectoriesCommand extends $Command
@@ -179,9 +186,7 @@ export class DescribeWorkspaceDirectoriesCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: WorkSpacesClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -193,4 +198,16 @@ export class DescribeWorkspaceDirectoriesCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeWorkspaceDirectoriesCommand)
   .de(de_DescribeWorkspaceDirectoriesCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeWorkspaceDirectoriesRequest;
+      output: DescribeWorkspaceDirectoriesResult;
+    };
+    sdk: {
+      input: DescribeWorkspaceDirectoriesCommandInput;
+      output: DescribeWorkspaceDirectoriesCommandOutput;
+    };
+  };
+}

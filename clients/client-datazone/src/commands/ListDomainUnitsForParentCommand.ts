@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { DataZoneClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../DataZoneClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListDomainUnitsForParentInput, ListDomainUnitsForParentOutput } from "../models/models_0";
+import { ListDomainUnitsForParentInput, ListDomainUnitsForParentOutput } from "../models/models_1";
 import { de_ListDomainUnitsForParentCommand, se_ListDomainUnitsForParentCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -79,6 +79,7 @@ export interface ListDomainUnitsForParentCommandOutput extends ListDomainUnitsFo
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListDomainUnitsForParentCommand extends $Command
@@ -89,9 +90,7 @@ export class ListDomainUnitsForParentCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -103,4 +102,16 @@ export class ListDomainUnitsForParentCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListDomainUnitsForParentCommand)
   .de(de_ListDomainUnitsForParentCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListDomainUnitsForParentInput;
+      output: ListDomainUnitsForParentOutput;
+    };
+    sdk: {
+      input: ListDomainUnitsForParentCommandInput;
+      output: ListDomainUnitsForParentCommandOutput;
+    };
+  };
+}

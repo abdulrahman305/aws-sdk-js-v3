@@ -181,6 +181,7 @@ export interface DeleteReplicationGroupCommandOutput extends DeleteReplicationGr
  * //     IpDiscovery: "ipv4" || "ipv6",
  * //     TransitEncryptionMode: "preferred" || "required",
  * //     ClusterMode: "enabled" || "disabled" || "compatible",
+ * //     Engine: "STRING_VALUE",
  * //   },
  * // };
  *
@@ -211,12 +212,12 @@ export interface DeleteReplicationGroupCommandOutput extends DeleteReplicationGr
  *  <p>You attempted one of the following operations:</p>
  *          <ul>
  *             <li>
- *                <p>Creating a snapshot of a Redis OSS cluster running on a
+ *                <p>Creating a snapshot of a Valkey or Redis OSS cluster running on a
  *                         <code>cache.t1.micro</code> cache node.</p>
  *             </li>
  *             <li>
  *                <p>Creating a snapshot of a cluster that is running Memcached rather than
- *                     Redis OSS.</p>
+ *                     Valkey or Redis OSS.</p>
  *             </li>
  *          </ul>
  *          <p>Neither of these are supported by ElastiCache.</p>
@@ -228,30 +229,30 @@ export interface DeleteReplicationGroupCommandOutput extends DeleteReplicationGr
  * @throws {@link ElastiCacheServiceException}
  * <p>Base exception class for all service exceptions from ElastiCache service.</p>
  *
- * @public
+ *
  * @example DeleteReplicationGroup
  * ```javascript
  * // Deletes the Amazon ElastiCache replication group my-redis-rg.
  * const input = {
- *   "ReplicationGroupId": "my-redis-rg",
- *   "RetainPrimaryCluster": false
+ *   ReplicationGroupId: "my-redis-rg",
+ *   RetainPrimaryCluster: false
  * };
  * const command = new DeleteReplicationGroupCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "ReplicationGroup": {
- *     "AutomaticFailover": "disabled",
- *     "Description": "simple redis cluster",
- *     "PendingModifiedValues": {},
- *     "ReplicationGroupId": "my-redis-rg",
- *     "Status": "deleting"
+ *   ReplicationGroup: {
+ *     AutomaticFailover: "disabled",
+ *     Description: "simple redis cluster",
+ *     PendingModifiedValues:     { /* empty *\/ },
+ *     ReplicationGroupId: "my-redis-rg",
+ *     Status: "deleting"
  *   }
  * }
  * *\/
- * // example id: deletereplicationgroup-1475011641804
  * ```
  *
+ * @public
  */
 export class DeleteReplicationGroupCommand extends $Command
   .classBuilder<
@@ -261,9 +262,7 @@ export class DeleteReplicationGroupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ElastiCacheClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -275,4 +274,16 @@ export class DeleteReplicationGroupCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteReplicationGroupCommand)
   .de(de_DeleteReplicationGroupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteReplicationGroupMessage;
+      output: DeleteReplicationGroupResult;
+    };
+    sdk: {
+      input: DeleteReplicationGroupCommandInput;
+      output: DeleteReplicationGroupCommandOutput;
+    };
+  };
+}

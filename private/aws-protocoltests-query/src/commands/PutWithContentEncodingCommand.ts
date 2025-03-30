@@ -54,6 +54,7 @@ export interface PutWithContentEncodingCommandOutput extends __MetadataBearer {}
  * @throws {@link QueryProtocolServiceException}
  * <p>Base exception class for all service exceptions from QueryProtocol service.</p>
  *
+ *
  */
 export class PutWithContentEncodingCommand extends $Command
   .classBuilder<
@@ -76,4 +77,16 @@ export class PutWithContentEncodingCommand extends $Command
   .f(void 0, void 0)
   .ser(se_PutWithContentEncodingCommand)
   .de(de_PutWithContentEncodingCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: PutWithContentEncodingInput;
+      output: {};
+    };
+    sdk: {
+      input: PutWithContentEncodingCommandInput;
+      output: PutWithContentEncodingCommandOutput;
+    };
+  };
+}

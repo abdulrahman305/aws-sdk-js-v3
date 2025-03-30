@@ -39,7 +39,7 @@ export interface RemovePolicyGrantCommandOutput extends RemovePolicyGrantOutput,
  *   domainIdentifier: "STRING_VALUE", // required
  *   entityType: "DOMAIN_UNIT" || "ENVIRONMENT_BLUEPRINT_CONFIGURATION" || "ENVIRONMENT_PROFILE", // required
  *   entityIdentifier: "STRING_VALUE", // required
- *   policyType: "CREATE_DOMAIN_UNIT" || "OVERRIDE_DOMAIN_UNIT_OWNERS" || "ADD_TO_PROJECT_MEMBER_POOL" || "OVERRIDE_PROJECT_OWNERS" || "CREATE_GLOSSARY" || "CREATE_FORM_TYPE" || "CREATE_ASSET_TYPE" || "CREATE_PROJECT" || "CREATE_ENVIRONMENT_PROFILE" || "DELEGATE_CREATE_ENVIRONMENT_PROFILE" || "CREATE_ENVIRONMENT", // required
+ *   policyType: "CREATE_DOMAIN_UNIT" || "OVERRIDE_DOMAIN_UNIT_OWNERS" || "ADD_TO_PROJECT_MEMBER_POOL" || "OVERRIDE_PROJECT_OWNERS" || "CREATE_GLOSSARY" || "CREATE_FORM_TYPE" || "CREATE_ASSET_TYPE" || "CREATE_PROJECT" || "CREATE_ENVIRONMENT_PROFILE" || "DELEGATE_CREATE_ENVIRONMENT_PROFILE" || "CREATE_ENVIRONMENT" || "CREATE_ENVIRONMENT_FROM_BLUEPRINT" || "CREATE_PROJECT_FROM_PROJECT_PROFILE", // required
  *   principal: { // PolicyGrantPrincipal Union: only one key present
  *     user: { // UserPolicyGrantPrincipal Union: only one key present
  *       userIdentifier: "STRING_VALUE",
@@ -49,7 +49,7 @@ export interface RemovePolicyGrantCommandOutput extends RemovePolicyGrantOutput,
  *       groupIdentifier: "STRING_VALUE",
  *     },
  *     project: { // ProjectPolicyGrantPrincipal
- *       projectDesignation: "OWNER" || "CONTRIBUTOR", // required
+ *       projectDesignation: "OWNER" || "CONTRIBUTOR" || "PROJECT_CATALOG_STEWARD", // required
  *       projectIdentifier: "STRING_VALUE",
  *       projectGrantFilter: { // ProjectGrantFilter Union: only one key present
  *         domainUnitFilter: { // DomainUnitFilterForProject
@@ -98,6 +98,7 @@ export interface RemovePolicyGrantCommandOutput extends RemovePolicyGrantOutput,
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class RemovePolicyGrantCommand extends $Command
@@ -108,9 +109,7 @@ export class RemovePolicyGrantCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -122,4 +121,16 @@ export class RemovePolicyGrantCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RemovePolicyGrantCommand)
   .de(de_RemovePolicyGrantCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RemovePolicyGrantInput;
+      output: {};
+    };
+    sdk: {
+      input: RemovePolicyGrantCommandInput;
+      output: RemovePolicyGrantCommandOutput;
+    };
+  };
+}

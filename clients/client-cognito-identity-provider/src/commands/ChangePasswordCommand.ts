@@ -36,7 +36,7 @@ export interface ChangePasswordCommandInput extends ChangePasswordRequest {}
 export interface ChangePasswordCommandOutput extends ChangePasswordResponse, __MetadataBearer {}
 
 /**
- * <p>Changes the password for a specified user in a user pool.</p>
+ * <p>Changes the password for the currently signed-in user.</p>
  *          <p>Authorize this action with a signed-in user's access token. It must include the scope <code>aws.cognito.signin.user.admin</code>.</p>
  *          <note>
  *             <p>Amazon Cognito doesn't evaluate Identity and Access Management (IAM) policies in requests for this API operation. For
@@ -51,7 +51,7 @@ export interface ChangePasswordCommandOutput extends ChangePasswordResponse, __M
  * // const { CognitoIdentityProviderClient, ChangePasswordCommand } = require("@aws-sdk/client-cognito-identity-provider"); // CommonJS import
  * const client = new CognitoIdentityProviderClient(config);
  * const input = { // ChangePasswordRequest
- *   PreviousPassword: "STRING_VALUE", // required
+ *   PreviousPassword: "STRING_VALUE",
  *   ProposedPassword: "STRING_VALUE", // required
  *   AccessToken: "STRING_VALUE", // required
  * };
@@ -112,6 +112,7 @@ export interface ChangePasswordCommandOutput extends ChangePasswordResponse, __M
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class ChangePasswordCommand extends $Command
@@ -122,9 +123,7 @@ export class ChangePasswordCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -136,4 +135,16 @@ export class ChangePasswordCommand extends $Command
   .f(ChangePasswordRequestFilterSensitiveLog, void 0)
   .ser(se_ChangePasswordCommand)
   .de(de_ChangePasswordCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ChangePasswordRequest;
+      output: {};
+    };
+    sdk: {
+      input: ChangePasswordCommandInput;
+      output: ChangePasswordCommandOutput;
+    };
+  };
+}

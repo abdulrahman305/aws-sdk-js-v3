@@ -33,7 +33,7 @@ export interface DeleteClusterCommandOutput extends DeleteClusterResponse, __Met
  * 			account for a period of time. However, this behavior is subject to change in the future.
  * 			We don't recommend that you rely on <code>INACTIVE</code> clusters persisting.</p>
  *          <p>You must deregister all container instances from this cluster before you may delete
- * 			it. You can list the container instances in a cluster with  <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListContainerInstances.html">ListContainerInstances</a>  and deregister them with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeregisterContainerInstance.html">DeregisterContainerInstance</a>.</p>
+ * 			it. You can list the container instances in a cluster with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListContainerInstances.html">ListContainerInstances</a> and deregister them with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeregisterContainerInstance.html">DeregisterContainerInstance</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -145,12 +145,13 @@ export interface DeleteClusterCommandOutput extends DeleteClusterResponse, __Met
  * @throws {@link ClusterContainsContainerInstancesException} (client fault)
  *  <p>You can't delete a cluster that has registered container instances. First, deregister
  * 			the container instances before you can delete the cluster. For more information, see
- * 			<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeregisterContainerInstance.html">DeregisterContainerInstance</a>.</p>
+ * 				<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeregisterContainerInstance.html">DeregisterContainerInstance</a>.</p>
  *
  * @throws {@link ClusterContainsServicesException} (client fault)
  *  <p>You can't delete a cluster that contains services. First, update the service to reduce
  * 			its desired task count to 0, and then delete the service. For more information, see
- * 			<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateService.html">UpdateService</a> and <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteService.html">DeleteService</a>.</p>
+ * 				<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateService.html">UpdateService</a> and
+ * 				<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteService.html">DeleteService</a>.</p>
  *
  * @throws {@link ClusterContainsTasksException} (client fault)
  *  <p>You can't delete a cluster that has active tasks.</p>
@@ -161,6 +162,7 @@ export interface DeleteClusterCommandOutput extends DeleteClusterResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
@@ -175,31 +177,31 @@ export interface DeleteClusterCommandOutput extends DeleteClusterResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
- * @public
+ *
  * @example To delete an empty cluster
  * ```javascript
  * // This example deletes an empty cluster in your default region.
  * const input = {
- *   "cluster": "my_cluster"
+ *   cluster: "my_cluster"
  * };
  * const command = new DeleteClusterCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "cluster": {
- *     "activeServicesCount": 0,
- *     "clusterArn": "arn:aws:ecs:us-east-1:012345678910:cluster/my_cluster",
- *     "clusterName": "my_cluster",
- *     "pendingTasksCount": 0,
- *     "registeredContainerInstancesCount": 0,
- *     "runningTasksCount": 0,
- *     "status": "INACTIVE"
+ *   cluster: {
+ *     activeServicesCount: 0,
+ *     clusterArn: "arn:aws:ecs:us-east-1:012345678910:cluster/my_cluster",
+ *     clusterName: "my_cluster",
+ *     pendingTasksCount: 0,
+ *     registeredContainerInstancesCount: 0,
+ *     runningTasksCount: 0,
+ *     status: "INACTIVE"
  *   }
  * }
  * *\/
- * // example id: to-delete-an-empty-cluster-1472512705352
  * ```
  *
+ * @public
  */
 export class DeleteClusterCommand extends $Command
   .classBuilder<
@@ -209,9 +211,7 @@ export class DeleteClusterCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -223,4 +223,16 @@ export class DeleteClusterCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteClusterCommand)
   .de(de_DeleteClusterCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteClusterRequest;
+      output: DeleteClusterResponse;
+    };
+    sdk: {
+      input: DeleteClusterCommandInput;
+      output: DeleteClusterCommandOutput;
+    };
+  };
+}

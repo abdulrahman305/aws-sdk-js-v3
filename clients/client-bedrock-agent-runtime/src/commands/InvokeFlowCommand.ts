@@ -37,7 +37,7 @@ export interface InvokeFlowCommandInput extends InvokeFlowRequest {}
 export interface InvokeFlowCommandOutput extends InvokeFlowResponse, __MetadataBearer {}
 
 /**
- * <p>Invokes an alias of a flow to run the inputs that you specify and return the output of each node as a stream. If there's an error, the error is returned. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-test.html">Test a flow in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p>
+ * <p>Invokes an alias of a flow to run the inputs that you specify and return the output of each node as a stream. If there's an error, the error is returned. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-test.html">Test a flow in Amazon Bedrock</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
  *          <note>
  *             <p>The CLI doesn't support streaming operations in Amazon Bedrock, including <code>InvokeFlow</code>.</p>
  *          </note>
@@ -53,12 +53,20 @@ export interface InvokeFlowCommandOutput extends InvokeFlowResponse, __MetadataB
  *   inputs: [ // FlowInputs // required
  *     { // FlowInput
  *       nodeName: "STRING_VALUE", // required
- *       nodeOutputName: "STRING_VALUE", // required
+ *       nodeOutputName: "STRING_VALUE",
  *       content: { // FlowInputContent Union: only one key present
  *         document: "DOCUMENT_VALUE",
  *       },
+ *       nodeInputName: "STRING_VALUE",
  *     },
  *   ],
+ *   enableTrace: true || false,
+ *   modelPerformanceConfiguration: { // ModelPerformanceConfiguration
+ *     performanceConfig: { // PerformanceConfiguration
+ *       latency: "standard" || "optimized",
+ *     },
+ *   },
+ *   executionId: "STRING_VALUE",
  * };
  * const command = new InvokeFlowCommand(input);
  * const response = await client.send(command);
@@ -72,10 +80,55 @@ export interface InvokeFlowCommandOutput extends InvokeFlowResponse, __MetadataB
  * //       },
  * //     },
  * //     flowCompletionEvent: { // FlowCompletionEvent
- * //       completionReason: "SUCCESS", // required
+ * //       completionReason: "SUCCESS" || "INPUT_REQUIRED", // required
+ * //     },
+ * //     flowTraceEvent: { // FlowTraceEvent
+ * //       trace: { // FlowTrace Union: only one key present
+ * //         nodeInputTrace: { // FlowTraceNodeInputEvent
+ * //           nodeName: "STRING_VALUE", // required
+ * //           timestamp: new Date("TIMESTAMP"), // required
+ * //           fields: [ // FlowTraceNodeInputFields // required
+ * //             { // FlowTraceNodeInputField
+ * //               nodeInputName: "STRING_VALUE", // required
+ * //               content: { // FlowTraceNodeInputContent Union: only one key present
+ * //                 document: "DOCUMENT_VALUE",
+ * //               },
+ * //             },
+ * //           ],
+ * //         },
+ * //         nodeOutputTrace: { // FlowTraceNodeOutputEvent
+ * //           nodeName: "STRING_VALUE", // required
+ * //           timestamp: new Date("TIMESTAMP"), // required
+ * //           fields: [ // FlowTraceNodeOutputFields // required
+ * //             { // FlowTraceNodeOutputField
+ * //               nodeOutputName: "STRING_VALUE", // required
+ * //               content: { // FlowTraceNodeOutputContent Union: only one key present
+ * //                 document: "DOCUMENT_VALUE",
+ * //               },
+ * //             },
+ * //           ],
+ * //         },
+ * //         conditionNodeResultTrace: { // FlowTraceConditionNodeResultEvent
+ * //           nodeName: "STRING_VALUE", // required
+ * //           timestamp: new Date("TIMESTAMP"), // required
+ * //           satisfiedConditions: [ // FlowTraceConditions // required
+ * //             { // FlowTraceCondition
+ * //               conditionName: "STRING_VALUE", // required
+ * //             },
+ * //           ],
+ * //         },
+ * //         nodeActionTrace: { // FlowTraceNodeActionEvent
+ * //           nodeName: "STRING_VALUE", // required
+ * //           timestamp: new Date("TIMESTAMP"), // required
+ * //           requestId: "STRING_VALUE", // required
+ * //           serviceName: "STRING_VALUE", // required
+ * //           operationName: "STRING_VALUE", // required
+ * //         },
+ * //       },
  * //     },
  * //     internalServerException: { // InternalServerException
  * //       message: "STRING_VALUE",
+ * //       reason: "STRING_VALUE",
  * //     },
  * //     validationException: { // ValidationException
  * //       message: "STRING_VALUE",
@@ -103,7 +156,15 @@ export interface InvokeFlowCommandOutput extends InvokeFlowResponse, __MetadataB
  * //       message: "STRING_VALUE",
  * //       resourceName: "STRING_VALUE",
  * //     },
+ * //     flowMultiTurnInputRequestEvent: { // FlowMultiTurnInputRequestEvent
+ * //       nodeName: "STRING_VALUE", // required
+ * //       nodeType: "FlowInputNode" || "FlowOutputNode" || "LambdaFunctionNode" || "KnowledgeBaseNode" || "PromptNode" || "ConditionNode" || "LexNode", // required
+ * //       content: { // FlowMultiTurnInputContent Union: only one key present
+ * //         document: "DOCUMENT_VALUE",
+ * //       },
+ * //     },
  * //   },
+ * //   executionId: "STRING_VALUE",
  * // };
  *
  * ```
@@ -144,6 +205,7 @@ export interface InvokeFlowCommandOutput extends InvokeFlowResponse, __MetadataB
  * @throws {@link BedrockAgentRuntimeServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgentRuntime service.</p>
  *
+ *
  * @public
  */
 export class InvokeFlowCommand extends $Command
@@ -154,9 +216,7 @@ export class InvokeFlowCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentRuntimeClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -175,4 +235,16 @@ export class InvokeFlowCommand extends $Command
   .f(InvokeFlowRequestFilterSensitiveLog, InvokeFlowResponseFilterSensitiveLog)
   .ser(se_InvokeFlowCommand)
   .de(de_InvokeFlowCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: InvokeFlowRequest;
+      output: InvokeFlowResponse;
+    };
+    sdk: {
+      input: InvokeFlowCommandInput;
+      output: InvokeFlowCommandOutput;
+    };
+  };
+}

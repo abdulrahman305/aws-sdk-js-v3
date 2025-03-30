@@ -161,6 +161,7 @@ export interface DescribeTaskSetsCommandOutput extends DescribeTaskSetsResponse,
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
@@ -179,6 +180,59 @@ export interface DescribeTaskSetsCommandOutput extends DescribeTaskSetsResponse,
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
+ *
+ * @example To describe a task set
+ * ```javascript
+ * // This example describes a task set in service MyService that uses an EXTERNAL deployment controller.
+ * const input = {
+ *   cluster: "MyCluster",
+ *   service: "MyService",
+ *   taskSets: [
+ *     "arn:aws:ecs:us-west-2:123456789012:task-set/MyCluster/MyService/ecs-svc/1234567890123456789"
+ *   ]
+ * };
+ * const command = new DescribeTaskSetsCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   failures:   [],
+ *   taskSets: [
+ *     {
+ *       computedDesiredCount: 0,
+ *       createdAt: 1.557207715195E9,
+ *       id: "ecs-svc/1234567890123456789",
+ *       launchType: "EC2",
+ *       loadBalancers:       [],
+ *       networkConfiguration: {
+ *         awsvpcConfiguration: {
+ *           assignPublicIp: "DISABLED",
+ *           securityGroups: [
+ *             "sg-1234431"
+ *           ],
+ *           subnets: [
+ *             "subnet-12344321"
+ *           ]
+ *         }
+ *       },
+ *       pendingCount: 0,
+ *       runningCount: 0,
+ *       scale: {
+ *         unit: "PERCENT",
+ *         value: 0
+ *       },
+ *       serviceRegistries:       [],
+ *       stabilityStatus: "STEADY_STATE",
+ *       stabilityStatusAt: 1.557207740014E9,
+ *       status: "ACTIVE",
+ *       taskDefinition: "arn:aws:ecs:us-west-2:123456789012:task-definition/sample-fargate:2",
+ *       taskSetArn: "arn:aws:ecs:us-west-2:123456789012:task-set/MyCluster/MyService/ecs-svc/1234567890123456789",
+ *       updatedAt: 1.557207740014E9
+ *     }
+ *   ]
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class DescribeTaskSetsCommand extends $Command
@@ -189,9 +243,7 @@ export class DescribeTaskSetsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -203,4 +255,16 @@ export class DescribeTaskSetsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DescribeTaskSetsCommand)
   .de(de_DescribeTaskSetsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeTaskSetsRequest;
+      output: DescribeTaskSetsResponse;
+    };
+    sdk: {
+      input: DescribeTaskSetsCommandInput;
+      output: DescribeTaskSetsCommandOutput;
+    };
+  };
+}

@@ -46,7 +46,7 @@ export interface GetProjectCommandOutput extends GetProjectOutput, __MetadataBea
  * //   id: "STRING_VALUE", // required
  * //   name: "STRING_VALUE", // required
  * //   description: "STRING_VALUE",
- * //   projectStatus: "ACTIVE" || "DELETING" || "DELETE_FAILED",
+ * //   projectStatus: "ACTIVE" || "DELETING" || "DELETE_FAILED" || "UPDATING" || "UPDATE_FAILED",
  * //   failureReasons: [ // FailureReasons
  * //     { // ProjectDeletionError
  * //       code: "STRING_VALUE",
@@ -60,6 +60,30 @@ export interface GetProjectCommandOutput extends GetProjectOutput, __MetadataBea
  * //     "STRING_VALUE",
  * //   ],
  * //   domainUnitId: "STRING_VALUE",
+ * //   projectProfileId: "STRING_VALUE",
+ * //   userParameters: [ // EnvironmentConfigurationUserParametersList
+ * //     { // EnvironmentConfigurationUserParameter
+ * //       environmentId: "STRING_VALUE",
+ * //       environmentConfigurationName: "STRING_VALUE",
+ * //       environmentParameters: [ // EnvironmentParametersList
+ * //         { // EnvironmentParameter
+ * //           name: "STRING_VALUE",
+ * //           value: "STRING_VALUE",
+ * //         },
+ * //       ],
+ * //     },
+ * //   ],
+ * //   environmentDeploymentDetails: { // EnvironmentDeploymentDetails
+ * //     overallDeploymentStatus: "PENDING_DEPLOYMENT" || "IN_PROGRESS" || "SUCCESSFUL" || "FAILED_VALIDATION" || "FAILED_DEPLOYMENT",
+ * //     environmentFailureReasons: { // EnvironmentFailureReasons
+ * //       "<keys>": [ // EnvironmentFailureReasonsList
+ * //         { // EnvironmentError
+ * //           code: "STRING_VALUE",
+ * //           message: "STRING_VALUE", // required
+ * //         },
+ * //       ],
+ * //     },
+ * //   },
  * // };
  *
  * ```
@@ -91,6 +115,7 @@ export interface GetProjectCommandOutput extends GetProjectOutput, __MetadataBea
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class GetProjectCommand extends $Command
@@ -101,9 +126,7 @@ export class GetProjectCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -115,4 +138,16 @@ export class GetProjectCommand extends $Command
   .f(void 0, GetProjectOutputFilterSensitiveLog)
   .ser(se_GetProjectCommand)
   .de(de_GetProjectCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetProjectInput;
+      output: GetProjectOutput;
+    };
+    sdk: {
+      input: GetProjectCommandInput;
+      output: GetProjectCommandOutput;
+    };
+  };
+}

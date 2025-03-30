@@ -37,9 +37,7 @@ export interface GetConfiguredTableAssociationAnalysisRuleCommandOutput
     __MetadataBearer {}
 
 /**
- * <p>
- *          Retrieves
- *          the analysis rule for a configured table association.</p>
+ * <p> Retrieves the analysis rule for a configured table association.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -118,6 +116,7 @@ export interface GetConfiguredTableAssociationAnalysisRuleCommandOutput
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class GetConfiguredTableAssociationAnalysisRuleCommand extends $Command
@@ -128,9 +127,7 @@ export class GetConfiguredTableAssociationAnalysisRuleCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -142,4 +139,16 @@ export class GetConfiguredTableAssociationAnalysisRuleCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetConfiguredTableAssociationAnalysisRuleCommand)
   .de(de_GetConfiguredTableAssociationAnalysisRuleCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetConfiguredTableAssociationAnalysisRuleInput;
+      output: GetConfiguredTableAssociationAnalysisRuleOutput;
+    };
+    sdk: {
+      input: GetConfiguredTableAssociationAnalysisRuleCommandInput;
+      output: GetConfiguredTableAssociationAnalysisRuleCommandOutput;
+    };
+  };
+}

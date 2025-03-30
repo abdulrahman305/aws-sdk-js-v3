@@ -9,7 +9,7 @@ import { BatchCreateTopicReviewedAnswerResponse } from "../models/models_2";
 import {
   BatchCreateTopicReviewedAnswerRequest,
   BatchCreateTopicReviewedAnswerRequestFilterSensitiveLog,
-} from "../models/models_4";
+} from "../models/models_5";
 import {
   de_BatchCreateTopicReviewedAnswerCommand,
   se_BatchCreateTopicReviewedAnswerCommand,
@@ -93,7 +93,7 @@ export interface BatchCreateTopicReviewedAnswerCommandOutput
  *               FractionDigits: Number("int"),
  *               Prefix: "STRING_VALUE",
  *               Suffix: "STRING_VALUE",
- *               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ *               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  *               NegativeFormat: { // NegativeFormat
  *                 Prefix: "STRING_VALUE",
  *                 Suffix: "STRING_VALUE",
@@ -128,7 +128,7 @@ export interface BatchCreateTopicReviewedAnswerCommandOutput
  *               FractionDigits: Number("int"),
  *               Prefix: "STRING_VALUE",
  *               Suffix: "STRING_VALUE",
- *               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ *               UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  *               NegativeFormat: {
  *                 Prefix: "STRING_VALUE",
  *                 Suffix: "STRING_VALUE",
@@ -367,7 +367,7 @@ export interface BatchCreateTopicReviewedAnswerCommandOutput
  *                 FractionDigits: Number("int"),
  *                 Prefix: "STRING_VALUE",
  *                 Suffix: "STRING_VALUE",
- *                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ *                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  *                 NegativeFormat: {
  *                   Prefix: "STRING_VALUE",
  *                   Suffix: "STRING_VALUE",
@@ -395,7 +395,7 @@ export interface BatchCreateTopicReviewedAnswerCommandOutput
  *                 FractionDigits: Number("int"),
  *                 Prefix: "STRING_VALUE",
  *                 Suffix: "STRING_VALUE",
- *                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS",
+ *                 UnitScaler: "NONE" || "AUTO" || "THOUSANDS" || "MILLIONS" || "BILLIONS" || "TRILLIONS" || "LAKHS" || "CRORES",
  *                 NegativeFormat: {
  *                   Prefix: "STRING_VALUE",
  *                   Suffix: "STRING_VALUE",
@@ -570,6 +570,7 @@ export interface BatchCreateTopicReviewedAnswerCommandOutput
  * @throws {@link QuickSightServiceException}
  * <p>Base exception class for all service exceptions from QuickSight service.</p>
  *
+ *
  * @public
  */
 export class BatchCreateTopicReviewedAnswerCommand extends $Command
@@ -580,9 +581,7 @@ export class BatchCreateTopicReviewedAnswerCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: QuickSightClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -594,4 +593,16 @@ export class BatchCreateTopicReviewedAnswerCommand extends $Command
   .f(BatchCreateTopicReviewedAnswerRequestFilterSensitiveLog, void 0)
   .ser(se_BatchCreateTopicReviewedAnswerCommand)
   .de(de_BatchCreateTopicReviewedAnswerCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: BatchCreateTopicReviewedAnswerRequest;
+      output: BatchCreateTopicReviewedAnswerResponse;
+    };
+    sdk: {
+      input: BatchCreateTopicReviewedAnswerCommandInput;
+      output: BatchCreateTopicReviewedAnswerCommandOutput;
+    };
+  };
+}

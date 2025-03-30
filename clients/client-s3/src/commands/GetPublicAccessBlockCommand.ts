@@ -30,7 +30,7 @@ export interface GetPublicAccessBlockCommandOutput extends GetPublicAccessBlockO
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
  *          <p>Retrieves the <code>PublicAccessBlock</code> configuration for an Amazon S3 bucket. To use
  *          this operation, you must have the <code>s3:GetBucketPublicAccessBlock</code> permission.
@@ -101,6 +101,7 @@ export interface GetPublicAccessBlockCommandOutput extends GetPublicAccessBlockO
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
+ *
  * @public
  */
 export class GetPublicAccessBlockCommand extends $Command
@@ -128,4 +129,16 @@ export class GetPublicAccessBlockCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetPublicAccessBlockCommand)
   .de(de_GetPublicAccessBlockCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetPublicAccessBlockRequest;
+      output: GetPublicAccessBlockOutput;
+    };
+    sdk: {
+      input: GetPublicAccessBlockCommandInput;
+      output: GetPublicAccessBlockCommandOutput;
+    };
+  };
+}

@@ -74,6 +74,7 @@ export interface UntagResourceCommandOutput extends UntagResourceResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The specified resource wasn't found.</p>
@@ -84,21 +85,24 @@ export interface UntagResourceCommandOutput extends UntagResourceResponse, __Met
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
  *
- * @public
+ *
  * @example To untag a cluster.
  * ```javascript
  * // This example deletes the 'team' tag from the 'dev' cluster.
  * const input = {
- *   "resourceArn": "arn:aws:ecs:region:aws_account_id:cluster/dev",
- *   "tagKeys": [
+ *   resourceArn: "arn:aws:ecs:region:aws_account_id:cluster/dev",
+ *   tagKeys: [
  *     "team"
  *   ]
  * };
  * const command = new UntagResourceCommand(input);
- * await client.send(command);
- * // example id: to-untag-a-cluster-1540582546056
+ * const response = await client.send(command);
+ * /* response is
+ * { /* empty *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class UntagResourceCommand extends $Command
   .classBuilder<
@@ -108,9 +112,7 @@ export class UntagResourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -122,4 +124,16 @@ export class UntagResourceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UntagResourceCommand)
   .de(de_UntagResourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UntagResourceRequest;
+      output: {};
+    };
+    sdk: {
+      input: UntagResourceCommandInput;
+      output: UntagResourceCommandOutput;
+    };
+  };
+}

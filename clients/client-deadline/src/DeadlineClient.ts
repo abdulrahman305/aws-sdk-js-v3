@@ -99,6 +99,7 @@ import {
   CreateLicenseEndpointCommandInput,
   CreateLicenseEndpointCommandOutput,
 } from "./commands/CreateLicenseEndpointCommand";
+import { CreateLimitCommandInput, CreateLimitCommandOutput } from "./commands/CreateLimitCommand";
 import { CreateMonitorCommandInput, CreateMonitorCommandOutput } from "./commands/CreateMonitorCommand";
 import { CreateQueueCommandInput, CreateQueueCommandOutput } from "./commands/CreateQueueCommand";
 import {
@@ -109,6 +110,10 @@ import {
   CreateQueueFleetAssociationCommandInput,
   CreateQueueFleetAssociationCommandOutput,
 } from "./commands/CreateQueueFleetAssociationCommand";
+import {
+  CreateQueueLimitAssociationCommandInput,
+  CreateQueueLimitAssociationCommandOutput,
+} from "./commands/CreateQueueLimitAssociationCommand";
 import {
   CreateStorageProfileCommandInput,
   CreateStorageProfileCommandOutput,
@@ -121,6 +126,7 @@ import {
   DeleteLicenseEndpointCommandInput,
   DeleteLicenseEndpointCommandOutput,
 } from "./commands/DeleteLicenseEndpointCommand";
+import { DeleteLimitCommandInput, DeleteLimitCommandOutput } from "./commands/DeleteLimitCommand";
 import {
   DeleteMeteredProductCommandInput,
   DeleteMeteredProductCommandOutput,
@@ -135,6 +141,10 @@ import {
   DeleteQueueFleetAssociationCommandInput,
   DeleteQueueFleetAssociationCommandOutput,
 } from "./commands/DeleteQueueFleetAssociationCommand";
+import {
+  DeleteQueueLimitAssociationCommandInput,
+  DeleteQueueLimitAssociationCommandOutput,
+} from "./commands/DeleteQueueLimitAssociationCommand";
 import {
   DeleteStorageProfileCommandInput,
   DeleteStorageProfileCommandOutput,
@@ -161,6 +171,7 @@ import { GetFarmCommandInput, GetFarmCommandOutput } from "./commands/GetFarmCom
 import { GetFleetCommandInput, GetFleetCommandOutput } from "./commands/GetFleetCommand";
 import { GetJobCommandInput, GetJobCommandOutput } from "./commands/GetJobCommand";
 import { GetLicenseEndpointCommandInput, GetLicenseEndpointCommandOutput } from "./commands/GetLicenseEndpointCommand";
+import { GetLimitCommandInput, GetLimitCommandOutput } from "./commands/GetLimitCommand";
 import { GetMonitorCommandInput, GetMonitorCommandOutput } from "./commands/GetMonitorCommand";
 import { GetQueueCommandInput, GetQueueCommandOutput } from "./commands/GetQueueCommand";
 import {
@@ -171,6 +182,10 @@ import {
   GetQueueFleetAssociationCommandInput,
   GetQueueFleetAssociationCommandOutput,
 } from "./commands/GetQueueFleetAssociationCommand";
+import {
+  GetQueueLimitAssociationCommandInput,
+  GetQueueLimitAssociationCommandOutput,
+} from "./commands/GetQueueLimitAssociationCommand";
 import { GetSessionActionCommandInput, GetSessionActionCommandOutput } from "./commands/GetSessionActionCommand";
 import { GetSessionCommandInput, GetSessionCommandOutput } from "./commands/GetSessionCommand";
 import {
@@ -195,11 +210,16 @@ import { ListFarmsCommandInput, ListFarmsCommandOutput } from "./commands/ListFa
 import { ListFleetMembersCommandInput, ListFleetMembersCommandOutput } from "./commands/ListFleetMembersCommand";
 import { ListFleetsCommandInput, ListFleetsCommandOutput } from "./commands/ListFleetsCommand";
 import { ListJobMembersCommandInput, ListJobMembersCommandOutput } from "./commands/ListJobMembersCommand";
+import {
+  ListJobParameterDefinitionsCommandInput,
+  ListJobParameterDefinitionsCommandOutput,
+} from "./commands/ListJobParameterDefinitionsCommand";
 import { ListJobsCommandInput, ListJobsCommandOutput } from "./commands/ListJobsCommand";
 import {
   ListLicenseEndpointsCommandInput,
   ListLicenseEndpointsCommandOutput,
 } from "./commands/ListLicenseEndpointsCommand";
+import { ListLimitsCommandInput, ListLimitsCommandOutput } from "./commands/ListLimitsCommand";
 import {
   ListMeteredProductsCommandInput,
   ListMeteredProductsCommandOutput,
@@ -213,6 +233,10 @@ import {
   ListQueueFleetAssociationsCommandInput,
   ListQueueFleetAssociationsCommandOutput,
 } from "./commands/ListQueueFleetAssociationsCommand";
+import {
+  ListQueueLimitAssociationsCommandInput,
+  ListQueueLimitAssociationsCommandOutput,
+} from "./commands/ListQueueLimitAssociationsCommand";
 import { ListQueueMembersCommandInput, ListQueueMembersCommandOutput } from "./commands/ListQueueMembersCommand";
 import { ListQueuesCommandInput, ListQueuesCommandOutput } from "./commands/ListQueuesCommand";
 import { ListSessionActionsCommandInput, ListSessionActionsCommandOutput } from "./commands/ListSessionActionsCommand";
@@ -256,6 +280,7 @@ import { UpdateBudgetCommandInput, UpdateBudgetCommandOutput } from "./commands/
 import { UpdateFarmCommandInput, UpdateFarmCommandOutput } from "./commands/UpdateFarmCommand";
 import { UpdateFleetCommandInput, UpdateFleetCommandOutput } from "./commands/UpdateFleetCommand";
 import { UpdateJobCommandInput, UpdateJobCommandOutput } from "./commands/UpdateJobCommand";
+import { UpdateLimitCommandInput, UpdateLimitCommandOutput } from "./commands/UpdateLimitCommand";
 import { UpdateMonitorCommandInput, UpdateMonitorCommandOutput } from "./commands/UpdateMonitorCommand";
 import { UpdateQueueCommandInput, UpdateQueueCommandOutput } from "./commands/UpdateQueueCommand";
 import {
@@ -266,6 +291,10 @@ import {
   UpdateQueueFleetAssociationCommandInput,
   UpdateQueueFleetAssociationCommandOutput,
 } from "./commands/UpdateQueueFleetAssociationCommand";
+import {
+  UpdateQueueLimitAssociationCommandInput,
+  UpdateQueueLimitAssociationCommandOutput,
+} from "./commands/UpdateQueueLimitAssociationCommand";
 import { UpdateSessionCommandInput, UpdateSessionCommandOutput } from "./commands/UpdateSessionCommand";
 import { UpdateStepCommandInput, UpdateStepCommandOutput } from "./commands/UpdateStepCommand";
 import {
@@ -309,21 +338,25 @@ export type ServiceInputTypes =
   | CreateFleetCommandInput
   | CreateJobCommandInput
   | CreateLicenseEndpointCommandInput
+  | CreateLimitCommandInput
   | CreateMonitorCommandInput
   | CreateQueueCommandInput
   | CreateQueueEnvironmentCommandInput
   | CreateQueueFleetAssociationCommandInput
+  | CreateQueueLimitAssociationCommandInput
   | CreateStorageProfileCommandInput
   | CreateWorkerCommandInput
   | DeleteBudgetCommandInput
   | DeleteFarmCommandInput
   | DeleteFleetCommandInput
   | DeleteLicenseEndpointCommandInput
+  | DeleteLimitCommandInput
   | DeleteMeteredProductCommandInput
   | DeleteMonitorCommandInput
   | DeleteQueueCommandInput
   | DeleteQueueEnvironmentCommandInput
   | DeleteQueueFleetAssociationCommandInput
+  | DeleteQueueLimitAssociationCommandInput
   | DeleteStorageProfileCommandInput
   | DeleteWorkerCommandInput
   | DisassociateMemberFromFarmCommandInput
@@ -335,10 +368,12 @@ export type ServiceInputTypes =
   | GetFleetCommandInput
   | GetJobCommandInput
   | GetLicenseEndpointCommandInput
+  | GetLimitCommandInput
   | GetMonitorCommandInput
   | GetQueueCommandInput
   | GetQueueEnvironmentCommandInput
   | GetQueueFleetAssociationCommandInput
+  | GetQueueLimitAssociationCommandInput
   | GetSessionActionCommandInput
   | GetSessionCommandInput
   | GetSessionsStatisticsAggregationCommandInput
@@ -354,12 +389,15 @@ export type ServiceInputTypes =
   | ListFleetMembersCommandInput
   | ListFleetsCommandInput
   | ListJobMembersCommandInput
+  | ListJobParameterDefinitionsCommandInput
   | ListJobsCommandInput
   | ListLicenseEndpointsCommandInput
+  | ListLimitsCommandInput
   | ListMeteredProductsCommandInput
   | ListMonitorsCommandInput
   | ListQueueEnvironmentsCommandInput
   | ListQueueFleetAssociationsCommandInput
+  | ListQueueLimitAssociationsCommandInput
   | ListQueueMembersCommandInput
   | ListQueuesCommandInput
   | ListSessionActionsCommandInput
@@ -385,10 +423,12 @@ export type ServiceInputTypes =
   | UpdateFarmCommandInput
   | UpdateFleetCommandInput
   | UpdateJobCommandInput
+  | UpdateLimitCommandInput
   | UpdateMonitorCommandInput
   | UpdateQueueCommandInput
   | UpdateQueueEnvironmentCommandInput
   | UpdateQueueFleetAssociationCommandInput
+  | UpdateQueueLimitAssociationCommandInput
   | UpdateSessionCommandInput
   | UpdateStepCommandInput
   | UpdateStorageProfileCommandInput
@@ -416,21 +456,25 @@ export type ServiceOutputTypes =
   | CreateFleetCommandOutput
   | CreateJobCommandOutput
   | CreateLicenseEndpointCommandOutput
+  | CreateLimitCommandOutput
   | CreateMonitorCommandOutput
   | CreateQueueCommandOutput
   | CreateQueueEnvironmentCommandOutput
   | CreateQueueFleetAssociationCommandOutput
+  | CreateQueueLimitAssociationCommandOutput
   | CreateStorageProfileCommandOutput
   | CreateWorkerCommandOutput
   | DeleteBudgetCommandOutput
   | DeleteFarmCommandOutput
   | DeleteFleetCommandOutput
   | DeleteLicenseEndpointCommandOutput
+  | DeleteLimitCommandOutput
   | DeleteMeteredProductCommandOutput
   | DeleteMonitorCommandOutput
   | DeleteQueueCommandOutput
   | DeleteQueueEnvironmentCommandOutput
   | DeleteQueueFleetAssociationCommandOutput
+  | DeleteQueueLimitAssociationCommandOutput
   | DeleteStorageProfileCommandOutput
   | DeleteWorkerCommandOutput
   | DisassociateMemberFromFarmCommandOutput
@@ -442,10 +486,12 @@ export type ServiceOutputTypes =
   | GetFleetCommandOutput
   | GetJobCommandOutput
   | GetLicenseEndpointCommandOutput
+  | GetLimitCommandOutput
   | GetMonitorCommandOutput
   | GetQueueCommandOutput
   | GetQueueEnvironmentCommandOutput
   | GetQueueFleetAssociationCommandOutput
+  | GetQueueLimitAssociationCommandOutput
   | GetSessionActionCommandOutput
   | GetSessionCommandOutput
   | GetSessionsStatisticsAggregationCommandOutput
@@ -461,12 +507,15 @@ export type ServiceOutputTypes =
   | ListFleetMembersCommandOutput
   | ListFleetsCommandOutput
   | ListJobMembersCommandOutput
+  | ListJobParameterDefinitionsCommandOutput
   | ListJobsCommandOutput
   | ListLicenseEndpointsCommandOutput
+  | ListLimitsCommandOutput
   | ListMeteredProductsCommandOutput
   | ListMonitorsCommandOutput
   | ListQueueEnvironmentsCommandOutput
   | ListQueueFleetAssociationsCommandOutput
+  | ListQueueLimitAssociationsCommandOutput
   | ListQueueMembersCommandOutput
   | ListQueuesCommandOutput
   | ListSessionActionsCommandOutput
@@ -492,10 +541,12 @@ export type ServiceOutputTypes =
   | UpdateFarmCommandOutput
   | UpdateFleetCommandOutput
   | UpdateJobCommandOutput
+  | UpdateLimitCommandOutput
   | UpdateMonitorCommandOutput
   | UpdateQueueCommandOutput
   | UpdateQueueEnvironmentCommandOutput
   | UpdateQueueFleetAssociationCommandOutput
+  | UpdateQueueLimitAssociationCommandOutput
   | UpdateSessionCommandOutput
   | UpdateStepCommandOutput
   | UpdateStorageProfileCommandOutput
@@ -593,6 +644,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -698,6 +768,8 @@ export class DeadlineClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<DeadlineClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -706,7 +778,6 @@ export class DeadlineClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

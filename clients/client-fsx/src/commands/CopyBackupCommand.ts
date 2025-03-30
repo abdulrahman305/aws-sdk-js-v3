@@ -98,7 +98,7 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //         Message: "STRING_VALUE",
  * //       },
  * //       StorageCapacity: Number("int"),
- * //       StorageType: "SSD" || "HDD",
+ * //       StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //       VpcId: "STRING_VALUE",
  * //       SubnetIds: [ // SubnetIds
  * //         "STRING_VALUE",
@@ -188,6 +188,7 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //           Iops: Number("int"),
  * //           Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //         },
+ * //         EfaEnabled: true || false,
  * //       },
  * //       AdministrativeActions: [ // AdministrativeActions
  * //         { // AdministrativeAction
@@ -205,7 +206,7 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //               Message: "STRING_VALUE",
  * //             },
  * //             StorageCapacity: Number("int"),
- * //             StorageType: "SSD" || "HDD",
+ * //             StorageType: "SSD" || "HDD" || "INTELLIGENT_TIERING",
  * //             VpcId: "STRING_VALUE",
  * //             SubnetIds: [
  * //               "STRING_VALUE",
@@ -290,6 +291,7 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //                 Iops: Number("int"),
  * //                 Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //               },
+ * //               EfaEnabled: true || false,
  * //             },
  * //             AdministrativeActions: [
  * //               {
@@ -474,6 +476,10 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //                 "STRING_VALUE",
  * //               ],
  * //               EndpointIpAddress: "STRING_VALUE",
+ * //               ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
+ * //                 SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //                 SizeGiB: Number("int"),
+ * //               },
  * //             },
  * //           },
  * //           FailureDetails: {
@@ -646,6 +652,10 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //           "STRING_VALUE",
  * //         ],
  * //         EndpointIpAddress: "STRING_VALUE",
+ * //         ReadCacheConfiguration: {
+ * //           SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //           SizeGiB: Number("int"),
+ * //         },
  * //       },
  * //     },
  * //     DirectoryInformation: { // ActiveDirectoryBackupAttributes
@@ -658,6 +668,7 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * //     SourceBackupRegion: "STRING_VALUE",
  * //     ResourceType: "FILE_SYSTEM" || "VOLUME",
  * //     Volume: "<Volume>",
+ * //     SizeInBytes: Number("long"),
  * //   },
  * // };
  *
@@ -713,51 +724,51 @@ export interface CopyBackupCommandOutput extends CopyBackupResponse, __MetadataB
  * @throws {@link FSxServiceException}
  * <p>Base exception class for all service exceptions from FSx service.</p>
  *
- * @public
+ *
  * @example To copy a backup
  * ```javascript
  * // This operation copies an Amazon FSx backup.
  * const input = {
- *   "SourceBackupId": "backup-03e3c82e0183b7b6b",
- *   "SourceRegion": "us-east-2"
+ *   SourceBackupId: "backup-03e3c82e0183b7b6b",
+ *   SourceRegion: "us-east-2"
  * };
  * const command = new CopyBackupCommand(input);
  * const response = await client.send(command);
- * /* response ==
+ * /* response is
  * {
- *   "Backup": {
- *     "BackupId": "backup-0a3364eded1014b28",
- *     "CreationTime": 1617954808.068,
- *     "FileSystem": {
- *       "FileSystemId": "fs-0498eed5fe91001ec",
- *       "FileSystemType": "LUSTRE",
- *       "LustreConfiguration": {
- *         "AutomaticBackupRetentionDays": 0,
- *         "DeploymentType": "PERSISTENT_1",
- *         "PerUnitStorageThroughput": 50,
- *         "WeeklyMaintenanceStartTime": "1:05:00"
+ *   Backup: {
+ *     BackupId: "backup-0a3364eded1014b28",
+ *     CreationTime: 1.617954808068E9,
+ *     FileSystem: {
+ *       FileSystemId: "fs-0498eed5fe91001ec",
+ *       FileSystemType: "LUSTRE",
+ *       LustreConfiguration: {
+ *         AutomaticBackupRetentionDays: 0,
+ *         DeploymentType: "PERSISTENT_1",
+ *         PerUnitStorageThroughput: 50,
+ *         WeeklyMaintenanceStartTime: "1:05:00"
  *       },
- *       "ResourceARN": "arn:aws:fsx:us-east-1:012345678912:file-system/fs-0f5179e395f597e66",
- *       "StorageCapacity": 2400,
- *       "StorageType": "SSD"
+ *       ResourceARN: "arn:aws:fsx:us-east-1:012345678912:file-system/fs-0f5179e395f597e66",
+ *       StorageCapacity: 2400,
+ *       StorageType: "SSD"
  *     },
- *     "KmsKeyId": "arn:aws:fsx:us-east-1:012345678912:key/d1234e22-543a-12b7-a98f-e12c2b54001a",
- *     "Lifecycle": "COPYING",
- *     "OwnerId": "123456789012",
- *     "ResourceARN": "arn:aws:fsx:us-east-1:012345678912:backup/backup-0a3364eded1014b28",
- *     "Tags": [
+ *     KmsKeyId: "arn:aws:fsx:us-east-1:012345678912:key/d1234e22-543a-12b7-a98f-e12c2b54001a",
+ *     Lifecycle: "COPYING",
+ *     OwnerId: "123456789012",
+ *     ResourceARN: "arn:aws:fsx:us-east-1:012345678912:backup/backup-0a3364eded1014b28",
+ *     Tags: [
  *       {
- *         "Key": "Name",
- *         "Value": "MyBackup"
+ *         Key: "Name",
+ *         Value: "MyBackup"
  *       }
  *     ],
- *     "Type": "USER_INITIATED"
+ *     Type: "USER_INITIATED"
  *   }
  * }
  * *\/
- * // example id: to-copy-a-backup-1481847318640
  * ```
  *
+ * @public
  */
 export class CopyBackupCommand extends $Command
   .classBuilder<
@@ -767,9 +778,7 @@ export class CopyBackupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: FSxClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -781,4 +790,16 @@ export class CopyBackupCommand extends $Command
   .f(void 0, CopyBackupResponseFilterSensitiveLog)
   .ser(se_CopyBackupCommand)
   .de(de_CopyBackupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: CopyBackupRequest;
+      output: CopyBackupResponse;
+    };
+    sdk: {
+      input: CopyBackupCommandInput;
+      output: CopyBackupCommandOutput;
+    };
+  };
+}

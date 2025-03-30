@@ -28,33 +28,35 @@ export interface UpdateClusterConfigCommandInput extends UpdateClusterConfigRequ
 export interface UpdateClusterConfigCommandOutput extends UpdateClusterConfigResponse, __MetadataBearer {}
 
 /**
- * <p>Updates an Amazon EKS cluster configuration. Your cluster continues to
- *             function during the update. The response output includes an update ID that you can use
- *             to track the status of your cluster update with <code>DescribeUpdate</code>"/>.</p>
+ * <p>Updates an Amazon EKS cluster configuration. Your cluster continues to function during the
+ *             update. The response output includes an update ID that you can use to track the status
+ *             of your cluster update with <code>DescribeUpdate</code>"/>.</p>
  *          <p>You can use this API operation to enable or disable exporting the Kubernetes control plane
- *             logs for your cluster to CloudWatch Logs. By default, cluster control plane logs
- *             aren't exported to CloudWatch Logs. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster control plane logs</a> in the
- *                 <i>
+ *             logs for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported
+ *             to CloudWatch Logs. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS
+ *                 Cluster control plane logs</a> in the
+ *             <i>
  *                <i>Amazon EKS User Guide</i>
  *             </i>.</p>
  *          <note>
- *             <p>CloudWatch Logs ingestion, archive storage, and data scanning rates apply to
- *                 exported control plane logs. For more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch
- *                 Pricing</a>.</p>
+ *             <p>CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported
+ *                 control plane logs. For more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch Pricing</a>.</p>
  *          </note>
  *          <p>You can also use this API operation to enable or disable public and private access to
  *             your cluster's Kubernetes API server endpoint. By default, public access is enabled, and
- *             private access is disabled. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the
- *                 <i>
+ *             private access is disabled. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster
+ *                 endpoint access control</a> in the <i>
  *                <i>Amazon EKS User Guide</i>
  *             </i>.</p>
  *          <p>You can also use this API operation to choose different subnets and security groups
- *             for the cluster. You must specify at least two subnets that are in different
- *             Availability Zones. You can't change which VPC the subnets are from, the subnets must be
- *             in the same VPC as the subnets that the cluster was created with. For more information
- *             about the VPC requirements, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a> in the <i>
+ *             for the cluster. You must specify at least two subnets that are in different Availability Zones. You
+ *             can't change which VPC the subnets are from, the subnets must be in the same VPC as the
+ *             subnets that the cluster was created with. For more information about the VPC
+ *             requirements, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a> in the <i>
  *                <i>Amazon EKS User Guide</i>
  *             </i>.</p>
+ *          <p>You can also use this API operation to enable or disable ARC zonal shift. If zonal
+ *             shift is enabled, Amazon Web Services configures zonal autoshift for the cluster.</p>
  *          <p>Cluster updates are asynchronous, and they should finish within a few minutes. During
  *             an update, the cluster status moves to <code>UPDATING</code> (this status transition is
  *             eventually consistent). When the update is complete (either <code>Failed</code> or
@@ -97,6 +99,28 @@ export interface UpdateClusterConfigCommandOutput extends UpdateClusterConfigRes
  *   upgradePolicy: { // UpgradePolicyRequest
  *     supportType: "STANDARD" || "EXTENDED",
  *   },
+ *   zonalShiftConfig: { // ZonalShiftConfigRequest
+ *     enabled: true || false,
+ *   },
+ *   computeConfig: { // ComputeConfigRequest
+ *     enabled: true || false,
+ *     nodePools: [
+ *       "STRING_VALUE",
+ *     ],
+ *     nodeRoleArn: "STRING_VALUE",
+ *   },
+ *   kubernetesNetworkConfig: { // KubernetesNetworkConfigRequest
+ *     serviceIpv4Cidr: "STRING_VALUE",
+ *     ipFamily: "ipv4" || "ipv6",
+ *     elasticLoadBalancing: { // ElasticLoadBalancing
+ *       enabled: true || false,
+ *     },
+ *   },
+ *   storageConfig: { // StorageConfigRequest
+ *     blockStorage: { // BlockStorage
+ *       enabled: true || false,
+ *     },
+ *   },
  * };
  * const command = new UpdateClusterConfigCommand(input);
  * const response = await client.send(command);
@@ -104,10 +128,10 @@ export interface UpdateClusterConfigCommandOutput extends UpdateClusterConfigRes
  * //   update: { // Update
  * //     id: "STRING_VALUE",
  * //     status: "InProgress" || "Failed" || "Cancelled" || "Successful",
- * //     type: "VersionUpdate" || "EndpointAccessUpdate" || "LoggingUpdate" || "ConfigUpdate" || "AssociateIdentityProviderConfig" || "DisassociateIdentityProviderConfig" || "AssociateEncryptionConfig" || "AddonUpdate" || "VpcConfigUpdate" || "AccessConfigUpdate" || "UpgradePolicyUpdate",
+ * //     type: "VersionUpdate" || "EndpointAccessUpdate" || "LoggingUpdate" || "ConfigUpdate" || "AssociateIdentityProviderConfig" || "DisassociateIdentityProviderConfig" || "AssociateEncryptionConfig" || "AddonUpdate" || "VpcConfigUpdate" || "AccessConfigUpdate" || "UpgradePolicyUpdate" || "ZonalShiftConfigUpdate" || "AutoModeUpdate",
  * //     params: [ // UpdateParams
  * //       { // UpdateParam
- * //         type: "Version" || "PlatformVersion" || "EndpointPrivateAccess" || "EndpointPublicAccess" || "ClusterLogging" || "DesiredSize" || "LabelsToAdd" || "LabelsToRemove" || "TaintsToAdd" || "TaintsToRemove" || "MaxSize" || "MinSize" || "ReleaseVersion" || "PublicAccessCidrs" || "LaunchTemplateName" || "LaunchTemplateVersion" || "IdentityProviderConfig" || "EncryptionConfig" || "AddonVersion" || "ServiceAccountRoleArn" || "ResolveConflicts" || "MaxUnavailable" || "MaxUnavailablePercentage" || "ConfigurationValues" || "SecurityGroups" || "Subnets" || "AuthenticationMode" || "PodIdentityAssociations" || "UpgradePolicy",
+ * //         type: "Version" || "PlatformVersion" || "EndpointPrivateAccess" || "EndpointPublicAccess" || "ClusterLogging" || "DesiredSize" || "LabelsToAdd" || "LabelsToRemove" || "TaintsToAdd" || "TaintsToRemove" || "MaxSize" || "MinSize" || "ReleaseVersion" || "PublicAccessCidrs" || "LaunchTemplateName" || "LaunchTemplateVersion" || "IdentityProviderConfig" || "EncryptionConfig" || "AddonVersion" || "ServiceAccountRoleArn" || "ResolveConflicts" || "MaxUnavailable" || "MaxUnavailablePercentage" || "NodeRepairEnabled" || "UpdateStrategy" || "ConfigurationValues" || "SecurityGroups" || "Subnets" || "AuthenticationMode" || "PodIdentityAssociations" || "UpgradePolicy" || "ZonalShiftConfig" || "ComputeConfig" || "StorageConfig" || "KubernetesNetworkConfig",
  * //         value: "STRING_VALUE",
  * //       },
  * //     ],
@@ -151,13 +175,19 @@ export interface UpdateClusterConfigCommandOutput extends UpdateClusterConfigRes
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The specified resource could not be found. You can view your available clusters with
  *                 <code>ListClusters</code>. You can view your available managed node groups with
- *                 <code>ListNodegroups</code>. Amazon EKS clusters and node groups are Amazon Web Services Region specific.</p>
+ *                 <code>ListNodegroups</code>. Amazon EKS clusters and node groups are Amazon Web Services Region
+ *             specific.</p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server-side issue.</p>
  *
+ * @throws {@link ThrottlingException} (client fault)
+ *  <p>The request or operation couldn't be performed because a service is throttling
+ *             requests.</p>
+ *
  * @throws {@link EKSServiceException}
  * <p>Base exception class for all service exceptions from EKS service.</p>
+ *
  *
  * @public
  */
@@ -169,9 +199,7 @@ export class UpdateClusterConfigCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EKSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -183,4 +211,16 @@ export class UpdateClusterConfigCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateClusterConfigCommand)
   .de(de_UpdateClusterConfigCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateClusterConfigRequest;
+      output: UpdateClusterConfigResponse;
+    };
+    sdk: {
+      input: UpdateClusterConfigCommandInput;
+      output: UpdateClusterConfigCommandOutput;
+    };
+  };
+}

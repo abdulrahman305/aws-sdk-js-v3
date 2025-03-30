@@ -193,6 +193,10 @@ import {
   MalformedContentTypeWithoutBodyCommandOutput,
 } from "./commands/MalformedContentTypeWithoutBodyCommand";
 import {
+  MalformedContentTypeWithoutBodyEmptyInputCommandInput,
+  MalformedContentTypeWithoutBodyEmptyInputCommandOutput,
+} from "./commands/MalformedContentTypeWithoutBodyEmptyInputCommand";
+import {
   MalformedContentTypeWithPayloadCommandInput,
   MalformedContentTypeWithPayloadCommandOutput,
 } from "./commands/MalformedContentTypeWithPayloadCommand";
@@ -304,6 +308,14 @@ import {
 import { QueryPrecedenceCommandInput, QueryPrecedenceCommandOutput } from "./commands/QueryPrecedenceCommand";
 import { RecursiveShapesCommandInput, RecursiveShapesCommandOutput } from "./commands/RecursiveShapesCommand";
 import {
+  ResponseCodeHttpFallbackCommandInput,
+  ResponseCodeHttpFallbackCommandOutput,
+} from "./commands/ResponseCodeHttpFallbackCommand";
+import {
+  ResponseCodeRequiredCommandInput,
+  ResponseCodeRequiredCommandOutput,
+} from "./commands/ResponseCodeRequiredCommand";
+import {
   SimpleScalarPropertiesCommandInput,
   SimpleScalarPropertiesCommandOutput,
 } from "./commands/SimpleScalarPropertiesCommand";
@@ -320,15 +332,20 @@ import {
 } from "./commands/StreamingTraitsWithMediaTypeCommand";
 import { TestBodyStructureCommandInput, TestBodyStructureCommandOutput } from "./commands/TestBodyStructureCommand";
 import {
-  TestNoInputNoPayloadCommandInput,
-  TestNoInputNoPayloadCommandOutput,
-} from "./commands/TestNoInputNoPayloadCommand";
-import { TestNoPayloadCommandInput, TestNoPayloadCommandOutput } from "./commands/TestNoPayloadCommand";
+  TestGetNoInputNoPayloadCommandInput,
+  TestGetNoInputNoPayloadCommandOutput,
+} from "./commands/TestGetNoInputNoPayloadCommand";
+import { TestGetNoPayloadCommandInput, TestGetNoPayloadCommandOutput } from "./commands/TestGetNoPayloadCommand";
 import { TestPayloadBlobCommandInput, TestPayloadBlobCommandOutput } from "./commands/TestPayloadBlobCommand";
 import {
   TestPayloadStructureCommandInput,
   TestPayloadStructureCommandOutput,
 } from "./commands/TestPayloadStructureCommand";
+import {
+  TestPostNoInputNoPayloadCommandInput,
+  TestPostNoInputNoPayloadCommandOutput,
+} from "./commands/TestPostNoInputNoPayloadCommand";
+import { TestPostNoPayloadCommandInput, TestPostNoPayloadCommandOutput } from "./commands/TestPostNoPayloadCommand";
 import {
   TimestampFormatHeadersCommandInput,
   TimestampFormatHeadersCommandOutput,
@@ -391,6 +408,7 @@ export type ServiceInputTypes =
   | MalformedContentTypeWithGenericStringCommandInput
   | MalformedContentTypeWithPayloadCommandInput
   | MalformedContentTypeWithoutBodyCommandInput
+  | MalformedContentTypeWithoutBodyEmptyInputCommandInput
   | MalformedDoubleCommandInput
   | MalformedFloatCommandInput
   | MalformedIntegerCommandInput
@@ -429,6 +447,8 @@ export type ServiceInputTypes =
   | QueryParamsAsStringListMapCommandInput
   | QueryPrecedenceCommandInput
   | RecursiveShapesCommandInput
+  | ResponseCodeHttpFallbackCommandInput
+  | ResponseCodeRequiredCommandInput
   | SimpleScalarPropertiesCommandInput
   | SparseJsonListsCommandInput
   | SparseJsonMapsCommandInput
@@ -436,10 +456,12 @@ export type ServiceInputTypes =
   | StreamingTraitsRequireLengthCommandInput
   | StreamingTraitsWithMediaTypeCommandInput
   | TestBodyStructureCommandInput
-  | TestNoInputNoPayloadCommandInput
-  | TestNoPayloadCommandInput
+  | TestGetNoInputNoPayloadCommandInput
+  | TestGetNoPayloadCommandInput
   | TestPayloadBlobCommandInput
   | TestPayloadStructureCommandInput
+  | TestPostNoInputNoPayloadCommandInput
+  | TestPostNoPayloadCommandInput
   | TimestampFormatHeadersCommandInput
   | UnitInputAndOutputCommandInput;
 
@@ -495,6 +517,7 @@ export type ServiceOutputTypes =
   | MalformedContentTypeWithGenericStringCommandOutput
   | MalformedContentTypeWithPayloadCommandOutput
   | MalformedContentTypeWithoutBodyCommandOutput
+  | MalformedContentTypeWithoutBodyEmptyInputCommandOutput
   | MalformedDoubleCommandOutput
   | MalformedFloatCommandOutput
   | MalformedIntegerCommandOutput
@@ -533,6 +556,8 @@ export type ServiceOutputTypes =
   | QueryParamsAsStringListMapCommandOutput
   | QueryPrecedenceCommandOutput
   | RecursiveShapesCommandOutput
+  | ResponseCodeHttpFallbackCommandOutput
+  | ResponseCodeRequiredCommandOutput
   | SimpleScalarPropertiesCommandOutput
   | SparseJsonListsCommandOutput
   | SparseJsonMapsCommandOutput
@@ -540,10 +565,12 @@ export type ServiceOutputTypes =
   | StreamingTraitsRequireLengthCommandOutput
   | StreamingTraitsWithMediaTypeCommandOutput
   | TestBodyStructureCommandOutput
-  | TestNoInputNoPayloadCommandOutput
-  | TestNoPayloadCommandOutput
+  | TestGetNoInputNoPayloadCommandOutput
+  | TestGetNoPayloadCommandOutput
   | TestPayloadBlobCommandOutput
   | TestPayloadStructureCommandOutput
+  | TestPostNoInputNoPayloadCommandOutput
+  | TestPostNoPayloadCommandOutput
   | TimestampFormatHeadersCommandOutput
   | UnitInputAndOutputCommandOutput;
 
@@ -637,6 +664,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * Fetch related hostname, signing name or signing region with given region.
@@ -761,6 +807,8 @@ export class RestJsonProtocolClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<RestJsonProtocolClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveUserAgentConfig(_config_0);
     const _config_2 = resolveRetryConfig(_config_1);
     const _config_3 = resolveRegionConfig(_config_2);
@@ -769,7 +817,6 @@ export class RestJsonProtocolClient extends __Client<
     const _config_6 = resolveHttpAuthSchemeConfig(_config_5);
     const _config_7 = resolveCompressionConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

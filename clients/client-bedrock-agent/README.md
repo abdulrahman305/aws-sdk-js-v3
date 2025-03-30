@@ -10,7 +10,7 @@ AWS SDK for JavaScript BedrockAgent Client for Node.js, Browser and React Native
 
 ## Installing
 
-To install the this package, simply type add or install @aws-sdk/client-bedrock-agent
+To install this package, simply type add or install @aws-sdk/client-bedrock-agent
 using your favorite package manager:
 
 - `npm install @aws-sdk/client-bedrock-agent`
@@ -205,6 +205,14 @@ see LICENSE for more information.
 
 <details>
 <summary>
+AssociateAgentCollaborator
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/AssociateAgentCollaboratorCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/AssociateAgentCollaboratorCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/AssociateAgentCollaboratorCommandOutput/)
+
+</details>
+<details>
+<summary>
 AssociateAgentKnowledgeBase
 </summary>
 
@@ -365,10 +373,26 @@ DeleteKnowledgeBase
 </details>
 <details>
 <summary>
+DeleteKnowledgeBaseDocuments
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/DeleteKnowledgeBaseDocumentsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/DeleteKnowledgeBaseDocumentsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/DeleteKnowledgeBaseDocumentsCommandOutput/)
+
+</details>
+<details>
+<summary>
 DeletePrompt
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/DeletePromptCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/DeletePromptCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/DeletePromptCommandOutput/)
+
+</details>
+<details>
+<summary>
+DisassociateAgentCollaborator
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/DisassociateAgentCollaboratorCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/DisassociateAgentCollaboratorCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/DisassociateAgentCollaboratorCommandOutput/)
 
 </details>
 <details>
@@ -401,6 +425,14 @@ GetAgentAlias
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/GetAgentAliasCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetAgentAliasCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetAgentAliasCommandOutput/)
+
+</details>
+<details>
+<summary>
+GetAgentCollaborator
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/GetAgentCollaboratorCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetAgentCollaboratorCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetAgentCollaboratorCommandOutput/)
 
 </details>
 <details>
@@ -469,10 +501,26 @@ GetKnowledgeBase
 </details>
 <details>
 <summary>
+GetKnowledgeBaseDocuments
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/GetKnowledgeBaseDocumentsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetKnowledgeBaseDocumentsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetKnowledgeBaseDocumentsCommandOutput/)
+
+</details>
+<details>
+<summary>
 GetPrompt
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/GetPromptCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetPromptCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/GetPromptCommandOutput/)
+
+</details>
+<details>
+<summary>
+IngestKnowledgeBaseDocuments
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/IngestKnowledgeBaseDocumentsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/IngestKnowledgeBaseDocumentsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/IngestKnowledgeBaseDocumentsCommandOutput/)
 
 </details>
 <details>
@@ -489,6 +537,14 @@ ListAgentAliases
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/ListAgentAliasesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ListAgentAliasesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ListAgentAliasesCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListAgentCollaborators
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/ListAgentCollaboratorsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ListAgentCollaboratorsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ListAgentCollaboratorsCommandOutput/)
 
 </details>
 <details>
@@ -557,6 +613,14 @@ ListIngestionJobs
 </details>
 <details>
 <summary>
+ListKnowledgeBaseDocuments
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/ListKnowledgeBaseDocumentsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ListKnowledgeBaseDocumentsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ListKnowledgeBaseDocumentsCommandOutput/)
+
+</details>
+<details>
+<summary>
 ListKnowledgeBases
 </summary>
 
@@ -605,6 +669,14 @@ StartIngestionJob
 </details>
 <details>
 <summary>
+StopIngestionJob
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/StopIngestionJobCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/StopIngestionJobCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/StopIngestionJobCommandOutput/)
+
+</details>
+<details>
+<summary>
 TagResource
 </summary>
 
@@ -641,6 +713,14 @@ UpdateAgentAlias
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/UpdateAgentAliasCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/UpdateAgentAliasCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/UpdateAgentAliasCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateAgentCollaborator
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/UpdateAgentCollaboratorCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/UpdateAgentCollaboratorCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/UpdateAgentCollaboratorCommandOutput/)
 
 </details>
 <details>
@@ -689,5 +769,13 @@ UpdatePrompt
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/UpdatePromptCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/UpdatePromptCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/UpdatePromptCommandOutput/)
+
+</details>
+<details>
+<summary>
+ValidateFlowDefinition
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/bedrock-agent/command/ValidateFlowDefinitionCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ValidateFlowDefinitionCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-bedrock-agent/Interface/ValidateFlowDefinitionCommandOutput/)
 
 </details>

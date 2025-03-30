@@ -34,6 +34,24 @@ export interface UpdateWorkgroupCommandOutput extends UpdateWorkgroupResponse, _
 /**
  * <p>Updates a workgroup with the specified configuration settings. You can't update multiple parameters in one request. For example,
  *       you can update <code>baseCapacity</code> or <code>port</code> in a single request, but you can't update both in the same request.</p>
+ *          <p>VPC Block Public Access (BPA) enables you to block resources in VPCs and subnets that
+ *          you own in a Region from reaching or being reached from the internet through internet
+ *          gateways and egress-only internet gateways. If a workgroup is in an account with VPC BPA
+ *          turned on, the following capabilities are blocked: </p>
+ *          <ul>
+ *             <li>
+ *                <p>Creating a public access workgroup</p>
+ *             </li>
+ *             <li>
+ *                <p>Modifying a private workgroup to public</p>
+ *             </li>
+ *             <li>
+ *                <p>Adding a subnet with VPC BPA turned on to the workgroup when the workgroup is
+ *                public</p>
+ *             </li>
+ *          </ul>
+ *          <p>For more information about VPC BPA, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/security-vpc-bpa.html">Block public access to VPCs and
+ *             subnets</a> in the <i>Amazon VPC User Guide</i>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -60,6 +78,11 @@ export interface UpdateWorkgroupCommandOutput extends UpdateWorkgroupResponse, _
  *   port: Number("int"),
  *   maxCapacity: Number("int"),
  *   ipAddressType: "STRING_VALUE",
+ *   pricePerformanceTarget: { // PerformanceTarget
+ *     status: "STRING_VALUE",
+ *     level: Number("int"),
+ *   },
+ *   trackName: "STRING_VALUE",
  * };
  * const command = new UpdateWorkgroupCommand(input);
  * const response = await client.send(command);
@@ -116,6 +139,12 @@ export interface UpdateWorkgroupCommandOutput extends UpdateWorkgroupResponse, _
  * //       "STRING_VALUE",
  * //     ],
  * //     ipAddressType: "STRING_VALUE",
+ * //     pricePerformanceTarget: { // PerformanceTarget
+ * //       status: "STRING_VALUE",
+ * //       level: Number("int"),
+ * //     },
+ * //     trackName: "STRING_VALUE",
+ * //     pendingTrackName: "STRING_VALUE",
  * //   },
  * // };
  *
@@ -148,6 +177,7 @@ export interface UpdateWorkgroupCommandOutput extends UpdateWorkgroupResponse, _
  * @throws {@link RedshiftServerlessServiceException}
  * <p>Base exception class for all service exceptions from RedshiftServerless service.</p>
  *
+ *
  * @public
  */
 export class UpdateWorkgroupCommand extends $Command
@@ -158,9 +188,7 @@ export class UpdateWorkgroupCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: RedshiftServerlessClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -172,4 +200,16 @@ export class UpdateWorkgroupCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateWorkgroupCommand)
   .de(de_UpdateWorkgroupCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateWorkgroupRequest;
+      output: UpdateWorkgroupResponse;
+    };
+    sdk: {
+      input: UpdateWorkgroupCommandInput;
+      output: UpdateWorkgroupCommandOutput;
+    };
+  };
+}

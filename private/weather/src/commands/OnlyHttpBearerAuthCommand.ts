@@ -48,6 +48,7 @@ export interface OnlyHttpBearerAuthCommandOutput extends __MetadataBearer {}
  * @throws {@link WeatherServiceException}
  * <p>Base exception class for all service exceptions from Weather service.</p>
  *
+ *
  */
 export class OnlyHttpBearerAuthCommand extends $Command
   .classBuilder<
@@ -65,4 +66,16 @@ export class OnlyHttpBearerAuthCommand extends $Command
   .f(void 0, void 0)
   .ser(se_OnlyHttpBearerAuthCommand)
   .de(de_OnlyHttpBearerAuthCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: {};
+      output: {};
+    };
+    sdk: {
+      input: OnlyHttpBearerAuthCommandInput;
+      output: OnlyHttpBearerAuthCommandOutput;
+    };
+  };
+}

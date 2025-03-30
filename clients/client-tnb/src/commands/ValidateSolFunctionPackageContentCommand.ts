@@ -106,6 +106,33 @@ export interface ValidateSolFunctionPackageContentCommandOutput
  * @throws {@link TnbServiceException}
  * <p>Base exception class for all service exceptions from Tnb service.</p>
  *
+ *
+ * @example Validate a Function Package content
+ * ```javascript
+ * //
+ * const input = {
+ *   contentType: "application/zip",
+ *   file: "UEsDBBQAAAAAAPqLiVMAAAAAAAAAAAAAAAAMACAAZnJlZTVnYy1hbWYvVVQNAAcIrrJhBK",
+ *   vnfPkgId: "fp-07aa863e53460a2a6"
+ * };
+ * const command = new ValidateSolFunctionPackageContentCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   id: "fp-07aa863e53460a2a6",
+ *   metadata: {
+ *     vnfd: {
+ *       overrides:       []
+ *     }
+ *   },
+ *   vnfProductName: "Sample AMF",
+ *   vnfProvider: "Sample",
+ *   vnfdId: "0d72acd9-e45d-4644-9bcd-1fe67cd0e2c8",
+ *   vnfdVersion: "1.0.0"
+ * }
+ * *\/
+ * ```
+ *
  * @public
  */
 export class ValidateSolFunctionPackageContentCommand extends $Command
@@ -116,9 +143,7 @@ export class ValidateSolFunctionPackageContentCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: TnbClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -130,4 +155,16 @@ export class ValidateSolFunctionPackageContentCommand extends $Command
   .f(ValidateSolFunctionPackageContentInputFilterSensitiveLog, void 0)
   .ser(se_ValidateSolFunctionPackageContentCommand)
   .de(de_ValidateSolFunctionPackageContentCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ValidateSolFunctionPackageContentInput;
+      output: ValidateSolFunctionPackageContentOutput;
+    };
+    sdk: {
+      input: ValidateSolFunctionPackageContentCommandInput;
+      output: ValidateSolFunctionPackageContentCommandOutput;
+    };
+  };
+}

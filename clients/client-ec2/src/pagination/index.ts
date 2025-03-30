@@ -6,19 +6,22 @@ export * from "./DescribeAwsNetworkPerformanceMetricSubscriptionsPaginator";
 
 export * from "./DescribeByoipCidrsPaginator";
 
+export * from "./DescribeCapacityBlockExtensionHistoryPaginator";
+
+export * from "./DescribeCapacityBlockExtensionOfferingsPaginator";
+
 export * from "./DescribeCapacityBlockOfferingsPaginator";
+
+export * from "./DescribeCapacityReservationBillingRequestsPaginator";
 
 export * from "./DescribeCapacityReservationFleetsPaginator";
 
 export * from "./DescribeCapacityReservationsPaginator";
-
-export * from "./DescribeCarrierGatewaysPaginator";
-
-export * from "./DescribeClassicLinkInstancesPaginator";
-
-export * from "./DescribeClientVpnAuthorizationRulesPaginator";
 // smithy-typescript generated code
 export * from "./Interfaces";
+export * from "./DescribeCarrierGatewaysPaginator";
+export * from "./DescribeClassicLinkInstancesPaginator";
+export * from "./DescribeClientVpnAuthorizationRulesPaginator";
 export * from "./DescribeClientVpnConnectionsPaginator";
 export * from "./DescribeClientVpnEndpointsPaginator";
 export * from "./DescribeClientVpnRoutesPaginator";
@@ -42,6 +45,7 @@ export * from "./DescribeImportSnapshotTasksPaginator";
 export * from "./DescribeInstanceConnectEndpointsPaginator";
 export * from "./DescribeInstanceCreditSpecificationsPaginator";
 export * from "./DescribeInstanceEventWindowsPaginator";
+export * from "./DescribeInstanceImageMetadataPaginator";
 export * from "./DescribeInstanceStatusPaginator";
 export * from "./DescribeInstanceTopologyPaginator";
 export * from "./DescribeInstanceTypeOfferingsPaginator";
@@ -83,6 +87,7 @@ export * from "./DescribeRouteTablesPaginator";
 export * from "./DescribeScheduledInstanceAvailabilityPaginator";
 export * from "./DescribeScheduledInstancesPaginator";
 export * from "./DescribeSecurityGroupRulesPaginator";
+export * from "./DescribeSecurityGroupVpcAssociationsPaginator";
 export * from "./DescribeSecurityGroupsPaginator";
 export * from "./DescribeSnapshotTierStatusPaginator";
 export * from "./DescribeSnapshotsPaginator";

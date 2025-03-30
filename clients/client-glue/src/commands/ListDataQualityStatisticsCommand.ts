@@ -102,6 +102,7 @@ export interface ListDataQualityStatisticsCommandOutput extends ListDataQualityS
  * @throws {@link GlueServiceException}
  * <p>Base exception class for all service exceptions from Glue service.</p>
  *
+ *
  * @public
  */
 export class ListDataQualityStatisticsCommand extends $Command
@@ -112,9 +113,7 @@ export class ListDataQualityStatisticsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: GlueClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -126,4 +125,16 @@ export class ListDataQualityStatisticsCommand extends $Command
   .f(void 0, ListDataQualityStatisticsResponseFilterSensitiveLog)
   .ser(se_ListDataQualityStatisticsCommand)
   .de(de_ListDataQualityStatisticsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListDataQualityStatisticsRequest;
+      output: ListDataQualityStatisticsResponse;
+    };
+    sdk: {
+      input: ListDataQualityStatisticsCommandInput;
+      output: ListDataQualityStatisticsCommandOutput;
+    };
+  };
+}

@@ -173,7 +173,9 @@ export const de_GetControlCommand = async (
     Arn: __expectString,
     Behavior: __expectString,
     Description: __expectString,
+    Implementation: _json,
     Name: __expectString,
+    Parameters: _json,
     RegionConfiguration: _json,
   });
   Object.assign(contents, doc);
@@ -441,6 +443,10 @@ const de_CommonControlSummaryList = (output: any, context: __SerdeContext): Comm
   return retVal;
 };
 
+// de_ControlParameter omitted.
+
+// de_ControlParameters omitted.
+
 // de_Controls omitted.
 
 // de_ControlSummary omitted.
@@ -471,6 +477,8 @@ const de_DomainSummaryList = (output: any, context: __SerdeContext): DomainSumma
     });
   return retVal;
 };
+
+// de_ImplementationDetails omitted.
 
 /**
  * deserializeAws_restJson1ObjectiveSummary
@@ -511,13 +519,6 @@ const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
 // Encode Uint8Array data into string with utf-8.
 const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<string> =>
   collectBody(streamBody, context).then((body) => context.utf8Encoder(body));
-
-const isSerializableHeaderValue = (value: any): boolean =>
-  value !== undefined &&
-  value !== null &&
-  value !== "" &&
-  (!Object.getOwnPropertyNames(value).includes("length") || value.length != 0) &&
-  (!Object.getOwnPropertyNames(value).includes("size") || value.size != 0);
 
 const _MR = "MaxResults";
 const _NT = "NextToken";

@@ -76,6 +76,7 @@ export interface PutAccessPointPolicyCommandOutput extends __MetadataBearer {}
  * @throws {@link S3ControlServiceException}
  * <p>Base exception class for all service exceptions from S3Control service.</p>
  *
+ *
  * @public
  */
 export class PutAccessPointPolicyCommand extends $Command
@@ -104,4 +105,16 @@ export class PutAccessPointPolicyCommand extends $Command
   .f(void 0, void 0)
   .ser(se_PutAccessPointPolicyCommand)
   .de(de_PutAccessPointPolicyCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: PutAccessPointPolicyRequest;
+      output: {};
+    };
+    sdk: {
+      input: PutAccessPointPolicyCommandInput;
+      output: PutAccessPointPolicyCommandOutput;
+    };
+  };
+}

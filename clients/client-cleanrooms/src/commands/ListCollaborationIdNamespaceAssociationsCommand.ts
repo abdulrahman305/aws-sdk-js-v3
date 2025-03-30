@@ -101,6 +101,7 @@ export interface ListCollaborationIdNamespaceAssociationsCommandOutput
  * @throws {@link CleanRoomsServiceException}
  * <p>Base exception class for all service exceptions from CleanRooms service.</p>
  *
+ *
  * @public
  */
 export class ListCollaborationIdNamespaceAssociationsCommand extends $Command
@@ -111,9 +112,7 @@ export class ListCollaborationIdNamespaceAssociationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CleanRoomsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -125,4 +124,16 @@ export class ListCollaborationIdNamespaceAssociationsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListCollaborationIdNamespaceAssociationsCommand)
   .de(de_ListCollaborationIdNamespaceAssociationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListCollaborationIdNamespaceAssociationsInput;
+      output: ListCollaborationIdNamespaceAssociationsOutput;
+    };
+    sdk: {
+      input: ListCollaborationIdNamespaceAssociationsCommandInput;
+      output: ListCollaborationIdNamespaceAssociationsCommandOutput;
+    };
+  };
+}

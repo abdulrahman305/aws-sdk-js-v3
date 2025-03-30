@@ -74,6 +74,7 @@ export interface DeleteMatchingWorkflowCommandOutput extends DeleteMatchingWorkf
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class DeleteMatchingWorkflowCommand extends $Command
@@ -84,9 +85,7 @@ export class DeleteMatchingWorkflowCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -98,4 +97,16 @@ export class DeleteMatchingWorkflowCommand extends $Command
   .f(void 0, void 0)
   .ser(se_DeleteMatchingWorkflowCommand)
   .de(de_DeleteMatchingWorkflowCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DeleteMatchingWorkflowInput;
+      output: DeleteMatchingWorkflowOutput;
+    };
+    sdk: {
+      input: DeleteMatchingWorkflowCommandInput;
+      output: DeleteMatchingWorkflowCommandOutput;
+    };
+  };
+}

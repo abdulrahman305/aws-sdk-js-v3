@@ -124,6 +124,14 @@ export interface ListSubscriptionRequestsCommandOutput extends ListSubscriptionR
  * //       ],
  * //       reviewerId: "STRING_VALUE",
  * //       decisionComment: "STRING_VALUE",
+ * //       existingSubscriptionId: "STRING_VALUE",
+ * //       metadataFormsSummary: [ // MetadataFormsSummary
+ * //         { // MetadataFormSummary
+ * //           formName: "STRING_VALUE",
+ * //           typeName: "STRING_VALUE", // required
+ * //           typeRevision: "STRING_VALUE", // required
+ * //         },
+ * //       ],
  * //     },
  * //   ],
  * //   nextToken: "STRING_VALUE",
@@ -158,6 +166,7 @@ export interface ListSubscriptionRequestsCommandOutput extends ListSubscriptionR
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListSubscriptionRequestsCommand extends $Command
@@ -168,9 +177,7 @@ export class ListSubscriptionRequestsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -182,4 +189,16 @@ export class ListSubscriptionRequestsCommand extends $Command
   .f(void 0, ListSubscriptionRequestsOutputFilterSensitiveLog)
   .ser(se_ListSubscriptionRequestsCommand)
   .de(de_ListSubscriptionRequestsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListSubscriptionRequestsInput;
+      output: ListSubscriptionRequestsOutput;
+    };
+    sdk: {
+      input: ListSubscriptionRequestsCommandInput;
+      output: ListSubscriptionRequestsCommandOutput;
+    };
+  };
+}

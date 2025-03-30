@@ -32,7 +32,7 @@ export interface ListModelInvocationJobsCommandInput extends ListModelInvocation
 export interface ListModelInvocationJobsCommandOutput extends ListModelInvocationJobsResponse, __MetadataBearer {}
 
 /**
- * <p>Lists all batch inference jobs in the account. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-inference-manage.html#batch-inference-view">View details about a batch inference job</a>.</p>
+ * <p>Lists all batch inference jobs in the account. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-inference-view.html">View details about a batch inference job</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -69,13 +69,23 @@ export interface ListModelInvocationJobsCommandOutput extends ListModelInvocatio
  * //         s3InputDataConfig: { // ModelInvocationJobS3InputDataConfig
  * //           s3InputFormat: "JSONL",
  * //           s3Uri: "STRING_VALUE", // required
+ * //           s3BucketOwner: "STRING_VALUE",
  * //         },
  * //       },
  * //       outputDataConfig: { // ModelInvocationJobOutputDataConfig Union: only one key present
  * //         s3OutputDataConfig: { // ModelInvocationJobS3OutputDataConfig
  * //           s3Uri: "STRING_VALUE", // required
  * //           s3EncryptionKeyId: "STRING_VALUE",
+ * //           s3BucketOwner: "STRING_VALUE",
  * //         },
+ * //       },
+ * //       vpcConfig: { // VpcConfig
+ * //         subnetIds: [ // SubnetIds // required
+ * //           "STRING_VALUE",
+ * //         ],
+ * //         securityGroupIds: [ // SecurityGroupIds // required
+ * //           "STRING_VALUE",
+ * //         ],
  * //       },
  * //       timeoutDurationInHours: Number("int"),
  * //       jobExpirationTime: new Date("TIMESTAMP"),
@@ -106,6 +116,7 @@ export interface ListModelInvocationJobsCommandOutput extends ListModelInvocatio
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class ListModelInvocationJobsCommand extends $Command
@@ -116,9 +127,7 @@ export class ListModelInvocationJobsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -130,4 +139,16 @@ export class ListModelInvocationJobsCommand extends $Command
   .f(void 0, ListModelInvocationJobsResponseFilterSensitiveLog)
   .ser(se_ListModelInvocationJobsCommand)
   .de(de_ListModelInvocationJobsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListModelInvocationJobsRequest;
+      output: ListModelInvocationJobsResponse;
+    };
+    sdk: {
+      input: ListModelInvocationJobsCommandInput;
+      output: ListModelInvocationJobsCommandOutput;
+    };
+  };
+}

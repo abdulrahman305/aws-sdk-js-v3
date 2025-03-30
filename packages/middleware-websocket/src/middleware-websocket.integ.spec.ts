@@ -1,4 +1,5 @@
 import { RekognitionStreaming } from "@aws-sdk/client-rekognitionstreaming";
+import { describe, test as it } from "vitest";
 
 import { requireRequestsFrom } from "../../../private/aws-util-test/src";
 
@@ -15,6 +16,10 @@ describe("middleware-websocket", () => {
       const client = new RekognitionStreaming({
         region: "us-west-2",
         logger,
+        credentials: {
+          accessKeyId: "INTEG",
+          secretAccessKey: "INTEG",
+        },
       });
       requireRequestsFrom(client).toMatch({
         protocol: "wss:",

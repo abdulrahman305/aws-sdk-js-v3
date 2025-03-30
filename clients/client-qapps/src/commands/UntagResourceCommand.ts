@@ -63,8 +63,8 @@ export interface UntagResourceCommandOutput extends UntagResourceResponse, __Met
  *  <p>The requested resource could not be found.</p>
  *
  * @throws {@link ThrottlingException} (client fault)
- *  <p>The requested operation could not be completed because too many
- *       requests were sent at once. Wait a bit and try again later.</p>
+ *  <p>The requested operation could not be completed because too many requests were sent at
+ *       once. Wait a bit and try again later.</p>
  *
  * @throws {@link ValidationException} (client fault)
  *  <p>The input failed to satisfy the constraints specified by the service.</p>
@@ -72,21 +72,24 @@ export interface UntagResourceCommandOutput extends UntagResourceResponse, __Met
  * @throws {@link QAppsServiceException}
  * <p>Base exception class for all service exceptions from QApps service.</p>
  *
- * @public
+ *
  * @example A call to untag a resource
  * ```javascript
  * //
  * const input = {
- *   "resourceARN": "arn:aws:qapps:us-west-2:123456789012:application/3642ba81-344c-42fd-a480-9119a5a5f26b/qapp/7212ff04-de7b-4831-bd80-45d6975ba1b0",
- *   "tagKeys": [
+ *   resourceARN: "arn:aws:qapps:us-west-2:123456789012:application/3642ba81-344c-42fd-a480-9119a5a5f26b/qapp/7212ff04-de7b-4831-bd80-45d6975ba1b0",
+ *   tagKeys: [
  *     "department"
  *   ]
  * };
  * const command = new UntagResourceCommand(input);
- * await client.send(command);
- * // example id: example-1
+ * const response = await client.send(command);
+ * /* response is
+ * { /* metadata only *\/ }
+ * *\/
  * ```
  *
+ * @public
  */
 export class UntagResourceCommand extends $Command
   .classBuilder<
@@ -96,9 +99,7 @@ export class UntagResourceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: QAppsClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -110,4 +111,16 @@ export class UntagResourceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UntagResourceCommand)
   .de(de_UntagResourceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UntagResourceRequest;
+      output: {};
+    };
+    sdk: {
+      input: UntagResourceCommandInput;
+      output: UntagResourceCommandOutput;
+    };
+  };
+}

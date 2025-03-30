@@ -193,12 +193,14 @@ export interface RegisterContainerInstanceCommandOutput extends RegisterContaine
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
  *
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
+ *
  *
  * @public
  */
@@ -210,9 +212,7 @@ export class RegisterContainerInstanceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -224,4 +224,16 @@ export class RegisterContainerInstanceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RegisterContainerInstanceCommand)
   .de(de_RegisterContainerInstanceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RegisterContainerInstanceRequest;
+      output: RegisterContainerInstanceResponse;
+    };
+    sdk: {
+      input: RegisterContainerInstanceCommandInput;
+      output: RegisterContainerInstanceCommandOutput;
+    };
+  };
+}

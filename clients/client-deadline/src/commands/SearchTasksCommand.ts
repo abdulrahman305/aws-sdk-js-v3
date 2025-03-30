@@ -165,6 +165,7 @@ export interface SearchTasksCommandOutput extends SearchTasksResponse, __Metadat
  * @throws {@link DeadlineServiceException}
  * <p>Base exception class for all service exceptions from Deadline service.</p>
  *
+ *
  * @public
  */
 export class SearchTasksCommand extends $Command
@@ -175,9 +176,7 @@ export class SearchTasksCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DeadlineClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -189,4 +188,16 @@ export class SearchTasksCommand extends $Command
   .f(void 0, SearchTasksResponseFilterSensitiveLog)
   .ser(se_SearchTasksCommand)
   .de(de_SearchTasksCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: SearchTasksRequest;
+      output: SearchTasksResponse;
+    };
+    sdk: {
+      input: SearchTasksCommandInput;
+      output: SearchTasksCommandOutput;
+    };
+  };
+}

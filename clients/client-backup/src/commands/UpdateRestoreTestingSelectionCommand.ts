@@ -113,6 +113,7 @@ export interface UpdateRestoreTestingSelectionCommandOutput
  * @throws {@link BackupServiceException}
  * <p>Base exception class for all service exceptions from Backup service.</p>
  *
+ *
  * @public
  */
 export class UpdateRestoreTestingSelectionCommand extends $Command
@@ -123,9 +124,7 @@ export class UpdateRestoreTestingSelectionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BackupClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -137,4 +136,16 @@ export class UpdateRestoreTestingSelectionCommand extends $Command
   .f(UpdateRestoreTestingSelectionInputFilterSensitiveLog, void 0)
   .ser(se_UpdateRestoreTestingSelectionCommand)
   .de(de_UpdateRestoreTestingSelectionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateRestoreTestingSelectionInput;
+      output: UpdateRestoreTestingSelectionOutput;
+    };
+    sdk: {
+      input: UpdateRestoreTestingSelectionCommandInput;
+      output: UpdateRestoreTestingSelectionCommandOutput;
+    };
+  };
+}

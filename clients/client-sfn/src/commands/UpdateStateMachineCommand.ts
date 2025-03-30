@@ -172,6 +172,7 @@ export interface UpdateStateMachineCommandOutput extends UpdateStateMachineOutpu
  * @throws {@link SFNServiceException}
  * <p>Base exception class for all service exceptions from SFN service.</p>
  *
+ *
  * @public
  */
 export class UpdateStateMachineCommand extends $Command
@@ -182,9 +183,7 @@ export class UpdateStateMachineCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SFNClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -196,4 +195,16 @@ export class UpdateStateMachineCommand extends $Command
   .f(UpdateStateMachineInputFilterSensitiveLog, void 0)
   .ser(se_UpdateStateMachineCommand)
   .de(de_UpdateStateMachineCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateStateMachineInput;
+      output: UpdateStateMachineOutput;
+    };
+    sdk: {
+      input: UpdateStateMachineCommandInput;
+      output: UpdateStateMachineCommandOutput;
+    };
+  };
+}

@@ -62,6 +62,10 @@ export interface GetFlowCommandOutput extends GetFlowResponse, __MetadataBearer 
  * //           knowledgeBase: { // KnowledgeBaseFlowNodeConfiguration
  * //             knowledgeBaseId: "STRING_VALUE", // required
  * //             modelId: "STRING_VALUE",
+ * //             guardrailConfiguration: { // GuardrailConfiguration
+ * //               guardrailIdentifier: "STRING_VALUE",
+ * //               guardrailVersion: "STRING_VALUE",
+ * //             },
  * //           },
  * //           condition: { // ConditionFlowNodeConfiguration
  * //             conditions: [ // FlowConditions // required
@@ -81,15 +85,65 @@ export interface GetFlowCommandOutput extends GetFlowResponse, __MetadataBearer 
  * //                 promptArn: "STRING_VALUE", // required
  * //               },
  * //               inline: { // PromptFlowNodeInlineConfiguration
- * //                 templateType: "TEXT", // required
+ * //                 templateType: "TEXT" || "CHAT", // required
  * //                 templateConfiguration: { // PromptTemplateConfiguration Union: only one key present
  * //                   text: { // TextPromptTemplateConfiguration
  * //                     text: "STRING_VALUE", // required
+ * //                     cachePoint: { // CachePointBlock
+ * //                       type: "default", // required
+ * //                     },
  * //                     inputVariables: [ // PromptInputVariablesList
  * //                       { // PromptInputVariable
  * //                         name: "STRING_VALUE",
  * //                       },
  * //                     ],
+ * //                   },
+ * //                   chat: { // ChatPromptTemplateConfiguration
+ * //                     messages: [ // Messages // required
+ * //                       { // Message
+ * //                         role: "user" || "assistant", // required
+ * //                         content: [ // ContentBlocks // required
+ * //                           { // ContentBlock Union: only one key present
+ * //                             text: "STRING_VALUE",
+ * //                             cachePoint: {
+ * //                               type: "default", // required
+ * //                             },
+ * //                           },
+ * //                         ],
+ * //                       },
+ * //                     ],
+ * //                     system: [ // SystemContentBlocks
+ * //                       { // SystemContentBlock Union: only one key present
+ * //                         text: "STRING_VALUE",
+ * //                         cachePoint: "<CachePointBlock>",
+ * //                       },
+ * //                     ],
+ * //                     inputVariables: [
+ * //                       {
+ * //                         name: "STRING_VALUE",
+ * //                       },
+ * //                     ],
+ * //                     toolConfiguration: { // ToolConfiguration
+ * //                       tools: [ // Tools // required
+ * //                         { // Tool Union: only one key present
+ * //                           toolSpec: { // ToolSpecification
+ * //                             name: "STRING_VALUE", // required
+ * //                             description: "STRING_VALUE",
+ * //                             inputSchema: { // ToolInputSchema Union: only one key present
+ * //                               json: "DOCUMENT_VALUE",
+ * //                             },
+ * //                           },
+ * //                           cachePoint: "<CachePointBlock>",
+ * //                         },
+ * //                       ],
+ * //                       toolChoice: { // ToolChoice Union: only one key present
+ * //                         auto: {},
+ * //                         any: {},
+ * //                         tool: { // SpecificToolChoice
+ * //                           name: "STRING_VALUE", // required
+ * //                         },
+ * //                       },
+ * //                     },
  * //                   },
  * //                 },
  * //                 modelId: "STRING_VALUE", // required
@@ -97,14 +151,18 @@ export interface GetFlowCommandOutput extends GetFlowResponse, __MetadataBearer 
  * //                   text: { // PromptModelInferenceConfiguration
  * //                     temperature: Number("float"),
  * //                     topP: Number("float"),
- * //                     topK: Number("int"),
  * //                     maxTokens: Number("int"),
  * //                     stopSequences: [ // StopSequences
  * //                       "STRING_VALUE",
  * //                     ],
  * //                   },
  * //                 },
+ * //                 additionalModelRequestFields: "DOCUMENT_VALUE",
  * //               },
+ * //             },
+ * //             guardrailConfiguration: {
+ * //               guardrailIdentifier: "STRING_VALUE",
+ * //               guardrailVersion: "STRING_VALUE",
  * //             },
  * //           },
  * //           lambdaFunction: { // LambdaFunctionFlowNodeConfiguration
@@ -167,6 +225,100 @@ export interface GetFlowCommandOutput extends GetFlowResponse, __MetadataBearer 
  * //     { // FlowValidation
  * //       message: "STRING_VALUE", // required
  * //       severity: "Warning" || "Error", // required
+ * //       details: { // FlowValidationDetails Union: only one key present
+ * //         cyclicConnection: { // CyclicConnectionFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         duplicateConnections: { // DuplicateConnectionsFlowValidationDetails
+ * //           source: "STRING_VALUE", // required
+ * //           target: "STRING_VALUE", // required
+ * //         },
+ * //         duplicateConditionExpression: { // DuplicateConditionExpressionFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           expression: "STRING_VALUE", // required
+ * //         },
+ * //         unreachableNode: { // UnreachableNodeFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //         },
+ * //         unknownConnectionSource: { // UnknownConnectionSourceFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         unknownConnectionSourceOutput: { // UnknownConnectionSourceOutputFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         unknownConnectionTarget: { // UnknownConnectionTargetFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         unknownConnectionTargetInput: { // UnknownConnectionTargetInputFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         unknownConnectionCondition: { // UnknownConnectionConditionFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         malformedConditionExpression: { // MalformedConditionExpressionFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           condition: "STRING_VALUE", // required
+ * //           cause: "STRING_VALUE", // required
+ * //         },
+ * //         malformedNodeInputExpression: { // MalformedNodeInputExpressionFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           input: "STRING_VALUE", // required
+ * //           cause: "STRING_VALUE", // required
+ * //         },
+ * //         mismatchedNodeInputType: { // MismatchedNodeInputTypeFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           input: "STRING_VALUE", // required
+ * //           expectedType: "String" || "Number" || "Boolean" || "Object" || "Array", // required
+ * //         },
+ * //         mismatchedNodeOutputType: { // MismatchedNodeOutputTypeFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           output: "STRING_VALUE", // required
+ * //           expectedType: "String" || "Number" || "Boolean" || "Object" || "Array", // required
+ * //         },
+ * //         incompatibleConnectionDataType: { // IncompatibleConnectionDataTypeFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         missingConnectionConfiguration: { // MissingConnectionConfigurationFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         missingDefaultCondition: { // MissingDefaultConditionFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //         },
+ * //         missingEndingNodes: {},
+ * //         missingNodeConfiguration: { // MissingNodeConfigurationFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //         },
+ * //         missingNodeInput: { // MissingNodeInputFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           input: "STRING_VALUE", // required
+ * //         },
+ * //         missingNodeOutput: { // MissingNodeOutputFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           output: "STRING_VALUE", // required
+ * //         },
+ * //         missingStartingNodes: {},
+ * //         multipleNodeInputConnections: { // MultipleNodeInputConnectionsFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           input: "STRING_VALUE", // required
+ * //         },
+ * //         unfulfilledNodeInput: { // UnfulfilledNodeInputFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           input: "STRING_VALUE", // required
+ * //         },
+ * //         unsatisfiedConnectionConditions: { // UnsatisfiedConnectionConditionsFlowValidationDetails
+ * //           connection: "STRING_VALUE", // required
+ * //         },
+ * //         unspecified: {},
+ * //         unknownNodeInput: { // UnknownNodeInputFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           input: "STRING_VALUE", // required
+ * //         },
+ * //         unknownNodeOutput: { // UnknownNodeOutputFlowValidationDetails
+ * //           node: "STRING_VALUE", // required
+ * //           output: "STRING_VALUE", // required
+ * //         },
+ * //       },
+ * //       type: "CyclicConnection" || "DuplicateConnections" || "DuplicateConditionExpression" || "UnreachableNode" || "UnknownConnectionSource" || "UnknownConnectionSourceOutput" || "UnknownConnectionTarget" || "UnknownConnectionTargetInput" || "UnknownConnectionCondition" || "MalformedConditionExpression" || "MalformedNodeInputExpression" || "MismatchedNodeInputType" || "MismatchedNodeOutputType" || "IncompatibleConnectionDataType" || "MissingConnectionConfiguration" || "MissingDefaultCondition" || "MissingEndingNodes" || "MissingNodeConfiguration" || "MissingNodeInput" || "MissingNodeOutput" || "MissingStartingNodes" || "MultipleNodeInputConnections" || "UnfulfilledNodeInput" || "UnsatisfiedConnectionConditions" || "Unspecified" || "UnknownNodeInput" || "UnknownNodeOutput",
  * //     },
  * //   ],
  * // };
@@ -197,6 +349,7 @@ export interface GetFlowCommandOutput extends GetFlowResponse, __MetadataBearer 
  * @throws {@link BedrockAgentServiceException}
  * <p>Base exception class for all service exceptions from BedrockAgent service.</p>
  *
+ *
  * @public
  */
 export class GetFlowCommand extends $Command
@@ -207,9 +360,7 @@ export class GetFlowCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockAgentClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -221,4 +372,16 @@ export class GetFlowCommand extends $Command
   .f(void 0, GetFlowResponseFilterSensitiveLog)
   .ser(se_GetFlowCommand)
   .de(de_GetFlowCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetFlowRequest;
+      output: GetFlowResponse;
+    };
+    sdk: {
+      input: GetFlowCommandInput;
+      output: GetFlowCommandOutput;
+    };
+  };
+}

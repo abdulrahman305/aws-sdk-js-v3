@@ -139,6 +139,7 @@ export interface StartExecutionCommandOutput extends StartExecutionOutput, __Met
  * @throws {@link SFNServiceException}
  * <p>Base exception class for all service exceptions from SFN service.</p>
  *
+ *
  * @public
  */
 export class StartExecutionCommand extends $Command
@@ -149,9 +150,7 @@ export class StartExecutionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: SFNClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -163,4 +162,16 @@ export class StartExecutionCommand extends $Command
   .f(StartExecutionInputFilterSensitiveLog, void 0)
   .ser(se_StartExecutionCommand)
   .de(de_StartExecutionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: StartExecutionInput;
+      output: StartExecutionOutput;
+    };
+    sdk: {
+      input: StartExecutionCommandInput;
+      output: StartExecutionCommandOutput;
+    };
+  };
+}

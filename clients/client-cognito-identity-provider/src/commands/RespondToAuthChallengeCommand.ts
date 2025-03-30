@@ -15,7 +15,7 @@ import {
   RespondToAuthChallengeRequestFilterSensitiveLog,
   RespondToAuthChallengeResponse,
   RespondToAuthChallengeResponseFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_RespondToAuthChallengeCommand, se_RespondToAuthChallengeCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -75,7 +75,7 @@ export interface RespondToAuthChallengeCommandOutput extends RespondToAuthChalle
  * const client = new CognitoIdentityProviderClient(config);
  * const input = { // RespondToAuthChallengeRequest
  *   ClientId: "STRING_VALUE", // required
- *   ChallengeName: "SMS_MFA" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED", // required
+ *   ChallengeName: "SMS_MFA" || "EMAIL_OTP" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "SELECT_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED" || "SMS_OTP" || "PASSWORD" || "WEB_AUTHN" || "PASSWORD_SRP", // required
  *   Session: "STRING_VALUE",
  *   ChallengeResponses: { // ChallengeResponsesType
  *     "<keys>": "STRING_VALUE",
@@ -94,7 +94,7 @@ export interface RespondToAuthChallengeCommandOutput extends RespondToAuthChalle
  * const command = new RespondToAuthChallengeCommand(input);
  * const response = await client.send(command);
  * // { // RespondToAuthChallengeResponse
- * //   ChallengeName: "SMS_MFA" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED",
+ * //   ChallengeName: "SMS_MFA" || "EMAIL_OTP" || "SOFTWARE_TOKEN_MFA" || "SELECT_MFA_TYPE" || "MFA_SETUP" || "PASSWORD_VERIFIER" || "CUSTOM_CHALLENGE" || "SELECT_CHALLENGE" || "DEVICE_SRP_AUTH" || "DEVICE_PASSWORD_VERIFIER" || "ADMIN_NO_SRP_AUTH" || "NEW_PASSWORD_REQUIRED" || "SMS_OTP" || "PASSWORD" || "WEB_AUTHN" || "PASSWORD_SRP",
  * //   Session: "STRING_VALUE",
  * //   ChallengeParameters: { // ChallengeParametersType
  * //     "<keys>": "STRING_VALUE",
@@ -141,6 +141,10 @@ export interface RespondToAuthChallengeCommandOutput extends RespondToAuthChalle
  * @throws {@link InternalErrorException} (server fault)
  *  <p>This exception is thrown when Amazon Cognito encounters an internal error.</p>
  *
+ * @throws {@link InvalidEmailRoleAccessPolicyException} (client fault)
+ *  <p>This exception is thrown when Amazon Cognito isn't allowed to use your email identity. HTTP
+ *             status code: 400.</p>
+ *
  * @throws {@link InvalidLambdaResponseException} (client fault)
  *  <p>This exception is thrown when Amazon Cognito encounters an invalid Lambda response.</p>
  *
@@ -158,7 +162,7 @@ export interface RespondToAuthChallengeCommandOutput extends RespondToAuthChalle
  * @throws {@link InvalidSmsRoleTrustRelationshipException} (client fault)
  *  <p>This exception is thrown when the trust relationship is not valid for the role
  *             provided for SMS configuration. This can happen if you don't trust
- *             <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
+ *                 <code>cognito-idp.amazonaws.com</code> or the external ID provided in the role does
  *             not match what is provided in the SMS configuration for the user pool.</p>
  *
  * @throws {@link InvalidUserPoolConfigurationException} (client fault)
@@ -207,6 +211,7 @@ export interface RespondToAuthChallengeCommandOutput extends RespondToAuthChalle
  * @throws {@link CognitoIdentityProviderServiceException}
  * <p>Base exception class for all service exceptions from CognitoIdentityProvider service.</p>
  *
+ *
  * @public
  */
 export class RespondToAuthChallengeCommand extends $Command
@@ -217,9 +222,7 @@ export class RespondToAuthChallengeCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: CognitoIdentityProviderClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -231,4 +234,16 @@ export class RespondToAuthChallengeCommand extends $Command
   .f(RespondToAuthChallengeRequestFilterSensitiveLog, RespondToAuthChallengeResponseFilterSensitiveLog)
   .ser(se_RespondToAuthChallengeCommand)
   .de(de_RespondToAuthChallengeCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RespondToAuthChallengeRequest;
+      output: RespondToAuthChallengeResponse;
+    };
+    sdk: {
+      input: RespondToAuthChallengeCommandInput;
+      output: RespondToAuthChallengeCommandOutput;
+    };
+  };
+}

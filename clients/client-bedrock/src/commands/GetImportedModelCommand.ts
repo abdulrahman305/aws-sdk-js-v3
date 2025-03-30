@@ -53,6 +53,11 @@ export interface GetImportedModelCommandOutput extends GetImportedModelResponse,
  * //   creationTime: new Date("TIMESTAMP"),
  * //   modelArchitecture: "STRING_VALUE",
  * //   modelKmsKeyArn: "STRING_VALUE",
+ * //   instructSupported: true || false,
+ * //   customModelUnits: { // CustomModelUnits
+ * //     customModelUnitsPerModelCopy: Number("int"),
+ * //     customModelUnitsVersion: "STRING_VALUE",
+ * //   },
  * // };
  *
  * ```
@@ -81,6 +86,7 @@ export interface GetImportedModelCommandOutput extends GetImportedModelResponse,
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>
  *
+ *
  * @public
  */
 export class GetImportedModelCommand extends $Command
@@ -91,9 +97,7 @@ export class GetImportedModelCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: BedrockClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -105,4 +109,16 @@ export class GetImportedModelCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetImportedModelCommand)
   .de(de_GetImportedModelCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetImportedModelRequest;
+      output: GetImportedModelResponse;
+    };
+    sdk: {
+      input: GetImportedModelCommandInput;
+      output: GetImportedModelCommandOutput;
+    };
+  };
+}

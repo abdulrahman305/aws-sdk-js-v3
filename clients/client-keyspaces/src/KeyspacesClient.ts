@@ -55,23 +55,28 @@ import {
 } from "./auth/httpAuthSchemeProvider";
 import { CreateKeyspaceCommandInput, CreateKeyspaceCommandOutput } from "./commands/CreateKeyspaceCommand";
 import { CreateTableCommandInput, CreateTableCommandOutput } from "./commands/CreateTableCommand";
+import { CreateTypeCommandInput, CreateTypeCommandOutput } from "./commands/CreateTypeCommand";
 import { DeleteKeyspaceCommandInput, DeleteKeyspaceCommandOutput } from "./commands/DeleteKeyspaceCommand";
 import { DeleteTableCommandInput, DeleteTableCommandOutput } from "./commands/DeleteTableCommand";
+import { DeleteTypeCommandInput, DeleteTypeCommandOutput } from "./commands/DeleteTypeCommand";
 import { GetKeyspaceCommandInput, GetKeyspaceCommandOutput } from "./commands/GetKeyspaceCommand";
 import {
   GetTableAutoScalingSettingsCommandInput,
   GetTableAutoScalingSettingsCommandOutput,
 } from "./commands/GetTableAutoScalingSettingsCommand";
 import { GetTableCommandInput, GetTableCommandOutput } from "./commands/GetTableCommand";
+import { GetTypeCommandInput, GetTypeCommandOutput } from "./commands/GetTypeCommand";
 import { ListKeyspacesCommandInput, ListKeyspacesCommandOutput } from "./commands/ListKeyspacesCommand";
 import { ListTablesCommandInput, ListTablesCommandOutput } from "./commands/ListTablesCommand";
 import {
   ListTagsForResourceCommandInput,
   ListTagsForResourceCommandOutput,
 } from "./commands/ListTagsForResourceCommand";
+import { ListTypesCommandInput, ListTypesCommandOutput } from "./commands/ListTypesCommand";
 import { RestoreTableCommandInput, RestoreTableCommandOutput } from "./commands/RestoreTableCommand";
 import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
+import { UpdateKeyspaceCommandInput, UpdateKeyspaceCommandOutput } from "./commands/UpdateKeyspaceCommand";
 import { UpdateTableCommandInput, UpdateTableCommandOutput } from "./commands/UpdateTableCommand";
 import {
   ClientInputEndpointParameters,
@@ -90,17 +95,22 @@ export { __Client };
 export type ServiceInputTypes =
   | CreateKeyspaceCommandInput
   | CreateTableCommandInput
+  | CreateTypeCommandInput
   | DeleteKeyspaceCommandInput
   | DeleteTableCommandInput
+  | DeleteTypeCommandInput
   | GetKeyspaceCommandInput
   | GetTableAutoScalingSettingsCommandInput
   | GetTableCommandInput
+  | GetTypeCommandInput
   | ListKeyspacesCommandInput
   | ListTablesCommandInput
   | ListTagsForResourceCommandInput
+  | ListTypesCommandInput
   | RestoreTableCommandInput
   | TagResourceCommandInput
   | UntagResourceCommandInput
+  | UpdateKeyspaceCommandInput
   | UpdateTableCommandInput;
 
 /**
@@ -109,17 +119,22 @@ export type ServiceInputTypes =
 export type ServiceOutputTypes =
   | CreateKeyspaceCommandOutput
   | CreateTableCommandOutput
+  | CreateTypeCommandOutput
   | DeleteKeyspaceCommandOutput
   | DeleteTableCommandOutput
+  | DeleteTypeCommandOutput
   | GetKeyspaceCommandOutput
   | GetTableAutoScalingSettingsCommandOutput
   | GetTableCommandOutput
+  | GetTypeCommandOutput
   | ListKeyspacesCommandOutput
   | ListTablesCommandOutput
   | ListTagsForResourceCommandOutput
+  | ListTypesCommandOutput
   | RestoreTableCommandOutput
   | TagResourceCommandOutput
   | UntagResourceCommandOutput
+  | UpdateKeyspaceCommandOutput
   | UpdateTableCommandOutput;
 
 /**
@@ -212,6 +227,25 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The AWS region to which this client will send requests
    */
   region?: string | __Provider<string>;
+
+  /**
+   * Setting a client profile is similar to setting a value for the
+   * AWS_PROFILE environment variable. Setting a profile on a client
+   * in code only affects the single client instance, unlike AWS_PROFILE.
+   *
+   * When set, and only for environments where an AWS configuration
+   * file exists, fields configurable by this file will be retrieved
+   * from the specified profile within that file.
+   * Conflicting code configuration and environment variables will
+   * still have higher priority.
+   *
+   * For client credential resolution that involves checking the AWS
+   * configuration file, the client's profile (this value) will be
+   * used unless a different profile is set in the credential
+   * provider options.
+   *
+   */
+  profile?: string;
 
   /**
    * The provider populating default tracking information to be sent with `user-agent`, `x-amz-user-agent` header
@@ -323,6 +357,8 @@ export class KeyspacesClient extends __Client<
 
   constructor(...[configuration]: __CheckOptionalClientConfig<KeyspacesClientConfig>) {
     const _config_0 = __getRuntimeConfig(configuration || {});
+    super(_config_0 as any);
+    this.initConfig = _config_0;
     const _config_1 = resolveClientEndpointParameters(_config_0);
     const _config_2 = resolveUserAgentConfig(_config_1);
     const _config_3 = resolveRetryConfig(_config_2);
@@ -331,7 +367,6 @@ export class KeyspacesClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveHttpAuthSchemeConfig(_config_6);
     const _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
-    super(_config_8);
     this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));

@@ -65,7 +65,7 @@ export interface ListResourceGroupingRecommendationsCommandOutput
  * //           resourceType: "STRING_VALUE", // required
  * //           physicalResourceId: { // PhysicalResourceId
  * //             identifier: "STRING_VALUE", // required
- * //             type: "STRING_VALUE", // required
+ * //             type: "Arn" || "Native", // required
  * //             awsRegion: "STRING_VALUE",
  * //             awsAccountId: "STRING_VALUE",
  * //           },
@@ -85,10 +85,10 @@ export interface ListResourceGroupingRecommendationsCommandOutput
  * //       recommendationReasons: [ // required
  * //         "STRING_VALUE",
  * //       ],
- * //       status: "STRING_VALUE", // required
- * //       confidenceLevel: "STRING_VALUE", // required
+ * //       status: "Accepted" || "Rejected" || "PendingDecision", // required
+ * //       confidenceLevel: "High" || "Medium", // required
  * //       creationTime: new Date("TIMESTAMP"), // required
- * //       rejectionReason: "STRING_VALUE",
+ * //       rejectionReason: "DistinctBusinessPurpose" || "SeparateDataConcern" || "DistinctUserGroupHandling" || "Other",
  * //     },
  * //   ],
  * //   nextToken: "STRING_VALUE",
@@ -123,6 +123,7 @@ export interface ListResourceGroupingRecommendationsCommandOutput
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class ListResourceGroupingRecommendationsCommand extends $Command
@@ -133,9 +134,7 @@ export class ListResourceGroupingRecommendationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -147,4 +146,16 @@ export class ListResourceGroupingRecommendationsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListResourceGroupingRecommendationsCommand)
   .de(de_ListResourceGroupingRecommendationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListResourceGroupingRecommendationsRequest;
+      output: ListResourceGroupingRecommendationsResponse;
+    };
+    sdk: {
+      input: ListResourceGroupingRecommendationsCommandInput;
+      output: ListResourceGroupingRecommendationsCommandOutput;
+    };
+  };
+}

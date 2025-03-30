@@ -49,7 +49,7 @@ export interface RejectResourceGroupingRecommendationsCommandOutput
  *   entries: [ // RejectGroupingRecommendationEntries // required
  *     { // RejectGroupingRecommendationEntry
  *       groupingRecommendationId: "STRING_VALUE", // required
- *       rejectionReason: "STRING_VALUE",
+ *       rejectionReason: "DistinctBusinessPurpose" || "SeparateDataConcern" || "DistinctUserGroupHandling" || "Other",
  *     },
  *   ],
  * };
@@ -94,6 +94,7 @@ export interface RejectResourceGroupingRecommendationsCommandOutput
  * @throws {@link ResiliencehubServiceException}
  * <p>Base exception class for all service exceptions from Resiliencehub service.</p>
  *
+ *
  * @public
  */
 export class RejectResourceGroupingRecommendationsCommand extends $Command
@@ -104,9 +105,7 @@ export class RejectResourceGroupingRecommendationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ResiliencehubClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -118,4 +117,16 @@ export class RejectResourceGroupingRecommendationsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_RejectResourceGroupingRecommendationsCommand)
   .de(de_RejectResourceGroupingRecommendationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: RejectResourceGroupingRecommendationsRequest;
+      output: RejectResourceGroupingRecommendationsResponse;
+    };
+    sdk: {
+      input: RejectResourceGroupingRecommendationsCommandInput;
+      output: RejectResourceGroupingRecommendationsCommandOutput;
+    };
+  };
+}

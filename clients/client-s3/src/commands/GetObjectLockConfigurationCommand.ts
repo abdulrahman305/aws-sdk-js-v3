@@ -30,7 +30,7 @@ export interface GetObjectLockConfigurationCommandOutput extends GetObjectLockCo
 
 /**
  * <note>
- *             <p>This operation is not supported by directory buckets.</p>
+ *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
  *          <p>Gets the Object Lock configuration for a bucket. The rule specified in the Object Lock
  *          configuration will be applied by default to every new object placed in the specified
@@ -79,6 +79,7 @@ export interface GetObjectLockConfigurationCommandOutput extends GetObjectLockCo
  * @throws {@link S3ServiceException}
  * <p>Base exception class for all service exceptions from S3 service.</p>
  *
+ *
  * @public
  */
 export class GetObjectLockConfigurationCommand extends $Command
@@ -105,4 +106,16 @@ export class GetObjectLockConfigurationCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetObjectLockConfigurationCommand)
   .de(de_GetObjectLockConfigurationCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetObjectLockConfigurationRequest;
+      output: GetObjectLockConfigurationOutput;
+    };
+    sdk: {
+      input: GetObjectLockConfigurationCommandInput;
+      output: GetObjectLockConfigurationCommandOutput;
+    };
+  };
+}

@@ -69,6 +69,8 @@ export interface DescribeChimeWebhookConfigurationsCommandOutput
  * //           TagValue: "STRING_VALUE", // required
  * //         },
  * //       ],
+ * //       State: "STRING_VALUE",
+ * //       StateReason: "STRING_VALUE",
  * //     },
  * //   ],
  * // };
@@ -93,6 +95,7 @@ export interface DescribeChimeWebhookConfigurationsCommandOutput
  * @throws {@link ChatbotServiceException}
  * <p>Base exception class for all service exceptions from Chatbot service.</p>
  *
+ *
  * @public
  */
 export class DescribeChimeWebhookConfigurationsCommand extends $Command
@@ -103,9 +106,7 @@ export class DescribeChimeWebhookConfigurationsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ChatbotClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -117,4 +118,16 @@ export class DescribeChimeWebhookConfigurationsCommand extends $Command
   .f(void 0, DescribeChimeWebhookConfigurationsResultFilterSensitiveLog)
   .ser(se_DescribeChimeWebhookConfigurationsCommand)
   .de(de_DescribeChimeWebhookConfigurationsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: DescribeChimeWebhookConfigurationsRequest;
+      output: DescribeChimeWebhookConfigurationsResult;
+    };
+    sdk: {
+      input: DescribeChimeWebhookConfigurationsCommandInput;
+      output: DescribeChimeWebhookConfigurationsCommandOutput;
+    };
+  };
+}

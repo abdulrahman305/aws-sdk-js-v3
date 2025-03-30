@@ -79,6 +79,7 @@ export interface ListServicesByNamespaceCommandOutput extends ListServicesByName
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
  *
  * @throws {@link NamespaceNotFoundException} (client fault)
  *  <p>The specified namespace wasn't found.</p>
@@ -88,6 +89,7 @@ export interface ListServicesByNamespaceCommandOutput extends ListServicesByName
  *
  * @throws {@link ECSServiceException}
  * <p>Base exception class for all service exceptions from ECS service.</p>
+ *
  *
  * @public
  */
@@ -99,9 +101,7 @@ export class ListServicesByNamespaceCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: ECSClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -113,4 +113,16 @@ export class ListServicesByNamespaceCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListServicesByNamespaceCommand)
   .de(de_ListServicesByNamespaceCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListServicesByNamespaceRequest;
+      output: ListServicesByNamespaceResponse;
+    };
+    sdk: {
+      input: ListServicesByNamespaceCommandInput;
+      output: ListServicesByNamespaceCommandOutput;
+    };
+  };
+}

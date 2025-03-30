@@ -85,6 +85,7 @@ export interface ListDataProductRevisionsCommandOutput extends ListDataProductRe
  * @throws {@link DataZoneServiceException}
  * <p>Base exception class for all service exceptions from DataZone service.</p>
  *
+ *
  * @public
  */
 export class ListDataProductRevisionsCommand extends $Command
@@ -95,9 +96,7 @@ export class ListDataProductRevisionsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: DataZoneClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -109,4 +108,16 @@ export class ListDataProductRevisionsCommand extends $Command
   .f(void 0, void 0)
   .ser(se_ListDataProductRevisionsCommand)
   .de(de_ListDataProductRevisionsCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: ListDataProductRevisionsInput;
+      output: ListDataProductRevisionsOutput;
+    };
+    sdk: {
+      input: ListDataProductRevisionsCommandInput;
+      output: ListDataProductRevisionsCommandOutput;
+    };
+  };
+}

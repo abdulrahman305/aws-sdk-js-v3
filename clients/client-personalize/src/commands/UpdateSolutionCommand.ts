@@ -82,6 +82,7 @@ export interface UpdateSolutionCommandOutput extends UpdateSolutionResponse, __M
  * @throws {@link PersonalizeServiceException}
  * <p>Base exception class for all service exceptions from Personalize service.</p>
  *
+ *
  * @public
  */
 export class UpdateSolutionCommand extends $Command
@@ -92,9 +93,7 @@ export class UpdateSolutionCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: PersonalizeClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -106,4 +105,16 @@ export class UpdateSolutionCommand extends $Command
   .f(void 0, void 0)
   .ser(se_UpdateSolutionCommand)
   .de(de_UpdateSolutionCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: UpdateSolutionRequest;
+      output: UpdateSolutionResponse;
+    };
+    sdk: {
+      input: UpdateSolutionCommandInput;
+      output: UpdateSolutionCommandOutput;
+    };
+  };
+}

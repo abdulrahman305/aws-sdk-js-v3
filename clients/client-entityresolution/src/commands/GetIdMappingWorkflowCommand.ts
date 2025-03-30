@@ -115,6 +115,7 @@ export interface GetIdMappingWorkflowCommandOutput extends GetIdMappingWorkflowO
  * @throws {@link EntityResolutionServiceException}
  * <p>Base exception class for all service exceptions from EntityResolution service.</p>
  *
+ *
  * @public
  */
 export class GetIdMappingWorkflowCommand extends $Command
@@ -125,9 +126,7 @@ export class GetIdMappingWorkflowCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
-  .ep({
-    ...commonParams,
-  })
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: EntityResolutionClientResolvedConfig, o: any) {
     return [
       getSerdePlugin(config, this.serialize, this.deserialize),
@@ -139,4 +138,16 @@ export class GetIdMappingWorkflowCommand extends $Command
   .f(void 0, void 0)
   .ser(se_GetIdMappingWorkflowCommand)
   .de(de_GetIdMappingWorkflowCommand)
-  .build() {}
+  .build() {
+  /** @internal type navigation helper, not in runtime. */
+  protected declare static __types: {
+    api: {
+      input: GetIdMappingWorkflowInput;
+      output: GetIdMappingWorkflowOutput;
+    };
+    sdk: {
+      input: GetIdMappingWorkflowCommandInput;
+      output: GetIdMappingWorkflowCommandOutput;
+    };
+  };
+}
