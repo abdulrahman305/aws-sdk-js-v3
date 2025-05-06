@@ -22,9 +22,9 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-polly": "*",
-    "@aws-sdk/types": "*",
-    "@aws-sdk/util-format-url": "*",
+    "@aws-sdk/client-polly": "3.598.0",
+    "@aws-sdk/types": "3.0.0",
+    "@aws-sdk/util-format-url": "3.0.0",
     "@smithy/protocol-http": "^5.1.0",
     "@smithy/signature-v4": "^5.0.2",
     "@smithy/types": "^4.2.0",
