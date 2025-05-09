@@ -64,7 +64,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
-    "@cucumber/cucumber": "8.5.3",
+    "@cucumber/cucumber": "9.5.0",
     "@cucumber/pretty-formatter": "^1.0.0",
     "@fastify/formbody": "^7.4.0",
     "@microsoft/api-extractor": "7.34.4",
@@ -76,7 +76,7 @@
     "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.55.0",
     "async": "3.2.4",
-    "concurrently": "7.0.0",
+    "concurrently": "9.0.0",
     "decomment": "0.9.5",
     "downlevel-dts": "0.10.1",
     "esbuild": "0.25.0",
