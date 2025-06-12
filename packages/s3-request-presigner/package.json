@@ -22,7 +22,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/signature-v4-multi-region": "*",
+    "@aws-sdk/signature-v4-multi-region": "3.66.0",
     "@aws-sdk/types": "*",
     "@aws-sdk/util-format-url": "*",
     "@smithy/middleware-endpoint": "^4.1.0",
