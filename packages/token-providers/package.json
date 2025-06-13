@@ -27,8 +27,8 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/nested-clients": "*",
-    "@aws-sdk/types": "*",
+    "@aws-sdk/nested-clients": "3.730.0",
+    "@aws-sdk/types": "3.0.0",
     "@smithy/property-provider": "^4.0.2",
     "@smithy/shared-ini-file-loader": "^4.0.2",
     "@smithy/types": "^4.2.0",
