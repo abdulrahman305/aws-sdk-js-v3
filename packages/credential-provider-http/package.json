@@ -27,8 +27,8 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/core": "*",
-    "@aws-sdk/types": "*",
+    "@aws-sdk/core": "3.429.0",
+    "@aws-sdk/types": "3.0.0",
     "@smithy/fetch-http-handler": "^5.0.2",
     "@smithy/node-http-handler": "^4.0.4",
     "@smithy/property-provider": "^4.0.2",
