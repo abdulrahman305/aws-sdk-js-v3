@@ -30,7 +30,7 @@
     "@aws-sdk/types": "*",
     "@aws-sdk/util-endpoints": "*",
     "@aws-sdk/util-user-agent-browser": "*",
-    "@aws-sdk/util-user-agent-node": "*",
+    "@aws-sdk/util-user-agent-node": "3.0.0",
     "@smithy/config-resolver": "^4.1.0",
     "@smithy/core": "^3.2.0",
     "@smithy/fetch-http-handler": "^5.0.2",
