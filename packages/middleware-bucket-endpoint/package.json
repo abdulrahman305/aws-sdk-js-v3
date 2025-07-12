@@ -23,7 +23,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@aws-sdk/types": "*",
-    "@aws-sdk/util-arn-parser": "*",
+    "@aws-sdk/util-arn-parser": "3.0.0",
     "@smithy/node-config-provider": "^4.0.2",
     "@smithy/protocol-http": "^5.1.0",
     "@smithy/types": "^4.2.0",
