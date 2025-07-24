@@ -22,7 +22,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/crt-loader": "*",
+    "@aws-sdk/crt-loader": "3.713.0",
     "@aws-sdk/signature-v4-multi-region": "*",
     "@aws-sdk/types": "*",
     "@smithy/querystring-parser": "^4.0.2",
