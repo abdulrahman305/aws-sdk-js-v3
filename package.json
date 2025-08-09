@@ -98,7 +98,7 @@
     "jmespath": "^0.15.0",
     "json5": "^2.2.0",
     "kill-port": "^2.0.1",
-    "lerna": "5.5.2",
+    "lerna": "6.5.0",
     "lint-staged": "^10.0.1",
     "prettier": "2.8.5",
     "rimraf": "3.0.2",
