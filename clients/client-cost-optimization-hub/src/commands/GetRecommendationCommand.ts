@@ -32,11 +32,7 @@ export interface GetRecommendationCommandInput extends GetRecommendationRequest 
 export interface GetRecommendationCommandOutput extends GetRecommendationResponse, __MetadataBearer {}
 
 /**
- * <p>Returns both the current and recommended resource configuration and the estimated cost
- *       impact for a recommendation.</p>
- *          <p>The <code>recommendationId</code> is only valid for up to a maximum of 24 hours as
- *       recommendations are refreshed daily. To retrieve the <code>recommendationId</code>, use the
- *         <code>ListRecommendations</code> API.</p>
+ * <p>Returns both the current and recommended resource configuration and the estimated cost impact for a recommendation.</p> <p>The <code>recommendationId</code> is only valid for up to a maximum of 24 hours as recommendations are refreshed daily. To retrieve the <code>recommendationId</code>, use the <code>ListRecommendations</code> API.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -58,8 +54,8 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //   costCalculationLookbackPeriodInDays: Number("int"),
  * //   estimatedSavingsPercentage: Number("double"),
  * //   estimatedSavingsOverCostCalculationLookbackPeriod: Number("double"),
- * //   currentResourceType: "Ec2Instance" || "LambdaFunction" || "EbsVolume" || "EcsService" || "Ec2AutoScalingGroup" || "Ec2InstanceSavingsPlans" || "ComputeSavingsPlans" || "SageMakerSavingsPlans" || "Ec2ReservedInstances" || "RdsReservedInstances" || "OpenSearchReservedInstances" || "RedshiftReservedInstances" || "ElastiCacheReservedInstances" || "RdsDbInstanceStorage" || "RdsDbInstance",
- * //   recommendedResourceType: "Ec2Instance" || "LambdaFunction" || "EbsVolume" || "EcsService" || "Ec2AutoScalingGroup" || "Ec2InstanceSavingsPlans" || "ComputeSavingsPlans" || "SageMakerSavingsPlans" || "Ec2ReservedInstances" || "RdsReservedInstances" || "OpenSearchReservedInstances" || "RedshiftReservedInstances" || "ElastiCacheReservedInstances" || "RdsDbInstanceStorage" || "RdsDbInstance",
+ * //   currentResourceType: "Ec2Instance" || "LambdaFunction" || "EbsVolume" || "EcsService" || "Ec2AutoScalingGroup" || "Ec2InstanceSavingsPlans" || "ComputeSavingsPlans" || "SageMakerSavingsPlans" || "Ec2ReservedInstances" || "RdsReservedInstances" || "OpenSearchReservedInstances" || "RedshiftReservedInstances" || "ElastiCacheReservedInstances" || "RdsDbInstanceStorage" || "RdsDbInstance" || "AuroraDbClusterStorage" || "DynamoDbReservedCapacity" || "MemoryDbReservedInstances",
+ * //   recommendedResourceType: "Ec2Instance" || "LambdaFunction" || "EbsVolume" || "EcsService" || "Ec2AutoScalingGroup" || "Ec2InstanceSavingsPlans" || "ComputeSavingsPlans" || "SageMakerSavingsPlans" || "Ec2ReservedInstances" || "RdsReservedInstances" || "OpenSearchReservedInstances" || "RedshiftReservedInstances" || "ElastiCacheReservedInstances" || "RdsDbInstanceStorage" || "RdsDbInstance" || "AuroraDbClusterStorage" || "DynamoDbReservedCapacity" || "MemoryDbReservedInstances",
  * //   region: "STRING_VALUE",
  * //   source: "ComputeOptimizer" || "CostExplorer",
  * //   lastRefreshTimestamp: new Date("TIMESTAMP"),
@@ -233,20 +229,20 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: { // Ec2ReservedInstancesConfiguration
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         offeringClass: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         currentGeneration: "STRING_VALUE",
  * //         platform: "STRING_VALUE",
  * //         tenancy: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //       },
  * //       costCalculation: { // ReservedInstancesCostCalculation
  * //         pricing: { // ReservedInstancesPricing
@@ -261,17 +257,17 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: { // RdsReservedInstancesConfiguration
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
  * //         currentGeneration: "STRING_VALUE",
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //         licenseModel: "STRING_VALUE",
  * //         databaseEdition: "STRING_VALUE",
  * //         databaseEngine: "STRING_VALUE",
@@ -290,17 +286,17 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: { // ElastiCacheReservedInstancesConfiguration
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         currentGeneration: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //       },
  * //       costCalculation: {
  * //         pricing: {
@@ -315,16 +311,16 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: { // OpenSearchReservedInstancesConfiguration
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
- * //         numberOfInstancesToPurchase: "STRING_VALUE",
- * //         instanceType: "STRING_VALUE",
  * //         reservedInstancesRegion: "STRING_VALUE",
- * //         currentGeneration: "STRING_VALUE",
- * //         sizeFlexEligible: true || false,
  * //         upfrontCost: "STRING_VALUE",
  * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
+ * //         numberOfInstancesToPurchase: "STRING_VALUE",
+ * //         instanceType: "STRING_VALUE",
+ * //         currentGeneration: "STRING_VALUE",
+ * //         sizeFlexEligible: true || false,
  * //       },
  * //       costCalculation: {
  * //         pricing: {
@@ -339,17 +335,17 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: { // RedshiftReservedInstancesConfiguration
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
  * //         currentGeneration: "STRING_VALUE",
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //       },
  * //       costCalculation: {
  * //         pricing: {
@@ -427,6 +423,44 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       },
  * //       costCalculation: "<ResourceCostCalculation>",
  * //     },
+ * //     auroraDbClusterStorage: { // AuroraDbClusterStorage
+ * //       configuration: { // AuroraDbClusterStorageConfiguration
+ * //         storageType: "STRING_VALUE",
+ * //       },
+ * //       costCalculation: "<ResourceCostCalculation>",
+ * //     },
+ * //     dynamoDbReservedCapacity: { // DynamoDbReservedCapacity
+ * //       configuration: { // DynamoDbReservedCapacityConfiguration
+ * //         accountScope: "STRING_VALUE",
+ * //         service: "STRING_VALUE",
+ * //         term: "STRING_VALUE",
+ * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         numberOfCapacityUnitsToPurchase: "STRING_VALUE",
+ * //         capacityUnits: "STRING_VALUE",
+ * //       },
+ * //       costCalculation: "<ReservedInstancesCostCalculation>",
+ * //     },
+ * //     memoryDbReservedInstances: { // MemoryDbReservedInstances
+ * //       configuration: { // MemoryDbReservedInstancesConfiguration
+ * //         accountScope: "STRING_VALUE",
+ * //         service: "STRING_VALUE",
+ * //         term: "STRING_VALUE",
+ * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
+ * //         numberOfInstancesToPurchase: "STRING_VALUE",
+ * //         instanceType: "STRING_VALUE",
+ * //         instanceFamily: "STRING_VALUE",
+ * //         sizeFlexEligible: true || false,
+ * //         currentGeneration: "STRING_VALUE",
+ * //       },
+ * //       costCalculation: "<ReservedInstancesCostCalculation>",
+ * //     },
  * //   },
  * //   recommendedResourceDetails: {//  Union: only one key present
  * //     lambdaFunction: {
@@ -492,20 +526,20 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: {
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         offeringClass: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         currentGeneration: "STRING_VALUE",
  * //         platform: "STRING_VALUE",
  * //         tenancy: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //       },
  * //       costCalculation: "<ReservedInstancesCostCalculation>",
  * //     },
@@ -513,17 +547,17 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: {
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
  * //         currentGeneration: "STRING_VALUE",
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //         licenseModel: "STRING_VALUE",
  * //         databaseEdition: "STRING_VALUE",
  * //         databaseEngine: "STRING_VALUE",
@@ -535,17 +569,17 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: {
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         currentGeneration: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //       },
  * //       costCalculation: "<ReservedInstancesCostCalculation>",
  * //     },
@@ -553,16 +587,16 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: {
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
- * //         numberOfInstancesToPurchase: "STRING_VALUE",
- * //         instanceType: "STRING_VALUE",
  * //         reservedInstancesRegion: "STRING_VALUE",
- * //         currentGeneration: "STRING_VALUE",
- * //         sizeFlexEligible: true || false,
  * //         upfrontCost: "STRING_VALUE",
  * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
+ * //         numberOfInstancesToPurchase: "STRING_VALUE",
+ * //         instanceType: "STRING_VALUE",
+ * //         currentGeneration: "STRING_VALUE",
+ * //         sizeFlexEligible: true || false,
  * //       },
  * //       costCalculation: "<ReservedInstancesCostCalculation>",
  * //     },
@@ -570,17 +604,17 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       configuration: {
  * //         accountScope: "STRING_VALUE",
  * //         service: "STRING_VALUE",
- * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         term: "STRING_VALUE",
  * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
  * //         numberOfInstancesToPurchase: "STRING_VALUE",
  * //         instanceFamily: "STRING_VALUE",
  * //         instanceType: "STRING_VALUE",
- * //         reservedInstancesRegion: "STRING_VALUE",
  * //         sizeFlexEligible: true || false,
  * //         currentGeneration: "STRING_VALUE",
- * //         upfrontCost: "STRING_VALUE",
- * //         monthlyRecurringCost: "STRING_VALUE",
  * //       },
  * //       costCalculation: "<ReservedInstancesCostCalculation>",
  * //     },
@@ -644,6 +678,44 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  * //       },
  * //       costCalculation: "<ResourceCostCalculation>",
  * //     },
+ * //     auroraDbClusterStorage: {
+ * //       configuration: {
+ * //         storageType: "STRING_VALUE",
+ * //       },
+ * //       costCalculation: "<ResourceCostCalculation>",
+ * //     },
+ * //     dynamoDbReservedCapacity: {
+ * //       configuration: {
+ * //         accountScope: "STRING_VALUE",
+ * //         service: "STRING_VALUE",
+ * //         term: "STRING_VALUE",
+ * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         numberOfCapacityUnitsToPurchase: "STRING_VALUE",
+ * //         capacityUnits: "STRING_VALUE",
+ * //       },
+ * //       costCalculation: "<ReservedInstancesCostCalculation>",
+ * //     },
+ * //     memoryDbReservedInstances: {
+ * //       configuration: {
+ * //         accountScope: "STRING_VALUE",
+ * //         service: "STRING_VALUE",
+ * //         term: "STRING_VALUE",
+ * //         paymentOption: "STRING_VALUE",
+ * //         reservedInstancesRegion: "STRING_VALUE",
+ * //         upfrontCost: "STRING_VALUE",
+ * //         monthlyRecurringCost: "STRING_VALUE",
+ * //         normalizedUnitsToPurchase: "STRING_VALUE",
+ * //         numberOfInstancesToPurchase: "STRING_VALUE",
+ * //         instanceType: "STRING_VALUE",
+ * //         instanceFamily: "STRING_VALUE",
+ * //         sizeFlexEligible: true || false,
+ * //         currentGeneration: "STRING_VALUE",
+ * //       },
+ * //       costCalculation: "<ReservedInstancesCostCalculation>",
+ * //     },
  * //   },
  * //   tags: [ // TagList
  * //     { // Tag
@@ -665,8 +737,7 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  *  <p>You are not authorized to use this operation with the given parameters.</p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>An error on the server occurred during the processing of your request. Try again
- *       later.</p>
+ *  <p>An error on the server occurred during the processing of your request. Try again later.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The specified Amazon Resource Name (ARN) in the request doesn't exist.</p>
@@ -675,8 +746,7 @@ export interface GetRecommendationCommandOutput extends GetRecommendationRespons
  *  <p>The request was denied due to request throttling.</p>
  *
  * @throws {@link ValidationException} (client fault)
- *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services
- *       service.</p>
+ *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>
  *
  * @throws {@link CostOptimizationHubServiceException}
  * <p>Base exception class for all service exceptions from CostOptimizationHub service.</p>

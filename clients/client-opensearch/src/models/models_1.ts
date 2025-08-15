@@ -21,6 +21,7 @@ import {
   DirectQueryDataSourceType,
   DomainConfig,
   DomainEndpointOptions,
+  DomainInfo,
   DomainPackageDetails,
   DryRunProgressStatus,
   DryRunResults,
@@ -50,6 +51,67 @@ import {
 } from "./models_0";
 
 import { OpenSearchServiceException as __BaseException } from "./OpenSearchServiceException";
+
+/**
+ * <p>The results of a <code>ListDomainNames</code> operation. Contains the names of all domains
+ *    owned by this account and their respective engine types.</p>
+ * @public
+ */
+export interface ListDomainNamesResponse {
+  /**
+   * <p>The names of all OpenSearch Service domains owned by the current user and their respective
+   *    engine types.</p>
+   * @public
+   */
+  DomainNames?: DomainInfo[] | undefined;
+}
+
+/**
+ * <p>Container for the request parameters to the <code>ListDomainsForPackage</code> operation.</p>
+ * @public
+ */
+export interface ListDomainsForPackageRequest {
+  /**
+   * <p>The unique identifier of the package for which to list associated domains.</p>
+   * @public
+   */
+  PackageID: string | undefined;
+
+  /**
+   * <p>An optional parameter that specifies the maximum number of results to return. You can use
+   *     <code>nextToken</code> to get the next page of results.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+
+  /**
+   * <p>If your initial <code>ListDomainsForPackage</code> operation returns a
+   *     <code>nextToken</code>, you can include the returned <code>nextToken</code> in subsequent
+   *     <code>ListDomainsForPackage</code> operations, which returns results in the next page.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * <p>Container for the response parameters to the <code>ListDomainsForPackage</code> operation.</p>
+ * @public
+ */
+export interface ListDomainsForPackageResponse {
+  /**
+   * <p>Information about all domains associated with a package.</p>
+   * @public
+   */
+  DomainPackageDetailsList?: DomainPackageDetails[] | undefined;
+
+  /**
+   * <p>When <code>nextToken</code> is returned, there are more results available. The value of
+   *     <code>nextToken</code> is a unique pagination token for each page. Send the request again using the
+   *    returned token to retrieve the next page.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
 
 /**
  * @public
@@ -750,19 +812,19 @@ export interface StartServiceSoftwareUpdateResponse {
  */
 export interface UpdateApplicationRequest {
   /**
-   * <p>Unique identifier of the OpenSearch Application to be updated.</p>
+   * <p>The unique identifier for the OpenSearch application to be updated.</p>
    * @public
    */
   id: string | undefined;
 
   /**
-   * <p>Data sources to be associated with the OpenSearch Application.</p>
+   * <p>The data sources to associate with the OpenSearch application.</p>
    * @public
    */
   dataSources?: DataSource[] | undefined;
 
   /**
-   * <p>Configurations to be changed for the OpenSearch Application.</p>
+   * <p>The configuration settings to modify for the OpenSearch application.</p>
    * @public
    */
   appConfigs?: AppConfig[] | undefined;
@@ -773,13 +835,13 @@ export interface UpdateApplicationRequest {
  */
 export interface UpdateApplicationResponse {
   /**
-   * <p>Unique identifier of the updated OpenSearch Application.</p>
+   * <p>The unique identifier of the updated OpenSearch application.</p>
    * @public
    */
   id?: string | undefined;
 
   /**
-   * <p>Name of the updated OpenSearch Application.</p>
+   * <p>The name of the updated OpenSearch application.</p>
    * @public
    */
   name?: string | undefined;
@@ -793,31 +855,31 @@ export interface UpdateApplicationResponse {
   arn?: string | undefined;
 
   /**
-   * <p>Data sources associated with the updated OpenSearch Application.</p>
+   * <p>The data sources associated with the updated OpenSearch application.</p>
    * @public
    */
   dataSources?: DataSource[] | undefined;
 
   /**
-   * <p>IAM Identity Center settings for the updated OpenSearch Application.</p>
+   * <p>The IAM Identity Center configuration for the updated OpenSearch application.</p>
    * @public
    */
   iamIdentityCenterOptions?: IamIdentityCenterOptions | undefined;
 
   /**
-   * <p>Configurations for the updated OpenSearch Application.</p>
+   * <p>The configuration settings for the updated OpenSearch application.</p>
    * @public
    */
   appConfigs?: AppConfig[] | undefined;
 
   /**
-   * <p>Timestamp at which the OpenSearch Application was created.</p>
+   * <p>The timestamp when the OpenSearch application was originally created.</p>
    * @public
    */
   createdAt?: Date | undefined;
 
   /**
-   * <p>Timestamp at which the OpenSearch Application was last updated.</p>
+   * <p>The timestamp when the OpenSearch application was last updated.</p>
    * @public
    */
   lastUpdatedAt?: Date | undefined;
@@ -1063,7 +1125,7 @@ export interface UpdateDomainConfigRequest {
   AdvancedSecurityOptions?: AdvancedSecurityOptionsInput | undefined;
 
   /**
-   * <p>Container for IAM Identity Center Options settings.</p>
+   * <p>Configuration settings for enabling and managing IAM Identity Center.</p>
    * @public
    */
   IdentityCenterOptions?: IdentityCenterOptionsInput | undefined;

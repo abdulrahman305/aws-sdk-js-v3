@@ -192,6 +192,7 @@ import {
 } from "./commands/GetLogAnomalyDetectorCommand";
 import { GetLogEventsCommandInput, GetLogEventsCommandOutput } from "./commands/GetLogEventsCommand";
 import { GetLogGroupFieldsCommandInput, GetLogGroupFieldsCommandOutput } from "./commands/GetLogGroupFieldsCommand";
+import { GetLogObjectCommandInput, GetLogObjectCommandOutput } from "./commands/GetLogObjectCommand";
 import { GetLogRecordCommandInput, GetLogRecordCommandOutput } from "./commands/GetLogRecordCommand";
 import { GetQueryResultsCommandInput, GetQueryResultsCommandOutput } from "./commands/GetQueryResultsCommand";
 import { GetTransformerCommandInput, GetTransformerCommandOutput } from "./commands/GetTransformerCommand";
@@ -201,6 +202,7 @@ import {
   ListLogAnomalyDetectorsCommandInput,
   ListLogAnomalyDetectorsCommandOutput,
 } from "./commands/ListLogAnomalyDetectorsCommand";
+import { ListLogGroupsCommandInput, ListLogGroupsCommandOutput } from "./commands/ListLogGroupsCommand";
 import {
   ListLogGroupsForQueryCommandInput,
   ListLogGroupsForQueryCommandOutput,
@@ -326,12 +328,14 @@ export type ServiceInputTypes =
   | GetLogAnomalyDetectorCommandInput
   | GetLogEventsCommandInput
   | GetLogGroupFieldsCommandInput
+  | GetLogObjectCommandInput
   | GetLogRecordCommandInput
   | GetQueryResultsCommandInput
   | GetTransformerCommandInput
   | ListAnomaliesCommandInput
   | ListIntegrationsCommandInput
   | ListLogAnomalyDetectorsCommandInput
+  | ListLogGroupsCommandInput
   | ListLogGroupsForQueryCommandInput
   | ListTagsForResourceCommandInput
   | ListTagsLogGroupCommandInput
@@ -420,12 +424,14 @@ export type ServiceOutputTypes =
   | GetLogAnomalyDetectorCommandOutput
   | GetLogEventsCommandOutput
   | GetLogGroupFieldsCommandOutput
+  | GetLogObjectCommandOutput
   | GetLogRecordCommandOutput
   | GetQueryResultsCommandOutput
   | GetTransformerCommandOutput
   | ListAnomaliesCommandOutput
   | ListIntegrationsCommandOutput
   | ListLogAnomalyDetectorsCommandOutput
+  | ListLogGroupsCommandOutput
   | ListLogGroupsForQueryCommandOutput
   | ListTagsForResourceCommandOutput
   | ListTagsLogGroupCommandOutput
@@ -678,8 +684,8 @@ export interface CloudWatchLogsClientResolvedConfig extends CloudWatchLogsClient
  *             </li>
  *             <li>
  *                <p>
- *                   <b>Monitor CloudTrail logged events</b>: You can
- *           create alarms in CloudWatch and receive notifications of particular API activity as
+ *                   <b>Monitor CloudTrail logged events</b>: You
+ *           can create alarms in CloudWatch and receive notifications of particular API activity as
  *           captured by CloudTrail. You can use the notification to perform troubleshooting.</p>
  *             </li>
  *             <li>

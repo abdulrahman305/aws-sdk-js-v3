@@ -113,6 +113,9 @@ export interface DescribeAssetBundleImportJobCommandOutput
  * //           AthenaParameters: { // AthenaParameters
  * //             WorkGroup: "STRING_VALUE",
  * //             RoleArn: "STRING_VALUE",
+ * //             IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ * //               EnableIdentityPropagation: true || false,
+ * //             },
  * //           },
  * //           AuroraParameters: { // AuroraParameters
  * //             Host: "STRING_VALUE", // required
@@ -173,7 +176,7 @@ export interface DescribeAssetBundleImportJobCommandOutput
  * //               ],
  * //               AutoCreateDatabaseUser: true || false,
  * //             },
- * //             IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ * //             IdentityCenterConfiguration: {
  * //               EnableIdentityPropagation: true || false,
  * //             },
  * //           },
@@ -256,6 +259,12 @@ export interface DescribeAssetBundleImportJobCommandOutput
  * //           BigQueryParameters: { // BigQueryParameters
  * //             ProjectId: "STRING_VALUE", // required
  * //             DataSetRegion: "STRING_VALUE",
+ * //           },
+ * //           ImpalaParameters: { // ImpalaParameters
+ * //             Host: "STRING_VALUE", // required
+ * //             Port: Number("int"), // required
+ * //             Database: "STRING_VALUE",
+ * //             SqlEndpointPath: "STRING_VALUE", // required
  * //           },
  * //         },
  * //         VpcConnectionProperties: {

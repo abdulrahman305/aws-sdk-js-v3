@@ -48,7 +48,7 @@ export interface AcceleratorSelection {
   /**
    * <p>The name of the chip used by the GPU accelerator.</p>
    *          <p>If you specify <code>l4</code> as the name of the accelerator, you must specify
-   *             <code>latest</code> or <code>grid:r550</code> as the runtime.</p>
+   *             <code>latest</code> or <code>grid:r570</code> as the runtime.</p>
    *          <p>The available GPU accelerators are:</p>
    *          <ul>
    *             <li>
@@ -85,7 +85,7 @@ export interface AcceleratorSelection {
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>grid:r550</code> - <a href="https://docs.nvidia.com/vgpu/17.0/index.html">NVIDIA vGPU software 17</a>
+   *                   <code>grid:r570</code> - <a href="https://docs.nvidia.com/vgpu/18.0/index.html">NVIDIA vGPU software 18</a>
    *                </p>
    *             </li>
    *             <li>
@@ -275,6 +275,7 @@ export interface AssignedSyncInputJobAttachmentsSessionActionDefinition {
  * @public
  */
 export type TaskParameterValue =
+  | TaskParameterValue.ChunkIntMember
   | TaskParameterValue.FloatMember
   | TaskParameterValue.IntMember
   | TaskParameterValue.PathMember
@@ -294,6 +295,7 @@ export namespace TaskParameterValue {
     float?: never;
     string?: never;
     path?: never;
+    chunkInt?: never;
     $unknown?: never;
   }
 
@@ -306,6 +308,7 @@ export namespace TaskParameterValue {
     float: string;
     string?: never;
     path?: never;
+    chunkInt?: never;
     $unknown?: never;
   }
 
@@ -318,6 +321,7 @@ export namespace TaskParameterValue {
     float?: never;
     string: string;
     path?: never;
+    chunkInt?: never;
     $unknown?: never;
   }
 
@@ -330,6 +334,20 @@ export namespace TaskParameterValue {
     float?: never;
     string?: never;
     path: string;
+    chunkInt?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>A range (for example 1-10) or selection of specific (for example 1,3,7,8,10) integers represented as a string.</p>
+   * @public
+   */
+  export interface ChunkIntMember {
+    int?: never;
+    float?: never;
+    string?: never;
+    path?: never;
+    chunkInt: string;
     $unknown?: never;
   }
 
@@ -341,6 +359,7 @@ export namespace TaskParameterValue {
     float?: never;
     string?: never;
     path?: never;
+    chunkInt?: never;
     $unknown: [string, any];
   }
 
@@ -349,6 +368,7 @@ export namespace TaskParameterValue {
     float: (value: string) => T;
     string: (value: string) => T;
     path: (value: string) => T;
+    chunkInt: (value: string) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -357,6 +377,7 @@ export namespace TaskParameterValue {
     if (value.float !== undefined) return visitor.float(value.float);
     if (value.string !== undefined) return visitor.string(value.string);
     if (value.path !== undefined) return visitor.path(value.path);
+    if (value.chunkInt !== undefined) return visitor.chunkInt(value.chunkInt);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -370,7 +391,7 @@ export interface AssignedTaskRunSessionActionDefinition {
    * <p>The task ID.</p>
    * @public
    */
-  taskId: string | undefined;
+  taskId?: string | undefined;
 
   /**
    * <p>The step ID.</p>
@@ -669,6 +690,7 @@ export class ResourceNotFoundException extends __BaseException {
  * @enum
  */
 export const ServiceQuotaExceededExceptionReason = {
+  DEPENDENCY_LIMIT_EXCEEDED: "DEPENDENCY_LIMIT_EXCEEDED",
   KMS_KEY_LIMIT_EXCEEDED: "KMS_KEY_LIMIT_EXCEEDED",
   SERVICE_QUOTA_EXCEEDED_EXCEPTION: "SERVICE_QUOTA_EXCEEDED_EXCEPTION",
 } as const;
@@ -3058,6 +3080,20 @@ export interface CreateFarmResponse {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const TagPropagationMode = {
+  NO_PROPAGATION: "NO_PROPAGATION",
+  PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH: "PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH",
+} as const;
+
+/**
+ * @public
+ */
+export type TagPropagationMode = (typeof TagPropagationMode)[keyof typeof TagPropagationMode];
+
+/**
  * <p>The fleet amount and attribute capabilities.</p>
  * @public
  */
@@ -3233,6 +3269,19 @@ export interface CustomerManagedFleetConfiguration {
    * @public
    */
   storageProfileId?: string | undefined;
+
+  /**
+   * <p>Specifies whether tags associated with a fleet are attached to workers when the worker
+   *          is launched. </p>
+   *          <p>When the <code>tagPropagationMode</code> is set to
+   *             <code>PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH</code> any tag associated with a fleet is
+   *          attached to workers when they launch. If the tags for a fleet change, the tags associated
+   *          with running workers <b>do not</b> change.</p>
+   *          <p>If you don't specify <code>tagPropagationMode</code>, the default is
+   *             <code>NO_PROPAGATION</code>.</p>
+   * @public
+   */
+  tagPropagationMode?: TagPropagationMode | undefined;
 }
 
 /**
@@ -3348,6 +3397,7 @@ export interface ServiceManagedEc2InstanceCapabilities {
 export const Ec2MarketType = {
   ON_DEMAND: "on-demand",
   SPOT: "spot",
+  WAIT_AND_SAVE: "wait-and-save",
 } as const;
 
 /**
@@ -3368,6 +3418,18 @@ export interface ServiceManagedEc2InstanceMarketOptions {
 }
 
 /**
+ * <p>The configuration options for a service managed fleet's VPC.</p>
+ * @public
+ */
+export interface VpcConfiguration {
+  /**
+   * <p>The ARNs of the VPC Lattice resource configurations attached to the fleet.</p>
+   * @public
+   */
+  resourceConfigurationArns?: string[] | undefined;
+}
+
+/**
  * <p>The configuration details for a service managed Amazon EC2 fleet.</p>
  * @public
  */
@@ -3383,6 +3445,18 @@ export interface ServiceManagedEc2FleetConfiguration {
    * @public
    */
   instanceMarketOptions: ServiceManagedEc2InstanceMarketOptions | undefined;
+
+  /**
+   * <p>The VPC configuration details for a service managed Amazon EC2 fleet.</p>
+   * @public
+   */
+  vpcConfiguration?: VpcConfiguration | undefined;
+
+  /**
+   * <p>The storage profile ID.</p>
+   * @public
+   */
+  storageProfileId?: string | undefined;
 }
 
 /**
@@ -3441,6 +3515,44 @@ export namespace FleetConfiguration {
 }
 
 /**
+ * <p>Provides a script that runs as a worker is starting up that you can use to provide
+ *          additional configuration for workers in your fleet. </p>
+ *          <p>To remove a script from a fleet, use the <a href="https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateFleet.html">UpdateFleet</a>
+ *          operation with the <code>hostConfiguration</code>
+ *             <code>scriptBody</code> parameter set to an empty string ("").</p>
+ * @public
+ */
+export interface HostConfiguration {
+  /**
+   * <p>The text of the script that runs as a worker is starting up that you can use to provide
+   *          additional configuration for workers in your fleet. The script runs after a worker enters
+   *          the <code>STARTING</code> state and before the worker processes tasks.</p>
+   *          <p>For more information about using the script, see <a href="https://docs.aws.amazon.com/deadline-cloud/latest/developerguide/smf-admin.html">Run scripts as an
+   *             administrator to configure workers</a> in the <i>Deadline Cloud Developer
+   *             Guide</i>. </p>
+   *          <important>
+   *             <p>The script runs as an administrative user (<code>sudo root</code> on Linux, as an
+   *             Administrator on Windows). </p>
+   *          </important>
+   * @public
+   */
+  scriptBody: string | undefined;
+
+  /**
+   * <p>The maximum time that the host configuration can run. If the timeout expires, the worker
+   *          enters the <code>NOT RESPONDING</code> state and shuts down. You are charged for the time
+   *          that the worker is running the host configuration script.</p>
+   *          <note>
+   *             <p>You should configure your fleet for a maximum of one worker while testing your host
+   *             configuration script to avoid starting additional workers.</p>
+   *          </note>
+   *          <p>The default is 300 seconds (5 minutes).</p>
+   * @public
+   */
+  scriptTimeoutSeconds?: number | undefined;
+}
+
+/**
  * @public
  */
 export interface CreateFleetRequest {
@@ -3488,6 +3600,13 @@ export interface CreateFleetRequest {
 
   /**
    * <p>The maximum number of workers for the fleet.</p>
+   *          <p>Deadline Cloud limits the number of workers to less than or equal to the fleet's
+   *          maximum worker count. The service maintains eventual consistency for the worker count. If
+   *          you make multiple rapid calls to <code>CreateWorker</code> before the field updates, you
+   *          might exceed your fleet's maximum worker count. For example, if your
+   *          <code>maxWorkerCount</code> is 10 and you currently have 9 workers, making two quick
+   *          <code>CreateWorker</code> calls might successfully create 2 workers instead of 1,
+   *          resulting in 11 total workers.</p>
    * @public
    */
   maxWorkerCount: number | undefined;
@@ -3504,6 +3623,13 @@ export interface CreateFleetRequest {
    * @public
    */
   tags?: Record<string, string> | undefined;
+
+  /**
+   * <p>Provides a script that runs as a worker is starting up that you can use to provide
+   *          additional configuration for workers in your fleet.</p>
+   * @public
+   */
+  hostConfiguration?: HostConfiguration | undefined;
 }
 
 /**
@@ -3567,8 +3693,8 @@ export interface CreateJobRequest {
   templateType?: JobTemplateType | undefined;
 
   /**
-   * <p>The priority of the job on a scale of 0 to 100. The highest priority (first scheduled)
-   *          is 100. When two jobs have the same priority, the oldest job is scheduled first.</p>
+   * <p>The priority of the job. The highest priority (first scheduled) is 100. When two jobs
+   *          have the same priority, the oldest job is scheduled first.</p>
    * @public
    */
   priority: number | undefined;
@@ -3792,6 +3918,12 @@ export interface CreateMonitorRequest {
    * @public
    */
   roleArn: string | undefined;
+
+  /**
+   * <p>The tags to add to your monitor. Each tag consists of a tag key and a tag value. Tag keys and values are both required, but tag values can be empty strings.</p>
+   * @public
+   */
+  tags?: Record<string, string> | undefined;
 }
 
 /**
@@ -3953,8 +4085,8 @@ export interface CreateQueueEnvironmentRequest {
 
   /**
    * <p>Sets the priority of the environments in the queue from 0 to 10,000, where 0 is the
-   *          highest priority. If two environments share the same priority value, the environment
-   *          created first takes higher priority.</p>
+   *          highest priority (activated first and deactivated last). If two environments share the same
+   *          priority value, the environment created first takes higher priority.</p>
    * @public
    */
   priority: number | undefined;
@@ -4205,6 +4337,12 @@ export interface CreateWorkerRequest {
    * @public
    */
   clientToken?: string | undefined;
+
+  /**
+   * <p>Each tag consists of a tag key and a tag value. Tag keys and values are both required, but tag values can be empty strings.</p>
+   * @public
+   */
+  tags?: Record<string, string> | undefined;
 }
 
 /**
@@ -4480,6 +4618,7 @@ export const FleetStatus = {
   ACTIVE: "ACTIVE",
   CREATE_FAILED: "CREATE_FAILED",
   CREATE_IN_PROGRESS: "CREATE_IN_PROGRESS",
+  SUSPENDED: "SUSPENDED",
   UPDATE_FAILED: "UPDATE_FAILED",
   UPDATE_IN_PROGRESS: "UPDATE_IN_PROGRESS",
 } as const;
@@ -4524,10 +4663,16 @@ export interface GetFleetResponse {
   description?: string | undefined;
 
   /**
-   * <p>The Auto Scaling status of the fleet.</p>
+   * <p>The status of the fleet.</p>
    * @public
    */
   status: FleetStatus | undefined;
+
+  /**
+   * <p>A message that communicates a suspended status of the fleet.</p>
+   * @public
+   */
+  statusMessage?: string | undefined;
 
   /**
    * <p>The Auto Scaling status of the fleet. Either <code>GROWING</code>, <code>STEADY</code>, or
@@ -4565,6 +4710,13 @@ export interface GetFleetResponse {
    * @public
    */
   configuration: FleetConfiguration | undefined;
+
+  /**
+   * <p>The script that runs as a worker is starting up that you can use to provide additional
+   *          configuration for workers in your fleet.</p>
+   * @public
+   */
+  hostConfiguration?: HostConfiguration | undefined;
 
   /**
    * <p>Outlines what the fleet is capable of for minimums, maximums, and naming, in addition to
@@ -4769,6 +4921,12 @@ export interface FleetSummary {
   status: FleetStatus | undefined;
 
   /**
+   * <p>A message that communicates a suspended status of the fleet.</p>
+   * @public
+   */
+  statusMessage?: string | undefined;
+
+  /**
    * <p>The Auto Scaling status of a fleet.</p>
    * @public
    */
@@ -4900,6 +5058,13 @@ export interface UpdateFleetRequest {
 
   /**
    * <p>The maximum number of workers in the fleet.</p>
+   *          <p>Deadline Cloud limits the number of workers to less than or equal to the fleet's
+   *          maximum worker count. The service maintains eventual consistency for the worker count. If
+   *          you make multiple rapid calls to <code>CreateWorker</code> before the field updates, you
+   *          might exceed your fleet's maximum worker count. For example, if your
+   *          <code>maxWorkerCount</code> is 10 and you currently have 9 workers, making two quick
+   *          <code>CreateWorker</code> calls might successfully create 2 workers instead of 1,
+   *          resulting in 11 total workers.</p>
    * @public
    */
   maxWorkerCount?: number | undefined;
@@ -4909,6 +5074,13 @@ export interface UpdateFleetRequest {
    * @public
    */
   configuration?: FleetConfiguration | undefined;
+
+  /**
+   * <p>Provides a script that runs as a worker is starting up that you can use to provide
+   *          additional configuration for workers in your fleet.</p>
+   * @public
+   */
+  hostConfiguration?: HostConfiguration | undefined;
 }
 
 /**
@@ -5444,6 +5616,31 @@ export interface UpdateWorkerResponse {
    * @public
    */
   log?: LogConfiguration | undefined;
+
+  /**
+   * <p>The script that runs as a worker is starting up that you can use to provide additional
+   *          configuration for workers in your fleet.</p>
+   * @public
+   */
+  hostConfiguration?: HostConfiguration | undefined;
+}
+
+/**
+ * <p>The output manifest properties reported by the worker agent for a completed task run.</p>
+ * @public
+ */
+export interface TaskRunManifestPropertiesRequest {
+  /**
+   * <p>The manifest file path.</p>
+   * @public
+   */
+  outputManifestPath?: string | undefined;
+
+  /**
+   * <p>The hash value of the file.</p>
+   * @public
+   */
+  outputManifestHash?: string | undefined;
 }
 
 /**
@@ -5459,7 +5656,8 @@ export interface UpdatedSessionActionInfo {
   completedStatus?: CompletedStatus | undefined;
 
   /**
-   * <p>The process exit code.</p>
+   * <p>The process exit code. The default Deadline Cloud worker agent converts unsigned
+   *          32-bit exit codes to signed 32-bit exit codes.</p>
    * @public
    */
   processExitCode?: number | undefined;
@@ -5493,6 +5691,13 @@ export interface UpdatedSessionActionInfo {
    * @public
    */
   progressPercent?: number | undefined;
+
+  /**
+   * <p>A list of output manifest properties reported by the worker
+   *          agent, with each entry corresponding to a manifest property in the job.</p>
+   * @public
+   */
+  manifests?: TaskRunManifestPropertiesRequest[] | undefined;
 }
 
 /**
@@ -6752,6 +6957,12 @@ export interface GetJobResponse {
   taskRunStatusCounts?: Partial<Record<TaskRunStatus, number>> | undefined;
 
   /**
+   * <p>The total number of times tasks from the job failed and were retried.</p>
+   * @public
+   */
+  taskFailureRetryCount?: number | undefined;
+
+  /**
    * <p>The storage profile ID associated with the job.</p>
    * @public
    */
@@ -6987,7 +7198,7 @@ export interface TaskRunSessionActionDefinition {
    * <p>The task ID.</p>
    * @public
    */
-  taskId: string | undefined;
+  taskId?: string | undefined;
 
   /**
    * <p>The step ID.</p>
@@ -7095,6 +7306,24 @@ export namespace SessionActionDefinition {
 }
 
 /**
+ * <p>The manifest properties for a task run, corresponding to the manifest properties in the job.</p>
+ * @public
+ */
+export interface TaskRunManifestPropertiesResponse {
+  /**
+   * <p>The manifest file path.</p>
+   * @public
+   */
+  outputManifestPath?: string | undefined;
+
+  /**
+   * <p>The hash value of the file.</p>
+   * @public
+   */
+  outputManifestHash?: string | undefined;
+}
+
+/**
  * @public
  * @enum
  */
@@ -7164,7 +7393,8 @@ export interface GetSessionActionResponse {
   sessionId: string | undefined;
 
   /**
-   * <p>The exit code to exit the session.</p>
+   * <p>The process exit code. The default Deadline Cloud worker agent converts unsigned
+   *          32-bit exit codes to signed 32-bit exit codes.</p>
    * @public
    */
   processExitCode?: number | undefined;
@@ -7187,6 +7417,12 @@ export interface GetSessionActionResponse {
    * @public
    */
   acquiredLimits?: AcquiredLimit[] | undefined;
+
+  /**
+   * <p>The list of manifest properties that describe file attachments for the task run.</p>
+   * @public
+   */
+  manifests?: TaskRunManifestPropertiesResponse[] | undefined;
 }
 
 /**
@@ -7269,6 +7505,7 @@ export type StepLifecycleStatus = (typeof StepLifecycleStatus)[keyof typeof Step
  * @enum
  */
 export const StepParameterType = {
+  CHUNK_INT: "CHUNK_INT",
   FLOAT: "FLOAT",
   INT: "INT",
   PATH: "PATH",
@@ -7445,6 +7682,12 @@ export interface GetStepResponse {
    * @public
    */
   taskRunStatusCounts: Partial<Record<TaskRunStatus, number>> | undefined;
+
+  /**
+   * <p>The total number of times tasks from the step failed and were retried.</p>
+   * @public
+   */
+  taskFailureRetryCount?: number | undefined;
 
   /**
    * <p>The task status with which the job started.</p>
@@ -7965,6 +8208,12 @@ export interface JobSummary {
   taskRunStatusCounts?: Partial<Record<TaskRunStatus, number>> | undefined;
 
   /**
+   * <p>The total number of times tasks from the job failed and were retried.</p>
+   * @public
+   */
+  taskFailureRetryCount?: number | undefined;
+
+  /**
    * <p>The number of task failures before the job stops running and is marked as <code>FAILED</code>.</p>
    * @public
    */
@@ -8103,13 +8352,19 @@ export interface TaskRunSessionActionDefinitionSummary {
    * <p>The task ID.</p>
    * @public
    */
-  taskId: string | undefined;
+  taskId?: string | undefined;
 
   /**
    * <p>The step ID.</p>
    * @public
    */
   stepId: string | undefined;
+
+  /**
+   * <p>The parameters of a task run in a session action.</p>
+   * @public
+   */
+  parameters?: Record<string, TaskParameterValue> | undefined;
 }
 
 /**
@@ -8251,6 +8506,12 @@ export interface SessionActionSummary {
    * @public
    */
   definition: SessionActionDefinitionSummary | undefined;
+
+  /**
+   * <p>The list of manifest properties that describe file attachments for the task run.</p>
+   * @public
+   */
+  manifests?: TaskRunManifestPropertiesResponse[] | undefined;
 }
 
 /**
@@ -8585,291 +8846,6 @@ export interface ListStepsRequest {
 }
 
 /**
- * <p>The details for a step.</p>
- * @public
- */
-export interface StepSummary {
-  /**
-   * <p>The step ID.</p>
-   * @public
-   */
-  stepId: string | undefined;
-
-  /**
-   * <p>The name of the step.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The life cycle status.</p>
-   * @public
-   */
-  lifecycleStatus: StepLifecycleStatus | undefined;
-
-  /**
-   * <p>A message that describes the lifecycle of the step.</p>
-   * @public
-   */
-  lifecycleStatusMessage?: string | undefined;
-
-  /**
-   * <p>The task run status for the job.</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>PENDING</code>–pending and waiting for resources.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>READY</code>–ready to process.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>ASSIGNED</code>–assigned and will run next on a worker.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>SCHEDULED</code>–scheduled to run on a worker.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>INTERRUPTING</code>–being interrupted.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>RUNNING</code>–running on a worker.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>SUSPENDED</code>–the task is suspended.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>CANCELED</code>–the task has been canceled.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>FAILED</code>–the task has failed.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>SUCCEEDED</code>–the task has succeeded.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  taskRunStatus: TaskRunStatus | undefined;
-
-  /**
-   * <p>The number of tasks running on the job.</p>
-   * @public
-   */
-  taskRunStatusCounts: Partial<Record<TaskRunStatus, number>> | undefined;
-
-  /**
-   * <p>The task status to start with on the job.</p>
-   * @public
-   */
-  targetTaskRunStatus?: StepTargetTaskRunStatus | undefined;
-
-  /**
-   * <p>The date and time the resource was created.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The user or system that created this resource.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The date and time the resource was updated.</p>
-   * @public
-   */
-  updatedAt?: Date | undefined;
-
-  /**
-   * <p>The user or system that updated this resource.</p>
-   * @public
-   */
-  updatedBy?: string | undefined;
-
-  /**
-   * <p>The date and time the resource started running.</p>
-   * @public
-   */
-  startedAt?: Date | undefined;
-
-  /**
-   * <p>The date and time the resource ended running.</p>
-   * @public
-   */
-  endedAt?: Date | undefined;
-
-  /**
-   * <p>The number of dependencies for the step.</p>
-   * @public
-   */
-  dependencyCounts?: DependencyCounts | undefined;
-}
-
-/**
- * @public
- */
-export interface ListStepsResponse {
-  /**
-   * <p>The steps on the list.</p>
-   * @public
-   */
-  steps: StepSummary[] | undefined;
-
-  /**
-   * <p>If Deadline Cloud returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an HTTP 400 <code>ValidationException</code> error.</p>
-   * @public
-   */
-  nextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListTasksRequest {
-  /**
-   * <p>The farm ID connected to the tasks.</p>
-   * @public
-   */
-  farmId: string | undefined;
-
-  /**
-   * <p>The queue ID connected to the tasks.</p>
-   * @public
-   */
-  queueId: string | undefined;
-
-  /**
-   * <p>The job ID for the tasks.</p>
-   * @public
-   */
-  jobId: string | undefined;
-
-  /**
-   * <p>The step ID for the tasks.</p>
-   * @public
-   */
-  stepId: string | undefined;
-
-  /**
-   * <p>The token for the next set of results, or <code>null</code> to start from the beginning.</p>
-   * @public
-   */
-  nextToken?: string | undefined;
-
-  /**
-   * <p>The maximum number of results to return. Use this parameter with <code>NextToken</code> to get results as a set of sequential pages.</p>
-   * @public
-   */
-  maxResults?: number | undefined;
-}
-
-/**
- * <p>The details of a task.</p>
- * @public
- */
-export interface TaskSummary {
-  /**
-   * <p>The task ID.</p>
-   * @public
-   */
-  taskId: string | undefined;
-
-  /**
-   * <p>The date and time the resource was created.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The user or system that created this resource.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The run status of the task.</p>
-   * @public
-   */
-  runStatus: TaskRunStatus | undefined;
-
-  /**
-   * <p>The run status on which the started.</p>
-   * @public
-   */
-  targetRunStatus?: TaskTargetRunStatus | undefined;
-
-  /**
-   * <p>The number of times that the task failed and was retried.</p>
-   * @public
-   */
-  failureRetryCount?: number | undefined;
-
-  /**
-   * <p>The task parameters.</p>
-   * @public
-   */
-  parameters?: Record<string, TaskParameterValue> | undefined;
-
-  /**
-   * <p>The date and time the resource started running.</p>
-   * @public
-   */
-  startedAt?: Date | undefined;
-
-  /**
-   * <p>The date and time the resource ended running.</p>
-   * @public
-   */
-  endedAt?: Date | undefined;
-
-  /**
-   * <p>The date and time the resource was updated.</p>
-   * @public
-   */
-  updatedAt?: Date | undefined;
-
-  /**
-   * <p>The user or system that updated this resource.</p>
-   * @public
-   */
-  updatedBy?: string | undefined;
-
-  /**
-   * <p>The latest session action for the task.</p>
-   * @public
-   */
-  latestSessionActionId?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListTasksResponse {
-  /**
-   * <p>Tasks for the job.</p>
-   * @public
-   */
-  tasks: TaskSummary[] | undefined;
-
-  /**
-   * <p>If Deadline Cloud returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an HTTP 400 <code>ValidationException</code> error.</p>
-   * @public
-   */
-  nextToken?: string | undefined;
-}
-
-/**
  * @internal
  */
 export const TaskParameterValueFilterSensitiveLog = (obj: TaskParameterValue): any => {
@@ -8877,6 +8853,7 @@ export const TaskParameterValueFilterSensitiveLog = (obj: TaskParameterValue): a
   if (obj.float !== undefined) return { float: obj.float };
   if (obj.string !== undefined) return { string: obj.string };
   if (obj.path !== undefined) return { path: obj.path };
+  if (obj.chunkInt !== undefined) return { chunkInt: obj.chunkInt };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -8975,7 +8952,6 @@ export const AssumeQueueRoleForWorkerResponseFilterSensitiveLog = (obj: AssumeQu
  */
 export const ManifestPropertiesFilterSensitiveLog = (obj: ManifestProperties): any => ({
   ...obj,
-  ...(obj.fileSystemLocationName && { fileSystemLocationName: SENSITIVE_STRING }),
 });
 
 /**
@@ -9124,10 +9100,19 @@ export const CreateFarmRequestFilterSensitiveLog = (obj: CreateFarmRequest): any
 /**
  * @internal
  */
+export const HostConfigurationFilterSensitiveLog = (obj: HostConfiguration): any => ({
+  ...obj,
+  ...(obj.scriptBody && { scriptBody: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
 export const CreateFleetRequestFilterSensitiveLog = (obj: CreateFleetRequest): any => ({
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.configuration && { configuration: obj.configuration }),
+  ...(obj.hostConfiguration && { hostConfiguration: HostConfigurationFilterSensitiveLog(obj.hostConfiguration) }),
 });
 
 /**
@@ -9154,7 +9139,6 @@ export const CreateLimitRequestFilterSensitiveLog = (obj: CreateLimitRequest): a
 export const CreateQueueRequestFilterSensitiveLog = (obj: CreateQueueRequest): any => ({
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
-  ...(obj.requiredFileSystemLocationNames && { requiredFileSystemLocationNames: SENSITIVE_STRING }),
 });
 
 /**
@@ -9170,7 +9154,6 @@ export const CreateQueueEnvironmentRequestFilterSensitiveLog = (obj: CreateQueue
  */
 export const FileSystemLocationFilterSensitiveLog = (obj: FileSystemLocation): any => ({
   ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
 });
 
 /**
@@ -9188,6 +9171,7 @@ export const GetFleetResponseFilterSensitiveLog = (obj: GetFleetResponse): any =
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.configuration && { configuration: obj.configuration }),
+  ...(obj.hostConfiguration && { hostConfiguration: HostConfigurationFilterSensitiveLog(obj.hostConfiguration) }),
 });
 
 /**
@@ -9197,6 +9181,15 @@ export const UpdateFleetRequestFilterSensitiveLog = (obj: UpdateFleetRequest): a
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.configuration && { configuration: obj.configuration }),
+  ...(obj.hostConfiguration && { hostConfiguration: HostConfigurationFilterSensitiveLog(obj.hostConfiguration) }),
+});
+
+/**
+ * @internal
+ */
+export const UpdateWorkerResponseFilterSensitiveLog = (obj: UpdateWorkerResponse): any => ({
+  ...obj,
+  ...(obj.hostConfiguration && { hostConfiguration: HostConfigurationFilterSensitiveLog(obj.hostConfiguration) }),
 });
 
 /**
@@ -9267,7 +9260,6 @@ export const GetStorageProfileResponseFilterSensitiveLog = (obj: GetStorageProfi
 export const GetQueueResponseFilterSensitiveLog = (obj: GetQueueResponse): any => ({
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
-  ...(obj.requiredFileSystemLocationNames && { requiredFileSystemLocationNames: SENSITIVE_STRING }),
 });
 
 /**
@@ -9343,7 +9335,9 @@ export const GetTaskResponseFilterSensitiveLog = (obj: GetTaskResponse): any => 
 /**
  * @internal
  */
-export const TaskSummaryFilterSensitiveLog = (obj: TaskSummary): any => ({
+export const TaskRunSessionActionDefinitionSummaryFilterSensitiveLog = (
+  obj: TaskRunSessionActionDefinitionSummary
+): any => ({
   ...obj,
   ...(obj.parameters && { parameters: SENSITIVE_STRING }),
 });
@@ -9351,7 +9345,29 @@ export const TaskSummaryFilterSensitiveLog = (obj: TaskSummary): any => ({
 /**
  * @internal
  */
-export const ListTasksResponseFilterSensitiveLog = (obj: ListTasksResponse): any => ({
+export const SessionActionDefinitionSummaryFilterSensitiveLog = (obj: SessionActionDefinitionSummary): any => {
+  if (obj.envEnter !== undefined) return { envEnter: obj.envEnter };
+  if (obj.envExit !== undefined) return { envExit: obj.envExit };
+  if (obj.taskRun !== undefined)
+    return { taskRun: TaskRunSessionActionDefinitionSummaryFilterSensitiveLog(obj.taskRun) };
+  if (obj.syncInputJobAttachments !== undefined) return { syncInputJobAttachments: obj.syncInputJobAttachments };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const SessionActionSummaryFilterSensitiveLog = (obj: SessionActionSummary): any => ({
   ...obj,
-  ...(obj.tasks && { tasks: obj.tasks.map((item) => TaskSummaryFilterSensitiveLog(item)) }),
+  ...(obj.definition && { definition: SessionActionDefinitionSummaryFilterSensitiveLog(obj.definition) }),
+});
+
+/**
+ * @internal
+ */
+export const ListSessionActionsResponseFilterSensitiveLog = (obj: ListSessionActionsResponse): any => ({
+  ...obj,
+  ...(obj.sessionActions && {
+    sessionActions: obj.sessionActions.map((item) => SessionActionSummaryFilterSensitiveLog(item)),
+  }),
 });

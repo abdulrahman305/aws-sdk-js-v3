@@ -72,7 +72,7 @@ export interface GetMedicalScribeJobCommandOutput extends GetMedicalScribeJobRes
  * //       VocabularyFilterName: "STRING_VALUE",
  * //       VocabularyFilterMethod: "remove" || "mask" || "tag",
  * //       ClinicalNoteGenerationSettings: { // ClinicalNoteGenerationSettings
- * //         NoteTemplate: "HISTORY_AND_PHYSICAL" || "GIRPP",
+ * //         NoteTemplate: "HISTORY_AND_PHYSICAL" || "GIRPP" || "BIRP" || "SIRP" || "DAP" || "BEHAVIORAL_SOAP" || "PHYSICAL_SOAP",
  * //       },
  * //     },
  * //     DataAccessRoleArn: "STRING_VALUE",
@@ -82,6 +82,7 @@ export interface GetMedicalScribeJobCommandOutput extends GetMedicalScribeJobRes
  * //         ParticipantRole: "PATIENT" || "CLINICIAN", // required
  * //       },
  * //     ],
+ * //     MedicalScribeContextProvided: true || false,
  * //     Tags: [ // TagList
  * //       { // Tag
  * //         Key: "STRING_VALUE", // required

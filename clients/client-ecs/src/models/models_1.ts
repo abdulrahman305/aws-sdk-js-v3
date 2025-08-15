@@ -14,11 +14,14 @@ import {
   ContainerInstance,
   ContainerInstanceStatus,
   DeploymentConfiguration,
+  DeploymentController,
   Failure,
   LoadBalancer,
+  ManagedAgentName,
   ManagedDraining,
   ManagedScaling,
   ManagedTerminationProtection,
+  NetworkBinding,
   NetworkConfiguration,
   PlacementConstraint,
   PlacementStrategy,
@@ -29,9 +32,379 @@ import {
   ServiceConnectConfiguration,
   ServiceRegistry,
   ServiceVolumeConfiguration,
+  Tag,
+  Task,
   TaskSet,
   VpcLatticeConfiguration,
 } from "./models_0";
+
+/**
+ * @public
+ */
+export interface StopTaskResponse {
+  /**
+   * <p>The task that was stopped.</p>
+   * @public
+   */
+  task?: Task | undefined;
+}
+
+/**
+ * <p>An object representing a change in state for a task attachment.</p>
+ * @public
+ */
+export interface AttachmentStateChange {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the attachment.</p>
+   * @public
+   */
+  attachmentArn: string | undefined;
+
+  /**
+   * <p>The status of the attachment.</p>
+   * @public
+   */
+  status: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface SubmitAttachmentStateChangesRequest {
+  /**
+   * <p>The short name or full ARN of the cluster that hosts the container instance the
+   * 			attachment belongs to.</p>
+   * @public
+   */
+  cluster?: string | undefined;
+
+  /**
+   * <p>Any attachments associated with the state change request.</p>
+   * @public
+   */
+  attachments: AttachmentStateChange[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface SubmitAttachmentStateChangesResponse {
+  /**
+   * <p>Acknowledgement of the state change.</p>
+   * @public
+   */
+  acknowledgment?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface SubmitContainerStateChangeRequest {
+  /**
+   * <p>The short name or full ARN of the cluster that hosts the container.</p>
+   * @public
+   */
+  cluster?: string | undefined;
+
+  /**
+   * <p>The task ID or full Amazon Resource Name (ARN) of the task that hosts the container.</p>
+   * @public
+   */
+  task?: string | undefined;
+
+  /**
+   * <p>The name of the container.</p>
+   * @public
+   */
+  containerName?: string | undefined;
+
+  /**
+   * <p>The ID of the Docker container.</p>
+   * @public
+   */
+  runtimeId?: string | undefined;
+
+  /**
+   * <p>The status of the state change request.</p>
+   * @public
+   */
+  status?: string | undefined;
+
+  /**
+   * <p>The exit code that's returned for the state change request.</p>
+   * @public
+   */
+  exitCode?: number | undefined;
+
+  /**
+   * <p>The reason for the state change request.</p>
+   * @public
+   */
+  reason?: string | undefined;
+
+  /**
+   * <p>The network bindings of the container.</p>
+   * @public
+   */
+  networkBindings?: NetworkBinding[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface SubmitContainerStateChangeResponse {
+  /**
+   * <p>Acknowledgement of the state change.</p>
+   * @public
+   */
+  acknowledgment?: string | undefined;
+}
+
+/**
+ * <p>An object that represents a change in state for a container.</p>
+ * @public
+ */
+export interface ContainerStateChange {
+  /**
+   * <p>The name of the container.</p>
+   * @public
+   */
+  containerName?: string | undefined;
+
+  /**
+   * <p>The container image SHA 256 digest.</p>
+   * @public
+   */
+  imageDigest?: string | undefined;
+
+  /**
+   * <p>The ID of the Docker container.</p>
+   * @public
+   */
+  runtimeId?: string | undefined;
+
+  /**
+   * <p>The exit code for the container, if the state change is a result of the container
+   * 			exiting.</p>
+   * @public
+   */
+  exitCode?: number | undefined;
+
+  /**
+   * <p>Any network bindings that are associated with the container.</p>
+   * @public
+   */
+  networkBindings?: NetworkBinding[] | undefined;
+
+  /**
+   * <p>The reason for the state change.</p>
+   * @public
+   */
+  reason?: string | undefined;
+
+  /**
+   * <p>The status of the container.</p>
+   * @public
+   */
+  status?: string | undefined;
+}
+
+/**
+ * <p>An object representing a change in state for a managed agent.</p>
+ * @public
+ */
+export interface ManagedAgentStateChange {
+  /**
+   * <p>The name of the container that's associated with the managed agent.</p>
+   * @public
+   */
+  containerName: string | undefined;
+
+  /**
+   * <p>The name of the managed agent.</p>
+   * @public
+   */
+  managedAgentName: ManagedAgentName | undefined;
+
+  /**
+   * <p>The status of the managed agent.</p>
+   * @public
+   */
+  status: string | undefined;
+
+  /**
+   * <p>The reason for the status of the managed agent.</p>
+   * @public
+   */
+  reason?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface SubmitTaskStateChangeRequest {
+  /**
+   * <p>The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task.</p>
+   * @public
+   */
+  cluster?: string | undefined;
+
+  /**
+   * <p>The task ID or full ARN of the task in the state change request.</p>
+   * @public
+   */
+  task?: string | undefined;
+
+  /**
+   * <p>The status of the state change request.</p>
+   * @public
+   */
+  status?: string | undefined;
+
+  /**
+   * <p>The reason for the state change request.</p>
+   * @public
+   */
+  reason?: string | undefined;
+
+  /**
+   * <p>Any containers that's associated with the state change request.</p>
+   * @public
+   */
+  containers?: ContainerStateChange[] | undefined;
+
+  /**
+   * <p>Any attachments associated with the state change request.</p>
+   * @public
+   */
+  attachments?: AttachmentStateChange[] | undefined;
+
+  /**
+   * <p>The details for the managed agent that's associated with the task.</p>
+   * @public
+   */
+  managedAgents?: ManagedAgentStateChange[] | undefined;
+
+  /**
+   * <p>The Unix timestamp for the time when the container image pull started.</p>
+   * @public
+   */
+  pullStartedAt?: Date | undefined;
+
+  /**
+   * <p>The Unix timestamp for the time when the container image pull completed.</p>
+   * @public
+   */
+  pullStoppedAt?: Date | undefined;
+
+  /**
+   * <p>The Unix timestamp for the time when the task execution stopped.</p>
+   * @public
+   */
+  executionStoppedAt?: Date | undefined;
+}
+
+/**
+ * @public
+ */
+export interface SubmitTaskStateChangeResponse {
+  /**
+   * <p>Acknowledgement of the state change.</p>
+   * @public
+   */
+  acknowledgment?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface TagResourceRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the resource to add tags to. Currently, the supported resources are
+   * 			Amazon ECS capacity providers, tasks, services, task definitions, clusters, and container
+   * 			instances.</p>
+   *          <p>In order to tag a service that has the following ARN format, you need to migrate the
+   * 			service to the long ARN. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-arn-migration.html">Migrate an Amazon ECS short service ARN to a long ARN</a> in the <i>Amazon Elastic Container Service
+   * 				Developer Guide</i>.</p>
+   *          <p>
+   *             <code>arn:aws:ecs:region:aws_account_id:service/service-name</code>
+   *          </p>
+   *          <p>After the migration is complete, the service has the long ARN format, as shown below. Use this ARN to tag the service.</p>
+   *          <p>
+   *             <code>arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name</code>
+   *          </p>
+   *          <p>If you try to tag a service with a short ARN, you receive an
+   * 				<code>InvalidParameterException</code> error.</p>
+   * @public
+   */
+  resourceArn: string | undefined;
+
+  /**
+   * <p>The tags to add to the resource. A tag is an array of key-value pairs.</p>
+   *          <p>The following basic restrictions apply to tags:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Maximum number of tags per resource - 50</p>
+   *             </li>
+   *             <li>
+   *                <p>For each resource, each tag key must be unique, and each tag key can have only
+   *                     one value.</p>
+   *             </li>
+   *             <li>
+   *                <p>Maximum key length - 128 Unicode characters in UTF-8</p>
+   *             </li>
+   *             <li>
+   *                <p>Maximum value length - 256 Unicode characters in UTF-8</p>
+   *             </li>
+   *             <li>
+   *                <p>If your tagging schema is used across multiple services and resources,
+   *                     remember that other services may have restrictions on allowed characters.
+   *                     Generally allowed characters are: letters, numbers, and spaces representable in
+   *                     UTF-8, and the following characters: + - = . _ : / @.</p>
+   *             </li>
+   *             <li>
+   *                <p>Tag keys and values are case-sensitive.</p>
+   *             </li>
+   *             <li>
+   *                <p>Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase
+   *                     combination of such as a prefix for either keys or values as it is reserved for
+   *                     Amazon Web Services use. You cannot edit or delete tag keys or values with this prefix. Tags with
+   *                     this prefix do not count against your tags per resource limit.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  tags: Tag[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface TagResourceResponse {}
+
+/**
+ * @public
+ */
+export interface UntagResourceRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the resource to delete tags from. Currently, the supported resources
+   * 			are Amazon ECS capacity providers, tasks, services, task definitions, clusters, and container
+   * 			instances.</p>
+   * @public
+   */
+  resourceArn: string | undefined;
+
+  /**
+   * <p>The keys of the tags to be removed.</p>
+   * @public
+   */
+  tagKeys: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface UntagResourceResponse {}
 
 /**
  * <p>The details of the Auto Scaling group capacity provider to update.</p>
@@ -314,6 +687,7 @@ export interface UpdateServiceRequest {
   /**
    * <p>The short name or full Amazon Resource Name (ARN) of the cluster that your service runs on.
    * 			If you do not specify a cluster, the default cluster is assumed.</p>
+   *          <p>You can't change the cluster name.</p>
    * @public
    */
   cluster?: string | undefined;
@@ -342,27 +716,33 @@ export interface UpdateServiceRequest {
   taskDefinition?: string | undefined;
 
   /**
-   * <p>The capacity provider strategy to update the service to use.</p>
-   *          <p>if the service uses the default capacity provider strategy for the cluster, the
-   * 			service can be updated to use one or more capacity providers as opposed to the default
-   * 			capacity provider strategy. However, when a service is using a capacity provider
-   * 			strategy that's not the default capacity provider strategy, the service can't be updated
-   * 			to use the cluster's default capacity provider strategy.</p>
-   *          <p>A capacity provider strategy consists of one or more capacity providers along with the
-   * 				<code>base</code> and <code>weight</code> to assign to them. A capacity provider
-   * 			must be associated with the cluster to be used in a capacity provider strategy. The
-   * 				<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutClusterCapacityProviders.html">PutClusterCapacityProviders</a> API is used to associate a capacity provider
-   * 			with a cluster. Only capacity providers with an <code>ACTIVE</code> or
-   * 				<code>UPDATING</code> status can be used.</p>
-   *          <p>If specifying a capacity provider that uses an Auto Scaling group, the capacity
-   * 			provider must already be created. New capacity providers can be created with the <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateClusterCapacityProvider.html">CreateClusterCapacityProvider</a> API operation.</p>
-   *          <p>To use a Fargate capacity provider, specify either the <code>FARGATE</code> or
-   * 				<code>FARGATE_SPOT</code> capacity providers. The Fargate capacity providers are
-   * 			available to all accounts and only need to be associated with a cluster to be
-   * 			used.</p>
-   *          <p>The <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutClusterCapacityProviders.html">PutClusterCapacityProviders</a>API operation is used to update the list of
-   * 			available capacity providers for a cluster after the cluster is created.</p>
-   *          <p></p>
+   * <p>The details of a capacity provider strategy. You can set a capacity provider when you
+   * 			create a cluster, run a task, or update a service.</p>
+   *          <p>When you use Fargate, the capacity providers are <code>FARGATE</code> or
+   * 				<code>FARGATE_SPOT</code>.</p>
+   *          <p>When you use Amazon EC2, the capacity providers are Auto Scaling groups.</p>
+   *          <p>You can change capacity providers for rolling deployments and blue/green
+   * 			deployments.</p>
+   *          <p>The following list provides the valid transitions:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Update the Fargate launch type to an Auto Scaling group capacity provider.</p>
+   *             </li>
+   *             <li>
+   *                <p>Update the Amazon EC2 launch type to a Fargate capacity provider.</p>
+   *             </li>
+   *             <li>
+   *                <p>Update the Fargate capacity provider to an Auto Scaling group capacity provider.</p>
+   *             </li>
+   *             <li>
+   *                <p>Update the Amazon EC2 capacity provider to a Fargate capacity provider. </p>
+   *             </li>
+   *             <li>
+   *                <p>Update the Auto Scaling group or Fargate capacity provider back to the launch type.</p>
+   *                <p>Pass an empty list in the <code>capacityProviderStrategy</code> parameter.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For information about Amazon Web Services CDK considerations, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/update-service-parameters.html">Amazon Web Services CDK considerations</a>.</p>
    * @public
    */
   capacityProviderStrategy?: CapacityProviderStrategyItem[] | undefined;
@@ -448,6 +828,12 @@ export interface UpdateServiceRequest {
   healthCheckGracePeriodSeconds?: number | undefined;
 
   /**
+   * <p>The deployment controller to use for the service. </p>
+   * @public
+   */
+  deploymentController?: DeploymentController | undefined;
+
+  /**
    * <p>If <code>true</code>, this enables execute command functionality on all task
    * 			containers.</p>
    *          <p>If you do not want to override the value that was set when the service was created,
@@ -468,7 +854,10 @@ export interface UpdateServiceRequest {
   enableECSManagedTags?: boolean | undefined;
 
   /**
-   * <p>A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the
+   * <note>
+   *             <p>You must have a service-linked role when you update this property</p>
+   *          </note>
+   *          <p>A list of Elastic Load Balancing load balancer objects. It contains the load balancer name, the
    * 			container name, and the container port to access from the load balancer. The container
    * 			name is as it appears in a container definition.</p>
    *          <p>When you add, update, or remove a load balancer configuration, Amazon ECS starts new tasks
@@ -504,7 +893,14 @@ export interface UpdateServiceRequest {
   propagateTags?: PropagateTags | undefined;
 
   /**
-   * <p>The details for the service discovery registries to assign to this service. For more
+   * <note>
+   *             <p>You must have a service-linked role when you update this property.</p>
+   *             <p>For more information about the role see the <code>CreateService</code> request
+   * 				parameter <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html#ECS-CreateService-request-role">
+   *                   <code>role</code>
+   *                </a>. </p>
+   *          </note>
+   *          <p>The details for the service discovery registries to assign to this service. For more
    * 			information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
    * 				Discovery</a>.</p>
    *          <p>When you add, update, or remove the service registries configuration, Amazon ECS starts new

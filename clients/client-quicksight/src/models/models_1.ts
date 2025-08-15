@@ -3,10 +3,8 @@ import { SENSITIVE_STRING } from "@smithy/smithy-client";
 
 import {
   AggregationFunction,
-  AxisBinding,
   AxisDisplayOptions,
   BarChartFieldWells,
-  BarChartOrientation,
   BarsArrangement,
   ChartAxisLabelOptions,
   ColumnIdentifier,
@@ -24,16 +22,16 @@ import {
   FontConfiguration,
   FormatConfiguration,
   FormatConfigurationFilterSensitiveLog,
-  LegendOptions,
+  LabelOptions,
   MeasureField,
   MeasureFieldFilterSensitiveLog,
   NumberDisplayFormatConfiguration,
   NumberDisplayFormatConfigurationFilterSensitiveLog,
+  NumericalAggregationFunction,
   NumericFormatConfiguration,
   NumericFormatConfigurationFilterSensitiveLog,
   PercentageDisplayFormatConfiguration,
   PercentageDisplayFormatConfigurationFilterSensitiveLog,
-  ReferenceLineDynamicDataConfiguration,
   SortDirection,
   TimeGranularity,
   Visibility,
@@ -41,6 +39,140 @@ import {
   VisualInteractionOptions,
   WidgetStatus,
 } from "./models_0";
+
+/**
+ * @public
+ * @enum
+ */
+export const LegendPosition = {
+  AUTO: "AUTO",
+  BOTTOM: "BOTTOM",
+  RIGHT: "RIGHT",
+  TOP: "TOP",
+} as const;
+
+/**
+ * @public
+ */
+export type LegendPosition = (typeof LegendPosition)[keyof typeof LegendPosition];
+
+/**
+ * <p>The options for the legend setup of a visual.</p>
+ * @public
+ */
+export interface LegendOptions {
+  /**
+   * <p>Determines whether or not the legend is visible.</p>
+   * @public
+   */
+  Visibility?: Visibility | undefined;
+
+  /**
+   * <p>The custom title for the legend.</p>
+   * @public
+   */
+  Title?: LabelOptions | undefined;
+
+  /**
+   * <p>The positions for the legend. Choose one of the following
+   *             options:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>AUTO</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>RIGHT</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>BOTTOM</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>LEFT</code>
+   *                </p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  Position?: LegendPosition | undefined;
+
+  /**
+   * <p>The width of the legend. If this value is omitted, a default width is used when rendering.</p>
+   * @public
+   */
+  Width?: string | undefined;
+
+  /**
+   * <p>The height of the legend. If this value is omitted, a default height is used when
+   *             rendering.</p>
+   * @public
+   */
+  Height?: string | undefined;
+
+  /**
+   * <p>Configures the display properties of the given text.</p>
+   * @public
+   */
+  ValueFontConfiguration?: FontConfiguration | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const BarChartOrientation = {
+  HORIZONTAL: "HORIZONTAL",
+  VERTICAL: "VERTICAL",
+} as const;
+
+/**
+ * @public
+ */
+export type BarChartOrientation = (typeof BarChartOrientation)[keyof typeof BarChartOrientation];
+
+/**
+ * @public
+ * @enum
+ */
+export const AxisBinding = {
+  PRIMARY_YAXIS: "PRIMARY_YAXIS",
+  SECONDARY_YAXIS: "SECONDARY_YAXIS",
+} as const;
+
+/**
+ * @public
+ */
+export type AxisBinding = (typeof AxisBinding)[keyof typeof AxisBinding];
+
+/**
+ * <p>The dynamic configuration of the reference line data configuration.</p>
+ * @public
+ */
+export interface ReferenceLineDynamicDataConfiguration {
+  /**
+   * <p>The column that the dynamic data targets.</p>
+   * @public
+   */
+  Column: ColumnIdentifier | undefined;
+
+  /**
+   * <p>The aggregation function that is used in the dynamic data.</p>
+   * @public
+   */
+  MeasureAggregationFunction?: AggregationFunction | undefined;
+
+  /**
+   * <p>The calculation that is used in the dynamic data.</p>
+   * @public
+   */
+  Calculation: NumericalAggregationFunction | undefined;
+}
 
 /**
  * @public
@@ -3685,10 +3817,22 @@ export interface HeatMapConfiguration {
   SortConfiguration?: HeatMapSortConfiguration | undefined;
 
   /**
+   * <p>The options that determine the presentation of the row axis label.</p>
+   * @public
+   */
+  RowAxisDisplayOptions?: AxisDisplayOptions | undefined;
+
+  /**
    * <p>The label options of the row that is displayed in a <code>heat map</code>.</p>
    * @public
    */
   RowLabelOptions?: ChartAxisLabelOptions | undefined;
+
+  /**
+   * <p>The options that determine the presentation of the row axis label.</p>
+   * @public
+   */
+  ColumnAxisDisplayOptions?: AxisDisplayOptions | undefined;
 
   /**
    * <p>The label options of the column that is displayed in a heat map.</p>
@@ -7663,136 +7807,6 @@ export interface PivotTotalOptions {
 }
 
 /**
- * <p>The total options for a pivot table visual.</p>
- * @public
- */
-export interface PivotTableTotalOptions {
-  /**
-   * <p>The row subtotal options.</p>
-   * @public
-   */
-  RowSubtotalOptions?: SubtotalOptions | undefined;
-
-  /**
-   * <p>The column subtotal options.</p>
-   * @public
-   */
-  ColumnSubtotalOptions?: SubtotalOptions | undefined;
-
-  /**
-   * <p>The row total options.</p>
-   * @public
-   */
-  RowTotalOptions?: PivotTotalOptions | undefined;
-
-  /**
-   * <p>The column total options.</p>
-   * @public
-   */
-  ColumnTotalOptions?: PivotTotalOptions | undefined;
-}
-
-/**
- * <p>The configuration for a <code>PivotTableVisual</code>.</p>
- * @public
- */
-export interface PivotTableConfiguration {
-  /**
-   * <p>The field wells of the visual.</p>
-   * @public
-   */
-  FieldWells?: PivotTableFieldWells | undefined;
-
-  /**
-   * <p>The sort configuration for a <code>PivotTableVisual</code>.</p>
-   * @public
-   */
-  SortConfiguration?: PivotTableSortConfiguration | undefined;
-
-  /**
-   * <p>The table options for a pivot table visual.</p>
-   * @public
-   */
-  TableOptions?: PivotTableOptions | undefined;
-
-  /**
-   * <p>The total options for a pivot table visual.</p>
-   * @public
-   */
-  TotalOptions?: PivotTableTotalOptions | undefined;
-
-  /**
-   * <p>The field options for a pivot table visual.</p>
-   * @public
-   */
-  FieldOptions?: PivotTableFieldOptions | undefined;
-
-  /**
-   * <p>The paginated report options for a pivot table visual.</p>
-   * @public
-   */
-  PaginatedReportOptions?: PivotTablePaginatedReportOptions | undefined;
-
-  /**
-   * <p>The general visual interactions setup for a visual.</p>
-   * @public
-   */
-  Interactions?: VisualInteractionOptions | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const PivotTableConditionalFormattingScopeRole = {
-  FIELD: "FIELD",
-  FIELD_TOTAL: "FIELD_TOTAL",
-  GRAND_TOTAL: "GRAND_TOTAL",
-} as const;
-
-/**
- * @public
- */
-export type PivotTableConditionalFormattingScopeRole =
-  (typeof PivotTableConditionalFormattingScopeRole)[keyof typeof PivotTableConditionalFormattingScopeRole];
-
-/**
- * <p>The scope of the cell for conditional formatting.</p>
- * @public
- */
-export interface PivotTableConditionalFormattingScope {
-  /**
-   * <p>The role (field, field total, grand total) of the cell for conditional formatting.</p>
-   * @public
-   */
-  Role?: PivotTableConditionalFormattingScopeRole | undefined;
-}
-
-/**
- * <p>The conditional formatting for the text.</p>
- * @public
- */
-export interface TextConditionalFormat {
-  /**
-   * <p>The conditional formatting for the text background color.</p>
-   * @public
-   */
-  BackgroundColor?: ConditionalFormattingColor | undefined;
-
-  /**
-   * <p>The conditional formatting for the text color.</p>
-   * @public
-   */
-  TextColor?: ConditionalFormattingColor | undefined;
-
-  /**
-   * <p>The conditional formatting for the icon.</p>
-   * @public
-   */
-  Icon?: ConditionalFormattingIcon | undefined;
-}
-
-/**
  * @internal
  */
 export const ReferenceLineStaticDataConfigurationFilterSensitiveLog = (
@@ -8796,21 +8810,4 @@ export const PivotFieldSortOptionsFilterSensitiveLog = (obj: PivotFieldSortOptio
  */
 export const PivotTableSortConfigurationFilterSensitiveLog = (obj: PivotTableSortConfiguration): any => ({
   ...obj,
-});
-
-/**
- * @internal
- */
-export const PivotTableConfigurationFilterSensitiveLog = (obj: PivotTableConfiguration): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const TextConditionalFormatFilterSensitiveLog = (obj: TextConditionalFormat): any => ({
-  ...obj,
-  ...(obj.BackgroundColor && { BackgroundColor: ConditionalFormattingColorFilterSensitiveLog(obj.BackgroundColor) }),
-  ...(obj.TextColor && { TextColor: ConditionalFormattingColorFilterSensitiveLog(obj.TextColor) }),
-  ...(obj.Icon && { Icon: ConditionalFormattingIconFilterSensitiveLog(obj.Icon) }),
 });

@@ -6,8 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { IoTSiteWiseClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../IoTSiteWiseClient";
-import { ListAssetsRequest } from "../models/models_0";
-import { ListAssetsResponse } from "../models/models_1";
+import { ListAssetsRequest, ListAssetsResponse } from "../models/models_1";
 import { de_ListAssetsCommand, se_ListAssetsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -60,6 +59,7 @@ export interface ListAssetsCommandOutput extends ListAssetsResponse, __MetadataB
  * //   assetSummaries: [ // AssetSummaries // required
  * //     { // AssetSummary
  * //       id: "STRING_VALUE", // required
+ * //       externalId: "STRING_VALUE",
  * //       arn: "STRING_VALUE", // required
  * //       name: "STRING_VALUE", // required
  * //       assetModelId: "STRING_VALUE", // required
@@ -81,12 +81,11 @@ export interface ListAssetsCommandOutput extends ListAssetsResponse, __MetadataB
  * //       hierarchies: [ // AssetHierarchies // required
  * //         { // AssetHierarchy
  * //           id: "STRING_VALUE",
- * //           name: "STRING_VALUE", // required
  * //           externalId: "STRING_VALUE",
+ * //           name: "STRING_VALUE", // required
  * //         },
  * //       ],
  * //       description: "STRING_VALUE",
- * //       externalId: "STRING_VALUE",
  * //     },
  * //   ],
  * //   nextToken: "STRING_VALUE",

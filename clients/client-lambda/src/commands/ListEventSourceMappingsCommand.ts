@@ -28,8 +28,7 @@ export interface ListEventSourceMappingsCommandInput extends ListEventSourceMapp
 export interface ListEventSourceMappingsCommandOutput extends ListEventSourceMappingsResponse, __MetadataBearer {}
 
 /**
- * <p>Lists event source mappings. Specify an <code>EventSourceArn</code> to show only event source mappings for a
- *       single event source.</p>
+ * <p>Lists event source mappings. Specify an <code>EventSourceArn</code> to show only event source mappings for a single event source.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -103,9 +102,39 @@ export interface ListEventSourceMappingsCommandOutput extends ListEventSourceMap
  * //       ],
  * //       AmazonManagedKafkaEventSourceConfig: { // AmazonManagedKafkaEventSourceConfig
  * //         ConsumerGroupId: "STRING_VALUE",
+ * //         SchemaRegistryConfig: { // KafkaSchemaRegistryConfig
+ * //           SchemaRegistryURI: "STRING_VALUE",
+ * //           EventRecordFormat: "JSON" || "SOURCE",
+ * //           AccessConfigs: [ // KafkaSchemaRegistryAccessConfigList
+ * //             { // KafkaSchemaRegistryAccessConfig
+ * //               Type: "BASIC_AUTH" || "CLIENT_CERTIFICATE_TLS_AUTH" || "SERVER_ROOT_CA_CERTIFICATE",
+ * //               URI: "STRING_VALUE",
+ * //             },
+ * //           ],
+ * //           SchemaValidationConfigs: [ // KafkaSchemaValidationConfigList
+ * //             { // KafkaSchemaValidationConfig
+ * //               Attribute: "KEY" || "VALUE",
+ * //             },
+ * //           ],
+ * //         },
  * //       },
  * //       SelfManagedKafkaEventSourceConfig: { // SelfManagedKafkaEventSourceConfig
  * //         ConsumerGroupId: "STRING_VALUE",
+ * //         SchemaRegistryConfig: {
+ * //           SchemaRegistryURI: "STRING_VALUE",
+ * //           EventRecordFormat: "JSON" || "SOURCE",
+ * //           AccessConfigs: [
+ * //             {
+ * //               Type: "BASIC_AUTH" || "CLIENT_CERTIFICATE_TLS_AUTH" || "SERVER_ROOT_CA_CERTIFICATE",
+ * //               URI: "STRING_VALUE",
+ * //             },
+ * //           ],
+ * //           SchemaValidationConfigs: [
+ * //             {
+ * //               Attribute: "KEY" || "VALUE",
+ * //             },
+ * //           ],
+ * //         },
  * //       },
  * //       ScalingConfig: { // ScalingConfig
  * //         MaximumConcurrency: Number("int"),

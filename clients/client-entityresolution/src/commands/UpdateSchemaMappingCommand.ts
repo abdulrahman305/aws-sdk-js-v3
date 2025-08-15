@@ -28,11 +28,7 @@ export interface UpdateSchemaMappingCommandInput extends UpdateSchemaMappingInpu
 export interface UpdateSchemaMappingCommandOutput extends UpdateSchemaMappingOutput, __MetadataBearer {}
 
 /**
- * <p>Updates a schema mapping.</p>
- *          <note>
- *             <p>A schema is immutable if it is being used by a workflow. Therefore, you can't update
- *             a schema mapping if it's associated with a workflow. </p>
- *          </note>
+ * <p>Updates a schema mapping.</p> <note> <p>A schema is immutable if it is being used by a workflow. Therefore, you can't update a schema mapping if it's associated with a workflow. </p> </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -45,7 +41,7 @@ export interface UpdateSchemaMappingCommandOutput extends UpdateSchemaMappingOut
  *   mappedInputFields: [ // SchemaInputAttributes // required
  *     { // SchemaInputAttribute
  *       fieldName: "STRING_VALUE", // required
- *       type: "NAME" || "NAME_FIRST" || "NAME_MIDDLE" || "NAME_LAST" || "ADDRESS" || "ADDRESS_STREET1" || "ADDRESS_STREET2" || "ADDRESS_STREET3" || "ADDRESS_CITY" || "ADDRESS_STATE" || "ADDRESS_COUNTRY" || "ADDRESS_POSTALCODE" || "PHONE" || "PHONE_NUMBER" || "PHONE_COUNTRYCODE" || "EMAIL_ADDRESS" || "UNIQUE_ID" || "DATE" || "STRING" || "PROVIDER_ID", // required
+ *       type: "NAME" || "NAME_FIRST" || "NAME_MIDDLE" || "NAME_LAST" || "ADDRESS" || "ADDRESS_STREET1" || "ADDRESS_STREET2" || "ADDRESS_STREET3" || "ADDRESS_CITY" || "ADDRESS_STATE" || "ADDRESS_COUNTRY" || "ADDRESS_POSTALCODE" || "PHONE" || "PHONE_NUMBER" || "PHONE_COUNTRYCODE" || "EMAIL_ADDRESS" || "UNIQUE_ID" || "DATE" || "STRING" || "PROVIDER_ID" || "IPV4" || "IPV6" || "MAID", // required
  *       groupName: "STRING_VALUE",
  *       matchKey: "STRING_VALUE",
  *       subType: "STRING_VALUE",
@@ -62,7 +58,7 @@ export interface UpdateSchemaMappingCommandOutput extends UpdateSchemaMappingOut
  * //   mappedInputFields: [ // SchemaInputAttributes // required
  * //     { // SchemaInputAttribute
  * //       fieldName: "STRING_VALUE", // required
- * //       type: "NAME" || "NAME_FIRST" || "NAME_MIDDLE" || "NAME_LAST" || "ADDRESS" || "ADDRESS_STREET1" || "ADDRESS_STREET2" || "ADDRESS_STREET3" || "ADDRESS_CITY" || "ADDRESS_STATE" || "ADDRESS_COUNTRY" || "ADDRESS_POSTALCODE" || "PHONE" || "PHONE_NUMBER" || "PHONE_COUNTRYCODE" || "EMAIL_ADDRESS" || "UNIQUE_ID" || "DATE" || "STRING" || "PROVIDER_ID", // required
+ * //       type: "NAME" || "NAME_FIRST" || "NAME_MIDDLE" || "NAME_LAST" || "ADDRESS" || "ADDRESS_STREET1" || "ADDRESS_STREET2" || "ADDRESS_STREET3" || "ADDRESS_CITY" || "ADDRESS_STATE" || "ADDRESS_COUNTRY" || "ADDRESS_POSTALCODE" || "PHONE" || "PHONE_NUMBER" || "PHONE_COUNTRYCODE" || "EMAIL_ADDRESS" || "UNIQUE_ID" || "DATE" || "STRING" || "PROVIDER_ID" || "IPV4" || "IPV6" || "MAID", // required
  * //       groupName: "STRING_VALUE",
  * //       matchKey: "STRING_VALUE",
  * //       subType: "STRING_VALUE",
@@ -83,13 +79,10 @@ export interface UpdateSchemaMappingCommandOutput extends UpdateSchemaMappingOut
  *  <p>You do not have sufficient access to perform this action. </p>
  *
  * @throws {@link ConflictException} (client fault)
- *  <p>The request could not be processed because of conflict in the current state of the
- *          resource. Example: Workflow already exists, Schema already exists, Workflow is currently
- *          running, etc. </p>
+ *  <p>The request could not be processed because of conflict in the current state of the resource. Example: Workflow already exists, Schema already exists, Workflow is currently running, etc. </p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>This exception occurs when there is an internal failure in the Entity Resolution
- *          service. </p>
+ *  <p>This exception occurs when there is an internal failure in the Entity Resolution service. </p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The resource could not be found. </p>

@@ -849,6 +849,57 @@
                     {
                       "conditions": [
                         {
+                          "fn": "stringEquals",
+                          "argv": [
+                            {
+                              "fn": "getAttr",
+                              "argv": [
+                                {
+                                  "ref": "PartitionResult"
+                                },
+                                "name"
+                              ]
+                            },
+                            "aws-eusc"
+                          ]
+                        },
+                        {
+                          "fn": "booleanEquals",
+                          "argv": [
+                            {
+                              "ref": "UseFIPS"
+                            },
+                            false
+                          ]
+                        },
+                        {
+                          "fn": "booleanEquals",
+                          "argv": [
+                            {
+                              "ref": "UseDualStack"
+                            },
+                            false
+                          ]
+                        }
+                      ],
+                      "endpoint": {
+                        "url": "https://route53.amazonaws.eu",
+                        "properties": {
+                          "authSchemes": [
+                            {
+                              "name": "sigv4",
+                              "signingName": "route53",
+                              "signingRegion": "eusc-de-east-1"
+                            }
+                          ]
+                        },
+                        "headers": {}
+                      },
+                      "type": "endpoint"
+                    },
+                    {
+                      "conditions": [
+                        {
                           "fn": "booleanEquals",
                           "argv": [
                             {
@@ -3470,6 +3521,18 @@
           "target": "smithy.api#Unit",
           "traits": {
             "smithy.api#enumValue": "ap-southeast-7"
+          }
+        },
+        "ap_east_2": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "ap-east-2"
+          }
+        },
+        "eu_isoe_west_1": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "eu-isoe-west-1"
           }
         }
       },
@@ -10918,6 +10981,24 @@
           "traits": {
             "smithy.api#enumValue": "ap-southeast-7"
           }
+        },
+        "us_gov_east_1": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "us-gov-east-1"
+          }
+        },
+        "us_gov_west_1": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "us-gov-west-1"
+          }
+        },
+        "ap_east_2": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "ap-east-2"
+          }
         }
       },
       "traits": {
@@ -12575,6 +12656,18 @@
           "target": "smithy.api#Unit",
           "traits": {
             "smithy.api#enumValue": "ap-southeast-7"
+          }
+        },
+        "ap_east_2": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "ap-east-2"
+          }
+        },
+        "eu_isoe_west_1": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "eu-isoe-west-1"
           }
         }
       },

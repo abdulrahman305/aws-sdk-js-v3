@@ -28,6 +28,11 @@ import {
   CreateDomainCommandOutput,
 } from "./commands/CreateDomainCommand";
 import {
+  CreateDomainLayoutCommand,
+  CreateDomainLayoutCommandInput,
+  CreateDomainLayoutCommandOutput,
+} from "./commands/CreateDomainLayoutCommand";
+import {
   CreateEventStreamCommand,
   CreateEventStreamCommandInput,
   CreateEventStreamCommandOutput,
@@ -63,6 +68,11 @@ import {
   CreateSegmentSnapshotCommandOutput,
 } from "./commands/CreateSegmentSnapshotCommand";
 import {
+  CreateUploadJobCommand,
+  CreateUploadJobCommandInput,
+  CreateUploadJobCommandOutput,
+} from "./commands/CreateUploadJobCommand";
+import {
   DeleteCalculatedAttributeDefinitionCommand,
   DeleteCalculatedAttributeDefinitionCommandInput,
   DeleteCalculatedAttributeDefinitionCommandOutput,
@@ -72,6 +82,11 @@ import {
   DeleteDomainCommandInput,
   DeleteDomainCommandOutput,
 } from "./commands/DeleteDomainCommand";
+import {
+  DeleteDomainLayoutCommand,
+  DeleteDomainLayoutCommandInput,
+  DeleteDomainLayoutCommandOutput,
+} from "./commands/DeleteDomainLayoutCommand";
 import {
   DeleteEventStreamCommand,
   DeleteEventStreamCommandInput,
@@ -139,6 +154,11 @@ import {
 } from "./commands/GetCalculatedAttributeForProfileCommand";
 import { GetDomainCommand, GetDomainCommandInput, GetDomainCommandOutput } from "./commands/GetDomainCommand";
 import {
+  GetDomainLayoutCommand,
+  GetDomainLayoutCommandInput,
+  GetDomainLayoutCommandOutput,
+} from "./commands/GetDomainLayoutCommand";
+import {
   GetEventStreamCommand,
   GetEventStreamCommandInput,
   GetEventStreamCommandOutput,
@@ -194,6 +214,16 @@ import {
   GetSimilarProfilesCommandInput,
   GetSimilarProfilesCommandOutput,
 } from "./commands/GetSimilarProfilesCommand";
+import {
+  GetUploadJobCommand,
+  GetUploadJobCommandInput,
+  GetUploadJobCommandOutput,
+} from "./commands/GetUploadJobCommand";
+import {
+  GetUploadJobPathCommand,
+  GetUploadJobPathCommandInput,
+  GetUploadJobPathCommandOutput,
+} from "./commands/GetUploadJobPathCommand";
 import { GetWorkflowCommand, GetWorkflowCommandInput, GetWorkflowCommandOutput } from "./commands/GetWorkflowCommand";
 import {
   GetWorkflowStepsCommand,
@@ -215,6 +245,11 @@ import {
   ListCalculatedAttributesForProfileCommandInput,
   ListCalculatedAttributesForProfileCommandOutput,
 } from "./commands/ListCalculatedAttributesForProfileCommand";
+import {
+  ListDomainLayoutsCommand,
+  ListDomainLayoutsCommandInput,
+  ListDomainLayoutsCommandOutput,
+} from "./commands/ListDomainLayoutsCommand";
 import { ListDomainsCommand, ListDomainsCommandInput, ListDomainsCommandOutput } from "./commands/ListDomainsCommand";
 import {
   ListEventStreamsCommand,
@@ -277,6 +312,11 @@ import {
   ListTagsForResourceCommandOutput,
 } from "./commands/ListTagsForResourceCommand";
 import {
+  ListUploadJobsCommand,
+  ListUploadJobsCommandInput,
+  ListUploadJobsCommandOutput,
+} from "./commands/ListUploadJobsCommand";
+import {
   ListWorkflowsCommand,
   ListWorkflowsCommandInput,
   ListWorkflowsCommandOutput,
@@ -306,6 +346,16 @@ import {
   SearchProfilesCommandInput,
   SearchProfilesCommandOutput,
 } from "./commands/SearchProfilesCommand";
+import {
+  StartUploadJobCommand,
+  StartUploadJobCommandInput,
+  StartUploadJobCommandOutput,
+} from "./commands/StartUploadJobCommand";
+import {
+  StopUploadJobCommand,
+  StopUploadJobCommandInput,
+  StopUploadJobCommandOutput,
+} from "./commands/StopUploadJobCommand";
 import { TagResourceCommand, TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import {
   UntagResourceCommand,
@@ -322,6 +372,11 @@ import {
   UpdateDomainCommandInput,
   UpdateDomainCommandOutput,
 } from "./commands/UpdateDomainCommand";
+import {
+  UpdateDomainLayoutCommand,
+  UpdateDomainLayoutCommandInput,
+  UpdateDomainLayoutCommandOutput,
+} from "./commands/UpdateDomainLayoutCommand";
 import {
   UpdateEventTriggerCommand,
   UpdateEventTriggerCommandInput,
@@ -340,6 +395,7 @@ const commands = {
   BatchGetProfileCommand,
   CreateCalculatedAttributeDefinitionCommand,
   CreateDomainCommand,
+  CreateDomainLayoutCommand,
   CreateEventStreamCommand,
   CreateEventTriggerCommand,
   CreateIntegrationWorkflowCommand,
@@ -347,8 +403,10 @@ const commands = {
   CreateSegmentDefinitionCommand,
   CreateSegmentEstimateCommand,
   CreateSegmentSnapshotCommand,
+  CreateUploadJobCommand,
   DeleteCalculatedAttributeDefinitionCommand,
   DeleteDomainCommand,
+  DeleteDomainLayoutCommand,
   DeleteEventStreamCommand,
   DeleteEventTriggerCommand,
   DeleteIntegrationCommand,
@@ -363,6 +421,7 @@ const commands = {
   GetCalculatedAttributeDefinitionCommand,
   GetCalculatedAttributeForProfileCommand,
   GetDomainCommand,
+  GetDomainLayoutCommand,
   GetEventStreamCommand,
   GetEventTriggerCommand,
   GetIdentityResolutionJobCommand,
@@ -375,11 +434,14 @@ const commands = {
   GetSegmentMembershipCommand,
   GetSegmentSnapshotCommand,
   GetSimilarProfilesCommand,
+  GetUploadJobCommand,
+  GetUploadJobPathCommand,
   GetWorkflowCommand,
   GetWorkflowStepsCommand,
   ListAccountIntegrationsCommand,
   ListCalculatedAttributeDefinitionsCommand,
   ListCalculatedAttributesForProfileCommand,
+  ListDomainLayoutsCommand,
   ListDomainsCommand,
   ListEventStreamsCommand,
   ListEventTriggersCommand,
@@ -393,16 +455,20 @@ const commands = {
   ListRuleBasedMatchesCommand,
   ListSegmentDefinitionsCommand,
   ListTagsForResourceCommand,
+  ListUploadJobsCommand,
   ListWorkflowsCommand,
   MergeProfilesCommand,
   PutIntegrationCommand,
   PutProfileObjectCommand,
   PutProfileObjectTypeCommand,
   SearchProfilesCommand,
+  StartUploadJobCommand,
+  StopUploadJobCommand,
   TagResourceCommand,
   UntagResourceCommand,
   UpdateCalculatedAttributeDefinitionCommand,
   UpdateDomainCommand,
+  UpdateDomainLayoutCommand,
   UpdateEventTriggerCommand,
   UpdateProfileCommand,
 };
@@ -476,6 +542,23 @@ export interface CustomerProfiles {
     args: CreateDomainCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateDomainCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateDomainLayoutCommand}
+   */
+  createDomainLayout(
+    args: CreateDomainLayoutCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateDomainLayoutCommandOutput>;
+  createDomainLayout(
+    args: CreateDomainLayoutCommandInput,
+    cb: (err: any, data?: CreateDomainLayoutCommandOutput) => void
+  ): void;
+  createDomainLayout(
+    args: CreateDomainLayoutCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateDomainLayoutCommandOutput) => void
   ): void;
 
   /**
@@ -592,6 +675,20 @@ export interface CustomerProfiles {
   ): void;
 
   /**
+   * @see {@link CreateUploadJobCommand}
+   */
+  createUploadJob(
+    args: CreateUploadJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateUploadJobCommandOutput>;
+  createUploadJob(args: CreateUploadJobCommandInput, cb: (err: any, data?: CreateUploadJobCommandOutput) => void): void;
+  createUploadJob(
+    args: CreateUploadJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateUploadJobCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteCalculatedAttributeDefinitionCommand}
    */
   deleteCalculatedAttributeDefinition(
@@ -617,6 +714,23 @@ export interface CustomerProfiles {
     args: DeleteDomainCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteDomainCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteDomainLayoutCommand}
+   */
+  deleteDomainLayout(
+    args: DeleteDomainLayoutCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteDomainLayoutCommandOutput>;
+  deleteDomainLayout(
+    args: DeleteDomainLayoutCommandInput,
+    cb: (err: any, data?: DeleteDomainLayoutCommandOutput) => void
+  ): void;
+  deleteDomainLayout(
+    args: DeleteDomainLayoutCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteDomainLayoutCommandOutput) => void
   ): void;
 
   /**
@@ -843,6 +957,20 @@ export interface CustomerProfiles {
   ): void;
 
   /**
+   * @see {@link GetDomainLayoutCommand}
+   */
+  getDomainLayout(
+    args: GetDomainLayoutCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetDomainLayoutCommandOutput>;
+  getDomainLayout(args: GetDomainLayoutCommandInput, cb: (err: any, data?: GetDomainLayoutCommandOutput) => void): void;
+  getDomainLayout(
+    args: GetDomainLayoutCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetDomainLayoutCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetEventStreamCommand}
    */
   getEventStream(
@@ -1032,6 +1160,34 @@ export interface CustomerProfiles {
   ): void;
 
   /**
+   * @see {@link GetUploadJobCommand}
+   */
+  getUploadJob(args: GetUploadJobCommandInput, options?: __HttpHandlerOptions): Promise<GetUploadJobCommandOutput>;
+  getUploadJob(args: GetUploadJobCommandInput, cb: (err: any, data?: GetUploadJobCommandOutput) => void): void;
+  getUploadJob(
+    args: GetUploadJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetUploadJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetUploadJobPathCommand}
+   */
+  getUploadJobPath(
+    args: GetUploadJobPathCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetUploadJobPathCommandOutput>;
+  getUploadJobPath(
+    args: GetUploadJobPathCommandInput,
+    cb: (err: any, data?: GetUploadJobPathCommandOutput) => void
+  ): void;
+  getUploadJobPath(
+    args: GetUploadJobPathCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetUploadJobPathCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetWorkflowCommand}
    */
   getWorkflow(args: GetWorkflowCommandInput, options?: __HttpHandlerOptions): Promise<GetWorkflowCommandOutput>;
@@ -1108,6 +1264,23 @@ export interface CustomerProfiles {
     args: ListCalculatedAttributesForProfileCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListCalculatedAttributesForProfileCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListDomainLayoutsCommand}
+   */
+  listDomainLayouts(
+    args: ListDomainLayoutsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListDomainLayoutsCommandOutput>;
+  listDomainLayouts(
+    args: ListDomainLayoutsCommandInput,
+    cb: (err: any, data?: ListDomainLayoutsCommandOutput) => void
+  ): void;
+  listDomainLayouts(
+    args: ListDomainLayoutsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListDomainLayoutsCommandOutput) => void
   ): void;
 
   /**
@@ -1328,6 +1501,20 @@ export interface CustomerProfiles {
   ): void;
 
   /**
+   * @see {@link ListUploadJobsCommand}
+   */
+  listUploadJobs(
+    args: ListUploadJobsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListUploadJobsCommandOutput>;
+  listUploadJobs(args: ListUploadJobsCommandInput, cb: (err: any, data?: ListUploadJobsCommandOutput) => void): void;
+  listUploadJobs(
+    args: ListUploadJobsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListUploadJobsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListWorkflowsCommand}
    */
   listWorkflows(args: ListWorkflowsCommandInput, options?: __HttpHandlerOptions): Promise<ListWorkflowsCommandOutput>;
@@ -1412,6 +1599,31 @@ export interface CustomerProfiles {
   ): void;
 
   /**
+   * @see {@link StartUploadJobCommand}
+   */
+  startUploadJob(
+    args: StartUploadJobCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<StartUploadJobCommandOutput>;
+  startUploadJob(args: StartUploadJobCommandInput, cb: (err: any, data?: StartUploadJobCommandOutput) => void): void;
+  startUploadJob(
+    args: StartUploadJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StartUploadJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link StopUploadJobCommand}
+   */
+  stopUploadJob(args: StopUploadJobCommandInput, options?: __HttpHandlerOptions): Promise<StopUploadJobCommandOutput>;
+  stopUploadJob(args: StopUploadJobCommandInput, cb: (err: any, data?: StopUploadJobCommandOutput) => void): void;
+  stopUploadJob(
+    args: StopUploadJobCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StopUploadJobCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link TagResourceCommand}
    */
   tagResource(args: TagResourceCommandInput, options?: __HttpHandlerOptions): Promise<TagResourceCommandOutput>;
@@ -1459,6 +1671,23 @@ export interface CustomerProfiles {
     args: UpdateDomainCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: UpdateDomainCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateDomainLayoutCommand}
+   */
+  updateDomainLayout(
+    args: UpdateDomainLayoutCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateDomainLayoutCommandOutput>;
+  updateDomainLayout(
+    args: UpdateDomainLayoutCommandInput,
+    cb: (err: any, data?: UpdateDomainLayoutCommandOutput) => void
+  ): void;
+  updateDomainLayout(
+    args: UpdateDomainLayoutCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateDomainLayoutCommandOutput) => void
   ): void;
 
   /**

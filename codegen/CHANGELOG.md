@@ -1,5 +1,80 @@
 # Smithy AWS Typescript Codegen Changelog
 
+## 0.34.0 (2025-07-30)
+
+### Features
+- Upgraded to smithy-typescript 0.34.0 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0330-2025-07-30))
+- Upgraded smithy version to 1.61.0 ([#7233](https://github.com/aws/aws-sdk-js-v3/pull/7233))
+
+## 0.33.0 (2025-07-10)
+
+### Features
+- Upgraded to smithy-typescript 0.33.0 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0330-2025-07-10))
+- Upgraded smithy version to 1.60.3 ([#7170](https://github.com/aws/aws-sdk-js-v3/pull/7170))
+- Updated codegen to get token from environment variable ([#7166](https://github.com/aws/aws-sdk-js-v3/pull/7166))
+- Updated codegen to use Websocket in browser runtime for Bedrock Runtime ([#7175](https://github.com/aws/aws-sdk-js-v3/pull/7175))
+
+### Bug Fixes
+- Used model service instead of iterating services ([#7184](https://github.com/aws/aws-sdk-js-v3/pull/7184))
+- Generated default endpoint provider for default regional AWS endpoints ([#7190](https://github.com/aws/aws-sdk-js-v3/pull/7190))
+
+### Documentation
+
+## 0.32.0 (2025-06-26)
+
+## Features
+- Upgraded to smithy-typescript 0.32.0 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0320-2025-06-26))
+
+## Bug Fixes
+- Added default AWS regional endpoints for generated AWS clients ([#7151](https://github.com/aws/aws-sdk-js-v3/pull/7151))
+
+## 0.31.1 (2025-06-23)
+
+## Features
+- Upgraded to smithy-typescript 0.31.1 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0311-2025-06-23))
+
+## Bug Fixes
+- Updated codegen for endpoint configuration, event streams, and error classification ([#7143](https://github.com/aws/aws-sdk-js-v3/pull/7143))
+- Fixed awsQueryCompat error structure for backwards compatibility ([#7133](https://github.com/aws/aws-sdk-js-v3/pull/7133))
+- Allowed explicit undefined in EndpointParameters ([#7131](https://github.com/aws/aws-sdk-js-v3/pull/7131))
+
+## 0.31.0 (2025-06-09)
+
+## Features
+- Upgraded to smithy 1.58.0 and smithy-typescript 0.31.0.
+
+## Bug Fixes
+- Fixed fallback behavior for SigV4A to SigV4 ([#7113](https://github.com/aws/aws-sdk-js-v3/pull/7113))
+
+## 0.30.0 (2025-05-08)
+
+## Features
+- Upgraded to smithy 1.57.1 and smithy-typescript 0.30.0.
+
+## Bug Fixes
+- Allowed the `AwsSmithyRpcV2Cbor` generator to take priority over the base `SmithyRpcV2Cbor` generator. The
+AWS extension enables AwsQueryCompatibility handling. ([#7058](https://github.com/aws/aws-sdk-js-v3/pull/7058))
+
+## 0.29.1 (2025-04-24)
+
+## Features
+- Upgraded to smithy-typescript 0.29.1 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0291-2025-04-24))
+
+## Bug Fixes
+- Removed host prefix behaviour for S3 and S3Control ([#7025](https://github.com/aws/aws-sdk-js-v3/pull/7025))
+
+## 0.29.0 (2025-04-11)
+
+## Features
+- Upgraded to smithy-typescript 0.29.0 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0290-2025-04-11))
+- Upgraded to smithy 1.55.0 ([#7005](https://github.com/aws/aws-sdk-js-v3/pull/7005))
+
+## 0.28.0 (2025-04-01)
+
+## Features
+- Upgraded to smithy-typescript 0.28.0 ([Release Notes](https://github.com/smithy-lang/smithy-typescript/blob/main/CHANGELOG.md#0280-2025-04-01))
+- Enforced singular config object for resolver stack ([#6969](https://github.com/aws/aws-sdk-js-v3/pull/6969))
+
 ## 0.27.0 (2025-03-04)
 
 ## Features

@@ -44,8 +44,7 @@ export class BadRequestException extends __BaseException {
 }
 
 /**
- * <p>The request failed because there is a conflict with a previous write. You can retry the
- *       request.</p>
+ * <p>The request failed because there is a conflict with a previous write. You can retry the request.</p>
  * @public
  */
 export class ConflictException extends __BaseException {
@@ -182,6 +181,38 @@ export class TooManyRequestsException extends __BaseException {
  * @public
  * @enum
  */
+export const SSEAlgorithm = {
+  AES256: "AES256",
+  AWS_KMS: "aws:kms",
+} as const;
+
+/**
+ * @public
+ */
+export type SSEAlgorithm = (typeof SSEAlgorithm)[keyof typeof SSEAlgorithm];
+
+/**
+ * <p>Configuration specifying how data should be encrypted. This structure defines the encryption algorithm and optional KMS key to be used for server-side encryption.</p>
+ * @public
+ */
+export interface EncryptionConfiguration {
+  /**
+   * <p>The server-side encryption algorithm to use. Valid values are <code>AES256</code> for S3-managed encryption keys, or <code>aws:kms</code> for Amazon Web Services KMS-managed encryption keys. If you choose SSE-KMS encryption you must grant the S3 Tables maintenance principal access to your KMS key. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-tables-kms-permissions.html">Permissions requirements for S3 Tables SSE-KMS encryption</a>.</p>
+   * @public
+   */
+  sseAlgorithm: SSEAlgorithm | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the KMS key to use for encryption. This field is required only when <code>sseAlgorithm</code> is set to <code>aws:kms</code>.</p>
+   * @public
+   */
+  kmsKeyArn?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const OpenTableFormat = {
   ICEBERG: "ICEBERG",
 } as const;
@@ -310,6 +341,12 @@ export interface CreateTableRequest {
    * @public
    */
   metadata?: TableMetadata | undefined;
+
+  /**
+   * <p>The encryption configuration to use for the table. This configuration specifies the encryption algorithm and, if using SSE-KMS, the KMS key to use for encrypting the table. </p> <note> <p>If you choose SSE-KMS encryption you must grant the S3 Tables maintenance principal access to your KMS key. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-tables-kms-permissions.html">Permissions requirements for S3 Tables SSE-KMS encryption</a>.</p> </note>
+   * @public
+   */
+  encryptionConfiguration?: EncryptionConfiguration | undefined;
 }
 
 /**
@@ -338,6 +375,12 @@ export interface CreateTableBucketRequest {
    * @public
    */
   name: string | undefined;
+
+  /**
+   * <p>The encryption configuration to use for the table bucket. This configuration specifies the default encryption settings that will be applied to all tables created in this bucket unless overridden at the table level. The configuration includes the encryption algorithm and, if using SSE-KMS, the KMS key to use.</p>
+   * @public
+   */
+  encryptionConfiguration?: EncryptionConfiguration | undefined;
 }
 
 /**
@@ -401,6 +444,17 @@ export interface DeleteTableRequest {
  * @public
  */
 export interface DeleteTableBucketRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the table bucket.</p>
+   * @public
+   */
+  tableBucketARN: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteTableBucketEncryptionRequest {
   /**
    * <p>The Amazon Resource Name (ARN) of the table bucket.</p>
    * @public
@@ -486,6 +540,18 @@ export interface GetNamespaceResponse {
    * @public
    */
   ownerAccountId: string | undefined;
+
+  /**
+   * <p>The unique identifier of the namespace.</p>
+   * @public
+   */
+  namespaceId?: string | undefined;
+
+  /**
+   * <p>The unique identifier of the table bucket containing this namespace.</p>
+   * @public
+   */
+  tableBucketId?: string | undefined;
 }
 
 /**
@@ -496,19 +562,25 @@ export interface GetTableRequest {
    * <p>The Amazon Resource Name (ARN) of the table bucket associated with the table.</p>
    * @public
    */
-  tableBucketARN: string | undefined;
+  tableBucketARN?: string | undefined;
 
   /**
    * <p>The name of the namespace the table is associated with.</p>
    * @public
    */
-  namespace: string | undefined;
+  namespace?: string | undefined;
 
   /**
    * <p>The name of the table.</p>
    * @public
    */
-  name: string | undefined;
+  name?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the table.</p>
+   * @public
+   */
+  tableArn?: string | undefined;
 }
 
 /**
@@ -552,6 +624,12 @@ export interface GetTableResponse {
    * @public
    */
   namespace: string[] | undefined;
+
+  /**
+   * <p>The unique identifier of the namespace containing this table.</p>
+   * @public
+   */
+  namespaceId?: string | undefined;
 
   /**
    * <p>The version token of the table.</p>
@@ -612,6 +690,12 @@ export interface GetTableResponse {
    * @public
    */
   format: OpenTableFormat | undefined;
+
+  /**
+   * <p>The unique identifier of the table bucket containing this table.</p>
+   * @public
+   */
+  tableBucketId?: string | undefined;
 }
 
 /**
@@ -624,6 +708,20 @@ export interface GetTableBucketRequest {
    */
   tableBucketARN: string | undefined;
 }
+
+/**
+ * @public
+ * @enum
+ */
+export const TableBucketType = {
+  AWS: "aws",
+  CUSTOMER: "customer",
+} as const;
+
+/**
+ * @public
+ */
+export type TableBucketType = (typeof TableBucketType)[keyof typeof TableBucketType];
 
 /**
  * @public
@@ -652,6 +750,40 @@ export interface GetTableBucketResponse {
    * @public
    */
   createdAt: Date | undefined;
+
+  /**
+   * <p>The unique identifier of the table bucket.</p>
+   * @public
+   */
+  tableBucketId?: string | undefined;
+
+  /**
+   * <p>The type of the table bucket.</p>
+   * @public
+   */
+  type?: TableBucketType | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetTableBucketEncryptionRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the table bucket.</p>
+   * @public
+   */
+  tableBucketARN: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetTableBucketEncryptionResponse {
+  /**
+   * <p>The encryption configuration for the table bucket.</p>
+   * @public
+   */
+  encryptionConfiguration: EncryptionConfiguration | undefined;
 }
 
 /**
@@ -659,8 +791,7 @@ export interface GetTableBucketResponse {
  */
 export interface GetTableBucketMaintenanceConfigurationRequest {
   /**
-   * <p>The Amazon Resource Name (ARN) of the table bucket associated with the maintenance
-   *       configuration.</p>
+   * <p>The Amazon Resource Name (ARN) of the table bucket associated with the maintenance configuration.</p>
    * @public
    */
   tableBucketARN: string | undefined;
@@ -680,23 +811,18 @@ export const TableBucketMaintenanceType = {
 export type TableBucketMaintenanceType = (typeof TableBucketMaintenanceType)[keyof typeof TableBucketMaintenanceType];
 
 /**
- * <p>Contains details about the unreferenced file removal settings for an Iceberg table bucket.
- *     </p>
+ * <p>Contains details about the unreferenced file removal settings for an Iceberg table bucket.</p>
  * @public
  */
 export interface IcebergUnreferencedFileRemovalSettings {
   /**
-   * <p>The number of days an object has to be unreferenced before it is marked as non-current.
-   *
-   *        </p>
+   * <p>The number of days an object has to be unreferenced before it is marked as non-current.</p>
    * @public
    */
   unreferencedDays?: number | undefined;
 
   /**
-   * <p>The number of days an object has to be non-current before it is deleted.
-   *
-   *     </p>
+   * <p>The number of days an object has to be non-current before it is deleted.</p>
    * @public
    */
   nonCurrentDays?: number | undefined;
@@ -780,8 +906,7 @@ export interface TableBucketMaintenanceConfigurationValue {
  */
 export interface GetTableBucketMaintenanceConfigurationResponse {
   /**
-   * <p>The Amazon Resource Name (ARN) of the table bucket associated with the maintenance
-   *       configuration.</p>
+   * <p>The Amazon Resource Name (ARN) of the table bucket associated with the maintenance configuration.</p>
    * @public
    */
   tableBucketARN: string | undefined;
@@ -813,6 +938,40 @@ export interface GetTableBucketPolicyResponse {
    * @public
    */
   resourcePolicy: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetTableEncryptionRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the table bucket containing the table.</p>
+   * @public
+   */
+  tableBucketARN: string | undefined;
+
+  /**
+   * <p>The namespace associated with the table.</p>
+   * @public
+   */
+  namespace: string | undefined;
+
+  /**
+   * <p>The name of the table.</p>
+   * @public
+   */
+  name: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetTableEncryptionResponse {
+  /**
+   * <p>The encryption configuration for the table.</p>
+   * @public
+   */
+  encryptionConfiguration: EncryptionConfiguration | undefined;
 }
 
 /**
@@ -853,8 +1012,23 @@ export const TableMaintenanceType = {
 export type TableMaintenanceType = (typeof TableMaintenanceType)[keyof typeof TableMaintenanceType];
 
 /**
- * <p>Contains details about the compaction settings for an Iceberg table.
- *     </p>
+ * @public
+ * @enum
+ */
+export const IcebergCompactionStrategy = {
+  AUTO: "auto",
+  BINPACK: "binpack",
+  SORT: "sort",
+  ZORDER: "z-order",
+} as const;
+
+/**
+ * @public
+ */
+export type IcebergCompactionStrategy = (typeof IcebergCompactionStrategy)[keyof typeof IcebergCompactionStrategy];
+
+/**
+ * <p>Contains details about the compaction settings for an Iceberg table.</p>
  * @public
  */
 export interface IcebergCompactionSettings {
@@ -863,11 +1037,16 @@ export interface IcebergCompactionSettings {
    * @public
    */
   targetFileSizeMB?: number | undefined;
+
+  /**
+   * <p>The compaction strategy to use for the table. This determines how files are selected and combined during compaction operations.</p>
+   * @public
+   */
+  strategy?: IcebergCompactionStrategy | undefined;
 }
 
 /**
- * <p>Contains details about the snapshot management settings for an Iceberg table. The oldest snapshot expires when its age exceeds the <code>maxSnapshotAgeHours</code> and the total number of snapshots exceeds the value for the minimum number of snapshots to keep <code>minSnapshotsToKeep</code>.
- *     </p>
+ * <p>Contains details about the snapshot management settings for an Iceberg table. The oldest snapshot expires when its age exceeds the <code>maxSnapshotAgeHours</code> and the total number of snapshots exceeds the value for the minimum number of snapshots to keep <code>minSnapshotsToKeep</code>.</p>
  * @public
  */
 export interface IcebergSnapshotManagementSettings {
@@ -986,9 +1165,7 @@ export interface GetTableMaintenanceJobStatusRequest {
   tableBucketARN: string | undefined;
 
   /**
-   * <p>The name of the namespace the table is associated with.
-   *
-   *     </p>
+   * <p>The name of the namespace the table is associated with. </p>
    * @public
    */
   namespace: string | undefined;
@@ -1169,10 +1346,7 @@ export interface ListNamespacesRequest {
   prefix?: string | undefined;
 
   /**
-   * <p>
-   *             <code>ContinuationToken</code> indicates to Amazon S3 that the list is being continued on
-   *       this bucket with a token. <code>ContinuationToken</code> is obfuscated and is not a real key.
-   *       You can use this <code>ContinuationToken</code> for pagination of the list results.</p>
+   * <p> <code>ContinuationToken</code> indicates to Amazon S3 that the list is being continued on this bucket with a token. <code>ContinuationToken</code> is obfuscated and is not a real key. You can use this <code>ContinuationToken</code> for pagination of the list results.</p>
    * @public
    */
   continuationToken?: string | undefined;
@@ -1212,6 +1386,18 @@ export interface NamespaceSummary {
    * @public
    */
   ownerAccountId: string | undefined;
+
+  /**
+   * <p>The system-assigned unique identifier for the namespace.</p>
+   * @public
+   */
+  namespaceId?: string | undefined;
+
+  /**
+   * <p>The system-assigned unique identifier for the table bucket that contains this namespace.</p>
+   * @public
+   */
+  tableBucketId?: string | undefined;
 }
 
 /**
@@ -1242,10 +1428,7 @@ export interface ListTableBucketsRequest {
   prefix?: string | undefined;
 
   /**
-   * <p>
-   *             <code>ContinuationToken</code> indicates to Amazon S3 that the list is being continued on
-   *       this bucket with a token. <code>ContinuationToken</code> is obfuscated and is not a real key.
-   *       You can use this <code>ContinuationToken</code> for pagination of the list results.</p>
+   * <p> <code>ContinuationToken</code> indicates to Amazon S3 that the list is being continued on this bucket with a token. <code>ContinuationToken</code> is obfuscated and is not a real key. You can use this <code>ContinuationToken</code> for pagination of the list results.</p>
    * @public
    */
   continuationToken?: string | undefined;
@@ -1255,6 +1438,12 @@ export interface ListTableBucketsRequest {
    * @public
    */
   maxBuckets?: number | undefined;
+
+  /**
+   * <p>The type of table buckets to filter by in the list.</p>
+   * @public
+   */
+  type?: TableBucketType | undefined;
 }
 
 /**
@@ -1285,6 +1474,18 @@ export interface TableBucketSummary {
    * @public
    */
   createdAt: Date | undefined;
+
+  /**
+   * <p>The system-assigned unique identifier for the table bucket.</p>
+   * @public
+   */
+  tableBucketId?: string | undefined;
+
+  /**
+   * <p>The type of the table bucket.</p>
+   * @public
+   */
+  type?: TableBucketType | undefined;
 }
 
 /**
@@ -1327,10 +1528,7 @@ export interface ListTablesRequest {
   prefix?: string | undefined;
 
   /**
-   * <p>
-   *             <code>ContinuationToken</code> indicates to Amazon S3 that the list is being continued on
-   *       this bucket with a token. <code>ContinuationToken</code> is obfuscated and is not a real key.
-   *       You can use this <code>ContinuationToken</code> for pagination of the list results.</p>
+   * <p> <code>ContinuationToken</code> indicates to Amazon S3 that the list is being continued on this bucket with a token. <code>ContinuationToken</code> is obfuscated and is not a real key. You can use this <code>ContinuationToken</code> for pagination of the list results.</p>
    * @public
    */
   continuationToken?: string | undefined;
@@ -1382,6 +1580,18 @@ export interface TableSummary {
    * @public
    */
   modifiedAt: Date | undefined;
+
+  /**
+   * <p>The unique identifier for the namespace that contains this table.</p>
+   * @public
+   */
+  namespaceId?: string | undefined;
+
+  /**
+   * <p>The unique identifier for the table bucket that contains this table.</p>
+   * @public
+   */
+  tableBucketId?: string | undefined;
 }
 
 /**
@@ -1404,10 +1614,26 @@ export interface ListTablesResponse {
 /**
  * @public
  */
+export interface PutTableBucketEncryptionRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the table bucket.</p>
+   * @public
+   */
+  tableBucketARN: string | undefined;
+
+  /**
+   * <p>The encryption configuration to apply to the table bucket.</p>
+   * @public
+   */
+  encryptionConfiguration: EncryptionConfiguration | undefined;
+}
+
+/**
+ * @public
+ */
 export interface PutTableBucketMaintenanceConfigurationRequest {
   /**
-   * <p>The Amazon Resource Name (ARN) of the table bucket associated with the maintenance
-   *       configuration.</p>
+   * <p>The Amazon Resource Name (ARN) of the table bucket associated with the maintenance configuration.</p>
    * @public
    */
   tableBucketARN: string | undefined;
@@ -1447,8 +1673,7 @@ export interface PutTableBucketPolicyRequest {
  */
 export interface PutTableMaintenanceConfigurationRequest {
   /**
-   * <p>The Amazon Resource Name (ARN) of the table associated with the maintenance
-   *       configuration.</p>
+   * <p>The Amazon Resource Name (ARN) of the table associated with the maintenance configuration.</p>
    * @public
    */
   tableBucketARN: string | undefined;

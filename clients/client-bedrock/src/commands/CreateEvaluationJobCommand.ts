@@ -6,11 +6,8 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import {
-  CreateEvaluationJobRequest,
-  CreateEvaluationJobRequestFilterSensitiveLog,
-  CreateEvaluationJobResponse,
-} from "../models/models_0";
+import { CreateEvaluationJobResponse } from "../models/models_0";
+import { CreateEvaluationJobRequest, CreateEvaluationJobRequestFilterSensitiveLog } from "../models/models_1";
 import { de_CreateEvaluationJobCommand, se_CreateEvaluationJobCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -74,6 +71,32 @@ export interface CreateEvaluationJobCommandOutput extends CreateEvaluationJobRes
  *             modelIdentifier: "STRING_VALUE", // required
  *           },
  *         ],
+ *       },
+ *       customMetricConfig: { // AutomatedEvaluationCustomMetricConfig
+ *         customMetrics: [ // AutomatedEvaluationCustomMetrics // required
+ *           { // AutomatedEvaluationCustomMetricSource Union: only one key present
+ *             customMetricDefinition: { // CustomMetricDefinition
+ *               name: "STRING_VALUE", // required
+ *               instructions: "STRING_VALUE", // required
+ *               ratingScale: [ // RatingScale
+ *                 { // RatingScaleItem
+ *                   definition: "STRING_VALUE", // required
+ *                   value: { // RatingScaleItemValue Union: only one key present
+ *                     stringValue: "STRING_VALUE",
+ *                     floatValue: Number("float"),
+ *                   },
+ *                 },
+ *               ],
+ *             },
+ *           },
+ *         ],
+ *         evaluatorModelConfig: { // CustomMetricEvaluatorModelConfig
+ *           bedrockEvaluatorModels: [ // CustomMetricBedrockEvaluatorModels // required
+ *             { // CustomMetricBedrockEvaluatorModel
+ *               modelIdentifier: "STRING_VALUE", // required
+ *             },
+ *           ],
+ *         },
  *       },
  *     },
  *     human: { // HumanEvaluationConfig
@@ -180,6 +203,43 @@ export interface CreateEvaluationJobCommandOutput extends CreateEvaluationJobRes
  *                     "<RetrievalFilter>",
  *                   ],
  *                 },
+ *                 implicitFilterConfiguration: { // ImplicitFilterConfiguration
+ *                   metadataAttributes: [ // MetadataAttributeSchemaList // required
+ *                     { // MetadataAttributeSchema
+ *                       key: "STRING_VALUE", // required
+ *                       type: "STRING" || "NUMBER" || "BOOLEAN" || "STRING_LIST", // required
+ *                       description: "STRING_VALUE", // required
+ *                     },
+ *                   ],
+ *                   modelArn: "STRING_VALUE", // required
+ *                 },
+ *                 rerankingConfiguration: { // VectorSearchRerankingConfiguration
+ *                   type: "BEDROCK_RERANKING_MODEL", // required
+ *                   bedrockRerankingConfiguration: { // VectorSearchBedrockRerankingConfiguration
+ *                     modelConfiguration: { // VectorSearchBedrockRerankingModelConfiguration
+ *                       modelArn: "STRING_VALUE", // required
+ *                       additionalModelRequestFields: { // AdditionalModelRequestFields
+ *                         "<keys>": "DOCUMENT_VALUE",
+ *                       },
+ *                     },
+ *                     numberOfRerankedResults: Number("int"),
+ *                     metadataConfiguration: { // MetadataConfigurationForReranking
+ *                       selectionMode: "SELECTIVE" || "ALL", // required
+ *                       selectiveModeConfiguration: { // RerankingMetadataSelectiveModeConfiguration Union: only one key present
+ *                         fieldsToInclude: [ // FieldsForReranking
+ *                           { // FieldForReranking
+ *                             fieldName: "STRING_VALUE", // required
+ *                           },
+ *                         ],
+ *                         fieldsToExclude: [
+ *                           {
+ *                             fieldName: "STRING_VALUE", // required
+ *                           },
+ *                         ],
+ *                       },
+ *                     },
+ *                   },
+ *                 },
  *               },
  *             },
  *           },
@@ -193,6 +253,43 @@ export interface CreateEvaluationJobCommandOutput extends CreateEvaluationJobRes
  *                   numberOfResults: Number("int"),
  *                   overrideSearchType: "HYBRID" || "SEMANTIC",
  *                   filter: "<RetrievalFilter>",
+ *                   implicitFilterConfiguration: {
+ *                     metadataAttributes: [ // required
+ *                       {
+ *                         key: "STRING_VALUE", // required
+ *                         type: "STRING" || "NUMBER" || "BOOLEAN" || "STRING_LIST", // required
+ *                         description: "STRING_VALUE", // required
+ *                       },
+ *                     ],
+ *                     modelArn: "STRING_VALUE", // required
+ *                   },
+ *                   rerankingConfiguration: {
+ *                     type: "BEDROCK_RERANKING_MODEL", // required
+ *                     bedrockRerankingConfiguration: {
+ *                       modelConfiguration: {
+ *                         modelArn: "STRING_VALUE", // required
+ *                         additionalModelRequestFields: {
+ *                           "<keys>": "DOCUMENT_VALUE",
+ *                         },
+ *                       },
+ *                       numberOfRerankedResults: Number("int"),
+ *                       metadataConfiguration: {
+ *                         selectionMode: "SELECTIVE" || "ALL", // required
+ *                         selectiveModeConfiguration: {//  Union: only one key present
+ *                           fieldsToInclude: [
+ *                             {
+ *                               fieldName: "STRING_VALUE", // required
+ *                             },
+ *                           ],
+ *                           fieldsToExclude: [
+ *                             {
+ *                               fieldName: "STRING_VALUE", // required
+ *                             },
+ *                           ],
+ *                         },
+ *                       },
+ *                     },
+ *                   },
  *                 },
  *               },
  *               generationConfiguration: { // GenerationConfiguration
@@ -213,9 +310,7 @@ export interface CreateEvaluationJobCommandOutput extends CreateEvaluationJobRes
  *                     ],
  *                   },
  *                 },
- *                 additionalModelRequestFields: { // AdditionalModelRequestFields
- *                   "<keys>": "DOCUMENT_VALUE",
- *                 },
+ *                 additionalModelRequestFields: "<AdditionalModelRequestFields>",
  *               },
  *               orchestrationConfiguration: { // OrchestrationConfiguration
  *                 queryTransformationConfiguration: { // QueryTransformationConfiguration
@@ -256,9 +351,7 @@ export interface CreateEvaluationJobCommandOutput extends CreateEvaluationJobRes
  *                     ],
  *                   },
  *                 },
- *                 additionalModelRequestFields: {
- *                   "<keys>": "DOCUMENT_VALUE",
- *                 },
+ *                 additionalModelRequestFields: "<AdditionalModelRequestFields>",
  *               },
  *             },
  *           },

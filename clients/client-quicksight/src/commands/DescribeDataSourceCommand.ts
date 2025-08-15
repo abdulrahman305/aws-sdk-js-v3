@@ -57,6 +57,9 @@ export interface DescribeDataSourceCommandOutput extends DescribeDataSourceRespo
  * //       AthenaParameters: { // AthenaParameters
  * //         WorkGroup: "STRING_VALUE",
  * //         RoleArn: "STRING_VALUE",
+ * //         IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ * //           EnableIdentityPropagation: true || false,
+ * //         },
  * //       },
  * //       AuroraParameters: { // AuroraParameters
  * //         Host: "STRING_VALUE", // required
@@ -117,7 +120,7 @@ export interface DescribeDataSourceCommandOutput extends DescribeDataSourceRespo
  * //           ],
  * //           AutoCreateDatabaseUser: true || false,
  * //         },
- * //         IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ * //         IdentityCenterConfiguration: {
  * //           EnableIdentityPropagation: true || false,
  * //         },
  * //       },
@@ -201,6 +204,12 @@ export interface DescribeDataSourceCommandOutput extends DescribeDataSourceRespo
  * //         ProjectId: "STRING_VALUE", // required
  * //         DataSetRegion: "STRING_VALUE",
  * //       },
+ * //       ImpalaParameters: { // ImpalaParameters
+ * //         Host: "STRING_VALUE", // required
+ * //         Port: Number("int"), // required
+ * //         Database: "STRING_VALUE",
+ * //         SqlEndpointPath: "STRING_VALUE", // required
+ * //       },
  * //     },
  * //     AlternateDataSourceParameters: [ // DataSourceParametersList
  * //       {//  Union: only one key present
@@ -210,6 +219,9 @@ export interface DescribeDataSourceCommandOutput extends DescribeDataSourceRespo
  * //         AthenaParameters: {
  * //           WorkGroup: "STRING_VALUE",
  * //           RoleArn: "STRING_VALUE",
+ * //           IdentityCenterConfiguration: {
+ * //             EnableIdentityPropagation: true || false,
+ * //           },
  * //         },
  * //         AuroraParameters: {
  * //           Host: "STRING_VALUE", // required
@@ -353,6 +365,12 @@ export interface DescribeDataSourceCommandOutput extends DescribeDataSourceRespo
  * //         BigQueryParameters: {
  * //           ProjectId: "STRING_VALUE", // required
  * //           DataSetRegion: "STRING_VALUE",
+ * //         },
+ * //         ImpalaParameters: {
+ * //           Host: "STRING_VALUE", // required
+ * //           Port: Number("int"), // required
+ * //           Database: "STRING_VALUE",
+ * //           SqlEndpointPath: "STRING_VALUE", // required
  * //         },
  * //       },
  * //     ],

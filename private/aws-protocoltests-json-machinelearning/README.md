@@ -659,6 +659,22 @@ PutWithContentEncoding
 </details>
 <details>
 <summary>
+QueryCompatibleOperation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/QueryCompatibleOperationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/QueryCompatibleOperationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/QueryCompatibleOperationCommandOutput/)
+
+</details>
+<details>
+<summary>
+QueryIncompatibleOperation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/QueryIncompatibleOperationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/QueryIncompatibleOperationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/QueryIncompatibleOperationCommandOutput/)
+
+</details>
+<details>
+<summary>
 SimpleScalarProperties
 </summary>
 
@@ -1055,6 +1071,14 @@ HttpChecksumRequired
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/HttpChecksumRequiredCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/HttpChecksumRequiredCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/HttpChecksumRequiredCommandOutput/)
+
+</details>
+<details>
+<summary>
+HttpEmptyPrefixHeaders
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/HttpEmptyPrefixHeadersCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/HttpEmptyPrefixHeadersCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/HttpEmptyPrefixHeadersCommandOutput/)
 
 </details>
 <details>
@@ -1987,6 +2011,14 @@ GreetingWithErrors
 </details>
 <details>
 <summary>
+HttpEmptyPrefixHeaders
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/HttpEmptyPrefixHeadersCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/HttpEmptyPrefixHeadersCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/HttpEmptyPrefixHeadersCommandOutput/)
+
+</details>
+<details>
+<summary>
 HttpEnumPayload
 </summary>
 
@@ -2375,6 +2407,22 @@ SimpleScalarProperties
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/SimpleScalarPropertiesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/SimpleScalarPropertiesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/SimpleScalarPropertiesCommandOutput/)
+
+</details>
+<details>
+<summary>
+NonQueryCompatibleOperation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/NonQueryCompatibleOperationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/NonQueryCompatibleOperationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/NonQueryCompatibleOperationCommandOutput/)
+
+</details>
+<details>
+<summary>
+QueryCompatibleOperation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/machine-learning/command/QueryCompatibleOperationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/QueryCompatibleOperationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-machine-learning/Interface/QueryCompatibleOperationCommandOutput/)
 
 </details>
 <details>

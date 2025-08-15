@@ -3,6 +3,390 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.868.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.867.0...v3.868.0) (2025-08-14)
+
+
+### Features
+
+* **client-glue:** AWS Glue now supports Trusted Identity Propagation. ([71e32da](https://github.com/aws/aws-sdk-js-v3/commit/71e32da3d1568a8864a67f8904fac5d01869bdab))
+
+
+
+
+
+# [3.864.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.863.0...v3.864.0) (2025-08-08)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.863.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.862.0...v3.863.0) (2025-08-07)
+
+
+### Features
+
+* **client-glue:** AWS Glue Data Catalog now supports Iceberg Optimization settings at the Catalog level, and supports new options to control the optimization job run rate. ([5451046](https://github.com/aws/aws-sdk-js-v3/commit/5451046b6f342fa3afe32803aa605f8e111d06e3))
+
+
+
+
+
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.859.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.858.0...v3.859.0) (2025-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+
+### Features
+
+* **client-glue:** Added support for Route node, S3 Iceberg sources/targets, catalog Iceberg sources, DynamoDB ELT connector, AutoDataQuality evaluation, enhanced PII detection with redaction, Kinesis fan-out support, and new R-series worker types. ([3cf6f20](https://github.com/aws/aws-sdk-js-v3/commit/3cf6f20a56c23b3145966d968ea5c30cc63a68cf))
+
+
+
+
+
+# [3.857.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.856.0...v3.857.0) (2025-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.856.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.855.0...v3.856.0) (2025-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.855.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.854.0...v3.855.0) (2025-07-28)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.852.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.851.0...v3.852.0) (2025-07-23)
+
+
+### Features
+
+* **client-glue:** AWS Glue now supports dynamic session policies for job executions. This feature allows you to specify custom, fine-grained permissions for each job run without creating multiple IAM roles. ([1708c81](https://github.com/aws/aws-sdk-js-v3/commit/1708c8122952a7aa9f331b704883750bf361d38f))
+
+
+
+
+
+# [3.848.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.847.0...v3.848.0) (2025-07-17)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.847.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.846.0...v3.847.0) (2025-07-16)
+
+
+### Features
+
+* **client-glue:** AWS Glue now supports schema, partition and sort management of Apache Iceberg tables using Glue SDK ([0e59b13](https://github.com/aws/aws-sdk-js-v3/commit/0e59b1376e47239baa7ca44fc271e1fc4ad8e0d9))
+
+
+
+
+
+# [3.846.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.845.0...v3.846.0) (2025-07-16)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.845.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.844.0...v3.845.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **clients:** upgrade @smithy/middleware-endpoint to fix file/env endpoint resolution ([#7206](https://github.com/aws/aws-sdk-js-v3/issues/7206)) ([37a6275](https://github.com/aws/aws-sdk-js-v3/commit/37a627510bc53ad0ce8d3ef10a2a5ec8ad195ee2))
+
+
+
+
+
+# [3.844.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.843.0...v3.844.0) (2025-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.840.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.839.0...v3.840.0) (2025-06-30)
+
+
+### Features
+
+* **client-glue:** releasing source processing properties to support source properties for ODB integrations ([aa10e5d](https://github.com/aws/aws-sdk-js-v3/commit/aa10e5dafadb41d06b370ab7005f3a7ccee50f98))
+
+
+
+
+
+# [3.839.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.838.0...v3.839.0) (2025-06-27)
+
+
+### Features
+
+* **client-glue:** AWS Glue now supports schema, partition and sort management of Apache Iceberg tables using Glue SDK ([022f2c1](https://github.com/aws/aws-sdk-js-v3/commit/022f2c1daf88b6cc02cf915d9e01bd129136084b))
+
+
+
+
+
+# [3.835.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.834.0...v3.835.0) (2025-06-23)
+
+
+### Features
+
+* **client-glue:** AWS Glue now supports sort and z-order strategy for managed automated compaction for Iceberg tables in addition to binpack. ([19aaef4](https://github.com/aws/aws-sdk-js-v3/commit/19aaef440af7df26d38dc9bc15e8b8e520a8e7b9))
+
+
+
+
+
+# [3.834.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.833.0...v3.834.0) (2025-06-20)
+
+
+### Features
+
+* **client-glue:** AWS Glue Data Quality now provides aggregated metrics in evaluation results when publishAggregatedMetrics with row-level results are enabled. These metrics include summary statistics showing total counts of processed, passed, and failed rows and rules in a single view. ([b18e5aa](https://github.com/aws/aws-sdk-js-v3/commit/b18e5aadf9b84a41c966ce0282520fe6353722aa))
+
+
+
+
+
+# [3.830.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.829.0...v3.830.0) (2025-06-16)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.828.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.827.1...v3.828.0) (2025-06-11)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.826.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.825.0...v3.826.0) (2025-06-06)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.825.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.824.0...v3.825.0) (2025-06-05)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.823.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.822.0...v3.823.0) (2025-06-03)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.817.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.816.0...v3.817.0) (2025-05-23)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.816.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.815.0...v3.816.0) (2025-05-22)
+
+
+### Features
+
+* **client-glue:** This release supports additional ConversionSpec parameter as part of IntegrationPartition Structure in CreateIntegrationTableProperty API. This parameter is referred to apply appropriate column transformation for columns that are used for timestamp based partitioning ([eeecd10](https://github.com/aws/aws-sdk-js-v3/commit/eeecd1004fe02b57b7a32f2b10b7a92f7a7b5a02))
+
+
+
+
+
+# [3.814.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.813.0...v3.814.0) (2025-05-20)
+
+
+### Features
+
+* **client-glue:** Enhanced AWS Glue ListConnectionTypes API Model with additional metadata fields. ([2e5c62e](https://github.com/aws/aws-sdk-js-v3/commit/2e5c62eb3a9ccd3da558b679170c40dcc768f461))
+
+
+
+
+
+# [3.812.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.811.0...v3.812.0) (2025-05-16)
+
+
+### Features
+
+* **client-glue:** Changes include (1) Excel as S3 Source type and XML and Tableau's Hyper as S3 Sink types, (2) targeted number of partitions parameter in S3 sinks and (3) new compression types in CSV/JSON and Parquet S3 sinks. ([a5f2aef](https://github.com/aws/aws-sdk-js-v3/commit/a5f2aef9f311287e5f4f556b35757d310b02871d))
+
+
+
+
+
+# [3.810.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.809.0...v3.810.0) (2025-05-14)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.808.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.807.0...v3.808.0) (2025-05-12)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.806.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.805.0...v3.806.0) (2025-05-08)
+
+
+### Features
+
+* **client-glue:** This new release supports customizable RefreshInterval for all Saas ZETL integrations from 15 minutes to 6 days. ([d6e0049](https://github.com/aws/aws-sdk-js-v3/commit/d6e004919f766b24dc594b622fd440cfe7680379))
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.803.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.802.0...v3.803.0) (2025-05-05)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.799.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.798.0...v3.799.0) (2025-04-29)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.798.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.797.0...v3.798.0) (2025-04-28)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.797.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.796.0...v3.797.0) (2025-04-25)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.796.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.795.0...v3.796.0) (2025-04-24)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.787.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.786.0...v3.787.0) (2025-04-10)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
+# [3.786.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.785.0...v3.786.0) (2025-04-09)
+
+
+### Features
+
+* **client-glue:** The TableOptimizer APIs in AWS Glue now return the DpuHours field in each TableOptimizerRun, providing clients visibility to the DPU-hours used for billing in managed Apache Iceberg table compaction optimization. ([9874c2e](https://github.com/aws/aws-sdk-js-v3/commit/9874c2e8e3b0bf78b8c1ab083870b2c65703d6d9))
+
+
+
+
+
+# [3.784.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.783.0...v3.784.0) (2025-04-07)
+
+
+### Features
+
+* **client-glue:** Add input validations for multiple Glue APIs ([ed8a3cf](https://github.com/aws/aws-sdk-js-v3/commit/ed8a3cfef2d0b6047ebdfa7a894961eb0bdfc181))
+
+
+
+
+
+# [3.782.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.781.0...v3.782.0) (2025-04-03)
+
+**Note:** Version bump only for package @aws-sdk/client-glue
+
+
+
+
+
 # [3.777.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.776.0...v3.777.0) (2025-03-27)
 
 **Note:** Version bump only for package @aws-sdk/client-glue

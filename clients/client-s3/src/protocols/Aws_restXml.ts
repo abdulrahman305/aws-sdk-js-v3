@@ -36,6 +36,7 @@ import {
   SdkStreamSerdeContext as __SdkStreamSerdeContext,
   SerdeContext as __SerdeContext,
 } from "@smithy/types";
+import { v4 as generateIdempotencyToken } from "uuid";
 
 import {
   AbortMultipartUploadCommandInput,
@@ -47,6 +48,10 @@ import {
 } from "../commands/CompleteMultipartUploadCommand";
 import { CopyObjectCommandInput, CopyObjectCommandOutput } from "../commands/CopyObjectCommand";
 import { CreateBucketCommandInput, CreateBucketCommandOutput } from "../commands/CreateBucketCommand";
+import {
+  CreateBucketMetadataConfigurationCommandInput,
+  CreateBucketMetadataConfigurationCommandOutput,
+} from "../commands/CreateBucketMetadataConfigurationCommand";
 import {
   CreateBucketMetadataTableConfigurationCommandInput,
   CreateBucketMetadataTableConfigurationCommandOutput,
@@ -78,6 +83,10 @@ import {
   DeleteBucketLifecycleCommandInput,
   DeleteBucketLifecycleCommandOutput,
 } from "../commands/DeleteBucketLifecycleCommand";
+import {
+  DeleteBucketMetadataConfigurationCommandInput,
+  DeleteBucketMetadataConfigurationCommandOutput,
+} from "../commands/DeleteBucketMetadataConfigurationCommand";
 import {
   DeleteBucketMetadataTableConfigurationCommandInput,
   DeleteBucketMetadataTableConfigurationCommandOutput,
@@ -141,6 +150,10 @@ import {
 } from "../commands/GetBucketLifecycleConfigurationCommand";
 import { GetBucketLocationCommandInput, GetBucketLocationCommandOutput } from "../commands/GetBucketLocationCommand";
 import { GetBucketLoggingCommandInput, GetBucketLoggingCommandOutput } from "../commands/GetBucketLoggingCommand";
+import {
+  GetBucketMetadataConfigurationCommandInput,
+  GetBucketMetadataConfigurationCommandOutput,
+} from "../commands/GetBucketMetadataConfigurationCommand";
 import {
   GetBucketMetadataTableConfigurationCommandInput,
   GetBucketMetadataTableConfigurationCommandOutput,
@@ -292,11 +305,20 @@ import {
   PutPublicAccessBlockCommandInput,
   PutPublicAccessBlockCommandOutput,
 } from "../commands/PutPublicAccessBlockCommand";
+import { RenameObjectCommandInput, RenameObjectCommandOutput } from "../commands/RenameObjectCommand";
 import { RestoreObjectCommandInput, RestoreObjectCommandOutput } from "../commands/RestoreObjectCommand";
 import {
   SelectObjectContentCommandInput,
   SelectObjectContentCommandOutput,
 } from "../commands/SelectObjectContentCommand";
+import {
+  UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+  UpdateBucketMetadataInventoryTableConfigurationCommandOutput,
+} from "../commands/UpdateBucketMetadataInventoryTableConfigurationCommand";
+import {
+  UpdateBucketMetadataJournalTableConfigurationCommandInput,
+  UpdateBucketMetadataJournalTableConfigurationCommandOutput,
+} from "../commands/UpdateBucketMetadataJournalTableConfigurationCommand";
 import { UploadPartCommandInput, UploadPartCommandOutput } from "../commands/UploadPartCommand";
 import { UploadPartCopyCommandInput, UploadPartCopyCommandOutput } from "../commands/UploadPartCopyCommand";
 import {
@@ -305,7 +327,6 @@ import {
 } from "../commands/WriteGetObjectResponseCommand";
 import {
   _Error,
-  _Object,
   AbortIncompleteMultipartUpload,
   AccelerateConfiguration,
   AccessControlPolicy,
@@ -331,9 +352,9 @@ import {
   DefaultRetention,
   Delete,
   DeletedObject,
-  DeleteMarkerEntry,
   DeleteMarkerReplication,
   Destination,
+  DestinationResult,
   EncryptionConfiguration,
   ErrorDetails,
   ErrorDocument,
@@ -341,6 +362,7 @@ import {
   EventBridgeConfiguration,
   ExistingObjectReplication,
   FilterRule,
+  GetBucketMetadataConfigurationResult,
   GetBucketMetadataTableConfigurationResult,
   GetObjectAttributesParts,
   Grant,
@@ -358,6 +380,10 @@ import {
   InventoryOptionalField,
   InventoryS3BucketDestination,
   InventorySchedule,
+  InventoryTableConfiguration,
+  InventoryTableConfigurationResult,
+  JournalTableConfiguration,
+  JournalTableConfigurationResult,
   LambdaFunctionConfiguration,
   LifecycleExpiration,
   LifecycleRule,
@@ -365,8 +391,11 @@ import {
   LifecycleRuleFilter,
   LocationInfo,
   LoggingEnabled,
+  MetadataConfiguration,
+  MetadataConfigurationResult,
   MetadataTableConfiguration,
   MetadataTableConfigurationResult,
+  MetadataTableEncryptionConfiguration,
   Metrics,
   MetricsAndOperator,
   MetricsConfiguration,
@@ -387,15 +416,14 @@ import {
   ObjectLockRule,
   ObjectNotInActiveTierError,
   ObjectPart,
-  ObjectVersion,
   Owner,
   OwnershipControls,
   OwnershipControlsRule,
-  Part,
   PartitionedPrefix,
   PolicyStatus,
   PublicAccessBlockConfiguration,
   QueueConfiguration,
+  RecordExpiration,
   Redirect,
   RedirectAllRequestsTo,
   ReplicaModifications,
@@ -429,6 +457,7 @@ import {
   Transition,
 } from "../models/models_0";
 import {
+  _Object,
   BucketLifecycleConfiguration,
   BucketLoggingStatus,
   ContinuationEvent,
@@ -436,20 +465,26 @@ import {
   CORSConfiguration,
   CSVInput,
   CSVOutput,
+  DeleteMarkerEntry,
   Encryption,
   EncryptionTypeMismatch,
   EndEvent,
   GlacierJobParameters,
+  IdempotencyParameterMismatch,
   InputSerialization,
   InvalidRequest,
   InvalidWriteOffset,
+  InventoryTableConfigurationUpdates,
+  JournalTableConfigurationUpdates,
   JSONInput,
   JSONOutput,
   MetadataEntry,
   ObjectAlreadyInActiveTierError,
+  ObjectVersion,
   OutputLocation,
   OutputSerialization,
   ParquetInput,
+  Part,
   Progress,
   ProgressEvent,
   RecordsEvent,
@@ -547,6 +582,11 @@ export const se_CopyObjectCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
+    ...(input.Metadata !== undefined &&
+      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
+        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
+        return acc;
+      }, {})),
     [_xaa]: input[_ACL]!,
     [_cc]: input[_CC]!,
     [_xaca]: input[_CA]!,
@@ -585,11 +625,6 @@ export const se_CopyObjectCommand = async (
     [_xaollh]: input[_OLLHS]!,
     [_xaebo]: input[_EBO]!,
     [_xasebo]: input[_ESBO]!,
-    ...(input.Metadata !== undefined &&
-      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
-        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
-        return acc;
-      }, {})),
   });
   b.bp("/{Key+}");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
@@ -636,6 +671,37 @@ export const se_CreateBucketCommand = async (
 };
 
 /**
+ * serializeAws_restXmlCreateBucketMetadataConfigurationCommand
+ */
+export const se_CreateBucketMetadataConfigurationCommand = async (
+  input: CreateBucketMetadataConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = map({}, isSerializableHeaderValue, {
+    "content-type": "application/xml",
+    [_cm]: input[_CMD]!,
+    [_xasca]: input[_CA]!,
+    [_xaebo]: input[_EBO]!,
+  });
+  b.bp("/");
+  b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
+  const query: any = map({
+    [_mC]: [, ""],
+  });
+  let body: any;
+  let contents: any;
+  if (input.MetadataConfiguration !== undefined) {
+    contents = se_MetadataConfiguration(input.MetadataConfiguration, context);
+    body = _ve;
+    contents.a("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
+    body += contents.toString();
+  }
+  b.m("POST").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restXmlCreateBucketMetadataTableConfigurationCommand
  */
 export const se_CreateBucketMetadataTableConfigurationCommand = async (
@@ -675,6 +741,11 @@ export const se_CreateMultipartUploadCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
+    ...(input.Metadata !== undefined &&
+      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
+        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
+        return acc;
+      }, {})),
     [_xaa]: input[_ACL]!,
     [_cc]: input[_CC]!,
     [_cd]: input[_CD]!,
@@ -703,11 +774,6 @@ export const se_CreateMultipartUploadCommand = async (
     [_xaebo]: input[_EBO]!,
     [_xaca]: input[_CA]!,
     [_xact]: input[_CT]!,
-    ...(input.Metadata !== undefined &&
-      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
-        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
-        return acc;
-      }, {})),
   });
   b.bp("/{Key+}");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
@@ -835,7 +901,9 @@ export const se_DeleteBucketIntelligentTieringConfigurationCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {};
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_xaebo]: input[_EBO]!,
+  });
   b.bp("/");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   const query: any = map({
@@ -884,6 +952,27 @@ export const se_DeleteBucketLifecycleCommand = async (
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   const query: any = map({
     [_l]: [, ""],
+  });
+  let body: any;
+  b.m("DELETE").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restXmlDeleteBucketMetadataConfigurationCommand
+ */
+export const se_DeleteBucketMetadataConfigurationCommand = async (
+  input: DeleteBucketMetadataConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_xaebo]: input[_EBO]!,
+  });
+  b.bp("/");
+  b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
+  const query: any = map({
+    [_mC]: [, ""],
   });
   let body: any;
   b.m("DELETE").h(headers).q(query).b(body);
@@ -1260,7 +1349,9 @@ export const se_GetBucketIntelligentTieringConfigurationCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {};
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_xaebo]: input[_EBO]!,
+  });
   b.bp("/");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   const query: any = map({
@@ -1353,6 +1444,27 @@ export const se_GetBucketLoggingCommand = async (
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   const query: any = map({
     [_log]: [, ""],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restXmlGetBucketMetadataConfigurationCommand
+ */
+export const se_GetBucketMetadataConfigurationCommand = async (
+  input: GetBucketMetadataConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_xaebo]: input[_EBO]!,
+  });
+  b.bp("/");
+  b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
+  const query: any = map({
+    [_mC]: [, ""],
   });
   let body: any;
   b.m("GET").h(headers).q(query).b(body);
@@ -1911,7 +2023,9 @@ export const se_ListBucketIntelligentTieringConfigurationsCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {};
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_xaebo]: input[_EBO]!,
+  });
   b.bp("/");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   const query: any = map({
@@ -2322,9 +2436,10 @@ export const se_PutBucketIntelligentTieringConfigurationCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {
+  const headers: any = map({}, isSerializableHeaderValue, {
     "content-type": "application/xml",
-  };
+    [_xaebo]: input[_EBO]!,
+  });
   b.bp("/");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
   const query: any = map({
@@ -2508,6 +2623,7 @@ export const se_PutBucketOwnershipControlsCommand = async (
     "content-type": "application/xml",
     [_cm]: input[_CMD]!,
     [_xaebo]: input[_EBO]!,
+    [_xasca]: input[_CA]!,
   });
   b.bp("/");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
@@ -2722,6 +2838,11 @@ export const se_PutObjectCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
+    ...(input.Metadata !== undefined &&
+      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
+        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
+        return acc;
+      }, {})),
     [_ct]: input[_CTo] || "application/octet-stream",
     [_xaa]: input[_ACL]!,
     [_cc]: input[_CC]!,
@@ -2759,11 +2880,6 @@ export const se_PutObjectCommand = async (
     [_xaolrud]: [() => isSerializableHeaderValue(input[_OLRUD]), () => __serializeDateTime(input[_OLRUD]!).toString()],
     [_xaollh]: input[_OLLHS]!,
     [_xaebo]: input[_EBO]!,
-    ...(input.Metadata !== undefined &&
-      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
-        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
-        return acc;
-      }, {})),
   });
   b.bp("/{Key+}");
   b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
@@ -2991,6 +3107,37 @@ export const se_PutPublicAccessBlockCommand = async (
 };
 
 /**
+ * serializeAws_restXmlRenameObjectCommand
+ */
+export const se_RenameObjectCommand = async (
+  input: RenameObjectCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = map({}, isSerializableHeaderValue, {
+    [_xars]: input[_RS]!,
+    [_im]: input[_DIM]!,
+    [_inm]: input[_DINM]!,
+    [_ims]: [() => isSerializableHeaderValue(input[_DIMS]), () => __dateToUtcString(input[_DIMS]!).toString()],
+    [_ius]: [() => isSerializableHeaderValue(input[_DIUS]), () => __dateToUtcString(input[_DIUS]!).toString()],
+    [_xarsim]: input[_SIM]!,
+    [_xarsinm]: input[_SINM]!,
+    [_xarsims]: [() => isSerializableHeaderValue(input[_SIMS]), () => __dateToUtcString(input[_SIMS]!).toString()],
+    [_xarsius]: [() => isSerializableHeaderValue(input[_SIUS]), () => __dateToUtcString(input[_SIUS]!).toString()],
+    [_xact_]: input[_CTl] ?? generateIdempotencyToken(),
+  });
+  b.bp("/{Key+}");
+  b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
+  b.p("Key", () => input.Key!, "{Key+}", true);
+  const query: any = map({
+    [_rO]: [, ""],
+  });
+  let body: any;
+  b.m("PUT").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restXmlRestoreObjectCommand
  */
 export const se_RestoreObjectCommand = async (
@@ -3065,6 +3212,70 @@ export const se_SelectObjectContentCommand = async (
   }
   body += bn.toString();
   b.m("POST").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restXmlUpdateBucketMetadataInventoryTableConfigurationCommand
+ */
+export const se_UpdateBucketMetadataInventoryTableConfigurationCommand = async (
+  input: UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = map({}, isSerializableHeaderValue, {
+    "content-type": "application/xml",
+    [_cm]: input[_CMD]!,
+    [_xasca]: input[_CA]!,
+    [_xaebo]: input[_EBO]!,
+  });
+  b.bp("/");
+  b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
+  const query: any = map({
+    [_mIT]: [, ""],
+  });
+  let body: any;
+  let contents: any;
+  if (input.InventoryTableConfiguration !== undefined) {
+    contents = se_InventoryTableConfigurationUpdates(input.InventoryTableConfiguration, context);
+    contents = contents.n("InventoryTableConfiguration");
+    body = _ve;
+    contents.a("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
+    body += contents.toString();
+  }
+  b.m("PUT").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restXmlUpdateBucketMetadataJournalTableConfigurationCommand
+ */
+export const se_UpdateBucketMetadataJournalTableConfigurationCommand = async (
+  input: UpdateBucketMetadataJournalTableConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = map({}, isSerializableHeaderValue, {
+    "content-type": "application/xml",
+    [_cm]: input[_CMD]!,
+    [_xasca]: input[_CA]!,
+    [_xaebo]: input[_EBO]!,
+  });
+  b.bp("/");
+  b.p("Bucket", () => input.Bucket!, "{Bucket}", false);
+  const query: any = map({
+    [_mJT]: [, ""],
+  });
+  let body: any;
+  let contents: any;
+  if (input.JournalTableConfiguration !== undefined) {
+    contents = se_JournalTableConfigurationUpdates(input.JournalTableConfiguration, context);
+    contents = contents.n("JournalTableConfiguration");
+    body = _ve;
+    contents.a("xmlns", "http://s3.amazonaws.com/doc/2006-03-01/");
+    body += contents.toString();
+  }
+  b.m("PUT").h(headers).q(query).b(body);
   return b.build();
 };
 
@@ -3158,6 +3369,11 @@ export const se_WriteGetObjectResponseCommand = async (
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
     "x-amz-content-sha256": "UNSIGNED-PAYLOAD",
+    ...(input.Metadata !== undefined &&
+      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
+        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
+        return acc;
+      }, {})),
     "content-type": "application/octet-stream",
     [_xarr]: input[_RR]!,
     [_xart]: input[_RT]!,
@@ -3190,7 +3406,7 @@ export const se_WriteGetObjectResponseCommand = async (
       () => __serializeDateTime(input[_OLRUD]!).toString(),
     ],
     [_xafhxampc]: [() => isSerializableHeaderValue(input[_PC]), () => input[_PC]!.toString()],
-    [_xafhxars]: input[_RS]!,
+    [_xafhxars]: input[_RSe]!,
     [_xafhxarc]: input[_RC]!,
     [_xafhxar]: input[_Re]!,
     [_xafhxasse]: input[_SSE]!,
@@ -3201,11 +3417,6 @@ export const se_WriteGetObjectResponseCommand = async (
     [_xafhxatc]: [() => isSerializableHeaderValue(input[_TC]), () => input[_TC]!.toString()],
     [_xafhxavi]: input[_VI]!,
     [_xafhxassebke]: [() => isSerializableHeaderValue(input[_BKE]), () => input[_BKE]!.toString()],
-    ...(input.Metadata !== undefined &&
-      Object.keys(input.Metadata).reduce((acc: any, suffix: string) => {
-        acc[`x-amz-meta-${suffix.toLowerCase()}`] = input.Metadata![suffix];
-        return acc;
-      }, {})),
   });
   b.bp("/WriteGetObjectResponse");
   let body: any;
@@ -3342,6 +3553,24 @@ export const de_CreateBucketCommand = async (
   const contents: any = map({
     $metadata: deserializeMetadata(output),
     [_L]: [, output.headers[_lo]],
+    [_BA]: [, output.headers[_xaba]],
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restXmlCreateBucketMetadataConfigurationCommand
+ */
+export const de_CreateBucketMetadataConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateBucketMetadataConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
   });
   await collectBody(output.body, context);
   return contents;
@@ -3537,6 +3766,23 @@ export const de_DeleteBucketLifecycleCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteBucketLifecycleCommandOutput> => {
+  if (output.statusCode !== 204 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restXmlDeleteBucketMetadataConfigurationCommand
+ */
+export const de_DeleteBucketMetadataConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteBucketMetadataConfigurationCommandOutput> => {
   if (output.statusCode !== 204 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -3953,6 +4199,24 @@ export const de_GetBucketLoggingCommand = async (
 };
 
 /**
+ * deserializeAws_restXmlGetBucketMetadataConfigurationCommand
+ */
+export const de_GetBucketMetadataConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetBucketMetadataConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> | undefined = __expectObject(await parseBody(output.body, context));
+  contents.GetBucketMetadataConfigurationResult = de_GetBucketMetadataConfigurationResult(data, context);
+  return contents;
+};
+
+/**
  * deserializeAws_restXmlGetBucketMetadataTableConfigurationCommand
  */
 export const de_GetBucketMetadataTableConfigurationCommand = async (
@@ -4234,7 +4498,7 @@ export const de_GetObjectCommand = async (
     [_BKE]: [() => void 0 !== output.headers[_xassebke], () => __parseBoolean(output.headers[_xassebke])],
     [_SC]: [, output.headers[_xasc]],
     [_RC]: [, output.headers[_xarc]],
-    [_RS]: [, output.headers[_xars]],
+    [_RSe]: [, output.headers[_xars_]],
     [_PC]: [() => void 0 !== output.headers[_xampc], () => __strictParseInt32(output.headers[_xampc])],
     [_TC]: [() => void 0 !== output.headers[_xatc], () => __strictParseInt32(output.headers[_xatc])],
     [_OLM]: [, output.headers[_xaolm]],
@@ -4448,6 +4712,7 @@ export const de_HeadBucketCommand = async (
   }
   const contents: any = map({
     $metadata: deserializeMetadata(output),
+    [_BA]: [, output.headers[_xaba]],
     [_BLT]: [, output.headers[_xablt]],
     [_BLN]: [, output.headers[_xabln]],
     [_BR]: [, output.headers[_xabr]],
@@ -4501,8 +4766,9 @@ export const de_HeadObjectCommand = async (
     [_BKE]: [() => void 0 !== output.headers[_xassebke], () => __parseBoolean(output.headers[_xassebke])],
     [_SC]: [, output.headers[_xasc]],
     [_RC]: [, output.headers[_xarc]],
-    [_RS]: [, output.headers[_xars]],
+    [_RSe]: [, output.headers[_xars_]],
     [_PC]: [() => void 0 !== output.headers[_xampc], () => __strictParseInt32(output.headers[_xampc])],
+    [_TC]: [() => void 0 !== output.headers[_xatc], () => __strictParseInt32(output.headers[_xatc])],
     [_OLM]: [, output.headers[_xaolm]],
     [_OLRUD]: [
       () => void 0 !== output.headers[_xaolrud],
@@ -5447,6 +5713,23 @@ export const de_PutPublicAccessBlockCommand = async (
 };
 
 /**
+ * deserializeAws_restXmlRenameObjectCommand
+ */
+export const de_RenameObjectCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<RenameObjectCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
  * deserializeAws_restXmlRestoreObjectCommand
  */
 export const de_RestoreObjectCommand = async (
@@ -5480,6 +5763,40 @@ export const de_SelectObjectContentCommand = async (
   });
   const data: any = output.body;
   contents.Payload = de_SelectObjectContentEventStream(data, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restXmlUpdateBucketMetadataInventoryTableConfigurationCommand
+ */
+export const de_UpdateBucketMetadataInventoryTableConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateBucketMetadataInventoryTableConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restXmlUpdateBucketMetadataJournalTableConfigurationCommand
+ */
+export const de_UpdateBucketMetadataJournalTableConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateBucketMetadataJournalTableConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
   return contents;
 };
 
@@ -5600,6 +5917,9 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "TooManyParts":
     case "com.amazonaws.s3#TooManyParts":
       throw await de_TooManyPartsRes(parsedOutput, context);
+    case "IdempotencyParameterMismatch":
+    case "com.amazonaws.s3#IdempotencyParameterMismatch":
+      throw await de_IdempotencyParameterMismatchRes(parsedOutput, context);
     case "ObjectAlreadyInActiveTierError":
     case "com.amazonaws.s3#ObjectAlreadyInActiveTierError":
       throw await de_ObjectAlreadyInActiveTierErrorRes(parsedOutput, context);
@@ -5653,6 +5973,22 @@ const de_EncryptionTypeMismatchRes = async (
   const contents: any = map({});
   const data: any = parsedOutput.body;
   const exception = new EncryptionTypeMismatch({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...contents,
+  });
+  return __decorateServiceException(exception, parsedOutput.body);
+};
+
+/**
+ * deserializeAws_restXmlIdempotencyParameterMismatchRes
+ */
+const de_IdempotencyParameterMismatchRes = async (
+  parsedOutput: any,
+  context: __SerdeContext
+): Promise<IdempotencyParameterMismatch> => {
+  const contents: any = map({});
+  const data: any = parsedOutput.body;
+  const exception = new IdempotencyParameterMismatch({
     $metadata: deserializeMetadata(parsedOutput),
     ...contents,
   });
@@ -5834,7 +6170,7 @@ const de_SelectObjectContentEventStream = (
         End: await de_EndEvent_event(event["End"], context),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 const de_ContinuationEvent_event = async (output: any, context: __SerdeContext): Promise<ContinuationEvent> => {
@@ -6165,6 +6501,7 @@ const se_CreateBucketConfiguration = (input: CreateBucketConfiguration, context:
   if (input[_B] != null) {
     bn.c(se_BucketInfo(input[_B], context).n(_B));
   }
+  bn.lc(input, "Tags", "Tags", () => se_TagSet(input[_Tag]!, context));
   return bn;
 };
 
@@ -6591,6 +6928,62 @@ const se_InventorySchedule = (input: InventorySchedule, context: __SerdeContext)
 };
 
 /**
+ * serializeAws_restXmlInventoryTableConfiguration
+ */
+const se_InventoryTableConfiguration = (input: InventoryTableConfiguration, context: __SerdeContext): any => {
+  const bn = new __XmlNode(_ITCn);
+  if (input[_CSo] != null) {
+    bn.c(__XmlNode.of(_ICS, input[_CSo]).n(_CSo));
+  }
+  if (input[_ECn] != null) {
+    bn.c(se_MetadataTableEncryptionConfiguration(input[_ECn], context).n(_ECn));
+  }
+  return bn;
+};
+
+/**
+ * serializeAws_restXmlInventoryTableConfigurationUpdates
+ */
+const se_InventoryTableConfigurationUpdates = (
+  input: InventoryTableConfigurationUpdates,
+  context: __SerdeContext
+): any => {
+  const bn = new __XmlNode(_ITCU);
+  if (input[_CSo] != null) {
+    bn.c(__XmlNode.of(_ICS, input[_CSo]).n(_CSo));
+  }
+  if (input[_ECn] != null) {
+    bn.c(se_MetadataTableEncryptionConfiguration(input[_ECn], context).n(_ECn));
+  }
+  return bn;
+};
+
+/**
+ * serializeAws_restXmlJournalTableConfiguration
+ */
+const se_JournalTableConfiguration = (input: JournalTableConfiguration, context: __SerdeContext): any => {
+  const bn = new __XmlNode(_JTC);
+  if (input[_REe] != null) {
+    bn.c(se_RecordExpiration(input[_REe], context).n(_REe));
+  }
+  if (input[_ECn] != null) {
+    bn.c(se_MetadataTableEncryptionConfiguration(input[_ECn], context).n(_ECn));
+  }
+  return bn;
+};
+
+/**
+ * serializeAws_restXmlJournalTableConfigurationUpdates
+ */
+const se_JournalTableConfigurationUpdates = (input: JournalTableConfigurationUpdates, context: __SerdeContext): any => {
+  const bn = new __XmlNode(_JTCU);
+  if (input[_REe] != null) {
+    bn.c(se_RecordExpiration(input[_REe], context).n(_REe));
+  }
+  return bn;
+};
+
+/**
  * serializeAws_restXmlJSONInput
  */
 const se_JSONInput = (input: JSONInput, context: __SerdeContext): any => {
@@ -6764,6 +7157,20 @@ const se_LoggingEnabled = (input: LoggingEnabled, context: __SerdeContext): any 
 };
 
 /**
+ * serializeAws_restXmlMetadataConfiguration
+ */
+const se_MetadataConfiguration = (input: MetadataConfiguration, context: __SerdeContext): any => {
+  const bn = new __XmlNode(_MCe);
+  if (input[_JTC] != null) {
+    bn.c(se_JournalTableConfiguration(input[_JTC], context).n(_JTC));
+  }
+  if (input[_ITCn] != null) {
+    bn.c(se_InventoryTableConfiguration(input[_ITCn], context).n(_ITCn));
+  }
+  return bn;
+};
+
+/**
  * serializeAws_restXmlMetadataEntry
  */
 const se_MetadataEntry = (input: MetadataEntry, context: __SerdeContext): any => {
@@ -6785,6 +7192,21 @@ const se_MetadataTableConfiguration = (input: MetadataTableConfiguration, contex
   if (input[_STD] != null) {
     bn.c(se_S3TablesDestination(input[_STD], context).n(_STD));
   }
+  return bn;
+};
+
+/**
+ * serializeAws_restXmlMetadataTableEncryptionConfiguration
+ */
+const se_MetadataTableEncryptionConfiguration = (
+  input: MetadataTableEncryptionConfiguration,
+  context: __SerdeContext
+): any => {
+  const bn = new __XmlNode(_MTEC);
+  if (input[_SAs] != null) {
+    bn.c(__XmlNode.of(_TSA, input[_SAs]).n(_SAs));
+  }
+  bn.cc(input, _KKA);
   return bn;
 };
 
@@ -7144,6 +7566,20 @@ const se_QueueConfigurationList = (input: QueueConfiguration[], context: __Serde
       const n = se_QueueConfiguration(entry, context);
       return n.n(_me);
     });
+};
+
+/**
+ * serializeAws_restXmlRecordExpiration
+ */
+const se_RecordExpiration = (input: RecordExpiration, context: __SerdeContext): any => {
+  const bn = new __XmlNode(_REe);
+  if (input[_Exp] != null) {
+    bn.c(__XmlNode.of(_ESxp, input[_Exp]).n(_Exp));
+  }
+  if (input[_Da] != null) {
+    bn.c(__XmlNode.of(_RED, String(input[_Da])).n(_Da));
+  }
+  return bn;
 };
 
 /**
@@ -7932,6 +8368,9 @@ const de_Bucket = (output: any, context: __SerdeContext): Bucket => {
   if (output[_BR] != null) {
     contents[_BR] = __expectString(output[_BR]);
   }
+  if (output[_BA] != null) {
+    contents[_BA] = __expectString(output[_BA]);
+  }
   return contents;
 };
 
@@ -8256,6 +8695,23 @@ const de_Destination = (output: any, context: __SerdeContext): Destination => {
 };
 
 /**
+ * deserializeAws_restXmlDestinationResult
+ */
+const de_DestinationResult = (output: any, context: __SerdeContext): DestinationResult => {
+  const contents: any = {};
+  if (output[_TBT] != null) {
+    contents[_TBT] = __expectString(output[_TBT]);
+  }
+  if (output[_TBA] != null) {
+    contents[_TBA] = __expectString(output[_TBA]);
+  }
+  if (output[_TNa] != null) {
+    contents[_TNa] = __expectString(output[_TNa]);
+  }
+  return contents;
+};
+
+/**
  * deserializeAws_restXmlEncryptionConfiguration
  */
 const de_EncryptionConfiguration = (output: any, context: __SerdeContext): EncryptionConfiguration => {
@@ -8394,6 +8850,20 @@ const de_FilterRuleList = (output: any, context: __SerdeContext): FilterRule[] =
     .map((entry: any) => {
       return de_FilterRule(entry, context);
     });
+};
+
+/**
+ * deserializeAws_restXmlGetBucketMetadataConfigurationResult
+ */
+const de_GetBucketMetadataConfigurationResult = (
+  output: any,
+  context: __SerdeContext
+): GetBucketMetadataConfigurationResult => {
+  const contents: any = {};
+  if (output[_MCR] != null) {
+    contents[_MCR] = de_MetadataConfigurationResult(output[_MCR], context);
+  }
+  return contents;
 };
 
 /**
@@ -8710,6 +9180,55 @@ const de_InventorySchedule = (output: any, context: __SerdeContext): InventorySc
 };
 
 /**
+ * deserializeAws_restXmlInventoryTableConfigurationResult
+ */
+const de_InventoryTableConfigurationResult = (
+  output: any,
+  context: __SerdeContext
+): InventoryTableConfigurationResult => {
+  const contents: any = {};
+  if (output[_CSo] != null) {
+    contents[_CSo] = __expectString(output[_CSo]);
+  }
+  if (output[_TSa] != null) {
+    contents[_TSa] = __expectString(output[_TSa]);
+  }
+  if (output[_Er] != null) {
+    contents[_Er] = de_ErrorDetails(output[_Er], context);
+  }
+  if (output[_TN] != null) {
+    contents[_TN] = __expectString(output[_TN]);
+  }
+  if (output[_TAa] != null) {
+    contents[_TAa] = __expectString(output[_TAa]);
+  }
+  return contents;
+};
+
+/**
+ * deserializeAws_restXmlJournalTableConfigurationResult
+ */
+const de_JournalTableConfigurationResult = (output: any, context: __SerdeContext): JournalTableConfigurationResult => {
+  const contents: any = {};
+  if (output[_TSa] != null) {
+    contents[_TSa] = __expectString(output[_TSa]);
+  }
+  if (output[_Er] != null) {
+    contents[_Er] = de_ErrorDetails(output[_Er], context);
+  }
+  if (output[_TN] != null) {
+    contents[_TN] = __expectString(output[_TN]);
+  }
+  if (output[_TAa] != null) {
+    contents[_TAa] = __expectString(output[_TAa]);
+  }
+  if (output[_REe] != null) {
+    contents[_REe] = de_RecordExpiration(output[_REe], context);
+  }
+  return contents;
+};
+
+/**
  * deserializeAws_restXmlLambdaFunctionConfiguration
  */
 const de_LambdaFunctionConfiguration = (output: any, context: __SerdeContext): LambdaFunctionConfiguration => {
@@ -8872,6 +9391,23 @@ const de_LoggingEnabled = (output: any, context: __SerdeContext): LoggingEnabled
   }
   if (output[_TOKF] != null) {
     contents[_TOKF] = de_TargetObjectKeyFormat(output[_TOKF], context);
+  }
+  return contents;
+};
+
+/**
+ * deserializeAws_restXmlMetadataConfigurationResult
+ */
+const de_MetadataConfigurationResult = (output: any, context: __SerdeContext): MetadataConfigurationResult => {
+  const contents: any = {};
+  if (output[_DRes] != null) {
+    contents[_DRes] = de_DestinationResult(output[_DRes], context);
+  }
+  if (output[_JTCR] != null) {
+    contents[_JTCR] = de_JournalTableConfigurationResult(output[_JTCR], context);
+  }
+  if (output[_ITCR] != null) {
+    contents[_ITCR] = de_InventoryTableConfigurationResult(output[_ITCR], context);
   }
   return contents;
 };
@@ -9104,8 +9640,8 @@ const de__Object = (output: any, context: __SerdeContext): _Object => {
   if (output[_O] != null) {
     contents[_O] = de_Owner(output[_O], context);
   }
-  if (output[_RSe] != null) {
-    contents[_RSe] = de_RestoreStatus(output[_RSe], context);
+  if (output[_RSes] != null) {
+    contents[_RSes] = de_RestoreStatus(output[_RSes], context);
   }
   return contents;
 };
@@ -9237,8 +9773,8 @@ const de_ObjectVersion = (output: any, context: __SerdeContext): ObjectVersion =
   if (output[_O] != null) {
     contents[_O] = de_Owner(output[_O], context);
   }
-  if (output[_RSe] != null) {
-    contents[_RSe] = de_RestoreStatus(output[_RSe], context);
+  if (output[_RSes] != null) {
+    contents[_RSes] = de_RestoreStatus(output[_RSes], context);
   }
   return contents;
 };
@@ -9453,6 +9989,20 @@ const de_QueueConfigurationList = (output: any, context: __SerdeContext): QueueC
 };
 
 /**
+ * deserializeAws_restXmlRecordExpiration
+ */
+const de_RecordExpiration = (output: any, context: __SerdeContext): RecordExpiration => {
+  const contents: any = {};
+  if (output[_Exp] != null) {
+    contents[_Exp] = __expectString(output[_Exp]);
+  }
+  if (output[_Da] != null) {
+    contents[_Da] = __strictParseInt32(output[_Da]) as number;
+  }
+  return contents;
+};
+
+/**
  * deserializeAws_restXmlRedirect
  */
 const de_Redirect = (output: any, context: __SerdeContext): Redirect => {
@@ -9628,8 +10178,8 @@ const de_RestoreStatus = (output: any, context: __SerdeContext): RestoreStatus =
   if (output[_IRIP] != null) {
     contents[_IRIP] = __parseBoolean(output[_IRIP]);
   }
-  if (output[_RED] != null) {
-    contents[_RED] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_RED]));
+  if (output[_REDe] != null) {
+    contents[_REDe] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_REDe]));
   }
   return contents;
 };
@@ -10057,6 +10607,7 @@ const _ASSEBD = "ApplyServerSideEncryptionByDefault";
 const _AT = "AccessTier";
 const _Ac = "Account";
 const _B = "Bucket";
+const _BA = "BucketArn";
 const _BAI = "BucketAccountId";
 const _BAS = "BucketAccelerateStatus";
 const _BGR = "BypassGovernanceRetention";
@@ -10118,7 +10669,9 @@ const _CSV = "CSV";
 const _CSVI = "CopySourceVersionId";
 const _CSVIn = "CSVInput";
 const _CSVO = "CSVOutput";
+const _CSo = "ConfigurationState";
 const _CT = "ChecksumType";
+const _CTl = "ClientToken";
 const _CTo = "ContentType";
 const _CTom = "CompressionType";
 const _CTon = "ContinuationToken";
@@ -10130,6 +10683,10 @@ const _Con = "Condition";
 const _D = "Delimiter";
 const _DAI = "DaysAfterInitiation";
 const _DE = "DataExport";
+const _DIM = "DestinationIfMatch";
+const _DIMS = "DestinationIfModifiedSince";
+const _DINM = "DestinationIfNoneMatch";
+const _DIUS = "DestinationIfUnmodifiedSince";
 const _DM = "DeleteMarker";
 const _DMR = "DeleteMarkerReplication";
 const _DMRS = "DeleteMarkerReplicationStatus";
@@ -10138,6 +10695,7 @@ const _DMe = "DeleteMarkers";
 const _DN = "DisplayName";
 const _DR = "DataRedundancy";
 const _DRe = "DefaultRetention";
+const _DRes = "DestinationResult";
 const _Da = "Days";
 const _Dat = "Date";
 const _De = "Deleted";
@@ -10161,6 +10719,7 @@ const _ERP = "EnableRequestProgress";
 const _ES = "ExpiresString";
 const _ESBO = "ExpectedSourceBucketOwner";
 const _ESx = "ExpirationStatus";
+const _ESxp = "ExpirationState";
 const _ET = "EncodingType";
 const _ETa = "ETag";
 const _ETn = "EncryptionType";
@@ -10201,6 +10760,7 @@ const _HRC = "HttpRedirectCode";
 const _I = "Id";
 const _IC = "InventoryConfiguration";
 const _ICL = "InventoryConfigurationList";
+const _ICS = "InventoryConfigurationState";
 const _ID = "IndexDocument";
 const _ID_ = "ID";
 const _IDn = "InventoryDestination";
@@ -10231,6 +10791,9 @@ const _ITAO = "IntelligentTieringAndOperator";
 const _ITAT = "IntelligentTieringAccessTier";
 const _ITC = "IntelligentTieringConfiguration";
 const _ITCL = "IntelligentTieringConfigurationList";
+const _ITCR = "InventoryTableConfigurationResult";
+const _ITCU = "InventoryTableConfigurationUpdates";
+const _ITCn = "InventoryTableConfiguration";
 const _ITD = "IntelligentTieringDays";
 const _ITF = "IntelligentTieringFilter";
 const _ITI = "IntelligentTieringId";
@@ -10242,9 +10805,13 @@ const _JSON = "JSON";
 const _JSONI = "JSONInput";
 const _JSONO = "JSONOutput";
 const _JSONT = "JSONType";
+const _JTC = "JournalTableConfiguration";
+const _JTCR = "JournalTableConfigurationResult";
+const _JTCU = "JournalTableConfigurationUpdates";
 const _K = "Key";
 const _KC = "KeyCount";
 const _KI = "KeyId";
+const _KKA = "KmsKeyArn";
 const _KM = "KeyMarker";
 const _KMSC = "KMSContext";
 const _KMSKI = "KMSKeyId";
@@ -10272,6 +10839,8 @@ const _MAS = "MaxAgeSeconds";
 const _MB = "MaxBuckets";
 const _MC = "MetricsConfiguration";
 const _MCL = "MetricsConfigurationList";
+const _MCR = "MetadataConfigurationResult";
+const _MCe = "MetadataConfiguration";
 const _MD = "MetadataDirective";
 const _MDB = "MaxDirectoryBuckets";
 const _MDf = "MfaDelete";
@@ -10288,6 +10857,7 @@ const _MP = "MaxParts";
 const _MS = "MetricsStatus";
 const _MTC = "MetadataTableConfiguration";
 const _MTCR = "MetadataTableConfigurationResult";
+const _MTEC = "MetadataTableEncryptionConfiguration";
 const _MU = "MaxUploads";
 const _MV = "MetadataValue";
 const _Me = "Metrics";
@@ -10375,7 +10945,9 @@ const _RCT = "ResponseContentType";
 const _RCe = "ReplicationConfiguration";
 const _RD = "RecordDelimiter";
 const _RE = "ResponseExpires";
-const _RED = "RestoreExpiryDate";
+const _RED = "RecordExpirationDays";
+const _REDe = "RestoreExpiryDate";
+const _REe = "RecordExpiration";
 const _RKKID = "ReplicaKmsKeyID";
 const _RKPW = "ReplaceKeyPrefixWith";
 const _RKW = "ReplaceKeyWith";
@@ -10395,8 +10967,9 @@ const _RRe = "ReplicationRule";
 const _RRes = "RestoreRequest";
 const _RRo = "RoutingRules";
 const _RRou = "RoutingRule";
-const _RS = "ReplicationStatus";
-const _RSe = "RestoreStatus";
+const _RS = "RenameSource";
+const _RSe = "ReplicationStatus";
+const _RSes = "RestoreStatus";
 const _RT = "RequestToken";
 const _RTS = "ReplicationTimeStatus";
 const _RTV = "ReplicationTimeValue";
@@ -10410,6 +10983,7 @@ const _Rul = "Rules";
 const _S = "Status";
 const _SA = "StartAfter";
 const _SAK = "SecretAccessKey";
+const _SAs = "SseAlgorithm";
 const _SBD = "S3BucketDestination";
 const _SC = "StorageClass";
 const _SCA = "StorageClassAnalysis";
@@ -10417,6 +10991,10 @@ const _SCADE = "StorageClassAnalysisDataExport";
 const _SCASV = "StorageClassAnalysisSchemaVersion";
 const _SCt = "StatusCode";
 const _SDV = "SkipDestinationValidation";
+const _SIM = "SourceIfMatch";
+const _SIMS = "SourceIfModifiedSince";
+const _SINM = "SourceIfNoneMatch";
+const _SIUS = "SourceIfUnmodifiedSince";
 const _SK = "SSE-KMS";
 const _SKEO = "SseKmsEncryptedObjects";
 const _SKEOS = "SseKmsEncryptedObjectsStatus";
@@ -10458,6 +11036,7 @@ const _TA = "TopicArn";
 const _TAa = "TableArn";
 const _TB = "TargetBucket";
 const _TBA = "TableBucketArn";
+const _TBT = "TableBucketType";
 const _TC = "TagCount";
 const _TCo = "TopicConfiguration";
 const _TCop = "TopicConfigurations";
@@ -10471,7 +11050,9 @@ const _TOKF = "TargetObjectKeyFormat";
 const _TP = "TargetPrefix";
 const _TPC = "TotalPartsCount";
 const _TS = "TagSet";
+const _TSA = "TableSseAlgorithm";
 const _TSC = "TransitionStorageClass";
+const _TSa = "TableStatus";
 const _Ta = "Tag";
 const _Tag = "Tags";
 const _Ti = "Tier";
@@ -10539,6 +11120,9 @@ const _lo = "location";
 const _log = "logging";
 const _lt = "list-type";
 const _m = "metrics";
+const _mC = "metadataConfiguration";
+const _mIT = "metadataInventoryTable";
+const _mJT = "metadataJournalTable";
 const _mT = "metadataTable";
 const _ma = "marker";
 const _mb = "max-buckets";
@@ -10557,6 +11141,7 @@ const _pS = "policyStatus";
 const _pnm = "part-number-marker";
 const _pr = "prefix";
 const _r = "replication";
+const _rO = "renameObject";
 const _rP = "requestPayment";
 const _ra = "range";
 const _rcc = "response-cache-control";
@@ -10588,6 +11173,7 @@ const _xaad = "x-amz-abort-date";
 const _xaapa = "x-amz-access-point-alias";
 const _xaari = "x-amz-abort-rule-id";
 const _xaas = "x-amz-archive-status";
+const _xaba = "x-amz-bucket-arn";
 const _xabgr = "x-amz-bypass-governance-retention";
 const _xabln = "x-amz-bucket-location-name";
 const _xablt = "x-amz-bucket-location-type";
@@ -10614,6 +11200,7 @@ const _xacssseck = "x-amz-copy-source-server-side-encryption-customer-key";
 const _xacssseckm = "x-amz-copy-source-server-side-encryption-customer-key-md5";
 const _xacsvi = "x-amz-copy-source-version-id";
 const _xact = "x-amz-checksum-type";
+const _xact_ = "x-amz-client-token";
 const _xadm = "x-amz-delete-marker";
 const _xae = "x-amz-expiration";
 const _xaebo = "x-amz-expected-bucket-owner";
@@ -10680,7 +11267,12 @@ const _xarc = "x-amz-request-charged";
 const _xarop = "x-amz-restore-output-path";
 const _xarp = "x-amz-request-payer";
 const _xarr = "x-amz-request-route";
-const _xars = "x-amz-replication-status";
+const _xars = "x-amz-rename-source";
+const _xars_ = "x-amz-replication-status";
+const _xarsim = "x-amz-rename-source-if-match";
+const _xarsims = "x-amz-rename-source-if-modified-since";
+const _xarsinm = "x-amz-rename-source-if-none-match";
+const _xarsius = "x-amz-rename-source-if-unmodified-since";
 const _xart = "x-amz-request-token";
 const _xasc = "x-amz-storage-class";
 const _xasca = "x-amz-sdk-checksum-algorithm";

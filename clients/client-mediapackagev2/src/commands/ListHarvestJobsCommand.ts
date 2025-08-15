@@ -100,7 +100,9 @@ export interface ListHarvestJobsCommandOutput extends ListHarvestJobsResponse, _
  * @see {@link MediaPackageV2ClientResolvedConfig | config} for MediaPackageV2Client's `config` shape.
  *
  * @throws {@link AccessDeniedException} (client fault)
- *  <p>You don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide.</p>
+ *  <p>Access is denied because either you don't have permissions to perform the requested operation or MediaPackage is getting throttling errors with CDN authorization. The user or role that is making the request must have at least
+ *          one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide. Or, if you're using CDN authorization, you will receive this exception
+ *          if MediaPackage receives a throttling error from Secrets Manager.</p>
  *
  * @throws {@link InternalServerException} (server fault)
  *  <p>Indicates that an error from the service occurred while trying to process a request.</p>
@@ -166,11 +168,7 @@ export interface ListHarvestJobsCommandOutput extends ListHarvestJobsResponse, _
  *         EndTime: "2024-05-28T12:00:00.00Z",
  *         StartTime: "2024-05-28T06:00:00.00Z"
  *       },
- *       Status: "QUEUED",
- *       Tags: {
- *         key1: "value1",
- *         key2: "value2"
- *       }
+ *       Status: "QUEUED"
  *     },
  *     {
  *       Arn: "arn:aws:mediapackagev2:us-west-2:123456789012:channelGroup/exampleChannelGroup/channel/exampleChannelName2/originEndpoint/exampleOriginEndpointName2/harvestJob/HarvestJobName2",
@@ -209,11 +207,7 @@ export interface ListHarvestJobsCommandOutput extends ListHarvestJobsResponse, _
  *         EndTime: "2024-05-28T12:00:00.00Z",
  *         StartTime: "2024-05-28T02:00:00.00Z"
  *       },
- *       Status: "IN_PROGRESS",
- *       Tags: {
- *         key1: "value1",
- *         key2: "value2"
- *       }
+ *       Status: "IN_PROGRESS"
  *     }
  *   ],
  *   NextToken: "someTokenValue"
@@ -270,11 +264,7 @@ export interface ListHarvestJobsCommandOutput extends ListHarvestJobsResponse, _
  *         EndTime: "2024-05-28T12:00:00.00Z",
  *         StartTime: "2024-05-28T06:00:00.00Z"
  *       },
- *       Status: "QUEUED",
- *       Tags: {
- *         key1: "value1",
- *         key2: "value2"
- *       }
+ *       Status: "QUEUED"
  *     },
  *     {
  *       Arn: "arn:aws:mediapackagev2:us-west-2:123456789012:channelGroup/exampleChannelGroup/channel/exampleChannelName/originEndpoint/exampleOriginEndpointName2/harvestJob/HarvestJobName2",
@@ -312,11 +302,7 @@ export interface ListHarvestJobsCommandOutput extends ListHarvestJobsResponse, _
  *         EndTime: "2024-05-28T12:00:00.00Z",
  *         StartTime: "2024-05-28T02:00:00.00Z"
  *       },
- *       Status: "IN_PROGRESS",
- *       Tags: {
- *         key1: "value1",
- *         key2: "value2"
- *       }
+ *       Status: "IN_PROGRESS"
  *     }
  *   ],
  *   NextToken: "someTokenValue"

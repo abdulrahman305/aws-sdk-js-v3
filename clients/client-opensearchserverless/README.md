@@ -13,7 +13,7 @@ Amazon OpenSearch Service. OpenSearch Serverless removes the operational complex
 configuring, and tuning your OpenSearch clusters. It enables you to easily search and
 analyze petabytes of data without having to worry about the underlying infrastructure
 and data management.</p>
-<p> To learn more about OpenSearch Serverless, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">What is
+<p>To learn more about OpenSearch Serverless, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">What is
 Amazon OpenSearch Serverless?</a>
 </p>
 
@@ -262,6 +262,14 @@ CreateCollection
 </details>
 <details>
 <summary>
+CreateIndex
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/opensearchserverless/command/CreateIndexCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/CreateIndexCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/CreateIndexCommandOutput/)
+
+</details>
+<details>
+<summary>
 CreateLifecyclePolicy
 </summary>
 
@@ -310,6 +318,14 @@ DeleteCollection
 </details>
 <details>
 <summary>
+DeleteIndex
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/opensearchserverless/command/DeleteIndexCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/DeleteIndexCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/DeleteIndexCommandOutput/)
+
+</details>
+<details>
+<summary>
 DeleteLifecyclePolicy
 </summary>
 
@@ -354,6 +370,14 @@ GetAccountSettings
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/opensearchserverless/command/GetAccountSettingsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/GetAccountSettingsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/GetAccountSettingsCommandOutput/)
+
+</details>
+<details>
+<summary>
+GetIndex
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/opensearchserverless/command/GetIndexCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/GetIndexCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/GetIndexCommandOutput/)
 
 </details>
 <details>
@@ -474,6 +498,14 @@ UpdateCollection
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/opensearchserverless/command/UpdateCollectionCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/UpdateCollectionCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/UpdateCollectionCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateIndex
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/opensearchserverless/command/UpdateIndexCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/UpdateIndexCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-opensearchserverless/Interface/UpdateIndexCommandOutput/)
 
 </details>
 <details>

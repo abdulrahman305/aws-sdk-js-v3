@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { CloudFrontClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../CloudFrontClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateFieldLevelEncryptionProfileRequest, UpdateFieldLevelEncryptionProfileResult } from "../models/models_1";
+import { UpdateFieldLevelEncryptionProfileRequest, UpdateFieldLevelEncryptionProfileResult } from "../models/models_2";
 import {
   de_UpdateFieldLevelEncryptionProfileCommand,
   se_UpdateFieldLevelEncryptionProfileCommand,
@@ -115,8 +115,7 @@ export interface UpdateFieldLevelEncryptionProfileCommandOutput
  *  <p>The update contains modifications that are not allowed.</p>
  *
  * @throws {@link InconsistentQuantities} (client fault)
- *  <p>The value of <code>Quantity</code> and the size of <code>Items</code> don't
- * 			match.</p>
+ *  <p>The value of <code>Quantity</code> and the size of <code>Items</code> don't match.</p>
  *
  * @throws {@link InvalidArgument} (client fault)
  *  <p>An argument is invalid.</p>
@@ -131,16 +130,13 @@ export interface UpdateFieldLevelEncryptionProfileCommandOutput
  *  <p>The specified public key doesn't exist.</p>
  *
  * @throws {@link PreconditionFailed} (client fault)
- *  <p>The precondition in one or more of the request fields evaluated to
- * 			<code>false</code>.</p>
+ *  <p>The precondition in one or more of the request fields evaluated to <code>false</code>.</p>
  *
  * @throws {@link TooManyFieldLevelEncryptionEncryptionEntities} (client fault)
- *  <p>The maximum number of encryption entities for field-level encryption have been
- * 			created.</p>
+ *  <p>The maximum number of encryption entities for field-level encryption have been created.</p>
  *
  * @throws {@link TooManyFieldLevelEncryptionFieldPatterns} (client fault)
- *  <p>The maximum number of field patterns for field-level encryption have been
- * 			created.</p>
+ *  <p>The maximum number of field patterns for field-level encryption have been created.</p>
  *
  * @throws {@link CloudFrontServiceException}
  * <p>Base exception class for all service exceptions from CloudFront service.</p>

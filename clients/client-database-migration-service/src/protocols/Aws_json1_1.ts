@@ -532,8 +532,6 @@ import {
   DescribeReplicationTableStatisticsResponse,
   DescribeReplicationTaskAssessmentResultsMessage,
   DescribeReplicationTaskAssessmentResultsResponse,
-  DescribeReplicationTaskAssessmentRunsMessage,
-  DescribeReplicationTaskAssessmentRunsResponse,
   DmsTransferSettings,
   DocDbDataProviderSettings,
   DocDbSettings,
@@ -618,6 +616,8 @@ import {
 } from "../models/models_0";
 import {
   AssessmentReportType,
+  DescribeReplicationTaskAssessmentRunsMessage,
+  DescribeReplicationTaskAssessmentRunsResponse,
   DescribeReplicationTaskIndividualAssessmentsMessage,
   DescribeReplicationTaskIndividualAssessmentsResponse,
   DescribeReplicationTasksMessage,
@@ -5585,6 +5585,7 @@ const de_DataProvider = (output: any, context: __SerdeContext): DataProvider => 
     Description: __expectString,
     Engine: __expectString,
     Settings: (_: any) => _json(__expectUnion(_)),
+    Virtual: __expectBoolean,
   }) as any;
 };
 
@@ -7079,6 +7080,11 @@ const de_TableStatistics = (output: any, context: __SerdeContext): TableStatisti
     FullLoadStartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     Inserts: __expectLong,
     LastUpdateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    ResyncProgress: __limitedParseDouble,
+    ResyncRowsAttempted: __expectLong,
+    ResyncRowsFailed: __expectLong,
+    ResyncRowsSucceeded: __expectLong,
+    ResyncState: __expectString,
     SchemaName: __expectString,
     TableName: __expectString,
     TableState: __expectString,

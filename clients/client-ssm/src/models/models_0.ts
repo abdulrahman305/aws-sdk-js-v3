@@ -4,6 +4,59 @@ import { ExceptionOptionType as __ExceptionOptionType, SENSITIVE_STRING } from "
 import { SSMServiceException as __BaseException } from "./SSMServiceException";
 
 /**
+ * <p>The requester doesn't have permissions to perform the requested operation.</p>
+ * @public
+ */
+export class AccessDeniedException extends __BaseException {
+  readonly name: "AccessDeniedException" = "AccessDeniedException";
+  readonly $fault: "client" = "client";
+  Message: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<AccessDeniedException, __BaseException>) {
+    super({
+      name: "AccessDeniedException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, AccessDeniedException.prototype);
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const AccessRequestStatus = {
+  APPROVED: "Approved",
+  EXPIRED: "Expired",
+  PENDING: "Pending",
+  REJECTED: "Rejected",
+  REVOKED: "Revoked",
+} as const;
+
+/**
+ * @public
+ */
+export type AccessRequestStatus = (typeof AccessRequestStatus)[keyof typeof AccessRequestStatus];
+
+/**
+ * @public
+ * @enum
+ */
+export const AccessType = {
+  JUSTINTIME: "JustInTime",
+  STANDARD: "Standard",
+} as const;
+
+/**
+ * @public
+ */
+export type AccessType = (typeof AccessType)[keyof typeof AccessType];
+
+/**
  * <p>Information includes the Amazon Web Services account ID where the current document is shared and the
  *    version shared with that account.</p>
  * @public
@@ -2284,6 +2337,7 @@ export type DocumentFormat = (typeof DocumentFormat)[keyof typeof DocumentFormat
 export const DocumentType = {
   ApplicationConfiguration: "ApplicationConfiguration",
   ApplicationConfigurationSchema: "ApplicationConfigurationSchema",
+  AutoApprovalPolicy: "AutoApprovalPolicy",
   Automation: "Automation",
   ChangeCalendar: "ChangeCalendar",
   ChangeTemplate: "Automation.ChangeTemplate",
@@ -2291,6 +2345,7 @@ export const DocumentType = {
   Command: "Command",
   ConformancePackTemplate: "ConformancePackTemplate",
   DeploymentStrategy: "DeploymentStrategy",
+  ManualApprovalPolicy: "ManualApprovalPolicy",
   Package: "Package",
   Policy: "Policy",
   ProblemAnalysis: "ProblemAnalysis",
@@ -3838,7 +3893,10 @@ export interface PatchSource {
   Products: string[] | undefined;
 
   /**
-   * <p>The value of the yum repo configuration. For example:</p>
+   * <p>The value of the repo configuration.</p>
+   *          <p>
+   *             <b>Example for yum repositories</b>
+   *          </p>
    *          <p>
    *             <code>[main]</code>
    *          </p>
@@ -3851,10 +3909,22 @@ export interface PatchSource {
    *          <p>
    *             <code>enabled=1</code>
    *          </p>
-   *          <note>
-   *             <p>For information about other options available for your yum repository configuration, see
-   *      <a href="https://man7.org/linux/man-pages/man5/dnf.conf.5.html">dnf.conf(5)</a>.</p>
-   *          </note>
+   *          <p>For information about other options available for your yum repository configuration, see
+   *     <a href="https://man7.org/linux/man-pages/man5/dnf.conf.5.html">dnf.conf(5)</a> on the
+   *     <i>man7.org</i> website.</p>
+   *          <p>
+   *             <b>Examples for Ubuntu Server and Debian Server</b>
+   *          </p>
+   *          <p>
+   *             <code>deb http://security.ubuntu.com/ubuntu jammy main</code>
+   *          </p>
+   *          <p>
+   *             <code>deb https://site.example.com/debian distribution component1 component2 component3</code>
+   *          </p>
+   *          <p>Repo information for Ubuntu Server repositories must be specifed in a single line. For more
+   *    examples and information, see <a href="https://manpages.ubuntu.com/manpages/jammy/man5/sources.list.5.html">jammy (5)
+   *     sources.list.5.gz</a> on the <i>Ubuntu Server Manuals</i> website and <a href="https://wiki.debian.org/SourcesList#sources.list_format">sources.list format</a> on the
+   *     <i>Debian Wiki</i>.</p>
    * @public
    */
   Configuration: string | undefined;
@@ -5904,6 +5974,7 @@ export type AutomationExecutionStatus = (typeof AutomationExecutionStatus)[keyof
  * @enum
  */
 export const AutomationSubtype = {
+  AccessRequest: "AccessRequest",
   ChangeRequest: "ChangeRequest",
 } as const;
 
@@ -7073,6 +7144,10 @@ export interface DescribeAvailablePatchesResult {
 export interface DescribeDocumentRequest {
   /**
    * <p>The name of the SSM document.</p>
+   *          <note>
+   *             <p>If you're calling a shared SSM document from a different Amazon Web Services account,
+   *      <code>Name</code> is the full Amazon Resource Name (ARN) of the document.</p>
+   *          </note>
    * @public
    */
   Name: string | undefined;
@@ -7122,7 +7197,7 @@ export type DocumentPermissionType = (typeof DocumentPermissionType)[keyof typeo
  */
 export interface DescribeDocumentPermissionRequest {
   /**
-   * <p>The name of the document for which you are the owner.</p>
+   * <p>The name of the document for which you are the owner. </p>
    * @public
    */
   Name: string | undefined;
@@ -7155,7 +7230,7 @@ export interface DescribeDocumentPermissionRequest {
 export interface DescribeDocumentPermissionResponse {
   /**
    * <p>The account IDs that have permission to use this document. The ID can be either an
-   *    Amazon Web Services account or <i>All</i>.</p>
+   *    Amazon Web Services account number or <code>all</code>.</p>
    * @public
    */
   AccountIds?: string[] | undefined;
@@ -7556,7 +7631,7 @@ export interface InstanceInformationStringFilter {
   /**
    * <p>The filter key name to describe your managed nodes.</p>
    *          <p>Valid filter key values: ActivationIds | AgentVersion | AssociationStatus | IamRole |
-   *    InstanceIds | PingStatus | PlatformTypes | ResourceType | SourceIds | SourceTypes | "tag-key" |
+   *    InstanceIds | PingStatus | PlatformType | ResourceType | SourceIds | SourceTypes | "tag-key" |
    *     "tag:<code>\{keyname\}</code>
    *          </p>
    *          <ul>
@@ -9585,84 +9660,6 @@ export interface MaintenanceWindowIdentity {
 }
 
 /**
- * @public
- */
-export interface DescribeMaintenanceWindowsResult {
-  /**
-   * <p>Information about the maintenance windows.</p>
-   * @public
-   */
-  WindowIdentities?: MaintenanceWindowIdentity[] | undefined;
-
-  /**
-   * <p>The token to use when requesting the next set of items. If there are no additional items to
-   *    return, the string is empty.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const MaintenanceWindowResourceType = {
-  Instance: "INSTANCE",
-  ResourceGroup: "RESOURCE_GROUP",
-} as const;
-
-/**
- * @public
- */
-export type MaintenanceWindowResourceType =
-  (typeof MaintenanceWindowResourceType)[keyof typeof MaintenanceWindowResourceType];
-
-/**
- * @public
- */
-export interface DescribeMaintenanceWindowScheduleRequest {
-  /**
-   * <p>The ID of the maintenance window to retrieve information about.</p>
-   * @public
-   */
-  WindowId?: string | undefined;
-
-  /**
-   * <p>The managed node ID or key-value pair to retrieve information about.</p>
-   * @public
-   */
-  Targets?: Target[] | undefined;
-
-  /**
-   * <p>The type of resource you want to retrieve information about. For example,
-   *     <code>INSTANCE</code>.</p>
-   * @public
-   */
-  ResourceType?: MaintenanceWindowResourceType | undefined;
-
-  /**
-   * <p>Filters used to limit the range of results. For example, you can limit maintenance window
-   *    executions to only those scheduled before or after a certain date and time.</p>
-   * @public
-   */
-  Filters?: PatchOrchestratorFilter[] | undefined;
-
-  /**
-   * <p>The maximum number of items to return for this call. The call also returns a token that you
-   *    can specify in a subsequent call to get the next set of results.</p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-
-  /**
-   * <p>The token for the next set of items to return. (You received this token from a previous
-   *    call.)</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
  * @internal
  */
 export const CreateAssociationRequestFilterSensitiveLog = (obj: CreateAssociationRequest): any => ({
@@ -9854,14 +9851,4 @@ export const DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensit
 export const MaintenanceWindowIdentityFilterSensitiveLog = (obj: MaintenanceWindowIdentity): any => ({
   ...obj,
   ...(obj.Description && { Description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const DescribeMaintenanceWindowsResultFilterSensitiveLog = (obj: DescribeMaintenanceWindowsResult): any => ({
-  ...obj,
-  ...(obj.WindowIdentities && {
-    WindowIdentities: obj.WindowIdentities.map((item) => MaintenanceWindowIdentityFilterSensitiveLog(item)),
-  }),
 });

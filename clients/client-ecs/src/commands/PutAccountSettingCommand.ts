@@ -40,7 +40,7 @@ export interface PutAccountSettingCommandOutput extends PutAccountSettingRespons
  * // const { ECSClient, PutAccountSettingCommand } = require("@aws-sdk/client-ecs"); // CommonJS import
  * const client = new ECSClient(config);
  * const input = { // PutAccountSettingRequest
- *   name: "serviceLongArnFormat" || "taskLongArnFormat" || "containerInstanceLongArnFormat" || "awsvpcTrunking" || "containerInsights" || "fargateFIPSMode" || "tagResourceAuthorization" || "fargateTaskRetirementWaitPeriod" || "guardDutyActivate", // required
+ *   name: "serviceLongArnFormat" || "taskLongArnFormat" || "containerInstanceLongArnFormat" || "awsvpcTrunking" || "containerInsights" || "fargateFIPSMode" || "tagResourceAuthorization" || "fargateTaskRetirementWaitPeriod" || "guardDutyActivate" || "defaultLogDriverMode", // required
  *   value: "STRING_VALUE", // required
  *   principalArn: "STRING_VALUE",
  * };
@@ -48,7 +48,7 @@ export interface PutAccountSettingCommandOutput extends PutAccountSettingRespons
  * const response = await client.send(command);
  * // { // PutAccountSettingResponse
  * //   setting: { // Setting
- * //     name: "serviceLongArnFormat" || "taskLongArnFormat" || "containerInstanceLongArnFormat" || "awsvpcTrunking" || "containerInsights" || "fargateFIPSMode" || "tagResourceAuthorization" || "fargateTaskRetirementWaitPeriod" || "guardDutyActivate",
+ * //     name: "serviceLongArnFormat" || "taskLongArnFormat" || "containerInstanceLongArnFormat" || "awsvpcTrunking" || "containerInsights" || "fargateFIPSMode" || "tagResourceAuthorization" || "fargateTaskRetirementWaitPeriod" || "guardDutyActivate" || "defaultLogDriverMode",
  * //     value: "STRING_VALUE",
  * //     principalArn: "STRING_VALUE",
  * //     type: "user" || "aws_managed",
@@ -67,21 +67,12 @@ export interface PutAccountSettingCommandOutput extends PutAccountSettingRespons
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
- *          <p>The following list includes additional causes for the error:</p>
- *          <ul>
- *             <li>
- *                <p>The <code>RunTask</code> could not be processed because you use managed
- * 					scaling and there is a capacity error because the quota of tasks in the
- * 						<code>PROVISIONING</code> per cluster has been reached. For information
- * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
- * 						service quotas</a>.</p>
- *             </li>
- *          </ul>
  *
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
- *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service
+ * 				event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>

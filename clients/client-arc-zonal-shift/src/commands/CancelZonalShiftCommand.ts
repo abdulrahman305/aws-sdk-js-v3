@@ -28,10 +28,7 @@ export interface CancelZonalShiftCommandInput extends CancelZonalShiftRequest {}
 export interface CancelZonalShiftCommandOutput extends ZonalShift, __MetadataBearer {}
 
 /**
- * <p>Cancel a zonal shift in Amazon Route 53 Application Recovery Controller. To cancel the zonal shift, specify the zonal shift ID.</p>
- *          <p>A zonal shift can be one that you've started for a resource in your Amazon Web Services account
- *   		in an Amazon Web Services Region, or it can be a zonal shift started by a practice run with zonal
- *   		autoshift. </p>
+ * <p>Cancel a zonal shift in Amazon Application Recovery Controller. To cancel the zonal shift, specify the zonal shift ID.</p> <p>A zonal shift can be one that you've started for a resource in your Amazon Web Services account in an Amazon Web Services Region, or it can be a zonal shift started by a practice run with zonal autoshift. </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

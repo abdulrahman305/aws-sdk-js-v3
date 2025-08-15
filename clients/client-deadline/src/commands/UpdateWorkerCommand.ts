@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { DeadlineClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../DeadlineClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateWorkerRequest, UpdateWorkerResponse } from "../models/models_0";
+import { UpdateWorkerRequest, UpdateWorkerResponse, UpdateWorkerResponseFilterSensitiveLog } from "../models/models_0";
 import { de_UpdateWorkerCommand, se_UpdateWorkerCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -81,6 +81,10 @@ export interface UpdateWorkerCommandOutput extends UpdateWorkerResponse, __Metad
  * //     },
  * //     error: "STRING_VALUE",
  * //   },
+ * //   hostConfiguration: { // HostConfiguration
+ * //     scriptBody: "STRING_VALUE", // required
+ * //     scriptTimeoutSeconds: Number("int"),
+ * //   },
  * // };
  *
  * ```
@@ -134,7 +138,7 @@ export class UpdateWorkerCommand extends $Command
   })
   .s("Deadline", "UpdateWorker", {})
   .n("DeadlineClient", "UpdateWorkerCommand")
-  .f(void 0, void 0)
+  .f(void 0, UpdateWorkerResponseFilterSensitiveLog)
   .ser(se_UpdateWorkerCommand)
   .de(de_UpdateWorkerCommand)
   .build() {

@@ -14,6 +14,7 @@ import {
   BasicCatalogTarget,
   CatalogDeltaSource,
   CatalogHudiSource,
+  CatalogIcebergSource,
   CatalogKafkaSource,
   CatalogKinesisSource,
   CatalogSource,
@@ -32,6 +33,7 @@ import {
   DropNullFields,
   DynamicTransform,
   DynamoDBCatalogSource,
+  DynamoDBELTConnectorSource,
   ErrorDetail,
   EvaluateDataQuality,
   EvaluateDataQualityMultiFrame,
@@ -42,6 +44,7 @@ import {
   Filter,
   GovernedCatalogSource,
   GovernedCatalogTarget,
+  InclusionAnnotationValue,
   JDBCConnectorSource,
   JDBCConnectorTarget,
   JobCommand,
@@ -68,8 +71,10 @@ import {
   RedshiftTarget,
   RelationalCatalogSource,
   RenameField,
+  Route,
   S3CatalogDeltaSource,
   S3CatalogHudiSource,
+  S3CatalogIcebergSource,
   S3CatalogSource,
   S3CatalogTarget,
   S3CsvSource,
@@ -77,10 +82,14 @@ import {
   S3DeltaDirectTarget,
   S3DeltaSource,
   S3DirectTarget,
+  S3ExcelSource,
   S3GlueParquetTarget,
   S3HudiCatalogTarget,
   S3HudiDirectTarget,
   S3HudiSource,
+  S3HyperDirectTarget,
+  S3IcebergCatalogTarget,
+  S3IcebergDirectTarget,
   S3JsonSource,
   S3ParquetSource,
   SchemaChangePolicy,
@@ -99,6 +108,7 @@ import {
   SplitFields,
   StorageDescriptor,
   TableOptimizerConfiguration,
+  TableOptimizerRun,
   TableOptimizerType,
   Trigger,
   Union,
@@ -107,7 +117,6 @@ import {
 
 import {
   CatalogInput,
-  ColumnStatistics,
   Compatibility,
   ConnectionInput,
   ConnectionInputFilterSensitiveLog,
@@ -116,13 +125,20 @@ import {
   CsvHeaderOption,
   CsvSerdeOption,
   DatabaseInput,
+  IcebergPartitionSpec,
+  IcebergSchema,
+  IcebergSortOrder,
+  IntegrationError,
+  IntegrationStatus,
   Permission,
   ProfileConfiguration,
   RegistryId,
+  SchemaVersionStatus,
   SourceProcessingProperties,
   SourceTableConfig,
   TableIdentifier,
   TableInput,
+  Tag,
   TargetProcessingProperties,
   TargetTableConfig,
   TransformParameters,
@@ -131,9 +147,11 @@ import {
 
 import {
   ColumnRowFilter,
-  Comparator,
+  ColumnStatistics,
+  DataCatalogEncryptionSettings,
   DataQualityEvaluationRunAdditionalRunOptions,
   FederatedTable,
+  JobBookmarkEntry,
   ResourceAction,
   ResourceShareType,
   ResourceState,
@@ -141,6 +159,992 @@ import {
   ViewDefinition,
   ViewValidation,
 } from "./models_2";
+
+/**
+ * @public
+ */
+export interface ListTableOptimizerRunsResponse {
+  /**
+   * <p>The Catalog ID of the table.</p>
+   * @public
+   */
+  CatalogId?: string | undefined;
+
+  /**
+   * <p>The name of the database in the catalog in which the table resides.</p>
+   * @public
+   */
+  DatabaseName?: string | undefined;
+
+  /**
+   * <p>The name of the table.</p>
+   * @public
+   */
+  TableName?: string | undefined;
+
+  /**
+   * <p>A continuation token for paginating the returned list of optimizer runs, returned if the current segment of the list is not the last.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>A list of the optimizer runs associated with a table.</p>
+   * @public
+   */
+  TableOptimizerRuns?: TableOptimizerRun[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListTriggersRequest {
+  /**
+   * <p>A continuation token, if this is a continuation request.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p> The name of the job for which to retrieve triggers. The trigger that can start this job
+   *       is returned. If there is no such trigger, all triggers are returned.</p>
+   * @public
+   */
+  DependentJobName?: string | undefined;
+
+  /**
+   * <p>The maximum size of a list to return.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+
+  /**
+   * <p>Specifies to return only these tagged resources.</p>
+   * @public
+   */
+  Tags?: Record<string, string> | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListTriggersResponse {
+  /**
+   * <p>The names of all triggers in the account, or the triggers with the specified tags.</p>
+   * @public
+   */
+  TriggerNames?: string[] | undefined;
+
+  /**
+   * <p>A continuation token, if the returned list does not contain the
+   *       last metric available.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListUsageProfilesRequest {
+  /**
+   * <p>A continuation token, included if this is a continuation call.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of usage profiles to return in a single response.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * <p>Describes an Glue usage profile.</p>
+ * @public
+ */
+export interface UsageProfileDefinition {
+  /**
+   * <p>The name of the usage profile.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>A description of the usage profile.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>The date and time when the usage profile was created.</p>
+   * @public
+   */
+  CreatedOn?: Date | undefined;
+
+  /**
+   * <p>The date and time when the usage profile was last modified.</p>
+   * @public
+   */
+  LastModifiedOn?: Date | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListUsageProfilesResponse {
+  /**
+   * <p>A list of usage profile (<code>UsageProfileDefinition</code>) objects.</p>
+   * @public
+   */
+  Profiles?: UsageProfileDefinition[] | undefined;
+
+  /**
+   * <p>A continuation token, present if the current list segment is not the last.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListWorkflowsRequest {
+  /**
+   * <p>A continuation token, if this is a continuation request.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum size of a list to return.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListWorkflowsResponse {
+  /**
+   * <p>List of names of workflows in the account.</p>
+   * @public
+   */
+  Workflows?: string[] | undefined;
+
+  /**
+   * <p>A continuation token, if not all workflow names have been returned.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ModifyIntegrationRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) for the integration.</p>
+   * @public
+   */
+  IntegrationIdentifier: string | undefined;
+
+  /**
+   * <p>A description of the integration.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>Selects source tables for the integration using Maxwell filter syntax.</p>
+   * @public
+   */
+  DataFilter?: string | undefined;
+
+  /**
+   * <p>A unique name for an integration in Glue.</p>
+   * @public
+   */
+  IntegrationName?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ModifyIntegrationResponse {
+  /**
+   * <p>The ARN of the source for the integration.</p>
+   * @public
+   */
+  SourceArn: string | undefined;
+
+  /**
+   * <p>The ARN of the target for the integration.</p>
+   * @public
+   */
+  TargetArn: string | undefined;
+
+  /**
+   * <p>A unique name for an integration in Glue.</p>
+   * @public
+   */
+  IntegrationName: string | undefined;
+
+  /**
+   * <p>A description of the integration.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) for the integration.</p>
+   * @public
+   */
+  IntegrationArn: string | undefined;
+
+  /**
+   * <p>The ARN of a KMS key used for encrypting the channel.</p>
+   * @public
+   */
+  KmsKeyId?: string | undefined;
+
+  /**
+   * <p>An optional set of non-secret key–value pairs that contains additional contextual information for encryption.</p>
+   * @public
+   */
+  AdditionalEncryptionContext?: Record<string, string> | undefined;
+
+  /**
+   * <p>Metadata assigned to the resource consisting of a list of key-value pairs.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The status of the integration being modified.</p>
+   *          <p>The possible statuses are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>CREATING: The integration is being created.</p>
+   *             </li>
+   *             <li>
+   *                <p>ACTIVE: The integration creation succeeds.</p>
+   *             </li>
+   *             <li>
+   *                <p>MODIFYING: The integration is being modified.</p>
+   *             </li>
+   *             <li>
+   *                <p>FAILED: The integration creation fails. </p>
+   *             </li>
+   *             <li>
+   *                <p>DELETING: The integration is deleted.</p>
+   *             </li>
+   *             <li>
+   *                <p>SYNCING: The integration is synchronizing.</p>
+   *             </li>
+   *             <li>
+   *                <p>NEEDS_ATTENTION: The integration needs attention, such as synchronization.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  Status: IntegrationStatus | undefined;
+
+  /**
+   * <p>The time when the integration was created, in UTC.</p>
+   * @public
+   */
+  CreateTime: Date | undefined;
+
+  /**
+   * <p>A list of errors associated with the integration modification.</p>
+   * @public
+   */
+  Errors?: IntegrationError[] | undefined;
+
+  /**
+   * <p>Selects source tables for the integration using Maxwell filter syntax.</p>
+   * @public
+   */
+  DataFilter?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutDataCatalogEncryptionSettingsRequest {
+  /**
+   * <p>The ID of the Data Catalog to set the security configuration for. If none is provided, the
+   *       Amazon Web Services account ID is used by default.</p>
+   * @public
+   */
+  CatalogId?: string | undefined;
+
+  /**
+   * <p>The security configuration to set.</p>
+   * @public
+   */
+  DataCatalogEncryptionSettings: DataCatalogEncryptionSettings | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutDataCatalogEncryptionSettingsResponse {}
+
+/**
+ * @public
+ */
+export interface PutDataQualityProfileAnnotationRequest {
+  /**
+   * <p>The ID of the data quality monitoring profile to annotate.</p>
+   * @public
+   */
+  ProfileId: string | undefined;
+
+  /**
+   * <p>The inclusion annotation value to apply to the profile.</p>
+   * @public
+   */
+  InclusionAnnotation: InclusionAnnotationValue | undefined;
+}
+
+/**
+ * <p>Left blank.</p>
+ * @public
+ */
+export interface PutDataQualityProfileAnnotationResponse {}
+
+/**
+ * @public
+ * @enum
+ */
+export const EnableHybridValues = {
+  FALSE: "FALSE",
+  TRUE: "TRUE",
+} as const;
+
+/**
+ * @public
+ */
+export type EnableHybridValues = (typeof EnableHybridValues)[keyof typeof EnableHybridValues];
+
+/**
+ * @public
+ * @enum
+ */
+export const ExistCondition = {
+  MUST_EXIST: "MUST_EXIST",
+  NONE: "NONE",
+  NOT_EXIST: "NOT_EXIST",
+} as const;
+
+/**
+ * @public
+ */
+export type ExistCondition = (typeof ExistCondition)[keyof typeof ExistCondition];
+
+/**
+ * @public
+ */
+export interface PutResourcePolicyRequest {
+  /**
+   * <p>Contains the policy document to set, in JSON format.</p>
+   * @public
+   */
+  PolicyInJson: string | undefined;
+
+  /**
+   * <p>Do not use. For internal use only.</p>
+   * @public
+   */
+  ResourceArn?: string | undefined;
+
+  /**
+   * <p>The hash value returned when the previous policy was set using
+   *         <code>PutResourcePolicy</code>. Its purpose is to prevent concurrent modifications of a
+   *       policy. Do not use this parameter if no previous policy has been set.</p>
+   * @public
+   */
+  PolicyHashCondition?: string | undefined;
+
+  /**
+   * <p>A value of <code>MUST_EXIST</code> is used to update a policy. A value of
+   *         <code>NOT_EXIST</code> is used to create a new policy. If a value of <code>NONE</code> or a
+   *       null value is used, the call does not depend on the existence of a policy.</p>
+   * @public
+   */
+  PolicyExistsCondition?: ExistCondition | undefined;
+
+  /**
+   * <p>If <code>'TRUE'</code>, indicates that you are using both methods to grant cross-account
+   *       access to Data Catalog resources:</p>
+   *          <ul>
+   *             <li>
+   *                <p>By directly updating the resource policy with <code>PutResourePolicy</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>By using the <b>Grant permissions</b> command on the Amazon Web Services Management Console.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Must be set to <code>'TRUE'</code> if you have already used the Management Console to
+   *       grant cross-account access, otherwise the call fails. Default is 'FALSE'.</p>
+   * @public
+   */
+  EnableHybrid?: EnableHybridValues | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutResourcePolicyResponse {
+  /**
+   * <p>A hash of the policy that has just been set. This must
+   *       be included in a subsequent call that overwrites or updates
+   *       this policy.</p>
+   * @public
+   */
+  PolicyHash?: string | undefined;
+}
+
+/**
+ * <p>A structure containing a key value pair for metadata.</p>
+ * @public
+ */
+export interface MetadataKeyValuePair {
+  /**
+   * <p>A metadata key.</p>
+   * @public
+   */
+  MetadataKey?: string | undefined;
+
+  /**
+   * <p>A metadata key’s corresponding value.</p>
+   * @public
+   */
+  MetadataValue?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutSchemaVersionMetadataInput {
+  /**
+   * <p>The unique ID for the schema.</p>
+   * @public
+   */
+  SchemaId?: SchemaId | undefined;
+
+  /**
+   * <p>The version number of the schema.</p>
+   * @public
+   */
+  SchemaVersionNumber?: SchemaVersionNumber | undefined;
+
+  /**
+   * <p>The unique version ID of the schema version.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>The metadata key's corresponding value.</p>
+   * @public
+   */
+  MetadataKeyValue: MetadataKeyValuePair | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutSchemaVersionMetadataResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) for the schema.</p>
+   * @public
+   */
+  SchemaArn?: string | undefined;
+
+  /**
+   * <p>The name for the schema.</p>
+   * @public
+   */
+  SchemaName?: string | undefined;
+
+  /**
+   * <p>The name for the registry.</p>
+   * @public
+   */
+  RegistryName?: string | undefined;
+
+  /**
+   * <p>The latest version of the schema.</p>
+   * @public
+   */
+  LatestVersion?: boolean | undefined;
+
+  /**
+   * <p>The version number of the schema.</p>
+   * @public
+   */
+  VersionNumber?: number | undefined;
+
+  /**
+   * <p>The unique version ID of the schema version.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>The metadata key.</p>
+   * @public
+   */
+  MetadataKey?: string | undefined;
+
+  /**
+   * <p>The value of the metadata key.</p>
+   * @public
+   */
+  MetadataValue?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutWorkflowRunPropertiesRequest {
+  /**
+   * <p>Name of the workflow which was run.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The ID of the workflow run for which the run properties should be updated.</p>
+   * @public
+   */
+  RunId: string | undefined;
+
+  /**
+   * <p>The properties to put for the specified run.</p>
+   *          <p>Run properties may be logged. Do not pass plaintext secrets as properties. Retrieve secrets from a Glue Connection, Amazon Web Services Secrets Manager or other secret management mechanism if you intend to use them within the workflow run.</p>
+   * @public
+   */
+  RunProperties: Record<string, string> | undefined;
+}
+
+/**
+ * @public
+ */
+export interface PutWorkflowRunPropertiesResponse {}
+
+/**
+ * @public
+ */
+export interface QuerySchemaVersionMetadataInput {
+  /**
+   * <p>A wrapper structure that may contain the schema name and Amazon Resource Name (ARN).</p>
+   * @public
+   */
+  SchemaId?: SchemaId | undefined;
+
+  /**
+   * <p>The version number of the schema.</p>
+   * @public
+   */
+  SchemaVersionNumber?: SchemaVersionNumber | undefined;
+
+  /**
+   * <p>The unique version ID of the schema version.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>Search key-value pairs for metadata, if they are not provided all the metadata information will be fetched.</p>
+   * @public
+   */
+  MetadataList?: MetadataKeyValuePair[] | undefined;
+
+  /**
+   * <p>Maximum number of results required per page. If the value is not supplied, this will be defaulted to 25 per page.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+
+  /**
+   * <p>A continuation token, if this is a continuation call.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * <p>A structure containing other metadata for a schema version belonging to the same metadata key.</p>
+ * @public
+ */
+export interface OtherMetadataValueListItem {
+  /**
+   * <p>The metadata key’s corresponding value for the other metadata belonging to the same metadata key.</p>
+   * @public
+   */
+  MetadataValue?: string | undefined;
+
+  /**
+   * <p>The time at which the entry was created.</p>
+   * @public
+   */
+  CreatedTime?: string | undefined;
+}
+
+/**
+ * <p>A structure containing metadata information for a schema version.</p>
+ * @public
+ */
+export interface MetadataInfo {
+  /**
+   * <p>The metadata key’s corresponding value.</p>
+   * @public
+   */
+  MetadataValue?: string | undefined;
+
+  /**
+   * <p>The time at which the entry was created.</p>
+   * @public
+   */
+  CreatedTime?: string | undefined;
+
+  /**
+   * <p>Other metadata belonging to the same metadata key.</p>
+   * @public
+   */
+  OtherMetadataValueList?: OtherMetadataValueListItem[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface QuerySchemaVersionMetadataResponse {
+  /**
+   * <p>A map of a metadata key and associated values.</p>
+   * @public
+   */
+  MetadataInfoMap?: Record<string, MetadataInfo> | undefined;
+
+  /**
+   * <p>The unique version ID of the schema version.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>A continuation token for paginating the returned list of tokens, returned if the current segment of the list is not the last.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RegisterSchemaVersionInput {
+  /**
+   * <p>This is a wrapper structure to contain schema identity fields. The structure contains:</p>
+   *          <ul>
+   *             <li>
+   *                <p>SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema. Either <code>SchemaArn</code> or <code>SchemaName</code> and <code>RegistryName</code> has to be provided.</p>
+   *             </li>
+   *             <li>
+   *                <p>SchemaId$SchemaName: The name of the schema. Either <code>SchemaArn</code> or <code>SchemaName</code> and <code>RegistryName</code> has to be provided.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  SchemaId: SchemaId | undefined;
+
+  /**
+   * <p>The schema definition using the <code>DataFormat</code> setting for the <code>SchemaName</code>.</p>
+   * @public
+   */
+  SchemaDefinition: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RegisterSchemaVersionResponse {
+  /**
+   * <p>The unique ID that represents the version of this schema.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>The version of this schema (for sync flow only, in case this is the first version).</p>
+   * @public
+   */
+  VersionNumber?: number | undefined;
+
+  /**
+   * <p>The status of the schema version.</p>
+   * @public
+   */
+  Status?: SchemaVersionStatus | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RemoveSchemaVersionMetadataInput {
+  /**
+   * <p>A wrapper structure that may contain the schema name and Amazon Resource Name (ARN).</p>
+   * @public
+   */
+  SchemaId?: SchemaId | undefined;
+
+  /**
+   * <p>The version number of the schema.</p>
+   * @public
+   */
+  SchemaVersionNumber?: SchemaVersionNumber | undefined;
+
+  /**
+   * <p>The unique version ID of the schema version.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>The value of the metadata key.</p>
+   * @public
+   */
+  MetadataKeyValue: MetadataKeyValuePair | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RemoveSchemaVersionMetadataResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the schema.</p>
+   * @public
+   */
+  SchemaArn?: string | undefined;
+
+  /**
+   * <p>The name of the schema.</p>
+   * @public
+   */
+  SchemaName?: string | undefined;
+
+  /**
+   * <p>The name of the registry.</p>
+   * @public
+   */
+  RegistryName?: string | undefined;
+
+  /**
+   * <p>The latest version of the schema.</p>
+   * @public
+   */
+  LatestVersion?: boolean | undefined;
+
+  /**
+   * <p>The version number of the schema.</p>
+   * @public
+   */
+  VersionNumber?: number | undefined;
+
+  /**
+   * <p>The version ID for the schema version.</p>
+   * @public
+   */
+  SchemaVersionId?: string | undefined;
+
+  /**
+   * <p>The metadata key.</p>
+   * @public
+   */
+  MetadataKey?: string | undefined;
+
+  /**
+   * <p>The value of the metadata key.</p>
+   * @public
+   */
+  MetadataValue?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ResetJobBookmarkRequest {
+  /**
+   * <p>The name of the job in question.</p>
+   * @public
+   */
+  JobName: string | undefined;
+
+  /**
+   * <p>The unique run identifier associated with this job run.</p>
+   * @public
+   */
+  RunId?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ResetJobBookmarkResponse {
+  /**
+   * <p>The reset bookmark entry.</p>
+   * @public
+   */
+  JobBookmarkEntry?: JobBookmarkEntry | undefined;
+}
+
+/**
+ * <p>Too many jobs are being run concurrently.</p>
+ * @public
+ */
+export class ConcurrentRunsExceededException extends __BaseException {
+  readonly name: "ConcurrentRunsExceededException" = "ConcurrentRunsExceededException";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>A message describing the problem.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ConcurrentRunsExceededException, __BaseException>) {
+    super({
+      name: "ConcurrentRunsExceededException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ConcurrentRunsExceededException.prototype);
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * <p>The workflow is in an invalid state to perform a requested operation.</p>
+ * @public
+ */
+export class IllegalWorkflowStateException extends __BaseException {
+  readonly name: "IllegalWorkflowStateException" = "IllegalWorkflowStateException";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>A message describing the problem.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<IllegalWorkflowStateException, __BaseException>) {
+    super({
+      name: "IllegalWorkflowStateException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, IllegalWorkflowStateException.prototype);
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * @public
+ */
+export interface ResumeWorkflowRunRequest {
+  /**
+   * <p>The name of the workflow to resume.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The ID of the workflow run to resume.</p>
+   * @public
+   */
+  RunId: string | undefined;
+
+  /**
+   * <p>A list of the node IDs for the nodes you want to restart. The nodes that are to be restarted must have a run attempt in the original run.</p>
+   * @public
+   */
+  NodeIds: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ResumeWorkflowRunResponse {
+  /**
+   * <p>The new ID assigned to the resumed workflow run. Each resume of a workflow run will have a new run ID.</p>
+   * @public
+   */
+  RunId?: string | undefined;
+
+  /**
+   * <p>A list of the node IDs for the nodes that were actually restarted.</p>
+   * @public
+   */
+  NodeIds?: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RunStatementRequest {
+  /**
+   * <p>The Session Id of the statement to be run.</p>
+   * @public
+   */
+  SessionId: string | undefined;
+
+  /**
+   * <p>The statement code to be run.</p>
+   * @public
+   */
+  Code: string | undefined;
+
+  /**
+   * <p>The origin of the request.</p>
+   * @public
+   */
+  RequestOrigin?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RunStatementResponse {
+  /**
+   * <p>Returns the Id of the statement that was run.</p>
+   * @public
+   */
+  Id?: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const Comparator = {
+  EQUALS: "EQUALS",
+  GREATER_THAN: "GREATER_THAN",
+  GREATER_THAN_EQUALS: "GREATER_THAN_EQUALS",
+  LESS_THAN: "LESS_THAN",
+  LESS_THAN_EQUALS: "LESS_THAN_EQUALS",
+} as const;
+
+/**
+ * @public
+ */
+export type Comparator = (typeof Comparator)[keyof typeof Comparator];
 
 /**
  * <p>Defines a property predicate.</p>
@@ -488,6 +1492,7 @@ export interface StartCrawlerScheduleRequest {
 export interface StartCrawlerScheduleResponse {}
 
 /**
+ * <p>The request of the Data Quality rule recommendation request.</p>
  * @public
  */
 export interface StartDataQualityRuleRecommendationRunRequest {
@@ -817,6 +1822,13 @@ export interface StartJobRunRequest {
    * @public
    */
   ExecutionClass?: ExecutionClass | undefined;
+
+  /**
+   * <p>This inline session policy to the StartJobRun API allows you to dynamically restrict the permissions of the specified
+   *       execution role for the scope of the job, without requiring the creation of additional IAM roles.</p>
+   * @public
+   */
+  ExecutionRoleSessionPolicy?: string | undefined;
 }
 
 /**
@@ -2108,6 +3120,24 @@ export interface UpdateDevEndpointRequest {
 export interface UpdateDevEndpointResponse {}
 
 /**
+ * <p>Request to update an existing Glue Identity Center configuration.</p>
+ * @public
+ */
+export interface UpdateGlueIdentityCenterConfigurationRequest {
+  /**
+   * <p>A list of Identity Center scopes that define the updated permissions and access levels for the Glue configuration.</p>
+   * @public
+   */
+  Scopes?: string[] | undefined;
+}
+
+/**
+ * <p>Response from updating an existing Glue Identity Center configuration.</p>
+ * @public
+ */
+export interface UpdateGlueIdentityCenterConfigurationResponse {}
+
+/**
  * @public
  */
 export interface UpdateIntegrationResourcePropertyRequest {
@@ -2585,6 +3615,88 @@ export interface UpdateSourceControlFromJobResponse {
 }
 
 /**
+ * <p>Defines a complete set of updates to be applied to an Iceberg table, including schema changes, partitioning modifications, sort order
+ *       adjustments, location updates, and property changes.</p>
+ * @public
+ */
+export interface IcebergTableUpdate {
+  /**
+   * <p>The updated schema definition for the Iceberg table, specifying any changes to field structure, data types, or schema metadata.</p>
+   * @public
+   */
+  Schema: IcebergSchema | undefined;
+
+  /**
+   * <p>The updated partitioning specification that defines how the table data should be reorganized and partitioned.</p>
+   * @public
+   */
+  PartitionSpec?: IcebergPartitionSpec | undefined;
+
+  /**
+   * <p>The updated sort order specification that defines how data should be ordered within partitions for optimal query performance.</p>
+   * @public
+   */
+  SortOrder?: IcebergSortOrder | undefined;
+
+  /**
+   * <p>The updated S3 location where the Iceberg table data will be stored.</p>
+   * @public
+   */
+  Location: string | undefined;
+
+  /**
+   * <p>Updated key-value pairs of table properties and configuration settings for the Iceberg table.</p>
+   * @public
+   */
+  Properties?: Record<string, string> | undefined;
+}
+
+/**
+ * <p>Contains the update operations to be applied to an existing Iceberg table inGlue Data Catalog, defining the new state of the table metadata.
+ *     </p>
+ * @public
+ */
+export interface UpdateIcebergTableInput {
+  /**
+   * <p>The list of table update operations that specify the changes to be made to the Iceberg table, including schema modifications, partition
+   *       specifications, and table properties.</p>
+   * @public
+   */
+  Updates: IcebergTableUpdate[] | undefined;
+}
+
+/**
+ * <p>Input parameters specific to updating Apache Iceberg tables in Glue Data
+ *       Catalog, containing the update operations to be applied to an existing Iceberg
+ *       table.</p>
+ * @public
+ */
+export interface UpdateIcebergInput {
+  /**
+   * <p>The specific update operations to be applied to the Iceberg table, containing a
+   *       list of updates that define the new state of the table including schema,
+   *       partitions, and properties.</p>
+   * @public
+   */
+  UpdateIcebergTableInput: UpdateIcebergTableInput | undefined;
+}
+
+/**
+ * <p>Input parameters for updating open table format tables in GlueData Catalog,
+ *       serving as a wrapper for format-specific update operations such as Apache Iceberg.</p>
+ * @public
+ */
+export interface UpdateOpenTableFormatInput {
+  /**
+   * <p>Apache Iceberg-specific update parameters that define the table modifications to
+   *       be applied, including schema changes, partition specifications, and table
+   *       properties.</p>
+   * @public
+   */
+  UpdateIcebergInput?: UpdateIcebergInput | undefined;
+}
+
+/**
  * @public
  * @enum
  */
@@ -2619,11 +3731,18 @@ export interface UpdateTableRequest {
   DatabaseName: string | undefined;
 
   /**
+   * <p>The unique identifier for the table within the specified database that will be
+   *       created in the Glue Data Catalog.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
    * <p>An updated <code>TableInput</code> object to define the metadata table
    *       in the catalog.</p>
    * @public
    */
-  TableInput: TableInput | undefined;
+  TableInput?: TableInput | undefined;
 
   /**
    * <p>By default, <code>UpdateTable</code> always creates an archived version of the table
@@ -2656,6 +3775,13 @@ export interface UpdateTableRequest {
    * @public
    */
   Force?: boolean | undefined;
+
+  /**
+   * <p>Input parameters for updating open table format tables in GlueData Catalog,
+   *       serving as a wrapper for format-specific update operations such as Apache Iceberg.</p>
+   * @public
+   */
+  UpdateOpenTableFormatInput?: UpdateOpenTableFormatInput | undefined;
 }
 
 /**
@@ -3543,6 +4669,12 @@ export interface CodeGenConfigurationNode {
   PostgreSQLCatalogTarget?: PostgreSQLCatalogTarget | undefined;
 
   /**
+   * <p>Specifies a route node that directs data to different output paths based on defined filtering conditions.</p>
+   * @public
+   */
+  Route?: Route | undefined;
+
+  /**
    * <p>Specifies a custom visual transform created by a user.</p>
    * @public
    */
@@ -3667,6 +4799,48 @@ export interface CodeGenConfigurationNode {
    * @public
    */
   ConnectorDataTarget?: ConnectorDataTarget | undefined;
+
+  /**
+   * <p>Specifies an Apache Iceberg data source that is registered in the Glue Data Catalog. The Iceberg data source must be stored in Amazon S3.</p>
+   * @public
+   */
+  S3CatalogIcebergSource?: S3CatalogIcebergSource | undefined;
+
+  /**
+   * <p>Specifies an Apache Iceberg data source that is registered in the Glue Data Catalog.</p>
+   * @public
+   */
+  CatalogIcebergSource?: CatalogIcebergSource | undefined;
+
+  /**
+   * <p>Specifies an Apache Iceberg catalog target that writes data to Amazon S3 and registers the table in the Glue Data Catalog.</p>
+   * @public
+   */
+  S3IcebergCatalogTarget?: S3IcebergCatalogTarget | undefined;
+
+  /**
+   * <p>Defines configuration parameters for writing data to Amazon S3 as an Apache Iceberg table.</p>
+   * @public
+   */
+  S3IcebergDirectTarget?: S3IcebergDirectTarget | undefined;
+
+  /**
+   * <p>Defines configuration parameters for reading Excel files from Amazon S3.</p>
+   * @public
+   */
+  S3ExcelSource?: S3ExcelSource | undefined;
+
+  /**
+   * <p>Defines configuration parameters for writing data to Amazon S3 using HyperDirect optimization.</p>
+   * @public
+   */
+  S3HyperDirectTarget?: S3HyperDirectTarget | undefined;
+
+  /**
+   * <p>Specifies a DynamoDB ELT connector source for extracting data from DynamoDB tables.</p>
+   * @public
+   */
+  DynamoDBELTConnectorSource?: DynamoDBELTConnectorSource | undefined;
 }
 
 /**
@@ -4018,7 +5192,7 @@ export interface CreateJobRequest {
    *                <p>For the <code>G.2X</code> worker type, each worker maps to 2 DPU (8 vCPUs, 32 GB of memory) with 138GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
    *             </li>
    *             <li>
-   *                <p>For the <code>G.4X</code> worker type, each worker maps to 4 DPU (16 vCPUs, 64 GB of memory) with 256GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs in the following Amazon Web Services Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), and Europe (Stockholm).</p>
+   *                <p>For the <code>G.4X</code> worker type, each worker maps to 4 DPU (16 vCPUs, 64 GB of memory) with 256GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs in the following Amazon Web Services Regions: US East (Ohio), US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Mumbai), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Spain), Europe (Stockholm), and South America (São Paulo).</p>
    *             </li>
    *             <li>
    *                <p>For the <code>G.8X</code> worker type, each worker maps to 8 DPU (32 vCPUs, 128 GB of memory) with 512GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs, in the same Amazon Web Services Regions as supported for the <code>G.4X</code> worker type.</p>
@@ -4254,26 +5428,42 @@ export interface Job {
   MaxCapacity?: number | undefined;
 
   /**
-   * <p>The type of predefined worker that is allocated when a job runs. Accepts a value of
-   *       G.1X, G.2X, G.4X, G.8X or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
+   * <p>The type of predefined worker that is allocated when a job runs.</p>
+   *          <p>Glue provides multiple worker types to accommodate different workload requirements:</p>
+   *          <p>G Worker Types (General-purpose compute workers):</p>
    *          <ul>
    *             <li>
-   *                <p>For the <code>G.1X</code> worker type, each worker maps to 1 DPU (4 vCPUs, 16 GB of memory) with 94GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
+   *                <p>G.1X: 1 DPU (4 vCPUs, 16 GB memory, 94GB disk)</p>
    *             </li>
    *             <li>
-   *                <p>For the <code>G.2X</code> worker type, each worker maps to 2 DPU (8 vCPUs, 32 GB of memory) with 138GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
+   *                <p>G.2X: 2 DPU (8 vCPUs, 32 GB memory, 138GB disk)</p>
    *             </li>
    *             <li>
-   *                <p>For the <code>G.4X</code> worker type, each worker maps to 4 DPU (16 vCPUs, 64 GB of memory) with 256GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs in the following Amazon Web Services Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), and Europe (Stockholm).</p>
+   *                <p>G.4X: 4 DPU (16 vCPUs, 64 GB memory, 256GB disk)</p>
    *             </li>
    *             <li>
-   *                <p>For the <code>G.8X</code> worker type, each worker maps to 8 DPU (32 vCPUs, 128 GB of memory) with 512GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs, in the same Amazon Web Services Regions as supported for the <code>G.4X</code> worker type.</p>
+   *                <p>G.8X: 8 DPU (32 vCPUs, 128 GB memory, 512GB disk)</p>
    *             </li>
    *             <li>
-   *                <p>For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPUs, 4 GB of memory) with 84GB disk, and provides 1 executor per worker. We recommend this worker type for low volume streaming jobs. This worker type is only available for Glue version 3.0 or later streaming jobs.</p>
+   *                <p>G.12X: 12 DPU (48 vCPUs, 192 GB memory, 768GB disk)</p>
    *             </li>
    *             <li>
-   *                <p>For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPUs, 64 GB of memory) with 128 GB disk, and provides up to 8 Ray workers based on the autoscaler.</p>
+   *                <p>G.16X: 16 DPU (64 vCPUs, 256 GB memory, 1024GB disk)</p>
+   *             </li>
+   *          </ul>
+   *          <p>R Worker Types (Memory-optimized workers):</p>
+   *          <ul>
+   *             <li>
+   *                <p>R.1X: 1 M-DPU (4 vCPUs, 32 GB memory)</p>
+   *             </li>
+   *             <li>
+   *                <p>R.2X: 2 M-DPU (8 vCPUs, 64 GB memory)</p>
+   *             </li>
+   *             <li>
+   *                <p>R.4X: 4 M-DPU (16 vCPUs, 128 GB memory)</p>
+   *             </li>
+   *             <li>
+   *                <p>R.8X: 8 M-DPU (32 vCPUs, 256 GB memory)</p>
    *             </li>
    *          </ul>
    * @public
@@ -4505,27 +5695,10 @@ export interface JobUpdate {
 
   /**
    * <p>The type of predefined worker that is allocated when a job runs. Accepts a value of
-   *       G.1X, G.2X, G.4X, G.8X or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
-   *          <ul>
-   *             <li>
-   *                <p>For the <code>G.1X</code> worker type, each worker maps to 1 DPU (4 vCPUs, 16 GB of memory) with 94GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.2X</code> worker type, each worker maps to 2 DPU (8 vCPUs, 32 GB of memory) with 138GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.4X</code> worker type, each worker maps to 4 DPU (16 vCPUs, 64 GB of memory) with 256GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs in the following Amazon Web Services Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), and Europe (Stockholm).</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.8X</code> worker type, each worker maps to 8 DPU (32 vCPUs, 128 GB of memory) with 512GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs, in the same Amazon Web Services Regions as supported for the <code>G.4X</code> worker type.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPUs, 4 GB of memory) with 84GB disk, and provides 1 executor per worker. We recommend this worker type for low volume streaming jobs. This worker type is only available for Glue version 3.0 or later streaming jobs.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPUs, 64 GB of memory) with 128 GB disk, and provides up to 8 Ray workers based on the autoscaler.</p>
-   *             </li>
-   *          </ul>
+   *       G.1X, G.2X, G.4X, G.8X or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs. For more information, see
+   *       <a href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html#create-job">Defining job properties for Spark jobs
+   *       </a>
+   *          </p>
    * @public
    */
   WorkerType?: WorkerType | undefined;

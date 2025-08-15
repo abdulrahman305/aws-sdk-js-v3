@@ -159,6 +159,7 @@ import {
 } from "../commands/GetLogAnomalyDetectorCommand";
 import { GetLogEventsCommandInput, GetLogEventsCommandOutput } from "../commands/GetLogEventsCommand";
 import { GetLogGroupFieldsCommandInput, GetLogGroupFieldsCommandOutput } from "../commands/GetLogGroupFieldsCommand";
+import { GetLogObjectCommandInput, GetLogObjectCommandOutput } from "../commands/GetLogObjectCommand";
 import { GetLogRecordCommandInput, GetLogRecordCommandOutput } from "../commands/GetLogRecordCommand";
 import { GetQueryResultsCommandInput, GetQueryResultsCommandOutput } from "../commands/GetQueryResultsCommand";
 import { GetTransformerCommandInput, GetTransformerCommandOutput } from "../commands/GetTransformerCommand";
@@ -168,6 +169,7 @@ import {
   ListLogAnomalyDetectorsCommandInput,
   ListLogAnomalyDetectorsCommandOutput,
 } from "../commands/ListLogAnomalyDetectorsCommand";
+import { ListLogGroupsCommandInput, ListLogGroupsCommandOutput } from "../commands/ListLogGroupsCommand";
 import {
   ListLogGroupsForQueryCommandInput,
   ListLogGroupsForQueryCommandOutput,
@@ -284,6 +286,7 @@ import {
   DescribeSubscriptionFiltersRequest,
   DisassociateKmsKeyRequest,
   Entity,
+  FieldsData,
   FilterLogEventsRequest,
   GetDataProtectionPolicyRequest,
   GetDeliveryDestinationPolicyRequest,
@@ -294,12 +297,15 @@ import {
   GetLogAnomalyDetectorRequest,
   GetLogEventsRequest,
   GetLogGroupFieldsRequest,
+  GetLogObjectRequest,
+  GetLogObjectResponseStream,
   GetLogRecordRequest,
   GetQueryResultsRequest,
   GetQueryResultsResponse,
   GetTransformerRequest,
   Grok,
   InputLogEvent,
+  InternalStreamingException,
   InvalidOperationException,
   InvalidParameterException,
   InvalidSequenceTokenException,
@@ -308,6 +314,7 @@ import {
   ListIntegrationsRequest,
   ListLogAnomalyDetectorsRequest,
   ListLogGroupsForQueryRequest,
+  ListLogGroupsRequest,
   ListTagsForResourceRequest,
   ListTagsLogGroupRequest,
   ListToMap,
@@ -326,6 +333,7 @@ import {
   ParseKeyValue,
   ParsePostgres,
   ParseRoute53,
+  ParseToOCSF,
   ParseVPC,
   ParseWAF,
   Processor,
@@ -1061,6 +1069,26 @@ export const se_GetLogGroupFieldsCommand = async (
 };
 
 /**
+ * serializeAws_json1_1GetLogObjectCommand
+ */
+export const se_GetLogObjectCommand = async (
+  input: GetLogObjectCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("GetLogObject");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "streaming-" + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  return buildHttpRpcRequest(context, headers, "/", resolvedHostname, body);
+};
+
+/**
  * serializeAws_json1_1GetLogRecordCommand
  */
 export const se_GetLogRecordCommand = async (
@@ -1133,6 +1161,19 @@ export const se_ListLogAnomalyDetectorsCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("ListLogAnomalyDetectors");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1ListLogGroupsCommand
+ */
+export const se_ListLogGroupsCommand = async (
+  input: ListLogGroupsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("ListLogGroups");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -2529,6 +2570,24 @@ export const de_GetLogGroupFieldsCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1GetLogObjectCommand
+ */
+export const de_GetLogObjectCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext & __EventStreamSerdeContext
+): Promise<GetLogObjectCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents = { fieldStream: de_GetLogObjectResponseStream(output.body, context) };
+  const response: GetLogObjectCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1GetLogRecordCommand
  */
 export const de_GetLogRecordCommand = async (
@@ -2642,6 +2701,26 @@ export const de_ListLogAnomalyDetectorsCommand = async (
   let contents: any = {};
   contents = _json(data);
   const response: ListLogAnomalyDetectorsCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1ListLogGroupsCommand
+ */
+export const de_ListLogGroupsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListLogGroupsCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = _json(data);
+  const response: ListLogGroupsCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -3568,6 +3647,30 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 };
 
 /**
+ * deserializeAws_json1_1GetLogObjectResponseStream
+ */
+const de_GetLogObjectResponseStream = (
+  output: any,
+  context: __SerdeContext & __EventStreamSerdeContext
+): AsyncIterable<GetLogObjectResponseStream> => {
+  return context.eventStreamMarshaller.deserialize(output, async (event) => {
+    if (event["fields"] != null) {
+      return {
+        fields: await de_FieldsData_event(event["fields"], context),
+      };
+    }
+    if (event["InternalStreamingException"] != null) {
+      return {
+        InternalStreamingException: await de_InternalStreamingException_event(
+          event["InternalStreamingException"],
+          context
+        ),
+      };
+    }
+    return { $unknown: event as any };
+  });
+};
+/**
  * deserializeAws_json1_1StartLiveTailResponseStream
  */
 const de_StartLiveTailResponseStream = (
@@ -3598,8 +3701,24 @@ const de_StartLiveTailResponseStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
+};
+const de_FieldsData_event = async (output: any, context: __SerdeContext): Promise<FieldsData> => {
+  const contents: FieldsData = {} as any;
+  const data: any = await parseBody(output.body, context);
+  Object.assign(contents, de_FieldsData(data, context));
+  return contents;
+};
+const de_InternalStreamingException_event = async (
+  output: any,
+  context: __SerdeContext
+): Promise<InternalStreamingException> => {
+  const parsedOutput: any = {
+    ...output,
+    body: await parseBody(output.body, context),
+  };
+  return de_InternalStreamingExceptionRes(parsedOutput, context);
 };
 const de_LiveTailSessionStart_event = async (output: any, context: __SerdeContext): Promise<LiveTailSessionStart> => {
   const contents: LiveTailSessionStart = {} as any;
@@ -3633,6 +3752,22 @@ const de_SessionTimeoutException_event = async (
   };
   return de_SessionTimeoutExceptionRes(parsedOutput, context);
 };
+/**
+ * deserializeAws_json1_1InternalStreamingExceptionRes
+ */
+const de_InternalStreamingExceptionRes = async (
+  parsedOutput: any,
+  context: __SerdeContext
+): Promise<InternalStreamingException> => {
+  const body = parsedOutput.body;
+  const deserialized: any = _json(body);
+  const exception = new InternalStreamingException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized,
+  });
+  return __decorateServiceException(exception, body);
+};
+
 /**
  * deserializeAws_json1_1SessionStreamingExceptionRes
  */
@@ -3767,6 +3902,8 @@ const de_SessionTimeoutExceptionRes = async (
 
 // se_DescribeIndexPoliciesRequest omitted.
 
+// se_DescribeLogGroupsLogGroupIdentifiers omitted.
+
 // se_DescribeLogGroupsRequest omitted.
 
 // se_DescribeLogStreamsRequest omitted.
@@ -3811,6 +3948,8 @@ const de_SessionTimeoutExceptionRes = async (
 
 // se_GetLogGroupFieldsRequest omitted.
 
+// se_GetLogObjectRequest omitted.
+
 // se_GetLogRecordRequest omitted.
 
 // se_GetQueryResultsRequest omitted.
@@ -3832,6 +3971,8 @@ const de_SessionTimeoutExceptionRes = async (
 // se_ListLogAnomalyDetectorsRequest omitted.
 
 // se_ListLogGroupsForQueryRequest omitted.
+
+// se_ListLogGroupsRequest omitted.
 
 // se_ListTagsForResourceRequest omitted.
 
@@ -3895,6 +4036,8 @@ const se_MetricTransformations = (input: MetricTransformation[], context: __Serd
 // se_ParsePostgres omitted.
 
 // se_ParseRoute53 omitted.
+
+// se_ParseToOCSF omitted.
 
 // se_ParseVPC omitted.
 
@@ -4173,6 +4316,15 @@ const de_DescribeMetricFiltersResponse = (output: any, context: __SerdeContext):
 
 // de_FieldIndexes omitted.
 
+/**
+ * deserializeAws_json1_1FieldsData
+ */
+const de_FieldsData = (output: any, context: __SerdeContext): FieldsData => {
+  return take(output, {
+    data: context.base64Decoder,
+  }) as any;
+};
+
 // de_FilteredLogEvent omitted.
 
 // de_FilteredLogEvents omitted.
@@ -4232,6 +4384,8 @@ const de_GetQueryResultsResponse = (output: any, context: __SerdeContext): GetQu
 
 // de_IntegrationSummary omitted.
 
+// de_InternalStreamingException omitted.
+
 // de_InvalidOperationException omitted.
 
 // de_InvalidParameterException omitted.
@@ -4247,6 +4401,8 @@ const de_GetQueryResultsResponse = (output: any, context: __SerdeContext): GetQu
 // de_ListLogAnomalyDetectorsResponse omitted.
 
 // de_ListLogGroupsForQueryResponse omitted.
+
+// de_ListLogGroupsResponse omitted.
 
 // de_ListTagsForResourceResponse omitted.
 
@@ -4279,6 +4435,10 @@ const de_GetQueryResultsResponse = (output: any, context: __SerdeContext): GetQu
 // de_LogGroupNames omitted.
 
 // de_LogGroups omitted.
+
+// de_LogGroupSummaries omitted.
+
+// de_LogGroupSummary omitted.
 
 // de_LogRecord omitted.
 
@@ -4395,6 +4555,8 @@ const de_MetricTransformations = (output: any, context: __SerdeContext): MetricT
 // de_ParsePostgres omitted.
 
 // de_ParseRoute53 omitted.
+
+// de_ParseToOCSF omitted.
 
 // de_ParseVPC omitted.
 

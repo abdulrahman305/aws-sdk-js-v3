@@ -34,12 +34,17 @@ export type HttpRequestMatcher = {
  */
 export class TestHttpHandler implements HttpHandler {
   private static WATCHER = Symbol("TestHttpHandler_WATCHER");
+
+  public readonly matchers: HttpRequestMatcher[];
+
   private originalSend?: Function;
   private originalRequestHandler?: RequestHandler<any, any, any>;
   private client?: Client<any, any, any>;
+  private responseQueue: HttpResponse[] = [];
   private assertions = 0;
 
-  public constructor(public readonly matcher: HttpRequestMatcher) {
+  public constructor(...matchers: HttpRequestMatcher[]) {
+    this.matchers = matchers;
     const RESERVED_ENVIRONMENT_VARIABLES = {
       AWS_DEFAULT_REGION: 1,
       AWS_REGION: 1,
@@ -66,15 +71,15 @@ export class TestHttpHandler implements HttpHandler {
 
   /**
    * @param client - to watch for requests.
-   * @param matcher - optional override of this instance's matchers.
+   * @param matchers - optional override of this instance's matchers.
    *
    * Temporarily hooks the client.send call to check the outgoing request.
    */
-  public watch(client: Client<any, any, any>, matcher: HttpRequestMatcher = this.matcher) {
+  public watch(client: Client<any, any, any>): TestHttpHandler {
     this.client = client;
     this.originalRequestHandler = client.config.requestHandler;
 
-    client.config.requestHandler = new TestHttpHandler(matcher);
+    client.config.requestHandler = this;
     if (!(client as any)[TestHttpHandler.WATCHER]) {
       (client as any)[TestHttpHandler.WATCHER] = true;
       const originalSend = (this.originalSend = client.send as any);
@@ -87,6 +92,16 @@ export class TestHttpHandler implements HttpHandler {
         });
       };
     }
+
+    return this;
+  }
+
+  /**
+   * @param httpResponses - to enqueue for mock responses.
+   */
+  public respondWith(...httpResponses: HttpResponse[]): TestHttpHandler {
+    this.responseQueue.push(...httpResponses);
+    return this;
   }
 
   /**
@@ -97,7 +112,7 @@ export class TestHttpHandler implements HttpHandler {
     request: HttpRequest,
     handlerOptions?: HttpHandlerOptions
   ): Promise<RequestHandlerOutput<HttpResponse>> {
-    const m = this.matcher;
+    const m = this.matchers.length > 1 ? this.matchers.shift()! : this.matchers[0];
 
     if (m.log) {
       console.log(request);
@@ -107,14 +122,26 @@ export class TestHttpHandler implements HttpHandler {
     this.check(m.hostname, request.hostname);
     this.check(m.port, request.port);
     this.check(m.path, request.path);
-    this.checkAll(m.query, request.query);
+    this.checkAll(m.query ?? {}, request.query, "query");
 
-    this.checkAll(m.headers, request.headers);
+    this.checkAll(m.headers ?? {}, request.headers, "header");
     this.check(m.body, request.body);
     this.check(m.method, request.method);
 
     if (this.assertions === 0) {
       throw new Error("Request handled with no assertions, empty matcher?");
+    }
+
+    if (this.responseQueue.length > 1) {
+      return {
+        response: this.responseQueue.shift()!,
+      };
+    } else {
+      if (this.responseQueue.length === 1) {
+        return {
+          response: this.responseQueue[0],
+        };
+      }
     }
 
     throw new TestHttpHandlerSuccess();
@@ -162,7 +189,11 @@ export class TestHttpHandler implements HttpHandler {
     this.assertions++;
   }
 
-  private checkAll(matchers?: Record<string, Matcher> | Map<RegExp | string, Matcher>, observed?: any) {
+  private checkAll(
+    matchers: Record<string, Matcher> | Map<RegExp | string, Matcher>,
+    observed: any,
+    type: "header" | "query"
+  ) {
     if (matchers == null) {
       return;
     }
@@ -174,7 +205,11 @@ export class TestHttpHandler implements HttpHandler {
         if (key.startsWith("/") && key.endsWith("/")) {
           key = new RegExp(key);
         } else {
-          this.check(matcher, observed[key]);
+          const matchingValue =
+            type === "header"
+              ? observed[Object.keys(observed).find((k) => k.toLowerCase() === String(key).toLowerCase()) ?? ""]
+              : observed[key];
+          this.check(matcher, matchingValue);
         }
       }
       if (key instanceof RegExp) {
@@ -204,8 +239,8 @@ export class TestHttpHandlerSuccess extends Error {
  */
 export const requireRequestsFrom = (client: Client<any, any, any>) => {
   return {
-    toMatch(matcher: HttpRequestMatcher) {
-      return new TestHttpHandler(matcher).watch(client);
+    toMatch(...matchers: HttpRequestMatcher[]) {
+      return new TestHttpHandler(...matchers).watch(client);
     },
   };
 };

@@ -25,10 +25,25 @@ import {
 import { ChatCommand, ChatCommandInput, ChatCommandOutput } from "./commands/ChatCommand";
 import { ChatSyncCommand, ChatSyncCommandInput, ChatSyncCommandOutput } from "./commands/ChatSyncCommand";
 import {
+  CheckDocumentAccessCommand,
+  CheckDocumentAccessCommandInput,
+  CheckDocumentAccessCommandOutput,
+} from "./commands/CheckDocumentAccessCommand";
+import {
+  CreateAnonymousWebExperienceUrlCommand,
+  CreateAnonymousWebExperienceUrlCommandInput,
+  CreateAnonymousWebExperienceUrlCommandOutput,
+} from "./commands/CreateAnonymousWebExperienceUrlCommand";
+import {
   CreateApplicationCommand,
   CreateApplicationCommandInput,
   CreateApplicationCommandOutput,
 } from "./commands/CreateApplicationCommand";
+import {
+  CreateChatResponseConfigurationCommand,
+  CreateChatResponseConfigurationCommandInput,
+  CreateChatResponseConfigurationCommandOutput,
+} from "./commands/CreateChatResponseConfigurationCommand";
 import {
   CreateDataAccessorCommand,
   CreateDataAccessorCommandInput,
@@ -76,6 +91,11 @@ import {
   DeleteChatControlsConfigurationCommandInput,
   DeleteChatControlsConfigurationCommandOutput,
 } from "./commands/DeleteChatControlsConfigurationCommand";
+import {
+  DeleteChatResponseConfigurationCommand,
+  DeleteChatResponseConfigurationCommandInput,
+  DeleteChatResponseConfigurationCommandOutput,
+} from "./commands/DeleteChatResponseConfigurationCommand";
 import {
   DeleteConversationCommand,
   DeleteConversationCommandInput,
@@ -125,6 +145,11 @@ import {
   GetChatControlsConfigurationCommandOutput,
 } from "./commands/GetChatControlsConfigurationCommand";
 import {
+  GetChatResponseConfigurationCommand,
+  GetChatResponseConfigurationCommandInput,
+  GetChatResponseConfigurationCommandOutput,
+} from "./commands/GetChatResponseConfigurationCommand";
+import {
   GetDataAccessorCommand,
   GetDataAccessorCommandInput,
   GetDataAccessorCommandOutput,
@@ -134,6 +159,11 @@ import {
   GetDataSourceCommandInput,
   GetDataSourceCommandOutput,
 } from "./commands/GetDataSourceCommand";
+import {
+  GetDocumentContentCommand,
+  GetDocumentContentCommandInput,
+  GetDocumentContentCommandOutput,
+} from "./commands/GetDocumentContentCommand";
 import { GetGroupCommand, GetGroupCommandInput, GetGroupCommandOutput } from "./commands/GetGroupCommand";
 import { GetIndexCommand, GetIndexCommandInput, GetIndexCommandOutput } from "./commands/GetIndexCommand";
 import { GetMediaCommand, GetMediaCommandInput, GetMediaCommandOutput } from "./commands/GetMediaCommand";
@@ -160,6 +190,11 @@ import {
   ListAttachmentsCommandInput,
   ListAttachmentsCommandOutput,
 } from "./commands/ListAttachmentsCommand";
+import {
+  ListChatResponseConfigurationsCommand,
+  ListChatResponseConfigurationsCommandInput,
+  ListChatResponseConfigurationsCommandOutput,
+} from "./commands/ListChatResponseConfigurationsCommand";
 import {
   ListConversationsCommand,
   ListConversationsCommandInput,
@@ -262,6 +297,11 @@ import {
   UpdateChatControlsConfigurationCommandOutput,
 } from "./commands/UpdateChatControlsConfigurationCommand";
 import {
+  UpdateChatResponseConfigurationCommand,
+  UpdateChatResponseConfigurationCommandInput,
+  UpdateChatResponseConfigurationCommandOutput,
+} from "./commands/UpdateChatResponseConfigurationCommand";
+import {
   UpdateDataAccessorCommand,
   UpdateDataAccessorCommandInput,
   UpdateDataAccessorCommandOutput,
@@ -302,7 +342,10 @@ const commands = {
   CancelSubscriptionCommand,
   ChatCommand,
   ChatSyncCommand,
+  CheckDocumentAccessCommand,
+  CreateAnonymousWebExperienceUrlCommand,
   CreateApplicationCommand,
+  CreateChatResponseConfigurationCommand,
   CreateDataAccessorCommand,
   CreateDataSourceCommand,
   CreateIndexCommand,
@@ -314,6 +357,7 @@ const commands = {
   DeleteApplicationCommand,
   DeleteAttachmentCommand,
   DeleteChatControlsConfigurationCommand,
+  DeleteChatResponseConfigurationCommand,
   DeleteConversationCommand,
   DeleteDataAccessorCommand,
   DeleteDataSourceCommand,
@@ -326,8 +370,10 @@ const commands = {
   DisassociatePermissionCommand,
   GetApplicationCommand,
   GetChatControlsConfigurationCommand,
+  GetChatResponseConfigurationCommand,
   GetDataAccessorCommand,
   GetDataSourceCommand,
+  GetDocumentContentCommand,
   GetGroupCommand,
   GetIndexCommand,
   GetMediaCommand,
@@ -338,6 +384,7 @@ const commands = {
   GetWebExperienceCommand,
   ListApplicationsCommand,
   ListAttachmentsCommand,
+  ListChatResponseConfigurationsCommand,
   ListConversationsCommand,
   ListDataAccessorsCommand,
   ListDataSourcesCommand,
@@ -363,6 +410,7 @@ const commands = {
   UntagResourceCommand,
   UpdateApplicationCommand,
   UpdateChatControlsConfigurationCommand,
+  UpdateChatResponseConfigurationCommand,
   UpdateDataAccessorCommand,
   UpdateDataSourceCommand,
   UpdateIndexCommand,
@@ -461,6 +509,40 @@ export interface QBusiness {
   ): void;
 
   /**
+   * @see {@link CheckDocumentAccessCommand}
+   */
+  checkDocumentAccess(
+    args: CheckDocumentAccessCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CheckDocumentAccessCommandOutput>;
+  checkDocumentAccess(
+    args: CheckDocumentAccessCommandInput,
+    cb: (err: any, data?: CheckDocumentAccessCommandOutput) => void
+  ): void;
+  checkDocumentAccess(
+    args: CheckDocumentAccessCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CheckDocumentAccessCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateAnonymousWebExperienceUrlCommand}
+   */
+  createAnonymousWebExperienceUrl(
+    args: CreateAnonymousWebExperienceUrlCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateAnonymousWebExperienceUrlCommandOutput>;
+  createAnonymousWebExperienceUrl(
+    args: CreateAnonymousWebExperienceUrlCommandInput,
+    cb: (err: any, data?: CreateAnonymousWebExperienceUrlCommandOutput) => void
+  ): void;
+  createAnonymousWebExperienceUrl(
+    args: CreateAnonymousWebExperienceUrlCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateAnonymousWebExperienceUrlCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateApplicationCommand}
    */
   createApplication(
@@ -475,6 +557,23 @@ export interface QBusiness {
     args: CreateApplicationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateApplicationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateChatResponseConfigurationCommand}
+   */
+  createChatResponseConfiguration(
+    args: CreateChatResponseConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateChatResponseConfigurationCommandOutput>;
+  createChatResponseConfiguration(
+    args: CreateChatResponseConfigurationCommandInput,
+    cb: (err: any, data?: CreateChatResponseConfigurationCommandOutput) => void
+  ): void;
+  createChatResponseConfiguration(
+    args: CreateChatResponseConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateChatResponseConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -641,6 +740,23 @@ export interface QBusiness {
     args: DeleteChatControlsConfigurationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteChatControlsConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteChatResponseConfigurationCommand}
+   */
+  deleteChatResponseConfiguration(
+    args: DeleteChatResponseConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteChatResponseConfigurationCommandOutput>;
+  deleteChatResponseConfiguration(
+    args: DeleteChatResponseConfigurationCommandInput,
+    cb: (err: any, data?: DeleteChatResponseConfigurationCommandOutput) => void
+  ): void;
+  deleteChatResponseConfiguration(
+    args: DeleteChatResponseConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteChatResponseConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -818,6 +934,23 @@ export interface QBusiness {
   ): void;
 
   /**
+   * @see {@link GetChatResponseConfigurationCommand}
+   */
+  getChatResponseConfiguration(
+    args: GetChatResponseConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetChatResponseConfigurationCommandOutput>;
+  getChatResponseConfiguration(
+    args: GetChatResponseConfigurationCommandInput,
+    cb: (err: any, data?: GetChatResponseConfigurationCommandOutput) => void
+  ): void;
+  getChatResponseConfiguration(
+    args: GetChatResponseConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetChatResponseConfigurationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetDataAccessorCommand}
    */
   getDataAccessor(
@@ -840,6 +973,23 @@ export interface QBusiness {
     args: GetDataSourceCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetDataSourceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetDocumentContentCommand}
+   */
+  getDocumentContent(
+    args: GetDocumentContentCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetDocumentContentCommandOutput>;
+  getDocumentContent(
+    args: GetDocumentContentCommandInput,
+    cb: (err: any, data?: GetDocumentContentCommandOutput) => void
+  ): void;
+  getDocumentContent(
+    args: GetDocumentContentCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetDocumentContentCommandOutput) => void
   ): void;
 
   /**
@@ -966,6 +1116,23 @@ export interface QBusiness {
     args: ListAttachmentsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListAttachmentsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListChatResponseConfigurationsCommand}
+   */
+  listChatResponseConfigurations(
+    args: ListChatResponseConfigurationsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListChatResponseConfigurationsCommandOutput>;
+  listChatResponseConfigurations(
+    args: ListChatResponseConfigurationsCommandInput,
+    cb: (err: any, data?: ListChatResponseConfigurationsCommandOutput) => void
+  ): void;
+  listChatResponseConfigurations(
+    args: ListChatResponseConfigurationsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListChatResponseConfigurationsCommandOutput) => void
   ): void;
 
   /**
@@ -1335,6 +1502,23 @@ export interface QBusiness {
   ): void;
 
   /**
+   * @see {@link UpdateChatResponseConfigurationCommand}
+   */
+  updateChatResponseConfiguration(
+    args: UpdateChatResponseConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateChatResponseConfigurationCommandOutput>;
+  updateChatResponseConfiguration(
+    args: UpdateChatResponseConfigurationCommandInput,
+    cb: (err: any, data?: UpdateChatResponseConfigurationCommandOutput) => void
+  ): void;
+  updateChatResponseConfiguration(
+    args: UpdateChatResponseConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateChatResponseConfigurationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link UpdateDataAccessorCommand}
    */
   updateDataAccessor(
@@ -1451,45 +1635,7 @@ export interface QBusiness {
 }
 
 /**
- * <p>This is the <i>Amazon Q Business</i> API Reference. Amazon Q Business is a fully
- *             managed, generative-AI powered enterprise chat assistant that you can deploy within your
- *             organization. Amazon Q Business enhances employee productivity by supporting key tasks such
- *             as question-answering, knowledge discovery, writing email messages, summarizing text,
- *             drafting document outlines, and brainstorming ideas. Users ask questions of
- *             Amazon Q Business and get answers that are presented in a conversational manner. For an
- *             introduction to the service, see the <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html">
- *                <i>Amazon Q Business User Guide</i>
- *             </a>.</p>
- *          <p>For an overview of the Amazon Q Business APIs, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q Business API operations</a>.</p>
- *          <p>For information about the IAM access control permissions you need to
- *             use this API, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q Business</a> in the
- *                 <i>Amazon Q Business User Guide</i>.</p>
- *          <p>The following resources provide additional information about using the Amazon Q Business
- *             API:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <i>
- *                      <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for
- *                             Amazon Q Business</a>
- *                   </i>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <i>
- *                      <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q Business CLI Reference</a>
- *                   </i>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <i>
- *                      <a href="https://docs.aws.amazon.com/general/latest/gr/amazonq.html">Amazon Web Services General Reference</a>
- *                   </i>
- *                </p>
- *             </li>
- *          </ul>
+ * <p>This is the <i>Amazon Q Business</i> API Reference. Amazon Q Business is a fully managed, generative-AI powered enterprise chat assistant that you can deploy within your organization. Amazon Q Business enhances employee productivity by supporting key tasks such as question-answering, knowledge discovery, writing email messages, summarizing text, drafting document outlines, and brainstorming ideas. Users ask questions of Amazon Q Business and get answers that are presented in a conversational manner. For an introduction to the service, see the <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html"> <i>Amazon Q Business User Guide</i> </a>.</p> <p>For an overview of the Amazon Q Business APIs, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q Business API operations</a>.</p> <p>For information about the IAM access control permissions you need to use this API, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q Business</a> in the <i>Amazon Q Business User Guide</i>.</p> <p>The following resources provide additional information about using the Amazon Q Business API:</p> <ul> <li> <p> <i> <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for Amazon Q Business</a> </i> </p> </li> <li> <p> <i> <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q Business CLI Reference</a> </i> </p> </li> <li> <p> <i> <a href="https://docs.aws.amazon.com/general/latest/gr/amazonq.html">Amazon Web Services General Reference</a> </i> </p> </li> </ul>
  * @public
  */
 export class QBusiness extends QBusinessClient implements QBusiness {}

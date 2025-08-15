@@ -55,17 +55,26 @@ export interface GetTableOptimizerCommandOutput extends GetTableOptimizerRespons
  * //       vpcConfiguration: { // TableOptimizerVpcConfiguration Union: only one key present
  * //         glueConnectionName: "STRING_VALUE",
  * //       },
+ * //       compactionConfiguration: { // CompactionConfiguration
+ * //         icebergConfiguration: { // IcebergCompactionConfiguration
+ * //           strategy: "binpack" || "sort" || "z-order",
+ * //           minInputFiles: Number("int"),
+ * //           deleteFileThreshold: Number("int"),
+ * //         },
+ * //       },
  * //       retentionConfiguration: { // RetentionConfiguration
  * //         icebergConfiguration: { // IcebergRetentionConfiguration
  * //           snapshotRetentionPeriodInDays: Number("int"),
  * //           numberOfSnapshotsToRetain: Number("int"),
  * //           cleanExpiredFiles: true || false,
+ * //           runRateInHours: Number("int"),
  * //         },
  * //       },
  * //       orphanFileDeletionConfiguration: { // OrphanFileDeletionConfiguration
  * //         icebergConfiguration: { // IcebergOrphanFileDeletionConfiguration
  * //           orphanFileRetentionPeriodInDays: Number("int"),
  * //           location: "STRING_VALUE",
+ * //           runRateInHours: Number("int"),
  * //         },
  * //       },
  * //     },
@@ -84,15 +93,18 @@ export interface GetTableOptimizerCommandOutput extends GetTableOptimizerRespons
  * //         IcebergMetrics: { // IcebergCompactionMetrics
  * //           NumberOfBytesCompacted: Number("long"),
  * //           NumberOfFilesCompacted: Number("long"),
+ * //           DpuHours: Number("double"),
  * //           NumberOfDpus: Number("int"),
  * //           JobDurationInHour: Number("double"),
  * //         },
  * //       },
+ * //       compactionStrategy: "binpack" || "sort" || "z-order",
  * //       retentionMetrics: { // RetentionMetrics
  * //         IcebergMetrics: { // IcebergRetentionMetrics
  * //           NumberOfDataFilesDeleted: Number("long"),
  * //           NumberOfManifestFilesDeleted: Number("long"),
  * //           NumberOfManifestListsDeleted: Number("long"),
+ * //           DpuHours: Number("double"),
  * //           NumberOfDpus: Number("int"),
  * //           JobDurationInHour: Number("double"),
  * //         },
@@ -100,11 +112,13 @@ export interface GetTableOptimizerCommandOutput extends GetTableOptimizerRespons
  * //       orphanFileDeletionMetrics: { // OrphanFileDeletionMetrics
  * //         IcebergMetrics: { // IcebergOrphanFileDeletionMetrics
  * //           NumberOfOrphanFilesDeleted: Number("long"),
+ * //           DpuHours: Number("double"),
  * //           NumberOfDpus: Number("int"),
  * //           JobDurationInHour: Number("double"),
  * //         },
  * //       },
  * //     },
+ * //     configurationSource: "catalog" || "table",
  * //   },
  * // };
  *

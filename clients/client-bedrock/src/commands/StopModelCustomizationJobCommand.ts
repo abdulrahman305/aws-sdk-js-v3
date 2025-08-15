@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { StopModelCustomizationJobRequest, StopModelCustomizationJobResponse } from "../models/models_0";
+import { StopModelCustomizationJobRequest, StopModelCustomizationJobResponse } from "../models/models_1";
 import { de_StopModelCustomizationJobCommand, se_StopModelCustomizationJobCommand } from "../protocols/Aws_restJson1";
 
 /**

@@ -92,13 +92,23 @@ import {
 import { MediaPackageV2ServiceException as __BaseException } from "../models/MediaPackageV2ServiceException";
 import {
   AccessDeniedException,
+  CdnAuthConfiguration,
   ChannelGroupListConfiguration,
   ChannelListConfiguration,
   ConflictException,
   CreateDashManifestConfiguration,
   CreateHlsManifestConfiguration,
   CreateLowLatencyHlsManifestConfiguration,
+  CreateMssManifestConfiguration,
+  DashBaseUrl,
+  DashDvbFontDownload,
+  DashDvbMetricsReporting,
+  DashDvbSettings,
   DashPeriodTrigger,
+  DashProfile,
+  DashProgramInformation,
+  DashSubtitleConfiguration,
+  DashTtmlConfiguration,
   DashUtcTiming,
   Destination,
   DrmSystem,
@@ -111,6 +121,7 @@ import {
   GetDashManifestConfiguration,
   GetHlsManifestConfiguration,
   GetLowLatencyHlsManifestConfiguration,
+  GetMssManifestConfiguration,
   HarvestedDashManifest,
   HarvestedHlsManifest,
   HarvestedLowLatencyHlsManifest,
@@ -267,6 +278,7 @@ export const se_CreateOriginEndpointCommand = async (
       ForceEndpointErrorConfiguration: (_) => _json(_),
       HlsManifests: (_) => se_CreateHlsManifests(_, context),
       LowLatencyHlsManifests: (_) => se_CreateLowLatencyHlsManifests(_, context),
+      MssManifests: (_) => se_CreateMssManifests(_, context),
       OriginEndpointName: [],
       Segment: (_) => _json(_),
       StartoverWindowSeconds: [],
@@ -611,6 +623,7 @@ export const se_PutOriginEndpointPolicyCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      CdnAuthConfiguration: (_) => _json(_),
       Policy: [],
     })
   );
@@ -771,6 +784,7 @@ export const se_UpdateOriginEndpointCommand = async (
       ForceEndpointErrorConfiguration: (_) => _json(_),
       HlsManifests: (_) => se_CreateHlsManifests(_, context),
       LowLatencyHlsManifests: (_) => se_CreateLowLatencyHlsManifests(_, context),
+      MssManifests: (_) => se_CreateMssManifests(_, context),
       Segment: (_) => _json(_),
       StartoverWindowSeconds: [],
     })
@@ -918,6 +932,7 @@ export const de_CreateOriginEndpointCommand = async (
     HlsManifests: (_) => de_GetHlsManifests(_, context),
     LowLatencyHlsManifests: (_) => de_GetLowLatencyHlsManifests(_, context),
     ModifiedAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    MssManifests: (_) => de_GetMssManifests(_, context),
     OriginEndpointName: __expectString,
     Segment: _json,
     StartoverWindowSeconds: __expectInt32,
@@ -1158,6 +1173,7 @@ export const de_GetOriginEndpointCommand = async (
     HlsManifests: (_) => de_GetHlsManifests(_, context),
     LowLatencyHlsManifests: (_) => de_GetLowLatencyHlsManifests(_, context),
     ModifiedAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    MssManifests: (_) => de_GetMssManifests(_, context),
     OriginEndpointName: __expectString,
     ResetAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     Segment: _json,
@@ -1183,6 +1199,7 @@ export const de_GetOriginEndpointPolicyCommand = async (
   });
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
+    CdnAuthConfiguration: _json,
     ChannelGroupName: __expectString,
     ChannelName: __expectString,
     OriginEndpointName: __expectString,
@@ -1505,6 +1522,7 @@ export const de_UpdateOriginEndpointCommand = async (
     HlsManifests: (_) => de_GetHlsManifests(_, context),
     LowLatencyHlsManifests: (_) => de_GetLowLatencyHlsManifests(_, context),
     ModifiedAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    MssManifests: (_) => de_GetMssManifests(_, context),
     OriginEndpointName: __expectString,
     Segment: _json,
     StartoverWindowSeconds: __expectInt32,
@@ -1690,20 +1708,30 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
   return __decorateServiceException(exception, parsedOutput.body);
 };
 
+// se_CdnAuthConfiguration omitted.
+
+// se_CdnIdentifierSecretArns omitted.
+
 /**
  * serializeAws_restJson1CreateDashManifestConfiguration
  */
 const se_CreateDashManifestConfiguration = (input: CreateDashManifestConfiguration, context: __SerdeContext): any => {
   return take(input, {
+    BaseUrls: _json,
+    Compactness: [],
     DrmSignaling: [],
+    DvbSettings: _json,
     FilterConfiguration: (_) => se_FilterConfiguration(_, context),
     ManifestName: [],
     ManifestWindowSeconds: [],
     MinBufferTimeSeconds: [],
     MinUpdatePeriodSeconds: [],
     PeriodTriggers: _json,
+    Profiles: _json,
+    ProgramInformation: _json,
     ScteDash: _json,
     SegmentTemplateFormat: [],
+    SubtitleConfiguration: _json,
     SuggestedPresentationDelaySeconds: [],
     UtcTiming: _json,
   });
@@ -1780,7 +1808,50 @@ const se_CreateLowLatencyHlsManifests = (
     });
 };
 
+/**
+ * serializeAws_restJson1CreateMssManifestConfiguration
+ */
+const se_CreateMssManifestConfiguration = (input: CreateMssManifestConfiguration, context: __SerdeContext): any => {
+  return take(input, {
+    FilterConfiguration: (_) => se_FilterConfiguration(_, context),
+    ManifestLayout: [],
+    ManifestName: [],
+    ManifestWindowSeconds: [],
+  });
+};
+
+/**
+ * serializeAws_restJson1CreateMssManifests
+ */
+const se_CreateMssManifests = (input: CreateMssManifestConfiguration[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_CreateMssManifestConfiguration(entry, context);
+    });
+};
+
+// se_DashBaseUrl omitted.
+
+// se_DashBaseUrls omitted.
+
+// se_DashDvbErrorMetrics omitted.
+
+// se_DashDvbFontDownload omitted.
+
+// se_DashDvbMetricsReporting omitted.
+
+// se_DashDvbSettings omitted.
+
 // se_DashPeriodTriggers omitted.
+
+// se_DashProfiles omitted.
+
+// se_DashProgramInformation omitted.
+
+// se_DashSubtitleConfiguration omitted.
+
+// se_DashTtmlConfiguration omitted.
 
 // se_DashUtcTiming omitted.
 
@@ -1865,6 +1936,10 @@ const se_StartTag = (input: StartTag, context: __SerdeContext): any => {
 
 // se_TagMap omitted.
 
+// de_CdnAuthConfiguration omitted.
+
+// de_CdnIdentifierSecretArns omitted.
+
 /**
  * deserializeAws_restJson1ChannelGroupListConfiguration
  */
@@ -1917,7 +1992,27 @@ const de_ChannelListConfiguration = (output: any, context: __SerdeContext): Chan
   }) as any;
 };
 
+// de_DashBaseUrl omitted.
+
+// de_DashBaseUrls omitted.
+
+// de_DashDvbErrorMetrics omitted.
+
+// de_DashDvbFontDownload omitted.
+
+// de_DashDvbMetricsReporting omitted.
+
+// de_DashDvbSettings omitted.
+
 // de_DashPeriodTriggers omitted.
+
+// de_DashProfiles omitted.
+
+// de_DashProgramInformation omitted.
+
+// de_DashSubtitleConfiguration omitted.
+
+// de_DashTtmlConfiguration omitted.
 
 // de_DashUtcTiming omitted.
 
@@ -1953,15 +2048,21 @@ const de_FilterConfiguration = (output: any, context: __SerdeContext): FilterCon
  */
 const de_GetDashManifestConfiguration = (output: any, context: __SerdeContext): GetDashManifestConfiguration => {
   return take(output, {
+    BaseUrls: _json,
+    Compactness: __expectString,
     DrmSignaling: __expectString,
+    DvbSettings: _json,
     FilterConfiguration: (_: any) => de_FilterConfiguration(_, context),
     ManifestName: __expectString,
     ManifestWindowSeconds: __expectInt32,
     MinBufferTimeSeconds: __expectInt32,
     MinUpdatePeriodSeconds: __expectInt32,
     PeriodTriggers: _json,
+    Profiles: _json,
+    ProgramInformation: _json,
     ScteDash: _json,
     SegmentTemplateFormat: __expectString,
+    SubtitleConfiguration: _json,
     SuggestedPresentationDelaySeconds: __expectInt32,
     Url: __expectString,
     UtcTiming: _json,
@@ -2044,6 +2145,31 @@ const de_GetLowLatencyHlsManifests = (
   return retVal;
 };
 
+/**
+ * deserializeAws_restJson1GetMssManifestConfiguration
+ */
+const de_GetMssManifestConfiguration = (output: any, context: __SerdeContext): GetMssManifestConfiguration => {
+  return take(output, {
+    FilterConfiguration: (_: any) => de_FilterConfiguration(_, context),
+    ManifestLayout: __expectString,
+    ManifestName: __expectString,
+    ManifestWindowSeconds: __expectInt32,
+    Url: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1GetMssManifests
+ */
+const de_GetMssManifests = (output: any, context: __SerdeContext): GetMssManifestConfiguration[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_GetMssManifestConfiguration(entry, context);
+    });
+  return retVal;
+};
+
 // de_HarvestedDashManifest omitted.
 
 // de_HarvestedDashManifestsList omitted.
@@ -2120,6 +2246,10 @@ const de_HarvestJobsList = (output: any, context: __SerdeContext): HarvestJob[] 
 
 // de_ListLowLatencyHlsManifests omitted.
 
+// de_ListMssManifestConfiguration omitted.
+
+// de_ListMssManifests omitted.
+
 /**
  * deserializeAws_restJson1OriginEndpointListConfiguration
  */
@@ -2136,6 +2266,7 @@ const de_OriginEndpointListConfiguration = (output: any, context: __SerdeContext
     HlsManifests: _json,
     LowLatencyHlsManifests: _json,
     ModifiedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    MssManifests: _json,
     OriginEndpointName: __expectString,
   }) as any;
 };

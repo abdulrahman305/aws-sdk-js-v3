@@ -21,12 +21,9 @@ import {
   HoursOfOperationOverrideConfig,
   InstanceStorageConfig,
   InstanceStorageResourceType,
+  LexBot,
   MonitorCapability,
-  OutboundCallerConfig,
-  OutboundEmailConfig,
   ParticipantRole,
-  PredefinedAttributeValues,
-  QuickConnectConfig,
   QuickConnectType,
   Reference,
   RehydrationType,
@@ -56,19 +53,640 @@ import {
   HoursOfOperation,
   HoursOfOperationOverride,
   InstanceAttributeType,
+  IntegrationAssociationSummary,
   PhoneNumberCountryCode,
   PhoneNumberType,
   PredefinedAttribute,
   Prompt,
   Queue,
-  QueueStatus,
-  QueueType,
   QuickConnect,
-  QuickConnectSummary,
   RoutingProfile,
   SortOrder,
   TrafficDistributionGroupStatus,
 } from "./models_1";
+
+/**
+ * @public
+ */
+export interface ListIntegrationAssociationsResponse {
+  /**
+   * <p>The associations.</p>
+   * @public
+   */
+  IntegrationAssociationSummaryList?: IntegrationAssociationSummary[] | undefined;
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListLambdaFunctionsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListLambdaFunctionsResponse {
+  /**
+   * <p>The Lambdafunction ARNs associated with the specified instance.</p>
+   * @public
+   */
+  LambdaFunctions?: string[] | undefined;
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListLexBotsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page. If no value is specified, the default is 10.
+   *    </p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListLexBotsResponse {
+  /**
+   * <p>The names and Amazon Web Services Regions of the Amazon Lex bots associated with the
+   *    specified instance.</p>
+   * @public
+   */
+  LexBots?: LexBot[] | undefined;
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPhoneNumbersRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The type of phone number.</p>
+   *          <note>
+   *             <p>We recommend using <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbersV2.html">ListPhoneNumbersV2</a> to
+   *     return phone number types. While ListPhoneNumbers returns number types <code>UIFN</code>,
+   *      <code>SHARED</code>, <code>THIRD_PARTY_TF</code>, and <code>THIRD_PARTY_DID</code>, it
+   *     incorrectly lists them as <code>TOLL_FREE</code> or <code>DID</code>. </p>
+   *          </note>
+   * @public
+   */
+  PhoneNumberTypes?: PhoneNumberType[] | undefined;
+
+  /**
+   * <p>The ISO country code.</p>
+   * @public
+   */
+  PhoneNumberCountryCodes?: PhoneNumberCountryCode[] | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * <p>Contains summary information about a phone number for a contact center.</p>
+ * @public
+ */
+export interface PhoneNumberSummary {
+  /**
+   * <p>The identifier of the phone number.</p>
+   * @public
+   */
+  Id?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the phone number.</p>
+   * @public
+   */
+  Arn?: string | undefined;
+
+  /**
+   * <p>The phone number.</p>
+   * @public
+   */
+  PhoneNumber?: string | undefined;
+
+  /**
+   * <p>The type of phone number.</p>
+   * @public
+   */
+  PhoneNumberType?: PhoneNumberType | undefined;
+
+  /**
+   * <p>The ISO country code.</p>
+   * @public
+   */
+  PhoneNumberCountryCode?: PhoneNumberCountryCode | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPhoneNumbersResponse {
+  /**
+   * <p>Information about the phone numbers.</p>
+   * @public
+   */
+  PhoneNumberSummaryList?: PhoneNumberSummary[] | undefined;
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPhoneNumbersV2Request {
+  /**
+   * <p>The Amazon Resource Name (ARN) for Amazon Connect instances or traffic distribution groups that phone number inbound traffic is routed through. If both <code>TargetArn</code> and <code>InstanceId</code> input are not
+   *    provided, this API lists numbers claimed to all the Amazon Connect instances belonging to
+   *    your account in the same Amazon Web Services Region as the request.</p>
+   * @public
+   */
+  TargetArn?: string | undefined;
+
+  /**
+   * <p>The identifier of the Amazon Connect instance that phone numbers are claimed to. You
+   *    can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the
+   *     instance ID</a> in the Amazon Resource Name (ARN) of the instance. If both <code>TargetArn</code> and <code>InstanceId</code> are not
+   *    provided, this API lists numbers claimed to all the Amazon Connect instances belonging to your account in
+   *    the same AWS Region as the request.</p>
+   * @public
+   */
+  InstanceId?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The ISO country code.</p>
+   * @public
+   */
+  PhoneNumberCountryCodes?: PhoneNumberCountryCode[] | undefined;
+
+  /**
+   * <p>The type of phone number.</p>
+   * @public
+   */
+  PhoneNumberTypes?: PhoneNumberType[] | undefined;
+
+  /**
+   * <p>The prefix of the phone number. If provided, it must contain <code>+</code> as part of the country code.</p>
+   * @public
+   */
+  PhoneNumberPrefix?: string | undefined;
+}
+
+/**
+ * <p>Information about phone numbers that have been claimed to your Amazon Connect instance
+ *    or traffic distribution group.</p>
+ * @public
+ */
+export interface ListPhoneNumbersSummary {
+  /**
+   * <p>A unique identifier for the phone number.</p>
+   * @public
+   */
+  PhoneNumberId?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the phone number.</p>
+   * @public
+   */
+  PhoneNumberArn?: string | undefined;
+
+  /**
+   * <p>The phone number. Phone numbers are formatted <code>[+] [country code] [subscriber number including area code]</code>.</p>
+   * @public
+   */
+  PhoneNumber?: string | undefined;
+
+  /**
+   * <p>The ISO country code.</p>
+   * @public
+   */
+  PhoneNumberCountryCode?: PhoneNumberCountryCode | undefined;
+
+  /**
+   * <p>The type of phone number.</p>
+   * @public
+   */
+  PhoneNumberType?: PhoneNumberType | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) for Amazon Connect instances or traffic distribution groups that phone number inbound traffic is routed through.</p>
+   * @public
+   */
+  TargetArn?: string | undefined;
+
+  /**
+   * <p>The identifier of the Amazon Connect instance that phone numbers are claimed to. You
+   *    can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the
+   *     instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId?: string | undefined;
+
+  /**
+   * <p>The description of the phone number.</p>
+   * @public
+   */
+  PhoneNumberDescription?: string | undefined;
+
+  /**
+   * <p>The claimed phone number ARN that was previously imported from the external service, such as
+   *     Amazon Web Services End User Messaging. If it is from Amazon Web Services End User Messaging, it
+   *    looks like the ARN of the phone number that was imported from Amazon Web Services End User
+   *    Messaging.</p>
+   * @public
+   */
+  SourcePhoneNumberArn?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPhoneNumbersV2Response {
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>Information about phone numbers that have been claimed to your Amazon Connect instances
+   *    or traffic distribution groups.</p>
+   * @public
+   */
+  ListPhoneNumbersSummaryList?: ListPhoneNumbersSummary[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPredefinedAttributesRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource
+   *    Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous response in
+   *    the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * <p>Summary of a predefined attribute.</p>
+ * @public
+ */
+export interface PredefinedAttributeSummary {
+  /**
+   * <p>The name of the predefined attribute.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>Last modified time.</p>
+   * @public
+   */
+  LastModifiedTime?: Date | undefined;
+
+  /**
+   * <p>Last modified region.</p>
+   * @public
+   */
+  LastModifiedRegion?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPredefinedAttributesResponse {
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>Summary of the predefined attributes.</p>
+   * @public
+   */
+  PredefinedAttributeSummaryList?: PredefinedAttributeSummary[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPromptsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous response in
+   *    the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * <p>Contains information about the prompt.</p>
+ * @public
+ */
+export interface PromptSummary {
+  /**
+   * <p>The identifier of the prompt.</p>
+   * @public
+   */
+  Id?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the prompt.</p>
+   * @public
+   */
+  Arn?: string | undefined;
+
+  /**
+   * <p>The name of the prompt.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The timestamp when this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region where this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListPromptsResponse {
+  /**
+   * <p>Information about the prompts.</p>
+   * @public
+   */
+  PromptSummaryList?: PromptSummary[] | undefined;
+
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListQueueQuickConnectsRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The identifier for the queue.</p>
+   * @public
+   */
+  QueueId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * <p>Contains summary information about a quick connect.</p>
+ * @public
+ */
+export interface QuickConnectSummary {
+  /**
+   * <p>The identifier for the quick connect.</p>
+   * @public
+   */
+  Id?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the quick connect.</p>
+   * @public
+   */
+  Arn?: string | undefined;
+
+  /**
+   * <p>The name of the quick connect.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The type of quick connect. In the Amazon Connect admin website, when you create a quick connect, you are
+   *    prompted to assign one of the following types: Agent (USER), External (PHONE_NUMBER), or Queue (QUEUE).</p>
+   * @public
+   */
+  QuickConnectType?: QuickConnectType | undefined;
+
+  /**
+   * <p>The timestamp when this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region where this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListQueueQuickConnectsResponse {
+  /**
+   * <p>If there are additional results, this is the token for the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>Information about the quick connects.</p>
+   * @public
+   */
+  QuickConnectSummaryList?: QuickConnectSummary[] | undefined;
+
+  /**
+   * <p>The timestamp when this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedTime?: Date | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region where this resource was last modified.</p>
+   * @public
+   */
+  LastModifiedRegion?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const QueueType = {
+  AGENT: "AGENT",
+  STANDARD: "STANDARD",
+} as const;
+
+/**
+ * @public
+ */
+export type QueueType = (typeof QueueType)[keyof typeof QueueType];
+
+/**
+ * @public
+ */
+export interface ListQueuesRequest {
+  /**
+   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>The type of queue.</p>
+   * @public
+   */
+  QueueTypes?: QueueType[] | undefined;
+
+  /**
+   * <p>The token for the next set of results. Use the value returned in the previous
+   * response in the next request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return per page. The default MaxResult size is 100.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
 
 /**
  * <p>Contains summary information about a queue.</p>
@@ -3299,7 +3917,7 @@ export interface EmailAddressMetadata {
   EmailAddressArn?: string | undefined;
 
   /**
-   * <p>The email address with the instance, in [^\s@]+@[^\s@]+\.[^\s@]+ format.</p>
+   * <p>The email address, including the domain.</p>
    * @public
    */
   EmailAddress?: string | undefined;
@@ -3417,8 +4035,7 @@ export interface SearchHoursOfOperationOverridesResponse {
 
   /**
    * <p>The token for the next set of results. Use the value returned in the previous response in
-   *    the next request to retrieve the next set of results. Length Constraints: Minimum length of 1.
-   *    Maximum length of 2500.</p>
+   *    the next request to retrieve the next set of results. </p>
    * @public
    */
   NextToken?: string | undefined;
@@ -4655,12 +5272,12 @@ export interface SendChatIntegrationEventResponse {
 }
 
 /**
- * <p>Contains information about a source or destination email address</p>
+ * <p>Contains information about a source or destination email address.</p>
  * @public
  */
 export interface EmailAddressInfo {
   /**
-   * <p>The email address with the instance, in [^\s@]+@[^\s@]+\.[^\s@]+ format.</p>
+   * <p>The email address, including the domain.</p>
    * @public
    */
   EmailAddress: string | undefined;
@@ -4673,12 +5290,15 @@ export interface EmailAddressInfo {
 }
 
 /**
- * <p>The additional recipients information of outbound email.</p>
+ * <p>Information about the additional recipients of outbound email.</p>
  * @public
  */
 export interface OutboundAdditionalRecipients {
   /**
-   * <p>The additional CC email address recipients information.</p>
+   * <p>Information about the <b>additional</b> CC email address
+   *    recipients. Email recipients are limited to 50 total addresses: 1 required recipient in the
+   *     <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_SendOutboundEmail.html#API_SendOutboundEmail_RequestBody">DestinationEmailAddress</a> field and up to 49 recipients in the 'CcEmailAddresses'
+   *    field.</p>
    * @public
    */
   CcEmailAddresses?: EmailAddressInfo[] | undefined;
@@ -4862,6 +5482,9 @@ export interface SendOutboundEmailRequest {
 
   /**
    * <p>Denotes the class of traffic.</p>
+   *          <note>
+   *             <p>Only the CAMPAIGN traffic type is supported.</p>
+   *          </note>
    * @public
    */
   TrafficType: TrafficType | undefined;
@@ -5307,18 +5930,30 @@ export interface StartContactStreamingResponse {
 }
 
 /**
- * <p>The additional TO CC recipients information of inbound email.</p>
+ * <p>Information about the additional TO and CC recipients of an inbound email contact.</p>
+ *          <note>
+ *             <p>You can include up to 50 email addresses in total, distributed across <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartEmailContact.html#API_StartEmailContact_RequestBody">DestinationEmailAddress</a>, <code>ToAddresses</code>, and <code>CcAddresses</code>. This
+ *     total must include one required <code>DestinationEmailAddress</code>. You can then specify up to
+ *     49 addresses allocated across <code>ToAddresses</code> and <code>CcAddresses</code> as
+ *     needed.</p>
+ *          </note>
  * @public
  */
 export interface InboundAdditionalRecipients {
   /**
-   * <p>The additional recipients information present in to list.</p>
+   * <p>The <b>additional</b> recipients information present in to list.
+   *    You must have 1 required recipient (<code>DestinationEmailAddress</code>). You can then specify
+   *    up to 49 additional recipients (across <code>ToAddresses</code> and <code>CcAddresses</code>),
+   *    for a total of 50 recipients.</p>
    * @public
    */
   ToAddresses?: EmailAddressInfo[] | undefined;
 
   /**
-   * <p>The additional recipients information present in cc list.</p>
+   * <p>The <b>additional</b> recipients information present in cc list.
+   *    You must have 1 required recipient (<code>DestinationEmailAddress</code>). You can then specify
+   *    up to 49 additional recipients (across <code>ToAddresses</code> and <code>CcAddresses</code>),
+   *    for a total of 50 recipients.</p>
    * @public
    */
   CcAddresses?: EmailAddressInfo[] | undefined;
@@ -5459,7 +6094,7 @@ export interface StartOutboundEmailContactRequest {
   ContactId: string | undefined;
 
   /**
-   * <p>The email address associated with the instance.</p>
+   * <p>The email address associated with the Amazon Connect instance.</p>
    * @public
    */
   FromEmailAddress?: EmailAddressInfo | undefined;
@@ -5471,7 +6106,7 @@ export interface StartOutboundEmailContactRequest {
   DestinationEmailAddress: EmailAddressInfo | undefined;
 
   /**
-   * <p>The addtional recipients address of email in CC.</p>
+   * <p>The additional recipients address of email in CC.</p>
    * @public
    */
   AdditionalRecipients?: OutboundAdditionalRecipients | undefined;
@@ -5587,8 +6222,9 @@ export interface StartOutboundVoiceContactRequest {
   Name?: string | undefined;
 
   /**
-   * <p>A description of the voice contact that is shown to an agent in the Contact Control Panel
-   *    (CCP).</p>
+   * <p>A description of the voice contact that appears in the agent's snapshot in the CCP logs. For
+   *    more information about CCP logs, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/download-ccp-logs.html">Download and review CCP logs</a> in
+   *    the <i>Amazon Connect Administrator Guide</i>.</p>
    * @public
    */
   Description?: string | undefined;
@@ -7139,556 +7775,6 @@ export const TimerEligibleParticipantRoles = {
  */
 export type TimerEligibleParticipantRoles =
   (typeof TimerEligibleParticipantRoles)[keyof typeof TimerEligibleParticipantRoles];
-
-/**
- * @public
- * @enum
- */
-export const ParticipantTimerType = {
-  DISCONNECT_NONCUSTOMER: "DISCONNECT_NONCUSTOMER",
-  IDLE: "IDLE",
-} as const;
-
-/**
- * @public
- */
-export type ParticipantTimerType = (typeof ParticipantTimerType)[keyof typeof ParticipantTimerType];
-
-/**
- * @public
- * @enum
- */
-export const ParticipantTimerAction = {
-  Unset: "Unset",
-} as const;
-
-/**
- * @public
- */
-export type ParticipantTimerAction = (typeof ParticipantTimerAction)[keyof typeof ParticipantTimerAction];
-
-/**
- * <p>The value of the timer. Either the timer action (<code>Unset</code> to delete the timer), or
- *    the duration of the timer in minutes. Only one value can be set.</p>
- *          <p>For more information about how chat timeouts work, see
- *    <a href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-chat-timeouts.html">Set up chat timeouts for human participants</a>. </p>
- * @public
- */
-export type ParticipantTimerValue =
-  | ParticipantTimerValue.ParticipantTimerActionMember
-  | ParticipantTimerValue.ParticipantTimerDurationInMinutesMember
-  | ParticipantTimerValue.$UnknownMember;
-
-/**
- * @public
- */
-export namespace ParticipantTimerValue {
-  /**
-   * <p>The timer action. Currently only one value is allowed: <code>Unset</code>. It deletes a
-   *    timer.</p>
-   * @public
-   */
-  export interface ParticipantTimerActionMember {
-    ParticipantTimerAction: ParticipantTimerAction;
-    ParticipantTimerDurationInMinutes?: never;
-    $unknown?: never;
-  }
-
-  /**
-   * <p>The duration of a timer, in minutes. </p>
-   * @public
-   */
-  export interface ParticipantTimerDurationInMinutesMember {
-    ParticipantTimerAction?: never;
-    ParticipantTimerDurationInMinutes: number;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    ParticipantTimerAction?: never;
-    ParticipantTimerDurationInMinutes?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    ParticipantTimerAction: (value: ParticipantTimerAction) => T;
-    ParticipantTimerDurationInMinutes: (value: number) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: ParticipantTimerValue, visitor: Visitor<T>): T => {
-    if (value.ParticipantTimerAction !== undefined) return visitor.ParticipantTimerAction(value.ParticipantTimerAction);
-    if (value.ParticipantTimerDurationInMinutes !== undefined)
-      return visitor.ParticipantTimerDurationInMinutes(value.ParticipantTimerDurationInMinutes);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * <p>Configuration information for the timer. After the timer configuration is set, it persists
- *    for the duration of the chat. It persists across new contacts in the chain, for example, transfer
- *    contacts.</p>
- *          <p>For more information about how chat timeouts work, see
- *    <a href="https://docs.aws.amazon.com/connect/latest/adminguide/setup-chat-timeouts.html">Set up chat timeouts for human participants</a>. </p>
- * @public
- */
-export interface ParticipantTimerConfiguration {
-  /**
-   * <p>The role of the participant in the chat conversation.</p>
-   * @public
-   */
-  ParticipantRole: TimerEligibleParticipantRoles | undefined;
-
-  /**
-   * <p>The type of timer. <code>IDLE</code> indicates the timer applies for considering a human
-   *    chat participant as idle. <code>DISCONNECT_NONCUSTOMER</code> indicates the timer applies to
-   *    automatically disconnecting a chat participant due to idleness.</p>
-   * @public
-   */
-  TimerType: ParticipantTimerType | undefined;
-
-  /**
-   * <p>The value of the timer. Either the timer action (Unset to delete the timer), or the duration
-   *    of the timer in minutes. Only one value can be set.</p>
-   * @public
-   */
-  TimerValue: ParticipantTimerValue | undefined;
-}
-
-/**
- * <p>Configuration information for the chat participant role.</p>
- * @public
- */
-export interface ChatParticipantRoleConfig {
-  /**
-   * <p>A list of participant timers. You can specify any unique combination of role and timer type.
-   *    Duplicate entries error out the request with a 400.</p>
-   * @public
-   */
-  ParticipantTimerConfigList: ParticipantTimerConfiguration[] | undefined;
-}
-
-/**
- * <p>Configuration information for the chat participant role.</p>
- * @public
- */
-export type UpdateParticipantRoleConfigChannelInfo =
-  | UpdateParticipantRoleConfigChannelInfo.ChatMember
-  | UpdateParticipantRoleConfigChannelInfo.$UnknownMember;
-
-/**
- * @public
- */
-export namespace UpdateParticipantRoleConfigChannelInfo {
-  /**
-   * <p>Configuration information for the chat participant role.</p>
-   * @public
-   */
-  export interface ChatMember {
-    Chat: ChatParticipantRoleConfig;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    Chat?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    Chat: (value: ChatParticipantRoleConfig) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: UpdateParticipantRoleConfigChannelInfo, visitor: Visitor<T>): T => {
-    if (value.Chat !== undefined) return visitor.Chat(value.Chat);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * @public
- */
-export interface UpdateParticipantRoleConfigRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier of the contact in this instance of Amazon Connect. </p>
-   * @public
-   */
-  ContactId: string | undefined;
-
-  /**
-   * <p>The Amazon Connect channel you want to configure.</p>
-   * @public
-   */
-  ChannelConfiguration: UpdateParticipantRoleConfigChannelInfo | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateParticipantRoleConfigResponse {}
-
-/**
- * @public
- */
-export interface UpdatePhoneNumberRequest {
-  /**
-   * <p>A unique identifier for the phone number.</p>
-   * @public
-   */
-  PhoneNumberId: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) for Amazon Connect instances or traffic distribution groups that phone number inbound traffic is routed through. You must enter <code>InstanceId</code> or <code>TargetArn</code>. </p>
-   * @public
-   */
-  TargetArn?: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon Connect instance that phone numbers are claimed to. You
-   *    can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the
-   *     instance ID</a> in the Amazon Resource Name (ARN) of the instance. You must enter <code>InstanceId</code> or <code>TargetArn</code>. </p>
-   * @public
-   */
-  InstanceId?: string | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the
-   *             request. If not provided, the Amazon Web Services
-   *             SDK populates this field. For more information about idempotency, see
-   *             <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdatePhoneNumberResponse {
-  /**
-   * <p>A unique identifier for the phone number.</p>
-   * @public
-   */
-  PhoneNumberId?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the phone number.</p>
-   * @public
-   */
-  PhoneNumberArn?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdatePhoneNumberMetadataRequest {
-  /**
-   * <p>The Amazon Resource Name (ARN) or resource ID of the phone number.</p>
-   * @public
-   */
-  PhoneNumberId: string | undefined;
-
-  /**
-   * <p>The description of the phone number.</p>
-   * @public
-   */
-  PhoneNumberDescription?: string | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the
-   *             request. If not provided, the Amazon Web Services
-   *             SDK populates this field. For more information about idempotency, see
-   *             <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdatePredefinedAttributeRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource
-   *    Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The name of the predefined attribute.</p>
-   * @public
-   */
-  Name: string | undefined;
-
-  /**
-   * <p>The values of the predefined attribute.</p>
-   * @public
-   */
-  Values?: PredefinedAttributeValues | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdatePromptRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>A unique identifier for the prompt.</p>
-   * @public
-   */
-  PromptId: string | undefined;
-
-  /**
-   * <p>The name of the prompt.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>A description of the prompt.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>The URI for the S3 bucket where the prompt is stored. You can provide S3 pre-signed URLs returned by the
-   * <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_GetPromptFile.html">GetPromptFile</a>
-   *  API instead of providing S3 URIs.</p>
-   * @public
-   */
-  S3Uri?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdatePromptResponse {
-  /**
-   * <p>The Amazon Resource Name (ARN) of the prompt.</p>
-   * @public
-   */
-  PromptARN?: string | undefined;
-
-  /**
-   * <p>A unique identifier for the prompt.</p>
-   * @public
-   */
-  PromptId?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQueueHoursOfOperationRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-
-  /**
-   * <p>The identifier for the hours of operation.</p>
-   * @public
-   */
-  HoursOfOperationId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQueueMaxContactsRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-
-  /**
-   * <p>The maximum number of contacts that can be in the queue before it is considered full.</p>
-   * @public
-   */
-  MaxContacts?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQueueNameRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-
-  /**
-   * <p>The name of the queue.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>The description of the queue.</p>
-   * @public
-   */
-  Description?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQueueOutboundCallerConfigRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-
-  /**
-   * <p>The outbound caller ID name, number, and outbound whisper flow.</p>
-   * @public
-   */
-  OutboundCallerConfig: OutboundCallerConfig | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQueueOutboundEmailConfigRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-
-  /**
-   * <p>The outbound email address ID for a specified queue.</p>
-   * @public
-   */
-  OutboundEmailConfig: OutboundEmailConfig | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQueueStatusRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-
-  /**
-   * <p>The status of the queue.</p>
-   * @public
-   */
-  Status: QueueStatus | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQuickConnectConfigRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the quick connect.</p>
-   * @public
-   */
-  QuickConnectId: string | undefined;
-
-  /**
-   * <p>Information about the configuration settings for the quick connect.</p>
-   * @public
-   */
-  QuickConnectConfig: QuickConnectConfig | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateQuickConnectNameRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the quick connect.</p>
-   * @public
-   */
-  QuickConnectId: string | undefined;
-
-  /**
-   * <p>The name of the quick connect.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>The description of the quick connect.</p>
-   * @public
-   */
-  Description?: string | undefined;
-}
 
 /**
  * @internal

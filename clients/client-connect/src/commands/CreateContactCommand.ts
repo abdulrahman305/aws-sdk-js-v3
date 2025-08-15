@@ -30,10 +30,28 @@ export interface CreateContactCommandOutput extends CreateContactResponse, __Met
 
 /**
  * <important>
- *             <p>Only the EMAIL channel is supported. The supported initiation methods are: OUTBOUND,
- *     AGENT_REPLY, and FLOW.</p>
+ *             <p>Only the VOICE, EMAIL, and TASK channels are supported. </p>
+ *             <ul>
+ *                <li>
+ *                   <p>For VOICE: The supported initiation method is <code>TRANSFER</code>. The contacts created
+ *       with this initiation method have a subtype <code>connect:ExternalAudio</code>. </p>
+ *                </li>
+ *                <li>
+ *                   <p>For EMAIL: The supported initiation methods are <code>OUTBOUND</code>,
+ *        <code>AGENT_REPLY</code>, and <code>FLOW</code>. </p>
+ *                </li>
+ *                <li>
+ *                   <p>For TASK: The supported initiation method is <code>API</code>. Contacts created with this
+ *       API have a sub-type of <code>connect:ExternalTask</code>.</p>
+ *                </li>
+ *             </ul>
  *          </important>
- *          <p>Creates a new EMAIL contact. </p>
+ *          <p>Creates a new VOICE, EMAIL, or TASK contact. </p>
+ *          <p>After a contact is created, you can move it to the desired state by using the
+ *     <code>InitiateAs</code> parameter. While you can use API to create task contacts that are in the
+ *     <code>COMPLETED</code> state, you must contact Amazon Web Services Support before using it for
+ *    bulk import use cases. Bulk import causes your requests to be throttled or fail if your
+ *    CreateContact limits aren't high enough. </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -62,7 +80,7 @@ export interface CreateContactCommandOutput extends CreateContactResponse, __Met
  *   UserInfo: { // UserInfo
  *     UserId: "STRING_VALUE",
  *   },
- *   InitiateAs: "CONNECTED_TO_USER",
+ *   InitiateAs: "CONNECTED_TO_USER" || "COMPLETED",
  *   Name: "STRING_VALUE",
  *   Description: "STRING_VALUE",
  *   SegmentAttributes: { // SegmentAttributes

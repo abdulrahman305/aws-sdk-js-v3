@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeClientVpnEndpointsRequest, DescribeClientVpnEndpointsResult } from "../models/models_3";
+import { DescribeClientVpnEndpointsRequest, DescribeClientVpnEndpointsResult } from "../models/models_4";
 import { de_DescribeClientVpnEndpointsCommand, se_DescribeClientVpnEndpointsCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -123,6 +123,9 @@ export interface DescribeClientVpnEndpointsCommandOutput extends DescribeClientV
  * //       ClientLoginBannerOptions: { // ClientLoginBannerResponseOptions
  * //         Enabled: true || false,
  * //         BannerText: "STRING_VALUE",
+ * //       },
+ * //       ClientRouteEnforcementOptions: { // ClientRouteEnforcementResponseOptions
+ * //         Enforced: true || false,
  * //       },
  * //       DisconnectOnSessionTimeout: true || false,
  * //     },

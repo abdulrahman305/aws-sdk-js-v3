@@ -778,6 +778,170 @@ export interface AcceptSubscriptionRequestOutput {
 }
 
 /**
+ * <p>The account information within an account pool.</p>
+ * @public
+ */
+export interface AccountInfo {
+  /**
+   * <p>The account ID.</p>
+   * @public
+   */
+  awsAccountId: string | undefined;
+
+  /**
+   * <p>The regions supported for an account within an account pool. </p>
+   * @public
+   */
+  supportedRegions: string[] | undefined;
+
+  /**
+   * <p>The account name.</p>
+   * @public
+   */
+  awsAccountName?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const ResolutionStrategy = {
+  MANUAL: "MANUAL",
+} as const;
+
+/**
+ * @public
+ */
+export type ResolutionStrategy = (typeof ResolutionStrategy)[keyof typeof ResolutionStrategy];
+
+/**
+ * <p>The summary of the account pool.</p>
+ * @public
+ */
+export interface AccountPoolSummary {
+  /**
+   * <p>The ID of the domain.</p>
+   * @public
+   */
+  domainId?: string | undefined;
+
+  /**
+   * <p>The ID of the account pool.</p>
+   * @public
+   */
+  id?: string | undefined;
+
+  /**
+   * <p>The name of the account pool.</p>
+   * @public
+   */
+  name?: string | undefined;
+
+  /**
+   * <p>The mechanism used to resolve the account selection from the account pool.</p>
+   * @public
+   */
+  resolutionStrategy?: ResolutionStrategy | undefined;
+
+  /**
+   * <p>The ID of the domain unit.</p>
+   * @public
+   */
+  domainUnitId?: string | undefined;
+
+  /**
+   * <p>The user who created the account pool.</p>
+   * @public
+   */
+  createdBy?: string | undefined;
+
+  /**
+   * <p>The user who updated the account pool.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
+}
+
+/**
+ * <p>The custom Amazon Web Services Lambda handler within an account pool.</p>
+ * @public
+ */
+export interface CustomAccountPoolHandler {
+  /**
+   * <p>The ARN of the Amazon Web Services Lambda function for the custom Amazon Web Services
+   *          Lambda handler.</p>
+   * @public
+   */
+  lambdaFunctionArn: string | undefined;
+
+  /**
+   * <p>The ARN of the IAM role that enables Amazon SageMaker Unified Studio to invoke the
+   *             Amazon Web Services Lambda funtion if the account source is the custom account pool
+   *          handler.</p>
+   * @public
+   */
+  lambdaExecutionRoleArn?: string | undefined;
+}
+
+/**
+ * <p>The source of accounts for the account pool. In the current release, it's either a
+ *          static list of accounts provided by the customer or a custom Amazon Web Services Lambda
+ *          handler. </p>
+ * @public
+ */
+export type AccountSource =
+  | AccountSource.AccountsMember
+  | AccountSource.CustomAccountPoolHandlerMember
+  | AccountSource.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace AccountSource {
+  /**
+   * <p>The static list of accounts within an account pool.</p>
+   * @public
+   */
+  export interface AccountsMember {
+    accounts: AccountInfo[];
+    customAccountPoolHandler?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The custom Amazon Web Services Lambda handler within an account pool.</p>
+   * @public
+   */
+  export interface CustomAccountPoolHandlerMember {
+    accounts?: never;
+    customAccountPoolHandler: CustomAccountPoolHandler;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    accounts?: never;
+    customAccountPoolHandler?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    accounts: (value: AccountInfo[]) => T;
+    customAccountPoolHandler: (value: CustomAccountPoolHandler) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: AccountSource, visitor: Visitor<T>): T => {
+    if (value.accounts !== undefined) return visitor.accounts(value.accounts);
+    if (value.customAccountPoolHandler !== undefined)
+      return visitor.customAccountPoolHandler(value.customAccountPoolHandler);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
  * <p>The parameters of the console link specified as part of the environment action.</p>
  * @public
  */
@@ -1112,6 +1276,19 @@ export interface OverrideProjectOwnersPolicyGrantDetail {
 }
 
 /**
+ * <p>Specifies the domain unit(s) whose projects can use this asset type while creating asset
+ *          or asset revisions.</p>
+ * @public
+ */
+export interface UseAssetTypePolicyGrantDetail {
+  /**
+   * <p>The ID of the domain unit.</p>
+   * @public
+   */
+  domainUnitId?: string | undefined;
+}
+
+/**
  * <p>The details of the policy grant.</p>
  * @public
  */
@@ -1129,6 +1306,7 @@ export type PolicyGrantDetail =
   | PolicyGrantDetail.DelegateCreateEnvironmentProfileMember
   | PolicyGrantDetail.OverrideDomainUnitOwnersMember
   | PolicyGrantDetail.OverrideProjectOwnersMember
+  | PolicyGrantDetail.UseAssetTypeMember
   | PolicyGrantDetail.$UnknownMember;
 
 /**
@@ -1153,6 +1331,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1174,6 +1353,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1195,6 +1375,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1216,6 +1397,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1237,6 +1419,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1258,6 +1441,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1279,6 +1463,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1300,6 +1485,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1321,6 +1507,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1342,6 +1529,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1363,6 +1551,7 @@ export namespace PolicyGrantDetail {
     createEnvironment: Unit;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1384,6 +1573,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint: Unit;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown?: never;
   }
 
@@ -1405,6 +1595,30 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile: CreateProjectFromProjectProfilePolicyGrantDetail;
+    useAssetType?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p> Specifies the domain unit(s) whose projects can use this asset type while creating
+   *          asset or asset revisions.</p>
+   * @public
+   */
+  export interface UseAssetTypeMember {
+    createDomainUnit?: never;
+    overrideDomainUnitOwners?: never;
+    addToProjectMemberPool?: never;
+    overrideProjectOwners?: never;
+    createGlossary?: never;
+    createFormType?: never;
+    createAssetType?: never;
+    createProject?: never;
+    createEnvironmentProfile?: never;
+    delegateCreateEnvironmentProfile?: never;
+    createEnvironment?: never;
+    createEnvironmentFromBlueprint?: never;
+    createProjectFromProjectProfile?: never;
+    useAssetType: UseAssetTypePolicyGrantDetail;
     $unknown?: never;
   }
 
@@ -1425,6 +1639,7 @@ export namespace PolicyGrantDetail {
     createEnvironment?: never;
     createEnvironmentFromBlueprint?: never;
     createProjectFromProjectProfile?: never;
+    useAssetType?: never;
     $unknown: [string, any];
   }
 
@@ -1442,6 +1657,7 @@ export namespace PolicyGrantDetail {
     createEnvironment: (value: Unit) => T;
     createEnvironmentFromBlueprint: (value: Unit) => T;
     createProjectFromProjectProfile: (value: CreateProjectFromProjectProfilePolicyGrantDetail) => T;
+    useAssetType: (value: UseAssetTypePolicyGrantDetail) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -1464,6 +1680,7 @@ export namespace PolicyGrantDetail {
       return visitor.createEnvironmentFromBlueprint(value.createEnvironmentFromBlueprint);
     if (value.createProjectFromProjectProfile !== undefined)
       return visitor.createProjectFromProjectProfile(value.createProjectFromProjectProfile);
+    if (value.useAssetType !== undefined) return visitor.useAssetType(value.useAssetType);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -1473,6 +1690,7 @@ export namespace PolicyGrantDetail {
  * @enum
  */
 export const TargetEntityType = {
+  ASSET_TYPE: "ASSET_TYPE",
   DOMAIN_UNIT: "DOMAIN_UNIT",
   ENVIRONMENT_BLUEPRINT_CONFIGURATION: "ENVIRONMENT_BLUEPRINT_CONFIGURATION",
   ENVIRONMENT_PROFILE: "ENVIRONMENT_PROFILE",
@@ -1501,6 +1719,7 @@ export const ManagedPolicyType = {
   DELEGATE_CREATE_ENVIRONMENT_PROFILE: "DELEGATE_CREATE_ENVIRONMENT_PROFILE",
   OVERRIDE_DOMAIN_UNIT_OWNERS: "OVERRIDE_DOMAIN_UNIT_OWNERS",
   OVERRIDE_PROJECT_OWNERS: "OVERRIDE_PROJECT_OWNERS",
+  USE_ASSET_TYPE: "USE_ASSET_TYPE",
 } as const;
 
 /**
@@ -1934,6 +2153,75 @@ export interface AddPolicyGrantInput {
 export interface AddPolicyGrantOutput {}
 
 /**
+ * <p>An aggregation list item.</p>
+ * @public
+ */
+export interface AggregationListItem {
+  /**
+   * <p>An attribute on which to compute aggregations.</p>
+   * @public
+   */
+  attribute: string | undefined;
+
+  /**
+   * <p>The display value of the aggregation list item. Supported values include
+   *             <code>value</code> and <code>glossaryTerm.name</code>.</p>
+   * @public
+   */
+  displayValue?: string | undefined;
+}
+
+/**
+ * <p>An aggregation output item.</p>
+ * @public
+ */
+export interface AggregationOutputItem {
+  /**
+   * <p>The attribute value of the aggregation output item.</p>
+   * @public
+   */
+  value?: string | undefined;
+
+  /**
+   * <p>The count of the aggregation output item.</p>
+   * @public
+   */
+  count?: number | undefined;
+
+  /**
+   * <p>The display value of the aggregation. If the attribute being aggregated corresponds to
+   *          the id of a public resource, the service automatically resolves the id to the provided
+   *          display value.</p>
+   * @public
+   */
+  displayValue?: string | undefined;
+}
+
+/**
+ * <p>The aggregation for an attribute.</p>
+ * @public
+ */
+export interface AggregationOutput {
+  /**
+   * <p>The attribute for this aggregation.</p>
+   * @public
+   */
+  attribute?: string | undefined;
+
+  /**
+   * <p>The display value of the aggregation output item.</p>
+   * @public
+   */
+  displayValue?: string | undefined;
+
+  /**
+   * <p>A list of aggregation output items.</p>
+   * @public
+   */
+  items?: AggregationOutputItem[] | undefined;
+}
+
+/**
  * @public
  * @enum
  */
@@ -2038,6 +2326,8 @@ export interface CreateAssetInput {
 
   /**
    * <p>The external identifier of the asset.</p>
+   *          <p>If the value for the <code>externalIdentifier</code> parameter is specified, it must be
+   *          a unique value.</p>
    * @public
    */
   externalIdentifier?: string | undefined;
@@ -2471,6 +2761,10 @@ export interface GetAssetInput {
 
   /**
    * <p>The ID of the Amazon DataZone asset.</p>
+   *          <p>This parameter supports either the value of <code>assetId</code> or
+   *             <code>externalIdentifier</code> as input. If you are passing the value of
+   *             <code>externalIdentifier</code>, you must prefix this value with
+   *             <code>externalIdentifer%2F</code>.</p>
    * @public
    */
   identifier: string | undefined;
@@ -3207,6 +3501,86 @@ export interface AssetFilterSummary {
 }
 
 /**
+ * <p>The offset of a matched term.</p>
+ * @public
+ */
+export interface MatchOffset {
+  /**
+   * <p>The 0-indexed number indicating the start position (inclusive) of a matched term.</p>
+   * @public
+   */
+  startOffset?: number | undefined;
+
+  /**
+   * <p>The 0-indexed number indicating the end position (exclusive) of a matched term.</p>
+   * @public
+   */
+  endOffset?: number | undefined;
+}
+
+/**
+ * <p>A structure indicating matched terms for an attribute.</p>
+ * @public
+ */
+export interface TextMatchItem {
+  /**
+   * <p>The name of the attribute.</p>
+   * @public
+   */
+  attribute?: string | undefined;
+
+  /**
+   * <p>Snippet of attribute text containing highlighted content.</p>
+   * @public
+   */
+  text?: string | undefined;
+
+  /**
+   * <p>List of offsets indicating matching terms in the TextMatchItem text.</p>
+   * @public
+   */
+  matchOffsets?: MatchOffset[] | undefined;
+}
+
+/**
+ * <p>A rationale indicating why this item was matched by search. </p>
+ * @public
+ */
+export type MatchRationaleItem = MatchRationaleItem.TextMatchesMember | MatchRationaleItem.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace MatchRationaleItem {
+  /**
+   * <p>A list of TextMatchItems.</p>
+   * @public
+   */
+  export interface TextMatchesMember {
+    textMatches: TextMatchItem[];
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    textMatches?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    textMatches: (value: TextMatchItem[]) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: MatchRationaleItem, visitor: Visitor<T>): T => {
+    if (value.textMatches !== undefined) return visitor.textMatches(value.textMatches);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
  * <p>The additional attributes of an inventory asset.</p>
  * @public
  */
@@ -3229,6 +3603,12 @@ export interface AssetItemAdditionalAttributes {
    * @public
    */
   latestTimeSeriesDataPointFormsOutput?: TimeSeriesDataPointSummaryFormOutput[] | undefined;
+
+  /**
+   * <p>List of rationales indicating why this item was matched by search.</p>
+   * @public
+   */
+  matchRationale?: MatchRationaleItem[] | undefined;
 }
 
 /**
@@ -3387,6 +3767,12 @@ export interface AssetListingItemAdditionalAttributes {
    * @public
    */
   forms?: string | undefined;
+
+  /**
+   * <p>List of rationales indicating why this item was matched by search.</p>
+   * @public
+   */
+  matchRationale?: MatchRationaleItem[] | undefined;
 
   /**
    * <p>The latest time series data points forms included in the additional attributes of an
@@ -4963,6 +5349,25 @@ export interface RedshiftPropertiesInput {
 }
 
 /**
+ * <p>The Amazon S3 properties of a connection.</p>
+ * @public
+ */
+export interface S3PropertiesInput {
+  /**
+   * <p>The Amazon S3 URI that's part of the Amazon S3 properties of a connection.</p>
+   * @public
+   */
+  s3Uri: string | undefined;
+
+  /**
+   * <p>The Amazon S3 Access Grant location ID that's part of the Amazon S3 properties of a
+   *          connection.</p>
+   * @public
+   */
+  s3AccessGrantLocationId?: string | undefined;
+}
+
+/**
  * <p>The Spark EMR properties.</p>
  * @public
  */
@@ -5088,6 +5493,7 @@ export type ConnectionPropertiesInput =
   | ConnectionPropertiesInput.HyperPodPropertiesMember
   | ConnectionPropertiesInput.IamPropertiesMember
   | ConnectionPropertiesInput.RedshiftPropertiesMember
+  | ConnectionPropertiesInput.S3PropertiesMember
   | ConnectionPropertiesInput.SparkEmrPropertiesMember
   | ConnectionPropertiesInput.SparkGluePropertiesMember
   | ConnectionPropertiesInput.$UnknownMember;
@@ -5108,6 +5514,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5123,6 +5530,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5138,6 +5546,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5153,6 +5562,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5168,6 +5578,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties: RedshiftPropertiesInput;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5183,6 +5594,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties: SparkEmrPropertiesInput;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5198,6 +5610,23 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties: SparkGluePropertiesInput;
+    s3Properties?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The Amazon S3 properties of a connection.</p>
+   * @public
+   */
+  export interface S3PropertiesMember {
+    athenaProperties?: never;
+    glueProperties?: never;
+    hyperPodProperties?: never;
+    iamProperties?: never;
+    redshiftProperties?: never;
+    sparkEmrProperties?: never;
+    sparkGlueProperties?: never;
+    s3Properties: S3PropertiesInput;
     $unknown?: never;
   }
 
@@ -5212,6 +5641,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown: [string, any];
   }
 
@@ -5223,6 +5653,7 @@ export namespace ConnectionPropertiesInput {
     redshiftProperties: (value: RedshiftPropertiesInput) => T;
     sparkEmrProperties: (value: SparkEmrPropertiesInput) => T;
     sparkGlueProperties: (value: SparkGluePropertiesInput) => T;
+    s3Properties: (value: S3PropertiesInput) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -5234,6 +5665,7 @@ export namespace ConnectionPropertiesInput {
     if (value.redshiftProperties !== undefined) return visitor.redshiftProperties(value.redshiftProperties);
     if (value.sparkEmrProperties !== undefined) return visitor.sparkEmrProperties(value.sparkEmrProperties);
     if (value.sparkGlueProperties !== undefined) return visitor.sparkGlueProperties(value.sparkGlueProperties);
+    if (value.s3Properties !== undefined) return visitor.s3Properties(value.s3Properties);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -5418,6 +5850,37 @@ export interface RedshiftPropertiesOutput {
 }
 
 /**
+ * <p>The Amazon S3 properties of a connection.</p>
+ * @public
+ */
+export interface S3PropertiesOutput {
+  /**
+   * <p>The Amazon S3 URI that's part of the Amazon S3 properties of a connection.</p>
+   * @public
+   */
+  s3Uri: string | undefined;
+
+  /**
+   * <p>The Amazon S3 Access Grant location ID that's part of the Amazon S3 properties of a
+   *          connection.</p>
+   * @public
+   */
+  s3AccessGrantLocationId?: string | undefined;
+
+  /**
+   * <p>The status of the Amazon S3 connection.</p>
+   * @public
+   */
+  status?: ConnectionStatus | undefined;
+
+  /**
+   * <p>The error message that gets displayed.</p>
+   * @public
+   */
+  errorMessage?: string | undefined;
+}
+
+/**
  * @public
  * @enum
  */
@@ -5569,6 +6032,7 @@ export type ConnectionPropertiesOutput =
   | ConnectionPropertiesOutput.HyperPodPropertiesMember
   | ConnectionPropertiesOutput.IamPropertiesMember
   | ConnectionPropertiesOutput.RedshiftPropertiesMember
+  | ConnectionPropertiesOutput.S3PropertiesMember
   | ConnectionPropertiesOutput.SparkEmrPropertiesMember
   | ConnectionPropertiesOutput.SparkGluePropertiesMember
   | ConnectionPropertiesOutput.$UnknownMember;
@@ -5589,6 +6053,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5604,6 +6069,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5619,6 +6085,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5634,6 +6101,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5649,6 +6117,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties: RedshiftPropertiesOutput;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5664,6 +6133,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties: SparkEmrPropertiesOutput;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5679,6 +6149,23 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties: SparkGluePropertiesOutput;
+    s3Properties?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The Amazon S3 properties of a connection.</p>
+   * @public
+   */
+  export interface S3PropertiesMember {
+    athenaProperties?: never;
+    glueProperties?: never;
+    hyperPodProperties?: never;
+    iamProperties?: never;
+    redshiftProperties?: never;
+    sparkEmrProperties?: never;
+    sparkGlueProperties?: never;
+    s3Properties: S3PropertiesOutput;
     $unknown?: never;
   }
 
@@ -5693,6 +6180,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties?: never;
     sparkEmrProperties?: never;
     sparkGlueProperties?: never;
+    s3Properties?: never;
     $unknown: [string, any];
   }
 
@@ -5704,6 +6192,7 @@ export namespace ConnectionPropertiesOutput {
     redshiftProperties: (value: RedshiftPropertiesOutput) => T;
     sparkEmrProperties: (value: SparkEmrPropertiesOutput) => T;
     sparkGlueProperties: (value: SparkGluePropertiesOutput) => T;
+    s3Properties: (value: S3PropertiesOutput) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -5715,6 +6204,7 @@ export namespace ConnectionPropertiesOutput {
     if (value.redshiftProperties !== undefined) return visitor.redshiftProperties(value.redshiftProperties);
     if (value.sparkEmrProperties !== undefined) return visitor.sparkEmrProperties(value.sparkEmrProperties);
     if (value.sparkGlueProperties !== undefined) return visitor.sparkGlueProperties(value.sparkGlueProperties);
+    if (value.s3Properties !== undefined) return visitor.s3Properties(value.s3Properties);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -5811,6 +6301,25 @@ export interface RedshiftPropertiesPatch {
 }
 
 /**
+ * <p>The Amazon S3 properties patch of a connection.</p>
+ * @public
+ */
+export interface S3PropertiesPatch {
+  /**
+   * <p>The Amazon S3 URI that's part of the Amazon S3 properties patch of a connection.</p>
+   * @public
+   */
+  s3Uri: string | undefined;
+
+  /**
+   * <p>The Amazon S3 Access Grant location ID that's part of the Amazon S3 properties patch of
+   *          a connection.</p>
+   * @public
+   */
+  s3AccessGrantLocationId?: string | undefined;
+}
+
+/**
  * <p>The Spark EMR properties patch.</p>
  * @public
  */
@@ -5867,6 +6376,7 @@ export type ConnectionPropertiesPatch =
   | ConnectionPropertiesPatch.GluePropertiesMember
   | ConnectionPropertiesPatch.IamPropertiesMember
   | ConnectionPropertiesPatch.RedshiftPropertiesMember
+  | ConnectionPropertiesPatch.S3PropertiesMember
   | ConnectionPropertiesPatch.SparkEmrPropertiesMember
   | ConnectionPropertiesPatch.$UnknownMember;
 
@@ -5884,6 +6394,7 @@ export namespace ConnectionPropertiesPatch {
     iamProperties?: never;
     redshiftProperties?: never;
     sparkEmrProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5897,6 +6408,7 @@ export namespace ConnectionPropertiesPatch {
     iamProperties?: never;
     redshiftProperties?: never;
     sparkEmrProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5910,6 +6422,7 @@ export namespace ConnectionPropertiesPatch {
     iamProperties: IamPropertiesPatch;
     redshiftProperties?: never;
     sparkEmrProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5923,6 +6436,7 @@ export namespace ConnectionPropertiesPatch {
     iamProperties?: never;
     redshiftProperties: RedshiftPropertiesPatch;
     sparkEmrProperties?: never;
+    s3Properties?: never;
     $unknown?: never;
   }
 
@@ -5936,6 +6450,21 @@ export namespace ConnectionPropertiesPatch {
     iamProperties?: never;
     redshiftProperties?: never;
     sparkEmrProperties: SparkEmrPropertiesPatch;
+    s3Properties?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The Amazon S3 properties of a connection properties patch.</p>
+   * @public
+   */
+  export interface S3PropertiesMember {
+    athenaProperties?: never;
+    glueProperties?: never;
+    iamProperties?: never;
+    redshiftProperties?: never;
+    sparkEmrProperties?: never;
+    s3Properties: S3PropertiesPatch;
     $unknown?: never;
   }
 
@@ -5948,6 +6477,7 @@ export namespace ConnectionPropertiesPatch {
     iamProperties?: never;
     redshiftProperties?: never;
     sparkEmrProperties?: never;
+    s3Properties?: never;
     $unknown: [string, any];
   }
 
@@ -5957,6 +6487,7 @@ export namespace ConnectionPropertiesPatch {
     iamProperties: (value: IamPropertiesPatch) => T;
     redshiftProperties: (value: RedshiftPropertiesPatch) => T;
     sparkEmrProperties: (value: SparkEmrPropertiesPatch) => T;
+    s3Properties: (value: S3PropertiesPatch) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -5966,6 +6497,7 @@ export namespace ConnectionPropertiesPatch {
     if (value.iamProperties !== undefined) return visitor.iamProperties(value.iamProperties);
     if (value.redshiftProperties !== undefined) return visitor.redshiftProperties(value.redshiftProperties);
     if (value.sparkEmrProperties !== undefined) return visitor.sparkEmrProperties(value.sparkEmrProperties);
+    if (value.s3Properties !== undefined) return visitor.s3Properties(value.s3Properties);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -5987,6 +6519,7 @@ export const ConnectionType = {
   ORACLE: "ORACLE",
   POSTGRESQL: "POSTGRESQL",
   REDSHIFT: "REDSHIFT",
+  S3: "S3",
   SAPHANA: "SAPHANA",
   SNOWFLAKE: "SNOWFLAKE",
   SPARK: "SPARK",
@@ -6240,6 +6773,116 @@ export interface ConnectionSummary {
    * @public
    */
   type: ConnectionType | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateAccountPoolInput {
+  /**
+   * <p>The ID of the domain where the account pool is created.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The name of the account pool.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The description of the account pool.</p>
+   * @public
+   */
+  description?: string | undefined;
+
+  /**
+   * <p>The mechanism used to resolve the account selection from the account pool.</p>
+   * @public
+   */
+  resolutionStrategy: ResolutionStrategy | undefined;
+
+  /**
+   * <p>The source of accounts for the account pool. In the current release, it's either a
+   *          static list of accounts provided by the customer or a custom Amazon Web Services Lambda
+   *          handler. </p>
+   * @public
+   */
+  accountSource: AccountSource | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateAccountPoolOutput {
+  /**
+   * <p>The ID of the domain where the account pool is created.</p>
+   * @public
+   */
+  domainId?: string | undefined;
+
+  /**
+   * <p>The name of the account pool.</p>
+   * @public
+   */
+  name?: string | undefined;
+
+  /**
+   * <p>The ID of the account pool.</p>
+   * @public
+   */
+  id?: string | undefined;
+
+  /**
+   * <p>The description of the account pool.</p>
+   * @public
+   */
+  description?: string | undefined;
+
+  /**
+   * <p>The mechanism used to resolve the account selection from the account pool.</p>
+   * @public
+   */
+  resolutionStrategy?: ResolutionStrategy | undefined;
+
+  /**
+   * <p>The source of accounts for the account pool. In the current release, it's either a
+   *          static list of accounts provided by the customer or a custom Amazon Web Services Lambda
+   *          handler. </p>
+   * @public
+   */
+  accountSource: AccountSource | undefined;
+
+  /**
+   * <p>The user who created the account pool.</p>
+   * @public
+   */
+  createdBy: string | undefined;
+
+  /**
+   * <p>The timestamp at which the account pool was created.</p>
+   * @public
+   */
+  createdAt?: Date | undefined;
+
+  /**
+   * <p>The timestamp at which the account pool was last updated.</p>
+   * @public
+   */
+  lastUpdatedAt?: Date | undefined;
+
+  /**
+   * <p>The user who last updated the account pool.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
+
+  /**
+   * <p>The ID of the domain where the account pool is created.</p>
+   * @public
+   */
+  domainUnitId?: string | undefined;
 }
 
 /**
@@ -8074,7 +8717,7 @@ export interface CreateEnvironmentInput {
    *          environment.</p>
    * @public
    */
-  environmentProfileIdentifier: string | undefined;
+  environmentProfileIdentifier?: string | undefined;
 
   /**
    * <p>The user parameters of this Amazon DataZone environment.</p>
@@ -9238,6 +9881,31 @@ export interface CreateListingChangeSetOutput {
 }
 
 /**
+ * <p>Specifies the account/Region that is to be used during project creation for a particular
+ *          blueprint.</p>
+ * @public
+ */
+export interface EnvironmentResolvedAccount {
+  /**
+   * <p>The ID of the resolved account.</p>
+   * @public
+   */
+  awsAccountId: string | undefined;
+
+  /**
+   * <p>The name of the resolved Region.</p>
+   * @public
+   */
+  regionName: string | undefined;
+
+  /**
+   * <p>The ID of the account pool.</p>
+   * @public
+   */
+  sourceAccountPoolId?: string | undefined;
+}
+
+/**
  * <p>The environment configuration user parameters.</p>
  * @public
  */
@@ -9247,6 +9915,13 @@ export interface EnvironmentConfigurationUserParameter {
    * @public
    */
   environmentId?: string | undefined;
+
+  /**
+   * <p>Specifies the account/Region that is to be used during project creation for a particular
+   *          blueprint.</p>
+   * @public
+   */
+  environmentResolvedAccount?: EnvironmentResolvedAccount | undefined;
 
   /**
    * <p>The environment configuration name.</p>
@@ -9732,13 +10407,19 @@ export interface EnvironmentConfiguration {
    * <p>The Amazon Web Services account of the environment.</p>
    * @public
    */
-  awsAccount: AwsAccount | undefined;
+  awsAccount?: AwsAccount | undefined;
+
+  /**
+   * <p>The account pools used by a custom project profile.</p>
+   * @public
+   */
+  accountPools?: string[] | undefined;
 
   /**
    * <p>The Amazon Web Services Region of the environment.</p>
    * @public
    */
-  awsRegion: Region | undefined;
+  awsRegion?: Region | undefined;
 
   /**
    * <p>The deployment order of the environment.</p>
@@ -9993,576 +10674,6 @@ export interface RuleScope {
 }
 
 /**
- * <p>The target for the domain unit.</p>
- * @public
- */
-export interface DomainUnitTarget {
-  /**
-   * <p>The ID of the domain unit.</p>
-   * @public
-   */
-  domainUnitId: string | undefined;
-
-  /**
-   * <p>Specifies whether to apply a rule to the child domain units.</p>
-   * @public
-   */
-  includeChildDomainUnits?: boolean | undefined;
-}
-
-/**
- * <p>The target of the rule.</p>
- * @public
- */
-export type RuleTarget = RuleTarget.DomainUnitTargetMember | RuleTarget.$UnknownMember;
-
-/**
- * @public
- */
-export namespace RuleTarget {
-  /**
-   * <p>The ID of the domain unit.</p>
-   * @public
-   */
-  export interface DomainUnitTargetMember {
-    domainUnitTarget: DomainUnitTarget;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    domainUnitTarget?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    domainUnitTarget: (value: DomainUnitTarget) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: RuleTarget, visitor: Visitor<T>): T => {
-    if (value.domainUnitTarget !== undefined) return visitor.domainUnitTarget(value.domainUnitTarget);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * @public
- */
-export interface CreateRuleInput {
-  /**
-   * <p>The ID of the domain where the rule is created.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The name of the rule.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The target of the rule.</p>
-   * @public
-   */
-  target: RuleTarget | undefined;
-
-  /**
-   * <p>The action of the rule.</p>
-   * @public
-   */
-  action: RuleAction | undefined;
-
-  /**
-   * <p>The scope of the rule.</p>
-   * @public
-   */
-  scope: RuleScope | undefined;
-
-  /**
-   * <p>The detail of the rule.</p>
-   * @public
-   */
-  detail: RuleDetail | undefined;
-
-  /**
-   * <p>The description of the rule.</p>
-   * @public
-   */
-  description?: string | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const RuleType = {
-  METADATA_FORM_ENFORCEMENT: "METADATA_FORM_ENFORCEMENT",
-} as const;
-
-/**
- * @public
- */
-export type RuleType = (typeof RuleType)[keyof typeof RuleType];
-
-/**
- * @public
- * @enum
- */
-export const RuleTargetType = {
-  DOMAIN_UNIT: "DOMAIN_UNIT",
-} as const;
-
-/**
- * @public
- */
-export type RuleTargetType = (typeof RuleTargetType)[keyof typeof RuleTargetType];
-
-/**
- * @public
- */
-export interface CreateRuleOutput {
-  /**
-   * <p>The ID of the rule.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The name of the rule.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The type of the rule.</p>
-   * @public
-   */
-  ruleType: RuleType | undefined;
-
-  /**
-   * <p>The target of the rule.</p>
-   * @public
-   */
-  target: RuleTarget | undefined;
-
-  /**
-   * <p>The action of the rule.</p>
-   * @public
-   */
-  action: RuleAction | undefined;
-
-  /**
-   * <p>The scope of the rule.</p>
-   * @public
-   */
-  scope: RuleScope | undefined;
-
-  /**
-   * <p>The detail of the rule.</p>
-   * @public
-   */
-  detail: RuleDetail | undefined;
-
-  /**
-   * <p>The target type of the rule.</p>
-   * @public
-   */
-  targetType?: RuleTargetType | undefined;
-
-  /**
-   * <p>The description of the rule.</p>
-   * @public
-   */
-  description?: string | undefined;
-
-  /**
-   * <p>The timestamp at which the rule is created.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The user who creates the rule.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-}
-
-/**
- * <p>A revision to be made to an asset published in a Amazon DataZone catalog.</p>
- * @public
- */
-export interface ListingRevisionInput {
-  /**
-   * <p>An identifier of revision to be made to an asset published in a Amazon DataZone
-   *          catalog.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The details of a revision to be made to an asset published in a Amazon DataZone
-   *          catalog.</p>
-   * @public
-   */
-  revision: string | undefined;
-}
-
-/**
- * <p>The details of a listing for which a subscription is to be granted.</p>
- * @public
- */
-export type GrantedEntityInput = GrantedEntityInput.ListingMember | GrantedEntityInput.$UnknownMember;
-
-/**
- * @public
- */
-export namespace GrantedEntityInput {
-  /**
-   * <p>The listing for which a subscription is to be granted.</p>
-   * @public
-   */
-  export interface ListingMember {
-    listing: ListingRevisionInput;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    listing?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    listing: (value: ListingRevisionInput) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: GrantedEntityInput, visitor: Visitor<T>): T => {
-    if (value.listing !== undefined) return visitor.listing(value.listing);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * @public
- */
-export interface CreateSubscriptionGrantInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which the subscription grant is created.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the environment in which the subscription grant is created.</p>
-   * @public
-   */
-  environmentIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the subscription target for which the subscription grant is created.</p>
-   * @public
-   */
-  subscriptionTargetIdentifier?: string | undefined;
-
-  /**
-   * <p>The entity to which the subscription is to be granted.</p>
-   * @public
-   */
-  grantedEntity: GrantedEntityInput | undefined;
-
-  /**
-   * <p>The names of the assets for which the subscription grant is created.</p>
-   * @public
-   */
-  assetTargetNames?: AssetTargetNameMap[] | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * <p>Specifies the error message that is returned if the operation cannot be successfully
- *          completed.</p>
- * @public
- */
-export interface FailureCause {
-  /**
-   * <p>The description of the error message.</p>
-   * @public
-   */
-  message?: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const SubscriptionGrantStatus = {
-  GRANTED: "GRANTED",
-  GRANT_FAILED: "GRANT_FAILED",
-  GRANT_IN_PROGRESS: "GRANT_IN_PROGRESS",
-  GRANT_PENDING: "GRANT_PENDING",
-  REVOKED: "REVOKED",
-  REVOKE_FAILED: "REVOKE_FAILED",
-  REVOKE_IN_PROGRESS: "REVOKE_IN_PROGRESS",
-  REVOKE_PENDING: "REVOKE_PENDING",
-} as const;
-
-/**
- * @public
- */
-export type SubscriptionGrantStatus = (typeof SubscriptionGrantStatus)[keyof typeof SubscriptionGrantStatus];
-
-/**
- * <p>The details of the asset for which the subscription grant is created.</p>
- * @public
- */
-export interface SubscribedAsset {
-  /**
-   * <p>The identifier of the asset for which the subscription grant is created.</p>
-   * @public
-   */
-  assetId: string | undefined;
-
-  /**
-   * <p>The revision of the asset for which the subscription grant is created.</p>
-   * @public
-   */
-  assetRevision: string | undefined;
-
-  /**
-   * <p>The status of the asset for which the subscription grant is created.</p>
-   * @public
-   */
-  status: SubscriptionGrantStatus | undefined;
-
-  /**
-   * <p>The target name of the asset for which the subscription grant is created.</p>
-   * @public
-   */
-  targetName?: string | undefined;
-
-  /**
-   * <p>The failure cause included in the details of the asset for which the subscription grant
-   *          is created.</p>
-   * @public
-   */
-  failureCause?: FailureCause | undefined;
-
-  /**
-   * <p>The timestamp of when the subscription grant to the asset is created.</p>
-   * @public
-   */
-  grantedTimestamp?: Date | undefined;
-
-  /**
-   * <p>The failure timestamp included in the details of the asset for which the subscription
-   *          grant is created.</p>
-   * @public
-   */
-  failureTimestamp?: Date | undefined;
-
-  /**
-   * <p>The asset scope of the subscribed asset.</p>
-   * @public
-   */
-  assetScope?: AssetScope | undefined;
-}
-
-/**
- * <p>A revision of an asset published in a Amazon DataZone catalog.</p>
- * @public
- */
-export interface ListingRevision {
-  /**
-   * <p>An identifier of a revision of an asset published in a Amazon DataZone catalog.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The details of a revision of an asset published in a Amazon DataZone catalog.</p>
-   * @public
-   */
-  revision: string | undefined;
-}
-
-/**
- * <p>The details of a listing for which a subscription is granted.</p>
- * @public
- */
-export type GrantedEntity = GrantedEntity.ListingMember | GrantedEntity.$UnknownMember;
-
-/**
- * @public
- */
-export namespace GrantedEntity {
-  /**
-   * <p>The listing for which a subscription is granted.</p>
-   * @public
-   */
-  export interface ListingMember {
-    listing: ListingRevision;
-    $unknown?: never;
-  }
-
-  /**
-   * @public
-   */
-  export interface $UnknownMember {
-    listing?: never;
-    $unknown: [string, any];
-  }
-
-  export interface Visitor<T> {
-    listing: (value: ListingRevision) => T;
-    _: (name: string, value: any) => T;
-  }
-
-  export const visit = <T>(value: GrantedEntity, visitor: Visitor<T>): T => {
-    if (value.listing !== undefined) return visitor.listing(value.listing);
-    return visitor._(value.$unknown[0], value.$unknown[1]);
-  };
-}
-
-/**
- * @public
- * @enum
- */
-export const SubscriptionGrantOverallStatus = {
-  COMPLETED: "COMPLETED",
-  GRANT_AND_REVOKE_FAILED: "GRANT_AND_REVOKE_FAILED",
-  GRANT_FAILED: "GRANT_FAILED",
-  INACCESSIBLE: "INACCESSIBLE",
-  IN_PROGRESS: "IN_PROGRESS",
-  PENDING: "PENDING",
-  REVOKE_FAILED: "REVOKE_FAILED",
-} as const;
-
-/**
- * @public
- */
-export type SubscriptionGrantOverallStatus =
-  (typeof SubscriptionGrantOverallStatus)[keyof typeof SubscriptionGrantOverallStatus];
-
-/**
- * @public
- */
-export interface CreateSubscriptionGrantOutput {
-  /**
-   * <p>The ID of the subscription grant.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The Amazon DataZone user who created the subscription grant.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The Amazon DataZone user who updated the subscription grant.</p>
-   * @public
-   */
-  updatedBy?: string | undefined;
-
-  /**
-   * <p>The ID of the Amazon DataZone domain in which the subscription grant is created.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>A timestamp of when the subscription grant is created.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>A timestamp of when the subscription grant was updated.</p>
-   * @public
-   */
-  updatedAt: Date | undefined;
-
-  /**
-   * <p>The ID of the subscription target for which the subscription grant is created.</p>
-   * @public
-   */
-  subscriptionTargetId: string | undefined;
-
-  /**
-   * <p>The entity to which the subscription is granted.</p>
-   * @public
-   */
-  grantedEntity: GrantedEntity | undefined;
-
-  /**
-   * <p>The status of the subscription grant.</p>
-   * @public
-   */
-  status: SubscriptionGrantOverallStatus | undefined;
-
-  /**
-   * <p>The assets for which the subscription grant is created.</p>
-   * @public
-   */
-  assets?: SubscribedAsset[] | undefined;
-
-  /**
-   * <p>The identifier of the subscription grant.</p>
-   *
-   * @deprecated
-   * @public
-   */
-  subscriptionId?: string | undefined;
-}
-
-/**
- * <p>The published asset for which the subscription grant is to be created.</p>
- * @public
- */
-export interface SubscribedListingInput {
-  /**
-   * <p>The identifier of the published asset for which the subscription grant is to be
-   *          created.</p>
-   * @public
-   */
-  identifier: string | undefined;
-}
-
-/**
- * <p>The project that is to be given a subscription grant.</p>
- * @public
- */
-export interface SubscribedProjectInput {
-  /**
-   * <p>The identifier of the project that is to be given a subscription grant.</p>
-   * @public
-   */
-  identifier?: string | undefined;
-}
-
-/**
  * @internal
  */
 export const AcceptChoiceFilterSensitiveLog = (obj: AcceptChoice): any => ({
@@ -10678,6 +10789,31 @@ export const AcceptSubscriptionRequestOutputFilterSensitiveLog = (obj: AcceptSub
 /**
  * @internal
  */
+export const AccountInfoFilterSensitiveLog = (obj: AccountInfo): any => ({
+  ...obj,
+  ...(obj.awsAccountName && { awsAccountName: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const AccountPoolSummaryFilterSensitiveLog = (obj: AccountPoolSummary): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const AccountSourceFilterSensitiveLog = (obj: AccountSource): any => {
+  if (obj.accounts !== undefined) return { accounts: obj.accounts.map((item) => AccountInfoFilterSensitiveLog(item)) };
+  if (obj.customAccountPoolHandler !== undefined) return { customAccountPoolHandler: obj.customAccountPoolHandler };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
 export const FormInputFilterSensitiveLog = (obj: FormInput): any => ({
   ...obj,
 });
@@ -10759,6 +10895,7 @@ export const AssetItemAdditionalAttributesFilterSensitiveLog = (obj: AssetItemAd
   ...(obj.readOnlyFormsOutput && {
     readOnlyFormsOutput: obj.readOnlyFormsOutput.map((item) => FormOutputFilterSensitiveLog(item)),
   }),
+  ...(obj.matchRationale && { matchRationale: obj.matchRationale.map((item) => item) }),
 });
 
 /**
@@ -10793,6 +10930,7 @@ export const AssetListingItemFilterSensitiveLog = (obj: AssetListingItem): any =
   ...(obj.glossaryTerms && {
     glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
   }),
+  ...(obj.additionalAttributes && { additionalAttributes: obj.additionalAttributes }),
 });
 
 /**
@@ -10984,6 +11122,7 @@ export const ConnectionPropertiesInputFilterSensitiveLog = (obj: ConnectionPrope
     return { redshiftProperties: RedshiftPropertiesInputFilterSensitiveLog(obj.redshiftProperties) };
   if (obj.sparkEmrProperties !== undefined) return { sparkEmrProperties: obj.sparkEmrProperties };
   if (obj.sparkGlueProperties !== undefined) return { sparkGlueProperties: obj.sparkGlueProperties };
+  if (obj.s3Properties !== undefined) return { s3Properties: obj.s3Properties };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -11017,6 +11156,7 @@ export const ConnectionPropertiesOutputFilterSensitiveLog = (obj: ConnectionProp
   if (obj.sparkEmrProperties !== undefined)
     return { sparkEmrProperties: SparkEmrPropertiesOutputFilterSensitiveLog(obj.sparkEmrProperties) };
   if (obj.sparkGlueProperties !== undefined) return { sparkGlueProperties: obj.sparkGlueProperties };
+  if (obj.s3Properties !== undefined) return { s3Properties: obj.s3Properties };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -11060,6 +11200,7 @@ export const ConnectionPropertiesPatchFilterSensitiveLog = (obj: ConnectionPrope
   if (obj.redshiftProperties !== undefined)
     return { redshiftProperties: RedshiftPropertiesPatchFilterSensitiveLog(obj.redshiftProperties) };
   if (obj.sparkEmrProperties !== undefined) return { sparkEmrProperties: obj.sparkEmrProperties };
+  if (obj.s3Properties !== undefined) return { s3Properties: obj.s3Properties };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -11090,6 +11231,26 @@ export const ConnectionSummaryFilterSensitiveLog = (obj: ConnectionSummary): any
     physicalEndpoints: obj.physicalEndpoints.map((item) => PhysicalEndpointFilterSensitiveLog(item)),
   }),
   ...(obj.props && { props: ConnectionPropertiesOutputFilterSensitiveLog(obj.props) }),
+});
+
+/**
+ * @internal
+ */
+export const CreateAccountPoolInputFilterSensitiveLog = (obj: CreateAccountPoolInput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.accountSource && { accountSource: AccountSourceFilterSensitiveLog(obj.accountSource) }),
+});
+
+/**
+ * @internal
+ */
+export const CreateAccountPoolOutputFilterSensitiveLog = (obj: CreateAccountPoolOutput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.accountSource && { accountSource: AccountSourceFilterSensitiveLog(obj.accountSource) }),
 });
 
 /**
@@ -11393,26 +11554,4 @@ export const CreateProjectProfileOutputFilterSensitiveLog = (obj: CreateProjectP
       EnvironmentConfigurationFilterSensitiveLog(item)
     ),
   }),
-});
-
-/**
- * @internal
- */
-export const CreateRuleInputFilterSensitiveLog = (obj: CreateRuleInput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.target && { target: obj.target }),
-  ...(obj.detail && { detail: obj.detail }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const CreateRuleOutputFilterSensitiveLog = (obj: CreateRuleOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.target && { target: obj.target }),
-  ...(obj.detail && { detail: obj.detail }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
 });

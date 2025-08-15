@@ -1965,6 +1965,242 @@ export interface DescribeDBLogFilesResponse {
 }
 
 /**
+ * @public
+ */
+export interface DescribeDBMajorEngineVersionsRequest {
+  /**
+   * <p>The database engine to return major version details for.</p>
+   *          <p>Valid Values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>aurora-mysql</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>aurora-postgresql</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>custom-sqlserver-ee</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>custom-sqlserver-se</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>custom-sqlserver-web</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>db2-ae</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>db2-se</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>mariadb</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>mysql</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>oracle-ee</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>oracle-ee-cdb</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>oracle-se2</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>oracle-se2-cdb</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>postgres</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>sqlserver-ee</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>sqlserver-se</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>sqlserver-ex</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>sqlserver-web</code>
+   *                </p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  Engine?: string | undefined;
+
+  /**
+   * <p>A specific database major engine version to return details for.</p>
+   *          <p>Example: <code>8.4</code>
+   *          </p>
+   * @public
+   */
+  MajorEngineVersion?: string | undefined;
+
+  /**
+   * <p>An optional pagination token provided by a previous request. If this parameter is
+   *             specified, the response includes only records beyond the marker, up to the value
+   *             specified by <code>MaxRecords</code>.</p>
+   * @public
+   */
+  Marker?: string | undefined;
+
+  /**
+   * <p>The maximum number of records to include in the response.
+   *             If more than the <code>MaxRecords</code> value is available, a pagination token called a marker is
+   *             included in the response so you can retrieve the remaining results.</p>
+   *          <p>Default: 100</p>
+   * @public
+   */
+  MaxRecords?: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const LifecycleSupportName = {
+  OPEN_SOURCE_RDS_EXTENDED_SUPPORT: "open-source-rds-extended-support",
+  OPEN_SOURCE_RDS_STANDARD_SUPPORT: "open-source-rds-standard-support",
+} as const;
+
+/**
+ * @public
+ */
+export type LifecycleSupportName = (typeof LifecycleSupportName)[keyof typeof LifecycleSupportName];
+
+/**
+ * <p>This data type is used as a response element in the operation
+ *             <code>DescribeDBMajorEngineVersions</code>.</p>
+ *          <p>You can use the information that this data type returns to plan for upgrades.</p>
+ *          <p>This data type only returns information for the open source engines Amazon RDS for
+ *             MariaDB, Amazon RDS for MySQL, Amazon RDS for PostgreSQL, Aurora MySQL, and Aurora
+ *             PostgreSQL.</p>
+ * @public
+ */
+export interface SupportedEngineLifecycle {
+  /**
+   * <p>The type of lifecycle support that the engine version is in.</p>
+   *          <p>This parameter returns the following values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>open-source-rds-standard-support</code> - Indicates RDS standard support or Aurora standard support.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>open-source-rds-extended-support</code> - Indicates Amazon RDS Extended Support.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For Amazon RDS for MySQL, Amazon RDS for PostgreSQL, Aurora MySQL, and Aurora
+   *             PostgreSQL, this parameter returns both <code>open-source-rds-standard-support</code>
+   *             and <code>open-source-rds-extended-support</code>.</p>
+   *          <p>For Amazon RDS for MariaDB, this parameter only returns the value
+   *                 <code>open-source-rds-standard-support</code>.</p>
+   *          <p>For information about Amazon RDS Extended Support, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support
+   *             with Amazon RDS</a> in the <i>Amazon RDS User Guide</i> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Amazon RDS Extended Support with Amazon Aurora</a> in the <i>Amazon
+   *                     Aurora User Guide</i>.</p>
+   * @public
+   */
+  LifecycleSupportName: LifecycleSupportName | undefined;
+
+  /**
+   * <p>The start date for the type of support returned by <code>LifecycleSupportName</code>.</p>
+   * @public
+   */
+  LifecycleSupportStartDate: Date | undefined;
+
+  /**
+   * <p>The end date for the type of support returned by <code>LifecycleSupportName</code>.</p>
+   * @public
+   */
+  LifecycleSupportEndDate: Date | undefined;
+}
+
+/**
+ * <p>This data type is used as a response element in the operation
+ *             <code>DescribeDBMajorEngineVersions</code>.</p>
+ * @public
+ */
+export interface DBMajorEngineVersion {
+  /**
+   * <p>The name of the database engine.</p>
+   * @public
+   */
+  Engine?: string | undefined;
+
+  /**
+   * <p>The major version number of the database engine.</p>
+   * @public
+   */
+  MajorEngineVersion?: string | undefined;
+
+  /**
+   * <p>A list of the lifecycles supported by this engine for the
+   *                 <code>DescribeDBMajorEngineVersions</code> operation.</p>
+   * @public
+   */
+  SupportedEngineLifecycles?: SupportedEngineLifecycle[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DescribeDBMajorEngineVersionsResponse {
+  /**
+   * <p>A list of <code>DBMajorEngineVersion</code> elements.</p>
+   * @public
+   */
+  DBMajorEngineVersions?: DBMajorEngineVersion[] | undefined;
+
+  /**
+   * <p>An optional pagination token provided by a previous request. If this parameter is
+   *             specified, the response includes only records beyond the marker, up to the value
+   *             specified by <code>MaxRecords</code>.</p>
+   * @public
+   */
+  Marker?: string | undefined;
+}
+
+/**
  * <p>Contains the result of a successful invocation of the <code>DescribeDBParameterGroups</code> action.</p>
  * @public
  */
@@ -2305,11 +2541,16 @@ export interface ConnectionPoolConfigurationInfo {
 
   /**
    * <p>One or more SQL statements for the proxy to run when opening each new database connection.
-   *         Typically used with <code>SET</code> statements to make sure that each connection has identical
-   *         settings such as time zone and character set. This setting is empty by default.
-   *         For multiple statements, use semicolons as the separator.
-   *         You can also include multiple variables in a single <code>SET</code> statement, such as
-   *         <code>SET x=1, y=2</code>.</p>
+   *         The setting is typically used with <code>SET</code> statements to make sure that each connection has identical settings.
+   *         The query added here must be valid. For including multiple variables in a single SET statement, use a comma separator.
+   *         This is an optional field.</p>
+   *          <p>For example: <code>SET variable1=value1, variable2=value2</code>
+   *          </p>
+   *          <important>
+   *             <p>Since you can access initialization query as part of target group configuration, it is not protected by authentication or cryptographic methods.
+   *                 Anyone with access to view or manage your proxy target group configuration can view the initialization query.
+   *                 You should not add sensitive data, such as passwords or long-lived encryption keys, to this option.</p>
+   *          </important>
    * @public
    */
   InitQuery?: string | undefined;
@@ -6978,7 +7219,7 @@ export interface FailoverDBClusterMessage {
  */
 export interface FailoverDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -7904,7 +8145,8 @@ export interface ModifyDBClusterMessage {
   /**
    * <p>Specifies whether minor engine upgrades are applied automatically to the DB cluster during the maintenance window.
    *             By default, minor engine upgrades are applied automatically.</p>
-   *          <p>Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters</p>
+   *          <p>Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -8150,7 +8392,7 @@ export interface ModifyDBClusterMessage {
  */
 export interface ModifyDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -8532,11 +8774,17 @@ export interface ModifyDBInstanceMessage {
    *          <p>This setting doesn't apply to the following DB instances:</p>
    *          <ul>
    *             <li>
-   *                <p>Amazon Aurora (The password for the master user is managed by the DB cluster. For
-   *             more information, see <code>ModifyDBCluster</code>.)</p>
+   *                <p>Amazon Aurora</p>
+   *                <p>The password for the master user is managed by the DB cluster. For more
+   *                     information, see <code>ModifyDBCluster</code>.</p>
    *             </li>
    *             <li>
    *                <p>RDS Custom</p>
+   *             </li>
+   *             <li>
+   *                <p>RDS for Oracle CDBs in the multi-tenant configuration</p>
+   *                <p>Specify the master password in <code>ModifyTenantDatabase</code>
+   *                     instead.</p>
    *             </li>
    *          </ul>
    *          <p>Default: Uses existing setting</p>
@@ -8755,6 +9003,7 @@ export interface ModifyDBInstanceMessage {
    *          <p>If any of the preceding conditions isn't met, Amazon RDS applies the change as soon as possible and
    *       doesn't cause an outage.</p>
    *          <p>For an RDS Custom DB instance, don't enable this setting. Otherwise, the operation returns an error.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -9282,17 +9531,40 @@ export interface ModifyDBInstanceMessage {
   CertificateRotationRestart?: boolean | undefined;
 
   /**
-   * <p>A value that sets the open mode of a replica database to either mounted or read-only.</p>
+   * <p>The open mode of a replica database.</p>
    *          <note>
-   *             <p>Currently, this parameter is only supported for Oracle DB instances.</p>
+   *             <p>This parameter is only supported for Db2 DB instances and Oracle DB
+   *                 instances.</p>
    *          </note>
-   *          <p>Mounted DB replicas are included in Oracle Enterprise Edition. The main use case for
-   *             mounted replicas is cross-Region disaster recovery. The primary database doesn't use
-   *             Active Data Guard to transmit information to the mounted replica. Because it doesn't
-   *             accept user connections, a mounted replica can't serve a read-only workload.
-   *             For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with Oracle Read Replicas for Amazon RDS</a>
-   *             in the <i>Amazon RDS User Guide</i>.</p>
-   *          <p>This setting doesn't apply to RDS Custom DB instances.</p>
+   *          <dl>
+   *             <dt>Db2</dt>
+   *             <dd>
+   *                <p>Standby DB replicas are included in Db2 Advanced Edition (AE) and Db2
+   *                         Standard Edition (SE). The main use case for standby replicas is
+   *                         cross-Region disaster recovery. Because it doesn't accept user
+   *                         connections, a standby replica can't serve a read-only workload.</p>
+   *                <p>You can create a combination of standby and read-only DB replicas for the
+   *                         same primary DB instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-replication.html">Working with read
+   *                             replicas for Amazon RDS for Db2</a> in the <i>Amazon RDS User
+   *                                 Guide</i>.</p>
+   *                <p>To create standby DB replicas for RDS for Db2, set this parameter to
+   *                         <code>mounted</code>.</p>
+   *             </dd>
+   *             <dt>Oracle</dt>
+   *             <dd>
+   *                <p>Mounted DB replicas are included in Oracle Database Enterprise Edition. The main use case for
+   *                         mounted replicas is cross-Region disaster recovery. The primary database doesn't use Active
+   *                         Data Guard to transmit information to the mounted replica. Because it doesn't accept
+   *                         user connections, a mounted replica can't serve a read-only workload.</p>
+   *                <p>You can create a combination of mounted and read-only DB replicas for the
+   *                         same primary DB instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with
+   *                             read replicas for Amazon RDS for Oracle</a> in the <i>Amazon
+   *                             RDS User Guide</i>.</p>
+   *                <p>For RDS Custom, you must specify this parameter and set it to
+   *                             <code>mounted</code>. The value won't be set by default. After replica
+   *                         creation, you can manage the open mode manually.</p>
+   *             </dd>
+   *          </dl>
    * @public
    */
   ReplicaMode?: ReplicaMode | undefined;
@@ -9385,6 +9657,14 @@ export interface ModifyDBInstanceMessage {
    *                <p>Can't manage the master user password with Amazon Web Services Secrets Manager if <code>MasterUserPassword</code>
    *                     is specified.</p>
    *             </li>
+   *             <li>
+   *                <p>Can't specify for RDS for Oracle CDB instances in the multi-tenant
+   *                     configuration. Use <code>ModifyTenantDatabase</code> instead.</p>
+   *             </li>
+   *             <li>
+   *                <p>Can't specify the parameters <code>ManageMasterUserPassword</code> and
+   *                         <code>MultiTenant</code> in the same operation.</p>
+   *             </li>
    *          </ul>
    * @public
    */
@@ -9394,7 +9674,7 @@ export interface ModifyDBInstanceMessage {
    * <p>Specifies whether to rotate the secret managed by Amazon Web Services Secrets Manager for the
    *             master user password.</p>
    *          <p>This setting is valid only if the master user password is managed by RDS in Amazon Web Services Secrets
-   *             Manager for the DB cluster. The secret value contains the updated password.</p>
+   *             Manager for the DB instance. The secret value contains the updated password.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
    *             in the <i>Amazon RDS User Guide.</i>
    *          </p>
@@ -9721,7 +10001,7 @@ export interface ConnectionPoolConfiguration {
    *          <p>Constraints:</p>
    *          <ul>
    *             <li>
-   *                <p>Must be between 0 and 3600.</p>
+   *                <p>Must be between 0 and 300.</p>
    *             </li>
    *          </ul>
    * @public
@@ -9738,16 +10018,18 @@ export interface ConnectionPoolConfiguration {
   SessionPinningFilters?: string[] | undefined;
 
   /**
-   * <p>Add an initialization query, or modify the current one. You can specify one or more SQL statements for
-   *             the proxy to run when opening each new database connection. The setting is
-   *             typically used with <code>SET</code> statements to make sure that each
-   *             connection has identical settings. Make sure that the query you add is valid. To
-   *             include multiple variables in a single <code>SET</code> statement, use comma
-   *             separators.</p>
+   * <p>Add an initialization query, or modify the current one. You can specify one or more SQL statements for the proxy to run when opening each new database connection.
+   *             The setting is typically used with <code>SET</code> statements to make sure that each connection has identical settings.
+   *             Make sure the query added here is valid. This is an optional field, so you can choose to leave it empty.
+   *             For including multiple variables in a single SET statement, use a comma separator.</p>
    *          <p>For example: <code>SET variable1=value1, variable2=value2</code>
    *          </p>
-   *          <p>For multiple statements, use semicolons as the separator.</p>
    *          <p>Default: no initialization query</p>
+   *          <important>
+   *             <p>Since you can access initialization query as part of target group configuration, it is not protected by authentication or cryptographic methods.
+   *                 Anyone with access to view or manage your proxy target group configuration can view the initialization query.
+   *                 You should not add sensitive data, such as passwords or long-lived encryption keys, to this option.</p>
+   *          </important>
    * @public
    */
   InitQuery?: string | undefined;
@@ -10440,6 +10722,91 @@ export interface ModifyTenantDatabaseMessage {
    * @public
    */
   NewTenantDBName?: string | undefined;
+
+  /**
+   * <p>Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.</p>
+   *          <p>If the tenant database doesn't manage the master user password with Amazon Web Services Secrets
+   *             Manager, you can turn on this management. In this case, you can't specify
+   *                 <code>MasterUserPassword</code>.</p>
+   *          <p>If the tenant database already manages the master user password with Amazon Web Services Secrets
+   *             Manager, and you specify that the master user password is not managed with Amazon Web Services Secrets
+   *             Manager, then you must specify <code>MasterUserPassword</code>. In this case, Amazon RDS
+   *             deletes the secret and uses the new password for the master user specified by
+   *                 <code>MasterUserPassword</code>.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon RDS User Guide.</i>
+   *          </p>
+   *          <p>Constraints:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Can't manage the master user password with Amazon Web Services Secrets Manager if <code>MasterUserPassword</code>
+   *                     is specified.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  ManageMasterUserPassword?: boolean | undefined;
+
+  /**
+   * <p>Specifies whether to rotate the secret managed by Amazon Web Services Secrets Manager for the
+   *             master user password.</p>
+   *          <p>This setting is valid only if the master user password is managed by RDS in Amazon Web Services Secrets
+   *             Manager for the DB instance. The secret value contains the updated password.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon RDS User Guide.</i>
+   *          </p>
+   *          <p>Constraints:</p>
+   *          <ul>
+   *             <li>
+   *                <p>You must apply the change immediately when rotating the master user password.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  RotateMasterUserPassword?: boolean | undefined;
+
+  /**
+   * <p>The Amazon Web Services KMS key identifier to encrypt a secret that is automatically generated and
+   *             managed in Amazon Web Services Secrets Manager.</p>
+   *          <p>This setting is valid only if both of the following conditions are met:</p>
+   *          <ul>
+   *             <li>
+   *                <p>The tenant database doesn't manage the master user password in Amazon Web Services Secrets Manager.</p>
+   *                <p>If the tenant database already manages the master user password in Amazon Web Services Secrets Manager,
+   *                     you can't change the KMS key used to encrypt the secret.</p>
+   *             </li>
+   *             <li>
+   *                <p>You're turning on <code>ManageMasterUserPassword</code> to manage the master user password
+   *                     in Amazon Web Services Secrets Manager.</p>
+   *                <p>If you're turning on <code>ManageMasterUserPassword</code> and don't specify
+   *                     <code>MasterUserSecretKmsKeyId</code>, then the <code>aws/secretsmanager</code>
+   *                     KMS key is used to encrypt the secret. If the secret is in a different Amazon Web Services account, then you can't
+   *                     use the <code>aws/secretsmanager</code> KMS key to encrypt the secret, and you must use a self-managed
+   *                     KMS key.</p>
+   *             </li>
+   *          </ul>
+   *          <p>The Amazon Web Services KMS key identifier is any of the following:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Key ARN</p>
+   *             </li>
+   *             <li>
+   *                <p>Key ID</p>
+   *             </li>
+   *             <li>
+   *                <p>Alias ARN</p>
+   *             </li>
+   *             <li>
+   *                <p>Alias name for the KMS key</p>
+   *             </li>
+   *          </ul>
+   *          <p>To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias
+   *             ARN.</p>
+   *          <p>A default KMS key exists for your Amazon Web Services account. Your Amazon Web Services account has a different
+   *             default KMS key for each Amazon Web Services Region.</p>
+   * @public
+   */
+  MasterUserSecretKmsKeyId?: string | undefined;
 }
 
 /**
@@ -10561,7 +10928,7 @@ export interface PromoteReadReplicaDBClusterMessage {
  */
 export interface PromoteReadReplicaDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -10697,7 +11064,7 @@ export interface RebootDBClusterMessage {
  */
 export interface RebootDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -11559,11 +11926,11 @@ export interface RestoreDBClusterFromS3Message {
    *         you can run the selected major engine version on your DB cluster past the end of standard support for that engine version. For more information, see the following sections:</p>
    *          <ul>
    *             <li>
-   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon Aurora User Guide</i>
+   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Amazon RDS Extended Support with Amazon Aurora</a> in the <i>Amazon Aurora User Guide</i>
    *                </p>
    *             </li>
    *             <li>
-   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>
+   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>
    *                </p>
    *             </li>
    *          </ul>
@@ -11582,7 +11949,7 @@ export interface RestoreDBClusterFromS3Message {
  */
 export interface RestoreDBClusterFromS3Result {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -12132,11 +12499,11 @@ export interface RestoreDBClusterFromSnapshotMessage {
    *         you can run the selected major engine version on your DB cluster past the end of standard support for that engine version. For more information, see the following sections:</p>
    *          <ul>
    *             <li>
-   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon Aurora User Guide</i>
+   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Amazon RDS Extended Support with Amazon Aurora</a> in the <i>Amazon Aurora User Guide</i>
    *                </p>
    *             </li>
    *             <li>
-   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>
+   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>
    *                </p>
    *             </li>
    *          </ul>
@@ -12155,7 +12522,7 @@ export interface RestoreDBClusterFromSnapshotMessage {
  */
 export interface RestoreDBClusterFromSnapshotResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -12655,11 +13022,11 @@ export interface RestoreDBClusterToPointInTimeMessage {
    *         you can run the selected major engine version on your DB cluster past the end of standard support for that engine version. For more information, see the following sections:</p>
    *          <ul>
    *             <li>
-   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon Aurora User Guide</i>
+   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Amazon RDS Extended Support with Amazon Aurora</a> in the <i>Amazon Aurora User Guide</i>
    *                </p>
    *             </li>
    *             <li>
-   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>
+   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>
    *                </p>
    *             </li>
    *          </ul>
@@ -12678,7 +13045,7 @@ export interface RestoreDBClusterToPointInTimeMessage {
  */
 export interface RestoreDBClusterToPointInTimeResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -12817,6 +13184,7 @@ export interface RestoreDBInstanceFromDBSnapshotMessage {
    * <p>Specifies whether to automatically apply minor version upgrades to the DB instance
    *           during the maintenance window.</p>
    *          <p>If you restore an RDS Custom DB instance, you must disable this parameter.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -13213,7 +13581,7 @@ export interface RestoreDBInstanceFromDBSnapshotMessage {
 
   /**
    * <p>Specifies where automated backups and manual snapshots are stored for the restored DB instance.</p>
-   *          <p>Possible values are <code>outposts</code> (Amazon Web Services Outposts) and <code>region</code> (Amazon Web Services Region). The default is <code>region</code>.</p>
+   *          <p>Possible values are <code>local</code> (Dedicated Local Zone), <code>outposts</code> (Amazon Web Services Outposts), and <code>region</code> (Amazon Web Services Region). The default is <code>region</code>.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working
    *             with Amazon RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.</p>
    * @public
@@ -13319,7 +13687,7 @@ export interface RestoreDBInstanceFromDBSnapshotMessage {
    *               RDS automatically upgrades your restored DB instance to a higher engine version, if the major engine version is past its end of standard support date.</p>
    *          </note>
    *          <p>You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With RDS Extended Support,
-   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>.</p>
+   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.</p>
    *          <p>This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB instances, the life cycle type is managed by the DB cluster.</p>
    *          <p>Valid Values: <code>open-source-rds-extended-support | open-source-rds-extended-support-disabled</code>
    *          </p>
@@ -13328,6 +13696,38 @@ export interface RestoreDBInstanceFromDBSnapshotMessage {
    * @public
    */
   EngineLifecycleSupport?: string | undefined;
+
+  /**
+   * <p>Specifies whether to manage the master user password with Amazon Web Services Secrets Manager in the
+   *             restored DB instance.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon RDS User Guide</i>.</p>
+   *          <p>Constraints:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Applies to RDS for Oracle only.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  ManageMasterUserPassword?: boolean | undefined;
+
+  /**
+   * <p>The Amazon Web Services KMS key identifier to encrypt a secret that is automatically generated and
+   *             managed in Amazon Web Services Secrets Manager.</p>
+   *          <p>This setting is valid only if the master user password is managed by RDS in Amazon Web Services Secrets
+   *             Manager for the DB instance.</p>
+   *          <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+   *             To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.</p>
+   *          <p>If you don't specify <code>MasterUserSecretKmsKeyId</code>, then the <code>aws/secretsmanager</code>
+   *             KMS key is used to encrypt the secret. If the secret is in a different Amazon Web Services account, then you can't
+   *             use the <code>aws/secretsmanager</code> KMS key to encrypt the secret, and you must use a customer
+   *             managed KMS key.</p>
+   *          <p>There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account
+   *             has a different default KMS key for each Amazon Web Services Region.</p>
+   * @public
+   */
+  MasterUserSecretKmsKeyId?: string | undefined;
 }
 
 /**
@@ -13598,6 +13998,7 @@ export interface RestoreDBInstanceFromS3Message {
    * <p>Specifies whether to automatically apply minor engine upgrades
    *             to the DB instance during the maintenance window. By default, minor engine upgrades
    *             are not applied automatically.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -13959,7 +14360,7 @@ export interface RestoreDBInstanceFromS3Message {
    *               RDS automatically upgrades your restored DB instance to a higher engine version, if the major engine version is past its end of standard support date.</p>
    *          </note>
    *          <p>You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With RDS Extended Support,
-   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>.</p>
+   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.</p>
    *          <p>This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB instances, the life cycle type is managed by the DB cluster.</p>
    *          <p>Valid Values: <code>open-source-rds-extended-support | open-source-rds-extended-support-disabled</code>
    *          </p>
@@ -14162,6 +14563,7 @@ export interface RestoreDBInstanceToPointInTimeMessage {
    * <p>Specifies whether minor version upgrades are applied automatically to the
    *           DB instance during the maintenance window.</p>
    *          <p>This setting doesn't apply to RDS Custom.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -14601,6 +15003,10 @@ export interface RestoreDBInstanceToPointInTimeMessage {
    *          <ul>
    *             <li>
    *                <p>
+   *                   <code>local</code> (Dedicated Local Zone)</p>
+   *             </li>
+   *             <li>
+   *                <p>
    *                   <code>outposts</code> (Amazon Web Services Outposts)</p>
    *             </li>
    *             <li>
@@ -14687,7 +15093,7 @@ export interface RestoreDBInstanceToPointInTimeMessage {
    *               RDS automatically upgrades your restored DB instance to a higher engine version, if the major engine version is past its end of standard support date.</p>
    *          </note>
    *          <p>You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With RDS Extended Support,
-   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>.</p>
+   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.</p>
    *          <p>This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB instances, the life cycle type is managed by the DB cluster.</p>
    *          <p>Valid Values: <code>open-source-rds-extended-support | open-source-rds-extended-support-disabled</code>
    *          </p>
@@ -14696,6 +15102,38 @@ export interface RestoreDBInstanceToPointInTimeMessage {
    * @public
    */
   EngineLifecycleSupport?: string | undefined;
+
+  /**
+   * <p>Specifies whether to manage the master user password with Amazon Web Services Secrets Manager in the
+   *             restored DB instance.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon RDS User Guide</i>.</p>
+   *          <p>Constraints:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Applies to RDS for Oracle only.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  ManageMasterUserPassword?: boolean | undefined;
+
+  /**
+   * <p>The Amazon Web Services KMS key identifier to encrypt a secret that is automatically generated and
+   *             managed in Amazon Web Services Secrets Manager.</p>
+   *          <p>This setting is valid only if the master user password is managed by RDS in Amazon Web Services Secrets
+   *             Manager for the DB instance.</p>
+   *          <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+   *             To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.</p>
+   *          <p>If you don't specify <code>MasterUserSecretKmsKeyId</code>, then the <code>aws/secretsmanager</code>
+   *             KMS key is used to encrypt the secret. If the secret is in a different Amazon Web Services account, then you can't
+   *             use the <code>aws/secretsmanager</code> KMS key to encrypt the secret, and you must use a customer
+   *             managed KMS key.</p>
+   *          <p>There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account
+   *             has a different default KMS key for each Amazon Web Services Region.</p>
+   * @public
+   */
+  MasterUserSecretKmsKeyId?: string | undefined;
 }
 
 /**
@@ -14874,7 +15312,7 @@ export interface StartDBClusterMessage {
  */
 export interface StartDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -15157,31 +15595,10 @@ export interface StartExportTaskMessage {
    *             These can be set in the Amazon Web Services KMS key policy:</p>
    *          <ul>
    *             <li>
-   *                <p>kms:Encrypt</p>
-   *             </li>
-   *             <li>
-   *                <p>kms:Decrypt</p>
-   *             </li>
-   *             <li>
-   *                <p>kms:GenerateDataKey</p>
-   *             </li>
-   *             <li>
-   *                <p>kms:GenerateDataKeyWithoutPlaintext</p>
-   *             </li>
-   *             <li>
-   *                <p>kms:ReEncryptFrom</p>
-   *             </li>
-   *             <li>
-   *                <p>kms:ReEncryptTo</p>
-   *             </li>
-   *             <li>
    *                <p>kms:CreateGrant</p>
    *             </li>
    *             <li>
    *                <p>kms:DescribeKey</p>
-   *             </li>
-   *             <li>
-   *                <p>kms:RetireGrant</p>
    *             </li>
    *          </ul>
    * @public
@@ -15287,7 +15704,7 @@ export interface StopDBClusterMessage {
  */
 export interface StopDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,

@@ -6,12 +6,8 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { IoTSiteWiseClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../IoTSiteWiseClient";
-import {
-  InvokeAssistantRequest,
-  InvokeAssistantRequestFilterSensitiveLog,
-  InvokeAssistantResponse,
-  InvokeAssistantResponseFilterSensitiveLog,
-} from "../models/models_0";
+import { InvokeAssistantRequest, InvokeAssistantRequestFilterSensitiveLog } from "../models/models_0";
+import { InvokeAssistantResponse, InvokeAssistantResponseFilterSensitiveLog } from "../models/models_1";
 import { de_InvokeAssistantCommand, se_InvokeAssistantCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -123,7 +119,7 @@ export interface InvokeAssistantCommandOutput extends InvokeAssistantResponse, _
  *       unsupported characters. Check your request and try again.</p>
  *
  * @throws {@link LimitExceededException} (client fault)
- *  <p>You've reached the limit for a resource. For example, this can occur if you're trying to
+ *  <p>You've reached the quota for a resource. For example, this can occur if you're trying to
  *       associate more than the allowed number of child assets or attempting to create more than the
  *       allowed number of properties for an asset model.</p>
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT SiteWise User Guide</i>.</p>

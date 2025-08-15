@@ -39,7 +39,8 @@ export interface UpdateContinuousBackupsCommandOutput extends UpdateContinuousBa
  *                 <code>LatestRestorableDateTime</code>. </p>
  *          <p>
  *             <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time.
- *             You can restore your table to any point in time in the last 35 days. You can set the recovery period to any value between 1 and 35 days.</p>
+ *             You can restore your table to any point in time in the last 35 days. You can set the
+ *                 <code>RecoveryPeriodInDays</code> to any value between 1 and 35 days.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -85,7 +86,8 @@ export interface UpdateContinuousBackupsCommandOutput extends UpdateContinuousBa
  *
  * @throws {@link TableNotFoundException} (client fault)
  *  <p>A source table with the name <code>TableName</code> does not currently exist within
- *             the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
+ *             the subscriber's account or the subscriber is operating in the wrong Amazon Web Services
+ *             Region.</p>
  *
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>

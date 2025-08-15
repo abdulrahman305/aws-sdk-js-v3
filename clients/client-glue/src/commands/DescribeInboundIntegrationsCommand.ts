@@ -53,6 +53,12 @@ export interface DescribeInboundIntegrationsCommandOutput
  * //       IntegrationArn: "STRING_VALUE", // required
  * //       Status: "CREATING" || "ACTIVE" || "MODIFYING" || "FAILED" || "DELETING" || "SYNCING" || "NEEDS_ATTENTION", // required
  * //       CreateTime: new Date("TIMESTAMP"), // required
+ * //       IntegrationConfig: { // IntegrationConfig
+ * //         RefreshInterval: "STRING_VALUE",
+ * //         SourceProperties: { // IntegrationSourcePropertiesMap
+ * //           "<keys>": "STRING_VALUE",
+ * //         },
+ * //       },
  * //       Errors: [ // IntegrationErrorList
  * //         { // IntegrationError
  * //           ErrorCode: "STRING_VALUE",

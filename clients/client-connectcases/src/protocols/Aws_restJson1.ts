@@ -45,10 +45,12 @@ import { CreateFieldCommandInput, CreateFieldCommandOutput } from "../commands/C
 import { CreateLayoutCommandInput, CreateLayoutCommandOutput } from "../commands/CreateLayoutCommand";
 import { CreateRelatedItemCommandInput, CreateRelatedItemCommandOutput } from "../commands/CreateRelatedItemCommand";
 import { CreateTemplateCommandInput, CreateTemplateCommandOutput } from "../commands/CreateTemplateCommand";
+import { DeleteCaseCommandInput, DeleteCaseCommandOutput } from "../commands/DeleteCaseCommand";
 import { DeleteCaseRuleCommandInput, DeleteCaseRuleCommandOutput } from "../commands/DeleteCaseRuleCommand";
 import { DeleteDomainCommandInput, DeleteDomainCommandOutput } from "../commands/DeleteDomainCommand";
 import { DeleteFieldCommandInput, DeleteFieldCommandOutput } from "../commands/DeleteFieldCommand";
 import { DeleteLayoutCommandInput, DeleteLayoutCommandOutput } from "../commands/DeleteLayoutCommand";
+import { DeleteRelatedItemCommandInput, DeleteRelatedItemCommandOutput } from "../commands/DeleteRelatedItemCommand";
 import { DeleteTemplateCommandInput, DeleteTemplateCommandOutput } from "../commands/DeleteTemplateCommand";
 import { GetCaseAuditEventsCommandInput, GetCaseAuditEventsCommandOutput } from "../commands/GetCaseAuditEventsCommand";
 import { GetCaseCommandInput, GetCaseCommandOutput } from "../commands/GetCaseCommand";
@@ -137,6 +139,11 @@ import {
   SearchRelatedItemsResponseItem,
   Section,
   ServiceQuotaExceededException,
+  SlaConfiguration,
+  SlaContent,
+  SlaFilter,
+  SlaInputConfiguration,
+  SlaInputContent,
   Sort,
   TemplateRule,
   ThrottlingException,
@@ -353,7 +360,7 @@ export const se_CreateRelatedItemCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
-      content: (_) => _json(_),
+      content: (_) => se_RelatedItemInputContent(_, context),
       performedBy: (_) => _json(_),
       type: [],
     })
@@ -387,6 +394,23 @@ export const se_CreateTemplateCommand = async (
     })
   );
   b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DeleteCaseCommand
+ */
+export const se_DeleteCaseCommand = async (
+  input: DeleteCaseCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/domains/{domainId}/cases/{caseId}");
+  b.p("domainId", () => input.domainId!, "{domainId}", false);
+  b.p("caseId", () => input.caseId!, "{caseId}", false);
+  let body: any;
+  b.m("DELETE").h(headers).b(body);
   return b.build();
 };
 
@@ -452,6 +476,24 @@ export const se_DeleteLayoutCommand = async (
   b.bp("/domains/{domainId}/layouts/{layoutId}");
   b.p("domainId", () => input.domainId!, "{domainId}", false);
   b.p("layoutId", () => input.layoutId!, "{layoutId}", false);
+  let body: any;
+  b.m("DELETE").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DeleteRelatedItemCommand
+ */
+export const se_DeleteRelatedItemCommand = async (
+  input: DeleteRelatedItemCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/domains/{domainId}/cases/{caseId}/related-items/{relatedItemId}");
+  b.p("domainId", () => input.domainId!, "{domainId}", false);
+  b.p("caseId", () => input.caseId!, "{caseId}", false);
+  b.p("relatedItemId", () => input.relatedItemId!, "{relatedItemId}", false);
   let body: any;
   b.m("DELETE").h(headers).b(body);
   return b.build();
@@ -1223,6 +1265,23 @@ export const de_CreateTemplateCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1DeleteCaseCommand
+ */
+export const de_DeleteCaseCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteCaseCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1DeleteCaseRuleCommand
  */
 export const de_DeleteCaseRuleCommand = async (
@@ -1280,6 +1339,23 @@ export const de_DeleteLayoutCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteLayoutCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DeleteRelatedItemCommand
+ */
+export const de_DeleteRelatedItemCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteRelatedItemCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -2180,7 +2256,18 @@ const se_OperandTwo = (input: OperandTwo, context: __SerdeContext): any => {
 
 // se_RelatedItemFilterList omitted.
 
-// se_RelatedItemInputContent omitted.
+/**
+ * serializeAws_restJson1RelatedItemInputContent
+ */
+const se_RelatedItemInputContent = (input: RelatedItemInputContent, context: __SerdeContext): any => {
+  return RelatedItemInputContent.visit(input, {
+    comment: (value) => ({ comment: _json(value) }),
+    contact: (value) => ({ contact: _json(value) }),
+    file: (value) => ({ file: _json(value) }),
+    sla: (value) => ({ sla: se_SlaInputContent(value, context) }),
+    _: (name, value) => ({ [name]: value } as any),
+  });
+};
 
 // se_RelatedItemTypeFilter omitted.
 
@@ -2201,6 +2288,42 @@ const se_RequiredCaseRule = (input: RequiredCaseRule, context: __SerdeContext): 
 // se_Section omitted.
 
 // se_SectionsList omitted.
+
+/**
+ * serializeAws_restJson1SlaFieldValueUnionList
+ */
+const se_SlaFieldValueUnionList = (input: FieldValueUnion[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_FieldValueUnion(entry, context);
+    });
+};
+
+// se_SlaFilter omitted.
+
+/**
+ * serializeAws_restJson1SlaInputConfiguration
+ */
+const se_SlaInputConfiguration = (input: SlaInputConfiguration, context: __SerdeContext): any => {
+  return take(input, {
+    fieldId: [],
+    name: [],
+    targetFieldValues: (_) => se_SlaFieldValueUnionList(_, context),
+    targetSlaMinutes: [],
+    type: [],
+  });
+};
+
+/**
+ * serializeAws_restJson1SlaInputContent
+ */
+const se_SlaInputContent = (input: SlaInputContent, context: __SerdeContext): any => {
+  return SlaInputContent.visit(input, {
+    slaInputConfiguration: (value) => ({ slaInputConfiguration: se_SlaInputConfiguration(value, context) }),
+    _: (name, value) => ({ [name]: value } as any),
+  });
+};
 
 // se_Sort omitted.
 
@@ -2581,6 +2704,11 @@ const de_RelatedItemContent = (output: any, context: __SerdeContext): RelatedIte
       file: _json(output.file),
     };
   }
+  if (output.sla != null) {
+    return {
+      sla: de_SlaContent(output.sla, context),
+    };
+  }
   return { $unknown: Object.entries(output)[0] };
 };
 
@@ -2658,6 +2786,42 @@ const de_SearchRelatedItemsResponseItemList = (
 // de_Section omitted.
 
 // de_SectionsList omitted.
+
+/**
+ * deserializeAws_restJson1SlaConfiguration
+ */
+const de_SlaConfiguration = (output: any, context: __SerdeContext): SlaConfiguration => {
+  return take(output, {
+    completionTime: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    fieldId: __expectString,
+    name: __expectString,
+    status: __expectString,
+    targetFieldValues: (_: any) => de_SlaFieldValueUnionList(_, context),
+    targetTime: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    type: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1SlaContent
+ */
+const de_SlaContent = (output: any, context: __SerdeContext): SlaContent => {
+  return take(output, {
+    slaConfiguration: (_: any) => de_SlaConfiguration(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1SlaFieldValueUnionList
+ */
+const de_SlaFieldValueUnionList = (output: any, context: __SerdeContext): FieldValueUnion[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_FieldValueUnion(__expectUnion(entry), context);
+    });
+  return retVal;
+};
 
 /**
  * deserializeAws_restJson1Tags

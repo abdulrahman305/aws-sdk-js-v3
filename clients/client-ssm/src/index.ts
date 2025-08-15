@@ -4,7 +4,8 @@
  * <p>Amazon Web Services Systems Manager is the operations hub for your Amazon Web Services applications and resources and a secure
  *    end-to-end management solution for hybrid cloud environments that enables safe and secure
  *    operations at scale.</p>
- *          <p>This reference is intended to be used with the <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User Guide</a>. To get started, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Setting up Amazon Web Services Systems Manager</a>.</p>
+ *          <p>This reference is intended to be used with the <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User Guide</a>. To get started, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-console.html">Setting up
+ *     Amazon Web Services Systems Manager</a>.</p>
  *          <p class="title">
  *             <b>Related resources</b>
  *          </p>
@@ -16,7 +17,7 @@
  *             <li>
  *                <p>For details about predefined runbooks for Automation, a tool in Amazon Web Services Systems Manager, see the
  *        <i>
- *                      <a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-runbook-reference.html">Systems Manager Automation runbook reference</a>
+ *                      <a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-runbook-reference.html">Systems Manager Automation Runbook Reference</a>
  *                   </i>.</p>
  *             </li>
  *             <li>

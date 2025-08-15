@@ -78,6 +78,14 @@ export interface GetMatchingWorkflowCommandOutput extends GetMatchingWorkflowOut
  * //       attributeMatchingModel: "ONE_TO_ONE" || "MANY_TO_MANY", // required
  * //       matchPurpose: "IDENTIFIER_GENERATION" || "INDEXING",
  * //     },
+ * //     ruleConditionProperties: { // RuleConditionProperties
+ * //       rules: [ // RuleConditionList // required
+ * //         { // RuleCondition
+ * //           ruleName: "STRING_VALUE", // required
+ * //           condition: "STRING_VALUE", // required
+ * //         },
+ * //       ],
+ * //     },
  * //     providerProperties: { // ProviderProperties
  * //       providerServiceArn: "STRING_VALUE", // required
  * //       providerConfiguration: "DOCUMENT_VALUE",
@@ -109,8 +117,7 @@ export interface GetMatchingWorkflowCommandOutput extends GetMatchingWorkflowOut
  *  <p>You do not have sufficient access to perform this action. </p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>This exception occurs when there is an internal failure in the Entity Resolution
- *          service. </p>
+ *  <p>This exception occurs when there is an internal failure in the Entity Resolution service. </p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The resource could not be found. </p>

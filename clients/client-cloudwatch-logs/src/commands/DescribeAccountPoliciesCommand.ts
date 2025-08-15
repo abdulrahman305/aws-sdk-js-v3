@@ -29,22 +29,26 @@ export interface DescribeAccountPoliciesCommandOutput extends DescribeAccountPol
 
 /**
  * <p>Returns a list of all CloudWatch Logs account policies in the account.</p>
- *          <p>To use this operation, you must be signed on with the correct permissions depending on the type of policy that you are retrieving information for.</p>
+ *          <p>To use this operation, you must be signed on with the correct permissions depending on the
+ *       type of policy that you are retrieving information for.</p>
  *          <ul>
  *             <li>
- *                <p>To see data protection policies, you must have the <code>logs:GetDataProtectionPolicy</code> and
- *         <code>logs:DescribeAccountPolicies</code> permissions.</p>
+ *                <p>To see data protection policies, you must have the
+ *             <code>logs:GetDataProtectionPolicy</code> and <code>logs:DescribeAccountPolicies</code>
+ *           permissions.</p>
  *             </li>
  *             <li>
- *                <p>To see subscription filter policies, you must have the <code>logs:DescrubeSubscriptionFilters</code> and
- *         <code>logs:DescribeAccountPolicies</code> permissions.</p>
+ *                <p>To see subscription filter policies, you must have the
+ *             <code>logs:DescribeSubscriptionFilters</code> and
+ *             <code>logs:DescribeAccountPolicies</code> permissions.</p>
  *             </li>
  *             <li>
- *                <p>To see transformer policies, you must have the <code>logs:GetTransformer</code> and <code>logs:DescribeAccountPolicies</code> permissions.</p>
+ *                <p>To see transformer policies, you must have the <code>logs:GetTransformer</code> and
+ *             <code>logs:DescribeAccountPolicies</code> permissions.</p>
  *             </li>
  *             <li>
- *                <p>To see field index policies, you must have the <code>logs:DescribeIndexPolicies</code> and
- *         <code>logs:DescribeAccountPolicies</code> permissions.</p>
+ *                <p>To see field index policies, you must have the <code>logs:DescribeIndexPolicies</code>
+ *           and <code>logs:DescribeAccountPolicies</code> permissions.</p>
  *             </li>
  *          </ul>
  * @example
@@ -54,7 +58,7 @@ export interface DescribeAccountPoliciesCommandOutput extends DescribeAccountPol
  * // const { CloudWatchLogsClient, DescribeAccountPoliciesCommand } = require("@aws-sdk/client-cloudwatch-logs"); // CommonJS import
  * const client = new CloudWatchLogsClient(config);
  * const input = { // DescribeAccountPoliciesRequest
- *   policyType: "DATA_PROTECTION_POLICY" || "SUBSCRIPTION_FILTER_POLICY" || "FIELD_INDEX_POLICY" || "TRANSFORMER_POLICY", // required
+ *   policyType: "DATA_PROTECTION_POLICY" || "SUBSCRIPTION_FILTER_POLICY" || "FIELD_INDEX_POLICY" || "TRANSFORMER_POLICY" || "METRIC_EXTRACTION_POLICY", // required
  *   policyName: "STRING_VALUE",
  *   accountIdentifiers: [ // AccountIds
  *     "STRING_VALUE",
@@ -69,7 +73,7 @@ export interface DescribeAccountPoliciesCommandOutput extends DescribeAccountPol
  * //       policyName: "STRING_VALUE",
  * //       policyDocument: "STRING_VALUE",
  * //       lastUpdatedTime: Number("long"),
- * //       policyType: "DATA_PROTECTION_POLICY" || "SUBSCRIPTION_FILTER_POLICY" || "FIELD_INDEX_POLICY" || "TRANSFORMER_POLICY",
+ * //       policyType: "DATA_PROTECTION_POLICY" || "SUBSCRIPTION_FILTER_POLICY" || "FIELD_INDEX_POLICY" || "TRANSFORMER_POLICY" || "METRIC_EXTRACTION_POLICY",
  * //       scope: "ALL",
  * //       selectionCriteria: "STRING_VALUE",
  * //       accountId: "STRING_VALUE",

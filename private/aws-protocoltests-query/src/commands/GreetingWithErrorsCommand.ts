@@ -1,8 +1,10 @@
 // smithy-typescript generated code
+import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
+import { commonParams } from "../endpoint/EndpointParameters";
 import { GreetingWithErrorsOutput } from "../models/models_0";
 import { de_GreetingWithErrorsCommand, se_GreetingWithErrorsCommand } from "../protocols/Aws_query";
 import { QueryProtocolClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../QueryProtocolClient";
@@ -55,10 +57,10 @@ export interface GreetingWithErrorsCommandOutput extends GreetingWithErrorsOutpu
  * @throws {@link InvalidGreeting} (client fault)
  *  This error is thrown when an invalid greeting value is provided.
  *
- * @throws {@link CustomCodeError} (client fault)
- *
  * @throws {@link ComplexError} (client fault)
  *  This error is thrown when a request is invalid.
+ *
+ * @throws {@link CustomCodeError} (client fault)
  *
  * @throws {@link QueryProtocolServiceException}
  * <p>Base exception class for all service exceptions from QueryProtocol service.</p>
@@ -74,8 +76,12 @@ export class GreetingWithErrorsCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: QueryProtocolClientResolvedConfig, o: any) {
-    return [getSerdePlugin(config, this.serialize, this.deserialize)];
+    return [
+      getSerdePlugin(config, this.serialize, this.deserialize),
+      getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+    ];
   })
   .s("AwsQuery", "GreetingWithErrors", {})
   .n("QueryProtocolClient", "GreetingWithErrorsCommand")

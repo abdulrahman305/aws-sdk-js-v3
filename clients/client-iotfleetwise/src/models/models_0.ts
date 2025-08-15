@@ -765,6 +765,9 @@ export type UpdateMode = (typeof UpdateMode)[keyof typeof UpdateMode];
 
 /**
  * <p>Information about the vehicle to update.</p>
+ *          <important>
+ *             <p>Access to certain Amazon Web Services IoT FleetWise features is currently gated. For more information, see <a href="https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html">Amazon Web Services Region and feature availability</a> in the <i>Amazon Web Services IoT FleetWise Developer Guide</i>.</p>
+ *          </important>
  * @public
  */
 export interface UpdateVehicleRequestItem {
@@ -816,6 +819,12 @@ export interface UpdateVehicleRequestItem {
    * @public
    */
   stateTemplatesToRemove?: string[] | undefined;
+
+  /**
+   * <p>Change the <code>stateTemplateUpdateStrategy</code> of state templates already associated with the vehicle.</p>
+   * @public
+   */
+  stateTemplatesToUpdate?: StateTemplateAssociation[] | undefined;
 }
 
 /**
@@ -2284,9 +2293,7 @@ export interface UpdateCampaignResponse {
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>WAITING_FOR_APPROVAL</code> - After a campaign is created, it enters the
-   *                         <code>WAITING_FOR_APPROVAL</code> state. To allow Amazon Web Services IoT FleetWise to deploy the
-   *                     campaign to the target vehicle or fleet, use the  API operation to approve the campaign.
+   *                   <code>WAITING_FOR_APPROVAL</code> - After you create a campaign, it enters this state. Use the  API operation to approve the campaign for deployment to the target vehicle or fleet.
    *                 </p>
    *             </li>
    *             <li>
@@ -5159,6 +5166,7 @@ export const VehicleState = {
   DELETING: "DELETING",
   HEALTHY: "HEALTHY",
   READY: "READY",
+  READY_FOR_CHECKIN: "READY_FOR_CHECKIN",
   SUSPENDED: "SUSPENDED",
 } as const;
 
@@ -5189,26 +5197,27 @@ export interface VehicleStatus {
    *          <ul>
    *             <li>
    *                <p>
-   *                   <code>CREATED</code> - The campaign has been created successfully but has not been
-   *                     approved. </p>
+   *                   <code>CREATED</code> - The campaign exists but is not yet approved.</p>
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>READY</code> - The campaign has been approved but has not been deployed to
-   *                     the vehicle.</p>
+   *                   <code>READY</code> - The campaign is approved but has not been deployed to the vehicle. Data has not arrived at the vehicle yet.</p>
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>HEALTHY</code> - The campaign has been deployed to the vehicle.  </p>
+   *                   <code>HEALTHY</code> - The campaign is deployed to the vehicle.</p>
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>SUSPENDED</code> - The campaign has been suspended and data collection is
-   *                     paused. </p>
+   *                   <code>SUSPENDED</code> - The campaign is suspended and data collection is paused.</p>
    *             </li>
    *             <li>
    *                <p>
    *                   <code>DELETING</code> - The campaign is being removed from the vehicle.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>READY_FOR_CHECKIN</code> - The campaign is approved and waiting for vehicle check-in before deployment.</p>
    *             </li>
    *          </ul>
    * @public
@@ -6229,6 +6238,12 @@ export interface UpdateVehicleRequest {
    * @public
    */
   stateTemplatesToRemove?: string[] | undefined;
+
+  /**
+   * <p>Change the <code>stateTemplateUpdateStrategy</code> of state templates already associated with the vehicle.</p>
+   * @public
+   */
+  stateTemplatesToUpdate?: StateTemplateAssociation[] | undefined;
 }
 
 /**

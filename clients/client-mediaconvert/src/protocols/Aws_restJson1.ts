@@ -123,12 +123,12 @@ import {
   FileSourceSettings,
   FlacSettings,
   ForceIncludeRenditionSize,
+  FrameMetricType,
   Hdr10Metadata,
   HlsAdditionalManifest,
   HlsAdMarkers,
   HlsCaptionLanguageMapping,
   HlsEncryptionSettings,
-  HlsGroupSettings,
   HlsImageBasedTrickPlaySettings,
   HlsRenditionGroupSettings,
   HopDestination,
@@ -138,6 +138,7 @@ import {
   Input,
   InputClipping,
   InputDecryptionSettings,
+  InputTamsSettings,
   InputTemplate,
   InputVideoGenerator,
   InsertableImage,
@@ -150,8 +151,6 @@ import {
   MotionImageInsertionOffset,
   Mp2Settings,
   Mp3Settings,
-  MsSmoothAdditionalManifest,
-  MsSmoothEncryptionSettings,
   NielsenConfiguration,
   NielsenNonLinearWatermarkSettings,
   OpusSettings,
@@ -176,6 +175,7 @@ import {
   TtmlDestinationSettings,
   VideoDetail,
   VideoOverlay,
+  VideoOverlayCrop,
   VideoOverlayInput,
   VideoOverlayInputClipping,
   VideoOverlayPosition,
@@ -210,9 +210,8 @@ import {
   H265QvbrSettings,
   H265Settings,
   Hdr10Plus,
+  HlsGroupSettings,
   HlsSettings,
-  Job,
-  JobSettings,
   M2tsScte35Esam,
   M2tsSettings,
   M3u8Settings,
@@ -220,6 +219,8 @@ import {
   Mp4Settings,
   MpdSettings,
   Mpeg2Settings,
+  MsSmoothAdditionalManifest,
+  MsSmoothEncryptionSettings,
   MsSmoothGroupSettings,
   MxfSettings,
   MxfXavcProfileSettings,
@@ -237,7 +238,6 @@ import {
   TimecodeBurnin,
   TimecodeConfig,
   TimedMetadataInsertion,
-  Timing,
   UncompressedSettings,
   Vc3Settings,
   VideoCodecSettings,
@@ -245,7 +245,6 @@ import {
   VideoPreprocessor,
   Vp8Settings,
   Vp9Settings,
-  WarningGroup,
   Xavc4kIntraCbgProfileSettings,
   Xavc4kIntraVbrProfileSettings,
   Xavc4kProfileSettings,
@@ -262,7 +261,9 @@ import {
   ForbiddenException,
   FrameRate,
   InternalServerErrorException,
+  Job,
   JobEngineVersion,
+  JobSettings,
   JobTemplate,
   JobTemplateSettings,
   Metadata,
@@ -277,10 +278,12 @@ import {
   ReservationPlanSettings,
   ResourceTags,
   ServiceOverride,
+  Timing,
   TooManyRequestsException,
   Track,
   TrackMapping,
   VideoProperties,
+  WarningGroup,
 } from "../models/models_2";
 
 /**
@@ -1829,6 +1832,8 @@ const se___listOfForceIncludeRenditionSize = (input: ForceIncludeRenditionSize[]
     });
 };
 
+// se___listOfFrameMetricType omitted.
+
 /**
  * serializeAws_restJson1__listOfHlsAdditionalManifest
  */
@@ -2072,10 +2077,13 @@ const se_AacSettings = (input: AacSettings, context: __SerdeContext): any => {
     bitrate: [, , `Bitrate`],
     codecProfile: [, , `CodecProfile`],
     codingMode: [, , `CodingMode`],
+    loudnessMeasurementMode: [, , `LoudnessMeasurementMode`],
+    rapInterval: [, , `RapInterval`],
     rateControlMode: [, , `RateControlMode`],
     rawFormat: [, , `RawFormat`],
     sampleRate: [, , `SampleRate`],
     specification: [, , `Specification`],
+    targetLoudnessRange: [, , `TargetLoudnessRange`],
     vbrQuality: [, , `VbrQuality`],
   });
 };
@@ -2303,6 +2311,7 @@ const se_Av1Settings = (input: Av1Settings, context: __SerdeContext): any => {
     gopSize: [, __serializeFloat, `GopSize`],
     maxBitrate: [, , `MaxBitrate`],
     numberBFramesBetweenReferenceFrames: [, , `NumberBFramesBetweenReferenceFrames`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     qvbrSettings: [, (_) => se_Av1QvbrSettings(_, context), `QvbrSettings`],
     rateControlMode: [, , `RateControlMode`],
     slices: [, , `Slices`],
@@ -2331,6 +2340,7 @@ const se_AvcIntraSettings = (input: AvcIntraSettings, context: __SerdeContext): 
     framerateDenominator: [, , `FramerateDenominator`],
     framerateNumerator: [, , `FramerateNumerator`],
     interlaceMode: [, , `InterlaceMode`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     scanTypeConversionMode: [, , `ScanTypeConversionMode`],
     slowPal: [, , `SlowPal`],
     telecine: [, , `Telecine`],
@@ -3013,6 +3023,7 @@ const se_FileSourceSettings = (input: FileSourceSettings, context: __SerdeContex
     sourceFile: [, , `SourceFile`],
     timeDelta: [, , `TimeDelta`],
     timeDeltaUnits: [, , `TimeDeltaUnits`],
+    upconvertSTLToTeletext: [, , `UpconvertSTLToTeletext`],
   });
 };
 
@@ -3106,6 +3117,7 @@ const se_H264Settings = (input: H264Settings, context: __SerdeContext): any => {
     parControl: [, , `ParControl`],
     parDenominator: [, , `ParDenominator`],
     parNumerator: [, , `ParNumerator`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     qualityTuningLevel: [, , `QualityTuningLevel`],
     qvbrSettings: [, (_) => se_H264QvbrSettings(_, context), `QvbrSettings`],
     rateControlMode: [, , `RateControlMode`],
@@ -3170,6 +3182,7 @@ const se_H265Settings = (input: H265Settings, context: __SerdeContext): any => {
     parControl: [, , `ParControl`],
     parDenominator: [, , `ParDenominator`],
     parNumerator: [, , `ParNumerator`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     qualityTuningLevel: [, , `QualityTuningLevel`],
     qvbrSettings: [, (_) => se_H265QvbrSettings(_, context), `QvbrSettings`],
     rateControlMode: [, , `RateControlMode`],
@@ -3406,6 +3419,7 @@ const se_Input = (input: Input, context: __SerdeContext): any => {
     programNumber: [, , `ProgramNumber`],
     psiControl: [, , `PsiControl`],
     supplementalImps: [, _json, `SupplementalImps`],
+    tamsSettings: [, (_) => se_InputTamsSettings(_, context), `TamsSettings`],
     timecodeSource: [, , `TimecodeSource`],
     timecodeStart: [, , `TimecodeStart`],
     videoGenerator: [, (_) => se_InputVideoGenerator(_, context), `VideoGenerator`],
@@ -3433,6 +3447,18 @@ const se_InputDecryptionSettings = (input: InputDecryptionSettings, context: __S
     encryptedDecryptionKey: [, , `EncryptedDecryptionKey`],
     initializationVector: [, , `InitializationVector`],
     kmsKeyRegion: [, , `KmsKeyRegion`],
+  });
+};
+
+/**
+ * serializeAws_restJson1InputTamsSettings
+ */
+const se_InputTamsSettings = (input: InputTamsSettings, context: __SerdeContext): any => {
+  return take(input, {
+    authConnectionArn: [, , `AuthConnectionArn`],
+    gapHandling: [, , `GapHandling`],
+    sourceId: [, , `SourceId`],
+    timerange: [, , `Timerange`],
   });
 };
 
@@ -3758,11 +3784,14 @@ const se_Mp3Settings = (input: Mp3Settings, context: __SerdeContext): any => {
 const se_Mp4Settings = (input: Mp4Settings, context: __SerdeContext): any => {
   return take(input, {
     audioDuration: [, , `AudioDuration`],
+    c2paManifest: [, , `C2paManifest`],
+    certificateSecret: [, , `CertificateSecret`],
     cslgAtom: [, , `CslgAtom`],
     cttsVersion: [, , `CttsVersion`],
     freeSpaceBox: [, , `FreeSpaceBox`],
     moovPlacement: [, , `MoovPlacement`],
     mp4MajorBrand: [, , `Mp4MajorBrand`],
+    signingKmsKey: [, , `SigningKmsKey`],
   });
 };
 
@@ -3813,6 +3842,7 @@ const se_Mpeg2Settings = (input: Mpeg2Settings, context: __SerdeContext): any =>
     parControl: [, , `ParControl`],
     parDenominator: [, , `ParDenominator`],
     parNumerator: [, , `ParNumerator`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     qualityTuningLevel: [, , `QualityTuningLevel`],
     rateControlMode: [, , `RateControlMode`],
     scanTypeConversionMode: [, , `ScanTypeConversionMode`],
@@ -4037,6 +4067,7 @@ const se_OutputGroupSettings = (input: OutputGroupSettings, context: __SerdeCont
     fileGroupSettings: [, (_) => se_FileGroupSettings(_, context), `FileGroupSettings`],
     hlsGroupSettings: [, (_) => se_HlsGroupSettings(_, context), `HlsGroupSettings`],
     msSmoothGroupSettings: [, (_) => se_MsSmoothGroupSettings(_, context), `MsSmoothGroupSettings`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     type: [, , `Type`],
   });
 };
@@ -4106,6 +4137,7 @@ const se_ProresSettings = (input: ProresSettings, context: __SerdeContext): any 
     parControl: [, , `ParControl`],
     parDenominator: [, , `ParDenominator`],
     parNumerator: [, , `ParNumerator`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     scanTypeConversionMode: [, , `ScanTypeConversionMode`],
     slowPal: [, , `SlowPal`],
     telecine: [, , `Telecine`],
@@ -4399,12 +4431,26 @@ const se_VideoDescription = (input: VideoDescription, context: __SerdeContext): 
  */
 const se_VideoOverlay = (input: VideoOverlay, context: __SerdeContext): any => {
   return take(input, {
+    crop: [, (_) => se_VideoOverlayCrop(_, context), `Crop`],
     endTimecode: [, , `EndTimecode`],
     initialPosition: [, (_) => se_VideoOverlayPosition(_, context), `InitialPosition`],
     input: [, (_) => se_VideoOverlayInput(_, context), `Input`],
     playback: [, , `Playback`],
     startTimecode: [, , `StartTimecode`],
     transitions: [, (_) => se___listOfVideoOverlayTransition(_, context), `Transitions`],
+  });
+};
+
+/**
+ * serializeAws_restJson1VideoOverlayCrop
+ */
+const se_VideoOverlayCrop = (input: VideoOverlayCrop, context: __SerdeContext): any => {
+  return take(input, {
+    height: [, , `Height`],
+    unit: [, , `Unit`],
+    width: [, , `Width`],
+    x: [, , `X`],
+    y: [, , `Y`],
   });
 };
 
@@ -4646,6 +4692,7 @@ const se_XavcSettings = (input: XavcSettings, context: __SerdeContext): any => {
     framerateConversionAlgorithm: [, , `FramerateConversionAlgorithm`],
     framerateDenominator: [, , `FramerateDenominator`],
     framerateNumerator: [, , `FramerateNumerator`],
+    perFrameMetrics: [, _json, `PerFrameMetrics`],
     profile: [, , `Profile`],
     slowPal: [, , `SlowPal`],
     softness: [, , `Softness`],
@@ -4825,6 +4872,8 @@ const de___listOfForceIncludeRenditionSize = (output: any, context: __SerdeConte
     });
   return retVal;
 };
+
+// de___listOfFrameMetricType omitted.
 
 /**
  * deserializeAws_restJson1__listOfHlsAdditionalManifest
@@ -5229,10 +5278,13 @@ const de_AacSettings = (output: any, context: __SerdeContext): AacSettings => {
     Bitrate: [, __expectInt32, `bitrate`],
     CodecProfile: [, __expectString, `codecProfile`],
     CodingMode: [, __expectString, `codingMode`],
+    LoudnessMeasurementMode: [, __expectString, `loudnessMeasurementMode`],
+    RapInterval: [, __expectInt32, `rapInterval`],
     RateControlMode: [, __expectString, `rateControlMode`],
     RawFormat: [, __expectString, `rawFormat`],
     SampleRate: [, __expectInt32, `sampleRate`],
     Specification: [, __expectString, `specification`],
+    TargetLoudnessRange: [, __expectInt32, `targetLoudnessRange`],
     VbrQuality: [, __expectString, `vbrQuality`],
   }) as any;
 };
@@ -5381,7 +5433,7 @@ const de_AudioNormalizationSettings = (output: any, context: __SerdeContext): Au
 const de_AudioProperties = (output: any, context: __SerdeContext): AudioProperties => {
   return take(output, {
     BitDepth: [, __expectInt32, `bitDepth`],
-    BitRate: [, __expectInt32, `bitRate`],
+    BitRate: [, __expectLong, `bitRate`],
     Channels: [, __expectInt32, `channels`],
     FrameRate: [, (_: any) => de_FrameRate(_, context), `frameRate`],
     LanguageCode: [, __expectString, `languageCode`],
@@ -5478,6 +5530,7 @@ const de_Av1Settings = (output: any, context: __SerdeContext): Av1Settings => {
     GopSize: [, __limitedParseDouble, `gopSize`],
     MaxBitrate: [, __expectInt32, `maxBitrate`],
     NumberBFramesBetweenReferenceFrames: [, __expectInt32, `numberBFramesBetweenReferenceFrames`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     QvbrSettings: [, (_: any) => de_Av1QvbrSettings(_, context), `qvbrSettings`],
     RateControlMode: [, __expectString, `rateControlMode`],
     Slices: [, __expectInt32, `slices`],
@@ -5506,6 +5559,7 @@ const de_AvcIntraSettings = (output: any, context: __SerdeContext): AvcIntraSett
     FramerateDenominator: [, __expectInt32, `framerateDenominator`],
     FramerateNumerator: [, __expectInt32, `framerateNumerator`],
     InterlaceMode: [, __expectString, `interlaceMode`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     ScanTypeConversionMode: [, __expectString, `scanTypeConversionMode`],
     SlowPal: [, __expectString, `slowPal`],
     Telecine: [, __expectString, `telecine`],
@@ -6228,6 +6282,7 @@ const de_FileSourceSettings = (output: any, context: __SerdeContext): FileSource
     SourceFile: [, __expectString, `sourceFile`],
     TimeDelta: [, __expectInt32, `timeDelta`],
     TimeDeltaUnits: [, __expectString, `timeDeltaUnits`],
+    UpconvertSTLToTeletext: [, __expectString, `upconvertSTLToTeletext`],
   }) as any;
 };
 
@@ -6331,6 +6386,7 @@ const de_H264Settings = (output: any, context: __SerdeContext): H264Settings => 
     ParControl: [, __expectString, `parControl`],
     ParDenominator: [, __expectInt32, `parDenominator`],
     ParNumerator: [, __expectInt32, `parNumerator`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     QualityTuningLevel: [, __expectString, `qualityTuningLevel`],
     QvbrSettings: [, (_: any) => de_H264QvbrSettings(_, context), `qvbrSettings`],
     RateControlMode: [, __expectString, `rateControlMode`],
@@ -6395,6 +6451,7 @@ const de_H265Settings = (output: any, context: __SerdeContext): H265Settings => 
     ParControl: [, __expectString, `parControl`],
     ParDenominator: [, __expectInt32, `parDenominator`],
     ParNumerator: [, __expectInt32, `parNumerator`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     QualityTuningLevel: [, __expectString, `qualityTuningLevel`],
     QvbrSettings: [, (_: any) => de_H265QvbrSettings(_, context), `qvbrSettings`],
     RateControlMode: [, __expectString, `rateControlMode`],
@@ -6639,6 +6696,7 @@ const de_Input = (output: any, context: __SerdeContext): Input => {
     ProgramNumber: [, __expectInt32, `programNumber`],
     PsiControl: [, __expectString, `psiControl`],
     SupplementalImps: [, _json, `supplementalImps`],
+    TamsSettings: [, (_: any) => de_InputTamsSettings(_, context), `tamsSettings`],
     TimecodeSource: [, __expectString, `timecodeSource`],
     TimecodeStart: [, __expectString, `timecodeStart`],
     VideoGenerator: [, (_: any) => de_InputVideoGenerator(_, context), `videoGenerator`],
@@ -6666,6 +6724,18 @@ const de_InputDecryptionSettings = (output: any, context: __SerdeContext): Input
     EncryptedDecryptionKey: [, __expectString, `encryptedDecryptionKey`],
     InitializationVector: [, __expectString, `initializationVector`],
     KmsKeyRegion: [, __expectString, `kmsKeyRegion`],
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1InputTamsSettings
+ */
+const de_InputTamsSettings = (output: any, context: __SerdeContext): InputTamsSettings => {
+  return take(output, {
+    AuthConnectionArn: [, __expectString, `authConnectionArn`],
+    GapHandling: [, __expectString, `gapHandling`],
+    SourceId: [, __expectString, `sourceId`],
+    Timerange: [, __expectString, `timerange`],
   }) as any;
 };
 
@@ -7093,11 +7163,14 @@ const de_Mp3Settings = (output: any, context: __SerdeContext): Mp3Settings => {
 const de_Mp4Settings = (output: any, context: __SerdeContext): Mp4Settings => {
   return take(output, {
     AudioDuration: [, __expectString, `audioDuration`],
+    C2paManifest: [, __expectString, `c2paManifest`],
+    CertificateSecret: [, __expectString, `certificateSecret`],
     CslgAtom: [, __expectString, `cslgAtom`],
     CttsVersion: [, __expectInt32, `cttsVersion`],
     FreeSpaceBox: [, __expectString, `freeSpaceBox`],
     MoovPlacement: [, __expectString, `moovPlacement`],
     Mp4MajorBrand: [, __expectString, `mp4MajorBrand`],
+    SigningKmsKey: [, __expectString, `signingKmsKey`],
   }) as any;
 };
 
@@ -7148,6 +7221,7 @@ const de_Mpeg2Settings = (output: any, context: __SerdeContext): Mpeg2Settings =
     ParControl: [, __expectString, `parControl`],
     ParDenominator: [, __expectInt32, `parDenominator`],
     ParNumerator: [, __expectInt32, `parNumerator`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     QualityTuningLevel: [, __expectString, `qualityTuningLevel`],
     RateControlMode: [, __expectString, `rateControlMode`],
     ScanTypeConversionMode: [, __expectString, `scanTypeConversionMode`],
@@ -7391,6 +7465,7 @@ const de_OutputGroupSettings = (output: any, context: __SerdeContext): OutputGro
     FileGroupSettings: [, (_: any) => de_FileGroupSettings(_, context), `fileGroupSettings`],
     HlsGroupSettings: [, (_: any) => de_HlsGroupSettings(_, context), `hlsGroupSettings`],
     MsSmoothGroupSettings: [, (_: any) => de_MsSmoothGroupSettings(_, context), `msSmoothGroupSettings`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     Type: [, __expectString, `type`],
   }) as any;
 };
@@ -7478,6 +7553,7 @@ const de_ProresSettings = (output: any, context: __SerdeContext): ProresSettings
     ParControl: [, __expectString, `parControl`],
     ParDenominator: [, __expectInt32, `parDenominator`],
     ParNumerator: [, __expectInt32, `parNumerator`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     ScanTypeConversionMode: [, __expectString, `scanTypeConversionMode`],
     SlowPal: [, __expectString, `slowPal`],
     Telecine: [, __expectString, `telecine`],
@@ -7875,12 +7951,26 @@ const de_VideoDetail = (output: any, context: __SerdeContext): VideoDetail => {
  */
 const de_VideoOverlay = (output: any, context: __SerdeContext): VideoOverlay => {
   return take(output, {
+    Crop: [, (_: any) => de_VideoOverlayCrop(_, context), `crop`],
     EndTimecode: [, __expectString, `endTimecode`],
     InitialPosition: [, (_: any) => de_VideoOverlayPosition(_, context), `initialPosition`],
     Input: [, (_: any) => de_VideoOverlayInput(_, context), `input`],
     Playback: [, __expectString, `playback`],
     StartTimecode: [, __expectString, `startTimecode`],
     Transitions: [, (_: any) => de___listOfVideoOverlayTransition(_, context), `transitions`],
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1VideoOverlayCrop
+ */
+const de_VideoOverlayCrop = (output: any, context: __SerdeContext): VideoOverlayCrop => {
+  return take(output, {
+    Height: [, __expectInt32, `height`],
+    Unit: [, __expectString, `unit`],
+    Width: [, __expectInt32, `width`],
+    X: [, __expectInt32, `x`],
+    Y: [, __expectInt32, `y`],
   }) as any;
 };
 
@@ -7952,7 +8042,7 @@ const de_VideoPreprocessor = (output: any, context: __SerdeContext): VideoPrepro
 const de_VideoProperties = (output: any, context: __SerdeContext): VideoProperties => {
   return take(output, {
     BitDepth: [, __expectInt32, `bitDepth`],
-    BitRate: [, __expectInt32, `bitRate`],
+    BitRate: [, __expectLong, `bitRate`],
     ColorPrimaries: [, __expectString, `colorPrimaries`],
     FrameRate: [, (_: any) => de_FrameRate(_, context), `frameRate`],
     Height: [, __expectInt32, `height`],
@@ -8148,6 +8238,7 @@ const de_XavcSettings = (output: any, context: __SerdeContext): XavcSettings => 
     FramerateConversionAlgorithm: [, __expectString, `framerateConversionAlgorithm`],
     FramerateDenominator: [, __expectInt32, `framerateDenominator`],
     FramerateNumerator: [, __expectInt32, `framerateNumerator`],
+    PerFrameMetrics: [, _json, `perFrameMetrics`],
     Profile: [, __expectString, `profile`],
     SlowPal: [, __expectString, `slowPal`],
     Softness: [, __expectInt32, `softness`],

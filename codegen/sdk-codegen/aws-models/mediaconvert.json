@@ -69,6 +69,12 @@
           "traits": {
             "smithy.api#enumValue": "HEV2"
           }
+        },
+        "XHE": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "XHE"
+          }
         }
       },
       "traits": {
@@ -111,6 +117,26 @@
       },
       "traits": {
         "smithy.api#documentation": "The Coding mode that you specify determines the number of audio channels and the audio channel layout metadata in your AAC output. Valid coding modes depend on the Rate control mode and Profile that you select. The following list shows the number of audio channels and channel layout for each coding mode. * 1.0 Audio Description (Receiver Mix): One channel, C. Includes audio description data from your stereo input. For more information see ETSI TS 101 154 Annex E. * 1.0 Mono: One channel, C. * 2.0 Stereo: Two channels, L, R. * 5.1 Surround: Six channels, C, L, R, Ls, Rs, LFE."
+      }
+    },
+    "com.amazonaws.mediaconvert#AacLoudnessMeasurementMode": {
+      "type": "enum",
+      "members": {
+        "PROGRAM": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "PROGRAM"
+          }
+        },
+        "ANCHOR": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "ANCHOR"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "Choose the loudness measurement mode for your audio content. For music or advertisements: We recommend that you keep the default value, Program. For speech or other content: We recommend that you choose Anchor. When you do, MediaConvert optimizes the loudness of your output for clarify by applying speech gates."
       }
     },
     "com.amazonaws.mediaconvert#AacRateControlMode": {
@@ -184,6 +210,20 @@
             "smithy.api#jsonName": "codingMode"
           }
         },
+        "LoudnessMeasurementMode": {
+          "target": "com.amazonaws.mediaconvert#AacLoudnessMeasurementMode",
+          "traits": {
+            "smithy.api#documentation": "Choose the loudness measurement mode for your audio content. For music or advertisements: We recommend that you keep the default value, Program. For speech or other content: We recommend that you choose Anchor. When you do, MediaConvert optimizes the loudness of your output for clarify by applying speech gates.",
+            "smithy.api#jsonName": "loudnessMeasurementMode"
+          }
+        },
+        "RapInterval": {
+          "target": "com.amazonaws.mediaconvert#__integerMin2000Max30000",
+          "traits": {
+            "smithy.api#documentation": "Specify the RAP (Random Access Point) interval for your xHE-AAC audio output. A RAP allows a decoder to decode audio data mid-stream, without the need to reference previous audio frames, and perform adaptive audio bitrate switching. To specify the RAP interval: Enter an integer from 2000 to 30000, in milliseconds. Smaller values allow for better seeking and more frequent stream switching, while large values improve compression efficiency. To have MediaConvert automatically determine the RAP interval: Leave blank.",
+            "smithy.api#jsonName": "rapInterval"
+          }
+        },
         "RateControlMode": {
           "target": "com.amazonaws.mediaconvert#AacRateControlMode",
           "traits": {
@@ -210,6 +250,13 @@
           "traits": {
             "smithy.api#documentation": "Use MPEG-2 AAC instead of MPEG-4 AAC audio for raw or MPEG-2 Transport Stream containers.",
             "smithy.api#jsonName": "specification"
+          }
+        },
+        "TargetLoudnessRange": {
+          "target": "com.amazonaws.mediaconvert#__integerMin6Max16",
+          "traits": {
+            "smithy.api#documentation": "Specify the xHE-AAC loudness target. Enter an integer from 6 to 16, representing \"loudness units\". For more information, see the following specification: Supplementary information for R 128 EBU Tech 3342-2023.",
+            "smithy.api#jsonName": "targetLoudnessRange"
           }
         },
         "VbrQuality": {
@@ -1700,7 +1747,7 @@
           }
         },
         "BitRate": {
-          "target": "com.amazonaws.mediaconvert#__integer",
+          "target": "com.amazonaws.mediaconvert#__long",
           "traits": {
             "smithy.api#documentation": "The bit rate of the audio track, in bits per second.",
             "smithy.api#jsonName": "bitRate"
@@ -1815,7 +1862,7 @@
         "SelectorType": {
           "target": "com.amazonaws.mediaconvert#AudioSelectorType",
           "traits": {
-            "smithy.api#documentation": "Specifies the type of the audio selector.",
+            "smithy.api#documentation": "Specify how MediaConvert selects audio content within your input. The default is Track. PID: Select audio by specifying the Packet Identifier (PID) values for MPEG Transport Stream inputs. Use this when you know the exact PID values of your audio streams. Track: Default. Select audio by track number. This is the most common option and works with most input container formats. Language code: Select audio by language using ISO 639-2 or ISO 639-3 three-letter language codes. Use this when your source has embedded language metadata and you want to select tracks based on their language. HLS rendition group: Select audio from an HLS rendition group. Use this when your input is an HLS package with multiple audio renditions and you want to select specific rendition groups. All PCM: Select all uncompressed PCM audio tracks from your input automatically. This is useful when you want to include all PCM audio tracks without specifying individual track numbers.",
             "smithy.api#jsonName": "selectorType"
           }
         },
@@ -1872,10 +1919,16 @@
           "traits": {
             "smithy.api#enumValue": "HLS_RENDITION_GROUP"
           }
+        },
+        "ALL_PCM": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "ALL_PCM"
+          }
         }
       },
       "traits": {
-        "smithy.api#documentation": "Specifies the type of the audio selector."
+        "smithy.api#documentation": "Specify how MediaConvert selects audio content within your input. The default is Track. PID: Select audio by specifying the Packet Identifier (PID) values for MPEG Transport Stream inputs. Use this when you know the exact PID values of your audio streams. Track: Default. Select audio by track number. This is the most common option and works with most input container formats. Language code: Select audio by language using ISO 639-2 or ISO 639-3 three-letter language codes. Use this when your source has embedded language metadata and you want to select tracks based on their language. HLS rendition group: Select audio from an HLS rendition group. Use this when your input is an HLS package with multiple audio renditions and you want to select specific rendition groups. All PCM: Select all uncompressed PCM audio tracks from your input automatically. This is useful when you want to include all PCM audio tracks without specifying individual track numbers."
       }
     },
     "com.amazonaws.mediaconvert#AudioTypeControl": {
@@ -1954,7 +2007,7 @@
         "MaxQualityLevel": {
           "target": "com.amazonaws.mediaconvert#__doubleMin1Max10",
           "traits": {
-            "smithy.api#documentation": "Optional. Specify the QVBR quality level to use for all renditions in your automated ABR stack. To have MediaConvert automatically determine the quality level: Leave blank. To manually specify a quality level: Enter an integer from 1 to 10. MediaConvert will use a quality level up to the value that you specify, depending on your source. For more information about QVBR quality levels, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/qvbr-guidelines.html",
+            "smithy.api#documentation": "Optional. Specify the QVBR quality level to use for all renditions in your automated ABR stack. To have MediaConvert automatically determine the quality level: Leave blank. To manually specify a quality level: Enter a value from 1 to 10. MediaConvert will use a quality level up to the value that you specify, depending on your source. For more information about QVBR quality levels, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/qvbr-guidelines.html",
             "smithy.api#jsonName": "maxQualityLevel"
           }
         },
@@ -2244,6 +2297,13 @@
             "smithy.api#jsonName": "numberBFramesBetweenReferenceFrames"
           }
         },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
+          }
+        },
         "QvbrSettings": {
           "target": "com.amazonaws.mediaconvert#Av1QvbrSettings",
           "traits": {
@@ -2504,6 +2564,13 @@
           "traits": {
             "smithy.api#documentation": "Choose the scan line type for the output. Keep the default value, Progressive to create a progressive output, regardless of the scan type of your input. Use Top field first or Bottom field first to create an output that's interlaced with the same field polarity throughout. Use Follow, default top or Follow, default bottom to produce outputs with the same field polarity as the source. For jobs that have multiple inputs, the output field polarity might change over the course of the output. Follow behavior depends on the input scan type. If the source is interlaced, the output will be interlaced with the same polarity as the source. If the source is progressive, the output will be interlaced with top field bottom field first, depending on which of the Follow options you choose.",
             "smithy.api#jsonName": "interlaceMode"
+          }
+        },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
           }
         },
         "ScanTypeConversionMode": {
@@ -3781,6 +3848,26 @@
         "smithy.api#documentation": "Use Source to identify the format of your input captions. The service cannot auto-detect caption format."
       }
     },
+    "com.amazonaws.mediaconvert#CaptionSourceUpconvertSTLToTeletext": {
+      "type": "enum",
+      "members": {
+        "UPCONVERT": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "UPCONVERT"
+          }
+        },
+        "DISABLED": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "DISABLED"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "Specify whether this set of input captions appears in your outputs in both STL and Teletext format. If you choose Upconvert, MediaConvert includes the captions data in two ways: it passes the STL data through using the Teletext compatibility bytes fields of the Teletext wrapper, and it also translates the STL data into Teletext."
+      }
+    },
     "com.amazonaws.mediaconvert#ChannelMapping": {
       "type": "structure",
       "members": {
@@ -4995,6 +5082,12 @@
             "smithy.api#enumValue": "HEVC"
           }
         },
+        "JPEG2000": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "JPEG2000"
+          }
+        },
         "MJPEG": {
           "target": "smithy.api#Unit",
           "traits": {
@@ -5484,7 +5577,7 @@
         "Format": {
           "target": "com.amazonaws.mediaconvert#Format",
           "traits": {
-            "smithy.api#documentation": "The format of your media file. For example: MP4, QuickTime (MOV), Matroska (MKV), or WebM. Note that this will be blank if your media file has a format that the MediaConvert Probe operation does not recognize.",
+            "smithy.api#documentation": "The format of your media file. For example: MP4, QuickTime (MOV), Matroska (MKV), WebM or MXF. Note that this will be blank if your media file has a format that the MediaConvert Probe operation does not recognize.",
             "smithy.api#jsonName": "format"
           }
         },
@@ -5733,7 +5826,7 @@
         "BillingTagsSource": {
           "target": "com.amazonaws.mediaconvert#BillingTagsSource",
           "traits": {
-            "smithy.api#documentation": "Optional. Choose a tag type that AWS Billing and Cost Management will use to sort your AWS Elemental MediaConvert costs on any billing report that you set up. Any transcoding outputs that don't have an associated tag will appear in your billing report unsorted. If you don't choose a valid value for this field, your job outputs will appear on the billing report unsorted.",
+            "smithy.api#documentation": "Optionally choose a Billing tags source that AWS Billing and Cost Management will use to display tags for individual output costs on any billing report that you set up. Leave blank to use the default value, Job.",
             "smithy.api#jsonName": "billingTagsSource"
           }
         },
@@ -7559,7 +7652,7 @@
         "DdsHandling": {
           "target": "com.amazonaws.mediaconvert#DvbddsHandling",
           "traits": {
-            "smithy.api#documentation": "Specify how MediaConvert handles the display definition segment (DDS). To exclude the DDS from this set of captions: Keep the default, None. To include the DDS: Choose Specified. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate. To include the DDS, but not include display window data: Choose No display window. When you do, you can write position metadata to the page composition segment (PCS) with DDS x-coordinate and DDS y-coordinate. For video resolutions with a height of 576 pixels or less, MediaConvert doesn't include the DDS, regardless of the value you choose for DDS handling. All burn-in and DVB-Sub font settings must match.",
+            "smithy.api#documentation": "Specify how MediaConvert handles the display definition segment (DDS). To exclude the DDS from this set of captions: Keep the default, None. To include the DDS: Choose Specified. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate. To include the DDS, but not include display window data: Choose No display window. When you do, you can write position metadata to the page composition segment (PCS) with DDS x-coordinate and DDS y-coordinate. For video resolutions with a height of 576 pixels or less, MediaConvert doesn't include the DDS, regardless of the value you choose for DDS handling. All burn-in and DVB-Sub font settings must match. To include the DDS, with optimized subtitle placement and reduced data overhead: We recommend that you choose Specified (optimal). This option provides the same visual positioning as Specified while using less bandwidth. This also supports resolutions higher than 1080p while maintaining full DVB-Sub compatibility. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate.",
             "smithy.api#jsonName": "ddsHandling"
           }
         },
@@ -8120,10 +8213,16 @@
           "traits": {
             "smithy.api#enumValue": "NO_DISPLAY_WINDOW"
           }
+        },
+        "SPECIFIED_OPTIMAL": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "SPECIFIED_OPTIMAL"
+          }
         }
       },
       "traits": {
-        "smithy.api#documentation": "Specify how MediaConvert handles the display definition segment (DDS). To exclude the DDS from this set of captions: Keep the default, None. To include the DDS: Choose Specified. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate. To include the DDS, but not include display window data: Choose No display window. When you do, you can write position metadata to the page composition segment (PCS) with DDS x-coordinate and DDS y-coordinate. For video resolutions with a height of 576 pixels or less, MediaConvert doesn't include the DDS, regardless of the value you choose for DDS handling. All burn-in and DVB-Sub font settings must match."
+        "smithy.api#documentation": "Specify how MediaConvert handles the display definition segment (DDS). To exclude the DDS from this set of captions: Keep the default, None. To include the DDS: Choose Specified. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate. To include the DDS, but not include display window data: Choose No display window. When you do, you can write position metadata to the page composition segment (PCS) with DDS x-coordinate and DDS y-coordinate. For video resolutions with a height of 576 pixels or less, MediaConvert doesn't include the DDS, regardless of the value you choose for DDS handling. All burn-in and DVB-Sub font settings must match. To include the DDS, with optimized subtitle placement and reduced data overhead: We recommend that you choose Specified (optimal). This option provides the same visual positioning as Specified while using less bandwidth. This also supports resolutions higher than 1080p while maintaining full DVB-Sub compatibility. When you do, also specify the offset coordinates of the display window with DDS x-coordinate and DDS y-coordinate."
       }
     },
     "com.amazonaws.mediaconvert#DynamicAudioSelector": {
@@ -8166,7 +8265,7 @@
         }
       },
       "traits": {
-        "smithy.api#documentation": "Use Dynamic audio selectors when you do not know the track layout of your source when you submit your job, but want to select multiple audio tracks. When you include an audio track in your output and specify this Dynamic audio selector as the Audio source, MediaConvert creates an output audio track for each dynamically selected track. Note that when you include a Dynamic audio selector for two or more inputs, each input must have the same number of audio tracks and audio channels."
+        "smithy.api#documentation": "Use Dynamic audio selectors when you do not know the track layout of your source when you submit your job, but want to select multiple audio tracks. When you include an audio track in your output and specify this Dynamic audio selector as the Audio source, MediaConvert creates an audio track within that output for each dynamically selected track. Note that when you include a Dynamic audio selector for two or more inputs, each input must have the same number of audio tracks and audio channels."
       }
     },
     "com.amazonaws.mediaconvert#DynamicAudioSelectorType": {
@@ -9501,6 +9600,13 @@
             "smithy.api#documentation": "When you use the setting Time delta to adjust the sync between your sidecar captions and your video, use this setting to specify the units for the delta that you specify. When you don't specify a value for Time delta units, MediaConvert uses seconds by default.",
             "smithy.api#jsonName": "timeDeltaUnits"
           }
+        },
+        "UpconvertSTLToTeletext": {
+          "target": "com.amazonaws.mediaconvert#CaptionSourceUpconvertSTLToTeletext",
+          "traits": {
+            "smithy.api#documentation": "Specify whether this set of input captions appears in your outputs in both STL and Teletext format. If you choose Upconvert, MediaConvert includes the captions data in two ways: it passes the STL data through using the Teletext compatibility bytes fields of the Teletext wrapper, and it also translates the STL data into Teletext.",
+            "smithy.api#jsonName": "upconvertSTLToTeletext"
+          }
         }
       },
       "traits": {
@@ -9545,7 +9651,7 @@
           }
         },
         "SampleRate": {
-          "target": "com.amazonaws.mediaconvert#__integerMin22050Max48000",
+          "target": "com.amazonaws.mediaconvert#__integerMin22050Max192000",
           "traits": {
             "smithy.api#documentation": "Sample rate in Hz.",
             "smithy.api#jsonName": "sampleRate"
@@ -9646,6 +9752,12 @@
           "traits": {
             "smithy.api#enumValue": "webm"
           }
+        },
+        "mxf": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "mxf"
+          }
         }
       }
     },
@@ -9683,6 +9795,50 @@
       },
       "traits": {
         "smithy.api#documentation": "Required when you set Codec to the value FRAME_CAPTURE."
+      }
+    },
+    "com.amazonaws.mediaconvert#FrameMetricType": {
+      "type": "enum",
+      "members": {
+        "PSNR": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "PSNR"
+          }
+        },
+        "SSIM": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "SSIM"
+          }
+        },
+        "MS_SSIM": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "MS_SSIM"
+          }
+        },
+        "PSNR_HVS": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "PSNR_HVS"
+          }
+        },
+        "VMAF": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "VMAF"
+          }
+        },
+        "QVBR": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "QVBR"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "* PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode."
       }
     },
     "com.amazonaws.mediaconvert#FrameRate": {
@@ -10953,6 +11109,13 @@
             "smithy.api#jsonName": "parNumerator"
           }
         },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
+          }
+        },
         "QualityTuningLevel": {
           "target": "com.amazonaws.mediaconvert#H264QualityTuningLevel",
           "traits": {
@@ -12027,6 +12190,13 @@
           "traits": {
             "smithy.api#documentation": "Required when you set Pixel aspect ratio to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.",
             "smithy.api#jsonName": "parNumerator"
+          }
+        },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
           }
         },
         "QualityTuningLevel": {
@@ -13722,7 +13892,7 @@
         "FileInput": {
           "target": "com.amazonaws.mediaconvert#__stringMax2048PatternS3Https",
           "traits": {
-            "smithy.api#documentation": "Specify the source file for your transcoding job. You can use multiple inputs in a single job. The service concatenates these inputs, in the order that you specify them in the job, to create the outputs. If your input format is IMF, specify your input by providing the path to your CPL. For example, \"s3://bucket/vf/cpl.xml\". If the CPL is in an incomplete IMP, make sure to use *Supplemental IMPs* to specify any supplemental IMPs that contain assets referenced by the CPL.",
+            "smithy.api#documentation": "Specify the source file for your transcoding job. You can use multiple inputs in a single job. The service concatenates these inputs, in the order that you specify them in the job, to create the outputs. For standard inputs, provide the path to your S3, HTTP, or HTTPS source file. For example, s3://amzn-s3-demo-bucket/input.mp4 for an Amazon S3 input or https://example.com/input.mp4 for an HTTPS input. For TAMS inputs, specify the HTTPS endpoint of your TAMS server. For example, https://tams-server.example.com . When you do, also specify Source ID, Timerange, GAP handling, and the Authorization connection ARN under TAMS settings. (Don't include these parameters in the Input file URL.) For IMF inputs, specify your input by providing the path to your CPL. For example, s3://amzn-s3-demo-bucket/vf/cpl.xml . If the CPL is in an incomplete IMP, make sure to use Supplemental IMPsto specify any supplemental IMPs that contain assets referenced by the CPL.",
             "smithy.api#jsonName": "fileInput"
           }
         },
@@ -13787,6 +13957,13 @@
           "traits": {
             "smithy.api#documentation": "Provide a list of any necessary supplemental IMPs. You need supplemental IMPs if the CPL that you're using for your input is in an incomplete IMP. Specify either the supplemental IMP directories with a trailing slash or the ASSETMAP.xml files. For example [\"s3://bucket/ov/\", \"s3://bucket/vf2/ASSETMAP.xml\"]. You don't need to specify the IMP that contains your input CPL, because the service automatically detects it.",
             "smithy.api#jsonName": "supplementalImps"
+          }
+        },
+        "TamsSettings": {
+          "target": "com.amazonaws.mediaconvert#InputTamsSettings",
+          "traits": {
+            "smithy.api#documentation": "Specify a Time Addressable Media Store (TAMS) server as an input source. TAMS is an open-source API specification that provides access to time-segmented media content. Use TAMS to retrieve specific time ranges from live or archived media streams. When you specify TAMS settings, MediaConvert connects to your TAMS server, retrieves the media segments for your specified time range, and processes them as a single input. This enables workflows like extracting clips from live streams or processing specific portions of archived content. To use TAMS, you must: 1. Have access to a TAMS-compliant server 2. Specify the server URL in the Input file URL field 3. Provide the required SourceId and Timerange parameters 4. Configure authentication, if your TAMS server requires it",
+            "smithy.api#jsonName": "tamsSettings"
           }
         },
         "TimecodeSource": {
@@ -14075,6 +14252,42 @@
       },
       "traits": {
         "smithy.api#documentation": "When you have a progressive segmented frame (PsF) input, use this setting to flag the input as PsF. MediaConvert doesn't automatically detect PsF. Therefore, flagging your input as PsF results in better preservation of video quality when you do deinterlacing and frame rate conversion. If you don't specify, the default value is Auto. Auto is the correct setting for all inputs that are not PsF. Don't set this value to PsF when your input is interlaced. Doing so creates horizontal interlacing artifacts."
+      }
+    },
+    "com.amazonaws.mediaconvert#InputTamsSettings": {
+      "type": "structure",
+      "members": {
+        "AuthConnectionArn": {
+          "target": "com.amazonaws.mediaconvert#__stringPatternArnAwsAZ09EventsAZ090912ConnectionAZAZ09AF0936",
+          "traits": {
+            "smithy.api#documentation": "Specify the ARN (Amazon Resource Name) of an EventBridge Connection to authenticate with your TAMS server. The EventBridge Connection stores your authentication credentials securely. MediaConvert assumes your job's IAM role to access this connection, so ensure the role has the events:RetrieveConnectionCredentials, secretsmanager:DescribeSecret, and secretsmanager:GetSecretValue permissions. Format: arn:aws:events:region:account-id:connection/connection-name/unique-id",
+            "smithy.api#jsonName": "authConnectionArn"
+          }
+        },
+        "GapHandling": {
+          "target": "com.amazonaws.mediaconvert#TamsGapHandling",
+          "traits": {
+            "smithy.api#documentation": "Specify how MediaConvert handles gaps between media segments in your TAMS source. Gaps can occur in live streams due to network issues or other interruptions. Choose from the following options: * Skip gaps - Default. Skip over gaps and join segments together. This creates a continuous output with no blank frames, but may cause timeline discontinuities. * Fill with black - Insert black frames to fill gaps between segments. This maintains timeline continuity but adds black frames where content is missing. * Hold last frame - Repeat the last frame before a gap until the next segment begins. This maintains visual continuity during gaps.",
+            "smithy.api#jsonName": "gapHandling"
+          }
+        },
+        "SourceId": {
+          "target": "com.amazonaws.mediaconvert#__string",
+          "traits": {
+            "smithy.api#documentation": "Specify the unique identifier for the media source in your TAMS server. MediaConvert uses this source ID to locate the appropriate flows containing the media segments you want to process. The source ID corresponds to a specific media source registered in your TAMS server. This source must be of type urn:x-nmos:format:multi, and can can reference multiple flows for audio, video, or combined audio/video content. MediaConvert automatically selects the highest quality flows available for your job. This setting is required when include TAMS settings in your job.",
+            "smithy.api#jsonName": "sourceId"
+          }
+        },
+        "Timerange": {
+          "target": "com.amazonaws.mediaconvert#__stringPattern019090190908019090190908",
+          "traits": {
+            "smithy.api#documentation": "Specify the time range of media segments to retrieve from your TAMS server. MediaConvert fetches only the segments that fall within this range. Use the format specified by your TAMS server implementation. This must be two timestamp values with the format {sign?}{seconds}:{nanoseconds}, separated by an underscore, surrounded by either parentheses or square brackets.  Example: [15:0_35:0) This setting is required when include TAMS settings in your job.",
+            "smithy.api#jsonName": "timerange"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "Specify a Time Addressable Media Store (TAMS) server as an input source. TAMS is an open-source API specification that provides access to time-segmented media content. Use TAMS to retrieve specific time ranges from live or archived media streams. When you specify TAMS settings, MediaConvert connects to your TAMS server, retrieves the media segments for your specified time range, and processes them as a single input. This enables workflows like extracting clips from live streams or processing specific portions of archived content. To use TAMS, you must: 1. Have access to a TAMS-compliant server 2. Specify the server URL in the Input file URL field 3. Provide the required SourceId and Timerange parameters 4. Configure authentication, if your TAMS server requires it"
       }
     },
     "com.amazonaws.mediaconvert#InputTemplate": {
@@ -19494,6 +19707,26 @@
         "smithy.api#documentation": "Required when you set Codec, under AudioDescriptions>CodecSettings, to the value MP3."
       }
     },
+    "com.amazonaws.mediaconvert#Mp4C2paManifest": {
+      "type": "enum",
+      "members": {
+        "INCLUDE": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "INCLUDE"
+          }
+        },
+        "EXCLUDE": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "EXCLUDE"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "When enabled, a C2PA compliant manifest will be generated, signed and embeded in the output. For more information on C2PA, see https://c2pa.org/specifications/specifications/2.1/index.html"
+      }
+    },
     "com.amazonaws.mediaconvert#Mp4CslgAtom": {
       "type": "enum",
       "members": {
@@ -19564,6 +19797,20 @@
             "smithy.api#jsonName": "audioDuration"
           }
         },
+        "C2paManifest": {
+          "target": "com.amazonaws.mediaconvert#Mp4C2paManifest",
+          "traits": {
+            "smithy.api#documentation": "When enabled, a C2PA compliant manifest will be generated, signed and embeded in the output. For more information on C2PA, see https://c2pa.org/specifications/specifications/2.1/index.html",
+            "smithy.api#jsonName": "c2paManifest"
+          }
+        },
+        "CertificateSecret": {
+          "target": "com.amazonaws.mediaconvert#__stringMin1Max2048PatternArnAZSecretsmanagerWD12SecretAZAZ09",
+          "traits": {
+            "smithy.api#documentation": "Specify the name or ARN of the AWS Secrets Manager secret that contains your C2PA public certificate chain in PEM format. Provide a valid secret name or ARN. Note that your MediaConvert service role must allow access to this secret. The public certificate chain is added to the COSE header (x5chain) for signature validation. Include the signer's certificate and all intermediate certificates. Do not include the root certificate. For details on COSE, see: https://opensource.contentauthenticity.org/docs/manifest/signing-manifests",
+            "smithy.api#jsonName": "certificateSecret"
+          }
+        },
         "CslgAtom": {
           "target": "com.amazonaws.mediaconvert#Mp4CslgAtom",
           "traits": {
@@ -19597,6 +19844,13 @@
           "traits": {
             "smithy.api#documentation": "Overrides the \"Major Brand\" field in the output file. Usually not necessary to specify.",
             "smithy.api#jsonName": "mp4MajorBrand"
+          }
+        },
+        "SigningKmsKey": {
+          "target": "com.amazonaws.mediaconvert#__stringMin1PatternArnAwsUsGovCnKmsAZ26EastWestCentralNorthSouthEastWest1912D12KeyAFAF098AFAF094AFAF094AFAF094AFAF0912MrkAFAF0932",
+          "traits": {
+            "smithy.api#documentation": "Specify the ID or ARN of the AWS KMS key used to sign the C2PA manifest in your MP4 output. Provide a valid KMS key ARN. Note that your MediaConvert service role must allow access to this key.",
+            "smithy.api#jsonName": "signingKmsKey"
           }
         }
       },
@@ -20389,6 +20643,13 @@
           "traits": {
             "smithy.api#documentation": "Required when you set Pixel aspect ratio to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.",
             "smithy.api#jsonName": "parNumerator"
+          }
+        },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
           }
         },
         "QualityTuningLevel": {
@@ -21571,6 +21832,13 @@
             "smithy.api#jsonName": "msSmoothGroupSettings"
           }
         },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
+          }
+        },
         "Type": {
           "target": "com.amazonaws.mediaconvert#OutputGroupType",
           "traits": {
@@ -22364,6 +22632,13 @@
           "traits": {
             "smithy.api#documentation": "Required when you set Pixel aspect ratio to SPECIFIED. On the console, this corresponds to any value other than Follow source. When you specify an output pixel aspect ratio (PAR) that is different from your input video PAR, provide your output PAR as a ratio. For example, for D1/DV NTSC widescreen, you would specify the ratio 40:33. In this example, the value for parNumerator is 40.",
             "smithy.api#jsonName": "parNumerator"
+          }
+        },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
           }
         },
         "ScanTypeConversionMode": {
@@ -23788,6 +24063,32 @@
       "members": {},
       "traits": {
         "smithy.api#output": {}
+      }
+    },
+    "com.amazonaws.mediaconvert#TamsGapHandling": {
+      "type": "enum",
+      "members": {
+        "SKIP_GAPS": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "SKIP_GAPS"
+          }
+        },
+        "FILL_WITH_BLACK": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "FILL_WITH_BLACK"
+          }
+        },
+        "HOLD_LAST_FRAME": {
+          "target": "smithy.api#Unit",
+          "traits": {
+            "smithy.api#enumValue": "HOLD_LAST_FRAME"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "Specify how MediaConvert handles gaps between media segments in your TAMS source. Gaps can occur in live streams due to network issues or other interruptions. Choose from the following options: * Skip gaps - Default. Skip over gaps and join segments together. This creates a continuous output with no blank frames, but may cause timeline discontinuities. * Fill with black - Insert black frames to fill gaps between segments. This maintains timeline continuity but adds black frames where content is missing. * Hold last frame - Repeat the last frame before a gap until the next segment begins. This maintains visual continuity during gaps."
       }
     },
     "com.amazonaws.mediaconvert#TeletextDestinationSettings": {
@@ -25408,7 +25709,7 @@
         "Codec": {
           "target": "com.amazonaws.mediaconvert#VideoCodec",
           "traits": {
-            "smithy.api#documentation": "Specifies the video codec. This must be equal to one of the enum values defined by the object VideoCodec. To passthrough the video stream of your input JPEG2000, VC-3, AVC-INTRA or Apple ProRes video without any video encoding: Choose Passthrough. If you have multiple input videos, note that they must have identical encoding attributes. When you choose Passthrough, your output container must be MXF or QuickTime MOV.",
+            "smithy.api#documentation": "Specifies the video codec. This must be equal to one of the enum values defined by the object VideoCodec. To passthrough the video stream of your input without any video encoding: Choose Passthrough. More information about passthrough codec support and job settings requirements, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/video-passthrough-feature-restrictions.html",
             "smithy.api#jsonName": "codec"
           }
         },
@@ -25646,6 +25947,13 @@
     "com.amazonaws.mediaconvert#VideoOverlay": {
       "type": "structure",
       "members": {
+        "Crop": {
+          "target": "com.amazonaws.mediaconvert#VideoOverlayCrop",
+          "traits": {
+            "smithy.api#documentation": "Specify a rectangle of content to crop and use from your video overlay's input video. When you do, MediaConvert uses the cropped dimensions that you specify under X offset, Y offset, Width, and Height.",
+            "smithy.api#jsonName": "crop"
+          }
+        },
         "EndTimecode": {
           "target": "com.amazonaws.mediaconvert#__stringPattern010920405090509092",
           "traits": {
@@ -25691,6 +25999,49 @@
       },
       "traits": {
         "smithy.api#documentation": "Overlay one or more videos on top of your input video. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/video-overlays.html"
+      }
+    },
+    "com.amazonaws.mediaconvert#VideoOverlayCrop": {
+      "type": "structure",
+      "members": {
+        "Height": {
+          "target": "com.amazonaws.mediaconvert#__integerMin0Max2147483647",
+          "traits": {
+            "smithy.api#documentation": "Specify the height of the video overlay cropping rectangle. To use the same height as your overlay input video: Keep blank, or enter 0. To specify a different height for the cropping rectangle: Enter an integer representing the Unit type that you choose, either Pixels or Percentage. For example, when you enter 100 and choose Pixels, the cropping rectangle will be 100 pixels high. When you enter 10, choose Percentage, and your overlay input video is 1920x1080, the cropping rectangle will be 108 pixels high.",
+            "smithy.api#jsonName": "height"
+          }
+        },
+        "Unit": {
+          "target": "com.amazonaws.mediaconvert#VideoOverlayUnit",
+          "traits": {
+            "smithy.api#documentation": "Specify the Unit type to use when you enter a value for X position, Y position, Width, or Height. You can choose Pixels or Percentage. Leave blank to use the default value, Pixels.",
+            "smithy.api#jsonName": "unit"
+          }
+        },
+        "Width": {
+          "target": "com.amazonaws.mediaconvert#__integerMin0Max2147483647",
+          "traits": {
+            "smithy.api#documentation": "Specify the width of the video overlay cropping rectangle. To use the same width as your overlay input video: Keep blank, or enter 0. To specify a different width for the cropping rectangle: Enter an integer representing the Unit type that you choose, either Pixels or Percentage. For example, when you enter 100 and choose Pixels, the cropping rectangle will be 100 pixels wide. When you enter 10, choose Percentage, and your overlay input video is 1920x1080, the cropping rectangle will be 192 pixels wide.",
+            "smithy.api#jsonName": "width"
+          }
+        },
+        "X": {
+          "target": "com.amazonaws.mediaconvert#__integerMin0Max2147483647",
+          "traits": {
+            "smithy.api#documentation": "Specify the distance between the cropping rectangle and the left edge of your overlay video's frame. To position the cropping rectangle along the left edge: Keep blank, or enter 0. To position the cropping rectangle to the right, relative to the left edge of your overlay video's frame: Enter an integer representing the Unit type that you choose, either Pixels or Percentage. For example, when you enter 10 and choose Pixels, the cropping rectangle will be positioned 10 pixels from the left edge of the overlay video's frame. When you enter 10, choose Percentage, and your overlay input video is 1920x1080, the cropping rectangle will be positioned 192 pixels from the left edge of the overlay video's frame.",
+            "smithy.api#jsonName": "x"
+          }
+        },
+        "Y": {
+          "target": "com.amazonaws.mediaconvert#__integerMin0Max2147483647",
+          "traits": {
+            "smithy.api#documentation": "Specify the distance between the cropping rectangle and the top edge of your overlay video's frame. To position the cropping rectangle along the top edge: Keep blank, or enter 0. To position the cropping rectangle down, relative to the top edge of your overlay video's frame: Enter an integer representing the Unit type that you choose, either Pixels or Percentage. For example, when you enter 10 and choose Pixels, the cropping rectangle will be positioned 10 pixels from the top edge of the overlay video's frame. When you enter 10, choose Percentage, and your overlay input video is 1920x1080, the cropping rectangle will be positioned 108 pixels from the top edge of the overlay video's frame.",
+            "smithy.api#jsonName": "y"
+          }
+        }
+      },
+      "traits": {
+        "smithy.api#documentation": "Specify a rectangle of content to crop and use from your video overlay's input video. When you do, MediaConvert uses the cropped dimensions that you specify under X offset, Y offset, Width, and Height."
       }
     },
     "com.amazonaws.mediaconvert#VideoOverlayInput": {
@@ -25938,7 +26289,7 @@
           }
         },
         "BitRate": {
-          "target": "com.amazonaws.mediaconvert#__integer",
+          "target": "com.amazonaws.mediaconvert#__long",
           "traits": {
             "smithy.api#documentation": "The bit rate of the video track, in bits per second.",
             "smithy.api#jsonName": "bitRate"
@@ -27455,6 +27806,13 @@
             "smithy.api#jsonName": "framerateNumerator"
           }
         },
+        "PerFrameMetrics": {
+          "target": "com.amazonaws.mediaconvert#__listOfFrameMetricType",
+          "traits": {
+            "smithy.api#documentation": "Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.",
+            "smithy.api#jsonName": "perFrameMetrics"
+          }
+        },
         "Profile": {
           "target": "com.amazonaws.mediaconvert#XavcProfile",
           "traits": {
@@ -28202,6 +28560,24 @@
         }
       }
     },
+    "com.amazonaws.mediaconvert#__integerMin2000Max30000": {
+      "type": "integer",
+      "traits": {
+        "smithy.api#range": {
+          "min": 2000,
+          "max": 30000
+        }
+      }
+    },
+    "com.amazonaws.mediaconvert#__integerMin22050Max192000": {
+      "type": "integer",
+      "traits": {
+        "smithy.api#range": {
+          "min": 22050,
+          "max": 192000
+        }
+      }
+    },
     "com.amazonaws.mediaconvert#__integerMin22050Max48000": {
       "type": "integer",
       "traits": {
@@ -28370,6 +28746,15 @@
         "smithy.api#range": {
           "min": 64000,
           "max": 640000
+        }
+      }
+    },
+    "com.amazonaws.mediaconvert#__integerMin6Max16": {
+      "type": "integer",
+      "traits": {
+        "smithy.api#range": {
+          "min": 6,
+          "max": 16
         }
       }
     },
@@ -28608,6 +28993,12 @@
       "type": "list",
       "member": {
         "target": "com.amazonaws.mediaconvert#ForceIncludeRenditionSize"
+      }
+    },
+    "com.amazonaws.mediaconvert#__listOfFrameMetricType": {
+      "type": "list",
+      "member": {
+        "target": "com.amazonaws.mediaconvert#FrameMetricType"
       }
     },
     "com.amazonaws.mediaconvert#__listOfHlsAdMarkers": {
@@ -29090,6 +29481,15 @@
         "smithy.api#pattern": "^[a-zA-Z0-9_\\/_+=.@-]*$"
       }
     },
+    "com.amazonaws.mediaconvert#__stringMin1PatternArnAwsUsGovCnKmsAZ26EastWestCentralNorthSouthEastWest1912D12KeyAFAF098AFAF094AFAF094AFAF094AFAF0912MrkAFAF0932": {
+      "type": "string",
+      "traits": {
+        "smithy.api#length": {
+          "min": 1
+        },
+        "smithy.api#pattern": "^(arn:aws(-us-gov|-cn)?:kms:[a-z-]{2,6}-(east|west|central|((north|south)(east|west)?))-[1-9]{1,2}:\\d{12}:key/)?[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|mrk-[a-fA-F0-9]{32}$"
+      }
+    },
     "com.amazonaws.mediaconvert#__stringMin24Max512PatternAZaZ0902": {
       "type": "string",
       "traits": {
@@ -29178,6 +29578,12 @@
         "smithy.api#pattern": "^([01][0-9]|2[0-4]):[0-5][0-9]:[0-5][0-9][:;][0-9]{2}(@[0-9]+(\\.[0-9]+)?(:[0-9]+)?)?$"
       }
     },
+    "com.amazonaws.mediaconvert#__stringPattern019090190908019090190908": {
+      "type": "string",
+      "traits": {
+        "smithy.api#pattern": "^(\\[|\\()?(-?(0|[1-9][0-9]*):(0|[1-9][0-9]{0,8}))?(_(-?(0|[1-9][0-9]*):(0|[1-9][0-9]{0,8}))?)?(\\]|\\))?$"
+      }
+    },
     "com.amazonaws.mediaconvert#__stringPattern01D20305D205D": {
       "type": "string",
       "traits": {
@@ -29224,6 +29630,12 @@
       "type": "string",
       "traits": {
         "smithy.api#pattern": "^[A-Za-z]{2,3}(-[A-Za-z0-9-]+)?$"
+      }
+    },
+    "com.amazonaws.mediaconvert#__stringPatternArnAwsAZ09EventsAZ090912ConnectionAZAZ09AF0936": {
+      "type": "string",
+      "traits": {
+        "smithy.api#pattern": "^arn:aws[a-z0-9-]*:events:[a-z0-9-]+:[0-9]{12}:connection/[a-zA-Z0-9-]+/[a-f0-9-]{36}$"
       }
     },
     "com.amazonaws.mediaconvert#__stringPatternArnAwsUsGovAcm": {

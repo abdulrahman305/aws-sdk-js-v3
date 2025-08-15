@@ -77,8 +77,10 @@ import {
   MedicalScribeAudioEvent,
   MedicalScribeChannelDefinition,
   MedicalScribeConfigurationEvent,
+  MedicalScribeContext,
   MedicalScribeEncryptionSettings,
   MedicalScribeInputStream,
+  MedicalScribePatientContext,
   MedicalScribePostStreamAnalyticsSettings,
   MedicalScribeResultStream,
   MedicalScribeSessionControlEvent,
@@ -680,7 +682,7 @@ const de_CallAnalyticsTranscriptResultStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 /**
@@ -724,7 +726,7 @@ const de_MedicalScribeResultStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 /**
@@ -768,7 +770,7 @@ const de_MedicalTranscriptResultStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 /**
@@ -812,7 +814,7 @@ const de_TranscriptResultStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 const de_BadRequestException_event = async (output: any, context: __SerdeContext): Promise<BadRequestException> => {
@@ -911,7 +913,11 @@ const de_UtteranceEvent_event = async (output: any, context: __SerdeContext): Pr
 
 // se_MedicalScribeConfigurationEvent omitted.
 
+// se_MedicalScribeContext omitted.
+
 // se_MedicalScribeEncryptionSettings omitted.
+
+// se_MedicalScribePatientContext omitted.
 
 // se_MedicalScribePostStreamAnalyticsSettings omitted.
 
@@ -1207,6 +1213,7 @@ const de_MedicalScribeStreamDetails = (output: any, context: __SerdeContext): Me
     LanguageCode: __expectString,
     MediaEncoding: __expectString,
     MediaSampleRateHertz: __expectInt32,
+    MedicalScribeContextProvided: __expectBoolean,
     PostStreamAnalyticsResult: _json,
     PostStreamAnalyticsSettings: _json,
     ResourceAccessRoleArn: __expectString,

@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListCompilationJobsRequest, ListCompilationJobsResponse } from "../models/models_3";
+import { ListCompilationJobsRequest, ListCompilationJobsResponse } from "../models/models_4";
 import { de_ListCompilationJobsCommand, se_ListCompilationJobsCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,9 +28,7 @@ export interface ListCompilationJobsCommandInput extends ListCompilationJobsRequ
 export interface ListCompilationJobsCommandOutput extends ListCompilationJobsResponse, __MetadataBearer {}
 
 /**
- * <p>Lists model compilation jobs that satisfy various filters.</p>
- *          <p>To create a model compilation job, use <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateCompilationJob.html">CreateCompilationJob</a>. To get information about a particular model
- *             compilation job you have created, use <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeCompilationJob.html">DescribeCompilationJob</a>.</p>
+ * <p>Lists model compilation jobs that satisfy various filters.</p> <p>To create a model compilation job, use <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateCompilationJob.html">CreateCompilationJob</a>. To get information about a particular model compilation job you have created, use <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeCompilationJob.html">DescribeCompilationJob</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

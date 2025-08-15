@@ -796,15 +796,13 @@ export interface DukptEncryptionAttributes {
   KeySerialNumber: string | undefined;
 
   /**
-   * <p>The block cipher method to use for encryption.</p>
-   *          <p>The default is CBC.</p>
+   * <p>The block cipher method to use for encryption.</p> <p>The default is CBC.</p>
    * @public
    */
   Mode?: DukptEncryptionMode | undefined;
 
   /**
-   * <p>The key type encrypted using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code>
-   *          </p>
+   * <p>The key type encrypted using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code> </p>
    * @public
    */
   DukptKeyDerivationType?: DukptDerivationType | undefined;
@@ -1034,6 +1032,8 @@ export namespace EncryptionDecryptionAttributes {
 export const KeyCheckValueAlgorithm = {
   ANSI_X9_24: "ANSI_X9_24",
   CMAC: "CMAC",
+  HMAC: "HMAC",
+  SHA_1: "SHA_1",
 } as const;
 
 /**
@@ -1049,6 +1049,10 @@ export const SymmetricKeyAlgorithm = {
   AES_128: "AES_128",
   AES_192: "AES_192",
   AES_256: "AES_256",
+  HMAC_SHA224: "HMAC_SHA224",
+  HMAC_SHA256: "HMAC_SHA256",
+  HMAC_SHA384: "HMAC_SHA384",
+  HMAC_SHA512: "HMAC_SHA512",
   TDES_2KEY: "TDES_2KEY",
   TDES_3KEY: "TDES_3KEY",
 } as const;
@@ -1123,8 +1127,7 @@ export interface EcdhDerivationAttributes {
   KeyDerivationHashAlgorithm: KeyDerivationHashAlgorithm | undefined;
 
   /**
-   * <p>A byte string containing information that binds the ECDH derived key to the two parties involved or to the context of the key.</p>
-   *          <p>It may include details like identities of the two parties deriving the key, context of the operation, session IDs, and optionally a nonce. It must not contain zero bytes, and re-using shared information for multiple ECDH key derivations is not recommended.</p>
+   * <p>A byte string containing information that binds the ECDH derived key to the two parties involved or to the context of the key.</p> <p>It may include details like identities of the two parties deriving the key, context of the operation, session IDs, and optionally a nonce. It must not contain zero bytes, and re-using shared information for multiple ECDH key derivations is not recommended.</p>
    * @public
    */
   SharedInformation: string | undefined;
@@ -1198,8 +1201,7 @@ export interface WrappedKey {
   WrappedKeyMaterial: WrappedKeyMaterial | undefined;
 
   /**
-   * <p>The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is used to validate the key integrity.</p>
-   *          <p>For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted result.</p>
+   * <p>The algorithm that Amazon Web Services Payment Cryptography uses to calculate the key check value (KCV). It is used to validate the key integrity.</p> <p>For TDES keys, the KCV is computed by encrypting 8 bytes, each with value of zero, with the key to be checked and retaining the 3 highest order bytes of the encrypted result. For AES keys, the KCV is computed using a CMAC algorithm where the input data is 16 bytes of zero and retaining the 3 highest order bytes of the encrypted result.</p>
    * @public
    */
   KeyCheckValueAlgorithm?: KeyCheckValueAlgorithm | undefined;
@@ -1210,8 +1212,7 @@ export interface WrappedKey {
  */
 export interface DecryptDataInput {
   /**
-   * <p>The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext decryption.</p>
-   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
+   * <p>The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for ciphertext decryption.</p> <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   KeyIdentifier: string | undefined;
@@ -1246,8 +1247,7 @@ export interface DecryptDataOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -1468,15 +1468,13 @@ export interface EmvCommonAttributes {
   Mode: EmvEncryptionMode | undefined;
 
   /**
-   * <p>The padding to be added to the PIN block prior to encryption.</p>
-   *          <p>Padding type should be <code>ISO_IEC_7816_4</code>, if <code>PinBlockLengthPosition</code> is set to <code>FRONT_OF_PIN_BLOCK</code>. No padding is required, if <code>PinBlockLengthPosition</code> is set to <code>NONE</code>.</p>
+   * <p>The padding to be added to the PIN block prior to encryption.</p> <p>Padding type should be <code>ISO_IEC_7816_4</code>, if <code>PinBlockLengthPosition</code> is set to <code>FRONT_OF_PIN_BLOCK</code>. No padding is required, if <code>PinBlockLengthPosition</code> is set to <code>NONE</code>.</p>
    * @public
    */
   PinBlockPaddingType: PinBlockPaddingType | undefined;
 
   /**
-   * <p>Specifies if PIN block length should be added to front of the pin block. </p>
-   *          <p>If value is set to <code>FRONT_OF_PIN_BLOCK</code>, then PIN block padding type should be <code>ISO_IEC_7816_4</code>.</p>
+   * <p>Specifies if PIN block length should be added to front of the pin block. </p> <p>If value is set to <code>FRONT_OF_PIN_BLOCK</code>, then PIN block padding type should be <code>ISO_IEC_7816_4</code>.</p>
    * @public
    */
   PinBlockLengthPosition: PinBlockLengthPosition | undefined;
@@ -1696,8 +1694,7 @@ export interface DukptDerivationAttributes {
   KeySerialNumber: string | undefined;
 
   /**
-   * <p>The key type derived using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code>
-   *          </p>
+   * <p>The key type derived using DUKPT from a Base Derivation Key (BDK) and Key Serial Number (KSN). This must be less than or equal to the strength of the BDK. For example, you can't use <code>AES_128</code> as a derivation type for a BDK of <code>AES_128</code> or <code>TDES_2KEY</code> </p>
    * @public
    */
   DukptKeyDerivationType?: DukptDerivationType | undefined;
@@ -1714,17 +1711,13 @@ export interface DukptDerivationAttributes {
  */
 export interface EncryptDataInput {
   /**
-   * <p>The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext encryption.</p>
-   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
+   * <p>The <code>keyARN</code> of the encryption key that Amazon Web Services Payment Cryptography uses for plaintext encryption.</p> <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   KeyIdentifier: string | undefined;
 
   /**
-   * <p>The plaintext to be encrypted.</p>
-   *          <note>
-   *             <p>For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you define in <code>KeyAlgorithm</code> and padding type that you define in <code>AsymmetricEncryptionAttributes</code>. For more information, see <a href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.</p>
-   *          </note>
+   * <p>The plaintext to be encrypted.</p> <note> <p>For encryption using asymmetric keys, plaintext data length is constrained by encryption key strength that you define in <code>KeyAlgorithm</code> and padding type that you define in <code>AsymmetricEncryptionAttributes</code>. For more information, see <a href="https://docs.aws.amazon.com/payment-cryptography/latest/userguide/encrypt-data.html">Encrypt data</a> in the <i>Amazon Web Services Payment Cryptography User Guide</i>.</p> </note>
    * @public
    */
   PlainText: string | undefined;
@@ -1753,8 +1746,7 @@ export interface EncryptDataOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue?: string | undefined;
@@ -1806,8 +1798,7 @@ export interface GenerateCardValidationDataOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -1825,6 +1816,7 @@ export interface GenerateCardValidationDataOutput {
  */
 export const MacAlgorithm = {
   CMAC: "CMAC",
+  HMAC: "HMAC",
   HMAC_SHA224: "HMAC_SHA224",
   HMAC_SHA256: "HMAC_SHA256",
   HMAC_SHA384: "HMAC_SHA384",
@@ -2123,8 +2115,7 @@ export interface GenerateMacOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -2612,9 +2603,7 @@ export interface GeneratePinDataInput {
   PrimaryAccountNumber: string | undefined;
 
   /**
-   * <p>The PIN encoding format for pin data generation as specified in ISO 9564. Amazon Web Services Payment Cryptography supports <code>ISO_Format_0</code> and <code>ISO_Format_3</code>.</p>
-   *          <p>The <code>ISO_Format_0</code> PIN block format is equivalent to the ANSI X9.8, VISA-1, and ECI-1 PIN block formats. It is similar to a VISA-4 PIN block format. It supports a PIN from 4 to 12 digits in length.</p>
-   *          <p>The <code>ISO_Format_3</code> PIN block format is the same as <code>ISO_Format_0</code> except that the fill digits are random values from 10 to 15.</p>
+   * <p>The PIN encoding format for pin data generation as specified in ISO 9564. Amazon Web Services Payment Cryptography supports <code>ISO_Format_0</code> and <code>ISO_Format_3</code>.</p> <p>The <code>ISO_Format_0</code> PIN block format is equivalent to the ANSI X9.8, VISA-1, and ECI-1 PIN block formats. It is similar to a VISA-4 PIN block format. It supports a PIN from 4 to 12 digits in length.</p> <p>The <code>ISO_Format_3</code> PIN block format is the same as <code>ISO_Format_0</code> except that the fill digits are random values from 10 to 15.</p>
    * @public
    */
   PinBlockFormat: PinBlockFormatForPinData | undefined;
@@ -2689,8 +2678,7 @@ export interface GeneratePinDataOutput {
   GenerationKeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   GenerationKeyCheckValue: string | undefined;
@@ -2702,8 +2690,7 @@ export interface GeneratePinDataOutput {
   EncryptionKeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   EncryptionKeyCheckValue: string | undefined;
@@ -2811,8 +2798,7 @@ export namespace ReEncryptionAttributes {
  */
 export interface ReEncryptDataInput {
   /**
-   * <p>The <code>keyARN</code> of the encryption key of incoming ciphertext data.</p>
-   *          <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
+   * <p>The <code>keyARN</code> of the encryption key of incoming ciphertext data.</p> <p>When a WrappedKeyBlock is provided, this value will be the identifier to the key wrapping key. Otherwise, it is the key identifier used to perform the operation.</p>
    * @public
    */
   IncomingKeyIdentifier: string | undefined;
@@ -2865,8 +2851,7 @@ export interface ReEncryptDataOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -2992,15 +2977,13 @@ export namespace TranslationIsoFormats {
  */
 export interface TranslatePinDataInput {
   /**
-   * <p>The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can be PEK or BDK.</p>
-   *          <p>For dynamic keys, it is the <code>keyARN</code> of KEK of the TR-31 wrapped PEK. For ECDH, it is the <code>keyARN</code> of the asymmetric ECC key.</p>
+   * <p>The <code>keyARN</code> of the encryption key under which incoming PIN block data is encrypted. This key type can be PEK or BDK.</p> <p>For dynamic keys, it is the <code>keyARN</code> of KEK of the TR-31 wrapped PEK. For ECDH, it is the <code>keyARN</code> of the asymmetric ECC key.</p>
    * @public
    */
   IncomingKeyIdentifier: string | undefined;
 
   /**
-   * <p>The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or BDK.</p>
-   *          <p>For ECDH, it is the <code>keyARN</code> of the asymmetric ECC key.</p>
+   * <p>The <code>keyARN</code> of the encryption key for encrypting outgoing PIN block data. This key type can be PEK or BDK.</p> <p>For ECDH, it is the <code>keyARN</code> of the asymmetric ECC key.</p>
    * @public
    */
   OutgoingKeyIdentifier: string | undefined;
@@ -3065,8 +3048,7 @@ export interface TranslatePinDataOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -3395,8 +3377,7 @@ export interface VerifyAuthRequestCryptogramOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -3448,8 +3429,7 @@ export interface VerifyCardValidationDataOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -3501,8 +3481,7 @@ export interface VerifyMacOutput {
   KeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   KeyCheckValue: string | undefined;
@@ -3616,9 +3595,7 @@ export interface VerifyPinDataInput {
   PrimaryAccountNumber: string | undefined;
 
   /**
-   * <p>The PIN encoding format for pin data generation as specified in ISO 9564. Amazon Web Services Payment Cryptography supports <code>ISO_Format_0</code> and <code>ISO_Format_3</code>.</p>
-   *          <p>The <code>ISO_Format_0</code> PIN block format is equivalent to the ANSI X9.8, VISA-1, and ECI-1 PIN block formats. It is similar to a VISA-4 PIN block format. It supports a PIN from 4 to 12 digits in length.</p>
-   *          <p>The <code>ISO_Format_3</code> PIN block format is the same as <code>ISO_Format_0</code> except that the fill digits are random values from 10 to 15.</p>
+   * <p>The PIN encoding format for pin data generation as specified in ISO 9564. Amazon Web Services Payment Cryptography supports <code>ISO_Format_0</code> and <code>ISO_Format_3</code>.</p> <p>The <code>ISO_Format_0</code> PIN block format is equivalent to the ANSI X9.8, VISA-1, and ECI-1 PIN block formats. It is similar to a VISA-4 PIN block format. It supports a PIN from 4 to 12 digits in length.</p> <p>The <code>ISO_Format_3</code> PIN block format is the same as <code>ISO_Format_0</code> except that the fill digits are random values from 10 to 15.</p>
    * @public
    */
   PinBlockFormat: PinBlockFormatForPinData | undefined;
@@ -3653,8 +3630,7 @@ export interface VerifyPinDataOutput {
   VerificationKeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   VerificationKeyCheckValue: string | undefined;
@@ -3666,8 +3642,7 @@ export interface VerifyPinDataOutput {
   EncryptionKeyArn: string | undefined;
 
   /**
-   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p>
-   *          <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
+   * <p>The key check value (KCV) of the encryption key. The KCV is used to check if all parties holding a given key have the same key or to detect that a key has changed.</p> <p>Amazon Web Services Payment Cryptography computes the KCV according to the CMAC specification.</p>
    * @public
    */
   EncryptionKeyCheckValue: string | undefined;

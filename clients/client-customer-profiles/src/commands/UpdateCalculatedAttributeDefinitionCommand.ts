@@ -11,7 +11,7 @@ import {
   UpdateCalculatedAttributeDefinitionRequestFilterSensitiveLog,
   UpdateCalculatedAttributeDefinitionResponse,
   UpdateCalculatedAttributeDefinitionResponseFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import {
   de_UpdateCalculatedAttributeDefinitionCommand,
   se_UpdateCalculatedAttributeDefinitionCommand,
@@ -54,8 +54,14 @@ export interface UpdateCalculatedAttributeDefinitionCommandOutput
  *   Description: "STRING_VALUE",
  *   Conditions: { // Conditions
  *     Range: { // Range
- *       Value: Number("int"), // required
- *       Unit: "DAYS", // required
+ *       Value: Number("int"),
+ *       Unit: "DAYS",
+ *       ValueRange: { // ValueRange
+ *         Start: Number("int"), // required
+ *         End: Number("int"), // required
+ *       },
+ *       TimestampSource: "STRING_VALUE",
+ *       TimestampFormat: "STRING_VALUE",
  *     },
  *     ObjectCount: Number("int"),
  *     Threshold: { // Threshold
@@ -75,8 +81,14 @@ export interface UpdateCalculatedAttributeDefinitionCommandOutput
  * //   Statistic: "FIRST_OCCURRENCE" || "LAST_OCCURRENCE" || "COUNT" || "SUM" || "MINIMUM" || "MAXIMUM" || "AVERAGE" || "MAX_OCCURRENCE",
  * //   Conditions: { // Conditions
  * //     Range: { // Range
- * //       Value: Number("int"), // required
- * //       Unit: "DAYS", // required
+ * //       Value: Number("int"),
+ * //       Unit: "DAYS",
+ * //       ValueRange: { // ValueRange
+ * //         Start: Number("int"), // required
+ * //         End: Number("int"), // required
+ * //       },
+ * //       TimestampSource: "STRING_VALUE",
+ * //       TimestampFormat: "STRING_VALUE",
  * //     },
  * //     ObjectCount: Number("int"),
  * //     Threshold: { // Threshold
@@ -91,6 +103,12 @@ export interface UpdateCalculatedAttributeDefinitionCommandOutput
  * //       },
  * //     ],
  * //     Expression: "STRING_VALUE", // required
+ * //   },
+ * //   UseHistoricalData: true || false,
+ * //   Status: "PREPARING" || "IN_PROGRESS" || "COMPLETED" || "FAILED",
+ * //   Readiness: { // Readiness
+ * //     ProgressPercentage: Number("int"),
+ * //     Message: "STRING_VALUE",
  * //   },
  * //   Tags: { // TagMap
  * //     "<keys>": "STRING_VALUE",

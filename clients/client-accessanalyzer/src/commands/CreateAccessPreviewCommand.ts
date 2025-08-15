@@ -28,8 +28,7 @@ export interface CreateAccessPreviewCommandInput extends CreateAccessPreviewRequ
 export interface CreateAccessPreviewCommandOutput extends CreateAccessPreviewResponse, __MetadataBearer {}
 
 /**
- * <p>Creates an access preview that allows you to preview IAM Access Analyzer findings for your
- *          resource before deploying resource permissions.</p>
+ * <p>Creates an access preview that allows you to preview IAM Access Analyzer findings for your resource before deploying resource permissions.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -144,6 +143,17 @@ export interface CreateAccessPreviewCommandOutput extends CreateAccessPreviewRes
  *       },
  *       s3ExpressDirectoryBucket: { // S3ExpressDirectoryBucketConfiguration
  *         bucketPolicy: "STRING_VALUE",
+ *         accessPoints: { // S3ExpressDirectoryAccessPointConfigurationsMap
+ *           "<keys>": { // S3ExpressDirectoryAccessPointConfiguration
+ *             accessPointPolicy: "STRING_VALUE",
+ *             networkOrigin: {//  Union: only one key present
+ *               vpcConfiguration: {
+ *                 vpcId: "STRING_VALUE", // required
+ *               },
+ *               internetConfiguration: {},
+ *             },
+ *           },
+ *         },
  *       },
  *       dynamodbStream: { // DynamodbStreamConfiguration
  *         streamPolicy: "STRING_VALUE",

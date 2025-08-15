@@ -28,8 +28,8 @@ export interface TerminateInstancesCommandInput extends TerminateInstancesReques
 export interface TerminateInstancesCommandOutput extends TerminateInstancesResult, __MetadataBearer {}
 
 /**
- * <p>Shuts down the specified instances. This operation is idempotent; if you terminate an
- *             instance more than once, each call succeeds. </p>
+ * <p>Shuts down the specified instances. This operation is <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">idempotent</a>; if you
+ *             terminate an instance more than once, each call succeeds.</p>
  *          <p>If you specify multiple instances and the request fails (for example, because of a
  *             single incorrect instance ID), none of the instances are terminated.</p>
  *          <p>If you terminate multiple instances across multiple Availability Zones, and one or
@@ -78,15 +78,22 @@ export interface TerminateInstancesCommandOutput extends TerminateInstancesResul
  *             hour).</p>
  *          <p>By default, Amazon EC2 deletes all EBS volumes that were attached when the instance
  *             launched. Volumes attached after instance launch continue running.</p>
+ *          <p>By default, the TerminateInstances operation includes a graceful operating system (OS)
+ *             shutdown. To bypass the graceful shutdown, use the <code>skipOsShutdown</code>
+ *             parameter; however, this might risk data integrity.</p>
  *          <p>You can stop, start, and terminate EBS-backed instances. You can only terminate
- *             instance store-backed instances. What happens to an instance differs if you stop it or
+ *             instance store-backed instances. What happens to an instance differs if you stop or
  *             terminate it. For example, when you stop an instance, the root device and any other
  *             devices attached to the instance persist. When you terminate an instance, any attached
  *             EBS volumes with the <code>DeleteOnTermination</code> block device mapping parameter set
  *             to <code>true</code> are automatically deleted. For more information about the
- *             differences between stopping and terminating instances, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance lifecycle</a>
- *             in the <i>Amazon EC2 User Guide</i>.</p>
- *          <p>For more information about troubleshooting, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesShuttingDown.html">Troubleshooting terminating your instance</a> in the
+ *             differences between stopping and terminating instances, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Amazon EC2
+ *                 instance state changes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ *          <p>When you terminate an instance, we attempt to terminate it forcibly after a short
+ *             while. If your instance appears stuck in the shutting-down state after a period of time,
+ *             there might be an issue with the underlying host computer. For more information about
+ *             terminating and troubleshooting terminating your instances, see <a href="https://docs.aws.amazon.com/">Terminate Amazon EC2 instances</a> and
+ *                 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesShuttingDown.html">Troubleshooting terminating your instance</a> in the
  *                 <i>Amazon EC2 User Guide</i>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -98,6 +105,8 @@ export interface TerminateInstancesCommandOutput extends TerminateInstancesResul
  *   InstanceIds: [ // InstanceIdStringList // required
  *     "STRING_VALUE",
  *   ],
+ *   Force: true || false,
+ *   SkipOsShutdown: true || false,
  *   DryRun: true || false,
  * };
  * const command = new TerminateInstancesCommand(input);

@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { GlueClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../GlueClient";
-import { GetCatalogsRequest, GetCatalogsResponse } from "../models/models_1";
+import { GetCatalogsRequest, GetCatalogsResponse } from "../models/models_2";
 import { de_GetCatalogsCommand, se_GetCatalogsCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -62,6 +62,7 @@ export interface GetCatalogsCommandOutput extends GetCatalogsResponse, __Metadat
  * //       FederatedCatalog: { // FederatedCatalog
  * //         Identifier: "STRING_VALUE",
  * //         ConnectionName: "STRING_VALUE",
+ * //         ConnectionType: "STRING_VALUE",
  * //       },
  * //       CatalogProperties: { // CatalogPropertiesOutput
  * //         DataLakeAccessProperties: { // DataLakeAccessPropertiesOutput
@@ -74,9 +75,20 @@ export interface GetCatalogsCommandOutput extends GetCatalogsResponse, __Metadat
  * //           StatusMessage: "STRING_VALUE",
  * //           CatalogType: "STRING_VALUE",
  * //         },
- * //         CustomProperties: {
- * //           "<keys>": "STRING_VALUE",
+ * //         IcebergOptimizationProperties: { // IcebergOptimizationPropertiesOutput
+ * //           RoleArn: "STRING_VALUE",
+ * //           Compaction: {
+ * //             "<keys>": "STRING_VALUE",
+ * //           },
+ * //           Retention: {
+ * //             "<keys>": "STRING_VALUE",
+ * //           },
+ * //           OrphanFileDeletion: {
+ * //             "<keys>": "STRING_VALUE",
+ * //           },
+ * //           LastUpdatedTime: new Date("TIMESTAMP"),
  * //         },
+ * //         CustomProperties: "<ParametersMap>",
  * //       },
  * //       CreateTableDefaultPermissions: [ // PrincipalPermissionsList
  * //         { // PrincipalPermissions

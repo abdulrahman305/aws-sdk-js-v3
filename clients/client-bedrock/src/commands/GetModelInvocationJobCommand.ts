@@ -10,7 +10,7 @@ import {
   GetModelInvocationJobRequest,
   GetModelInvocationJobResponse,
   GetModelInvocationJobResponseFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_GetModelInvocationJobCommand, se_GetModelInvocationJobCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -32,8 +32,7 @@ export interface GetModelInvocationJobCommandInput extends GetModelInvocationJob
 export interface GetModelInvocationJobCommandOutput extends GetModelInvocationJobResponse, __MetadataBearer {}
 
 /**
- * <p>Gets details about a batch inference job. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-inference-monitor">Monitor batch inference jobs</a>
- *          </p>
+ * <p>Gets details about a batch inference job. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/batch-inference-monitor">Monitor batch inference jobs</a> </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

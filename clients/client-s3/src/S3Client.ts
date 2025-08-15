@@ -91,6 +91,10 @@ import {
 import { CopyObjectCommandInput, CopyObjectCommandOutput } from "./commands/CopyObjectCommand";
 import { CreateBucketCommandInput, CreateBucketCommandOutput } from "./commands/CreateBucketCommand";
 import {
+  CreateBucketMetadataConfigurationCommandInput,
+  CreateBucketMetadataConfigurationCommandOutput,
+} from "./commands/CreateBucketMetadataConfigurationCommand";
+import {
   CreateBucketMetadataTableConfigurationCommandInput,
   CreateBucketMetadataTableConfigurationCommandOutput,
 } from "./commands/CreateBucketMetadataTableConfigurationCommand";
@@ -125,6 +129,10 @@ import {
   DeleteBucketLifecycleCommandInput,
   DeleteBucketLifecycleCommandOutput,
 } from "./commands/DeleteBucketLifecycleCommand";
+import {
+  DeleteBucketMetadataConfigurationCommandInput,
+  DeleteBucketMetadataConfigurationCommandOutput,
+} from "./commands/DeleteBucketMetadataConfigurationCommand";
 import {
   DeleteBucketMetadataTableConfigurationCommandInput,
   DeleteBucketMetadataTableConfigurationCommandOutput,
@@ -188,6 +196,10 @@ import {
 } from "./commands/GetBucketLifecycleConfigurationCommand";
 import { GetBucketLocationCommandInput, GetBucketLocationCommandOutput } from "./commands/GetBucketLocationCommand";
 import { GetBucketLoggingCommandInput, GetBucketLoggingCommandOutput } from "./commands/GetBucketLoggingCommand";
+import {
+  GetBucketMetadataConfigurationCommandInput,
+  GetBucketMetadataConfigurationCommandOutput,
+} from "./commands/GetBucketMetadataConfigurationCommand";
 import {
   GetBucketMetadataTableConfigurationCommandInput,
   GetBucketMetadataTableConfigurationCommandOutput,
@@ -339,11 +351,20 @@ import {
   PutPublicAccessBlockCommandInput,
   PutPublicAccessBlockCommandOutput,
 } from "./commands/PutPublicAccessBlockCommand";
+import { RenameObjectCommandInput, RenameObjectCommandOutput } from "./commands/RenameObjectCommand";
 import { RestoreObjectCommandInput, RestoreObjectCommandOutput } from "./commands/RestoreObjectCommand";
 import {
   SelectObjectContentCommandInput,
   SelectObjectContentCommandOutput,
 } from "./commands/SelectObjectContentCommand";
+import {
+  UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+  UpdateBucketMetadataInventoryTableConfigurationCommandOutput,
+} from "./commands/UpdateBucketMetadataInventoryTableConfigurationCommand";
+import {
+  UpdateBucketMetadataJournalTableConfigurationCommandInput,
+  UpdateBucketMetadataJournalTableConfigurationCommandOutput,
+} from "./commands/UpdateBucketMetadataJournalTableConfigurationCommand";
 import { UploadPartCommandInput, UploadPartCommandOutput } from "./commands/UploadPartCommand";
 import { UploadPartCopyCommandInput, UploadPartCopyCommandOutput } from "./commands/UploadPartCopyCommand";
 import {
@@ -369,6 +390,7 @@ export type ServiceInputTypes =
   | CompleteMultipartUploadCommandInput
   | CopyObjectCommandInput
   | CreateBucketCommandInput
+  | CreateBucketMetadataConfigurationCommandInput
   | CreateBucketMetadataTableConfigurationCommandInput
   | CreateMultipartUploadCommandInput
   | CreateSessionCommandInput
@@ -379,6 +401,7 @@ export type ServiceInputTypes =
   | DeleteBucketIntelligentTieringConfigurationCommandInput
   | DeleteBucketInventoryConfigurationCommandInput
   | DeleteBucketLifecycleCommandInput
+  | DeleteBucketMetadataConfigurationCommandInput
   | DeleteBucketMetadataTableConfigurationCommandInput
   | DeleteBucketMetricsConfigurationCommandInput
   | DeleteBucketOwnershipControlsCommandInput
@@ -400,6 +423,7 @@ export type ServiceInputTypes =
   | GetBucketLifecycleConfigurationCommandInput
   | GetBucketLocationCommandInput
   | GetBucketLoggingCommandInput
+  | GetBucketMetadataConfigurationCommandInput
   | GetBucketMetadataTableConfigurationCommandInput
   | GetBucketMetricsConfigurationCommandInput
   | GetBucketNotificationConfigurationCommandInput
@@ -458,8 +482,11 @@ export type ServiceInputTypes =
   | PutObjectRetentionCommandInput
   | PutObjectTaggingCommandInput
   | PutPublicAccessBlockCommandInput
+  | RenameObjectCommandInput
   | RestoreObjectCommandInput
   | SelectObjectContentCommandInput
+  | UpdateBucketMetadataInventoryTableConfigurationCommandInput
+  | UpdateBucketMetadataJournalTableConfigurationCommandInput
   | UploadPartCommandInput
   | UploadPartCopyCommandInput
   | WriteGetObjectResponseCommandInput;
@@ -472,6 +499,7 @@ export type ServiceOutputTypes =
   | CompleteMultipartUploadCommandOutput
   | CopyObjectCommandOutput
   | CreateBucketCommandOutput
+  | CreateBucketMetadataConfigurationCommandOutput
   | CreateBucketMetadataTableConfigurationCommandOutput
   | CreateMultipartUploadCommandOutput
   | CreateSessionCommandOutput
@@ -482,6 +510,7 @@ export type ServiceOutputTypes =
   | DeleteBucketIntelligentTieringConfigurationCommandOutput
   | DeleteBucketInventoryConfigurationCommandOutput
   | DeleteBucketLifecycleCommandOutput
+  | DeleteBucketMetadataConfigurationCommandOutput
   | DeleteBucketMetadataTableConfigurationCommandOutput
   | DeleteBucketMetricsConfigurationCommandOutput
   | DeleteBucketOwnershipControlsCommandOutput
@@ -503,6 +532,7 @@ export type ServiceOutputTypes =
   | GetBucketLifecycleConfigurationCommandOutput
   | GetBucketLocationCommandOutput
   | GetBucketLoggingCommandOutput
+  | GetBucketMetadataConfigurationCommandOutput
   | GetBucketMetadataTableConfigurationCommandOutput
   | GetBucketMetricsConfigurationCommandOutput
   | GetBucketNotificationConfigurationCommandOutput
@@ -561,8 +591,11 @@ export type ServiceOutputTypes =
   | PutObjectRetentionCommandOutput
   | PutObjectTaggingCommandOutput
   | PutPublicAccessBlockCommandOutput
+  | RenameObjectCommandOutput
   | RestoreObjectCommandOutput
   | SelectObjectContentCommandOutput
+  | UpdateBucketMetadataInventoryTableConfigurationCommandOutput
+  | UpdateBucketMetadataJournalTableConfigurationCommandOutput
   | UploadPartCommandOutput
   | UploadPartCopyCommandOutput
   | WriteGetObjectResponseCommandOutput;
@@ -755,9 +788,9 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
   signingEscapePath?: boolean;
 
   /**
-   * Whether to override the request region with the region inferred from requested resource's ARN. Defaults to false.
+   * Whether to override the request region with the region inferred from requested resource's ARN. Defaults to undefined.
    */
-  useArnRegion?: boolean | Provider<boolean>;
+  useArnRegion?: boolean | undefined | Provider<boolean | undefined>;
   /**
    * The internal function that inject utilities to runtime-specific stream to help users consume the data
    * @internal

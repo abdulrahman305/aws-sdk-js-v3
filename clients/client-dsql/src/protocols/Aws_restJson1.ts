@@ -27,16 +27,12 @@ import {
 import { v4 as generateIdempotencyToken } from "uuid";
 
 import { CreateClusterCommandInput, CreateClusterCommandOutput } from "../commands/CreateClusterCommand";
-import {
-  CreateMultiRegionClustersCommandInput,
-  CreateMultiRegionClustersCommandOutput,
-} from "../commands/CreateMultiRegionClustersCommand";
 import { DeleteClusterCommandInput, DeleteClusterCommandOutput } from "../commands/DeleteClusterCommand";
-import {
-  DeleteMultiRegionClustersCommandInput,
-  DeleteMultiRegionClustersCommandOutput,
-} from "../commands/DeleteMultiRegionClustersCommand";
 import { GetClusterCommandInput, GetClusterCommandOutput } from "../commands/GetClusterCommand";
+import {
+  GetVpcEndpointServiceNameCommandInput,
+  GetVpcEndpointServiceNameCommandOutput,
+} from "../commands/GetVpcEndpointServiceNameCommand";
 import { ListClustersCommandInput, ListClustersCommandOutput } from "../commands/ListClustersCommand";
 import {
   ListTagsForResourceCommandInput,
@@ -50,7 +46,7 @@ import {
   AccessDeniedException,
   ConflictException,
   InternalServerException,
-  LinkedClusterProperties,
+  MultiRegionProperties,
   ResourceNotFoundException,
   ServiceQuotaExceededException,
   ThrottlingException,
@@ -74,32 +70,9 @@ export const se_CreateClusterCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       deletionProtectionEnabled: [],
+      kmsEncryptionKey: [],
+      multiRegionProperties: (_) => _json(_),
       tags: (_) => _json(_),
-    })
-  );
-  b.m("POST").h(headers).b(body);
-  return b.build();
-};
-
-/**
- * serializeAws_restJson1CreateMultiRegionClustersCommand
- */
-export const se_CreateMultiRegionClustersCommand = async (
-  input: CreateMultiRegionClustersCommandInput,
-  context: __SerdeContext
-): Promise<__HttpRequest> => {
-  const b = rb(input, context);
-  const headers: any = {
-    "content-type": "application/json",
-  };
-  b.bp("/multi-region-clusters");
-  let body: any;
-  body = JSON.stringify(
-    take(input, {
-      clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
-      clusterProperties: (_) => _json(_),
-      linkedRegionList: (_) => _json(_),
-      witnessRegion: [],
     })
   );
   b.m("POST").h(headers).b(body);
@@ -126,25 +99,6 @@ export const se_DeleteClusterCommand = async (
 };
 
 /**
- * serializeAws_restJson1DeleteMultiRegionClustersCommand
- */
-export const se_DeleteMultiRegionClustersCommand = async (
-  input: DeleteMultiRegionClustersCommandInput,
-  context: __SerdeContext
-): Promise<__HttpRequest> => {
-  const b = rb(input, context);
-  const headers: any = {};
-  b.bp("/multi-region-clusters");
-  const query: any = map({
-    [_lca]: [__expectNonNull(input.linkedClusterArns, `linkedClusterArns`) != null, () => input[_lCA]! || []],
-    [_ct]: [, input[_cT] ?? generateIdempotencyToken()],
-  });
-  let body: any;
-  b.m("DELETE").h(headers).q(query).b(body);
-  return b.build();
-};
-
-/**
  * serializeAws_restJson1GetClusterCommand
  */
 export const se_GetClusterCommand = async (
@@ -154,6 +108,22 @@ export const se_GetClusterCommand = async (
   const b = rb(input, context);
   const headers: any = {};
   b.bp("/cluster/{identifier}");
+  b.p("identifier", () => input.identifier!, "{identifier}", false);
+  let body: any;
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1GetVpcEndpointServiceNameCommand
+ */
+export const se_GetVpcEndpointServiceNameCommand = async (
+  input: GetVpcEndpointServiceNameCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/clusters/{identifier}/vpc-endpoint-service-name");
   b.p("identifier", () => input.identifier!, "{identifier}", false);
   let body: any;
   b.m("GET").h(headers).b(body);
@@ -255,6 +225,8 @@ export const se_UpdateClusterCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       deletionProtectionEnabled: [],
+      kmsEncryptionKey: [],
+      multiRegionProperties: (_) => _json(_),
     })
   );
   b.m("POST").h(headers).b(body);
@@ -279,29 +251,10 @@ export const de_CreateClusterCommand = async (
     arn: __expectString,
     creationTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     deletionProtectionEnabled: __expectBoolean,
+    encryptionDetails: _json,
     identifier: __expectString,
+    multiRegionProperties: _json,
     status: __expectString,
-  });
-  Object.assign(contents, doc);
-  return contents;
-};
-
-/**
- * deserializeAws_restJson1CreateMultiRegionClustersCommand
- */
-export const de_CreateMultiRegionClustersCommand = async (
-  output: __HttpResponse,
-  context: __SerdeContext
-): Promise<CreateMultiRegionClustersCommandOutput> => {
-  if (output.statusCode !== 200 && output.statusCode >= 300) {
-    return de_CommandError(output, context);
-  }
-  const contents: any = map({
-    $metadata: deserializeMetadata(output),
-  });
-  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
-  const doc = take(data, {
-    linkedClusterArns: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -324,28 +277,10 @@ export const de_DeleteClusterCommand = async (
   const doc = take(data, {
     arn: __expectString,
     creationTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
-    deletionProtectionEnabled: __expectBoolean,
     identifier: __expectString,
     status: __expectString,
   });
   Object.assign(contents, doc);
-  return contents;
-};
-
-/**
- * deserializeAws_restJson1DeleteMultiRegionClustersCommand
- */
-export const de_DeleteMultiRegionClustersCommand = async (
-  output: __HttpResponse,
-  context: __SerdeContext
-): Promise<DeleteMultiRegionClustersCommandOutput> => {
-  if (output.statusCode !== 200 && output.statusCode >= 300) {
-    return de_CommandError(output, context);
-  }
-  const contents: any = map({
-    $metadata: deserializeMetadata(output),
-  });
-  await collectBody(output.body, context);
   return contents;
 };
 
@@ -367,10 +302,32 @@ export const de_GetClusterCommand = async (
     arn: __expectString,
     creationTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     deletionProtectionEnabled: __expectBoolean,
+    encryptionDetails: _json,
     identifier: __expectString,
-    linkedClusterArns: _json,
+    multiRegionProperties: _json,
     status: __expectString,
-    witnessRegion: __expectString,
+    tags: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1GetVpcEndpointServiceNameCommand
+ */
+export const de_GetVpcEndpointServiceNameCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetVpcEndpointServiceNameCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    serviceName: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -470,11 +427,8 @@ export const de_UpdateClusterCommand = async (
   const doc = take(data, {
     arn: __expectString,
     creationTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
-    deletionProtectionEnabled: __expectBoolean,
     identifier: __expectString,
-    linkedClusterArns: _json,
     status: __expectString,
-    witnessRegion: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -669,11 +623,9 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
   return __decorateServiceException(exception, parsedOutput.body);
 };
 
-// se_ClusterPropertyMap omitted.
+// se_ClusterArnList omitted.
 
-// se_LinkedClusterProperties omitted.
-
-// se_RegionList omitted.
+// se_MultiRegionProperties omitted.
 
 // se_TagMap omitted.
 
@@ -682,6 +634,10 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 // de_ClusterList omitted.
 
 // de_ClusterSummary omitted.
+
+// de_EncryptionDetails omitted.
+
+// de_MultiRegionProperties omitted.
 
 // de_TagMap omitted.
 
@@ -703,8 +659,6 @@ const collectBodyString = (streamBody: any, context: __SerdeContext): Promise<st
 
 const _cT = "clientToken";
 const _ct = "client-token";
-const _lCA = "linkedClusterArns";
-const _lca = "linked-cluster-arns";
 const _mR = "maxResults";
 const _mr = "max-results";
 const _nT = "nextToken";

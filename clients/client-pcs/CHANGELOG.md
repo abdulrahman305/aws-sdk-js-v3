@@ -3,6 +3,325 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.868.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.867.0...v3.868.0) (2025-08-14)
+
+
+### Features
+
+* **client-pcs:** Updated the regex pattern and description of iamInstanceProfileArn in the CreateComputeNodeGroup and UpdateComputeNodeGroup API actions. Name and path requirements apply to the ARN of the IAM role associated with the instance profile and not the ARN of the instance profile. ([b5adbbc](https://github.com/aws/aws-sdk-js-v3/commit/b5adbbce1c054c23c5972b6188409f66f3325256))
+
+
+
+
+
+# [3.864.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.863.0...v3.864.0) (2025-08-08)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.863.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.862.0...v3.863.0) (2025-08-07)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.859.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.858.0...v3.859.0) (2025-08-01)
+
+
+### Features
+
+* **client-pcs:** Add support for IPv6 Networking for Clusters. ([e8774c1](https://github.com/aws/aws-sdk-js-v3/commit/e8774c179662126253ef71e9b0e9b0d3f2258636))
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.857.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.856.0...v3.857.0) (2025-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.856.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.855.0...v3.856.0) (2025-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.855.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.854.0...v3.855.0) (2025-07-28)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.848.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.847.0...v3.848.0) (2025-07-17)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.846.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.845.0...v3.846.0) (2025-07-16)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.845.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.844.0...v3.845.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **clients:** upgrade @smithy/middleware-endpoint to fix file/env endpoint resolution ([#7206](https://github.com/aws/aws-sdk-js-v3/issues/7206)) ([37a6275](https://github.com/aws/aws-sdk-js-v3/commit/37a627510bc53ad0ce8d3ef10a2a5ec8ad195ee2))
+
+
+
+
+
+# [3.844.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.843.0...v3.844.0) (2025-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.840.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.839.0...v3.840.0) (2025-06-30)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.839.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.838.0...v3.839.0) (2025-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.835.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.834.0...v3.835.0) (2025-06-23)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.830.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.829.0...v3.830.0) (2025-06-16)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.828.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.827.1...v3.828.0) (2025-06-11)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.826.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.825.0...v3.826.0) (2025-06-06)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.825.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.824.0...v3.825.0) (2025-06-05)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.823.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.822.0...v3.823.0) (2025-06-03)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.822.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.821.0...v3.822.0) (2025-06-02)
+
+
+### Features
+
+* **client-pcs:** Introduces SUSPENDING and SUSPENDED states for clusters, compute node groups, and queues. ([172256c](https://github.com/aws/aws-sdk-js-v3/commit/172256cc37cf024f1243832a5f6b70e2207a9218))
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.817.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.816.0...v3.817.0) (2025-05-23)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.816.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.815.0...v3.816.0) (2025-05-22)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.812.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.811.0...v3.812.0) (2025-05-16)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.811.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.810.0...v3.811.0) (2025-05-15)
+
+
+### Features
+
+* **client-pcs:** This release adds support for Slurm accounting. For more information, see the Slurm accounting topic in the AWS PCS User Guide. Slurm accounting is supported for Slurm 24.11 and later. This release also adds 24.11 as a valid value for the version parameter of the Scheduler data type. ([8f51899](https://github.com/aws/aws-sdk-js-v3/commit/8f518997cebf7a8ae60afb6b2e5d6ade5380d33b))
+
+
+
+
+
+# [3.810.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.809.0...v3.810.0) (2025-05-14)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.808.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.807.0...v3.808.0) (2025-05-12)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.806.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.805.0...v3.806.0) (2025-05-08)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.803.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.802.0...v3.803.0) (2025-05-05)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.799.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.798.0...v3.799.0) (2025-04-29)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.798.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.797.0...v3.798.0) (2025-04-28)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.797.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.796.0...v3.797.0) (2025-04-25)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.796.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.795.0...v3.796.0) (2025-04-24)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.787.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.786.0...v3.787.0) (2025-04-10)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
+# [3.782.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.781.0...v3.782.0) (2025-04-03)
+
+**Note:** Version bump only for package @aws-sdk/client-pcs
+
+
+
+
+
 # [3.777.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.776.0...v3.777.0) (2025-03-27)
 
 **Note:** Version bump only for package @aws-sdk/client-pcs

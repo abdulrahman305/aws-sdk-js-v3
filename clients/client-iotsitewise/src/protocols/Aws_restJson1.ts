@@ -75,6 +75,10 @@ import {
   CreateBulkImportJobCommandInput,
   CreateBulkImportJobCommandOutput,
 } from "../commands/CreateBulkImportJobCommand";
+import {
+  CreateComputationModelCommandInput,
+  CreateComputationModelCommandOutput,
+} from "../commands/CreateComputationModelCommand";
 import { CreateDashboardCommandInput, CreateDashboardCommandOutput } from "../commands/CreateDashboardCommand";
 import { CreateDatasetCommandInput, CreateDatasetCommandOutput } from "../commands/CreateDatasetCommand";
 import { CreateGatewayCommandInput, CreateGatewayCommandOutput } from "../commands/CreateGatewayCommand";
@@ -87,6 +91,14 @@ import {
   DeleteAssetModelCompositeModelCommandInput,
   DeleteAssetModelCompositeModelCommandOutput,
 } from "../commands/DeleteAssetModelCompositeModelCommand";
+import {
+  DeleteAssetModelInterfaceRelationshipCommandInput,
+  DeleteAssetModelInterfaceRelationshipCommandOutput,
+} from "../commands/DeleteAssetModelInterfaceRelationshipCommand";
+import {
+  DeleteComputationModelCommandInput,
+  DeleteComputationModelCommandOutput,
+} from "../commands/DeleteComputationModelCommand";
 import { DeleteDashboardCommandInput, DeleteDashboardCommandOutput } from "../commands/DeleteDashboardCommand";
 import { DeleteDatasetCommandInput, DeleteDatasetCommandOutput } from "../commands/DeleteDatasetCommand";
 import { DeleteGatewayCommandInput, DeleteGatewayCommandOutput } from "../commands/DeleteGatewayCommand";
@@ -109,6 +121,10 @@ import {
   DescribeAssetModelCompositeModelCommandOutput,
 } from "../commands/DescribeAssetModelCompositeModelCommand";
 import {
+  DescribeAssetModelInterfaceRelationshipCommandInput,
+  DescribeAssetModelInterfaceRelationshipCommandOutput,
+} from "../commands/DescribeAssetModelInterfaceRelationshipCommand";
+import {
   DescribeAssetPropertyCommandInput,
   DescribeAssetPropertyCommandOutput,
 } from "../commands/DescribeAssetPropertyCommand";
@@ -116,12 +132,21 @@ import {
   DescribeBulkImportJobCommandInput,
   DescribeBulkImportJobCommandOutput,
 } from "../commands/DescribeBulkImportJobCommand";
+import {
+  DescribeComputationModelCommandInput,
+  DescribeComputationModelCommandOutput,
+} from "../commands/DescribeComputationModelCommand";
+import {
+  DescribeComputationModelExecutionSummaryCommandInput,
+  DescribeComputationModelExecutionSummaryCommandOutput,
+} from "../commands/DescribeComputationModelExecutionSummaryCommand";
 import { DescribeDashboardCommandInput, DescribeDashboardCommandOutput } from "../commands/DescribeDashboardCommand";
 import { DescribeDatasetCommandInput, DescribeDatasetCommandOutput } from "../commands/DescribeDatasetCommand";
 import {
   DescribeDefaultEncryptionConfigurationCommandInput,
   DescribeDefaultEncryptionConfigurationCommandOutput,
 } from "../commands/DescribeDefaultEncryptionConfigurationCommand";
+import { DescribeExecutionCommandInput, DescribeExecutionCommandOutput } from "../commands/DescribeExecutionCommand";
 import {
   DescribeGatewayCapabilityConfigurationCommandInput,
   DescribeGatewayCapabilityConfigurationCommandOutput,
@@ -191,9 +216,26 @@ import {
   ListCompositionRelationshipsCommandInput,
   ListCompositionRelationshipsCommandOutput,
 } from "../commands/ListCompositionRelationshipsCommand";
+import {
+  ListComputationModelDataBindingUsagesCommandInput,
+  ListComputationModelDataBindingUsagesCommandOutput,
+} from "../commands/ListComputationModelDataBindingUsagesCommand";
+import {
+  ListComputationModelResolveToResourcesCommandInput,
+  ListComputationModelResolveToResourcesCommandOutput,
+} from "../commands/ListComputationModelResolveToResourcesCommand";
+import {
+  ListComputationModelsCommandInput,
+  ListComputationModelsCommandOutput,
+} from "../commands/ListComputationModelsCommand";
 import { ListDashboardsCommandInput, ListDashboardsCommandOutput } from "../commands/ListDashboardsCommand";
 import { ListDatasetsCommandInput, ListDatasetsCommandOutput } from "../commands/ListDatasetsCommand";
+import { ListExecutionsCommandInput, ListExecutionsCommandOutput } from "../commands/ListExecutionsCommand";
 import { ListGatewaysCommandInput, ListGatewaysCommandOutput } from "../commands/ListGatewaysCommand";
+import {
+  ListInterfaceRelationshipsCommandInput,
+  ListInterfaceRelationshipsCommandOutput,
+} from "../commands/ListInterfaceRelationshipsCommand";
 import { ListPortalsCommandInput, ListPortalsCommandOutput } from "../commands/ListPortalsCommand";
 import { ListProjectAssetsCommandInput, ListProjectAssetsCommandOutput } from "../commands/ListProjectAssetsCommand";
 import { ListProjectsCommandInput, ListProjectsCommandOutput } from "../commands/ListProjectsCommand";
@@ -202,6 +244,10 @@ import {
   ListTagsForResourceCommandOutput,
 } from "../commands/ListTagsForResourceCommand";
 import { ListTimeSeriesCommandInput, ListTimeSeriesCommandOutput } from "../commands/ListTimeSeriesCommand";
+import {
+  PutAssetModelInterfaceRelationshipCommandInput,
+  PutAssetModelInterfaceRelationshipCommandOutput,
+} from "../commands/PutAssetModelInterfaceRelationshipCommand";
 import {
   PutDefaultEncryptionConfigurationCommandInput,
   PutDefaultEncryptionConfigurationCommandOutput,
@@ -224,6 +270,10 @@ import {
   UpdateAssetPropertyCommandInput,
   UpdateAssetPropertyCommandOutput,
 } from "../commands/UpdateAssetPropertyCommand";
+import {
+  UpdateComputationModelCommandInput,
+  UpdateComputationModelCommandOutput,
+} from "../commands/UpdateComputationModelCommand";
 import { UpdateDashboardCommandInput, UpdateDashboardCommandOutput } from "../commands/UpdateDashboardCommand";
 import { UpdateDatasetCommandInput, UpdateDatasetCommandOutput } from "../commands/UpdateDatasetCommand";
 import {
@@ -242,14 +292,20 @@ import {
   Aggregates,
   AggregateType,
   Alarms,
+  AssetBindingValueFilter,
+  AssetModelBindingValueFilter,
   AssetModelCompositeModel,
   AssetModelCompositeModelDefinition,
   AssetModelHierarchy,
   AssetModelHierarchyDefinition,
   AssetModelProperty,
+  AssetModelPropertyBindingValue,
+  AssetModelPropertyBindingValueFilter,
   AssetModelPropertyDefinition,
   AssetModelPropertyPathSegment,
   AssetModelSummary,
+  AssetPropertyBindingValue,
+  AssetPropertyBindingValueFilter,
   AssetPropertyValue,
   AssetSummary,
   AssociatedAssetsSummary,
@@ -267,6 +323,8 @@ import {
   BatchGetAssetPropertyValueSkippedEntry,
   BatchGetAssetPropertyValueSuccessEntry,
   ColumnName,
+  ComputationModelAnomalyDetectionConfiguration,
+  ComputationModelConfiguration,
   ConflictingOperationException,
   Csv,
   CustomerManagedS3Storage,
@@ -287,7 +345,6 @@ import {
   InternalFailureException,
   InterpolatedAssetPropertyValue,
   InvalidRequestException,
-  InvocationOutput,
   JobConfiguration,
   KendraSourceDetail,
   LimitExceededException,
@@ -303,15 +360,16 @@ import {
   PortalTypeEntry,
   PreconditionFailedException,
   ProjectResource,
+  PropertyMapping,
   PropertyType,
   PropertyValueNullValue,
   PutAssetPropertyValueEntry,
   Quality,
   QueryTimeoutException,
+  ResolveTo,
   Resource,
   ResourceAlreadyExistsException,
   ResourceNotFoundException,
-  ResponseStream,
   RetentionPeriod,
   ServiceUnavailableException,
   SiemensIE,
@@ -319,7 +377,6 @@ import {
   TargetResource,
   ThrottlingException,
   TimeInNanos,
-  Trace,
   Transform,
   TransformProcessingConfig,
   TumblingWindow,
@@ -330,16 +387,24 @@ import {
   WarmTierRetentionPeriod,
 } from "../models/models_0";
 import {
+  ComputationModelDataBindingValue,
+  ComputationModelSummary,
   DashboardSummary,
+  DataBindingValueFilter,
   DatasetSummary,
   Datum,
+  ExecutionSummary,
   GatewaySummary,
   Image,
+  InvocationOutput,
   PortalSummary,
   ProjectSummary,
+  PropertyMappingConfiguration,
+  ResponseStream,
   Row,
   TimeSeriesSummary,
   TooManyTagsException,
+  Trace,
   UnauthorizedException,
 } from "../models/models_1";
 
@@ -789,6 +854,41 @@ export const se_CreateBulkImportJobCommand = async (
 };
 
 /**
+ * serializeAws_restJson1CreateComputationModelCommand
+ */
+export const se_CreateComputationModelCommand = async (
+  input: CreateComputationModelCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/computation-models");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      computationModelConfiguration: (_) => _json(_),
+      computationModelDataBinding: (_) => se_ComputationModelDataBinding(_, context),
+      computationModelDescription: [],
+      computationModelName: [],
+      tags: (_) => _json(_),
+    })
+  );
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1CreateDashboardCommand
  */
 export const se_CreateDashboardCommand = async (
@@ -1067,6 +1167,61 @@ export const se_DeleteAssetModelCompositeModelCommand = async (
   b.bp("/asset-models/{assetModelId}/composite-models/{assetModelCompositeModelId}");
   b.p("assetModelId", () => input.assetModelId!, "{assetModelId}", false);
   b.p("assetModelCompositeModelId", () => input.assetModelCompositeModelId!, "{assetModelCompositeModelId}", false);
+  const query: any = map({
+    [_cT]: [, input[_cT] ?? generateIdempotencyToken()],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("DELETE").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DeleteAssetModelInterfaceRelationshipCommand
+ */
+export const se_DeleteAssetModelInterfaceRelationshipCommand = async (
+  input: DeleteAssetModelInterfaceRelationshipCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/asset-models/{assetModelId}/interface/{interfaceAssetModelId}/asset-model-interface-relationship");
+  b.p("assetModelId", () => input.assetModelId!, "{assetModelId}", false);
+  b.p("interfaceAssetModelId", () => input.interfaceAssetModelId!, "{interfaceAssetModelId}", false);
+  const query: any = map({
+    [_cT]: [, input[_cT] ?? generateIdempotencyToken()],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("DELETE").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DeleteComputationModelCommand
+ */
+export const se_DeleteComputationModelCommand = async (
+  input: DeleteComputationModelCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/computation-models/{computationModelId}");
+  b.p("computationModelId", () => input.computationModelId!, "{computationModelId}", false);
   const query: any = map({
     [_cT]: [, input[_cT] ?? generateIdempotencyToken()],
   });
@@ -1407,6 +1562,31 @@ export const se_DescribeAssetModelCompositeModelCommand = async (
 };
 
 /**
+ * serializeAws_restJson1DescribeAssetModelInterfaceRelationshipCommand
+ */
+export const se_DescribeAssetModelInterfaceRelationshipCommand = async (
+  input: DescribeAssetModelInterfaceRelationshipCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/asset-models/{assetModelId}/interface/{interfaceAssetModelId}/asset-model-interface-relationship");
+  b.p("assetModelId", () => input.assetModelId!, "{assetModelId}", false);
+  b.p("interfaceAssetModelId", () => input.interfaceAssetModelId!, "{interfaceAssetModelId}", false);
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1DescribeAssetPropertyCommand
  */
 export const se_DescribeAssetPropertyCommand = async (
@@ -1452,6 +1632,58 @@ export const se_DescribeBulkImportJobCommand = async (
   }
   b.hn(resolvedHostname);
   b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DescribeComputationModelCommand
+ */
+export const se_DescribeComputationModelCommand = async (
+  input: DescribeComputationModelCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/computation-models/{computationModelId}");
+  b.p("computationModelId", () => input.computationModelId!, "{computationModelId}", false);
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DescribeComputationModelExecutionSummaryCommand
+ */
+export const se_DescribeComputationModelExecutionSummaryCommand = async (
+  input: DescribeComputationModelExecutionSummaryCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/computation-models/{computationModelId}/execution-summary");
+  b.p("computationModelId", () => input.computationModelId!, "{computationModelId}", false);
+  const query: any = map({
+    [_rTRT]: [, input[_rTRT]!],
+    [_rTRI]: [, input[_rTRI]!],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).q(query).b(body);
   return b.build();
 };
 
@@ -1513,6 +1745,30 @@ export const se_DescribeDefaultEncryptionConfigurationCommand = async (
   const b = rb(input, context);
   const headers: any = {};
   b.bp("/configuration/account/encryption");
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DescribeExecutionCommand
+ */
+export const se_DescribeExecutionCommand = async (
+  input: DescribeExecutionCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/executions/{executionId}");
+  b.p("executionId", () => input.executionId!, "{executionId}", false);
   let body: any;
   let { hostname: resolvedHostname } = await context.endpoint();
   if (context.disableHostPrefix !== true) {
@@ -1783,6 +2039,7 @@ export const se_ExecuteActionCommand = async (
       actionDefinitionId: [],
       actionPayload: (_) => _json(_),
       clientToken: [],
+      resolveTo: (_) => _json(_),
       targetResource: (_) => _json(_),
     })
   );
@@ -2046,6 +2303,8 @@ export const se_ListActionsCommand = async (
     [_tRI]: [, __expectNonNull(input[_tRI]!, `targetResourceId`)],
     [_nT]: [, input[_nT]!],
     [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+    [_rTRT]: [, input[_rTRT]!],
+    [_rTRI]: [, input[_rTRI]!],
   });
   let body: any;
   let { hostname: resolvedHostname } = await context.endpoint();
@@ -2322,6 +2581,94 @@ export const se_ListCompositionRelationshipsCommand = async (
 };
 
 /**
+ * serializeAws_restJson1ListComputationModelDataBindingUsagesCommand
+ */
+export const se_ListComputationModelDataBindingUsagesCommand = async (
+  input: ListComputationModelDataBindingUsagesCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/computation-models/data-binding-usages");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      dataBindingValueFilter: (_) => _json(_),
+      maxResults: [],
+      nextToken: [],
+    })
+  );
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListComputationModelResolveToResourcesCommand
+ */
+export const se_ListComputationModelResolveToResourcesCommand = async (
+  input: ListComputationModelResolveToResourcesCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/computation-models/{computationModelId}/resolve-to-resources");
+  b.p("computationModelId", () => input.computationModelId!, "{computationModelId}", false);
+  const query: any = map({
+    [_nT]: [, input[_nT]!],
+    [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListComputationModelsCommand
+ */
+export const se_ListComputationModelsCommand = async (
+  input: ListComputationModelsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/computation-models");
+  const query: any = map({
+    [_cMT]: [, input[_cMT]!],
+    [_nT]: [, input[_nT]!],
+    [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1ListDashboardsCommand
  */
 export const se_ListDashboardsCommand = async (
@@ -2378,6 +2725,38 @@ export const se_ListDatasetsCommand = async (
 };
 
 /**
+ * serializeAws_restJson1ListExecutionsCommand
+ */
+export const se_ListExecutionsCommand = async (
+  input: ListExecutionsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/executions");
+  const query: any = map({
+    [_tRT]: [, __expectNonNull(input[_tRT]!, `targetResourceType`)],
+    [_tRI]: [, __expectNonNull(input[_tRI]!, `targetResourceId`)],
+    [_rTRT]: [, input[_rTRT]!],
+    [_rTRI]: [, input[_rTRI]!],
+    [_nT]: [, input[_nT]!],
+    [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+    [_aTc]: [, input[_aTc]!],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1ListGatewaysCommand
  */
 export const se_ListGatewaysCommand = async (
@@ -2387,6 +2766,34 @@ export const se_ListGatewaysCommand = async (
   const b = rb(input, context);
   const headers: any = {};
   b.bp("/20200301/gateways");
+  const query: any = map({
+    [_nT]: [, input[_nT]!],
+    [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+  });
+  let body: any;
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListInterfaceRelationshipsCommand
+ */
+export const se_ListInterfaceRelationshipsCommand = async (
+  input: ListInterfaceRelationshipsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/interface/{interfaceAssetModelId}/asset-models");
+  b.p("interfaceAssetModelId", () => input.interfaceAssetModelId!, "{interfaceAssetModelId}", false);
   const query: any = map({
     [_nT]: [, input[_nT]!],
     [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
@@ -2540,6 +2947,39 @@ export const se_ListTimeSeriesCommand = async (
   }
   b.hn(resolvedHostname);
   b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1PutAssetModelInterfaceRelationshipCommand
+ */
+export const se_PutAssetModelInterfaceRelationshipCommand = async (
+  input: PutAssetModelInterfaceRelationshipCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/asset-models/{assetModelId}/interface/{interfaceAssetModelId}/asset-model-interface-relationship");
+  b.p("assetModelId", () => input.assetModelId!, "{assetModelId}", false);
+  b.p("interfaceAssetModelId", () => input.interfaceAssetModelId!, "{interfaceAssetModelId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      propertyMappingConfiguration: (_) => _json(_),
+    })
+  );
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("PUT").h(headers).b(body);
   return b.build();
 };
 
@@ -2879,6 +3319,41 @@ export const se_UpdateAssetPropertyCommand = async (
   }
   b.hn(resolvedHostname);
   b.m("PUT").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1UpdateComputationModelCommand
+ */
+export const se_UpdateComputationModelCommand = async (
+  input: UpdateComputationModelCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/computation-models/{computationModelId}");
+  b.p("computationModelId", () => input.computationModelId!, "{computationModelId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      computationModelConfiguration: (_) => _json(_),
+      computationModelDataBinding: (_) => se_ComputationModelDataBinding(_, context),
+      computationModelDescription: [],
+      computationModelName: [],
+    })
+  );
+  let { hostname: resolvedHostname } = await context.endpoint();
+  if (context.disableHostPrefix !== true) {
+    resolvedHostname = "api." + resolvedHostname;
+    if (!__isValidHostname(resolvedHostname)) {
+      throw new Error("ValidationError: prefixed hostname must be hostname compatible.");
+    }
+  }
+  b.hn(resolvedHostname);
+  b.m("POST").h(headers).b(body);
   return b.build();
 };
 
@@ -3370,6 +3845,29 @@ export const de_CreateBulkImportJobCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1CreateComputationModelCommand
+ */
+export const de_CreateComputationModelCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateComputationModelCommandOutput> => {
+  if (output.statusCode !== 202 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    computationModelArn: __expectString,
+    computationModelId: __expectString,
+    computationModelStatus: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1CreateDashboardCommand
  */
 export const de_CreateDashboardCommand = async (
@@ -3564,6 +4062,51 @@ export const de_DeleteAssetModelCompositeModelCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1DeleteAssetModelInterfaceRelationshipCommand
+ */
+export const de_DeleteAssetModelInterfaceRelationshipCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteAssetModelInterfaceRelationshipCommandOutput> => {
+  if (output.statusCode !== 202 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    assetModelArn: __expectString,
+    assetModelId: __expectString,
+    assetModelStatus: _json,
+    interfaceAssetModelId: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DeleteComputationModelCommand
+ */
+export const de_DeleteComputationModelCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteComputationModelCommandOutput> => {
+  if (output.statusCode !== 202 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    computationModelStatus: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1DeleteDashboardCommand
  */
 export const de_DeleteDashboardCommand = async (
@@ -3719,6 +4262,7 @@ export const de_DescribeActionCommand = async (
     actionId: __expectString,
     actionPayload: _json,
     executionTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    resolveTo: _json,
     targetResource: _json,
   });
   Object.assign(contents, doc);
@@ -3818,6 +4362,7 @@ export const de_DescribeAssetModelCommand = async (
     assetModelStatus: _json,
     assetModelType: __expectString,
     assetModelVersion: __expectString,
+    interfaceDetails: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -3849,6 +4394,30 @@ export const de_DescribeAssetModelCompositeModelCommand = async (
     assetModelCompositeModelType: __expectString,
     assetModelId: __expectString,
     compositionDetails: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DescribeAssetModelInterfaceRelationshipCommand
+ */
+export const de_DescribeAssetModelInterfaceRelationshipCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeAssetModelInterfaceRelationshipCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    assetModelId: __expectString,
+    hierarchyMappings: _json,
+    interfaceAssetModelId: __expectString,
+    propertyMappings: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -3906,6 +4475,60 @@ export const de_DescribeBulkImportJobCommand = async (
     jobName: __expectString,
     jobRoleArn: __expectString,
     jobStatus: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DescribeComputationModelCommand
+ */
+export const de_DescribeComputationModelCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeComputationModelCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    actionDefinitions: _json,
+    computationModelArn: __expectString,
+    computationModelConfiguration: _json,
+    computationModelCreationDate: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    computationModelDataBinding: (_) => de_ComputationModelDataBinding(_, context),
+    computationModelDescription: __expectString,
+    computationModelId: __expectString,
+    computationModelLastUpdateDate: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    computationModelName: __expectString,
+    computationModelStatus: _json,
+    computationModelVersion: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DescribeComputationModelExecutionSummaryCommand
+ */
+export const de_DescribeComputationModelExecutionSummaryCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeComputationModelExecutionSummaryCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    computationModelExecutionSummary: _json,
+    computationModelId: __expectString,
+    resolveTo: _json,
   });
   Object.assign(contents, doc);
   return contents;
@@ -3986,6 +4609,37 @@ export const de_DescribeDefaultEncryptionConfigurationCommand = async (
     configurationStatus: _json,
     encryptionType: __expectString,
     kmsKeyArn: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DescribeExecutionCommand
+ */
+export const de_DescribeExecutionCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeExecutionCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    actionType: __expectString,
+    executionDetails: _json,
+    executionEndTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    executionEntityVersion: __expectString,
+    executionId: __expectString,
+    executionResult: _json,
+    executionStartTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    executionStatus: _json,
+    resolveTo: _json,
+    targetResource: _json,
+    targetResourceVersion: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -4613,6 +5267,72 @@ export const de_ListCompositionRelationshipsCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1ListComputationModelDataBindingUsagesCommand
+ */
+export const de_ListComputationModelDataBindingUsagesCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListComputationModelDataBindingUsagesCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    dataBindingUsageSummaries: _json,
+    nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListComputationModelResolveToResourcesCommand
+ */
+export const de_ListComputationModelResolveToResourcesCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListComputationModelResolveToResourcesCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    computationModelResolveToResourceSummaries: _json,
+    nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListComputationModelsCommand
+ */
+export const de_ListComputationModelsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListComputationModelsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    computationModelSummaries: (_) => de_ComputationModelSummaries(_, context),
+    nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1ListDashboardsCommand
  */
 export const de_ListDashboardsCommand = async (
@@ -4657,6 +5377,28 @@ export const de_ListDatasetsCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1ListExecutionsCommand
+ */
+export const de_ListExecutionsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListExecutionsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    executionSummaries: (_) => de_ExecutionSummaries(_, context),
+    nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1ListGatewaysCommand
  */
 export const de_ListGatewaysCommand = async (
@@ -4672,6 +5414,28 @@ export const de_ListGatewaysCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     gatewaySummaries: (_) => de_GatewaySummaries(_, context),
+    nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListInterfaceRelationshipsCommand
+ */
+export const de_ListInterfaceRelationshipsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListInterfaceRelationshipsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    interfaceRelationshipSummaries: _json,
     nextToken: __expectString,
   });
   Object.assign(contents, doc);
@@ -4782,6 +5546,30 @@ export const de_ListTimeSeriesCommand = async (
   const doc = take(data, {
     TimeSeriesSummaries: (_) => de_TimeSeriesSummaries(_, context),
     nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1PutAssetModelInterfaceRelationshipCommand
+ */
+export const de_PutAssetModelInterfaceRelationshipCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<PutAssetModelInterfaceRelationshipCommandOutput> => {
+  if (output.statusCode !== 202 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    assetModelArn: __expectString,
+    assetModelId: __expectString,
+    assetModelStatus: _json,
+    interfaceAssetModelId: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -4984,6 +5772,27 @@ export const de_UpdateAssetPropertyCommand = async (
     $metadata: deserializeMetadata(output),
   });
   await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1UpdateComputationModelCommand
+ */
+export const de_UpdateComputationModelCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateComputationModelCommandOutput> => {
+  if (output.statusCode !== 202 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    computationModelStatus: _json,
+  });
+  Object.assign(contents, doc);
   return contents;
 };
 
@@ -5507,7 +6316,7 @@ const de_ResponseStream = (
         throttlingException: await de_ThrottlingException_event(event["throttlingException"], context),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 const de_AccessDeniedException_event = async (output: any, context: __SerdeContext): Promise<AccessDeniedException> => {
@@ -5592,6 +6401,10 @@ const de_Trace_event = async (output: any, context: __SerdeContext): Promise<Tra
 
 // se_Alarms omitted.
 
+// se_AssetBindingValueFilter omitted.
+
+// se_AssetModelBindingValueFilter omitted.
+
 // se_AssetModelCompositeModel omitted.
 
 // se_AssetModelCompositeModelDefinition omitted.
@@ -5633,6 +6446,10 @@ const se_AssetModelCompositeModels = (input: AssetModelCompositeModel[], context
 
 // se_AssetModelProperty omitted.
 
+// se_AssetModelPropertyBindingValue omitted.
+
+// se_AssetModelPropertyBindingValueFilter omitted.
+
 // se_AssetModelPropertyDefinition omitted.
 
 // se_AssetModelPropertyDefinitions omitted.
@@ -5640,6 +6457,10 @@ const se_AssetModelCompositeModels = (input: AssetModelCompositeModel[], context
 // se_AssetModelPropertyPath omitted.
 
 // se_AssetModelPropertyPathSegment omitted.
+
+// se_AssetPropertyBindingValue omitted.
+
+// se_AssetPropertyBindingValueFilter omitted.
 
 /**
  * serializeAws_restJson1AssetPropertyValue
@@ -5737,11 +6558,55 @@ const se_BatchGetAssetPropertyValueHistoryEntry = (
   });
 };
 
+/**
+ * serializeAws_restJson1BindingValueList
+ */
+const se_BindingValueList = (input: ComputationModelDataBindingValue[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_ComputationModelDataBindingValue(entry, context);
+    });
+};
+
 // se_ColumnNames omitted.
+
+// se_ComputationModelAnomalyDetectionConfiguration omitted.
+
+// se_ComputationModelConfiguration omitted.
+
+/**
+ * serializeAws_restJson1ComputationModelDataBinding
+ */
+const se_ComputationModelDataBinding = (
+  input: Record<string, ComputationModelDataBindingValue>,
+  context: __SerdeContext
+): any => {
+  return Object.entries(input).reduce((acc: Record<string, any>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key] = se_ComputationModelDataBindingValue(value, context);
+    return acc;
+  }, {});
+};
+
+/**
+ * serializeAws_restJson1ComputationModelDataBindingValue
+ */
+const se_ComputationModelDataBindingValue = (input: ComputationModelDataBindingValue, context: __SerdeContext): any => {
+  return take(input, {
+    assetModelProperty: _json,
+    assetProperty: _json,
+    list: (_) => se_BindingValueList(_, context),
+  });
+};
 
 // se_Csv omitted.
 
 // se_CustomerManagedS3Storage omitted.
+
+// se_DataBindingValueFilter omitted.
 
 // se_DatasetSource omitted.
 
@@ -5825,6 +6690,12 @@ const se_ImageFile = (input: ImageFile, context: __SerdeContext): any => {
 
 // se_ProjectResource omitted.
 
+// se_PropertyMapping omitted.
+
+// se_PropertyMappingConfiguration omitted.
+
+// se_PropertyMappings omitted.
+
 // se_PropertyType omitted.
 
 // se_PropertyValueNullValue omitted.
@@ -5854,6 +6725,8 @@ const se_PutAssetPropertyValueEntry = (input: PutAssetPropertyValueEntry, contex
 };
 
 // se_Qualities omitted.
+
+// se_ResolveTo omitted.
 
 // se_Resource omitted.
 
@@ -6021,6 +6894,8 @@ const de_AssetModelCompositeModels = (output: any, context: __SerdeContext): Ass
 
 // de_AssetModelProperty omitted.
 
+// de_AssetModelPropertyBindingValue omitted.
+
 // de_AssetModelPropertyPath omitted.
 
 // de_AssetModelPropertyPathSegment omitted.
@@ -6064,6 +6939,8 @@ const de_AssetModelSummary = (output: any, context: __SerdeContext): AssetModelS
 // de_AssetProperties omitted.
 
 // de_AssetProperty omitted.
+
+// de_AssetPropertyBindingValue omitted.
 
 // de_AssetPropertyPath omitted.
 
@@ -6398,6 +7275,18 @@ const de_BatchGetAssetPropertyValueSuccessEntry = (
 
 // de_BatchPutAssetPropertyErrors omitted.
 
+/**
+ * deserializeAws_restJson1BindingValueList
+ */
+const de_BindingValueList = (output: any, context: __SerdeContext): ComputationModelDataBindingValue[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ComputationModelDataBindingValue(entry, context);
+    });
+  return retVal;
+};
+
 // de_Citation omitted.
 
 // de_Citations omitted.
@@ -6421,6 +7310,86 @@ const de_BatchGetAssetPropertyValueSuccessEntry = (
 // de_CompositionRelationshipSummaries omitted.
 
 // de_CompositionRelationshipSummary omitted.
+
+// de_ComputationModelAnomalyDetectionConfiguration omitted.
+
+// de_ComputationModelConfiguration omitted.
+
+/**
+ * deserializeAws_restJson1ComputationModelDataBinding
+ */
+const de_ComputationModelDataBinding = (
+  output: any,
+  context: __SerdeContext
+): Record<string, ComputationModelDataBindingValue> => {
+  return Object.entries(output).reduce(
+    (acc: Record<string, ComputationModelDataBindingValue>, [key, value]: [string, any]) => {
+      if (value === null) {
+        return acc;
+      }
+      acc[key as string] = de_ComputationModelDataBindingValue(value, context);
+      return acc;
+    },
+    {} as Record<string, ComputationModelDataBindingValue>
+  );
+};
+
+// de_ComputationModelDataBindingUsageSummaries omitted.
+
+// de_ComputationModelDataBindingUsageSummary omitted.
+
+/**
+ * deserializeAws_restJson1ComputationModelDataBindingValue
+ */
+const de_ComputationModelDataBindingValue = (
+  output: any,
+  context: __SerdeContext
+): ComputationModelDataBindingValue => {
+  return take(output, {
+    assetModelProperty: _json,
+    assetProperty: _json,
+    list: (_: any) => de_BindingValueList(_, context),
+  }) as any;
+};
+
+// de_ComputationModelExecutionSummary omitted.
+
+// de_ComputationModelIdList omitted.
+
+// de_ComputationModelResolveToResourceSummaries omitted.
+
+// de_ComputationModelResolveToResourceSummary omitted.
+
+// de_ComputationModelStatus omitted.
+
+/**
+ * deserializeAws_restJson1ComputationModelSummaries
+ */
+const de_ComputationModelSummaries = (output: any, context: __SerdeContext): ComputationModelSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ComputationModelSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1ComputationModelSummary
+ */
+const de_ComputationModelSummary = (output: any, context: __SerdeContext): ComputationModelSummary => {
+  return take(output, {
+    arn: __expectString,
+    creationDate: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    description: __expectString,
+    id: __expectString,
+    lastUpdateDate: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    name: __expectString,
+    status: _json,
+    type: __expectString,
+    version: __expectString,
+  }) as any;
+};
 
 // de_ConfigurationErrorDetails omitted.
 
@@ -6456,6 +7425,8 @@ const de_DashboardSummary = (output: any, context: __SerdeContext): DashboardSum
     name: __expectString,
   }) as any;
 };
+
+// de_DataBindingValue omitted.
 
 // de_DataSetReference omitted.
 
@@ -6522,6 +7493,41 @@ const de_DatumList = (output: any, context: __SerdeContext): Datum[] => {
 
 // de_ErrorReportLocation omitted.
 
+// de_ExecutionDetails omitted.
+
+// de_ExecutionResult omitted.
+
+// de_ExecutionStatus omitted.
+
+/**
+ * deserializeAws_restJson1ExecutionSummaries
+ */
+const de_ExecutionSummaries = (output: any, context: __SerdeContext): ExecutionSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ExecutionSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1ExecutionSummary
+ */
+const de_ExecutionSummary = (output: any, context: __SerdeContext): ExecutionSummary => {
+  return take(output, {
+    actionType: __expectString,
+    executionEndTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    executionEntityVersion: __expectString,
+    executionId: __expectString,
+    executionStartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    executionStatus: _json,
+    resolveTo: _json,
+    targetResource: _json,
+    targetResourceVersion: __expectString,
+  }) as any;
+};
+
 // de_ExpressionVariable omitted.
 
 // de_ExpressionVariables omitted.
@@ -6573,6 +7579,10 @@ const de_GatewaySummary = (output: any, context: __SerdeContext): GatewaySummary
 
 // de_GroupIdentity omitted.
 
+// de_HierarchyMapping omitted.
+
+// de_HierarchyMappings omitted.
+
 // de_IAMRoleIdentity omitted.
 
 // de_IAMUserIdentity omitted.
@@ -6580,6 +7590,18 @@ const de_GatewaySummary = (output: any, context: __SerdeContext): GatewaySummary
 // de_Identity omitted.
 
 // de_ImageLocation omitted.
+
+// de_InterfaceDetails omitted.
+
+// de_InterfaceRelationship omitted.
+
+// de_InterfaceRelationshipSummaries omitted.
+
+// de_InterfaceRelationshipSummary omitted.
+
+// de_InterfaceSummaries omitted.
+
+// de_InterfaceSummary omitted.
 
 /**
  * deserializeAws_restJson1InterpolatedAssetPropertyValue
@@ -6616,6 +7638,8 @@ const de_InterpolatedAssetPropertyValues = (output: any, context: __SerdeContext
 // de_Location omitted.
 
 // de_LoggingOptions omitted.
+
+// de_MatchedDataBinding omitted.
 
 // de_Measurement omitted.
 
@@ -6701,6 +7725,10 @@ const de_ProjectSummary = (output: any, context: __SerdeContext): ProjectSummary
 
 // de_Property omitted.
 
+// de_PropertyMapping omitted.
+
+// de_PropertyMappings omitted.
+
 // de_PropertyNotification omitted.
 
 // de_PropertyType omitted.
@@ -6708,6 +7736,8 @@ const de_ProjectSummary = (output: any, context: __SerdeContext): ProjectSummary
 // de_PropertyValueNullValue omitted.
 
 // de_Reference omitted.
+
+// de_ResolveTo omitted.
 
 // de_Resource omitted.
 
@@ -6823,7 +7853,9 @@ const _aMT = "assetModelTypes";
 const _aMV = "assetModelVersion";
 const _aP = "aliasPrefix";
 const _aT = "aggregateTypes";
+const _aTc = "actionType";
 const _cI = "conversationId";
+const _cMT = "computationModelType";
 const _cT = "clientToken";
 const _e = "etag";
 const _eD = "endDate";
@@ -6856,6 +7888,8 @@ const _r = "resolution";
 const _rA = "resourceArn";
 const _rI = "resourceId";
 const _rT = "resourceType";
+const _rTRI = "resolveToResourceId";
+const _rTRT = "resolveToResourceType";
 const _sD = "startDate";
 const _sT = "sourceType";
 const _sTIS = "startTimeInSeconds";

@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ResetNetworkInterfaceAttributeRequest } from "../models/models_7";
+import { ResetNetworkInterfaceAttributeRequest } from "../models/models_8";
 import {
   de_ResetNetworkInterfaceAttributeCommand,
   se_ResetNetworkInterfaceAttributeCommand,
@@ -31,7 +31,8 @@ export interface ResetNetworkInterfaceAttributeCommandInput extends ResetNetwork
 export interface ResetNetworkInterfaceAttributeCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>Resets a network interface attribute. You can specify only one attribute at a time.</p>
+ * <p>Resets a network interface attribute. You can specify only one attribute at a
+ *             time.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

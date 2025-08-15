@@ -24,6 +24,10 @@ import {
 
 import { GetControlCommandInput, GetControlCommandOutput } from "../commands/GetControlCommand";
 import { ListCommonControlsCommandInput, ListCommonControlsCommandOutput } from "../commands/ListCommonControlsCommand";
+import {
+  ListControlMappingsCommandInput,
+  ListControlMappingsCommandOutput,
+} from "../commands/ListControlMappingsCommand";
 import { ListControlsCommandInput, ListControlsCommandOutput } from "../commands/ListControlsCommand";
 import { ListDomainsCommandInput, ListDomainsCommandOutput } from "../commands/ListDomainsCommand";
 import { ListObjectivesCommandInput, ListObjectivesCommandOutput } from "../commands/ListObjectivesCommand";
@@ -32,9 +36,14 @@ import {
   AccessDeniedException,
   CommonControlFilter,
   CommonControlSummary,
+  ControlFilter,
+  ControlMappingFilter,
+  ControlSummary,
   DomainResourceFilter,
   DomainSummary,
+  ImplementationFilter,
   InternalServerException,
+  MappingType,
   ObjectiveFilter,
   ObjectiveResourceFilter,
   ObjectiveSummary,
@@ -92,6 +101,32 @@ export const se_ListCommonControlsCommand = async (
 };
 
 /**
+ * serializeAws_restJson1ListControlMappingsCommand
+ */
+export const se_ListControlMappingsCommand = async (
+  input: ListControlMappingsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/list-control-mappings");
+  const query: any = map({
+    [_nT]: [, input[_NT]!],
+    [_mR]: [() => input.MaxResults !== void 0, () => input[_MR]!.toString()],
+  });
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      Filter: (_) => _json(_),
+    })
+  );
+  b.m("POST").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1ListControlsCommand
  */
 export const se_ListControlsCommand = async (
@@ -99,13 +134,20 @@ export const se_ListControlsCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
-  const headers: any = {};
+  const headers: any = {
+    "content-type": "application/json",
+  };
   b.bp("/list-controls");
   const query: any = map({
     [_nT]: [, input[_NT]!],
     [_mR]: [() => input.MaxResults !== void 0, () => input[_MR]!.toString()],
   });
   let body: any;
+  body = JSON.stringify(
+    take(input, {
+      Filter: (_) => _json(_),
+    })
+  );
   b.m("POST").h(headers).q(query).b(body);
   return b.build();
 };
@@ -170,13 +212,17 @@ export const de_GetControlCommand = async (
   });
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
+    Aliases: _json,
     Arn: __expectString,
     Behavior: __expectString,
+    CreateTime: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     Description: __expectString,
+    GovernedResources: _json,
     Implementation: _json,
     Name: __expectString,
     Parameters: _json,
     RegionConfiguration: _json,
+    Severity: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -205,6 +251,28 @@ export const de_ListCommonControlsCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1ListControlMappingsCommand
+ */
+export const de_ListControlMappingsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListControlMappingsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    ControlMappings: _json,
+    NextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1ListControlsCommand
  */
 export const de_ListControlsCommand = async (
@@ -219,7 +287,7 @@ export const de_ListControlsCommand = async (
   });
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
-    Controls: _json,
+    Controls: (_) => de_Controls(_, context),
     NextToken: __expectString,
   });
   Object.assign(contents, doc);
@@ -400,11 +468,27 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
   return __decorateServiceException(exception, parsedOutput.body);
 };
 
+// se_CommonControlArnFilterList omitted.
+
 // se_CommonControlFilter omitted.
+
+// se_ControlArnFilterList omitted.
+
+// se_ControlFilter omitted.
+
+// se_ControlMappingFilter omitted.
 
 // se_DomainResourceFilter omitted.
 
 // se_DomainResourceFilterList omitted.
+
+// se_ImplementationFilter omitted.
+
+// se_ImplementationIdentifierFilterList omitted.
+
+// se_ImplementationTypeFilterList omitted.
+
+// se_MappingTypeFilterList omitted.
 
 // se_ObjectiveFilter omitted.
 
@@ -415,6 +499,8 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 // de_AssociatedDomainSummary omitted.
 
 // de_AssociatedObjectiveSummary omitted.
+
+// de_CommonControlMappingDetails omitted.
 
 /**
  * deserializeAws_restJson1CommonControlSummary
@@ -443,13 +529,44 @@ const de_CommonControlSummaryList = (output: any, context: __SerdeContext): Comm
   return retVal;
 };
 
+// de_ControlAliases omitted.
+
+// de_ControlMapping omitted.
+
+// de_ControlMappings omitted.
+
 // de_ControlParameter omitted.
 
 // de_ControlParameters omitted.
 
-// de_Controls omitted.
+/**
+ * deserializeAws_restJson1Controls
+ */
+const de_Controls = (output: any, context: __SerdeContext): ControlSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ControlSummary(entry, context);
+    });
+  return retVal;
+};
 
-// de_ControlSummary omitted.
+/**
+ * deserializeAws_restJson1ControlSummary
+ */
+const de_ControlSummary = (output: any, context: __SerdeContext): ControlSummary => {
+  return take(output, {
+    Aliases: _json,
+    Arn: __expectString,
+    Behavior: __expectString,
+    CreateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    Description: __expectString,
+    GovernedResources: _json,
+    Implementation: _json,
+    Name: __expectString,
+    Severity: __expectString,
+  }) as any;
+};
 
 // de_DeployableRegions omitted.
 
@@ -478,7 +595,15 @@ const de_DomainSummaryList = (output: any, context: __SerdeContext): DomainSumma
   return retVal;
 };
 
+// de_FrameworkMappingDetails omitted.
+
+// de_GovernedResources omitted.
+
 // de_ImplementationDetails omitted.
+
+// de_ImplementationSummary omitted.
+
+// de_Mapping omitted.
 
 /**
  * deserializeAws_restJson1ObjectiveSummary

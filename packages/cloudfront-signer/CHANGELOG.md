@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/cloudfront-signer
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+
+### Bug Fixes
+
+* **cloudfront-signer:** do not use URL Object ([#7237](https://github.com/aws/aws-sdk-js-v3/issues/7237)) ([5a421d4](https://github.com/aws/aws-sdk-js-v3/commit/5a421d48a47cb30c69803a23abfdd2714009efac))
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+**Note:** Version bump only for package @aws-sdk/cloudfront-signer
+
+
+
+
+
+# [3.813.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.812.0...v3.813.0) (2025-05-19)
+
+**Note:** Version bump only for package @aws-sdk/cloudfront-signer
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/cloudfront-signer
+
+
+
+
+
 # [3.775.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.774.0...v3.775.0) (2025-03-25)
 
 **Note:** Version bump only for package @aws-sdk/cloudfront-signer

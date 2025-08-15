@@ -28,10 +28,7 @@ export interface GetSearchSuggestionsCommandInput extends GetSearchSuggestionsRe
 export interface GetSearchSuggestionsCommandOutput extends GetSearchSuggestionsResponse, __MetadataBearer {}
 
 /**
- * <p>An auto-complete API for the search functionality in the SageMaker console. It returns
- *       suggestions of possible matches for the property name to use in <code>Search</code> queries.
- *       Provides suggestions for <code>HyperParameters</code>, <code>Tags</code>, and
- *         <code>Metrics</code>.</p>
+ * <p>An auto-complete API for the search functionality in the SageMaker console. It returns suggestions of possible matches for the property name to use in <code>Search</code> queries. Provides suggestions for <code>HyperParameters</code>, <code>Tags</code>, and <code>Metrics</code>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -39,7 +36,7 @@ export interface GetSearchSuggestionsCommandOutput extends GetSearchSuggestionsR
  * // const { SageMakerClient, GetSearchSuggestionsCommand } = require("@aws-sdk/client-sagemaker"); // CommonJS import
  * const client = new SageMakerClient(config);
  * const input = { // GetSearchSuggestionsRequest
- *   Resource: "TrainingJob" || "Experiment" || "ExperimentTrial" || "ExperimentTrialComponent" || "Endpoint" || "Model" || "ModelPackage" || "ModelPackageGroup" || "Pipeline" || "PipelineExecution" || "FeatureGroup" || "FeatureMetadata" || "Image" || "ImageVersion" || "Project" || "HyperParameterTuningJob" || "ModelCard", // required
+ *   Resource: "TrainingJob" || "Experiment" || "ExperimentTrial" || "ExperimentTrialComponent" || "Endpoint" || "Model" || "ModelPackage" || "ModelPackageGroup" || "Pipeline" || "PipelineExecution" || "FeatureGroup" || "FeatureMetadata" || "Image" || "ImageVersion" || "Project" || "HyperParameterTuningJob" || "ModelCard" || "PipelineVersion", // required
  *   SuggestionQuery: { // SuggestionQuery
  *     PropertyNameQuery: { // PropertyNameQuery
  *       PropertyNameHint: "STRING_VALUE", // required

@@ -1,11 +1,11 @@
-import type { HttpResponse, SerdeContext } from "@smithy/types";
+import type { HttpResponse, SerdeFunctions } from "@smithy/types";
 
 import { collectBodyString } from "../common";
 
 /**
  * @internal
  */
-export const parseJsonBody = (streamBody: any, context: SerdeContext): any =>
+export const parseJsonBody = (streamBody: any, context: SerdeFunctions): any =>
   collectBodyString(streamBody, context).then((encoded) => {
     if (encoded.length) {
       try {
@@ -25,7 +25,7 @@ export const parseJsonBody = (streamBody: any, context: SerdeContext): any =>
 /**
  * @internal
  */
-export const parseJsonErrorBody = async (errorBody: any, context: SerdeContext) => {
+export const parseJsonErrorBody = async (errorBody: any, context: SerdeFunctions) => {
   const value = await parseJsonBody(errorBody, context);
   value.message = value.message ?? value.Message;
   return value;
@@ -59,11 +59,14 @@ export const loadRestJsonErrorCode = (output: HttpResponse, data: any): string |
     return sanitizeErrorCode(output.headers[headerKey]);
   }
 
-  if (data.code !== undefined) {
-    return sanitizeErrorCode(data.code);
-  }
+  if (data && typeof data === "object") {
+    const codeKey = findKey(data, "code");
+    if (codeKey && data[codeKey] !== undefined) {
+      return sanitizeErrorCode(data[codeKey]);
+    }
 
-  if (data["__type"] !== undefined) {
-    return sanitizeErrorCode(data["__type"]);
+    if (data["__type"] !== undefined) {
+      return sanitizeErrorCode(data["__type"]);
+    }
   }
 };

@@ -46,17 +46,26 @@ export interface UpdateTableOptimizerCommandOutput extends UpdateTableOptimizerR
  *     vpcConfiguration: { // TableOptimizerVpcConfiguration Union: only one key present
  *       glueConnectionName: "STRING_VALUE",
  *     },
+ *     compactionConfiguration: { // CompactionConfiguration
+ *       icebergConfiguration: { // IcebergCompactionConfiguration
+ *         strategy: "binpack" || "sort" || "z-order",
+ *         minInputFiles: Number("int"),
+ *         deleteFileThreshold: Number("int"),
+ *       },
+ *     },
  *     retentionConfiguration: { // RetentionConfiguration
  *       icebergConfiguration: { // IcebergRetentionConfiguration
  *         snapshotRetentionPeriodInDays: Number("int"),
  *         numberOfSnapshotsToRetain: Number("int"),
  *         cleanExpiredFiles: true || false,
+ *         runRateInHours: Number("int"),
  *       },
  *     },
  *     orphanFileDeletionConfiguration: { // OrphanFileDeletionConfiguration
  *       icebergConfiguration: { // IcebergOrphanFileDeletionConfiguration
  *         orphanFileRetentionPeriodInDays: Number("int"),
  *         location: "STRING_VALUE",
+ *         runRateInHours: Number("int"),
  *       },
  *     },
  *   },

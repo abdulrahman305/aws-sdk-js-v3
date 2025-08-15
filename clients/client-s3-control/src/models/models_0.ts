@@ -355,6 +355,18 @@ export interface AccessPoint {
    * @public
    */
   BucketAccountId?: string | undefined;
+
+  /**
+   * <p>A unique identifier for the data source of the access point.</p>
+   * @public
+   */
+  DataSourceId?: string | undefined;
+
+  /**
+   * <p>The type of the data source that the access point is attached to.</p>
+   * @public
+   */
+  DataSourceType?: string | undefined;
 }
 
 /**
@@ -949,11 +961,8 @@ export type S3PrefixType = (typeof S3PrefixType)[keyof typeof S3PrefixType];
 
 /**
  * <p>
- *    An Amazon Web Services resource tag that's associated with your S3 resource. You can add tags to new objects when you upload them, or you can add object tags to existing objects.
+ *    A key-value pair that you use to label your resources. You can add tags to new resources when you create them, or you can add tags to existing resources. Tags can help you organize, track costs for, and control access to resources.
  * </p>
- *          <note>
- *             <p>This operation is only supported for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-lens-groups.html">S3 Storage Lens groups</a> and for <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-grants-tagging.html">S3 Access Grants</a>. The tagged resource can be an S3 Storage Lens group or S3 Access Grants instance, registered location, or grant. </p>
- *          </note>
  * @public
  */
 export interface Tag {
@@ -1246,6 +1255,45 @@ export interface CreateAccessGrantsLocationResult {
 
 /**
  * @public
+ * @enum
+ */
+export const ScopePermission = {
+  AbortMultipartUpload: "AbortMultipartUpload",
+  DeleteObject: "DeleteObject",
+  GetObject: "GetObject",
+  GetObjectAttributes: "GetObjectAttributes",
+  ListBucket: "ListBucket",
+  ListBucketMultipartUploads: "ListBucketMultipartUploads",
+  ListMultipartUploadParts: "ListMultipartUploadParts",
+  PutObject: "PutObject",
+} as const;
+
+/**
+ * @public
+ */
+export type ScopePermission = (typeof ScopePermission)[keyof typeof ScopePermission];
+
+/**
+ * <p>You can use the access point scope to restrict access to specific prefixes, API operations, or a combination of both.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-directory-buckets-manage-scope.html">Manage the scope of your access points for directory buckets</a>.</p>
+ * @public
+ */
+export interface Scope {
+  /**
+   * <p>You can specify any amount of prefixes, but the total length of characters of all prefixes must be less than 256 bytes in size.</p>
+   * @public
+   */
+  Prefixes?: string[] | undefined;
+
+  /**
+   * <p>You can include one or more API operations as permissions.</p>
+   * @public
+   */
+  Permissions?: ScopePermission[] | undefined;
+}
+
+/**
+ * @public
  */
 export interface CreateAccessPointRequest {
   /**
@@ -1256,6 +1304,10 @@ export interface CreateAccessPointRequest {
 
   /**
    * <p>The name you want to assign to this access point.</p>
+   *          <p>For directory buckets, the access point name must consist of a base name that you provide and
+   *          suffix that includes the <code>ZoneID</code> (Amazon Web Services Availability Zone or Local Zone) of your bucket location,
+   *          followed by <code>--xa-s3</code>. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-directory-buckets.html">Managing access to shared datasets in directory buckets with
+   *             access points</a> in the <i>Amazon S3 User Guide</i>.</p>
    * @public
    */
   Name: string | undefined;
@@ -1293,6 +1345,23 @@ export interface CreateAccessPointRequest {
    * @public
    */
   BucketAccountId?: string | undefined;
+
+  /**
+   * <p>For directory buckets, you can filter access control to specific prefixes, API
+   *          operations, or a combination of both. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-directory-buckets.html">Managing access to shared datasets in directory buckets with
+   *             access points</a> in the <i>Amazon S3 User Guide</i>.</p>
+   *          <note>
+   *             <p>Scope is only supported for access points attached to directory buckets.</p>
+   *          </note>
+   * @public
+   */
+  Scope?: Scope | undefined;
+
+  /**
+   * <p>An array of tags that you can apply to an access point. Tags are key-value pairs of metadata used to control access to your access points. For more information about tags, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/tagging.html">Using tags with Amazon S3</a>. For information about tagging access points, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/tagging.html#using-tags-for-abac">Using tags for attribute-based access control (ABAC)</a>.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
 }
 
 /**
@@ -3704,6 +3773,27 @@ export interface DeleteAccessPointPolicyForObjectLambdaRequest {
 /**
  * @public
  */
+export interface DeleteAccessPointScopeRequest {
+  /**
+   * <p>
+   *          The Amazon Web Services account ID that owns the access point with the scope that you want to delete.
+   *       </p>
+   * @public
+   */
+  AccountId?: string | undefined;
+
+  /**
+   * <p>
+   *          The name of the access point with the scope that you want to delete.
+   *       </p>
+   * @public
+   */
+  Name: string | undefined;
+}
+
+/**
+ * @public
+ */
 export interface DeleteBucketRequest {
   /**
    * <p>The account ID that owns the Outposts bucket.</p>
@@ -4619,6 +4709,18 @@ export interface GetAccessPointResult {
    * @public
    */
   BucketAccountId?: string | undefined;
+
+  /**
+   * <p>The unique identifier for the data source of the access point.</p>
+   * @public
+   */
+  DataSourceId?: string | undefined;
+
+  /**
+   * <p>The type of the data source that the access point is attached to.</p>
+   * @public
+   */
+  DataSourceType?: string | undefined;
 }
 
 /**
@@ -4822,6 +4924,36 @@ export interface GetAccessPointPolicyStatusForObjectLambdaResult {
    * @public
    */
   PolicyStatus?: PolicyStatus | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetAccessPointScopeRequest {
+  /**
+   * <p>
+   *          The Amazon Web Services account ID that owns the access point with the scope that you want to retrieve.
+   *       </p>
+   * @public
+   */
+  AccountId?: string | undefined;
+
+  /**
+   * <p>The name of the access point with the scope you want to retrieve.</p>
+   * @public
+   */
+  Name: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetAccessPointScopeResult {
+  /**
+   * <p>The contents of the access point scope.</p>
+   * @public
+   */
+  Scope?: Scope | undefined;
 }
 
 /**
@@ -7041,6 +7173,19 @@ export interface ListAccessPointsRequest {
    * @public
    */
   MaxResults?: number | undefined;
+
+  /**
+   * <p>The unique identifier for the data source of the access point.</p>
+   * @public
+   */
+  DataSourceId?: string | undefined;
+
+  /**
+   * <p>The type of the data source that the access point is attached to. Returns only access points attached to S3 buckets by default. To return all access points specify
+   *          <code>DataSourceType</code> as <code>ALL</code>.</p>
+   * @public
+   */
+  DataSourceType?: string | undefined;
 }
 
 /**
@@ -7058,6 +7203,62 @@ export interface ListAccessPointsResult {
    * <p>If the specified bucket has more access points than can be returned in one call to this API,
    *          this field contains a continuation token that you can provide in subsequent calls to this
    *          API to retrieve additional access points.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListAccessPointsForDirectoryBucketsRequest {
+  /**
+   * <p>The Amazon Web Services account ID that owns the access points.</p>
+   * @public
+   */
+  AccountId?: string | undefined;
+
+  /**
+   * <p>The name of the directory bucket associated with the access points you want to list.</p>
+   * @public
+   */
+  DirectoryBucket?: string | undefined;
+
+  /**
+   * <p>
+   *          If <code>NextToken</code> is returned, there are more access points available than requested in the <code>maxResults</code> value. The value of <code>NextToken</code> is a
+   *          unique pagination token for each page. Make the call again using the returned token to
+   *          retrieve the next page. Keep all other arguments unchanged. Each pagination token expires
+   *          after 24 hours.
+   *       </p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of access points that you would like returned in the <code>ListAccessPointsForDirectoryBuckets</code> response. If the directory bucket is associated with more than this number of access points, the results include the pagination token <code>NextToken</code>. Make another call using the <code>NextToken</code> to retrieve more results.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListAccessPointsForDirectoryBucketsResult {
+  /**
+   * <p>Contains identification and configuration information for one or more access points associated with the directory bucket.</p>
+   * @public
+   */
+  AccessPointList?: AccessPoint[] | undefined;
+
+  /**
+   * <p>
+   *          If <code>NextToken</code> is returned, there are more access points available than requested in the <code>maxResults</code> value. The value of <code>NextToken</code> is a
+   *          unique pagination token for each page. Make the call again using the returned token to
+   *          retrieve the next page. Keep all other arguments unchanged. Each pagination token expires
+   *          after 24 hours.
+   *       </p>
    * @public
    */
   NextToken?: string | undefined;
@@ -7383,173 +7584,6 @@ export interface JobListDescriptor {
    * @public
    */
   ProgressSummary?: JobProgressSummary | undefined;
-}
-
-/**
- * @public
- */
-export interface ListJobsResult {
-  /**
-   * <p>If the <code>List Jobs</code> request produced more than the maximum number of results,
-   *          you can pass this value into a subsequent <code>List Jobs</code> request in order to
-   *          retrieve the next page of results.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-
-  /**
-   * <p>The list of current jobs and jobs that have ended within the last 30 days.</p>
-   * @public
-   */
-  Jobs?: JobListDescriptor[] | undefined;
-}
-
-/**
- * @public
- */
-export interface ListMultiRegionAccessPointsRequest {
-  /**
-   * <p>The Amazon Web Services account ID for the owner of the Multi-Region Access Point.</p>
-   * @public
-   */
-  AccountId?: string | undefined;
-
-  /**
-   * <p>Not currently used. Do not use this parameter.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-
-  /**
-   * <p>Not currently used. Do not use this parameter.</p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface ListMultiRegionAccessPointsResult {
-  /**
-   * <p>The list of Multi-Region Access Points associated with the user.</p>
-   * @public
-   */
-  AccessPoints?: MultiRegionAccessPointReport[] | undefined;
-
-  /**
-   * <p>If the specified bucket has more Multi-Region Access Points than can be returned in one call to this
-   *          action, this field contains a continuation token. You can use this token tin subsequent
-   *          calls to this action to retrieve additional Multi-Region Access Points.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListRegionalBucketsRequest {
-  /**
-   * <p>The Amazon Web Services account ID of the Outposts bucket.</p>
-   * @public
-   */
-  AccountId?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  NextToken?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-
-  /**
-   * <p>The ID of the Outposts resource.</p>
-   *          <note>
-   *             <p>This ID is required by Amazon S3 on Outposts buckets.</p>
-   *          </note>
-   * @public
-   */
-  OutpostId?: string | undefined;
-}
-
-/**
- * <p>The container for the regional bucket.</p>
- * @public
- */
-export interface RegionalBucket {
-  /**
-   * <p></p>
-   * @public
-   */
-  Bucket: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) for the regional bucket.</p>
-   * @public
-   */
-  BucketArn?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  PublicAccessBlockEnabled: boolean | undefined;
-
-  /**
-   * <p>The creation date of the regional bucket</p>
-   * @public
-   */
-  CreationDate: Date | undefined;
-
-  /**
-   * <p>The Outposts ID of the regional bucket.</p>
-   * @public
-   */
-  OutpostId?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListRegionalBucketsResult {
-  /**
-   * <p></p>
-   * @public
-   */
-  RegionalBucketList?: RegionalBucket[] | undefined;
-
-  /**
-   * <p>
-   *             <code>NextToken</code> is sent when <code>isTruncated</code> is true, which means there
-   *          are more buckets that can be listed. The next list requests to Amazon S3 can be continued with
-   *          this <code>NextToken</code>. <code>NextToken</code> is obfuscated and is not a real
-   *          key.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListStorageLensConfigurationsRequest {
-  /**
-   * <p>The account ID of the requester.</p>
-   * @public
-   */
-  AccountId?: string | undefined;
-
-  /**
-   * <p>A pagination token to request the next page of results.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
 }
 
 /**

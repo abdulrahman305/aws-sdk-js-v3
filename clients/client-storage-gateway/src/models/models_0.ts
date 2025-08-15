@@ -340,6 +340,7 @@ export class InvalidGatewayRequestException extends __BaseException {
 export const ActiveDirectoryStatus = {
   ACCESS_DENIED: "ACCESS_DENIED",
   DETACHED: "DETACHED",
+  INSUFFICIENT_PERMISSIONS: "INSUFFICIENT_PERMISSIONS",
   JOINED: "JOINED",
   JOINING: "JOINING",
   NETWORK_ERROR: "NETWORK_ERROR",
@@ -686,9 +687,9 @@ export interface AttachVolumeInput {
   VolumeARN: string | undefined;
 
   /**
-   * <p>The network interface of the gateway on which to expose the iSCSI target. Only IPv4
-   *          addresses are accepted. Use <a>DescribeGatewayInformation</a> to get a list of
-   *          the network interfaces available on a gateway.</p>
+   * <p>The network interface of the gateway on which to expose the iSCSI target. Accepts IPv4
+   *          and IPv6 addresses. Use <a>DescribeGatewayInformation</a> to get a list of the
+   *          network interfaces available on a gateway.</p>
    *          <p>Valid Values: A valid IP address.</p>
    * @public
    */
@@ -1385,9 +1386,9 @@ export interface CreateCachediSCSIVolumeInput {
   SourceVolumeARN?: string | undefined;
 
   /**
-   * <p>The network interface of the gateway on which to expose the iSCSI target. Only IPv4
-   *          addresses are accepted. Use <a>DescribeGatewayInformation</a> to get a list of
-   *          the network interfaces available on a gateway.</p>
+   * <p>The network interface of the gateway on which to expose the iSCSI target. Accepts IPv4
+   *          and IPv6 addresses. Use <a>DescribeGatewayInformation</a> to get a list of the
+   *          network interfaces available on a gateway.</p>
    *          <p>Valid Values: A valid IP address.</p>
    * @public
    */
@@ -1648,7 +1649,7 @@ export interface CreateNFSFileShareInput {
 
   /**
    * <p>The list of clients that are allowed to access the S3 File Gateway. The list must
-   *          contain either valid IP addresses or valid CIDR blocks.</p>
+   *          contain either valid IPv4/IPv6 addresses or valid CIDR blocks.</p>
    * @public
    */
   ClientList?: string[] | undefined;
@@ -2383,9 +2384,9 @@ export interface CreateStorediSCSIVolumeInput {
   TargetName: string | undefined;
 
   /**
-   * <p>The network interface of the gateway on which to expose the iSCSI target. Only IPv4
-   *          addresses are accepted. Use <a>DescribeGatewayInformation</a> to get a list of
-   *          the network interfaces available on a gateway.</p>
+   * <p>The network interface of the gateway on which to expose the iSCSI target. Accepts IPv4
+   *          and IPv6 addresses. Use <a>DescribeGatewayInformation</a> to get a list of the
+   *          network interfaces available on a gateway.</p>
    *          <p>Valid Values: A valid IP address.</p>
    * @public
    */
@@ -3520,8 +3521,10 @@ export interface NetworkInterface {
   MacAddress?: string | undefined;
 
   /**
-   * <p>The Internet Protocol version 6 (IPv6) address of the interface. <i>Currently not
-   *             supported</i>.</p>
+   * <p>The Internet Protocol version 6 (IPv6) address of the interface.</p>
+   *          <note>
+   *             <p>This element returns IPv6 addresses for all gateway types except FSx File Gateway.</p>
+   *          </note>
    * @public
    */
   Ipv6Address?: string | undefined;
@@ -4009,7 +4012,7 @@ export interface NFSFileShareInfo {
 
   /**
    * <p>The list of clients that are allowed to access the S3 File Gateway. The list must
-   *          contain either valid IP addresses or valid CIDR blocks.</p>
+   *          contain either valid IPv4/IPv6 addresses or valid CIDR blocks.</p>
    * @public
    */
   ClientList?: string[] | undefined;
@@ -6014,9 +6017,14 @@ export interface JoinDomainInput {
   OrganizationalUnit?: string | undefined;
 
   /**
-   * <p>List of IPv4 addresses, NetBIOS names, or host names of your domain server. If you need
-   *          to specify the port number include it after the colon (“:”). For example,
+   * <p>List of IP addresses, NetBIOS names, or host names of your domain server. If you need to
+   *          specify the port number include it after the colon (“:”). For example,
    *             <code>mydc.mydomain.com:389</code>.</p>
+   *          <note>
+   *             <p>S3 File Gateway supports IPv6 addresses in addition to IPv4 and other existing
+   *             formats.</p>
+   *             <p>FSx File Gateway does not support IPv6.</p>
+   *          </note>
    * @public
    */
   DomainControllers?: string[] | undefined;
@@ -6082,6 +6090,12 @@ export interface JoinDomainOutput {
    *                <p>
    *                   <code>JOINING</code>: Indicates that a <code>JoinDomain</code> operation is in
    *                progress.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>INSUFFICIENT_PERMISSIONS</code>: Indicates that the <code>JoinDomain</code>
+   *                operation failed because the specified user lacks the necessary permissions to join
+   *                the domain.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -7225,7 +7239,7 @@ export interface StartCacheReportInput {
   Role: string | undefined;
 
   /**
-   * <p>The ARN of the Amazon S3 bucket where the cache report will be saved.</p>
+   * <p>The ARN of the Amazon S3 bucket where you want to save the cache report.</p>
    *          <note>
    *             <p>We do not recommend saving the cache report to the same Amazon S3 bucket for
    *             which you are generating the report.</p>
@@ -7236,8 +7250,8 @@ export interface StartCacheReportInput {
   LocationARN: string | undefined;
 
   /**
-   * <p>The Amazon Web Services Region of the Amazon S3 bucket associated with the file
-   *          share for which you want to generate the cache report.</p>
+   * <p>The Amazon Web Services Region of the Amazon S3 bucket where you want to save the
+   *          cache report.</p>
    * @public
    */
   BucketRegion: string | undefined;
@@ -7838,7 +7852,7 @@ export interface UpdateNFSFileShareInput {
 
   /**
    * <p>The list of clients that are allowed to access the S3 File Gateway. The list must
-   *          contain either valid IP addresses or valid CIDR blocks.</p>
+   *          contain either valid IPv4/IPv6 addresses or valid CIDR blocks.</p>
    * @public
    */
   ClientList?: string[] | undefined;

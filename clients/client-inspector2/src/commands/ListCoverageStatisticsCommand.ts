@@ -99,6 +99,22 @@ export interface ListCoverageStatisticsCommandOutput extends ListCoverageStatist
  *         endInclusive: new Date("TIMESTAMP"),
  *       },
  *     ],
+ *     ecrImageLastInUseAt: [
+ *       {
+ *         startInclusive: new Date("TIMESTAMP"),
+ *         endInclusive: new Date("TIMESTAMP"),
+ *       },
+ *     ],
+ *     ecrImageInUseCount: [ // CoverageNumberFilterList
+ *       { // CoverageNumberFilter
+ *         upperInclusive: Number("long"),
+ *         lowerInclusive: Number("long"),
+ *       },
+ *     ],
+ *     codeRepositoryProjectName: "<CoverageStringFilterList>",
+ *     codeRepositoryProviderType: "<CoverageStringFilterList>",
+ *     codeRepositoryProviderTypeVisibility: "<CoverageStringFilterList>",
+ *     lastScannedCommitId: "<CoverageStringFilterList>",
  *   },
  *   groupBy: "STRING_VALUE",
  *   nextToken: "STRING_VALUE",

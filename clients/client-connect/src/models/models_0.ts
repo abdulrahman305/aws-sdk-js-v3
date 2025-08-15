@@ -31,6 +31,7 @@ export class AccessDeniedException extends __BaseException {
  */
 export const ActionType = {
   ASSIGN_CONTACT_CATEGORY: "ASSIGN_CONTACT_CATEGORY",
+  ASSIGN_SLA: "ASSIGN_SLA",
   CREATE_CASE: "CREATE_CASE",
   CREATE_TASK: "CREATE_TASK",
   END_ASSOCIATED_TASKS: "END_ASSOCIATED_TASKS",
@@ -233,16 +234,12 @@ export class ThrottlingException extends __BaseException {
 export interface EmailRecipient {
   /**
    * <p>Address of the email recipient.</p>
-   *          <p>Type: String</p>
-   *          <p>Length Constraints: Minimum length of 1. Maximum length of 256.</p>
    * @public
    */
   Address?: string | undefined;
 
   /**
    * <p>Display name of the email recipient.</p>
-   *          <p>Type: String</p>
-   *          <p>Length Constraints: Minimum length of 1. Maximum length of 256.</p>
    * @public
    */
   DisplayName?: string | undefined;
@@ -603,6 +600,46 @@ export interface HierarchyGroups {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const ParticipantState = {
+  CONNECTED: "CONNECTED",
+  DISCONNECTED: "DISCONNECTED",
+  INITIAL: "INITIAL",
+  MISSED: "MISSED",
+} as const;
+
+/**
+ * @public
+ */
+export type ParticipantState = (typeof ParticipantState)[keyof typeof ParticipantState];
+
+/**
+ * <p>Information about the state transition of a supervisor.</p>
+ * @public
+ */
+export interface StateTransition {
+  /**
+   * <p>The state of the transition.</p>
+   * @public
+   */
+  State?: ParticipantState | undefined;
+
+  /**
+   * <p>The date and time when the state started in UTC time.</p>
+   * @public
+   */
+  StateStartTimestamp?: Date | undefined;
+
+  /**
+   * <p>The date and time when the state ended in UTC time.</p>
+   * @public
+   */
+  StateEndTimestamp?: Date | undefined;
+}
+
+/**
  * <p>Information about the agent who accepted the contact.</p>
  * @public
  */
@@ -644,6 +681,42 @@ export interface AgentInfo {
    * @public
    */
   Capabilities?: ParticipantCapabilities | undefined;
+
+  /**
+   * <p>The difference in time, in whole seconds, between
+   *     <code>AfterContactWorkStartTimestamp</code> and
+   *    <code>AfterContactWorkEndTimestamp</code>.</p>
+   * @public
+   */
+  AfterContactWorkDuration?: number | undefined;
+
+  /**
+   * <p>The date and time when the agent started doing After Contact Work for the contact, in UTC
+   *    time.</p>
+   * @public
+   */
+  AfterContactWorkStartTimestamp?: Date | undefined;
+
+  /**
+   * <p>The date and time when the agent ended After Contact Work for the contact, in UTC time. In
+   *    cases when agent finishes doing <code>AfterContactWork</code> for chat contacts and switches
+   *    their activity status to offline or equivalent without clearing the contact in CCP, discrepancies
+   *    may be noticed for <code>AfterContactWorkEndTimestamp</code>.</p>
+   * @public
+   */
+  AfterContactWorkEndTimestamp?: Date | undefined;
+
+  /**
+   * <p>The total hold duration in seconds initiated by the agent.</p>
+   * @public
+   */
+  AgentInitiatedHoldDuration?: number | undefined;
+
+  /**
+   * <p>List of <code>StateTransition</code> for a supervisor.</p>
+   * @public
+   */
+  StateTransitions?: StateTransition[] | undefined;
 }
 
 /**
@@ -2935,6 +3008,7 @@ export class ConflictException extends __BaseException {
  * @enum
  */
 export const InitiateAs = {
+  COMPLETED: "COMPLETED",
   CONNECTED_TO_USER: "CONNECTED_TO_USER",
 } as const;
 
@@ -3364,7 +3438,7 @@ export interface CreateEmailAddressRequest {
   InstanceId: string | undefined;
 
   /**
-   * <p>The email address with the instance, in [^\s@]+@[^\s@]+\.[^\s@]+ format.</p>
+   * <p>The email address, including the domain.</p>
    * @public
    */
   EmailAddress: string | undefined;
@@ -4138,13 +4212,13 @@ export interface CreateHoursOfOperationOverrideRequest {
   Config: HoursOfOperationOverrideConfig[] | undefined;
 
   /**
-   * <p>The date from when the hours of operation override would be effective.</p>
+   * <p>The date from when the hours of operation override is effective.</p>
    * @public
    */
   EffectiveFrom: string | undefined;
 
   /**
-   * <p>The date until when the hours of operation override would be effective.</p>
+   * <p>The date until when the hours of operation override is effective.</p>
    * @public
    */
   EffectiveTill: string | undefined;
@@ -4861,7 +4935,7 @@ export interface OutboundCallerConfig {
 }
 
 /**
- * <p>The outbound email address Id.</p>
+ * <p>The outbound email address ID.</p>
  * @public
  */
 export interface OutboundEmailConfig {
@@ -5281,6 +5355,88 @@ export interface FieldValueUnion {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const SlaType = {
+  CASE_FIELD: "CaseField",
+} as const;
+
+/**
+ * @public
+ */
+export type SlaType = (typeof SlaType)[keyof typeof SlaType];
+
+/**
+ * <p>The SLA configuration for Case SlaAssignmentType.</p>
+ * @public
+ */
+export interface CaseSlaConfiguration {
+  /**
+   * <p>Name of an SLA.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>Type of SLA for Case SlaAssignmentType.</p>
+   * @public
+   */
+  Type: SlaType | undefined;
+
+  /**
+   * <p>Unique identifier of a Case field.</p>
+   * @public
+   */
+  FieldId?: string | undefined;
+
+  /**
+   * <p>Represents a list of target field values for the fieldId specified in CaseSlaConfiguration.
+   *    The SLA is considered met if any one of these target field values matches the actual field
+   *    value.</p>
+   * @public
+   */
+  TargetFieldValues?: FieldValueUnion[] | undefined;
+
+  /**
+   * <p>Target duration in minutes within which an SLA should be completed.</p>
+   * @public
+   */
+  TargetSlaMinutes: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SlaAssignmentType = {
+  CASES: "CASES",
+} as const;
+
+/**
+ * @public
+ */
+export type SlaAssignmentType = (typeof SlaAssignmentType)[keyof typeof SlaAssignmentType];
+
+/**
+ * <p>The AssignSla action definition.</p>
+ * @public
+ */
+export interface AssignSlaActionDefinition {
+  /**
+   * <p>Type of SLA assignment.</p>
+   * @public
+   */
+  SlaAssignmentType: SlaAssignmentType | undefined;
+
+  /**
+   * <p>The SLA configuration for Case SLA Assignment.</p>
+   * @public
+   */
+  CaseSlaConfiguration?: CaseSlaConfiguration | undefined;
+}
+
+/**
  * <p>Object for case field values.</p>
  * @public
  */
@@ -5551,6 +5707,12 @@ export interface RuleAction {
   UpdateCaseAction?: UpdateCaseActionDefinition | undefined;
 
   /**
+   * <p>Information about the assign SLA action.</p>
+   * @public
+   */
+  AssignSlaAction?: AssignSlaActionDefinition | undefined;
+
+  /**
    * <p>Information about the end associated tasks action.</p>
    *          <p>Supported only for <code>TriggerEventSource</code> values: <code>OnCaseUpdate</code>.</p>
    * @public
@@ -5592,6 +5754,7 @@ export const EventSourceName = {
   OnRealTimeCallAnalysisAvailable: "OnRealTimeCallAnalysisAvailable",
   OnRealTimeChatAnalysisAvailable: "OnRealTimeChatAnalysisAvailable",
   OnSalesforceCaseCreate: "OnSalesforceCaseCreate",
+  OnSlaBreach: "OnSlaBreach",
   OnZendeskTicketCreate: "OnZendeskTicketCreate",
   OnZendeskTicketStatusUpdate: "OnZendeskTicketStatusUpdate",
 } as const;
@@ -6765,7 +6928,10 @@ export const ResourceType = {
 export type ResourceType = (typeof ResourceType)[keyof typeof ResourceType];
 
 /**
- * <p>That resource is already in use. Please try another.</p>
+ * <p>That resource is already in use (for example, you're trying to add a record with the same
+ *    name as an existing record). If you are trying to delete a resource (for example,
+ *    DeleteHoursOfOperation or DeletePredefinedAttribute), remove its reference from related resources
+ *    and then try again.</p>
  * @public
  */
 export class ResourceInUseException extends __BaseException {
@@ -7261,103 +7427,6 @@ export interface DeletePredefinedAttributeRequest {
    * @public
    */
   Name: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeletePromptRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>A unique identifier for the prompt.</p>
-   * @public
-   */
-  PromptId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeletePushNotificationRegistrationRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the
-   *    Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the registration.</p>
-   * @public
-   */
-  RegistrationId: string | undefined;
-
-  /**
-   * <p>The identifier of the contact within the Amazon Connect instance.</p>
-   * @public
-   */
-  ContactId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeletePushNotificationRegistrationResponse {}
-
-/**
- * @public
- */
-export interface DeleteQueueRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the queue.</p>
-   * @public
-   */
-  QueueId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeleteQuickConnectRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier for the quick connect.</p>
-   * @public
-   */
-  QuickConnectId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeleteRoutingProfileRequest {
-  /**
-   * <p>The identifier of the Amazon Connect instance. You can <a href="https://docs.aws.amazon.com/connect/latest/adminguide/find-instance-arn.html">find the instance ID</a> in the Amazon Resource Name (ARN) of the instance.</p>
-   * @public
-   */
-  InstanceId: string | undefined;
-
-  /**
-   * <p>The identifier of the routing profile.</p>
-   * @public
-   */
-  RoutingProfileId: string | undefined;
 }
 
 /**

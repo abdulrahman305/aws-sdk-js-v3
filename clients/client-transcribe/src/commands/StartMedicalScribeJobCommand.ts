@@ -5,7 +5,11 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { StartMedicalScribeJobRequest, StartMedicalScribeJobResponse } from "../models/models_0";
+import {
+  StartMedicalScribeJobRequest,
+  StartMedicalScribeJobRequestFilterSensitiveLog,
+  StartMedicalScribeJobResponse,
+} from "../models/models_0";
 import { de_StartMedicalScribeJobCommand, se_StartMedicalScribeJobCommand } from "../protocols/Aws_json1_1";
 import { ServiceInputTypes, ServiceOutputTypes, TranscribeClientResolvedConfig } from "../TranscribeClient";
 
@@ -62,7 +66,7 @@ export interface StartMedicalScribeJobCommandOutput extends StartMedicalScribeJo
  *             </li>
  *             <li>
  *                <p>
- *                   <code>Settings</code>: A <code>MedicalScribeSettings</code> obect
+ *                   <code>Settings</code>: A <code>MedicalScribeSettings</code> object
  *                 that must set exactly one of <code>ShowSpeakerLabels</code> or <code>ChannelIdentification</code> to true.
  *                 If <code>ShowSpeakerLabels</code> is true, <code>MaxSpeakerLabels</code> must also be set.
  *                 </p>
@@ -100,7 +104,7 @@ export interface StartMedicalScribeJobCommandOutput extends StartMedicalScribeJo
  *     VocabularyFilterName: "STRING_VALUE",
  *     VocabularyFilterMethod: "remove" || "mask" || "tag",
  *     ClinicalNoteGenerationSettings: { // ClinicalNoteGenerationSettings
- *       NoteTemplate: "HISTORY_AND_PHYSICAL" || "GIRPP",
+ *       NoteTemplate: "HISTORY_AND_PHYSICAL" || "GIRPP" || "BIRP" || "SIRP" || "DAP" || "BEHAVIORAL_SOAP" || "PHYSICAL_SOAP",
  *     },
  *   },
  *   ChannelDefinitions: [ // MedicalScribeChannelDefinitions
@@ -115,6 +119,11 @@ export interface StartMedicalScribeJobCommandOutput extends StartMedicalScribeJo
  *       Value: "STRING_VALUE", // required
  *     },
  *   ],
+ *   MedicalScribeContext: { // MedicalScribeContext
+ *     PatientContext: { // MedicalScribePatientContext
+ *       Pronouns: "HE_HIM" || "SHE_HER" || "THEY_THEM",
+ *     },
+ *   },
  * };
  * const command = new StartMedicalScribeJobCommand(input);
  * const response = await client.send(command);
@@ -143,7 +152,7 @@ export interface StartMedicalScribeJobCommandOutput extends StartMedicalScribeJo
  * //       VocabularyFilterName: "STRING_VALUE",
  * //       VocabularyFilterMethod: "remove" || "mask" || "tag",
  * //       ClinicalNoteGenerationSettings: { // ClinicalNoteGenerationSettings
- * //         NoteTemplate: "HISTORY_AND_PHYSICAL" || "GIRPP",
+ * //         NoteTemplate: "HISTORY_AND_PHYSICAL" || "GIRPP" || "BIRP" || "SIRP" || "DAP" || "BEHAVIORAL_SOAP" || "PHYSICAL_SOAP",
  * //       },
  * //     },
  * //     DataAccessRoleArn: "STRING_VALUE",
@@ -153,6 +162,7 @@ export interface StartMedicalScribeJobCommandOutput extends StartMedicalScribeJo
  * //         ParticipantRole: "PATIENT" || "CLINICIAN", // required
  * //       },
  * //     ],
+ * //     MedicalScribeContextProvided: true || false,
  * //     Tags: [ // TagList
  * //       { // Tag
  * //         Key: "STRING_VALUE", // required
@@ -211,7 +221,7 @@ export class StartMedicalScribeJobCommand extends $Command
   })
   .s("Transcribe", "StartMedicalScribeJob", {})
   .n("TranscribeClient", "StartMedicalScribeJobCommand")
-  .f(void 0, void 0)
+  .f(StartMedicalScribeJobRequestFilterSensitiveLog, void 0)
   .ser(se_StartMedicalScribeJobCommand)
   .de(de_StartMedicalScribeJobCommand)
   .build() {

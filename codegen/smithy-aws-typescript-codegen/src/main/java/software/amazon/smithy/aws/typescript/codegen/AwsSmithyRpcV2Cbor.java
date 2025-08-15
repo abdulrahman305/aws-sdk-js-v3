@@ -5,11 +5,17 @@
 
 package software.amazon.smithy.aws.typescript.codegen;
 
+import java.util.Collection;
+import java.util.Map;
+import java.util.TreeSet;
 import software.amazon.smithy.aws.traits.protocols.AwsQueryCompatibleTrait;
+import software.amazon.smithy.model.shapes.OperationShape;
+import software.amazon.smithy.typescript.codegen.SmithyCoreSubmodules;
 import software.amazon.smithy.typescript.codegen.TypeScriptDependency;
 import software.amazon.smithy.typescript.codegen.TypeScriptWriter;
 import software.amazon.smithy.typescript.codegen.integration.ProtocolGenerator;
 import software.amazon.smithy.typescript.codegen.protocols.cbor.SmithyRpcV2Cbor;
+import software.amazon.smithy.utils.IoUtils;
 
 /**
  * Extension of the Smithy RPCv2 CBOR protocol generator, adding
@@ -22,17 +28,15 @@ public final class AwsSmithyRpcV2Cbor extends SmithyRpcV2Cbor {
         if (context.getService().hasTrait(AwsQueryCompatibleTrait.class)) {
             TypeScriptWriter writer = context.getWriter();
             writer.addImport("HeaderBag", "__HeaderBag", TypeScriptDependency.SMITHY_TYPES);
-            writer.write("""
-                const populateBodyWithQueryCompatibility = (parsedOutput: any, headers: __HeaderBag) => {
-                  const queryErrorHeader = headers["x-amzn-query-error"];
-                  if (parsedOutput.body !== undefined && queryErrorHeader != null) {
-                    const codeAndType = queryErrorHeader.split(";");
-                    parsedOutput.body.Code = codeAndType[0];
-                    parsedOutput.body.Type = codeAndType[1];
-                  }
-                };
-                """);
+            writer.write(IoUtils.readUtf8Resource(
+                AwsProtocolUtils.class, "populate-body-with-query-compatibility-code-stub.ts"));
         }
+    }
+
+    @Override
+    public Map<String, TreeSet<String>> getErrorAliases(GenerationContext context,
+                                                        Collection<OperationShape> operations) {
+        return AwsProtocolUtils.getErrorAliases(context, operations);
     }
 
     @Override
@@ -55,9 +59,7 @@ public final class AwsSmithyRpcV2Cbor extends SmithyRpcV2Cbor {
 
     @Override
     protected void writeErrorCodeParser(GenerationContext generationContext) {
-        super.writeErrorCodeParser(generationContext);
         TypeScriptWriter writer = generationContext.getWriter();
-
         if (generationContext.getService().hasTrait(AwsQueryCompatibleTrait.class)) {
             // Populate parsedOutput.body with 'Code' and 'Type' fields
             // "x-amzn-query-error" header is available when AwsQueryCompatibleTrait is applied to a service
@@ -65,5 +67,10 @@ public final class AwsSmithyRpcV2Cbor extends SmithyRpcV2Cbor {
             // E.g. "MalformedInput;Sender" or "InternalFailure;Receiver"
             writer.write("populateBodyWithQueryCompatibility(parsedOutput, output.headers);");
         }
+        writer.addImportSubmodule(
+            "loadSmithyRpcV2CborErrorCode", null,
+            TypeScriptDependency.SMITHY_CORE, SmithyCoreSubmodules.CBOR
+        );
+        writer.write("const errorCode = loadSmithyRpcV2CborErrorCode(output, parsedOutput.body);");
     }
 }

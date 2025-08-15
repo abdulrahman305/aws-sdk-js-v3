@@ -765,7 +765,6 @@ import {
   LabelOptions,
   Layout,
   LayoutConfiguration,
-  LegendOptions,
   ListControlDisplayOptions,
   ListControlSearchOptions,
   ListControlSelectAllOptions,
@@ -803,7 +802,6 @@ import {
   PercentVisibleRange,
   QueryExecutionOptions,
   RangeEndsLabelType,
-  ReferenceLineDynamicDataConfiguration,
   RelativeDatesFilter,
   RelativeDateTimeControlDisplayOptions,
   RollingDateConfiguration,
@@ -839,6 +837,8 @@ import {
   StringParameterDeclaration,
   StringValueWhenUnsetConfiguration,
   TextAreaControlDisplayOptions,
+  TextBoxInteractionOptions,
+  TextBoxMenuOption,
   TextControlPlaceholderOptions,
   TextFieldControlDisplayOptions,
   ThousandSeparatorOptions,
@@ -848,7 +848,9 @@ import {
   TopBottomFilter,
   VisibleRangeOptions,
   VisualCustomAction,
+  VisualCustomActionDefaults,
   VisualCustomActionOperation,
+  VisualHighlightOperation,
   VisualInteractionOptions,
   VisualMenuOption,
 } from "../models/models_0";
@@ -1010,6 +1012,7 @@ import {
   LayerCustomAction,
   LayerCustomActionOperation,
   LayerMapVisual,
+  LegendOptions,
   LineChartAggregatedFieldWells,
   LineChartConfiguration,
   LineChartDefaultSeriesSettings,
@@ -1037,8 +1040,6 @@ import {
   PieChartVisual,
   PivotFieldSortOptions,
   PivotTableAggregatedFieldWells,
-  PivotTableConditionalFormattingScope,
-  PivotTableConfiguration,
   PivotTableDataPathOption,
   PivotTableFieldCollapseStateOption,
   PivotTableFieldCollapseStateTarget,
@@ -1051,13 +1052,13 @@ import {
   PivotTableRowsLabelOptions,
   PivotTableSortBy,
   PivotTableSortConfiguration,
-  PivotTableTotalOptions,
   PivotTotalOptions,
   PredefinedHierarchy,
   ProgressBarOptions,
   ReferenceLine,
   ReferenceLineCustomLabelConfiguration,
   ReferenceLineDataConfiguration,
+  ReferenceLineDynamicDataConfiguration,
   ReferenceLineLabelConfiguration,
   ReferenceLineStaticDataConfiguration,
   ReferenceLineStyleConfiguration,
@@ -1076,7 +1077,6 @@ import {
   TableCellStyle,
   TableSideBorderOptions,
   TableStyleTarget,
-  TextConditionalFormat,
   TimeBasedForecastProperties,
   TimeRangeDrillDownFilter,
   TooltipItem,
@@ -1174,10 +1174,7 @@ import {
   BorderStyle,
   BrandColorPalette,
   BrandDefinition,
-  BrandDetail,
   BrandElementStyle,
-  BrandSummary,
-  CalculatedColumn,
   CollectiveConstantEntry,
   ConflictException,
   ContributionAnalysisFactor,
@@ -1197,6 +1194,7 @@ import {
   ImageSetConfiguration,
   ImageSource,
   ImageStaticFile,
+  ImpalaParameters,
   IncrementalRefresh,
   InternalFailureException,
   InvalidParameterValueException,
@@ -1216,6 +1214,9 @@ import {
   PivotTableCellConditionalFormatting,
   PivotTableConditionalFormatting,
   PivotTableConditionalFormattingOption,
+  PivotTableConditionalFormattingScope,
+  PivotTableConfiguration,
+  PivotTableTotalOptions,
   PivotTableVisual,
   PluginVisual,
   PluginVisualConfiguration,
@@ -1296,6 +1297,7 @@ import {
   TableVisual,
   Tag,
   TeradataParameters,
+  TextConditionalFormat,
   ThrottlingException,
   TopicConstantValue,
   TopicIR,
@@ -1335,6 +1337,9 @@ import {
 } from "../models/models_2";
 import {
   _Parameters,
+  BrandDetail,
+  BrandSummary,
+  CalculatedColumn,
   Capabilities,
   CastColumnTypeOperation,
   CellValueSynonym,
@@ -1352,6 +1357,7 @@ import {
   CreateColumnsOperation,
   CredentialPair,
   CustomerManagedKeyUnavailableException,
+  CustomInstructions,
   CustomSql,
   Dashboard,
   DashboardPublishOptions,
@@ -1494,7 +1500,6 @@ import {
   SchedulesConfigurations,
   SessionLifetimeInMinutesInvalidException,
   SessionTag,
-  SnapshotAnonymousUser,
   SnapshotConfiguration,
   SnapshotDestinationConfiguration,
   SnapshotFileGroup,
@@ -1516,6 +1521,7 @@ import {
 } from "../models/models_4";
 import {
   CreateTopicReviewedAnswer,
+  SnapshotAnonymousUser,
   SnapshotUserConfiguration,
   TopicReviewedAnswer,
   TopicVisual,
@@ -2181,6 +2187,7 @@ export const se_CreateTopicCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      CustomInstructions: (_) => _json(_),
       FolderArns: (_) => _json(_),
       Tags: (_) => _json(_),
       Topic: (_) => _json(_),
@@ -5930,6 +5937,7 @@ export const se_UpdateTopicCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      CustomInstructions: (_) => _json(_),
       Topic: (_) => _json(_),
     })
   );
@@ -8762,6 +8770,7 @@ export const de_DescribeTopicCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     Arn: __expectString,
+    CustomInstructions: _json,
     RequestId: __expectString,
     Topic: _json,
     TopicId: __expectString,
@@ -13154,6 +13163,8 @@ const se_CustomContentVisual = (input: CustomContentVisual, context: __SerdeCont
 
 // se_CustomFilterListConfiguration omitted.
 
+// se_CustomInstructions omitted.
+
 // se_CustomNarrativeOptions omitted.
 
 /**
@@ -14748,11 +14759,13 @@ const se_HeatMapAggregatedFieldWells = (input: HeatMapAggregatedFieldWells, cont
 const se_HeatMapConfiguration = (input: HeatMapConfiguration, context: __SerdeContext): any => {
   return take(input, {
     ColorScale: (_) => se_ColorScale(_, context),
+    ColumnAxisDisplayOptions: (_) => se_AxisDisplayOptions(_, context),
     ColumnLabelOptions: _json,
     DataLabels: _json,
     FieldWells: (_) => se_HeatMapFieldWells(_, context),
     Interactions: _json,
     Legend: _json,
+    RowAxisDisplayOptions: (_) => se_AxisDisplayOptions(_, context),
     RowLabelOptions: _json,
     SortConfiguration: (_) => se_HeatMapSortConfiguration(_, context),
     Tooltip: (_) => se_TooltipOptions(_, context),
@@ -14945,6 +14958,8 @@ const se_ImageCustomActionOperationList = (input: ImageCustomActionOperation[], 
 // se_ImageSource omitted.
 
 // se_ImageStaticFile omitted.
+
+// se_ImpalaParameters omitted.
 
 // se_IncrementalRefresh omitted.
 
@@ -16036,6 +16051,7 @@ const se_PivotTableVisual = (input: PivotTableVisual, context: __SerdeContext): 
  */
 const se_PluginVisual = (input: PluginVisual, context: __SerdeContext): any => {
   return take(input, {
+    Actions: (_) => se_VisualCustomActionList(_, context),
     ChartConfiguration: (_) => se_PluginVisualConfiguration(_, context),
     PluginArn: [],
     Subtitle: _json,
@@ -16684,6 +16700,7 @@ const se_ShapeConditionalFormat = (input: ShapeConditionalFormat, context: __Ser
 const se_SheetDefinition = (input: SheetDefinition, context: __SerdeContext): any => {
   return take(input, {
     ContentType: [],
+    CustomActionDefaults: _json,
     Description: [],
     FilterControls: (_) => se_FilterControlList(_, context),
     Images: (_) => se_SheetImageList(_, context),
@@ -17067,6 +17084,10 @@ const se_TemplateVersionDefinition = (input: TemplateVersionDefinition, context:
 // se_TeradataParameters omitted.
 
 // se_TextAreaControlDisplayOptions omitted.
+
+// se_TextBoxInteractionOptions omitted.
+
+// se_TextBoxMenuOption omitted.
 
 /**
  * serializeAws_restJson1TextConditionalFormat
@@ -17563,6 +17584,8 @@ const se_VisualCustomAction = (input: VisualCustomAction, context: __SerdeContex
   });
 };
 
+// se_VisualCustomActionDefaults omitted.
+
 /**
  * serializeAws_restJson1VisualCustomActionList
  */
@@ -17596,6 +17619,8 @@ const se_VisualCustomActionOperationList = (input: VisualCustomActionOperation[]
       return se_VisualCustomActionOperation(entry, context);
     });
 };
+
+// se_VisualHighlightOperation omitted.
 
 // se_VisualInteractionOptions omitted.
 
@@ -19078,6 +19103,8 @@ const de_CustomContentVisual = (output: any, context: __SerdeContext): CustomCon
 // de_CustomFilterConfiguration omitted.
 
 // de_CustomFilterListConfiguration omitted.
+
+// de_CustomInstructions omitted.
 
 // de_CustomNarrativeOptions omitted.
 
@@ -20940,11 +20967,13 @@ const de_HeatMapAggregatedFieldWells = (output: any, context: __SerdeContext): H
 const de_HeatMapConfiguration = (output: any, context: __SerdeContext): HeatMapConfiguration => {
   return take(output, {
     ColorScale: (_: any) => de_ColorScale(_, context),
+    ColumnAxisDisplayOptions: (_: any) => de_AxisDisplayOptions(_, context),
     ColumnLabelOptions: _json,
     DataLabels: _json,
     FieldWells: (_: any) => de_HeatMapFieldWells(_, context),
     Interactions: _json,
     Legend: _json,
+    RowAxisDisplayOptions: (_: any) => de_AxisDisplayOptions(_, context),
     RowLabelOptions: _json,
     SortConfiguration: (_: any) => de_HeatMapSortConfiguration(_, context),
     Tooltip: (_: any) => de_TooltipOptions(_, context),
@@ -21151,6 +21180,8 @@ const de_ImageCustomActionOperationList = (output: any, context: __SerdeContext)
 // de_ImageSource omitted.
 
 // de_ImageStaticFile omitted.
+
+// de_ImpalaParameters omitted.
 
 // de_IncrementalRefresh omitted.
 
@@ -22309,6 +22340,7 @@ const de_PivotTableVisual = (output: any, context: __SerdeContext): PivotTableVi
  */
 const de_PluginVisual = (output: any, context: __SerdeContext): PluginVisual => {
   return take(output, {
+    Actions: (_: any) => de_VisualCustomActionList(_, context),
     ChartConfiguration: (_: any) => de_PluginVisualConfiguration(_, context),
     PluginArn: __expectString,
     Subtitle: _json,
@@ -22972,6 +23004,7 @@ const de_Sheet = (output: any, context: __SerdeContext): Sheet => {
 const de_SheetDefinition = (output: any, context: __SerdeContext): SheetDefinition => {
   return take(output, {
     ContentType: __expectString,
+    CustomActionDefaults: _json,
     Description: __expectString,
     FilterControls: (_: any) => de_FilterControlList(_, context),
     Images: (_: any) => de_SheetImageList(_, context),
@@ -23481,6 +23514,10 @@ const de_TemplateVersionSummaryList = (output: any, context: __SerdeContext): Te
 // de_TeradataParameters omitted.
 
 // de_TextAreaControlDisplayOptions omitted.
+
+// de_TextBoxInteractionOptions omitted.
+
+// de_TextBoxMenuOption omitted.
 
 /**
  * deserializeAws_restJson1TextConditionalFormat
@@ -24153,6 +24190,8 @@ const de_VisualCustomAction = (output: any, context: __SerdeContext): VisualCust
   }) as any;
 };
 
+// de_VisualCustomActionDefaults omitted.
+
 /**
  * deserializeAws_restJson1VisualCustomActionList
  */
@@ -24188,6 +24227,8 @@ const de_VisualCustomActionOperationList = (output: any, context: __SerdeContext
     });
   return retVal;
 };
+
+// de_VisualHighlightOperation omitted.
 
 // de_VisualInteractionOptions omitted.
 

@@ -33,31 +33,7 @@ export interface InvokeInlineAgentCommandInput extends InvokeInlineAgentRequest 
 export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentResponse, __MetadataBearer {}
 
 /**
- * <p>
- *             Invokes an inline Amazon Bedrock agent using the configurations you provide with the request.
- *         </p>
- *          <ul>
- *             <li>
- *                <p>Specify the following fields for security purposes.</p>
- *                <ul>
- *                   <li>
- *                      <p>(Optional) <code>customerEncryptionKeyArn</code> – The Amazon Resource Name (ARN) of a KMS key to encrypt the creation of the agent.</p>
- *                   </li>
- *                   <li>
- *                      <p>(Optional) <code>idleSessionTTLinSeconds</code> – Specify the number of seconds for which the agent should maintain session information. After this time expires, the subsequent <code>InvokeInlineAgent</code> request begins a new session.</p>
- *                   </li>
- *                </ul>
- *             </li>
- *             <li>
- *                <p>To override the default prompt behavior for agent orchestration and to use advanced prompts, include a <code>promptOverrideConfiguration</code> object.
- *                     For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.</p>
- *             </li>
- *             <li>
- *                <p>The agent instructions will not be honored if your agent has only one knowledge base, uses default prompts, has no action group, and user input is disabled.</p>
- *             </li>
- *          </ul>
- *          <note>
- *         </note>
+ * <p> Invokes an inline Amazon Bedrock agent using the configurations you provide with the request. </p> <ul> <li> <p>Specify the following fields for security purposes.</p> <ul> <li> <p>(Optional) <code>customerEncryptionKeyArn</code> – The Amazon Resource Name (ARN) of a KMS key to encrypt the creation of the agent.</p> </li> <li> <p>(Optional) <code>idleSessionTTLinSeconds</code> – Specify the number of seconds for which the agent should maintain session information. After this time expires, the subsequent <code>InvokeInlineAgent</code> request begins a new session.</p> </li> </ul> </li> <li> <p>To override the default prompt behavior for agent orchestration and to use advanced prompts, include a <code>promptOverrideConfiguration</code> object. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html">Advanced prompts</a>.</p> </li> <li> <p>The agent instructions will not be honored if your agent has only one knowledge base, uses default prompts, has no action group, and user input is disabled.</p> </li> </ul> <note> </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -243,6 +219,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  *       relayConversationHistory: "TO_COLLABORATOR" || "DISABLED",
  *     },
  *   ],
+ *   agentName: "STRING_VALUE",
  *   sessionId: "STRING_VALUE", // required
  *   endSession: true || false,
  *   enableTrace: true || false,
@@ -250,6 +227,10 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  *   streamingConfigurations: { // StreamingConfigurations
  *     streamFinalResponse: true || false,
  *     applyGuardrailInterval: Number("int"),
+ *   },
+ *   promptCreationConfigurations: { // PromptCreationConfigurations
+ *     previousConversationTurnsToInclude: Number("int"),
+ *     excludePreviousThinkingSteps: true || false,
  *   },
  *   inlineSessionState: { // InlineSessionState
  *     sessionAttributes: { // SessionAttributesMap
@@ -471,6 +452,12 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  *       latency: "standard" || "optimized",
  *     },
  *   },
+ *   orchestrationType: "DEFAULT" || "CUSTOM_ORCHESTRATION",
+ *   customOrchestration: { // CustomOrchestration
+ *     executor: { // OrchestrationExecutor Union: only one key present
+ *       lambda: "STRING_VALUE",
+ *     },
+ *   },
  * };
  * const command = new InvokeInlineAgentCommand(input);
  * const response = await client.send(command);
@@ -654,6 +641,17 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //               },
  * //             },
  * //           ],
+ * //           metadata: { // Metadata
+ * //             startTime: new Date("TIMESTAMP"),
+ * //             endTime: new Date("TIMESTAMP"),
+ * //             totalTimeMs: Number("long"),
+ * //             operationTotalTimeMs: Number("long"),
+ * //             clientRequestId: "STRING_VALUE",
+ * //             usage: { // Usage
+ * //               inputTokens: Number("int"),
+ * //               outputTokens: Number("int"),
+ * //             },
+ * //           },
  * //         },
  * //         preProcessingTrace: { // PreProcessingTrace Union: only one key present
  * //           modelInvocationInput: { // ModelInvocationInput
@@ -683,8 +681,13 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //             rawResponse: { // RawResponse
  * //               content: "STRING_VALUE",
  * //             },
- * //             metadata: { // Metadata
- * //               usage: { // Usage
+ * //             metadata: {
+ * //               startTime: new Date("TIMESTAMP"),
+ * //               endTime: new Date("TIMESTAMP"),
+ * //               totalTimeMs: Number("long"),
+ * //               operationTotalTimeMs: Number("long"),
+ * //               clientRequestId: "STRING_VALUE",
+ * //               usage: {
  * //                 inputTokens: Number("int"),
  * //                 outputTokens: Number("int"),
  * //               },
@@ -805,6 +808,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //             type: "ACTION_GROUP" || "AGENT_COLLABORATOR" || "KNOWLEDGE_BASE" || "FINISH" || "ASK_USER" || "REPROMPT",
  * //             actionGroupInvocationOutput: { // ActionGroupInvocationOutput
  * //               text: "STRING_VALUE",
+ * //               metadata: "<Metadata>",
  * //             },
  * //             agentCollaboratorInvocationOutput: { // AgentCollaboratorInvocationOutput
  * //               agentCollaboratorName: "STRING_VALUE",
@@ -858,6 +862,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //                   invocationId: "STRING_VALUE",
  * //                 },
  * //               },
+ * //               metadata: "<Metadata>",
  * //             },
  * //             knowledgeBaseLookupOutput: { // KnowledgeBaseLookupOutput
  * //               retrievedReferences: [
@@ -906,9 +911,11 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //                   },
  * //                 },
  * //               ],
+ * //               metadata: "<Metadata>",
  * //             },
  * //             finalResponse: { // FinalResponse
  * //               text: "STRING_VALUE",
+ * //               metadata: "<Metadata>",
  * //             },
  * //             repromptResponse: { // RepromptResponse
  * //               text: "STRING_VALUE",
@@ -921,6 +928,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //                 "STRING_VALUE",
  * //               ],
  * //               executionTimeout: true || false,
+ * //               metadata: "<Metadata>",
  * //             },
  * //           },
  * //           modelInvocationInput: {
@@ -946,12 +954,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //             rawResponse: {
  * //               content: "STRING_VALUE",
  * //             },
- * //             metadata: {
- * //               usage: {
- * //                 inputTokens: Number("int"),
- * //                 outputTokens: Number("int"),
- * //               },
- * //             },
+ * //             metadata: "<Metadata>",
  * //             reasoningContent: {//  Union: only one key present
  * //               reasoningText: {
  * //                 text: "STRING_VALUE", // required
@@ -988,12 +991,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //             rawResponse: {
  * //               content: "STRING_VALUE",
  * //             },
- * //             metadata: {
- * //               usage: {
- * //                 inputTokens: Number("int"),
- * //                 outputTokens: Number("int"),
- * //               },
- * //             },
+ * //             metadata: "<Metadata>",
  * //             reasoningContent: {//  Union: only one key present
  * //               reasoningText: {
  * //                 text: "STRING_VALUE", // required
@@ -1098,6 +1096,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //             type: "ACTION_GROUP" || "AGENT_COLLABORATOR" || "KNOWLEDGE_BASE" || "FINISH" || "ASK_USER" || "REPROMPT",
  * //             actionGroupInvocationOutput: {
  * //               text: "STRING_VALUE",
+ * //               metadata: "<Metadata>",
  * //             },
  * //             agentCollaboratorInvocationOutput: {
  * //               agentCollaboratorName: "STRING_VALUE",
@@ -1151,6 +1150,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //                   invocationId: "STRING_VALUE",
  * //                 },
  * //               },
+ * //               metadata: "<Metadata>",
  * //             },
  * //             knowledgeBaseLookupOutput: {
  * //               retrievedReferences: [
@@ -1199,9 +1199,11 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //                   },
  * //                 },
  * //               ],
+ * //               metadata: "<Metadata>",
  * //             },
  * //             finalResponse: {
  * //               text: "STRING_VALUE",
+ * //               metadata: "<Metadata>",
  * //             },
  * //             repromptResponse: {
  * //               text: "STRING_VALUE",
@@ -1214,6 +1216,7 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //                 "STRING_VALUE",
  * //               ],
  * //               executionTimeout: true || false,
+ * //               metadata: "<Metadata>",
  * //             },
  * //           },
  * //           modelInvocationInput: {
@@ -1239,17 +1242,14 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //             rawResponse: {
  * //               content: "STRING_VALUE",
  * //             },
- * //             metadata: {
- * //               usage: {
- * //                 inputTokens: Number("int"),
- * //                 outputTokens: Number("int"),
- * //               },
- * //             },
+ * //             metadata: "<Metadata>",
  * //           },
  * //         },
  * //         failureTrace: { // FailureTrace
  * //           traceId: "STRING_VALUE",
  * //           failureReason: "STRING_VALUE",
+ * //           failureCode: Number("int"),
+ * //           metadata: "<Metadata>",
  * //         },
  * //         customOrchestrationTrace: { // CustomOrchestrationTrace
  * //           traceId: "STRING_VALUE",
@@ -1258,6 +1258,13 @@ export interface InvokeInlineAgentCommandOutput extends InvokeInlineAgentRespons
  * //           },
  * //         },
  * //       },
+ * //       callerChain: [ // CallerChain
+ * //         { // Caller Union: only one key present
+ * //           agentAliasArn: "STRING_VALUE",
+ * //         },
+ * //       ],
+ * //       eventTime: new Date("TIMESTAMP"),
+ * //       collaboratorName: "STRING_VALUE",
  * //     },
  * //     returnControl: { // InlineAgentReturnControlPayload
  * //       invocationInputs: [

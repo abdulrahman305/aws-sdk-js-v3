@@ -1,3 +1,4 @@
+export * from "./CreateHubContentPresignedUrlsPaginator";
 // smithy-typescript generated code
 export * from "./Interfaces";
 export * from "./ListActionsPaginator";
@@ -9,6 +10,7 @@ export * from "./ListArtifactsPaginator";
 export * from "./ListAssociationsPaginator";
 export * from "./ListAutoMLJobsPaginator";
 export * from "./ListCandidatesForAutoMLJobPaginator";
+export * from "./ListClusterEventsPaginator";
 export * from "./ListClusterNodesPaginator";
 export * from "./ListClusterSchedulerConfigsPaginator";
 export * from "./ListClustersPaginator";
@@ -60,6 +62,7 @@ export * from "./ListPartnerAppsPaginator";
 export * from "./ListPipelineExecutionStepsPaginator";
 export * from "./ListPipelineExecutionsPaginator";
 export * from "./ListPipelineParametersForExecutionPaginator";
+export * from "./ListPipelineVersionsPaginator";
 export * from "./ListPipelinesPaginator";
 export * from "./ListProcessingJobsPaginator";
 export * from "./ListProjectsPaginator";
@@ -75,6 +78,7 @@ export * from "./ListTrainingPlansPaginator";
 export * from "./ListTransformJobsPaginator";
 export * from "./ListTrialComponentsPaginator";
 export * from "./ListTrialsPaginator";
+export * from "./ListUltraServersByReservedCapacityPaginator";
 export * from "./ListUserProfilesPaginator";
 export * from "./ListWorkforcesPaginator";
 export * from "./ListWorkteamsPaginator";

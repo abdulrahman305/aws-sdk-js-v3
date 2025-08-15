@@ -59,7 +59,7 @@ export interface ListRecoveryPointsByResourceCommandOutput
  * //     { // RecoveryPointByResource
  * //       RecoveryPointArn: "STRING_VALUE",
  * //       CreationDate: new Date("TIMESTAMP"),
- * //       Status: "COMPLETED" || "PARTIAL" || "DELETING" || "EXPIRED",
+ * //       Status: "COMPLETED" || "PARTIAL" || "DELETING" || "EXPIRED" || "AVAILABLE" || "STOPPED" || "CREATING",
  * //       StatusMessage: "STRING_VALUE",
  * //       EncryptionKeyArn: "STRING_VALUE",
  * //       BackupSizeBytes: Number("long"),
@@ -67,7 +67,7 @@ export interface ListRecoveryPointsByResourceCommandOutput
  * //       IsParent: true || false,
  * //       ParentRecoveryPointArn: "STRING_VALUE",
  * //       ResourceName: "STRING_VALUE",
- * //       VaultType: "BACKUP_VAULT" || "LOGICALLY_AIR_GAPPED_BACKUP_VAULT",
+ * //       VaultType: "BACKUP_VAULT" || "LOGICALLY_AIR_GAPPED_BACKUP_VAULT" || "RESTORE_ACCESS_BACKUP_VAULT",
  * //       IndexStatus: "PENDING" || "ACTIVE" || "FAILED" || "DELETING",
  * //       IndexStatusMessage: "STRING_VALUE",
  * //     },

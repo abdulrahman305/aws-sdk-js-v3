@@ -636,6 +636,7 @@ export interface UpdateRuleGroupCommandOutput extends UpdateRuleGroupResponse, _
  *                   JA4Fingerprint: { // RateLimitJA4Fingerprint
  *                     FallbackBehavior: "MATCH" || "NO_MATCH", // required
  *                   },
+ *                   ASN: {},
  *                 },
  *               ],
  *             },
@@ -788,6 +789,20 @@ export interface UpdateRuleGroupCommandOutput extends UpdateRuleGroupResponse, _
  *                     },
  *                     EnableRegexInPath: true || false,
  *                   },
+ *                   AWSManagedRulesAntiDDoSRuleSet: { // AWSManagedRulesAntiDDoSRuleSet
+ *                     ClientSideActionConfig: { // ClientSideActionConfig
+ *                       Challenge: { // ClientSideAction
+ *                         UsageOfAction: "ENABLED" || "DISABLED", // required
+ *                         Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ *                         ExemptUriRegularExpressions: [ // RegularExpressionList
+ *                           { // Regex
+ *                             RegexString: "STRING_VALUE",
+ *                           },
+ *                         ],
+ *                       },
+ *                     },
+ *                     SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ *                   },
  *                 },
  *               ],
  *               RuleActionOverrides: [
@@ -826,6 +841,15 @@ export interface UpdateRuleGroupCommandOutput extends UpdateRuleGroupResponse, _
  *               FieldToMatch: "<FieldToMatch>", // required
  *               TextTransformations: "<TextTransformations>", // required
  *             },
+ *             AsnMatchStatement: { // AsnMatchStatement
+ *               AsnList: [ // AsnList // required
+ *                 Number("long"),
+ *               ],
+ *               ForwardedIPConfig: {
+ *                 HeaderName: "STRING_VALUE", // required
+ *                 FallbackBehavior: "MATCH" || "NO_MATCH", // required
+ *               },
+ *             },
  *           },
  *           ForwardedIPConfig: {
  *             HeaderName: "STRING_VALUE", // required
@@ -863,6 +887,7 @@ export interface UpdateRuleGroupCommandOutput extends UpdateRuleGroupResponse, _
  *               JA4Fingerprint: {
  *                 FallbackBehavior: "MATCH" || "NO_MATCH", // required
  *               },
+ *               ASN: {},
  *             },
  *           ],
  *         },
@@ -1003,6 +1028,20 @@ export interface UpdateRuleGroupCommandOutput extends UpdateRuleGroupResponse, _
  *                 },
  *                 EnableRegexInPath: true || false,
  *               },
+ *               AWSManagedRulesAntiDDoSRuleSet: {
+ *                 ClientSideActionConfig: {
+ *                   Challenge: {
+ *                     UsageOfAction: "ENABLED" || "DISABLED", // required
+ *                     Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ *                     ExemptUriRegularExpressions: [
+ *                       {
+ *                         RegexString: "STRING_VALUE",
+ *                       },
+ *                     ],
+ *                   },
+ *                 },
+ *                 SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ *               },
  *             },
  *           ],
  *           RuleActionOverrides: [
@@ -1040,6 +1079,12 @@ export interface UpdateRuleGroupCommandOutput extends UpdateRuleGroupResponse, _
  *           RegexString: "STRING_VALUE", // required
  *           FieldToMatch: "<FieldToMatch>", // required
  *           TextTransformations: "<TextTransformations>", // required
+ *         },
+ *         AsnMatchStatement: {
+ *           AsnList: [ // required
+ *             Number("long"),
+ *           ],
+ *           ForwardedIPConfig: "<ForwardedIPConfig>",
  *         },
  *       },
  *       Action: "<RuleAction>",

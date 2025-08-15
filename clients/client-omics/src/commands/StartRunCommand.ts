@@ -28,18 +28,7 @@ export interface StartRunCommandInput extends StartRunRequest {}
 export interface StartRunCommandOutput extends StartRunResponse, __MetadataBearer {}
 
 /**
- * <p>Starts a workflow run. To duplicate a run, specify the run's ID and a role ARN. The
- *       remaining parameters are copied from the previous run.</p>
- *          <p>StartRun will not support re-run for a workflow that is shared with you.</p>
- *          <p>HealthOmics stores a fixed number of runs that are available to the console and API.
- *         By default, HealthOmics doesn't any remove any runs. If HealthOmics reaches the maximum
- *         number of runs, you must manually remove runs. To have older runs removed automatically,
- *         set the retention mode to <code>REMOVE</code>.</p>
- *          <p>By default, the run uses STATIC storage. For STATIC storage, set the <code>storageCapacity</code> field.
- *       You can set the storage type to DYNAMIC. You do not set <code>storageCapacity</code>,
- *       because HealthOmics dynamically scales the storage up or down as required.
- *       For more information about static and dynamic storage, see <a href="https://docs.aws.amazon.com/omics/latest/dev/Using-workflows.html">Running workflows</a>
- *       in the <i>AWS HealthOmics User Guide</i>.</p>
+ * <p>Starts a new run and returns details about the run, or duplicates an existing run. A run is a single invocation of a workflow. If you provide request IDs, Amazon Web Services HealthOmics identifies duplicate requests and starts the run only once. Monitor the progress of the run by calling the <code>GetRun</code> API operation.</p> <p>To start a new run, the following inputs are required:</p> <ul> <li> <p>A service role ARN (<code>roleArn</code>).</p> </li> <li> <p>The run's workflow ID (<code>workflowId</code>, not the <code>uuid</code> or <code>runId</code>).</p> </li> <li> <p>An Amazon S3 location (<code>outputUri</code>) where the run outputs will be saved.</p> </li> <li> <p>All required workflow parameters (<code>parameter</code>), which can include optional parameters from the parameter template. The run cannot include any parameters that are not defined in the parameter template. To see all possible parameters, use the <code>GetRun</code> API operation. </p> </li> <li> <p>For runs with a <code>STATIC</code> (default) storage type, specify the required storage capacity (in gibibytes). A storage capacity value is not required for runs that use <code>DYNAMIC</code> storage.</p> </li> </ul> <p> <code>StartRun</code> can also duplicate an existing run using the run's default values. You can modify these default values and/or add other optional inputs. To duplicate a run, the following inputs are required:</p> <ul> <li> <p>A service role ARN (<code>roleArn</code>).</p> </li> <li> <p>The ID of the run to duplicate (<code>runId</code>).</p> </li> <li> <p>An Amazon S3 location where the run outputs will be saved (<code>outputUri</code>).</p> </li> </ul> <p>To learn more about the optional parameters for <code>StartRun</code>, see <a href="https://docs.aws.amazon.com/omics/latest/dev/starting-a-run.html">Starting a run</a> in the <i>Amazon Web Services HealthOmics User Guide</i>.</p> <p>Use the <code>retentionMode</code> input to control how long the metadata for each run is stored in CloudWatch. There are two retention modes:</p> <ul> <li> <p>Specify <code>REMOVE</code> to automatically remove the oldest runs when you reach the maximum service retention limit for runs. It is recommended that you use the <code>REMOVE</code> mode to initiate major run requests so that your runs do not fail when you reach the limit.</p> </li> <li> <p>The <code>retentionMode</code> is set to the <code>RETAIN</code> mode by default, which allows you to manually remove runs after reaching the maximum service retention limit. Under this setting, you cannot create additional runs until you remove the excess runs.</p> </li> </ul> <p>To learn more about the retention modes, see <a href="https://docs.aws.amazon.com/omics/latest/dev/run-retention.html">Run retention mode</a> in the <i>Amazon Web Services HealthOmics User Guide</i>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -67,6 +56,7 @@ export interface StartRunCommandOutput extends StartRunResponse, __MetadataBeare
  *   retentionMode: "STRING_VALUE",
  *   storageType: "STRING_VALUE",
  *   workflowOwnerId: "STRING_VALUE",
+ *   workflowVersionName: "STRING_VALUE",
  * };
  * const command = new StartRunCommand(input);
  * const response = await client.send(command);

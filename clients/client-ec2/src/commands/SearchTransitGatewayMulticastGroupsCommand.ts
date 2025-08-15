@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   SearchTransitGatewayMulticastGroupsRequest,
   SearchTransitGatewayMulticastGroupsResult,
-} from "../models/models_7";
+} from "../models/models_8";
 import {
   de_SearchTransitGatewayMulticastGroupsCommand,
   se_SearchTransitGatewayMulticastGroupsCommand,
@@ -66,7 +66,7 @@ export interface SearchTransitGatewayMulticastGroupsCommandOutput
  * //       TransitGatewayAttachmentId: "STRING_VALUE",
  * //       SubnetId: "STRING_VALUE",
  * //       ResourceId: "STRING_VALUE",
- * //       ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering",
+ * //       ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering" || "network-function",
  * //       ResourceOwnerId: "STRING_VALUE",
  * //       NetworkInterfaceId: "STRING_VALUE",
  * //       GroupMember: true || false,

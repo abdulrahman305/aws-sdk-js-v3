@@ -37,16 +37,12 @@ import {
   AssetBundleImportJobStatus,
   AssetBundleImportJobSummary,
   AssetBundleImportJobWarning,
-  AssetBundleImportSource,
   AssetBundleImportSourceDescription,
   AssetBundleImportSourceDescriptionFilterSensitiveLog,
-  AssetBundleImportSourceFilterSensitiveLog,
   AssignmentStatus,
   AuthorizedTargetsByService,
   BookmarksConfigurations,
   BrandDefinition,
-  BrandDetail,
-  BrandSummary,
   DashboardVisualId,
   DataSetRefreshProperties,
   FilterOperator,
@@ -59,6 +55,10 @@ import {
 import {
   _Parameters,
   _ParametersFilterSensitiveLog,
+  BrandDetail,
+  BrandSummary,
+  CustomInstructions,
+  CustomInstructionsFilterSensitiveLog,
   CustomPermissions,
   Dashboard,
   DashboardError,
@@ -100,6 +100,193 @@ import {
 } from "./models_3";
 
 import { QuickSightServiceException as __BaseException } from "./QuickSightServiceException";
+
+/**
+ * @public
+ */
+export interface DeleteThemeAliasRequest {
+  /**
+   * <p>The ID of the Amazon Web Services account that contains the theme alias to delete.</p>
+   * @public
+   */
+  AwsAccountId: string | undefined;
+
+  /**
+   * <p>The ID for the theme that the specified alias is for.</p>
+   * @public
+   */
+  ThemeId: string | undefined;
+
+  /**
+   * <p>The unique name for the theme alias to delete.</p>
+   * @public
+   */
+  AliasName: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteThemeAliasResponse {
+  /**
+   * <p>The name for the theme alias.</p>
+   * @public
+   */
+  AliasName?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the theme resource using the deleted alias.</p>
+   * @public
+   */
+  Arn?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services request ID for this operation.</p>
+   * @public
+   */
+  RequestId?: string | undefined;
+
+  /**
+   * <p>The HTTP status of the request.</p>
+   * @public
+   */
+  Status?: number | undefined;
+
+  /**
+   * <p>An ID for the theme associated with the deletion.</p>
+   * @public
+   */
+  ThemeId?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteTopicRequest {
+  /**
+   * <p>The ID of the Amazon Web Services account that contains the topic that you want to
+   *          delete.</p>
+   * @public
+   */
+  AwsAccountId: string | undefined;
+
+  /**
+   * <p>The ID of the topic that you want to delete. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.</p>
+   * @public
+   */
+  TopicId: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteTopicResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the topic.</p>
+   * @public
+   */
+  Arn?: string | undefined;
+
+  /**
+   * <p>The ID of the topic that you want to delete. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.</p>
+   * @public
+   */
+  TopicId?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services request ID for this operation.</p>
+   * @public
+   */
+  RequestId?: string | undefined;
+
+  /**
+   * <p>The HTTP status of the request.</p>
+   * @public
+   */
+  Status?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteTopicRefreshScheduleRequest {
+  /**
+   * <p>The Amazon Web Services account ID.</p>
+   * @public
+   */
+  AwsAccountId: string | undefined;
+
+  /**
+   * <p>The ID of the topic that you want to modify. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.</p>
+   * @public
+   */
+  TopicId: string | undefined;
+
+  /**
+   * <p>The ID of the dataset.</p>
+   * @public
+   */
+  DatasetId: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteTopicRefreshScheduleResponse {
+  /**
+   * <p>The ID of the topic that you want to modify. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.</p>
+   * @public
+   */
+  TopicId?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the topic.</p>
+   * @public
+   */
+  TopicArn?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the dataset.</p>
+   * @public
+   */
+  DatasetArn?: string | undefined;
+
+  /**
+   * <p>The HTTP status of the request.</p>
+   * @public
+   */
+  Status?: number | undefined;
+
+  /**
+   * <p>The Amazon Web Services request ID for this operation.</p>
+   * @public
+   */
+  RequestId?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteUserRequest {
+  /**
+   * <p>The name of the user that you want to delete.</p>
+   * @public
+   */
+  UserName: string | undefined;
+
+  /**
+   * <p>The ID for the Amazon Web Services account that the user is in. Currently, you use the ID for the
+   * 			Amazon Web Services account that contains your Amazon QuickSight account.</p>
+   * @public
+   */
+  AwsAccountId: string | undefined;
+
+  /**
+   * <p>The namespace. Currently, you should set this to <code>default</code>.</p>
+   * @public
+   */
+  Namespace: string | undefined;
+}
 
 /**
  * @public
@@ -3984,6 +4171,12 @@ export interface DescribeTopicResponse {
    * @public
    */
   Status?: number | undefined;
+
+  /**
+   * <p>Custom instructions for the topic.</p>
+   * @public
+   */
+  CustomInstructions?: CustomInstructions | undefined;
 }
 
 /**
@@ -8847,307 +9040,6 @@ export interface TopicSearchFilter {
 }
 
 /**
- * @public
- */
-export interface SearchTopicsRequest {
-  /**
-   * <p>The ID of the Amazon Web Services account that contains the topic that you want to find.</p>
-   * @public
-   */
-  AwsAccountId: string | undefined;
-
-  /**
-   * <p>The filters that you want to use to search for the topic.</p>
-   * @public
-   */
-  Filters: TopicSearchFilter[] | undefined;
-
-  /**
-   * <p>The token for the next set of results, or null if there are no more results.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-
-  /**
-   * <p>The maximum number of results to be returned per request.</p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface SearchTopicsResponse {
-  /**
-   * <p>A list of topic summaries that is returned by the search topic request.</p>
-   * @public
-   */
-  TopicSummaryList?: TopicSummary[] | undefined;
-
-  /**
-   * <p>The token for the next set of results, or null if there are no more results.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-
-  /**
-   * <p>The HTTP status of the request.</p>
-   * @public
-   */
-  Status?: number | undefined;
-
-  /**
-   * <p>The Amazon Web Services request ID for this operation.</p>
-   * @public
-   */
-  RequestId?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface StartAssetBundleExportJobRequest {
-  /**
-   * <p>The ID of the Amazon Web Services account to export assets from.</p>
-   * @public
-   */
-  AwsAccountId: string | undefined;
-
-  /**
-   * <p>The ID of the job. This ID is unique while the job is running. After the job is completed, you can reuse this ID for another job.</p>
-   * @public
-   */
-  AssetBundleExportJobId: string | undefined;
-
-  /**
-   * <p>An array of resource ARNs to export. The following resources are supported.</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>Analysis</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>Dashboard</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>DataSet</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>DataSource</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>RefreshSchedule</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>Theme</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>VPCConnection</code>
-   *                </p>
-   *             </li>
-   *          </ul>
-   *          <p>The API caller must have the necessary permissions in their IAM role to access each resource before the resources can be exported.</p>
-   * @public
-   */
-  ResourceArns: string[] | undefined;
-
-  /**
-   * <p>A Boolean that determines whether all dependencies of each resource ARN are recursively
-   *          exported with the job. For example, say you provided a Dashboard ARN to the
-   *             <code>ResourceArns</code> parameter. If you set <code>IncludeAllDependencies</code> to
-   *             <code>TRUE</code>, any theme, dataset, and data source resource that is a dependency of the dashboard is also
-   *          exported.</p>
-   * @public
-   */
-  IncludeAllDependencies?: boolean | undefined;
-
-  /**
-   * <p>The export data format.</p>
-   * @public
-   */
-  ExportFormat: AssetBundleExportFormat | undefined;
-
-  /**
-   * <p>An optional collection of structures that generate CloudFormation parameters to override the existing resource property values when the resource is exported to a new CloudFormation template.</p>
-   *          <p>Use this field if the <code>ExportFormat</code> field of a <code>StartAssetBundleExportJobRequest</code> API call is set to <code>CLOUDFORMATION_JSON</code>.</p>
-   * @public
-   */
-  CloudFormationOverridePropertyConfiguration?: AssetBundleCloudFormationOverridePropertyConfiguration | undefined;
-
-  /**
-   * <p>A Boolean that determines whether all permissions for each resource ARN are exported with the job. If you set <code>IncludePermissions</code> to <code>TRUE</code>, any permissions associated with each resource are exported.
-   *       </p>
-   * @public
-   */
-  IncludePermissions?: boolean | undefined;
-
-  /**
-   * <p> A Boolean that determines whether all tags for each resource ARN are exported with the job. If you set <code>IncludeTags</code> to <code>TRUE</code>, any tags associated with each resource are exported.</p>
-   * @public
-   */
-  IncludeTags?: boolean | undefined;
-
-  /**
-   * <p>An optional parameter that determines which validation strategy to use for the export job. If <code>StrictModeForAllResources</code> is set to <code>TRUE</code>, strict validation for every error is enforced. If it is set to <code>FALSE</code>, validation is skipped for specific UI errors that are shown as warnings. The default value for <code>StrictModeForAllResources</code> is <code>FALSE</code>.</p>
-   * @public
-   */
-  ValidationStrategy?: AssetBundleExportJobValidationStrategy | undefined;
-
-  /**
-   * <p>A Boolean that determines if the exported asset carries over information about the folders that the asset is a member of. </p>
-   * @public
-   */
-  IncludeFolderMemberships?: boolean | undefined;
-
-  /**
-   * <p>A setting that indicates whether you want to include folder assets. You can also use this setting to recusrsively include all subfolders of an exported folder.</p>
-   * @public
-   */
-  IncludeFolderMembers?: IncludeFolderMembers | undefined;
-}
-
-/**
- * @public
- */
-export interface StartAssetBundleExportJobResponse {
-  /**
-   * <p>The Amazon Resource Name (ARN) for the export job.</p>
-   * @public
-   */
-  Arn?: string | undefined;
-
-  /**
-   * <p>The ID of the job. This ID is unique while the job is running. After the job is completed, you can reuse this ID for another job.</p>
-   * @public
-   */
-  AssetBundleExportJobId?: string | undefined;
-
-  /**
-   * <p>The Amazon Web Services response ID for this operation.</p>
-   * @public
-   */
-  RequestId?: string | undefined;
-
-  /**
-   * <p>The HTTP status of the response.</p>
-   * @public
-   */
-  Status?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface StartAssetBundleImportJobRequest {
-  /**
-   * <p>The ID of the Amazon Web Services account to import assets into. </p>
-   * @public
-   */
-  AwsAccountId: string | undefined;
-
-  /**
-   * <p>The ID of the job. This ID is unique while the job is running. After the job is completed, you can reuse this ID for another job.</p>
-   * @public
-   */
-  AssetBundleImportJobId: string | undefined;
-
-  /**
-   * <p>The source of the asset bundle zip file that contains the data that you want to import. The file must be in <code>QUICKSIGHT_JSON</code> format.
-   *       </p>
-   * @public
-   */
-  AssetBundleImportSource: AssetBundleImportSource | undefined;
-
-  /**
-   * <p>Optional overrides that are applied to the resource configuration before import.</p>
-   * @public
-   */
-  OverrideParameters?: AssetBundleImportJobOverrideParameters | undefined;
-
-  /**
-   * <p>The failure action for the import job.</p>
-   *          <p>If you choose <code>ROLLBACK</code>, failed  import jobs will attempt to  undo any asset changes caused by the failed job.</p>
-   *          <p>If you choose <code>DO_NOTHING</code>, failed import jobs will not attempt to roll back
-   *          any asset changes caused by the failed job, possibly keeping the Amazon QuickSight account in an inconsistent state.</p>
-   * @public
-   */
-  FailureAction?: AssetBundleImportFailureAction | undefined;
-
-  /**
-   * <p>Optional permission overrides that are applied to the resource configuration before import.</p>
-   * @public
-   */
-  OverridePermissions?: AssetBundleImportJobOverridePermissions | undefined;
-
-  /**
-   * <p>Optional tag overrides that are applied to the resource configuration before import.</p>
-   * @public
-   */
-  OverrideTags?: AssetBundleImportJobOverrideTags | undefined;
-
-  /**
-   * <p>An optional validation strategy override for all analyses and dashboards that is applied to the resource configuration before import. </p>
-   * @public
-   */
-  OverrideValidationStrategy?: AssetBundleImportJobOverrideValidationStrategy | undefined;
-}
-
-/**
- * @public
- */
-export interface StartAssetBundleImportJobResponse {
-  /**
-   * <p>The Amazon Resource Name (ARN) for the import job.</p>
-   * @public
-   */
-  Arn?: string | undefined;
-
-  /**
-   * <p>The ID of the job. This ID is unique while the job is running. After the job is completed, you can reuse this ID for another job.</p>
-   * @public
-   */
-  AssetBundleImportJobId?: string | undefined;
-
-  /**
-   * <p>The Amazon Web Services response ID for this operation.</p>
-   * @public
-   */
-  RequestId?: string | undefined;
-
-  /**
-   * <p>The HTTP status of the response.</p>
-   * @public
-   */
-  Status?: number | undefined;
-}
-
-/**
- * <p>A structure that contains information on the anonymous user configuration.</p>
- * @public
- */
-export interface SnapshotAnonymousUser {
-  /**
-   * <p>The tags to be used for row-level security (RLS). Make sure that the relevant datasets have RLS tags configured before you start a snapshot export job. You can configure the RLS tags of a dataset with a <code>DataSet$RowLevelPermissionTagConfiguration</code> API call.</p>
-   *          <p>These are not the tags that are used for Amazon Web Services resource tagging. For more information on row level security in Amazon QuickSight, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/quicksight-dev-rls-tags.html">Using Row-Level Security (RLS) with Tags</a>in the <i>Amazon QuickSight User Guide</i>.</p>
-   * @public
-   */
-  RowLevelPermissionTags?: SessionTag[] | undefined;
-}
-
-/**
  * @internal
  */
 export const DescribeAnalysisResponseFilterSensitiveLog = (obj: DescribeAnalysisResponse): any => ({
@@ -9273,6 +9165,7 @@ export const DescribeTemplateDefinitionResponseFilterSensitiveLog = (obj: Descri
  */
 export const DescribeTopicResponseFilterSensitiveLog = (obj: DescribeTopicResponse): any => ({
   ...obj,
+  ...(obj.CustomInstructions && { CustomInstructions: CustomInstructionsFilterSensitiveLog(obj.CustomInstructions) }),
 });
 
 /**
@@ -9372,25 +9265,5 @@ export const PredictQAResultsResponseFilterSensitiveLog = (obj: PredictQAResults
   ...(obj.PrimaryResult && { PrimaryResult: QAResultFilterSensitiveLog(obj.PrimaryResult) }),
   ...(obj.AdditionalResults && {
     AdditionalResults: obj.AdditionalResults.map((item) => QAResultFilterSensitiveLog(item)),
-  }),
-});
-
-/**
- * @internal
- */
-export const StartAssetBundleImportJobRequestFilterSensitiveLog = (obj: StartAssetBundleImportJobRequest): any => ({
-  ...obj,
-  ...(obj.AssetBundleImportSource && {
-    AssetBundleImportSource: AssetBundleImportSourceFilterSensitiveLog(obj.AssetBundleImportSource),
-  }),
-});
-
-/**
- * @internal
- */
-export const SnapshotAnonymousUserFilterSensitiveLog = (obj: SnapshotAnonymousUser): any => ({
-  ...obj,
-  ...(obj.RowLevelPermissionTags && {
-    RowLevelPermissionTags: obj.RowLevelPermissionTags.map((item) => SessionTagFilterSensitiveLog(item)),
   }),
 });

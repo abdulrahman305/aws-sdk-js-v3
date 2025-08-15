@@ -6,11 +6,8 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { FSxClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../FSxClient";
-import {
-  CreateSnapshotRequest,
-  CreateSnapshotResponse,
-  CreateSnapshotResponseFilterSensitiveLog,
-} from "../models/models_0";
+import { CreateSnapshotRequest } from "../models/models_0";
+import { CreateSnapshotResponse, CreateSnapshotResponseFilterSensitiveLog } from "../models/models_1";
 import { de_CreateSnapshotCommand, se_CreateSnapshotCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -101,7 +98,7 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //         AdministrativeActionType: "FILE_SYSTEM_UPDATE" || "STORAGE_OPTIMIZATION" || "FILE_SYSTEM_ALIAS_ASSOCIATION" || "FILE_SYSTEM_ALIAS_DISASSOCIATION" || "VOLUME_UPDATE" || "SNAPSHOT_UPDATE" || "RELEASE_NFS_V3_LOCKS" || "VOLUME_RESTORE" || "THROUGHPUT_OPTIMIZATION" || "IOPS_OPTIMIZATION" || "STORAGE_TYPE_OPTIMIZATION" || "MISCONFIGURED_STATE_RECOVERY" || "VOLUME_UPDATE_WITH_SNAPSHOT" || "VOLUME_INITIALIZE_WITH_SNAPSHOT" || "DOWNLOAD_DATA_FROM_BACKUP",
  * //         ProgressPercent: Number("int"),
  * //         RequestTime: new Date("TIMESTAMP"),
- * //         Status: "FAILED" || "IN_PROGRESS" || "PENDING" || "COMPLETED" || "UPDATED_OPTIMIZING" || "OPTIMIZING",
+ * //         Status: "FAILED" || "IN_PROGRESS" || "PENDING" || "COMPLETED" || "UPDATED_OPTIMIZING" || "OPTIMIZING" || "PAUSED" || "CANCELLED",
  * //         TargetFileSystemValues: { // FileSystem
  * //           OwnerId: "STRING_VALUE",
  * //           CreationTime: new Date("TIMESTAMP"),
@@ -203,13 +200,18 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //               Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //             },
  * //             EfaEnabled: true || false,
+ * //             ThroughputCapacity: Number("int"),
+ * //             DataReadCacheConfiguration: { // LustreReadCacheConfiguration
+ * //               SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //               SizeGiB: Number("int"),
+ * //             },
  * //           },
  * //           AdministrativeActions: [
  * //             {
  * //               AdministrativeActionType: "FILE_SYSTEM_UPDATE" || "STORAGE_OPTIMIZATION" || "FILE_SYSTEM_ALIAS_ASSOCIATION" || "FILE_SYSTEM_ALIAS_DISASSOCIATION" || "VOLUME_UPDATE" || "SNAPSHOT_UPDATE" || "RELEASE_NFS_V3_LOCKS" || "VOLUME_RESTORE" || "THROUGHPUT_OPTIMIZATION" || "IOPS_OPTIMIZATION" || "STORAGE_TYPE_OPTIMIZATION" || "MISCONFIGURED_STATE_RECOVERY" || "VOLUME_UPDATE_WITH_SNAPSHOT" || "VOLUME_INITIALIZE_WITH_SNAPSHOT" || "DOWNLOAD_DATA_FROM_BACKUP",
  * //               ProgressPercent: Number("int"),
  * //               RequestTime: new Date("TIMESTAMP"),
- * //               Status: "FAILED" || "IN_PROGRESS" || "PENDING" || "COMPLETED" || "UPDATED_OPTIMIZING" || "OPTIMIZING",
+ * //               Status: "FAILED" || "IN_PROGRESS" || "PENDING" || "COMPLETED" || "UPDATED_OPTIMIZING" || "OPTIMIZING" || "PAUSED" || "CANCELLED",
  * //               TargetFileSystemValues: {
  * //                 OwnerId: "STRING_VALUE",
  * //                 CreationTime: new Date("TIMESTAMP"),
@@ -306,6 +308,11 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //                     Mode: "AUTOMATIC" || "USER_PROVISIONED", // required
  * //                   },
  * //                   EfaEnabled: true || false,
+ * //                   ThroughputCapacity: Number("int"),
+ * //                   DataReadCacheConfiguration: {
+ * //                     SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+ * //                     SizeGiB: Number("int"),
+ * //                   },
  * //                 },
  * //                 AdministrativeActions: "<AdministrativeActions>",
  * //                 OntapConfiguration: { // OntapFileSystemConfiguration
@@ -357,15 +364,18 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //                   RootVolumeId: "STRING_VALUE",
  * //                   PreferredSubnetId: "STRING_VALUE",
  * //                   EndpointIpAddressRange: "STRING_VALUE",
+ * //                   EndpointIpv6AddressRange: "STRING_VALUE",
  * //                   RouteTableIds: [
  * //                     "STRING_VALUE",
  * //                   ],
  * //                   EndpointIpAddress: "STRING_VALUE",
+ * //                   EndpointIpv6Address: "STRING_VALUE",
  * //                   ReadCacheConfiguration: { // OpenZFSReadCacheConfiguration
  * //                     SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
  * //                     SizeGiB: Number("int"),
  * //                   },
  * //                 },
+ * //                 NetworkType: "IPV4" || "DUAL",
  * //               },
  * //               FailureDetails: { // AdministrativeActionFailureDetails
  * //                 Message: "STRING_VALUE",
@@ -488,6 +498,7 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //               },
  * //               TotalTransferBytes: Number("long"),
  * //               RemainingTransferBytes: Number("long"),
+ * //               Message: "STRING_VALUE",
  * //             },
  * //           ],
  * //           OntapConfiguration: {
@@ -536,15 +547,18 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //             RootVolumeId: "STRING_VALUE",
  * //             PreferredSubnetId: "STRING_VALUE",
  * //             EndpointIpAddressRange: "STRING_VALUE",
+ * //             EndpointIpv6AddressRange: "STRING_VALUE",
  * //             RouteTableIds: [
  * //               "STRING_VALUE",
  * //             ],
  * //             EndpointIpAddress: "STRING_VALUE",
+ * //             EndpointIpv6Address: "STRING_VALUE",
  * //             ReadCacheConfiguration: {
  * //               SizingMode: "NO_CACHE" || "USER_PROVISIONED" || "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
  * //               SizeGiB: Number("int"),
  * //             },
  * //           },
+ * //           NetworkType: "IPV4" || "DUAL",
  * //         },
  * //         FailureDetails: {
  * //           Message: "STRING_VALUE",
@@ -650,6 +664,7 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  * //         TargetSnapshotValues: "<Snapshot>",
  * //         TotalTransferBytes: Number("long"),
  * //         RemainingTransferBytes: Number("long"),
+ * //         Message: "STRING_VALUE",
  * //       },
  * //     ],
  * //   },
@@ -671,7 +686,7 @@ export interface CreateSnapshotCommandOutput extends CreateSnapshotResponse, __M
  *
  * @throws {@link ServiceLimitExceeded} (client fault)
  *  <p>An error indicating that a particular service limit was exceeded. You can increase
- *             some service limits by contacting Amazon Web Services Support.</p>
+ *             some service limits by contacting Amazon Web ServicesSupport.</p>
  *
  * @throws {@link VolumeNotFound} (client fault)
  *  <p>No Amazon FSx volumes were found based upon the supplied parameters.</p>

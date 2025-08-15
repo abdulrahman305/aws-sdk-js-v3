@@ -1,39 +1,312 @@
 // smithy-typescript generated code
 import {
-  AccelerationSettings,
-  AccelerationStatus,
   AudioDescription,
   AutomatedEncodingSettings,
-  AvailBlanking,
-  BillingTagsSource,
   CaptionDescription,
   CmafGroupSettings,
-  ColorConversion3DLUTSetting,
   DashIsoGroupSettings,
   DestinationSettings,
-  EsamSettings,
-  ExtendedDataServices,
   FileGroupSettings,
+  FrameMetricType,
   Hdr10Metadata,
-  HlsGroupSettings,
-  HopDestination,
+  HlsAdditionalManifest,
+  HlsAdMarkers,
+  HlsAudioOnlyHeader,
+  HlsCaptionLanguageMapping,
+  HlsCaptionLanguageSetting,
+  HlsCaptionSegmentLengthControl,
+  HlsClientCache,
+  HlsCodecSpecification,
+  HlsDirectoryStructure,
+  HlsEncryptionSettings,
+  HlsImageBasedTrickPlay,
+  HlsImageBasedTrickPlaySettings,
+  HlsManifestCompression,
+  HlsManifestDurationFormat,
+  HlsOutputSelection,
+  HlsProgramDateTime,
+  HlsProgressiveWriteHlsManifest,
+  HlsSegmentControl,
+  HlsSegmentLengthControl,
+  HlsStreamInfResolution,
+  HlsTargetDurationCompatibilityMode,
   Id3Insertion,
   ImageInserter,
-  Input,
-  JobMessages,
-  JobPhase,
-  KantarWatermarkSettings,
-  MotionImageInserter,
-  MsSmoothAdditionalManifest,
-  MsSmoothAudioDeduplication,
-  MsSmoothEncryptionSettings,
-  MsSmoothFragmentLengthControl,
-  NielsenConfiguration,
-  NielsenNonLinearWatermarkSettings,
-  OutputGroupDetail,
-  QueueTransition,
   Rectangle,
+  SpekeKeyProvider,
 } from "./models_0";
+
+/**
+ * @public
+ * @enum
+ */
+export const HlsTimedMetadataId3Frame = {
+  NONE: "NONE",
+  PRIV: "PRIV",
+  TDRL: "TDRL",
+} as const;
+
+/**
+ * @public
+ */
+export type HlsTimedMetadataId3Frame = (typeof HlsTimedMetadataId3Frame)[keyof typeof HlsTimedMetadataId3Frame];
+
+/**
+ * Settings related to your HLS output package. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/outputs-file-ABR.html.
+ * @public
+ */
+export interface HlsGroupSettings {
+  /**
+   * Choose one or more ad marker types to decorate your Apple HLS manifest. This setting does not determine whether SCTE-35 markers appear in the outputs themselves.
+   * @public
+   */
+  AdMarkers?: HlsAdMarkers[] | undefined;
+
+  /**
+   * By default, the service creates one top-level .m3u8 HLS manifest for each HLS output group in your job. This default manifest references every output in the output group. To create additional top-level manifests that reference a subset of the outputs in the output group, specify a list of them here.
+   * @public
+   */
+  AdditionalManifests?: HlsAdditionalManifest[] | undefined;
+
+  /**
+   * Ignore this setting unless you are using FairPlay DRM with Verimatrix and you encounter playback issues. Keep the default value, Include, to output audio-only headers. Choose Exclude to remove the audio-only headers from your audio segments.
+   * @public
+   */
+  AudioOnlyHeader?: HlsAudioOnlyHeader | undefined;
+
+  /**
+   * A partial URI prefix that will be prepended to each output in the media .m3u8 file. Can be used if base manifest is delivered from a different URL than the main .m3u8 file.
+   * @public
+   */
+  BaseUrl?: string | undefined;
+
+  /**
+   * Language to be used on Caption outputs
+   * @public
+   */
+  CaptionLanguageMappings?: HlsCaptionLanguageMapping[] | undefined;
+
+  /**
+   * Applies only to 608 Embedded output captions. Insert: Include CLOSED-CAPTIONS lines in the manifest. Specify at least one language in the CC1 Language Code field. One CLOSED-CAPTION line is added for each Language Code you specify. Make sure to specify the languages in the order in which they appear in the original source (if the source is embedded format) or the order of the caption selectors (if the source is other than embedded). Otherwise, languages in the manifest will not match up properly with the output captions. None: Include CLOSED-CAPTIONS=NONE line in the manifest. Omit: Omit any CLOSED-CAPTIONS line from the manifest.
+   * @public
+   */
+  CaptionLanguageSetting?: HlsCaptionLanguageSetting | undefined;
+
+  /**
+   * Set Caption segment length control to Match video to create caption segments that align with the video segments from the first video output in this output group. For example, if the video segments are 2 seconds long, your WebVTT segments will also be 2 seconds long. Keep the default setting, Large segments to create caption segments that are 300 seconds long.
+   * @public
+   */
+  CaptionSegmentLengthControl?: HlsCaptionSegmentLengthControl | undefined;
+
+  /**
+   * Disable this setting only when your workflow requires the #EXT-X-ALLOW-CACHE:no tag. Otherwise, keep the default value Enabled and control caching in your video distribution set up. For example, use the Cache-Control http header.
+   * @public
+   */
+  ClientCache?: HlsClientCache | undefined;
+
+  /**
+   * Specification to use (RFC-6381 or the default RFC-4281) during m3u8 playlist generation.
+   * @public
+   */
+  CodecSpecification?: HlsCodecSpecification | undefined;
+
+  /**
+   * Use Destination to specify the S3 output location and the output filename base. Destination accepts format identifiers. If you do not specify the base filename in the URI, the service will use the filename of the input file. If your job has multiple inputs, the service uses the filename of the first input file.
+   * @public
+   */
+  Destination?: string | undefined;
+
+  /**
+   * Settings associated with the destination. Will vary based on the type of destination
+   * @public
+   */
+  DestinationSettings?: DestinationSettings | undefined;
+
+  /**
+   * Indicates whether segments should be placed in subdirectories.
+   * @public
+   */
+  DirectoryStructure?: HlsDirectoryStructure | undefined;
+
+  /**
+   * DRM settings.
+   * @public
+   */
+  Encryption?: HlsEncryptionSettings | undefined;
+
+  /**
+   * Specify whether MediaConvert generates images for trick play. Keep the default value, None, to not generate any images. Choose Thumbnail to generate tiled thumbnails. Choose Thumbnail and full frame to generate tiled thumbnails and full-resolution images of single frames. MediaConvert creates a child manifest for each set of images that you generate and adds corresponding entries to the parent manifest. A common application for these images is Roku trick mode. The thumbnails and full-frame images that MediaConvert creates with this feature are compatible with this Roku specification: https://developer.roku.com/docs/developer-program/media-playback/trick-mode/hls-and-dash.md
+   * @public
+   */
+  ImageBasedTrickPlay?: HlsImageBasedTrickPlay | undefined;
+
+  /**
+   * Tile and thumbnail settings applicable when imageBasedTrickPlay is ADVANCED
+   * @public
+   */
+  ImageBasedTrickPlaySettings?: HlsImageBasedTrickPlaySettings | undefined;
+
+  /**
+   * When set to GZIP, compresses HLS playlist.
+   * @public
+   */
+  ManifestCompression?: HlsManifestCompression | undefined;
+
+  /**
+   * Indicates whether the output manifest should use floating point values for segment duration.
+   * @public
+   */
+  ManifestDurationFormat?: HlsManifestDurationFormat | undefined;
+
+  /**
+   * Keep this setting at the default value of 0, unless you are troubleshooting a problem with how devices play back the end of your video asset. If you know that player devices are hanging on the final segment of your video because the length of your final segment is too short, use this setting to specify a minimum final segment length, in seconds. Choose a value that is greater than or equal to 1 and less than your segment length. When you specify a value for this setting, the encoder will combine any final segment that is shorter than the length that you specify with the previous segment. For example, your segment length is 3 seconds and your final segment is .5 seconds without a minimum final segment length; when you set the minimum final segment length to 1, your final segment is 3.5 seconds.
+   * @public
+   */
+  MinFinalSegmentLength?: number | undefined;
+
+  /**
+   * When set, Minimum Segment Size is enforced by looking ahead and back within the specified range for a nearby avail and extending the segment size if needed.
+   * @public
+   */
+  MinSegmentLength?: number | undefined;
+
+  /**
+   * Indicates whether the .m3u8 manifest file should be generated for this HLS output group.
+   * @public
+   */
+  OutputSelection?: HlsOutputSelection | undefined;
+
+  /**
+   * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows: either the program date and time are initialized using the input timecode source, or the time is initialized using the input timecode source and the date is initialized using the timestamp_offset.
+   * @public
+   */
+  ProgramDateTime?: HlsProgramDateTime | undefined;
+
+  /**
+   * Period of insertion of EXT-X-PROGRAM-DATE-TIME entry, in seconds.
+   * @public
+   */
+  ProgramDateTimePeriod?: number | undefined;
+
+  /**
+   * Specify whether MediaConvert generates HLS manifests while your job is running or when your job is complete. To generate HLS manifests while your job is running: Choose Enabled. Use if you want to play back your content as soon as it's available. MediaConvert writes the parent and child manifests after the first three media segments are written to your destination S3 bucket. It then writes new updated manifests after each additional segment is written. The parent manifest includes the latest BANDWIDTH and AVERAGE-BANDWIDTH attributes, and child manifests include the latest available media segment. When your job completes, the final child playlists include an EXT-X-ENDLIST tag. To generate HLS manifests only when your job completes: Choose Disabled.
+   * @public
+   */
+  ProgressiveWriteHlsManifest?: HlsProgressiveWriteHlsManifest | undefined;
+
+  /**
+   * When set to SINGLE_FILE, emits program as a single media resource (.ts) file, uses #EXT-X-BYTERANGE tags to index segment for playback.
+   * @public
+   */
+  SegmentControl?: HlsSegmentControl | undefined;
+
+  /**
+   * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to 10. Related settings: Use Segment length control to specify whether the encoder enforces this value strictly. Use Segment control to specify whether MediaConvert creates separate segment files or one content file that has metadata to mark the segment boundaries.
+   * @public
+   */
+  SegmentLength?: number | undefined;
+
+  /**
+   * Specify how you want MediaConvert to determine segment lengths in this output group. To use the exact value that you specify under Segment length: Choose Exact. Note that this might result in additional I-frames in the output GOP. To create segment lengths that are a multiple of the GOP: Choose Multiple of GOP. MediaConvert will round up the segment lengths to match the next GOP boundary. To have MediaConvert automatically determine a segment duration that is a multiple of both the audio packets and the frame rates: Choose Match. When you do, also specify a target segment duration under Segment length. This is useful for some ad-insertion or segment replacement workflows. Note that Match has the following requirements: - Output containers: Include at least one video output and at least one audio output. Audio-only outputs are not supported. - Output frame rate: Follow source is not supported. - Multiple output frame rates: When you specify multiple outputs, we recommend they share a similar frame rate (as in X/3, X/2, X, or 2X). For example: 5, 15, 30 and 60. Or: 25 and 50. (Outputs must share an integer multiple.) - Output audio codec: Specify Advanced Audio Coding (AAC). - Output sample rate: Choose 48kHz.
+   * @public
+   */
+  SegmentLengthControl?: HlsSegmentLengthControl | undefined;
+
+  /**
+   * Specify the number of segments to write to a subdirectory before starting a new one. You must also set Directory structure to Subdirectory per stream for this setting to have an effect.
+   * @public
+   */
+  SegmentsPerSubdirectory?: number | undefined;
+
+  /**
+   * Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest.
+   * @public
+   */
+  StreamInfResolution?: HlsStreamInfResolution | undefined;
+
+  /**
+   * When set to LEGACY, the segment target duration is always rounded up to the nearest integer value above its current value in seconds. When set to SPEC\\_COMPLIANT, the segment target duration is rounded up to the nearest integer value if fraction seconds are greater than or equal to 0.5 (>= 0.5) and rounded down if less than 0.5 (< 0.5). You may need to use LEGACY if your client needs to ensure that the target duration is always longer than the actual duration of the segment. Some older players may experience interrupted playback when the actual duration of a track in a segment is longer than the target duration.
+   * @public
+   */
+  TargetDurationCompatibilityMode?: HlsTargetDurationCompatibilityMode | undefined;
+
+  /**
+   * Specify the type of the ID3 frame to use for ID3 timestamps in your output. To include ID3 timestamps: Specify PRIV or TDRL and set ID3 metadata to Passthrough. To exclude ID3 timestamps: Set ID3 timestamp frame type to None.
+   * @public
+   */
+  TimedMetadataId3Frame?: HlsTimedMetadataId3Frame | undefined;
+
+  /**
+   * Specify the interval in seconds to write ID3 timestamps in your output. The first timestamp starts at the output timecode and date, and increases incrementally with each ID3 timestamp. To use the default interval of 10 seconds: Leave blank. To include this metadata in your output: Set ID3 timestamp frame type to PRIV or TDRL, and set ID3 metadata to Passthrough.
+   * @public
+   */
+  TimedMetadataId3Period?: number | undefined;
+
+  /**
+   * Provides an extra millisecond delta offset to fine tune the timestamps.
+   * @public
+   */
+  TimestampDeltaMilliseconds?: number | undefined;
+}
+
+/**
+ * Specify the details for each additional Microsoft Smooth Streaming manifest that you want the service to generate for this output group. Each manifest can reference a different subset of outputs in the group.
+ * @public
+ */
+export interface MsSmoothAdditionalManifest {
+  /**
+   * Specify a name modifier that the service adds to the name of this manifest to make it different from the file names of the other main manifests in the output group. For example, say that the default main manifest for your Microsoft Smooth group is film-name.ismv. If you enter "-no-premium" for this setting, then the file name the service generates for this top-level manifest is film-name-no-premium.ismv.
+   * @public
+   */
+  ManifestNameModifier?: string | undefined;
+
+  /**
+   * Specify the outputs that you want this additional top-level manifest to reference.
+   * @public
+   */
+  SelectedOutputs?: string[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const MsSmoothAudioDeduplication = {
+  COMBINE_DUPLICATE_STREAMS: "COMBINE_DUPLICATE_STREAMS",
+  NONE: "NONE",
+} as const;
+
+/**
+ * @public
+ */
+export type MsSmoothAudioDeduplication = (typeof MsSmoothAudioDeduplication)[keyof typeof MsSmoothAudioDeduplication];
+
+/**
+ * If you are using DRM, set DRM System to specify the value SpekeKeyProvider.
+ * @public
+ */
+export interface MsSmoothEncryptionSettings {
+  /**
+   * If your output group type is HLS, DASH, or Microsoft Smooth, use these settings when doing DRM encryption with a SPEKE-compliant key provider. If your output group type is CMAF, use the SpekeKeyProviderCmaf settings instead.
+   * @public
+   */
+  SpekeKeyProvider?: SpekeKeyProvider | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const MsSmoothFragmentLengthControl = {
+  EXACT: "EXACT",
+  GOP_MULTIPLE: "GOP_MULTIPLE",
+} as const;
+
+/**
+ * @public
+ */
+export type MsSmoothFragmentLengthControl =
+  (typeof MsSmoothFragmentLengthControl)[keyof typeof MsSmoothFragmentLengthControl];
 
 /**
  * @public
@@ -154,6 +427,12 @@ export interface OutputGroupSettings {
    * @public
    */
   MsSmoothGroupSettings?: MsSmoothGroupSettings | undefined;
+
+  /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
 
   /**
    * Type of output group (File group, Apple HLS, DASH ISO, Microsoft Smooth Streaming, CMAF)
@@ -1385,6 +1664,20 @@ export interface MovSettings {
  * @public
  * @enum
  */
+export const Mp4C2paManifest = {
+  EXCLUDE: "EXCLUDE",
+  INCLUDE: "INCLUDE",
+} as const;
+
+/**
+ * @public
+ */
+export type Mp4C2paManifest = (typeof Mp4C2paManifest)[keyof typeof Mp4C2paManifest];
+
+/**
+ * @public
+ * @enum
+ */
 export const Mp4CslgAtom = {
   EXCLUDE: "EXCLUDE",
   INCLUDE: "INCLUDE",
@@ -1435,6 +1728,18 @@ export interface Mp4Settings {
   AudioDuration?: CmfcAudioDuration | undefined;
 
   /**
+   * When enabled, a C2PA compliant manifest will be generated, signed and embeded in the output. For more information on C2PA, see https://c2pa.org/specifications/specifications/2.1/index.html
+   * @public
+   */
+  C2paManifest?: Mp4C2paManifest | undefined;
+
+  /**
+   * Specify the name or ARN of the AWS Secrets Manager secret that contains your C2PA public certificate chain in PEM format. Provide a valid secret name or ARN. Note that your MediaConvert service role must allow access to this secret. The public certificate chain is added to the COSE header (x5chain) for signature validation. Include the signer's certificate and all intermediate certificates. Do not include the root certificate. For details on COSE, see: https://opensource.contentauthenticity.org/docs/manifest/signing-manifests
+   * @public
+   */
+  CertificateSecret?: string | undefined;
+
+  /**
    * When enabled, file composition times will start at zero, composition times in the 'ctts' (composition time to sample) box for B-frames will be negative, and a 'cslg' (composition shift least greatest) box will be included per 14496-1 amendment 1. This improves compatibility with Apple players and tools.
    * @public
    */
@@ -1463,6 +1768,12 @@ export interface Mp4Settings {
    * @public
    */
   Mp4MajorBrand?: string | undefined;
+
+  /**
+   * Specify the ID or ARN of the AWS KMS key used to sign the C2PA manifest in your MP4 output. Provide a valid KMS key ARN. Note that your MediaConvert service role must allow access to this key.
+   * @public
+   */
+  SigningKmsKey?: string | undefined;
 }
 
 /**
@@ -2167,6 +2478,12 @@ export interface Av1Settings {
   NumberBFramesBetweenReferenceFrames?: number | undefined;
 
   /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
+
+  /**
    * Settings for quality-defined variable bitrate encoding with the H.265 codec. Use these settings only when you set QVBR for Rate control mode.
    * @public
    */
@@ -2371,6 +2688,12 @@ export interface AvcIntraSettings {
    * @public
    */
   InterlaceMode?: AvcIntraInterlaceMode | undefined;
+
+  /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
 
   /**
    * Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing, for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine to None or Soft. You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode to a value other than Progressive.
@@ -3181,6 +3504,12 @@ export interface H264Settings {
   ParNumerator?: number | undefined;
 
   /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
+
+  /**
    * The Quality tuning level you choose represents a trade-off between the encoding speed of your job and the output video quality. For the fastest encoding speed at the cost of video quality: Choose Single pass. For a good balance between encoding speed and video quality: Leave blank or keep the default value Single pass HQ. For the best video quality, at the cost of encoding speed: Choose Multi pass HQ. MediaConvert performs an analysis pass on your input followed by an encoding pass. Outputs that use this feature incur pro-tier pricing.
    * @public
    */
@@ -3900,6 +4229,12 @@ export interface H265Settings {
   ParNumerator?: number | undefined;
 
   /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
+
+  /**
    * Optional. Use Quality tuning level to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
    * @public
    */
@@ -4418,6 +4753,12 @@ export interface Mpeg2Settings {
   ParNumerator?: number | undefined;
 
   /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
+
+  /**
    * Optional. Use Quality tuning level to choose how you want to trade off encoding speed for output video quality. The default behavior is faster, lower quality, single-pass encoding.
    * @public
    */
@@ -4679,6 +5020,12 @@ export interface ProresSettings {
    * @public
    */
   ParNumerator?: number | undefined;
+
+  /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
 
   /**
    * Use this setting for interlaced outputs, when your output frame rate is half of your input frame rate. In this situation, choose Optimized interlacing to create a better quality interlaced output. In this case, each progressive frame from the input corresponds to an interlaced field in the output. Keep the default value, Basic interlacing, for all other output frame rates. With basic interlacing, MediaConvert performs any frame rate conversion first and then interlaces the frames. When you choose Optimized interlacing and you set your output frame rate to a value that isn't suitable for optimized interlacing, MediaConvert automatically falls back to basic interlacing. Required settings: To use optimized interlacing, you must set Telecine to None or Soft. You can't use optimized interlacing for hard telecine outputs. You must also set Interlace mode to a value other than Progressive.
@@ -5836,6 +6183,12 @@ export interface XavcSettings {
   FramerateNumerator?: number | undefined;
 
   /**
+   * Optionally choose one or more per frame metric reports to generate along with your output. You can use these metrics to analyze your video output according to one or more commonly used image quality metrics. You can specify per frame metrics for output groups or for individual outputs. When you do, MediaConvert writes a CSV (Comma-Separated Values) file to your S3 output destination, named after the output name and metric type. For example: videofile_PSNR.csv Jobs that generate per frame metrics will take longer to complete, depending on the resolution and complexity of your output. For example, some 4K jobs might take up to twice as long to complete. Note that when analyzing the video quality of your output, or when comparing the video quality of multiple different outputs, we generally also recommend a detailed visual review in a controlled environment. You can choose from the following per frame metrics: * PSNR: Peak Signal-to-Noise Ratio * SSIM: Structural Similarity Index Measure * MS_SSIM: Multi-Scale Similarity Index Measure * PSNR_HVS: Peak Signal-to-Noise Ratio, Human Visual System * VMAF: Video Multi-Method Assessment Fusion * QVBR: Quality-Defined Variable Bitrate. This option is only available when your output uses the QVBR rate control mode.
+   * @public
+   */
+  PerFrameMetrics?: FrameMetricType[] | undefined;
+
+  /**
    * Specify the XAVC profile for this output. For more information, see the Sony documentation at https://www.xavc-info.org/. Note that MediaConvert doesn't support the interlaced video XAVC operating points for XAVC_HD_INTRA_CBG. To create an interlaced XAVC output, choose the profile XAVC_HD.
    * @public
    */
@@ -5914,7 +6267,7 @@ export interface VideoCodecSettings {
   AvcIntraSettings?: AvcIntraSettings | undefined;
 
   /**
-   * Specifies the video codec. This must be equal to one of the enum values defined by the object VideoCodec. To passthrough the video stream of your input JPEG2000, VC-3, AVC-INTRA or Apple ProRes video without any video encoding: Choose Passthrough. If you have multiple input videos, note that they must have identical encoding attributes. When you choose Passthrough, your output container must be MXF or QuickTime MOV.
+   * Specifies the video codec. This must be equal to one of the enum values defined by the object VideoCodec. To passthrough the video stream of your input without any video encoding: Choose Passthrough. More information about passthrough codec support and job settings requirements, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/video-passthrough-feature-restrictions.html
    * @public
    */
   Codec?: VideoCodec | undefined;
@@ -6977,374 +7330,4 @@ export interface TimedMetadataInsertion {
    * @public
    */
   Id3Insertions?: Id3Insertion[] | undefined;
-}
-
-/**
- * JobSettings contains all the transcode settings for a job.
- * @public
- */
-export interface JobSettings {
-  /**
-   * When specified, this offset (in milliseconds) is added to the input Ad Avail PTS time.
-   * @public
-   */
-  AdAvailOffset?: number | undefined;
-
-  /**
-   * Settings for ad avail blanking. Video can be blanked or overlaid with an image, and audio muted during SCTE-35 triggered ad avails.
-   * @public
-   */
-  AvailBlanking?: AvailBlanking | undefined;
-
-  /**
-   * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can include up to 8 different 3D LUTs. For more information, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
-   * @public
-   */
-  ColorConversion3DLUTSettings?: ColorConversion3DLUTSetting[] | undefined;
-
-  /**
-   * Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings.
-   * @public
-   */
-  Esam?: EsamSettings | undefined;
-
-  /**
-   * If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
-   * @public
-   */
-  ExtendedDataServices?: ExtendedDataServices | undefined;
-
-  /**
-   * Specify the input that MediaConvert references for your default output settings.  MediaConvert uses this input's Resolution, Frame rate, and Pixel aspect ratio for all  outputs that you don't manually specify different output settings for. Enabling this setting will disable "Follow source" for all other inputs.  If MediaConvert cannot follow your source, for example if you specify an audio-only input,  MediaConvert uses the first followable input instead. In your JSON job specification, enter an integer from 1 to 150 corresponding  to the order of your inputs.
-   * @public
-   */
-  FollowSource?: number | undefined;
-
-  /**
-   * Use Inputs to define source file used in the transcode job. There can be multiple inputs add in a job. These inputs will be concantenated together to create the output.
-   * @public
-   */
-  Inputs?: Input[] | undefined;
-
-  /**
-   * Use these settings only when you use Kantar watermarking. Specify the values that MediaConvert uses to generate and place Kantar watermarks in your output audio. These settings apply to every output in your job. In addition to specifying these values, you also need to store your Kantar credentials in AWS Secrets Manager. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/kantar-watermarking.html.
-   * @public
-   */
-  KantarWatermark?: KantarWatermarkSettings | undefined;
-
-  /**
-   * Overlay motion graphics on top of your video. The motion graphics that you specify here appear on all outputs in all output groups. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/motion-graphic-overlay.html.
-   * @public
-   */
-  MotionImageInserter?: MotionImageInserter | undefined;
-
-  /**
-   * Settings for your Nielsen configuration. If you don't do Nielsen measurement and analytics, ignore these settings. When you enable Nielsen configuration, MediaConvert enables PCM to ID3 tagging for all outputs in the job.
-   * @public
-   */
-  NielsenConfiguration?: NielsenConfiguration | undefined;
-
-  /**
-   * Ignore these settings unless you are using Nielsen non-linear watermarking. Specify the values that MediaConvert uses to generate and place Nielsen watermarks in your output audio. In addition to specifying these values, you also need to set up your cloud TIC server. These settings apply to every output in your job. The MediaConvert implementation is currently with the following Nielsen versions: Nielsen Watermark SDK Version 6.0.13 Nielsen NLM Watermark Engine Version 1.3.3 Nielsen Watermark Authenticator [SID_TIC] Version [7.0.0]
-   * @public
-   */
-  NielsenNonLinearWatermark?: NielsenNonLinearWatermarkSettings | undefined;
-
-  /**
-   * Contains one group of settings for each set of outputs that share a common package type. All unpackaged files (MPEG-4, MPEG-2 TS, Quicktime, MXF, and no container) are grouped in a single output group as well. Required in is a group of settings that apply to the whole group. This required object depends on the value you set for Type. Type, settings object pairs are as follows. * FILE_GROUP_SETTINGS, FileGroupSettings * HLS_GROUP_SETTINGS, HlsGroupSettings * DASH_ISO_GROUP_SETTINGS, DashIsoGroupSettings * MS_SMOOTH_GROUP_SETTINGS, MsSmoothGroupSettings * CMAF_GROUP_SETTINGS, CmafGroupSettings
-   * @public
-   */
-  OutputGroups?: OutputGroup[] | undefined;
-
-  /**
-   * These settings control how the service handles timecodes throughout the job. These settings don't affect input clipping.
-   * @public
-   */
-  TimecodeConfig?: TimecodeConfig | undefined;
-
-  /**
-   * Insert user-defined custom ID3 metadata at timecodes that you specify. In each output that you want to include this metadata, you must set ID3 metadata to Passthrough.
-   * @public
-   */
-  TimedMetadataInsertion?: TimedMetadataInsertion | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const SimulateReservedQueue = {
-  DISABLED: "DISABLED",
-  ENABLED: "ENABLED",
-} as const;
-
-/**
- * @public
- */
-export type SimulateReservedQueue = (typeof SimulateReservedQueue)[keyof typeof SimulateReservedQueue];
-
-/**
- * @public
- * @enum
- */
-export const JobStatus = {
-  CANCELED: "CANCELED",
-  COMPLETE: "COMPLETE",
-  ERROR: "ERROR",
-  PROGRESSING: "PROGRESSING",
-  SUBMITTED: "SUBMITTED",
-} as const;
-
-/**
- * @public
- */
-export type JobStatus = (typeof JobStatus)[keyof typeof JobStatus];
-
-/**
- * @public
- * @enum
- */
-export const StatusUpdateInterval = {
-  SECONDS_10: "SECONDS_10",
-  SECONDS_12: "SECONDS_12",
-  SECONDS_120: "SECONDS_120",
-  SECONDS_15: "SECONDS_15",
-  SECONDS_180: "SECONDS_180",
-  SECONDS_20: "SECONDS_20",
-  SECONDS_240: "SECONDS_240",
-  SECONDS_30: "SECONDS_30",
-  SECONDS_300: "SECONDS_300",
-  SECONDS_360: "SECONDS_360",
-  SECONDS_420: "SECONDS_420",
-  SECONDS_480: "SECONDS_480",
-  SECONDS_540: "SECONDS_540",
-  SECONDS_60: "SECONDS_60",
-  SECONDS_600: "SECONDS_600",
-} as const;
-
-/**
- * @public
- */
-export type StatusUpdateInterval = (typeof StatusUpdateInterval)[keyof typeof StatusUpdateInterval];
-
-/**
- * Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.
- * @public
- */
-export interface Timing {
-  /**
-   * The time, in Unix epoch format, that the transcoding job finished
-   * @public
-   */
-  FinishTime?: Date | undefined;
-
-  /**
-   * The time, in Unix epoch format, that transcoding for the job began.
-   * @public
-   */
-  StartTime?: Date | undefined;
-
-  /**
-   * The time, in Unix epoch format, that you submitted the job.
-   * @public
-   */
-  SubmitTime?: Date | undefined;
-}
-
-/**
- * Contains any warning codes and their count for the job.
- * @public
- */
-export interface WarningGroup {
-  /**
-   * Warning code that identifies a specific warning in the job. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/warning_codes.html
-   * @public
-   */
-  Code: number | undefined;
-
-  /**
-   * The number of times this warning occurred in the job.
-   * @public
-   */
-  Count: number | undefined;
-}
-
-/**
- * Each job converts an input file into an output file or files. For more information, see the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
- * @public
- */
-export interface Job {
-  /**
-   * Accelerated transcoding can significantly speed up jobs with long, visually complex content.
-   * @public
-   */
-  AccelerationSettings?: AccelerationSettings | undefined;
-
-  /**
-   * Describes whether the current job is running with accelerated transcoding. For jobs that have Acceleration (AccelerationMode) set to DISABLED, AccelerationStatus is always NOT_APPLICABLE. For jobs that have Acceleration (AccelerationMode) set to ENABLED or PREFERRED, AccelerationStatus is one of the other states. AccelerationStatus is IN_PROGRESS initially, while the service determines whether the input files and job settings are compatible with accelerated transcoding. If they are, AcclerationStatus is ACCELERATED. If your input files and job settings aren't compatible with accelerated transcoding, the service either fails your job or runs it without accelerated transcoding, depending on how you set Acceleration (AccelerationMode). When the service runs your job without accelerated transcoding, AccelerationStatus is NOT_ACCELERATED.
-   * @public
-   */
-  AccelerationStatus?: AccelerationStatus | undefined;
-
-  /**
-   * An identifier for this resource that is unique within all of AWS.
-   * @public
-   */
-  Arn?: string | undefined;
-
-  /**
-   * The tag type that AWS Billing and Cost Management will use to sort your AWS Elemental MediaConvert costs on any billing report that you set up.
-   * @public
-   */
-  BillingTagsSource?: BillingTagsSource | undefined;
-
-  /**
-   * Prevent duplicate jobs from being created and ensure idempotency for your requests. A client request token can be any string that includes up to 64 ASCII characters. If you reuse a client request token within one minute of a successful request, the API returns the job details of the original request instead. For more information see https://docs.aws.amazon.com/mediaconvert/latest/apireference/idempotency.html.
-   * @public
-   */
-  ClientRequestToken?: string | undefined;
-
-  /**
-   * The time, in Unix epoch format in seconds, when the job got created.
-   * @public
-   */
-  CreatedAt?: Date | undefined;
-
-  /**
-   * A job's phase can be PROBING, TRANSCODING OR UPLOADING
-   * @public
-   */
-  CurrentPhase?: JobPhase | undefined;
-
-  /**
-   * Error code for the job
-   * @public
-   */
-  ErrorCode?: number | undefined;
-
-  /**
-   * Error message of Job
-   * @public
-   */
-  ErrorMessage?: string | undefined;
-
-  /**
-   * Optional list of hop destinations.
-   * @public
-   */
-  HopDestinations?: HopDestination[] | undefined;
-
-  /**
-   * A portion of the job's ARN, unique within your AWS Elemental MediaConvert resources
-   * @public
-   */
-  Id?: string | undefined;
-
-  /**
-   * The Job engine version that you requested for your job. Valid versions are in a YYYY-MM-DD format.
-   * @public
-   */
-  JobEngineVersionRequested?: string | undefined;
-
-  /**
-   * The Job engine version that your job used. Job engine versions are in a YYYY-MM-DD format. When you request an expired version, the response for this property will be empty. Requests to create jobs with an expired version result in a regular job, as if no specific Job engine version was requested. When you request an invalid version, the response for this property will be empty. Requests to create jobs with an invalid version result in a 400 error message, and no job is created.
-   * @public
-   */
-  JobEngineVersionUsed?: string | undefined;
-
-  /**
-   * An estimate of how far your job has progressed. This estimate is shown as a percentage of the total time from when your job leaves its queue to when your output files appear in your output Amazon S3 bucket. AWS Elemental MediaConvert provides jobPercentComplete in CloudWatch STATUS_UPDATE events and in the response to GetJob and ListJobs requests. The jobPercentComplete estimate is reliable for the following input containers: Quicktime, Transport Stream, MP4, and MXF. For some jobs, the service can't provide information about job progress. In those cases, jobPercentComplete returns a null value.
-   * @public
-   */
-  JobPercentComplete?: number | undefined;
-
-  /**
-   * The job template that the job is created from, if it is created from a job template.
-   * @public
-   */
-  JobTemplate?: string | undefined;
-
-  /**
-   * Provides messages from the service about jobs that you have already successfully submitted.
-   * @public
-   */
-  Messages?: JobMessages | undefined;
-
-  /**
-   * List of output group details
-   * @public
-   */
-  OutputGroupDetails?: OutputGroupDetail[] | undefined;
-
-  /**
-   * Relative priority on the job.
-   * @public
-   */
-  Priority?: number | undefined;
-
-  /**
-   * When you create a job, you can specify a queue to send it to. If you don't specify, the job will go to the default queue. For more about queues, see the User Guide topic at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
-   * @public
-   */
-  Queue?: string | undefined;
-
-  /**
-   * The job's queue hopping history.
-   * @public
-   */
-  QueueTransitions?: QueueTransition[] | undefined;
-
-  /**
-   * The number of times that the service automatically attempted to process your job after encountering an error.
-   * @public
-   */
-  RetryCount?: number | undefined;
-
-  /**
-   * The IAM role you use for creating this job. For details about permissions, see the User Guide topic at the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html
-   * @public
-   */
-  Role: string | undefined;
-
-  /**
-   * JobSettings contains all the transcode settings for a job.
-   * @public
-   */
-  Settings: JobSettings | undefined;
-
-  /**
-   * Enable this setting when you run a test job to estimate how many reserved transcoding slots (RTS) you need. When this is enabled, MediaConvert runs your job from an on-demand queue with similar performance to what you will see with one RTS in a reserved queue. This setting is disabled by default.
-   * @public
-   */
-  SimulateReservedQueue?: SimulateReservedQueue | undefined;
-
-  /**
-   * A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.
-   * @public
-   */
-  Status?: JobStatus | undefined;
-
-  /**
-   * Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events. Set the interval, in seconds, between status updates. MediaConvert sends an update at this interval from the time the service begins processing your job to the time it completes the transcode or encounters an error.
-   * @public
-   */
-  StatusUpdateInterval?: StatusUpdateInterval | undefined;
-
-  /**
-   * Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.
-   * @public
-   */
-  Timing?: Timing | undefined;
-
-  /**
-   * User-defined metadata that you want to associate with an MediaConvert job. You specify metadata in key/value pairs.
-   * @public
-   */
-  UserMetadata?: Record<string, string> | undefined;
-
-  /**
-   * Contains any warning messages for the job. Use to help identify potential issues with your input, output, or job. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/warning_codes.html
-   * @public
-   */
-  Warnings?: WarningGroup[] | undefined;
 }

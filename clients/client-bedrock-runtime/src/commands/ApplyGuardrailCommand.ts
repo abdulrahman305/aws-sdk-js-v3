@@ -10,6 +10,7 @@ import {
   ApplyGuardrailRequest,
   ApplyGuardrailRequestFilterSensitiveLog,
   ApplyGuardrailResponse,
+  ApplyGuardrailResponseFilterSensitiveLog,
 } from "../models/models_0";
 import { de_ApplyGuardrailCommand, se_ApplyGuardrailCommand } from "../protocols/Aws_restJson1";
 
@@ -32,9 +33,7 @@ export interface ApplyGuardrailCommandInput extends ApplyGuardrailRequest {}
 export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __MetadataBearer {}
 
 /**
- * <p>The action to apply a guardrail.</p>
- *          <p>For troubleshooting some of the common errors you might encounter when using the <code>ApplyGuardrail</code> API,
- *             see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html">Troubleshooting Amazon Bedrock API Error Codes</a> in the Amazon Bedrock User Guide</p>
+ * <p>The action to apply a guardrail.</p> <p>For troubleshooting some of the common errors you might encounter when using the <code>ApplyGuardrail</code> API, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html">Troubleshooting Amazon Bedrock API Error Codes</a> in the Amazon Bedrock User Guide</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -61,6 +60,7 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  *       },
  *     },
  *   ],
+ *   outputScope: "INTERVENTIONS" || "FULL",
  * };
  * const command = new ApplyGuardrailCommand(input);
  * const response = await client.send(command);
@@ -73,8 +73,11 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //     sensitiveInformationPolicyFreeUnits: Number("int"), // required
  * //     contextualGroundingPolicyUnits: Number("int"), // required
  * //     contentPolicyImageUnits: Number("int"),
+ * //     automatedReasoningPolicyUnits: Number("int"),
+ * //     automatedReasoningPolicies: Number("int"),
  * //   },
  * //   action: "NONE" || "GUARDRAIL_INTERVENED", // required
+ * //   actionReason: "STRING_VALUE",
  * //   outputs: [ // GuardrailOutputContentList // required
  * //     { // GuardrailOutputContent
  * //       text: "STRING_VALUE",
@@ -87,7 +90,8 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //           { // GuardrailTopic
  * //             name: "STRING_VALUE", // required
  * //             type: "DENY", // required
- * //             action: "BLOCKED", // required
+ * //             action: "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
  * //           },
  * //         ],
  * //       },
@@ -97,7 +101,8 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //             type: "INSULTS" || "HATE" || "SEXUAL" || "VIOLENCE" || "MISCONDUCT" || "PROMPT_ATTACK", // required
  * //             confidence: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
  * //             filterStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH",
- * //             action: "BLOCKED", // required
+ * //             action: "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
  * //           },
  * //         ],
  * //       },
@@ -105,14 +110,16 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //         customWords: [ // GuardrailCustomWordList // required
  * //           { // GuardrailCustomWord
  * //             match: "STRING_VALUE", // required
- * //             action: "BLOCKED", // required
+ * //             action: "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
  * //           },
  * //         ],
  * //         managedWordLists: [ // GuardrailManagedWordList // required
  * //           { // GuardrailManagedWord
  * //             match: "STRING_VALUE", // required
  * //             type: "PROFANITY", // required
- * //             action: "BLOCKED", // required
+ * //             action: "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
  * //           },
  * //         ],
  * //       },
@@ -121,7 +128,8 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //           { // GuardrailPiiEntityFilter
  * //             match: "STRING_VALUE", // required
  * //             type: "ADDRESS" || "AGE" || "AWS_ACCESS_KEY" || "AWS_SECRET_KEY" || "CA_HEALTH_NUMBER" || "CA_SOCIAL_INSURANCE_NUMBER" || "CREDIT_DEBIT_CARD_CVV" || "CREDIT_DEBIT_CARD_EXPIRY" || "CREDIT_DEBIT_CARD_NUMBER" || "DRIVER_ID" || "EMAIL" || "INTERNATIONAL_BANK_ACCOUNT_NUMBER" || "IP_ADDRESS" || "LICENSE_PLATE" || "MAC_ADDRESS" || "NAME" || "PASSWORD" || "PHONE" || "PIN" || "SWIFT_CODE" || "UK_NATIONAL_HEALTH_SERVICE_NUMBER" || "UK_NATIONAL_INSURANCE_NUMBER" || "UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER" || "URL" || "USERNAME" || "US_BANK_ACCOUNT_NUMBER" || "US_BANK_ROUTING_NUMBER" || "US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER" || "US_PASSPORT_NUMBER" || "US_SOCIAL_SECURITY_NUMBER" || "VEHICLE_IDENTIFICATION_NUMBER", // required
- * //             action: "ANONYMIZED" || "BLOCKED", // required
+ * //             action: "ANONYMIZED" || "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
  * //           },
  * //         ],
  * //         regexes: [ // GuardrailRegexFilterList // required
@@ -129,7 +137,8 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //             name: "STRING_VALUE",
  * //             match: "STRING_VALUE",
  * //             regex: "STRING_VALUE",
- * //             action: "ANONYMIZED" || "BLOCKED", // required
+ * //             action: "ANONYMIZED" || "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
  * //           },
  * //         ],
  * //       },
@@ -140,6 +149,163 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //             threshold: Number("double"), // required
  * //             score: Number("double"), // required
  * //             action: "BLOCKED" || "NONE", // required
+ * //             detected: true || false,
+ * //           },
+ * //         ],
+ * //       },
+ * //       automatedReasoningPolicy: { // GuardrailAutomatedReasoningPolicyAssessment
+ * //         findings: [ // GuardrailAutomatedReasoningFindingList
+ * //           { // GuardrailAutomatedReasoningFinding Union: only one key present
+ * //             valid: { // GuardrailAutomatedReasoningValidFinding
+ * //               translation: { // GuardrailAutomatedReasoningTranslation
+ * //                 premises: [ // GuardrailAutomatedReasoningStatementList
+ * //                   { // GuardrailAutomatedReasoningStatement
+ * //                     logic: "STRING_VALUE",
+ * //                     naturalLanguage: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 claims: [
+ * //                   {
+ * //                     logic: "STRING_VALUE",
+ * //                     naturalLanguage: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 untranslatedPremises: [ // GuardrailAutomatedReasoningInputTextReferenceList
+ * //                   { // GuardrailAutomatedReasoningInputTextReference
+ * //                     text: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 untranslatedClaims: [
+ * //                   {
+ * //                     text: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 confidence: Number("double"),
+ * //               },
+ * //               claimsTrueScenario: { // GuardrailAutomatedReasoningScenario
+ * //                 statements: [
+ * //                   {
+ * //                     logic: "STRING_VALUE",
+ * //                     naturalLanguage: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //               },
+ * //               supportingRules: [ // GuardrailAutomatedReasoningRuleList
+ * //                 { // GuardrailAutomatedReasoningRule
+ * //                   identifier: "STRING_VALUE",
+ * //                   policyVersionArn: "STRING_VALUE",
+ * //                 },
+ * //               ],
+ * //               logicWarning: { // GuardrailAutomatedReasoningLogicWarning
+ * //                 type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                 premises: [
+ * //                   {
+ * //                     logic: "STRING_VALUE",
+ * //                     naturalLanguage: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 claims: [
+ * //                   {
+ * //                     logic: "STRING_VALUE",
+ * //                     naturalLanguage: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //               },
+ * //             },
+ * //             invalid: { // GuardrailAutomatedReasoningInvalidFinding
+ * //               translation: {
+ * //                 premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 untranslatedPremises: [
+ * //                   {
+ * //                     text: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 untranslatedClaims: [
+ * //                   {
+ * //                     text: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 confidence: Number("double"),
+ * //               },
+ * //               contradictingRules: [
+ * //                 {
+ * //                   identifier: "STRING_VALUE",
+ * //                   policyVersionArn: "STRING_VALUE",
+ * //                 },
+ * //               ],
+ * //               logicWarning: {
+ * //                 type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                 premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //               },
+ * //             },
+ * //             satisfiable: { // GuardrailAutomatedReasoningSatisfiableFinding
+ * //               translation: {
+ * //                 premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 untranslatedPremises: [
+ * //                   {
+ * //                     text: "STRING_VALUE",
+ * //                   },
+ * //                 ],
+ * //                 untranslatedClaims: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                 confidence: Number("double"),
+ * //               },
+ * //               claimsTrueScenario: {
+ * //                 statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //               },
+ * //               claimsFalseScenario: {
+ * //                 statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //               },
+ * //               logicWarning: {
+ * //                 type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                 premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //               },
+ * //             },
+ * //             impossible: { // GuardrailAutomatedReasoningImpossibleFinding
+ * //               translation: {
+ * //                 premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 untranslatedPremises: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                 untranslatedClaims: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                 confidence: Number("double"),
+ * //               },
+ * //               contradictingRules: [
+ * //                 {
+ * //                   identifier: "STRING_VALUE",
+ * //                   policyVersionArn: "STRING_VALUE",
+ * //                 },
+ * //               ],
+ * //               logicWarning: {
+ * //                 type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                 premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //               },
+ * //             },
+ * //             translationAmbiguous: { // GuardrailAutomatedReasoningTranslationAmbiguousFinding
+ * //               options: [ // GuardrailAutomatedReasoningTranslationOptionList
+ * //                 { // GuardrailAutomatedReasoningTranslationOption
+ * //                   translations: [ // GuardrailAutomatedReasoningTranslationList
+ * //                     {
+ * //                       premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       untranslatedPremises: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                       untranslatedClaims: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                       confidence: Number("double"),
+ * //                     },
+ * //                   ],
+ * //                 },
+ * //               ],
+ * //               differenceScenarios: [ // GuardrailAutomatedReasoningDifferenceScenarioList
+ * //                 {
+ * //                   statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //                 },
+ * //               ],
+ * //             },
+ * //             tooComplex: {},
+ * //             noTranslations: {},
  * //           },
  * //         ],
  * //       },
@@ -153,6 +319,8 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * //           sensitiveInformationPolicyFreeUnits: Number("int"), // required
  * //           contextualGroundingPolicyUnits: Number("int"), // required
  * //           contentPolicyImageUnits: Number("int"),
+ * //           automatedReasoningPolicyUnits: Number("int"),
+ * //           automatedReasoningPolicies: Number("int"),
  * //         },
  * //         guardrailCoverage: { // GuardrailCoverage
  * //           textCharacters: { // GuardrailTextCharactersCoverage
@@ -188,27 +356,22 @@ export interface ApplyGuardrailCommandOutput extends ApplyGuardrailResponse, __M
  * @see {@link BedrockRuntimeClientResolvedConfig | config} for BedrockRuntimeClient's `config` shape.
  *
  * @throws {@link AccessDeniedException} (client fault)
- *  <p>The request is denied because you do not have sufficient permissions to perform the requested action. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-access-denied">AccessDeniedException</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The request is denied because you do not have sufficient permissions to perform the requested action. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-access-denied">AccessDeniedException</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>An internal server error occurred. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-internal-failure">InternalFailure</a> in the Amazon Bedrock User Guide</p>
+ *  <p>An internal server error occurred. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-internal-failure">InternalFailure</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
- *  <p>The specified resource ARN was not found. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-resource-not-found">ResourceNotFound</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The specified resource ARN was not found. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-resource-not-found">ResourceNotFound</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ServiceQuotaExceededException} (client fault)
  *  <p>Your request exceeds the service quota for your account. You can view your quotas at <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/gs-request-quota.html">Viewing service quotas</a>. You can resubmit your request later.</p>
  *
  * @throws {@link ThrottlingException} (client fault)
- *  <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For
- *          troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
+ *  <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ValidationException} (client fault)
- *  <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link BedrockRuntimeServiceException}
  * <p>Base exception class for all service exceptions from BedrockRuntime service.</p>
@@ -233,7 +396,7 @@ export class ApplyGuardrailCommand extends $Command
   })
   .s("AmazonBedrockFrontendService", "ApplyGuardrail", {})
   .n("BedrockRuntimeClient", "ApplyGuardrailCommand")
-  .f(ApplyGuardrailRequestFilterSensitiveLog, void 0)
+  .f(ApplyGuardrailRequestFilterSensitiveLog, ApplyGuardrailResponseFilterSensitiveLog)
   .ser(se_ApplyGuardrailCommand)
   .de(de_ApplyGuardrailCommand)
   .build() {

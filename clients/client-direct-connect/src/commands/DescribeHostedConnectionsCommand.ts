@@ -41,6 +41,8 @@ export interface DescribeHostedConnectionsCommandOutput extends Connections, __M
  * const client = new DirectConnectClient(config);
  * const input = { // DescribeHostedConnectionsRequest
  *   connectionId: "STRING_VALUE", // required
+ *   maxResults: Number("int"),
+ *   nextToken: "STRING_VALUE",
  * };
  * const command = new DescribeHostedConnectionsCommand(input);
  * const response = await client.send(command);
@@ -81,8 +83,10 @@ export interface DescribeHostedConnectionsCommandOutput extends Connections, __M
  * //           startOn: "STRING_VALUE",
  * //         },
  * //       ],
+ * //       partnerInterconnectMacSecCapable: true || false,
  * //     },
  * //   ],
+ * //   nextToken: "STRING_VALUE",
  * // };
  *
  * ```

@@ -32,7 +32,8 @@ export interface UpdateLocationAzureBlobCommandInput extends UpdateLocationAzure
 export interface UpdateLocationAzureBlobCommandOutput extends UpdateLocationAzureBlobResponse, __MetadataBearer {}
 
 /**
- * <p>Modifies the following configurations of the Microsoft Azure Blob Storage transfer location that you're using with DataSync.</p>
+ * <p>Modifies the following configurations of the Microsoft Azure Blob Storage transfer
+ *       location that you're using with DataSync.</p>
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/creating-azure-blob-location.html">Configuring DataSync transfers with Azure Blob Storage</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -43,7 +44,7 @@ export interface UpdateLocationAzureBlobCommandOutput extends UpdateLocationAzur
  * const input = { // UpdateLocationAzureBlobRequest
  *   LocationArn: "STRING_VALUE", // required
  *   Subdirectory: "STRING_VALUE",
- *   AuthenticationType: "SAS",
+ *   AuthenticationType: "SAS" || "NONE",
  *   SasConfiguration: { // AzureBlobSasConfiguration
  *     Token: "STRING_VALUE", // required
  *   },
@@ -52,6 +53,14 @@ export interface UpdateLocationAzureBlobCommandOutput extends UpdateLocationAzur
  *   AgentArns: [ // AgentArnList
  *     "STRING_VALUE",
  *   ],
+ *   CmkSecretConfig: { // CmkSecretConfig
+ *     SecretArn: "STRING_VALUE",
+ *     KmsKeyArn: "STRING_VALUE",
+ *   },
+ *   CustomSecretConfig: { // CustomSecretConfig
+ *     SecretArn: "STRING_VALUE",
+ *     SecretAccessRoleArn: "STRING_VALUE",
+ *   },
  * };
  * const command = new UpdateLocationAzureBlobCommand(input);
  * const response = await client.send(command);

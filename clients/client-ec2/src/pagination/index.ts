@@ -12,13 +12,15 @@ export * from "./DescribeCapacityBlockExtensionOfferingsPaginator";
 
 export * from "./DescribeCapacityBlockOfferingsPaginator";
 
+export * from "./DescribeCapacityBlockStatusPaginator";
+
+export * from "./DescribeCapacityBlocksPaginator";
+
 export * from "./DescribeCapacityReservationBillingRequestsPaginator";
-
-export * from "./DescribeCapacityReservationFleetsPaginator";
-
-export * from "./DescribeCapacityReservationsPaginator";
 // smithy-typescript generated code
 export * from "./Interfaces";
+export * from "./DescribeCapacityReservationFleetsPaginator";
+export * from "./DescribeCapacityReservationsPaginator";
 export * from "./DescribeCarrierGatewaysPaginator";
 export * from "./DescribeClassicLinkInstancesPaginator";
 export * from "./DescribeClientVpnAuthorizationRulesPaginator";
@@ -67,6 +69,7 @@ export * from "./DescribeLocalGatewayVirtualInterfaceGroupsPaginator";
 export * from "./DescribeLocalGatewayVirtualInterfacesPaginator";
 export * from "./DescribeLocalGatewaysPaginator";
 export * from "./DescribeMacHostsPaginator";
+export * from "./DescribeMacModificationTasksPaginator";
 export * from "./DescribeManagedPrefixListsPaginator";
 export * from "./DescribeMovingAddressesPaginator";
 export * from "./DescribeNatGatewaysPaginator";
@@ -83,6 +86,9 @@ export * from "./DescribePublicIpv4PoolsPaginator";
 export * from "./DescribeReplaceRootVolumeTasksPaginator";
 export * from "./DescribeReservedInstancesModificationsPaginator";
 export * from "./DescribeReservedInstancesOfferingsPaginator";
+export * from "./DescribeRouteServerEndpointsPaginator";
+export * from "./DescribeRouteServerPeersPaginator";
+export * from "./DescribeRouteServersPaginator";
 export * from "./DescribeRouteTablesPaginator";
 export * from "./DescribeScheduledInstanceAvailabilityPaginator";
 export * from "./DescribeScheduledInstancesPaginator";

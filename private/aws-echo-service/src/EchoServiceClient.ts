@@ -7,6 +7,12 @@ import {
 } from "./auth/httpAuthSchemeProvider";
 import { EchoCommandInput, EchoCommandOutput } from "./commands/EchoCommand";
 import { LengthCommandInput, LengthCommandOutput } from "./commands/LengthCommand";
+import {
+  ClientInputEndpointParameters,
+  ClientResolvedEndpointParameters,
+  EndpointParameters,
+  resolveClientEndpointParameters,
+} from "./endpoint/EndpointParameters";
 import { getRuntimeConfig as __getRuntimeConfig } from "./runtimeConfig";
 import { RuntimeExtension, RuntimeExtensionsConfig, resolveRuntimeExtensions } from "./runtimeExtensions";
 import {
@@ -24,12 +30,19 @@ import {
   resolveUserAgentConfig,
 } from "@aws-sdk/middleware-user-agent";
 import {
-  CustomEndpointsInputConfig,
-  CustomEndpointsResolvedConfig,
-  resolveCustomEndpointsConfig,
-} from "@smithy/config-resolver";
-import { DefaultIdentityProviderConfig, getHttpAuthSchemePlugin, getHttpSigningPlugin } from "@smithy/core";
+  DefaultIdentityProviderConfig,
+  getHttpAuthSchemeEndpointRuleSetPlugin,
+  getHttpSigningPlugin,
+} from "@smithy/core";
 import { getContentLengthPlugin } from "@smithy/middleware-content-length";
+import {
+  EndpointInputConfig,
+  EndpointRequiredInputConfig,
+  EndpointRequiredResolvedConfig,
+  EndpointResolvedConfig,
+  resolveEndpointConfig,
+  resolveEndpointRequiredConfig,
+} from "@smithy/middleware-endpoint";
 import { RetryInputConfig, RetryResolvedConfig, getRetryPlugin, resolveRetryConfig } from "@smithy/middleware-retry";
 import { HttpHandlerUserInput as __HttpHandlerUserInput } from "@smithy/protocol-http";
 import {
@@ -195,10 +208,12 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
 export type EchoServiceClientConfigType = Partial<__SmithyConfiguration<__HttpHandlerOptions>> &
   ClientDefaults &
   UserAgentInputConfig &
-  CustomEndpointsInputConfig &
   RetryInputConfig &
   HostHeaderInputConfig &
-  HttpAuthSchemeInputConfig;
+  EndpointInputConfig<EndpointParameters> &
+  EndpointRequiredInputConfig &
+  HttpAuthSchemeInputConfig &
+  ClientInputEndpointParameters;
 /**
  * @public
  *
@@ -213,10 +228,12 @@ export type EchoServiceClientResolvedConfigType = __SmithyResolvedConfiguration<
   Required<ClientDefaults> &
   RuntimeExtensionsConfig &
   UserAgentResolvedConfig &
-  CustomEndpointsResolvedConfig &
   RetryResolvedConfig &
   HostHeaderResolvedConfig &
-  HttpAuthSchemeResolvedConfig;
+  EndpointResolvedConfig<EndpointParameters> &
+  EndpointRequiredResolvedConfig &
+  HttpAuthSchemeResolvedConfig &
+  ClientResolvedEndpointParameters;
 /**
  * @public
  *
@@ -242,13 +259,15 @@ export class EchoServiceClient extends __Client<
     let _config_0 = __getRuntimeConfig(configuration || {});
     super(_config_0 as any);
     this.initConfig = _config_0;
-    let _config_1 = resolveUserAgentConfig(_config_0);
-    let _config_2 = resolveCustomEndpointsConfig(_config_1);
+    let _config_1 = resolveClientEndpointParameters(_config_0);
+    let _config_2 = resolveUserAgentConfig(_config_1);
     let _config_3 = resolveRetryConfig(_config_2);
     let _config_4 = resolveHostHeaderConfig(_config_3);
-    let _config_5 = resolveHttpAuthSchemeConfig(_config_4);
-    let _config_6 = resolveRuntimeExtensions(_config_5, configuration?.extensions || []);
-    this.config = _config_6;
+    let _config_5 = resolveEndpointConfig(_config_4);
+    let _config_6 = resolveEndpointRequiredConfig(_config_5);
+    let _config_7 = resolveHttpAuthSchemeConfig(_config_6);
+    let _config_8 = resolveRuntimeExtensions(_config_7, configuration?.extensions || []);
+    this.config = _config_8;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
@@ -256,7 +275,7 @@ export class EchoServiceClient extends __Client<
     this.middlewareStack.use(getLoggerPlugin(this.config));
     this.middlewareStack.use(getRecursionDetectionPlugin(this.config));
     this.middlewareStack.use(
-      getHttpAuthSchemePlugin(this.config, {
+      getHttpAuthSchemeEndpointRuleSetPlugin(this.config, {
         httpAuthSchemeParametersProvider: defaultEchoServiceHttpAuthSchemeParametersProvider,
         identityProviderConfigProvider: async (config: EchoServiceClientResolvedConfig) =>
           new DefaultIdentityProviderConfig({}),

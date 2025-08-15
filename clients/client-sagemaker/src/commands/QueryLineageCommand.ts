@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { QueryLineageRequest, QueryLineageResponse } from "../models/models_4";
+import { QueryLineageRequest, QueryLineageResponse } from "../models/models_5";
 import { de_QueryLineageCommand, se_QueryLineageCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,9 +28,7 @@ export interface QueryLineageCommandInput extends QueryLineageRequest {}
 export interface QueryLineageCommandOutput extends QueryLineageResponse, __MetadataBearer {}
 
 /**
- * <p>Use this action to inspect your lineage and discover relationships between entities.
- *          For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html">
- *             Querying Lineage Entities</a> in the <i>Amazon SageMaker Developer Guide</i>.</p>
+ * <p>Use this action to inspect your lineage and discover relationships between entities. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/querying-lineage-entities.html"> Querying Lineage Entities</a> in the <i>Amazon SageMaker Developer Guide</i>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

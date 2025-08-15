@@ -101,6 +101,22 @@ export interface ListCoverageCommandOutput extends ListCoverageResponse, __Metad
  *         endInclusive: new Date("TIMESTAMP"),
  *       },
  *     ],
+ *     ecrImageLastInUseAt: [
+ *       {
+ *         startInclusive: new Date("TIMESTAMP"),
+ *         endInclusive: new Date("TIMESTAMP"),
+ *       },
+ *     ],
+ *     ecrImageInUseCount: [ // CoverageNumberFilterList
+ *       { // CoverageNumberFilter
+ *         upperInclusive: Number("long"),
+ *         lowerInclusive: Number("long"),
+ *       },
+ *     ],
+ *     codeRepositoryProjectName: "<CoverageStringFilterList>",
+ *     codeRepositoryProviderType: "<CoverageStringFilterList>",
+ *     codeRepositoryProviderTypeVisibility: "<CoverageStringFilterList>",
+ *     lastScannedCommitId: "<CoverageStringFilterList>",
  *   },
  * };
  * const command = new ListCoverageCommand(input);
@@ -127,6 +143,8 @@ export interface ListCoverageCommandOutput extends ListCoverageResponse, __Metad
  * //             "STRING_VALUE",
  * //           ],
  * //           imagePulledAt: new Date("TIMESTAMP"),
+ * //           lastInUseAt: new Date("TIMESTAMP"),
+ * //           inUseCount: Number("long"),
  * //         },
  * //         ec2: { // Ec2Metadata
  * //           tags: { // TagMap
@@ -144,6 +162,39 @@ export interface ListCoverageCommandOutput extends ListCoverageResponse, __Metad
  * //           ],
  * //           functionName: "STRING_VALUE",
  * //           runtime: "STRING_VALUE",
+ * //         },
+ * //         codeRepository: { // CodeRepositoryMetadata
+ * //           projectName: "STRING_VALUE", // required
+ * //           integrationArn: "STRING_VALUE",
+ * //           providerType: "STRING_VALUE", // required
+ * //           providerTypeVisibility: "STRING_VALUE", // required
+ * //           lastScannedCommitId: "STRING_VALUE",
+ * //           scanConfiguration: { // ProjectCodeSecurityScanConfiguration
+ * //             periodicScanConfigurations: [ // ProjectPeriodicScanConfigurationList
+ * //               { // ProjectPeriodicScanConfiguration
+ * //                 frequencyExpression: "STRING_VALUE",
+ * //                 ruleSetCategories: [ // RuleSetCategories
+ * //                   "SAST" || "IAC" || "SCA",
+ * //                 ],
+ * //               },
+ * //             ],
+ * //             continuousIntegrationScanConfigurations: [ // ProjectContinuousIntegrationScanConfigurationList
+ * //               { // ProjectContinuousIntegrationScanConfiguration
+ * //                 supportedEvent: "PULL_REQUEST" || "PUSH",
+ * //                 ruleSetCategories: [
+ * //                   "SAST" || "IAC" || "SCA",
+ * //                 ],
+ * //               },
+ * //             ],
+ * //           },
+ * //           onDemandScan: { // CodeRepositoryOnDemandScan
+ * //             lastScannedCommitId: "STRING_VALUE",
+ * //             lastScanAt: new Date("TIMESTAMP"),
+ * //             scanStatus: {
+ * //               statusCode: "STRING_VALUE", // required
+ * //               reason: "STRING_VALUE", // required
+ * //             },
+ * //           },
  * //         },
  * //       },
  * //       lastScannedAt: new Date("TIMESTAMP"),

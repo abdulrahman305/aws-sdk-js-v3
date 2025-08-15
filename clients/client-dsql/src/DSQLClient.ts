@@ -54,16 +54,12 @@ import {
   resolveHttpAuthSchemeConfig,
 } from "./auth/httpAuthSchemeProvider";
 import { CreateClusterCommandInput, CreateClusterCommandOutput } from "./commands/CreateClusterCommand";
-import {
-  CreateMultiRegionClustersCommandInput,
-  CreateMultiRegionClustersCommandOutput,
-} from "./commands/CreateMultiRegionClustersCommand";
 import { DeleteClusterCommandInput, DeleteClusterCommandOutput } from "./commands/DeleteClusterCommand";
-import {
-  DeleteMultiRegionClustersCommandInput,
-  DeleteMultiRegionClustersCommandOutput,
-} from "./commands/DeleteMultiRegionClustersCommand";
 import { GetClusterCommandInput, GetClusterCommandOutput } from "./commands/GetClusterCommand";
+import {
+  GetVpcEndpointServiceNameCommandInput,
+  GetVpcEndpointServiceNameCommandOutput,
+} from "./commands/GetVpcEndpointServiceNameCommand";
 import { ListClustersCommandInput, ListClustersCommandOutput } from "./commands/ListClustersCommand";
 import {
   ListTagsForResourceCommandInput,
@@ -88,10 +84,9 @@ export { __Client };
  */
 export type ServiceInputTypes =
   | CreateClusterCommandInput
-  | CreateMultiRegionClustersCommandInput
   | DeleteClusterCommandInput
-  | DeleteMultiRegionClustersCommandInput
   | GetClusterCommandInput
+  | GetVpcEndpointServiceNameCommandInput
   | ListClustersCommandInput
   | ListTagsForResourceCommandInput
   | TagResourceCommandInput
@@ -103,10 +98,9 @@ export type ServiceInputTypes =
  */
 export type ServiceOutputTypes =
   | CreateClusterCommandOutput
-  | CreateMultiRegionClustersCommandOutput
   | DeleteClusterCommandOutput
-  | DeleteMultiRegionClustersCommandOutput
   | GetClusterCommandOutput
+  | GetVpcEndpointServiceNameCommandOutput
   | ListClustersCommandOutput
   | ListTagsForResourceCommandOutput
   | TagResourceCommandOutput
@@ -304,16 +298,12 @@ export type DSQLClientResolvedConfigType = __SmithyResolvedConfiguration<__HttpH
 export interface DSQLClientResolvedConfig extends DSQLClientResolvedConfigType {}
 
 /**
- * <p>This is an interface reference for Amazon Aurora DSQL.
- *          It contains documentation for one of the programming or
- *          command line interfaces you can use to manage Amazon Aurora DSQL.</p>
- *          <p>Amazon Aurora DSQL is a serverless, distributed SQL
- *          database suitable for workloads of any size. Aurora DSQL
- *          is available in both single-Region and multi-Region configurations,
- *          so your clusters and databases are always available even if an
- *          Availability Zone or an Amazon Web Services Region are unavailable. Aurora DSQL
- *          lets you focus on using your data to acquire new insights for your
- *          business and customers.</p>
+ * <p>This is an interface reference for Amazon Aurora DSQL. It contains documentation for one of the
+ *          programming or command line interfaces you can use to manage Amazon Aurora DSQL.</p>
+ *          <p>Amazon Aurora DSQL is a serverless, distributed SQL database suitable for workloads of any size.
+ *           is available in both single-Region and multi-Region configurations, so your
+ *          clusters and databases are always available even if an Availability Zone or an Amazon Web Services Region are unavailable.  lets you focus on using your data to
+ *          acquire new insights for your business and customers.</p>
  * @public
  */
 export class DSQLClient extends __Client<

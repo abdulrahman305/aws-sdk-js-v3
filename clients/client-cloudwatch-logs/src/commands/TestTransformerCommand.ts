@@ -28,8 +28,9 @@ export interface TestTransformerCommandInput extends TestTransformerRequest {}
 export interface TestTransformerCommandOutput extends TestTransformerResponse, __MetadataBearer {}
 
 /**
- * <p>Use this operation to test a log transformer. You enter the transformer configuration and a set of log events to test with. The operation
- *      responds with an array that includes the original log events and the transformed versions.</p>
+ * <p>Use this operation to test a log transformer. You enter the transformer configuration and
+ *       a set of log events to test with. The operation responds with an array that includes the
+ *       original log events and the transformed versions.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -125,6 +126,11 @@ export interface TestTransformerCommandOutput extends TestTransformerResponse, _
  *       },
  *       parseRoute53: { // ParseRoute53
  *         source: "STRING_VALUE",
+ *       },
+ *       parseToOCSF: { // ParseToOCSF
+ *         source: "STRING_VALUE",
+ *         eventSource: "CloudTrail" || "Route53Resolver" || "VPCFlow" || "EKSAudit" || "AWSWAF", // required
+ *         ocsfVersion: "V1.1", // required
  *       },
  *       parsePostgres: { // ParsePostgres
  *         source: "STRING_VALUE",

@@ -37,6 +37,8 @@ export interface DescribeInterconnectsCommandOutput extends Interconnects, __Met
  * const client = new DirectConnectClient(config);
  * const input = { // DescribeInterconnectsRequest
  *   interconnectId: "STRING_VALUE",
+ *   maxResults: Number("int"),
+ *   nextToken: "STRING_VALUE",
  * };
  * const command = new DescribeInterconnectsCommand(input);
  * const response = await client.send(command);
@@ -63,8 +65,20 @@ export interface DescribeInterconnectsCommandOutput extends Interconnects, __Met
  * //         },
  * //       ],
  * //       providerName: "STRING_VALUE",
+ * //       macSecCapable: true || false,
+ * //       portEncryptionStatus: "STRING_VALUE",
+ * //       encryptionMode: "STRING_VALUE",
+ * //       macSecKeys: [ // MacSecKeyList
+ * //         { // MacSecKey
+ * //           secretARN: "STRING_VALUE",
+ * //           ckn: "STRING_VALUE",
+ * //           state: "STRING_VALUE",
+ * //           startOn: "STRING_VALUE",
+ * //         },
+ * //       ],
  * //     },
  * //   ],
+ * //   nextToken: "STRING_VALUE",
  * // };
  *
  * ```

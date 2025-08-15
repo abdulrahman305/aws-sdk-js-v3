@@ -37,13 +37,17 @@ export interface ExecuteActionCommandOutput extends ExecuteActionResponse, __Met
  * const client = new IoTSiteWiseClient(config);
  * const input = { // ExecuteActionRequest
  *   targetResource: { // TargetResource
- *     assetId: "STRING_VALUE", // required
+ *     assetId: "STRING_VALUE",
+ *     computationModelId: "STRING_VALUE",
  *   },
  *   actionDefinitionId: "STRING_VALUE", // required
  *   actionPayload: { // ActionPayload
  *     stringValue: "STRING_VALUE", // required
  *   },
  *   clientToken: "STRING_VALUE",
+ *   resolveTo: { // ResolveTo
+ *     assetId: "STRING_VALUE", // required
+ *   },
  * };
  * const command = new ExecuteActionCommand(input);
  * const response = await client.send(command);
@@ -71,7 +75,7 @@ export interface ExecuteActionCommandOutput extends ExecuteActionResponse, __Met
  *       unsupported characters. Check your request and try again.</p>
  *
  * @throws {@link LimitExceededException} (client fault)
- *  <p>You've reached the limit for a resource. For example, this can occur if you're trying to
+ *  <p>You've reached the quota for a resource. For example, this can occur if you're trying to
  *       associate more than the allowed number of child assets or attempting to create more than the
  *       allowed number of properties for an asset model.</p>
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT SiteWise User Guide</i>.</p>

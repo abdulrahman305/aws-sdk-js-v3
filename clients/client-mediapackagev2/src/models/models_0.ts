@@ -4,7 +4,9 @@ import { ExceptionOptionType as __ExceptionOptionType } from "@smithy/smithy-cli
 import { MediaPackageV2ServiceException as __BaseException } from "./MediaPackageV2ServiceException";
 
 /**
- * <p>You don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide.</p>
+ * <p>Access is denied because either you don't have permissions to perform the requested operation or MediaPackage is getting throttling errors with CDN authorization. The user or role that is making the request must have at least
+ *          one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide. Or, if you're using CDN authorization, you will receive this exception
+ *          if MediaPackage receives a throttling error from Secrets Manager.</p>
  * @public
  */
 export class AccessDeniedException extends __BaseException {
@@ -229,30 +231,53 @@ export class ThrottlingException extends __BaseException {
  * @enum
  */
 export const ValidationExceptionType = {
+  BATCH_GET_SECRET_VALUE_DENIED: "BATCH_GET_SECRET_VALUE_DENIED",
   CENC_IV_INCOMPATIBLE: "CENC_IV_INCOMPATIBLE",
   CLIP_START_TIME_WITH_START_OR_END: "CLIP_START_TIME_WITH_START_OR_END",
+  CMAF_CONTAINER_TYPE_WITH_MSS_MANIFEST: "CMAF_CONTAINER_TYPE_WITH_MSS_MANIFEST",
+  CMAF_EXCLUDE_SEGMENT_DRM_METADATA_INCOMPATIBLE_CONTAINER_TYPE:
+    "CMAF_EXCLUDE_SEGMENT_DRM_METADATA_INCOMPATIBLE_CONTAINER_TYPE",
   CONTAINER_TYPE_IMMUTABLE: "CONTAINER_TYPE_IMMUTABLE",
+  DASH_DVB_ATTRIBUTES_WITHOUT_DVB_DASH_PROFILE: "DASH_DVB_ATTRIBUTES_WITHOUT_DVB_DASH_PROFILE",
+  DECRYPT_SECRET_FAILED: "DECRYPT_SECRET_FAILED",
+  DESCRIBE_SECRET_DENIED: "DESCRIBE_SECRET_DENIED",
   DIRECT_MODE_WITH_TIMING_SOURCE: "DIRECT_MODE_WITH_TIMING_SOURCE",
   DRM_SIGNALING_MISMATCH_SEGMENT_ENCRYPTION_STATUS: "DRM_SIGNALING_MISMATCH_SEGMENT_ENCRYPTION_STATUS",
   DRM_SYSTEMS_ENCRYPTION_METHOD_INCOMPATIBLE: "DRM_SYSTEMS_ENCRYPTION_METHOD_INCOMPATIBLE",
+  DUPLICATED_SECRET: "DUPLICATED_SECRET",
   ENCRYPTION_CONTRACT_SHARED: "ENCRYPTION_CONTRACT_SHARED",
   ENCRYPTION_CONTRACT_UNENCRYPTED: "ENCRYPTION_CONTRACT_UNENCRYPTED",
   ENCRYPTION_CONTRACT_WITHOUT_AUDIO_RENDITION_INCOMPATIBLE: "ENCRYPTION_CONTRACT_WITHOUT_AUDIO_RENDITION_INCOMPATIBLE",
+  ENCRYPTION_CONTRACT_WITH_ISM_CONTAINER_INCOMPATIBLE: "ENCRYPTION_CONTRACT_WITH_ISM_CONTAINER_INCOMPATIBLE",
   ENCRYPTION_METHOD_CONTAINER_TYPE_MISMATCH: "ENCRYPTION_METHOD_CONTAINER_TYPE_MISMATCH",
   END_TIME_EARLIER_THAN_START_TIME: "END_TIME_EARLIER_THAN_START_TIME",
+  GET_SECRET_VALUE_DENIED: "GET_SECRET_VALUE_DENIED",
   HARVESTED_MANIFEST_HAS_START_END_FILTER_CONFIGURATION: "HARVESTED_MANIFEST_HAS_START_END_FILTER_CONFIGURATION",
   HARVESTED_MANIFEST_NOT_FOUND_ON_ENDPOINT: "HARVESTED_MANIFEST_NOT_FOUND_ON_ENDPOINT",
   HARVEST_JOB_CUSTOMER_ENDPOINT_READ_ACCESS_DENIED: "HARVEST_JOB_CUSTOMER_ENDPOINT_READ_ACCESS_DENIED",
   HARVEST_JOB_INELIGIBLE_FOR_CANCELLATION: "HARVEST_JOB_INELIGIBLE_FOR_CANCELLATION",
   HARVEST_JOB_S3_DESTINATION_MISSING_OR_INCOMPLETE: "HARVEST_JOB_S3_DESTINATION_MISSING_OR_INCOMPLETE",
   HARVEST_JOB_UNABLE_TO_WRITE_TO_S3_DESTINATION: "HARVEST_JOB_UNABLE_TO_WRITE_TO_S3_DESTINATION",
+  INCOMPATIBLE_DASH_COMPACTNESS_CONFIGURATION: "INCOMPATIBLE_DASH_COMPACTNESS_CONFIGURATION",
+  INCOMPATIBLE_DASH_PROFILE_DVB_DASH_CONFIGURATION: "INCOMPATIBLE_DASH_PROFILE_DVB_DASH_CONFIGURATION",
+  INCOMPATIBLE_XML_ENCODING: "INCOMPATIBLE_XML_ENCODING",
   INVALID_HARVEST_JOB_DURATION: "INVALID_HARVEST_JOB_DURATION",
   INVALID_MANIFEST_FILTER: "INVALID_MANIFEST_FILTER",
   INVALID_PAGINATION_MAX_RESULTS: "INVALID_PAGINATION_MAX_RESULTS",
   INVALID_PAGINATION_TOKEN: "INVALID_PAGINATION_TOKEN",
   INVALID_POLICY: "INVALID_POLICY",
   INVALID_ROLE_ARN: "INVALID_ROLE_ARN",
+  INVALID_SECRET: "INVALID_SECRET",
+  INVALID_SECRET_FORMAT: "INVALID_SECRET_FORMAT",
+  INVALID_SECRET_KEY: "INVALID_SECRET_KEY",
+  INVALID_SECRET_VALUE: "INVALID_SECRET_VALUE",
   INVALID_TIME_DELAY_SECONDS: "INVALID_TIME_DELAY_SECONDS",
+  ISM_CONTAINER_TYPE_WITH_DASH_MANIFEST: "ISM_CONTAINER_TYPE_WITH_DASH_MANIFEST",
+  ISM_CONTAINER_TYPE_WITH_HLS_MANIFEST: "ISM_CONTAINER_TYPE_WITH_HLS_MANIFEST",
+  ISM_CONTAINER_TYPE_WITH_LL_HLS_MANIFEST: "ISM_CONTAINER_TYPE_WITH_LL_HLS_MANIFEST",
+  ISM_CONTAINER_TYPE_WITH_SCTE: "ISM_CONTAINER_TYPE_WITH_SCTE",
+  ISM_CONTAINER_WITH_KEY_ROTATION: "ISM_CONTAINER_WITH_KEY_ROTATION",
+  MALFORMED_SECRET_ARN: "MALFORMED_SECRET_ARN",
   MANIFEST_DRM_SYSTEMS_INCOMPATIBLE: "MANIFEST_DRM_SYSTEMS_INCOMPATIBLE",
   MANIFEST_NAME_COLLISION: "MANIFEST_NAME_COLLISION",
   MEMBER_DOES_NOT_MATCH_PATTERN: "MEMBER_DOES_NOT_MATCH_PATTERN",
@@ -270,15 +295,22 @@ export const ValidationExceptionType = {
     "ONLY_CMAF_INPUT_TYPE_ALLOW_FORCE_ENDPOINT_ERROR_CONFIGURATION",
   ONLY_CMAF_INPUT_TYPE_ALLOW_MQCS_INPUT_SWITCHING: "ONLY_CMAF_INPUT_TYPE_ALLOW_MQCS_INPUT_SWITCHING",
   ONLY_CMAF_INPUT_TYPE_ALLOW_MQCS_OUTPUT_CONFIGURATION: "ONLY_CMAF_INPUT_TYPE_ALLOW_MQCS_OUTPUT_CONFIGURATION",
+  ONLY_CMAF_INPUT_TYPE_ALLOW_PREFERRED_INPUT_CONFIGURATION: "ONLY_CMAF_INPUT_TYPE_ALLOW_PREFERRED_INPUT_CONFIGURATION",
   PERIOD_TRIGGERS_NONE_SPECIFIED_WITH_ADDITIONAL_VALUES: "PERIOD_TRIGGERS_NONE_SPECIFIED_WITH_ADDITIONAL_VALUES",
   ROLE_ARN_INVALID_FORMAT: "ROLE_ARN_INVALID_FORMAT",
   ROLE_ARN_LENGTH_OUT_OF_RANGE: "ROLE_ARN_LENGTH_OUT_OF_RANGE",
   ROLE_ARN_NOT_ASSUMABLE: "ROLE_ARN_NOT_ASSUMABLE",
+  SECRET_ARN_RESOURCE_NOT_FOUND: "SECRET_ARN_RESOURCE_NOT_FOUND",
+  SECRET_FROM_DIFFERENT_ACCOUNT: "SECRET_FROM_DIFFERENT_ACCOUNT",
+  SECRET_FROM_DIFFERENT_REGION: "SECRET_FROM_DIFFERENT_REGION",
+  SECRET_IS_NOT_ONE_KEY_VALUE_PAIR: "SECRET_IS_NOT_ONE_KEY_VALUE_PAIR",
   SOURCE_DISRUPTIONS_ENABLED_INCORRECTLY: "SOURCE_DISRUPTIONS_ENABLED_INCORRECTLY",
   START_TAG_TIME_OFFSET_INVALID: "START_TAG_TIME_OFFSET_INVALID",
   TIMING_SOURCE_MISSING: "TIMING_SOURCE_MISSING",
   TOO_MANY_IN_PROGRESS_HARVEST_JOBS: "TOO_MANY_IN_PROGRESS_HARVEST_JOBS",
+  TOO_MANY_SECRETS: "TOO_MANY_SECRETS",
   TS_CONTAINER_TYPE_WITH_DASH_MANIFEST: "TS_CONTAINER_TYPE_WITH_DASH_MANIFEST",
+  TS_CONTAINER_TYPE_WITH_MSS_MANIFEST: "TS_CONTAINER_TYPE_WITH_MSS_MANIFEST",
   UPDATE_PERIOD_SMALLER_THAN_SEGMENT_DURATION: "UPDATE_PERIOD_SMALLER_THAN_SEGMENT_DURATION",
   URL_INVALID: "URL_INVALID",
   URL_LINK_LOCAL_ADDRESS: "URL_LINK_LOCAL_ADDRESS",
@@ -322,6 +354,24 @@ export class ValidationException extends __BaseException {
     this.Message = opts.Message;
     this.ValidationExceptionType = opts.ValidationExceptionType;
   }
+}
+
+/**
+ * <p>The settings to enable CDN authorization headers in MediaPackage.</p>
+ * @public
+ */
+export interface CdnAuthConfiguration {
+  /**
+   * <p>The ARN for the secret in Secrets Manager that your CDN uses for authorization to access the endpoint.</p>
+   * @public
+   */
+  CdnIdentifierSecretArns: string[] | undefined;
+
+  /**
+   * <p>The ARN for the IAM role that gives MediaPackage read access to Secrets Manager and KMS for CDN authorization.</p>
+   * @public
+   */
+  SecretsRoleArn: string | undefined;
 }
 
 /**
@@ -460,6 +510,12 @@ export interface InputSwitchConfiguration {
    * @public
    */
   MQCSInputSwitching?: boolean | undefined;
+
+  /**
+   * <p>For CMAF inputs, indicates which input MediaPackage should prefer when both inputs have equal MQCS scores. Select <code>1</code> to prefer the first ingest endpoint, or <code>2</code> to prefer the second ingest endpoint. If you don't specify a preferred input, MediaPackage uses its default switching behavior when MQCS scores are equal.</p>
+   * @public
+   */
+  PreferredInput?: number | undefined;
 }
 
 /**
@@ -924,6 +980,7 @@ export interface ListChannelsResponse {
  */
 export const ContainerType = {
   CMAF: "CMAF",
+  ISM: "ISM",
   TS: "TS",
 } as const;
 
@@ -931,6 +988,50 @@ export const ContainerType = {
  * @public
  */
 export type ContainerType = (typeof ContainerType)[keyof typeof ContainerType];
+
+/**
+ * <p>The base URLs to use for retrieving segments. You can specify multiple locations and indicate the priority and weight for when each should be used, for use in mutli-CDN workflows.</p>
+ * @public
+ */
+export interface DashBaseUrl {
+  /**
+   * <p>A source location for segments.</p>
+   * @public
+   */
+  Url: string | undefined;
+
+  /**
+   * <p>The name of the source location.</p>
+   * @public
+   */
+  ServiceLocation?: string | undefined;
+
+  /**
+   * <p>For use with DVB-DASH profiles only. The priority of this location for servings segments. The lower the number, the higher the priority.</p>
+   * @public
+   */
+  DvbPriority?: number | undefined;
+
+  /**
+   * <p>For use with DVB-DASH profiles only. The weighting for source locations that have the same priority. </p>
+   * @public
+   */
+  DvbWeight?: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const DashCompactness = {
+  NONE: "NONE",
+  STANDARD: "STANDARD",
+} as const;
+
+/**
+ * @public
+ */
+export type DashCompactness = (typeof DashCompactness)[keyof typeof DashCompactness];
 
 /**
  * @public
@@ -945,6 +1046,67 @@ export const DashDrmSignaling = {
  * @public
  */
 export type DashDrmSignaling = (typeof DashDrmSignaling)[keyof typeof DashDrmSignaling];
+
+/**
+ * <p>For use with DVB-DASH profiles only. The settings for error reporting from the playback device that you want Elemental MediaPackage to pass through to the manifest.</p>
+ * @public
+ */
+export interface DashDvbMetricsReporting {
+  /**
+   * <p>The URL where playback devices send error reports.</p>
+   * @public
+   */
+  ReportingUrl: string | undefined;
+
+  /**
+   * <p>The number of playback devices per 1000 that will send error reports to the reporting URL. This represents the probability that a playback device will be a reporting player for this session.</p>
+   * @public
+   */
+  Probability?: number | undefined;
+}
+
+/**
+ * <p>For use with DVB-DASH profiles only. The settings for font downloads that you want Elemental MediaPackage to pass through to the manifest.</p>
+ * @public
+ */
+export interface DashDvbFontDownload {
+  /**
+   * <p>The URL for downloading fonts for subtitles.</p>
+   * @public
+   */
+  Url?: string | undefined;
+
+  /**
+   * <p>The <code>mimeType</code> of the resource that's at the font download URL.</p>
+   *          <p>For information about font MIME types, see the <a href="https://dvb.org/wp-content/uploads/2021/06/A168r4_MPEG-DASH-Profile-for-Transport-of-ISO-BMFF-Based-DVB-Services_Draft-ts_103-285-v140_November_2021.pdf">MPEG-DASH Profile for Transport of ISO BMFF Based DVB Services over IP Based Networks</a> document. </p>
+   * @public
+   */
+  MimeType?: string | undefined;
+
+  /**
+   * <p>The <code>fontFamily</code> name for subtitles, as described in <a href="https://tech.ebu.ch/publications/tech3380">EBU-TT-D Subtitling Distribution Format</a>. </p>
+   * @public
+   */
+  FontFamily?: string | undefined;
+}
+
+/**
+ * <p>For endpoints that use the DVB-DASH profile only. The font download and error reporting information that you want MediaPackage to pass through to the manifest.</p>
+ * @public
+ */
+export interface DashDvbSettings {
+  /**
+   * <p>Subtitle font settings.</p>
+   * @public
+   */
+  FontDownload?: DashDvbFontDownload | undefined;
+
+  /**
+   * <p>Playback device error reporting settings.</p>
+   * @public
+   */
+  ErrorMetrics?: DashDvbMetricsReporting[] | undefined;
+}
 
 /**
  * <p>Filter configuration includes settings for manifest filtering, start and end times, and time delay that apply to all of your egress requests for this manifest. </p>
@@ -1000,6 +1162,55 @@ export const DashPeriodTrigger = {
 export type DashPeriodTrigger = (typeof DashPeriodTrigger)[keyof typeof DashPeriodTrigger];
 
 /**
+ * @public
+ * @enum
+ */
+export const DashProfile = {
+  DVB_DASH: "DVB_DASH",
+} as const;
+
+/**
+ * @public
+ */
+export type DashProfile = (typeof DashProfile)[keyof typeof DashProfile];
+
+/**
+ * <p>Details about the content that you want MediaPackage to pass through in the manifest to the playback device.</p>
+ * @public
+ */
+export interface DashProgramInformation {
+  /**
+   * <p>The title for the manifest.</p>
+   * @public
+   */
+  Title?: string | undefined;
+
+  /**
+   * <p>Information about the content provider.</p>
+   * @public
+   */
+  Source?: string | undefined;
+
+  /**
+   * <p>A copyright statement about the content.</p>
+   * @public
+   */
+  Copyright?: string | undefined;
+
+  /**
+   * <p>The language code for this manifest.</p>
+   * @public
+   */
+  LanguageCode?: string | undefined;
+
+  /**
+   * <p>An absolute URL that contains more information about this content.</p>
+   * @public
+   */
+  MoreInformationUrl?: string | undefined;
+}
+
+/**
  * <p>The SCTE configuration.</p>
  * @public
  */
@@ -1034,6 +1245,46 @@ export const DashSegmentTemplateFormat = {
  * @public
  */
 export type DashSegmentTemplateFormat = (typeof DashSegmentTemplateFormat)[keyof typeof DashSegmentTemplateFormat];
+
+/**
+ * @public
+ * @enum
+ */
+export const DashTtmlProfile = {
+  EBU_TT_D_101: "EBU_TT_D_101",
+  IMSC_1: "IMSC_1",
+} as const;
+
+/**
+ * @public
+ */
+export type DashTtmlProfile = (typeof DashTtmlProfile)[keyof typeof DashTtmlProfile];
+
+/**
+ * <p>The settings for TTML subtitles.</p>
+ * @public
+ */
+export interface DashTtmlConfiguration {
+  /**
+   * <p>The profile that MediaPackage uses when signaling subtitles in the manifest. <code>IMSC</code> is the default profile.
+   *          <code>EBU-TT-D</code> produces subtitles that are compliant with the EBU-TT-D TTML profile.
+   *          MediaPackage passes through subtitle styles to the manifest. For more information about EBU-TT-D subtitles, see <a href="https://tech.ebu.ch/publications/tech3380">EBU-TT-D Subtitling Distribution Format</a>.</p>
+   * @public
+   */
+  TtmlProfile: DashTtmlProfile | undefined;
+}
+
+/**
+ * <p>The configuration for DASH subtitles.</p>
+ * @public
+ */
+export interface DashSubtitleConfiguration {
+  /**
+   * <p>Settings for TTML subtitles.</p>
+   * @public
+   */
+  TtmlConfiguration?: DashTtmlConfiguration | undefined;
+}
 
 /**
  * @public
@@ -1147,6 +1398,43 @@ export interface CreateDashManifestConfiguration {
    * @public
    */
   UtcTiming?: DashUtcTiming | undefined;
+
+  /**
+   * <p>The profile that the output is compliant with.</p>
+   * @public
+   */
+  Profiles?: DashProfile[] | undefined;
+
+  /**
+   * <p>The base URLs to use for retrieving segments.</p>
+   * @public
+   */
+  BaseUrls?: DashBaseUrl[] | undefined;
+
+  /**
+   * <p>Details about the content that you want MediaPackage to pass through in the manifest to the playback device.</p>
+   * @public
+   */
+  ProgramInformation?: DashProgramInformation | undefined;
+
+  /**
+   * <p>For endpoints that use the DVB-DASH profile only. The font download and error reporting information that you want MediaPackage to pass through to the manifest.</p>
+   * @public
+   */
+  DvbSettings?: DashDvbSettings | undefined;
+
+  /**
+   * <p>The layout of the DASH manifest that MediaPackage produces. <code>STANDARD</code> indicates a default manifest, which is compacted. <code>NONE</code> indicates a full manifest.</p>
+   *          <p>For information about compactness, see <a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/compacted.html">DASH manifest compactness</a> in the <i>Elemental MediaPackage v2 User Guide</i>.</p>
+   * @public
+   */
+  Compactness?: DashCompactness | undefined;
+
+  /**
+   * <p>The configuration for DASH subtitles.</p>
+   * @public
+   */
+  SubtitleConfiguration?: DashSubtitleConfiguration | undefined;
 }
 
 /**
@@ -1351,6 +1639,50 @@ export interface CreateLowLatencyHlsManifestConfiguration {
  * @public
  * @enum
  */
+export const MssManifestLayout = {
+  COMPACT: "COMPACT",
+  FULL: "FULL",
+} as const;
+
+/**
+ * @public
+ */
+export type MssManifestLayout = (typeof MssManifestLayout)[keyof typeof MssManifestLayout];
+
+/**
+ * <p>Configuration parameters for creating a Microsoft Smooth Streaming (MSS) manifest. MSS is a streaming media format developed by Microsoft that delivers adaptive bitrate streaming content to compatible players and devices.</p>
+ * @public
+ */
+export interface CreateMssManifestConfiguration {
+  /**
+   * <p>A short string that's appended to the endpoint URL to create a unique path to this MSS manifest. The manifest name must be unique within the origin endpoint and can contain letters, numbers, hyphens, and underscores.</p>
+   * @public
+   */
+  ManifestName: string | undefined;
+
+  /**
+   * <p>The total duration (in seconds) of the manifest window. This determines how much content is available in the manifest at any given time. The manifest window slides forward as new segments become available, maintaining a consistent duration of content. The minimum value is 30 seconds.</p>
+   * @public
+   */
+  ManifestWindowSeconds?: number | undefined;
+
+  /**
+   * <p>Filter configuration includes settings for manifest filtering, start and end times, and time delay that apply to all of your egress requests for this manifest. </p>
+   * @public
+   */
+  FilterConfiguration?: FilterConfiguration | undefined;
+
+  /**
+   * <p>Determines the layout format of the MSS manifest. This controls how the manifest is structured and presented to client players, affecting compatibility with different MSS-compatible devices and applications.</p>
+   * @public
+   */
+  ManifestLayout?: MssManifestLayout | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const CmafEncryptionMethod = {
   CBCS: "CBCS",
   CENC: "CENC",
@@ -1360,6 +1692,19 @@ export const CmafEncryptionMethod = {
  * @public
  */
 export type CmafEncryptionMethod = (typeof CmafEncryptionMethod)[keyof typeof CmafEncryptionMethod];
+
+/**
+ * @public
+ * @enum
+ */
+export const IsmEncryptionMethod = {
+  CENC: "CENC",
+} as const;
+
+/**
+ * @public
+ */
+export type IsmEncryptionMethod = (typeof IsmEncryptionMethod)[keyof typeof IsmEncryptionMethod];
 
 /**
  * @public
@@ -1391,6 +1736,12 @@ export interface EncryptionMethod {
    * @public
    */
   CmafEncryptionMethod?: CmafEncryptionMethod | undefined;
+
+  /**
+   * <p>The encryption method used for Microsoft Smooth Streaming (MSS) content. This specifies how the MSS segments are encrypted to protect the content during delivery to client players.</p>
+   * @public
+   */
+  IsmEncryptionMethod?: IsmEncryptionMethod | undefined;
 }
 
 /**
@@ -1611,6 +1962,32 @@ export interface Encryption {
   KeyRotationIntervalSeconds?: number | undefined;
 
   /**
+   * <p>Excludes SEIG and SGPD boxes from segment metadata in CMAF containers.</p>
+   *          <p>When set to <code>true</code>, MediaPackage omits these DRM metadata boxes from CMAF segments, which can improve compatibility with certain devices and players that don't support these boxes.</p>
+   *          <p>Important considerations:</p>
+   *          <ul>
+   *             <li>
+   *                <p>This setting only affects CMAF container formats</p>
+   *             </li>
+   *             <li>
+   *                <p>Key rotation can still be handled through media playlist signaling</p>
+   *             </li>
+   *             <li>
+   *                <p>PSSH and TENC boxes remain unaffected</p>
+   *             </li>
+   *             <li>
+   *                <p>Default behavior is preserved when this setting is disabled</p>
+   *             </li>
+   *          </ul>
+   *          <p>Valid values: <code>true</code> | <code>false</code>
+   *          </p>
+   *          <p>Default: <code>false</code>
+   *          </p>
+   * @public
+   */
+  CmafExcludeSegmentDrmMetadata?: boolean | undefined;
+
+  /**
    * <p>The parameters for the SPEKE key provider.</p>
    * @public
    */
@@ -1769,6 +2146,12 @@ export interface CreateOriginEndpointRequest {
   DashManifests?: CreateDashManifestConfiguration[] | undefined;
 
   /**
+   * <p>A list of Microsoft Smooth Streaming (MSS) manifest configurations for the origin endpoint. You can configure multiple MSS manifests to provide different streaming experiences or to support different client requirements.</p>
+   * @public
+   */
+  MssManifests?: CreateMssManifestConfiguration[] | undefined;
+
+  /**
    * <p>The failover settings for the endpoint.</p>
    * @public
    */
@@ -1871,6 +2254,42 @@ export interface GetDashManifestConfiguration {
    * @public
    */
   UtcTiming?: DashUtcTiming | undefined;
+
+  /**
+   * <p>The profile that the output is compliant with.</p>
+   * @public
+   */
+  Profiles?: DashProfile[] | undefined;
+
+  /**
+   * <p>The base URL to use for retrieving segments.</p>
+   * @public
+   */
+  BaseUrls?: DashBaseUrl[] | undefined;
+
+  /**
+   * <p>Details about the content that you want MediaPackage to pass through in the manifest to the playback device.</p>
+   * @public
+   */
+  ProgramInformation?: DashProgramInformation | undefined;
+
+  /**
+   * <p>For endpoints that use the DVB-DASH profile only. The font download and error reporting information that you want MediaPackage to pass through to the manifest.</p>
+   * @public
+   */
+  DvbSettings?: DashDvbSettings | undefined;
+
+  /**
+   * <p>The layout of the DASH manifest that MediaPackage produces. <code>STANDARD</code> indicates a default manifest, which is compacted. <code>NONE</code> indicates a full manifest.</p>
+   * @public
+   */
+  Compactness?: DashCompactness | undefined;
+
+  /**
+   * <p>The configuration for DASH subtitles.</p>
+   * @public
+   */
+  SubtitleConfiguration?: DashSubtitleConfiguration | undefined;
 }
 
 /**
@@ -2002,6 +2421,42 @@ export interface GetLowLatencyHlsManifestConfiguration {
 }
 
 /**
+ * <p>Configuration details for a Microsoft Smooth Streaming (MSS) manifest associated with an origin endpoint. This includes all the settings and properties that define how the MSS content is packaged and delivered.</p>
+ * @public
+ */
+export interface GetMssManifestConfiguration {
+  /**
+   * <p>The name of the MSS manifest. This name is appended to the origin endpoint URL to create the unique path for accessing this specific MSS manifest.</p>
+   * @public
+   */
+  ManifestName: string | undefined;
+
+  /**
+   * <p>The complete URL for accessing the MSS manifest. Client players use this URL to retrieve the manifest and begin streaming the Microsoft Smooth Streaming content.</p>
+   * @public
+   */
+  Url: string | undefined;
+
+  /**
+   * <p>Filter configuration includes settings for manifest filtering, start and end times, and time delay that apply to all of your egress requests for this manifest. </p>
+   * @public
+   */
+  FilterConfiguration?: FilterConfiguration | undefined;
+
+  /**
+   * <p>The duration (in seconds) of the manifest window. This represents the total amount of content available in the manifest at any given time.</p>
+   * @public
+   */
+  ManifestWindowSeconds?: number | undefined;
+
+  /**
+   * <p>The layout format of the MSS manifest, which determines how the manifest is structured for client compatibility.</p>
+   * @public
+   */
+  ManifestLayout?: MssManifestLayout | undefined;
+}
+
+/**
  * @public
  */
 export interface CreateOriginEndpointResponse {
@@ -2082,6 +2537,12 @@ export interface CreateOriginEndpointResponse {
    * @public
    */
   DashManifests?: GetDashManifestConfiguration[] | undefined;
+
+  /**
+   * <p>The Microsoft Smooth Streaming (MSS) manifest configurations that were created for this origin endpoint.</p>
+   * @public
+   */
+  MssManifests?: GetMssManifestConfiguration[] | undefined;
 
   /**
    * <p>The failover settings for the endpoint.</p>
@@ -2242,6 +2703,12 @@ export interface GetOriginEndpointResponse {
   DashManifests?: GetDashManifestConfiguration[] | undefined;
 
   /**
+   * <p>The Microsoft Smooth Streaming (MSS) manifest configurations associated with this origin endpoint.</p>
+   * @public
+   */
+  MssManifests?: GetMssManifestConfiguration[] | undefined;
+
+  /**
    * <p>The failover settings for the endpoint.</p>
    * @public
    */
@@ -2356,6 +2823,24 @@ export interface ListLowLatencyHlsManifestConfiguration {
 }
 
 /**
+ * <p>Summary information about a Microsoft Smooth Streaming (MSS) manifest configuration. This provides key details about the MSS manifest without including all configuration parameters.</p>
+ * @public
+ */
+export interface ListMssManifestConfiguration {
+  /**
+   * <p>The name of the MSS manifest configuration.</p>
+   * @public
+   */
+  ManifestName: string | undefined;
+
+  /**
+   * <p>The URL for accessing the MSS manifest.</p>
+   * @public
+   */
+  Url?: string | undefined;
+}
+
+/**
  * <p>The configuration of the origin endpoint.</p>
  * @public
  */
@@ -2425,6 +2910,12 @@ export interface OriginEndpointListConfiguration {
    * @public
    */
   DashManifests?: ListDashManifestConfiguration[] | undefined;
+
+  /**
+   * <p>A list of Microsoft Smooth Streaming (MSS) manifest configurations associated with the origin endpoint. Each configuration represents a different MSS streaming option available from this endpoint.</p>
+   * @public
+   */
+  MssManifests?: ListMssManifestConfiguration[] | undefined;
 
   /**
    * <p>The failover settings for the endpoint.</p>
@@ -2528,6 +3019,14 @@ export interface GetOriginEndpointPolicyResponse {
    * @public
    */
   Policy: string | undefined;
+
+  /**
+   * <p>The settings for using authorization headers between the MediaPackage endpoint and your CDN. </p>
+   *          <p>For information about CDN authorization, see <a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/cdn-auth.html">CDN authorization
+   *             in Elemental MediaPackage</a>  in the MediaPackage user guide.</p>
+   * @public
+   */
+  CdnAuthConfiguration?: CdnAuthConfiguration | undefined;
 }
 
 /**
@@ -2557,6 +3056,14 @@ export interface PutOriginEndpointPolicyRequest {
    * @public
    */
   Policy: string | undefined;
+
+  /**
+   * <p>The settings for using authorization headers between the MediaPackage endpoint and your CDN. </p>
+   *          <p>For information about CDN authorization, see <a href="https://docs.aws.amazon.com/mediapackage/latest/userguide/cdn-auth.html">CDN authorization
+   *             in Elemental MediaPackage</a>  in the MediaPackage user guide. </p>
+   * @public
+   */
+  CdnAuthConfiguration?: CdnAuthConfiguration | undefined;
 }
 
 /**
@@ -2687,6 +3194,12 @@ export interface UpdateOriginEndpointRequest {
   DashManifests?: CreateDashManifestConfiguration[] | undefined;
 
   /**
+   * <p>A list of Microsoft Smooth Streaming (MSS) manifest configurations to update for the origin endpoint. This replaces the existing MSS manifest configurations.</p>
+   * @public
+   */
+  MssManifests?: CreateMssManifestConfiguration[] | undefined;
+
+  /**
    * <p>The failover settings for the endpoint.</p>
    * @public
    */
@@ -2774,6 +3287,12 @@ export interface UpdateOriginEndpointResponse {
    * @public
    */
   LowLatencyHlsManifests?: GetLowLatencyHlsManifestConfiguration[] | undefined;
+
+  /**
+   * <p>The updated Microsoft Smooth Streaming (MSS) manifest configurations for this origin endpoint.</p>
+   * @public
+   */
+  MssManifests?: GetMssManifestConfiguration[] | undefined;
 
   /**
    * <p>The failover settings for the endpoint.</p>

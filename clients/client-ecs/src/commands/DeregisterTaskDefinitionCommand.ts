@@ -297,7 +297,7 @@ export interface DeregisterTaskDefinitionCommandOutput extends DeregisterTaskDef
  * //     ],
  * //     runtimePlatform: { // RuntimePlatform
  * //       cpuArchitecture: "X86_64" || "ARM64",
- * //       operatingSystemFamily: "WINDOWS_SERVER_2019_FULL" || "WINDOWS_SERVER_2019_CORE" || "WINDOWS_SERVER_2016_FULL" || "WINDOWS_SERVER_2004_CORE" || "WINDOWS_SERVER_2022_CORE" || "WINDOWS_SERVER_2022_FULL" || "WINDOWS_SERVER_20H2_CORE" || "LINUX",
+ * //       operatingSystemFamily: "WINDOWS_SERVER_2019_FULL" || "WINDOWS_SERVER_2019_CORE" || "WINDOWS_SERVER_2016_FULL" || "WINDOWS_SERVER_2004_CORE" || "WINDOWS_SERVER_2022_CORE" || "WINDOWS_SERVER_2022_FULL" || "WINDOWS_SERVER_2025_CORE" || "WINDOWS_SERVER_2025_FULL" || "WINDOWS_SERVER_20H2_CORE" || "LINUX",
  * //     },
  * //     requiresCompatibilities: [
  * //       "EC2" || "FARGATE" || "EXTERNAL",
@@ -344,21 +344,12 @@ export interface DeregisterTaskDefinitionCommandOutput extends DeregisterTaskDef
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
- *          <p>The following list includes additional causes for the error:</p>
- *          <ul>
- *             <li>
- *                <p>The <code>RunTask</code> could not be processed because you use managed
- * 					scaling and there is a capacity error because the quota of tasks in the
- * 						<code>PROVISIONING</code> per cluster has been reached. For information
- * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
- * 						service quotas</a>.</p>
- *             </li>
- *          </ul>
  *
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
- *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service
+ * 				event messages</a>. </p>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>
@@ -369,9 +360,9 @@ export interface DeregisterTaskDefinitionCommandOutput extends DeregisterTaskDef
  *
  * @example To deregister a revision of a task definition
  * ```javascript
- * // This example deregisters the first revision of the curler task definition
+ * // This example deregisters the first revision of the fargate-task task definition
  * const input = {
- *   taskDefinition: "curler:1"
+ *   taskDefinition: "fargate-task:1"
  * };
  * const command = new DeregisterTaskDefinitionCommand(input);
  * const response = await client.send(command);
@@ -380,25 +371,23 @@ export interface DeregisterTaskDefinitionCommandOutput extends DeregisterTaskDef
  *   taskDefinition: {
  *     containerDefinitions: [
  *       {
- *         command: [
- *           "curl -v http://example.com/"
- *         ],
- *         cpu: 100,
- *         entryPoint:         [],
- *         environment:         [],
+ *         cpu: 256,
  *         essential: true,
- *         image: "curl:latest",
- *         memory: 256,
- *         mountPoints:         [],
- *         name: "curler",
- *         portMappings:         [],
- *         volumesFrom:         []
+ *         image: "public.ecr.aws/docker/library/nginx:latest",
+ *         memory: 128,
+ *         name: "nginx",
+ *         portMappings: [
+ *           {
+ *             containerPort: 80,
+ *             hostPort: 80,
+ *             protocol: "tcp"
+ *           }
+ *         ]
  *       }
  *     ],
- *     family: "curler",
- *     revision: 1,
+ *     family: "fargate-task",
  *     status: "INACTIVE",
- *     taskDefinitionArn: "arn:aws:ecs:us-west-2:123456789012:task-definition/curler:1",
+ *     taskDefinitionArn: "arn:aws:ecs:us-west-2:123456789012:task-definition/fargate-task:1",
  *     volumes:     []
  *   }
  * }

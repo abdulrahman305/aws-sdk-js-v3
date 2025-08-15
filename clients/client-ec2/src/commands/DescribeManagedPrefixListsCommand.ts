@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeManagedPrefixListsRequest, DescribeManagedPrefixListsResult } from "../models/models_4";
+import { DescribeManagedPrefixListsRequest, DescribeManagedPrefixListsResult } from "../models/models_5";
 import { de_DescribeManagedPrefixListsCommand, se_DescribeManagedPrefixListsCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -29,7 +29,6 @@ export interface DescribeManagedPrefixListsCommandOutput extends DescribeManaged
 
 /**
  * <p>Describes your managed prefix lists and any Amazon Web Services-managed prefix lists.</p>
- *          <p>To view the entries for your prefix list, use <a>GetManagedPrefixListEntries</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

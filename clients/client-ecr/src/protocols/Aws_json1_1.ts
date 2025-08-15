@@ -228,6 +228,7 @@ import {
   ImageScanFindingsSummary,
   ImageScanningConfiguration,
   ImageTagAlreadyExistsException,
+  ImageTagMutabilityExclusionFilter,
   InitiateLayerUploadRequest,
   InvalidLayerException,
   InvalidLayerPartException,
@@ -2767,6 +2768,10 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_ImageScanningConfiguration omitted.
 
+// se_ImageTagMutabilityExclusionFilter omitted.
+
+// se_ImageTagMutabilityExclusionFilters omitted.
+
 // se_InitiateLayerUploadRequest omitted.
 
 // se_LayerDigestList omitted.
@@ -2901,6 +2906,8 @@ const de_AwsEcrContainerImageDetails = (output: any, context: __SerdeContext): A
     author: __expectString,
     imageHash: __expectString,
     imageTags: _json,
+    inUseCount: __expectLong,
+    lastInUseAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     platform: __expectString,
     pushedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     registry: __expectString,
@@ -3307,6 +3314,10 @@ const de_ImageScanFindingsSummary = (output: any, context: __SerdeContext): Imag
 
 // de_ImageTagList omitted.
 
+// de_ImageTagMutabilityExclusionFilter omitted.
+
+// de_ImageTagMutabilityExclusionFilters omitted.
+
 // de_ImageTagsList omitted.
 
 // de_InitiateLayerUploadResponse omitted.
@@ -3484,6 +3495,7 @@ const de_Repository = (output: any, context: __SerdeContext): Repository => {
     encryptionConfiguration: _json,
     imageScanningConfiguration: _json,
     imageTagMutability: __expectString,
+    imageTagMutabilityExclusionFilters: _json,
     registryId: __expectString,
     repositoryArn: __expectString,
     repositoryName: __expectString,
@@ -3504,6 +3516,7 @@ const de_RepositoryCreationTemplate = (output: any, context: __SerdeContext): Re
     description: __expectString,
     encryptionConfiguration: _json,
     imageTagMutability: __expectString,
+    imageTagMutabilityExclusionFilters: _json,
     lifecyclePolicy: __expectString,
     prefix: __expectString,
     repositoryPolicy: __expectString,

@@ -613,6 +613,7 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                     JA4Fingerprint: { // RateLimitJA4Fingerprint
  * //                       FallbackBehavior: "MATCH" || "NO_MATCH", // required
  * //                     },
+ * //                     ASN: {},
  * //                   },
  * //                 ],
  * //               },
@@ -765,6 +766,20 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                       },
  * //                       EnableRegexInPath: true || false,
  * //                     },
+ * //                     AWSManagedRulesAntiDDoSRuleSet: { // AWSManagedRulesAntiDDoSRuleSet
+ * //                       ClientSideActionConfig: { // ClientSideActionConfig
+ * //                         Challenge: { // ClientSideAction
+ * //                           UsageOfAction: "ENABLED" || "DISABLED", // required
+ * //                           Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ * //                           ExemptUriRegularExpressions: [ // RegularExpressionList
+ * //                             { // Regex
+ * //                               RegexString: "STRING_VALUE",
+ * //                             },
+ * //                           ],
+ * //                         },
+ * //                       },
+ * //                       SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ * //                     },
  * //                   },
  * //                 ],
  * //                 RuleActionOverrides: [
@@ -794,6 +809,15 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                 RegexString: "STRING_VALUE", // required
  * //                 FieldToMatch: "<FieldToMatch>", // required
  * //                 TextTransformations: "<TextTransformations>", // required
+ * //               },
+ * //               AsnMatchStatement: { // AsnMatchStatement
+ * //                 AsnList: [ // AsnList // required
+ * //                   Number("long"),
+ * //                 ],
+ * //                 ForwardedIPConfig: {
+ * //                   HeaderName: "STRING_VALUE", // required
+ * //                   FallbackBehavior: "MATCH" || "NO_MATCH", // required
+ * //                 },
  * //               },
  * //             },
  * //             ForwardedIPConfig: {
@@ -832,6 +856,7 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                 JA4Fingerprint: {
  * //                   FallbackBehavior: "MATCH" || "NO_MATCH", // required
  * //                 },
+ * //                 ASN: {},
  * //               },
  * //             ],
  * //           },
@@ -972,6 +997,20 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                   },
  * //                   EnableRegexInPath: true || false,
  * //                 },
+ * //                 AWSManagedRulesAntiDDoSRuleSet: {
+ * //                   ClientSideActionConfig: {
+ * //                     Challenge: {
+ * //                       UsageOfAction: "ENABLED" || "DISABLED", // required
+ * //                       Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ * //                       ExemptUriRegularExpressions: [
+ * //                         {
+ * //                           RegexString: "STRING_VALUE",
+ * //                         },
+ * //                       ],
+ * //                     },
+ * //                   },
+ * //                   SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ * //                 },
  * //               },
  * //             ],
  * //             RuleActionOverrides: [
@@ -1001,6 +1040,12 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //             RegexString: "STRING_VALUE", // required
  * //             FieldToMatch: "<FieldToMatch>", // required
  * //             TextTransformations: "<TextTransformations>", // required
+ * //           },
+ * //           AsnMatchStatement: {
+ * //             AsnList: [ // required
+ * //               Number("long"),
+ * //             ],
+ * //             ForwardedIPConfig: "<ForwardedIPConfig>",
  * //           },
  * //         },
  * //         Action: "<RuleAction>",
@@ -1145,6 +1190,20 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                   ResponseInspection: "<ResponseInspection>",
  * //                   EnableRegexInPath: true || false,
  * //                 },
+ * //                 AWSManagedRulesAntiDDoSRuleSet: {
+ * //                   ClientSideActionConfig: {
+ * //                     Challenge: {
+ * //                       UsageOfAction: "ENABLED" || "DISABLED", // required
+ * //                       Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ * //                       ExemptUriRegularExpressions: [
+ * //                         {
+ * //                           RegexString: "STRING_VALUE",
+ * //                         },
+ * //                       ],
+ * //                     },
+ * //                   },
+ * //                   SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ * //                 },
  * //               },
  * //             ],
  * //             RuleActionOverrides: [
@@ -1226,6 +1285,20 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //                   ResponseInspection: "<ResponseInspection>",
  * //                   EnableRegexInPath: true || false,
  * //                 },
+ * //                 AWSManagedRulesAntiDDoSRuleSet: {
+ * //                   ClientSideActionConfig: {
+ * //                     Challenge: {
+ * //                       UsageOfAction: "ENABLED" || "DISABLED", // required
+ * //                       Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ * //                       ExemptUriRegularExpressions: [
+ * //                         {
+ * //                           RegexString: "STRING_VALUE",
+ * //                         },
+ * //                       ],
+ * //                     },
+ * //                   },
+ * //                   SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ * //                 },
  * //               },
  * //             ],
  * //             RuleActionOverrides: "<RuleActionOverrides>",
@@ -1276,6 +1349,19 @@ export interface GetWebACLCommandOutput extends GetWebACLResponse, __MetadataBea
  * //       },
  * //     },
  * //     RetrofittedByFirewallManager: true || false,
+ * //     OnSourceDDoSProtectionConfig: { // OnSourceDDoSProtectionConfig
+ * //       ALBLowReputationMode: "ACTIVE_UNDER_DDOS" || "ALWAYS_ON", // required
+ * //     },
+ * //     ApplicationConfig: { // ApplicationConfig
+ * //       Attributes: [ // ApplicationAttributes
+ * //         { // ApplicationAttribute
+ * //           Name: "STRING_VALUE",
+ * //           Values: [ // AttributeValues
+ * //             "STRING_VALUE",
+ * //           ],
+ * //         },
+ * //       ],
+ * //     },
  * //   },
  * //   LockToken: "STRING_VALUE",
  * //   ApplicationIntegrationURL: "STRING_VALUE",

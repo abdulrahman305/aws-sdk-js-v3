@@ -37,7 +37,8 @@ export interface DescribeContinuousBackupsCommandOutput extends DescribeContinuo
  *                 <code>LatestRestorableDateTime</code>. </p>
  *          <p>
  *             <code>LatestRestorableDateTime</code> is typically 5 minutes before the current time.
- *             You can restore your table to any point in time in the last 35 days. You can set the recovery period to any value between 1 and 35 days. </p>
+ *             You can restore your table to any point in time in the last 35 days. You can set the
+ *             recovery period to any value between 1 and 35 days. </p>
  *          <p>You can call <code>DescribeContinuousBackups</code> at a maximum rate of 10 times per
  *             second.</p>
  * @example
@@ -78,7 +79,8 @@ export interface DescribeContinuousBackupsCommandOutput extends DescribeContinuo
  *
  * @throws {@link TableNotFoundException} (client fault)
  *  <p>A source table with the name <code>TableName</code> does not currently exist within
- *             the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
+ *             the subscriber's account or the subscriber is operating in the wrong Amazon Web Services
+ *             Region.</p>
  *
  * @throws {@link DynamoDBServiceException}
  * <p>Base exception class for all service exceptions from DynamoDB service.</p>

@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   GetTransitGatewayRouteTableAssociationsRequest,
   GetTransitGatewayRouteTableAssociationsResult,
-} from "../models/models_6";
+} from "../models/models_7";
 import {
   de_GetTransitGatewayRouteTableAssociationsCommand,
   se_GetTransitGatewayRouteTableAssociationsCommand,
@@ -65,7 +65,7 @@ export interface GetTransitGatewayRouteTableAssociationsCommandOutput
  * //     { // TransitGatewayRouteTableAssociation
  * //       TransitGatewayAttachmentId: "STRING_VALUE",
  * //       ResourceId: "STRING_VALUE",
- * //       ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering",
+ * //       ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering" || "network-function",
  * //       State: "associating" || "associated" || "disassociating" || "disassociated",
  * //     },
  * //   ],

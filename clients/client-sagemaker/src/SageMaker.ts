@@ -14,6 +14,16 @@ import {
   AssociateTrialComponentCommandOutput,
 } from "./commands/AssociateTrialComponentCommand";
 import {
+  AttachClusterNodeVolumeCommand,
+  AttachClusterNodeVolumeCommandInput,
+  AttachClusterNodeVolumeCommandOutput,
+} from "./commands/AttachClusterNodeVolumeCommand";
+import {
+  BatchAddClusterNodesCommand,
+  BatchAddClusterNodesCommandInput,
+  BatchAddClusterNodesCommandOutput,
+} from "./commands/BatchAddClusterNodesCommand";
+import {
   BatchDeleteClusterNodesCommand,
   BatchDeleteClusterNodesCommandInput,
   BatchDeleteClusterNodesCommandOutput,
@@ -140,6 +150,11 @@ import {
   CreateFlowDefinitionCommandOutput,
 } from "./commands/CreateFlowDefinitionCommand";
 import { CreateHubCommand, CreateHubCommandInput, CreateHubCommandOutput } from "./commands/CreateHubCommand";
+import {
+  CreateHubContentPresignedUrlsCommand,
+  CreateHubContentPresignedUrlsCommandInput,
+  CreateHubContentPresignedUrlsCommandOutput,
+} from "./commands/CreateHubContentPresignedUrlsCommand";
 import {
   CreateHubContentReferenceCommand,
   CreateHubContentReferenceCommandInput,
@@ -613,6 +628,11 @@ import {
   DescribeClusterCommandOutput,
 } from "./commands/DescribeClusterCommand";
 import {
+  DescribeClusterEventCommand,
+  DescribeClusterEventCommandInput,
+  DescribeClusterEventCommandOutput,
+} from "./commands/DescribeClusterEventCommand";
+import {
   DescribeClusterNodeCommand,
   DescribeClusterNodeCommandInput,
   DescribeClusterNodeCommandOutput,
@@ -849,6 +869,11 @@ import {
   DescribeProjectCommandOutput,
 } from "./commands/DescribeProjectCommand";
 import {
+  DescribeReservedCapacityCommand,
+  DescribeReservedCapacityCommandInput,
+  DescribeReservedCapacityCommandOutput,
+} from "./commands/DescribeReservedCapacityCommand";
+import {
   DescribeSpaceCommand,
   DescribeSpaceCommandInput,
   DescribeSpaceCommandOutput,
@@ -903,6 +928,11 @@ import {
   DescribeWorkteamCommandInput,
   DescribeWorkteamCommandOutput,
 } from "./commands/DescribeWorkteamCommand";
+import {
+  DetachClusterNodeVolumeCommand,
+  DetachClusterNodeVolumeCommandInput,
+  DetachClusterNodeVolumeCommandOutput,
+} from "./commands/DetachClusterNodeVolumeCommand";
 import {
   DisableSagemakerServicecatalogPortfolioCommand,
   DisableSagemakerServicecatalogPortfolioCommandInput,
@@ -986,6 +1016,11 @@ import {
   ListCandidatesForAutoMLJobCommandInput,
   ListCandidatesForAutoMLJobCommandOutput,
 } from "./commands/ListCandidatesForAutoMLJobCommand";
+import {
+  ListClusterEventsCommand,
+  ListClusterEventsCommandInput,
+  ListClusterEventsCommandOutput,
+} from "./commands/ListClusterEventsCommand";
 import {
   ListClusterNodesCommand,
   ListClusterNodesCommandInput,
@@ -1242,6 +1277,11 @@ import {
   ListPipelinesCommandOutput,
 } from "./commands/ListPipelinesCommand";
 import {
+  ListPipelineVersionsCommand,
+  ListPipelineVersionsCommandInput,
+  ListPipelineVersionsCommandOutput,
+} from "./commands/ListPipelineVersionsCommand";
+import {
   ListProcessingJobsCommand,
   ListProcessingJobsCommandInput,
   ListProcessingJobsCommandOutput,
@@ -1299,6 +1339,11 @@ import {
   ListTrialComponentsCommandOutput,
 } from "./commands/ListTrialComponentsCommand";
 import { ListTrialsCommand, ListTrialsCommandInput, ListTrialsCommandOutput } from "./commands/ListTrialsCommand";
+import {
+  ListUltraServersByReservedCapacityCommand,
+  ListUltraServersByReservedCapacityCommandInput,
+  ListUltraServersByReservedCapacityCommandOutput,
+} from "./commands/ListUltraServersByReservedCapacityCommand";
 import {
   ListUserProfilesCommand,
   ListUserProfilesCommandInput,
@@ -1385,6 +1430,11 @@ import {
   StartPipelineExecutionCommandInput,
   StartPipelineExecutionCommandOutput,
 } from "./commands/StartPipelineExecutionCommand";
+import {
+  StartSessionCommand,
+  StartSessionCommandInput,
+  StartSessionCommandOutput,
+} from "./commands/StartSessionCommand";
 import {
   StopAutoMLJobCommand,
   StopAutoMLJobCommandInput,
@@ -1633,6 +1683,11 @@ import {
   UpdatePipelineExecutionCommandOutput,
 } from "./commands/UpdatePipelineExecutionCommand";
 import {
+  UpdatePipelineVersionCommand,
+  UpdatePipelineVersionCommandInput,
+  UpdatePipelineVersionCommandOutput,
+} from "./commands/UpdatePipelineVersionCommand";
+import {
   UpdateProjectCommand,
   UpdateProjectCommandInput,
   UpdateProjectCommandOutput,
@@ -1670,6 +1725,8 @@ const commands = {
   AddAssociationCommand,
   AddTagsCommand,
   AssociateTrialComponentCommand,
+  AttachClusterNodeVolumeCommand,
+  BatchAddClusterNodesCommand,
   BatchDeleteClusterNodesCommand,
   BatchDescribeModelPackageCommand,
   CreateActionCommand,
@@ -1697,6 +1754,7 @@ const commands = {
   CreateFeatureGroupCommand,
   CreateFlowDefinitionCommand,
   CreateHubCommand,
+  CreateHubContentPresignedUrlsCommand,
   CreateHubContentReferenceCommand,
   CreateHumanTaskUiCommand,
   CreateHyperParameterTuningJobCommand,
@@ -1801,6 +1859,7 @@ const commands = {
   DescribeAutoMLJobCommand,
   DescribeAutoMLJobV2Command,
   DescribeClusterCommand,
+  DescribeClusterEventCommand,
   DescribeClusterNodeCommand,
   DescribeClusterSchedulerConfigCommand,
   DescribeCodeRepositoryCommand,
@@ -1849,6 +1908,7 @@ const commands = {
   DescribePipelineExecutionCommand,
   DescribeProcessingJobCommand,
   DescribeProjectCommand,
+  DescribeReservedCapacityCommand,
   DescribeSpaceCommand,
   DescribeStudioLifecycleConfigCommand,
   DescribeSubscribedWorkteamCommand,
@@ -1860,6 +1920,7 @@ const commands = {
   DescribeUserProfileCommand,
   DescribeWorkforceCommand,
   DescribeWorkteamCommand,
+  DetachClusterNodeVolumeCommand,
   DisableSagemakerServicecatalogPortfolioCommand,
   DisassociateTrialComponentCommand,
   EnableSagemakerServicecatalogPortfolioCommand,
@@ -1879,6 +1940,7 @@ const commands = {
   ListAssociationsCommand,
   ListAutoMLJobsCommand,
   ListCandidatesForAutoMLJobCommand,
+  ListClusterEventsCommand,
   ListClusterNodesCommand,
   ListClustersCommand,
   ListClusterSchedulerConfigsCommand,
@@ -1934,6 +1996,7 @@ const commands = {
   ListPipelineExecutionStepsCommand,
   ListPipelineParametersForExecutionCommand,
   ListPipelinesCommand,
+  ListPipelineVersionsCommand,
   ListProcessingJobsCommand,
   ListProjectsCommand,
   ListResourceCatalogsCommand,
@@ -1948,6 +2011,7 @@ const commands = {
   ListTransformJobsCommand,
   ListTrialComponentsCommand,
   ListTrialsCommand,
+  ListUltraServersByReservedCapacityCommand,
   ListUserProfilesCommand,
   ListWorkforcesCommand,
   ListWorkteamsCommand,
@@ -1966,6 +2030,7 @@ const commands = {
   StartMonitoringScheduleCommand,
   StartNotebookInstanceCommand,
   StartPipelineExecutionCommand,
+  StartSessionCommand,
   StopAutoMLJobCommand,
   StopCompilationJobCommand,
   StopEdgeDeploymentStageCommand,
@@ -2017,6 +2082,7 @@ const commands = {
   UpdatePartnerAppCommand,
   UpdatePipelineCommand,
   UpdatePipelineExecutionCommand,
+  UpdatePipelineVersionCommand,
   UpdateProjectCommand,
   UpdateSpaceCommand,
   UpdateTrainingJobCommand,
@@ -2068,6 +2134,40 @@ export interface SageMaker {
     args: AssociateTrialComponentCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: AssociateTrialComponentCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link AttachClusterNodeVolumeCommand}
+   */
+  attachClusterNodeVolume(
+    args: AttachClusterNodeVolumeCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<AttachClusterNodeVolumeCommandOutput>;
+  attachClusterNodeVolume(
+    args: AttachClusterNodeVolumeCommandInput,
+    cb: (err: any, data?: AttachClusterNodeVolumeCommandOutput) => void
+  ): void;
+  attachClusterNodeVolume(
+    args: AttachClusterNodeVolumeCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: AttachClusterNodeVolumeCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link BatchAddClusterNodesCommand}
+   */
+  batchAddClusterNodes(
+    args: BatchAddClusterNodesCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<BatchAddClusterNodesCommandOutput>;
+  batchAddClusterNodes(
+    args: BatchAddClusterNodesCommandInput,
+    cb: (err: any, data?: BatchAddClusterNodesCommandOutput) => void
+  ): void;
+  batchAddClusterNodes(
+    args: BatchAddClusterNodesCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: BatchAddClusterNodesCommandOutput) => void
   ): void;
 
   /**
@@ -2479,6 +2579,23 @@ export interface SageMaker {
     args: CreateHubCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateHubCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateHubContentPresignedUrlsCommand}
+   */
+  createHubContentPresignedUrls(
+    args: CreateHubContentPresignedUrlsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateHubContentPresignedUrlsCommandOutput>;
+  createHubContentPresignedUrls(
+    args: CreateHubContentPresignedUrlsCommandInput,
+    cb: (err: any, data?: CreateHubContentPresignedUrlsCommandOutput) => void
+  ): void;
+  createHubContentPresignedUrls(
+    args: CreateHubContentPresignedUrlsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateHubContentPresignedUrlsCommandOutput) => void
   ): void;
 
   /**
@@ -4105,6 +4222,23 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link DescribeClusterEventCommand}
+   */
+  describeClusterEvent(
+    args: DescribeClusterEventCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeClusterEventCommandOutput>;
+  describeClusterEvent(
+    args: DescribeClusterEventCommandInput,
+    cb: (err: any, data?: DescribeClusterEventCommandOutput) => void
+  ): void;
+  describeClusterEvent(
+    args: DescribeClusterEventCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeClusterEventCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeClusterNodeCommand}
    */
   describeClusterNode(
@@ -4891,6 +5025,23 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link DescribeReservedCapacityCommand}
+   */
+  describeReservedCapacity(
+    args: DescribeReservedCapacityCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeReservedCapacityCommandOutput>;
+  describeReservedCapacity(
+    args: DescribeReservedCapacityCommandInput,
+    cb: (err: any, data?: DescribeReservedCapacityCommandOutput) => void
+  ): void;
+  describeReservedCapacity(
+    args: DescribeReservedCapacityCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeReservedCapacityCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeSpaceCommand}
    */
   describeSpace(args: DescribeSpaceCommandInput, options?: __HttpHandlerOptions): Promise<DescribeSpaceCommandOutput>;
@@ -5063,6 +5214,23 @@ export interface SageMaker {
     args: DescribeWorkteamCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeWorkteamCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DetachClusterNodeVolumeCommand}
+   */
+  detachClusterNodeVolume(
+    args: DetachClusterNodeVolumeCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DetachClusterNodeVolumeCommandOutput>;
+  detachClusterNodeVolume(
+    args: DetachClusterNodeVolumeCommandInput,
+    cb: (err: any, data?: DetachClusterNodeVolumeCommandOutput) => void
+  ): void;
+  detachClusterNodeVolume(
+    args: DetachClusterNodeVolumeCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DetachClusterNodeVolumeCommandOutput) => void
   ): void;
 
   /**
@@ -5366,6 +5534,23 @@ export interface SageMaker {
     args: ListCandidatesForAutoMLJobCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListCandidatesForAutoMLJobCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListClusterEventsCommand}
+   */
+  listClusterEvents(
+    args: ListClusterEventsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListClusterEventsCommandOutput>;
+  listClusterEvents(
+    args: ListClusterEventsCommandInput,
+    cb: (err: any, data?: ListClusterEventsCommandOutput) => void
+  ): void;
+  listClusterEvents(
+    args: ListClusterEventsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListClusterEventsCommandOutput) => void
   ): void;
 
   /**
@@ -6282,6 +6467,23 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link ListPipelineVersionsCommand}
+   */
+  listPipelineVersions(
+    args: ListPipelineVersionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListPipelineVersionsCommandOutput>;
+  listPipelineVersions(
+    args: ListPipelineVersionsCommandInput,
+    cb: (err: any, data?: ListPipelineVersionsCommandOutput) => void
+  ): void;
+  listPipelineVersions(
+    args: ListPipelineVersionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListPipelineVersionsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ListProcessingJobsCommand}
    */
   listProcessingJobs(): Promise<ListProcessingJobsCommandOutput>;
@@ -6504,6 +6706,23 @@ export interface SageMaker {
     args: ListTrialsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListTrialsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListUltraServersByReservedCapacityCommand}
+   */
+  listUltraServersByReservedCapacity(
+    args: ListUltraServersByReservedCapacityCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ListUltraServersByReservedCapacityCommandOutput>;
+  listUltraServersByReservedCapacity(
+    args: ListUltraServersByReservedCapacityCommandInput,
+    cb: (err: any, data?: ListUltraServersByReservedCapacityCommandOutput) => void
+  ): void;
+  listUltraServersByReservedCapacity(
+    args: ListUltraServersByReservedCapacityCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListUltraServersByReservedCapacityCommandOutput) => void
   ): void;
 
   /**
@@ -6790,6 +7009,17 @@ export interface SageMaker {
     args: StartPipelineExecutionCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: StartPipelineExecutionCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link StartSessionCommand}
+   */
+  startSession(args: StartSessionCommandInput, options?: __HttpHandlerOptions): Promise<StartSessionCommandOutput>;
+  startSession(args: StartSessionCommandInput, cb: (err: any, data?: StartSessionCommandOutput) => void): void;
+  startSession(
+    args: StartSessionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StartSessionCommandOutput) => void
   ): void;
 
   /**
@@ -7594,6 +7824,23 @@ export interface SageMaker {
   ): void;
 
   /**
+   * @see {@link UpdatePipelineVersionCommand}
+   */
+  updatePipelineVersion(
+    args: UpdatePipelineVersionCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdatePipelineVersionCommandOutput>;
+  updatePipelineVersion(
+    args: UpdatePipelineVersionCommandInput,
+    cb: (err: any, data?: UpdatePipelineVersionCommandOutput) => void
+  ): void;
+  updatePipelineVersion(
+    args: UpdatePipelineVersionCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdatePipelineVersionCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link UpdateProjectCommand}
    */
   updateProject(args: UpdateProjectCommandInput, options?: __HttpHandlerOptions): Promise<UpdateProjectCommandOutput>;
@@ -7707,22 +7954,7 @@ export interface SageMaker {
 }
 
 /**
- * <p>Provides APIs for creating and managing SageMaker resources. </p>
- *          <p>Other Resources:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer
- *                         Guide</a>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/augmented-ai/2019-11-07/APIReference/Welcome.html">Amazon Augmented AI
- *                         Runtime API Reference</a>
- *                </p>
- *             </li>
- *          </ul>
+ * <p>Provides APIs for creating and managing SageMaker resources. </p> <p>Other Resources:</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer Guide</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/augmented-ai/2019-11-07/APIReference/Welcome.html">Amazon Augmented AI Runtime API Reference</a> </p> </li> </ul>
  * @public
  */
 export class SageMaker extends SageMakerClient implements SageMaker {}

@@ -139,6 +139,9 @@ import {
   GeneratedPolicyResult,
   IamRoleConfiguration,
   InlineArchiveRule,
+  InternalAccessAnalysisRule,
+  InternalAccessAnalysisRuleCriteria,
+  InternalAccessConfiguration,
   InternalServerException,
   InternetConfiguration,
   InvalidParameterException,
@@ -156,9 +159,11 @@ import {
   RdsDbSnapshotConfiguration,
   RecommendedStep,
   ResourceNotFoundException,
+  ResourceType,
   S3AccessPointConfiguration,
   S3BucketAclGrantConfiguration,
   S3BucketConfiguration,
+  S3ExpressDirectoryAccessPointConfiguration,
   S3ExpressDirectoryBucketConfiguration,
   S3PublicAccessBlockConfiguration,
   SecretsManagerSecretConfiguration,
@@ -2050,6 +2055,14 @@ const se_CloudTrailDetails = (input: CloudTrailDetails, context: __SerdeContext)
 
 // se_InlineArchiveRulesList omitted.
 
+// se_InternalAccessAnalysisRule omitted.
+
+// se_InternalAccessAnalysisRuleCriteria omitted.
+
+// se_InternalAccessAnalysisRuleCriteriaList omitted.
+
+// se_InternalAccessConfiguration omitted.
+
 // se_InternetConfiguration omitted.
 
 // se_KmsConstraintsMap omitted.
@@ -2088,7 +2101,11 @@ const se_CloudTrailDetails = (input: CloudTrailDetails, context: __SerdeContext)
 
 // se_RegionList omitted.
 
+// se_ResourceArnsList omitted.
+
 // se_ResourcesList omitted.
+
+// se_ResourceTypeList omitted.
 
 // se_S3AccessPointConfiguration omitted.
 
@@ -2099,6 +2116,10 @@ const se_CloudTrailDetails = (input: CloudTrailDetails, context: __SerdeContext)
 // se_S3BucketAclGrantConfigurationsList omitted.
 
 // se_S3BucketConfiguration omitted.
+
+// se_S3ExpressDirectoryAccessPointConfiguration omitted.
+
+// se_S3ExpressDirectoryAccessPointConfigurationsMap omitted.
 
 // se_S3ExpressDirectoryBucketConfiguration omitted.
 
@@ -2371,6 +2392,11 @@ const de_FindingDetails = (output: any, context: __SerdeContext): FindingDetails
       externalAccessDetails: _json(output.externalAccessDetails),
     };
   }
+  if (output.internalAccessDetails != null) {
+    return {
+      internalAccessDetails: _json(output.internalAccessDetails),
+    };
+  }
   if (output.unusedIamRoleDetails != null) {
     return {
       unusedIamRoleDetails: de_UnusedIamRoleDetails(output.unusedIamRoleDetails, context),
@@ -2508,6 +2534,22 @@ const de_GeneratedPolicyResult = (output: any, context: __SerdeContext): Generat
 
 // de_IamRoleConfiguration omitted.
 
+// de_InternalAccessAnalysisRule omitted.
+
+// de_InternalAccessAnalysisRuleCriteria omitted.
+
+// de_InternalAccessAnalysisRuleCriteriaList omitted.
+
+// de_InternalAccessConfiguration omitted.
+
+// de_InternalAccessDetails omitted.
+
+// de_InternalAccessFindingsStatistics omitted.
+
+// de_InternalAccessResourceTypeDetails omitted.
+
+// de_InternalAccessResourceTypeStatisticsMap omitted.
+
 // de_InternetConfiguration omitted.
 
 /**
@@ -2629,7 +2671,11 @@ const de_RecommendedStepList = (output: any, context: __SerdeContext): Recommend
 
 // de_RegionList omitted.
 
+// de_ResourceArnsList omitted.
+
 // de_ResourceTypeDetails omitted.
+
+// de_ResourceTypeList omitted.
 
 // de_ResourceTypeStatisticsMap omitted.
 
@@ -2642,6 +2688,10 @@ const de_RecommendedStepList = (output: any, context: __SerdeContext): Recommend
 // de_S3BucketAclGrantConfigurationsList omitted.
 
 // de_S3BucketConfiguration omitted.
+
+// de_S3ExpressDirectoryAccessPointConfiguration omitted.
+
+// de_S3ExpressDirectoryAccessPointConfigurationsMap omitted.
 
 // de_S3ExpressDirectoryBucketConfiguration omitted.
 

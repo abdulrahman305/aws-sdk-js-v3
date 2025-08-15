@@ -38,8 +38,7 @@ export const EnrollmentStatus = {
 export type EnrollmentStatus = (typeof EnrollmentStatus)[keyof typeof EnrollmentStatus];
 
 /**
- * <p>Describes the enrollment status of an organization's member accounts in Cost Optimization
- *       Hub.</p>
+ * <p>Describes the enrollment status of an organization's member accounts in Cost Optimization Hub.</p>
  * @public
  */
 export interface AccountEnrollmentStatus {
@@ -103,8 +102,145 @@ export const AllocationStrategy = {
 export type AllocationStrategy = (typeof AllocationStrategy)[keyof typeof AllocationStrategy];
 
 /**
- * <p>Describes the Amazon Elastic Block Store performance configuration of the current and
- *       recommended resource configuration for a recommendation.</p>
+ * <p>The Aurora DB cluster storage configuration used for recommendations.</p>
+ * @public
+ */
+export interface AuroraDbClusterStorageConfiguration {
+  /**
+   * <p>The storage type to associate with the Aurora DB cluster.</p>
+   * @public
+   */
+  storageType?: string | undefined;
+}
+
+/**
+ * <p>Estimated discount details of the current and recommended resource configuration for a recommendation.</p>
+ * @public
+ */
+export interface EstimatedDiscounts {
+  /**
+   * <p>Estimated Savings Plans discounts.</p>
+   * @public
+   */
+  savingsPlansDiscount?: number | undefined;
+
+  /**
+   * <p>Estimated reserved instance discounts.</p>
+   * @public
+   */
+  reservedInstancesDiscount?: number | undefined;
+
+  /**
+   * <p>Estimated other discounts include all discounts that are not itemized. Itemized discounts include <code>reservedInstanceDiscount</code> and <code>savingsPlansDiscount</code>.</p>
+   * @public
+   */
+  otherDiscount?: number | undefined;
+}
+
+/**
+ * <p>Contains pricing information about the specified resource.</p>
+ * @public
+ */
+export interface ResourcePricing {
+  /**
+   * <p>The savings estimate using Amazon Web Services public pricing without incorporating any discounts.</p>
+   * @public
+   */
+  estimatedCostBeforeDiscounts?: number | undefined;
+
+  /**
+   * <p>The estimated net unused amortized commitment for the recommendation.</p>
+   * @public
+   */
+  estimatedNetUnusedAmortizedCommitments?: number | undefined;
+
+  /**
+   * <p>The estimated discounts for a recommendation.</p>
+   * @public
+   */
+  estimatedDiscounts?: EstimatedDiscounts | undefined;
+
+  /**
+   * <p>The savings estimate incorporating all discounts with Amazon Web Services, such as Reserved Instances and Savings Plans.</p>
+   * @public
+   */
+  estimatedCostAfterDiscounts?: number | undefined;
+}
+
+/**
+ * <p>Details about the usage.</p>
+ * @public
+ */
+export interface Usage {
+  /**
+   * <p>The usage type.</p>
+   * @public
+   */
+  usageType?: string | undefined;
+
+  /**
+   * <p>The usage amount.</p>
+   * @public
+   */
+  usageAmount?: number | undefined;
+
+  /**
+   * <p>The operation value.</p>
+   * @public
+   */
+  operation?: string | undefined;
+
+  /**
+   * <p>The product code.</p>
+   * @public
+   */
+  productCode?: string | undefined;
+
+  /**
+   * <p>The usage unit.</p>
+   * @public
+   */
+  unit?: string | undefined;
+}
+
+/**
+ * <p>Cost impact of the resource recommendation.</p>
+ * @public
+ */
+export interface ResourceCostCalculation {
+  /**
+   * <p>Usage details of the resource recommendation.</p>
+   * @public
+   */
+  usages?: Usage[] | undefined;
+
+  /**
+   * <p>Pricing details of the resource recommendation.</p>
+   * @public
+   */
+  pricing?: ResourcePricing | undefined;
+}
+
+/**
+ * <p>Contains the details of an Aurora DB cluster storage.</p>
+ * @public
+ */
+export interface AuroraDbClusterStorage {
+  /**
+   * <p>The Aurora DB cluster storage configuration used for recommendations.</p>
+   * @public
+   */
+  configuration?: AuroraDbClusterStorageConfiguration | undefined;
+
+  /**
+   * <p>Cost impact of the resource recommendation.</p>
+   * @public
+   */
+  costCalculation?: ResourceCostCalculation | undefined;
+}
+
+/**
+ * <p>Describes the Amazon Elastic Block Store performance configuration of the current and recommended resource configuration for a recommendation.</p>
  * @public
  */
 export interface BlockStoragePerformanceConfiguration {
@@ -122,8 +258,7 @@ export interface BlockStoragePerformanceConfiguration {
 }
 
 /**
- * <p>Describes the performance configuration for compute services such as Amazon EC2, Lambda,
- *       and ECS.</p>
+ * <p>Describes the performance configuration for compute services such as Amazon EC2, Lambda, and ECS.</p>
  * @public
  */
 export interface ComputeConfiguration {
@@ -146,8 +281,7 @@ export interface ComputeConfiguration {
   architecture?: string | undefined;
 
   /**
-   * <p>The platform of the resource. The platform is the specific combination of operating
-   *       system, license model, and software on an instance.</p>
+   * <p>The platform of the resource. The platform is the specific combination of operating system, license model, and software on an instance.</p>
    * @public
    */
   platform?: string | undefined;
@@ -159,10 +293,7 @@ export interface ComputeConfiguration {
  */
 export interface ComputeSavingsPlansConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for. Amazon Web Services calculates
-   *       recommendations including the management account and member accounts if the value is set to
-   *         <code>PAYER</code>. If the value is <code>LINKED</code>, recommendations are calculated for
-   *       individual member accounts only.</p>
+   * <p>The account scope for which you want recommendations. Amazon Web Services calculates recommendations including the management account and member accounts if the value is set to <code>PAYER</code>. If the value is <code>LINKED</code>, recommendations are calculated for individual member accounts only.</p>
    * @public
    */
   accountScope?: string | undefined;
@@ -270,6 +401,53 @@ export type MemberAccountDiscountVisibility =
  * @public
  * @enum
  */
+export const PaymentOption = {
+  ALL_UPFRONT: "AllUpfront",
+  NO_UPFRONT: "NoUpfront",
+  PARTIAL_UPFRONT: "PartialUpfront",
+} as const;
+
+/**
+ * @public
+ */
+export type PaymentOption = (typeof PaymentOption)[keyof typeof PaymentOption];
+
+/**
+ * @public
+ * @enum
+ */
+export const Term = {
+  ONE_YEAR: "OneYear",
+  THREE_YEARS: "ThreeYears",
+} as const;
+
+/**
+ * @public
+ */
+export type Term = (typeof Term)[keyof typeof Term];
+
+/**
+ * <p>The preferred configuration for Reserved Instances and Savings Plans commitment-based discounts, consisting of a payment option and a commitment duration.</p>
+ * @public
+ */
+export interface PreferredCommitment {
+  /**
+   * <p>The preferred length of the commitment period. If the value is null, it will default to <code>ThreeYears</code> (highest savings) where applicable.</p>
+   * @public
+   */
+  term?: Term | undefined;
+
+  /**
+   * <p>The preferred upfront payment structure for commitments. If the value is null, it will default to <code>AllUpfront</code> (highest savings) where applicable.</p>
+   * @public
+   */
+  paymentOption?: PaymentOption | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const SavingsEstimationMode = {
   AFTER_DISCOUNTS: "AfterDiscounts",
   BEFORE_DISCOUNTS: "BeforeDiscounts",
@@ -295,11 +473,16 @@ export interface GetPreferencesResponse {
    * @public
    */
   memberAccountDiscountVisibility?: MemberAccountDiscountVisibility | undefined;
+
+  /**
+   * <p>Retrieves the current preferences for how Reserved Instances and Savings Plans cost-saving opportunities are prioritized in terms of payment option and term length.</p>
+   * @public
+   */
+  preferredCommitment?: PreferredCommitment | undefined;
 }
 
 /**
- * <p>An error on the server occurred during the processing of your request. Try again
- *       later.</p>
+ * <p>An error on the server occurred during the processing of your request. Try again later.</p>
  * @public
  */
 export class InternalServerException extends __BaseException {
@@ -339,8 +522,7 @@ export class ThrottlingException extends __BaseException {
 }
 
 /**
- * <p>The input failed to meet the constraints specified by the Amazon Web Services service in a
- *       specified field.</p>
+ * <p>The input failed to meet the constraints specified by the Amazon Web Services service in a specified field.</p>
  * @public
  */
 export interface ValidationExceptionDetail {
@@ -372,8 +554,7 @@ export const ValidationExceptionReason = {
 export type ValidationExceptionReason = (typeof ValidationExceptionReason)[keyof typeof ValidationExceptionReason];
 
 /**
- * <p>The input fails to satisfy the constraints specified by an Amazon Web Services
- *       service.</p>
+ * <p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>
  * @public
  */
 export class ValidationException extends __BaseException {
@@ -415,6 +596,126 @@ export interface GetRecommendationRequest {
    * @public
    */
   recommendationId: string | undefined;
+}
+
+/**
+ * <p>The DynamoDB reserved capacity configuration used for recommendations.</p>
+ * @public
+ */
+export interface DynamoDbReservedCapacityConfiguration {
+  /**
+   * <p>The account scope for which you want recommendations.</p>
+   * @public
+   */
+  accountScope?: string | undefined;
+
+  /**
+   * <p>The service for which you want recommendations.</p>
+   * @public
+   */
+  service?: string | undefined;
+
+  /**
+   * <p>The reserved capacity recommendation term in years.</p>
+   * @public
+   */
+  term?: string | undefined;
+
+  /**
+   * <p>The payment option for the commitment.</p>
+   * @public
+   */
+  paymentOption?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region of the commitment.</p>
+   * @public
+   */
+  reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing this reserved capacity costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing this reserved capacity costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of reserved capacity units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  numberOfCapacityUnitsToPurchase?: string | undefined;
+
+  /**
+   * <p>The capacity unit of the recommended reservation.</p>
+   * @public
+   */
+  capacityUnits?: string | undefined;
+}
+
+/**
+ * <p>Pricing details for your recommended reserved instance.</p>
+ * @public
+ */
+export interface ReservedInstancesPricing {
+  /**
+   * <p>The remaining On-Demand cost estimated to not be covered by the recommended reserved instance, over the length of the lookback period.</p>
+   * @public
+   */
+  estimatedOnDemandCost?: number | undefined;
+
+  /**
+   * <p>The cost of paying for the recommended reserved instance monthly.</p>
+   * @public
+   */
+  monthlyReservationEligibleCost?: number | undefined;
+
+  /**
+   * <p>The savings percentage relative to the total On-Demand costs that are associated with this instance.</p>
+   * @public
+   */
+  savingsPercentage?: number | undefined;
+
+  /**
+   * <p>The estimated cost of your recurring monthly fees for the recommended reserved instance across the month.</p>
+   * @public
+   */
+  estimatedMonthlyAmortizedReservationCost?: number | undefined;
+}
+
+/**
+ * <p>Cost impact of the purchase recommendation.</p>
+ * @public
+ */
+export interface ReservedInstancesCostCalculation {
+  /**
+   * <p>Pricing details of the purchase recommendation.</p>
+   * @public
+   */
+  pricing?: ReservedInstancesPricing | undefined;
+}
+
+/**
+ * <p>The DynamoDB reserved capacity recommendation details.</p>
+ * @public
+ */
+export interface DynamoDbReservedCapacity {
+  /**
+   * <p>The DynamoDB reserved capacity configuration used for recommendations.</p>
+   * @public
+   */
+  configuration?: DynamoDbReservedCapacityConfiguration | undefined;
+
+  /**
+   * <p>Cost impact of the purchase recommendation.</p>
+   * @public
+   */
+  costCalculation?: ReservedInstancesCostCalculation | undefined;
 }
 
 /**
@@ -460,120 +761,7 @@ export interface EbsVolumeConfiguration {
 }
 
 /**
- * <p>Estimated discount details of the current and recommended resource configuration for a
- *       recommendation.</p>
- * @public
- */
-export interface EstimatedDiscounts {
-  /**
-   * <p>Estimated Savings Plans discounts.</p>
-   * @public
-   */
-  savingsPlansDiscount?: number | undefined;
-
-  /**
-   * <p>Estimated reserved instance discounts.</p>
-   * @public
-   */
-  reservedInstancesDiscount?: number | undefined;
-
-  /**
-   * <p>Estimated other discounts include all discounts that are not itemized. Itemized discounts
-   *       include <code>reservedInstanceDiscount</code> and <code>savingsPlansDiscount</code>.</p>
-   * @public
-   */
-  otherDiscount?: number | undefined;
-}
-
-/**
- * <p>Contains pricing information about the specified resource.</p>
- * @public
- */
-export interface ResourcePricing {
-  /**
-   * <p>The savings estimate using Amazon Web Services public pricing without incorporating any
-   *       discounts.</p>
-   * @public
-   */
-  estimatedCostBeforeDiscounts?: number | undefined;
-
-  /**
-   * <p>The estimated net unused amortized commitment for the recommendation.</p>
-   * @public
-   */
-  estimatedNetUnusedAmortizedCommitments?: number | undefined;
-
-  /**
-   * <p>The estimated discounts for a recommendation.</p>
-   * @public
-   */
-  estimatedDiscounts?: EstimatedDiscounts | undefined;
-
-  /**
-   * <p>The savings estimate incorporating all discounts with Amazon Web Services, such as Reserved
-   *       Instances and Savings Plans.</p>
-   * @public
-   */
-  estimatedCostAfterDiscounts?: number | undefined;
-}
-
-/**
- * <p>Details about the usage.</p>
- * @public
- */
-export interface Usage {
-  /**
-   * <p>The usage type.</p>
-   * @public
-   */
-  usageType?: string | undefined;
-
-  /**
-   * <p>The usage amount.</p>
-   * @public
-   */
-  usageAmount?: number | undefined;
-
-  /**
-   * <p>The operation value.</p>
-   * @public
-   */
-  operation?: string | undefined;
-
-  /**
-   * <p>The product code.</p>
-   * @public
-   */
-  productCode?: string | undefined;
-
-  /**
-   * <p>The usage unit.</p>
-   * @public
-   */
-  unit?: string | undefined;
-}
-
-/**
- * <p>Cost impact of the resource recommendation.</p>
- * @public
- */
-export interface ResourceCostCalculation {
-  /**
-   * <p>Usage details of the resource recommendation.</p>
-   * @public
-   */
-  usages?: Usage[] | undefined;
-
-  /**
-   * <p>Pricing details of the resource recommendation.</p>
-   * @public
-   */
-  pricing?: ResourcePricing | undefined;
-}
-
-/**
- * <p>Describes the Amazon Elastic Block Store volume configuration of the current and recommended
- *       resource configuration for a recommendation.</p>
+ * <p>Describes the Amazon Elastic Block Store volume configuration of the current and recommended resource configuration for a recommendation.</p>
  * @public
  */
 export interface EbsVolume {
@@ -634,8 +822,7 @@ export type Ec2AutoScalingGroupType = (typeof Ec2AutoScalingGroupType)[keyof typ
  */
 export interface Ec2AutoScalingGroupConfiguration {
   /**
-   * <p>Details about the instance for the EC2 Auto Scaling group with a single instance
-   *       type.</p>
+   * <p>Details about the instance for the EC2 Auto Scaling group with a single instance type.</p>
    * @public
    */
   instance?: InstanceConfiguration | undefined;
@@ -647,15 +834,13 @@ export interface Ec2AutoScalingGroupConfiguration {
   mixedInstances?: MixedInstanceConfiguration[] | undefined;
 
   /**
-   * <p>The type of EC2 Auto Scaling group, showing whether it consists of a single instance type
-   *       or mixed instance types.</p>
+   * <p>The type of EC2 Auto Scaling group, showing whether it consists of a single instance type or mixed instance types.</p>
    * @public
    */
   type?: Ec2AutoScalingGroupType | undefined;
 
   /**
-   * <p>The strategy used for allocating instances, based on a predefined priority order or based
-   *       on the lowest available price.</p>
+   * <p>The strategy used for allocating instances, based on a predefined priority order or based on the lowest available price.</p>
    * @public
    */
   allocationStrategy?: AllocationStrategy | undefined;
@@ -692,8 +877,7 @@ export interface Ec2InstanceConfiguration {
 }
 
 /**
- * <p>Describes the EC2 instance configuration of the current and recommended resource
- *       configuration for a recommendation.</p>
+ * <p>Describes the EC2 instance configuration of the current and recommended resource configuration for a recommendation.</p>
  * @public
  */
 export interface Ec2Instance {
@@ -716,7 +900,7 @@ export interface Ec2Instance {
  */
 export interface Ec2InstanceSavingsPlansConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
@@ -776,23 +960,16 @@ export interface Ec2InstanceSavingsPlans {
  */
 export interface Ec2ReservedInstancesConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
 
   /**
-   * <p>The service that you want your recommendations for.</p>
+   * <p>The service for which you want recommendations.</p>
    * @public
    */
   service?: string | undefined;
-
-  /**
-   * <p>The number of normalized units that Amazon Web Services recommends that you
-   *       purchase.</p>
-   * @public
-   */
-  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The reserved instances recommendation term in years.</p>
@@ -805,6 +982,30 @@ export interface Ec2ReservedInstancesConfiguration {
    * @public
    */
   paymentOption?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region of the commitment.</p>
+   * @public
+   */
+  reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing this instance costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing these reserved instances costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
@@ -831,20 +1032,13 @@ export interface Ec2ReservedInstancesConfiguration {
   instanceType?: string | undefined;
 
   /**
-   * <p>The Amazon Web Services Region of the commitment.</p>
-   * @public
-   */
-  reservedInstancesRegion?: string | undefined;
-
-  /**
    * <p>Determines whether the recommendation is for a current generation instance.</p>
    * @public
    */
   currentGeneration?: string | undefined;
 
   /**
-   * <p>The platform of the recommended reservation. The platform is the specific combination of
-   *       operating system, license model, and software on an instance.</p>
+   * <p>The platform of the recommended reservation. The platform is the specific combination of operating system, license model, and software on an instance.</p>
    * @public
    */
   platform?: string | undefined;
@@ -860,63 +1054,6 @@ export interface Ec2ReservedInstancesConfiguration {
    * @public
    */
   sizeFlexEligible?: boolean | undefined;
-
-  /**
-   * <p>How much purchasing this instance costs you upfront.</p>
-   * @public
-   */
-  upfrontCost?: string | undefined;
-
-  /**
-   * <p>How much purchasing reserved instances costs you on a monthly basis.</p>
-   * @public
-   */
-  monthlyRecurringCost?: string | undefined;
-}
-
-/**
- * <p>Pricing details for your recommended reserved instance.</p>
- * @public
- */
-export interface ReservedInstancesPricing {
-  /**
-   * <p>The remaining On-Demand cost estimated to not be covered by the recommended reserved
-   *       instance, over the length of the lookback period.</p>
-   * @public
-   */
-  estimatedOnDemandCost?: number | undefined;
-
-  /**
-   * <p>The cost of paying for the recommended reserved instance monthly.</p>
-   * @public
-   */
-  monthlyReservationEligibleCost?: number | undefined;
-
-  /**
-   * <p>The savings percentage relative to the total On-Demand costs that are associated with this
-   *       instance.</p>
-   * @public
-   */
-  savingsPercentage?: number | undefined;
-
-  /**
-   * <p>The estimated cost of your recurring monthly fees for the recommended reserved instance
-   *       across the month.</p>
-   * @public
-   */
-  estimatedMonthlyAmortizedReservationCost?: number | undefined;
-}
-
-/**
- * <p>Cost impact of the purchase recommendation.</p>
- * @public
- */
-export interface ReservedInstancesCostCalculation {
-  /**
-   * <p>Pricing details of the purchase recommendation.</p>
-   * @public
-   */
-  pricing?: ReservedInstancesPricing | undefined;
 }
 
 /**
@@ -973,23 +1110,16 @@ export interface EcsService {
  */
 export interface ElastiCacheReservedInstancesConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
 
   /**
-   * <p>The service that you want your recommendations for.</p>
+   * <p>The service for which you want recommendations.</p>
    * @public
    */
   service?: string | undefined;
-
-  /**
-   * <p>The number of normalized units that Amazon Web Services recommends that you
-   *       purchase.</p>
-   * @public
-   */
-  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The reserved instances recommendation term in years.</p>
@@ -1002,6 +1132,30 @@ export interface ElastiCacheReservedInstancesConfiguration {
    * @public
    */
   paymentOption?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region of the commitment.</p>
+   * @public
+   */
+  reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing this instance costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing these reserved instances costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
@@ -1022,12 +1176,6 @@ export interface ElastiCacheReservedInstancesConfiguration {
   instanceType?: string | undefined;
 
   /**
-   * <p>The Amazon Web Services Region of the commitment.</p>
-   * @public
-   */
-  reservedInstancesRegion?: string | undefined;
-
-  /**
    * <p>Determines whether the recommendation is for a current generation instance.</p>
    * @public
    */
@@ -1038,18 +1186,6 @@ export interface ElastiCacheReservedInstancesConfiguration {
    * @public
    */
   sizeFlexEligible?: boolean | undefined;
-
-  /**
-   * <p>How much purchasing this instance costs you upfront.</p>
-   * @public
-   */
-  upfrontCost?: string | undefined;
-
-  /**
-   * <p>How much purchasing reserved instances costs you on a monthly basis.</p>
-   * @public
-   */
-  monthlyRecurringCost?: string | undefined;
 }
 
 /**
@@ -1101,28 +1237,21 @@ export interface LambdaFunction {
 }
 
 /**
- * <p>The OpenSearch reserved instances configuration used for recommendations.</p>
+ * <p>The MemoryDB reserved instances configuration used for recommendations.</p> <note> <p>While the API reference uses "MemoryDB reserved instances", the user guide and other documentation refer to them as "MemoryDB reserved nodes", as the terms are used interchangeably.</p> </note>
  * @public
  */
-export interface OpenSearchReservedInstancesConfiguration {
+export interface MemoryDbReservedInstancesConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
 
   /**
-   * <p>The service that you want your recommendations for.</p>
+   * <p>The service for which you want recommendations.</p>
    * @public
    */
   service?: string | undefined;
-
-  /**
-   * <p>The number of normalized units that Amazon Web Services recommends that you
-   *       purchase.</p>
-   * @public
-   */
-  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The reserved instances recommendation term in years.</p>
@@ -1137,6 +1266,30 @@ export interface OpenSearchReservedInstancesConfiguration {
   paymentOption?: string | undefined;
 
   /**
+   * <p>The Amazon Web Services Region of the commitment.</p>
+   * @public
+   */
+  reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing these reserved instances costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing these reserved instances costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  normalizedUnitsToPurchase?: string | undefined;
+
+  /**
    * <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
    * @public
    */
@@ -1149,10 +1302,106 @@ export interface OpenSearchReservedInstancesConfiguration {
   instanceType?: string | undefined;
 
   /**
+   * <p>The instance family of the recommended reservation.</p>
+   * @public
+   */
+  instanceFamily?: string | undefined;
+
+  /**
+   * <p>Determines whether the recommendation is size flexible.</p>
+   * @public
+   */
+  sizeFlexEligible?: boolean | undefined;
+
+  /**
+   * <p>Determines whether the recommendation is for a current generation instance.</p>
+   * @public
+   */
+  currentGeneration?: string | undefined;
+}
+
+/**
+ * <p>The MemoryDB reserved instances recommendation details.</p> <note> <p>While the API reference uses "MemoryDB reserved instances", the user guide and other documentation refer to them as "MemoryDB reserved nodes", as the terms are used interchangeably.</p> </note>
+ * @public
+ */
+export interface MemoryDbReservedInstances {
+  /**
+   * <p>The MemoryDB reserved instances configuration used for recommendations.</p>
+   * @public
+   */
+  configuration?: MemoryDbReservedInstancesConfiguration | undefined;
+
+  /**
+   * <p>Cost impact of the purchase recommendation.</p>
+   * @public
+   */
+  costCalculation?: ReservedInstancesCostCalculation | undefined;
+}
+
+/**
+ * <p>The OpenSearch reserved instances configuration used for recommendations.</p>
+ * @public
+ */
+export interface OpenSearchReservedInstancesConfiguration {
+  /**
+   * <p>The account scope for which you want recommendations.</p>
+   * @public
+   */
+  accountScope?: string | undefined;
+
+  /**
+   * <p>The service for which you want recommendations.</p>
+   * @public
+   */
+  service?: string | undefined;
+
+  /**
+   * <p>The reserved instances recommendation term in years.</p>
+   * @public
+   */
+  term?: string | undefined;
+
+  /**
+   * <p>The payment option for the commitment.</p>
+   * @public
+   */
+  paymentOption?: string | undefined;
+
+  /**
    * <p>The Amazon Web Services Region of the commitment.</p>
    * @public
    */
   reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing this instance costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing these reserved instances costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  normalizedUnitsToPurchase?: string | undefined;
+
+  /**
+   * <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  numberOfInstancesToPurchase?: string | undefined;
+
+  /**
+   * <p>The type of instance that Amazon Web Services recommends.</p>
+   * @public
+   */
+  instanceType?: string | undefined;
 
   /**
    * <p>Determines whether the recommendation is for a current generation instance.</p>
@@ -1165,18 +1414,6 @@ export interface OpenSearchReservedInstancesConfiguration {
    * @public
    */
   sizeFlexEligible?: boolean | undefined;
-
-  /**
-   * <p>How much purchasing this instance costs you upfront.</p>
-   * @public
-   */
-  upfrontCost?: string | undefined;
-
-  /**
-   * <p>How much purchasing reserved instances costs you on a monthly basis.</p>
-   * @public
-   */
-  monthlyRecurringCost?: string | undefined;
 }
 
 /**
@@ -1257,8 +1494,7 @@ export interface RdsDbInstanceStorageConfiguration {
   allocatedStorageInGb?: number | undefined;
 
   /**
-   * <p>The amount of Provisioned IOPS (input/output operations per second) to be initially
-   *       allocated for the DB instance.</p>
+   * <p>The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB instance.</p>
    * @public
    */
   iops?: number | undefined;
@@ -1294,23 +1530,16 @@ export interface RdsDbInstanceStorage {
  */
 export interface RdsReservedInstancesConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
 
   /**
-   * <p>The service that you want your recommendations for.</p>
+   * <p>The service for which you want recommendations.</p>
    * @public
    */
   service?: string | undefined;
-
-  /**
-   * <p>The number of normalized units that Amazon Web Services recommends that you
-   *       purchase.</p>
-   * @public
-   */
-  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The reserved instances recommendation term in years.</p>
@@ -1323,6 +1552,30 @@ export interface RdsReservedInstancesConfiguration {
    * @public
    */
   paymentOption?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region of the commitment.</p>
+   * @public
+   */
+  reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing this instance costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing this instance costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
@@ -1343,12 +1596,6 @@ export interface RdsReservedInstancesConfiguration {
   instanceType?: string | undefined;
 
   /**
-   * <p>The Amazon Web Services Region of the commitment.</p>
-   * @public
-   */
-  reservedInstancesRegion?: string | undefined;
-
-  /**
    * <p>Determines whether the recommendation is size flexible.</p>
    * @public
    */
@@ -1359,18 +1606,6 @@ export interface RdsReservedInstancesConfiguration {
    * @public
    */
   currentGeneration?: string | undefined;
-
-  /**
-   * <p>How much purchasing this instance costs you upfront.</p>
-   * @public
-   */
-  upfrontCost?: string | undefined;
-
-  /**
-   * <p>How much purchasing this instance costs you on a monthly basis.</p>
-   * @public
-   */
-  monthlyRecurringCost?: string | undefined;
 
   /**
    * <p>The license model that the recommended reservation supports.</p>
@@ -1391,8 +1626,7 @@ export interface RdsReservedInstancesConfiguration {
   databaseEngine?: string | undefined;
 
   /**
-   * <p>Determines whether the recommendation is for a reservation in a single Availability Zone
-   *       or a reservation with a backup in a second Availability Zone.</p>
+   * <p>Determines whether the recommendation is for a reservation in a single Availability Zone or a reservation with a backup in a second Availability Zone.</p>
    * @public
    */
   deploymentOption?: string | undefined;
@@ -1422,23 +1656,16 @@ export interface RdsReservedInstances {
  */
 export interface RedshiftReservedInstancesConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
 
   /**
-   * <p>The service that you want your recommendations for.</p>
+   * <p>The service for which you want recommendations.</p>
    * @public
    */
   service?: string | undefined;
-
-  /**
-   * <p>The number of normalized units that Amazon Web Services recommends that you
-   *       purchase.</p>
-   * @public
-   */
-  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The reserved instances recommendation term in years.</p>
@@ -1451,6 +1678,30 @@ export interface RedshiftReservedInstancesConfiguration {
    * @public
    */
   paymentOption?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services Region of the commitment.</p>
+   * @public
+   */
+  reservedInstancesRegion?: string | undefined;
+
+  /**
+   * <p>How much purchasing this instance costs you upfront.</p>
+   * @public
+   */
+  upfrontCost?: string | undefined;
+
+  /**
+   * <p>How much purchasing these reserved instances costs you on a monthly basis.</p>
+   * @public
+   */
+  monthlyRecurringCost?: string | undefined;
+
+  /**
+   * <p>The number of normalized units that Amazon Web Services recommends that you purchase.</p>
+   * @public
+   */
+  normalizedUnitsToPurchase?: string | undefined;
 
   /**
    * <p>The number of instances that Amazon Web Services recommends that you purchase.</p>
@@ -1471,12 +1722,6 @@ export interface RedshiftReservedInstancesConfiguration {
   instanceType?: string | undefined;
 
   /**
-   * <p>The Amazon Web Services Region of the commitment.</p>
-   * @public
-   */
-  reservedInstancesRegion?: string | undefined;
-
-  /**
    * <p>Determines whether the recommendation is size flexible.</p>
    * @public
    */
@@ -1487,18 +1732,6 @@ export interface RedshiftReservedInstancesConfiguration {
    * @public
    */
   currentGeneration?: string | undefined;
-
-  /**
-   * <p>How much purchasing this instance costs you upfront.</p>
-   * @public
-   */
-  upfrontCost?: string | undefined;
-
-  /**
-   * <p>How much purchasing reserved instances costs you on a monthly basis.</p>
-   * @public
-   */
-  monthlyRecurringCost?: string | undefined;
 }
 
 /**
@@ -1525,7 +1758,7 @@ export interface RedshiftReservedInstances {
  */
 export interface SageMakerSavingsPlansConfiguration {
   /**
-   * <p>The account scope that you want your recommendations for.</p>
+   * <p>The account scope for which you want recommendations.</p>
    * @public
    */
   accountScope?: string | undefined;
@@ -1572,7 +1805,9 @@ export interface SageMakerSavingsPlans {
  * @public
  */
 export type ResourceDetails =
+  | ResourceDetails.AuroraDbClusterStorageMember
   | ResourceDetails.ComputeSavingsPlansMember
+  | ResourceDetails.DynamoDbReservedCapacityMember
   | ResourceDetails.EbsVolumeMember
   | ResourceDetails.Ec2AutoScalingGroupMember
   | ResourceDetails.Ec2InstanceMember
@@ -1581,6 +1816,7 @@ export type ResourceDetails =
   | ResourceDetails.EcsServiceMember
   | ResourceDetails.ElastiCacheReservedInstancesMember
   | ResourceDetails.LambdaFunctionMember
+  | ResourceDetails.MemoryDbReservedInstancesMember
   | ResourceDetails.OpenSearchReservedInstancesMember
   | ResourceDetails.RdsDbInstanceMember
   | ResourceDetails.RdsDbInstanceStorageMember
@@ -1613,6 +1849,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1636,6 +1875,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1659,6 +1901,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1682,6 +1927,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1705,6 +1953,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1728,6 +1979,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1751,6 +2005,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1774,6 +2031,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1797,6 +2057,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1820,6 +2083,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1843,6 +2109,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1866,12 +2135,14 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
   /**
-   * <p>The SageMaker AI
-   *       Savings Plans recommendation details.</p>
+   * <p>The SageMaker AI Savings Plans recommendation details.</p>
    * @public
    */
   export interface SageMakerSavingsPlansMember {
@@ -1890,6 +2161,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans: SageMakerSavingsPlans;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1913,6 +2187,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance: RdsDbInstance;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown?: never;
   }
 
@@ -1936,6 +2213,87 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage: RdsDbInstanceStorage;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The Aurora DB cluster storage recommendation details.</p>
+   * @public
+   */
+  export interface AuroraDbClusterStorageMember {
+    lambdaFunction?: never;
+    ecsService?: never;
+    ec2Instance?: never;
+    ebsVolume?: never;
+    ec2AutoScalingGroup?: never;
+    ec2ReservedInstances?: never;
+    rdsReservedInstances?: never;
+    elastiCacheReservedInstances?: never;
+    openSearchReservedInstances?: never;
+    redshiftReservedInstances?: never;
+    ec2InstanceSavingsPlans?: never;
+    computeSavingsPlans?: never;
+    sageMakerSavingsPlans?: never;
+    rdsDbInstance?: never;
+    rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage: AuroraDbClusterStorage;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The DynamoDB reserved capacity recommendation details.</p>
+   * @public
+   */
+  export interface DynamoDbReservedCapacityMember {
+    lambdaFunction?: never;
+    ecsService?: never;
+    ec2Instance?: never;
+    ebsVolume?: never;
+    ec2AutoScalingGroup?: never;
+    ec2ReservedInstances?: never;
+    rdsReservedInstances?: never;
+    elastiCacheReservedInstances?: never;
+    openSearchReservedInstances?: never;
+    redshiftReservedInstances?: never;
+    ec2InstanceSavingsPlans?: never;
+    computeSavingsPlans?: never;
+    sageMakerSavingsPlans?: never;
+    rdsDbInstance?: never;
+    rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity: DynamoDbReservedCapacity;
+    memoryDbReservedInstances?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The MemoryDB reserved instances recommendation details.</p>
+   * @public
+   */
+  export interface MemoryDbReservedInstancesMember {
+    lambdaFunction?: never;
+    ecsService?: never;
+    ec2Instance?: never;
+    ebsVolume?: never;
+    ec2AutoScalingGroup?: never;
+    ec2ReservedInstances?: never;
+    rdsReservedInstances?: never;
+    elastiCacheReservedInstances?: never;
+    openSearchReservedInstances?: never;
+    redshiftReservedInstances?: never;
+    ec2InstanceSavingsPlans?: never;
+    computeSavingsPlans?: never;
+    sageMakerSavingsPlans?: never;
+    rdsDbInstance?: never;
+    rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances: MemoryDbReservedInstances;
     $unknown?: never;
   }
 
@@ -1958,6 +2316,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans?: never;
     rdsDbInstance?: never;
     rdsDbInstanceStorage?: never;
+    auroraDbClusterStorage?: never;
+    dynamoDbReservedCapacity?: never;
+    memoryDbReservedInstances?: never;
     $unknown: [string, any];
   }
 
@@ -1977,6 +2338,9 @@ export namespace ResourceDetails {
     sageMakerSavingsPlans: (value: SageMakerSavingsPlans) => T;
     rdsDbInstance: (value: RdsDbInstance) => T;
     rdsDbInstanceStorage: (value: RdsDbInstanceStorage) => T;
+    auroraDbClusterStorage: (value: AuroraDbClusterStorage) => T;
+    dynamoDbReservedCapacity: (value: DynamoDbReservedCapacity) => T;
+    memoryDbReservedInstances: (value: MemoryDbReservedInstances) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -2000,6 +2364,11 @@ export namespace ResourceDetails {
     if (value.sageMakerSavingsPlans !== undefined) return visitor.sageMakerSavingsPlans(value.sageMakerSavingsPlans);
     if (value.rdsDbInstance !== undefined) return visitor.rdsDbInstance(value.rdsDbInstance);
     if (value.rdsDbInstanceStorage !== undefined) return visitor.rdsDbInstanceStorage(value.rdsDbInstanceStorage);
+    if (value.auroraDbClusterStorage !== undefined) return visitor.auroraDbClusterStorage(value.auroraDbClusterStorage);
+    if (value.dynamoDbReservedCapacity !== undefined)
+      return visitor.dynamoDbReservedCapacity(value.dynamoDbReservedCapacity);
+    if (value.memoryDbReservedInstances !== undefined)
+      return visitor.memoryDbReservedInstances(value.memoryDbReservedInstances);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -2009,7 +2378,9 @@ export namespace ResourceDetails {
  * @enum
  */
 export const ResourceType = {
+  AURORA_DB_CLUSTER_STORAGE: "AuroraDbClusterStorage",
   COMPUTE_SAVINGS_PLANS: "ComputeSavingsPlans",
+  DYNAMO_DB_RESERVED_CAPACITY: "DynamoDbReservedCapacity",
   EBS_VOLUME: "EbsVolume",
   EC2_AUTO_SCALING_GROUP: "Ec2AutoScalingGroup",
   EC2_INSTANCE: "Ec2Instance",
@@ -2018,6 +2389,7 @@ export const ResourceType = {
   ECS_SERVICE: "EcsService",
   ELASTI_CACHE_RESERVED_INSTANCES: "ElastiCacheReservedInstances",
   LAMBDA_FUNCTION: "LambdaFunction",
+  MEMORY_DB_RESERVED_INSTANCES: "MemoryDbReservedInstances",
   OPEN_SEARCH_RESERVED_INSTANCES: "OpenSearchReservedInstances",
   RDS_DB_INSTANCE: "RdsDbInstance",
   RDS_DB_INSTANCE_STORAGE: "RdsDbInstanceStorage",
@@ -2091,8 +2463,7 @@ export interface GetRecommendationResponse {
   recommendationId?: string | undefined;
 
   /**
-   * <p>The unique identifier for the resource. This is the same as the Amazon Resource Name
-   *       (ARN), if available.</p>
+   * <p>The unique identifier for the resource. This is the same as the Amazon Resource Name (ARN), if available.</p>
    * @public
    */
   resourceId?: string | undefined;
@@ -2104,7 +2475,7 @@ export interface GetRecommendationResponse {
   resourceArn?: string | undefined;
 
   /**
-   * <p>The account that the recommendation is for.</p>
+   * <p>The account to which the recommendation applies.</p>
    * @public
    */
   accountId?: string | undefined;
@@ -2128,15 +2499,13 @@ export interface GetRecommendationResponse {
   costCalculationLookbackPeriodInDays?: number | undefined;
 
   /**
-   * <p>The estimated savings percentage relative to the total cost over the cost calculation
-   *       lookback period.</p>
+   * <p>The estimated savings percentage relative to the total cost over the cost calculation lookback period.</p>
    * @public
    */
   estimatedSavingsPercentage?: number | undefined;
 
   /**
-   * <p>The estimated savings amount over the lookback period used to calculate cost impact for a
-   *       recommendation.</p>
+   * <p>The estimated savings amount over the lookback period used to calculate cost impact for a recommendation.</p>
    * @public
    */
   estimatedSavingsOverCostCalculationLookbackPeriod?: number | undefined;
@@ -2287,15 +2656,13 @@ export interface ListEnrollmentStatusesRequest {
  */
 export interface ListEnrollmentStatusesResponse {
   /**
-   * <p>The enrollment status of a specific account ID, including creation and last updated
-   *       timestamps.</p>
+   * <p>The enrollment status of a specific account ID, including creation and last updated timestamps.</p>
    * @public
    */
   items?: AccountEnrollmentStatus[] | undefined;
 
   /**
-   * <p>The enrollment status of all member accounts in the organization if the account is the
-   *       management account or delegated administrator.</p>
+   * <p>The enrollment status of all member accounts in the organization if the account is the management account or delegated administrator.</p>
    * @public
    */
   includeMemberAccounts?: boolean | undefined;
@@ -2308,8 +2675,7 @@ export interface ListEnrollmentStatusesResponse {
 }
 
 /**
- * <p>Describes a filter that returns a more specific list of recommendations. Filters
- *       recommendations by different dimensions.</p>
+ * <p>Describes a filter that returns a more specific list of recommendations. Filters recommendations by different dimensions.</p>
  * @public
  */
 export interface Filter {
@@ -2332,7 +2698,7 @@ export interface Filter {
   implementationEfforts?: ImplementationEffort[] | undefined;
 
   /**
-   * <p>The account that the recommendation is for.</p>
+   * <p>The account to which the recommendation applies.</p>
    * @public
    */
   accountIds?: string[] | undefined;
@@ -2429,8 +2795,7 @@ export interface ListRecommendationsRequest {
   orderBy?: OrderBy | undefined;
 
   /**
-   * <p>List of all recommendations for a resource, or a single recommendation if de-duped by
-   *         <code>resourceId</code>.</p>
+   * <p>List of all recommendations for a resource, or a single recommendation if de-duped by <code>resourceId</code>.</p>
    * @public
    */
   includeAllRecommendations?: boolean | undefined;
@@ -2460,7 +2825,7 @@ export interface Recommendation {
   recommendationId?: string | undefined;
 
   /**
-   * <p>The account that the recommendation is for.</p>
+   * <p>The account to which the recommendation applies.</p>
    * @public
    */
   accountId?: string | undefined;
@@ -2502,8 +2867,7 @@ export interface Recommendation {
   estimatedMonthlySavings?: number | undefined;
 
   /**
-   * <p>The estimated savings percentage relative to the total cost over the cost calculation
-   *       lookback period.</p>
+   * <p>The estimated savings percentage relative to the total cost over the cost calculation lookback period.</p>
    * @public
    */
   estimatedSavingsPercentage?: number | undefined;
@@ -2616,8 +2980,7 @@ export type SummaryMetrics = (typeof SummaryMetrics)[keyof typeof SummaryMetrics
  */
 export interface ListRecommendationSummariesRequest {
   /**
-   * <p>Describes a filter that returns a more specific list of recommendations. Filters
-   *       recommendations by different dimensions.</p>
+   * <p>Describes a filter that returns a more specific list of recommendations. Filters recommendations by different dimensions.</p>
    * @public
    */
   filter?: Filter | undefined;
@@ -2635,8 +2998,7 @@ export interface ListRecommendationSummariesRequest {
   maxResults?: number | undefined;
 
   /**
-   * <p>Additional metrics to be returned for the request. The only valid value is
-   *         <code>savingsPercentage</code>.</p>
+   * <p>Additional metrics to be returned for the request. The only valid value is <code>savingsPercentage</code>.</p>
    * @public
    */
   metrics?: SummaryMetrics[] | undefined;
@@ -2649,8 +3011,7 @@ export interface ListRecommendationSummariesRequest {
 }
 
 /**
- * <p>The summary of rightsizing recommendations, including de-duped savings from all types of
- *       recommendations.</p>
+ * <p>The summary of rightsizing recommendations, including de-duped savings from all types of recommendations.</p>
  * @public
  */
 export interface RecommendationSummary {
@@ -2674,18 +3035,12 @@ export interface RecommendationSummary {
 }
 
 /**
- * <p>The results or descriptions for the additional metrics, based on whether the metrics were
- *       or were not requested.</p>
+ * <p>The results or descriptions for the additional metrics, based on whether the metrics were or were not requested.</p>
  * @public
  */
 export interface SummaryMetricsResult {
   /**
-   * <p>The savings percentage based on your Amazon Web Services spend over the past 30
-   *       days.</p>
-   *          <note>
-   *             <p>Savings percentage is only supported when filtering by Region, account ID, or
-   *         tags.</p>
-   *          </note>
+   * <p>The savings percentage based on your Amazon Web Services spend over the past 30 days.</p> <note> <p>Savings percentage is only supported when filtering by Region, account ID, or tags.</p> </note>
    * @public
    */
   savingsPercentage?: string | undefined;
@@ -2720,8 +3075,7 @@ export interface ListRecommendationSummariesResponse {
   currencyCode?: string | undefined;
 
   /**
-   * <p>The results or descriptions for the additional metrics, based on whether the metrics were
-   *       or were not requested.</p>
+   * <p>The results or descriptions for the additional metrics, based on whether the metrics were or were not requested.</p>
    * @public
    */
   metrics?: SummaryMetricsResult | undefined;
@@ -2744,8 +3098,7 @@ export interface UpdateEnrollmentStatusRequest {
   status: EnrollmentStatus | undefined;
 
   /**
-   * <p>Indicates whether to enroll member accounts of the organization if the account is the
-   *       management account or delegated administrator.</p>
+   * <p>Indicates whether to enroll member accounts of the organization if the account is the management account or delegated administrator.</p>
    * @public
    */
   includeMemberAccounts?: boolean | undefined;
@@ -2777,6 +3130,12 @@ export interface UpdatePreferencesRequest {
    * @public
    */
   memberAccountDiscountVisibility?: MemberAccountDiscountVisibility | undefined;
+
+  /**
+   * <p>Sets the preferences for how Reserved Instances and Savings Plans cost-saving opportunities are prioritized in terms of payment option and term length.</p>
+   * @public
+   */
+  preferredCommitment?: PreferredCommitment | undefined;
 }
 
 /**
@@ -2794,4 +3153,10 @@ export interface UpdatePreferencesResponse {
    * @public
    */
   memberAccountDiscountVisibility?: MemberAccountDiscountVisibility | undefined;
+
+  /**
+   * <p>Shows the updated preferences for how Reserved Instances and Savings Plans cost-saving opportunities are prioritized in terms of payment option and term length.</p>
+   * @public
+   */
+  preferredCommitment?: PreferredCommitment | undefined;
 }

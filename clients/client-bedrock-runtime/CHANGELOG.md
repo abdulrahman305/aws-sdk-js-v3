@@ -3,6 +3,353 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.864.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.863.0...v3.864.0) (2025-08-08)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.863.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.862.0...v3.863.0) (2025-08-07)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.861.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.860.0...v3.861.0) (2025-08-05)
+
+
+### Features
+
+* **client-bedrock-runtime:** This release adds support for Automated Reasoning checks output models for the Amazon Bedrock Guardrails ApplyGuardrail API. ([860cc4f](https://github.com/aws/aws-sdk-js-v3/commit/860cc4f5e2c66080f5405589e57999e4686d5f32))
+
+
+
+
+
+# [3.859.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.858.0...v3.859.0) (2025-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.857.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.856.0...v3.857.0) (2025-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.856.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.855.0...v3.856.0) (2025-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.855.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.854.0...v3.855.0) (2025-07-28)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.848.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.847.0...v3.848.0) (2025-07-17)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.846.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.845.0...v3.846.0) (2025-07-16)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.845.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.844.0...v3.845.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **clients:** upgrade @smithy/middleware-endpoint to fix file/env endpoint resolution ([#7206](https://github.com/aws/aws-sdk-js-v3/issues/7206)) ([37a6275](https://github.com/aws/aws-sdk-js-v3/commit/37a627510bc53ad0ce8d3ef10a2a5ec8ad195ee2))
+
+
+
+
+
+# [3.844.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.843.0...v3.844.0) (2025-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.842.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.841.0...v3.842.0) (2025-07-02)
+
+
+### Features
+
+* **client-bedrock-runtime:** use WebSocketHandler in browser ([#7175](https://github.com/aws/aws-sdk-js-v3/issues/7175)) ([b293971](https://github.com/aws/aws-sdk-js-v3/commit/b29397195b2cbc6da2775654f06bee9517e924d4))
+
+
+
+
+
+# [3.840.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.839.0...v3.840.0) (2025-06-30)
+
+
+### Features
+
+* **client-bedrock-runtime:** Add API Key and document citations support for Bedrock Runtime APIs ([3e92ce7](https://github.com/aws/aws-sdk-js-v3/commit/3e92ce782ebab55e98768dcc65fb5bb509d17c5f))
+
+
+
+
+
+# [3.839.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.838.0...v3.839.0) (2025-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.835.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.834.0...v3.835.0) (2025-06-23)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.830.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.829.0...v3.830.0) (2025-06-16)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.828.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.827.1...v3.828.0) (2025-06-11)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.826.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.825.0...v3.826.0) (2025-06-06)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.825.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.824.0...v3.825.0) (2025-06-05)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.823.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.822.0...v3.823.0) (2025-06-03)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.817.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.816.0...v3.817.0) (2025-05-23)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.816.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.815.0...v3.816.0) (2025-05-22)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.812.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.811.0...v3.812.0) (2025-05-16)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.810.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.809.0...v3.810.0) (2025-05-14)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.808.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.807.0...v3.808.0) (2025-05-12)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.806.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.805.0...v3.806.0) (2025-05-08)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.803.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.802.0...v3.803.0) (2025-05-05)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.799.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.798.0...v3.799.0) (2025-04-29)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.798.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.797.0...v3.798.0) (2025-04-28)
+
+
+### Features
+
+* **client-bedrock-runtime:** This release adds native h2 support for the bedrock runtime API, the support is only limited to SDKs that support h2 requests natively. ([3c9a894](https://github.com/aws/aws-sdk-js-v3/commit/3c9a8946e29aa21770528d5c61b03f1f24f328c5))
+
+
+
+
+
+# [3.797.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.796.0...v3.797.0) (2025-04-25)
+
+
+### Features
+
+* **client-bedrock-runtime:** You can now reference images and documents stored in Amazon S3 when using InvokeModel and Converse APIs with Amazon Nova Lite and Nova Pro. This enables direct integration of S3-stored multimedia assets in your model requests without manual downloading or base64 encoding. ([25f581e](https://github.com/aws/aws-sdk-js-v3/commit/25f581e4aacaeb2f01a17e88807fd2d980786adb))
+
+
+
+
+
+# [3.796.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.795.0...v3.796.0) (2025-04-24)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.787.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.786.0...v3.787.0) (2025-04-10)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.785.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.784.0...v3.785.0) (2025-04-08)
+
+
+### Features
+
+* **client-bedrock-runtime:** This release introduces our latest bedrock runtime API, InvokeModelWithBidirectionalStream. The API supports both input and output streams and is supported by only HTTP2.0. ([8f0175d](https://github.com/aws/aws-sdk-js-v3/commit/8f0175dce0b261ad24afca775d68ffd23b1a3178))
+
+
+
+
+
+# [3.784.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.783.0...v3.784.0) (2025-04-07)
+
+
+### Features
+
+* **client-bedrock-runtime:** New options for how to handle harmful content detected by Amazon Bedrock Guardrails. ([55fb5c5](https://github.com/aws/aws-sdk-js-v3/commit/55fb5c5b5f5a84c4930d2373a9d09e8d02e310b8))
+
+
+
+
+
+# [3.782.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.781.0...v3.782.0) (2025-04-03)
+
+**Note:** Version bump only for package @aws-sdk/client-bedrock-runtime
+
+
+
+
+
+# [3.779.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.778.0...v3.779.0) (2025-03-31)
+
+
+### Features
+
+* **client-bedrock-runtime:** Add Prompt Caching support to Converse and ConverseStream APIs ([e48bc08](https://github.com/aws/aws-sdk-js-v3/commit/e48bc0834f743c979152b7d16bd29cd211342136))
+
+
+
+
+
 # [3.778.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.777.0...v3.778.0) (2025-03-28)
 
 

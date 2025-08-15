@@ -171,6 +171,7 @@ export interface StartDBClusterCommandOutput extends StartDBClusterResult, __Met
  * //         Value: "STRING_VALUE",
  * //       },
  * //     ],
+ * //     GlobalClusterIdentifier: "STRING_VALUE",
  * //     GlobalWriteForwardingStatus: "enabled" || "disabled" || "enabling" || "disabling" || "unknown",
  * //     GlobalWriteForwardingRequested: true || false,
  * //     PendingModifiedValues: { // ClusterPendingModifiedValues
@@ -216,6 +217,7 @@ export interface StartDBClusterCommandOutput extends StartDBClusterResult, __Met
  * //       MaxCapacity: Number("double"),
  * //       SecondsUntilAutoPause: Number("int"),
  * //     },
+ * //     ServerlessV2PlatformVersion: "STRING_VALUE",
  * //     NetworkType: "STRING_VALUE",
  * //     DBSystemId: "STRING_VALUE",
  * //     MasterUserSecret: { // MasterUserSecret
@@ -257,6 +259,9 @@ export interface StartDBClusterCommandOutput extends StartDBClusterResult, __Met
  *
  * @throws {@link InvalidDBInstanceStateFault} (client fault)
  *  <p>The DB instance isn't in a valid state.</p>
+ *
+ * @throws {@link InvalidDBShardGroupStateFault} (client fault)
+ *  <p>The DB shard group must be in the available state.</p>
  *
  * @throws {@link RDSServiceException}
  * <p>Base exception class for all service exceptions from RDS service.</p>

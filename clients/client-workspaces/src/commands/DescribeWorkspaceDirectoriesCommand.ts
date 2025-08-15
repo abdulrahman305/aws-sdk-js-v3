@@ -79,7 +79,6 @@ export interface DescribeWorkspaceDirectoriesCommandOutput
  * //       WorkspaceSecurityGroupId: "STRING_VALUE",
  * //       State: "REGISTERING" || "REGISTERED" || "DEREGISTERING" || "DEREGISTERED" || "ERROR",
  * //       WorkspaceCreationProperties: { // DefaultWorkspaceCreationProperties
- * //         EnableWorkDocs: true || false,
  * //         EnableInternetAccess: true || false,
  * //         DefaultOu: "STRING_VALUE",
  * //         CustomSecurityGroupId: "STRING_VALUE",
@@ -100,6 +99,17 @@ export interface DescribeWorkspaceDirectoriesCommandOutput
  * //         DeviceTypeZeroClient: "ALLOW" || "DENY",
  * //         DeviceTypeLinux: "ALLOW" || "DENY",
  * //         DeviceTypeWorkSpacesThinClient: "ALLOW" || "DENY",
+ * //         AccessEndpointConfig: { // AccessEndpointConfig
+ * //           AccessEndpoints: [ // AccessEndpointList // required
+ * //             { // AccessEndpoint
+ * //               AccessEndpointType: "STREAMING_WSP",
+ * //               VpcEndpointId: "STRING_VALUE",
+ * //             },
+ * //           ],
+ * //           InternetFallbackProtocols: [ // InternetFallbackProtocolList
+ * //             "PCOIP",
+ * //           ],
+ * //         },
  * //       },
  * //       Tenancy: "DEDICATED" || "SHARED",
  * //       SelfservicePermissions: { // SelfservicePermissions

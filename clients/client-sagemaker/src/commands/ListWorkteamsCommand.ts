@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListWorkteamsRequest, ListWorkteamsResponse } from "../models/models_4";
+import { ListWorkteamsRequest, ListWorkteamsResponse } from "../models/models_5";
 import { de_ListWorkteamsCommand, se_ListWorkteamsCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,9 +28,7 @@ export interface ListWorkteamsCommandInput extends ListWorkteamsRequest {}
 export interface ListWorkteamsCommandOutput extends ListWorkteamsResponse, __MetadataBearer {}
 
 /**
- * <p>Gets a list of private work teams that you have defined in a region. The list may be empty if
- *             no work team satisfies the filter specified in the <code>NameContains</code>
- *             parameter.</p>
+ * <p>Gets a list of private work teams that you have defined in a region. The list may be empty if no work team satisfies the filter specified in the <code>NameContains</code> parameter.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

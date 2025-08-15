@@ -65,6 +65,17 @@ export interface SendBulkEmailCommandOutput extends SendBulkEmailResponse, __Met
  *           Value: "STRING_VALUE", // required
  *         },
  *       ],
+ *       Attachments: [ // AttachmentList
+ *         { // Attachment
+ *           RawContent: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")           // required
+ *           ContentDisposition: "ATTACHMENT" || "INLINE",
+ *           FileName: "STRING_VALUE", // required
+ *           ContentDescription: "STRING_VALUE",
+ *           ContentId: "STRING_VALUE",
+ *           ContentTransferEncoding: "BASE64" || "QUOTED_PRINTABLE" || "SEVEN_BIT",
+ *           ContentType: "STRING_VALUE",
+ *         },
+ *       ],
  *     },
  *   },
  *   BulkEmailEntries: [ // BulkEmailEntryList // required
@@ -101,6 +112,7 @@ export interface SendBulkEmailCommandOutput extends SendBulkEmailResponse, __Met
  *   ],
  *   ConfigurationSetName: "STRING_VALUE",
  *   EndpointId: "STRING_VALUE",
+ *   TenantName: "STRING_VALUE",
  * };
  * const command = new SendBulkEmailCommand(input);
  * const response = await client.send(command);

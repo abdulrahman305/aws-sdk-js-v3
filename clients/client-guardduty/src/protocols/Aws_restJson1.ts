@@ -51,9 +51,17 @@ import {
   CreateSampleFindingsCommandOutput,
 } from "../commands/CreateSampleFindingsCommand";
 import {
+  CreateThreatEntitySetCommandInput,
+  CreateThreatEntitySetCommandOutput,
+} from "../commands/CreateThreatEntitySetCommand";
+import {
   CreateThreatIntelSetCommandInput,
   CreateThreatIntelSetCommandOutput,
 } from "../commands/CreateThreatIntelSetCommand";
+import {
+  CreateTrustedEntitySetCommandInput,
+  CreateTrustedEntitySetCommandOutput,
+} from "../commands/CreateTrustedEntitySetCommand";
 import { DeclineInvitationsCommandInput, DeclineInvitationsCommandOutput } from "../commands/DeclineInvitationsCommand";
 import { DeleteDetectorCommandInput, DeleteDetectorCommandOutput } from "../commands/DeleteDetectorCommand";
 import { DeleteFilterCommandInput, DeleteFilterCommandOutput } from "../commands/DeleteFilterCommand";
@@ -69,9 +77,17 @@ import {
   DeletePublishingDestinationCommandOutput,
 } from "../commands/DeletePublishingDestinationCommand";
 import {
+  DeleteThreatEntitySetCommandInput,
+  DeleteThreatEntitySetCommandOutput,
+} from "../commands/DeleteThreatEntitySetCommand";
+import {
   DeleteThreatIntelSetCommandInput,
   DeleteThreatIntelSetCommandOutput,
 } from "../commands/DeleteThreatIntelSetCommand";
+import {
+  DeleteTrustedEntitySetCommandInput,
+  DeleteTrustedEntitySetCommandOutput,
+} from "../commands/DeleteTrustedEntitySetCommand";
 import {
   DescribeMalwareScansCommandInput,
   DescribeMalwareScansCommandOutput,
@@ -143,7 +159,12 @@ import {
   GetRemainingFreeTrialDaysCommandInput,
   GetRemainingFreeTrialDaysCommandOutput,
 } from "../commands/GetRemainingFreeTrialDaysCommand";
+import { GetThreatEntitySetCommandInput, GetThreatEntitySetCommandOutput } from "../commands/GetThreatEntitySetCommand";
 import { GetThreatIntelSetCommandInput, GetThreatIntelSetCommandOutput } from "../commands/GetThreatIntelSetCommand";
+import {
+  GetTrustedEntitySetCommandInput,
+  GetTrustedEntitySetCommandOutput,
+} from "../commands/GetTrustedEntitySetCommand";
 import { GetUsageStatisticsCommandInput, GetUsageStatisticsCommandOutput } from "../commands/GetUsageStatisticsCommand";
 import { InviteMembersCommandInput, InviteMembersCommandOutput } from "../commands/InviteMembersCommand";
 import { ListCoverageCommandInput, ListCoverageCommandOutput } from "../commands/ListCoverageCommand";
@@ -170,9 +191,17 @@ import {
   ListTagsForResourceCommandOutput,
 } from "../commands/ListTagsForResourceCommand";
 import {
+  ListThreatEntitySetsCommandInput,
+  ListThreatEntitySetsCommandOutput,
+} from "../commands/ListThreatEntitySetsCommand";
+import {
   ListThreatIntelSetsCommandInput,
   ListThreatIntelSetsCommandOutput,
 } from "../commands/ListThreatIntelSetsCommand";
+import {
+  ListTrustedEntitySetsCommandInput,
+  ListTrustedEntitySetsCommandOutput,
+} from "../commands/ListTrustedEntitySetsCommand";
 import { StartMalwareScanCommandInput, StartMalwareScanCommandOutput } from "../commands/StartMalwareScanCommand";
 import {
   StartMonitoringMembersCommandInput,
@@ -213,9 +242,17 @@ import {
   UpdatePublishingDestinationCommandOutput,
 } from "../commands/UpdatePublishingDestinationCommand";
 import {
+  UpdateThreatEntitySetCommandInput,
+  UpdateThreatEntitySetCommandOutput,
+} from "../commands/UpdateThreatEntitySetCommand";
+import {
   UpdateThreatIntelSetCommandInput,
   UpdateThreatIntelSetCommandOutput,
 } from "../commands/UpdateThreatIntelSetCommand";
+import {
+  UpdateTrustedEntitySetCommandInput,
+  UpdateTrustedEntitySetCommandOutput,
+} from "../commands/UpdateTrustedEntitySetCommand";
 import { GuardDutyServiceException as __BaseException } from "../models/GuardDutyServiceException";
 import {
   AccessControlList,
@@ -229,6 +266,7 @@ import {
   AccountStatistics,
   Action,
   Actor,
+  ActorProcess,
   AddonDetails,
   AdminAccount,
   Administrator,
@@ -247,6 +285,7 @@ import {
   Condition,
   ConflictException,
   Container,
+  ContainerFindingResource,
   ContainerInstanceDetails,
   Country,
   CoverageEc2InstanceDetails,
@@ -286,6 +325,7 @@ import {
   Ec2NetworkInterface,
   EcsClusterDetails,
   EcsTaskDetails,
+  EksCluster,
   EksClusterDetails,
   Evidence,
   FargateDetails,
@@ -295,7 +335,6 @@ import {
   Finding,
   FindingCriteria,
   FindingStatistics,
-  FindingStatisticType,
   FindingTypeStatistics,
   FlowLogsConfigurationResult,
   FreeTrialFeatureConfigurationResult,
@@ -319,6 +358,7 @@ import {
   KubernetesRoleBindingDetails,
   KubernetesRoleDetails,
   KubernetesUserDetails,
+  KubernetesWorkload,
   KubernetesWorkloadDetails,
   LambdaDetails,
   LineageObject,
@@ -409,6 +449,7 @@ import {
   VpcConfig,
 } from "../models/models_0";
 import {
+  FindingStatisticType,
   Invitation,
   MalwareProtectionPlanStatusReason,
   MalwareProtectionPlanSummary,
@@ -595,6 +636,7 @@ export const se_CreateIPSetCommand = async (
     take(input, {
       activate: [, , `Activate`],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken(), `ClientToken`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
       format: [, , `Format`],
       location: [, , `Location`],
       name: [, , `Name`],
@@ -703,6 +745,35 @@ export const se_CreateSampleFindingsCommand = async (
 };
 
 /**
+ * serializeAws_restJson1CreateThreatEntitySetCommand
+ */
+export const se_CreateThreatEntitySetCommand = async (
+  input: CreateThreatEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/detector/{DetectorId}/threatentityset");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      activate: [, , `Activate`],
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken(), `ClientToken`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
+      format: [, , `Format`],
+      location: [, , `Location`],
+      name: [, , `Name`],
+      tags: [, (_) => _json(_), `Tags`],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1CreateThreatIntelSetCommand
  */
 export const se_CreateThreatIntelSetCommand = async (
@@ -720,6 +791,36 @@ export const se_CreateThreatIntelSetCommand = async (
     take(input, {
       activate: [, , `Activate`],
       clientToken: [true, (_) => _ ?? generateIdempotencyToken(), `ClientToken`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
+      format: [, , `Format`],
+      location: [, , `Location`],
+      name: [, , `Name`],
+      tags: [, (_) => _json(_), `Tags`],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1CreateTrustedEntitySetCommand
+ */
+export const se_CreateTrustedEntitySetCommand = async (
+  input: CreateTrustedEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/detector/{DetectorId}/trustedentityset");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      activate: [, , `Activate`],
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken(), `ClientToken`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
       format: [, , `Format`],
       location: [, , `Location`],
       name: [, , `Name`],
@@ -881,6 +982,23 @@ export const se_DeletePublishingDestinationCommand = async (
 };
 
 /**
+ * serializeAws_restJson1DeleteThreatEntitySetCommand
+ */
+export const se_DeleteThreatEntitySetCommand = async (
+  input: DeleteThreatEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/detector/{DetectorId}/threatentityset/{ThreatEntitySetId}");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  b.p("ThreatEntitySetId", () => input.ThreatEntitySetId!, "{ThreatEntitySetId}", false);
+  let body: any;
+  b.m("DELETE").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1DeleteThreatIntelSetCommand
  */
 export const se_DeleteThreatIntelSetCommand = async (
@@ -892,6 +1010,23 @@ export const se_DeleteThreatIntelSetCommand = async (
   b.bp("/detector/{DetectorId}/threatintelset/{ThreatIntelSetId}");
   b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
   b.p("ThreatIntelSetId", () => input.ThreatIntelSetId!, "{ThreatIntelSetId}", false);
+  let body: any;
+  b.m("DELETE").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1DeleteTrustedEntitySetCommand
+ */
+export const se_DeleteTrustedEntitySetCommand = async (
+  input: DeleteTrustedEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/detector/{DetectorId}/trustedentityset/{TrustedEntitySetId}");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  b.p("TrustedEntitySetId", () => input.TrustedEntitySetId!, "{TrustedEntitySetId}", false);
   let body: any;
   b.m("DELETE").h(headers).b(body);
   return b.build();
@@ -1348,6 +1483,23 @@ export const se_GetRemainingFreeTrialDaysCommand = async (
 };
 
 /**
+ * serializeAws_restJson1GetThreatEntitySetCommand
+ */
+export const se_GetThreatEntitySetCommand = async (
+  input: GetThreatEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/detector/{DetectorId}/threatentityset/{ThreatEntitySetId}");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  b.p("ThreatEntitySetId", () => input.ThreatEntitySetId!, "{ThreatEntitySetId}", false);
+  let body: any;
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1GetThreatIntelSetCommand
  */
 export const se_GetThreatIntelSetCommand = async (
@@ -1359,6 +1511,23 @@ export const se_GetThreatIntelSetCommand = async (
   b.bp("/detector/{DetectorId}/threatintelset/{ThreatIntelSetId}");
   b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
   b.p("ThreatIntelSetId", () => input.ThreatIntelSetId!, "{ThreatIntelSetId}", false);
+  let body: any;
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1GetTrustedEntitySetCommand
+ */
+export const se_GetTrustedEntitySetCommand = async (
+  input: GetTrustedEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/detector/{DetectorId}/trustedentityset/{TrustedEntitySetId}");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  b.p("TrustedEntitySetId", () => input.TrustedEntitySetId!, "{TrustedEntitySetId}", false);
   let body: any;
   b.m("GET").h(headers).b(body);
   return b.build();
@@ -1641,6 +1810,26 @@ export const se_ListTagsForResourceCommand = async (
 };
 
 /**
+ * serializeAws_restJson1ListThreatEntitySetsCommand
+ */
+export const se_ListThreatEntitySetsCommand = async (
+  input: ListThreatEntitySetsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/detector/{DetectorId}/threatentityset");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  const query: any = map({
+    [_mR]: [() => input.MaxResults !== void 0, () => input[_MR]!.toString()],
+    [_nT]: [, input[_NT]!],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1ListThreatIntelSetsCommand
  */
 export const se_ListThreatIntelSetsCommand = async (
@@ -1650,6 +1839,26 @@ export const se_ListThreatIntelSetsCommand = async (
   const b = rb(input, context);
   const headers: any = {};
   b.bp("/detector/{DetectorId}/threatintelset");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  const query: any = map({
+    [_mR]: [() => input.MaxResults !== void 0, () => input[_MR]!.toString()],
+    [_nT]: [, input[_NT]!],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListTrustedEntitySetsCommand
+ */
+export const se_ListTrustedEntitySetsCommand = async (
+  input: ListTrustedEntitySetsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/detector/{DetectorId}/trustedentityset");
   b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
   const query: any = map({
     [_mR]: [() => input.MaxResults !== void 0, () => input[_MR]!.toString()],
@@ -1889,6 +2098,7 @@ export const se_UpdateIPSetCommand = async (
   body = JSON.stringify(
     take(input, {
       activate: [, , `Activate`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
       location: [, , `Location`],
       name: [, , `Name`],
     })
@@ -2022,6 +2232,33 @@ export const se_UpdatePublishingDestinationCommand = async (
 };
 
 /**
+ * serializeAws_restJson1UpdateThreatEntitySetCommand
+ */
+export const se_UpdateThreatEntitySetCommand = async (
+  input: UpdateThreatEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/detector/{DetectorId}/threatentityset/{ThreatEntitySetId}");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  b.p("ThreatEntitySetId", () => input.ThreatEntitySetId!, "{ThreatEntitySetId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      activate: [, , `Activate`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
+      location: [, , `Location`],
+      name: [, , `Name`],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1UpdateThreatIntelSetCommand
  */
 export const se_UpdateThreatIntelSetCommand = async (
@@ -2039,6 +2276,34 @@ export const se_UpdateThreatIntelSetCommand = async (
   body = JSON.stringify(
     take(input, {
       activate: [, , `Activate`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
+      location: [, , `Location`],
+      name: [, , `Name`],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1UpdateTrustedEntitySetCommand
+ */
+export const se_UpdateTrustedEntitySetCommand = async (
+  input: UpdateTrustedEntitySetCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/detector/{DetectorId}/trustedentityset/{TrustedEntitySetId}");
+  b.p("DetectorId", () => input.DetectorId!, "{DetectorId}", false);
+  b.p("TrustedEntitySetId", () => input.TrustedEntitySetId!, "{TrustedEntitySetId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      activate: [, , `Activate`],
+      expectedBucketOwner: [, , `ExpectedBucketOwner`],
       location: [, , `Location`],
       name: [, , `Name`],
     })
@@ -2243,6 +2508,27 @@ export const de_CreateSampleFindingsCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1CreateThreatEntitySetCommand
+ */
+export const de_CreateThreatEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateThreatEntitySetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    ThreatEntitySetId: [, __expectString, `threatEntitySetId`],
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1CreateThreatIntelSetCommand
  */
 export const de_CreateThreatIntelSetCommand = async (
@@ -2258,6 +2544,27 @@ export const de_CreateThreatIntelSetCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     ThreatIntelSetId: [, __expectString, `threatIntelSetId`],
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1CreateTrustedEntitySetCommand
+ */
+export const de_CreateTrustedEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateTrustedEntitySetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    TrustedEntitySetId: [, __expectString, `trustedEntitySetId`],
   });
   Object.assign(contents, doc);
   return contents;
@@ -2412,12 +2719,46 @@ export const de_DeletePublishingDestinationCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1DeleteThreatEntitySetCommand
+ */
+export const de_DeleteThreatEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteThreatEntitySetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1DeleteThreatIntelSetCommand
  */
 export const de_DeleteThreatIntelSetCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteThreatIntelSetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DeleteTrustedEntitySetCommand
+ */
+export const de_DeleteTrustedEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteTrustedEntitySetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -2765,6 +3106,7 @@ export const de_GetIPSetCommand = async (
   });
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
+    ExpectedBucketOwner: [, __expectString, `expectedBucketOwner`],
     Format: [, __expectString, `format`],
     Location: [, __expectString, `location`],
     Name: [, __expectString, `name`],
@@ -2934,6 +3276,35 @@ export const de_GetRemainingFreeTrialDaysCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1GetThreatEntitySetCommand
+ */
+export const de_GetThreatEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetThreatEntitySetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    CreatedAt: [, (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))), `createdAt`],
+    ErrorDetails: [, __expectString, `errorDetails`],
+    ExpectedBucketOwner: [, __expectString, `expectedBucketOwner`],
+    Format: [, __expectString, `format`],
+    Location: [, __expectString, `location`],
+    Name: [, __expectString, `name`],
+    Status: [, __expectString, `status`],
+    Tags: [, _json, `tags`],
+    UpdatedAt: [, (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))), `updatedAt`],
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1GetThreatIntelSetCommand
  */
 export const de_GetThreatIntelSetCommand = async (
@@ -2948,11 +3319,41 @@ export const de_GetThreatIntelSetCommand = async (
   });
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
+    ExpectedBucketOwner: [, __expectString, `expectedBucketOwner`],
     Format: [, __expectString, `format`],
     Location: [, __expectString, `location`],
     Name: [, __expectString, `name`],
     Status: [, __expectString, `status`],
     Tags: [, _json, `tags`],
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1GetTrustedEntitySetCommand
+ */
+export const de_GetTrustedEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetTrustedEntitySetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    CreatedAt: [, (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))), `createdAt`],
+    ErrorDetails: [, __expectString, `errorDetails`],
+    ExpectedBucketOwner: [, __expectString, `expectedBucketOwner`],
+    Format: [, __expectString, `format`],
+    Location: [, __expectString, `location`],
+    Name: [, __expectString, `name`],
+    Status: [, __expectString, `status`],
+    Tags: [, _json, `tags`],
+    UpdatedAt: [, (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))), `updatedAt`],
   });
   Object.assign(contents, doc);
   return contents;
@@ -3243,6 +3644,28 @@ export const de_ListTagsForResourceCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1ListThreatEntitySetsCommand
+ */
+export const de_ListThreatEntitySetsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListThreatEntitySetsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    NextToken: [, __expectString, `nextToken`],
+    ThreatEntitySetIds: [, _json, `threatEntitySetIds`],
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1ListThreatIntelSetsCommand
  */
 export const de_ListThreatIntelSetsCommand = async (
@@ -3259,6 +3682,28 @@ export const de_ListThreatIntelSetsCommand = async (
   const doc = take(data, {
     NextToken: [, __expectString, `nextToken`],
     ThreatIntelSetIds: [, _json, `threatIntelSetIds`],
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListTrustedEntitySetsCommand
+ */
+export const de_ListTrustedEntitySetsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListTrustedEntitySetsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    NextToken: [, __expectString, `nextToken`],
+    TrustedEntitySetIds: [, _json, `trustedEntitySetIds`],
   });
   Object.assign(contents, doc);
   return contents;
@@ -3540,12 +3985,46 @@ export const de_UpdatePublishingDestinationCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1UpdateThreatEntitySetCommand
+ */
+export const de_UpdateThreatEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateThreatEntitySetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1UpdateThreatIntelSetCommand
  */
 export const de_UpdateThreatIntelSetCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateThreatIntelSetCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1UpdateTrustedEntitySetCommand
+ */
+export const de_UpdateTrustedEntitySetCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateTrustedEntitySetCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -4415,12 +4894,24 @@ const de_Action = (output: any, context: __SerdeContext): Action => {
 const de_Actor = (output: any, context: __SerdeContext): Actor => {
   return take(output, {
     Id: [, __expectString, `id`],
+    Process: [, (_: any) => de_ActorProcess(_, context), `process`],
     Session: [, (_: any) => de_Session(_, context), `session`],
     User: [, (_: any) => de_User(_, context), `user`],
   }) as any;
 };
 
 // de_ActorIds omitted.
+
+/**
+ * deserializeAws_restJson1ActorProcess
+ */
+const de_ActorProcess = (output: any, context: __SerdeContext): ActorProcess => {
+  return take(output, {
+    Name: [, __expectString, `name`],
+    Path: [, __expectString, `path`],
+    Sha256: [, __expectString, `sha256`],
+  }) as any;
+};
 
 /**
  * deserializeAws_restJson1Actors
@@ -4433,6 +4924,8 @@ const de_Actors = (output: any, context: __SerdeContext): Actor[] => {
     });
   return retVal;
 };
+
+// de_AdditionalSequenceTypes omitted.
 
 /**
  * deserializeAws_restJson1AddonDetails
@@ -4703,6 +5196,16 @@ const de_Container = (output: any, context: __SerdeContext): Container => {
 };
 
 /**
+ * deserializeAws_restJson1ContainerFindingResource
+ */
+const de_ContainerFindingResource = (output: any, context: __SerdeContext): ContainerFindingResource => {
+  return take(output, {
+    Image: [, __expectString, `image`],
+    ImageUid: [, __expectString, `imageUid`],
+  }) as any;
+};
+
+/**
  * deserializeAws_restJson1ContainerInstanceDetails
  */
 const de_ContainerInstanceDetails = (output: any, context: __SerdeContext): ContainerInstanceDetails => {
@@ -4723,6 +5226,8 @@ const de_Containers = (output: any, context: __SerdeContext): Container[] => {
     });
   return retVal;
 };
+
+// de_ContainerUids omitted.
 
 // de_CountByCoverageStatus omitted.
 
@@ -5043,6 +5548,7 @@ const de_DnsRequestAction = (output: any, context: __SerdeContext): DnsRequestAc
     Domain: [, __expectString, `domain`],
     DomainWithSuffix: [, __expectString, `domainWithSuffix`],
     Protocol: [, __expectString, `protocol`],
+    VpcOwnerAccountId: [, __expectString, `vpcOwnerAccountId`],
   }) as any;
 };
 
@@ -5107,6 +5613,8 @@ const de_Ec2Instance = (output: any, context: __SerdeContext): Ec2Instance => {
   }) as any;
 };
 
+// de_Ec2InstanceUids omitted.
+
 /**
  * deserializeAws_restJson1Ec2NetworkInterface
  */
@@ -5155,6 +5663,19 @@ const de_EcsTaskDetails = (output: any, context: __SerdeContext): EcsTaskDetails
     TaskCreatedAt: [, (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))), `createdAt`],
     Version: [, __expectString, `version`],
     Volumes: [, (_: any) => de_Volumes(_, context), `volumes`],
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1EksCluster
+ */
+const de_EksCluster = (output: any, context: __SerdeContext): EksCluster => {
+  return take(output, {
+    Arn: [, __expectString, `arn`],
+    CreatedAt: [, (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))), `createdAt`],
+    Ec2InstanceUids: [, _json, `ec2InstanceUids`],
+    Status: [, __expectString, `status`],
+    VpcId: [, __expectString, `vpcId`],
   }) as any;
 };
 
@@ -5640,6 +6161,17 @@ const de_KubernetesUserDetails = (output: any, context: __SerdeContext): Kuberne
     SessionName: [, _json, `sessionName`],
     Uid: [, __expectString, `uid`],
     Username: [, __expectString, `username`],
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1KubernetesWorkload
+ */
+const de_KubernetesWorkload = (output: any, context: __SerdeContext): KubernetesWorkload => {
+  return take(output, {
+    ContainerUids: [, _json, `containerUids`],
+    KubernetesResourcesTypes: [, __expectString, `type`],
+    Namespace: [, __expectString, `namespace`],
   }) as any;
 };
 
@@ -6607,8 +7139,11 @@ const de_Resource = (output: any, context: __SerdeContext): Resource => {
 const de_ResourceData = (output: any, context: __SerdeContext): ResourceData => {
   return take(output, {
     AccessKey: [, (_: any) => de_AccessKey(_, context), `accessKey`],
+    Container: [, (_: any) => de_ContainerFindingResource(_, context), `container`],
     Ec2Instance: [, (_: any) => de_Ec2Instance(_, context), `ec2Instance`],
     Ec2NetworkInterface: [, (_: any) => de_Ec2NetworkInterface(_, context), `ec2NetworkInterface`],
+    EksCluster: [, (_: any) => de_EksCluster(_, context), `eksCluster`],
+    KubernetesWorkload: [, (_: any) => de_KubernetesWorkload(_, context), `kubernetesWorkload`],
     S3Bucket: [, (_: any) => de_S3Bucket(_, context), `s3Bucket`],
     S3Object: [, (_: any) => de_S3Object(_, context), `s3Object`],
   }) as any;
@@ -7010,6 +7545,7 @@ const de_SecurityGroups = (output: any, context: __SerdeContext): SecurityGroup[
 const de_Sequence = (output: any, context: __SerdeContext): Sequence => {
   return take(output, {
     Actors: [, (_: any) => de_Actors(_, context), `actors`],
+    AdditionalSequenceTypes: [, _json, `additionalSequenceTypes`],
     Description: [, __expectString, `description`],
     Endpoints: [, (_: any) => de_NetworkEndpoints(_, context), `endpoints`],
     Resources: [, (_: any) => de_Resources(_, context), `resources`],
@@ -7165,6 +7701,8 @@ const de_ThreatDetectedByName = (output: any, context: __SerdeContext): ThreatDe
   }) as any;
 };
 
+// de_ThreatEntitySetIds omitted.
+
 /**
  * deserializeAws_restJson1ThreatIntelligenceDetail
  */
@@ -7232,6 +7770,8 @@ const de_TriggerDetails = (output: any, context: __SerdeContext): TriggerDetails
     GuardDutyFindingId: [, __expectString, `guardDutyFindingId`],
   }) as any;
 };
+
+// de_TrustedEntitySetIds omitted.
 
 /**
  * deserializeAws_restJson1UnprocessedAccount

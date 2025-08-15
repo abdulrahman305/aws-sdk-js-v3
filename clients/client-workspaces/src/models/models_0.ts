@@ -190,6 +190,68 @@ export class ValidationException extends __BaseException {
  * @public
  * @enum
  */
+export const AccessEndpointType = {
+  STREAMING_WSP: "STREAMING_WSP",
+} as const;
+
+/**
+ * @public
+ */
+export type AccessEndpointType = (typeof AccessEndpointType)[keyof typeof AccessEndpointType];
+
+/**
+ * <p>Describes the access type and endpoint for a WorkSpace.</p>
+ * @public
+ */
+export interface AccessEndpoint {
+  /**
+   * <p>Indicates the type of access endpoint.</p>
+   * @public
+   */
+  AccessEndpointType?: AccessEndpointType | undefined;
+
+  /**
+   * <p>Indicates the VPC endpoint to use for access.</p>
+   * @public
+   */
+  VpcEndpointId?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const InternetFallbackProtocol = {
+  PCOIP: "PCOIP",
+} as const;
+
+/**
+ * @public
+ */
+export type InternetFallbackProtocol = (typeof InternetFallbackProtocol)[keyof typeof InternetFallbackProtocol];
+
+/**
+ * <p>Describes the access endpoint configuration for a WorkSpace.</p>
+ * @public
+ */
+export interface AccessEndpointConfig {
+  /**
+   * <p>Indicates a list of access endpoints associated with this directory.</p>
+   * @public
+   */
+  AccessEndpoints: AccessEndpoint[] | undefined;
+
+  /**
+   * <p>Indicates a list of protocols that fallback to using the public Internet when streaming over a VPC endpoint is not available.</p>
+   * @public
+   */
+  InternetFallbackProtocols?: InternetFallbackProtocol[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const AccessPropertyValue = {
   ALLOW: "ALLOW",
   DENY: "DENY",
@@ -2866,6 +2928,20 @@ export interface CreateWorkspacesResult {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const PoolsRunningMode = {
+  ALWAYS_ON: "ALWAYS_ON",
+  AUTO_STOP: "AUTO_STOP",
+} as const;
+
+/**
+ * @public
+ */
+export type PoolsRunningMode = (typeof PoolsRunningMode)[keyof typeof PoolsRunningMode];
+
+/**
  * <p>Describes the timeout settings for a pool of WorkSpaces.</p>
  * @public
  */
@@ -2946,6 +3022,12 @@ export interface CreateWorkspacesPoolRequest {
    * @public
    */
   TimeoutSettings?: TimeoutSettings | undefined;
+
+  /**
+   * <p>The running mode for the pool.</p>
+   * @public
+   */
+  RunningMode?: PoolsRunningMode | undefined;
 }
 
 /**
@@ -3061,7 +3143,7 @@ export interface WorkspacesPool {
   CapacityStatus: CapacityStatus | undefined;
 
   /**
-   * <p>The name of the pool,</p>
+   * <p>The name of the pool.</p>
    * @public
    */
   PoolName: string | undefined;
@@ -3116,6 +3198,12 @@ export interface WorkspacesPool {
    * @public
    */
   TimeoutSettings?: TimeoutSettings | undefined;
+
+  /**
+   * <p>The running mode of the pool.</p>
+   * @public
+   */
+  RunningMode: PoolsRunningMode | undefined;
 }
 
 /**
@@ -3128,6 +3216,57 @@ export interface CreateWorkspacesPoolResult {
    */
   WorkspacesPool?: WorkspacesPool | undefined;
 }
+
+/**
+ * @public
+ * @enum
+ */
+export const CustomImageProtocol = {
+  BYOP: "BYOP",
+  DCV: "DCV",
+  PCOIP: "PCOIP",
+} as const;
+
+/**
+ * @public
+ */
+export type CustomImageProtocol = (typeof CustomImageProtocol)[keyof typeof CustomImageProtocol];
+
+/**
+ * <p>Describes in-depth details about the error. These details include the
+ *          possible causes of the error and troubleshooting information.</p>
+ * @public
+ */
+export interface CustomWorkspaceImageImportErrorDetails {
+  /**
+   * <p>The error code that is returned for the image import.</p>
+   * @public
+   */
+  ErrorCode?: string | undefined;
+
+  /**
+   * <p>The text of the error message that is returned for the image import.</p>
+   * @public
+   */
+  ErrorMessage?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const CustomWorkspaceImageImportState = {
+  COMPLETED: "COMPLETED",
+  ERROR: "ERROR",
+  IN_PROGRESS: "IN_PROGRESS",
+  PENDING: "PENDING",
+} as const;
+
+/**
+ * @public
+ */
+export type CustomWorkspaceImageImportState =
+  (typeof CustomWorkspaceImageImportState)[keyof typeof CustomWorkspaceImageImportState];
 
 /**
  * @public
@@ -3305,12 +3444,6 @@ export interface DefaultImportClientBrandingAttributes {
  * @public
  */
 export interface DefaultWorkspaceCreationProperties {
-  /**
-   * <p>Specifies whether the directory is enabled for Amazon WorkDocs.</p>
-   * @public
-   */
-  EnableWorkDocs?: boolean | undefined;
-
   /**
    * <p>Specifies whether to automatically assign an Elastic public IP address to WorkSpaces in
    *          this directory by default. If enabled, the Elastic public IP address allows outbound
@@ -3639,6 +3772,12 @@ export interface DescribeAccountResult {
    * @public
    */
   DedicatedTenancyAccountType?: DedicatedTenancyAccountType | undefined;
+
+  /**
+   * <p>The text message to describe the status of BYOL.</p>
+   * @public
+   */
+  Message?: string | undefined;
 }
 
 /**
@@ -4208,6 +4347,143 @@ export interface DescribeConnectionAliasPermissionsResult {
    * @public
    */
   NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DescribeCustomWorkspaceImageImportRequest {
+  /**
+   * <p>The identifier of the WorkSpace image.</p>
+   * @public
+   */
+  ImageId: string | undefined;
+}
+
+/**
+ * <p>Describes the image import source.</p>
+ * @public
+ */
+export type ImageSourceIdentifier =
+  | ImageSourceIdentifier.Ec2ImageIdMember
+  | ImageSourceIdentifier.Ec2ImportTaskIdMember
+  | ImageSourceIdentifier.ImageBuildVersionArnMember
+  | ImageSourceIdentifier.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace ImageSourceIdentifier {
+  /**
+   * <p>The EC2 import task ID to import the image from the Amazon EC2 VM import process.</p>
+   * @public
+   */
+  export interface Ec2ImportTaskIdMember {
+    Ec2ImportTaskId: string;
+    ImageBuildVersionArn?: never;
+    Ec2ImageId?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The ARN of the EC2 Image Builder image.</p>
+   * @public
+   */
+  export interface ImageBuildVersionArnMember {
+    Ec2ImportTaskId?: never;
+    ImageBuildVersionArn: string;
+    Ec2ImageId?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The identifier of the EC2 image.</p>
+   * @public
+   */
+  export interface Ec2ImageIdMember {
+    Ec2ImportTaskId?: never;
+    ImageBuildVersionArn?: never;
+    Ec2ImageId: string;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    Ec2ImportTaskId?: never;
+    ImageBuildVersionArn?: never;
+    Ec2ImageId?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    Ec2ImportTaskId: (value: string) => T;
+    ImageBuildVersionArn: (value: string) => T;
+    Ec2ImageId: (value: string) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: ImageSourceIdentifier, visitor: Visitor<T>): T => {
+    if (value.Ec2ImportTaskId !== undefined) return visitor.Ec2ImportTaskId(value.Ec2ImportTaskId);
+    if (value.ImageBuildVersionArn !== undefined) return visitor.ImageBuildVersionArn(value.ImageBuildVersionArn);
+    if (value.Ec2ImageId !== undefined) return visitor.Ec2ImageId(value.Ec2ImageId);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ */
+export interface DescribeCustomWorkspaceImageImportResult {
+  /**
+   * <p>The identifier of the WorkSpace image.</p>
+   * @public
+   */
+  ImageId?: string | undefined;
+
+  /**
+   * <p>The infrastructure configuration ARN that specifies how the WorkSpace image is built.</p>
+   * @public
+   */
+  InfrastructureConfigurationArn?: string | undefined;
+
+  /**
+   * <p>The state of the WorkSpace image.</p>
+   * @public
+   */
+  State?: CustomWorkspaceImageImportState | undefined;
+
+  /**
+   * <p>The timestamp when the WorkSpace image import was created.</p>
+   * @public
+   */
+  Created?: Date | undefined;
+
+  /**
+   * <p>The timestamp when the WorkSpace image import was last updated.</p>
+   * @public
+   */
+  LastUpdatedTime?: Date | undefined;
+
+  /**
+   * <p>Describes the image import source.</p>
+   * @public
+   */
+  ImageSource?: ImageSourceIdentifier | undefined;
+
+  /**
+   * <p>The image builder instance ID of the WorkSpace image.</p>
+   * @public
+   */
+  ImageBuilderInstanceId?: string | undefined;
+
+  /**
+   * <p>Describes in-depth details about the error. These details include the
+   *          possible causes of the error and troubleshooting information.</p>
+   * @public
+   */
+  ErrorDetails?: CustomWorkspaceImageImportErrorDetails[] | undefined;
 }
 
 /**
@@ -4972,6 +5248,12 @@ export interface WorkspaceAccessProperties {
    * @public
    */
   DeviceTypeWorkSpacesThinClient?: AccessPropertyValue | undefined;
+
+  /**
+   * <p>Specifies the configuration for accessing the WorkSpace.</p>
+   * @public
+   */
+  AccessEndpointConfig?: AccessEndpointConfig | undefined;
 }
 
 /**
@@ -5320,7 +5602,9 @@ export const WorkspaceImageErrorDetailCode = {
   DOMAIN_JOINED: "DomainJoined",
   ENVIRONMENT_VARIABLES_PATH_MISSING_ENTRIES: "EnvironmentVariablesPathMissingEntries",
   FIREWALL_ENABLED: "FirewallEnabled",
+  INCOMPATIBLE_MEMORY_INTEGRITY: "MemoryIntegrityIncompatibility",
   INCOMPATIBLE_PARTITIONING: "IncompatiblePartitioning",
+  INCOMPATIBLE_PROTOCOL: "ProtocolOSIncompatibility",
   INSUFFICIENT_DISK_SPACE: "InsufficientDiskSpace",
   INSUFFICIENT_REARM_COUNT: "InsufficientRearmCount",
   INVALID_IP: "InvalidIp",
@@ -5335,6 +5619,7 @@ export const WorkspaceImageErrorDetailCode = {
   REALTIME_UNIVERSAL_DISABLED: "RealTimeUniversalDisabled",
   REMOTE_DESKTOP_SERVICES_DISABLED: "RemoteDesktopServicesDisabled",
   RESERVED_STORAGE_IN_USE: "ReservedStorageInUse",
+  RESTRICTED_DRIVE_LETTER: "RestrictedDriveLetterInUse",
   SIXTY_FOUR_BIT_OS: "Requires64BitOS",
   STAGED_APPX_PACKAGE: "StagedAppxPackage",
   SYSPREP_FILE_MISSING: "SysPrepFileMissing",
@@ -6053,6 +6338,20 @@ export interface GetAccountLinkResult {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const ImageComputeType = {
+  BASE: "BASE",
+  GRAPHICS_G4DN: "GRAPHICS_G4DN",
+} as const;
+
+/**
+ * @public
+ */
+export type ImageComputeType = (typeof ImageComputeType)[keyof typeof ImageComputeType];
+
+/**
  * <p>The client branding attributes to import for iOS device types. These attributes are
  *          displayed on the iOS client login screen.</p>
  *          <important>
@@ -6242,6 +6541,109 @@ export interface ImportClientBrandingResult {
  * @public
  * @enum
  */
+export const OSVersion = {
+  Windows_10: "Windows_10",
+  Windows_11: "Windows_11",
+} as const;
+
+/**
+ * @public
+ */
+export type OSVersion = (typeof OSVersion)[keyof typeof OSVersion];
+
+/**
+ * @public
+ * @enum
+ */
+export const Platform = {
+  WINDOWS: "WINDOWS",
+} as const;
+
+/**
+ * @public
+ */
+export type Platform = (typeof Platform)[keyof typeof Platform];
+
+/**
+ * @public
+ */
+export interface ImportCustomWorkspaceImageRequest {
+  /**
+   * <p>The name of the WorkSpace image.</p>
+   * @public
+   */
+  ImageName: string | undefined;
+
+  /**
+   * <p>The description of the WorkSpace image.</p>
+   * @public
+   */
+  ImageDescription: string | undefined;
+
+  /**
+   * <p>The supported compute type for the WorkSpace image.</p>
+   * @public
+   */
+  ComputeType: ImageComputeType | undefined;
+
+  /**
+   * <p>The supported protocol for the WorkSpace image. Windows 11 does not support PCOIP protocol.</p>
+   * @public
+   */
+  Protocol: CustomImageProtocol | undefined;
+
+  /**
+   * <p>The options for image import source.</p>
+   * @public
+   */
+  ImageSource: ImageSourceIdentifier | undefined;
+
+  /**
+   * <p>The infrastructure configuration ARN that specifies how the WorkSpace image is built.</p>
+   * @public
+   */
+  InfrastructureConfigurationArn: string | undefined;
+
+  /**
+   * <p>The platform for the WorkSpace image source.</p>
+   * @public
+   */
+  Platform: Platform | undefined;
+
+  /**
+   * <p>The OS version for the WorkSpace image source.</p>
+   * @public
+   */
+  OsVersion: OSVersion | undefined;
+
+  /**
+   * <p>The resource tags. Each WorkSpaces resource can have a maximum of 50 tags.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ImportCustomWorkspaceImageResult {
+  /**
+   * <p>The identifier of the WorkSpace image.</p>
+   * @public
+   */
+  ImageId?: string | undefined;
+
+  /**
+   * <p>The state of the WorkSpace image.</p>
+   * @public
+   */
+  State?: CustomWorkspaceImageImportState | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const WorkspaceImageIngestionProcess = {
   BYOL_GRAPHICS: "BYOL_GRAPHICS",
   BYOL_GRAPHICSPRO: "BYOL_GRAPHICSPRO",
@@ -6336,6 +6738,26 @@ export interface ImportWorkspaceImageResult {
    * @public
    */
   ImageId?: string | undefined;
+}
+
+/**
+ * <p>Two or more of the selected parameter values cannot be used together.</p>
+ * @public
+ */
+export class InvalidParameterCombinationException extends __BaseException {
+  readonly name: "InvalidParameterCombinationException" = "InvalidParameterCombinationException";
+  readonly $fault: "client" = "client";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<InvalidParameterCombinationException, __BaseException>) {
+    super({
+      name: "InvalidParameterCombinationException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, InvalidParameterCombinationException.prototype);
+  }
 }
 
 /**
@@ -6501,7 +6923,13 @@ export interface ModifyAccountRequest {
 /**
  * @public
  */
-export interface ModifyAccountResult {}
+export interface ModifyAccountResult {
+  /**
+   * <p>The text message to describe the status of BYOL modification.</p>
+   * @public
+   */
+  Message?: string | undefined;
+}
 
 /**
  * @public
@@ -6631,276 +7059,4 @@ export interface ModifySelfservicePermissionsRequest {
    * @public
    */
   SelfservicePermissions: SelfservicePermissions | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifySelfservicePermissionsResult {}
-
-/**
- * @public
- */
-export interface ModifyStreamingPropertiesRequest {
-  /**
-   * <p>The identifier of the resource.</p>
-   * @public
-   */
-  ResourceId: string | undefined;
-
-  /**
-   * <p>The streaming properties to configure.</p>
-   * @public
-   */
-  StreamingProperties?: StreamingProperties | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifyStreamingPropertiesResult {}
-
-/**
- * @public
- */
-export interface ModifyWorkspaceAccessPropertiesRequest {
-  /**
-   * <p>The identifier of the directory.</p>
-   * @public
-   */
-  ResourceId: string | undefined;
-
-  /**
-   * <p>The device types and operating systems to enable or disable for access.</p>
-   * @public
-   */
-  WorkspaceAccessProperties: WorkspaceAccessProperties | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifyWorkspaceAccessPropertiesResult {}
-
-/**
- * <p>Describes the default properties that are used for creating WorkSpaces. For more
- *          information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/update-directory-details.html">Update Directory
- *             Details for Your WorkSpaces</a>. </p>
- * @public
- */
-export interface WorkspaceCreationProperties {
-  /**
-   * <p>Indicates whether Amazon WorkDocs is enabled for your WorkSpaces.</p>
-   *          <note>
-   *             <p>If WorkDocs is already enabled for a WorkSpaces directory and you disable it, new
-   *             WorkSpaces launched in the directory will not have WorkDocs enabled. However, WorkDocs
-   *             remains enabled for any existing WorkSpaces, unless you either disable users' access to
-   *             WorkDocs or you delete the WorkDocs site. To disable users' access to WorkDocs, see
-   *                <a href="https://docs.aws.amazon.com/workdocs/latest/adminguide/inactive-user.html">Disabling Users</a> in the <i>Amazon WorkDocs Administration
-   *                Guide</i>. To delete a WorkDocs site, see <a href="https://docs.aws.amazon.com/workdocs/latest/adminguide/manage-sites.html">Deleting a Site</a> in the
-   *                <i>Amazon WorkDocs Administration Guide</i>.</p>
-   *             <p>If you enable WorkDocs on a directory that already has existing WorkSpaces, the
-   *             existing WorkSpaces and any new WorkSpaces that are launched in the directory will have
-   *             WorkDocs enabled.</p>
-   *          </note>
-   * @public
-   */
-  EnableWorkDocs?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether internet access is enabled for your WorkSpaces.</p>
-   * @public
-   */
-  EnableInternetAccess?: boolean | undefined;
-
-  /**
-   * <p>The default organizational unit (OU) for your WorkSpaces directories. This string must
-   *          be the full Lightweight Directory Access Protocol (LDAP) distinguished name for the target
-   *          domain and OU. It must be in the form
-   *                <code>"OU=<i>value</i>,DC=<i>value</i>,DC=<i>value</i>"</code>,
-   *          where <i>value</i> is any string of characters, and the number of domain
-   *          components (DCs) is two or more. For example,
-   *             <code>OU=WorkSpaces_machines,DC=machines,DC=example,DC=com</code>. </p>
-   *          <important>
-   *             <ul>
-   *                <li>
-   *                   <p>To avoid errors, certain characters in the distinguished name must be escaped.
-   *                   For more information, see <a href="https://docs.microsoft.com/previous-versions/windows/desktop/ldap/distinguished-names"> Distinguished Names</a> in the Microsoft documentation.</p>
-   *                </li>
-   *                <li>
-   *                   <p>The API doesn't validate whether the OU exists.</p>
-   *                </li>
-   *             </ul>
-   *          </important>
-   * @public
-   */
-  DefaultOu?: string | undefined;
-
-  /**
-   * <p>The identifier of your custom security group.</p>
-   * @public
-   */
-  CustomSecurityGroupId?: string | undefined;
-
-  /**
-   * <p>Indicates whether users are local administrators of their WorkSpaces.</p>
-   * @public
-   */
-  UserEnabledAsLocalAdministrator?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether maintenance mode is enabled for your WorkSpaces. For more information,
-   *          see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html">WorkSpace
-   *             Maintenance</a>. </p>
-   * @public
-   */
-  EnableMaintenanceMode?: boolean | undefined;
-
-  /**
-   * <p>Indicates the IAM role ARN of the instance.</p>
-   * @public
-   */
-  InstanceIamRoleArn?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifyWorkspaceCreationPropertiesRequest {
-  /**
-   * <p>The identifier of the directory.</p>
-   * @public
-   */
-  ResourceId: string | undefined;
-
-  /**
-   * <p>The default properties for creating WorkSpaces.</p>
-   * @public
-   */
-  WorkspaceCreationProperties: WorkspaceCreationProperties | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifyWorkspaceCreationPropertiesResult {}
-
-/**
- * @public
- */
-export interface ModifyWorkspacePropertiesRequest {
-  /**
-   * <p>The identifier of the WorkSpace.</p>
-   * @public
-   */
-  WorkspaceId: string | undefined;
-
-  /**
-   * <p>The properties of the WorkSpace.</p>
-   * @public
-   */
-  WorkspaceProperties?: WorkspaceProperties | undefined;
-
-  /**
-   * <p>Indicates the data replication status.</p>
-   * @public
-   */
-  DataReplication?: DataReplication | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifyWorkspacePropertiesResult {}
-
-/**
- * <p>The configuration of this WorkSpace is not supported for this operation. For more information, see
- *          <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/required-service-components.html">Required
- *             Configuration and Service Components for WorkSpaces </a>.</p>
- * @public
- */
-export class UnsupportedWorkspaceConfigurationException extends __BaseException {
-  readonly name: "UnsupportedWorkspaceConfigurationException" = "UnsupportedWorkspaceConfigurationException";
-  readonly $fault: "client" = "client";
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<UnsupportedWorkspaceConfigurationException, __BaseException>) {
-    super({
-      name: "UnsupportedWorkspaceConfigurationException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, UnsupportedWorkspaceConfigurationException.prototype);
-  }
-}
-
-/**
- * @public
- * @enum
- */
-export const TargetWorkspaceState = {
-  ADMIN_MAINTENANCE: "ADMIN_MAINTENANCE",
-  AVAILABLE: "AVAILABLE",
-} as const;
-
-/**
- * @public
- */
-export type TargetWorkspaceState = (typeof TargetWorkspaceState)[keyof typeof TargetWorkspaceState];
-
-/**
- * @public
- */
-export interface ModifyWorkspaceStateRequest {
-  /**
-   * <p>The identifier of the WorkSpace.</p>
-   * @public
-   */
-  WorkspaceId: string | undefined;
-
-  /**
-   * <p>The WorkSpace state.</p>
-   * @public
-   */
-  WorkspaceState: TargetWorkspaceState | undefined;
-}
-
-/**
- * @public
- */
-export interface ModifyWorkspaceStateResult {}
-
-/**
- * <p>Describes the information used to reboot a WorkSpace.</p>
- * @public
- */
-export interface RebootRequest {
-  /**
-   * <p>The identifier of the WorkSpace.</p>
-   * @public
-   */
-  WorkspaceId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface RebootWorkspacesRequest {
-  /**
-   * <p>The WorkSpaces to reboot. You can specify up to 25 WorkSpaces.</p>
-   * @public
-   */
-  RebootWorkspaceRequests: RebootRequest[] | undefined;
-}
-
-/**
- * @public
- */
-export interface RebootWorkspacesResult {
-  /**
-   * <p>Information about the WorkSpaces that could not be rebooted.</p>
-   * @public
-   */
-  FailedRequests?: FailedWorkspaceChangeRequest[] | undefined;
 }

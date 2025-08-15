@@ -117,6 +117,18 @@ export interface ListFindingsCommandOutput extends ListFindingsResponse, __Metad
  *     ecrImageRepositoryName: "<StringFilterList>",
  *     ecrImageTags: "<StringFilterList>",
  *     ecrImageHash: "<StringFilterList>",
+ *     ecrImageLastInUseAt: [
+ *       {
+ *         startInclusive: new Date("TIMESTAMP"),
+ *         endInclusive: new Date("TIMESTAMP"),
+ *       },
+ *     ],
+ *     ecrImageInUseCount: [
+ *       {
+ *         upperInclusive: Number("double"),
+ *         lowerInclusive: Number("double"),
+ *       },
+ *     ],
  *     portRange: [ // PortRangeFilterList
  *       { // PortRangeFilter
  *         beginInclusive: Number("int"),
@@ -149,12 +161,7 @@ export interface ListFindingsCommandOutput extends ListFindingsResponse, __Metad
  *     lambdaFunctionName: "<StringFilterList>",
  *     lambdaFunctionLayers: "<StringFilterList>",
  *     lambdaFunctionRuntime: "<StringFilterList>",
- *     lambdaFunctionLastModifiedAt: [
- *       {
- *         startInclusive: new Date("TIMESTAMP"),
- *         endInclusive: new Date("TIMESTAMP"),
- *       },
- *     ],
+ *     lambdaFunctionLastModifiedAt: "<DateFilterList>",
  *     lambdaFunctionExecutionRoleArn: "<StringFilterList>",
  *     exploitAvailable: "<StringFilterList>",
  *     codeVulnerabilityDetectorName: "<StringFilterList>",
@@ -166,6 +173,8 @@ export interface ListFindingsCommandOutput extends ListFindingsResponse, __Metad
  *         lowerInclusive: Number("double"),
  *       },
  *     ],
+ *     codeRepositoryProjectName: "<StringFilterList>",
+ *     codeRepositoryProviderType: "<StringFilterList>",
  *   },
  *   sortCriteria: { // SortCriteria
  *     field: "STRING_VALUE", // required
@@ -231,6 +240,8 @@ export interface ListFindingsCommandOutput extends ListFindingsResponse, __Metad
  * //               imageHash: "STRING_VALUE", // required
  * //               registry: "STRING_VALUE", // required
  * //               platform: "STRING_VALUE",
+ * //               lastInUseAt: new Date("TIMESTAMP"),
+ * //               inUseCount: Number("long"),
  * //             },
  * //             awsLambdaFunction: { // AwsLambdaFunctionDetails
  * //               functionName: "STRING_VALUE", // required
@@ -255,6 +266,11 @@ export interface ListFindingsCommandOutput extends ListFindingsResponse, __Metad
  * //                 "STRING_VALUE",
  * //               ],
  * //               lastModifiedAt: new Date("TIMESTAMP"),
+ * //             },
+ * //             codeRepository: { // CodeRepositoryDetails
+ * //               projectName: "STRING_VALUE",
+ * //               integrationArn: "STRING_VALUE",
+ * //               providerType: "STRING_VALUE",
  * //             },
  * //           },
  * //         },

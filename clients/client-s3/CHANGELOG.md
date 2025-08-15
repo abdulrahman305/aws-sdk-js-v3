@@ -3,6 +3,395 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.864.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.863.0...v3.864.0) (2025-08-08)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.863.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.862.0...v3.863.0) (2025-08-07)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.859.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.858.0...v3.859.0) (2025-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.857.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.856.0...v3.857.0) (2025-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.856.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.855.0...v3.856.0) (2025-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.855.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.854.0...v3.855.0) (2025-07-28)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.850.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.849.0...v3.850.0) (2025-07-21)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.848.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.847.0...v3.848.0) (2025-07-17)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.846.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.845.0...v3.846.0) (2025-07-16)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.845.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.844.0...v3.845.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **clients:** upgrade @smithy/middleware-endpoint to fix file/env endpoint resolution ([#7206](https://github.com/aws/aws-sdk-js-v3/issues/7206)) ([37a6275](https://github.com/aws/aws-sdk-js-v3/commit/37a627510bc53ad0ce8d3ef10a2a5ec8ad195ee2))
+
+
+### Features
+
+* **client-s3:** Amazon S3 Metadata live inventory tables provide a queryable inventory of all the objects in your general purpose bucket so that you can determine the latest state of your data. To help minimize your storage costs, use journal table record expiration to set a retention period for your records. ([6f14868](https://github.com/aws/aws-sdk-js-v3/commit/6f14868baccb691d449170eafc7330a27272a1ba))
+
+
+
+
+
+# [3.844.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.843.0...v3.844.0) (2025-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.842.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.841.0...v3.842.0) (2025-07-02)
+
+
+### Features
+
+* **client-s3:** Added support for directory bucket creation with tags and bucket ARN retrieval in CreateBucket, ListDirectoryBuckets, and HeadBucket operations ([e5eb29d](https://github.com/aws/aws-sdk-js-v3/commit/e5eb29d5f712c3c9b217e362063f84be6b213fd1))
+
+
+
+
+
+# [3.840.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.839.0...v3.840.0) (2025-06-30)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.839.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.838.0...v3.839.0) (2025-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.837.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.836.0...v3.837.0) (2025-06-25)
+
+
+### Features
+
+* **client-s3:** Adds support for additional server-side encryption mode and storage class values for accessing Amazon FSx data from Amazon S3 using S3 Access Points ([35933a6](https://github.com/aws/aws-sdk-js-v3/commit/35933a620ffb308fb1681e876ca634f0e59acdbf))
+
+
+
+
+
+# [3.835.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.834.0...v3.835.0) (2025-06-23)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.832.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.831.0...v3.832.0) (2025-06-18)
+
+
+### Features
+
+* **client-s3:** Added support for renaming objects within the same bucket using the new RenameObject API. ([a3d0c1b](https://github.com/aws/aws-sdk-js-v3/commit/a3d0c1b1e9db53b5ff437070d3b1224ac01659a1))
+
+
+
+
+
+# [3.830.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.829.0...v3.830.0) (2025-06-16)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.828.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.827.1...v3.828.0) (2025-06-11)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.826.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.825.0...v3.826.0) (2025-06-06)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.825.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.824.0...v3.825.0) (2025-06-05)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.824.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.823.0...v3.824.0) (2025-06-04)
+
+
+### Bug Fixes
+
+* **signature-v4-multi-region:** report available sigv4a dependency ([#7113](https://github.com/aws/aws-sdk-js-v3/issues/7113)) ([a96c5df](https://github.com/aws/aws-sdk-js-v3/commit/a96c5df2f1b8e5bcca160a2e4300af2d74f656d6))
+
+
+
+
+
+# [3.823.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.822.0...v3.823.0) (2025-06-03)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.820.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.819.0...v3.820.0) (2025-05-29)
+
+
+### Features
+
+* **client-s3:** Adding checksum support for S3 PutBucketOwnershipControls API. ([542663c](https://github.com/aws/aws-sdk-js-v3/commit/542663c4d784834ba1067293b804c78fcdd08ba4))
+
+
+
+
+
+# [3.817.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.816.0...v3.817.0) (2025-05-23)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.816.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.815.0...v3.816.0) (2025-05-22)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.815.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.814.0...v3.815.0) (2025-05-21)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.812.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.811.0...v3.812.0) (2025-05-16)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.810.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.809.0...v3.810.0) (2025-05-14)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.808.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.807.0...v3.808.0) (2025-05-12)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.806.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.805.0...v3.806.0) (2025-05-08)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.803.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.802.0...v3.803.0) (2025-05-05)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.802.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.801.0...v3.802.0) (2025-05-02)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.800.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.799.0...v3.800.0) (2025-04-30)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.799.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.798.0...v3.799.0) (2025-04-29)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.798.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.797.0...v3.798.0) (2025-04-28)
+
+
+### Features
+
+* **signature-v4-multi-region:** add support for sigv4a package ([#6267](https://github.com/aws/aws-sdk-js-v3/issues/6267)) ([ecbba9f](https://github.com/aws/aws-sdk-js-v3/commit/ecbba9f6573ee0513a92b163f7b5db4c70e4390a))
+
+
+
+
+
+# [3.797.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.796.0...v3.797.0) (2025-04-25)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.796.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.795.0...v3.796.0) (2025-04-24)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.787.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.786.0...v3.787.0) (2025-04-10)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.782.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.781.0...v3.782.0) (2025-04-03)
+
+**Note:** Version bump only for package @aws-sdk/client-s3
+
+
+
+
+
+# [3.779.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.778.0...v3.779.0) (2025-03-31)
+
+
+### Features
+
+* **client-s3:** Amazon S3 adds support for S3 Access Points for directory buckets in AWS Dedicated Local Zones ([7f2cfea](https://github.com/aws/aws-sdk-js-v3/commit/7f2cfea14ef7e980b331fa0413a479bd2913a3a9))
+
+
+
+
+
 # [3.777.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.776.0...v3.777.0) (2025-03-27)
 
 **Note:** Version bump only for package @aws-sdk/client-s3

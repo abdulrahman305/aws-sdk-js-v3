@@ -318,6 +318,11 @@ import {
   DisassociateOpsItemRelatedItemCommandOutput,
 } from "./commands/DisassociateOpsItemRelatedItemCommand";
 import {
+  GetAccessTokenCommand,
+  GetAccessTokenCommandInput,
+  GetAccessTokenCommandOutput,
+} from "./commands/GetAccessTokenCommand";
+import {
   GetAutomationExecutionCommand,
   GetAutomationExecutionCommandInput,
   GetAutomationExecutionCommandOutput,
@@ -597,6 +602,11 @@ import {
 } from "./commands/SendAutomationSignalCommand";
 import { SendCommandCommand, SendCommandCommandInput, SendCommandCommandOutput } from "./commands/SendCommandCommand";
 import {
+  StartAccessRequestCommand,
+  StartAccessRequestCommandInput,
+  StartAccessRequestCommandOutput,
+} from "./commands/StartAccessRequestCommand";
+import {
   StartAssociationsOnceCommand,
   StartAssociationsOnceCommandInput,
   StartAssociationsOnceCommandOutput,
@@ -772,6 +782,7 @@ const commands = {
   DescribePatchPropertiesCommand,
   DescribeSessionsCommand,
   DisassociateOpsItemRelatedItemCommand,
+  GetAccessTokenCommand,
   GetAutomationExecutionCommand,
   GetCalendarStateCommand,
   GetCommandInvocationCommand,
@@ -831,6 +842,7 @@ const commands = {
   ResumeSessionCommand,
   SendAutomationSignalCommand,
   SendCommandCommand,
+  StartAccessRequestCommand,
   StartAssociationsOnceCommand,
   StartAutomationExecutionCommand,
   StartChangeRequestExecutionCommand,
@@ -1912,6 +1924,20 @@ export interface SSM {
   ): void;
 
   /**
+   * @see {@link GetAccessTokenCommand}
+   */
+  getAccessToken(
+    args: GetAccessTokenCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetAccessTokenCommandOutput>;
+  getAccessToken(args: GetAccessTokenCommandInput, cb: (err: any, data?: GetAccessTokenCommandOutput) => void): void;
+  getAccessToken(
+    args: GetAccessTokenCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetAccessTokenCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetAutomationExecutionCommand}
    */
   getAutomationExecution(
@@ -2847,6 +2873,23 @@ export interface SSM {
   ): void;
 
   /**
+   * @see {@link StartAccessRequestCommand}
+   */
+  startAccessRequest(
+    args: StartAccessRequestCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<StartAccessRequestCommandOutput>;
+  startAccessRequest(
+    args: StartAccessRequestCommandInput,
+    cb: (err: any, data?: StartAccessRequestCommandOutput) => void
+  ): void;
+  startAccessRequest(
+    args: StartAccessRequestCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: StartAccessRequestCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link StartAssociationsOnceCommand}
    */
   startAssociationsOnce(
@@ -3210,7 +3253,8 @@ export interface SSM {
  * <p>Amazon Web Services Systems Manager is the operations hub for your Amazon Web Services applications and resources and a secure
  *    end-to-end management solution for hybrid cloud environments that enables safe and secure
  *    operations at scale.</p>
- *          <p>This reference is intended to be used with the <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User Guide</a>. To get started, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Setting up Amazon Web Services Systems Manager</a>.</p>
+ *          <p>This reference is intended to be used with the <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User Guide</a>. To get started, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-console.html">Setting up
+ *     Amazon Web Services Systems Manager</a>.</p>
  *          <p class="title">
  *             <b>Related resources</b>
  *          </p>
@@ -3222,7 +3266,7 @@ export interface SSM {
  *             <li>
  *                <p>For details about predefined runbooks for Automation, a tool in Amazon Web Services Systems Manager, see the
  *        <i>
- *                      <a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-runbook-reference.html">Systems Manager Automation runbook reference</a>
+ *                      <a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-runbook-reference.html">Systems Manager Automation Runbook Reference</a>
  *                   </i>.</p>
  *             </li>
  *             <li>

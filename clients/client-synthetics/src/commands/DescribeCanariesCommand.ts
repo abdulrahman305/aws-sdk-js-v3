@@ -61,16 +61,26 @@ export interface DescribeCanariesCommandOutput extends DescribeCanariesResponse,
  * //       Code: { // CanaryCodeOutput
  * //         SourceLocationArn: "STRING_VALUE",
  * //         Handler: "STRING_VALUE",
+ * //         Dependencies: [ // Dependencies
+ * //           { // Dependency
+ * //             Type: "LambdaLayer",
+ * //             Reference: "STRING_VALUE", // required
+ * //           },
+ * //         ],
  * //       },
  * //       ExecutionRoleArn: "STRING_VALUE",
  * //       Schedule: { // CanaryScheduleOutput
  * //         Expression: "STRING_VALUE",
  * //         DurationInSeconds: Number("long"),
+ * //         RetryConfig: { // RetryConfigOutput
+ * //           MaxRetries: Number("int"),
+ * //         },
  * //       },
  * //       RunConfig: { // CanaryRunConfigOutput
  * //         TimeoutInSeconds: Number("int"),
  * //         MemoryInMB: Number("int"),
  * //         ActiveTracing: true || false,
+ * //         EphemeralStorage: Number("int"),
  * //       },
  * //       SuccessRetentionPeriodInDays: Number("int"),
  * //       FailureRetentionPeriodInDays: Number("int"),
@@ -118,6 +128,10 @@ export interface DescribeCanariesCommandOutput extends DescribeCanariesResponse,
  * //           EncryptionMode: "SSE_S3" || "SSE_KMS",
  * //           KmsKeyArn: "STRING_VALUE",
  * //         },
+ * //       },
+ * //       DryRunConfig: { // DryRunConfigOutput
+ * //         DryRunId: "STRING_VALUE",
+ * //         LastDryRunExecutionStatus: "STRING_VALUE",
  * //       },
  * //     },
  * //   ],

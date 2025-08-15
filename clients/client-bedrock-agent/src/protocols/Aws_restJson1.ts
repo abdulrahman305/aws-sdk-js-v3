@@ -217,14 +217,15 @@ import {
   ContentBlock,
   ContextEnrichmentConfiguration,
   CrawlFilterConfiguration,
-  CustomDocumentIdentifier,
   CustomOrchestration,
   CustomTransformationConfiguration,
   DataSource,
   DataSourceConfiguration,
   DataSourceSummary,
   EnrichmentStrategyConfiguration,
+  FieldForReranking,
   FixedSizeChunkingConfiguration,
+  FlowAliasConcurrencyConfiguration,
   FlowAliasRoutingConfigurationListItem,
   FlowAliasSummary,
   FlowCondition,
@@ -232,9 +233,6 @@ import {
   FlowConnection,
   FlowConnectionConfiguration,
   FlowDataConnectionConfiguration,
-  FlowDefinition,
-  FlowNode,
-  FlowNodeConfiguration,
   FlowNodeInput,
   FlowNodeOutput,
   FlowSummary,
@@ -245,20 +243,22 @@ import {
   HierarchicalChunkingConfiguration,
   HierarchicalChunkingLevelConfiguration,
   InferenceConfiguration,
-  IngestionJob,
-  IngestionJobFilter,
-  IngestionJobSortBy,
-  IngestionJobSummary,
+  InlineCodeFlowNodeConfiguration,
   InputFlowNodeConfiguration,
   IntermediateStorage,
   InternalServerException,
   IteratorFlowNodeConfiguration,
   KnowledgeBaseFlowNodeConfiguration,
+  KnowledgeBaseOrchestrationConfiguration,
+  KnowledgeBasePromptTemplate,
   LambdaFunctionFlowNodeConfiguration,
   LexFlowNodeConfiguration,
+  LoopControllerFlowNodeConfiguration,
+  LoopInputFlowNodeConfiguration,
   MemoryConfiguration,
   MemoryType,
   Message,
+  MetadataConfigurationForReranking,
   OrchestrationExecutor,
   OutputFlowNodeConfiguration,
   ParameterDetail,
@@ -266,6 +266,7 @@ import {
   ParsingPrompt,
   PatternObjectFilter,
   PatternObjectFilterConfiguration,
+  PerformanceConfiguration,
   PromptConfiguration,
   PromptFlowNodeConfiguration,
   PromptFlowNodeInlineConfiguration,
@@ -276,6 +277,7 @@ import {
   PromptModelInferenceConfiguration,
   PromptOverrideConfiguration,
   PromptTemplateConfiguration,
+  RerankingMetadataSelectiveModeConfiguration,
   ResourceNotFoundException,
   RetrievalFlowNodeConfiguration,
   RetrievalFlowNodeS3Configuration,
@@ -312,6 +314,9 @@ import {
   UrlConfiguration,
   ValidationException,
   VectorIngestionConfiguration,
+  VectorSearchBedrockRerankingConfiguration,
+  VectorSearchBedrockRerankingModelConfiguration,
+  VectorSearchRerankingConfiguration,
   WebCrawlerConfiguration,
   WebCrawlerLimits,
   WebDataSourceConfiguration,
@@ -322,11 +327,19 @@ import {
   ByteContentDoc,
   CuratedQuery,
   CustomContent,
+  CustomDocumentIdentifier,
   CustomS3Location,
   DocumentContent,
   DocumentIdentifier,
   DocumentMetadata,
   EmbeddingModelConfiguration,
+  FlowDefinition,
+  FlowNode,
+  FlowNodeConfiguration,
+  IngestionJob,
+  IngestionJobFilter,
+  IngestionJobSortBy,
+  IngestionJobSummary,
   InlineContent,
   KendraKnowledgeBaseConfiguration,
   KnowledgeBase,
@@ -334,6 +347,7 @@ import {
   KnowledgeBaseDocument,
   KnowledgeBaseDocumentDetail,
   KnowledgeBaseSummary,
+  LoopFlowNodeConfiguration,
   MetadataAttribute,
   MetadataAttributeValue,
   MongoDbAtlasConfiguration,
@@ -369,6 +383,7 @@ import {
   RedshiftServerlessAuthConfiguration,
   RedshiftServerlessConfiguration,
   S3Content,
+  S3VectorsConfiguration,
   SqlKnowledgeBaseConfiguration,
   StorageConfiguration,
   SupplementalDataStorageConfiguration,
@@ -600,6 +615,7 @@ export const se_CreateFlowAliasCommand = async (
   body = JSON.stringify(
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      concurrencyConfiguration: (_) => _json(_),
       description: [],
       name: [],
       routingConfiguration: (_) => _json(_),
@@ -1776,6 +1792,7 @@ export const se_UpdateAgentAliasCommand = async (
   body = JSON.stringify(
     take(input, {
       agentAliasName: [],
+      aliasInvocationState: [],
       description: [],
       routingConfiguration: (_) => _json(_),
     })
@@ -1911,6 +1928,7 @@ export const se_UpdateFlowAliasCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      concurrencyConfiguration: (_) => _json(_),
       description: [],
       name: [],
       routingConfiguration: (_) => _json(_),
@@ -2169,6 +2187,7 @@ export const de_CreateFlowAliasCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     arn: __expectString,
+    concurrencyConfiguration: _json,
     createdAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     description: __expectString,
     flowId: __expectString,
@@ -2759,6 +2778,7 @@ export const de_GetFlowAliasCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     arn: __expectString,
+    concurrencyConfiguration: _json,
     createdAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     description: __expectString,
     flowId: __expectString,
@@ -3539,6 +3559,7 @@ export const de_UpdateFlowAliasCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     arn: __expectString,
+    concurrencyConfiguration: _json,
     createdAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     description: __expectString,
     flowId: __expectString,
@@ -3801,6 +3822,26 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_ActionGroupSignatureParams omitted.
 
+/**
+ * serializeAws_restJson1AdditionalModelRequestFields
+ */
+const se_AdditionalModelRequestFields = (input: Record<string, __DocumentType>, context: __SerdeContext): any => {
+  return Object.entries(input).reduce((acc: Record<string, any>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key] = se_AdditionalModelRequestFieldsValue(value, context);
+    return acc;
+  }, {});
+};
+
+/**
+ * serializeAws_restJson1AdditionalModelRequestFieldsValue
+ */
+const se_AdditionalModelRequestFieldsValue = (input: __DocumentType, context: __SerdeContext): any => {
+  return input;
+};
+
 // se_AgentAliasRoutingConfiguration omitted.
 
 // se_AgentAliasRoutingConfigurationListItem omitted.
@@ -3927,9 +3968,15 @@ const se_DocumentMetadata = (input: DocumentMetadata, context: __SerdeContext): 
 
 // se_EnrichmentStrategyConfiguration omitted.
 
+// se_FieldForReranking omitted.
+
+// se_FieldsForReranking omitted.
+
 // se_FilterList omitted.
 
 // se_FixedSizeChunkingConfiguration omitted.
+
+// se_FlowAliasConcurrencyConfiguration omitted.
 
 // se_FlowAliasRoutingConfiguration omitted.
 
@@ -3980,11 +4027,15 @@ const se_FlowNodeConfiguration = (input: FlowNodeConfiguration, context: __Serde
     agent: (value) => ({ agent: _json(value) }),
     collector: (value) => ({ collector: _json(value) }),
     condition: (value) => ({ condition: _json(value) }),
+    inlineCode: (value) => ({ inlineCode: _json(value) }),
     input: (value) => ({ input: _json(value) }),
     iterator: (value) => ({ iterator: _json(value) }),
-    knowledgeBase: (value) => ({ knowledgeBase: _json(value) }),
+    knowledgeBase: (value) => ({ knowledgeBase: se_KnowledgeBaseFlowNodeConfiguration(value, context) }),
     lambdaFunction: (value) => ({ lambdaFunction: _json(value) }),
     lex: (value) => ({ lex: _json(value) }),
+    loop: (value) => ({ loop: se_LoopFlowNodeConfiguration(value, context) }),
+    loopController: (value) => ({ loopController: _json(value) }),
+    loopInput: (value) => ({ loopInput: _json(value) }),
     output: (value) => ({ output: _json(value) }),
     prompt: (value) => ({ prompt: se_PromptFlowNodeConfiguration(value, context) }),
     retrieval: (value) => ({ retrieval: _json(value) }),
@@ -4047,6 +4098,8 @@ const se_InferenceConfiguration = (input: InferenceConfiguration, context: __Ser
 
 // se_IngestionJobSortBy omitted.
 
+// se_InlineCodeFlowNodeConfiguration omitted.
+
 /**
  * serializeAws_restJson1InlineContent
  */
@@ -4089,11 +4142,58 @@ const se_KnowledgeBaseDocuments = (input: KnowledgeBaseDocument[], context: __Se
     });
 };
 
-// se_KnowledgeBaseFlowNodeConfiguration omitted.
+/**
+ * serializeAws_restJson1KnowledgeBaseFlowNodeConfiguration
+ */
+const se_KnowledgeBaseFlowNodeConfiguration = (
+  input: KnowledgeBaseFlowNodeConfiguration,
+  context: __SerdeContext
+): any => {
+  return take(input, {
+    guardrailConfiguration: _json,
+    inferenceConfiguration: (_) => se_PromptInferenceConfiguration(_, context),
+    knowledgeBaseId: [],
+    modelId: [],
+    numberOfResults: [],
+    orchestrationConfiguration: (_) => se_KnowledgeBaseOrchestrationConfiguration(_, context),
+    promptTemplate: _json,
+    rerankingConfiguration: (_) => se_VectorSearchRerankingConfiguration(_, context),
+  });
+};
+
+/**
+ * serializeAws_restJson1KnowledgeBaseOrchestrationConfiguration
+ */
+const se_KnowledgeBaseOrchestrationConfiguration = (
+  input: KnowledgeBaseOrchestrationConfiguration,
+  context: __SerdeContext
+): any => {
+  return take(input, {
+    additionalModelRequestFields: (_) => se_AdditionalModelRequestFields(_, context),
+    inferenceConfig: (_) => se_PromptInferenceConfiguration(_, context),
+    performanceConfig: _json,
+    promptTemplate: _json,
+  });
+};
+
+// se_KnowledgeBasePromptTemplate omitted.
 
 // se_LambdaFunctionFlowNodeConfiguration omitted.
 
 // se_LexFlowNodeConfiguration omitted.
+
+// se_LoopControllerFlowNodeConfiguration omitted.
+
+/**
+ * serializeAws_restJson1LoopFlowNodeConfiguration
+ */
+const se_LoopFlowNodeConfiguration = (input: LoopFlowNodeConfiguration, context: __SerdeContext): any => {
+  return take(input, {
+    definition: (_) => se_FlowDefinition(_, context),
+  });
+};
+
+// se_LoopInputFlowNodeConfiguration omitted.
 
 // se_MemoryConfiguration omitted.
 
@@ -4135,6 +4235,8 @@ const se_MetadataAttributeValue = (input: MetadataAttributeValue, context: __Ser
   });
 };
 
+// se_MetadataConfigurationForReranking omitted.
+
 // se_MongoDbAtlasConfiguration omitted.
 
 // se_MongoDbAtlasFieldMapping omitted.
@@ -4168,6 +4270,8 @@ const se_MetadataAttributeValue = (input: MetadataAttributeValue, context: __Ser
 // se_PatternObjectFilterConfiguration omitted.
 
 // se_PatternObjectFilterList omitted.
+
+// se_PerformanceConfiguration omitted.
 
 // se_PineconeConfiguration omitted.
 
@@ -4367,6 +4471,8 @@ const se_PromptVariantList = (input: PromptVariant[], context: __SerdeContext): 
 
 // se_RedshiftServerlessConfiguration omitted.
 
+// se_RerankingMetadataSelectiveModeConfiguration omitted.
+
 // se_RetrievalFlowNodeConfiguration omitted.
 
 // se_RetrievalFlowNodeS3Configuration omitted.
@@ -4382,6 +4488,8 @@ const se_PromptVariantList = (input: PromptVariant[], context: __SerdeContext): 
 // se_S3Location omitted.
 
 // se_S3Prefixes omitted.
+
+// se_S3VectorsConfiguration omitted.
 
 // se_SalesforceCrawlerConfiguration omitted.
 
@@ -4508,6 +4616,46 @@ const se_ToolSpecification = (input: ToolSpecification, context: __SerdeContext)
 
 // se_VectorKnowledgeBaseConfiguration omitted.
 
+/**
+ * serializeAws_restJson1VectorSearchBedrockRerankingConfiguration
+ */
+const se_VectorSearchBedrockRerankingConfiguration = (
+  input: VectorSearchBedrockRerankingConfiguration,
+  context: __SerdeContext
+): any => {
+  return take(input, {
+    metadataConfiguration: _json,
+    modelConfiguration: (_) => se_VectorSearchBedrockRerankingModelConfiguration(_, context),
+    numberOfRerankedResults: [],
+  });
+};
+
+/**
+ * serializeAws_restJson1VectorSearchBedrockRerankingModelConfiguration
+ */
+const se_VectorSearchBedrockRerankingModelConfiguration = (
+  input: VectorSearchBedrockRerankingModelConfiguration,
+  context: __SerdeContext
+): any => {
+  return take(input, {
+    additionalModelRequestFields: (_) => se_AdditionalModelRequestFields(_, context),
+    modelArn: [],
+  });
+};
+
+/**
+ * serializeAws_restJson1VectorSearchRerankingConfiguration
+ */
+const se_VectorSearchRerankingConfiguration = (
+  input: VectorSearchRerankingConfiguration,
+  context: __SerdeContext
+): any => {
+  return take(input, {
+    bedrockRerankingConfiguration: (_) => se_VectorSearchBedrockRerankingConfiguration(_, context),
+    type: [],
+  });
+};
+
 // se_WebCrawlerConfiguration omitted.
 
 // se_WebCrawlerLimits omitted.
@@ -4550,6 +4698,26 @@ const de_ActionGroupSummary = (output: any, context: __SerdeContext): ActionGrou
     description: __expectString,
     updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
   }) as any;
+};
+
+/**
+ * deserializeAws_restJson1AdditionalModelRequestFields
+ */
+const de_AdditionalModelRequestFields = (output: any, context: __SerdeContext): Record<string, __DocumentType> => {
+  return Object.entries(output).reduce((acc: Record<string, __DocumentType>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key as string] = de_AdditionalModelRequestFieldsValue(value, context);
+    return acc;
+  }, {} as Record<string, __DocumentType>);
+};
+
+/**
+ * deserializeAws_restJson1AdditionalModelRequestFieldsValue
+ */
+const de_AdditionalModelRequestFieldsValue = (output: any, context: __SerdeContext): __DocumentType => {
+  return output;
 };
 
 /**
@@ -4616,6 +4784,7 @@ const de_AgentAlias = (output: any, context: __SerdeContext): AgentAlias => {
     agentAliasName: __expectString,
     agentAliasStatus: __expectString,
     agentId: __expectString,
+    aliasInvocationState: __expectString,
     clientToken: __expectString,
     createdAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     description: __expectString,
@@ -4672,6 +4841,7 @@ const de_AgentAliasSummary = (output: any, context: __SerdeContext): AgentAliasS
     agentAliasId: __expectString,
     agentAliasName: __expectString,
     agentAliasStatus: __expectString,
+    aliasInvocationState: __expectString,
     createdAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     description: __expectString,
     routingConfiguration: _json,
@@ -4974,9 +5144,15 @@ const de_DataSourceSummary = (output: any, context: __SerdeContext): DataSourceS
 
 // de_FailureReasons omitted.
 
+// de_FieldForReranking omitted.
+
+// de_FieldsForReranking omitted.
+
 // de_FilterList omitted.
 
 // de_FixedSizeChunkingConfiguration omitted.
+
+// de_FlowAliasConcurrencyConfiguration omitted.
 
 // de_FlowAliasRoutingConfiguration omitted.
 
@@ -5000,6 +5176,7 @@ const de_FlowAliasSummaries = (output: any, context: __SerdeContext): FlowAliasS
 const de_FlowAliasSummary = (output: any, context: __SerdeContext): FlowAliasSummary => {
   return take(output, {
     arn: __expectString,
+    concurrencyConfiguration: _json,
     createdAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     description: __expectString,
     flowId: __expectString,
@@ -5066,6 +5243,11 @@ const de_FlowNodeConfiguration = (output: any, context: __SerdeContext): FlowNod
       condition: _json(output.condition),
     };
   }
+  if (output.inlineCode != null) {
+    return {
+      inlineCode: _json(output.inlineCode),
+    };
+  }
   if (output.input != null) {
     return {
       input: _json(output.input),
@@ -5078,7 +5260,7 @@ const de_FlowNodeConfiguration = (output: any, context: __SerdeContext): FlowNod
   }
   if (output.knowledgeBase != null) {
     return {
-      knowledgeBase: _json(output.knowledgeBase),
+      knowledgeBase: de_KnowledgeBaseFlowNodeConfiguration(output.knowledgeBase, context),
     };
   }
   if (output.lambdaFunction != null) {
@@ -5089,6 +5271,21 @@ const de_FlowNodeConfiguration = (output: any, context: __SerdeContext): FlowNod
   if (output.lex != null) {
     return {
       lex: _json(output.lex),
+    };
+  }
+  if (output.loop != null) {
+    return {
+      loop: de_LoopFlowNodeConfiguration(output.loop, context),
+    };
+  }
+  if (output.loopController != null) {
+    return {
+      loopController: _json(output.loopController),
+    };
+  }
+  if (output.loopInput != null) {
+    return {
+      loopInput: _json(output.loopInput),
     };
   }
   if (output.output != null) {
@@ -5269,9 +5466,13 @@ const de_IngestionJobSummary = (output: any, context: __SerdeContext): Ingestion
   }) as any;
 };
 
+// de_InlineCodeFlowNodeConfiguration omitted.
+
 // de_InputFlowNodeConfiguration omitted.
 
 // de_IntermediateStorage omitted.
+
+// de_InvalidLoopBoundaryFlowValidationDetails omitted.
 
 // de_IteratorFlowNodeConfiguration omitted.
 
@@ -5324,7 +5525,41 @@ const de_KnowledgeBaseDocumentDetails = (output: any, context: __SerdeContext): 
   return retVal;
 };
 
-// de_KnowledgeBaseFlowNodeConfiguration omitted.
+/**
+ * deserializeAws_restJson1KnowledgeBaseFlowNodeConfiguration
+ */
+const de_KnowledgeBaseFlowNodeConfiguration = (
+  output: any,
+  context: __SerdeContext
+): KnowledgeBaseFlowNodeConfiguration => {
+  return take(output, {
+    guardrailConfiguration: _json,
+    inferenceConfiguration: (_: any) => de_PromptInferenceConfiguration(__expectUnion(_), context),
+    knowledgeBaseId: __expectString,
+    modelId: __expectString,
+    numberOfResults: __expectInt32,
+    orchestrationConfiguration: (_: any) => de_KnowledgeBaseOrchestrationConfiguration(_, context),
+    promptTemplate: _json,
+    rerankingConfiguration: (_: any) => de_VectorSearchRerankingConfiguration(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1KnowledgeBaseOrchestrationConfiguration
+ */
+const de_KnowledgeBaseOrchestrationConfiguration = (
+  output: any,
+  context: __SerdeContext
+): KnowledgeBaseOrchestrationConfiguration => {
+  return take(output, {
+    additionalModelRequestFields: (_: any) => de_AdditionalModelRequestFields(_, context),
+    inferenceConfig: (_: any) => de_PromptInferenceConfiguration(__expectUnion(_), context),
+    performanceConfig: _json,
+    promptTemplate: _json,
+  }) as any;
+};
+
+// de_KnowledgeBasePromptTemplate omitted.
 
 /**
  * deserializeAws_restJson1KnowledgeBaseSummaries
@@ -5355,6 +5590,21 @@ const de_KnowledgeBaseSummary = (output: any, context: __SerdeContext): Knowledg
 
 // de_LexFlowNodeConfiguration omitted.
 
+// de_LoopControllerFlowNodeConfiguration omitted.
+
+/**
+ * deserializeAws_restJson1LoopFlowNodeConfiguration
+ */
+const de_LoopFlowNodeConfiguration = (output: any, context: __SerdeContext): LoopFlowNodeConfiguration => {
+  return take(output, {
+    definition: (_: any) => de_FlowDefinition(_, context),
+  }) as any;
+};
+
+// de_LoopIncompatibleNodeTypeFlowValidationDetails omitted.
+
+// de_LoopInputFlowNodeConfiguration omitted.
+
 // de_MalformedConditionExpressionFlowValidationDetails omitted.
 
 // de_MalformedNodeInputExpressionFlowValidationDetails omitted.
@@ -5365,6 +5615,8 @@ const de_KnowledgeBaseSummary = (output: any, context: __SerdeContext): Knowledg
 
 // de_Messages omitted.
 
+// de_MetadataConfigurationForReranking omitted.
+
 // de_MismatchedNodeInputTypeFlowValidationDetails omitted.
 
 // de_MismatchedNodeOutputTypeFlowValidationDetails omitted.
@@ -5374,6 +5626,10 @@ const de_KnowledgeBaseSummary = (output: any, context: __SerdeContext): Knowledg
 // de_MissingDefaultConditionFlowValidationDetails omitted.
 
 // de_MissingEndingNodesFlowValidationDetails omitted.
+
+// de_MissingLoopControllerNodeFlowValidationDetails omitted.
+
+// de_MissingLoopInputNodeFlowValidationDetails omitted.
 
 // de_MissingNodeConfigurationFlowValidationDetails omitted.
 
@@ -5386,6 +5642,10 @@ const de_KnowledgeBaseSummary = (output: any, context: __SerdeContext): Knowledg
 // de_MongoDbAtlasConfiguration omitted.
 
 // de_MongoDbAtlasFieldMapping omitted.
+
+// de_MultipleLoopControllerNodesFlowValidationDetails omitted.
+
+// de_MultipleLoopInputNodesFlowValidationDetails omitted.
 
 // de_MultipleNodeInputConnectionsFlowValidationDetails omitted.
 
@@ -5418,6 +5678,8 @@ const de_KnowledgeBaseSummary = (output: any, context: __SerdeContext): Knowledg
 // de_PatternObjectFilterConfiguration omitted.
 
 // de_PatternObjectFilterList omitted.
+
+// de_PerformanceConfiguration omitted.
 
 // de_PineconeConfiguration omitted.
 
@@ -5662,6 +5924,8 @@ const de_PromptVariantList = (output: any, context: __SerdeContext): PromptVaria
 
 // de_RedshiftServerlessConfiguration omitted.
 
+// de_RerankingMetadataSelectiveModeConfiguration omitted.
+
 // de_RetrievalFlowNodeConfiguration omitted.
 
 // de_RetrievalFlowNodeS3Configuration omitted.
@@ -5675,6 +5939,8 @@ const de_PromptVariantList = (output: any, context: __SerdeContext): PromptVaria
 // de_S3Location omitted.
 
 // de_S3Prefixes omitted.
+
+// de_S3VectorsConfiguration omitted.
 
 // de_SalesforceCrawlerConfiguration omitted.
 
@@ -5831,6 +6097,46 @@ const de_ToolSpecification = (output: any, context: __SerdeContext): ToolSpecifi
 // de_VectorIngestionConfiguration omitted.
 
 // de_VectorKnowledgeBaseConfiguration omitted.
+
+/**
+ * deserializeAws_restJson1VectorSearchBedrockRerankingConfiguration
+ */
+const de_VectorSearchBedrockRerankingConfiguration = (
+  output: any,
+  context: __SerdeContext
+): VectorSearchBedrockRerankingConfiguration => {
+  return take(output, {
+    metadataConfiguration: _json,
+    modelConfiguration: (_: any) => de_VectorSearchBedrockRerankingModelConfiguration(_, context),
+    numberOfRerankedResults: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1VectorSearchBedrockRerankingModelConfiguration
+ */
+const de_VectorSearchBedrockRerankingModelConfiguration = (
+  output: any,
+  context: __SerdeContext
+): VectorSearchBedrockRerankingModelConfiguration => {
+  return take(output, {
+    additionalModelRequestFields: (_: any) => de_AdditionalModelRequestFields(_, context),
+    modelArn: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1VectorSearchRerankingConfiguration
+ */
+const de_VectorSearchRerankingConfiguration = (
+  output: any,
+  context: __SerdeContext
+): VectorSearchRerankingConfiguration => {
+  return take(output, {
+    bedrockRerankingConfiguration: (_: any) => de_VectorSearchBedrockRerankingConfiguration(_, context),
+    type: __expectString,
+  }) as any;
+};
 
 // de_WebCrawlerConfiguration omitted.
 

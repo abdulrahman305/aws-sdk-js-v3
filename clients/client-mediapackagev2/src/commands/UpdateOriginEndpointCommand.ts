@@ -40,7 +40,7 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  *   ChannelGroupName: "STRING_VALUE", // required
  *   ChannelName: "STRING_VALUE", // required
  *   OriginEndpointName: "STRING_VALUE", // required
- *   ContainerType: "TS" || "CMAF", // required
+ *   ContainerType: "TS" || "CMAF" || "ISM", // required
  *   Segment: { // Segment
  *     SegmentDurationSeconds: Number("int"),
  *     SegmentName: "STRING_VALUE",
@@ -57,8 +57,10 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  *       EncryptionMethod: { // EncryptionMethod
  *         TsEncryptionMethod: "AES_128" || "SAMPLE_AES",
  *         CmafEncryptionMethod: "CENC" || "CBCS",
+ *         IsmEncryptionMethod: "CENC",
  *       },
  *       KeyRotationIntervalSeconds: Number("int"),
+ *       CmafExcludeSegmentDrmMetadata: true || false,
  *       SpekeKeyProvider: { // SpekeKeyProvider
  *         EncryptionContractConfiguration: { // EncryptionContractConfiguration
  *           PresetSpeke20Audio: "PRESET_AUDIO_1" || "PRESET_AUDIO_2" || "PRESET_AUDIO_3" || "SHARED" || "UNENCRYPTED", // required
@@ -147,6 +149,57 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  *         TimingMode: "HTTP_HEAD" || "HTTP_ISO" || "HTTP_XSDATE" || "UTC_DIRECT",
  *         TimingSource: "STRING_VALUE",
  *       },
+ *       Profiles: [ // DashProfiles
+ *         "DVB_DASH",
+ *       ],
+ *       BaseUrls: [ // DashBaseUrls
+ *         { // DashBaseUrl
+ *           Url: "STRING_VALUE", // required
+ *           ServiceLocation: "STRING_VALUE",
+ *           DvbPriority: Number("int"),
+ *           DvbWeight: Number("int"),
+ *         },
+ *       ],
+ *       ProgramInformation: { // DashProgramInformation
+ *         Title: "STRING_VALUE",
+ *         Source: "STRING_VALUE",
+ *         Copyright: "STRING_VALUE",
+ *         LanguageCode: "STRING_VALUE",
+ *         MoreInformationUrl: "STRING_VALUE",
+ *       },
+ *       DvbSettings: { // DashDvbSettings
+ *         FontDownload: { // DashDvbFontDownload
+ *           Url: "STRING_VALUE",
+ *           MimeType: "STRING_VALUE",
+ *           FontFamily: "STRING_VALUE",
+ *         },
+ *         ErrorMetrics: [ // DashDvbErrorMetrics
+ *           { // DashDvbMetricsReporting
+ *             ReportingUrl: "STRING_VALUE", // required
+ *             Probability: Number("int"),
+ *           },
+ *         ],
+ *       },
+ *       Compactness: "STANDARD" || "NONE",
+ *       SubtitleConfiguration: { // DashSubtitleConfiguration
+ *         TtmlConfiguration: { // DashTtmlConfiguration
+ *           TtmlProfile: "IMSC_1" || "EBU_TT_D_101", // required
+ *         },
+ *       },
+ *     },
+ *   ],
+ *   MssManifests: [ // CreateMssManifests
+ *     { // CreateMssManifestConfiguration
+ *       ManifestName: "STRING_VALUE", // required
+ *       ManifestWindowSeconds: Number("int"),
+ *       FilterConfiguration: {
+ *         ManifestFilter: "STRING_VALUE",
+ *         Start: new Date("TIMESTAMP"),
+ *         End: new Date("TIMESTAMP"),
+ *         TimeDelaySeconds: Number("int"),
+ *         ClipStartTime: new Date("TIMESTAMP"),
+ *       },
+ *       ManifestLayout: "FULL" || "COMPACT",
  *     },
  *   ],
  *   ForceEndpointErrorConfiguration: { // ForceEndpointErrorConfiguration
@@ -163,7 +216,7 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  * //   ChannelGroupName: "STRING_VALUE", // required
  * //   ChannelName: "STRING_VALUE", // required
  * //   OriginEndpointName: "STRING_VALUE", // required
- * //   ContainerType: "TS" || "CMAF", // required
+ * //   ContainerType: "TS" || "CMAF" || "ISM", // required
  * //   Segment: { // Segment
  * //     SegmentDurationSeconds: Number("int"),
  * //     SegmentName: "STRING_VALUE",
@@ -180,8 +233,10 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  * //       EncryptionMethod: { // EncryptionMethod
  * //         TsEncryptionMethod: "AES_128" || "SAMPLE_AES",
  * //         CmafEncryptionMethod: "CENC" || "CBCS",
+ * //         IsmEncryptionMethod: "CENC",
  * //       },
  * //       KeyRotationIntervalSeconds: Number("int"),
+ * //       CmafExcludeSegmentDrmMetadata: true || false,
  * //       SpekeKeyProvider: { // SpekeKeyProvider
  * //         EncryptionContractConfiguration: { // EncryptionContractConfiguration
  * //           PresetSpeke20Audio: "PRESET_AUDIO_1" || "PRESET_AUDIO_2" || "PRESET_AUDIO_3" || "SHARED" || "UNENCRYPTED", // required
@@ -248,6 +303,21 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  * //       UrlEncodeChildManifest: true || false,
  * //     },
  * //   ],
+ * //   MssManifests: [ // GetMssManifests
+ * //     { // GetMssManifestConfiguration
+ * //       ManifestName: "STRING_VALUE", // required
+ * //       Url: "STRING_VALUE", // required
+ * //       FilterConfiguration: {
+ * //         ManifestFilter: "STRING_VALUE",
+ * //         Start: new Date("TIMESTAMP"),
+ * //         End: new Date("TIMESTAMP"),
+ * //         TimeDelaySeconds: Number("int"),
+ * //         ClipStartTime: new Date("TIMESTAMP"),
+ * //       },
+ * //       ManifestWindowSeconds: Number("int"),
+ * //       ManifestLayout: "FULL" || "COMPACT",
+ * //     },
+ * //   ],
  * //   ForceEndpointErrorConfiguration: { // ForceEndpointErrorConfiguration
  * //     EndpointErrorConditions: [ // EndpointErrorConditions
  * //       "STALE_MANIFEST" || "INCOMPLETE_MANIFEST" || "MISSING_DRM_KEY" || "SLATE_INPUT",
@@ -284,6 +354,43 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  * //         TimingMode: "HTTP_HEAD" || "HTTP_ISO" || "HTTP_XSDATE" || "UTC_DIRECT",
  * //         TimingSource: "STRING_VALUE",
  * //       },
+ * //       Profiles: [ // DashProfiles
+ * //         "DVB_DASH",
+ * //       ],
+ * //       BaseUrls: [ // DashBaseUrls
+ * //         { // DashBaseUrl
+ * //           Url: "STRING_VALUE", // required
+ * //           ServiceLocation: "STRING_VALUE",
+ * //           DvbPriority: Number("int"),
+ * //           DvbWeight: Number("int"),
+ * //         },
+ * //       ],
+ * //       ProgramInformation: { // DashProgramInformation
+ * //         Title: "STRING_VALUE",
+ * //         Source: "STRING_VALUE",
+ * //         Copyright: "STRING_VALUE",
+ * //         LanguageCode: "STRING_VALUE",
+ * //         MoreInformationUrl: "STRING_VALUE",
+ * //       },
+ * //       DvbSettings: { // DashDvbSettings
+ * //         FontDownload: { // DashDvbFontDownload
+ * //           Url: "STRING_VALUE",
+ * //           MimeType: "STRING_VALUE",
+ * //           FontFamily: "STRING_VALUE",
+ * //         },
+ * //         ErrorMetrics: [ // DashDvbErrorMetrics
+ * //           { // DashDvbMetricsReporting
+ * //             ReportingUrl: "STRING_VALUE", // required
+ * //             Probability: Number("int"),
+ * //           },
+ * //         ],
+ * //       },
+ * //       Compactness: "STANDARD" || "NONE",
+ * //       SubtitleConfiguration: { // DashSubtitleConfiguration
+ * //         TtmlConfiguration: { // DashTtmlConfiguration
+ * //           TtmlProfile: "IMSC_1" || "EBU_TT_D_101", // required
+ * //         },
+ * //       },
  * //     },
  * //   ],
  * // };
@@ -297,7 +404,9 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  * @see {@link MediaPackageV2ClientResolvedConfig | config} for MediaPackageV2Client's `config` shape.
  *
  * @throws {@link AccessDeniedException} (client fault)
- *  <p>You don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide.</p>
+ *  <p>Access is denied because either you don't have permissions to perform the requested operation or MediaPackage is getting throttling errors with CDN authorization. The user or role that is making the request must have at least
+ *          one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide. Or, if you're using CDN authorization, you will receive this exception
+ *          if MediaPackage receives a throttling error from Secrets Manager.</p>
  *
  * @throws {@link ConflictException} (client fault)
  *  <p>Updating or deleting this resource can cause an inconsistent state.</p>
@@ -506,6 +615,123 @@ export interface UpdateOriginEndpointCommandOutput extends UpdateOriginEndpointR
  *     SegmentName: "segmentName2",
  *     TsIncludeDvbSubtitles: false,
  *     TsUseAudioRenditionGroup: true
+ *   },
+ *   StartoverWindowSeconds: 600,
+ *   Tags: {
+ *     key1: "value1",
+ *     key2: "value2"
+ *   }
+ * }
+ * *\/
+ * ```
+ *
+ * @example Updating an OriginEndpoint with ISM container
+ * ```javascript
+ * //
+ * const input = {
+ *   ChannelGroupName: "exampleChannelGroup",
+ *   ChannelName: "exampleChannel",
+ *   ContainerType: "ISM",
+ *   Description: "Updated description for exampleOriginEndpointISM",
+ *   ForceEndpointErrorConfiguration: {
+ *     EndpointErrorConditions: [
+ *       "STALE_MANIFEST",
+ *       "INCOMPLETE_MANIFEST",
+ *       "MISSING_DRM_KEY",
+ *       "SLATE_INPUT"
+ *     ]
+ *   },
+ *   MssManifests: [
+ *     {
+ *       ManifestLayout: "FULL",
+ *       ManifestName: "exampleMssManifest1",
+ *       ManifestWindowSeconds: 60
+ *     },
+ *     {
+ *       ManifestLayout: "COMPACT",
+ *       ManifestName: "exampleMssManifest2",
+ *       ManifestWindowSeconds: 30
+ *     }
+ *   ],
+ *   OriginEndpointName: "exampleOriginEndpointISM",
+ *   Segment: {
+ *     Encryption: {
+ *       EncryptionMethod: {
+ *         IsmEncryptionMethod: "CENC"
+ *       },
+ *       SpekeKeyProvider: {
+ *         DrmSystems: [
+ *           "PLAYREADY"
+ *         ],
+ *         EncryptionContractConfiguration: {
+ *           PresetSpeke20Audio: "SHARED",
+ *           PresetSpeke20Video: "SHARED"
+ *         },
+ *         ResourceId: "ResourceId",
+ *         RoleArn: "arn:aws:iam::123456789012:role/empRole",
+ *         Url: "https://speke-key-provider.example.com"
+ *       }
+ *     },
+ *     SegmentDurationSeconds: 2,
+ *     SegmentName: "segmentName2"
+ *   },
+ *   StartoverWindowSeconds: 600
+ * };
+ * const command = new UpdateOriginEndpointCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   Arn: "arn:aws:mediapackagev2:us-west-2:123456789012:channelGroup/exampleChannelGroup/channel/exampleChannel/originEndpoint/exampleOriginEndpointISM",
+ *   ChannelGroupName: "exampleChannelGroup",
+ *   ChannelName: "exampleChannel",
+ *   ContainerType: "ISM",
+ *   CreatedAt: "2022-10-18T09:36:00.00Z",
+ *   Description: "Updated description for exampleOriginEndpointISM",
+ *   ETag: "HmgU+ewBzHJS5xvz9nLXm2SEQxTsjRfk0rVvuMayoyl=",
+ *   ForceEndpointErrorConfiguration: {
+ *     EndpointErrorConditions: [
+ *       "STALE_MANIFEST",
+ *       "INCOMPLETE_MANIFEST",
+ *       "MISSING_DRM_KEY",
+ *       "SLATE_INPUT"
+ *     ]
+ *   },
+ *   ModifiedAt: "2022-10-18T09:37:00.00Z",
+ *   MssManifests: [
+ *     {
+ *       ManifestLayout: "FULL",
+ *       ManifestName: "exampleMssManifest1",
+ *       ManifestWindowSeconds: 60,
+ *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointISM/exampleMssManifest1.ism/Manifest"
+ *     },
+ *     {
+ *       ManifestLayout: "COMPACT",
+ *       ManifestName: "exampleMssManifest2",
+ *       ManifestWindowSeconds: 30,
+ *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointISM/exampleMssManifest2.ism/Manifest"
+ *     }
+ *   ],
+ *   OriginEndpointName: "exampleOriginEndpointISM",
+ *   Segment: {
+ *     Encryption: {
+ *       EncryptionMethod: {
+ *         IsmEncryptionMethod: "CENC"
+ *       },
+ *       SpekeKeyProvider: {
+ *         DrmSystems: [
+ *           "PLAYREADY"
+ *         ],
+ *         EncryptionContractConfiguration: {
+ *           PresetSpeke20Audio: "SHARED",
+ *           PresetSpeke20Video: "SHARED"
+ *         },
+ *         ResourceId: "ResourceId",
+ *         RoleArn: "arn:aws:iam::123456789012:role/empRole",
+ *         Url: "https://speke-key-provider.example.com"
+ *       }
+ *     },
+ *     SegmentDurationSeconds: 2,
+ *     SegmentName: "segmentName2"
  *   },
  *   StartoverWindowSeconds: 600,
  *   Tags: {

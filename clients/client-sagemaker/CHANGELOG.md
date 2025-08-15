@@ -3,6 +3,477 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.867.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.866.0...v3.867.0) (2025-08-13)
+
+
+### Features
+
+* **client-sagemaker:** This release introduces compute quota for GPU, Trainium accelerators, vCPU, and vCPU memory utilization across teams in HyperPod clusters ([0e1fe39](https://github.com/aws/aws-sdk-js-v3/commit/0e1fe398e7943436e58a6af8d58e9e586c4ed6b0))
+
+
+
+
+
+# [3.866.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.865.0...v3.866.0) (2025-08-12)
+
+
+### Features
+
+* **client-sagemaker:** IAM Identity Center trusted identity propagation is now supported in SageMaker Studio. ([acfa7e4](https://github.com/aws/aws-sdk-js-v3/commit/acfa7e4e69ab958d77ecd947fa78d91c4e54f350))
+
+
+
+
+
+# [3.864.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.863.0...v3.864.0) (2025-08-08)
+
+
+### Features
+
+* **client-sagemaker:** Adds support for GB200 UltraServers in Amazon SageMaker training jobs, training plans, and HyperPod clusters ([b5dc676](https://github.com/aws/aws-sdk-js-v3/commit/b5dc676b54aee7487922730c9387d81422c6b594))
+
+
+
+
+
+# [3.863.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.862.0...v3.863.0) (2025-08-07)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.861.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.860.0...v3.861.0) (2025-08-05)
+
+
+### Features
+
+* **client-sagemaker:** Add support for SageMaker Hyperpod continuous scaling and custom AMI; Introduce new APIs: ListClusterEvents, DescribeClusterEvent, BatchAddClusterNodes ([0238160](https://github.com/aws/aws-sdk-js-v3/commit/02381600c4c8d19d6ce261092fd6f5eed996866e))
+
+
+
+
+
+# [3.860.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.859.0...v3.860.0) (2025-08-04)
+
+
+### Features
+
+* **client-sagemaker:** This release adds the ability for customers to attach and detach their EBS volumes to EKS-orchestrated HyperPod cluster nodes. ([4f78a2a](https://github.com/aws/aws-sdk-js-v3/commit/4f78a2a0e4d960f7d6d0b159fe97ae1fd0ef6b29))
+
+
+
+
+
+# [3.859.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.858.0...v3.859.0) (2025-08-01)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.857.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.856.0...v3.857.0) (2025-07-30)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.856.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.855.0...v3.856.0) (2025-07-29)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.855.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.854.0...v3.855.0) (2025-07-28)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.850.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.849.0...v3.850.0) (2025-07-21)
+
+
+### Features
+
+* **client-sagemaker:** This release adds 1/ Support for S3FileSystem in CustomFileSystems 2/ The ability for a customer to select their preferred IpAddressType for use with private Workforces 3/ Support for p4de instance type in SageMaker Training Plans ([a78bcaf](https://github.com/aws/aws-sdk-js-v3/commit/a78bcaf1ef8cc1498f3e73f59329fdae3d3bd4de))
+
+
+
+
+
+# [3.848.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.847.0...v3.848.0) (2025-07-17)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.846.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.845.0...v3.846.0) (2025-07-16)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.845.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.844.0...v3.845.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **clients:** upgrade @smithy/middleware-endpoint to fix file/env endpoint resolution ([#7206](https://github.com/aws/aws-sdk-js-v3/issues/7206)) ([37a6275](https://github.com/aws/aws-sdk-js-v3/commit/37a627510bc53ad0ce8d3ef10a2a5ec8ad195ee2))
+
+
+### Features
+
+* **client-sagemaker:** This release adds support for a new Restricted instance group type to enable a specialized environment for running Nova customization jobs on SageMaker HyperPod clusters. This release also adds support for SageMaker pipeline versioning. ([469f748](https://github.com/aws/aws-sdk-js-v3/commit/469f748a6bf4b643f845e9ea305d5dbdddf02382))
+
+
+
+
+
+# [3.844.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.843.0...v3.844.0) (2025-07-09)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.843.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.842.0...v3.843.0) (2025-07-03)
+
+
+### Features
+
+* **client-sagemaker:** Changes include new StartSession API for SageMaker Studio spaces and CreateHubContentPresignedUrls API for SageMaker JumpStart. ([33f9fd4](https://github.com/aws/aws-sdk-js-v3/commit/33f9fd40cef5de3fcc0814d875c4e8e7a6e3fc71))
+
+
+
+
+
+# [3.841.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.840.0...v3.841.0) (2025-07-01)
+
+
+### Features
+
+* **client-sagemaker:** Updated field validation requirements for InstanceGroups. ([8df0fe0](https://github.com/aws/aws-sdk-js-v3/commit/8df0fe0ccfb7b6d09041cdf9cc8bc92ea8db6e21))
+
+
+
+
+
+# [3.840.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.839.0...v3.840.0) (2025-06-30)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.839.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.838.0...v3.839.0) (2025-06-27)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.835.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.834.0...v3.835.0) (2025-06-23)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.833.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.832.0...v3.833.0) (2025-06-19)
+
+
+### Features
+
+* **client-sagemaker:** This release introduces alternative support for utilizing CFN templates from S3 for SageMaker Projects. ([49f6cc2](https://github.com/aws/aws-sdk-js-v3/commit/49f6cc2f2d3968aa24d2e84f2f5f4237c8b65562))
+
+
+
+
+
+# [3.832.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.831.0...v3.832.0) (2025-06-18)
+
+
+### Features
+
+* **client-sagemaker:** Add support for p6-b200 instance type for SageMaker Hyperpod ([f0f582b](https://github.com/aws/aws-sdk-js-v3/commit/f0f582b7685b8ce04466c22f3747c7445fcd0ab2))
+
+
+
+
+
+# [3.830.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.829.0...v3.830.0) (2025-06-16)
+
+
+### Features
+
+* **client-sagemaker:** This release 1) adds a new S3DataType Converse for SageMaker training 2)adds C8g R7gd M8g C6in P6 P6e instance type for SageMaker endpoint 3) adds m7i, r7i, c7i instance type for SageMaker Training and Processing. ([797e80c](https://github.com/aws/aws-sdk-js-v3/commit/797e80ce6bb536bbd5393d76ce3cc09d4ea8cd70))
+
+
+
+
+
+# [3.828.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.827.1...v3.828.0) (2025-06-11)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.826.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.825.0...v3.826.0) (2025-06-06)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.825.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.824.0...v3.825.0) (2025-06-05)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.824.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.823.0...v3.824.0) (2025-06-04)
+
+
+### Features
+
+* **client-sagemaker:** Added support for p6-b200 instance type in SageMaker Training Jobs and Training Plans. ([b293230](https://github.com/aws/aws-sdk-js-v3/commit/b293230c51fc20d4c99c9cf3559e86a12beeb9c5))
+
+
+
+
+
+# [3.823.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.822.0...v3.823.0) (2025-06-03)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+
+### Features
+
+* **client-sagemaker:** Release new parameter CapacityReservationConfig in ProductionVariant ([9ef6641](https://github.com/aws/aws-sdk-js-v3/commit/9ef66413ff91720ec7c383c5db6421b018a2cf35))
+
+
+
+
+
+# [3.820.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.819.0...v3.820.0) (2025-05-29)
+
+
+### Features
+
+* **client-sagemaker:** Add maintenance status field to DescribeMlflowTrackingServer API response ([3ed9c12](https://github.com/aws/aws-sdk-js-v3/commit/3ed9c12976cf6f0dc86aad8c0d2660a4aee578fd))
+
+
+
+
+
+# [3.817.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.816.0...v3.817.0) (2025-05-23)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.816.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.815.0...v3.816.0) (2025-05-22)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.812.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.811.0...v3.812.0) (2025-05-16)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.810.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.809.0...v3.810.0) (2025-05-14)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.808.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.807.0...v3.808.0) (2025-05-12)
+
+
+### Features
+
+* **client-sagemaker:** No API changes from previous release. This release migrated the model to Smithy keeping all features unchanged. ([e06ca01](https://github.com/aws/aws-sdk-js-v3/commit/e06ca015c0b2ea13bdd2e7099160e64dad6eb745))
+
+
+
+
+
+# [3.806.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.805.0...v3.806.0) (2025-05-08)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.805.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.804.0...v3.805.0) (2025-05-07)
+
+
+### Features
+
+* **client-sagemaker:** SageMaker AI Studio users can now migrate to SageMaker Unified Studio, which offers a unified web-based development experience that integrates AWS data, analytics, artificial intelligence (AI), and machine learning (ML) services, as well as additional tools and resource ([b527f8c](https://github.com/aws/aws-sdk-js-v3/commit/b527f8cc4c5cb9fd86171e251711756e5e6c8ecf))
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.803.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.802.0...v3.803.0) (2025-05-05)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.801.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.800.0...v3.801.0) (2025-05-01)
+
+
+### Features
+
+* **client-sagemaker:** Feature - Adding support for Scheduled and Rolling Update Software in Sagemaker Hyperpod. ([81bec3e](https://github.com/aws/aws-sdk-js-v3/commit/81bec3e64d0cfe810cad96f486c1ebfae9ff46d1))
+
+
+
+
+
+# [3.799.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.798.0...v3.799.0) (2025-04-29)
+
+
+### Features
+
+* **client-sagemaker:** Introduced support for P5en instance types on SageMaker Studio for JupyterLab and CodeEditor applications. ([219315a](https://github.com/aws/aws-sdk-js-v3/commit/219315ab1529dc1c61a280446f63ec9f3a526d0b))
+
+
+
+
+
+# [3.798.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.797.0...v3.798.0) (2025-04-28)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.797.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.796.0...v3.797.0) (2025-04-25)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.796.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.795.0...v3.796.0) (2025-04-24)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.792.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.791.0...v3.792.0) (2025-04-18)
+
+
+### Features
+
+* **client-sagemaker:** This release adds a new Neuron driver option in InferenceAmiVersion parameter for ProductionVariant. Additionally, it adds support for fetching model lifecycle status in the ListModelPackages API. Users can now use this API to view the lifecycle stage of models that have been shared with them. ([b436013](https://github.com/aws/aws-sdk-js-v3/commit/b436013ed61efbc4ef5860629c451e6da4062bbd))
+
+
+
+
+
+# [3.787.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.786.0...v3.787.0) (2025-04-10)
+
+**Note:** Version bump only for package @aws-sdk/client-sagemaker
+
+
+
+
+
+# [3.782.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.781.0...v3.782.0) (2025-04-03)
+
+
+### Features
+
+* **client-sagemaker:** Adds support for i3en, m7i, r7i instance types for SageMaker Hyperpod ([3aaab37](https://github.com/aws/aws-sdk-js-v3/commit/3aaab37ddc0dfd02f20e1f7f03e1524679487a47))
+
+
+
+
+
+# [3.780.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.779.0...v3.780.0) (2025-04-01)
+
+
+### Features
+
+* **client-sagemaker:** Added tagging support for SageMaker notebook instance lifecycle configurations ([b1ed2a7](https://github.com/aws/aws-sdk-js-v3/commit/b1ed2a7e68531d6ed47b3ad2895554ac08078622))
+
+
+
+
+
 # [3.778.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.777.0...v3.778.0) (2025-03-28)
 
 

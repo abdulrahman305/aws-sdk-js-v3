@@ -604,6 +604,7 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *                   JA4Fingerprint: { // RateLimitJA4Fingerprint
  *                     FallbackBehavior: "MATCH" || "NO_MATCH", // required
  *                   },
+ *                   ASN: {},
  *                 },
  *               ],
  *             },
@@ -756,6 +757,20 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *                     },
  *                     EnableRegexInPath: true || false,
  *                   },
+ *                   AWSManagedRulesAntiDDoSRuleSet: { // AWSManagedRulesAntiDDoSRuleSet
+ *                     ClientSideActionConfig: { // ClientSideActionConfig
+ *                       Challenge: { // ClientSideAction
+ *                         UsageOfAction: "ENABLED" || "DISABLED", // required
+ *                         Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ *                         ExemptUriRegularExpressions: [ // RegularExpressionList
+ *                           { // Regex
+ *                             RegexString: "STRING_VALUE",
+ *                           },
+ *                         ],
+ *                       },
+ *                     },
+ *                     SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ *                   },
  *                 },
  *               ],
  *               RuleActionOverrides: [
@@ -785,6 +800,15 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *               RegexString: "STRING_VALUE", // required
  *               FieldToMatch: "<FieldToMatch>", // required
  *               TextTransformations: "<TextTransformations>", // required
+ *             },
+ *             AsnMatchStatement: { // AsnMatchStatement
+ *               AsnList: [ // AsnList // required
+ *                 Number("long"),
+ *               ],
+ *               ForwardedIPConfig: {
+ *                 HeaderName: "STRING_VALUE", // required
+ *                 FallbackBehavior: "MATCH" || "NO_MATCH", // required
+ *               },
  *             },
  *           },
  *           ForwardedIPConfig: {
@@ -823,6 +847,7 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *               JA4Fingerprint: {
  *                 FallbackBehavior: "MATCH" || "NO_MATCH", // required
  *               },
+ *               ASN: {},
  *             },
  *           ],
  *         },
@@ -963,6 +988,20 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *                 },
  *                 EnableRegexInPath: true || false,
  *               },
+ *               AWSManagedRulesAntiDDoSRuleSet: {
+ *                 ClientSideActionConfig: {
+ *                   Challenge: {
+ *                     UsageOfAction: "ENABLED" || "DISABLED", // required
+ *                     Sensitivity: "LOW" || "MEDIUM" || "HIGH",
+ *                     ExemptUriRegularExpressions: [
+ *                       {
+ *                         RegexString: "STRING_VALUE",
+ *                       },
+ *                     ],
+ *                   },
+ *                 },
+ *                 SensitivityToBlock: "LOW" || "MEDIUM" || "HIGH",
+ *               },
  *             },
  *           ],
  *           RuleActionOverrides: [
@@ -992,6 +1031,12 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *           RegexString: "STRING_VALUE", // required
  *           FieldToMatch: "<FieldToMatch>", // required
  *           TextTransformations: "<TextTransformations>", // required
+ *         },
+ *         AsnMatchStatement: {
+ *           AsnList: [ // required
+ *             Number("long"),
+ *           ],
+ *           ForwardedIPConfig: "<ForwardedIPConfig>",
  *         },
  *       },
  *       Action: "<RuleAction>",
@@ -1072,6 +1117,19 @@ export interface CreateWebACLCommandOutput extends CreateWebACLResponse, __Metad
  *         DefaultSizeInspectionLimit: "KB_16" || "KB_32" || "KB_48" || "KB_64", // required
  *       },
  *     },
+ *   },
+ *   OnSourceDDoSProtectionConfig: { // OnSourceDDoSProtectionConfig
+ *     ALBLowReputationMode: "ACTIVE_UNDER_DDOS" || "ALWAYS_ON", // required
+ *   },
+ *   ApplicationConfig: { // ApplicationConfig
+ *     Attributes: [ // ApplicationAttributes
+ *       { // ApplicationAttribute
+ *         Name: "STRING_VALUE",
+ *         Values: [ // AttributeValues
+ *           "STRING_VALUE",
+ *         ],
+ *       },
+ *     ],
  *   },
  * };
  * const command = new CreateWebACLCommand(input);

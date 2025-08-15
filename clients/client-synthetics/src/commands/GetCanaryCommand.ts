@@ -39,6 +39,7 @@ export interface GetCanaryCommandOutput extends GetCanaryResponse, __MetadataBea
  * const client = new SyntheticsClient(config);
  * const input = { // GetCanaryRequest
  *   Name: "STRING_VALUE", // required
+ *   DryRunId: "STRING_VALUE",
  * };
  * const command = new GetCanaryCommand(input);
  * const response = await client.send(command);
@@ -49,16 +50,26 @@ export interface GetCanaryCommandOutput extends GetCanaryResponse, __MetadataBea
  * //     Code: { // CanaryCodeOutput
  * //       SourceLocationArn: "STRING_VALUE",
  * //       Handler: "STRING_VALUE",
+ * //       Dependencies: [ // Dependencies
+ * //         { // Dependency
+ * //           Type: "LambdaLayer",
+ * //           Reference: "STRING_VALUE", // required
+ * //         },
+ * //       ],
  * //     },
  * //     ExecutionRoleArn: "STRING_VALUE",
  * //     Schedule: { // CanaryScheduleOutput
  * //       Expression: "STRING_VALUE",
  * //       DurationInSeconds: Number("long"),
+ * //       RetryConfig: { // RetryConfigOutput
+ * //         MaxRetries: Number("int"),
+ * //       },
  * //     },
  * //     RunConfig: { // CanaryRunConfigOutput
  * //       TimeoutInSeconds: Number("int"),
  * //       MemoryInMB: Number("int"),
  * //       ActiveTracing: true || false,
+ * //       EphemeralStorage: Number("int"),
  * //     },
  * //     SuccessRetentionPeriodInDays: Number("int"),
  * //     FailureRetentionPeriodInDays: Number("int"),
@@ -106,6 +117,10 @@ export interface GetCanaryCommandOutput extends GetCanaryResponse, __MetadataBea
  * //         EncryptionMode: "SSE_S3" || "SSE_KMS",
  * //         KmsKeyArn: "STRING_VALUE",
  * //       },
+ * //     },
+ * //     DryRunConfig: { // DryRunConfigOutput
+ * //       DryRunId: "STRING_VALUE",
+ * //       LastDryRunExecutionStatus: "STRING_VALUE",
  * //     },
  * //   },
  * // };

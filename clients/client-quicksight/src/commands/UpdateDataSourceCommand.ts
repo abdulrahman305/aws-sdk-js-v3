@@ -50,6 +50,9 @@ export interface UpdateDataSourceCommandOutput extends UpdateDataSourceResponse,
  *     AthenaParameters: { // AthenaParameters
  *       WorkGroup: "STRING_VALUE",
  *       RoleArn: "STRING_VALUE",
+ *       IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ *         EnableIdentityPropagation: true || false,
+ *       },
  *     },
  *     AuroraParameters: { // AuroraParameters
  *       Host: "STRING_VALUE", // required
@@ -110,7 +113,7 @@ export interface UpdateDataSourceCommandOutput extends UpdateDataSourceResponse,
  *         ],
  *         AutoCreateDatabaseUser: true || false,
  *       },
- *       IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ *       IdentityCenterConfiguration: {
  *         EnableIdentityPropagation: true || false,
  *       },
  *     },
@@ -194,6 +197,12 @@ export interface UpdateDataSourceCommandOutput extends UpdateDataSourceResponse,
  *       ProjectId: "STRING_VALUE", // required
  *       DataSetRegion: "STRING_VALUE",
  *     },
+ *     ImpalaParameters: { // ImpalaParameters
+ *       Host: "STRING_VALUE", // required
+ *       Port: Number("int"), // required
+ *       Database: "STRING_VALUE",
+ *       SqlEndpointPath: "STRING_VALUE", // required
+ *     },
  *   },
  *   Credentials: { // DataSourceCredentials
  *     CredentialPair: { // CredentialPair
@@ -207,6 +216,9 @@ export interface UpdateDataSourceCommandOutput extends UpdateDataSourceResponse,
  *           AthenaParameters: {
  *             WorkGroup: "STRING_VALUE",
  *             RoleArn: "STRING_VALUE",
+ *             IdentityCenterConfiguration: {
+ *               EnableIdentityPropagation: true || false,
+ *             },
  *           },
  *           AuroraParameters: {
  *             Host: "STRING_VALUE", // required
@@ -350,6 +362,12 @@ export interface UpdateDataSourceCommandOutput extends UpdateDataSourceResponse,
  *           BigQueryParameters: {
  *             ProjectId: "STRING_VALUE", // required
  *             DataSetRegion: "STRING_VALUE",
+ *           },
+ *           ImpalaParameters: {
+ *             Host: "STRING_VALUE", // required
+ *             Port: Number("int"), // required
+ *             Database: "STRING_VALUE",
+ *             SqlEndpointPath: "STRING_VALUE", // required
  *           },
  *         },
  *       ],

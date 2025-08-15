@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DeleteImportedModelRequest, DeleteImportedModelResponse } from "../models/models_0";
+import { DeleteImportedModelRequest, DeleteImportedModelResponse } from "../models/models_1";
 import { de_DeleteImportedModelCommand, se_DeleteImportedModelCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,9 +28,7 @@ export interface DeleteImportedModelCommandInput extends DeleteImportedModelRequ
 export interface DeleteImportedModelCommandOutput extends DeleteImportedModelResponse, __MetadataBearer {}
 
 /**
- * <p>Deletes a custom model that you imported earlier. For more information,
- *         see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">Import a customized model</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.
- * </p>
+ * <p>Deletes a custom model that you imported earlier. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">Import a customized model</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>. </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

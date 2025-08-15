@@ -56,6 +56,7 @@ export interface SearchTasksCommandOutput extends SearchTasksResponse, __Metadat
  *         },
  *         searchTermFilter: { // SearchTermFilterExpression
  *           searchTerm: "STRING_VALUE", // required
+ *           matchType: "FUZZY_MATCH" || "CONTAINS",
  *         },
  *         stringFilter: { // StringFilterExpression
  *           name: "STRING_VALUE", // required
@@ -77,6 +78,7 @@ export interface SearchTasksCommandOutput extends SearchTasksResponse, __Metadat
  *               },
  *               searchTermFilter: {
  *                 searchTerm: "STRING_VALUE", // required
+ *                 matchType: "FUZZY_MATCH" || "CONTAINS",
  *               },
  *               stringFilter: {
  *                 name: "STRING_VALUE", // required
@@ -127,11 +129,14 @@ export interface SearchTasksCommandOutput extends SearchTasksResponse, __Metadat
  * //           float: "STRING_VALUE",
  * //           string: "STRING_VALUE",
  * //           path: "STRING_VALUE",
+ * //           chunkInt: "STRING_VALUE",
  * //         },
  * //       },
  * //       failureRetryCount: Number("int"),
  * //       startedAt: new Date("TIMESTAMP"),
  * //       endedAt: new Date("TIMESTAMP"),
+ * //       updatedAt: new Date("TIMESTAMP"),
+ * //       updatedBy: "STRING_VALUE",
  * //     },
  * //   ],
  * //   nextItemOffset: Number("int"),

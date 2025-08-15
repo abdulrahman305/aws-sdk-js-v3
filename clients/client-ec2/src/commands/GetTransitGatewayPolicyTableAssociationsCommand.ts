@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   GetTransitGatewayPolicyTableAssociationsRequest,
   GetTransitGatewayPolicyTableAssociationsResult,
-} from "../models/models_6";
+} from "../models/models_7";
 import {
   de_GetTransitGatewayPolicyTableAssociationsCommand,
   se_GetTransitGatewayPolicyTableAssociationsCommand,
@@ -66,7 +66,7 @@ export interface GetTransitGatewayPolicyTableAssociationsCommandOutput
  * //       TransitGatewayPolicyTableId: "STRING_VALUE",
  * //       TransitGatewayAttachmentId: "STRING_VALUE",
  * //       ResourceId: "STRING_VALUE",
- * //       ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering",
+ * //       ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering" || "network-function",
  * //       State: "associating" || "associated" || "disassociating" || "disassociated",
  * //     },
  * //   ],

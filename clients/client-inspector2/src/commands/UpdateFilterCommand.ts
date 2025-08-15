@@ -117,6 +117,18 @@ export interface UpdateFilterCommandOutput extends UpdateFilterResponse, __Metad
  *     ecrImageRepositoryName: "<StringFilterList>",
  *     ecrImageTags: "<StringFilterList>",
  *     ecrImageHash: "<StringFilterList>",
+ *     ecrImageLastInUseAt: [
+ *       {
+ *         startInclusive: new Date("TIMESTAMP"),
+ *         endInclusive: new Date("TIMESTAMP"),
+ *       },
+ *     ],
+ *     ecrImageInUseCount: [
+ *       {
+ *         upperInclusive: Number("double"),
+ *         lowerInclusive: Number("double"),
+ *       },
+ *     ],
  *     portRange: [ // PortRangeFilterList
  *       { // PortRangeFilter
  *         beginInclusive: Number("int"),
@@ -149,12 +161,7 @@ export interface UpdateFilterCommandOutput extends UpdateFilterResponse, __Metad
  *     lambdaFunctionName: "<StringFilterList>",
  *     lambdaFunctionLayers: "<StringFilterList>",
  *     lambdaFunctionRuntime: "<StringFilterList>",
- *     lambdaFunctionLastModifiedAt: [
- *       {
- *         startInclusive: new Date("TIMESTAMP"),
- *         endInclusive: new Date("TIMESTAMP"),
- *       },
- *     ],
+ *     lambdaFunctionLastModifiedAt: "<DateFilterList>",
  *     lambdaFunctionExecutionRoleArn: "<StringFilterList>",
  *     exploitAvailable: "<StringFilterList>",
  *     codeVulnerabilityDetectorName: "<StringFilterList>",
@@ -166,6 +173,8 @@ export interface UpdateFilterCommandOutput extends UpdateFilterResponse, __Metad
  *         lowerInclusive: Number("double"),
  *       },
  *     ],
+ *     codeRepositoryProjectName: "<StringFilterList>",
+ *     codeRepositoryProviderType: "<StringFilterList>",
  *   },
  *   name: "STRING_VALUE",
  *   filterArn: "STRING_VALUE", // required
@@ -187,12 +196,15 @@ export interface UpdateFilterCommandOutput extends UpdateFilterResponse, __Metad
  *
  * @throws {@link AccessDeniedException} (client fault)
  *  <p>You do not have sufficient access to perform this action.</p>
+ *          <p> For <code>Enable</code>, you receive this error if you attempt to use a feature in an
+ *          unsupported Amazon Web Services Region. </p>
  *
  * @throws {@link InternalServerException} (server fault)
  *  <p>The request has failed due to an internal failure of the Amazon Inspector service.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
- *  <p>The operation tried to access an invalid resource. Make sure the resource is specified correctly.</p>
+ *  <p>The operation tried to access an invalid resource. Make sure the resource is specified
+ *          correctly.</p>
  *
  * @throws {@link ThrottlingException} (client fault)
  *  <p>The limit on the number of requests per second was exceeded.</p>

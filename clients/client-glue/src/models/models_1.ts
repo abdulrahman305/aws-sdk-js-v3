@@ -1,25 +1,35 @@
 // smithy-typescript generated code
 import { ExceptionOptionType as __ExceptionOptionType } from "@smithy/smithy-client";
 
+import { DocumentType as __DocumentType } from "@smithy/types";
+
 import { GlueServiceException as __BaseException } from "./GlueServiceException";
 
 import {
   Action,
   AllowFullTableExternalDataAccessEnum,
+  AnnotationError,
   AuthConfiguration,
   AuthenticationConfigurationInput,
   AuthenticationConfigurationInputFilterSensitiveLog,
   AuthenticationType,
   Blueprint,
+  BlueprintDetails,
   Column,
   ConnectionsList,
   CrawlerTargets,
+  CrawlState,
   DataOperation,
   ErrorDetail,
   EventBatchingCondition,
+  ExecutionClass,
   GlueTable,
+  InclusionAnnotationValue,
+  JobMode,
+  JobRunState,
   LakeFormationConfiguration,
   LineageConfiguration,
+  NotificationProperty,
   PartitionInput,
   Predicate,
   Property,
@@ -29,9 +39,807 @@ import {
   StorageDescriptor,
   TableOptimizerConfiguration,
   TableOptimizerType,
+  Trigger,
   TriggerType,
   WorkerType,
 } from "./models_0";
+
+/**
+ * <p>An edge represents a directed connection between two Glue components that are part of the workflow the
+ *       edge belongs to.</p>
+ * @public
+ */
+export interface Edge {
+  /**
+   * <p>The unique of the node within the workflow where the edge starts.</p>
+   * @public
+   */
+  SourceId?: string | undefined;
+
+  /**
+   * <p>The unique of the node within the workflow where the edge ends.</p>
+   * @public
+   */
+  DestinationId?: string | undefined;
+}
+
+/**
+ * <p>The details of a crawl in the workflow.</p>
+ * @public
+ */
+export interface Crawl {
+  /**
+   * <p>The state of the crawler.</p>
+   * @public
+   */
+  State?: CrawlState | undefined;
+
+  /**
+   * <p>The date and time on which the crawl started.</p>
+   * @public
+   */
+  StartedOn?: Date | undefined;
+
+  /**
+   * <p>The date and time on which the crawl completed.</p>
+   * @public
+   */
+  CompletedOn?: Date | undefined;
+
+  /**
+   * <p>The error message associated with the crawl.</p>
+   * @public
+   */
+  ErrorMessage?: string | undefined;
+
+  /**
+   * <p>The log group associated with the crawl.</p>
+   * @public
+   */
+  LogGroup?: string | undefined;
+
+  /**
+   * <p>The log stream associated with the crawl.</p>
+   * @public
+   */
+  LogStream?: string | undefined;
+}
+
+/**
+ * <p>The details of a Crawler node present in the workflow.</p>
+ * @public
+ */
+export interface CrawlerNodeDetails {
+  /**
+   * <p>A list of crawls represented by the crawl node.</p>
+   * @public
+   */
+  Crawls?: Crawl[] | undefined;
+}
+
+/**
+ * <p>A job run that was used in the predicate of a conditional trigger
+ *       that triggered this job run.</p>
+ * @public
+ */
+export interface Predecessor {
+  /**
+   * <p>The name of the job definition used by the predecessor job run.</p>
+   * @public
+   */
+  JobName?: string | undefined;
+
+  /**
+   * <p>The job-run ID of the predecessor job run.</p>
+   * @public
+   */
+  RunId?: string | undefined;
+}
+
+/**
+ * <p>Contains information about a job run.</p>
+ * @public
+ */
+export interface JobRun {
+  /**
+   * <p>The ID of this job run.</p>
+   * @public
+   */
+  Id?: string | undefined;
+
+  /**
+   * <p>The number of the attempt to run this job.</p>
+   * @public
+   */
+  Attempt?: number | undefined;
+
+  /**
+   * <p>The ID of the previous run of this job. For example, the <code>JobRunId</code> specified
+   *       in the <code>StartJobRun</code> action.</p>
+   * @public
+   */
+  PreviousRunId?: string | undefined;
+
+  /**
+   * <p>The name of the trigger that started this job run.</p>
+   * @public
+   */
+  TriggerName?: string | undefined;
+
+  /**
+   * <p>The name of the job definition being used in this run.</p>
+   * @public
+   */
+  JobName?: string | undefined;
+
+  /**
+   * <p>A mode that describes how a job was created. Valid values are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>SCRIPT</code> - The job was created using the Glue Studio script editor.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>VISUAL</code> - The job was created using the Glue Studio visual editor.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.</p>
+   *             </li>
+   *          </ul>
+   *          <p>When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.</p>
+   * @public
+   */
+  JobMode?: JobMode | undefined;
+
+  /**
+   * <p>Specifies whether job run queuing is enabled for the job run.</p>
+   *          <p>A value of true means job run queuing is enabled for the job run. If false or not populated, the job run will not be considered for queueing.</p>
+   * @public
+   */
+  JobRunQueuingEnabled?: boolean | undefined;
+
+  /**
+   * <p>The date and time at which this job run was started.</p>
+   * @public
+   */
+  StartedOn?: Date | undefined;
+
+  /**
+   * <p>The last time that this job run was modified.</p>
+   * @public
+   */
+  LastModifiedOn?: Date | undefined;
+
+  /**
+   * <p>The date and time that this job run completed.</p>
+   * @public
+   */
+  CompletedOn?: Date | undefined;
+
+  /**
+   * <p>The current state of the job run. For more information about the statuses of jobs that have terminated abnormally, see <a href="https://docs.aws.amazon.com/glue/latest/dg/job-run-statuses.html">Glue Job Run Statuses</a>.</p>
+   * @public
+   */
+  JobRunState?: JobRunState | undefined;
+
+  /**
+   * <p>The job arguments associated with this run. For this job run, they replace the default
+   *       arguments set in the job definition itself.</p>
+   *          <p>You can specify arguments here that your own job-execution script
+   *       consumes, as well as arguments that Glue itself consumes.</p>
+   *          <p>Job arguments may be logged. Do not pass plaintext secrets as arguments. Retrieve secrets
+   *       from a Glue Connection, Secrets Manager or other secret management
+   *       mechanism if you intend to keep them within the Job. </p>
+   *          <p>For information about how to specify and consume your own Job arguments, see the <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling Glue APIs in Python</a> topic in the developer guide.</p>
+   *          <p>For information about the arguments you can provide to this field when configuring Spark jobs,
+   *      see the <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by Glue</a> topic in the developer guide.</p>
+   *          <p>For information about the arguments you can provide to this field when configuring Ray
+   *       jobs, see <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using
+   *       job parameters in Ray jobs</a> in the developer guide.</p>
+   * @public
+   */
+  Arguments?: Record<string, string> | undefined;
+
+  /**
+   * <p>An error message associated with this job run.</p>
+   * @public
+   */
+  ErrorMessage?: string | undefined;
+
+  /**
+   * <p>A list of predecessors to this job run.</p>
+   * @public
+   */
+  PredecessorRuns?: Predecessor[] | undefined;
+
+  /**
+   * <p>This field is deprecated. Use <code>MaxCapacity</code> instead.</p>
+   *          <p>The number of Glue data processing units (DPUs) allocated to this JobRun.
+   *       From 2 to 100 DPUs can be allocated; the default is 10. A DPU is a relative measure
+   *       of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
+   *       For more information, see the <a href="https://aws.amazon.com/glue/pricing/">Glue
+   *         pricing page</a>.</p>
+   *
+   * @deprecated
+   * @public
+   */
+  AllocatedCapacity?: number | undefined;
+
+  /**
+   * <p>The amount of time (in seconds) that the job run consumed resources.</p>
+   * @public
+   */
+  ExecutionTime?: number | undefined;
+
+  /**
+   * <p>The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can
+   *       consume resources before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set in the parent job.</p>
+   *          <p>Jobs must have timeout values less than 7 days or 10080 minutes. Otherwise, the jobs will throw an exception.</p>
+   *          <p>When the value is left blank, the timeout is defaulted to 2880 minutes.</p>
+   *          <p>Any existing Glue jobs that had a timeout value greater than 7 days will be defaulted to 7 days. For instance if you have specified a timeout of 20 days for a batch job, it will be stopped on the 7th day.</p>
+   *          <p>For streaming jobs, if you have set up a maintenance window, it will be restarted during the maintenance window after 7 days.</p>
+   * @public
+   */
+  Timeout?: number | undefined;
+
+  /**
+   * <p>For Glue version 1.0 or earlier jobs, using the standard worker type, the number of
+   *       Glue data processing units (DPUs) that can be allocated when this job runs. A DPU is
+   *       a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB
+   *       of memory. For more information, see the <a href="https://aws.amazon.com/glue/pricing/">
+   *         Glue pricing page</a>.</p>
+   *          <p>For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>.
+   *       Instead, you should specify a <code>Worker type</code> and the <code>Number of workers</code>.</p>
+   *          <p>Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.</p>
+   *          <p>The value that can be allocated for <code>MaxCapacity</code> depends on whether you are
+   *       running a Python shell job, an Apache Spark ETL job, or an Apache Spark streaming ETL
+   *       job:</p>
+   *          <ul>
+   *             <li>
+   *                <p>When you specify a Python shell job (<code>JobCommand.Name</code>="pythonshell"), you can
+   *           allocate either 0.0625 or 1 DPU. The default is 0.0625 DPU.</p>
+   *             </li>
+   *             <li>
+   *                <p>When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache
+   *         Spark streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs.
+   *         The default is 10 DPUs. This job type cannot have a fractional DPU allocation.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  MaxCapacity?: number | undefined;
+
+  /**
+   * <p>The type of predefined worker that is allocated when a job runs. Accepts a value of
+   *           G.1X, G.2X, G.4X, G.8X or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
+   *          <ul>
+   *             <li>
+   *                <p>For the <code>G.1X</code> worker type, each worker maps to 1 DPU (4 vCPUs, 16 GB of memory) with 94GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
+   *             </li>
+   *             <li>
+   *                <p>For the <code>G.2X</code> worker type, each worker maps to 2 DPU (8 vCPUs, 32 GB of memory) with 138GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
+   *             </li>
+   *             <li>
+   *                <p>For the <code>G.4X</code> worker type, each worker maps to 4 DPU (16 vCPUs, 64 GB of memory) with 256GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs in the following Amazon Web Services Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), and Europe (Stockholm).</p>
+   *             </li>
+   *             <li>
+   *                <p>For the <code>G.8X</code> worker type, each worker maps to 8 DPU (32 vCPUs, 128 GB of memory) with 512GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs, in the same Amazon Web Services Regions as supported for the <code>G.4X</code> worker type.</p>
+   *             </li>
+   *             <li>
+   *                <p>For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPUs, 4 GB of memory) with 84GB disk, and provides 1 executor per worker. We recommend this worker type for low volume streaming jobs. This worker type is only available for Glue version 3.0 or later streaming jobs.</p>
+   *             </li>
+   *             <li>
+   *                <p>For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPUs, 64 GB of memory) with 128 GB disk, and provides up to 8 Ray workers based on the autoscaler.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  WorkerType?: WorkerType | undefined;
+
+  /**
+   * <p>The number of workers of a defined <code>workerType</code> that are allocated when a job runs.</p>
+   * @public
+   */
+  NumberOfWorkers?: number | undefined;
+
+  /**
+   * <p>The name of the <code>SecurityConfiguration</code> structure to be used with this job
+   *       run.</p>
+   * @public
+   */
+  SecurityConfiguration?: string | undefined;
+
+  /**
+   * <p>The name of the log group for secure logging that can be server-side encrypted in Amazon
+   *       CloudWatch using KMS. This name can be <code>/aws-glue/jobs/</code>, in which case the
+   *       default encryption is <code>NONE</code>. If you add a role name and
+   *       <code>SecurityConfiguration</code> name (in other words,
+   *       <code>/aws-glue/jobs-yourRoleName-yourSecurityConfigurationName/</code>), then that security
+   *       configuration is used to encrypt the log group.</p>
+   * @public
+   */
+  LogGroupName?: string | undefined;
+
+  /**
+   * <p>Specifies configuration properties of a job run notification.</p>
+   * @public
+   */
+  NotificationProperty?: NotificationProperty | undefined;
+
+  /**
+   * <p>In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python
+   *       that Glue available in a job. The Python version indicates the version
+   *       supported for jobs of type Spark. </p>
+   *          <p>Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However,
+   *     the versions of Ray, Python and additional libraries available in your Ray job are determined
+   *     by the <code>Runtime</code> parameter of the Job command.</p>
+   *          <p>For more information about the available Glue versions and corresponding
+   *       Spark and Python versions, see <a href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html">Glue version</a> in the developer
+   *       guide.</p>
+   *          <p>Jobs that are created without specifying a Glue version default to Glue 0.9.</p>
+   * @public
+   */
+  GlueVersion?: string | undefined;
+
+  /**
+   * <p>This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is enabled, and represents the total time each executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.</p>
+   * @public
+   */
+  DPUSeconds?: number | undefined;
+
+  /**
+   * <p>Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
+   *          <p>The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary. </p>
+   *          <p>Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.</p>
+   * @public
+   */
+  ExecutionClass?: ExecutionClass | undefined;
+
+  /**
+   * <p>This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.</p>
+   *          <p>Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.</p>
+   * @public
+   */
+  MaintenanceWindow?: string | undefined;
+
+  /**
+   * <p>The name of an Glue usage profile associated with the job run.</p>
+   * @public
+   */
+  ProfileName?: string | undefined;
+
+  /**
+   * <p>This field holds details that pertain to the state of a job run. The field is nullable.</p>
+   *          <p>For example, when a job run is in a WAITING state as a result of job run queuing, the field has the reason why the job run is in that state.</p>
+   * @public
+   */
+  StateDetail?: string | undefined;
+
+  /**
+   * <p>This inline session policy to the StartJobRun API allows you to dynamically restrict the permissions of the specified
+   *       execution role for the scope of the job, without requiring the creation of additional IAM roles.</p>
+   * @public
+   */
+  ExecutionRoleSessionPolicy?: string | undefined;
+}
+
+/**
+ * <p>The details of a Job node present in the workflow.</p>
+ * @public
+ */
+export interface JobNodeDetails {
+  /**
+   * <p>The information for the job runs represented by the job node.</p>
+   * @public
+   */
+  JobRuns?: JobRun[] | undefined;
+}
+
+/**
+ * <p>The details of a Trigger node present in the workflow.</p>
+ * @public
+ */
+export interface TriggerNodeDetails {
+  /**
+   * <p>The information of the trigger represented by the trigger node.</p>
+   * @public
+   */
+  Trigger?: Trigger | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const NodeType = {
+  CRAWLER: "CRAWLER",
+  JOB: "JOB",
+  TRIGGER: "TRIGGER",
+} as const;
+
+/**
+ * @public
+ */
+export type NodeType = (typeof NodeType)[keyof typeof NodeType];
+
+/**
+ * <p>A node represents an Glue component (trigger, crawler, or job) on a workflow graph.</p>
+ * @public
+ */
+export interface Node {
+  /**
+   * <p>The type of Glue component represented by the node.</p>
+   * @public
+   */
+  Type?: NodeType | undefined;
+
+  /**
+   * <p>The name of the Glue component represented by the node.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The unique Id assigned to the node within the workflow.</p>
+   * @public
+   */
+  UniqueId?: string | undefined;
+
+  /**
+   * <p>Details of the Trigger when the node represents a Trigger.</p>
+   * @public
+   */
+  TriggerDetails?: TriggerNodeDetails | undefined;
+
+  /**
+   * <p>Details of the Job when the node represents a Job.</p>
+   * @public
+   */
+  JobDetails?: JobNodeDetails | undefined;
+
+  /**
+   * <p>Details of the crawler when the node represents a crawler.</p>
+   * @public
+   */
+  CrawlerDetails?: CrawlerNodeDetails | undefined;
+}
+
+/**
+ * <p>A workflow graph represents the complete workflow containing all the Glue components present in the
+ *       workflow and all the directed connections between them.</p>
+ * @public
+ */
+export interface WorkflowGraph {
+  /**
+   * <p>A list of the the Glue components belong to the workflow represented as nodes.</p>
+   * @public
+   */
+  Nodes?: Node[] | undefined;
+
+  /**
+   * <p>A list of all the directed connections between the nodes belonging to the workflow.</p>
+   * @public
+   */
+  Edges?: Edge[] | undefined;
+}
+
+/**
+ * <p>The batch condition that started the workflow run. Either the number of events in the batch size arrived,
+ *       in which case the BatchSize member is non-zero, or the batch window expired, in which case the BatchWindow
+ *       member is non-zero.</p>
+ * @public
+ */
+export interface StartingEventBatchCondition {
+  /**
+   * <p>Number of events in the batch.</p>
+   * @public
+   */
+  BatchSize?: number | undefined;
+
+  /**
+   * <p>Duration of the batch window in seconds.</p>
+   * @public
+   */
+  BatchWindow?: number | undefined;
+}
+
+/**
+ * <p>Workflow run statistics provides statistics about the workflow run.</p>
+ * @public
+ */
+export interface WorkflowRunStatistics {
+  /**
+   * <p>Total number of Actions in the workflow run.</p>
+   * @public
+   */
+  TotalActions?: number | undefined;
+
+  /**
+   * <p>Total number of Actions that timed out.</p>
+   * @public
+   */
+  TimeoutActions?: number | undefined;
+
+  /**
+   * <p>Total number of Actions that have failed.</p>
+   * @public
+   */
+  FailedActions?: number | undefined;
+
+  /**
+   * <p>Total number of Actions that have stopped.</p>
+   * @public
+   */
+  StoppedActions?: number | undefined;
+
+  /**
+   * <p>Total number of Actions that have succeeded.</p>
+   * @public
+   */
+  SucceededActions?: number | undefined;
+
+  /**
+   * <p>Total number Actions in running state.</p>
+   * @public
+   */
+  RunningActions?: number | undefined;
+
+  /**
+   * <p>Indicates the count of job runs in the ERROR state in the workflow run.</p>
+   * @public
+   */
+  ErroredActions?: number | undefined;
+
+  /**
+   * <p>Indicates the count of job runs in WAITING state in the workflow run.</p>
+   * @public
+   */
+  WaitingActions?: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const WorkflowRunStatus = {
+  COMPLETED: "COMPLETED",
+  ERROR: "ERROR",
+  RUNNING: "RUNNING",
+  STOPPED: "STOPPED",
+  STOPPING: "STOPPING",
+} as const;
+
+/**
+ * @public
+ */
+export type WorkflowRunStatus = (typeof WorkflowRunStatus)[keyof typeof WorkflowRunStatus];
+
+/**
+ * <p>A workflow run is an execution of a workflow providing all the runtime information.</p>
+ * @public
+ */
+export interface WorkflowRun {
+  /**
+   * <p>Name of the workflow that was run.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The ID of this workflow run.</p>
+   * @public
+   */
+  WorkflowRunId?: string | undefined;
+
+  /**
+   * <p>The ID of the previous workflow run.</p>
+   * @public
+   */
+  PreviousRunId?: string | undefined;
+
+  /**
+   * <p>The workflow run properties which were set during the run.</p>
+   * @public
+   */
+  WorkflowRunProperties?: Record<string, string> | undefined;
+
+  /**
+   * <p>The date and time when the workflow run was started.</p>
+   * @public
+   */
+  StartedOn?: Date | undefined;
+
+  /**
+   * <p>The date and time when the workflow run completed.</p>
+   * @public
+   */
+  CompletedOn?: Date | undefined;
+
+  /**
+   * <p>The status of the workflow run.</p>
+   * @public
+   */
+  Status?: WorkflowRunStatus | undefined;
+
+  /**
+   * <p>This error message describes any error that may have occurred in starting the workflow run. Currently the only error message is "Concurrent runs exceeded for workflow: <code>foo</code>."</p>
+   * @public
+   */
+  ErrorMessage?: string | undefined;
+
+  /**
+   * <p>The statistics of the run.</p>
+   * @public
+   */
+  Statistics?: WorkflowRunStatistics | undefined;
+
+  /**
+   * <p>The graph representing all the Glue components that belong to the workflow as nodes and directed
+   *       connections between them as edges.</p>
+   * @public
+   */
+  Graph?: WorkflowGraph | undefined;
+
+  /**
+   * <p>The batch condition that started the workflow run.</p>
+   * @public
+   */
+  StartingEventBatchCondition?: StartingEventBatchCondition | undefined;
+}
+
+/**
+ * <p>A workflow is a collection of multiple dependent Glue
+ *       jobs and crawlers that are run to complete a complex ETL task. A
+ *       workflow manages the execution and monitoring of all its jobs and crawlers.</p>
+ * @public
+ */
+export interface Workflow {
+  /**
+   * <p>The name of the workflow.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>A description of the workflow.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>A collection of properties to be used as part of each execution of the workflow.
+   *     The run properties are made available to each job in the workflow. A job can modify
+   *     the properties for the next jobs in the flow.</p>
+   * @public
+   */
+  DefaultRunProperties?: Record<string, string> | undefined;
+
+  /**
+   * <p>The date and time when the workflow was created.</p>
+   * @public
+   */
+  CreatedOn?: Date | undefined;
+
+  /**
+   * <p>The date and time when the workflow was last modified.</p>
+   * @public
+   */
+  LastModifiedOn?: Date | undefined;
+
+  /**
+   * <p>The information about the last execution of the workflow.</p>
+   * @public
+   */
+  LastRun?: WorkflowRun | undefined;
+
+  /**
+   * <p>The graph representing all the Glue components that belong to the workflow as nodes and directed
+   *       connections between them as edges.</p>
+   * @public
+   */
+  Graph?: WorkflowGraph | undefined;
+
+  /**
+   * <p>You can use this parameter to prevent unwanted multiple updates to data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.</p>
+   * @public
+   */
+  MaxConcurrentRuns?: number | undefined;
+
+  /**
+   * <p>This structure indicates the details of the blueprint that this particular workflow is created from.</p>
+   * @public
+   */
+  BlueprintDetails?: BlueprintDetails | undefined;
+}
+
+/**
+ * @public
+ */
+export interface BatchGetWorkflowsResponse {
+  /**
+   * <p>A list of workflow resource metadata.</p>
+   * @public
+   */
+  Workflows?: Workflow[] | undefined;
+
+  /**
+   * <p>A list of names of workflows not found.</p>
+   * @public
+   */
+  MissingWorkflows?: string[] | undefined;
+}
+
+/**
+ * <p>An Inclusion Annotation.</p>
+ * @public
+ */
+export interface DatapointInclusionAnnotation {
+  /**
+   * <p>The ID of the data quality profile the statistic belongs to.</p>
+   * @public
+   */
+  ProfileId?: string | undefined;
+
+  /**
+   * <p>The Statistic ID.</p>
+   * @public
+   */
+  StatisticId?: string | undefined;
+
+  /**
+   * <p>The inclusion annotation value to apply to the statistic.</p>
+   * @public
+   */
+  InclusionAnnotation?: InclusionAnnotationValue | undefined;
+}
+
+/**
+ * @public
+ */
+export interface BatchPutDataQualityStatisticAnnotationRequest {
+  /**
+   * <p>A list of <code>DatapointInclusionAnnotation</code>'s.</p>
+   * @public
+   */
+  InclusionAnnotations: DatapointInclusionAnnotation[] | undefined;
+
+  /**
+   * <p>Client Token.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface BatchPutDataQualityStatisticAnnotationResponse {
+  /**
+   * <p>A list of <code>AnnotationError</code>'s.</p>
+   * @public
+   */
+  FailedInclusionAnnotations?: AnnotationError[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface BatchStopJobRunRequest {
+  /**
+   * <p>The name of the job definition for which to stop job runs.</p>
+   * @public
+   */
+  JobName: string | undefined;
+
+  /**
+   * <p>A list of the <code>JobRunIds</code> that should be stopped for that job
+   *       definition.</p>
+   * @public
+   */
+  JobRunIds: string[] | undefined;
+}
 
 /**
  * <p>Records an error that occurred when attempting to stop a
@@ -464,6 +1272,36 @@ export interface DataLakeAccessProperties {
 }
 
 /**
+ * <p>A structure that specifies Iceberg table optimization properties for the catalog, including configurations for compaction, retention, and orphan file deletion operations.</p>
+ * @public
+ */
+export interface IcebergOptimizationProperties {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the IAM role that will be assumed to perform Iceberg table optimization operations.</p>
+   * @public
+   */
+  RoleArn?: string | undefined;
+
+  /**
+   * <p>A map of key-value pairs that specify configuration parameters for Iceberg table compaction operations, which optimize the layout of data files to improve query performance.</p>
+   * @public
+   */
+  Compaction?: Record<string, string> | undefined;
+
+  /**
+   * <p>A map of key-value pairs that specify configuration parameters for Iceberg table retention operations, which manage the lifecycle of table snapshots to control storage costs.</p>
+   * @public
+   */
+  Retention?: Record<string, string> | undefined;
+
+  /**
+   * <p>A map of key-value pairs that specify configuration parameters for Iceberg orphan file deletion operations, which identify and remove files that are no longer referenced by the table metadata.</p>
+   * @public
+   */
+  OrphanFileDeletion?: Record<string, string> | undefined;
+}
+
+/**
  * <p>A structure that specifies data lake access properties and other custom properties.</p>
  * @public
  */
@@ -473,6 +1311,13 @@ export interface CatalogProperties {
    * @public
    */
   DataLakeAccessProperties?: DataLakeAccessProperties | undefined;
+
+  /**
+   * <p>A structure that specifies Iceberg table optimization properties for the catalog. This includes configuration for compaction, retention, and
+   *       orphan file deletion operations that can be applied to Iceberg tables in this catalog.</p>
+   * @public
+   */
+  IcebergOptimizationProperties?: IcebergOptimizationProperties | undefined;
 
   /**
    * <p>Additional key-value properties for the catalog, such as column statistics optimizations.</p>
@@ -548,6 +1393,13 @@ export interface FederatedCatalog {
    * @public
    */
   ConnectionName?: string | undefined;
+
+  /**
+   * <p>The type of connection used to access the federated catalog, specifying the protocol or method for connection to the
+   *     external data source.</p>
+   * @public
+   */
+  ConnectionType?: string | undefined;
 }
 
 /**
@@ -1626,6 +2478,12 @@ export interface FederatedDatabase {
    * @public
    */
   ConnectionName?: string | undefined;
+
+  /**
+   * <p>The type of connection used to access the federated database, such as JDBC, ODBC, or other supported connection protocols.</p>
+   * @public
+   */
+  ConnectionType?: string | undefined;
 }
 
 /**
@@ -1757,6 +2615,7 @@ export interface DataQualityTargetTable {
 }
 
 /**
+ * <p>A request to create a data quality ruleset.</p>
  * @public
  */
 export interface CreateDataQualityRulesetRequest {
@@ -2107,6 +2966,36 @@ export class ValidationException extends __BaseException {
 }
 
 /**
+ * <p>Request to create a new Glue Identity Center configuration.</p>
+ * @public
+ */
+export interface CreateGlueIdentityCenterConfigurationRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Identity Center instance to be associated with the Glue configuration.</p>
+   * @public
+   */
+  InstanceArn: string | undefined;
+
+  /**
+   * <p>A list of Identity Center scopes that define the permissions and access levels for the Glue configuration.</p>
+   * @public
+   */
+  Scopes?: string[] | undefined;
+}
+
+/**
+ * <p>Response from creating a new Glue Identity Center configuration.</p>
+ * @public
+ */
+export interface CreateGlueIdentityCenterConfigurationResponse {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Identity Center application that was created for the Glue configuration.</p>
+   * @public
+   */
+  ApplicationArn?: string | undefined;
+}
+
+/**
  * <p>The <code>CreatePartitions</code> API was called on a table that has indexes enabled.	</p>
  * @public
  */
@@ -2130,6 +3019,29 @@ export class ConflictException extends __BaseException {
     Object.setPrototypeOf(this, ConflictException.prototype);
     this.Message = opts.Message;
   }
+}
+
+/**
+ * <p>Properties associated with the integration.</p>
+ * @public
+ */
+export interface IntegrationConfig {
+  /**
+   * <p>Specifies the frequency at which CDC (Change Data Capture) pulls or incremental loads should occur. This parameter provides flexibility to align
+   *       the refresh rate with your specific data update patterns, system load considerations, and performance optimization goals. Time increment can be set from
+   *     15 minutes to 8640 minutes (six days). Currently supports creation of <code>RefreshInterval</code> only.</p>
+   * @public
+   */
+  RefreshInterval?: string | undefined;
+
+  /**
+   * <p>
+   *       A collection of key-value pairs that specify additional properties for the integration source. These properties provide configuration options that
+   *       can be used to customize the behavior of the ODB source during data integration operations.
+   *     </p>
+   * @public
+   */
+  SourceProperties?: Record<string, string> | undefined;
 }
 
 /**
@@ -2204,6 +3116,12 @@ export interface CreateIntegrationRequest {
    * @public
    */
   Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The configuration settings.</p>
+   * @public
+   */
+  IntegrationConfig?: IntegrationConfig | undefined;
 }
 
 /**
@@ -2342,6 +3260,12 @@ export interface CreateIntegrationResponse {
    * @public
    */
   DataFilter?: string | undefined;
+
+  /**
+   * <p>The configuration settings.</p>
+   * @public
+   */
+  IntegrationConfig?: IntegrationConfig | undefined;
 }
 
 /**
@@ -2568,25 +3492,26 @@ export interface CreateIntegrationResourcePropertyResponse {
  */
 export interface SourceTableConfig {
   /**
-   * <p>A list of fields used for column-level filtering.</p>
+   * <p>A list of fields used for column-level filtering. Currently unsupported.</p>
    * @public
    */
   Fields?: string[] | undefined;
 
   /**
-   * <p>A condition clause used for row-level filtering.</p>
+   * <p>A condition clause used for row-level filtering. Currently unsupported.</p>
    * @public
    */
   FilterPredicate?: string | undefined;
 
   /**
-   * <p>Unique identifier of a record.</p>
+   * <p>Provide the primary key set for this table. Currently supported specifically for SAP <code>EntityOf</code> entities upon request. Contact
+   *       Amazon Web Services Support to make this feature available.</p>
    * @public
    */
   PrimaryKey?: string[] | undefined;
 
   /**
-   * <p>Incremental pull timestamp-based field.</p>
+   * <p>Incremental pull timestamp-based field. Currently unsupported.</p>
    * @public
    */
   RecordUpdateField?: string | undefined;
@@ -2598,16 +3523,63 @@ export interface SourceTableConfig {
  */
 export interface IntegrationPartition {
   /**
-   * <p>The field name used to partition data on the target.</p>
+   * <p>The field name used to partition data on the target. Avoid using columns that have unique values for each row (for example, `LastModifiedTimestamp`,
+   *       `SystemModTimeStamp`) as the partition column. These columns are not suitable for partitioning because they create a large number of small partitions,
+   *       which can lead to performance issues.</p>
    * @public
    */
   FieldName?: string | undefined;
 
   /**
-   * <p>Specifies a function used to partition data on the target.</p>
+   * <p>Specifies the function used to partition data on the target. The only accepted value for this parameter is `'identity'` (string).
+   *       The `'identity'` function ensures that the data partitioning on the target follows the same scheme as the source. In other words, the partitioning
+   *       structure of the source data is preserved in the target destination.</p>
    * @public
    */
   FunctionSpec?: string | undefined;
+
+  /**
+   * <p>Specifies the timestamp format of the source data. Valid values are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>epoch_sec</code> - Unix epoch timestamp in seconds</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>epoch_milli</code> - Unix epoch timestamp in milliseconds</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>iso</code> - ISO 8601 formatted timestamp</p>
+   *             </li>
+   *          </ul>
+   *          <note>
+   *             <p>
+   *         Only specify <code>ConversionSpec</code> when using timestamp-based partition functions (year, month, day, or hour).
+   *         Glue Zero-ETL uses this parameter to correctly transform source data into timestamp format before partitioning.
+   *       </p>
+   *             <p>
+   *         Do not use high-cardinality columns with the <code>identity</code> partition function. High-cardinality columns include:
+   *       </p>
+   *             <ul>
+   *                <li>
+   *                   <p>Primary keys</p>
+   *                </li>
+   *                <li>
+   *                   <p>Timestamp fields (such as <code>LastModifiedTimestamp</code>, <code>CreatedDate</code>)</p>
+   *                </li>
+   *                <li>
+   *                   <p>System-generated timestamps</p>
+   *                </li>
+   *             </ul>
+   *             <p>
+   *         Using high-cardinality columns with identity partitioning creates many small partitions, which can significantly degrade ingestion performance.
+   *       </p>
+   *          </note>
+   * @public
+   */
+  ConversionSpec?: string | undefined;
 }
 
 /**
@@ -2654,7 +3626,10 @@ export interface TargetTableConfig {
  */
 export interface CreateIntegrationTablePropertiesRequest {
   /**
-   * <p>The connection ARN of the source, or the database ARN of the target.</p>
+   * <p>The Amazon Resource Name (ARN) of the target table for which to create integration table properties. Currently, this API only supports creating
+   *       integration table properties for target tables, and the provided ARN should be the ARN of the target table in the Glue Data Catalog. Support for
+   *       creating integration table properties for source connections (using the connection ARN) is not yet implemented and will be added in a future release.
+   *     </p>
    * @public
    */
   ResourceArn: string | undefined;
@@ -2666,7 +3641,7 @@ export interface CreateIntegrationTablePropertiesRequest {
   TableName: string | undefined;
 
   /**
-   * <p>A structure for the source table configuration.</p>
+   * <p>A structure for the source table configuration. See the <code>SourceTableConfig</code> structure to see list of supported source properties.</p>
    * @public
    */
   SourceTableConfig?: SourceTableConfig | undefined;
@@ -3991,6 +4966,248 @@ export interface CreateSessionResponse {
 }
 
 /**
+ * <p>Defines a single partition field within an Iceberg partition specification, including the source field, transformation function, partition name,
+ *       and unique identifier.</p>
+ * @public
+ */
+export interface IcebergPartitionField {
+  /**
+   * <p>The identifier of the source field from the table schema that this partition field is based on.</p>
+   * @public
+   */
+  SourceId: number | undefined;
+
+  /**
+   * <p>The transformation function applied to the source field to create the partition, such as identity, bucket, truncate, year, month, day, or hour.</p>
+   * @public
+   */
+  Transform: string | undefined;
+
+  /**
+   * <p>The name of the partition field as it will appear in the partitioned table structure.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The unique identifier assigned to this partition field within the Iceberg table's partition specification.</p>
+   * @public
+   */
+  FieldId?: number | undefined;
+}
+
+/**
+ * <p>Defines the partitioning specification for an Iceberg table, determining how table data will be organized and partitioned for optimal query performance.</p>
+ * @public
+ */
+export interface IcebergPartitionSpec {
+  /**
+   * <p>The list of partition fields that define how the table data should be partitioned, including source fields and their transformations.</p>
+   * @public
+   */
+  Fields: IcebergPartitionField[] | undefined;
+
+  /**
+   * <p>The unique identifier for this partition specification within the Iceberg table's metadata history.</p>
+   * @public
+   */
+  SpecId?: number | undefined;
+}
+
+/**
+ * <p>Defines a single field within an Iceberg table schema, including its identifier, name, data type, nullability, and documentation.</p>
+ * @public
+ */
+export interface IcebergStructField {
+  /**
+   * <p>The unique identifier assigned to this field within the Iceberg table schema, used for schema evolution and field tracking.</p>
+   * @public
+   */
+  Id: number | undefined;
+
+  /**
+   * <p>The name of the field as it appears in the table schema and query operations.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The data type definition for this field, specifying the structure and format of the data it contains.</p>
+   * @public
+   */
+  Type: __DocumentType | undefined;
+
+  /**
+   * <p>Indicates whether this field is required (non-nullable) or optional (nullable) in the table schema.</p>
+   * @public
+   */
+  Required: boolean | undefined;
+
+  /**
+   * <p>Optional documentation or description text that provides additional context about the purpose and usage of this field.</p>
+   * @public
+   */
+  Doc?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const IcebergStructTypeEnum = {
+  STRUCT: "struct",
+} as const;
+
+/**
+ * @public
+ */
+export type IcebergStructTypeEnum = (typeof IcebergStructTypeEnum)[keyof typeof IcebergStructTypeEnum];
+
+/**
+ * <p>Defines the schema structure for an Iceberg table, including field definitions, data types, and schema metadata.</p>
+ * @public
+ */
+export interface IcebergSchema {
+  /**
+   * <p>The unique identifier for this schema version within the Iceberg table's schema evolution history.</p>
+   * @public
+   */
+  SchemaId?: number | undefined;
+
+  /**
+   * <p>The list of field identifiers that uniquely identify records in the table, used for row-level operations and deduplication.</p>
+   * @public
+   */
+  IdentifierFieldIds?: number[] | undefined;
+
+  /**
+   * <p>The root type of the schema structure, typically "struct" for Iceberg table schemas.</p>
+   * @public
+   */
+  Type?: IcebergStructTypeEnum | undefined;
+
+  /**
+   * <p>The list of field definitions that make up the table schema, including field names, types, and metadata.</p>
+   * @public
+   */
+  Fields: IcebergStructField[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const IcebergSortDirection = {
+  ASC: "asc",
+  DESC: "desc",
+} as const;
+
+/**
+ * @public
+ */
+export type IcebergSortDirection = (typeof IcebergSortDirection)[keyof typeof IcebergSortDirection];
+
+/**
+ * @public
+ * @enum
+ */
+export const IcebergNullOrder = {
+  NULLS_FIRST: "nulls-first",
+  NULLS_LAST: "nulls-last",
+} as const;
+
+/**
+ * @public
+ */
+export type IcebergNullOrder = (typeof IcebergNullOrder)[keyof typeof IcebergNullOrder];
+
+/**
+ * <p>Defines a single field within an Iceberg sort order specification, including the source field, transformation, sort direction, and null value ordering.</p>
+ * @public
+ */
+export interface IcebergSortField {
+  /**
+   * <p>The identifier of the source field from the table schema that this sort field is based on.</p>
+   * @public
+   */
+  SourceId: number | undefined;
+
+  /**
+   * <p>The transformation function applied to the source field before sorting, such as identity, bucket, or truncate.</p>
+   * @public
+   */
+  Transform: string | undefined;
+
+  /**
+   * <p>The sort direction for this field, either ascending or descending.</p>
+   * @public
+   */
+  Direction: IcebergSortDirection | undefined;
+
+  /**
+   * <p>The ordering behavior for null values in this field, specifying whether nulls should appear first or last in the sort order.</p>
+   * @public
+   */
+  NullOrder: IcebergNullOrder | undefined;
+}
+
+/**
+ * <p>Defines the sort order specification for an Iceberg table, determining how data should be ordered within partitions to
+ *       optimize query performance.</p>
+ * @public
+ */
+export interface IcebergSortOrder {
+  /**
+   * <p>The unique identifier for this sort order specification within the Iceberg table's metadata.</p>
+   * @public
+   */
+  OrderId: number | undefined;
+
+  /**
+   * <p>The list of fields and their sort directions that define the ordering criteria for the Iceberg table data.</p>
+   * @public
+   */
+  Fields: IcebergSortField[] | undefined;
+}
+
+/**
+ * <p>The configuration parameters required to create a new Iceberg table in the Glue Data Catalog,
+ *       including table properties and metadata specifications.</p>
+ * @public
+ */
+export interface CreateIcebergTableInput {
+  /**
+   * <p>The S3 location where the Iceberg table data will be stored.</p>
+   * @public
+   */
+  Location: string | undefined;
+
+  /**
+   * <p>The schema definition that specifies the structure, field types, and metadata for the Iceberg table.</p>
+   * @public
+   */
+  Schema: IcebergSchema | undefined;
+
+  /**
+   * <p>The partitioning specification that defines how the Iceberg table data will be organized and partitioned for optimal query performance.</p>
+   * @public
+   */
+  PartitionSpec?: IcebergPartitionSpec | undefined;
+
+  /**
+   * <p>The sort order specification that defines how data should be ordered within each partition to optimize query performance.</p>
+   * @public
+   */
+  WriteOrder?: IcebergSortOrder | undefined;
+
+  /**
+   * <p>Key-value pairs of additional table properties and configuration settings for the Iceberg table.</p>
+   * @public
+   */
+  Properties?: Record<string, string> | undefined;
+}
+
+/**
  * @public
  * @enum
  */
@@ -4019,6 +5236,13 @@ export interface IcebergInput {
    * @public
    */
   Version?: string | undefined;
+
+  /**
+   * <p>The configuration parameters required to create a new Iceberg table in the Glue Data Catalog, including table properties
+   *       and metadata specifications.</p>
+   * @public
+   */
+  CreateIcebergTableInput?: CreateIcebergTableInput | undefined;
 }
 
 /**
@@ -4278,11 +5502,18 @@ export interface CreateTableRequest {
   DatabaseName: string | undefined;
 
   /**
+   * <p>The unique identifier for the table within the specified database that will be
+   *       created in the Glue Data Catalog.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
    * <p>The <code>TableInput</code> object that defines the metadata table
    *       to create in the catalog.</p>
    * @public
    */
-  TableInput: TableInput | undefined;
+  TableInput?: TableInput | undefined;
 
   /**
    * <p>A list of partition indexes, <code>PartitionIndex</code> structures, to create in the table.</p>
@@ -5027,6 +6258,18 @@ export interface DeleteDevEndpointRequest {
  * @public
  */
 export interface DeleteDevEndpointResponse {}
+
+/**
+ * <p>Request to delete the existing Glue Identity Center configuration.</p>
+ * @public
+ */
+export interface DeleteGlueIdentityCenterConfigurationRequest {}
+
+/**
+ * <p>Response from deleting the Glue Identity Center configuration.</p>
+ * @public
+ */
+export interface DeleteGlueIdentityCenterConfigurationResponse {}
 
 /**
  * @public
@@ -6240,6 +7483,12 @@ export interface InboundIntegration {
   CreateTime: Date | undefined;
 
   /**
+   * <p>Properties associated with the integration.</p>
+   * @public
+   */
+  IntegrationConfig?: IntegrationConfig | undefined;
+
+  /**
    * <p>A list of errors associated with the integration.</p>
    * @public
    */
@@ -6423,6 +7672,12 @@ export interface Integration {
    * @public
    */
   CreateTime: Date | undefined;
+
+  /**
+   * <p>Properties associated with the integration.</p>
+   * @public
+   */
+  IntegrationConfig?: IntegrationConfig | undefined;
 
   /**
    * <p>A list of errors associated with the integration.</p>
@@ -6718,6 +7973,43 @@ export interface DataLakeAccessPropertiesOutput {
 }
 
 /**
+ * <p>A structure that contains the output properties of Iceberg table optimization configuration for your catalog resource in the Glue
+ *       Data Catalog.</p>
+ * @public
+ */
+export interface IcebergOptimizationPropertiesOutput {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the IAM role that is used to perform Iceberg table optimization operations.</p>
+   * @public
+   */
+  RoleArn?: string | undefined;
+
+  /**
+   * <p>A map of key-value pairs that specify configuration parameters for Iceberg table compaction operations, which optimize the layout of data files to improve query performance.</p>
+   * @public
+   */
+  Compaction?: Record<string, string> | undefined;
+
+  /**
+   * <p>A map of key-value pairs that specify configuration parameters for Iceberg table retention operations, which manage the lifecycle of table snapshots to control storage costs.</p>
+   * @public
+   */
+  Retention?: Record<string, string> | undefined;
+
+  /**
+   * <p>A map of key-value pairs that specify configuration parameters for Iceberg orphan file deletion operations, which identify and remove files that are no longer referenced by the table metadata.</p>
+   * @public
+   */
+  OrphanFileDeletion?: Record<string, string> | undefined;
+
+  /**
+   * <p>The timestamp when the Iceberg optimization properties were last updated.</p>
+   * @public
+   */
+  LastUpdatedTime?: Date | undefined;
+}
+
+/**
  * <p>Property attributes that include configuration properties for the catalog resource.</p>
  * @public
  */
@@ -6727,6 +8019,13 @@ export interface CatalogPropertiesOutput {
    * @public
    */
   DataLakeAccessProperties?: DataLakeAccessPropertiesOutput | undefined;
+
+  /**
+   * <p>An <code>IcebergOptimizationPropertiesOutput</code> object that specifies Iceberg table optimization settings for the catalog, including
+   *       configurations for compaction, retention, and orphan file deletion operations.</p>
+   * @public
+   */
+  IcebergOptimizationProperties?: IcebergOptimizationPropertiesOutput | undefined;
 
   /**
    * <p>Additional key-value properties for the catalog, such as column statistics optimizations.</p>
@@ -6867,1076 +8166,6 @@ export interface CatalogImportStatus {
    */
   ImportedBy?: string | undefined;
 }
-
-/**
- * @public
- */
-export interface GetCatalogImportStatusResponse {
-  /**
-   * <p>The status of the specified catalog migration.</p>
-   * @public
-   */
-  ImportStatus?: CatalogImportStatus | undefined;
-}
-
-/**
- * @public
- */
-export interface GetCatalogsRequest {
-  /**
-   * <p>The ID of the parent catalog in which the catalog resides. If none is provided, the Amazon Web Services Account Number is used by default.</p>
-   * @public
-   */
-  ParentCatalogId?: string | undefined;
-
-  /**
-   * <p>A continuation token, if this is a continuation call.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-
-  /**
-   * <p>The maximum number of catalogs to return in one response.</p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-
-  /**
-   * <p>Whether to list all catalogs across the catalog hierarchy, starting from the <code>ParentCatalogId</code>. Defaults to <code>false</code> . When <code>true</code>, all catalog objects in the <code>ParentCatalogID</code> hierarchy are enumerated in the response.</p>
-   * @public
-   */
-  Recursive?: boolean | undefined;
-
-  /**
-   * <p>Whether to list the default catalog in the account and region in the response. Defaults to <code>false</code>. When <code>true</code> and <code>ParentCatalogId = NULL | Amazon Web Services Account ID</code>, all catalogs and the default catalog are enumerated in the response.</p>
-   *          <p>When the <code>ParentCatalogId</code> is not equal to null, and this attribute is passed as <code>false</code> or <code>true</code>, an <code>InvalidInputException</code> is thrown.</p>
-   * @public
-   */
-  IncludeRoot?: boolean | undefined;
-}
-
-/**
- * @public
- */
-export interface GetCatalogsResponse {
-  /**
-   * <p>An array of <code>Catalog</code> objects. A list of <code>Catalog</code> objects from the specified parent catalog.</p>
-   * @public
-   */
-  CatalogList: Catalog[] | undefined;
-
-  /**
-   * <p>A continuation token for paginating the returned list of tokens, returned if the current segment of the list is not the last.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetClassifierRequest {
-  /**
-   * <p>Name of the classifier to retrieve.</p>
-   * @public
-   */
-  Name: string | undefined;
-}
-
-/**
- * <p>A classifier for custom <code>CSV</code> content.</p>
- * @public
- */
-export interface CsvClassifier {
-  /**
-   * <p>The name of the classifier.</p>
-   * @public
-   */
-  Name: string | undefined;
-
-  /**
-   * <p>The time that this classifier was registered.</p>
-   * @public
-   */
-  CreationTime?: Date | undefined;
-
-  /**
-   * <p>The time that this classifier was last updated.</p>
-   * @public
-   */
-  LastUpdated?: Date | undefined;
-
-  /**
-   * <p>The version of this classifier.</p>
-   * @public
-   */
-  Version?: number | undefined;
-
-  /**
-   * <p>A custom symbol to denote what separates each column entry in the row.</p>
-   * @public
-   */
-  Delimiter?: string | undefined;
-
-  /**
-   * <p>A custom symbol to denote what combines content into a single column value. It must be
-   *       different from the column delimiter.</p>
-   * @public
-   */
-  QuoteSymbol?: string | undefined;
-
-  /**
-   * <p>Indicates whether the CSV file contains a header.</p>
-   * @public
-   */
-  ContainsHeader?: CsvHeaderOption | undefined;
-
-  /**
-   * <p>A list of strings representing column names.</p>
-   * @public
-   */
-  Header?: string[] | undefined;
-
-  /**
-   * <p>Specifies not to trim values before identifying the type of column values. The default
-   *       value is <code>true</code>.</p>
-   * @public
-   */
-  DisableValueTrimming?: boolean | undefined;
-
-  /**
-   * <p>Enables the processing of files that contain only one column.</p>
-   * @public
-   */
-  AllowSingleColumn?: boolean | undefined;
-
-  /**
-   * <p>Enables the custom datatype to be configured.</p>
-   * @public
-   */
-  CustomDatatypeConfigured?: boolean | undefined;
-
-  /**
-   * <p>A list of custom datatypes including "BINARY", "BOOLEAN", "DATE", "DECIMAL", "DOUBLE", "FLOAT", "INT", "LONG", "SHORT", "STRING", "TIMESTAMP".</p>
-   * @public
-   */
-  CustomDatatypes?: string[] | undefined;
-
-  /**
-   * <p>Sets the SerDe for processing CSV in the classifier, which will be applied in the Data Catalog. Valid values are <code>OpenCSVSerDe</code>, <code>LazySimpleSerDe</code>, and <code>None</code>. You can specify the <code>None</code> value when you want the crawler to do the detection.</p>
-   * @public
-   */
-  Serde?: CsvSerdeOption | undefined;
-}
-
-/**
- * <p>A classifier that uses <code>grok</code> patterns.</p>
- * @public
- */
-export interface GrokClassifier {
-  /**
-   * <p>The name of the classifier.</p>
-   * @public
-   */
-  Name: string | undefined;
-
-  /**
-   * <p>An identifier of the data format that the classifier matches, such as Twitter, JSON, Omniture logs, and
-   *       so on.</p>
-   * @public
-   */
-  Classification: string | undefined;
-
-  /**
-   * <p>The time that this classifier was registered.</p>
-   * @public
-   */
-  CreationTime?: Date | undefined;
-
-  /**
-   * <p>The time that this classifier was last updated.</p>
-   * @public
-   */
-  LastUpdated?: Date | undefined;
-
-  /**
-   * <p>The version of this classifier.</p>
-   * @public
-   */
-  Version?: number | undefined;
-
-  /**
-   * <p>The grok pattern applied to a data store by this classifier.
-   *        For more information, see built-in patterns in <a href="https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html">Writing Custom Classifiers</a>.</p>
-   * @public
-   */
-  GrokPattern: string | undefined;
-
-  /**
-   * <p>Optional custom grok patterns defined by this classifier.
-   *       For more information, see custom patterns in <a href="https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html">Writing Custom Classifiers</a>.</p>
-   * @public
-   */
-  CustomPatterns?: string | undefined;
-}
-
-/**
- * <p>A classifier for <code>JSON</code> content.</p>
- * @public
- */
-export interface JsonClassifier {
-  /**
-   * <p>The name of the classifier.</p>
-   * @public
-   */
-  Name: string | undefined;
-
-  /**
-   * <p>The time that this classifier was registered.</p>
-   * @public
-   */
-  CreationTime?: Date | undefined;
-
-  /**
-   * <p>The time that this classifier was last updated.</p>
-   * @public
-   */
-  LastUpdated?: Date | undefined;
-
-  /**
-   * <p>The version of this classifier.</p>
-   * @public
-   */
-  Version?: number | undefined;
-
-  /**
-   * <p>A <code>JsonPath</code> string defining the JSON data for the classifier to classify.
-   *       Glue supports a subset of JsonPath, as described in <a href="https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json">Writing JsonPath Custom Classifiers</a>.</p>
-   * @public
-   */
-  JsonPath: string | undefined;
-}
-
-/**
- * <p>A classifier for <code>XML</code> content.</p>
- * @public
- */
-export interface XMLClassifier {
-  /**
-   * <p>The name of the classifier.</p>
-   * @public
-   */
-  Name: string | undefined;
-
-  /**
-   * <p>An identifier of the data format that the classifier matches.</p>
-   * @public
-   */
-  Classification: string | undefined;
-
-  /**
-   * <p>The time that this classifier was registered.</p>
-   * @public
-   */
-  CreationTime?: Date | undefined;
-
-  /**
-   * <p>The time that this classifier was last updated.</p>
-   * @public
-   */
-  LastUpdated?: Date | undefined;
-
-  /**
-   * <p>The version of this classifier.</p>
-   * @public
-   */
-  Version?: number | undefined;
-
-  /**
-   * <p>The XML tag designating the element that contains each record in an XML document being
-   *       parsed. This can't identify a self-closing element (closed by <code>/></code>). An empty
-   *       row element that contains only attributes can be parsed as long as it ends with a closing tag
-   *       (for example, <code><row item_a="A" item_b="B"></row></code> is okay, but
-   *         <code><row item_a="A" item_b="B" /></code> is not).</p>
-   * @public
-   */
-  RowTag?: string | undefined;
-}
-
-/**
- * <p>Classifiers are triggered during a crawl task. A classifier checks whether a given file is
- *       in a format it can handle. If it is, the classifier creates a schema in the form of a
- *         <code>StructType</code> object that matches that data format.</p>
- *          <p>You can use the standard classifiers that Glue provides, or you can write your own
- *       classifiers to best categorize your data sources and specify the appropriate schemas to use
- *       for them. A classifier can be a <code>grok</code> classifier, an <code>XML</code> classifier,
- *       a <code>JSON</code> classifier, or a custom <code>CSV</code> classifier, as specified in one
- *       of the fields in the <code>Classifier</code> object.</p>
- * @public
- */
-export interface Classifier {
-  /**
-   * <p>A classifier that uses <code>grok</code>.</p>
-   * @public
-   */
-  GrokClassifier?: GrokClassifier | undefined;
-
-  /**
-   * <p>A classifier for XML content.</p>
-   * @public
-   */
-  XMLClassifier?: XMLClassifier | undefined;
-
-  /**
-   * <p>A classifier for JSON content.</p>
-   * @public
-   */
-  JsonClassifier?: JsonClassifier | undefined;
-
-  /**
-   * <p>A classifier for comma-separated values (CSV).</p>
-   * @public
-   */
-  CsvClassifier?: CsvClassifier | undefined;
-}
-
-/**
- * @public
- */
-export interface GetClassifierResponse {
-  /**
-   * <p>The requested classifier.</p>
-   * @public
-   */
-  Classifier?: Classifier | undefined;
-}
-
-/**
- * @public
- */
-export interface GetClassifiersRequest {
-  /**
-   * <p>The size of the list to return (optional).</p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-
-  /**
-   * <p>An optional continuation token.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetClassifiersResponse {
-  /**
-   * <p>The requested list of classifier
-   *       objects.</p>
-   * @public
-   */
-  Classifiers?: Classifier[] | undefined;
-
-  /**
-   * <p>A continuation token.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsForPartitionRequest {
-  /**
-   * <p>The ID of the Data Catalog where the partitions in question reside.
-   *       If none is supplied, the Amazon Web Services account ID is used by default.</p>
-   * @public
-   */
-  CatalogId?: string | undefined;
-
-  /**
-   * <p>The name of the catalog database where the partitions reside.</p>
-   * @public
-   */
-  DatabaseName: string | undefined;
-
-  /**
-   * <p>The name of the partitions' table.</p>
-   * @public
-   */
-  TableName: string | undefined;
-
-  /**
-   * <p>A list of partition values identifying the partition.</p>
-   * @public
-   */
-  PartitionValues: string[] | undefined;
-
-  /**
-   * <p>A list of the column names.</p>
-   * @public
-   */
-  ColumnNames: string[] | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for bit sequence data values.</p>
- * @public
- */
-export interface BinaryColumnStatisticsData {
-  /**
-   * <p>The size of the longest bit sequence in the column.</p>
-   * @public
-   */
-  MaximumLength: number | undefined;
-
-  /**
-   * <p>The average bit sequence length in the column.</p>
-   * @public
-   */
-  AverageLength: number | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for Boolean data columns.</p>
- * @public
- */
-export interface BooleanColumnStatisticsData {
-  /**
-   * <p>The number of true values in the column.</p>
-   * @public
-   */
-  NumberOfTrues: number | undefined;
-
-  /**
-   * <p>The number of false values in the column.</p>
-   * @public
-   */
-  NumberOfFalses: number | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for timestamp data columns.</p>
- * @public
- */
-export interface DateColumnStatisticsData {
-  /**
-   * <p>The lowest value in the column.</p>
-   * @public
-   */
-  MinimumValue?: Date | undefined;
-
-  /**
-   * <p>The highest value in the column.</p>
-   * @public
-   */
-  MaximumValue?: Date | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-
-  /**
-   * <p>The number of distinct values in a column.</p>
-   * @public
-   */
-  NumberOfDistinctValues: number | undefined;
-}
-
-/**
- * <p>Contains a numeric value in decimal format.</p>
- * @public
- */
-export interface DecimalNumber {
-  /**
-   * <p>The unscaled numeric value.</p>
-   * @public
-   */
-  UnscaledValue: Uint8Array | undefined;
-
-  /**
-   * <p>The scale that determines where the decimal point falls in the
-   *       unscaled value.</p>
-   * @public
-   */
-  Scale: number | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for fixed-point number data columns.</p>
- * @public
- */
-export interface DecimalColumnStatisticsData {
-  /**
-   * <p>The lowest value in the column.</p>
-   * @public
-   */
-  MinimumValue?: DecimalNumber | undefined;
-
-  /**
-   * <p>The highest value in the column.</p>
-   * @public
-   */
-  MaximumValue?: DecimalNumber | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-
-  /**
-   * <p>The number of distinct values in a column.</p>
-   * @public
-   */
-  NumberOfDistinctValues: number | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for floating-point number data columns.</p>
- * @public
- */
-export interface DoubleColumnStatisticsData {
-  /**
-   * <p>The lowest value in the column.</p>
-   * @public
-   */
-  MinimumValue?: number | undefined;
-
-  /**
-   * <p>The highest value in the column.</p>
-   * @public
-   */
-  MaximumValue?: number | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-
-  /**
-   * <p>The number of distinct values in a column.</p>
-   * @public
-   */
-  NumberOfDistinctValues: number | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for integer data columns.</p>
- * @public
- */
-export interface LongColumnStatisticsData {
-  /**
-   * <p>The lowest value in the column.</p>
-   * @public
-   */
-  MinimumValue?: number | undefined;
-
-  /**
-   * <p>The highest value in the column.</p>
-   * @public
-   */
-  MaximumValue?: number | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-
-  /**
-   * <p>The number of distinct values in a column.</p>
-   * @public
-   */
-  NumberOfDistinctValues: number | undefined;
-}
-
-/**
- * <p>Defines column statistics supported for character sequence data values.</p>
- * @public
- */
-export interface StringColumnStatisticsData {
-  /**
-   * <p>The size of the longest string in the column.</p>
-   * @public
-   */
-  MaximumLength: number | undefined;
-
-  /**
-   * <p>The average string length in the column.</p>
-   * @public
-   */
-  AverageLength: number | undefined;
-
-  /**
-   * <p>The number of null values in the column.</p>
-   * @public
-   */
-  NumberOfNulls: number | undefined;
-
-  /**
-   * <p>The number of distinct values in a column.</p>
-   * @public
-   */
-  NumberOfDistinctValues: number | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const ColumnStatisticsType = {
-  BINARY: "BINARY",
-  BOOLEAN: "BOOLEAN",
-  DATE: "DATE",
-  DECIMAL: "DECIMAL",
-  DOUBLE: "DOUBLE",
-  LONG: "LONG",
-  STRING: "STRING",
-} as const;
-
-/**
- * @public
- */
-export type ColumnStatisticsType = (typeof ColumnStatisticsType)[keyof typeof ColumnStatisticsType];
-
-/**
- * <p>Contains the individual types of column statistics data. Only one data object should be set and indicated by the <code>Type</code> attribute.</p>
- * @public
- */
-export interface ColumnStatisticsData {
-  /**
-   * <p>The type of column statistics data.</p>
-   * @public
-   */
-  Type: ColumnStatisticsType | undefined;
-
-  /**
-   * <p>Boolean column statistics data.</p>
-   * @public
-   */
-  BooleanColumnStatisticsData?: BooleanColumnStatisticsData | undefined;
-
-  /**
-   * <p>Date column statistics data.</p>
-   * @public
-   */
-  DateColumnStatisticsData?: DateColumnStatisticsData | undefined;
-
-  /**
-   * <p>
-   *         Decimal column statistics data. UnscaledValues within are Base64-encoded
-   *         binary objects storing big-endian, two's complement representations of
-   *         the decimal's unscaled value.
-   *     </p>
-   * @public
-   */
-  DecimalColumnStatisticsData?: DecimalColumnStatisticsData | undefined;
-
-  /**
-   * <p>Double column statistics data.</p>
-   * @public
-   */
-  DoubleColumnStatisticsData?: DoubleColumnStatisticsData | undefined;
-
-  /**
-   * <p>Long column statistics data.</p>
-   * @public
-   */
-  LongColumnStatisticsData?: LongColumnStatisticsData | undefined;
-
-  /**
-   * <p>String column statistics data.</p>
-   * @public
-   */
-  StringColumnStatisticsData?: StringColumnStatisticsData | undefined;
-
-  /**
-   * <p>Binary column statistics data.</p>
-   * @public
-   */
-  BinaryColumnStatisticsData?: BinaryColumnStatisticsData | undefined;
-}
-
-/**
- * <p>Represents the generated column-level statistics for a table or partition.</p>
- * @public
- */
-export interface ColumnStatistics {
-  /**
-   * <p>Name of column which statistics belong to.</p>
-   * @public
-   */
-  ColumnName: string | undefined;
-
-  /**
-   * <p>The data type of the column.</p>
-   * @public
-   */
-  ColumnType: string | undefined;
-
-  /**
-   * <p>The timestamp of when column statistics were generated.</p>
-   * @public
-   */
-  AnalyzedTime: Date | undefined;
-
-  /**
-   * <p>A <code>ColumnStatisticData</code> object that contains the statistics data values.</p>
-   * @public
-   */
-  StatisticsData: ColumnStatisticsData | undefined;
-}
-
-/**
- * <p>Encapsulates a column name that failed and the reason for failure.</p>
- * @public
- */
-export interface ColumnError {
-  /**
-   * <p>The name of the column that failed.</p>
-   * @public
-   */
-  ColumnName?: string | undefined;
-
-  /**
-   * <p>An error message with the reason for the failure of an operation.</p>
-   * @public
-   */
-  Error?: ErrorDetail | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsForPartitionResponse {
-  /**
-   * <p>List of ColumnStatistics that failed to be retrieved.</p>
-   * @public
-   */
-  ColumnStatisticsList?: ColumnStatistics[] | undefined;
-
-  /**
-   * <p>Error occurred during retrieving column statistics data.</p>
-   * @public
-   */
-  Errors?: ColumnError[] | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsForTableRequest {
-  /**
-   * <p>The ID of the Data Catalog where the partitions in question reside.
-   *       If none is supplied, the Amazon Web Services account ID is used by default.</p>
-   * @public
-   */
-  CatalogId?: string | undefined;
-
-  /**
-   * <p>The name of the catalog database where the partitions reside.</p>
-   * @public
-   */
-  DatabaseName: string | undefined;
-
-  /**
-   * <p>The name of the partitions' table.</p>
-   * @public
-   */
-  TableName: string | undefined;
-
-  /**
-   * <p>A list of the column names.</p>
-   * @public
-   */
-  ColumnNames: string[] | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsForTableResponse {
-  /**
-   * <p>List of ColumnStatistics.</p>
-   * @public
-   */
-  ColumnStatisticsList?: ColumnStatistics[] | undefined;
-
-  /**
-   * <p>List of ColumnStatistics that failed to be retrieved.</p>
-   * @public
-   */
-  Errors?: ColumnError[] | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsTaskRunRequest {
-  /**
-   * <p>The identifier for the particular column statistics task run.</p>
-   * @public
-   */
-  ColumnStatisticsTaskRunId: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const ComputationType = {
-  FULL: "FULL",
-  INCREMENTAL: "INCREMENTAL",
-} as const;
-
-/**
- * @public
- */
-export type ComputationType = (typeof ComputationType)[keyof typeof ComputationType];
-
-/**
- * @public
- * @enum
- */
-export const ColumnStatisticsState = {
-  FAILED: "FAILED",
-  RUNNING: "RUNNING",
-  STARTING: "STARTING",
-  STOPPED: "STOPPED",
-  SUCCEEDED: "SUCCEEDED",
-} as const;
-
-/**
- * @public
- */
-export type ColumnStatisticsState = (typeof ColumnStatisticsState)[keyof typeof ColumnStatisticsState];
-
-/**
- * <p>The object that shows the details of the column stats run.</p>
- * @public
- */
-export interface ColumnStatisticsTaskRun {
-  /**
-   * <p>The Amazon Web Services account ID.</p>
-   * @public
-   */
-  CustomerId?: string | undefined;
-
-  /**
-   * <p>The identifier for the particular column statistics task run.</p>
-   * @public
-   */
-  ColumnStatisticsTaskRunId?: string | undefined;
-
-  /**
-   * <p>The database where the table resides.</p>
-   * @public
-   */
-  DatabaseName?: string | undefined;
-
-  /**
-   * <p>The name of the table for which column statistics is generated.</p>
-   * @public
-   */
-  TableName?: string | undefined;
-
-  /**
-   * <p>A list of the column names. If none is supplied, all column names for the table will be used by default.</p>
-   * @public
-   */
-  ColumnNameList?: string[] | undefined;
-
-  /**
-   * <p>The ID of the Data Catalog where the table resides. If none is supplied, the Amazon Web Services account ID is used by default.</p>
-   * @public
-   */
-  CatalogID?: string | undefined;
-
-  /**
-   * <p>The IAM role that the service assumes to generate statistics.</p>
-   * @public
-   */
-  Role?: string | undefined;
-
-  /**
-   * <p>The percentage of rows used to generate statistics. If none is supplied, the entire table will be used to generate stats.</p>
-   * @public
-   */
-  SampleSize?: number | undefined;
-
-  /**
-   * <p>Name of the security configuration that is used to encrypt CloudWatch logs for the column stats task run.</p>
-   * @public
-   */
-  SecurityConfiguration?: string | undefined;
-
-  /**
-   * <p>The number of workers used to generate column statistics. The job is preconfigured to autoscale up to 25 instances.</p>
-   * @public
-   */
-  NumberOfWorkers?: number | undefined;
-
-  /**
-   * <p>The type of workers being used for generating stats. The default is <code>g.1x</code>.</p>
-   * @public
-   */
-  WorkerType?: string | undefined;
-
-  /**
-   * <p>The type of column statistics computation.</p>
-   * @public
-   */
-  ComputationType?: ComputationType | undefined;
-
-  /**
-   * <p>The status of the task run.</p>
-   * @public
-   */
-  Status?: ColumnStatisticsState | undefined;
-
-  /**
-   * <p>The time that this task was created.</p>
-   * @public
-   */
-  CreationTime?: Date | undefined;
-
-  /**
-   * <p>The last point in time when this task was modified.</p>
-   * @public
-   */
-  LastUpdated?: Date | undefined;
-
-  /**
-   * <p>The start time of the task.</p>
-   * @public
-   */
-  StartTime?: Date | undefined;
-
-  /**
-   * <p>The end time of the task.</p>
-   * @public
-   */
-  EndTime?: Date | undefined;
-
-  /**
-   * <p>The error message for the job.</p>
-   * @public
-   */
-  ErrorMessage?: string | undefined;
-
-  /**
-   * <p>The calculated DPU usage in seconds for all autoscaled workers.</p>
-   * @public
-   */
-  DPUSeconds?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsTaskRunResponse {
-  /**
-   * <p>A <code>ColumnStatisticsTaskRun</code> object representing the details of the column stats run.</p>
-   * @public
-   */
-  ColumnStatisticsTaskRun?: ColumnStatisticsTaskRun | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsTaskRunsRequest {
-  /**
-   * <p>The name of the database where the table resides.</p>
-   * @public
-   */
-  DatabaseName: string | undefined;
-
-  /**
-   * <p>The name of the table.</p>
-   * @public
-   */
-  TableName: string | undefined;
-
-  /**
-   * <p>The maximum size of the response.</p>
-   * @public
-   */
-  MaxResults?: number | undefined;
-
-  /**
-   * <p>A continuation token, if this is a continuation call.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsTaskRunsResponse {
-  /**
-   * <p>A list of column statistics task runs.</p>
-   * @public
-   */
-  ColumnStatisticsTaskRuns?: ColumnStatisticsTaskRun[] | undefined;
-
-  /**
-   * <p>A continuation token, if not all task runs have yet been returned.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetColumnStatisticsTaskSettingsRequest {
-  /**
-   * <p>The name of the database where the table resides.</p>
-   * @public
-   */
-  DatabaseName: string | undefined;
-
-  /**
-   * <p>The name of the table for which to retrieve column statistics.</p>
-   * @public
-   */
-  TableName: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const ExecutionStatus = {
-  FAILED: "FAILED",
-  STARTED: "STARTED",
-} as const;
-
-/**
- * @public
- */
-export type ExecutionStatus = (typeof ExecutionStatus)[keyof typeof ExecutionStatus];
 
 /**
  * @internal

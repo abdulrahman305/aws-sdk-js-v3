@@ -10,7 +10,7 @@ import {
   ListGuardrailsRequest,
   ListGuardrailsResponse,
   ListGuardrailsResponseFilterSensitiveLog,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_ListGuardrailsCommand, se_ListGuardrailsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -32,8 +32,7 @@ export interface ListGuardrailsCommandInput extends ListGuardrailsRequest {}
 export interface ListGuardrailsCommandOutput extends ListGuardrailsResponse, __MetadataBearer {}
 
 /**
- * <p>Lists details about all the guardrails in an account. To list the <code>DRAFT</code> version of all your guardrails, don't specify the <code>guardrailIdentifier</code> field. To list all versions of a guardrail, specify the ARN of the guardrail in the <code>guardrailIdentifier</code> field.</p>
- *          <p>You can set the maximum number of results to return in a response in the <code>maxResults</code> field. If there are more results than the number you set, the response returns a <code>nextToken</code> that you can send in another <code>ListGuardrails</code> request to see the next batch of results.</p>
+ * <p>Lists details about all the guardrails in an account. To list the <code>DRAFT</code> version of all your guardrails, don't specify the <code>guardrailIdentifier</code> field. To list all versions of a guardrail, specify the ARN of the guardrail in the <code>guardrailIdentifier</code> field.</p> <p>You can set the maximum number of results to return in a response in the <code>maxResults</code> field. If there are more results than the number you set, the response returns a <code>nextToken</code> that you can send in another <code>ListGuardrails</code> request to see the next batch of results.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -58,6 +57,10 @@ export interface ListGuardrailsCommandOutput extends ListGuardrailsResponse, __M
  * //       version: "STRING_VALUE", // required
  * //       createdAt: new Date("TIMESTAMP"), // required
  * //       updatedAt: new Date("TIMESTAMP"), // required
+ * //       crossRegionDetails: { // GuardrailCrossRegionDetails
+ * //         guardrailProfileId: "STRING_VALUE",
+ * //         guardrailProfileArn: "STRING_VALUE",
+ * //       },
  * //     },
  * //   ],
  * //   nextToken: "STRING_VALUE",

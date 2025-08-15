@@ -9,7 +9,7 @@ import { Inspector2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes }
 import {
   ListCisScanResultsAggregatedByChecksRequest,
   ListCisScanResultsAggregatedByChecksResponse,
-} from "../models/models_0";
+} from "../models/models_1";
 import {
   de_ListCisScanResultsAggregatedByChecksCommand,
   se_ListCisScanResultsAggregatedByChecksCommand,
@@ -120,6 +120,8 @@ export interface ListCisScanResultsAggregatedByChecksCommandOutput
  *
  * @throws {@link AccessDeniedException} (client fault)
  *  <p>You do not have sufficient access to perform this action.</p>
+ *          <p> For <code>Enable</code>, you receive this error if you attempt to use a feature in an
+ *          unsupported Amazon Web Services Region. </p>
  *
  * @throws {@link InternalServerException} (server fault)
  *  <p>The request has failed due to an internal failure of the Amazon Inspector service.</p>

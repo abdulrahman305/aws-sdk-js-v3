@@ -66,9 +66,7 @@ export interface GetDeviceCommandOutput extends GetDeviceResponse, __MetadataBea
  * //     updatedAt: new Date("TIMESTAMP"),
  * //     arn: "STRING_VALUE",
  * //     kmsKeyArn: "STRING_VALUE",
- * //     tags: { // TagsMap
- * //       "<keys>": "STRING_VALUE",
- * //     },
+ * //     lastUserId: "STRING_VALUE",
  * //   },
  * // };
  *

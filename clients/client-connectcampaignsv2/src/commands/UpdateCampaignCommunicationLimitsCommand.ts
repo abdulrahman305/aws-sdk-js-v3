@@ -54,6 +54,7 @@ export interface UpdateCampaignCommunicationLimitsCommandOutput extends __Metada
  *         },
  *       ],
  *     },
+ *     instanceLimitsHandling: "STRING_VALUE",
  *   },
  * };
  * const command = new UpdateCampaignCommunicationLimitsCommand(input);

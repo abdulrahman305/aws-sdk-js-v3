@@ -376,6 +376,20 @@ export interface ActionTypeId {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const EnvironmentVariableType = {
+  PLAINTEXT: "PLAINTEXT",
+  SECRETS_MANAGER: "SECRETS_MANAGER",
+} as const;
+
+/**
+ * @public
+ */
+export type EnvironmentVariableType = (typeof EnvironmentVariableType)[keyof typeof EnvironmentVariableType];
+
+/**
  * <p>The environment variables for the action.</p>
  * @public
  */
@@ -391,6 +405,14 @@ export interface EnvironmentVariable {
    * @public
    */
   value: string | undefined;
+
+  /**
+   * <p>Specifies the type of use for the environment variable value. The value can be either
+   *             <code>PLAINTEXT</code> or <code>SECRETS_MANAGER</code>. If the value is <code>SECRETS_MANAGER</code>, provide the Secrets
+   *             reference in the EnvironmentVariable value.</p>
+   * @public
+   */
+  type?: EnvironmentVariableType | undefined;
 }
 
 /**
@@ -958,6 +980,26 @@ export interface ActionExecutionFilter {
    * @public
    */
   latestInPipelineExecution?: LatestInPipelineExecutionFilter | undefined;
+}
+
+/**
+ * <p>The action execution was not found.</p>
+ * @public
+ */
+export class ActionExecutionNotFoundException extends __BaseException {
+  readonly name: "ActionExecutionNotFoundException" = "ActionExecutionNotFoundException";
+  readonly $fault: "client" = "client";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ActionExecutionNotFoundException, __BaseException>) {
+    super({
+      name: "ActionExecutionNotFoundException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ActionExecutionNotFoundException.prototype);
+  }
 }
 
 /**
@@ -1854,10 +1896,8 @@ export type RuleOwner = (typeof RuleOwner)[keyof typeof RuleOwner];
 
 /**
  * <p>The ID for the rule type, which is made up of the combined values for category, owner,
- *             provider, and version. For more
- *             information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>.
- *             For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule
- *                 reference</a>.</p>
+ *             provider, and version. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
+ *                 conditions</a>. For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule reference</a>.</p>
  * @public
  */
 export interface RuleTypeId {
@@ -1876,7 +1916,8 @@ export interface RuleTypeId {
   owner?: RuleOwner | undefined;
 
   /**
-   * <p>The rule provider, such as the <code>DeploymentWindow</code> rule. For a list of rule provider names, see the rules listed in the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule
+   * <p>The rule provider, such as the <code>DeploymentWindow</code> rule. For a list of rule
+   *             provider names, see the rules listed in the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule
    *                 reference</a>.</p>
    * @public
    */
@@ -1892,10 +1933,10 @@ export interface RuleTypeId {
 /**
  * <p>Represents information about the rule to be created for an associated condition. An
  *             example would be creating a new rule for an entry condition, such as a rule that checks
- *             for a test result before allowing the run to enter the deployment stage. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
- *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>.
- *             For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule
- *                 reference</a>.</p>
+ *             for a test result before allowing the run to enter the deployment stage. For more
+ *             information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>
+ *             and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do
+ *                 stage conditions work?</a>. For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule reference</a>.</p>
  * @public
  */
 export interface RuleDeclaration {
@@ -1958,10 +1999,9 @@ export interface RuleDeclaration {
 
 /**
  * <p>The condition for the stage. A condition is made up of the rules and the result for
- *             the condition. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
- *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>..
- *             For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule
- *                 reference</a>.</p>
+ *             the condition. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>
+ *             and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do
+ *                 stage conditions work?</a>.. For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule reference</a>.</p>
  * @public
  */
 export interface Condition {
@@ -1980,8 +2020,10 @@ export interface Condition {
 }
 
 /**
- * <p>The conditions for making checks for entry to a stage. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
- *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>. </p>
+ * <p>The conditions for making checks for entry to a stage. For more information about
+ *             conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>
+ *             and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do
+ *                 stage conditions work?</a>. </p>
  * @public
  */
 export interface BeforeEntryConditions {
@@ -2262,8 +2304,9 @@ export interface RetryConfiguration {
 
 /**
  * <p>The configuration that specifies the result, such as rollback, to occur upon stage
- *             failure. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
- *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>. </p>
+ *             failure. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>
+ *             and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do
+ *                 stage conditions work?</a>. </p>
  * @public
  */
 export interface FailureConditions {
@@ -2282,16 +2325,20 @@ export interface FailureConditions {
   retryConfiguration?: RetryConfiguration | undefined;
 
   /**
-   * <p>The conditions that are configured as failure conditions. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
-   *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>.</p>
+   * <p>The conditions that are configured as failure conditions. For more information about
+   *             conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>
+   *             and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do
+   *                 stage conditions work?</a>.</p>
    * @public
    */
   conditions?: Condition[] | undefined;
 }
 
 /**
- * <p>The conditions for making checks that, if met, succeed a stage. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
- *                 conditions</a> and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do stage conditions work?</a>.</p>
+ * <p>The conditions for making checks that, if met, succeed a stage. For more information
+ *             about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>
+ *             and <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts-how-it-works-conditions.html">How do
+ *                 stage conditions work?</a>.</p>
  * @public
  */
 export interface SuccessConditions {
@@ -3358,12 +3405,17 @@ export interface PipelineMetadata {
 
   /**
    * <p>The date and time that polling for source changes (periodic checks) was stopped for
-   *             the pipeline, in timestamp format. You can migrate (update) a polling pipeline to use
-   *             event-based change detection. For example, for a pipeline with a CodeCommit
-   *             source, we recommend you migrate (update) your pipeline to use CloudWatch Events. To
-   *             learn more, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/update-change-detection.html">Migrate polling
-   *                 pipelines to use event-based change detection</a> in the CodePipeline
-   *             User Guide.</p>
+   *             the pipeline, in timestamp format. </p>
+   *          <important>
+   *             <p>Pipelines that are inactive for longer than 30 days will have polling disabled for
+   *                 the pipeline. For more information, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#metadata.pollingDisabledAt">pollingDisabledAt</a> in the pipeline structure reference. For the steps to
+   *                 migrate your pipeline from polling to event-based change detection, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/update-change-detection.html">Migrate polling
+   *                     pipelines to use event-based change detection</a>.</p>
+   *          </important>
+   *          <p>You can migrate (update) a polling pipeline to use event-based change detection. For
+   *             example, for a pipeline with a CodeCommit source, we recommend you migrate
+   *             (update) your pipeline to use CloudWatch Events. To learn more, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/update-change-detection.html">Migrate polling
+   *                 pipelines to use event-based change detection</a> in the <i>CodePipeline User Guide</i>.</p>
    * @public
    */
   pollingDisabledAt?: Date | undefined;
@@ -4425,6 +4477,188 @@ export interface ListActionTypesOutput {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const TargetFilterName = {
+  TARGET_STATUS: "TARGET_STATUS",
+} as const;
+
+/**
+ * @public
+ */
+export type TargetFilterName = (typeof TargetFilterName)[keyof typeof TargetFilterName];
+
+/**
+ * <p>Filters the list of targets.</p>
+ * @public
+ */
+export interface TargetFilter {
+  /**
+   * <p>The name on which to filter.</p>
+   * @public
+   */
+  name?: TargetFilterName | undefined;
+
+  /**
+   * <p>The values on which to filter.</p>
+   * @public
+   */
+  values?: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListDeployActionExecutionTargetsInput {
+  /**
+   * <p>The name of the pipeline with the deploy action.</p>
+   * @public
+   */
+  pipelineName?: string | undefined;
+
+  /**
+   * <p>The execution ID for the deploy action.</p>
+   * @public
+   */
+  actionExecutionId: string | undefined;
+
+  /**
+   * <p>Filters the targets for a specified deploy action.</p>
+   * @public
+   */
+  filters?: TargetFilter[] | undefined;
+
+  /**
+   * <p>The maximum number of results to return in a single call. To retrieve the remaining
+   *             results, make another call with the returned nextToken value.</p>
+   * @public
+   */
+  maxResults?: number | undefined;
+
+  /**
+   * <p>An identifier that was returned from the previous list action types call, which can be
+   *             used to return the next set of action types in the list.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+}
+
+/**
+ * <p>The context for the event for the deploy action.</p>
+ * @public
+ */
+export interface DeployTargetEventContext {
+  /**
+   * <p>The command ID for the event for the deploy action.</p>
+   * @public
+   */
+  ssmCommandId?: string | undefined;
+
+  /**
+   * <p>The context message for the event for the deploy action.</p>
+   * @public
+   */
+  message?: string | undefined;
+}
+
+/**
+ * <p>A lifecycle event for the deploy action.</p>
+ * @public
+ */
+export interface DeployTargetEvent {
+  /**
+   * <p>The name of the event for the deploy action.</p>
+   * @public
+   */
+  name?: string | undefined;
+
+  /**
+   * <p>The status of the event for the deploy action.</p>
+   * @public
+   */
+  status?: string | undefined;
+
+  /**
+   * <p>The start time for the event for the deploy action.</p>
+   * @public
+   */
+  startTime?: Date | undefined;
+
+  /**
+   * <p>The end time for the event for the deploy action.</p>
+   * @public
+   */
+  endTime?: Date | undefined;
+
+  /**
+   * <p>The context for the event for the deploy action.</p>
+   * @public
+   */
+  context?: DeployTargetEventContext | undefined;
+}
+
+/**
+ * <p>The target for the deploy action.</p>
+ * @public
+ */
+export interface DeployActionExecutionTarget {
+  /**
+   * <p>The ID of the target for the deploy action.</p>
+   * @public
+   */
+  targetId?: string | undefined;
+
+  /**
+   * <p>The type of target for the deploy action.</p>
+   * @public
+   */
+  targetType?: string | undefined;
+
+  /**
+   * <p>The status of the deploy action.</p>
+   * @public
+   */
+  status?: string | undefined;
+
+  /**
+   * <p>The start time for the deploy action.</p>
+   * @public
+   */
+  startTime?: Date | undefined;
+
+  /**
+   * <p>The end time for the deploy action.</p>
+   * @public
+   */
+  endTime?: Date | undefined;
+
+  /**
+   * <p>The lifecycle events for the deploy action.</p>
+   * @public
+   */
+  events?: DeployTargetEvent[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListDeployActionExecutionTargetsOutput {
+  /**
+   * <p>The targets for the deploy action.</p>
+   * @public
+   */
+  targets?: DeployActionExecutionTarget[] | undefined;
+
+  /**
+   * <p>An identifier that was returned from the previous list action types call, which can be
+   *             used to return the next set of action types in the list.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+}
+
+/**
  * <p>Filter for pipeline executions that have successfully completed the stage in the
  *             current pipeline version.</p>
  * @public
@@ -4826,10 +5060,8 @@ export interface ListRuleExecutionsInput {
 export interface RuleExecutionInput {
   /**
    * <p>The ID for the rule type, which is made up of the combined values for category, owner,
-   *             provider, and version. For more
-   *             information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage conditions</a>.
-   *             For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule
-   *                 reference</a>.</p>
+   *             provider, and version. For more information about conditions, see <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html">Stage
+   *                 conditions</a>. For more information about rules, see the <a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html">CodePipeline rule reference</a>.</p>
    * @public
    */
   ruleTypeId?: RuleTypeId | undefined;

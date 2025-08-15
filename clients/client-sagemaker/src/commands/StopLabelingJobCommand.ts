@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { StopLabelingJobRequest } from "../models/models_4";
+import { StopLabelingJobRequest } from "../models/models_5";
 import { de_StopLabelingJobCommand, se_StopLabelingJobCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,8 +28,7 @@ export interface StopLabelingJobCommandInput extends StopLabelingJobRequest {}
 export interface StopLabelingJobCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>Stops a running labeling job. A job that is stopped cannot be restarted. Any results
- *             obtained before the job is stopped are placed in the Amazon S3 output bucket.</p>
+ * <p>Stops a running labeling job. A job that is stopped cannot be restarted. Any results obtained before the job is stopped are placed in the Amazon S3 output bucket.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

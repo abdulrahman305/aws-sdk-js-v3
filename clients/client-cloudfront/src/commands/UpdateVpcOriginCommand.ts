@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { CloudFrontClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../CloudFrontClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateVpcOriginRequest, UpdateVpcOriginResult } from "../models/models_1";
+import { UpdateVpcOriginRequest, UpdateVpcOriginResult } from "../models/models_2";
 import { de_UpdateVpcOriginCommand, se_UpdateVpcOriginCommand } from "../protocols/Aws_restXml";
 
 /**
@@ -93,8 +93,7 @@ export interface UpdateVpcOriginCommandOutput extends UpdateVpcOriginResult, __M
  *  <p>The entity cannot be updated while it is in use.</p>
  *
  * @throws {@link EntityAlreadyExists} (client fault)
- *  <p>The entity already exists. You must provide a unique
- * 			entity.</p>
+ *  <p>The entity already exists. You must provide a unique entity.</p>
  *
  * @throws {@link EntityLimitExceeded} (client fault)
  *  <p>The entity limit has been exceeded.</p>
@@ -106,8 +105,7 @@ export interface UpdateVpcOriginCommandOutput extends UpdateVpcOriginResult, __M
  *  <p>The update contains modifications that are not allowed.</p>
  *
  * @throws {@link InconsistentQuantities} (client fault)
- *  <p>The value of <code>Quantity</code> and the size of <code>Items</code> don't
- * 			match.</p>
+ *  <p>The value of <code>Quantity</code> and the size of <code>Items</code> don't match.</p>
  *
  * @throws {@link InvalidArgument} (client fault)
  *  <p>An argument is invalid.</p>
@@ -116,8 +114,7 @@ export interface UpdateVpcOriginCommandOutput extends UpdateVpcOriginResult, __M
  *  <p>The <code>If-Match</code> version is missing or not valid.</p>
  *
  * @throws {@link PreconditionFailed} (client fault)
- *  <p>The precondition in one or more of the request fields evaluated to
- * 			<code>false</code>.</p>
+ *  <p>The precondition in one or more of the request fields evaluated to <code>false</code>.</p>
  *
  * @throws {@link UnsupportedOperation} (client fault)
  *  <p>This operation is not supported in this Amazon Web Services Region.</p>

@@ -49,8 +49,7 @@ public class AddWebsocketPlugin implements TypeScriptIntegration {
     public List<String> runAfter() {
         return List.of(
             AddHttpAuthSchemePlugin.class.getCanonicalName(),
-            AddBuiltinPlugins.class.getCanonicalName(),
-            AddEndpointsPlugin.class.getCanonicalName()
+            AddBuiltinPlugins.class.getCanonicalName()
         );
     }
 
@@ -127,7 +126,7 @@ public class AddWebsocketPlugin implements TypeScriptIntegration {
     }
 
     private static boolean isWebsocketSupported(ServiceShape service) {
-        Set<String> websocketServices = SetUtils.of("Transcribe Streaming", "RekognitionStreaming");
+        Set<String> websocketServices = SetUtils.of("Transcribe Streaming", "RekognitionStreaming", "Bedrock Runtime");
         String serviceId = service.getTrait(ServiceTrait.class).map(ServiceTrait::getSdkId).orElse("");
         return websocketServices.contains(serviceId);
     }
@@ -142,6 +141,8 @@ public class AddWebsocketPlugin implements TypeScriptIntegration {
             return MapUtils.of("headerPrefix", "x-amzn-transcribe-");
         } else if (serviceId.equals("RekognitionStreaming")) {
             return MapUtils.of("headerPrefix", "x-amz-rekognition-streaming-liveness-");
+        } else if (serviceId.equals("Bedrock Runtime")) {
+            return MapUtils.of("headerPrefix", "x-amz-bedrock-");
         } else {
             throw new CodegenException("Missing endpoint prefix for Websocket plugin of service " + serviceId);
         }

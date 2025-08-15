@@ -280,6 +280,7 @@ export class NoSuchKeySigningKey extends __BaseException {
 export const CloudWatchRegion = {
   af_south_1: "af-south-1",
   ap_east_1: "ap-east-1",
+  ap_east_2: "ap-east-2",
   ap_northeast_1: "ap-northeast-1",
   ap_northeast_2: "ap-northeast-2",
   ap_northeast_3: "ap-northeast-3",
@@ -297,6 +298,7 @@ export const CloudWatchRegion = {
   cn_northwest_1: "cn-northwest-1",
   eu_central_1: "eu-central-1",
   eu_central_2: "eu-central-2",
+  eu_isoe_west_1: "eu-isoe-west-1",
   eu_north_1: "eu-north-1",
   eu_south_1: "eu-south-1",
   eu_south_2: "eu-south-2",
@@ -803,6 +805,7 @@ export interface AliasTarget {
 export const VPCRegion = {
   af_south_1: "af-south-1",
   ap_east_1: "ap-east-1",
+  ap_east_2: "ap-east-2",
   ap_northeast_1: "ap-northeast-1",
   ap_northeast_2: "ap-northeast-2",
   ap_northeast_3: "ap-northeast-3",
@@ -820,6 +823,7 @@ export const VPCRegion = {
   cn_northwest_1: "cn-northwest-1",
   eu_central_1: "eu-central-1",
   eu_central_2: "eu-central-2",
+  eu_isoe_west_1: "eu-isoe-west-1",
   eu_north_1: "eu-north-1",
   eu_south_1: "eu-south-1",
   eu_south_2: "eu-south-2",
@@ -1446,6 +1450,7 @@ export interface GeoProximityLocation {
 export const ResourceRecordSetRegion = {
   af_south_1: "af-south-1",
   ap_east_1: "ap-east-1",
+  ap_east_2: "ap-east-2",
   ap_northeast_1: "ap-northeast-1",
   ap_northeast_2: "ap-northeast-2",
   ap_northeast_3: "ap-northeast-3",
@@ -1476,6 +1481,8 @@ export const ResourceRecordSetRegion = {
   sa_east_1: "sa-east-1",
   us_east_1: "us-east-1",
   us_east_2: "us-east-2",
+  us_gov_east_1: "us-gov-east-1",
+  us_gov_west_1: "us-gov-west-1",
   us_west_1: "us-west-1",
   us_west_2: "us-west-2",
 } as const;

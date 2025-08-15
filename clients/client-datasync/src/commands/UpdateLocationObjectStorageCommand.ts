@@ -34,8 +34,10 @@ export interface UpdateLocationObjectStorageCommandOutput
     __MetadataBearer {}
 
 /**
- * <p>Modifies the following configuration parameters of the object storage transfer location that you're using with DataSync.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Configuring DataSync transfers with an object storage system</a>.</p>
+ * <p>Modifies the following configuration parameters of the object storage transfer location
+ *       that you're using with DataSync.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html">Configuring DataSync
+ *         transfers with an object storage system</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -54,6 +56,14 @@ export interface UpdateLocationObjectStorageCommandOutput
  *     "STRING_VALUE",
  *   ],
  *   ServerCertificate: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *   CmkSecretConfig: { // CmkSecretConfig
+ *     SecretArn: "STRING_VALUE",
+ *     KmsKeyArn: "STRING_VALUE",
+ *   },
+ *   CustomSecretConfig: { // CustomSecretConfig
+ *     SecretArn: "STRING_VALUE",
+ *     SecretAccessRoleArn: "STRING_VALUE",
+ *   },
  * };
  * const command = new UpdateLocationObjectStorageCommand(input);
  * const response = await client.send(command);

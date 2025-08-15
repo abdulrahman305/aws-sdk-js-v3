@@ -3396,7 +3396,9 @@ export interface UpdateTemplateCommandOutput extends UpdateTemplateResponse, __M
  *                   HeatMapRowItemsLimitConfiguration: "<ItemsLimitConfiguration>",
  *                   HeatMapColumnItemsLimitConfiguration: "<ItemsLimitConfiguration>",
  *                 },
+ *                 RowAxisDisplayOptions: "<AxisDisplayOptions>",
  *                 RowLabelOptions: "<ChartAxisLabelOptions>",
+ *                 ColumnAxisDisplayOptions: "<AxisDisplayOptions>",
  *                 ColumnLabelOptions: "<ChartAxisLabelOptions>",
  *                 ColorScale: { // ColorScale
  *                   Colors: [ // ColorScaleColorList // required
@@ -4507,6 +4509,7 @@ export interface UpdateTemplateCommandOutput extends UpdateTemplateResponse, __M
  *                   },
  *                 },
  *               },
+ *               Actions: "<VisualCustomActionList>",
  *               VisualContentAltText: "STRING_VALUE",
  *             },
  *           },
@@ -4515,6 +4518,11 @@ export interface UpdateTemplateCommandOutput extends UpdateTemplateResponse, __M
  *           { // SheetTextBox
  *             SheetTextBoxId: "STRING_VALUE", // required
  *             Content: "STRING_VALUE",
+ *             Interactions: { // TextBoxInteractionOptions
+ *               TextBoxMenuOption: { // TextBoxMenuOption
+ *                 AvailabilityStatus: "ENABLED" || "DISABLED",
+ *               },
+ *             },
  *           },
  *         ],
  *         Images: [ // SheetImageList
@@ -4786,6 +4794,11 @@ export interface UpdateTemplateCommandOutput extends UpdateTemplateResponse, __M
  *           },
  *         ],
  *         ContentType: "PAGINATED" || "INTERACTIVE",
+ *         CustomActionDefaults: { // VisualCustomActionDefaults
+ *           highlightOperation: { // VisualHighlightOperation
+ *             Trigger: "DATA_POINT_CLICK" || "DATA_POINT_HOVER" || "NONE", // required
+ *           },
+ *         },
  *       },
  *     ],
  *     CalculatedFields: [ // CalculatedFields
@@ -5436,6 +5449,11 @@ export interface UpdateTemplateCommandOutput extends UpdateTemplateResponse, __M
  *       ExcludedDataSetArns: [ // DataSetArnsList
  *         "STRING_VALUE",
  *       ],
+ *       CustomActionDefaults: {
+ *         highlightOperation: {
+ *           Trigger: "DATA_POINT_CLICK" || "DATA_POINT_HOVER" || "NONE", // required
+ *         },
+ *       },
  *     },
  *     QueryExecutionOptions: { // QueryExecutionOptions
  *       QueryExecutionMode: "AUTO" || "MANUAL",

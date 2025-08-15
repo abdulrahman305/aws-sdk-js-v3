@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { CreateModelCopyJobRequest, CreateModelCopyJobResponse } from "../models/models_0";
+import { CreateModelCopyJobRequest, CreateModelCopyJobResponse } from "../models/models_1";
 import { de_CreateModelCopyJobCommand, se_CreateModelCopyJobCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -71,8 +71,7 @@ export interface CreateModelCopyJobCommandOutput extends CreateModelCopyJobRespo
  *  <p>The specified resource Amazon Resource Name (ARN) was not found. Check the Amazon Resource Name (ARN) and try your request again.</p>
  *
  * @throws {@link TooManyTagsException} (client fault)
- *  <p>The request contains more tags than can be associated with a resource (50 tags per resource).
- *          The maximum number of tags includes both existing tags and those included in your current request. </p>
+ *  <p>The request contains more tags than can be associated with a resource (50 tags per resource). The maximum number of tags includes both existing tags and those included in your current request. </p>
  *
  * @throws {@link BedrockServiceException}
  * <p>Base exception class for all service exceptions from Bedrock service.</p>

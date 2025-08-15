@@ -102,6 +102,216 @@ export class AlreadyExistsException extends __BaseException {
 }
 
 /**
+ * @public
+ */
+export interface AssociateBackupVaultMpaApprovalTeamInput {
+  /**
+   * <p>The name of the backup vault to associate with the MPA approval team.</p>
+   * @public
+   */
+  BackupVaultName: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the MPA approval team to associate with the backup vault.</p>
+   * @public
+   */
+  MpaApprovalTeamArn: string | undefined;
+
+  /**
+   * <p>A comment provided by the requester explaining the association request.</p>
+   * @public
+   */
+  RequesterComment?: string | undefined;
+}
+
+/**
+ * <p>Indicates that something is wrong with a parameter's value. For example, the value is
+ *          out of range.</p>
+ * @public
+ */
+export class InvalidParameterValueException extends __BaseException {
+  readonly name: "InvalidParameterValueException" = "InvalidParameterValueException";
+  readonly $fault: "client" = "client";
+  Code?: string | undefined;
+  Message?: string | undefined;
+  /**
+   * <p></p>
+   * @public
+   */
+  Type?: string | undefined;
+
+  /**
+   * <p></p>
+   * @public
+   */
+  Context?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<InvalidParameterValueException, __BaseException>) {
+    super({
+      name: "InvalidParameterValueException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, InvalidParameterValueException.prototype);
+    this.Code = opts.Code;
+    this.Message = opts.Message;
+    this.Type = opts.Type;
+    this.Context = opts.Context;
+  }
+}
+
+/**
+ * <p>Indicates that something is wrong with the input to the request. For example, a
+ *          parameter is of the wrong type.</p>
+ * @public
+ */
+export class InvalidRequestException extends __BaseException {
+  readonly name: "InvalidRequestException" = "InvalidRequestException";
+  readonly $fault: "client" = "client";
+  Code?: string | undefined;
+  Message?: string | undefined;
+  /**
+   * <p></p>
+   * @public
+   */
+  Type?: string | undefined;
+
+  /**
+   * <p></p>
+   * @public
+   */
+  Context?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<InvalidRequestException, __BaseException>) {
+    super({
+      name: "InvalidRequestException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, InvalidRequestException.prototype);
+    this.Code = opts.Code;
+    this.Message = opts.Message;
+    this.Type = opts.Type;
+    this.Context = opts.Context;
+  }
+}
+
+/**
+ * <p>Indicates that a required parameter is missing.</p>
+ * @public
+ */
+export class MissingParameterValueException extends __BaseException {
+  readonly name: "MissingParameterValueException" = "MissingParameterValueException";
+  readonly $fault: "client" = "client";
+  Code?: string | undefined;
+  Message?: string | undefined;
+  /**
+   * <p></p>
+   * @public
+   */
+  Type?: string | undefined;
+
+  /**
+   * <p></p>
+   * @public
+   */
+  Context?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<MissingParameterValueException, __BaseException>) {
+    super({
+      name: "MissingParameterValueException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, MissingParameterValueException.prototype);
+    this.Code = opts.Code;
+    this.Message = opts.Message;
+    this.Type = opts.Type;
+    this.Context = opts.Context;
+  }
+}
+
+/**
+ * <p>A resource that is required for the action doesn't exist.</p>
+ * @public
+ */
+export class ResourceNotFoundException extends __BaseException {
+  readonly name: "ResourceNotFoundException" = "ResourceNotFoundException";
+  readonly $fault: "client" = "client";
+  Code?: string | undefined;
+  Message?: string | undefined;
+  /**
+   * <p></p>
+   * @public
+   */
+  Type?: string | undefined;
+
+  /**
+   * <p></p>
+   * @public
+   */
+  Context?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ResourceNotFoundException, __BaseException>) {
+    super({
+      name: "ResourceNotFoundException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ResourceNotFoundException.prototype);
+    this.Code = opts.Code;
+    this.Message = opts.Message;
+    this.Type = opts.Type;
+    this.Context = opts.Context;
+  }
+}
+
+/**
+ * <p>The request failed due to a temporary failure of the server.</p>
+ * @public
+ */
+export class ServiceUnavailableException extends __BaseException {
+  readonly name: "ServiceUnavailableException" = "ServiceUnavailableException";
+  readonly $fault: "server" = "server";
+  Code?: string | undefined;
+  Message?: string | undefined;
+  /**
+   * <p></p>
+   * @public
+   */
+  Type?: string | undefined;
+
+  /**
+   * <p></p>
+   * @public
+   */
+  Context?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ServiceUnavailableException, __BaseException>) {
+    super({
+      name: "ServiceUnavailableException",
+      $fault: "server",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ServiceUnavailableException.prototype);
+    this.Code = opts.Code;
+    this.Message = opts.Message;
+    this.Type = opts.Type;
+    this.Context = opts.Context;
+  }
+}
+
+/**
  * <p>Contains information about the backup plan and rule that Backup used to
  *          initiate the recovery point backup.</p>
  * @public
@@ -239,7 +449,44 @@ export interface BackupJob {
   PercentDone?: string | undefined;
 
   /**
-   * <p>The size, in bytes, of a backup.</p>
+   * <p>The size, in bytes, of a backup (recovery point).</p>
+   *          <p>This value can render differently depending on the resource type as Backup pulls in data information from other Amazon Web Services services. For example, the
+   *          value returned may show a value of <code>0</code>, which may differ from the
+   *          anticipated value.</p>
+   *          <p>The expected behavior for values by resource type are described as follows:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Amazon Aurora, Amazon DocumentDB, and Amazon Neptune do
+   *                not have this value populate from the operation
+   *                <code>GetBackupJobStatus</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Amazon DynamoDB with advanced features, this value refers to the size
+   *                of the recovery point (backup).</p>
+   *             </li>
+   *             <li>
+   *                <p>Amazon EC2 and Amazon EBS show volume size (provisioned storage)
+   *                returned as part of this value. Amazon EBS does not return backup size
+   *                information; snapshot size will have the same value as the original resource that was
+   *                backed up.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Amazon EFS, this value refers to the delta bytes transferred during a
+   *                backup.</p>
+   *             </li>
+   *             <li>
+   *                <p>Amazon FSx does not populate this value from the operation
+   *                <code>GetBackupJobStatus</code> for FSx file systems.</p>
+   *             </li>
+   *             <li>
+   *                <p>An Amazon RDS instance will show as <code>0</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For virtual machines running VMware, this value is passed to Backup
+   *                through an asynchronous workflow, which can mean this displayed value can
+   *                under-represent the actual backup size.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   BackupSizeInBytes?: number | undefined;
@@ -570,12 +817,15 @@ export interface BackupRule {
   TargetBackupVaultName: string | undefined;
 
   /**
-   * <p>A cron expression in UTC specifying when Backup initiates a backup job. For
-   *          more information about Amazon Web Services cron expressions, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for Rules</a> in the <i>Amazon CloudWatch Events User
-   *             Guide.</i>. Two examples of Amazon Web Services cron expressions are <code> 15 * ?
-   *             * * *</code> (take a backup every hour at 15 minutes past the hour) and <code>0 12 * * ?
-   *             *</code> (take a backup every day at 12 noon UTC). For a table of examples, click the
-   *          preceding link and scroll down the page.</p>
+   * <p>A cron expression in UTC specifying when Backup initiates a backup job.
+   *          When no CRON expression is provided, Backup will use the default
+   *          expression <code>cron(0 5 ? * * *)</code>.</p>
+   *          <p>For more information about Amazon Web Services cron expressions, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for Rules</a> in the <i>Amazon CloudWatch Events User
+   *             Guide</i>.</p>
+   *          <p>Two examples of Amazon Web Services cron expressions are <code> 15 * ? * * *</code> (take
+   *          a backup every hour at 15 minutes past the hour) and <code>0 12 * * ? *</code> (take a
+   *          backup every day at 12 noon UTC).</p>
+   *          <p>For a table of examples, click the preceding link and scroll down the page.</p>
    * @public
    */
   ScheduleExpression?: string | undefined;
@@ -715,7 +965,8 @@ export interface BackupRuleInput {
 
   /**
    * <p>A CRON expression in UTC specifying when Backup initiates a backup
-   *          job.</p>
+   *          job. When no CRON expression is provided, Backup will use the default
+   *          expression <code>cron(0 5 ? * * *)</code>.</p>
    * @public
    */
   ScheduleExpression?: string | undefined;
@@ -1157,9 +1408,13 @@ export const BackupVaultEvent = {
   BACKUP_JOB_SUCCESSFUL: "BACKUP_JOB_SUCCESSFUL",
   BACKUP_PLAN_CREATED: "BACKUP_PLAN_CREATED",
   BACKUP_PLAN_MODIFIED: "BACKUP_PLAN_MODIFIED",
+  CONTINUOUS_BACKUP_INTERRUPTED: "CONTINUOUS_BACKUP_INTERRUPTED",
   COPY_JOB_FAILED: "COPY_JOB_FAILED",
   COPY_JOB_STARTED: "COPY_JOB_STARTED",
   COPY_JOB_SUCCESSFUL: "COPY_JOB_SUCCESSFUL",
+  RECOVERY_POINT_INDEXING_FAILED: "RECOVERY_POINT_INDEXING_FAILED",
+  RECOVERY_POINT_INDEX_COMPLETED: "RECOVERY_POINT_INDEX_COMPLETED",
+  RECOVERY_POINT_INDEX_DELETED: "RECOVERY_POINT_INDEX_DELETED",
   RECOVERY_POINT_MODIFIED: "RECOVERY_POINT_MODIFIED",
   RESTORE_JOB_COMPLETED: "RESTORE_JOB_COMPLETED",
   RESTORE_JOB_FAILED: "RESTORE_JOB_FAILED",
@@ -1196,6 +1451,7 @@ export type VaultState = (typeof VaultState)[keyof typeof VaultState];
 export const VaultType = {
   BACKUP_VAULT: "BACKUP_VAULT",
   LOGICALLY_AIR_GAPPED_BACKUP_VAULT: "LOGICALLY_AIR_GAPPED_BACKUP_VAULT",
+  RESTORE_ACCESS_BACKUP_VAULT: "RESTORE_ACCESS_BACKUP_VAULT",
 } as const;
 
 /**
@@ -1380,44 +1636,6 @@ export interface CancelLegalHoldInput {
 export interface CancelLegalHoldOutput {}
 
 /**
- * <p>Indicates that something is wrong with a parameter's value. For example, the value is
- *          out of range.</p>
- * @public
- */
-export class InvalidParameterValueException extends __BaseException {
-  readonly name: "InvalidParameterValueException" = "InvalidParameterValueException";
-  readonly $fault: "client" = "client";
-  Code?: string | undefined;
-  Message?: string | undefined;
-  /**
-   * <p></p>
-   * @public
-   */
-  Type?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  Context?: string | undefined;
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<InvalidParameterValueException, __BaseException>) {
-    super({
-      name: "InvalidParameterValueException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, InvalidParameterValueException.prototype);
-    this.Code = opts.Code;
-    this.Message = opts.Message;
-    this.Type = opts.Type;
-    this.Context = opts.Context;
-  }
-}
-
-/**
  * <p>Backup is already performing an action on this recovery point. It can't
  *          perform the action you requested until the first action finishes. Try again later.</p>
  * @public
@@ -1448,117 +1666,6 @@ export class InvalidResourceStateException extends __BaseException {
       ...opts,
     });
     Object.setPrototypeOf(this, InvalidResourceStateException.prototype);
-    this.Code = opts.Code;
-    this.Message = opts.Message;
-    this.Type = opts.Type;
-    this.Context = opts.Context;
-  }
-}
-
-/**
- * <p>Indicates that a required parameter is missing.</p>
- * @public
- */
-export class MissingParameterValueException extends __BaseException {
-  readonly name: "MissingParameterValueException" = "MissingParameterValueException";
-  readonly $fault: "client" = "client";
-  Code?: string | undefined;
-  Message?: string | undefined;
-  /**
-   * <p></p>
-   * @public
-   */
-  Type?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  Context?: string | undefined;
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<MissingParameterValueException, __BaseException>) {
-    super({
-      name: "MissingParameterValueException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, MissingParameterValueException.prototype);
-    this.Code = opts.Code;
-    this.Message = opts.Message;
-    this.Type = opts.Type;
-    this.Context = opts.Context;
-  }
-}
-
-/**
- * <p>A resource that is required for the action doesn't exist.</p>
- * @public
- */
-export class ResourceNotFoundException extends __BaseException {
-  readonly name: "ResourceNotFoundException" = "ResourceNotFoundException";
-  readonly $fault: "client" = "client";
-  Code?: string | undefined;
-  Message?: string | undefined;
-  /**
-   * <p></p>
-   * @public
-   */
-  Type?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  Context?: string | undefined;
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<ResourceNotFoundException, __BaseException>) {
-    super({
-      name: "ResourceNotFoundException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, ResourceNotFoundException.prototype);
-    this.Code = opts.Code;
-    this.Message = opts.Message;
-    this.Type = opts.Type;
-    this.Context = opts.Context;
-  }
-}
-
-/**
- * <p>The request failed due to a temporary failure of the server.</p>
- * @public
- */
-export class ServiceUnavailableException extends __BaseException {
-  readonly name: "ServiceUnavailableException" = "ServiceUnavailableException";
-  readonly $fault: "server" = "server";
-  Code?: string | undefined;
-  Message?: string | undefined;
-  /**
-   * <p></p>
-   * @public
-   */
-  Type?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  Context?: string | undefined;
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<ServiceUnavailableException, __BaseException>) {
-    super({
-      name: "ServiceUnavailableException",
-      $fault: "server",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, ServiceUnavailableException.prototype);
     this.Code = opts.Code;
     this.Message = opts.Message;
     this.Type = opts.Type;
@@ -2505,44 +2612,6 @@ export interface CreateLogicallyAirGappedBackupVaultOutput {
 }
 
 /**
- * <p>Indicates that something is wrong with the input to the request. For example, a
- *          parameter is of the wrong type.</p>
- * @public
- */
-export class InvalidRequestException extends __BaseException {
-  readonly name: "InvalidRequestException" = "InvalidRequestException";
-  readonly $fault: "client" = "client";
-  Code?: string | undefined;
-  Message?: string | undefined;
-  /**
-   * <p></p>
-   * @public
-   */
-  Type?: string | undefined;
-
-  /**
-   * <p></p>
-   * @public
-   */
-  Context?: string | undefined;
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<InvalidRequestException, __BaseException>) {
-    super({
-      name: "InvalidRequestException",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, InvalidRequestException.prototype);
-    this.Code = opts.Code;
-    this.Message = opts.Message;
-    this.Type = opts.Type;
-    this.Context = opts.Context;
-  }
-}
-
-/**
  * <p>Contains information from your report plan about where to deliver your reports,
  *          specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your
  *          reports.</p>
@@ -2704,6 +2773,70 @@ export interface CreateReportPlanOutput {
 
 /**
  * @public
+ */
+export interface CreateRestoreAccessBackupVaultInput {
+  /**
+   * <p>The ARN of the source backup vault containing the recovery points to which temporary access is requested.</p>
+   * @public
+   */
+  SourceBackupVaultArn: string | undefined;
+
+  /**
+   * <p>The name of the backup vault to associate with an MPA approval team.</p>
+   * @public
+   */
+  BackupVaultName?: string | undefined;
+
+  /**
+   * <p>Optional tags to assign to the restore access backup vault.</p>
+   * @public
+   */
+  BackupVaultTags?: Record<string, string> | undefined;
+
+  /**
+   * <p>A unique string that identifies the request and allows failed requests to be retried without the risk of executing the operation twice.</p>
+   * @public
+   */
+  CreatorRequestId?: string | undefined;
+
+  /**
+   * <p>A comment explaining the reason for requesting restore access to the backup vault.</p>
+   * @public
+   */
+  RequesterComment?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateRestoreAccessBackupVaultOutput {
+  /**
+   * <p>The ARN that uniquely identifies the created restore access backup vault.</p>
+   * @public
+   */
+  RestoreAccessBackupVaultArn?: string | undefined;
+
+  /**
+   * <p>The current state of the restore access backup vault.</p>
+   * @public
+   */
+  VaultState?: VaultState | undefined;
+
+  /**
+   * <p>The name of the created restore access backup vault.</p>
+   * @public
+   */
+  RestoreAccessBackupVaultName?: string | undefined;
+
+  /**
+   * <p>>The date and time when the restore access backup vault was created, in Unix format and Coordinated Universal Time </p>
+   * @public
+   */
+  CreationDate?: Date | undefined;
+}
+
+/**
+ * @public
  * @enum
  */
 export const RestoreTestingRecoveryPointSelectionAlgorithm = {
@@ -2855,7 +2988,8 @@ export interface RestoreTestingPlanForCreate {
 
   /**
    * <p>A CRON expression in specified timezone when a restore
-   *          testing plan is executed.</p>
+   *          testing plan is executed. When no CRON expression is provided, Backup will use the default
+   *          expression <code>cron(0 5 ? * * *)</code>.</p>
    * @public
    */
   ScheduleExpression: string | undefined;
@@ -3119,7 +3253,7 @@ export interface RestoreTestingSelectionForCreate {
   RestoreTestingSelectionName: string | undefined;
 
   /**
-   * <p>This is amount of hours (1 to 168) available to run a validation script on the data. The
+   * <p>This is amount of hours (0 to 168) available to run a validation script on the data. The
    *          data will be deleted upon the completion of the validation script or the end of the
    *          specified retention period, whichever comes first.</p>
    * @public
@@ -3522,7 +3656,44 @@ export interface DescribeBackupJobOutput {
   PercentDone?: string | undefined;
 
   /**
-   * <p>The size, in bytes, of a backup.</p>
+   * <p>The size, in bytes, of a backup (recovery point).</p>
+   *          <p>This value can render differently depending on the resource type as Backup pulls in data information from other Amazon Web Services services. For example, the
+   *          value returned may show a value of <code>0</code>, which may differ from the
+   *          anticipated value.</p>
+   *          <p>The expected behavior for values by resource type are described as follows:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Amazon Aurora, Amazon DocumentDB, and Amazon Neptune do
+   *                not have this value populate from the operation
+   *                <code>GetBackupJobStatus</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Amazon DynamoDB with advanced features, this value refers to the size
+   *                of the recovery point (backup).</p>
+   *             </li>
+   *             <li>
+   *                <p>Amazon EC2 and Amazon EBS show volume size (provisioned storage)
+   *                returned as part of this value. Amazon EBS does not return backup size
+   *                information; snapshot size will have the same value as the original resource that was
+   *                backed up.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Amazon EFS, this value refers to the delta bytes transferred during a
+   *                backup.</p>
+   *             </li>
+   *             <li>
+   *                <p>Amazon FSx does not populate this value from the operation
+   *                <code>GetBackupJobStatus</code> for FSx file systems.</p>
+   *             </li>
+   *             <li>
+   *                <p>An Amazon RDS instance will show as <code>0</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For virtual machines running VMware, this value is passed to Backup
+   *                through an asynchronous workflow, which can mean this displayed value can
+   *                under-represent the actual backup size.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   BackupSizeInBytes?: number | undefined;
@@ -3659,6 +3830,57 @@ export interface DescribeBackupVaultInput {
 
 /**
  * @public
+ * @enum
+ */
+export const MpaSessionStatus = {
+  APPROVED: "APPROVED",
+  FAILED: "FAILED",
+  PENDING: "PENDING",
+} as const;
+
+/**
+ * @public
+ */
+export type MpaSessionStatus = (typeof MpaSessionStatus)[keyof typeof MpaSessionStatus];
+
+/**
+ * <p>Contains information about the latest update to an MPA approval team association.</p>
+ * @public
+ */
+export interface LatestMpaApprovalTeamUpdate {
+  /**
+   * <p>The ARN of the MPA session associated with this update.</p>
+   * @public
+   */
+  MpaSessionArn?: string | undefined;
+
+  /**
+   * <p>The current status of the MPA approval team update.</p>
+   * @public
+   */
+  Status?: MpaSessionStatus | undefined;
+
+  /**
+   * <p>A message describing the current status of the MPA approval team update.</p>
+   * @public
+   */
+  StatusMessage?: string | undefined;
+
+  /**
+   * <p>The date and time when the MPA approval team update was initiated.</p>
+   * @public
+   */
+  InitiationDate?: Date | undefined;
+
+  /**
+   * <p>The date and time when the MPA approval team update will expire.</p>
+   * @public
+   */
+  ExpiryDate?: Date | undefined;
+}
+
+/**
+ * @public
  */
 export interface DescribeBackupVaultOutput {
   /**
@@ -3714,6 +3936,10 @@ export interface DescribeBackupVaultOutput {
 
   /**
    * <p>The number of recovery points that are stored in a backup vault.</p>
+   *          <p>Recovery point count value displayed in the console can be an approximation. Use <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ListRecoveryPointsByBackupVault.html">
+   *                <code>ListRecoveryPointsByBackupVault</code>
+   *             </a> API to obtain the exact
+   *          count.</p>
    * @public
    */
   NumberOfRecoveryPoints?: number | undefined;
@@ -3767,6 +3993,30 @@ export interface DescribeBackupVaultOutput {
    * @public
    */
   LockDate?: Date | undefined;
+
+  /**
+   * <p>The ARN of the source backup vault from which this restore access backup vault was created.</p>
+   * @public
+   */
+  SourceBackupVaultArn?: string | undefined;
+
+  /**
+   * <p>The ARN of the MPA approval team associated with this backup vault.</p>
+   * @public
+   */
+  MpaApprovalTeamArn?: string | undefined;
+
+  /**
+   * <p>The ARN of the MPA session associated with this backup vault.</p>
+   * @public
+   */
+  MpaSessionArn?: string | undefined;
+
+  /**
+   * <p>Information about the latest update to the MPA approval team association for this backup vault.</p>
+   * @public
+   */
+  LatestMpaApprovalTeamUpdate?: LatestMpaApprovalTeamUpdate | undefined;
 }
 
 /**
@@ -4039,10 +4289,13 @@ export type IndexStatus = (typeof IndexStatus)[keyof typeof IndexStatus];
  * @enum
  */
 export const RecoveryPointStatus = {
+  AVAILABLE: "AVAILABLE",
   COMPLETED: "COMPLETED",
+  CREATING: "CREATING",
   DELETING: "DELETING",
   EXPIRED: "EXPIRED",
   PARTIAL: "PARTIAL",
+  STOPPED: "STOPPED",
 } as const;
 
 /**
@@ -4131,32 +4384,55 @@ export interface DescribeRecoveryPointOutput {
   IamRoleArn?: string | undefined;
 
   /**
-   * <p>A status code specifying the state of the recovery point.</p>
-   *          <p>
-   *             <code>PARTIAL</code> status indicates Backup could not create the recovery
-   *          point before the backup window closed. To increase your backup plan window using the API,
-   *          see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html">UpdateBackupPlan</a>. You can also increase your backup plan window using the
-   *          Console by choosing and editing your backup plan.</p>
-   *          <p>
-   *             <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention
-   *          period, but Backup lacks permission or is otherwise unable to delete it. To
-   *          manually delete these recovery points, see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
-   *             Delete the recovery points</a> in the <i>Clean up resources</i>
-   *          section of <i>Getting started</i>.</p>
-   *          <p>
-   *             <code>STOPPED</code> status occurs on a continuous backup where a user has taken some
-   *          action that causes the continuous backup to be disabled. This can be caused by the removal
-   *          of permissions, turning off versioning, turning off events being sent to EventBridge,
-   *          or disabling the EventBridge rules that are put in place by Backup. For
-   *          recovery points of Amazon S3, Amazon RDS, and Amazon Aurora resources, this status
-   *          occurs when the retention period of a continuous backup rule is changed.</p>
-   *          <p>To resolve <code>STOPPED</code> status, ensure that all requested permissions are in place and
-   *          that versioning is enabled on the S3 bucket. Once these conditions are met, the next instance
-   *          of a backup rule running will result in a new continuous recovery point being created.
-   *          The recovery points with STOPPED status do not need to be deleted.</p>
-   *          <p>For SAP HANA on Amazon EC2 <code>STOPPED</code> status occurs due to user action, application
-   *          misconfiguration, or backup failure. To ensure that future continuous backups succeed,
-   *          refer to the recovery point status and check SAP HANA for details.</p>
+   * <p>A status code specifying the state of the recovery point. For more information, see
+   *          <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/applicationstackbackups.html#cfnrecoverypointstatus">
+   *             Recovery point status</a> in the <i>Backup Developer
+   *                Guide</i>.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>CREATING</code> status indicates that an Backup job has been
+   *                initiated for a resource. The backup process has started and is actively processing
+   *                a backup job for the associated recovery point.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>AVAILABLE</code> status indicates that the backup was successfully created
+   *                for the recovery point. The backup process has completed without any issues, and the
+   *                recovery point is now ready for use.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>PARTIAL</code> status indicates a composite recovery point has one or more
+   *                nested recovery points that were not in the backup.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention
+   *                period, but Backup lacks permission or is otherwise unable to delete it. To
+   *                manually delete these recovery points, see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
+   *                   Delete the recovery points</a> in the <i>Clean up resources</i>
+   *                section of <i>Getting started</i>.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>STOPPED</code> status occurs on a continuous backup where a user has taken some
+   *                action that causes the continuous backup to be disabled. This can be caused by the removal
+   *                of permissions, turning off versioning, turning off events being sent to EventBridge,
+   *                or disabling the EventBridge rules that are put in place by Backup. For
+   *                recovery points of Amazon S3, Amazon RDS, and Amazon Aurora
+   *                resources, this status occurs when the retention period of a continuous backup rule is
+   *                changed.</p>
+   *                <p>To resolve <code>STOPPED</code> status, ensure that all requested permissions are in
+   *                place and that versioning is enabled on the S3 bucket. Once these conditions are met, the
+   *                next instance of a backup rule running will result in a new continuous recovery point being
+   *                created. The recovery points with STOPPED status do not need to be deleted.</p>
+   *                <p>For SAP HANA on Amazon EC2
+   *                <code>STOPPED</code> status occurs due to user action, application misconfiguration, or
+   *                backup failure. To ensure that future continuous backups succeed, refer to the recovery
+   *                point status and check SAP HANA for details.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   Status?: RecoveryPointStatus | undefined;
@@ -4175,6 +4451,13 @@ export interface DescribeRecoveryPointOutput {
    * @public
    */
   CreationDate?: Date | undefined;
+
+  /**
+   * <p>The date and time when the backup job that created this recovery point was initiated, in
+   *          Unix format and Coordinated Universal Time (UTC).</p>
+   * @public
+   */
+  InitiationDate?: Date | undefined;
 
   /**
    * <p>The date and time that a job to create a recovery point is completed, in Unix format and
@@ -4759,6 +5042,23 @@ export interface DescribeRestoreJobOutput {
    * @public
    */
   DeletionStatusMessage?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DisassociateBackupVaultMpaApprovalTeamInput {
+  /**
+   * <p>The name of the backup vault from which to disassociate the MPA approval team.</p>
+   * @public
+   */
+  BackupVaultName: string | undefined;
+
+  /**
+   * <p>An optional comment explaining the reason for disassociating the MPA approval team from the backup vault.</p>
+   * @public
+   */
+  RequesterComment?: string | undefined;
 }
 
 /**
@@ -5495,7 +5795,8 @@ export interface RestoreTestingPlanForGet {
 
   /**
    * <p>A CRON expression in specified timezone when a restore
-   *          testing plan is executed.</p>
+   *          testing plan is executed. When no CRON expression is provided, Backup will use the default
+   *          expression <code>cron(0 5 ? * * *)</code>.</p>
    * @public
    */
   ScheduleExpression: string | undefined;
@@ -7392,6 +7693,13 @@ export interface RecoveryPointByBackupVault {
   CreationDate?: Date | undefined;
 
   /**
+   * <p>The date and time when the backup job that created this recovery point was initiated, in
+   *          Unix format and Coordinated Universal Time (UTC).</p>
+   * @public
+   */
+  InitiationDate?: Date | undefined;
+
+  /**
    * <p>The date and time a job to restore a recovery point is completed, in Unix format and
    *          Coordinated Universal Time (UTC). The value of <code>CompletionDate</code> is accurate to
    *          milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018
@@ -7883,6 +8191,132 @@ export interface ListReportPlansOutput {
    * @public
    */
   NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListRestoreAccessBackupVaultsInput {
+  /**
+   * <p>The name of the backup vault for which to list associated restore access backup vaults.</p>
+   * @public
+   */
+  BackupVaultName: string | undefined;
+
+  /**
+   * <p>The pagination token from a previous request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of items to return in the response.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const MpaRevokeSessionStatus = {
+  FAILED: "FAILED",
+  PENDING: "PENDING",
+} as const;
+
+/**
+ * @public
+ */
+export type MpaRevokeSessionStatus = (typeof MpaRevokeSessionStatus)[keyof typeof MpaRevokeSessionStatus];
+
+/**
+ * <p>Contains information about the latest request to revoke access to a backup vault.</p>
+ * @public
+ */
+export interface LatestRevokeRequest {
+  /**
+   * <p>The ARN of the MPA session associated with this revoke request.</p>
+   * @public
+   */
+  MpaSessionArn?: string | undefined;
+
+  /**
+   * <p>The current status of the revoke request.</p>
+   * @public
+   */
+  Status?: MpaRevokeSessionStatus | undefined;
+
+  /**
+   * <p>A message describing the current status of the revoke request.</p>
+   * @public
+   */
+  StatusMessage?: string | undefined;
+
+  /**
+   * <p>The date and time when the revoke request was initiated.</p>
+   * @public
+   */
+  InitiationDate?: Date | undefined;
+
+  /**
+   * <p>The date and time when the revoke request will expire.</p>
+   * @public
+   */
+  ExpiryDate?: Date | undefined;
+}
+
+/**
+ * <p>Contains information about a restore access backup vault.</p>
+ * @public
+ */
+export interface RestoreAccessBackupVaultListMember {
+  /**
+   * <p>The ARN of the restore access backup vault.</p>
+   * @public
+   */
+  RestoreAccessBackupVaultArn?: string | undefined;
+
+  /**
+   * <p>The date and time when the restore access backup vault was created.</p>
+   * @public
+   */
+  CreationDate?: Date | undefined;
+
+  /**
+   * <p>The date and time when the restore access backup vault was approved.</p>
+   * @public
+   */
+  ApprovalDate?: Date | undefined;
+
+  /**
+   * <p>The current state of the restore access backup vault.</p>
+   * @public
+   */
+  VaultState?: VaultState | undefined;
+
+  /**
+   * <p>Information about the latest request to revoke access to this backup vault.</p>
+   * @public
+   */
+  LatestRevokeRequest?: LatestRevokeRequest | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListRestoreAccessBackupVaultsOutput {
+  /**
+   * <p>The pagination token to use in a subsequent request to retrieve the next set of results.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>A list of restore access backup vaults associated with the specified backup vault.</p>
+   * @public
+   */
+  RestoreAccessBackupVaults?: RestoreAccessBackupVaultListMember[] | undefined;
 }
 
 /**
@@ -8527,8 +8961,9 @@ export interface RestoreTestingPlanForList {
   RestoreTestingPlanName: string | undefined;
 
   /**
-   * <p>A CRON expression in specified timezone when a restore
-   *          testing plan is executed.</p>
+   * <p>A CRON expression in specified timezone when a restore testing plan is executed. When no
+   *          CRON expression is provided, Backup will use the default expression
+   *             <code>cron(0 5 ? * * *)</code>.</p>
    * @public
    */
   ScheduleExpression: string | undefined;
@@ -8834,39 +9269,8 @@ export interface PutBackupVaultNotificationsInput {
 
   /**
    * <p>An array of events that indicate the status of jobs to back up resources to the backup
-   *          vault.</p>
-   *          <p>For common use cases and code samples, see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/sns-notifications.html">Using Amazon SNS to
-   *             track Backup events</a>.</p>
-   *          <p>The following events are supported:</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>BACKUP_JOB_STARTED</code> | <code>BACKUP_JOB_COMPLETED</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>COPY_JOB_STARTED</code> | <code>COPY_JOB_SUCCESSFUL</code> |
-   *                   <code>COPY_JOB_FAILED</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> |
-   *                   <code>RECOVERY_POINT_MODIFIED</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
-   *                </p>
-   *             </li>
-   *          </ul>
-   *          <note>
-   *             <p>The list below includes both supported events and deprecated events that are no longer
-   *             in use (for reference). Deprecated events do not return statuses or notifications.
-   *             Refer to the list above for the supported events.</p>
-   *          </note>
+   *          vault. For the list of supported events, common use cases, and code samples, see <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/backup-notifications.html">Notification options
+   *             with Backup</a>.</p>
    * @public
    */
   BackupVaultEvents: BackupVaultEvent[] | undefined;
@@ -8894,6 +9298,29 @@ export interface PutRestoreValidationResultInput {
    * @public
    */
   ValidationStatusMessage?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface RevokeRestoreAccessBackupVaultInput {
+  /**
+   * <p>The name of the source backup vault associated with the restore access backup vault to be revoked.</p>
+   * @public
+   */
+  BackupVaultName: string | undefined;
+
+  /**
+   * <p>The ARN of the restore access backup vault to revoke.</p>
+   * @public
+   */
+  RestoreAccessBackupVaultArn: string | undefined;
+
+  /**
+   * <p>A comment explaining the reason for revoking access to the restore access backup vault.</p>
+   * @public
+   */
+  RequesterComment?: string | undefined;
 }
 
 /**
@@ -9404,13 +9831,7 @@ export interface StopBackupJobInput {
  */
 export interface TagResourceInput {
   /**
-   * <p>An ARN that uniquely identifies a resource. The format of the ARN depends on the type of
-   *          the tagged resource.</p>
-   *          <p>ARNs that do not include <code>backup</code> are incompatible with tagging.
-   *       <code>TagResource</code> and <code>UntagResource</code> with invalid ARNs will
-   *       result in an error. Acceptable ARN content can include
-   *          <code>arn:aws:backup:us-east</code>. Invalid ARN content may look like
-   *       <code>arn:aws:ec2:us-east</code>.</p>
+   * <p>The ARN that uniquely identifies the resource.</p>
    * @public
    */
   ResourceArn: string | undefined;
@@ -9847,8 +10268,9 @@ export interface RestoreTestingPlanForUpdate {
   RecoveryPointSelection?: RestoreTestingRecoveryPointSelection | undefined;
 
   /**
-   * <p>A CRON expression in specified timezone when a restore
-   *          testing plan is executed.</p>
+   * <p>A CRON expression in specified timezone when a restore testing plan is executed. When no
+   *          CRON expression is provided, Backup will use the default expression
+   *             <code>cron(0 5 ? * * *)</code>.</p>
    * @public
    */
   ScheduleExpression?: string | undefined;
@@ -10040,6 +10462,16 @@ export interface UpdateRestoreTestingSelectionOutput {
 /**
  * @internal
  */
+export const AssociateBackupVaultMpaApprovalTeamInputFilterSensitiveLog = (
+  obj: AssociateBackupVaultMpaApprovalTeamInput
+): any => ({
+  ...obj,
+  ...(obj.RequesterComment && { RequesterComment: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
 export const BackupRuleFilterSensitiveLog = (obj: BackupRule): any => ({
   ...obj,
   ...(obj.RecoveryPointTags && { RecoveryPointTags: SENSITIVE_STRING }),
@@ -10107,6 +10539,17 @@ export const CreateLogicallyAirGappedBackupVaultInputFilterSensitiveLog = (
 /**
  * @internal
  */
+export const CreateRestoreAccessBackupVaultInputFilterSensitiveLog = (
+  obj: CreateRestoreAccessBackupVaultInput
+): any => ({
+  ...obj,
+  ...(obj.BackupVaultTags && { BackupVaultTags: SENSITIVE_STRING }),
+  ...(obj.RequesterComment && { RequesterComment: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
 export const CreateRestoreTestingPlanInputFilterSensitiveLog = (obj: CreateRestoreTestingPlanInput): any => ({
   ...obj,
   ...(obj.Tags && { Tags: SENSITIVE_STRING }),
@@ -10128,6 +10571,16 @@ export const CreateRestoreTestingSelectionInputFilterSensitiveLog = (obj: Create
   ...(obj.RestoreTestingSelection && {
     RestoreTestingSelection: RestoreTestingSelectionForCreateFilterSensitiveLog(obj.RestoreTestingSelection),
   }),
+});
+
+/**
+ * @internal
+ */
+export const DisassociateBackupVaultMpaApprovalTeamInputFilterSensitiveLog = (
+  obj: DisassociateBackupVaultMpaApprovalTeamInput
+): any => ({
+  ...obj,
+  ...(obj.RequesterComment && { RequesterComment: SENSITIVE_STRING }),
 });
 
 /**
@@ -10196,6 +10649,16 @@ export const GetRestoreTestingSelectionOutputFilterSensitiveLog = (obj: GetResto
 export const ListTagsOutputFilterSensitiveLog = (obj: ListTagsOutput): any => ({
   ...obj,
   ...(obj.Tags && { Tags: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const RevokeRestoreAccessBackupVaultInputFilterSensitiveLog = (
+  obj: RevokeRestoreAccessBackupVaultInput
+): any => ({
+  ...obj,
+  ...(obj.RequesterComment && { RequesterComment: SENSITIVE_STRING }),
 });
 
 /**

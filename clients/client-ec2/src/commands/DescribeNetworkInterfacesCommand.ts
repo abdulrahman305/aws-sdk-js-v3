@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeNetworkInterfacesRequest, DescribeNetworkInterfacesResult } from "../models/models_4";
+import { DescribeNetworkInterfacesRequest, DescribeNetworkInterfacesResult } from "../models/models_5";
 import { de_DescribeNetworkInterfacesCommand, se_DescribeNetworkInterfacesCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -29,13 +29,14 @@ export interface DescribeNetworkInterfacesCommandOutput extends DescribeNetworkI
 
 /**
  * <p>Describes the specified network interfaces or all your network interfaces.</p>
- *          <p>If you have a large number of network interfaces, the operation fails unless
- *            you use pagination or one of the following filters: <code>group-id</code>,
- *            <code>mac-address</code>, <code>private-dns-name</code>, <code>private-ip-address</code>,
- *            <code>subnet-id</code>, or <code>vpc-id</code>.</p>
+ *          <p>If you have a large number of network interfaces, the operation fails unless you use
+ *             pagination or one of the following filters: <code>group-id</code>,
+ *                 <code>mac-address</code>, <code>private-dns-name</code>,
+ *                 <code>private-ip-address</code>, <code>subnet-id</code>, or
+ *             <code>vpc-id</code>.</p>
  *          <important>
  *             <p>We strongly recommend using only paginated requests. Unpaginated requests are
- *                susceptible to throttling and timeouts.</p>
+ *                 susceptible to throttling and timeouts.</p>
  *          </important>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -88,6 +89,7 @@ export interface DescribeNetworkInterfacesCommandOutput extends DescribeNetworkI
  * //             EnaSrdUdpEnabled: true || false,
  * //           },
  * //         },
+ * //         EnaQueueCount: Number("int"),
  * //       },
  * //       AvailabilityZone: "STRING_VALUE",
  * //       ConnectionTrackingConfiguration: { // ConnectionTrackingConfiguration
@@ -106,6 +108,7 @@ export interface DescribeNetworkInterfacesCommandOutput extends DescribeNetworkI
  * //       Ipv6Addresses: [ // NetworkInterfaceIpv6AddressesList
  * //         { // NetworkInterfaceIpv6Address
  * //           Ipv6Address: "STRING_VALUE",
+ * //           PublicIpv6DnsName: "STRING_VALUE",
  * //           IsPrimaryIpv6: true || false,
  * //         },
  * //       ],
@@ -114,6 +117,13 @@ export interface DescribeNetworkInterfacesCommandOutput extends DescribeNetworkI
  * //       OutpostArn: "STRING_VALUE",
  * //       OwnerId: "STRING_VALUE",
  * //       PrivateDnsName: "STRING_VALUE",
+ * //       PublicDnsName: "STRING_VALUE",
+ * //       PublicIpDnsNameOptions: { // PublicIpDnsNameOptions
+ * //         DnsHostnameType: "STRING_VALUE",
+ * //         PublicIpv4DnsName: "STRING_VALUE",
+ * //         PublicIpv6DnsName: "STRING_VALUE",
+ * //         PublicDualStackDnsName: "STRING_VALUE",
+ * //       },
  * //       PrivateIpAddress: "STRING_VALUE",
  * //       PrivateIpAddresses: [ // NetworkInterfacePrivateIpAddressList
  * //         { // NetworkInterfacePrivateIpAddress
@@ -160,6 +170,9 @@ export interface DescribeNetworkInterfacesCommandOutput extends DescribeNetworkI
  * //         Managed: true || false,
  * //         Principal: "STRING_VALUE",
  * //       },
+ * //       AssociatedSubnets: [ // AssociatedSubnetList
+ * //         "STRING_VALUE",
+ * //       ],
  * //     },
  * //   ],
  * //   NextToken: "STRING_VALUE",

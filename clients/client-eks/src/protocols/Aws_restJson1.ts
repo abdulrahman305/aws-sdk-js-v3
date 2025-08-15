@@ -400,6 +400,7 @@ export const se_CreateClusterCommand = async (
       bootstrapSelfManagedAddons: [],
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       computeConfig: (_) => _json(_),
+      deletionProtection: [],
       encryptionConfig: (_) => _json(_),
       kubernetesNetworkConfig: (_) => _json(_),
       logging: (_) => _json(_),
@@ -532,10 +533,12 @@ export const se_CreatePodIdentityAssociationCommand = async (
   body = JSON.stringify(
     take(input, {
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      disableSessionTags: [],
       namespace: [],
       roleArn: [],
       serviceAccount: [],
       tags: (_) => _json(_),
+      targetRoleArn: [],
     })
   );
   b.m("POST").h(headers).b(body);
@@ -1373,8 +1376,10 @@ export const se_UpdateClusterConfigCommand = async (
       accessConfig: (_) => _json(_),
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
       computeConfig: (_) => _json(_),
+      deletionProtection: [],
       kubernetesNetworkConfig: (_) => _json(_),
       logging: (_) => _json(_),
+      remoteNetworkConfig: (_) => _json(_),
       resourcesVpcConfig: (_) => _json(_),
       storageConfig: (_) => _json(_),
       upgradePolicy: (_) => _json(_),
@@ -1509,7 +1514,9 @@ export const se_UpdatePodIdentityAssociationCommand = async (
   body = JSON.stringify(
     take(input, {
       clientRequestToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      disableSessionTags: [],
       roleArn: [],
+      targetRoleArn: [],
     })
   );
   b.m("POST").h(headers).b(body);
@@ -3344,6 +3351,7 @@ const de_Cluster = (output: any, context: __SerdeContext): Cluster => {
     computeConfig: _json,
     connectorConfig: (_: any) => de_ConnectorConfigResponse(_, context),
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    deletionProtection: __expectBoolean,
     encryptionConfig: _json,
     endpoint: __expectString,
     health: _json,
@@ -3676,12 +3684,15 @@ const de_PodIdentityAssociation = (output: any, context: __SerdeContext): PodIde
     associationId: __expectString,
     clusterName: __expectString,
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    disableSessionTags: __expectBoolean,
+    externalId: __expectString,
     modifiedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     namespace: __expectString,
     ownerArn: __expectString,
     roleArn: __expectString,
     serviceAccount: __expectString,
     tags: _json,
+    targetRoleArn: __expectString,
   }) as any;
 };
 

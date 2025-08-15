@@ -215,19 +215,26 @@ export interface TransactGetItemsCommandOutput extends TransactGetItemsOutput, _
  * @throws {@link InvalidEndpointException} (client fault)
  *
  * @throws {@link ProvisionedThroughputExceededException} (client fault)
- *  <p>Your request rate is too high. The Amazon Web Services SDKs for DynamoDB
- *             automatically retry requests that receive this exception. Your request is eventually
- *             successful, unless your retry queue is too large to finish. Reduce the frequency of
- *             requests and use exponential backoff. For more information, go to <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.Errors.html#Programming.Errors.RetryAndBackoff">Error Retries and Exponential Backoff</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
+ *  <p>The request was denied due to request throttling. For detailed information about
+ *             why the request was throttled and the ARN of the impacted resource, find the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ThrottlingReason.html">ThrottlingReason</a> field in the returned exception. The Amazon Web Services
+ *             SDKs for DynamoDB automatically retry requests that receive this exception.
+ *             Your request is eventually successful, unless your retry queue is too large to finish.
+ *             Reduce the frequency of requests and use exponential backoff. For more information, go
+ *             to <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.Errors.html#Programming.Errors.RetryAndBackoff">Error Retries and Exponential Backoff</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p>
  *
  * @throws {@link RequestLimitExceeded} (client fault)
- *  <p>Throughput exceeds the current throughput quota for your account. Please contact
- *                 <a href="https://aws.amazon.com/support">Amazon Web Services Support</a> to request a
- *             quota increase.</p>
+ *  <p>Throughput exceeds the current throughput quota for your account. For detailed
+ *             information about why the request was throttled and the ARN of the impacted resource,
+ *             find the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ThrottlingReason.html">ThrottlingReason</a> field in the returned exception. Contact <a href="https://aws.amazon.com/support">Amazon Web ServicesSupport</a> to request a quota
+ *             increase.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *  <p>The operation tried to access a nonexistent table or index. The resource might not
  *             be specified correctly, or its status might not be <code>ACTIVE</code>.</p>
+ *
+ * @throws {@link ThrottlingException} (client fault)
+ *  <p>The request was denied due to request throttling. For detailed information about why
+ *             the request was throttled and the ARN of the impacted resource, find the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ThrottlingReason.html">ThrottlingReason</a> field in the returned exception.</p>
  *
  * @throws {@link TransactionCanceledException} (client fault)
  *  <p>The entire transaction request was canceled.</p>
@@ -258,11 +265,10 @@ export interface TransactGetItemsCommandOutput extends TransactGetItemsOutput, _
  *                <p>There is a user error, such as an invalid data format.</p>
  *             </li>
  *             <li>
- *                <p>
- *                     There is an ongoing <code>TransactWriteItems</code> operation that conflicts with a concurrent
- *                     <code>TransactWriteItems</code> request. In this case the <code>TransactWriteItems</code> operation
- *                     fails with a <code>TransactionCanceledException</code>.
- *                 </p>
+ *                <p> There is an ongoing <code>TransactWriteItems</code> operation that
+ *                     conflicts with a concurrent <code>TransactWriteItems</code> request. In this
+ *                     case the <code>TransactWriteItems</code> operation fails with a
+ *                         <code>TransactionCanceledException</code>. </p>
  *             </li>
  *          </ul>
  *          <p>DynamoDB cancels a <code>TransactGetItems</code> request under the
@@ -407,9 +413,9 @@ export interface TransactGetItemsCommandOutput extends TransactGetItemsOutput, _
  *                                     global secondary indexes. DynamoDB is automatically
  *                                     scaling your index so please try again shortly.</p>
  *                            <note>
- *                               <p>This message is returned when writes get throttled on
- *                                         an On-Demand GSI as DynamoDB is automatically
- *                                         scaling the GSI.</p>
+ *                               <p>This message is returned when writes get throttled on an
+ *                                         On-Demand GSI as DynamoDB is automatically scaling
+ *                                         the GSI.</p>
  *                            </note>
  *                         </li>
  *                      </ul>

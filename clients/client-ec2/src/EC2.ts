@@ -133,6 +133,11 @@ import {
   AssociateNatGatewayAddressCommandOutput,
 } from "./commands/AssociateNatGatewayAddressCommand";
 import {
+  AssociateRouteServerCommand,
+  AssociateRouteServerCommandInput,
+  AssociateRouteServerCommandOutput,
+} from "./commands/AssociateRouteServerCommand";
+import {
   AssociateRouteTableCommand,
   AssociateRouteTableCommandInput,
   AssociateRouteTableCommandOutput,
@@ -349,6 +354,11 @@ import {
   CreateDefaultVpcCommandOutput,
 } from "./commands/CreateDefaultVpcCommand";
 import {
+  CreateDelegateMacVolumeOwnershipTaskCommand,
+  CreateDelegateMacVolumeOwnershipTaskCommandInput,
+  CreateDelegateMacVolumeOwnershipTaskCommandOutput,
+} from "./commands/CreateDelegateMacVolumeOwnershipTaskCommand";
+import {
   CreateDhcpOptionsCommand,
   CreateDhcpOptionsCommandInput,
   CreateDhcpOptionsCommandOutput,
@@ -447,6 +457,21 @@ import {
   CreateLocalGatewayRouteTableVpcAssociationCommandOutput,
 } from "./commands/CreateLocalGatewayRouteTableVpcAssociationCommand";
 import {
+  CreateLocalGatewayVirtualInterfaceCommand,
+  CreateLocalGatewayVirtualInterfaceCommandInput,
+  CreateLocalGatewayVirtualInterfaceCommandOutput,
+} from "./commands/CreateLocalGatewayVirtualInterfaceCommand";
+import {
+  CreateLocalGatewayVirtualInterfaceGroupCommand,
+  CreateLocalGatewayVirtualInterfaceGroupCommandInput,
+  CreateLocalGatewayVirtualInterfaceGroupCommandOutput,
+} from "./commands/CreateLocalGatewayVirtualInterfaceGroupCommand";
+import {
+  CreateMacSystemIntegrityProtectionModificationTaskCommand,
+  CreateMacSystemIntegrityProtectionModificationTaskCommandInput,
+  CreateMacSystemIntegrityProtectionModificationTaskCommandOutput,
+} from "./commands/CreateMacSystemIntegrityProtectionModificationTaskCommand";
+import {
   CreateManagedPrefixListCommand,
   CreateManagedPrefixListCommandInput,
   CreateManagedPrefixListCommandOutput,
@@ -512,6 +537,21 @@ import {
   CreateRestoreImageTaskCommandOutput,
 } from "./commands/CreateRestoreImageTaskCommand";
 import { CreateRouteCommand, CreateRouteCommandInput, CreateRouteCommandOutput } from "./commands/CreateRouteCommand";
+import {
+  CreateRouteServerCommand,
+  CreateRouteServerCommandInput,
+  CreateRouteServerCommandOutput,
+} from "./commands/CreateRouteServerCommand";
+import {
+  CreateRouteServerEndpointCommand,
+  CreateRouteServerEndpointCommandInput,
+  CreateRouteServerEndpointCommandOutput,
+} from "./commands/CreateRouteServerEndpointCommand";
+import {
+  CreateRouteServerPeerCommand,
+  CreateRouteServerPeerCommandInput,
+  CreateRouteServerPeerCommandOutput,
+} from "./commands/CreateRouteServerPeerCommand";
 import {
   CreateRouteTableCommand,
   CreateRouteTableCommandInput,
@@ -821,6 +861,16 @@ import {
   DeleteLocalGatewayRouteTableVpcAssociationCommandOutput,
 } from "./commands/DeleteLocalGatewayRouteTableVpcAssociationCommand";
 import {
+  DeleteLocalGatewayVirtualInterfaceCommand,
+  DeleteLocalGatewayVirtualInterfaceCommandInput,
+  DeleteLocalGatewayVirtualInterfaceCommandOutput,
+} from "./commands/DeleteLocalGatewayVirtualInterfaceCommand";
+import {
+  DeleteLocalGatewayVirtualInterfaceGroupCommand,
+  DeleteLocalGatewayVirtualInterfaceGroupCommandInput,
+  DeleteLocalGatewayVirtualInterfaceGroupCommandOutput,
+} from "./commands/DeleteLocalGatewayVirtualInterfaceGroupCommand";
+import {
   DeleteManagedPrefixListCommand,
   DeleteManagedPrefixListCommandInput,
   DeleteManagedPrefixListCommandOutput,
@@ -886,6 +936,21 @@ import {
   DeleteQueuedReservedInstancesCommandOutput,
 } from "./commands/DeleteQueuedReservedInstancesCommand";
 import { DeleteRouteCommand, DeleteRouteCommandInput, DeleteRouteCommandOutput } from "./commands/DeleteRouteCommand";
+import {
+  DeleteRouteServerCommand,
+  DeleteRouteServerCommandInput,
+  DeleteRouteServerCommandOutput,
+} from "./commands/DeleteRouteServerCommand";
+import {
+  DeleteRouteServerEndpointCommand,
+  DeleteRouteServerEndpointCommandInput,
+  DeleteRouteServerEndpointCommandOutput,
+} from "./commands/DeleteRouteServerEndpointCommand";
+import {
+  DeleteRouteServerPeerCommand,
+  DeleteRouteServerPeerCommandInput,
+  DeleteRouteServerPeerCommandOutput,
+} from "./commands/DeleteRouteServerPeerCommand";
 import {
   DeleteRouteTableCommand,
   DeleteRouteTableCommandInput,
@@ -1158,6 +1223,16 @@ import {
   DescribeCapacityBlockOfferingsCommandInput,
   DescribeCapacityBlockOfferingsCommandOutput,
 } from "./commands/DescribeCapacityBlockOfferingsCommand";
+import {
+  DescribeCapacityBlocksCommand,
+  DescribeCapacityBlocksCommandInput,
+  DescribeCapacityBlocksCommandOutput,
+} from "./commands/DescribeCapacityBlocksCommand";
+import {
+  DescribeCapacityBlockStatusCommand,
+  DescribeCapacityBlockStatusCommandInput,
+  DescribeCapacityBlockStatusCommandOutput,
+} from "./commands/DescribeCapacityBlockStatusCommand";
 import {
   DescribeCapacityReservationBillingRequestsCommand,
   DescribeCapacityReservationBillingRequestsCommandInput,
@@ -1499,6 +1574,11 @@ import {
   DescribeMacHostsCommandOutput,
 } from "./commands/DescribeMacHostsCommand";
 import {
+  DescribeMacModificationTasksCommand,
+  DescribeMacModificationTasksCommandInput,
+  DescribeMacModificationTasksCommandOutput,
+} from "./commands/DescribeMacModificationTasksCommand";
+import {
   DescribeManagedPrefixListsCommand,
   DescribeManagedPrefixListsCommandInput,
   DescribeManagedPrefixListsCommandOutput,
@@ -1554,6 +1634,11 @@ import {
   DescribeNetworkInterfacesCommandOutput,
 } from "./commands/DescribeNetworkInterfacesCommand";
 import {
+  DescribeOutpostLagsCommand,
+  DescribeOutpostLagsCommandInput,
+  DescribeOutpostLagsCommandOutput,
+} from "./commands/DescribeOutpostLagsCommand";
+import {
   DescribePlacementGroupsCommand,
   DescribePlacementGroupsCommandInput,
   DescribePlacementGroupsCommandOutput,
@@ -1604,6 +1689,21 @@ import {
   DescribeReservedInstancesOfferingsCommandOutput,
 } from "./commands/DescribeReservedInstancesOfferingsCommand";
 import {
+  DescribeRouteServerEndpointsCommand,
+  DescribeRouteServerEndpointsCommandInput,
+  DescribeRouteServerEndpointsCommandOutput,
+} from "./commands/DescribeRouteServerEndpointsCommand";
+import {
+  DescribeRouteServerPeersCommand,
+  DescribeRouteServerPeersCommandInput,
+  DescribeRouteServerPeersCommandOutput,
+} from "./commands/DescribeRouteServerPeersCommand";
+import {
+  DescribeRouteServersCommand,
+  DescribeRouteServersCommandInput,
+  DescribeRouteServersCommandOutput,
+} from "./commands/DescribeRouteServersCommand";
+import {
   DescribeRouteTablesCommand,
   DescribeRouteTablesCommandInput,
   DescribeRouteTablesCommandOutput,
@@ -1638,6 +1738,11 @@ import {
   DescribeSecurityGroupVpcAssociationsCommandInput,
   DescribeSecurityGroupVpcAssociationsCommandOutput,
 } from "./commands/DescribeSecurityGroupVpcAssociationsCommand";
+import {
+  DescribeServiceLinkVirtualInterfacesCommand,
+  DescribeServiceLinkVirtualInterfacesCommandInput,
+  DescribeServiceLinkVirtualInterfacesCommandOutput,
+} from "./commands/DescribeServiceLinkVirtualInterfacesCommand";
 import {
   DescribeSnapshotAttributeCommand,
   DescribeSnapshotAttributeCommandInput,
@@ -1989,6 +2094,11 @@ import {
   DisableIpamOrganizationAdminAccountCommandOutput,
 } from "./commands/DisableIpamOrganizationAdminAccountCommand";
 import {
+  DisableRouteServerPropagationCommand,
+  DisableRouteServerPropagationCommandInput,
+  DisableRouteServerPropagationCommandOutput,
+} from "./commands/DisableRouteServerPropagationCommand";
+import {
   DisableSerialConsoleAccessCommand,
   DisableSerialConsoleAccessCommandInput,
   DisableSerialConsoleAccessCommandOutput,
@@ -2063,6 +2173,11 @@ import {
   DisassociateNatGatewayAddressCommandInput,
   DisassociateNatGatewayAddressCommandOutput,
 } from "./commands/DisassociateNatGatewayAddressCommand";
+import {
+  DisassociateRouteServerCommand,
+  DisassociateRouteServerCommandInput,
+  DisassociateRouteServerCommandOutput,
+} from "./commands/DisassociateRouteServerCommand";
 import {
   DisassociateRouteTableCommand,
   DisassociateRouteTableCommandInput,
@@ -2160,6 +2275,11 @@ import {
   EnableReachabilityAnalyzerOrganizationSharingCommandOutput,
 } from "./commands/EnableReachabilityAnalyzerOrganizationSharingCommand";
 import {
+  EnableRouteServerPropagationCommand,
+  EnableRouteServerPropagationCommandInput,
+  EnableRouteServerPropagationCommandOutput,
+} from "./commands/EnableRouteServerPropagationCommand";
+import {
   EnableSerialConsoleAccessCommand,
   EnableSerialConsoleAccessCommandInput,
   EnableSerialConsoleAccessCommandOutput,
@@ -2215,6 +2335,11 @@ import {
   ExportVerifiedAccessInstanceClientConfigurationCommandInput,
   ExportVerifiedAccessInstanceClientConfigurationCommandOutput,
 } from "./commands/ExportVerifiedAccessInstanceClientConfigurationCommand";
+import {
+  GetActiveVpnTunnelStatusCommand,
+  GetActiveVpnTunnelStatusCommandInput,
+  GetActiveVpnTunnelStatusCommandOutput,
+} from "./commands/GetActiveVpnTunnelStatusCommand";
 import {
   GetAllowedImagesSettingsCommand,
   GetAllowedImagesSettingsCommandInput,
@@ -2385,6 +2510,21 @@ import {
   GetReservedInstancesExchangeQuoteCommandInput,
   GetReservedInstancesExchangeQuoteCommandOutput,
 } from "./commands/GetReservedInstancesExchangeQuoteCommand";
+import {
+  GetRouteServerAssociationsCommand,
+  GetRouteServerAssociationsCommandInput,
+  GetRouteServerAssociationsCommandOutput,
+} from "./commands/GetRouteServerAssociationsCommand";
+import {
+  GetRouteServerPropagationsCommand,
+  GetRouteServerPropagationsCommandInput,
+  GetRouteServerPropagationsCommandOutput,
+} from "./commands/GetRouteServerPropagationsCommand";
+import {
+  GetRouteServerRoutingDatabaseCommand,
+  GetRouteServerRoutingDatabaseCommandInput,
+  GetRouteServerRoutingDatabaseCommandOutput,
+} from "./commands/GetRouteServerRoutingDatabaseCommand";
 import {
   GetSecurityGroupsForVpcCommand,
   GetSecurityGroupsForVpcCommandInput,
@@ -2584,6 +2724,11 @@ import {
   ModifyInstanceCapacityReservationAttributesCommandOutput,
 } from "./commands/ModifyInstanceCapacityReservationAttributesCommand";
 import {
+  ModifyInstanceConnectEndpointCommand,
+  ModifyInstanceConnectEndpointCommandInput,
+  ModifyInstanceConnectEndpointCommandOutput,
+} from "./commands/ModifyInstanceConnectEndpointCommand";
+import {
   ModifyInstanceCpuOptionsCommand,
   ModifyInstanceCpuOptionsCommandInput,
   ModifyInstanceCpuOptionsCommandOutput,
@@ -2675,10 +2820,20 @@ import {
   ModifyPrivateDnsNameOptionsCommandOutput,
 } from "./commands/ModifyPrivateDnsNameOptionsCommand";
 import {
+  ModifyPublicIpDnsNameOptionsCommand,
+  ModifyPublicIpDnsNameOptionsCommandInput,
+  ModifyPublicIpDnsNameOptionsCommandOutput,
+} from "./commands/ModifyPublicIpDnsNameOptionsCommand";
+import {
   ModifyReservedInstancesCommand,
   ModifyReservedInstancesCommandInput,
   ModifyReservedInstancesCommandOutput,
 } from "./commands/ModifyReservedInstancesCommand";
+import {
+  ModifyRouteServerCommand,
+  ModifyRouteServerCommandInput,
+  ModifyRouteServerCommandOutput,
+} from "./commands/ModifyRouteServerCommand";
 import {
   ModifySecurityGroupRulesCommand,
   ModifySecurityGroupRulesCommandInput,
@@ -3253,6 +3408,7 @@ const commands = {
   AssociateIpamByoasnCommand,
   AssociateIpamResourceDiscoveryCommand,
   AssociateNatGatewayAddressCommand,
+  AssociateRouteServerCommand,
   AssociateRouteTableCommand,
   AssociateSecurityGroupVpcCommand,
   AssociateSubnetCidrBlockCommand,
@@ -3297,6 +3453,7 @@ const commands = {
   CreateCustomerGatewayCommand,
   CreateDefaultSubnetCommand,
   CreateDefaultVpcCommand,
+  CreateDelegateMacVolumeOwnershipTaskCommand,
   CreateDhcpOptionsCommand,
   CreateEgressOnlyInternetGatewayCommand,
   CreateFleetCommand,
@@ -3319,6 +3476,9 @@ const commands = {
   CreateLocalGatewayRouteTableCommand,
   CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommand,
   CreateLocalGatewayRouteTableVpcAssociationCommand,
+  CreateLocalGatewayVirtualInterfaceCommand,
+  CreateLocalGatewayVirtualInterfaceGroupCommand,
+  CreateMacSystemIntegrityProtectionModificationTaskCommand,
   CreateManagedPrefixListCommand,
   CreateNatGatewayCommand,
   CreateNetworkAclCommand,
@@ -3333,6 +3493,9 @@ const commands = {
   CreateReservedInstancesListingCommand,
   CreateRestoreImageTaskCommand,
   CreateRouteCommand,
+  CreateRouteServerCommand,
+  CreateRouteServerEndpointCommand,
+  CreateRouteServerPeerCommand,
   CreateRouteTableCommand,
   CreateSecurityGroupCommand,
   CreateSnapshotCommand,
@@ -3397,6 +3560,8 @@ const commands = {
   DeleteLocalGatewayRouteTableCommand,
   DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationCommand,
   DeleteLocalGatewayRouteTableVpcAssociationCommand,
+  DeleteLocalGatewayVirtualInterfaceCommand,
+  DeleteLocalGatewayVirtualInterfaceGroupCommand,
   DeleteManagedPrefixListCommand,
   DeleteNatGatewayCommand,
   DeleteNetworkAclCommand,
@@ -3411,6 +3576,9 @@ const commands = {
   DeletePublicIpv4PoolCommand,
   DeleteQueuedReservedInstancesCommand,
   DeleteRouteCommand,
+  DeleteRouteServerCommand,
+  DeleteRouteServerEndpointCommand,
+  DeleteRouteServerPeerCommand,
   DeleteRouteTableCommand,
   DeleteSecurityGroupCommand,
   DeleteSnapshotCommand,
@@ -3467,6 +3635,8 @@ const commands = {
   DescribeCapacityBlockExtensionHistoryCommand,
   DescribeCapacityBlockExtensionOfferingsCommand,
   DescribeCapacityBlockOfferingsCommand,
+  DescribeCapacityBlocksCommand,
+  DescribeCapacityBlockStatusCommand,
   DescribeCapacityReservationBillingRequestsCommand,
   DescribeCapacityReservationFleetsCommand,
   DescribeCapacityReservationsCommand,
@@ -3535,6 +3705,7 @@ const commands = {
   DescribeLocalGatewayVirtualInterfacesCommand,
   DescribeLockedSnapshotsCommand,
   DescribeMacHostsCommand,
+  DescribeMacModificationTasksCommand,
   DescribeManagedPrefixListsCommand,
   DescribeMovingAddressesCommand,
   DescribeNatGatewaysCommand,
@@ -3546,6 +3717,7 @@ const commands = {
   DescribeNetworkInterfaceAttributeCommand,
   DescribeNetworkInterfacePermissionsCommand,
   DescribeNetworkInterfacesCommand,
+  DescribeOutpostLagsCommand,
   DescribePlacementGroupsCommand,
   DescribePrefixListsCommand,
   DescribePrincipalIdFormatCommand,
@@ -3556,6 +3728,9 @@ const commands = {
   DescribeReservedInstancesListingsCommand,
   DescribeReservedInstancesModificationsCommand,
   DescribeReservedInstancesOfferingsCommand,
+  DescribeRouteServerEndpointsCommand,
+  DescribeRouteServerPeersCommand,
+  DescribeRouteServersCommand,
   DescribeRouteTablesCommand,
   DescribeScheduledInstanceAvailabilityCommand,
   DescribeScheduledInstancesCommand,
@@ -3563,6 +3738,7 @@ const commands = {
   DescribeSecurityGroupRulesCommand,
   DescribeSecurityGroupsCommand,
   DescribeSecurityGroupVpcAssociationsCommand,
+  DescribeServiceLinkVirtualInterfacesCommand,
   DescribeSnapshotAttributeCommand,
   DescribeSnapshotsCommand,
   DescribeSnapshotTierStatusCommand,
@@ -3633,6 +3809,7 @@ const commands = {
   DisableImageDeprecationCommand,
   DisableImageDeregistrationProtectionCommand,
   DisableIpamOrganizationAdminAccountCommand,
+  DisableRouteServerPropagationCommand,
   DisableSerialConsoleAccessCommand,
   DisableSnapshotBlockPublicAccessCommand,
   DisableTransitGatewayRouteTablePropagationCommand,
@@ -3648,6 +3825,7 @@ const commands = {
   DisassociateIpamByoasnCommand,
   DisassociateIpamResourceDiscoveryCommand,
   DisassociateNatGatewayAddressCommand,
+  DisassociateRouteServerCommand,
   DisassociateRouteTableCommand,
   DisassociateSecurityGroupVpcCommand,
   DisassociateSubnetCidrBlockCommand,
@@ -3668,6 +3846,7 @@ const commands = {
   EnableImageDeregistrationProtectionCommand,
   EnableIpamOrganizationAdminAccountCommand,
   EnableReachabilityAnalyzerOrganizationSharingCommand,
+  EnableRouteServerPropagationCommand,
   EnableSerialConsoleAccessCommand,
   EnableSnapshotBlockPublicAccessCommand,
   EnableTransitGatewayRouteTablePropagationCommand,
@@ -3680,6 +3859,7 @@ const commands = {
   ExportImageCommand,
   ExportTransitGatewayRoutesCommand,
   ExportVerifiedAccessInstanceClientConfigurationCommand,
+  GetActiveVpnTunnelStatusCommand,
   GetAllowedImagesSettingsCommand,
   GetAssociatedEnclaveCertificateIamRolesCommand,
   GetAssociatedIpv6PoolCidrsCommand,
@@ -3714,6 +3894,9 @@ const commands = {
   GetNetworkInsightsAccessScopeContentCommand,
   GetPasswordDataCommand,
   GetReservedInstancesExchangeQuoteCommand,
+  GetRouteServerAssociationsCommand,
+  GetRouteServerPropagationsCommand,
+  GetRouteServerRoutingDatabaseCommand,
   GetSecurityGroupsForVpcCommand,
   GetSerialConsoleAccessStatusCommand,
   GetSnapshotBlockPublicAccessStateCommand,
@@ -3756,6 +3939,7 @@ const commands = {
   ModifyImageAttributeCommand,
   ModifyInstanceAttributeCommand,
   ModifyInstanceCapacityReservationAttributesCommand,
+  ModifyInstanceConnectEndpointCommand,
   ModifyInstanceCpuOptionsCommand,
   ModifyInstanceCreditSpecificationCommand,
   ModifyInstanceEventStartTimeCommand,
@@ -3775,7 +3959,9 @@ const commands = {
   ModifyManagedPrefixListCommand,
   ModifyNetworkInterfaceAttributeCommand,
   ModifyPrivateDnsNameOptionsCommand,
+  ModifyPublicIpDnsNameOptionsCommand,
   ModifyReservedInstancesCommand,
+  ModifyRouteServerCommand,
   ModifySecurityGroupRulesCommand,
   ModifySnapshotAttributeCommand,
   ModifySnapshotTierCommand,
@@ -4060,6 +4246,7 @@ export interface EC2 {
   /**
    * @see {@link AllocateHostsCommand}
    */
+  allocateHosts(): Promise<AllocateHostsCommandOutput>;
   allocateHosts(args: AllocateHostsCommandInput, options?: __HttpHandlerOptions): Promise<AllocateHostsCommandOutput>;
   allocateHosts(args: AllocateHostsCommandInput, cb: (err: any, data?: AllocateHostsCommandOutput) => void): void;
   allocateHosts(
@@ -4322,6 +4509,23 @@ export interface EC2 {
     args: AssociateNatGatewayAddressCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: AssociateNatGatewayAddressCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link AssociateRouteServerCommand}
+   */
+  associateRouteServer(
+    args: AssociateRouteServerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<AssociateRouteServerCommandOutput>;
+  associateRouteServer(
+    args: AssociateRouteServerCommandInput,
+    cb: (err: any, data?: AssociateRouteServerCommandOutput) => void
+  ): void;
+  associateRouteServer(
+    args: AssociateRouteServerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: AssociateRouteServerCommandOutput) => void
   ): void;
 
   /**
@@ -5010,6 +5214,7 @@ export interface EC2 {
   /**
    * @see {@link CreateDefaultSubnetCommand}
    */
+  createDefaultSubnet(): Promise<CreateDefaultSubnetCommandOutput>;
   createDefaultSubnet(
     args: CreateDefaultSubnetCommandInput,
     options?: __HttpHandlerOptions
@@ -5040,6 +5245,23 @@ export interface EC2 {
     args: CreateDefaultVpcCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateDefaultVpcCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateDelegateMacVolumeOwnershipTaskCommand}
+   */
+  createDelegateMacVolumeOwnershipTask(
+    args: CreateDelegateMacVolumeOwnershipTaskCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateDelegateMacVolumeOwnershipTaskCommandOutput>;
+  createDelegateMacVolumeOwnershipTask(
+    args: CreateDelegateMacVolumeOwnershipTaskCommandInput,
+    cb: (err: any, data?: CreateDelegateMacVolumeOwnershipTaskCommandOutput) => void
+  ): void;
+  createDelegateMacVolumeOwnershipTask(
+    args: CreateDelegateMacVolumeOwnershipTaskCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateDelegateMacVolumeOwnershipTaskCommandOutput) => void
   ): void;
 
   /**
@@ -5385,6 +5607,57 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link CreateLocalGatewayVirtualInterfaceCommand}
+   */
+  createLocalGatewayVirtualInterface(
+    args: CreateLocalGatewayVirtualInterfaceCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateLocalGatewayVirtualInterfaceCommandOutput>;
+  createLocalGatewayVirtualInterface(
+    args: CreateLocalGatewayVirtualInterfaceCommandInput,
+    cb: (err: any, data?: CreateLocalGatewayVirtualInterfaceCommandOutput) => void
+  ): void;
+  createLocalGatewayVirtualInterface(
+    args: CreateLocalGatewayVirtualInterfaceCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateLocalGatewayVirtualInterfaceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateLocalGatewayVirtualInterfaceGroupCommand}
+   */
+  createLocalGatewayVirtualInterfaceGroup(
+    args: CreateLocalGatewayVirtualInterfaceGroupCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateLocalGatewayVirtualInterfaceGroupCommandOutput>;
+  createLocalGatewayVirtualInterfaceGroup(
+    args: CreateLocalGatewayVirtualInterfaceGroupCommandInput,
+    cb: (err: any, data?: CreateLocalGatewayVirtualInterfaceGroupCommandOutput) => void
+  ): void;
+  createLocalGatewayVirtualInterfaceGroup(
+    args: CreateLocalGatewayVirtualInterfaceGroupCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateLocalGatewayVirtualInterfaceGroupCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateMacSystemIntegrityProtectionModificationTaskCommand}
+   */
+  createMacSystemIntegrityProtectionModificationTask(
+    args: CreateMacSystemIntegrityProtectionModificationTaskCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateMacSystemIntegrityProtectionModificationTaskCommandOutput>;
+  createMacSystemIntegrityProtectionModificationTask(
+    args: CreateMacSystemIntegrityProtectionModificationTaskCommandInput,
+    cb: (err: any, data?: CreateMacSystemIntegrityProtectionModificationTaskCommandOutput) => void
+  ): void;
+  createMacSystemIntegrityProtectionModificationTask(
+    args: CreateMacSystemIntegrityProtectionModificationTaskCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateMacSystemIntegrityProtectionModificationTaskCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateManagedPrefixListCommand}
    */
   createManagedPrefixList(
@@ -5616,6 +5889,57 @@ export interface EC2 {
     args: CreateRouteCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateRouteCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateRouteServerCommand}
+   */
+  createRouteServer(
+    args: CreateRouteServerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateRouteServerCommandOutput>;
+  createRouteServer(
+    args: CreateRouteServerCommandInput,
+    cb: (err: any, data?: CreateRouteServerCommandOutput) => void
+  ): void;
+  createRouteServer(
+    args: CreateRouteServerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateRouteServerCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateRouteServerEndpointCommand}
+   */
+  createRouteServerEndpoint(
+    args: CreateRouteServerEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateRouteServerEndpointCommandOutput>;
+  createRouteServerEndpoint(
+    args: CreateRouteServerEndpointCommandInput,
+    cb: (err: any, data?: CreateRouteServerEndpointCommandOutput) => void
+  ): void;
+  createRouteServerEndpoint(
+    args: CreateRouteServerEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateRouteServerEndpointCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateRouteServerPeerCommand}
+   */
+  createRouteServerPeer(
+    args: CreateRouteServerPeerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateRouteServerPeerCommandOutput>;
+  createRouteServerPeer(
+    args: CreateRouteServerPeerCommandInput,
+    cb: (err: any, data?: CreateRouteServerPeerCommandOutput) => void
+  ): void;
+  createRouteServerPeer(
+    args: CreateRouteServerPeerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateRouteServerPeerCommandOutput) => void
   ): void;
 
   /**
@@ -6083,6 +6407,7 @@ export interface EC2 {
   /**
    * @see {@link CreateVolumeCommand}
    */
+  createVolume(): Promise<CreateVolumeCommandOutput>;
   createVolume(args: CreateVolumeCommandInput, options?: __HttpHandlerOptions): Promise<CreateVolumeCommandOutput>;
   createVolume(args: CreateVolumeCommandInput, cb: (err: any, data?: CreateVolumeCommandOutput) => void): void;
   createVolume(
@@ -6649,6 +6974,40 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link DeleteLocalGatewayVirtualInterfaceCommand}
+   */
+  deleteLocalGatewayVirtualInterface(
+    args: DeleteLocalGatewayVirtualInterfaceCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteLocalGatewayVirtualInterfaceCommandOutput>;
+  deleteLocalGatewayVirtualInterface(
+    args: DeleteLocalGatewayVirtualInterfaceCommandInput,
+    cb: (err: any, data?: DeleteLocalGatewayVirtualInterfaceCommandOutput) => void
+  ): void;
+  deleteLocalGatewayVirtualInterface(
+    args: DeleteLocalGatewayVirtualInterfaceCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteLocalGatewayVirtualInterfaceCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteLocalGatewayVirtualInterfaceGroupCommand}
+   */
+  deleteLocalGatewayVirtualInterfaceGroup(
+    args: DeleteLocalGatewayVirtualInterfaceGroupCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteLocalGatewayVirtualInterfaceGroupCommandOutput>;
+  deleteLocalGatewayVirtualInterfaceGroup(
+    args: DeleteLocalGatewayVirtualInterfaceGroupCommandInput,
+    cb: (err: any, data?: DeleteLocalGatewayVirtualInterfaceGroupCommandOutput) => void
+  ): void;
+  deleteLocalGatewayVirtualInterfaceGroup(
+    args: DeleteLocalGatewayVirtualInterfaceGroupCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteLocalGatewayVirtualInterfaceGroupCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteManagedPrefixListCommand}
    */
   deleteManagedPrefixList(
@@ -6878,6 +7237,57 @@ export interface EC2 {
     args: DeleteRouteCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteRouteCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteRouteServerCommand}
+   */
+  deleteRouteServer(
+    args: DeleteRouteServerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteRouteServerCommandOutput>;
+  deleteRouteServer(
+    args: DeleteRouteServerCommandInput,
+    cb: (err: any, data?: DeleteRouteServerCommandOutput) => void
+  ): void;
+  deleteRouteServer(
+    args: DeleteRouteServerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteRouteServerCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteRouteServerEndpointCommand}
+   */
+  deleteRouteServerEndpoint(
+    args: DeleteRouteServerEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteRouteServerEndpointCommandOutput>;
+  deleteRouteServerEndpoint(
+    args: DeleteRouteServerEndpointCommandInput,
+    cb: (err: any, data?: DeleteRouteServerEndpointCommandOutput) => void
+  ): void;
+  deleteRouteServerEndpoint(
+    args: DeleteRouteServerEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteRouteServerEndpointCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteRouteServerPeerCommand}
+   */
+  deleteRouteServerPeer(
+    args: DeleteRouteServerPeerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteRouteServerPeerCommandOutput>;
+  deleteRouteServerPeer(
+    args: DeleteRouteServerPeerCommandInput,
+    cb: (err: any, data?: DeleteRouteServerPeerCommandOutput) => void
+  ): void;
+  deleteRouteServerPeer(
+    args: DeleteRouteServerPeerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteRouteServerPeerCommandOutput) => void
   ): void;
 
   /**
@@ -7813,6 +8223,42 @@ export interface EC2 {
     args: DescribeCapacityBlockOfferingsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeCapacityBlockOfferingsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeCapacityBlocksCommand}
+   */
+  describeCapacityBlocks(): Promise<DescribeCapacityBlocksCommandOutput>;
+  describeCapacityBlocks(
+    args: DescribeCapacityBlocksCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeCapacityBlocksCommandOutput>;
+  describeCapacityBlocks(
+    args: DescribeCapacityBlocksCommandInput,
+    cb: (err: any, data?: DescribeCapacityBlocksCommandOutput) => void
+  ): void;
+  describeCapacityBlocks(
+    args: DescribeCapacityBlocksCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeCapacityBlocksCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeCapacityBlockStatusCommand}
+   */
+  describeCapacityBlockStatus(): Promise<DescribeCapacityBlockStatusCommandOutput>;
+  describeCapacityBlockStatus(
+    args: DescribeCapacityBlockStatusCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeCapacityBlockStatusCommandOutput>;
+  describeCapacityBlockStatus(
+    args: DescribeCapacityBlockStatusCommandInput,
+    cb: (err: any, data?: DescribeCapacityBlockStatusCommandOutput) => void
+  ): void;
+  describeCapacityBlockStatus(
+    args: DescribeCapacityBlockStatusCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeCapacityBlockStatusCommandOutput) => void
   ): void;
 
   /**
@@ -9011,6 +9457,24 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link DescribeMacModificationTasksCommand}
+   */
+  describeMacModificationTasks(): Promise<DescribeMacModificationTasksCommandOutput>;
+  describeMacModificationTasks(
+    args: DescribeMacModificationTasksCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeMacModificationTasksCommandOutput>;
+  describeMacModificationTasks(
+    args: DescribeMacModificationTasksCommandInput,
+    cb: (err: any, data?: DescribeMacModificationTasksCommandOutput) => void
+  ): void;
+  describeMacModificationTasks(
+    args: DescribeMacModificationTasksCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeMacModificationTasksCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeManagedPrefixListsCommand}
    */
   describeManagedPrefixLists(): Promise<DescribeManagedPrefixListsCommandOutput>;
@@ -9208,6 +9672,24 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link DescribeOutpostLagsCommand}
+   */
+  describeOutpostLags(): Promise<DescribeOutpostLagsCommandOutput>;
+  describeOutpostLags(
+    args: DescribeOutpostLagsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeOutpostLagsCommandOutput>;
+  describeOutpostLags(
+    args: DescribeOutpostLagsCommandInput,
+    cb: (err: any, data?: DescribeOutpostLagsCommandOutput) => void
+  ): void;
+  describeOutpostLags(
+    args: DescribeOutpostLagsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeOutpostLagsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribePlacementGroupsCommand}
    */
   describePlacementGroups(): Promise<DescribePlacementGroupsCommandOutput>;
@@ -9385,6 +9867,60 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link DescribeRouteServerEndpointsCommand}
+   */
+  describeRouteServerEndpoints(): Promise<DescribeRouteServerEndpointsCommandOutput>;
+  describeRouteServerEndpoints(
+    args: DescribeRouteServerEndpointsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeRouteServerEndpointsCommandOutput>;
+  describeRouteServerEndpoints(
+    args: DescribeRouteServerEndpointsCommandInput,
+    cb: (err: any, data?: DescribeRouteServerEndpointsCommandOutput) => void
+  ): void;
+  describeRouteServerEndpoints(
+    args: DescribeRouteServerEndpointsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeRouteServerEndpointsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeRouteServerPeersCommand}
+   */
+  describeRouteServerPeers(): Promise<DescribeRouteServerPeersCommandOutput>;
+  describeRouteServerPeers(
+    args: DescribeRouteServerPeersCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeRouteServerPeersCommandOutput>;
+  describeRouteServerPeers(
+    args: DescribeRouteServerPeersCommandInput,
+    cb: (err: any, data?: DescribeRouteServerPeersCommandOutput) => void
+  ): void;
+  describeRouteServerPeers(
+    args: DescribeRouteServerPeersCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeRouteServerPeersCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeRouteServersCommand}
+   */
+  describeRouteServers(): Promise<DescribeRouteServersCommandOutput>;
+  describeRouteServers(
+    args: DescribeRouteServersCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeRouteServersCommandOutput>;
+  describeRouteServers(
+    args: DescribeRouteServersCommandInput,
+    cb: (err: any, data?: DescribeRouteServersCommandOutput) => void
+  ): void;
+  describeRouteServers(
+    args: DescribeRouteServersCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeRouteServersCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DescribeRouteTablesCommand}
    */
   describeRouteTables(): Promise<DescribeRouteTablesCommandOutput>;
@@ -9506,6 +10042,24 @@ export interface EC2 {
     args: DescribeSecurityGroupVpcAssociationsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DescribeSecurityGroupVpcAssociationsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DescribeServiceLinkVirtualInterfacesCommand}
+   */
+  describeServiceLinkVirtualInterfaces(): Promise<DescribeServiceLinkVirtualInterfacesCommandOutput>;
+  describeServiceLinkVirtualInterfaces(
+    args: DescribeServiceLinkVirtualInterfacesCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DescribeServiceLinkVirtualInterfacesCommandOutput>;
+  describeServiceLinkVirtualInterfaces(
+    args: DescribeServiceLinkVirtualInterfacesCommandInput,
+    cb: (err: any, data?: DescribeServiceLinkVirtualInterfacesCommandOutput) => void
+  ): void;
+  describeServiceLinkVirtualInterfaces(
+    args: DescribeServiceLinkVirtualInterfacesCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DescribeServiceLinkVirtualInterfacesCommandOutput) => void
   ): void;
 
   /**
@@ -10719,6 +11273,23 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link DisableRouteServerPropagationCommand}
+   */
+  disableRouteServerPropagation(
+    args: DisableRouteServerPropagationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DisableRouteServerPropagationCommandOutput>;
+  disableRouteServerPropagation(
+    args: DisableRouteServerPropagationCommandInput,
+    cb: (err: any, data?: DisableRouteServerPropagationCommandOutput) => void
+  ): void;
+  disableRouteServerPropagation(
+    args: DisableRouteServerPropagationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DisableRouteServerPropagationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DisableSerialConsoleAccessCommand}
    */
   disableSerialConsoleAccess(): Promise<DisableSerialConsoleAccessCommandOutput>;
@@ -10975,6 +11546,23 @@ export interface EC2 {
     args: DisassociateNatGatewayAddressCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DisassociateNatGatewayAddressCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DisassociateRouteServerCommand}
+   */
+  disassociateRouteServer(
+    args: DisassociateRouteServerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DisassociateRouteServerCommandOutput>;
+  disassociateRouteServer(
+    args: DisassociateRouteServerCommandInput,
+    cb: (err: any, data?: DisassociateRouteServerCommandOutput) => void
+  ): void;
+  disassociateRouteServer(
+    args: DisassociateRouteServerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DisassociateRouteServerCommandOutput) => void
   ): void;
 
   /**
@@ -11315,6 +11903,23 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link EnableRouteServerPropagationCommand}
+   */
+  enableRouteServerPropagation(
+    args: EnableRouteServerPropagationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<EnableRouteServerPropagationCommandOutput>;
+  enableRouteServerPropagation(
+    args: EnableRouteServerPropagationCommandInput,
+    cb: (err: any, data?: EnableRouteServerPropagationCommandOutput) => void
+  ): void;
+  enableRouteServerPropagation(
+    args: EnableRouteServerPropagationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: EnableRouteServerPropagationCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link EnableSerialConsoleAccessCommand}
    */
   enableSerialConsoleAccess(): Promise<EnableSerialConsoleAccessCommandOutput>;
@@ -11509,6 +12114,23 @@ export interface EC2 {
     args: ExportVerifiedAccessInstanceClientConfigurationCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ExportVerifiedAccessInstanceClientConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetActiveVpnTunnelStatusCommand}
+   */
+  getActiveVpnTunnelStatus(
+    args: GetActiveVpnTunnelStatusCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetActiveVpnTunnelStatusCommandOutput>;
+  getActiveVpnTunnelStatus(
+    args: GetActiveVpnTunnelStatusCommandInput,
+    cb: (err: any, data?: GetActiveVpnTunnelStatusCommandOutput) => void
+  ): void;
+  getActiveVpnTunnelStatus(
+    args: GetActiveVpnTunnelStatusCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetActiveVpnTunnelStatusCommandOutput) => void
   ): void;
 
   /**
@@ -12090,6 +12712,57 @@ export interface EC2 {
     args: GetReservedInstancesExchangeQuoteCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetReservedInstancesExchangeQuoteCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetRouteServerAssociationsCommand}
+   */
+  getRouteServerAssociations(
+    args: GetRouteServerAssociationsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetRouteServerAssociationsCommandOutput>;
+  getRouteServerAssociations(
+    args: GetRouteServerAssociationsCommandInput,
+    cb: (err: any, data?: GetRouteServerAssociationsCommandOutput) => void
+  ): void;
+  getRouteServerAssociations(
+    args: GetRouteServerAssociationsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetRouteServerAssociationsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetRouteServerPropagationsCommand}
+   */
+  getRouteServerPropagations(
+    args: GetRouteServerPropagationsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetRouteServerPropagationsCommandOutput>;
+  getRouteServerPropagations(
+    args: GetRouteServerPropagationsCommandInput,
+    cb: (err: any, data?: GetRouteServerPropagationsCommandOutput) => void
+  ): void;
+  getRouteServerPropagations(
+    args: GetRouteServerPropagationsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetRouteServerPropagationsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetRouteServerRoutingDatabaseCommand}
+   */
+  getRouteServerRoutingDatabase(
+    args: GetRouteServerRoutingDatabaseCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetRouteServerRoutingDatabaseCommandOutput>;
+  getRouteServerRoutingDatabase(
+    args: GetRouteServerRoutingDatabaseCommandInput,
+    cb: (err: any, data?: GetRouteServerRoutingDatabaseCommandOutput) => void
+  ): void;
+  getRouteServerRoutingDatabase(
+    args: GetRouteServerRoutingDatabaseCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetRouteServerRoutingDatabaseCommandOutput) => void
   ): void;
 
   /**
@@ -12769,6 +13442,23 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link ModifyInstanceConnectEndpointCommand}
+   */
+  modifyInstanceConnectEndpoint(
+    args: ModifyInstanceConnectEndpointCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ModifyInstanceConnectEndpointCommandOutput>;
+  modifyInstanceConnectEndpoint(
+    args: ModifyInstanceConnectEndpointCommandInput,
+    cb: (err: any, data?: ModifyInstanceConnectEndpointCommandOutput) => void
+  ): void;
+  modifyInstanceConnectEndpoint(
+    args: ModifyInstanceConnectEndpointCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ModifyInstanceConnectEndpointCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ModifyInstanceCpuOptionsCommand}
    */
   modifyInstanceCpuOptions(
@@ -13082,6 +13772,23 @@ export interface EC2 {
   ): void;
 
   /**
+   * @see {@link ModifyPublicIpDnsNameOptionsCommand}
+   */
+  modifyPublicIpDnsNameOptions(
+    args: ModifyPublicIpDnsNameOptionsCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ModifyPublicIpDnsNameOptionsCommandOutput>;
+  modifyPublicIpDnsNameOptions(
+    args: ModifyPublicIpDnsNameOptionsCommandInput,
+    cb: (err: any, data?: ModifyPublicIpDnsNameOptionsCommandOutput) => void
+  ): void;
+  modifyPublicIpDnsNameOptions(
+    args: ModifyPublicIpDnsNameOptionsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ModifyPublicIpDnsNameOptionsCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link ModifyReservedInstancesCommand}
    */
   modifyReservedInstances(
@@ -13096,6 +13803,23 @@ export interface EC2 {
     args: ModifyReservedInstancesCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ModifyReservedInstancesCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ModifyRouteServerCommand}
+   */
+  modifyRouteServer(
+    args: ModifyRouteServerCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<ModifyRouteServerCommandOutput>;
+  modifyRouteServer(
+    args: ModifyRouteServerCommandInput,
+    cb: (err: any, data?: ModifyRouteServerCommandOutput) => void
+  ): void;
+  modifyRouteServer(
+    args: ModifyRouteServerCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ModifyRouteServerCommandOutput) => void
   ): void;
 
   /**

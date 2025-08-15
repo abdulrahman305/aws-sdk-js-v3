@@ -37,16 +37,7 @@ export interface ListDistributionsByRealtimeLogConfigCommandOutput
     __MetadataBearer {}
 
 /**
- * <p>Gets a list of distributions that have a cache behavior that's associated with the
- * 			specified real-time log configuration.</p>
- *          <p>You can specify the real-time log configuration by its name or its Amazon Resource
- * 			Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to
- * 			identify the real-time log configuration to list distributions for.</p>
- *          <p>You can optionally specify the maximum number of items to receive in the response. If
- * 			the total number of items in the list exceeds the maximum that you specify, or the
- * 			default maximum, the response is paginated. To get the next page of items, send a
- * 			subsequent request that specifies the <code>NextMarker</code> value from the current
- * 			response as the <code>Marker</code> value in the subsequent request.</p>
+ * <p>Gets a list of distributions that have a cache behavior that's associated with the specified real-time log configuration.</p> <p>You can specify the real-time log configuration by its name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to list distributions for.</p> <p>You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the <code>Marker</code> value in the subsequent request.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -72,6 +63,7 @@ export interface ListDistributionsByRealtimeLogConfigCommandOutput
  * //       { // DistributionSummary
  * //         Id: "STRING_VALUE", // required
  * //         ARN: "STRING_VALUE", // required
+ * //         ETag: "STRING_VALUE",
  * //         Status: "STRING_VALUE", // required
  * //         LastModifiedTime: new Date("TIMESTAMP"), // required
  * //         DomainName: "STRING_VALUE", // required
@@ -99,6 +91,7 @@ export interface ListDistributionsByRealtimeLogConfigCommandOutput
  * //               },
  * //               S3OriginConfig: { // S3OriginConfig
  * //                 OriginAccessIdentity: "STRING_VALUE", // required
+ * //                 OriginReadTimeout: Number("int"),
  * //               },
  * //               CustomOriginConfig: { // CustomOriginConfig
  * //                 HTTPPort: Number("int"), // required
@@ -120,6 +113,7 @@ export interface ListDistributionsByRealtimeLogConfigCommandOutput
  * //               },
  * //               ConnectionAttempts: Number("int"),
  * //               ConnectionTimeout: Number("int"),
+ * //               ResponseCompletionTimeout: Number("int"),
  * //               OriginShield: { // OriginShield
  * //                 Enabled: true || false, // required
  * //                 OriginShieldRegion: "STRING_VALUE",
@@ -339,14 +333,14 @@ export interface ListDistributionsByRealtimeLogConfigCommandOutput
  * //           ],
  * //         },
  * //         Comment: "STRING_VALUE", // required
- * //         PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All", // required
+ * //         PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All" || "None", // required
  * //         Enabled: true || false, // required
  * //         ViewerCertificate: { // ViewerCertificate
  * //           CloudFrontDefaultCertificate: true || false,
  * //           IAMCertificateId: "STRING_VALUE",
  * //           ACMCertificateArn: "STRING_VALUE",
  * //           SSLSupportMethod: "sni-only" || "vip" || "static-ip",
- * //           MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021",
+ * //           MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021" || "TLSv1.3_2025",
  * //           Certificate: "STRING_VALUE",
  * //           CertificateSource: "cloudfront" || "iam" || "acm",
  * //         },
@@ -369,6 +363,7 @@ export interface ListDistributionsByRealtimeLogConfigCommandOutput
  * //           },
  * //         ],
  * //         Staging: true || false, // required
+ * //         ConnectionMode: "direct" || "tenant-only",
  * //         AnycastIpListId: "STRING_VALUE",
  * //       },
  * //     ],

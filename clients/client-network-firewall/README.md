@@ -68,12 +68,17 @@ Amazon VPC. </p>
 subnet for the sole use of Network Firewall. </p>
 </li>
 <li>
-<p>In Network Firewall, create stateless and stateful rule groups,
+<p>In Network Firewall, define the firewall behavior as follows: </p>
+<ol>
+<li>
+<p>Create stateless and stateful rule groups,
 to define the components of the network traffic filtering behavior that you want your firewall to have. </p>
 </li>
 <li>
-<p>In Network Firewall, create a firewall policy that uses your rule groups and
+<p>Create a firewall policy that uses your rule groups and
 specifies additional default traffic filtering behavior. </p>
+</li>
+</ol>
 </li>
 <li>
 <p>In Network Firewall, create a firewall and specify your new firewall policy and
@@ -85,6 +90,9 @@ specify, with the behavior that's defined in the firewall policy.</p>
 endpoints.</p>
 </li>
 </ol>
+<p>After your firewall is established, you can add firewall endpoints for new Availability Zones by following the prior steps for the Amazon VPC setup and
+firewall subnet definitions. You can also add endpoints to Availability Zones that you're using in the firewall, either for the same VPC
+or for another VPC, by following the prior steps for the Amazon VPC setup, and defining the new VPC subnets as VPC endpoint associations. </p>
 
 ## Installing
 
@@ -283,6 +291,22 @@ see LICENSE for more information.
 
 <details>
 <summary>
+AcceptNetworkFirewallTransitGatewayAttachment
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/AcceptNetworkFirewallTransitGatewayAttachmentCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/AcceptNetworkFirewallTransitGatewayAttachmentCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/AcceptNetworkFirewallTransitGatewayAttachmentCommandOutput/)
+
+</details>
+<details>
+<summary>
+AssociateAvailabilityZones
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/AssociateAvailabilityZonesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/AssociateAvailabilityZonesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/AssociateAvailabilityZonesCommandOutput/)
+
+</details>
+<details>
+<summary>
 AssociateFirewallPolicy
 </summary>
 
@@ -331,6 +355,14 @@ CreateTLSInspectionConfiguration
 </details>
 <details>
 <summary>
+CreateVpcEndpointAssociation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/CreateVpcEndpointAssociationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/CreateVpcEndpointAssociationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/CreateVpcEndpointAssociationCommandOutput/)
+
+</details>
+<details>
+<summary>
 DeleteFirewall
 </summary>
 
@@ -343,6 +375,14 @@ DeleteFirewallPolicy
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DeleteFirewallPolicyCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DeleteFirewallPolicyCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DeleteFirewallPolicyCommandOutput/)
+
+</details>
+<details>
+<summary>
+DeleteNetworkFirewallTransitGatewayAttachment
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DeleteNetworkFirewallTransitGatewayAttachmentCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DeleteNetworkFirewallTransitGatewayAttachmentCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DeleteNetworkFirewallTransitGatewayAttachmentCommandOutput/)
 
 </details>
 <details>
@@ -371,10 +411,26 @@ DeleteTLSInspectionConfiguration
 </details>
 <details>
 <summary>
+DeleteVpcEndpointAssociation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DeleteVpcEndpointAssociationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DeleteVpcEndpointAssociationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DeleteVpcEndpointAssociationCommandOutput/)
+
+</details>
+<details>
+<summary>
 DescribeFirewall
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DescribeFirewallCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeFirewallCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeFirewallCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeFirewallMetadata
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DescribeFirewallMetadataCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeFirewallMetadataCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeFirewallMetadataCommandOutput/)
 
 </details>
 <details>
@@ -427,10 +483,34 @@ DescribeRuleGroupMetadata
 </details>
 <details>
 <summary>
+DescribeRuleGroupSummary
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DescribeRuleGroupSummaryCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeRuleGroupSummaryCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeRuleGroupSummaryCommandOutput/)
+
+</details>
+<details>
+<summary>
 DescribeTLSInspectionConfiguration
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DescribeTLSInspectionConfigurationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeTLSInspectionConfigurationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeTLSInspectionConfigurationCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeVpcEndpointAssociation
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DescribeVpcEndpointAssociationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeVpcEndpointAssociationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DescribeVpcEndpointAssociationCommandOutput/)
+
+</details>
+<details>
+<summary>
+DisassociateAvailabilityZones
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/DisassociateAvailabilityZonesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DisassociateAvailabilityZonesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/DisassociateAvailabilityZonesCommandOutput/)
 
 </details>
 <details>
@@ -515,10 +595,26 @@ ListTLSInspectionConfigurations
 </details>
 <details>
 <summary>
+ListVpcEndpointAssociations
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/ListVpcEndpointAssociationsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/ListVpcEndpointAssociationsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/ListVpcEndpointAssociationsCommandOutput/)
+
+</details>
+<details>
+<summary>
 PutResourcePolicy
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/PutResourcePolicyCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/PutResourcePolicyCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/PutResourcePolicyCommandOutput/)
+
+</details>
+<details>
+<summary>
+RejectNetworkFirewallTransitGatewayAttachment
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/RejectNetworkFirewallTransitGatewayAttachmentCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/RejectNetworkFirewallTransitGatewayAttachmentCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/RejectNetworkFirewallTransitGatewayAttachmentCommandOutput/)
 
 </details>
 <details>
@@ -559,6 +655,14 @@ UntagResource
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/UntagResourceCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/UntagResourceCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/UntagResourceCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateAvailabilityZoneChangeProtection
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/network-firewall/command/UpdateAvailabilityZoneChangeProtectionCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/UpdateAvailabilityZoneChangeProtectionCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-network-firewall/Interface/UpdateAvailabilityZoneChangeProtectionCommandOutput/)
 
 </details>
 <details>

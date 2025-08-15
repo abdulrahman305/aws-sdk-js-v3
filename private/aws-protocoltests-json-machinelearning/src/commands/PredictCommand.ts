@@ -1,9 +1,11 @@
 // smithy-typescript generated code
 import { getPredictEndpointPlugin } from "@aws-sdk/middleware-sdk-machinelearning";
+import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
+import { commonParams } from "../endpoint/EndpointParameters";
 import { MachineLearningClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../MachineLearningClient";
 import { PredictInput, PredictOutput } from "../models/models_0";
 import { de_PredictCommand, se_PredictCommand } from "../protocols/Aws_json1_1";
@@ -65,15 +67,15 @@ export interface PredictCommandOutput extends PredictOutput, __MetadataBearer {}
  * @see {@link PredictCommandOutput} for command's `response` shape.
  * @see {@link MachineLearningClientResolvedConfig | config} for MachineLearningClient's `config` shape.
  *
- * @throws {@link ResourceNotFoundException} (client fault)
- *
  * @throws {@link InternalServerException} (server fault)
+ *
+ * @throws {@link InvalidInputException} (client fault)
  *
  * @throws {@link LimitExceededException} (client fault)
  *
  * @throws {@link PredictorNotMountedException} (client fault)
  *
- * @throws {@link InvalidInputException} (client fault)
+ * @throws {@link ResourceNotFoundException} (client fault)
  *
  * @throws {@link MachineLearningServiceException}
  * <p>Base exception class for all service exceptions from MachineLearning service.</p>
@@ -88,8 +90,13 @@ export class PredictCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: MachineLearningClientResolvedConfig, o: any) {
-    return [getSerdePlugin(config, this.serialize, this.deserialize), getPredictEndpointPlugin(config)];
+    return [
+      getSerdePlugin(config, this.serialize, this.deserialize),
+      getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+      getPredictEndpointPlugin(config),
+    ];
   })
   .s("AmazonML_20141212", "Predict", {})
   .n("MachineLearningClient", "PredictCommand")

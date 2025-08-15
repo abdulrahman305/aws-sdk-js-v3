@@ -28,14 +28,7 @@ export interface UpdateProjectCommandInput extends UpdateProjectInput {}
 export interface UpdateProjectCommandOutput extends UpdateProjectOutput, __MetadataBearer {}
 
 /**
- * <p>Updates a machine learning (ML) project that is created from a template that
- *             sets up an ML pipeline from training to deploying an approved model.</p>
- *          <note>
- *             <p>You must not update a project that is in use. If you update the
- *                     <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active
- *                 or being created, or updated, you may lose resources already created by the
- *                 project.</p>
- *          </note>
+ * <p>Updates a machine learning (ML) project that is created from a template that sets up an ML pipeline from training to deploying an approved model.</p> <note> <p>You must not update a project that is in use. If you update the <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active or being created, or updated, you may lose resources already created by the project.</p> </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -60,6 +53,20 @@ export interface UpdateProjectCommandOutput extends UpdateProjectOutput, __Metad
  *       Value: "STRING_VALUE", // required
  *     },
  *   ],
+ *   TemplateProvidersToUpdate: [ // UpdateTemplateProviderList
+ *     { // UpdateTemplateProvider
+ *       CfnTemplateProvider: { // CfnUpdateTemplateProvider
+ *         TemplateName: "STRING_VALUE", // required
+ *         TemplateURL: "STRING_VALUE", // required
+ *         Parameters: [ // CfnStackUpdateParameters
+ *           { // CfnStackUpdateParameter
+ *             Key: "STRING_VALUE", // required
+ *             Value: "STRING_VALUE",
+ *           },
+ *         ],
+ *       },
+ *     },
+ *   ],
  * };
  * const command = new UpdateProjectCommand(input);
  * const response = await client.send(command);
@@ -76,8 +83,7 @@ export interface UpdateProjectCommandOutput extends UpdateProjectOutput, __Metad
  * @see {@link SageMakerClientResolvedConfig | config} for SageMakerClient's `config` shape.
  *
  * @throws {@link ConflictException} (client fault)
- *  <p>There was a conflict when you attempted to modify a SageMaker entity such as an
- *       <code>Experiment</code> or <code>Artifact</code>.</p>
+ *  <p>There was a conflict when you attempted to modify a SageMaker entity such as an <code>Experiment</code> or <code>Artifact</code>.</p>
  *
  * @throws {@link SageMakerServiceException}
  * <p>Base exception class for all service exceptions from SageMaker service.</p>

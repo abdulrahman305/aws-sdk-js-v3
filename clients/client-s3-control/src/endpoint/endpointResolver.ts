@@ -16,9 +16,11 @@ const cache = new EndpointCache({
     "OutpostId",
     "Region",
     "RequiresAccountId",
+    "ResourceArn",
     "UseArnRegion",
     "UseDualStack",
     "UseFIPS",
+    "UseS3ExpressControlEndpoint",
   ],
 });
 

@@ -4,6 +4,39 @@ import { ExceptionOptionType as __ExceptionOptionType, SENSITIVE_STRING } from "
 import { FSxServiceException as __BaseException } from "./FSxServiceException";
 
 /**
+ * <p>An access point with that name already exists in the Amazon Web Services Region in your Amazon Web Services account.</p>
+ * @public
+ */
+export class AccessPointAlreadyOwnedByYou extends __BaseException {
+  readonly name: "AccessPointAlreadyOwnedByYou" = "AccessPointAlreadyOwnedByYou";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>An error code indicating that an access point with that name already exists in the Amazon Web Services Region in your Amazon Web Services account.</p>
+   * @public
+   */
+  ErrorCode?: string | undefined;
+
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<AccessPointAlreadyOwnedByYou, __BaseException>) {
+    super({
+      name: "AccessPointAlreadyOwnedByYou",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, AccessPointAlreadyOwnedByYou.prototype);
+    this.ErrorCode = opts.ErrorCode;
+    this.Message = opts.Message;
+  }
+}
+
+/**
  * <p>The Microsoft Active Directory attributes of the Amazon FSx for Windows File
  *             Server file system.</p>
  * @public
@@ -131,10 +164,12 @@ export interface AdministrativeActionFailureDetails {
  * @enum
  */
 export const Status = {
+  CANCELLED: "CANCELLED",
   COMPLETED: "COMPLETED",
   FAILED: "FAILED",
   IN_PROGRESS: "IN_PROGRESS",
   OPTIMIZING: "OPTIMIZING",
+  PAUSED: "PAUSED",
   PENDING: "PENDING",
   UPDATED_OPTIMIZING: "UPDATED_OPTIMIZING",
 } as const;
@@ -204,6 +239,62 @@ export const DataCompressionType = {
  * @public
  */
 export type DataCompressionType = (typeof DataCompressionType)[keyof typeof DataCompressionType];
+
+/**
+ * @public
+ * @enum
+ */
+export const LustreReadCacheSizingMode = {
+  NO_CACHE: "NO_CACHE",
+  PROPORTIONAL_TO_THROUGHPUT_CAPACITY: "PROPORTIONAL_TO_THROUGHPUT_CAPACITY",
+  USER_PROVISIONED: "USER_PROVISIONED",
+} as const;
+
+/**
+ * @public
+ */
+export type LustreReadCacheSizingMode = (typeof LustreReadCacheSizingMode)[keyof typeof LustreReadCacheSizingMode];
+
+/**
+ * <p>
+ *             The configuration for the optional provisioned SSD read cache on Amazon FSx for Lustre file systems
+ *             that use the Intelligent-Tiering storage class.
+ *         </p>
+ * @public
+ */
+export interface LustreReadCacheConfiguration {
+  /**
+   * <p>
+   *             Specifies how the provisioned SSD read cache is sized, as follows:
+   *         </p>
+   *          <ul>
+   *             <li>
+   *                <p>Set to <code>NO_CACHE</code> if you do not want to use an SSD read cache with your Intelligent-Tiering file system.</p>
+   *             </li>
+   *             <li>
+   *                <p>Set to <code>USER_PROVISIONED</code> to specify the exact size of your SSD read cache.</p>
+   *             </li>
+   *             <li>
+   *                <p>Set to <code>PROPORTIONAL_TO_THROUGHPUT_CAPACITY</code> to have your SSD read cache automatically sized based on your throughput capacity.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  SizingMode?: LustreReadCacheSizingMode | undefined;
+
+  /**
+   * <p>
+   *             Required if <code>SizingMode</code> is set to <code>USER_PROVISIONED</code>.
+   *             Specifies the size of the file system's SSD read cache, in gibibytes (GiB).
+   *         </p>
+   *          <p>The SSD read cache size is distributed across provisioned file servers in
+   *             your file system. Intelligent-Tiering file systems support a minimum of 32 GiB
+   *             and maximum of 131072 GiB for SSD read cache size for every 4,000 MB/s of throughput
+   *             capacity provisioned.</p>
+   * @public
+   */
+  SizeGiB?: number | undefined;
+}
 
 /**
  * @public
@@ -482,9 +573,18 @@ export type MetadataConfigurationMode = (typeof MetadataConfigurationMode)[keyof
  */
 export interface FileSystemLustreMetadataConfiguration {
   /**
-   * <p>The number of Metadata IOPS provisioned for the file system. Valid values
-   *             are <code>1500</code>, <code>3000</code>, <code>6000</code>, <code>12000</code>,
-   *             and multiples of <code>12000</code> up to a maximum of <code>192000</code>.</p>
+   * <p>The number of Metadata IOPS provisioned for the file system.</p>
+   *          <ul>
+   *             <li>
+   *                <p>For SSD file systems, valid values are <code>1500</code>,
+   *                     <code>3000</code>, <code>6000</code>, <code>12000</code>, and
+   *                     multiples of <code>12000</code> up to a maximum of <code>192000</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Intelligent-Tiering file systems, valid values are <code>6000</code>
+   *                     and <code>12000</code>.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   Iops?: number | undefined;
@@ -494,9 +594,10 @@ export interface FileSystemLustreMetadataConfiguration {
    *             file system.</p>
    *          <ul>
    *             <li>
-   *                <p>In AUTOMATIC mode, FSx for Lustre automatically
-   *                 provisions and scales the number of Metadata IOPS on your file system based
-   *                 on your file system storage capacity.</p>
+   *                <p>In AUTOMATIC mode (supported only on SSD file systems),
+   *                     FSx for Lustre automatically provisions and scales the
+   *                     number of Metadata IOPS on your file system based on your file
+   *                     system storage capacity.</p>
    *             </li>
    *             <li>
    *                <p>In USER_PROVISIONED mode, you can choose to specify the number
@@ -597,8 +698,8 @@ export interface LustreFileSystemConfiguration {
    *             for longer-term storage and workloads and encryption of data in transit.
    *                 <code>PERSISTENT_2</code> offers higher <code>PerUnitStorageThroughput</code>
    *             (up to 1000 MB/s/TiB) along with a lower minimum storage capacity requirement (600 GiB).
-   *             To learn more about FSx for Lustre deployment types, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html">
-   *                 FSx for Lustre deployment options</a>.</p>
+   *             To learn more about FSx for Lustre deployment types, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html">Deployment and storage class options for
+   *                     FSx for Lustre file systems</a>.</p>
    *          <p>The default is <code>SCRATCH_1</code>.</p>
    * @public
    */
@@ -722,7 +823,35 @@ export interface LustreFileSystemConfiguration {
    * @public
    */
   EfaEnabled?: boolean | undefined;
+
+  /**
+   * <p>The throughput of an Amazon FSx for Lustre file system using the Intelligent-Tiering
+   *             storage class, measured in megabytes per second (MBps).</p>
+   * @public
+   */
+  ThroughputCapacity?: number | undefined;
+
+  /**
+   * <p>Required when <code>StorageType</code> is set to <code>INTELLIGENT_TIERING</code>.
+   *             Specifies the optional provisioned SSD read cache.</p>
+   * @public
+   */
+  DataReadCacheConfiguration?: LustreReadCacheConfiguration | undefined;
 }
+
+/**
+ * @public
+ * @enum
+ */
+export const NetworkType = {
+  DUAL: "DUAL",
+  IPV4: "IPV4",
+} as const;
+
+/**
+ * @public
+ */
+export type NetworkType = (typeof NetworkType)[keyof typeof NetworkType];
 
 /**
  * @public
@@ -927,13 +1056,8 @@ export interface OntapFileSystemConfiguration {
   ThroughputCapacity?: number | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -1028,7 +1152,7 @@ export type OpenZFSReadCacheSizingMode = (typeof OpenZFSReadCacheSizingMode)[key
 
 /**
  * <p>
- *             The configuration for the optional provisioned SSD read cache on file systems that use the Intelligent-Tiering storage class.
+ *             The configuration for the optional provisioned SSD read cache on Amazon FSx for OpenZFS file systems that use the Intelligent-Tiering storage class.
  *         </p>
  * @public
  */
@@ -1119,13 +1243,8 @@ export interface OpenZFSFileSystemConfiguration {
   ThroughputCapacity?: number | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -1164,6 +1283,16 @@ export interface OpenZFSFileSystemConfiguration {
   EndpointIpAddressRange?: string | undefined;
 
   /**
+   * <p>(Multi-AZ only) Specifies the IP address range in which the endpoints to access your
+   *             file system will be created. By default in the Amazon FSx API and Amazon FSx
+   *             console, Amazon FSx selects an available /118 IP address range for you from one of the
+   *             VPC's CIDR ranges. You can have overlapping endpoint IP addresses for file systems deployed
+   *             in the same VPC/route tables, as long as they don't overlap with any subnet.</p>
+   * @public
+   */
+  EndpointIpv6AddressRange?: string | undefined;
+
+  /**
    * <p>(Multi-AZ only) The VPC route tables in which your file system's endpoints are
    *             created.</p>
    * @public
@@ -1176,6 +1305,12 @@ export interface OpenZFSFileSystemConfiguration {
    * @public
    */
   EndpointIpAddress?: string | undefined;
+
+  /**
+   * <p>The IPv6 address of the endpoint that is used to access data or to manage the file system.</p>
+   * @public
+   */
+  EndpointIpv6Address?: string | undefined;
 
   /**
    * <p>
@@ -3344,7 +3479,7 @@ export type ServiceLimit = (typeof ServiceLimit)[keyof typeof ServiceLimit];
 
 /**
  * <p>An error indicating that a particular service limit was exceeded. You can increase
- *             some service limits by contacting Amazon Web Services Support.</p>
+ *             some service limits by contacting Amazon Web ServicesSupport.</p>
  * @public
  */
 export class ServiceLimitExceeded extends __BaseException {
@@ -3506,6 +3641,427 @@ export interface CopySnapshotAndUpdateVolumeRequest {
 }
 
 /**
+ * <p>The FSx for OpenZFS file system user that is used for authorizing all file access requests that are made using the S3 access point.</p>
+ * @public
+ */
+export interface OpenZFSPosixFileSystemUser {
+  /**
+   * <p>The UID of the file system user.</p>
+   * @public
+   */
+  Uid: number | undefined;
+
+  /**
+   * <p>The GID of the file system user.</p>
+   * @public
+   */
+  Gid: number | undefined;
+
+  /**
+   * <p>The list of secondary GIDs for the file system user. </p>
+   * @public
+   */
+  SecondaryGids?: number[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const OpenZFSFileSystemUserType = {
+  POSIX: "POSIX",
+} as const;
+
+/**
+ * @public
+ */
+export type OpenZFSFileSystemUserType = (typeof OpenZFSFileSystemUserType)[keyof typeof OpenZFSFileSystemUserType];
+
+/**
+ * <p>Specifies the file system user identity that will be used for authorizing all file access requests that are made using the S3 access point.</p>
+ * @public
+ */
+export interface OpenZFSFileSystemIdentity {
+  /**
+   * <p>Specifies the FSx for OpenZFS user identity type, accepts only <code>POSIX</code>.</p>
+   * @public
+   */
+  Type: OpenZFSFileSystemUserType | undefined;
+
+  /**
+   * <p>Specifies the UID and GIDs of the file system POSIX user.</p>
+   * @public
+   */
+  PosixUser?: OpenZFSPosixFileSystemUser | undefined;
+}
+
+/**
+ * <p>Specifies the FSx for OpenZFS volume that the S3 access point will be attached to, and the file system user identity.</p>
+ * @public
+ */
+export interface CreateAndAttachS3AccessPointOpenZFSConfiguration {
+  /**
+   * <p>The ID of the FSx for OpenZFS volume to which you want the S3 access point attached.</p>
+   * @public
+   */
+  VolumeId: string | undefined;
+
+  /**
+   * <p>Specifies the file system user identity to use for authorizing file read and write requests that are made using this S3 access point.</p>
+   * @public
+   */
+  FileSystemIdentity: OpenZFSFileSystemIdentity | undefined;
+}
+
+/**
+ * <p>If included, Amazon S3 restricts access to this access point to requests from the specified virtual private cloud (VPC).</p>
+ * @public
+ */
+export interface S3AccessPointVpcConfiguration {
+  /**
+   * <p>Specifies the virtual private cloud (VPC) for the S3 access point VPC configuration, if one exists.</p>
+   * @public
+   */
+  VpcId?: string | undefined;
+}
+
+/**
+ * <p>Used to create an S3 access point that accepts requests only from a virtual private cloud (VPC) to restrict data access to a private network.</p>
+ * @public
+ */
+export interface CreateAndAttachS3AccessPointS3Configuration {
+  /**
+   * <p>If included, Amazon S3 restricts access to this S3 access point to requests made from the specified virtual private cloud (VPC).</p>
+   * @public
+   */
+  VpcConfiguration?: S3AccessPointVpcConfiguration | undefined;
+
+  /**
+   * <p>Specifies an access policy to associate with the S3 access point configuration. For more information, see
+   *          <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html">Configuring IAM policies for using access points</a>
+   *       in the Amazon Simple Storage Service User Guide.</p>
+   * @public
+   */
+  Policy?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const S3AccessPointAttachmentType = {
+  OPENZFS: "OPENZFS",
+} as const;
+
+/**
+ * @public
+ */
+export type S3AccessPointAttachmentType =
+  (typeof S3AccessPointAttachmentType)[keyof typeof S3AccessPointAttachmentType];
+
+/**
+ * @public
+ */
+export interface CreateAndAttachS3AccessPointRequest {
+  /**
+   * <p>(Optional) An idempotency token for resource creation, in a string of up to 63
+   *             ASCII characters. This token is automatically filled on your behalf when you use the
+   *             Command Line Interface (CLI) or an Amazon Web Services SDK.</p>
+   * @public
+   */
+  ClientRequestToken?: string | undefined;
+
+  /**
+   * <p>The name you want to assign to this S3 access point.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The type of S3 access point you want to create. Only <code>OpenZFS</code> is supported.</p>
+   * @public
+   */
+  Type: S3AccessPointAttachmentType | undefined;
+
+  /**
+   * <p>Specifies the configuration to use when creating and attaching an S3 access point to an FSx for OpenZFS volume.</p>
+   * @public
+   */
+  OpenZFSConfiguration?: CreateAndAttachS3AccessPointOpenZFSConfiguration | undefined;
+
+  /**
+   * <p>Specifies the virtual private cloud (VPC) configuration if you're creating an access point that is restricted to a VPC.
+   *          For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/access-points-vpc.html">Creating access points restricted to a virtual private cloud</a>.</p>
+   * @public
+   */
+  S3AccessPoint?: CreateAndAttachS3AccessPointS3Configuration | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const S3AccessPointAttachmentLifecycle = {
+  AVAILABLE: "AVAILABLE",
+  CREATING: "CREATING",
+  DELETING: "DELETING",
+  FAILED: "FAILED",
+  UPDATING: "UPDATING",
+} as const;
+
+/**
+ * @public
+ */
+export type S3AccessPointAttachmentLifecycle =
+  (typeof S3AccessPointAttachmentLifecycle)[keyof typeof S3AccessPointAttachmentLifecycle];
+
+/**
+ * <p>Describes the FSx for OpenZFS attachment configuration of an S3 access point attachment.</p>
+ * @public
+ */
+export interface S3AccessPointOpenZFSConfiguration {
+  /**
+   * <p>The ID of the FSx for OpenZFS volume that the S3 access point is attached to.</p>
+   * @public
+   */
+  VolumeId?: string | undefined;
+
+  /**
+   * <p>The file system identity used to authorize file access requests made using the S3 access point.</p>
+   * @public
+   */
+  FileSystemIdentity?: OpenZFSFileSystemIdentity | undefined;
+}
+
+/**
+ * <p>Describes the S3 access point configuration of the S3 access point attachment.</p>
+ * @public
+ */
+export interface S3AccessPoint {
+  /**
+   * <p>he S3 access point's ARN.</p>
+   * @public
+   */
+  ResourceARN?: string | undefined;
+
+  /**
+   * <p>The S3 access point's alias.</p>
+   * @public
+   */
+  Alias?: string | undefined;
+
+  /**
+   * <p>The S3 access point's virtual private cloud (VPC) configuration.</p>
+   * @public
+   */
+  VpcConfiguration?: S3AccessPointVpcConfiguration | undefined;
+}
+
+/**
+ * <p>An S3 access point attached to an Amazon FSx volume.</p>
+ * @public
+ */
+export interface S3AccessPointAttachment {
+  /**
+   * <p>The lifecycle status of the S3 access point attachment. The lifecycle can have the following values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>AVAILABLE - the S3 access point attachment is available for use</p>
+   *             </li>
+   *             <li>
+   *                <p>CREATING - Amazon FSx is creating the S3 access point and attachment</p>
+   *             </li>
+   *             <li>
+   *                <p>DELETING - Amazon FSx is deleting the S3 access point and attachment</p>
+   *             </li>
+   *             <li>
+   *                <p>FAILED - The S3 access point attachment is in a failed state. Delete and detach the S3 access
+   *                point attachment, and create a new one.</p>
+   *             </li>
+   *             <li>
+   *                <p>UPDATING - Amazon FSx is updating the S3 access point attachment</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  Lifecycle?: S3AccessPointAttachmentLifecycle | undefined;
+
+  /**
+   * <p>Describes why a resource lifecycle state changed.</p>
+   * @public
+   */
+  LifecycleTransitionReason?: LifecycleTransitionReason | undefined;
+
+  /**
+   * <p>The time that the resource was created, in seconds (since 1970-01-01T00:00:00Z),
+   *             also known as Unix time.</p>
+   * @public
+   */
+  CreationTime?: Date | undefined;
+
+  /**
+   * <p>The name of the S3 access point attachment; also used for the name of the S3 access point.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The type of Amazon FSx volume that the S3 access point is attached to. </p>
+   * @public
+   */
+  Type?: S3AccessPointAttachmentType | undefined;
+
+  /**
+   * <p>The OpenZFSConfiguration of the S3 access point attachment.</p>
+   * @public
+   */
+  OpenZFSConfiguration?: S3AccessPointOpenZFSConfiguration | undefined;
+
+  /**
+   * <p>The S3 access point configuration of the S3 access point attachment.</p>
+   * @public
+   */
+  S3AccessPoint?: S3AccessPoint | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateAndAttachS3AccessPointResponse {
+  /**
+   * <p>Describes the configuration of the S3 access point created.</p>
+   * @public
+   */
+  S3AccessPointAttachment?: S3AccessPointAttachment | undefined;
+}
+
+/**
+ * <p>The access point specified doesn't exist.</p>
+ * @public
+ */
+export class InvalidAccessPoint extends __BaseException {
+  readonly name: "InvalidAccessPoint" = "InvalidAccessPoint";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>An error code indicating that the access point specified doesn't exist.</p>
+   * @public
+   */
+  ErrorCode?: string | undefined;
+
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<InvalidAccessPoint, __BaseException>) {
+    super({
+      name: "InvalidAccessPoint",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, InvalidAccessPoint.prototype);
+    this.ErrorCode = opts.ErrorCode;
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * <p>The action or operation requested is invalid. Verify that the action is typed correctly.</p>
+ * @public
+ */
+export class InvalidRequest extends __BaseException {
+  readonly name: "InvalidRequest" = "InvalidRequest";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>An error code indicating that the action or operation requested is invalid.</p>
+   * @public
+   */
+  ErrorCode?: string | undefined;
+
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<InvalidRequest, __BaseException>) {
+    super({
+      name: "InvalidRequest",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, InvalidRequest.prototype);
+    this.ErrorCode = opts.ErrorCode;
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * <p>You have reached the maximum number of S3 access points attachments allowed for your account in this Amazon Web Services Region, or for the file system. For more information, or to request an increase,
+ *          see <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/limits.html">Service quotas on FSx resources</a> in the FSx for OpenZFS User Guide.</p>
+ * @public
+ */
+export class TooManyAccessPoints extends __BaseException {
+  readonly name: "TooManyAccessPoints" = "TooManyAccessPoints";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>An error code indicating that you have reached the maximum number of S3 access points attachments allowed for your account in this Amazon Web Services Region, or for the file system.</p>
+   * @public
+   */
+  ErrorCode?: string | undefined;
+
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<TooManyAccessPoints, __BaseException>) {
+    super({
+      name: "TooManyAccessPoints",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, TooManyAccessPoints.prototype);
+    this.ErrorCode = opts.ErrorCode;
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * <p>No Amazon FSx volumes were found based upon the supplied parameters.</p>
+ * @public
+ */
+export class VolumeNotFound extends __BaseException {
+  readonly name: "VolumeNotFound" = "VolumeNotFound";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<VolumeNotFound, __BaseException>) {
+    super({
+      name: "VolumeNotFound",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, VolumeNotFound.prototype);
+    this.Message = opts.Message;
+  }
+}
+
+/**
  * <p>Another backup is already under way. Wait for completion before initiating
  *             additional backups of this file system.</p>
  * @public
@@ -3566,32 +4122,6 @@ export interface CreateBackupRequest {
    * @public
    */
   VolumeId?: string | undefined;
-}
-
-/**
- * <p>No Amazon FSx volumes were found based upon the supplied parameters.</p>
- * @public
- */
-export class VolumeNotFound extends __BaseException {
-  readonly name: "VolumeNotFound" = "VolumeNotFound";
-  readonly $fault: "client" = "client";
-  /**
-   * <p>A detailed error message.</p>
-   * @public
-   */
-  Message?: string | undefined;
-  /**
-   * @internal
-   */
-  constructor(opts: __ExceptionOptionType<VolumeNotFound, __BaseException>) {
-    super({
-      name: "VolumeNotFound",
-      $fault: "client",
-      ...opts,
-    });
-    Object.setPrototypeOf(this, VolumeNotFound.prototype);
-    this.Message = opts.Message;
-  }
 }
 
 /**
@@ -3784,7 +4314,7 @@ export interface NFSDataRepositoryConfiguration {
  *          </ul>
  *          <p>Data repository associations are supported on Amazon File Cache resources and
  *             all FSx for Lustre 2.12 and 2.15 file systems, excluding
- *             <code>scratch_1</code> deployment type.</p>
+ *             Intelligent-Tiering and <code>scratch_1</code> file systems.</p>
  * @public
  */
 export interface DataRepositoryAssociation {
@@ -4754,13 +5284,8 @@ export interface CreateFileCacheLustreConfiguration {
   DeploymentType: FileCacheLustreDeploymentType | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -4937,13 +5462,8 @@ export interface FileCacheLustreConfiguration {
   MountName?: string | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -5307,11 +5827,21 @@ export interface CreateFileSystemLustreMetadataConfiguration {
   /**
    * <p>(USER_PROVISIONED mode only) Specifies the number of Metadata IOPS to provision
    *             for the file system. This parameter sets the maximum rate of metadata disk IOPS
-   *             supported by the file system. Valid values are <code>1500</code>, <code>3000</code>,
-   *             <code>6000</code>, <code>12000</code>, and multiples of <code>12000</code>
-   *             up to a maximum of <code>192000</code>.</p>
+   *             supported by the file system.</p>
+   *          <ul>
+   *             <li>
+   *                <p>For SSD file systems, valid values are <code>1500</code>,
+   *                     <code>3000</code>, <code>6000</code>, <code>12000</code>, and
+   *                     multiples of <code>12000</code> up to a maximum of <code>192000</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Intelligent-Tiering file systems, valid values are <code>6000</code>
+   *                     and <code>12000</code>.</p>
+   *             </li>
+   *          </ul>
    *          <note>
-   *             <p>Iops doesn’t have a default value. If you're using USER_PROVISIONED mode,
+   *             <p>
+   *                <code>Iops</code> doesn’t have a default value. If you're using USER_PROVISIONED mode,
    *                 you can choose to specify a valid value. If you're using AUTOMATIC mode,
    *                 you cannot specify a value because FSx for Lustre automatically sets
    *                 the value based on your file system storage capacity.
@@ -5327,8 +5857,9 @@ export interface CreateFileSystemLustreMetadataConfiguration {
    *             deployment type.</p>
    *          <ul>
    *             <li>
-   *                <p>In AUTOMATIC mode, FSx for Lustre automatically
-   *                 provisions and scales the number of Metadata IOPS for your file system
+   *                <p>In AUTOMATIC mode (supported only on SSD file systems),
+   *                     FSx for Lustre automatically provisions and scales the
+   *                     number of Metadata IOPS for your file system
    *                 based on your file system storage capacity.</p>
    *             </li>
    *             <li>
@@ -5443,13 +5974,14 @@ export interface CreateFileSystemLustreConfiguration {
    *             Amazon Web Services Regions in which FSx for Lustre is available.</p>
    *          <p>Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads
    *             that require the highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports
-   *             SSD storage, and offers higher <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB).
+   *             the SSD and Intelligent-Tiering storage classes.
    *             You can optionally specify a metadata configuration mode for <code>PERSISTENT_2</code>
    *             which supports increasing metadata performance. <code>PERSISTENT_2</code> is available
    *             in a limited number of Amazon Web Services Regions. For more information, and an up-to-date
    *             list of Amazon Web Services Regions in which <code>PERSISTENT_2</code> is available, see
-   *             <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types">File
-   *                 system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.</p>
+   *             <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html">Deployment and
+   *                 storage class options for FSx for Lustre file systems</a> in
+   *             the <i>Amazon FSx for Lustre User Guide</i>.</p>
    *          <note>
    *             <p>If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to
    *                     <code>2.10</code>, the <code>CreateFileSystem</code> operation fails.</p>
@@ -5509,7 +6041,7 @@ export interface CreateFileSystemLustreConfiguration {
 
   /**
    * <p>Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment
-   *             types, provisions the amount of read and write throughput for each 1 tebibyte (TiB) of
+   *             types using an SSD or HDD storage class, provisions the amount of read and write throughput for each 1 tebibyte (TiB) of
    *             file system storage capacity, in MB/s/TiB. File system throughput capacity is calculated
    *             by multiplying ﬁle system storage capacity (TiB) by the
    *                 <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system,
@@ -5626,6 +6158,22 @@ export interface CreateFileSystemLustreConfiguration {
    * @public
    */
   MetadataConfiguration?: CreateFileSystemLustreMetadataConfiguration | undefined;
+
+  /**
+   * <p>Specifies the throughput of an FSx for Lustre file system using the Intelligent-Tiering storage class,
+   *             measured in megabytes per second (MBps). Valid values are 4000 MBps or
+   *             multiples of 4000 MBps. You pay for the amount of throughput that you provision.</p>
+   * @public
+   */
+  ThroughputCapacity?: number | undefined;
+
+  /**
+   * <p>Specifies the optional provisioned SSD read cache on FSx for Lustre file systems that
+   *             use the Intelligent-Tiering storage class. Required when <code>StorageType</code> is set
+   *             to <code>INTELLIGENT_TIERING</code>.</p>
+   * @public
+   */
+  DataReadCacheConfiguration?: LustreReadCacheConfiguration | undefined;
 }
 
 /**
@@ -5747,13 +6295,8 @@ export interface CreateFileSystemOntapConfiguration {
   ThroughputCapacity?: number | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -5964,7 +6507,7 @@ export interface CreateFileSystemOpenZFSConfiguration {
   DeploymentType: OpenZFSDeploymentType | undefined;
 
   /**
-   * <p>Specifies the throughput of an Amazon FSx for OpenZFS file system, measured in megabytes per second (MBps). Valid values depend on the DeploymentType you choose, as follows:</p>
+   * <p>Specifies the throughput of an Amazon FSx for OpenZFS file system, measured in megabytes per second (MBps). Valid values depend on the <code>DeploymentType</code> that you choose, as follows:</p>
    *          <ul>
    *             <li>
    *                <p>For <code>MULTI_AZ_1</code> and <code>SINGLE_AZ_2</code>, valid values are 160, 320, 640,
@@ -5980,13 +6523,8 @@ export interface CreateFileSystemOpenZFSConfiguration {
   ThroughputCapacity: number | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -6016,13 +6554,24 @@ export interface CreateFileSystemOpenZFSConfiguration {
 
   /**
    * <p>(Multi-AZ only) Specifies the IP address range in which the endpoints to access your
-   *             file system will be created. By default in the Amazon FSx  API and Amazon FSx console, Amazon FSx
+   *             file system will be created. By default in the Amazon FSx API and Amazon FSx console, Amazon FSx
    *             selects an available /28 IP address range for you from one of the VPC's CIDR ranges.
    *             You can have overlapping endpoint IP addresses for file systems deployed in the
-   *             same VPC/route tables.</p>
+   *             same VPC/route tables, as long as they don't overlap with any subnet.</p>
    * @public
    */
   EndpointIpAddressRange?: string | undefined;
+
+  /**
+   * <p>(Multi-AZ only) Specifies the IP address range in which the endpoints to access
+   *             your file system will be created. By default in the Amazon FSx API and
+   *             Amazon FSx console, Amazon FSx selects an available /118 IP address
+   *             range for you from one of the VPC's CIDR ranges. You can have overlapping endpoint
+   *             IP addresses for file systems deployed in the same VPC/route tables, as long as they
+   *             don't overlap with any subnet.</p>
+   * @public
+   */
+  EndpointIpv6AddressRange?: string | undefined;
 
   /**
    * <p>(Multi-AZ only) Specifies the route tables in which Amazon FSx  creates the rules
@@ -6426,20 +6975,21 @@ export interface CreateFileSystemRequest {
    *                     Lustre, ONTAP, and OpenZFS deployment types.</p>
    *             </li>
    *             <li>
-   *                <p>Set to <code>HDD</code> to use hard disk drive storage.
-   *                 HDD is supported on <code>SINGLE_AZ_2</code> and <code>MULTI_AZ_1</code> Windows file system deployment types,
+   *                <p>Set to <code>HDD</code> to use hard disk drive storage, which is supported on
+   *                     <code>SINGLE_AZ_2</code> and <code>MULTI_AZ_1</code> Windows file system deployment types,
    *                 and on <code>PERSISTENT_1</code> Lustre file system deployment types.</p>
    *             </li>
    *             <li>
-   *                <p>Set to <code>INTELLIGENT_TIERING</code> to use fully elastic, intelligently-tiered storage. Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type.</p>
+   *                <p>Set to <code>INTELLIGENT_TIERING</code> to use fully elastic, intelligently-tiered storage.
+   *                     Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+   *                     and for Lustre file systems with the Persistent_2 deployment type.</p>
    *             </li>
    *          </ul>
    *          <p>Default value is <code>SSD</code>. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options"> Storage
    *                 type options</a> in the <i>FSx for Windows File Server User
-   *                 Guide</i>, <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options">Multiple storage
-   *                 options</a> in the <i>FSx for Lustre User
-   *                     Guide</i>, and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering">Working with Intelligent-Tiering</a> in the <i>Amazon FSx for OpenZFS User
-   *                             Guide</i>. </p>
+   *                 Guide</i>, <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-storage-classes">FSx for Lustre storage classes</a>
+   *             in the <i>FSx for Lustre User Guide</i>, and <a href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering">Working with Intelligent-Tiering</a>
+   *             in the <i>Amazon FSx for OpenZFS User Guide</i>.</p>
    * @public
    */
   StorageType?: StorageType | undefined;
@@ -6596,6 +7146,16 @@ export interface CreateFileSystemRequest {
    * @public
    */
   OpenZFSConfiguration?: CreateFileSystemOpenZFSConfiguration | undefined;
+
+  /**
+   * <p>The network type of the Amazon FSx file system that you
+   *             are creating. Valid values are <code>IPV4</code> (which supports
+   *             IPv4 only) and <code>DUAL</code> (for dual-stack mode, which supports
+   *             both IPv4 and IPv6). The default is <code>IPV4</code>. Supported only
+   *             for Amazon FSx for OpenZFS file systems.</p>
+   * @public
+   */
+  NetworkType?: NetworkType | undefined;
 }
 
 /**
@@ -6764,8 +7324,8 @@ export interface CreateFileSystemFromBackupRequest {
   LustreConfiguration?: CreateFileSystemLustreConfiguration | undefined;
 
   /**
-   * <p>Sets the storage type for the Windows or OpenZFS file system that you're creating from
-   *             a backup. Valid values are <code>SSD</code> and <code>HDD</code>.</p>
+   * <p>Sets the storage type for the Windows, OpenZFS, or Lustre file system that you're creating from
+   *             a backup. Valid values are <code>SSD</code>, <code>HDD</code>, and <code>INTELLIGENT_TIERING</code>.</p>
    *          <ul>
    *             <li>
    *                <p>Set to <code>SSD</code> to use solid state drive storage. SSD is supported on all Windows and OpenZFS
@@ -6774,6 +7334,11 @@ export interface CreateFileSystemFromBackupRequest {
    *             <li>
    *                <p>Set to <code>HDD</code> to use hard disk drive storage.
    *                     HDD is supported on <code>SINGLE_AZ_2</code> and <code>MULTI_AZ_1</code> FSx for Windows File Server file system deployment types.</p>
+   *             </li>
+   *             <li>
+   *                <p>Set to <code>INTELLIGENT_TIERING</code> to use fully elastic, intelligently-tiered storage.
+   *                     Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type
+   *                     and for Lustre file systems with the Persistent_2 deployment type.</p>
    *             </li>
    *          </ul>
    *          <p> The default value is <code>SSD</code>. </p>
@@ -6844,6 +7409,13 @@ export interface CreateFileSystemFromBackupRequest {
    * @public
    */
   StorageCapacity?: number | undefined;
+
+  /**
+   * <p>Sets the network type for the Amazon FSx for OpenZFS file system
+   *             that you're creating from a backup.</p>
+   * @public
+   */
+  NetworkType?: NetworkType | undefined;
 }
 
 /**
@@ -7641,11 +8213,9 @@ export interface CreateOpenZFSVolumeConfiguration {
 
   /**
    * <p>A Boolean value indicating whether tags for the volume should be copied to snapshots.
-   *             This value defaults to <code>false</code>. If it's set to <code>true</code>, all tags
-   *             for the volume are copied to snapshots where the user doesn't specify tags. If this
-   *             value is <code>true</code>, and you specify one or more tags, only the specified tags
-   *             are copied to snapshots. If you specify one or more tags when creating the snapshot, no
-   *             tags are copied from the volume, regardless of this value.</p>
+   *             This value defaults to <code>false</code>. If this value is set to <code>true</code>, and you do not specify any tags, all tags for the original volume are copied over to snapshots.
+   *             If this value is set to <code>true</code>, and you do specify one or more tags, only the specified tags for the original volume are copied over to snapshots. If you specify one or more tags when creating a new snapshot, no tags are copied over from the original volume, regardless of this value.
+   *         </p>
    * @public
    */
   CopyTagsToSnapshots?: boolean | undefined;
@@ -9050,6 +9620,117 @@ export interface DescribeFileSystemsRequest {
 
 /**
  * @public
+ * @enum
+ */
+export const S3AccessPointAttachmentsFilterName = {
+  FILE_SYSTEM_ID: "file-system-id",
+  TYPE: "type",
+  VOLUME_ID: "volume-id",
+} as const;
+
+/**
+ * @public
+ */
+export type S3AccessPointAttachmentsFilterName =
+  (typeof S3AccessPointAttachmentsFilterName)[keyof typeof S3AccessPointAttachmentsFilterName];
+
+/**
+ * <p>A set of Name and Values pairs used to view a select set of S3 access point attachments.</p>
+ * @public
+ */
+export interface S3AccessPointAttachmentsFilter {
+  /**
+   * <p>The name of the filter.</p>
+   * @public
+   */
+  Name?: S3AccessPointAttachmentsFilterName | undefined;
+
+  /**
+   * <p>The values of the filter.</p>
+   * @public
+   */
+  Values?: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DescribeS3AccessPointAttachmentsRequest {
+  /**
+   * <p>The names of the S3 access point attachments whose descriptions you want to retrieve.</p>
+   * @public
+   */
+  Names?: string[] | undefined;
+
+  /**
+   * <p>Enter a filter Name and Values pair to view a select set of S3 access point attachments.</p>
+   * @public
+   */
+  Filters?: S3AccessPointAttachmentsFilter[] | undefined;
+
+  /**
+   * <p>The maximum number of resources to return in the response. This value must be an
+   *             integer greater than zero.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+
+  /**
+   * <p>(Optional) Opaque pagination token returned from a previous operation (String). If
+   *             present, this token indicates from what point you can continue processing the request, where
+   *             the previous <code>NextToken</code> value left off.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DescribeS3AccessPointAttachmentsResponse {
+  /**
+   * <p>Array of S3 access point attachments returned after a successful <code>DescribeS3AccessPointAttachments</code> operation.</p>
+   * @public
+   */
+  S3AccessPointAttachments?: S3AccessPointAttachment[] | undefined;
+
+  /**
+   * <p>(Optional) Opaque pagination token returned from a previous operation (String). If
+   *             present, this token indicates from what point you can continue processing the request, where
+   *             the previous <code>NextToken</code> value left off.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * <p>The access point specified was not found.</p>
+ * @public
+ */
+export class S3AccessPointAttachmentNotFound extends __BaseException {
+  readonly name: "S3AccessPointAttachmentNotFound" = "S3AccessPointAttachmentNotFound";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<S3AccessPointAttachmentNotFound, __BaseException>) {
+    super({
+      name: "S3AccessPointAttachmentNotFound",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, S3AccessPointAttachmentNotFound.prototype);
+    this.Message = opts.Message;
+  }
+}
+
+/**
+ * @public
  */
 export interface DescribeSharedVpcConfigurationRequest {}
 
@@ -9293,6 +9974,42 @@ export interface DescribeVolumesRequest {
    * @public
    */
   NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DetachAndDeleteS3AccessPointRequest {
+  /**
+   * <p>(Optional) An idempotency token for resource creation, in a string of up to 63
+   *             ASCII characters. This token is automatically filled on your behalf when you use the
+   *             Command Line Interface (CLI) or an Amazon Web Services SDK.</p>
+   * @public
+   */
+  ClientRequestToken?: string | undefined;
+
+  /**
+   * <p>The name of the S3 access point attachment that you want to delete.</p>
+   * @public
+   */
+  Name: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DetachAndDeleteS3AccessPointResponse {
+  /**
+   * <p>The lifecycle status of the S3 access point attachment.</p>
+   * @public
+   */
+  Lifecycle?: S3AccessPointAttachmentLifecycle | undefined;
+
+  /**
+   * <p>The name of the S3 access point attachment being deleted.</p>
+   * @public
+   */
+  Name?: string | undefined;
 }
 
 /**
@@ -9691,13 +10408,8 @@ export interface UpdateDataRepositoryAssociationResponse {
  */
 export interface UpdateFileCacheLustreConfiguration {
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -9752,9 +10464,18 @@ export interface UpdateFileCacheResponse {
 export interface UpdateFileSystemLustreMetadataConfiguration {
   /**
    * <p>(USER_PROVISIONED mode only) Specifies the number of Metadata IOPS to provision
-   *             for your file system. Valid values are <code>1500</code>, <code>3000</code>,
-   *             <code>6000</code>, <code>12000</code>, and multiples of <code>12000</code>
-   *             up to a maximum of <code>192000</code>.</p>
+   *             for your file system.</p>
+   *          <ul>
+   *             <li>
+   *                <p>For SSD file systems, valid values are <code>1500</code>,
+   *                     <code>3000</code>, <code>6000</code>, <code>12000</code>, and
+   *                     multiples of <code>12000</code> up to a maximum of <code>192000</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For Intelligent-Tiering file systems, valid values are <code>6000</code>
+   *                     and <code>12000</code>.</p>
+   *             </li>
+   *          </ul>
    *          <p>The value you provide must be greater than or equal to the current number of
    *             Metadata IOPS provisioned for the file system.</p>
    * @public
@@ -9767,19 +10488,28 @@ export interface UpdateFileSystemLustreMetadataConfiguration {
    *             deployment type.</p>
    *          <ul>
    *             <li>
-   *                <p>To increase the Metadata IOPS or to switch from AUTOMATIC mode,
+   *                <p>To increase the Metadata IOPS or to switch an SSD file system from
+   *                     AUTOMATIC,
    *                 specify <code>USER_PROVISIONED</code> as the value for this parameter. Then use the
    *                 Iops parameter to provide a Metadata IOPS value that is greater than or equal to
    *                 the current number of Metadata IOPS provisioned for the file system.</p>
    *             </li>
    *             <li>
-   *                <p>To switch from USER_PROVISIONED mode, specify
+   *                <p>To switch from USER_PROVISIONED mode on an SSD file system, specify
    *                 <code>AUTOMATIC</code> as the value for this parameter, but do not input a value
    *                 for Iops.</p>
    *                <note>
-   *                   <p>If you request to switch from USER_PROVISIONED to AUTOMATIC mode and the
-   *                     current Metadata IOPS value is greater than the automated default, FSx for Lustre
-   *                     rejects the request because downscaling Metadata IOPS is not supported.</p>
+   *                   <ul>
+   *                      <li>
+   *                         <p>If you request to switch from USER_PROVISIONED to AUTOMATIC mode and the
+   *                                 current Metadata IOPS value is greater than the automated default, FSx for Lustre
+   *                                 rejects the request because downscaling Metadata IOPS is not supported.</p>
+   *                      </li>
+   *                      <li>
+   *                         <p>AUTOMATIC mode is not supported on Intelligent-Tiering
+   *                                 file systems. For Intelligent-Tiering file systems, use USER_PROVISIONED mode.</p>
+   *                      </li>
+   *                   </ul>
    *                </note>
    *             </li>
    *          </ul>
@@ -9922,6 +10652,21 @@ export interface UpdateFileSystemLustreConfiguration {
    * @public
    */
   MetadataConfiguration?: UpdateFileSystemLustreMetadataConfiguration | undefined;
+
+  /**
+   * <p>The throughput of an Amazon FSx for Lustre file system using an Intelligent-Tiering
+   *             storage class, measured in megabytes per second (MBps). You can only increase your file
+   *             system's throughput. Valid values are 4000 MBps or multiples of 4000 MBps.</p>
+   * @public
+   */
+  ThroughputCapacity?: number | undefined;
+
+  /**
+   * <p>Specifies the optional provisioned SSD read cache on Amazon FSx for Lustre file systems that
+   *                 use the Intelligent-Tiering storage class.</p>
+   * @public
+   */
+  DataReadCacheConfiguration?: LustreReadCacheConfiguration | undefined;
 }
 
 /**
@@ -9955,13 +10700,8 @@ export interface UpdateFileSystemOntapConfiguration {
   FsxAdminPassword?: string | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -9973,7 +10713,7 @@ export interface UpdateFileSystemOntapConfiguration {
    *             of an IOPS mode (<code>AUTOMATIC</code> or <code>USER_PROVISIONED</code>), and in
    *             the case of <code>USER_PROVISIONED</code> IOPS, the total number of SSD IOPS provisioned.
    *             For more information, see
-   *             <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/increase-primary-storage.html">Updating SSD storage capacity and IOPS</a>.</p>
+   *             <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/storage-capacity-and-IOPS.html">File system storage capacity and IOPS</a>.</p>
    * @public
    */
   DiskIopsConfiguration?: DiskIopsConfiguration | undefined;
@@ -10114,13 +10854,8 @@ export interface UpdateFileSystemOpenZFSConfiguration {
   ThroughputCapacity?: number | undefined;
 
   /**
-   * <p>A recurring weekly time, in the format <code>D:HH:MM</code>. </p>
-   *          <p>
-   *             <code>D</code> is the day of the week, for which 1 represents Monday and 7
-   *             represents Sunday. For further details, see <a href="https://en.wikipedia.org/wiki/ISO_week_date">the ISO-8601 spec as described on Wikipedia</a>.</p>
-   *          <p>
-   *             <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is
-   *             the zero-padded minute of the hour. </p>
+   * <p>The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC
+   *             time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.</p>
    *          <p>For example, <code>1:05:00</code> specifies maintenance at 5 AM Monday.</p>
    * @public
    */
@@ -10157,6 +10892,16 @@ export interface UpdateFileSystemOpenZFSConfiguration {
    * @public
    */
   ReadCacheConfiguration?: OpenZFSReadCacheConfiguration | undefined;
+
+  /**
+   * <p>(Multi-AZ only) Specifies the IP address range in which the endpoints to access your
+   *             file system will be created. By default in the Amazon FSx API and Amazon FSx console,
+   *             Amazon FSx selects an available /118 IP address range for you from one of the VPC's CIDR ranges.
+   *             You can have overlapping endpoint IP addresses for file systems deployed in the same VPC/route tables,
+   *             as long as they don't overlap with any subnet.</p>
+   * @public
+   */
+  EndpointIpv6AddressRange?: string | undefined;
 }
 
 /**
@@ -10293,8 +11038,8 @@ export interface UpdateFileSystemRequest {
   /**
    * <p>Use this parameter to increase the storage capacity of an FSx for Windows File Server,
    *       FSx for Lustre, FSx for OpenZFS, or FSx for ONTAP file system.
-   *       Specifies the storage capacity target value, in GiB, to increase the storage capacity for
-   *       the file system that you're updating. </p>
+   *       For second-generation FSx for ONTAP file systems, you can also decrease the storage capacity.
+   *       Specifies the storage capacity target value, in GiB, for the file system that you're updating. </p>
    *          <note>
    *             <p>You can't make a storage capacity increase request if there is an existing storage
    *         capacity increase request in progress.</p>
@@ -10325,10 +11070,10 @@ export interface UpdateFileSystemRequest {
    *       must have at least 16 MBps of throughput capacity. For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
    *         capacity</a> in the <i>Amazon FSxfor Windows File Server User
    *           Guide</i>.</p>
-   *          <p>For ONTAP file systems, the storage capacity target value must be at least 10 percent
-   *       greater than the current storage capacity value.  For more information, see
-   *       <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html">Managing storage capacity and provisioned IOPS</a> in the <i>Amazon FSx for NetApp ONTAP User
-   *           Guide</i>.</p>
+   *          <p>For ONTAP file systems, when increasing storage capacity, the storage capacity target value must be at least 10 percent
+   *       greater than the current storage capacity value. When decreasing storage capacity on second-generation file systems, the target value must be at least 9 percent smaller than the current SSD storage capacity. For more information, see
+   *       <a href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/storage-capacity-and-IOPS.html">File system storage capacity and IOPS</a> in the Amazon FSx for NetApp ONTAP User
+   *           Guide.</p>
    * @public
    */
   StorageCapacity?: number | undefined;
@@ -10371,6 +11116,12 @@ export interface UpdateFileSystemRequest {
    * @public
    */
   FileSystemTypeVersion?: string | undefined;
+
+  /**
+   * <p>Changes the network type of an FSx for OpenZFS file system.</p>
+   * @public
+   */
+  NetworkType?: NetworkType | undefined;
 }
 
 /**
@@ -10994,6 +11745,12 @@ export interface AdministrativeAction {
    * @public
    */
   RemainingTransferBytes?: number | undefined;
+
+  /**
+   * <p>A detailed error message.</p>
+   * @public
+   */
+  Message?: string | undefined;
 }
 
 /**
@@ -11082,10 +11839,19 @@ export interface FileSystem {
   StorageCapacity?: number | undefined;
 
   /**
-   * <p>The type of storage the file system is using.
-   *             If set to <code>SSD</code>, the file system uses solid state drive storage.
-   *             If set to <code>HDD</code>, the file system uses hard disk drive storage.
-   *         </p>
+   * <p>The type of storage the file system is using.</p>
+   *          <ul>
+   *             <li>
+   *                <p>If set to <code>SSD</code>, the file system uses solid state drive storage.</p>
+   *             </li>
+   *             <li>
+   *                <p>If set to <code>HDD</code>, the file system uses hard disk drive storage.</p>
+   *             </li>
+   *             <li>
+   *                <p>If set to <code>INTELLIGENT_TIERING</code>, the file system uses fully elastic,
+   *                     intelligently-tiered storage.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   StorageType?: StorageType | undefined;
@@ -11205,6 +11971,12 @@ export interface FileSystem {
    * @public
    */
   OpenZFSConfiguration?: OpenZFSFileSystemConfiguration | undefined;
+
+  /**
+   * <p>The network type of the file system.</p>
+   * @public
+   */
+  NetworkType?: NetworkType | undefined;
 }
 
 /**
@@ -11462,374 +12234,6 @@ export interface RestoreVolumeFromSnapshotResponse {
 }
 
 /**
- * <p>The response object for the <code>CreateFileSystemFromBackup</code>
- *             operation.</p>
- * @public
- */
-export interface CreateFileSystemFromBackupResponse {
-  /**
-   * <p>A description of the file system.</p>
-   * @public
-   */
-  FileSystem?: FileSystem | undefined;
-}
-
-/**
- * <p>The response object returned after the file system is created.</p>
- * @public
- */
-export interface CreateFileSystemResponse {
-  /**
-   * <p>The configuration of the file system that was created.</p>
-   * @public
-   */
-  FileSystem?: FileSystem | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateSnapshotResponse {
-  /**
-   * <p>A description of the snapshot.</p>
-   * @public
-   */
-  Snapshot?: Snapshot | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVolumeFromBackupResponse {
-  /**
-   * <p>Returned after a successful <code>CreateVolumeFromBackup</code> API operation,
-   *             describing the volume just created.</p>
-   * @public
-   */
-  Volume?: Volume | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVolumeResponse {
-  /**
-   * <p>Returned after a successful <code>CreateVolume</code> API operation, describing the volume just created.</p>
-   * @public
-   */
-  Volume?: Volume | undefined;
-}
-
-/**
- * @public
- */
-export interface ReleaseFileSystemNfsV3LocksResponse {
-  /**
-   * <p>A description of a specific Amazon FSx file system.</p>
-   * @public
-   */
-  FileSystem?: FileSystem | undefined;
-}
-
-/**
- * @public
- */
-export interface StartMisconfiguredStateRecoveryResponse {
-  /**
-   * <p>A description of a specific Amazon FSx file system.</p>
-   * @public
-   */
-  FileSystem?: FileSystem | undefined;
-}
-
-/**
- * <p>The response object for the <code>UpdateFileSystem</code> operation.</p>
- * @public
- */
-export interface UpdateFileSystemResponse {
-  /**
-   * <p>A description of the file system that was updated.</p>
-   * @public
-   */
-  FileSystem?: FileSystem | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateSnapshotResponse {
-  /**
-   * <p>Returned after a successful <code>UpdateSnapshot</code> operation, describing the
-   *             snapshot that you updated.</p>
-   * @public
-   */
-  Snapshot?: Snapshot | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateVolumeResponse {
-  /**
-   * <p>A description of the volume just updated. Returned after a successful
-   *                 <code>UpdateVolume</code> API operation.</p>
-   * @public
-   */
-  Volume?: Volume | undefined;
-}
-
-/**
- * <p>The response object for <code>DescribeFileSystems</code> operation.</p>
- * @public
- */
-export interface DescribeFileSystemsResponse {
-  /**
-   * <p>An array of file system descriptions.</p>
-   * @public
-   */
-  FileSystems?: FileSystem[] | undefined;
-
-  /**
-   * <p>Present if there are more file systems than returned in the response (String). You
-   *             can use the <code>NextToken</code> value in the later request to fetch the
-   *             descriptions. </p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DescribeSnapshotsResponse {
-  /**
-   * <p>An array of snapshots.</p>
-   * @public
-   */
-  Snapshots?: Snapshot[] | undefined;
-
-  /**
-   * <p>(Optional) Opaque pagination token returned from a previous operation (String). If
-   *             present, this token indicates from what point you can continue processing the request, where
-   *             the previous <code>NextToken</code> value left off.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DescribeVolumesResponse {
-  /**
-   * <p>Returned after a successful <code>DescribeVolumes</code> operation, describing each volume.</p>
-   * @public
-   */
-  Volumes?: Volume[] | undefined;
-
-  /**
-   * <p>(Optional) Opaque pagination token returned from a previous operation (String). If
-   *             present, this token indicates from what point you can continue processing the request, where
-   *             the previous <code>NextToken</code> value left off.</p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
- * <p>A backup of an Amazon FSx for Windows File Server, Amazon FSx for
- *             Lustre file system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx
- *             for OpenZFS file system.</p>
- * @public
- */
-export interface Backup {
-  /**
-   * <p>The ID of the backup.</p>
-   * @public
-   */
-  BackupId: string | undefined;
-
-  /**
-   * <p>The lifecycle status of the backup.</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>AVAILABLE</code> - The backup is fully available.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>PENDING</code> - For user-initiated backups on Lustre file systems only; Amazon FSx hasn't started creating the backup.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>CREATING</code> - Amazon FSx is creating the backup.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>TRANSFERRING</code> - For user-initiated backups on Lustre file systems only; Amazon FSx is transferring the backup to Amazon S3.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>COPYING</code> - Amazon FSx is copying the backup.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>DELETED</code> - Amazon FSx deleted the backup and it's no longer
-   *                     available.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>FAILED</code> - Amazon FSx couldn't finish the backup.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  Lifecycle: BackupLifecycle | undefined;
-
-  /**
-   * <p>Details explaining any failures that occurred when creating a backup.</p>
-   * @public
-   */
-  FailureDetails?: BackupFailureDetails | undefined;
-
-  /**
-   * <p>The type of the file-system backup.</p>
-   * @public
-   */
-  Type: BackupType | undefined;
-
-  /**
-   * <p>Displays the current percent of progress of an asynchronous task.</p>
-   * @public
-   */
-  ProgressPercent?: number | undefined;
-
-  /**
-   * <p>The time when a particular backup was created.</p>
-   * @public
-   */
-  CreationTime: Date | undefined;
-
-  /**
-   * <p>The ID of the Key Management Service (KMS) key used to encrypt the
-   *             backup of the Amazon FSx file system's data at rest. </p>
-   * @public
-   */
-  KmsKeyId?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) for the backup resource.</p>
-   * @public
-   */
-  ResourceARN?: string | undefined;
-
-  /**
-   * <p>The tags associated with a particular file system.</p>
-   * @public
-   */
-  Tags?: Tag[] | undefined;
-
-  /**
-   * <p>The metadata of the file system associated with the backup. This metadata is persisted
-   *             even if the file system is deleted.</p>
-   * @public
-   */
-  FileSystem: FileSystem | undefined;
-
-  /**
-   * <p>The configuration of the self-managed Microsoft Active Directory directory to which
-   *             the Windows File Server instance is joined.</p>
-   * @public
-   */
-  DirectoryInformation?: ActiveDirectoryBackupAttributes | undefined;
-
-  /**
-   * <p>An Amazon Web Services account ID. This ID is a 12-digit number that you use to construct Amazon
-   *             Resource Names (ARNs) for resources.</p>
-   * @public
-   */
-  OwnerId?: string | undefined;
-
-  /**
-   * <p>The ID of the source backup. Specifies the backup that you are copying.</p>
-   * @public
-   */
-  SourceBackupId?: string | undefined;
-
-  /**
-   * <p>The source Region of the backup. Specifies the Region from where this backup
-   *             is copied.</p>
-   * @public
-   */
-  SourceBackupRegion?: string | undefined;
-
-  /**
-   * <p>Specifies the resource type that's backed up.</p>
-   * @public
-   */
-  ResourceType?: ResourceType | undefined;
-
-  /**
-   * <p>Describes an Amazon FSx volume.</p>
-   * @public
-   */
-  Volume?: Volume | undefined;
-
-  /**
-   * <p>
-   *             The size of the backup in bytes. This represents the amount of data that the file system would contain if you restore this backup.
-   *         </p>
-   * @public
-   */
-  SizeInBytes?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface CopyBackupResponse {
-  /**
-   * <p>A backup of an Amazon FSx for Windows File Server, Amazon FSx for
-   *             Lustre file system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx
-   *             for OpenZFS file system.</p>
-   * @public
-   */
-  Backup?: Backup | undefined;
-}
-
-/**
- * <p>The response object for the <code>CreateBackup</code> operation.</p>
- * @public
- */
-export interface CreateBackupResponse {
-  /**
-   * <p>A description of the backup.</p>
-   * @public
-   */
-  Backup?: Backup | undefined;
-}
-
-/**
- * <p>Response object for the <code>DescribeBackups</code> operation.</p>
- * @public
- */
-export interface DescribeBackupsResponse {
-  /**
-   * <p>An array of backups.</p>
-   * @public
-   */
-  Backups?: Backup[] | undefined;
-
-  /**
-   * <p>A <code>NextToken</code> value is present if there are more backups than returned in
-   *             the response. You can use the <code>NextToken</code> value in the subsequent request to
-   *             fetch the backups. </p>
-   * @public
-   */
-  NextToken?: string | undefined;
-}
-
-/**
  * @internal
  */
 export const OntapFileSystemConfigurationFilterSensitiveLog = (obj: OntapFileSystemConfiguration): any => ({
@@ -12054,137 +12458,4 @@ export const RestoreVolumeFromSnapshotResponseFilterSensitiveLog = (obj: Restore
   ...(obj.AdministrativeActions && {
     AdministrativeActions: obj.AdministrativeActions.map((item) => AdministrativeActionFilterSensitiveLog(item)),
   }),
-});
-
-/**
- * @internal
- */
-export const CreateFileSystemFromBackupResponseFilterSensitiveLog = (obj: CreateFileSystemFromBackupResponse): any => ({
-  ...obj,
-  ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
-});
-
-/**
- * @internal
- */
-export const CreateFileSystemResponseFilterSensitiveLog = (obj: CreateFileSystemResponse): any => ({
-  ...obj,
-  ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
-});
-
-/**
- * @internal
- */
-export const CreateSnapshotResponseFilterSensitiveLog = (obj: CreateSnapshotResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const CreateVolumeFromBackupResponseFilterSensitiveLog = (obj: CreateVolumeFromBackupResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const CreateVolumeResponseFilterSensitiveLog = (obj: CreateVolumeResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const ReleaseFileSystemNfsV3LocksResponseFilterSensitiveLog = (
-  obj: ReleaseFileSystemNfsV3LocksResponse
-): any => ({
-  ...obj,
-  ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
-});
-
-/**
- * @internal
- */
-export const StartMisconfiguredStateRecoveryResponseFilterSensitiveLog = (
-  obj: StartMisconfiguredStateRecoveryResponse
-): any => ({
-  ...obj,
-  ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
-});
-
-/**
- * @internal
- */
-export const UpdateFileSystemResponseFilterSensitiveLog = (obj: UpdateFileSystemResponse): any => ({
-  ...obj,
-  ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
-});
-
-/**
- * @internal
- */
-export const UpdateSnapshotResponseFilterSensitiveLog = (obj: UpdateSnapshotResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const UpdateVolumeResponseFilterSensitiveLog = (obj: UpdateVolumeResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const DescribeFileSystemsResponseFilterSensitiveLog = (obj: DescribeFileSystemsResponse): any => ({
-  ...obj,
-  ...(obj.FileSystems && { FileSystems: obj.FileSystems.map((item) => FileSystemFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const DescribeSnapshotsResponseFilterSensitiveLog = (obj: DescribeSnapshotsResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const DescribeVolumesResponseFilterSensitiveLog = (obj: DescribeVolumesResponse): any => ({
-  ...obj,
-});
-
-/**
- * @internal
- */
-export const BackupFilterSensitiveLog = (obj: Backup): any => ({
-  ...obj,
-  ...(obj.FileSystem && { FileSystem: FileSystemFilterSensitiveLog(obj.FileSystem) }),
-});
-
-/**
- * @internal
- */
-export const CopyBackupResponseFilterSensitiveLog = (obj: CopyBackupResponse): any => ({
-  ...obj,
-  ...(obj.Backup && { Backup: BackupFilterSensitiveLog(obj.Backup) }),
-});
-
-/**
- * @internal
- */
-export const CreateBackupResponseFilterSensitiveLog = (obj: CreateBackupResponse): any => ({
-  ...obj,
-  ...(obj.Backup && { Backup: BackupFilterSensitiveLog(obj.Backup) }),
-});
-
-/**
- * @internal
- */
-export const DescribeBackupsResponseFilterSensitiveLog = (obj: DescribeBackupsResponse): any => ({
-  ...obj,
-  ...(obj.Backups && { Backups: obj.Backups.map((item) => BackupFilterSensitiveLog(item)) }),
 });

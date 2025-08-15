@@ -33,6 +33,10 @@ export const ClusterStatus = {
   DELETED: "DELETED",
   DELETING: "DELETING",
   FAILED: "FAILED",
+  IDLE: "IDLE",
+  INACTIVE: "INACTIVE",
+  PENDING_DELETE: "PENDING_DELETE",
+  PENDING_SETUP: "PENDING_SETUP",
   UPDATING: "UPDATING",
 } as const;
 
@@ -76,15 +80,39 @@ export class ConflictException extends __BaseException {
 }
 
 /**
+ * <p>Defines the structure for multi-Region cluster configurations, containing the witness region and linked cluster settings.</p>
+ * @public
+ */
+export interface MultiRegionProperties {
+  /**
+   * <p>The  that serves as the witness region for a multi-Region cluster. The witness region helps maintain cluster consistency and quorum.</p>
+   * @public
+   */
+  witnessRegion?: string | undefined;
+
+  /**
+   * <p>The set of linked clusters that form the multi-Region cluster configuration. Each linked cluster represents a database instance in a different  Region.</p>
+   * @public
+   */
+  clusters?: string[] | undefined;
+}
+
+/**
  * @public
  */
 export interface CreateClusterInput {
   /**
-   * <p>If enabled, you can't delete your cluster. You must first
-   *       disable this property before you can delete your cluster.</p>
+   * <p>If enabled, you can't delete your cluster. You must first disable this property before
+   *          you can delete your cluster.</p>
    * @public
    */
   deletionProtectionEnabled?: boolean | undefined;
+
+  /**
+   * <p>The KMS key that encrypts and protects the data on your cluster. You can specify the ARN, ID, or alias of an existing key or have Amazon Web Services create a default key for you.</p>
+   * @public
+   */
+  kmsEncryptionKey?: string | undefined;
 
   /**
    * <p>A map of key and value pairs to use to tag your cluster.</p>
@@ -93,21 +121,80 @@ export interface CreateClusterInput {
   tags?: Record<string, string> | undefined;
 
   /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the
-   *       idempotency of the request. Idempotency ensures that an API request completes
-   *        only once. With an idempotent request, if the original request completes
-   *        successfully, the subsequent retries with the same client token return the
-   *        result from the original successful request and they
-   *        have no additional effect.</p>
-   *          <p>If you don't specify a client token, the Amazon Web Services SDK
-   *       automatically generates one.</p>
+   * <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the
+   *          request. Idempotency ensures that an API request completes only once. With an idempotent
+   *          request, if the original request completes successfully, the subsequent retries with the
+   *          same client token return the result from the original successful request and they have no
+   *          additional effect.</p>
+   *          <p>If you don't specify a client token, the Amazon Web Services SDK automatically generates
+   *          one.</p>
    * @public
    */
   clientToken?: string | undefined;
+
+  /**
+   * <p>The configuration settings when creating a multi-Region cluster, including the witness region and linked cluster properties.</p>
+   * @public
+   */
+  multiRegionProperties?: MultiRegionProperties | undefined;
 }
 
 /**
- * Output Mixin
+ * @public
+ * @enum
+ */
+export const EncryptionStatus = {
+  ENABLED: "ENABLED",
+  ENABLING: "ENABLING",
+  KMS_KEY_INACCESSIBLE: "KMS_KEY_INACCESSIBLE",
+  UPDATING: "UPDATING",
+} as const;
+
+/**
+ * @public
+ */
+export type EncryptionStatus = (typeof EncryptionStatus)[keyof typeof EncryptionStatus];
+
+/**
+ * @public
+ * @enum
+ */
+export const EncryptionType = {
+  AWS_OWNED_KMS_KEY: "AWS_OWNED_KMS_KEY",
+  CUSTOMER_MANAGED_KMS_KEY: "CUSTOMER_MANAGED_KMS_KEY",
+} as const;
+
+/**
+ * @public
+ */
+export type EncryptionType = (typeof EncryptionType)[keyof typeof EncryptionType];
+
+/**
+ * <p>Configuration details about encryption for the cluster including the KMS key ARN, encryption type, and encryption status.</p>
+ * @public
+ */
+export interface EncryptionDetails {
+  /**
+   * <p>The type of encryption that protects the data on your cluster.</p>
+   * @public
+   */
+  encryptionType: EncryptionType | undefined;
+
+  /**
+   * <p>The ARN of the KMS key that encrypts data in the cluster.</p>
+   * @public
+   */
+  kmsKeyArn?: string | undefined;
+
+  /**
+   * <p>The status of encryption for the cluster.</p>
+   * @public
+   */
+  encryptionStatus: EncryptionStatus | undefined;
+}
+
+/**
+ * <p>The output of a created cluster.</p>
  * @public
  */
 export interface CreateClusterOutput {
@@ -136,6 +223,18 @@ export interface CreateClusterOutput {
   creationTime: Date | undefined;
 
   /**
+   * <p>The multi-Region cluster configuration details that were set during cluster creation</p>
+   * @public
+   */
+  multiRegionProperties?: MultiRegionProperties | undefined;
+
+  /**
+   * <p>The encryption configuration for the cluster that was specified during the creation process, including the KMS key identifier and encryption state.</p>
+   * @public
+   */
+  encryptionDetails?: EncryptionDetails | undefined;
+
+  /**
    * <p>Whether deletion protection is enabled on this cluster.</p>
    * @public
    */
@@ -143,8 +242,8 @@ export interface CreateClusterOutput {
 }
 
 /**
- * <p>The request processing has failed because of an unknown error,
- *       exception or failure.</p>
+ * <p>The request processing has failed because of an unknown error, exception or
+ *          failure.</p>
  * @public
  */
 export class InternalServerException extends __BaseException {
@@ -179,25 +278,25 @@ export class ServiceQuotaExceededException extends __BaseException {
   readonly name: "ServiceQuotaExceededException" = "ServiceQuotaExceededException";
   readonly $fault: "client" = "client";
   /**
-   * Identifier of the resource affected
+   * <p>The resource ID exceeds a quota.</p>
    * @public
    */
   resourceId: string | undefined;
 
   /**
-   * Type of the resource affected
+   * <p>The resource type exceeds a quota.</p>
    * @public
    */
   resourceType: string | undefined;
 
   /**
-   * Service Quotas requirement to identify originating service
+   * <p>The request exceeds a service quota.</p>
    * @public
    */
   serviceCode: string | undefined;
 
   /**
-   * Service Quotas requirement to identify originating quota
+   * <p>The service exceeds a quota.</p>
    * @public
    */
   quotaCode: string | undefined;
@@ -230,19 +329,19 @@ export class ThrottlingException extends __BaseException {
     throttling: true,
   };
   /**
-   * Service Quotas requirement to identify originating service
+   * <p>The request exceeds a service quota.</p>
    * @public
    */
   serviceCode?: string | undefined;
 
   /**
-   * Service Quotas requirement to identify originating quota
+   * <p>The request exceeds a request rate quota.</p>
    * @public
    */
   quotaCode?: string | undefined;
 
   /**
-   * Advice to clients on when the call can be safely retried
+   * <p>The request exceeds a request rate quota. Retry after seconds.</p>
    * @public
    */
   retryAfterSeconds?: number | undefined;
@@ -264,8 +363,8 @@ export class ThrottlingException extends __BaseException {
 }
 
 /**
- * <p>Stores information about a field passed inside a
- *       request that resulted in an validation error.</p>
+ * <p>Stores information about a field passed inside a request that resulted in an validation
+ *          error.</p>
  * @public
  */
 export interface ValidationExceptionField {
@@ -307,13 +406,13 @@ export class ValidationException extends __BaseException {
   readonly name: "ValidationException" = "ValidationException";
   readonly $fault: "client" = "client";
   /**
-   * Reason the request failed validation
+   * <p>The reason for the validation exception.</p>
    * @public
    */
   reason: ValidationExceptionReason | undefined;
 
   /**
-   * List of fields that caused the error
+   * <p>A list of fields that didn't validate.</p>
    * @public
    */
   fieldList?: ValidationExceptionField[] | undefined;
@@ -334,71 +433,6 @@ export class ValidationException extends __BaseException {
 }
 
 /**
- * <p>Properties of linked clusters.</p>
- * @public
- */
-export interface LinkedClusterProperties {
-  /**
-   * <p>Whether deletion protection is enabled.</p>
-   * @public
-   */
-  deletionProtectionEnabled?: boolean | undefined;
-
-  /**
-   * <p>A map of key and value pairs the linked cluster is tagged with.</p>
-   * @public
-   */
-  tags?: Record<string, string> | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateMultiRegionClustersInput {
-  /**
-   * <p>An array of the Regions in which you want to create additional clusters.</p>
-   * @public
-   */
-  linkedRegionList: string[] | undefined;
-
-  /**
-   * <p>A mapping of properties to use when creating linked clusters.</p>
-   * @public
-   */
-  clusterProperties?: Record<string, LinkedClusterProperties> | undefined;
-
-  /**
-   * <p>The witness Region of multi-Region clusters.</p>
-   * @public
-   */
-  witnessRegion: string | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the
-   *       idempotency of the request. Idempotency ensures that an API request completes
-   *        only once. With an idempotent request, if the original request completes
-   *        successfully. The subsequent retries with the same client token return the
-   *        result from the original successful request and they
-   *        have no additional effect.</p>
-   *          <p>If you don't specify a client token, the Amazon Web Services SDK
-   *       automatically generates one.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateMultiRegionClustersOutput {
-  /**
-   * <p>An array that contains the ARNs of all linked clusters.</p>
-   * @public
-   */
-  linkedClusterArns: string[] | undefined;
-}
-
-/**
  * @public
  */
 export interface DeleteClusterInput {
@@ -409,21 +443,20 @@ export interface DeleteClusterInput {
   identifier: string | undefined;
 
   /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the
-   *       idempotency of the request. Idempotency ensures that an API request completes
-   *        only once. With an idempotent request, if the original request completes
-   *        successfully. The subsequent retries with the same client token return the
-   *        result from the original successful request and they
-   *        have no additional effect.</p>
-   *          <p>If you don't specify a client token, the Amazon Web Services SDK
-   *       automatically generates one.</p>
+   * <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the
+   *          request. Idempotency ensures that an API request completes only once. With an idempotent
+   *          request, if the original request completes successfully. The subsequent retries with the
+   *          same client token return the result from the original successful request and they have no
+   *          additional effect.</p>
+   *          <p>If you don't specify a client token, the Amazon Web Services SDK automatically generates
+   *          one.</p>
    * @public
    */
   clientToken?: string | undefined;
 }
 
 /**
- * Output Mixin
+ * <p>The output from a deleted cluster.</p>
  * @public
  */
 export interface DeleteClusterOutput {
@@ -450,12 +483,6 @@ export interface DeleteClusterOutput {
    * @public
    */
   creationTime: Date | undefined;
-
-  /**
-   * <p>Specifies whether deletion protection was enabled on the cluster.</p>
-   * @public
-   */
-  deletionProtectionEnabled: boolean | undefined;
 }
 
 /**
@@ -466,13 +493,13 @@ export class ResourceNotFoundException extends __BaseException {
   readonly name: "ResourceNotFoundException" = "ResourceNotFoundException";
   readonly $fault: "client" = "client";
   /**
-   * Hypothetical identifier of the resource which does not exist
+   * <p>The resource ID could not be found.</p>
    * @public
    */
   resourceId: string | undefined;
 
   /**
-   * Hypothetical type of the resource which does not exist
+   * <p>The resource type could not be found.</p>
    * @public
    */
   resourceType: string | undefined;
@@ -495,31 +522,6 @@ export class ResourceNotFoundException extends __BaseException {
 /**
  * @public
  */
-export interface DeleteMultiRegionClustersInput {
-  /**
-   * <p>The ARNs of the clusters linked to the cluster you want to delete.
-   *        also deletes these clusters as part of the operation.</p>
-   * @public
-   */
-  linkedClusterArns: string[] | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the
-   *       idempotency of the request. Idempotency ensures that an API request completes
-   *        only once. With an idempotent request, if the original request completes
-   *        successfully. The subsequent retries with the same client token return the
-   *        result from the original successful request and they
-   *        have no additional effect.</p>
-   *          <p>If you don't specify a client token, the Amazon Web Services SDK
-   *       automatically generates one.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- */
 export interface GetClusterInput {
   /**
    * <p>The ID of the cluster to retrieve.</p>
@@ -529,7 +531,7 @@ export interface GetClusterInput {
 }
 
 /**
- * Output Mixin
+ * <p>The output of a cluster.</p>
  * @public
  */
 export interface GetClusterOutput {
@@ -564,17 +566,44 @@ export interface GetClusterOutput {
   deletionProtectionEnabled: boolean | undefined;
 
   /**
-   * <p>The witness Region of the cluster. Applicable only for
-   *       multi-Region clusters.</p>
+   * <p>Returns the current multi-Region cluster configuration, including witness region and linked cluster information.</p>
    * @public
    */
-  witnessRegion?: string | undefined;
+  multiRegionProperties?: MultiRegionProperties | undefined;
 
   /**
-   * <p>The ARNs of the clusters linked to the retrieved cluster.</p>
+   * <p>Map of tags.</p>
    * @public
    */
-  linkedClusterArns?: string[] | undefined;
+  tags?: Record<string, string> | undefined;
+
+  /**
+   * <p>The current encryption configuration details for the cluster.</p>
+   * @public
+   */
+  encryptionDetails?: EncryptionDetails | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetVpcEndpointServiceNameInput {
+  /**
+   * <p>The ID of the cluster to retrieve.</p>
+   * @public
+   */
+  identifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetVpcEndpointServiceNameOutput {
+  /**
+   * <p>The VPC endpoint service name.</p>
+   * @public
+   */
+  serviceName: string | undefined;
 }
 
 /**
@@ -582,16 +611,16 @@ export interface GetClusterOutput {
  */
 export interface ListClustersInput {
   /**
-   * <p>An optional parameter that specifies the maximum number of results to return.
-   *       You can use nextToken to display the next page of results.</p>
+   * <p>An optional parameter that specifies the maximum number of results to return. You can
+   *          use nextToken to display the next page of results.</p>
    * @public
    */
   maxResults?: number | undefined;
 
   /**
-   * <p>If your initial ListClusters operation returns a nextToken,
-   *        you can include the returned nextToken in following ListClusters operations,
-   *        which returns results in the next page.</p>
+   * <p>If your initial ListClusters operation returns a nextToken, you can include the returned
+   *          nextToken in following ListClusters operations, which returns results in the next
+   *          page.</p>
    * @public
    */
   nextToken?: string | undefined;
@@ -620,9 +649,9 @@ export interface ClusterSummary {
  */
 export interface ListClustersOutput {
   /**
-   * <p>If nextToken is returned, there are more results available. The value of
-   *       nextToken is a unique pagination token for each page. To retrieve the
-   *       next page, make the call again using the returned token.</p>
+   * <p>If nextToken is returned, there are more results available. The value of nextToken is a
+   *          unique pagination token for each page. To retrieve the next page, make the call again using
+   *          the returned token.</p>
    * @public
    */
   nextToken?: string | undefined;
@@ -651,21 +680,32 @@ export interface UpdateClusterInput {
   deletionProtectionEnabled?: boolean | undefined;
 
   /**
-   * <p>A unique, case-sensitive identifier that you provide to ensure the
-   *       idempotency of the request. Idempotency ensures that an API request completes
-   *        only once. With an idempotent request, if the original request completes
-   *        successfully. The subsequent retries with the same client token return the
-   *        result from the original successful request and they
-   *        have no additional effect.</p>
-   *          <p>If you don't specify a client token, the Amazon Web Services SDK
-   *       automatically generates one.</p>
+   * <p>The KMS key that encrypts and protects the data on your cluster. You can specify the ARN, ID, or alias of an existing key or have Amazon Web Services create a default key for you.</p>
+   * @public
+   */
+  kmsEncryptionKey?: string | undefined;
+
+  /**
+   * <p>A unique, case-sensitive identifier that you provide to ensure the idempotency of the
+   *          request. Idempotency ensures that an API request completes only once. With an idempotent
+   *          request, if the original request completes successfully. The subsequent retries with the
+   *          same client token return the result from the original successful request and they have no
+   *          additional effect.</p>
+   *          <p>If you don't specify a client token, the Amazon Web Services SDK automatically generates
+   *          one.</p>
    * @public
    */
   clientToken?: string | undefined;
+
+  /**
+   * <p>The new multi-Region cluster configuration settings to be applied during an update operation.</p>
+   * @public
+   */
+  multiRegionProperties?: MultiRegionProperties | undefined;
 }
 
 /**
- * Output Mixin
+ * <p>The details of the cluster after it has been updated.</p>
  * @public
  */
 export interface UpdateClusterOutput {
@@ -692,25 +732,6 @@ export interface UpdateClusterOutput {
    * @public
    */
   creationTime: Date | undefined;
-
-  /**
-   * <p>Whether deletion protection is enabled for the updated cluster.</p>
-   * @public
-   */
-  deletionProtectionEnabled: boolean | undefined;
-
-  /**
-   * <p>The Region that receives all data you write to linked clusters.</p>
-   * @public
-   */
-  witnessRegion?: string | undefined;
-
-  /**
-   * <p>The ARNs of the clusters linked to the updated cluster. Applicable
-   *       only for multi-Region clusters.</p>
-   * @public
-   */
-  linkedClusterArns?: string[] | undefined;
 }
 
 /**

@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   DisableTransitGatewayRouteTablePropagationRequest,
   DisableTransitGatewayRouteTablePropagationResult,
-} from "../models/models_5";
+} from "../models/models_6";
 import {
   de_DisableTransitGatewayRouteTablePropagationCommand,
   se_DisableTransitGatewayRouteTablePropagationCommand,
@@ -57,7 +57,7 @@ export interface DisableTransitGatewayRouteTablePropagationCommandOutput
  * //   Propagation: { // TransitGatewayPropagation
  * //     TransitGatewayAttachmentId: "STRING_VALUE",
  * //     ResourceId: "STRING_VALUE",
- * //     ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering",
+ * //     ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering" || "network-function",
  * //     TransitGatewayRouteTableId: "STRING_VALUE",
  * //     State: "enabling" || "enabled" || "disabling" || "disabled",
  * //     TransitGatewayRouteTableAnnouncementId: "STRING_VALUE",

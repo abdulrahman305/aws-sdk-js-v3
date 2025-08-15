@@ -46,6 +46,7 @@ export interface DescribeAutoScalingGroupsCommandOutput extends AutoScalingGroup
  *   AutoScalingGroupNames: [ // AutoScalingGroupNames
  *     "STRING_VALUE",
  *   ],
+ *   IncludeInstances: true || false,
  *   NextToken: "STRING_VALUE",
  *   MaxRecords: Number("int"),
  *   Filters: [ // Filters
@@ -92,7 +93,7 @@ export interface DescribeAutoScalingGroupsCommandOutput extends AutoScalingGroup
  * //                   Max: Number("int"),
  * //                 },
  * //                 CpuManufacturers: [ // CpuManufacturers
- * //                   "intel" || "amd" || "amazon-web-services",
+ * //                   "intel" || "amd" || "amazon-web-services" || "apple",
  * //                 ],
  * //                 MemoryGiBPerVCpu: { // MemoryGiBPerVCpuRequest
  * //                   Min: Number("double"),

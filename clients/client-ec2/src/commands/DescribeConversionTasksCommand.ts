@@ -10,7 +10,7 @@ import {
   DescribeConversionTasksRequest,
   DescribeConversionTasksResult,
   DescribeConversionTasksResultFilterSensitiveLog,
-} from "../models/models_3";
+} from "../models/models_4";
 import { de_DescribeConversionTasksCommand, se_DescribeConversionTasksCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -61,6 +61,7 @@ export interface DescribeConversionTasksCommandOutput extends DescribeConversion
  * //         Volumes: [ // ImportInstanceVolumeDetailSet
  * //           { // ImportInstanceVolumeDetailItem
  * //             AvailabilityZone: "STRING_VALUE",
+ * //             AvailabilityZoneId: "STRING_VALUE",
  * //             BytesConverted: Number("long"),
  * //             Description: "STRING_VALUE",
  * //             Image: { // DiskImageDescription
@@ -80,6 +81,7 @@ export interface DescribeConversionTasksCommandOutput extends DescribeConversion
  * //       },
  * //       ImportVolume: { // ImportVolumeTaskDetails
  * //         AvailabilityZone: "STRING_VALUE",
+ * //         AvailabilityZoneId: "STRING_VALUE",
  * //         BytesConverted: Number("long"),
  * //         Description: "STRING_VALUE",
  * //         Image: {

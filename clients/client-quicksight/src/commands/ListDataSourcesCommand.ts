@@ -59,6 +59,9 @@ export interface ListDataSourcesCommandOutput extends ListDataSourcesResponse, _
  * //         AthenaParameters: { // AthenaParameters
  * //           WorkGroup: "STRING_VALUE",
  * //           RoleArn: "STRING_VALUE",
+ * //           IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ * //             EnableIdentityPropagation: true || false,
+ * //           },
  * //         },
  * //         AuroraParameters: { // AuroraParameters
  * //           Host: "STRING_VALUE", // required
@@ -119,7 +122,7 @@ export interface ListDataSourcesCommandOutput extends ListDataSourcesResponse, _
  * //             ],
  * //             AutoCreateDatabaseUser: true || false,
  * //           },
- * //           IdentityCenterConfiguration: { // IdentityCenterConfiguration
+ * //           IdentityCenterConfiguration: {
  * //             EnableIdentityPropagation: true || false,
  * //           },
  * //         },
@@ -203,6 +206,12 @@ export interface ListDataSourcesCommandOutput extends ListDataSourcesResponse, _
  * //           ProjectId: "STRING_VALUE", // required
  * //           DataSetRegion: "STRING_VALUE",
  * //         },
+ * //         ImpalaParameters: { // ImpalaParameters
+ * //           Host: "STRING_VALUE", // required
+ * //           Port: Number("int"), // required
+ * //           Database: "STRING_VALUE",
+ * //           SqlEndpointPath: "STRING_VALUE", // required
+ * //         },
  * //       },
  * //       AlternateDataSourceParameters: [ // DataSourceParametersList
  * //         {//  Union: only one key present
@@ -212,6 +221,9 @@ export interface ListDataSourcesCommandOutput extends ListDataSourcesResponse, _
  * //           AthenaParameters: {
  * //             WorkGroup: "STRING_VALUE",
  * //             RoleArn: "STRING_VALUE",
+ * //             IdentityCenterConfiguration: {
+ * //               EnableIdentityPropagation: true || false,
+ * //             },
  * //           },
  * //           AuroraParameters: {
  * //             Host: "STRING_VALUE", // required
@@ -355,6 +367,12 @@ export interface ListDataSourcesCommandOutput extends ListDataSourcesResponse, _
  * //           BigQueryParameters: {
  * //             ProjectId: "STRING_VALUE", // required
  * //             DataSetRegion: "STRING_VALUE",
+ * //           },
+ * //           ImpalaParameters: {
+ * //             Host: "STRING_VALUE", // required
+ * //             Port: Number("int"), // required
+ * //             Database: "STRING_VALUE",
+ * //             SqlEndpointPath: "STRING_VALUE", // required
  * //           },
  * //         },
  * //       ],

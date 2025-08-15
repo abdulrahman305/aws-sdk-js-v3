@@ -46,7 +46,8 @@ export interface GetFleetCommandOutput extends GetFleetResponse, __MetadataBeare
  * //   farmId: "STRING_VALUE", // required
  * //   displayName: "STRING_VALUE", // required
  * //   description: "STRING_VALUE",
- * //   status: "ACTIVE" || "CREATE_IN_PROGRESS" || "UPDATE_IN_PROGRESS" || "CREATE_FAILED" || "UPDATE_FAILED", // required
+ * //   status: "ACTIVE" || "CREATE_IN_PROGRESS" || "UPDATE_IN_PROGRESS" || "CREATE_FAILED" || "UPDATE_FAILED" || "SUSPENDED", // required
+ * //   statusMessage: "STRING_VALUE",
  * //   autoScalingStatus: "GROWING" || "STEADY" || "SHRINKING",
  * //   targetWorkerCount: Number("int"),
  * //   workerCount: Number("int"), // required
@@ -94,6 +95,7 @@ export interface GetFleetCommandOutput extends GetFleetResponse, __MetadataBeare
  * //         ],
  * //       },
  * //       storageProfileId: "STRING_VALUE",
+ * //       tagPropagationMode: "NO_PROPAGATION" || "PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH",
  * //     },
  * //     serviceManagedEc2: { // ServiceManagedEc2FleetConfiguration
  * //       instanceCapabilities: { // ServiceManagedEc2InstanceCapabilities
@@ -147,9 +149,19 @@ export interface GetFleetCommandOutput extends GetFleetResponse, __MetadataBeare
  * //         ],
  * //       },
  * //       instanceMarketOptions: { // ServiceManagedEc2InstanceMarketOptions
- * //         type: "on-demand" || "spot", // required
+ * //         type: "on-demand" || "spot" || "wait-and-save", // required
  * //       },
+ * //       vpcConfiguration: { // VpcConfiguration
+ * //         resourceConfigurationArns: [ // VpcResourceConfigurationArns
+ * //           "STRING_VALUE",
+ * //         ],
+ * //       },
+ * //       storageProfileId: "STRING_VALUE",
  * //     },
+ * //   },
+ * //   hostConfiguration: { // HostConfiguration
+ * //     scriptBody: "STRING_VALUE", // required
+ * //     scriptTimeoutSeconds: Number("int"),
  * //   },
  * //   capabilities: { // FleetCapabilities
  * //     amounts: [ // FleetAmountCapabilities

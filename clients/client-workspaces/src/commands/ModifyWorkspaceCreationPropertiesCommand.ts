@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ModifyWorkspaceCreationPropertiesRequest, ModifyWorkspaceCreationPropertiesResult } from "../models/models_0";
+import { ModifyWorkspaceCreationPropertiesRequest, ModifyWorkspaceCreationPropertiesResult } from "../models/models_1";
 import {
   de_ModifyWorkspaceCreationPropertiesCommand,
   se_ModifyWorkspaceCreationPropertiesCommand,
@@ -43,7 +43,6 @@ export interface ModifyWorkspaceCreationPropertiesCommandOutput
  * const input = { // ModifyWorkspaceCreationPropertiesRequest
  *   ResourceId: "STRING_VALUE", // required
  *   WorkspaceCreationProperties: { // WorkspaceCreationProperties
- *     EnableWorkDocs: true || false,
  *     EnableInternetAccess: true || false,
  *     DefaultOu: "STRING_VALUE",
  *     CustomSecurityGroupId: "STRING_VALUE",

@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   DescribeLocalGatewayVirtualInterfaceGroupsRequest,
   DescribeLocalGatewayVirtualInterfaceGroupsResult,
-} from "../models/models_4";
+} from "../models/models_5";
 import {
   de_DescribeLocalGatewayVirtualInterfaceGroupsCommand,
   se_DescribeLocalGatewayVirtualInterfaceGroupsCommand,
@@ -71,12 +71,16 @@ export interface DescribeLocalGatewayVirtualInterfaceGroupsCommandOutput
  * //       ],
  * //       LocalGatewayId: "STRING_VALUE",
  * //       OwnerId: "STRING_VALUE",
+ * //       LocalBgpAsn: Number("int"),
+ * //       LocalBgpAsnExtended: Number("long"),
+ * //       LocalGatewayVirtualInterfaceGroupArn: "STRING_VALUE",
  * //       Tags: [ // TagList
  * //         { // Tag
  * //           Key: "STRING_VALUE",
  * //           Value: "STRING_VALUE",
  * //         },
  * //       ],
+ * //       ConfigurationState: "pending" || "incomplete" || "available" || "deleting" || "deleted",
  * //     },
  * //   ],
  * //   NextToken: "STRING_VALUE",

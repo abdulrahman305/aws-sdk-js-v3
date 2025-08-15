@@ -184,6 +184,7 @@ import {
   CreateGlobalSecondaryIndexAction,
   CreateGlobalTableInput,
   CreateGlobalTableOutput,
+  CreateGlobalTableWitnessGroupMemberAction,
   CreateReplicaAction,
   CreateReplicationGroupMemberAction,
   CreateTableInput,
@@ -193,6 +194,7 @@ import {
   DeleteBackupInput,
   DeleteBackupOutput,
   DeleteGlobalSecondaryIndexAction,
+  DeleteGlobalTableWitnessGroupMemberAction,
   DeleteItemInput,
   DeleteItemOutput,
   DeleteReplicaAction,
@@ -247,6 +249,7 @@ import {
   GlobalTableDescription,
   GlobalTableGlobalSecondaryIndexSettingsUpdate,
   GlobalTableNotFoundException,
+  GlobalTableWitnessGroupUpdate,
   IdempotentParameterMismatchException,
   ImportConflictException,
   ImportNotFoundException,
@@ -338,6 +341,7 @@ import {
   TableNotFoundException,
   Tag,
   TagResourceInput,
+  ThrottlingException,
   TimeToLiveSpecification,
   TransactGetItem,
   TransactGetItemsInput,
@@ -346,7 +350,6 @@ import {
   TransactionConflictException,
   TransactionInProgressException,
   TransactWriteItem,
-  TransactWriteItemsInput,
   TransactWriteItemsOutput,
   UntagResourceInput,
   Update,
@@ -371,6 +374,7 @@ import {
   WarmThroughput,
   WriteRequest,
 } from "../models/models_0";
+import { TransactWriteItemsInput } from "../models/models_1";
 
 /**
  * serializeAws_json1_0BatchExecuteStatementCommand
@@ -2251,6 +2255,9 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "RequestLimitExceeded":
     case "com.amazonaws.dynamodb#RequestLimitExceeded":
       throw await de_RequestLimitExceededRes(parsedOutput, context);
+    case "ThrottlingException":
+    case "com.amazonaws.dynamodb#ThrottlingException":
+      throw await de_ThrottlingExceptionRes(parsedOutput, context);
     case "InvalidEndpointException":
     case "com.amazonaws.dynamodb#InvalidEndpointException":
       throw await de_InvalidEndpointExceptionRes(parsedOutput, context);
@@ -2263,6 +2270,9 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "ItemCollectionSizeLimitExceededException":
     case "com.amazonaws.dynamodb#ItemCollectionSizeLimitExceededException":
       throw await de_ItemCollectionSizeLimitExceededExceptionRes(parsedOutput, context);
+    case "ReplicatedWriteConflictException":
+    case "com.amazonaws.dynamodb#ReplicatedWriteConflictException":
+      throw await de_ReplicatedWriteConflictExceptionRes(parsedOutput, context);
     case "BackupInUseException":
     case "com.amazonaws.dynamodb#BackupInUseException":
       throw await de_BackupInUseExceptionRes(parsedOutput, context);
@@ -2290,9 +2300,6 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "ConditionalCheckFailedException":
     case "com.amazonaws.dynamodb#ConditionalCheckFailedException":
       throw await de_ConditionalCheckFailedExceptionRes(parsedOutput, context);
-    case "ReplicatedWriteConflictException":
-    case "com.amazonaws.dynamodb#ReplicatedWriteConflictException":
-      throw await de_ReplicatedWriteConflictExceptionRes(parsedOutput, context);
     case "TransactionConflictException":
     case "com.amazonaws.dynamodb#TransactionConflictException":
       throw await de_TransactionConflictExceptionRes(parsedOutput, context);
@@ -2848,6 +2855,19 @@ const de_TableNotFoundExceptionRes = async (
 };
 
 /**
+ * deserializeAws_json1_0ThrottlingExceptionRes
+ */
+const de_ThrottlingExceptionRes = async (parsedOutput: any, context: __SerdeContext): Promise<ThrottlingException> => {
+  const body = parsedOutput.body;
+  const deserialized: any = _json(body);
+  const exception = new ThrottlingException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized,
+  });
+  return __decorateServiceException(exception, body);
+};
+
+/**
  * deserializeAws_json1_0TransactionCanceledExceptionRes
  */
 const de_TransactionCanceledExceptionRes = async (
@@ -3103,6 +3123,8 @@ const se_ConditionCheck = (input: ConditionCheck, context: __SerdeContext): any 
 
 // se_CreateGlobalTableInput omitted.
 
+// se_CreateGlobalTableWitnessGroupMemberAction omitted.
+
 // se_CreateReplicaAction omitted.
 
 // se_CreateReplicationGroupMemberAction omitted.
@@ -3130,6 +3152,8 @@ const se_Delete = (input: Delete, context: __SerdeContext): any => {
 // se_DeleteBackupInput omitted.
 
 // se_DeleteGlobalSecondaryIndexAction omitted.
+
+// se_DeleteGlobalTableWitnessGroupMemberAction omitted.
 
 /**
  * serializeAws_json1_0DeleteItemInput
@@ -3384,6 +3408,10 @@ const se_GlobalTableGlobalSecondaryIndexSettingsUpdateList = (
       return se_GlobalTableGlobalSecondaryIndexSettingsUpdate(entry, context);
     });
 };
+
+// se_GlobalTableWitnessGroupUpdate omitted.
+
+// se_GlobalTableWitnessGroupUpdateList omitted.
 
 /**
  * serializeAws_json1_0ImportTableInput
@@ -4517,6 +4545,7 @@ const de_DescribeContributorInsightsOutput = (
   context: __SerdeContext
 ): DescribeContributorInsightsOutput => {
   return take(output, {
+    ContributorInsightsMode: __expectString,
     ContributorInsightsRuleList: _json,
     ContributorInsightsStatus: __expectString,
     FailureException: _json,
@@ -4751,6 +4780,10 @@ const de_GlobalTableDescription = (output: any, context: __SerdeContext): Global
 // de_GlobalTableList omitted.
 
 // de_GlobalTableNotFoundException omitted.
+
+// de_GlobalTableWitnessDescription omitted.
+
+// de_GlobalTableWitnessDescriptionList omitted.
 
 // de_IdempotentParameterMismatchException omitted.
 
@@ -5478,6 +5511,7 @@ const de_TableDescription = (output: any, context: __SerdeContext): TableDescrip
     DeletionProtectionEnabled: __expectBoolean,
     GlobalSecondaryIndexes: (_: any) => de_GlobalSecondaryIndexDescriptionList(_, context),
     GlobalTableVersion: __expectString,
+    GlobalTableWitnesses: _json,
     ItemCount: __expectLong,
     KeySchema: _json,
     LatestStreamArn: __expectString,
@@ -5511,6 +5545,12 @@ const de_TableDescription = (output: any, context: __SerdeContext): TableDescrip
 // de_Tag omitted.
 
 // de_TagList omitted.
+
+// de_ThrottlingException omitted.
+
+// de_ThrottlingReason omitted.
+
+// de_ThrottlingReasonList omitted.
 
 // de_TimeToLiveDescription omitted.
 

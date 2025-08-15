@@ -6,7 +6,11 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ConnectCasesClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ConnectCasesClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { CreateRelatedItemRequest, CreateRelatedItemResponse } from "../models/models_0";
+import {
+  CreateRelatedItemRequest,
+  CreateRelatedItemRequestFilterSensitiveLog,
+  CreateRelatedItemResponse,
+} from "../models/models_0";
 import { de_CreateRelatedItemCommand, se_CreateRelatedItemCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,26 +32,7 @@ export interface CreateRelatedItemCommandInput extends CreateRelatedItemRequest 
 export interface CreateRelatedItemCommandOutput extends CreateRelatedItemResponse, __MetadataBearer {}
 
 /**
- * <p>Creates a related item (comments, tasks, and contacts) and associates it with a
- *       case.</p>
- *          <note>
- *             <ul>
- *                <li>
- *                   <p>A Related Item is a resource that is associated with a case. It may or may not have
- *             an external identifier linking it to an external resource (for example, a
- *               <code>contactArn</code>). All Related Items have their own internal identifier, the
- *               <code>relatedItemArn</code>. Examples of related items include <code>comments</code>
- *             and <code>contacts</code>.</p>
- *                </li>
- *                <li>
- *                   <p>If you provide a value for <code>performedBy.userArn</code> you must also have
- *               <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeUser.html">DescribeUser</a> permission on the ARN of the user that you provide.</p>
- *                </li>
- *                <li>
- *                   <p>The <code>type</code> field is reserved for internal use only.</p>
- *                </li>
- *             </ul>
- *          </note>
+ * <p>Creates a related item (comments, tasks, and contacts) and associates it with a case.</p> <note> <ul> <li> <p>A Related Item is a resource that is associated with a case. It may or may not have an external identifier linking it to an external resource (for example, a <code>contactArn</code>). All Related Items have their own internal identifier, the <code>relatedItemArn</code>. Examples of related items include <code>comments</code> and <code>contacts</code>.</p> </li> <li> <p>If you provide a value for <code>performedBy.userArn</code> you must also have <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeUser.html">DescribeUser</a> permission on the ARN of the user that you provide.</p> </li> <li> <p>The <code>type</code> field is reserved for internal use only.</p> </li> </ul> </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -69,9 +54,27 @@ export interface CreateRelatedItemCommandOutput extends CreateRelatedItemRespons
  *     file: { // FileContent
  *       fileArn: "STRING_VALUE", // required
  *     },
+ *     sla: { // SlaInputContent Union: only one key present
+ *       slaInputConfiguration: { // SlaInputConfiguration
+ *         name: "STRING_VALUE", // required
+ *         type: "STRING_VALUE", // required
+ *         fieldId: "STRING_VALUE",
+ *         targetFieldValues: [ // SlaFieldValueUnionList
+ *           { // FieldValueUnion Union: only one key present
+ *             stringValue: "STRING_VALUE",
+ *             doubleValue: Number("double"),
+ *             booleanValue: true || false,
+ *             emptyValue: {},
+ *             userArnValue: "STRING_VALUE",
+ *           },
+ *         ],
+ *         targetSlaMinutes: Number("long"), // required
+ *       },
+ *     },
  *   },
  *   performedBy: { // UserUnion Union: only one key present
  *     userArn: "STRING_VALUE",
+ *     customEntity: "STRING_VALUE",
  *   },
  * };
  * const command = new CreateRelatedItemCommand(input);
@@ -93,16 +96,13 @@ export interface CreateRelatedItemCommandOutput extends CreateRelatedItemRespons
  *  <p>You do not have sufficient access to perform this action.</p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>We couldn't process your request because of an issue with the server. Try again
- *       later.</p>
+ *  <p>We couldn't process your request because of an issue with the server. Try again later.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
- *  <p>We couldn't find the requested resource. Check that your resources exists and were created
- *       in the same Amazon Web Services Region as your request, and try your request again.</p>
+ *  <p>We couldn't find the requested resource. Check that your resources exists and were created in the same Amazon Web Services Region as your request, and try your request again.</p>
  *
  * @throws {@link ServiceQuotaExceededException} (client fault)
- *  <p>The service quota has been exceeded. For a list of service quotas, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect Service Quotas</a> in the <i>Amazon Connect
- *         Administrator Guide</i>.</p>
+ *  <p>The service quota has been exceeded. For a list of service quotas, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.</p>
  *
  * @throws {@link ThrottlingException} (client fault)
  *  <p>The rate has been exceeded for this API. Please try again after a few minutes.</p>
@@ -133,7 +133,7 @@ export class CreateRelatedItemCommand extends $Command
   })
   .s("AmazonConnectCases", "CreateRelatedItem", {})
   .n("ConnectCasesClient", "CreateRelatedItemCommand")
-  .f(void 0, void 0)
+  .f(CreateRelatedItemRequestFilterSensitiveLog, void 0)
   .ser(se_CreateRelatedItemCommand)
   .de(de_CreateRelatedItemCommand)
   .build() {

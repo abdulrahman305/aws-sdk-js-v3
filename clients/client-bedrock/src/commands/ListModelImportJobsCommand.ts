@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListModelImportJobsRequest, ListModelImportJobsResponse } from "../models/models_0";
+import { ListModelImportJobsRequest, ListModelImportJobsResponse } from "../models/models_1";
 import { de_ListModelImportJobsCommand, se_ListModelImportJobsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,9 +28,7 @@ export interface ListModelImportJobsCommandInput extends ListModelImportJobsRequ
 export interface ListModelImportJobsCommandOutput extends ListModelImportJobsResponse, __MetadataBearer {}
 
 /**
- * <p>Returns a list of import jobs you've submitted. You can filter the results to return based on one or more criteria.
- *         For more information,
- *         see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">Import a customized model</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
+ * <p>Returns a list of import jobs you've submitted. You can filter the results to return based on one or more criteria. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">Import a customized model</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

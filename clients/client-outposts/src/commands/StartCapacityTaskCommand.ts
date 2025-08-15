@@ -28,7 +28,8 @@ export interface StartCapacityTaskCommandInput extends StartCapacityTaskInput {}
 export interface StartCapacityTaskCommandOutput extends StartCapacityTaskOutput, __MetadataBearer {}
 
 /**
- * <p>Starts the specified capacity task. You can have one active capacity task for each order and each Outpost.</p>
+ * <p>Starts the specified capacity task. You can have one active capacity task for each order
+ *       and each Outpost.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -38,6 +39,7 @@ export interface StartCapacityTaskCommandOutput extends StartCapacityTaskOutput,
  * const input = { // StartCapacityTaskInput
  *   OutpostIdentifier: "STRING_VALUE", // required
  *   OrderId: "STRING_VALUE",
+ *   AssetId: "STRING_VALUE",
  *   InstancePools: [ // RequestedInstancePools // required
  *     { // InstanceTypeCapacity
  *       InstanceType: "STRING_VALUE", // required
@@ -64,6 +66,7 @@ export interface StartCapacityTaskCommandOutput extends StartCapacityTaskOutput,
  * //   CapacityTaskId: "STRING_VALUE",
  * //   OutpostId: "STRING_VALUE",
  * //   OrderId: "STRING_VALUE",
+ * //   AssetId: "STRING_VALUE",
  * //   RequestedInstancePools: [ // RequestedInstancePools
  * //     { // InstanceTypeCapacity
  * //       InstanceType: "STRING_VALUE", // required

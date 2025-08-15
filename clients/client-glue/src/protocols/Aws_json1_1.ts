@@ -108,6 +108,10 @@ import {
   CreateDataQualityRulesetCommandOutput,
 } from "../commands/CreateDataQualityRulesetCommand";
 import { CreateDevEndpointCommandInput, CreateDevEndpointCommandOutput } from "../commands/CreateDevEndpointCommand";
+import {
+  CreateGlueIdentityCenterConfigurationCommandInput,
+  CreateGlueIdentityCenterConfigurationCommandOutput,
+} from "../commands/CreateGlueIdentityCenterConfigurationCommand";
 import { CreateIntegrationCommandInput, CreateIntegrationCommandOutput } from "../commands/CreateIntegrationCommand";
 import {
   CreateIntegrationResourcePropertyCommandInput,
@@ -171,6 +175,10 @@ import {
   DeleteDataQualityRulesetCommandOutput,
 } from "../commands/DeleteDataQualityRulesetCommand";
 import { DeleteDevEndpointCommandInput, DeleteDevEndpointCommandOutput } from "../commands/DeleteDevEndpointCommand";
+import {
+  DeleteGlueIdentityCenterConfigurationCommandInput,
+  DeleteGlueIdentityCenterConfigurationCommandOutput,
+} from "../commands/DeleteGlueIdentityCenterConfigurationCommand";
 import { DeleteIntegrationCommandInput, DeleteIntegrationCommandOutput } from "../commands/DeleteIntegrationCommand";
 import {
   DeleteIntegrationTablePropertiesCommandInput,
@@ -298,6 +306,10 @@ import {
 import { GetDevEndpointCommandInput, GetDevEndpointCommandOutput } from "../commands/GetDevEndpointCommand";
 import { GetDevEndpointsCommandInput, GetDevEndpointsCommandOutput } from "../commands/GetDevEndpointsCommand";
 import { GetEntityRecordsCommandInput, GetEntityRecordsCommandOutput } from "../commands/GetEntityRecordsCommand";
+import {
+  GetGlueIdentityCenterConfigurationCommandInput,
+  GetGlueIdentityCenterConfigurationCommandOutput,
+} from "../commands/GetGlueIdentityCenterConfigurationCommand";
 import {
   GetIntegrationResourcePropertyCommandInput,
   GetIntegrationResourcePropertyCommandOutput,
@@ -566,6 +578,10 @@ import {
 } from "../commands/UpdateDataQualityRulesetCommand";
 import { UpdateDevEndpointCommandInput, UpdateDevEndpointCommandOutput } from "../commands/UpdateDevEndpointCommand";
 import {
+  UpdateGlueIdentityCenterConfigurationCommandInput,
+  UpdateGlueIdentityCenterConfigurationCommandOutput,
+} from "../commands/UpdateGlueIdentityCenterConfigurationCommand";
+import {
   UpdateIntegrationResourcePropertyCommandInput,
   UpdateIntegrationResourcePropertyCommandOutput,
 } from "../commands/UpdateIntegrationResourcePropertyCommand";
@@ -614,6 +630,7 @@ import {
   AuditContext,
   AuthenticationConfigurationInput,
   AuthorizationCodeProperties,
+  AutoDataQuality,
   BasicAuthenticationCredentials,
   BasicCatalogTarget,
   BatchCreatePartitionRequest,
@@ -638,31 +655,28 @@ import {
   BatchGetTableOptimizerResponse,
   BatchGetTriggersRequest,
   BatchGetWorkflowsRequest,
-  BatchGetWorkflowsResponse,
-  BatchPutDataQualityStatisticAnnotationRequest,
-  BatchStopJobRunRequest,
   BatchTableOptimizer,
   Blueprint,
   CatalogDeltaSource,
   CatalogHudiSource,
+  CatalogIcebergSource,
   CatalogKafkaSource,
   CatalogKinesisSource,
   CatalogSchemaChangePolicy,
   CatalogSource,
   CatalogTarget,
   Column,
+  CompactionConfiguration,
   CompactionMetrics,
   Condition,
   ConditionExpression,
   ConnectionsList,
   ConnectorDataSource,
   ConnectorDataTarget,
-  Crawl,
   Crawler,
-  CrawlerNodeDetails,
   CrawlerTargets,
   CustomCode,
-  DatapointInclusionAnnotation,
+  DataQualityAggregatedMetrics,
   DataQualityAnalyzerResult,
   DataQualityMetricValues,
   DataQualityObservation,
@@ -670,6 +684,8 @@ import {
   DataQualityRuleResult,
   DataSource,
   Datatype,
+  DDBELTCatalogAdditionalOptions,
+  DDBELTConnectionOptions,
   DeltaTarget,
   DevEndpoint,
   DirectJDBCSource,
@@ -683,6 +699,7 @@ import {
   DropNullFields,
   DynamicTransform,
   DynamoDBCatalogSource,
+  DynamoDBELTConnectorSource,
   DynamoDBTarget,
   EntityNotFoundException,
   EvaluateDataQuality,
@@ -702,7 +719,9 @@ import {
   GlueTable,
   GovernedCatalogSource,
   GovernedCatalogTarget,
+  GroupFilters,
   HudiTarget,
+  IcebergCompactionConfiguration,
   IcebergCompactionMetrics,
   IcebergOrphanFileDeletionConfiguration,
   IcebergOrphanFileDeletionMetrics,
@@ -719,8 +738,6 @@ import {
   JdbcMetadataEntry,
   JdbcTarget,
   JobCommand,
-  JobNodeDetails,
-  JobRun,
   Join,
   JoinColumn,
   KafkaStreamingSourceOptions,
@@ -736,7 +753,6 @@ import {
   MongoDBTarget,
   MySQLCatalogSource,
   MySQLCatalogTarget,
-  Node,
   NotificationProperty,
   NullCheckBoxList,
   NullValueField,
@@ -770,8 +786,10 @@ import {
   ResourceNumberLimitExceededException,
   RetentionConfiguration,
   RetentionMetrics,
+  Route,
   S3CatalogDeltaSource,
   S3CatalogHudiSource,
+  S3CatalogIcebergSource,
   S3CatalogSource,
   S3CatalogTarget,
   S3CsvSource,
@@ -780,10 +798,14 @@ import {
   S3DeltaSource,
   S3DirectSourceAdditionalOptions,
   S3DirectTarget,
+  S3ExcelSource,
   S3GlueParquetTarget,
   S3HudiCatalogTarget,
   S3HudiDirectTarget,
   S3HudiSource,
+  S3HyperDirectTarget,
+  S3IcebergCatalogTarget,
+  S3IcebergDirectTarget,
   S3JsonSource,
   S3ParquetSource,
   S3SourceAdditionalOptions,
@@ -817,16 +839,14 @@ import {
   TransformConfigParameter,
   Union,
   UpsertRedshiftTargetOptions,
-  Workflow,
-  WorkflowGraph,
-  WorkflowRun,
 } from "../models/models_0";
 import {
+  BatchGetWorkflowsResponse,
+  BatchPutDataQualityStatisticAnnotationRequest,
+  BatchStopJobRunRequest,
   BatchUpdatePartitionRequest,
   BatchUpdatePartitionRequestEntry,
-  BinaryColumnStatisticsData,
   BlueprintRun,
-  BooleanColumnStatisticsData,
   CancelDataQualityRuleRecommendationRunRequest,
   CancelDataQualityRulesetEvaluationRunRequest,
   CancelMLTaskRunRequest,
@@ -835,15 +855,12 @@ import {
   CatalogImportStatus,
   CatalogInput,
   CatalogProperties,
+  CatalogPropertiesOutput,
   CheckSchemaVersionValidityInput,
-  Classifier,
   CloudWatchEncryption,
   CodeGenEdge,
   CodeGenNode,
   CodeGenNodeArg,
-  ColumnStatistics,
-  ColumnStatisticsData,
-  ColumnStatisticsTaskRun,
   ColumnStatisticsTaskRunningException,
   ComputeEnvironment,
   ConcurrentModificationException,
@@ -852,6 +869,8 @@ import {
   ConflictException,
   ConnectionInput,
   ConnectionPropertyKey,
+  Crawl,
+  CrawlerNodeDetails,
   CrawlerRunningException,
   CreateBlueprintRequest,
   CreateCatalogRequest,
@@ -865,7 +884,9 @@ import {
   CreateDataQualityRulesetRequest,
   CreateDevEndpointRequest,
   CreateDevEndpointResponse,
+  CreateGlueIdentityCenterConfigurationRequest,
   CreateGrokClassifierRequest,
+  CreateIcebergTableInput,
   CreateIntegrationRequest,
   CreateIntegrationResourcePropertyRequest,
   CreateIntegrationResponse,
@@ -888,16 +909,13 @@ import {
   CreateUserDefinedFunctionRequest,
   CreateWorkflowRequest,
   CreateXMLClassifierRequest,
-  CsvClassifier,
   DatabaseIdentifier,
   DatabaseInput,
   DataLakeAccessProperties,
   DataLakePrincipal,
+  DatapointInclusionAnnotation,
   DataQualityEncryption,
   DataQualityTargetTable,
-  DateColumnStatisticsData,
-  DecimalColumnStatisticsData,
-  DecimalNumber,
   DeleteBlueprintRequest,
   DeleteCatalogRequest,
   DeleteClassifierRequest,
@@ -910,6 +928,7 @@ import {
   DeleteDatabaseRequest,
   DeleteDataQualityRulesetRequest,
   DeleteDevEndpointRequest,
+  DeleteGlueIdentityCenterConfigurationRequest,
   DeleteIntegrationRequest,
   DeleteIntegrationResponse,
   DeleteIntegrationTablePropertiesRequest,
@@ -936,7 +955,6 @@ import {
   DescribeInboundIntegrationsResponse,
   DescribeIntegrationsRequest,
   DescribeIntegrationsResponse,
-  DoubleColumnStatisticsData,
   EncryptionConfiguration,
   FederatedCatalog,
   FederatedDatabase,
@@ -949,30 +967,22 @@ import {
   GetBlueprintRunsRequest,
   GetBlueprintRunsResponse,
   GetCatalogImportStatusRequest,
-  GetCatalogImportStatusResponse,
   GetCatalogRequest,
   GetCatalogResponse,
-  GetCatalogsRequest,
-  GetCatalogsResponse,
-  GetClassifierRequest,
-  GetClassifierResponse,
-  GetClassifiersRequest,
-  GetClassifiersResponse,
-  GetColumnStatisticsForPartitionRequest,
-  GetColumnStatisticsForPartitionResponse,
-  GetColumnStatisticsForTableRequest,
-  GetColumnStatisticsForTableResponse,
-  GetColumnStatisticsTaskRunRequest,
-  GetColumnStatisticsTaskRunResponse,
-  GetColumnStatisticsTaskRunsRequest,
-  GetColumnStatisticsTaskRunsResponse,
-  GetColumnStatisticsTaskSettingsRequest,
-  GrokClassifier,
   IcebergInput,
+  IcebergOptimizationProperties,
+  IcebergOptimizationPropertiesOutput,
+  IcebergPartitionField,
+  IcebergPartitionSpec,
+  IcebergSchema,
+  IcebergSortField,
+  IcebergSortOrder,
+  IcebergStructField,
   IdempotentParameterMismatchException,
   IllegalSessionStateException,
   InboundIntegration,
   Integration,
+  IntegrationConfig,
   IntegrationConflictOperationFault,
   IntegrationFilter,
   IntegrationNotFoundFault,
@@ -981,10 +991,11 @@ import {
   InternalServerException,
   InvalidIntegrationStateFault,
   JobBookmarksEncryption,
-  JsonClassifier,
+  JobNodeDetails,
+  JobRun,
   KMSKeyNotAccessibleFault,
-  LongColumnStatisticsData,
   MLUserDataEncryption,
+  Node,
   OpenTableFormatInput,
   OperationNotSupportedException,
   PartitionIndex,
@@ -1001,7 +1012,6 @@ import {
   SessionCommand,
   SourceProcessingProperties,
   SourceTableConfig,
-  StringColumnStatisticsData,
   TableIdentifier,
   TableInput,
   Tag,
@@ -1015,18 +1025,26 @@ import {
   ValidationException,
   ViewDefinitionInput,
   ViewRepresentationInput,
-  XMLClassifier,
+  Workflow,
+  WorkflowGraph,
+  WorkflowRun,
 } from "../models/models_1";
 import {
+  BinaryColumnStatisticsData,
+  BooleanColumnStatisticsData,
   CatalogEntry,
+  Classifier,
   ColumnImportance,
+  ColumnStatistics,
+  ColumnStatisticsData,
+  ColumnStatisticsTaskRun,
   ColumnStatisticsTaskSettings,
-  ConcurrentRunsExceededException,
   Connection,
   ConnectionPasswordEncryption,
   CrawlerHistory,
   CrawlerMetrics,
   CrawlsFilter,
+  CsvClassifier,
   Database,
   DatabaseAttributes,
   DataCatalogEncryptionSettings,
@@ -1039,10 +1057,30 @@ import {
   DataQualityRulesetEvaluationRunFilter,
   DataQualityRulesetFilterCriteria,
   DataQualityRulesetListDetails,
+  DateColumnStatisticsData,
+  DecimalColumnStatisticsData,
+  DecimalNumber,
+  DoubleColumnStatisticsData,
   EncryptionAtRest,
   EvaluationMetrics,
   ExecutionAttempt,
   FindMatchesMetrics,
+  GetCatalogImportStatusResponse,
+  GetCatalogsRequest,
+  GetCatalogsResponse,
+  GetClassifierRequest,
+  GetClassifierResponse,
+  GetClassifiersRequest,
+  GetClassifiersResponse,
+  GetColumnStatisticsForPartitionRequest,
+  GetColumnStatisticsForPartitionResponse,
+  GetColumnStatisticsForTableRequest,
+  GetColumnStatisticsForTableResponse,
+  GetColumnStatisticsTaskRunRequest,
+  GetColumnStatisticsTaskRunResponse,
+  GetColumnStatisticsTaskRunsRequest,
+  GetColumnStatisticsTaskRunsResponse,
+  GetColumnStatisticsTaskSettingsRequest,
   GetColumnStatisticsTaskSettingsResponse,
   GetConnectionRequest,
   GetConnectionResponse,
@@ -1080,6 +1118,7 @@ import {
   GetDevEndpointsResponse,
   GetEntityRecordsRequest,
   GetEntityRecordsResponse,
+  GetGlueIdentityCenterConfigurationRequest,
   GetIntegrationResourcePropertyRequest,
   GetIntegrationTablePropertiesRequest,
   GetJobBookmarkRequest,
@@ -1149,8 +1188,9 @@ import {
   GetWorkflowRunsRequest,
   GetWorkflowRunsResponse,
   GluePolicy,
-  IllegalWorkflowStateException,
+  GrokClassifier,
   ImportCatalogToGlueRequest,
+  JsonClassifier,
   ListBlueprintsRequest,
   ListColumnStatisticsTaskRunsRequest,
   ListConnectionTypesRequest,
@@ -1182,31 +1222,13 @@ import {
   ListStatementsRequest,
   ListStatementsResponse,
   ListTableOptimizerRunsRequest,
-  ListTableOptimizerRunsResponse,
-  ListTriggersRequest,
-  ListUsageProfilesRequest,
-  ListUsageProfilesResponse,
-  ListWorkflowsRequest,
   Location,
+  LongColumnStatisticsData,
   MappingEntry,
-  MetadataKeyValuePair,
   MLTransform,
-  ModifyIntegrationRequest,
-  ModifyIntegrationResponse,
   PermissionType,
   PermissionTypeMismatchException,
-  PutDataCatalogEncryptionSettingsRequest,
-  PutDataQualityProfileAnnotationRequest,
-  PutResourcePolicyRequest,
-  PutSchemaVersionMetadataInput,
-  PutWorkflowRunPropertiesRequest,
-  QuerySchemaVersionMetadataInput,
   QuerySessionContext,
-  RegisterSchemaVersionInput,
-  RemoveSchemaVersionMetadataInput,
-  ResetJobBookmarkRequest,
-  ResumeWorkflowRunRequest,
-  RunStatementRequest,
   SchemaColumn,
   SchemaVersionNumber,
   SecurityConfiguration,
@@ -1214,6 +1236,7 @@ import {
   Statement,
   StatisticModelResult,
   StatisticSummary,
+  StringColumnStatisticsData,
   SupportedDialect,
   TableAttributes,
   TaskRun,
@@ -1223,9 +1246,9 @@ import {
   TransformFilterCriteria,
   TransformSortCriteria,
   UnfilteredPartition,
-  UsageProfileDefinition,
   UserDefinedFunction,
   ViewValidation,
+  XMLClassifier,
 } from "../models/models_2";
 import {
   ApplyMapping,
@@ -1234,6 +1257,7 @@ import {
   ColumnStatisticsError,
   ColumnStatisticsTaskNotRunningException,
   ColumnStatisticsTaskStoppingException,
+  ConcurrentRunsExceededException,
   CrawlerNotRunningException,
   CrawlerStoppingException,
   CreateJobRequest,
@@ -1245,13 +1269,34 @@ import {
   GetTableVersionResponse,
   GetTableVersionsResponse,
   GetUnfilteredTableMetadataResponse,
+  IcebergTableUpdate,
   IllegalBlueprintStateException,
+  IllegalWorkflowStateException,
   Job,
   JobUpdate,
+  ListTableOptimizerRunsResponse,
+  ListTriggersRequest,
+  ListUsageProfilesRequest,
+  ListUsageProfilesResponse,
+  ListWorkflowsRequest,
   Mapping,
+  MetadataKeyValuePair,
   MLTransformNotReadyException,
+  ModifyIntegrationRequest,
+  ModifyIntegrationResponse,
   NoScheduleException,
   PropertyPredicate,
+  PutDataCatalogEncryptionSettingsRequest,
+  PutDataQualityProfileAnnotationRequest,
+  PutResourcePolicyRequest,
+  PutSchemaVersionMetadataInput,
+  PutWorkflowRunPropertiesRequest,
+  QuerySchemaVersionMetadataInput,
+  RegisterSchemaVersionInput,
+  RemoveSchemaVersionMetadataInput,
+  ResetJobBookmarkRequest,
+  ResumeWorkflowRunRequest,
+  RunStatementRequest,
   SchedulerNotRunningException,
   SchedulerRunningException,
   SearchTablesRequest,
@@ -1302,13 +1347,17 @@ import {
   UpdateDatabaseRequest,
   UpdateDataQualityRulesetRequest,
   UpdateDevEndpointRequest,
+  UpdateGlueIdentityCenterConfigurationRequest,
   UpdateGrokClassifierRequest,
+  UpdateIcebergInput,
+  UpdateIcebergTableInput,
   UpdateIntegrationResourcePropertyRequest,
   UpdateIntegrationTablePropertiesRequest,
   UpdateJobFromSourceControlRequest,
   UpdateJobRequest,
   UpdateJsonClassifierRequest,
   UpdateMLTransformRequest,
+  UpdateOpenTableFormatInput,
   UpdatePartitionRequest,
   UpdateRegistryInput,
   UpdateSchemaInput,
@@ -1320,6 +1369,7 @@ import {
   UpdateUserDefinedFunctionRequest,
   UpdateWorkflowRequest,
   UpdateXMLClassifierRequest,
+  UsageProfileDefinition,
   VersionMismatchException,
 } from "../models/models_3";
 
@@ -1753,6 +1803,19 @@ export const se_CreateDevEndpointCommand = async (
 };
 
 /**
+ * serializeAws_json1_1CreateGlueIdentityCenterConfigurationCommand
+ */
+export const se_CreateGlueIdentityCenterConfigurationCommand = async (
+  input: CreateGlueIdentityCenterConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("CreateGlueIdentityCenterConfiguration");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1CreateIntegrationCommand
  */
 export const se_CreateIntegrationCommand = async (
@@ -2137,6 +2200,19 @@ export const se_DeleteDevEndpointCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DeleteDevEndpoint");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1DeleteGlueIdentityCenterConfigurationCommand
+ */
+export const se_DeleteGlueIdentityCenterConfigurationCommand = async (
+  input: DeleteGlueIdentityCenterConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DeleteGlueIdentityCenterConfiguration");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -2852,6 +2928,19 @@ export const se_GetEntityRecordsCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("GetEntityRecords");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1GetGlueIdentityCenterConfigurationCommand
+ */
+export const se_GetGlueIdentityCenterConfigurationCommand = async (
+  input: GetGlueIdentityCenterConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("GetGlueIdentityCenterConfiguration");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -4415,6 +4504,19 @@ export const se_UpdateDevEndpointCommand = async (
 };
 
 /**
+ * serializeAws_json1_1UpdateGlueIdentityCenterConfigurationCommand
+ */
+export const se_UpdateGlueIdentityCenterConfigurationCommand = async (
+  input: UpdateGlueIdentityCenterConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("UpdateGlueIdentityCenterConfiguration");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1UpdateIntegrationResourcePropertyCommand
  */
 export const se_UpdateIntegrationResourcePropertyCommand = async (
@@ -5270,6 +5372,26 @@ export const de_CreateDevEndpointCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1CreateGlueIdentityCenterConfigurationCommand
+ */
+export const de_CreateGlueIdentityCenterConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateGlueIdentityCenterConfigurationCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = _json(data);
+  const response: CreateGlueIdentityCenterConfigurationCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1CreateIntegrationCommand
  */
 export const de_CreateIntegrationCommand = async (
@@ -5863,6 +5985,26 @@ export const de_DeleteDevEndpointCommand = async (
   let contents: any = {};
   contents = _json(data);
   const response: DeleteDevEndpointCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1DeleteGlueIdentityCenterConfigurationCommand
+ */
+export const de_DeleteGlueIdentityCenterConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteGlueIdentityCenterConfigurationCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = _json(data);
+  const response: DeleteGlueIdentityCenterConfigurationCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -6963,6 +7105,26 @@ export const de_GetEntityRecordsCommand = async (
   let contents: any = {};
   contents = de_GetEntityRecordsResponse(data, context);
   const response: GetEntityRecordsCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1GetGlueIdentityCenterConfigurationCommand
+ */
+export const de_GetGlueIdentityCenterConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetGlueIdentityCenterConfigurationCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = _json(data);
+  const response: GetGlueIdentityCenterConfigurationCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -9370,6 +9532,26 @@ export const de_UpdateDevEndpointCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1UpdateGlueIdentityCenterConfigurationCommand
+ */
+export const de_UpdateGlueIdentityCenterConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateGlueIdentityCenterConfigurationCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = _json(data);
+  const response: UpdateGlueIdentityCenterConfigurationCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1UpdateIntegrationResourcePropertyCommand
  */
 export const de_UpdateIntegrationResourcePropertyCommand = async (
@@ -10581,6 +10763,8 @@ const se_ApplyMapping = (input: ApplyMapping, context: __SerdeContext): any => {
 
 // se_AuthorizationCodeProperties omitted.
 
+// se_AutoDataQuality omitted.
+
 // se_BasicAuthenticationCredentials omitted.
 
 // se_BasicCatalogTarget omitted.
@@ -10712,6 +10896,8 @@ const se_BinaryColumnStatisticsData = (input: BinaryColumnStatisticsData, contex
 
 // se_CatalogHudiSource omitted.
 
+// se_CatalogIcebergSource omitted.
+
 // se_CatalogInput omitted.
 
 /**
@@ -10774,6 +10960,7 @@ const se_CodeGenConfigurationNode = (input: CodeGenConfigurationNode, context: _
     AthenaConnectorSource: _json,
     CatalogDeltaSource: _json,
     CatalogHudiSource: _json,
+    CatalogIcebergSource: _json,
     CatalogKafkaSource: (_) => se_CatalogKafkaSource(_, context),
     CatalogKinesisSource: (_) => se_CatalogKinesisSource(_, context),
     CatalogSource: _json,
@@ -10789,6 +10976,7 @@ const se_CodeGenConfigurationNode = (input: CodeGenConfigurationNode, context: _
     DropNullFields: _json,
     DynamicTransform: _json,
     DynamoDBCatalogSource: _json,
+    DynamoDBELTConnectorSource: _json,
     EvaluateDataQuality: _json,
     EvaluateDataQualityMultiFrame: _json,
     FillMissingValues: _json,
@@ -10813,8 +11001,10 @@ const se_CodeGenConfigurationNode = (input: CodeGenConfigurationNode, context: _
     RedshiftTarget: _json,
     RelationalCatalogSource: _json,
     RenameField: _json,
+    Route: _json,
     S3CatalogDeltaSource: _json,
     S3CatalogHudiSource: _json,
+    S3CatalogIcebergSource: _json,
     S3CatalogSource: _json,
     S3CatalogTarget: _json,
     S3CsvSource: _json,
@@ -10822,10 +11012,14 @@ const se_CodeGenConfigurationNode = (input: CodeGenConfigurationNode, context: _
     S3DeltaDirectTarget: _json,
     S3DeltaSource: _json,
     S3DirectTarget: _json,
+    S3ExcelSource: _json,
     S3GlueParquetTarget: _json,
     S3HudiCatalogTarget: _json,
     S3HudiDirectTarget: _json,
     S3HudiSource: _json,
+    S3HyperDirectTarget: _json,
+    S3IcebergCatalogTarget: _json,
+    S3IcebergDirectTarget: _json,
     S3JsonSource: _json,
     S3ParquetSource: _json,
     SelectFields: _json,
@@ -10901,6 +11095,8 @@ const se_ColumnStatisticsData = (input: ColumnStatisticsData, context: __SerdeCo
 
 // se_ColumnValueStringList omitted.
 
+// se_CompactionConfiguration omitted.
+
 // se_ComputeEnvironmentList omitted.
 
 // se_Condition omitted.
@@ -10924,6 +11120,8 @@ const se_ColumnStatisticsData = (input: ColumnStatisticsData, context: __SerdeCo
 // se_ConnectionProperties omitted.
 
 // se_ConnectionsList omitted.
+
+// se_ConnectionStringList omitted.
 
 // se_ConnectorDataSource omitted.
 
@@ -11016,7 +11214,22 @@ const se_CreateCrawlerRequest = (input: CreateCrawlerRequest, context: __SerdeCo
 
 // se_CreateDevEndpointRequest omitted.
 
+// se_CreateGlueIdentityCenterConfigurationRequest omitted.
+
 // se_CreateGrokClassifierRequest omitted.
+
+/**
+ * serializeAws_json1_1CreateIcebergTableInput
+ */
+const se_CreateIcebergTableInput = (input: CreateIcebergTableInput, context: __SerdeContext): any => {
+  return take(input, {
+    Location: [],
+    PartitionSpec: _json,
+    Properties: _json,
+    Schema: (_) => se_IcebergSchema(_, context),
+    WriteOrder: _json,
+  });
+};
 
 // se_CreateIntegrationRequest omitted.
 
@@ -11134,7 +11347,8 @@ const se_CreateTableRequest = (input: CreateTableRequest, context: __SerdeContex
   return take(input, {
     CatalogId: [],
     DatabaseName: [],
-    OpenTableFormatInput: _json,
+    Name: [],
+    OpenTableFormatInput: (_) => se_OpenTableFormatInput(_, context),
     PartitionIndexes: _json,
     TableInput: (_) => se_TableInput(_, context),
     TransactionId: [],
@@ -11261,6 +11475,10 @@ const se_DateColumnStatisticsData = (input: DateColumnStatisticsData, context: _
   });
 };
 
+// se_DDBELTCatalogAdditionalOptions omitted.
+
+// se_DDBELTConnectionOptions omitted.
+
 /**
  * serializeAws_json1_1DecimalColumnStatisticsData
  */
@@ -11308,6 +11526,8 @@ const se_DecimalNumber = (input: DecimalNumber, context: __SerdeContext): any =>
 // se_DeleteDataQualityRulesetRequest omitted.
 
 // se_DeleteDevEndpointRequest omitted.
+
+// se_DeleteGlueIdentityCenterConfigurationRequest omitted.
 
 // se_DeleteIntegrationRequest omitted.
 
@@ -11422,6 +11642,8 @@ const se_DoubleColumnStatisticsData = (input: DoubleColumnStatisticsData, contex
 // se_DynamicTransform omitted.
 
 // se_DynamoDBCatalogSource omitted.
+
+// se_DynamoDBELTConnectorSource omitted.
 
 /**
  * serializeAws_json1_1DynamoDBTarget
@@ -11560,6 +11782,8 @@ const se_FindMatchesParameters = (input: FindMatchesParameters, context: __Serde
 // se_GetDevEndpointsRequest omitted.
 
 // se_GetEntityRecordsRequest omitted.
+
+// se_GetGlueIdentityCenterConfigurationRequest omitted.
 
 // se_GetIntegrationResourcePropertyRequest omitted.
 
@@ -11792,25 +12016,127 @@ const se_GetUnfilteredTableMetadataRequest = (
 
 // se_GovernedCatalogTarget omitted.
 
+// se_GroupFilters omitted.
+
+// se_GroupFiltersList omitted.
+
 // se_HudiTarget omitted.
 
 // se_HudiTargetList omitted.
 
-// se_IcebergInput omitted.
+// se_IcebergCompactionConfiguration omitted.
+
+/**
+ * serializeAws_json1_1IcebergDocument
+ */
+const se_IcebergDocument = (input: __DocumentType, context: __SerdeContext): any => {
+  return input;
+};
+
+/**
+ * serializeAws_json1_1IcebergInput
+ */
+const se_IcebergInput = (input: IcebergInput, context: __SerdeContext): any => {
+  return take(input, {
+    CreateIcebergTableInput: (_) => se_CreateIcebergTableInput(_, context),
+    MetadataOperation: [],
+    Version: [],
+  });
+};
+
+// se_IcebergOptimizationProperties omitted.
 
 // se_IcebergOrphanFileDeletionConfiguration omitted.
 
+// se_IcebergPartitionField omitted.
+
+// se_IcebergPartitionSpec omitted.
+
+// se_IcebergPartitionSpecFieldList omitted.
+
 // se_IcebergRetentionConfiguration omitted.
+
+/**
+ * serializeAws_json1_1IcebergSchema
+ */
+const se_IcebergSchema = (input: IcebergSchema, context: __SerdeContext): any => {
+  return take(input, {
+    Fields: (_) => se_IcebergStructFieldList(_, context),
+    IdentifierFieldIds: _json,
+    SchemaId: [],
+    Type: [],
+  });
+};
+
+// se_IcebergSortField omitted.
+
+// se_IcebergSortOrder omitted.
+
+// se_IcebergSortOrderFieldList omitted.
+
+/**
+ * serializeAws_json1_1IcebergStructField
+ */
+const se_IcebergStructField = (input: IcebergStructField, context: __SerdeContext): any => {
+  return take(input, {
+    Doc: [],
+    Id: [],
+    Name: [],
+    Required: [],
+    Type: (_) => se_IcebergDocument(_, context),
+  });
+};
+
+/**
+ * serializeAws_json1_1IcebergStructFieldList
+ */
+const se_IcebergStructFieldList = (input: IcebergStructField[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_IcebergStructField(entry, context);
+    });
+};
+
+/**
+ * serializeAws_json1_1IcebergTableUpdate
+ */
+const se_IcebergTableUpdate = (input: IcebergTableUpdate, context: __SerdeContext): any => {
+  return take(input, {
+    Location: [],
+    PartitionSpec: _json,
+    Properties: _json,
+    Schema: (_) => se_IcebergSchema(_, context),
+    SortOrder: _json,
+  });
+};
+
+/**
+ * serializeAws_json1_1IcebergTableUpdateList
+ */
+const se_IcebergTableUpdateList = (input: IcebergTableUpdate[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_IcebergTableUpdate(entry, context);
+    });
+};
 
 // se_IcebergTarget omitted.
 
 // se_IcebergTargetList omitted.
 
+// se_IdentityCenterScopesList omitted.
+
 // se_ImportCatalogToGlueRequest omitted.
 
 // se_InclusionAnnotationList omitted.
 
+// se_IntegerList omitted.
+
 // se_IntegrationAdditionalEncryptionContextMap omitted.
+
+// se_IntegrationConfig omitted.
 
 // se_IntegrationFilter omitted.
 
@@ -11821,6 +12147,8 @@ const se_GetUnfilteredTableMetadataRequest = (
 // se_IntegrationPartition omitted.
 
 // se_IntegrationPartitionSpecList omitted.
+
+// se_IntegrationSourcePropertiesMap omitted.
 
 // se_IntegrationTagsList omitted.
 
@@ -11921,6 +12249,7 @@ const se_KinesisStreamingSourceOptions = (input: KinesisStreamingSourceOptions, 
     DescribeShardInterval: [],
     EmitConsumerLagMetrics: [],
     EndpointUrl: [],
+    FanoutConsumerARN: [],
     IdleTimeBetweenReadsInMs: [],
     MaxFetchRecordsPerShard: [],
     MaxFetchTimeInMs: [],
@@ -12159,7 +12488,14 @@ const se_Mappings = (input: Mapping[], context: __SerdeContext): any => {
 
 // se_OneInput omitted.
 
-// se_OpenTableFormatInput omitted.
+/**
+ * serializeAws_json1_1OpenTableFormatInput
+ */
+const se_OpenTableFormatInput = (input: OpenTableFormatInput, context: __SerdeContext): any => {
+  return take(input, {
+    IcebergInput: (_) => se_IcebergInput(_, context),
+  });
+};
 
 // se_Option omitted.
 
@@ -12170,8 +12506,6 @@ const se_Mappings = (input: Mapping[], context: __SerdeContext): any => {
 // se_OracleSQLCatalogTarget omitted.
 
 // se_OrchestrationArgumentsMap omitted.
-
-// se_OrchestrationStringList omitted.
 
 // se_Order omitted.
 
@@ -12226,12 +12560,19 @@ const se_PartitionInputList = (input: PartitionInput[], context: __SerdeContext)
  */
 const se_PIIDetection = (input: PIIDetection, context: __SerdeContext): any => {
   return take(input, {
+    DetectionParameters: [],
+    DetectionSensitivity: [],
     EntityTypesToDetect: _json,
     Inputs: _json,
     MaskValue: [],
+    MatchPattern: [],
     Name: [],
+    NumLeftCharsToExclude: [],
+    NumRightCharsToExclude: [],
     OutputColumnName: [],
     PiiType: [],
+    RedactChar: [],
+    RedactText: [],
     SampleFraction: __serializeFloat,
     ThresholdFraction: __serializeFloat,
   });
@@ -12318,6 +12659,8 @@ const se_QuerySessionContext = (input: QuerySessionContext, context: __SerdeCont
 
 // se_RetentionConfiguration omitted.
 
+// se_Route omitted.
+
 // se_RulesetNames omitted.
 
 // se_RunStatementRequest omitted.
@@ -12325,6 +12668,8 @@ const se_QuerySessionContext = (input: QuerySessionContext, context: __SerdeCont
 // se_S3CatalogDeltaSource omitted.
 
 // se_S3CatalogHudiSource omitted.
+
+// se_S3CatalogIcebergSource omitted.
 
 // se_S3CatalogSource omitted.
 
@@ -12346,6 +12691,8 @@ const se_QuerySessionContext = (input: QuerySessionContext, context: __SerdeCont
 
 // se_S3EncryptionList omitted.
 
+// se_S3ExcelSource omitted.
+
 // se_S3GlueParquetTarget omitted.
 
 // se_S3HudiCatalogTarget omitted.
@@ -12353,6 +12700,12 @@ const se_QuerySessionContext = (input: QuerySessionContext, context: __SerdeCont
 // se_S3HudiDirectTarget omitted.
 
 // se_S3HudiSource omitted.
+
+// se_S3HyperDirectTarget omitted.
+
+// se_S3IcebergCatalogTarget omitted.
+
+// se_S3IcebergDirectTarget omitted.
 
 // se_S3JsonSource omitted.
 
@@ -12479,6 +12832,7 @@ const se_StartJobRunRequest = (input: StartJobRunRequest, context: __SerdeContex
     AllocatedCapacity: [],
     Arguments: _json,
     ExecutionClass: [],
+    ExecutionRoleSessionPolicy: [],
     JobName: [],
     JobRunId: [],
     JobRunQueuingEnabled: [],
@@ -12530,6 +12884,8 @@ const se_StringColumnStatisticsData = (input: StringColumnStatisticsData, contex
 };
 
 // se_StringList omitted.
+
+// se_StringToStringMap omitted.
 
 // se_SupportedDialect omitted.
 
@@ -12755,7 +13111,27 @@ const se_UpdateCrawlerRequest = (input: UpdateCrawlerRequest, context: __SerdeCo
 
 // se_UpdateDevEndpointRequest omitted.
 
+// se_UpdateGlueIdentityCenterConfigurationRequest omitted.
+
 // se_UpdateGrokClassifierRequest omitted.
+
+/**
+ * serializeAws_json1_1UpdateIcebergInput
+ */
+const se_UpdateIcebergInput = (input: UpdateIcebergInput, context: __SerdeContext): any => {
+  return take(input, {
+    UpdateIcebergTableInput: (_) => se_UpdateIcebergTableInput(_, context),
+  });
+};
+
+/**
+ * serializeAws_json1_1UpdateIcebergTableInput
+ */
+const se_UpdateIcebergTableInput = (input: UpdateIcebergTableInput, context: __SerdeContext): any => {
+  return take(input, {
+    Updates: (_) => se_IcebergTableUpdateList(_, context),
+  });
+};
 
 // se_UpdateIntegrationResourcePropertyRequest omitted.
 
@@ -12795,6 +13171,15 @@ const se_UpdateMLTransformRequest = (input: UpdateMLTransformRequest, context: _
 };
 
 /**
+ * serializeAws_json1_1UpdateOpenTableFormatInput
+ */
+const se_UpdateOpenTableFormatInput = (input: UpdateOpenTableFormatInput, context: __SerdeContext): any => {
+  return take(input, {
+    UpdateIcebergInput: (_) => se_UpdateIcebergInput(_, context),
+  });
+};
+
+/**
  * serializeAws_json1_1UpdatePartitionRequest
  */
 const se_UpdatePartitionRequest = (input: UpdatePartitionRequest, context: __SerdeContext): any => {
@@ -12823,9 +13208,11 @@ const se_UpdateTableRequest = (input: UpdateTableRequest, context: __SerdeContex
     CatalogId: [],
     DatabaseName: [],
     Force: [],
+    Name: [],
     SkipArchive: [],
     TableInput: (_) => se_TableInput(_, context),
     TransactionId: [],
+    UpdateOpenTableFormatInput: (_) => se_UpdateOpenTableFormatInput(_, context),
     VersionId: [],
     ViewUpdateAction: [],
   });
@@ -12925,6 +13312,8 @@ const de_ApplyMapping = (output: any, context: __SerdeContext): ApplyMapping => 
 // de_AuthenticationConfiguration omitted.
 
 // de_AuthenticationTypes omitted.
+
+// de_AutoDataQuality omitted.
 
 // de_BackfillError omitted.
 
@@ -13175,7 +13564,7 @@ const de_Catalog = (output: any, context: __SerdeContext): Catalog => {
   return take(output, {
     AllowFullTableExternalDataAccess: __expectString,
     CatalogId: __expectString,
-    CatalogProperties: _json,
+    CatalogProperties: (_: any) => de_CatalogPropertiesOutput(_, context),
     CreateDatabaseDefaultPermissions: _json,
     CreateTableDefaultPermissions: _json,
     CreateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -13192,6 +13581,8 @@ const de_Catalog = (output: any, context: __SerdeContext): Catalog => {
 // de_CatalogDeltaSource omitted.
 
 // de_CatalogHudiSource omitted.
+
+// de_CatalogIcebergSource omitted.
 
 /**
  * deserializeAws_json1_1CatalogImportStatus
@@ -13246,7 +13637,16 @@ const de_CatalogList = (output: any, context: __SerdeContext): Catalog[] => {
   return retVal;
 };
 
-// de_CatalogPropertiesOutput omitted.
+/**
+ * deserializeAws_json1_1CatalogPropertiesOutput
+ */
+const de_CatalogPropertiesOutput = (output: any, context: __SerdeContext): CatalogPropertiesOutput => {
+  return take(output, {
+    CustomProperties: _json,
+    DataLakeAccessProperties: _json,
+    IcebergOptimizationProperties: (_: any) => de_IcebergOptimizationPropertiesOutput(_, context),
+  }) as any;
+};
 
 // de_CatalogSchemaChangePolicy omitted.
 
@@ -13300,6 +13700,7 @@ const de_CodeGenConfigurationNode = (output: any, context: __SerdeContext): Code
     AthenaConnectorSource: _json,
     CatalogDeltaSource: _json,
     CatalogHudiSource: _json,
+    CatalogIcebergSource: _json,
     CatalogKafkaSource: (_: any) => de_CatalogKafkaSource(_, context),
     CatalogKinesisSource: (_: any) => de_CatalogKinesisSource(_, context),
     CatalogSource: _json,
@@ -13315,6 +13716,7 @@ const de_CodeGenConfigurationNode = (output: any, context: __SerdeContext): Code
     DropNullFields: _json,
     DynamicTransform: _json,
     DynamoDBCatalogSource: _json,
+    DynamoDBELTConnectorSource: _json,
     EvaluateDataQuality: _json,
     EvaluateDataQualityMultiFrame: _json,
     FillMissingValues: _json,
@@ -13339,8 +13741,10 @@ const de_CodeGenConfigurationNode = (output: any, context: __SerdeContext): Code
     RedshiftTarget: _json,
     RelationalCatalogSource: _json,
     RenameField: _json,
+    Route: _json,
     S3CatalogDeltaSource: _json,
     S3CatalogHudiSource: _json,
+    S3CatalogIcebergSource: _json,
     S3CatalogSource: _json,
     S3CatalogTarget: _json,
     S3CsvSource: _json,
@@ -13348,10 +13752,14 @@ const de_CodeGenConfigurationNode = (output: any, context: __SerdeContext): Code
     S3DeltaDirectTarget: _json,
     S3DeltaSource: _json,
     S3DirectTarget: _json,
+    S3ExcelSource: _json,
     S3GlueParquetTarget: _json,
     S3HudiCatalogTarget: _json,
     S3HudiDirectTarget: _json,
     S3HudiSource: _json,
+    S3HyperDirectTarget: _json,
+    S3IcebergCatalogTarget: _json,
+    S3IcebergDirectTarget: _json,
     S3JsonSource: _json,
     S3ParquetSource: _json,
     SelectFields: _json,
@@ -13557,6 +13965,8 @@ const de_ColumnStatisticsTaskSettings = (output: any, context: __SerdeContext): 
 
 // de_ColumnValueStringList omitted.
 
+// de_CompactionConfiguration omitted.
+
 /**
  * deserializeAws_json1_1CompactionMetrics
  */
@@ -13640,9 +14050,15 @@ const de_ConnectionList = (output: any, context: __SerdeContext): Connection[] =
 
 // de_ConnectionsList omitted.
 
+// de_ConnectionStringList omitted.
+
 // de_ConnectionTypeBrief omitted.
 
 // de_ConnectionTypeList omitted.
+
+// de_ConnectionTypeVariant omitted.
+
+// de_ConnectionTypeVariantList omitted.
 
 // de_ConnectorDataSource omitted.
 
@@ -13854,6 +14270,8 @@ const de_CreateDevEndpointResponse = (output: any, context: __SerdeContext): Cre
   }) as any;
 };
 
+// de_CreateGlueIdentityCenterConfigurationResponse omitted.
+
 // de_CreateIntegrationResourcePropertyResponse omitted.
 
 /**
@@ -13867,6 +14285,7 @@ const de_CreateIntegrationResponse = (output: any, context: __SerdeContext): Cre
     Description: __expectString,
     Errors: _json,
     IntegrationArn: __expectString,
+    IntegrationConfig: _json,
     IntegrationName: __expectString,
     KmsKeyId: __expectString,
     SourceArn: __expectString,
@@ -14005,6 +14424,20 @@ const de_DatabaseList = (output: any, context: __SerdeContext): Database[] => {
 // de_DataOperations omitted.
 
 /**
+ * deserializeAws_json1_1DataQualityAggregatedMetrics
+ */
+const de_DataQualityAggregatedMetrics = (output: any, context: __SerdeContext): DataQualityAggregatedMetrics => {
+  return take(output, {
+    TotalRowsFailed: __limitedParseDouble,
+    TotalRowsPassed: __limitedParseDouble,
+    TotalRowsProcessed: __limitedParseDouble,
+    TotalRulesFailed: __limitedParseDouble,
+    TotalRulesPassed: __limitedParseDouble,
+    TotalRulesProcessed: __limitedParseDouble,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1DataQualityAnalyzerResult
  */
 const de_DataQualityAnalyzerResult = (output: any, context: __SerdeContext): DataQualityAnalyzerResult => {
@@ -14071,6 +14504,7 @@ const de_DataQualityObservations = (output: any, context: __SerdeContext): DataQ
  */
 const de_DataQualityResult = (output: any, context: __SerdeContext): DataQualityResult => {
   return take(output, {
+    AggregatedMetrics: (_: any) => de_DataQualityAggregatedMetrics(_, context),
     AnalyzerResults: (_: any) => de_DataQualityAnalyzerResults(_, context),
     CompletedOn: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     DataSource: _json,
@@ -14170,6 +14604,7 @@ const de_DataQualityRuleResult = (output: any, context: __SerdeContext): DataQua
     EvaluationMessage: __expectString,
     Name: __expectString,
     Result: __expectString,
+    RuleMetrics: (_: any) => de_RuleMetricsMap(_, context),
   }) as any;
 };
 
@@ -14262,6 +14697,10 @@ const de_DateColumnStatisticsData = (output: any, context: __SerdeContext): Date
   }) as any;
 };
 
+// de_DDBELTCatalogAdditionalOptions omitted.
+
+// de_DDBELTConnectionOptions omitted.
+
 /**
  * deserializeAws_json1_1DecimalColumnStatisticsData
  */
@@ -14307,6 +14746,8 @@ const de_DecimalNumber = (output: any, context: __SerdeContext): DecimalNumber =
 // de_DeleteDataQualityRulesetResponse omitted.
 
 // de_DeleteDevEndpointResponse omitted.
+
+// de_DeleteGlueIdentityCenterConfigurationResponse omitted.
 
 /**
  * deserializeAws_json1_1DeleteIntegrationResponse
@@ -14503,6 +14944,8 @@ const de_DoubleColumnStatisticsData = (output: any, context: __SerdeContext): Do
 // de_DynamicTransform omitted.
 
 // de_DynamoDBCatalogSource omitted.
+
+// de_DynamoDBELTConnectorSource omitted.
 
 /**
  * deserializeAws_json1_1DynamoDBTarget
@@ -14899,6 +15342,7 @@ const de_GetDataQualityModelResultResponse = (
  */
 const de_GetDataQualityResultResponse = (output: any, context: __SerdeContext): GetDataQualityResultResponse => {
   return take(output, {
+    AggregatedMetrics: (_: any) => de_DataQualityAggregatedMetrics(_, context),
     AnalyzerResults: (_: any) => de_DataQualityAnalyzerResults(_, context),
     CompletedOn: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     DataSource: _json,
@@ -15011,6 +15455,8 @@ const de_GetEntityRecordsResponse = (output: any, context: __SerdeContext): GetE
     Records: (_: any) => de_Records(_, context),
   }) as any;
 };
+
+// de_GetGlueIdentityCenterConfigurationResponse omitted.
 
 // de_GetIntegrationResourcePropertyResponse omitted.
 
@@ -15460,19 +15906,42 @@ const de_GrokClassifier = (output: any, context: __SerdeContext): GrokClassifier
   }) as any;
 };
 
+// de_GroupFilters omitted.
+
+// de_GroupFiltersList omitted.
+
 // de_HudiTarget omitted.
 
 // de_HudiTargetList omitted.
+
+// de_IcebergCompactionConfiguration omitted.
 
 /**
  * deserializeAws_json1_1IcebergCompactionMetrics
  */
 const de_IcebergCompactionMetrics = (output: any, context: __SerdeContext): IcebergCompactionMetrics => {
   return take(output, {
+    DpuHours: __limitedParseDouble,
     JobDurationInHour: __limitedParseDouble,
     NumberOfBytesCompacted: __expectLong,
     NumberOfDpus: __expectInt32,
     NumberOfFilesCompacted: __expectLong,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1IcebergOptimizationPropertiesOutput
+ */
+const de_IcebergOptimizationPropertiesOutput = (
+  output: any,
+  context: __SerdeContext
+): IcebergOptimizationPropertiesOutput => {
+  return take(output, {
+    Compaction: _json,
+    LastUpdatedTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    OrphanFileDeletion: _json,
+    Retention: _json,
+    RoleArn: __expectString,
   }) as any;
 };
 
@@ -15486,6 +15955,7 @@ const de_IcebergOrphanFileDeletionMetrics = (
   context: __SerdeContext
 ): IcebergOrphanFileDeletionMetrics => {
   return take(output, {
+    DpuHours: __limitedParseDouble,
     JobDurationInHour: __limitedParseDouble,
     NumberOfDpus: __expectInt32,
     NumberOfOrphanFilesDeleted: __expectLong,
@@ -15499,6 +15969,7 @@ const de_IcebergOrphanFileDeletionMetrics = (
  */
 const de_IcebergRetentionMetrics = (output: any, context: __SerdeContext): IcebergRetentionMetrics => {
   return take(output, {
+    DpuHours: __limitedParseDouble,
     JobDurationInHour: __limitedParseDouble,
     NumberOfDataFilesDeleted: __expectLong,
     NumberOfDpus: __expectInt32,
@@ -15531,6 +16002,7 @@ const de_InboundIntegration = (output: any, context: __SerdeContext): InboundInt
     CreateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     Errors: _json,
     IntegrationArn: __expectString,
+    IntegrationConfig: _json,
     SourceArn: __expectString,
     Status: __expectString,
     TargetArn: __expectString,
@@ -15560,6 +16032,7 @@ const de_Integration = (output: any, context: __SerdeContext): Integration => {
     Description: __expectString,
     Errors: _json,
     IntegrationArn: __expectString,
+    IntegrationConfig: _json,
     IntegrationName: __expectString,
     KmsKeyId: __expectString,
     SourceArn: __expectString,
@@ -15570,6 +16043,8 @@ const de_Integration = (output: any, context: __SerdeContext): Integration => {
 };
 
 // de_IntegrationAdditionalEncryptionContextMap omitted.
+
+// de_IntegrationConfig omitted.
 
 // de_IntegrationConflictOperationFault omitted.
 
@@ -15596,6 +16071,8 @@ const de_IntegrationsList = (output: any, context: __SerdeContext): Integration[
     });
   return retVal;
 };
+
+// de_IntegrationSourcePropertiesMap omitted.
 
 // de_IntegrationTagsList omitted.
 
@@ -15697,6 +16174,7 @@ const de_JobRun = (output: any, context: __SerdeContext): JobRun => {
     DPUSeconds: __limitedParseDouble,
     ErrorMessage: __expectString,
     ExecutionClass: __expectString,
+    ExecutionRoleSessionPolicy: __expectString,
     ExecutionTime: __expectInt32,
     GlueVersion: __expectString,
     Id: __expectString,
@@ -15797,6 +16275,7 @@ const de_KinesisStreamingSourceOptions = (output: any, context: __SerdeContext):
     DescribeShardInterval: __expectLong,
     EmitConsumerLagMetrics: __expectString,
     EndpointUrl: __expectString,
+    FanoutConsumerARN: __expectString,
     IdleTimeBetweenReadsInMs: __expectLong,
     MaxFetchRecordsPerShard: __expectLong,
     MaxFetchTimeInMs: __expectLong,
@@ -16270,12 +16749,19 @@ const de_PartitionList = (output: any, context: __SerdeContext): Partition[] => 
  */
 const de_PIIDetection = (output: any, context: __SerdeContext): PIIDetection => {
   return take(output, {
+    DetectionParameters: __expectString,
+    DetectionSensitivity: __expectString,
     EntityTypesToDetect: _json,
     Inputs: _json,
     MaskValue: __expectString,
+    MatchPattern: __expectString,
     Name: __expectString,
+    NumLeftCharsToExclude: __expectInt32,
+    NumRightCharsToExclude: __expectInt32,
     OutputColumnName: __expectString,
     PiiType: __expectString,
+    RedactChar: __expectString,
+    RedactText: __expectString,
     SampleFraction: __limitedParseDouble,
     ThresholdFraction: __limitedParseDouble,
   }) as any;
@@ -16397,6 +16883,21 @@ const de_RetentionMetrics = (output: any, context: __SerdeContext): RetentionMet
   }) as any;
 };
 
+// de_Route omitted.
+
+/**
+ * deserializeAws_json1_1RuleMetricsMap
+ */
+const de_RuleMetricsMap = (output: any, context: __SerdeContext): Record<string, number> => {
+  return Object.entries(output).reduce((acc: Record<string, number>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key as string] = __limitedParseDouble(value) as any;
+    return acc;
+  }, {} as Record<string, number>);
+};
+
 // de_RulesetNames omitted.
 
 // de_RunIdentifier omitted.
@@ -16408,6 +16909,8 @@ const de_RetentionMetrics = (output: any, context: __SerdeContext): RetentionMet
 // de_S3CatalogDeltaSource omitted.
 
 // de_S3CatalogHudiSource omitted.
+
+// de_S3CatalogIcebergSource omitted.
 
 // de_S3CatalogSource omitted.
 
@@ -16429,6 +16932,8 @@ const de_RetentionMetrics = (output: any, context: __SerdeContext): RetentionMet
 
 // de_S3EncryptionList omitted.
 
+// de_S3ExcelSource omitted.
+
 // de_S3GlueParquetTarget omitted.
 
 // de_S3HudiCatalogTarget omitted.
@@ -16436,6 +16941,12 @@ const de_RetentionMetrics = (output: any, context: __SerdeContext): RetentionMet
 // de_S3HudiDirectTarget omitted.
 
 // de_S3HudiSource omitted.
+
+// de_S3HyperDirectTarget omitted.
+
+// de_S3IcebergCatalogTarget omitted.
+
+// de_S3IcebergDirectTarget omitted.
 
 // de_S3JsonSource omitted.
 
@@ -16831,6 +17342,7 @@ const de_TableList = (output: any, context: __SerdeContext): Table[] => {
 const de_TableOptimizer = (output: any, context: __SerdeContext): TableOptimizer => {
   return take(output, {
     configuration: _json,
+    configurationSource: __expectString,
     lastRun: (_: any) => de_TableOptimizerRun(_, context),
     type: __expectString,
   }) as any;
@@ -16844,6 +17356,7 @@ const de_TableOptimizer = (output: any, context: __SerdeContext): TableOptimizer
 const de_TableOptimizerRun = (output: any, context: __SerdeContext): TableOptimizerRun => {
   return take(output, {
     compactionMetrics: (_: any) => de_CompactionMetrics(_, context),
+    compactionStrategy: __expectString,
     endTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     error: __expectString,
     eventType: __expectString,
@@ -17072,6 +17585,8 @@ const de_UpdateColumnStatisticsForTableResponse = (
 // de_UpdateDataQualityRulesetResponse omitted.
 
 // de_UpdateDevEndpointResponse omitted.
+
+// de_UpdateGlueIdentityCenterConfigurationResponse omitted.
 
 // de_UpdateIntegrationResourcePropertyResponse omitted.
 

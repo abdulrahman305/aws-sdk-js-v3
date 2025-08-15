@@ -52,6 +52,7 @@ export interface GetStepCommandOutput extends GetStepResponse, __MetadataBearer 
  * //   taskRunStatusCounts: { // TaskRunStatusCounts // required
  * //     "<keys>": Number("int"),
  * //   },
+ * //   taskFailureRetryCount: Number("int"),
  * //   targetTaskRunStatus: "READY" || "FAILED" || "SUCCEEDED" || "CANCELED" || "SUSPENDED" || "PENDING",
  * //   createdAt: new Date("TIMESTAMP"), // required
  * //   createdBy: "STRING_VALUE", // required
@@ -90,7 +91,7 @@ export interface GetStepCommandOutput extends GetStepResponse, __MetadataBearer 
  * //     parameters: [ // StepParameterList // required
  * //       { // StepParameter
  * //         name: "STRING_VALUE", // required
- * //         type: "INT" || "FLOAT" || "STRING" || "PATH", // required
+ * //         type: "INT" || "FLOAT" || "STRING" || "PATH" || "CHUNK_INT", // required
  * //       },
  * //     ],
  * //     combination: "STRING_VALUE",

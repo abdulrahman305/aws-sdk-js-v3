@@ -1,5 +1,5 @@
 // smithy-typescript generated code
-import { ExceptionOptionType as __ExceptionOptionType } from "@smithy/smithy-client";
+import { ExceptionOptionType as __ExceptionOptionType, SENSITIVE_STRING } from "@smithy/smithy-client";
 
 import { TranscribeServiceException as __BaseException } from "./TranscribeServiceException";
 
@@ -247,6 +247,7 @@ export const LanguageCode = {
   EN_ZA: "en-ZA",
   ES_ES: "es-ES",
   ES_US: "es-US",
+  ET_EE: "et-EE",
   ET_ET: "et-ET",
   EU_ES: "eu-ES",
   FA_IR: "fa-IR",
@@ -317,6 +318,7 @@ export const LanguageCode = {
   VI_VN: "vi-VN",
   WO_SN: "wo-SN",
   ZH_CN: "zh-CN",
+  ZH_HK: "zh-HK",
   ZH_TW: "zh-TW",
   ZU_ZA: "zu-ZA",
 } as const;
@@ -1534,8 +1536,13 @@ export interface CategoryProperties {
  * @enum
  */
 export const MedicalScribeNoteTemplate = {
+  BEHAVIORAL_SOAP: "BEHAVIORAL_SOAP",
+  BIRP: "BIRP",
+  DAP: "DAP",
   GIRPP: "GIRPP",
   HISTORY_AND_PHYSICAL: "HISTORY_AND_PHYSICAL",
+  PHYSICAL_SOAP: "PHYSICAL_SOAP",
+  SIRP: "SIRP",
 } as const;
 
 /**
@@ -1558,6 +1565,21 @@ export interface ClinicalNoteGenerationSettings {
    *             <li>
    *                <p>GIRPP: Provides summaries based on the patients progress toward goals. Examples of sections include Goal, Intervention,
    *                     Response, Progress, and Plan.</p>
+   *             </li>
+   *             <li>
+   *                <p>BIRP: Focuses on the patient's behavioral patterns and responses. Examples of sections include Behavior, Intervention, Response, and Plan.</p>
+   *             </li>
+   *             <li>
+   *                <p>SIRP: Emphasizes the situational context of therapy. Examples of sections include Situation, Intervention, Response, and Plan.</p>
+   *             </li>
+   *             <li>
+   *                <p>DAP: Provides a simplified format for clinical documentation. Examples of sections include Data, Assessment, and Plan.</p>
+   *             </li>
+   *             <li>
+   *                <p>BEHAVIORAL_SOAP: Behavioral health focused documentation format. Examples of sections include Subjective, Objective, Assessment, and Plan.</p>
+   *             </li>
+   *             <li>
+   *                <p>PHYSICAL_SOAP: Physical health focused documentation format. Examples of sections include Subjective, Objective, Assessment, and Plan.</p>
    *             </li>
    *          </ul>
    * @public
@@ -2836,7 +2858,13 @@ export interface MedicalScribeJob {
   ChannelDefinitions?: MedicalScribeChannelDefinition[] | undefined;
 
   /**
-   * <p>Adds one or more custom tags, each in the form of a key:value pair, to the Medica Scribe job.</p>
+   * <p>Indicates whether the <code>MedicalScribeContext</code> object was provided when the Medical Scribe job was started.</p>
+   * @public
+   */
+  MedicalScribeContextProvided?: boolean | undefined;
+
+  /**
+   * <p>Adds one or more custom tags, each in the form of a key:value pair, to the Medical Scribe job.</p>
    *          <p>To learn more about using tags with Amazon Transcribe, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/tagging.html">Tagging
    *                 resources</a>.</p>
    * @public
@@ -4896,6 +4924,46 @@ export interface ListVocabularyFiltersResponse {
 
 /**
  * @public
+ * @enum
+ */
+export const Pronouns = {
+  HE_HIM: "HE_HIM",
+  SHE_HER: "SHE_HER",
+  THEY_THEM: "THEY_THEM",
+} as const;
+
+/**
+ * @public
+ */
+export type Pronouns = (typeof Pronouns)[keyof typeof Pronouns];
+
+/**
+ * <p>Contains patient-specific information used to customize the clinical note generation.</p>
+ * @public
+ */
+export interface MedicalScribePatientContext {
+  /**
+   * <p>The patient's preferred pronouns that the user wants to provide as a context for clinical note generation.</p>
+   * @public
+   */
+  Pronouns?: Pronouns | undefined;
+}
+
+/**
+ * <p>The <code>MedicalScribeContext</code> object that contains contextual information used to generate
+ *             customized clinical notes.</p>
+ * @public
+ */
+export interface MedicalScribeContext {
+  /**
+   * <p>Contains patient-specific information.</p>
+   * @public
+   */
+  PatientContext?: MedicalScribePatientContext | undefined;
+}
+
+/**
+ * @public
  */
 export interface StartCallAnalyticsJobRequest {
   /**
@@ -5168,12 +5236,19 @@ export interface StartMedicalScribeJobRequest {
   ChannelDefinitions?: MedicalScribeChannelDefinition[] | undefined;
 
   /**
-   * <p>Adds one or more custom tags, each in the form of a key:value pair, to the Medica Scribe job.</p>
+   * <p>Adds one or more custom tags, each in the form of a key:value pair, to the Medical Scribe job.</p>
    *          <p>To learn more about using tags with Amazon Transcribe, refer to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/tagging.html">Tagging
    *                 resources</a>.</p>
    * @public
    */
   Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The <code>MedicalScribeContext</code> object that contains contextual information which is used during
+   *             clinical note generation to add relevant context to the note.</p>
+   * @public
+   */
+  MedicalScribeContext?: MedicalScribeContext | undefined;
 }
 
 /**
@@ -6139,3 +6214,29 @@ export interface UpdateVocabularyFilterResponse {
    */
   LastModifiedTime?: Date | undefined;
 }
+
+/**
+ * @internal
+ */
+export const MedicalScribePatientContextFilterSensitiveLog = (obj: MedicalScribePatientContext): any => ({
+  ...obj,
+  ...(obj.Pronouns && { Pronouns: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const MedicalScribeContextFilterSensitiveLog = (obj: MedicalScribeContext): any => ({
+  ...obj,
+  ...(obj.PatientContext && { PatientContext: MedicalScribePatientContextFilterSensitiveLog(obj.PatientContext) }),
+});
+
+/**
+ * @internal
+ */
+export const StartMedicalScribeJobRequestFilterSensitiveLog = (obj: StartMedicalScribeJobRequest): any => ({
+  ...obj,
+  ...(obj.MedicalScribeContext && {
+    MedicalScribeContext: MedicalScribeContextFilterSensitiveLog(obj.MedicalScribeContext),
+  }),
+});

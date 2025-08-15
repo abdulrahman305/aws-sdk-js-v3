@@ -19,6 +19,11 @@ import {
   CreateBucketCommandOutput,
 } from "./commands/CreateBucketCommand";
 import {
+  CreateBucketMetadataConfigurationCommand,
+  CreateBucketMetadataConfigurationCommandInput,
+  CreateBucketMetadataConfigurationCommandOutput,
+} from "./commands/CreateBucketMetadataConfigurationCommand";
+import {
   CreateBucketMetadataTableConfigurationCommand,
   CreateBucketMetadataTableConfigurationCommandInput,
   CreateBucketMetadataTableConfigurationCommandOutput,
@@ -68,6 +73,11 @@ import {
   DeleteBucketLifecycleCommandInput,
   DeleteBucketLifecycleCommandOutput,
 } from "./commands/DeleteBucketLifecycleCommand";
+import {
+  DeleteBucketMetadataConfigurationCommand,
+  DeleteBucketMetadataConfigurationCommandInput,
+  DeleteBucketMetadataConfigurationCommandOutput,
+} from "./commands/DeleteBucketMetadataConfigurationCommand";
 import {
   DeleteBucketMetadataTableConfigurationCommand,
   DeleteBucketMetadataTableConfigurationCommandInput,
@@ -173,6 +183,11 @@ import {
   GetBucketLoggingCommandInput,
   GetBucketLoggingCommandOutput,
 } from "./commands/GetBucketLoggingCommand";
+import {
+  GetBucketMetadataConfigurationCommand,
+  GetBucketMetadataConfigurationCommandInput,
+  GetBucketMetadataConfigurationCommandOutput,
+} from "./commands/GetBucketMetadataConfigurationCommand";
 import {
   GetBucketMetadataTableConfigurationCommand,
   GetBucketMetadataTableConfigurationCommandInput,
@@ -436,6 +451,11 @@ import {
   PutPublicAccessBlockCommandOutput,
 } from "./commands/PutPublicAccessBlockCommand";
 import {
+  RenameObjectCommand,
+  RenameObjectCommandInput,
+  RenameObjectCommandOutput,
+} from "./commands/RenameObjectCommand";
+import {
   RestoreObjectCommand,
   RestoreObjectCommandInput,
   RestoreObjectCommandOutput,
@@ -445,6 +465,16 @@ import {
   SelectObjectContentCommandInput,
   SelectObjectContentCommandOutput,
 } from "./commands/SelectObjectContentCommand";
+import {
+  UpdateBucketMetadataInventoryTableConfigurationCommand,
+  UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+  UpdateBucketMetadataInventoryTableConfigurationCommandOutput,
+} from "./commands/UpdateBucketMetadataInventoryTableConfigurationCommand";
+import {
+  UpdateBucketMetadataJournalTableConfigurationCommand,
+  UpdateBucketMetadataJournalTableConfigurationCommandInput,
+  UpdateBucketMetadataJournalTableConfigurationCommandOutput,
+} from "./commands/UpdateBucketMetadataJournalTableConfigurationCommand";
 import { UploadPartCommand, UploadPartCommandInput, UploadPartCommandOutput } from "./commands/UploadPartCommand";
 import {
   UploadPartCopyCommand,
@@ -463,6 +493,7 @@ const commands = {
   CompleteMultipartUploadCommand,
   CopyObjectCommand,
   CreateBucketCommand,
+  CreateBucketMetadataConfigurationCommand,
   CreateBucketMetadataTableConfigurationCommand,
   CreateMultipartUploadCommand,
   CreateSessionCommand,
@@ -473,6 +504,7 @@ const commands = {
   DeleteBucketIntelligentTieringConfigurationCommand,
   DeleteBucketInventoryConfigurationCommand,
   DeleteBucketLifecycleCommand,
+  DeleteBucketMetadataConfigurationCommand,
   DeleteBucketMetadataTableConfigurationCommand,
   DeleteBucketMetricsConfigurationCommand,
   DeleteBucketOwnershipControlsCommand,
@@ -494,6 +526,7 @@ const commands = {
   GetBucketLifecycleConfigurationCommand,
   GetBucketLocationCommand,
   GetBucketLoggingCommand,
+  GetBucketMetadataConfigurationCommand,
   GetBucketMetadataTableConfigurationCommand,
   GetBucketMetricsConfigurationCommand,
   GetBucketNotificationConfigurationCommand,
@@ -552,8 +585,11 @@ const commands = {
   PutObjectRetentionCommand,
   PutObjectTaggingCommand,
   PutPublicAccessBlockCommand,
+  RenameObjectCommand,
   RestoreObjectCommand,
   SelectObjectContentCommand,
+  UpdateBucketMetadataInventoryTableConfigurationCommand,
+  UpdateBucketMetadataJournalTableConfigurationCommand,
   UploadPartCommand,
   UploadPartCopyCommand,
   WriteGetObjectResponseCommand,
@@ -614,6 +650,23 @@ export interface S3 {
     args: CreateBucketCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: CreateBucketCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link CreateBucketMetadataConfigurationCommand}
+   */
+  createBucketMetadataConfiguration(
+    args: CreateBucketMetadataConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<CreateBucketMetadataConfigurationCommandOutput>;
+  createBucketMetadataConfiguration(
+    args: CreateBucketMetadataConfigurationCommandInput,
+    cb: (err: any, data?: CreateBucketMetadataConfigurationCommandOutput) => void
+  ): void;
+  createBucketMetadataConfiguration(
+    args: CreateBucketMetadataConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateBucketMetadataConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -772,6 +825,23 @@ export interface S3 {
     args: DeleteBucketLifecycleCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: DeleteBucketLifecycleCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link DeleteBucketMetadataConfigurationCommand}
+   */
+  deleteBucketMetadataConfiguration(
+    args: DeleteBucketMetadataConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<DeleteBucketMetadataConfigurationCommandOutput>;
+  deleteBucketMetadataConfiguration(
+    args: DeleteBucketMetadataConfigurationCommandInput,
+    cb: (err: any, data?: DeleteBucketMetadataConfigurationCommandOutput) => void
+  ): void;
+  deleteBucketMetadataConfiguration(
+    args: DeleteBucketMetadataConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteBucketMetadataConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -1105,6 +1175,23 @@ export interface S3 {
     args: GetBucketLoggingCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetBucketLoggingCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetBucketMetadataConfigurationCommand}
+   */
+  getBucketMetadataConfiguration(
+    args: GetBucketMetadataConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<GetBucketMetadataConfigurationCommandOutput>;
+  getBucketMetadataConfiguration(
+    args: GetBucketMetadataConfigurationCommandInput,
+    cb: (err: any, data?: GetBucketMetadataConfigurationCommandOutput) => void
+  ): void;
+  getBucketMetadataConfiguration(
+    args: GetBucketMetadataConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetBucketMetadataConfigurationCommandOutput) => void
   ): void;
 
   /**
@@ -2018,6 +2105,17 @@ export interface S3 {
   ): void;
 
   /**
+   * @see {@link RenameObjectCommand}
+   */
+  renameObject(args: RenameObjectCommandInput, options?: __HttpHandlerOptions): Promise<RenameObjectCommandOutput>;
+  renameObject(args: RenameObjectCommandInput, cb: (err: any, data?: RenameObjectCommandOutput) => void): void;
+  renameObject(
+    args: RenameObjectCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: RenameObjectCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link RestoreObjectCommand}
    */
   restoreObject(args: RestoreObjectCommandInput, options?: __HttpHandlerOptions): Promise<RestoreObjectCommandOutput>;
@@ -2043,6 +2141,40 @@ export interface S3 {
     args: SelectObjectContentCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: SelectObjectContentCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateBucketMetadataInventoryTableConfigurationCommand}
+   */
+  updateBucketMetadataInventoryTableConfiguration(
+    args: UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateBucketMetadataInventoryTableConfigurationCommandOutput>;
+  updateBucketMetadataInventoryTableConfiguration(
+    args: UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+    cb: (err: any, data?: UpdateBucketMetadataInventoryTableConfigurationCommandOutput) => void
+  ): void;
+  updateBucketMetadataInventoryTableConfiguration(
+    args: UpdateBucketMetadataInventoryTableConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateBucketMetadataInventoryTableConfigurationCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link UpdateBucketMetadataJournalTableConfigurationCommand}
+   */
+  updateBucketMetadataJournalTableConfiguration(
+    args: UpdateBucketMetadataJournalTableConfigurationCommandInput,
+    options?: __HttpHandlerOptions
+  ): Promise<UpdateBucketMetadataJournalTableConfigurationCommandOutput>;
+  updateBucketMetadataJournalTableConfiguration(
+    args: UpdateBucketMetadataJournalTableConfigurationCommandInput,
+    cb: (err: any, data?: UpdateBucketMetadataJournalTableConfigurationCommandOutput) => void
+  ): void;
+  updateBucketMetadataJournalTableConfiguration(
+    args: UpdateBucketMetadataJournalTableConfigurationCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateBucketMetadataJournalTableConfigurationCommandOutput) => void
   ): void;
 
   /**

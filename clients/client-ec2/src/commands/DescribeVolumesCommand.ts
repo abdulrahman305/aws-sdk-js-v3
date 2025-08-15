@@ -69,6 +69,7 @@ export interface DescribeVolumesCommandOutput extends DescribeVolumesResult, __M
  * //   NextToken: "STRING_VALUE",
  * //   Volumes: [ // VolumeList
  * //     { // Volume
+ * //       AvailabilityZoneId: "STRING_VALUE",
  * //       OutpostArn: "STRING_VALUE",
  * //       Iops: Number("int"),
  * //       Tags: [ // TagList
@@ -86,6 +87,7 @@ export interface DescribeVolumesCommandOutput extends DescribeVolumesResult, __M
  * //         Managed: true || false,
  * //         Principal: "STRING_VALUE",
  * //       },
+ * //       VolumeInitializationRate: Number("int"),
  * //       VolumeId: "STRING_VALUE",
  * //       Size: Number("int"),
  * //       SnapshotId: "STRING_VALUE",

@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   RejectTransitGatewayMulticastDomainAssociationsRequest,
   RejectTransitGatewayMulticastDomainAssociationsResult,
-} from "../models/models_7";
+} from "../models/models_8";
 import {
   de_RejectTransitGatewayMulticastDomainAssociationsCommand,
   se_RejectTransitGatewayMulticastDomainAssociationsCommand,
@@ -59,7 +59,7 @@ export interface RejectTransitGatewayMulticastDomainAssociationsCommandOutput
  * //     TransitGatewayMulticastDomainId: "STRING_VALUE",
  * //     TransitGatewayAttachmentId: "STRING_VALUE",
  * //     ResourceId: "STRING_VALUE",
- * //     ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering",
+ * //     ResourceType: "vpc" || "vpn" || "direct-connect-gateway" || "connect" || "peering" || "tgw-peering" || "network-function",
  * //     ResourceOwnerId: "STRING_VALUE",
  * //     Subnets: [ // SubnetAssociationList
  * //       { // SubnetAssociation

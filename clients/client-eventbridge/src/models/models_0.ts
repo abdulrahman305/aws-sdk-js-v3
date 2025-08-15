@@ -4,7 +4,7 @@ import { ExceptionOptionType as __ExceptionOptionType, SENSITIVE_STRING } from "
 import { EventBridgeServiceException as __BaseException } from "./EventBridgeServiceException";
 
 /**
- * <p>You do not have the necessary permissons for this action.</p>
+ * <p>You do not have the necessary permissions for this action.</p>
  * @public
  */
 export class AccessDeniedException extends __BaseException {
@@ -548,6 +548,23 @@ export interface CreateArchiveRequest {
    * @public
    */
   RetentionDays?: number | undefined;
+
+  /**
+   * <p>The identifier of the KMS
+   *       customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this archive. The identifier can be the key
+   *       Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</p>
+   *          <p>If you do not specify a customer managed key identifier, EventBridge uses an
+   *         Amazon Web Services owned key to encrypt the archive.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html">Identify and view keys</a> in the <i>Key Management Service
+   *                                 Developer Guide</i>. </p>
+   *          <important>
+   *             <p>If you have specified that EventBridge use a customer managed key for encrypting the source event bus, we strongly recommend you also specify a
+   *         customer managed key for any archives for the event bus as well. </p>
+   *             <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html">Encrypting archives</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   *          </important>
+   * @public
+   */
+  KmsKeyIdentifier?: string | undefined;
 }
 
 /**
@@ -652,12 +669,12 @@ export interface CreateConnectionBasicAuthRequestParameters {
 }
 
 /**
- * <p>The Amazon Resource Name (ARN) of the resource configuration for the resource endpoint.</p>
+ * <p>The Amazon Resource Name (ARN) of the Amazon VPC Lattice resource configuration for the resource endpoint.</p>
  * @public
  */
 export interface ConnectivityResourceConfigurationArn {
   /**
-   * <p>The Amazon Resource Name (ARN) of the resource configuration for the resource endpoint.</p>
+   * <p>The Amazon Resource Name (ARN) of the Amazon VPC Lattice resource configuration for the resource endpoint.</p>
    * @public
    */
   ResourceConfigurationArn: string | undefined;
@@ -921,13 +938,25 @@ export interface CreateConnectionRequest {
   AuthParameters: CreateConnectionAuthRequestParameters | undefined;
 
   /**
-   * <p>For connections to private resource endpoints, the parameters to use for invoking the resource endpoint.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-private.html">Connecting to private resources</a> in the <i>
+   * <p>For connections to private APIs, the parameters to use for invoking the API.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html">Connecting to private APIs</a> in the <i>
    *                <i>Amazon EventBridge User Guide</i>
    *             </i>.</p>
    * @public
    */
   InvocationConnectivityParameters?: ConnectivityResourceParameters | undefined;
+
+  /**
+   * <p>The identifier of the KMS
+   *       customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this connection. The identifier can be the key
+   *       Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</p>
+   *          <p>If you do not specify a customer managed key identifier, EventBridge uses an
+   *         Amazon Web Services owned key to encrypt the connection.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html">Identify and view keys</a> in the <i>Key Management Service
+   *                                 Developer Guide</i>. </p>
+   * @public
+   */
+  KmsKeyIdentifier?: string | undefined;
 }
 
 /**
@@ -1226,6 +1255,58 @@ export interface DeadLetterConfig {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const IncludeDetail = {
+  FULL: "FULL",
+  NONE: "NONE",
+} as const;
+
+/**
+ * @public
+ */
+export type IncludeDetail = (typeof IncludeDetail)[keyof typeof IncludeDetail];
+
+/**
+ * @public
+ * @enum
+ */
+export const Level = {
+  ERROR: "ERROR",
+  INFO: "INFO",
+  OFF: "OFF",
+  TRACE: "TRACE",
+} as const;
+
+/**
+ * @public
+ */
+export type Level = (typeof Level)[keyof typeof Level];
+
+/**
+ * <p>The logging configuration settings for the event bus.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/eb-event-bus-logs.html">Configuring logs for event buses</a> in the <i>EventBridge User Guide</i>.</p>
+ * @public
+ */
+export interface LogConfig {
+  /**
+   * <p>Whether EventBridge include detailed event information in the records it generates.
+   *       Detailed data can be useful for troubleshooting and debugging. This information includes details of the event itself, as well as target details.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-logs-data">Including detail data in event bus logs</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  IncludeDetail?: IncludeDetail | undefined;
+
+  /**
+   * <p>The level of logging detail to include. This applies to all log destinations for the event bus.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-event-bus-logs.html#eb-event-bus-logs-level">Specifying event bus log level</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  Level?: Level | undefined;
+}
+
+/**
  * <p>A key-value pair associated with an Amazon Web Services resource. In EventBridge,
  *       rules and event buses support tagging.</p>
  * @public
@@ -1280,17 +1361,12 @@ export interface CreateEventBusRequest {
    *       Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</p>
    *          <p>If you do not specify a customer managed key identifier, EventBridge uses an
    *         Amazon Web Services owned key to encrypt events on the event bus.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html">Managing keys</a> in the <i>Key Management Service
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html">Identify and view keys</a> in the <i>Key Management Service
    *                                 Developer Guide</i>. </p>
    *          <note>
-   *             <p>Archives and schema discovery are not supported for event buses encrypted using a
-   *         customer managed key. EventBridge returns an error if:</p>
+   *             <p>Schema discovery is not supported for event buses encrypted using a
+   *         customer managed key. EventBridge returns an error if: </p>
    *             <ul>
-   *                <li>
-   *                   <p>You call <code>
-   *                         <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html">CreateArchive</a>
-   *                      </code> on an event bus set to use a customer managed key for encryption.</p>
-   *                </li>
    *                <li>
    *                   <p>You call <code>
    *                         <a href="https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer">CreateDiscoverer</a>
@@ -1299,12 +1375,17 @@ export interface CreateEventBusRequest {
    *                <li>
    *                   <p>You call <code>
    *                         <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html">UpdatedEventBus</a>
-   *                      </code> to set a customer managed key on an event bus with an archives or schema discovery enabled.</p>
+   *                      </code> to set a customer managed key on an event bus with schema discovery enabled.</p>
    *                </li>
    *             </ul>
-   *             <p>To enable archives or schema discovery on an event bus, choose to
-   *         use an Amazon Web Services owned key. For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html">Data encryption in EventBridge</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   *             <p>To enable schema discovery on an event bus, choose to
+   *         use an Amazon Web Services owned key. For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html">Encrypting events</a> in the <i>Amazon EventBridge User Guide</i>.</p>
    *          </note>
+   *          <important>
+   *             <p>If you have specified that EventBridge use a customer managed key for encrypting the source event bus, we strongly recommend you also specify a
+   *         customer managed key for any archives for the event bus as well. </p>
+   *             <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html">Encrypting archives</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   *          </important>
    * @public
    */
   KmsKeyIdentifier?: string | undefined;
@@ -1317,6 +1398,13 @@ export interface CreateEventBusRequest {
    * @public
    */
   DeadLetterConfig?: DeadLetterConfig | undefined;
+
+  /**
+   * <p>The logging configuration settings for the event bus.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eb-event-bus-logs.html">Configuring logs for event buses</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  LogConfig?: LogConfig | undefined;
 
   /**
    * <p>Tags to associate with the event bus.</p>
@@ -1357,6 +1445,13 @@ export interface CreateEventBusResponse {
    * @public
    */
   DeadLetterConfig?: DeadLetterConfig | undefined;
+
+  /**
+   * <p>The logging configuration settings for the event bus.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eb-event-bus-logs.html">Configuring logs for event buses</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  LogConfig?: LogConfig | undefined;
 }
 
 /**
@@ -1768,6 +1863,14 @@ export interface DescribeArchiveResponse {
   StateReason?: string | undefined;
 
   /**
+   * <p>The identifier of the KMS
+   *       customer managed key for EventBridge to use to encrypt this archive, if one has been specified.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html">Encrypting archives</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   * @public
+   */
+  KmsKeyIdentifier?: string | undefined;
+
+  /**
    * <p>The number of days to retain events for in the archive.</p>
    * @public
    */
@@ -1843,6 +1946,10 @@ export interface DescribeConnectionResourceParameters {
 
   /**
    * <p>For connections to private APIs, the Amazon Resource Name (ARN) of the resource association EventBridge created between the connection and the private API's resource configuration.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra">
+   *       Managing service network resource associations for connections</a> in the <i>
+   *                <i>Amazon EventBridge User Guide</i>
+   *             </i>.</p>
    * @public
    */
   ResourceAssociationArn: string | undefined;
@@ -1969,8 +2076,9 @@ export interface DescribeConnectionResponse {
   Description?: string | undefined;
 
   /**
-   * <p>For connections to private resource endpoints. The parameters EventBridge uses to invoke the resource endpoint.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-private.html">Connecting to private resources</a> in the <i>
+   * <p>For connections to private APIs The parameters EventBridge uses to invoke the resource
+   *       endpoint.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html">Connecting to private APIs</a> in the <i>
    *                <i>Amazon EventBridge User Guide</i>
    *             </i>.</p>
    * @public
@@ -2001,6 +2109,14 @@ export interface DescribeConnectionResponse {
    * @public
    */
   SecretArn?: string | undefined;
+
+  /**
+   * <p>The identifier of the KMS
+   *       customer managed key for EventBridge to use to encrypt the connection, if one has been specified.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-connections.html">Encrypting connections</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   * @public
+   */
+  KmsKeyIdentifier?: string | undefined;
 
   /**
    * <p>The parameters to use for authorization for the connection.</p>
@@ -2186,6 +2302,13 @@ export interface DescribeEventBusResponse {
    * @public
    */
   Policy?: string | undefined;
+
+  /**
+   * <p>The logging configuration settings for the event bus.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eb-event-bus-logs.html">Configuring logs for event buses</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  LogConfig?: LogConfig | undefined;
 
   /**
    * <p>The time the event bus was created.</p>
@@ -4261,20 +4384,20 @@ export interface RunCommandParameters {
 }
 
 /**
- * <p>Name/Value pair of a parameter to start execution of a SageMaker Model Building
+ * <p>Name/Value pair of a parameter to start execution of a SageMaker AI Model Building
  *       Pipeline.</p>
  * @public
  */
 export interface SageMakerPipelineParameter {
   /**
-   * <p>Name of parameter to start execution of a SageMaker Model Building
+   * <p>Name of parameter to start execution of a SageMaker AI Model Building
    *       Pipeline.</p>
    * @public
    */
   Name: string | undefined;
 
   /**
-   * <p>Value of parameter to start execution of a SageMaker Model Building
+   * <p>Value of parameter to start execution of a SageMaker AI Model Building
    *       Pipeline.</p>
    * @public
    */
@@ -4282,13 +4405,13 @@ export interface SageMakerPipelineParameter {
 }
 
 /**
- * <p>These are custom parameters to use when the target is a SageMaker Model Building
+ * <p>These are custom parameters to use when the target is a SageMaker AI Model Building
  *       Pipeline that starts based on EventBridge events.</p>
  * @public
  */
 export interface SageMakerPipelineParameters {
   /**
-   * <p>List of Parameter names and values for SageMaker Model Building Pipeline
+   * <p>List of Parameter names and values for SageMaker AI Model Building Pipeline
    *       execution.</p>
    * @public
    */
@@ -4423,9 +4546,9 @@ export interface Target {
   RedshiftDataParameters?: RedshiftDataParameters | undefined;
 
   /**
-   * <p>Contains the SageMaker Model Building Pipeline parameters to start execution of a
-   *         SageMaker Model Building Pipeline.</p>
-   *          <p>If you specify a SageMaker Model Building Pipeline as a target, you can use this
+   * <p>Contains the SageMaker AI Model Building Pipeline parameters to start execution of a
+   *         SageMaker AI Model Building Pipeline.</p>
+   *          <p>If you specify a SageMaker AI Model Building Pipeline as a target, you can use this
    *       to specify parameters to start a pipeline execution based on EventBridge events.</p>
    * @public
    */
@@ -5490,6 +5613,23 @@ export interface UpdateArchiveRequest {
    * @public
    */
   RetentionDays?: number | undefined;
+
+  /**
+   * <p>The identifier of the KMS
+   *       customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this archive. The identifier can be the key
+   *       Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</p>
+   *          <p>If you do not specify a customer managed key identifier, EventBridge uses an
+   *         Amazon Web Services owned key to encrypt the archive.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html">Identify and view keys</a> in the <i>Key Management Service
+   *                                 Developer Guide</i>. </p>
+   *          <important>
+   *             <p>If you have specified that EventBridge use a customer managed key for encrypting the source event bus, we strongly recommend you also specify a
+   *         customer managed key for any archives for the event bus as well. </p>
+   *             <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html">Encrypting archives</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   *          </important>
+   * @public
+   */
+  KmsKeyIdentifier?: string | undefined;
 }
 
 /**
@@ -5680,13 +5820,25 @@ export interface UpdateConnectionRequest {
   AuthParameters?: UpdateConnectionAuthRequestParameters | undefined;
 
   /**
-   * <p>For connections to private resource endpoints, the parameters to use for invoking the resource endpoint.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection-private.html">Connecting to private resources</a> in the <i>
+   * <p>For connections to private APIs, the parameters to use for invoking the API.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html">Connecting to private APIs</a> in the <i>
    *                <i>Amazon EventBridge User Guide</i>
    *             </i>.</p>
    * @public
    */
   InvocationConnectivityParameters?: ConnectivityResourceParameters | undefined;
+
+  /**
+   * <p>The identifier of the KMS
+   *       customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this connection. The identifier can be the key
+   *       Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</p>
+   *          <p>If you do not specify a customer managed key identifier, EventBridge uses an
+   *         Amazon Web Services owned key to encrypt the connection.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html">Identify and view keys</a> in the <i>Key Management Service
+   *                                 Developer Guide</i>. </p>
+   * @public
+   */
+  KmsKeyIdentifier?: string | undefined;
 }
 
 /**
@@ -5842,17 +5994,12 @@ export interface UpdateEventBusRequest {
    *       Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</p>
    *          <p>If you do not specify a customer managed key identifier, EventBridge uses an
    *         Amazon Web Services owned key to encrypt events on the event bus.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html">Managing keys</a> in the <i>Key Management Service
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html">Identify and view keys</a> in the <i>Key Management Service
    *                                 Developer Guide</i>. </p>
    *          <note>
-   *             <p>Archives and schema discovery are not supported for event buses encrypted using a
-   *         customer managed key. EventBridge returns an error if:</p>
+   *             <p>Schema discovery is not supported for event buses encrypted using a
+   *         customer managed key. EventBridge returns an error if: </p>
    *             <ul>
-   *                <li>
-   *                   <p>You call <code>
-   *                         <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateArchive.html">CreateArchive</a>
-   *                      </code> on an event bus set to use a customer managed key for encryption.</p>
-   *                </li>
    *                <li>
    *                   <p>You call <code>
    *                         <a href="https://docs.aws.amazon.com/eventbridge/latest/schema-reference/v1-discoverers.html#CreateDiscoverer">CreateDiscoverer</a>
@@ -5861,12 +6008,17 @@ export interface UpdateEventBusRequest {
    *                <li>
    *                   <p>You call <code>
    *                         <a href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdatedEventBus.html">UpdatedEventBus</a>
-   *                      </code> to set a customer managed key on an event bus with an archives or schema discovery enabled.</p>
+   *                      </code> to set a customer managed key on an event bus with schema discovery enabled.</p>
    *                </li>
    *             </ul>
-   *             <p>To enable archives or schema discovery on an event bus, choose to
-   *         use an Amazon Web Services owned key. For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption.html">Data encryption in EventBridge</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   *             <p>To enable schema discovery on an event bus, choose to
+   *         use an Amazon Web Services owned key. For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-encryption-event-bus-cmkey.html">Encrypting events</a> in the <i>Amazon EventBridge User Guide</i>.</p>
    *          </note>
+   *          <important>
+   *             <p>If you have specified that EventBridge use a customer managed key for encrypting the source event bus, we strongly recommend you also specify a
+   *         customer managed key for any archives for the event bus as well. </p>
+   *             <p>For more information, see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/encryption-archives.html">Encrypting archives</a> in the <i>Amazon EventBridge User Guide</i>.</p>
+   *          </important>
    * @public
    */
   KmsKeyIdentifier?: string | undefined;
@@ -5885,6 +6037,13 @@ export interface UpdateEventBusRequest {
    * @public
    */
   DeadLetterConfig?: DeadLetterConfig | undefined;
+
+  /**
+   * <p>The logging configuration settings for the event bus.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eb-event-bus-logs.html">Configuring logs for event buses</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  LogConfig?: LogConfig | undefined;
 }
 
 /**
@@ -5925,6 +6084,13 @@ export interface UpdateEventBusResponse {
    * @public
    */
   DeadLetterConfig?: DeadLetterConfig | undefined;
+
+  /**
+   * <p>The logging configuration settings for the event bus.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/eb-event-bus-logs.html">Configuring logs for event buses</a> in the <i>EventBridge User Guide</i>.</p>
+   * @public
+   */
+  LogConfig?: LogConfig | undefined;
 }
 
 /**

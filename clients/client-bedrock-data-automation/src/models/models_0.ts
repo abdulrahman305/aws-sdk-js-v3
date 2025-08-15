@@ -98,8 +98,10 @@ export interface Tag {
  * @enum
  */
 export const Type = {
+  AUDIO: "AUDIO",
   DOCUMENT: "DOCUMENT",
   IMAGE: "IMAGE",
+  VIDEO: "VIDEO",
 } as const;
 
 /**
@@ -704,6 +706,30 @@ export const State = {
 export type State = (typeof State)[keyof typeof State];
 
 /**
+ * Configuration to enable/disable processing of modality
+ * @public
+ */
+export interface ModalityProcessingConfiguration {
+  /**
+   * State
+   * @public
+   */
+  state?: State | undefined;
+}
+
+/**
+ * Override Configuration of Audio
+ * @public
+ */
+export interface AudioOverrideConfiguration {
+  /**
+   * Configuration to enable/disable processing of modality
+   * @public
+   */
+  modalityProcessing?: ModalityProcessingConfiguration | undefined;
+}
+
+/**
  * Configuration of Splitter
  * @public
  */
@@ -725,6 +751,82 @@ export interface DocumentOverrideConfiguration {
    * @public
    */
   splitter?: SplitterConfiguration | undefined;
+
+  /**
+   * Configuration to enable/disable processing of modality
+   * @public
+   */
+  modalityProcessing?: ModalityProcessingConfiguration | undefined;
+}
+
+/**
+ * Override Configuration of Image
+ * @public
+ */
+export interface ImageOverrideConfiguration {
+  /**
+   * Configuration to enable/disable processing of modality
+   * @public
+   */
+  modalityProcessing?: ModalityProcessingConfiguration | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const DesiredModality = {
+  AUDIO: "AUDIO",
+  DOCUMENT: "DOCUMENT",
+  IMAGE: "IMAGE",
+  VIDEO: "VIDEO",
+} as const;
+
+/**
+ * @public
+ */
+export type DesiredModality = (typeof DesiredModality)[keyof typeof DesiredModality];
+
+/**
+ * Configuration for routing file type to desired modality
+ * @public
+ */
+export interface ModalityRoutingConfiguration {
+  /**
+   * Desired Modality types
+   * @public
+   */
+  jpeg?: DesiredModality | undefined;
+
+  /**
+   * Desired Modality types
+   * @public
+   */
+  png?: DesiredModality | undefined;
+
+  /**
+   * Desired Modality types
+   * @public
+   */
+  mp4?: DesiredModality | undefined;
+
+  /**
+   * Desired Modality types
+   * @public
+   */
+  mov?: DesiredModality | undefined;
+}
+
+/**
+ * Override Configuration of Video
+ * @public
+ */
+export interface VideoOverrideConfiguration {
+  /**
+   * Configuration to enable/disable processing of modality
+   * @public
+   */
+  modalityProcessing?: ModalityProcessingConfiguration | undefined;
 }
 
 /**
@@ -737,6 +839,30 @@ export interface OverrideConfiguration {
    * @public
    */
   document?: DocumentOverrideConfiguration | undefined;
+
+  /**
+   * Override Configuration of Image
+   * @public
+   */
+  image?: ImageOverrideConfiguration | undefined;
+
+  /**
+   * Override Configuration of Video
+   * @public
+   */
+  video?: VideoOverrideConfiguration | undefined;
+
+  /**
+   * Override Configuration of Audio
+   * @public
+   */
+  audio?: AudioOverrideConfiguration | undefined;
+
+  /**
+   * Configuration for routing file type to desired modality
+   * @public
+   */
+  modalityRouting?: ModalityRoutingConfiguration | undefined;
 }
 
 /**

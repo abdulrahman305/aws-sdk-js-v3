@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/smithy-client",
-  "version": "3.775.0",
+  "version": "3.862.0",
   "private": true,
   "scripts": {
     "build": "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
@@ -22,7 +22,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@smithy/smithy-client": "^4.2.0",
+    "@smithy/smithy-client": "^4.4.10",
     "tslib": "^2.6.2"
   },
   "engines": {
@@ -50,6 +50,6 @@
     "concurrently": "7.0.0",
     "downlevel-dts": "0.10.1",
     "rimraf": "3.0.2",
-    "typescript": "~5.2.2"
+    "typescript": "~5.8.3"
   }
 }

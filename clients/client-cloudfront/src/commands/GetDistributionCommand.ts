@@ -109,6 +109,7 @@ export interface GetDistributionCommandOutput extends GetDistributionResult, __M
  * //             },
  * //             S3OriginConfig: { // S3OriginConfig
  * //               OriginAccessIdentity: "STRING_VALUE", // required
+ * //               OriginReadTimeout: Number("int"),
  * //             },
  * //             CustomOriginConfig: { // CustomOriginConfig
  * //               HTTPPort: Number("int"), // required
@@ -130,6 +131,7 @@ export interface GetDistributionCommandOutput extends GetDistributionResult, __M
  * //             },
  * //             ConnectionAttempts: Number("int"),
  * //             ConnectionTimeout: Number("int"),
+ * //             ResponseCompletionTimeout: Number("int"),
  * //             OriginShield: { // OriginShield
  * //               Enabled: true || false, // required
  * //               OriginShieldRegion: "STRING_VALUE",
@@ -355,14 +357,14 @@ export interface GetDistributionCommandOutput extends GetDistributionResult, __M
  * //         Bucket: "STRING_VALUE",
  * //         Prefix: "STRING_VALUE",
  * //       },
- * //       PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All",
+ * //       PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All" || "None",
  * //       Enabled: true || false, // required
  * //       ViewerCertificate: { // ViewerCertificate
  * //         CloudFrontDefaultCertificate: true || false,
  * //         IAMCertificateId: "STRING_VALUE",
  * //         ACMCertificateArn: "STRING_VALUE",
  * //         SSLSupportMethod: "sni-only" || "vip" || "static-ip",
- * //         MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021",
+ * //         MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021" || "TLSv1.3_2025",
  * //         Certificate: "STRING_VALUE",
  * //         CertificateSource: "cloudfront" || "iam" || "acm",
  * //       },
@@ -381,6 +383,21 @@ export interface GetDistributionCommandOutput extends GetDistributionResult, __M
  * //       ContinuousDeploymentPolicyId: "STRING_VALUE",
  * //       Staging: true || false,
  * //       AnycastIpListId: "STRING_VALUE",
+ * //       TenantConfig: { // TenantConfig
+ * //         ParameterDefinitions: [ // ParameterDefinitions
+ * //           { // ParameterDefinition
+ * //             Name: "STRING_VALUE", // required
+ * //             Definition: { // ParameterDefinitionSchema
+ * //               StringSchema: { // StringSchemaConfig
+ * //                 Comment: "STRING_VALUE",
+ * //                 DefaultValue: "STRING_VALUE",
+ * //                 Required: true || false, // required
+ * //               },
+ * //             },
+ * //           },
+ * //         ],
+ * //       },
+ * //       ConnectionMode: "direct" || "tenant-only",
  * //     },
  * //     AliasICPRecordals: [ // AliasICPRecordals
  * //       { // AliasICPRecordal

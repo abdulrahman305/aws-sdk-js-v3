@@ -71,8 +71,8 @@ export interface SharedDirectory {
 
   /**
    * <p>The method used when sharing a directory to determine whether the directory should be
-   *       shared within your Amazon Web Services organization (<code>ORGANIZATIONS</code>) or with any Amazon Web Services account by
-   *       sending a shared directory request (<code>HANDSHAKE</code>).</p>
+   *       shared within your Amazon Web Services organization (<code>ORGANIZATIONS</code>) or with any Amazon Web Services account
+   *       by sending a shared directory request (<code>HANDSHAKE</code>).</p>
    * @public
    */
   ShareMethod?: ShareMethod | undefined;
@@ -328,6 +328,47 @@ export class AccessDeniedException extends __BaseException {
 }
 
 /**
+ * <p>A directory assessment is automatically created when you create a hybrid directory.
+ *             There are two types of assessments: <code>CUSTOMER</code> and <code>SYSTEM</code>. Your
+ *             Amazon Web Services account has a limit of 100 <code>CUSTOMER</code> directory assessments.</p>
+ *          <p>If you attempt to create a hybrid directory; and you already have 100
+ *                 <code>CUSTOMER</code> directory assessments;, you will encounter an error. Delete
+ *             assessments to free up capacity before trying again.</p>
+ *          <p>You can request an increase to your <code>CUSTOMER</code> directory assessment quota
+ *             by contacting customer support or delete existing CUSTOMER directory assessments; to
+ *             free up capacity.</p>
+ * @public
+ */
+export class ADAssessmentLimitExceededException extends __BaseException {
+  readonly name: "ADAssessmentLimitExceededException" = "ADAssessmentLimitExceededException";
+  readonly $fault: "client" = "client";
+  /**
+   * <p>The descriptive message for the exception.</p>
+   * @public
+   */
+  Message?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services request identifier.</p>
+   * @public
+   */
+  RequestId?: string | undefined;
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ADAssessmentLimitExceededException, __BaseException>) {
+    super({
+      name: "ADAssessmentLimitExceededException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ADAssessmentLimitExceededException.prototype);
+    this.Message = opts.Message;
+    this.RequestId = opts.RequestId;
+  }
+}
+
+/**
  * <p>IP address block. This is often the address block of the DNS server used for your
  *          self-managed domain. </p>
  * @public
@@ -545,7 +586,7 @@ export class IpRouteLimitExceededException extends __BaseException {
 }
 
 /**
- * <p>Contains VPC information for the <a>CreateDirectory</a> or <a>CreateMicrosoftAD</a> operation.</p>
+ * <p>Contains VPC information for the <a>CreateDirectory</a>, <a>CreateMicrosoftAD</a>, or <a>CreateHybridAD</a> operation.</p>
  * @public
  */
 export interface DirectoryVpcSettings {
@@ -557,8 +598,8 @@ export interface DirectoryVpcSettings {
 
   /**
    * <p>The identifiers of the subnets for the directory servers. The two subnets must be in
-   *       different Availability Zones. Directory Service creates a directory server and a DNS
-   *       server in each of these subnets.</p>
+   *       different Availability Zones. Directory Service creates a directory server and a DNS server in each of
+   *       these subnets.</p>
    * @public
    */
   SubnetIds: string[] | undefined;
@@ -582,7 +623,7 @@ export interface AddRegionRequest {
   RegionName: string | undefined;
 
   /**
-   * <p>Contains VPC information for the <a>CreateDirectory</a> or <a>CreateMicrosoftAD</a> operation.</p>
+   * <p>Contains VPC information for the <a>CreateDirectory</a>, <a>CreateMicrosoftAD</a>, or <a>CreateHybridAD</a> operation.</p>
    * @public
    */
   VPCSettings: DirectoryVpcSettings | undefined;
@@ -594,8 +635,8 @@ export interface AddRegionRequest {
 export interface AddRegionResult {}
 
 /**
- * <p>The Region you specified is the same Region where the Managed Microsoft AD directory
- *       was created. Specify a different Region and try again.</p>
+ * <p>The Region you specified is the same Region where the Managed Microsoft AD directory was created.
+ *       Specify a different Region and try again.</p>
  * @public
  */
 export class DirectoryAlreadyInRegionException extends __BaseException {
@@ -806,6 +847,284 @@ export class TagLimitExceededException extends __BaseException {
 }
 
 /**
+ * <p>Contains detailed information about a directory assessment, including configuration
+ *             parameters, status, and validation results.</p>
+ * @public
+ */
+export interface Assessment {
+  /**
+   * <p>The unique identifier of the directory assessment.</p>
+   * @public
+   */
+  AssessmentId?: string | undefined;
+
+  /**
+   * <p>The identifier of the directory associated with this assessment.</p>
+   * @public
+   */
+  DirectoryId?: string | undefined;
+
+  /**
+   * <p>The fully qualified domain name (FQDN) of the Active Directory domain being
+   *             assessed.</p>
+   * @public
+   */
+  DnsName?: string | undefined;
+
+  /**
+   * <p>The date and time when the assessment was initiated.</p>
+   * @public
+   */
+  StartTime?: Date | undefined;
+
+  /**
+   * <p>The date and time when the assessment status was last updated.</p>
+   * @public
+   */
+  LastUpdateDateTime?: Date | undefined;
+
+  /**
+   * <p>The current status of the assessment. Valid values include <code>SUCCESS</code>,
+   *                 <code>FAILED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.</p>
+   * @public
+   */
+  Status?: string | undefined;
+
+  /**
+   * <p>A detailed status code providing additional information about the assessment
+   *             state.</p>
+   * @public
+   */
+  StatusCode?: string | undefined;
+
+  /**
+   * <p>A human-readable description of the current assessment status, including any error
+   *             details or progress information.</p>
+   * @public
+   */
+  StatusReason?: string | undefined;
+
+  /**
+   * <p>The IP addresses of the DNS servers or domain controllers in your self-managed AD
+   *             environment.</p>
+   * @public
+   */
+  CustomerDnsIps?: string[] | undefined;
+
+  /**
+   * <p>Contains Amazon VPC information for the <code>StartADAssessment</code> operation. </p>
+   * @public
+   */
+  VpcId?: string | undefined;
+
+  /**
+   * <p>A list of subnet identifiers in the Amazon VPC in which the hybrid directory is
+   *             created.</p>
+   * @public
+   */
+  SubnetIds?: string[] | undefined;
+
+  /**
+   * <p>The security groups identifiers attached to the network interfaces.</p>
+   * @public
+   */
+  SecurityGroupIds?: string[] | undefined;
+
+  /**
+   * <p>The identifiers of the self-managed AD instances used to perform the
+   *             assessment.</p>
+   * @public
+   */
+  SelfManagedInstanceIds?: string[] | undefined;
+
+  /**
+   * <p>The type of assessment report generated. Valid values are <code>CUSTOMER</code> and
+   *                 <code>SYSTEM</code>.</p>
+   * @public
+   */
+  ReportType?: string | undefined;
+
+  /**
+   * <p>The version of the assessment framework used to evaluate your self-managed AD
+   *             environment.</p>
+   * @public
+   */
+  Version?: string | undefined;
+}
+
+/**
+ * <p>Contains configuration parameters required to perform a directory assessment.</p>
+ * @public
+ */
+export interface AssessmentConfiguration {
+  /**
+   * <p>A list of IP addresses for the DNS servers or domain controllers in your self-managed
+   *             AD that are tested during the assessment.</p>
+   * @public
+   */
+  CustomerDnsIps: string[] | undefined;
+
+  /**
+   * <p>The fully qualified domain name (FQDN) of the self-managed AD domain to assess.</p>
+   * @public
+   */
+  DnsName: string | undefined;
+
+  /**
+   * <p>Contains VPC information for the <a>CreateDirectory</a>, <a>CreateMicrosoftAD</a>, or <a>CreateHybridAD</a> operation.</p>
+   * @public
+   */
+  VpcSettings: DirectoryVpcSettings | undefined;
+
+  /**
+   * <p>The identifiers of the self-managed instances with SSM that are used to perform
+   *             connectivity and validation tests.</p>
+   * @public
+   */
+  InstanceIds: string[] | undefined;
+
+  /**
+   * <p>By default, the service attaches a security group to allow network access to the
+   *             self-managed nodes in your Amazon VPC. You can optionally supply your own security group that
+   *             allows network traffic to and from your self-managed domain controllers outside of your
+   *             Amazon VPC. </p>
+   * @public
+   */
+  SecurityGroupIds?: string[] | undefined;
+}
+
+/**
+ * <p>Contains information about a specific validation test performed during a directory
+ *             assessment.</p>
+ * @public
+ */
+export interface AssessmentValidation {
+  /**
+   * <p>The category of the validation test.</p>
+   * @public
+   */
+  Category?: string | undefined;
+
+  /**
+   * <p>The name of the specific validation test performed within the category.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The result status of the validation test. Valid values include <code>SUCCESS</code>,
+   *                 <code>FAILED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.</p>
+   * @public
+   */
+  Status?: string | undefined;
+
+  /**
+   * <p>A detailed status code providing additional information about the validation
+   *             result.</p>
+   * @public
+   */
+  StatusCode?: string | undefined;
+
+  /**
+   * <p>A human-readable description of the validation result, including any error details or
+   *             recommendations.</p>
+   * @public
+   */
+  StatusReason?: string | undefined;
+
+  /**
+   * <p>The date and time when the validation test was started.</p>
+   * @public
+   */
+  StartTime?: Date | undefined;
+
+  /**
+   * <p>The date and time when the validation test was completed or last updated.</p>
+   * @public
+   */
+  LastUpdateDateTime?: Date | undefined;
+}
+
+/**
+ * <p>Contains the results of validation tests performed against a specific domain
+ *             controller during a directory assessment.</p>
+ * @public
+ */
+export interface AssessmentReport {
+  /**
+   * <p>The IP address of the domain controller that was tested during the assessment.</p>
+   * @public
+   */
+  DomainControllerIp?: string | undefined;
+
+  /**
+   * <p>A list of validation results for different test categories performed against this
+   *             domain controller.</p>
+   * @public
+   */
+  Validations?: AssessmentValidation[] | undefined;
+}
+
+/**
+ * <p>Contains summary information about a directory assessment, providing a high-level
+ *             overview without detailed validation results.</p>
+ * @public
+ */
+export interface AssessmentSummary {
+  /**
+   * <p>The unique identifier of the directory assessment.</p>
+   * @public
+   */
+  AssessmentId?: string | undefined;
+
+  /**
+   * <p>The identifier of the directory associated with this assessment.</p>
+   * @public
+   */
+  DirectoryId?: string | undefined;
+
+  /**
+   * <p>The fully qualified domain name (FQDN) of the Active Directory domain being
+   *             assessed.</p>
+   * @public
+   */
+  DnsName?: string | undefined;
+
+  /**
+   * <p>The date and time when the assessment was initiated.</p>
+   * @public
+   */
+  StartTime?: Date | undefined;
+
+  /**
+   * <p>The date and time when the assessment status was last updated.</p>
+   * @public
+   */
+  LastUpdateDateTime?: Date | undefined;
+
+  /**
+   * <p>The current status of the assessment. Valid values include <code>SUCCESS</code>,
+   *                 <code>FAILED</code>, <code>PENDING</code>, and <code>IN_PROGRESS</code>.</p>
+   * @public
+   */
+  Status?: string | undefined;
+
+  /**
+   * <p>The IP addresses of the DNS servers or domain controllers in your self-managed AD
+   *             environment.</p>
+   * @public
+   */
+  CustomerDnsIps?: string[] | undefined;
+
+  /**
+   * <p>The type of assessment report generated. Valid values include <code>CUSTOMER</code>
+   *             and <code>SYSTEM</code>.</p>
+   * @public
+   */
+  ReportType?: string | undefined;
+}
+
+/**
  * <p>Represents a named directory attribute.</p>
  * @public
  */
@@ -879,12 +1198,14 @@ export interface CancelSchemaExtensionRequest {
 export interface CancelSchemaExtensionResult {}
 
 /**
- * <p>Contains information about the client certificate authentication settings for the <code>RegisterCertificate</code> and <code>DescribeCertificate</code> operations. </p>
+ * <p>Contains information about the client certificate authentication settings for the
+ *         <code>RegisterCertificate</code> and <code>DescribeCertificate</code> operations. </p>
  * @public
  */
 export interface ClientCertAuthSettings {
   /**
-   * <p>Specifies the URL of the default OCSP server used to check for revocation status. A secondary value to any OCSP address found in the AIA extension of the user certificate.</p>
+   * <p>Specifies the URL of the default OCSP server used to check for revocation status. A
+   *       secondary value to any OCSP address found in the AIA extension of the user certificate.</p>
    * @public
    */
   OCSPUrl?: string | undefined;
@@ -964,13 +1285,16 @@ export interface Certificate {
   ExpiryDateTime?: Date | undefined;
 
   /**
-   * <p>The function that the registered certificate performs. Valid values include <code>ClientLDAPS</code> or <code>ClientCertAuth</code>. The default value is <code>ClientLDAPS</code>.</p>
+   * <p>The function that the registered certificate performs. Valid values include
+   *         <code>ClientLDAPS</code> or <code>ClientCertAuth</code>. The default value is
+   *         <code>ClientLDAPS</code>.</p>
    * @public
    */
   Type?: CertificateType | undefined;
 
   /**
-   * <p>A <code>ClientCertAuthSettings</code> object that contains client certificate authentication settings.</p>
+   * <p>A <code>ClientCertAuthSettings</code> object that contains client certificate
+   *       authentication settings.</p>
    * @public
    */
   ClientCertAuthSettings?: ClientCertAuthSettings | undefined;
@@ -1072,7 +1396,9 @@ export interface CertificateInfo {
   ExpiryDateTime?: Date | undefined;
 
   /**
-   * <p>The function that the registered certificate performs. Valid values include <code>ClientLDAPS</code> or <code>ClientCertAuth</code>. The default value is <code>ClientLDAPS</code>.</p>
+   * <p>The function that the registered certificate performs. Valid values include
+   *         <code>ClientLDAPS</code> or <code>ClientCertAuth</code>. The default value is
+   *         <code>ClientLDAPS</code>.</p>
    * @public
    */
   Type?: CertificateType | undefined;
@@ -1179,19 +1505,23 @@ export type ClientAuthenticationType = (typeof ClientAuthenticationType)[keyof t
  */
 export interface ClientAuthenticationSettingInfo {
   /**
-   * <p>The type of client authentication for the specified directory. If no type is specified, a list of all client authentication types that are supported for the directory is retrieved. </p>
+   * <p>The type of client authentication for the specified directory. If no type is specified, a
+   *       list of all client authentication types that are supported for the directory is retrieved.
+   *     </p>
    * @public
    */
   Type?: ClientAuthenticationType | undefined;
 
   /**
-   * <p>Whether the client authentication type is enabled or disabled for the specified directory.</p>
+   * <p>Whether the client authentication type is enabled or disabled for the specified
+   *       directory.</p>
    * @public
    */
   Status?: ClientAuthenticationStatus | undefined;
 
   /**
-   * <p>The date and time when the status of the client authentication type was last updated.</p>
+   * <p>The date and time when the status of the client authentication type was last
+   *       updated.</p>
    * @public
    */
   LastUpdatedDateTime?: Date | undefined;
@@ -1284,8 +1614,8 @@ export interface DirectoryConnectSettings {
   SubnetIds: string[] | undefined;
 
   /**
-   * <p>A list of one or more IP addresses of DNS servers or domain controllers in your self-managed
-   *       directory.</p>
+   * <p>A list of one or more IP addresses of DNS servers or domain controllers in your
+   *       self-managed directory.</p>
    * @public
    */
   CustomerDnsIps: string[] | undefined;
@@ -1633,6 +1963,49 @@ export interface CreateDirectoryResult {
 /**
  * @public
  */
+export interface CreateHybridADRequest {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Amazon Web Services Secrets Manager secret that contains the
+   *             credentials for the service account used to join hybrid domain controllers to your
+   *             self-managed AD domain. This secret is used once and not stored.</p>
+   *          <p>The secret must contain key-value pairs with keys matching
+   *                 <code>customerAdAdminDomainUsername</code> and
+   *                 <code>customerAdAdminDomainPassword</code>. For example:
+   *                 <code>\{"customerAdAdminDomainUsername":"carlos_salazar","customerAdAdminDomainPassword":"ExamplePassword123!"\}</code>.</p>
+   * @public
+   */
+  SecretArn: string | undefined;
+
+  /**
+   * <p>The unique identifier of the successful directory assessment that validates your
+   *             self-managed AD environment. You must have a successful directory assessment before you
+   *             create a hybrid directory.</p>
+   * @public
+   */
+  AssessmentId: string | undefined;
+
+  /**
+   * <p>The tags to be assigned to the directory. Each tag consists of a key and value pair.
+   *             You can specify multiple tags as a list.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateHybridADResult {
+  /**
+   * <p>The unique identifier of the newly created hybrid directory.</p>
+   * @public
+   */
+  DirectoryId?: string | undefined;
+}
+
+/**
+ * @public
+ */
 export interface CreateLogSubscriptionRequest {
   /**
    * <p>Identifier of the directory to which you want to subscribe and receive real-time logs to
@@ -1962,6 +2335,28 @@ export const DataAccessStatus = {
 export type DataAccessStatus = (typeof DataAccessStatus)[keyof typeof DataAccessStatus];
 
 /**
+ * @public
+ */
+export interface DeleteADAssessmentRequest {
+  /**
+   * <p>The unique identifier of the directory assessment to delete.</p>
+   * @public
+   */
+  AssessmentId: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteADAssessmentResult {
+  /**
+   * <p>The unique identifier of the deleted directory assessment.</p>
+   * @public
+   */
+  AssessmentId?: string | undefined;
+}
+
+/**
  * <p>Deletes a conditional forwarder.</p>
  * @public
  */
@@ -2132,6 +2527,36 @@ export interface DeregisterEventTopicResult {}
 /**
  * @public
  */
+export interface DescribeADAssessmentRequest {
+  /**
+   * <p>The identifier of the directory assessment to describe.</p>
+   * @public
+   */
+  AssessmentId: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DescribeADAssessmentResult {
+  /**
+   * <p>Detailed information about the self-managed instance settings (IDs and DNS
+   *             IPs).</p>
+   * @public
+   */
+  Assessment?: Assessment | undefined;
+
+  /**
+   * <p>A list of assessment reports containing validation results for each domain controller
+   *             and test category. Each report includes specific validation details and outcomes.</p>
+   * @public
+   */
+  AssessmentReports?: AssessmentReport[] | undefined;
+}
+
+/**
+ * @public
+ */
 export interface DescribeCertificateRequest {
   /**
    * <p>The identifier of the directory.</p>
@@ -2169,19 +2594,24 @@ export interface DescribeClientAuthenticationSettingsRequest {
   DirectoryId: string | undefined;
 
   /**
-   * <p>The type of client authentication for which to retrieve information. If no type is specified, a list of all client authentication types that are supported for the specified directory is retrieved.</p>
+   * <p>The type of client authentication for which to retrieve information. If no type is
+   *       specified, a list of all client authentication types that are supported for the specified
+   *       directory is retrieved.</p>
    * @public
    */
   Type?: ClientAuthenticationType | undefined;
 
   /**
-   * <p>The <i>DescribeClientAuthenticationSettingsResult.NextToken</i> value from a previous call to <a>DescribeClientAuthenticationSettings</a>. Pass null if this is the first call.</p>
+   * <p>The <i>DescribeClientAuthenticationSettingsResult.NextToken</i> value from a
+   *       previous call to <a>DescribeClientAuthenticationSettings</a>. Pass null if this is
+   *       the first call.</p>
    * @public
    */
   NextToken?: string | undefined;
 
   /**
-   * <p>The maximum number of items to return. If this value is zero, the maximum number of items is specified by the limitations of the operation. </p>
+   * <p>The maximum number of items to return. If this value is zero, the maximum number of items
+   *       is specified by the limitations of the operation. </p>
    * @public
    */
   Limit?: number | undefined;
@@ -2192,14 +2622,17 @@ export interface DescribeClientAuthenticationSettingsRequest {
  */
 export interface DescribeClientAuthenticationSettingsResult {
   /**
-   * <p>Information about the type of client authentication for the specified directory. The following information is retrieved: The date and time when the status of the client authentication type was last updated, whether the client authentication type is enabled or disabled, and the type of client authentication.</p>
+   * <p>Information about the type of client authentication for the specified directory. The
+   *       following information is retrieved: The date and time when the status of the client
+   *       authentication type was last updated, whether the client authentication type is enabled or
+   *       disabled, and the type of client authentication.</p>
    * @public
    */
   ClientAuthenticationSettingsInfo?: ClientAuthenticationSettingInfo[] | undefined;
 
   /**
-   * <p>The next token used to retrieve the client authentication settings if the number of setting types exceeds
-   *       page limit and there is another page.</p>
+   * <p>The next token used to retrieve the client authentication settings if the number of
+   *       setting types exceeds page limit and there is another page.</p>
    * @public
    */
   NextToken?: string | undefined;
@@ -2305,6 +2738,25 @@ export interface DirectoryConnectSettingsDescription {
    * @public
    */
   ConnectIps?: string[] | undefined;
+}
+
+/**
+ * <p>Describes the current hybrid directory configuration settings for a directory.</p>
+ * @public
+ */
+export interface HybridSettingsDescription {
+  /**
+   * <p>The IP addresses of the DNS servers in your self-managed AD environment.</p>
+   * @public
+   */
+  SelfManagedDnsIpAddrs?: string[] | undefined;
+
+  /**
+   * <p>The identifiers of the self-managed instances with SSM used for hybrid directory
+   *             operations.</p>
+   * @public
+   */
+  SelfManagedInstanceIds?: string[] | undefined;
 }
 
 /**
@@ -2448,8 +2900,7 @@ export interface DirectoryVpcSettingsDescription {
  */
 export interface OwnerDirectoryDescription {
   /**
-   * <p>Identifier of the Managed Microsoft AD directory in the directory owner
-   *       account.</p>
+   * <p>Identifier of the Managed Microsoft AD directory in the directory owner account.</p>
    * @public
    */
   DirectoryId?: string | undefined;
@@ -2605,9 +3056,9 @@ export interface DirectoryDescription {
 
   /**
    * <p>The IP addresses of the DNS servers for the directory. For a Simple AD or Microsoft AD
-   *       directory, these are the IP addresses of the Simple AD or Microsoft AD directory servers. For
-   *       an AD Connector directory, these are the IP addresses of the DNS servers or domain controllers
-   *       in your self-managed directory to which the AD Connector is connected.</p>
+   *       directory, these are the IP addresses of the Simple AD or Microsoft AD directory servers.
+   *       For an AD Connector directory, these are the IP addresses of the DNS servers or domain
+   *       controllers in your self-managed directory to which the AD Connector is connected.</p>
    * @public
    */
   DnsIpAddrs?: string[] | undefined;
@@ -2626,8 +3077,8 @@ export interface DirectoryDescription {
 
   /**
    * <p>The method used when sharing a directory to determine whether the directory should be
-   *       shared within your Amazon Web Services organization (<code>ORGANIZATIONS</code>) or with any Amazon Web Services account by
-   *       sending a shared directory request (<code>HANDSHAKE</code>).</p>
+   *       shared within your Amazon Web Services organization (<code>ORGANIZATIONS</code>) or with any Amazon Web Services account
+   *       by sending a shared directory request (<code>HANDSHAKE</code>).</p>
    * @public
    */
   ShareMethod?: ShareMethod | undefined;
@@ -2660,8 +3111,8 @@ export interface DirectoryDescription {
 
   /**
    * <p>A <a>DirectoryVpcSettingsDescription</a> object that contains additional
-   *       information about a directory. This member is only present if the directory is a Simple AD or
-   *       Managed Microsoft AD directory.</p>
+   *       information about a directory. This member is only present if the directory is a Simple AD
+   *       or Managed Microsoft AD directory.</p>
    * @public
    */
   VpcSettings?: DirectoryVpcSettingsDescription | undefined;
@@ -2723,6 +3174,13 @@ export interface DirectoryDescription {
    * @public
    */
   OsVersion?: OSVersion | undefined;
+
+  /**
+   * <p>Contains information about the hybrid directory configuration for the directory,
+   *             including Amazon Web Services System Manager managed node identifiers and DNS IPs.</p>
+   * @public
+   */
+  HybridSettings?: HybridSettingsDescription | undefined;
 }
 
 /**
@@ -2731,7 +3189,7 @@ export interface DirectoryDescription {
  */
 export interface DescribeDirectoriesResult {
   /**
-   * <p>The list of <a>DirectoryDescription</a> objects that were retrieved.</p>
+   * <p>The list of available <a>DirectoryDescription</a> objects that were retrieved.</p>
    *          <p>It is possible that this list contains less than the number of items specified in the
    *         <code>Limit</code> member of the request. This occurs if there are less than the requested
    *       number of items left to retrieve, or if the limitations of the operation have been
@@ -3034,6 +3492,181 @@ export interface DescribeEventTopicsResult {
  * @public
  * @enum
  */
+export const HybridUpdateType = {
+  HYBRID_ADMINISTRATOR_ACCOUNT: "HybridAdministratorAccount",
+  SELF_MANAGED_INSTANCES: "SelfManagedInstances",
+} as const;
+
+/**
+ * @public
+ */
+export type HybridUpdateType = (typeof HybridUpdateType)[keyof typeof HybridUpdateType];
+
+/**
+ * @public
+ */
+export interface DescribeHybridADUpdateRequest {
+  /**
+   * <p>The identifier of the hybrid directory for which to retrieve update
+   *             information.</p>
+   * @public
+   */
+  DirectoryId: string | undefined;
+
+  /**
+   * <p>The type of update activities to retrieve. Valid values include
+   *                 <code>SelfManagedInstances</code> and
+   *             <code>HybridAdministratorAccount</code>.</p>
+   * @public
+   */
+  UpdateType?: HybridUpdateType | undefined;
+
+  /**
+   * <p>The pagination token from a previous request to <a>DescribeHybridADUpdate</a>. Pass null if this is the first request.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * <p>Contains the configuration values for a hybrid directory update, including Amazon Web Services
+ *             System Manager managed node and DNS information.</p>
+ * @public
+ */
+export interface HybridUpdateValue {
+  /**
+   * <p>The identifiers of the self-managed instances with SSM in the hybrid directory
+   *             configuration.</p>
+   * @public
+   */
+  InstanceIds?: string[] | undefined;
+
+  /**
+   * <p>The IP addresses of the DNS servers or domain controllers in the hybrid directory
+   *             configuration.</p>
+   * @public
+   */
+  DnsIps?: string[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const UpdateStatus = {
+  UPDATED: "Updated",
+  UPDATE_FAILED: "UpdateFailed",
+  UPDATING: "Updating",
+} as const;
+
+/**
+ * @public
+ */
+export type UpdateStatus = (typeof UpdateStatus)[keyof typeof UpdateStatus];
+
+/**
+ * <p>Contains detailed information about a specific update activity for a hybrid directory
+ *             component.</p>
+ * @public
+ */
+export interface HybridUpdateInfoEntry {
+  /**
+   * <p>The current status of the update activity. Valid values include <code>UPDATED</code>,
+   *                 <code>UPDATING</code>, and <code>UPDATE_FAILED</code>.</p>
+   * @public
+   */
+  Status?: UpdateStatus | undefined;
+
+  /**
+   * <p>A human-readable description of the update status, including any error details or
+   *             progress information.</p>
+   * @public
+   */
+  StatusReason?: string | undefined;
+
+  /**
+   * <p>Specifies if the update was initiated by the customer or Amazon Web Services.</p>
+   * @public
+   */
+  InitiatedBy?: string | undefined;
+
+  /**
+   * <p>The new configuration values being applied in this update.</p>
+   * @public
+   */
+  NewValue?: HybridUpdateValue | undefined;
+
+  /**
+   * <p>The previous configuration values before this update was applied.</p>
+   * @public
+   */
+  PreviousValue?: HybridUpdateValue | undefined;
+
+  /**
+   * <p>The date and time when the update activity was initiated.</p>
+   * @public
+   */
+  StartTime?: Date | undefined;
+
+  /**
+   * <p>The date and time when the update activity status was last updated.</p>
+   * @public
+   */
+  LastUpdatedDateTime?: Date | undefined;
+
+  /**
+   * <p>The identifier of the assessment performed to validate this update
+   *             configuration.</p>
+   * @public
+   */
+  AssessmentId?: string | undefined;
+}
+
+/**
+ * <p>Contains information about update activities for different components of a hybrid
+ *             directory.</p>
+ * @public
+ */
+export interface HybridUpdateActivities {
+  /**
+   * <p>A list of update activities related to the self-managed instances with SSM in the
+   *             self-managed instances with SSM hybrid directory configuration.</p>
+   * @public
+   */
+  SelfManagedInstances?: HybridUpdateInfoEntry[] | undefined;
+
+  /**
+   * <p>A list of update activities related to hybrid directory administrator account
+   *             changes.</p>
+   * @public
+   */
+  HybridAdministratorAccount?: HybridUpdateInfoEntry[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DescribeHybridADUpdateResult {
+  /**
+   * <p>Information about update activities for the hybrid directory, organized by update
+   *             type.</p>
+   * @public
+   */
+  UpdateActivities?: HybridUpdateActivities | undefined;
+
+  /**
+   * <p>If not null, more results are available. Pass this value for the
+   *                 <code>NextToken</code> parameter in a subsequent request to retrieve the next set of
+   *             items.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const LDAPSType = {
   CLIENT: "Client",
 } as const;
@@ -3199,7 +3832,7 @@ export interface RegionDescription {
   Status?: DirectoryStage | undefined;
 
   /**
-   * <p>Contains VPC information for the <a>CreateDirectory</a> or <a>CreateMicrosoftAD</a> operation.</p>
+   * <p>Contains VPC information for the <a>CreateDirectory</a>, <a>CreateMicrosoftAD</a>, or <a>CreateHybridAD</a> operation.</p>
    * @public
    */
   VpcSettings?: DirectoryVpcSettings | undefined;
@@ -3296,8 +3929,9 @@ export interface DescribeSettingsRequest {
  */
 export interface SettingEntry {
   /**
-   * <p>The type, or category, of a directory setting. Similar settings have the same type. For example, <code>Protocol</code>, <code>Cipher</code>,
-   *       or <code>Certificate-Based Authentication</code>.</p>
+   * <p>The type, or category, of a directory setting. Similar settings have the same type. For
+   *       example, <code>Protocol</code>, <code>Cipher</code>, or <code>Certificate-Based
+   *         Authentication</code>.</p>
    * @public
    */
   Type?: string | undefined;
@@ -3312,7 +3946,8 @@ export interface SettingEntry {
   Name?: string | undefined;
 
   /**
-   * <p>The valid range of values for the directory setting. These values depend on the <code>DataType</code> of your directory.</p>
+   * <p>The valid range of values for the directory setting. These values depend on the
+   *         <code>DataType</code> of your directory.</p>
    * @public
    */
   AllowedValues?: string | undefined;
@@ -3330,13 +3965,17 @@ export interface SettingEntry {
   RequestedValue?: string | undefined;
 
   /**
-   * <p>The overall status of the request to update the directory setting request. If the directory setting is deployed in more than one region, and the request fails in any region, the overall status is <code>Failed</code>.</p>
+   * <p>The overall status of the request to update the directory setting request. If the
+   *       directory setting is deployed in more than one region, and the request fails in any region,
+   *       the overall status is <code>Failed</code>.</p>
    * @public
    */
   RequestStatus?: DirectoryConfigurationStatus | undefined;
 
   /**
-   * <p>Details about the status of the request to update the directory setting. If the directory setting is deployed in more than one region, status is returned for the request in each region where the setting is deployed.</p>
+   * <p>Details about the status of the request to update the directory setting. If the directory
+   *       setting is deployed in more than one region, status is returned for the request in each region
+   *       where the setting is deployed.</p>
    * @public
    */
   RequestDetailedStatus?: Record<string, DirectoryConfigurationStatus> | undefined;
@@ -3354,14 +3993,16 @@ export interface SettingEntry {
   LastUpdatedDateTime?: Date | undefined;
 
   /**
-   * <p>The date and time when the request to update a directory setting was last submitted.</p>
+   * <p>The date and time when the request to update a directory setting was last
+   *       submitted.</p>
    * @public
    */
   LastRequestedDateTime?: Date | undefined;
 
   /**
-   * <p>The data type of a directory setting. This is used to define the <code>AllowedValues</code> of a setting.
-   *       For example a data type can be <code>Boolean</code>, <code>DurationInSeconds</code>, or <code>Enum</code>.</p>
+   * <p>The data type of a directory setting. This is used to define the
+   *         <code>AllowedValues</code> of a setting. For example a data type can be
+   *       <code>Boolean</code>, <code>DurationInSeconds</code>, or <code>Enum</code>.</p>
    * @public
    */
   DataType?: string | undefined;
@@ -3380,7 +4021,7 @@ export interface DescribeSettingsResult {
   /**
    * <p>The list of <a>SettingEntry</a> objects that were retrieved.</p>
    *          <p>It is possible that this list contains less than the number of items specified in the
-   *       <code>Limit</code> member of the request. This occurs if there are less than the requested
+   *         <code>Limit</code> member of the request. This occurs if there are less than the requested
    *       number of items left to retrieve, or if the limitations of the operation have been
    *       exceeded.</p>
    * @public
@@ -3388,9 +4029,9 @@ export interface DescribeSettingsResult {
   SettingEntries?: SettingEntry[] | undefined;
 
   /**
-   * <p>If not null, token that indicates that more results are available.
-   *       Pass this value for the <code>NextToken</code> parameter in a subsequent
-   *       call to <code>DescribeSettings</code> to retrieve the next set of items. </p>
+   * <p>If not null, token that indicates that more results are available. Pass this value for the
+   *         <code>NextToken</code> parameter in a subsequent call to <code>DescribeSettings</code> to
+   *       retrieve the next set of items. </p>
    * @public
    */
   NextToken?: string | undefined;
@@ -3746,152 +4387,105 @@ export type UpdateType = (typeof UpdateType)[keyof typeof UpdateType];
  */
 export interface DescribeUpdateDirectoryRequest {
   /**
-   * <p>
-   *       The unique identifier of the directory.
-   *     </p>
+   * <p> The unique identifier of the directory. </p>
    * @public
    */
   DirectoryId: string | undefined;
 
   /**
-   * <p>
-   *       The type of updates you want to describe for the directory.
-   *     </p>
+   * <p> The type of updates you want to describe for the directory. </p>
    * @public
    */
   UpdateType: UpdateType | undefined;
 
   /**
-   * <p>
-   *       The name of the Region.
-   *     </p>
+   * <p> The name of the Region. </p>
    * @public
    */
   RegionName?: string | undefined;
 
   /**
-   * <p>
-   *       The <code>DescribeUpdateDirectoryResult</code>. NextToken value from a previous call to <a>DescribeUpdateDirectory</a>. Pass null if this is the first call.
-   *     </p>
+   * <p> The <code>DescribeUpdateDirectoryResult</code>. NextToken value from a previous call to
+   *         <a>DescribeUpdateDirectory</a>. Pass null if this is the first call. </p>
    * @public
    */
   NextToken?: string | undefined;
 }
 
 /**
- * <p>
- *       OS version that the directory needs to be updated to.
- *     </p>
+ * <p> OS version that the directory needs to be updated to. </p>
  * @public
  */
 export interface OSUpdateSettings {
   /**
-   * <p>
-   *       OS version that the directory needs to be updated to.
-   *     </p>
+   * <p> OS version that the directory needs to be updated to. </p>
    * @public
    */
   OSVersion?: OSVersion | undefined;
 }
 
 /**
- * <p>
- *       The value for a given type of <code>UpdateSettings</code>.
- *     </p>
+ * <p> The value for a given type of <code>UpdateSettings</code>. </p>
  * @public
  */
 export interface UpdateValue {
   /**
-   * <p>
-   *       The OS update related settings.
-   *     </p>
+   * <p> The OS update related settings. </p>
    * @public
    */
   OSUpdateSettings?: OSUpdateSettings | undefined;
 }
 
 /**
- * @public
- * @enum
- */
-export const UpdateStatus = {
-  UPDATED: "Updated",
-  UPDATE_FAILED: "UpdateFailed",
-  UPDATING: "Updating",
-} as const;
-
-/**
- * @public
- */
-export type UpdateStatus = (typeof UpdateStatus)[keyof typeof UpdateStatus];
-
-/**
- * <p>
- *       An entry of update information related to a requested update type.
- *     </p>
+ * <p> An entry of update information related to a requested update type. </p>
  * @public
  */
 export interface UpdateInfoEntry {
   /**
-   * <p>
-   *       The name of the Region.
-   *     </p>
+   * <p> The name of the Region. </p>
    * @public
    */
   Region?: string | undefined;
 
   /**
-   * <p>
-   *       The status of the update performed on the directory.
-   *     </p>
+   * <p> The status of the update performed on the directory. </p>
    * @public
    */
   Status?: UpdateStatus | undefined;
 
   /**
-   * <p>
-   *       The reason for the current status of the update type activity.
-   *     </p>
+   * <p> The reason for the current status of the update type activity. </p>
    * @public
    */
   StatusReason?: string | undefined;
 
   /**
-   * <p>
-   *       This specifies if the update was initiated by the customer or by the service team.
+   * <p> This specifies if the update was initiated by the customer or by the service team.
    *     </p>
    * @public
    */
   InitiatedBy?: string | undefined;
 
   /**
-   * <p>
-   *       The new value of the target setting.
-   *     </p>
+   * <p> The new value of the target setting. </p>
    * @public
    */
   NewValue?: UpdateValue | undefined;
 
   /**
-   * <p>
-   *       The old value of the target setting.
-   *     </p>
+   * <p> The old value of the target setting. </p>
    * @public
    */
   PreviousValue?: UpdateValue | undefined;
 
   /**
-   * <p>
-   *       The start time of the <code>UpdateDirectorySetup</code> for the particular type.
-   *     </p>
+   * <p> The start time of the <code>UpdateDirectorySetup</code> for the particular type. </p>
    * @public
    */
   StartTime?: Date | undefined;
 
   /**
-   * <p>
-   *       The last updated date and time of a particular directory setting.
-   *     </p>
+   * <p> The last updated date and time of a particular directory setting. </p>
    * @public
    */
   LastUpdatedDateTime?: Date | undefined;
@@ -3902,26 +4496,21 @@ export interface UpdateInfoEntry {
  */
 export interface DescribeUpdateDirectoryResult {
   /**
-   * <p>
-   *       The list of update activities on a directory for the requested update type.
-   *     </p>
+   * <p> The list of update activities on a directory for the requested update type. </p>
    * @public
    */
   UpdateActivities?: UpdateInfoEntry[] | undefined;
 
   /**
-   * <p>
-   *       If not null, more results are available. Pass this value for the <code>NextToken</code> parameter.
-   *     </p>
+   * <p> If not null, more results are available. Pass this value for the <code>NextToken</code>
+   *       parameter. </p>
    * @public
    */
   NextToken?: string | undefined;
 }
 
 /**
- * <p>
- *       The directory is already updated to desired update type settings.
- *     </p>
+ * <p> The directory is already updated to desired update type settings. </p>
  * @public
  */
 export class DirectoryInDesiredStateException extends __BaseException {
@@ -4057,7 +4646,8 @@ export interface DisableClientAuthenticationRequest {
   DirectoryId: string | undefined;
 
   /**
-   * <p>The type of client authentication to disable. Currently the only parameter <code>"SmartCard"</code> is supported.</p>
+   * <p>The type of client authentication to disable. Currently the only parameter
+   *         <code>"SmartCard"</code> is supported.</p>
    * @public
    */
   Type: ClientAuthenticationType | undefined;
@@ -4242,10 +4832,10 @@ export interface EnableClientAuthenticationRequest {
   DirectoryId: string | undefined;
 
   /**
-   * <p>The type of client authentication to enable. Currently only the value <code>SmartCard</code> is
-   *       supported. Smart card authentication in AD Connector requires that you enable Kerberos
-   *       Constrained Delegation for the Service User to the LDAP service in your self-managed AD.
-   *     </p>
+   * <p>The type of client authentication to enable. Currently only the value
+   *         <code>SmartCard</code> is supported. Smart card authentication in AD Connector requires
+   *       that you enable Kerberos Constrained Delegation for the Service User to the LDAP service in
+   *       your self-managed AD. </p>
    * @public
    */
   Type: ClientAuthenticationType | undefined;
@@ -4257,8 +4847,8 @@ export interface EnableClientAuthenticationRequest {
 export interface EnableClientAuthenticationResult {}
 
 /**
- * <p>Client authentication setup could not be completed because at least one valid certificate must be
- *       registered in the system.</p>
+ * <p>Client authentication setup could not be completed because at least one valid certificate
+ *       must be registered in the system.</p>
  * @public
  */
 export class NoAvailableCertificateException extends __BaseException {
@@ -4464,6 +5054,51 @@ export interface GetSnapshotLimitsResult {
 /**
  * @public
  */
+export interface ListADAssessmentsRequest {
+  /**
+   * <p>The identifier of the directory for which to list assessments. If not specified, all
+   *             assessments in your account are returned.</p>
+   * @public
+   */
+  DirectoryId?: string | undefined;
+
+  /**
+   * <p>The pagination token from a previous request to <a>ListADAssessments</a>.
+   *             Pass null if this is the first request.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of assessment summaries to return.</p>
+   * @public
+   */
+  Limit?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListADAssessmentsResult {
+  /**
+   * <p>A list of assessment summaries containing basic information about each directory
+   *             assessment.</p>
+   * @public
+   */
+  Assessments?: AssessmentSummary[] | undefined;
+
+  /**
+   * <p>If not null, more results are available. Pass this value for the
+   *                 <code>NextToken</code> parameter in a subsequent request to retrieve the next set of
+   *             items.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
 export interface ListCertificatesRequest {
   /**
    * <p>The identifier of the directory.</p>
@@ -4616,8 +5251,8 @@ export interface ListLogSubscriptionsRequest {
   /**
    * <p>If a <i>DirectoryID</i> is provided, lists only the log subscription
    *       associated with that directory. If no <i>DirectoryId</i> is provided, lists all
-   *       log subscriptions associated with your Amazon Web Services account. If there are no log subscriptions for the
-   *       Amazon Web Services account or the directory, an empty list will be returned.</p>
+   *       log subscriptions associated with your Amazon Web Services account. If there are no log subscriptions for
+   *       the Amazon Web Services account or the directory, an empty list will be returned.</p>
    * @public
    */
   DirectoryId?: string | undefined;
@@ -4666,7 +5301,8 @@ export interface LogSubscription {
  */
 export interface ListLogSubscriptionsResult {
   /**
-   * <p>A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.</p>
+   * <p>A list of active <a>LogSubscription</a> objects for calling the
+   *       Amazon Web Services account.</p>
    * @public
    */
   LogSubscriptions?: LogSubscription[] | undefined;
@@ -4882,13 +5518,16 @@ export interface RegisterCertificateRequest {
   CertificateData: string | undefined;
 
   /**
-   * <p>The function that the registered certificate performs. Valid values include <code>ClientLDAPS</code> or <code>ClientCertAuth</code>. The default value is <code>ClientLDAPS</code>.</p>
+   * <p>The function that the registered certificate performs. Valid values include
+   *         <code>ClientLDAPS</code> or <code>ClientCertAuth</code>. The default value is
+   *         <code>ClientLDAPS</code>.</p>
    * @public
    */
   Type?: CertificateType | undefined;
 
   /**
-   * <p>A <code>ClientCertAuthSettings</code> object that contains client certificate authentication settings.</p>
+   * <p>A <code>ClientCertAuthSettings</code> object that contains client certificate
+   *       authentication settings.</p>
    * @public
    */
   ClientCertAuthSettings?: ClientCertAuthSettings | undefined;
@@ -5053,8 +5692,7 @@ export class InvalidPasswordException extends __BaseException {
  */
 export interface ResetUserPasswordRequest {
   /**
-   * <p>Identifier of the Managed Microsoft AD or Simple AD directory in which the user
-   *       resides.</p>
+   * <p>Identifier of the Managed Microsoft AD or Simple AD directory in which the user resides.</p>
    * @public
    */
   DirectoryId: string | undefined;
@@ -5230,7 +5868,8 @@ export interface ShareTarget {
  */
 export interface ShareDirectoryRequest {
   /**
-   * <p>Identifier of the Managed Microsoft AD directory that you want to share with other Amazon Web Services accounts.</p>
+   * <p>Identifier of the Managed Microsoft AD directory that you want to share with other
+   *       Amazon Web Services accounts.</p>
    * @public
    */
   DirectoryId: string | undefined;
@@ -5252,8 +5891,8 @@ export interface ShareDirectoryRequest {
 
   /**
    * <p>The method used when sharing a directory to determine whether the directory should be
-   *       shared within your Amazon Web Services organization (<code>ORGANIZATIONS</code>) or with any Amazon Web Services account by
-   *       sending a directory sharing request (<code>HANDSHAKE</code>).</p>
+   *       shared within your Amazon Web Services organization (<code>ORGANIZATIONS</code>) or with any Amazon Web Services account
+   *       by sending a directory sharing request (<code>HANDSHAKE</code>).</p>
    * @public
    */
   ShareMethod: ShareMethod | undefined;
@@ -5303,6 +5942,39 @@ export class ShareLimitExceededException extends __BaseException {
     this.Message = opts.Message;
     this.RequestId = opts.RequestId;
   }
+}
+
+/**
+ * @public
+ */
+export interface StartADAssessmentRequest {
+  /**
+   * <p>Configuration parameters for the directory assessment, including DNS server
+   *             information, domain name, Amazon VPC subnet, and Amazon Web Services System Manager managed node
+   *             details.</p>
+   * @public
+   */
+  AssessmentConfiguration?: AssessmentConfiguration | undefined;
+
+  /**
+   * <p>The identifier of the directory for which to perform the assessment. This should be an
+   *             existing directory. If the assessment is not for an existing directory, this parameter
+   *             should be omitted.</p>
+   * @public
+   */
+  DirectoryId?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface StartADAssessmentResult {
+  /**
+   * <p>The unique identifier of the newly started directory assessment. Use this identifier
+   *             to monitor assessment progress and retrieve results.</p>
+   * @public
+   */
+  AssessmentId?: string | undefined;
 }
 
 /**
@@ -5373,8 +6045,7 @@ export interface UnshareTarget {
  */
 export interface UnshareDirectoryRequest {
   /**
-   * <p>The identifier of the Managed Microsoft AD directory that you want to stop
-   *       sharing.</p>
+   * <p>The identifier of the Managed Microsoft AD directory that you want to stop sharing.</p>
    * @public
    */
   DirectoryId: string | undefined;
@@ -5437,33 +6108,26 @@ export interface UpdateConditionalForwarderResult {}
  */
 export interface UpdateDirectorySetupRequest {
   /**
-   * <p>
-   *       The identifier of the directory on which you want to perform the update.
-   *     </p>
+   * <p> The identifier of the directory on which you want to perform the update. </p>
    * @public
    */
   DirectoryId: string | undefined;
 
   /**
-   * <p>
-   *       The type of update that needs to be performed on the directory. For example, OS.
-   *     </p>
+   * <p> The type of update that needs to be performed on the directory. For example, OS. </p>
    * @public
    */
   UpdateType: UpdateType | undefined;
 
   /**
-   * <p>
-   *       The settings for the OS update that needs to be performed on the directory.
-   *     </p>
+   * <p> The settings for the OS update that needs to be performed on the directory. </p>
    * @public
    */
   OSUpdateSettings?: OSUpdateSettings | undefined;
 
   /**
-   * <p>
-   *       The boolean that specifies if a snapshot for the directory needs to be taken before updating the directory.
-   *     </p>
+   * <p> The boolean that specifies if a snapshot for the directory needs to be taken before
+   *       updating the directory. </p>
    * @public
    */
   CreateSnapshotBeforeUpdate?: boolean | undefined;
@@ -5473,6 +6137,96 @@ export interface UpdateDirectorySetupRequest {
  * @public
  */
 export interface UpdateDirectorySetupResult {}
+
+/**
+ * <p> Use to recover to the hybrid directory administrator account credentials.</p>
+ * @public
+ */
+export interface HybridAdministratorAccountUpdate {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Amazon Web Services Secrets Manager secret that contains the
+   *             credentials for the AD administrator user, and enables hybrid domain controllers to
+   *             join the managed AD domain. For example:</p>
+   *          <p>
+   *             <code>
+   *                 \{"customerAdAdminDomainUsername":"carlos_salazar","customerAdAdminDomainPassword":"ExamplePassword123!"\}.
+   *             </code>
+   *          </p>
+   * @public
+   */
+  SecretArn: string | undefined;
+}
+
+/**
+ * <p>Contains configuration settings for self-managed instances with SSM used in hybrid
+ *             directory operations.</p>
+ * @public
+ */
+export interface HybridCustomerInstancesSettings {
+  /**
+   * <p>The IP addresses of the DNS servers or domain controllers in your self-managed AD
+   *             environment.</p>
+   * @public
+   */
+  CustomerDnsIps: string[] | undefined;
+
+  /**
+   * <p>The identifiers of the self-managed instances with SSM used in hybrid
+   *             directory.</p>
+   * @public
+   */
+  InstanceIds: string[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface UpdateHybridADRequest {
+  /**
+   * <p>The identifier of the hybrid directory to update.</p>
+   * @public
+   */
+  DirectoryId: string | undefined;
+
+  /**
+   * <p>We create a hybrid directory administrator account when we create a hybrid directory.
+   *             Use <code>HybridAdministratorAccountUpdate</code> to recover the hybrid directory
+   *             administrator account if you have deleted it.</p>
+   *          <p>To recover your hybrid directory administrator account, we need temporary access to a
+   *             user in your self-managed AD with administrator permissions in the form of a secret from
+   *             Amazon Web Services Secrets Manager. We use these credentials once during recovery and don't store them.</p>
+   *          <p>If your hybrid directory administrator account exists, then you don’t need to use
+   *                 <code>HybridAdministratorAccountUpdate</code>, even if you have updated your
+   *             self-managed AD administrator user.</p>
+   * @public
+   */
+  HybridAdministratorAccountUpdate?: HybridAdministratorAccountUpdate | undefined;
+
+  /**
+   * <p>Updates to the self-managed AD configuration, including DNS server IP addresses and
+   *             Amazon Web Services System Manager managed node identifiers.</p>
+   * @public
+   */
+  SelfManagedInstancesSettings?: HybridCustomerInstancesSettings | undefined;
+}
+
+/**
+ * @public
+ */
+export interface UpdateHybridADResult {
+  /**
+   * <p>The identifier of the updated hybrid directory.</p>
+   * @public
+   */
+  DirectoryId?: string | undefined;
+
+  /**
+   * <p>The identifier of the assessment performed to validate the update configuration. This
+   *             assessment ensures the updated settings are compatible with your environment.</p>
+   * @public
+   */
+  AssessmentId?: string | undefined;
+}
 
 /**
  * <p>The maximum allowed number of domain controllers per directory was exceeded. The
@@ -5638,7 +6392,9 @@ export interface Setting {
   Name: string | undefined;
 
   /**
-   * <p>The value of the directory setting for which to retrieve information. For example, for <code>TLS_1_0</code>, the valid values are: <code>Enable</code> and <code>Disable</code>.</p>
+   * <p>The value of the directory setting for which to retrieve information. For example, for
+   *         <code>TLS_1_0</code>, the valid values are: <code>Enable</code> and
+   *       <code>Disable</code>.</p>
    * @public
    */
   Value: string | undefined;

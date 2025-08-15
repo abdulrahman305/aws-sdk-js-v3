@@ -1,8 +1,10 @@
 // smithy-typescript generated code
+import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer, StreamingBlobPayloadInputTypes } from "@smithy/types";
 
+import { commonParams } from "../endpoint/EndpointParameters";
 import { GlacierClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../GlacierClient";
 import { ArchiveCreationOutput, UploadArchiveInput, UploadArchiveInputFilterSensitiveLog } from "../models/models_0";
 import { de_UploadArchiveCommand, se_UploadArchiveCommand } from "../protocols/Aws_restJson1";
@@ -60,11 +62,11 @@ export interface UploadArchiveCommandOutput extends ArchiveCreationOutput, __Met
  * @see {@link UploadArchiveCommandOutput} for command's `response` shape.
  * @see {@link GlacierClientResolvedConfig | config} for GlacierClient's `config` shape.
  *
+ * @throws {@link InvalidParameterValueException} (client fault)
+ *
  * @throws {@link MissingParameterValueException} (client fault)
  *
  * @throws {@link RequestTimeoutException} (client fault)
- *
- * @throws {@link InvalidParameterValueException} (client fault)
  *
  * @throws {@link ResourceNotFoundException} (client fault)
  *
@@ -83,8 +85,12 @@ export class UploadArchiveCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: GlacierClientResolvedConfig, o: any) {
-    return [getSerdePlugin(config, this.serialize, this.deserialize)];
+    return [
+      getSerdePlugin(config, this.serialize, this.deserialize),
+      getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+    ];
   })
   .s("Glacier", "UploadArchive", {})
   .n("GlacierClient", "UploadArchiveCommand")

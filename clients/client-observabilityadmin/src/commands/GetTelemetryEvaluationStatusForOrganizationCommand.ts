@@ -38,7 +38,7 @@ export interface GetTelemetryEvaluationStatusForOrganizationCommandOutput
 
 /**
  * <p>
- *       This returns the onboarding status of the telemetry configuration feature for the organization. It can only be called by a Management Account of an AWS Organization or an assigned Delegated Admin Account of AWS CloudWatch telemetry config.
+ *       This returns the onboarding status of the telemetry configuration feature for the organization. It can only be called by a Management Account of an Amazon Web Services Organization or an assigned Delegated Admin Account of Amazon CloudWatch telemetry config.
  *     </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
@@ -64,12 +64,17 @@ export interface GetTelemetryEvaluationStatusForOrganizationCommandOutput
  *
  * @throws {@link AccessDeniedException} (client fault)
  *  <p>
- *       Indicates you don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access management for AWS resources</a> in the IAM user guide.
+ *       Indicates you don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access management for Amazon Web Services resources</a> in the IAM user guide.
  *     </p>
  *
  * @throws {@link InternalServerException} (server fault)
  *  <p>
  *       Indicates the request has failed to process because of an unknown server error, exception, or failure.
+ *     </p>
+ *
+ * @throws {@link TooManyRequestsException} (client fault)
+ *  <p>
+ *       The request throughput limit was exceeded.
  *     </p>
  *
  * @throws {@link ValidationException} (client fault)

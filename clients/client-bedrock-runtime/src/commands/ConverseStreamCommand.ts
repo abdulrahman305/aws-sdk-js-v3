@@ -33,36 +33,7 @@ export interface ConverseStreamCommandInput extends ConverseStreamRequest {}
 export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __MetadataBearer {}
 
 /**
- * <p>Sends messages to the specified Amazon Bedrock model and returns
- *          the response in a stream. <code>ConverseStream</code> provides a consistent API
- *          that works with all Amazon Bedrock models that support messages.
- *          This allows you to write code once and use it with different models. Should a
- *          model have unique inference parameters, you can also pass those unique parameters to the
- *          model. </p>
- *          <p>To find out if a model supports streaming, call <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetFoundationModel.html">GetFoundationModel</a>
- *          and check the <code>responseStreamingSupported</code> field in the response.</p>
- *          <note>
- *             <p>The CLI doesn't support streaming operations in Amazon Bedrock, including <code>ConverseStream</code>.</p>
- *          </note>
- *          <p>Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The data is only used to generate the response.</p>
- *          <p>You can submit a prompt by including it in the <code>messages</code> field, specifying the <code>modelId</code> of a foundation model or inference profile to run inference on it, and including any other fields that are relevant to your use case.</p>
- *          <p>You can also submit a prompt from Prompt management by specifying the ARN of the prompt version and including a map of variables to values in the <code>promptVariables</code> field. You can append more messages to the prompt by using the <code>messages</code> field. If you use a prompt from Prompt management, you can't include the following fields in the request: <code>additionalModelRequestFields</code>, <code>inferenceConfig</code>, <code>system</code>, or <code>toolConfig</code>. Instead, these fields must be defined through Prompt management. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-use.html">Use a prompt from Prompt management</a>.</p>
- *          <p>For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
- *          To use a guardrail, see  <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
- *          To use a tool with a model, see <i>Tool use (Function calling)</i> in the <i>Amazon Bedrock User Guide</i>
- *          </p>
- *          <p>For example code, see <i>Conversation streaming example</i> in the <i>Amazon Bedrock User Guide</i>.
- *       </p>
- *          <p>This operation requires permission for the <code>bedrock:InvokeModelWithResponseStream</code> action.</p>
- *          <important>
- *             <p>To deny all inference access to resources that you specify in the modelId field, you
- *          need to deny access to the <code>bedrock:InvokeModel</code> and
- *          <code>bedrock:InvokeModelWithResponseStream</code> actions. Doing this also denies
- *          access to the resource through the base inference actions (<a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html">InvokeModel</a> and <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModelWithResponseStream.html">InvokeModelWithResponseStream</a>). For more information see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/security_iam_id-based-policy-examples.html#security_iam_id-based-policy-examples-deny-inference">Deny access for inference on specific models</a>.
- *       </p>
- *          </important>
- *          <p>For troubleshooting some of the common errors you might encounter when using the <code>ConverseStream</code> API,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html">Troubleshooting Amazon Bedrock API Error Codes</a> in the Amazon Bedrock User Guide</p>
+ * <p>Sends messages to the specified Amazon Bedrock model and returns the response in a stream. <code>ConverseStream</code> provides a consistent API that works with all Amazon Bedrock models that support messages. This allows you to write code once and use it with different models. Should a model have unique inference parameters, you can also pass those unique parameters to the model. </p> <p>To find out if a model supports streaming, call <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetFoundationModel.html">GetFoundationModel</a> and check the <code>responseStreamingSupported</code> field in the response.</p> <note> <p>The CLI doesn't support streaming operations in Amazon Bedrock, including <code>ConverseStream</code>.</p> </note> <p>Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The data is only used to generate the response.</p> <p>You can submit a prompt by including it in the <code>messages</code> field, specifying the <code>modelId</code> of a foundation model or inference profile to run inference on it, and including any other fields that are relevant to your use case.</p> <p>You can also submit a prompt from Prompt management by specifying the ARN of the prompt version and including a map of variables to values in the <code>promptVariables</code> field. You can append more messages to the prompt by using the <code>messages</code> field. If you use a prompt from Prompt management, you can't include the following fields in the request: <code>additionalModelRequestFields</code>, <code>inferenceConfig</code>, <code>system</code>, or <code>toolConfig</code>. Instead, these fields must be defined through Prompt management. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management-use.html">Use a prompt from Prompt management</a>.</p> <p>For information about the Converse API, see <i>Use the Converse API</i> in the <i>Amazon Bedrock User Guide</i>. To use a guardrail, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>. To use a tool with a model, see <i>Tool use (Function calling)</i> in the <i>Amazon Bedrock User Guide</i> </p> <p>For example code, see <i>Conversation streaming example</i> in the <i>Amazon Bedrock User Guide</i>. </p> <p>This operation requires permission for the <code>bedrock:InvokeModelWithResponseStream</code> action.</p> <important> <p>To deny all inference access to resources that you specify in the modelId field, you need to deny access to the <code>bedrock:InvokeModel</code> and <code>bedrock:InvokeModelWithResponseStream</code> actions. Doing this also denies access to the resource through the base inference actions (<a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html">InvokeModel</a> and <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModelWithResponseStream.html">InvokeModelWithResponseStream</a>). For more information see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/security_iam_id-based-policy-examples.html#security_iam_id-based-policy-examples-deny-inference">Deny access for inference on specific models</a>. </p> </important> <p>For troubleshooting some of the common errors you might encounter when using the <code>ConverseStream</code> API, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html">Troubleshooting Amazon Bedrock API Error Codes</a> in the Amazon Bedrock User Guide</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -81,20 +52,38 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *             format: "png" || "jpeg" || "gif" || "webp", // required
  *             source: { // ImageSource Union: only one key present
  *               bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *               s3Location: { // S3Location
+ *                 uri: "STRING_VALUE", // required
+ *                 bucketOwner: "STRING_VALUE",
+ *               },
  *             },
  *           },
  *           document: { // DocumentBlock
- *             format: "pdf" || "csv" || "doc" || "docx" || "xls" || "xlsx" || "html" || "txt" || "md", // required
+ *             format: "pdf" || "csv" || "doc" || "docx" || "xls" || "xlsx" || "html" || "txt" || "md",
  *             name: "STRING_VALUE", // required
  *             source: { // DocumentSource Union: only one key present
  *               bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *               s3Location: {
+ *                 uri: "STRING_VALUE", // required
+ *                 bucketOwner: "STRING_VALUE",
+ *               },
+ *               text: "STRING_VALUE",
+ *               content: [ // DocumentContentBlocks
+ *                 { // DocumentContentBlock Union: only one key present
+ *                   text: "STRING_VALUE",
+ *                 },
+ *               ],
+ *             },
+ *             context: "STRING_VALUE",
+ *             citations: { // CitationsConfig
+ *               enabled: true || false, // required
  *             },
  *           },
  *           video: { // VideoBlock
  *             format: "mkv" || "mov" || "mp4" || "webm" || "flv" || "mpeg" || "mpg" || "wmv" || "three_gp", // required
  *             source: { // VideoSource Union: only one key present
  *               bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
- *               s3Location: { // S3Location
+ *               s3Location: {
  *                 uri: "STRING_VALUE", // required
  *                 bucketOwner: "STRING_VALUE",
  *               },
@@ -115,23 +104,38 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *                   format: "png" || "jpeg" || "gif" || "webp", // required
  *                   source: {//  Union: only one key present
  *                     bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *                     s3Location: {
+ *                       uri: "STRING_VALUE", // required
+ *                       bucketOwner: "STRING_VALUE",
+ *                     },
  *                   },
  *                 },
  *                 document: {
- *                   format: "pdf" || "csv" || "doc" || "docx" || "xls" || "xlsx" || "html" || "txt" || "md", // required
+ *                   format: "pdf" || "csv" || "doc" || "docx" || "xls" || "xlsx" || "html" || "txt" || "md",
  *                   name: "STRING_VALUE", // required
- *                   source: {//  Union: only one key present
- *                     bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
- *                   },
- *                 },
- *                 video: {
- *                   format: "mkv" || "mov" || "mp4" || "webm" || "flv" || "mpeg" || "mpg" || "wmv" || "three_gp", // required
  *                   source: {//  Union: only one key present
  *                     bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
  *                     s3Location: {
  *                       uri: "STRING_VALUE", // required
  *                       bucketOwner: "STRING_VALUE",
  *                     },
+ *                     text: "STRING_VALUE",
+ *                     content: [
+ *                       {//  Union: only one key present
+ *                         text: "STRING_VALUE",
+ *                       },
+ *                     ],
+ *                   },
+ *                   context: "STRING_VALUE",
+ *                   citations: {
+ *                     enabled: true || false, // required
+ *                   },
+ *                 },
+ *                 video: {
+ *                   format: "mkv" || "mov" || "mp4" || "webm" || "flv" || "mpeg" || "mpg" || "wmv" || "three_gp", // required
+ *                   source: {//  Union: only one key present
+ *                     bytes: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *                     s3Location: "<S3Location>",
  *                   },
  *                 },
  *               },
@@ -152,12 +156,49 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *               },
  *             },
  *           },
+ *           cachePoint: { // CachePointBlock
+ *             type: "default", // required
+ *           },
  *           reasoningContent: { // ReasoningContentBlock Union: only one key present
  *             reasoningText: { // ReasoningTextBlock
  *               text: "STRING_VALUE", // required
  *               signature: "STRING_VALUE",
  *             },
  *             redactedContent: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
+ *           },
+ *           citationsContent: { // CitationsContentBlock
+ *             content: [ // CitationGeneratedContentList
+ *               { // CitationGeneratedContent Union: only one key present
+ *                 text: "STRING_VALUE",
+ *               },
+ *             ],
+ *             citations: [ // Citations
+ *               { // Citation
+ *                 title: "STRING_VALUE",
+ *                 sourceContent: [ // CitationSourceContentList
+ *                   { // CitationSourceContent Union: only one key present
+ *                     text: "STRING_VALUE",
+ *                   },
+ *                 ],
+ *                 location: { // CitationLocation Union: only one key present
+ *                   documentChar: { // DocumentCharLocation
+ *                     documentIndex: Number("int"),
+ *                     start: Number("int"),
+ *                     end: Number("int"),
+ *                   },
+ *                   documentPage: { // DocumentPageLocation
+ *                     documentIndex: Number("int"),
+ *                     start: Number("int"),
+ *                     end: Number("int"),
+ *                   },
+ *                   documentChunk: { // DocumentChunkLocation
+ *                     documentIndex: Number("int"),
+ *                     start: Number("int"),
+ *                     end: Number("int"),
+ *                   },
+ *                 },
+ *               },
+ *             ],
  *           },
  *         },
  *       ],
@@ -180,6 +221,9 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *           },
  *         },
  *       },
+ *       cachePoint: {
+ *         type: "default", // required
+ *       },
  *     },
  *   ],
  *   inferenceConfig: { // InferenceConfiguration
@@ -200,6 +244,7 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *             json: "DOCUMENT_VALUE",
  *           },
  *         },
+ *         cachePoint: "<CachePointBlock>",
  *       },
  *     ],
  *     toolChoice: { // ToolChoice Union: only one key present
@@ -213,7 +258,7 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  *   guardrailConfig: { // GuardrailStreamConfiguration
  *     guardrailIdentifier: "STRING_VALUE", // required
  *     guardrailVersion: "STRING_VALUE", // required
- *     trace: "enabled" || "disabled",
+ *     trace: "enabled" || "disabled" || "enabled_full",
  *     streamProcessingMode: "sync" || "async",
  *   },
  *   additionalModelRequestFields: "DOCUMENT_VALUE",
@@ -259,6 +304,31 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //           redactedContent: new Uint8Array(),
  * //           signature: "STRING_VALUE",
  * //         },
+ * //         citation: { // CitationsDelta
+ * //           title: "STRING_VALUE",
+ * //           sourceContent: [ // CitationSourceContentListDelta
+ * //             { // CitationSourceContentDelta
+ * //               text: "STRING_VALUE",
+ * //             },
+ * //           ],
+ * //           location: { // CitationLocation Union: only one key present
+ * //             documentChar: { // DocumentCharLocation
+ * //               documentIndex: Number("int"),
+ * //               start: Number("int"),
+ * //               end: Number("int"),
+ * //             },
+ * //             documentPage: { // DocumentPageLocation
+ * //               documentIndex: Number("int"),
+ * //               start: Number("int"),
+ * //               end: Number("int"),
+ * //             },
+ * //             documentChunk: { // DocumentChunkLocation
+ * //               documentIndex: Number("int"),
+ * //               start: Number("int"),
+ * //               end: Number("int"),
+ * //             },
+ * //           },
+ * //         },
  * //       },
  * //       contentBlockIndex: Number("int"), // required
  * //     },
@@ -274,6 +344,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //         inputTokens: Number("int"), // required
  * //         outputTokens: Number("int"), // required
  * //         totalTokens: Number("int"), // required
+ * //         cacheReadInputTokens: Number("int"),
+ * //         cacheWriteInputTokens: Number("int"),
  * //       },
  * //       metrics: { // ConverseStreamMetrics
  * //         latencyMs: Number("long"), // required
@@ -290,7 +362,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                   { // GuardrailTopic
  * //                     name: "STRING_VALUE", // required
  * //                     type: "DENY", // required
- * //                     action: "BLOCKED", // required
+ * //                     action: "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
  * //                   },
  * //                 ],
  * //               },
@@ -300,7 +373,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     type: "INSULTS" || "HATE" || "SEXUAL" || "VIOLENCE" || "MISCONDUCT" || "PROMPT_ATTACK", // required
  * //                     confidence: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
  * //                     filterStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH",
- * //                     action: "BLOCKED", // required
+ * //                     action: "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
  * //                   },
  * //                 ],
  * //               },
@@ -308,14 +382,16 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                 customWords: [ // GuardrailCustomWordList // required
  * //                   { // GuardrailCustomWord
  * //                     match: "STRING_VALUE", // required
- * //                     action: "BLOCKED", // required
+ * //                     action: "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
  * //                   },
  * //                 ],
  * //                 managedWordLists: [ // GuardrailManagedWordList // required
  * //                   { // GuardrailManagedWord
  * //                     match: "STRING_VALUE", // required
  * //                     type: "PROFANITY", // required
- * //                     action: "BLOCKED", // required
+ * //                     action: "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
  * //                   },
  * //                 ],
  * //               },
@@ -324,7 +400,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                   { // GuardrailPiiEntityFilter
  * //                     match: "STRING_VALUE", // required
  * //                     type: "ADDRESS" || "AGE" || "AWS_ACCESS_KEY" || "AWS_SECRET_KEY" || "CA_HEALTH_NUMBER" || "CA_SOCIAL_INSURANCE_NUMBER" || "CREDIT_DEBIT_CARD_CVV" || "CREDIT_DEBIT_CARD_EXPIRY" || "CREDIT_DEBIT_CARD_NUMBER" || "DRIVER_ID" || "EMAIL" || "INTERNATIONAL_BANK_ACCOUNT_NUMBER" || "IP_ADDRESS" || "LICENSE_PLATE" || "MAC_ADDRESS" || "NAME" || "PASSWORD" || "PHONE" || "PIN" || "SWIFT_CODE" || "UK_NATIONAL_HEALTH_SERVICE_NUMBER" || "UK_NATIONAL_INSURANCE_NUMBER" || "UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER" || "URL" || "USERNAME" || "US_BANK_ACCOUNT_NUMBER" || "US_BANK_ROUTING_NUMBER" || "US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER" || "US_PASSPORT_NUMBER" || "US_SOCIAL_SECURITY_NUMBER" || "VEHICLE_IDENTIFICATION_NUMBER", // required
- * //                     action: "ANONYMIZED" || "BLOCKED", // required
+ * //                     action: "ANONYMIZED" || "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
  * //                   },
  * //                 ],
  * //                 regexes: [ // GuardrailRegexFilterList // required
@@ -332,7 +409,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     name: "STRING_VALUE",
  * //                     match: "STRING_VALUE",
  * //                     regex: "STRING_VALUE",
- * //                     action: "ANONYMIZED" || "BLOCKED", // required
+ * //                     action: "ANONYMIZED" || "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
  * //                   },
  * //                 ],
  * //               },
@@ -343,6 +421,163 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     threshold: Number("double"), // required
  * //                     score: Number("double"), // required
  * //                     action: "BLOCKED" || "NONE", // required
+ * //                     detected: true || false,
+ * //                   },
+ * //                 ],
+ * //               },
+ * //               automatedReasoningPolicy: { // GuardrailAutomatedReasoningPolicyAssessment
+ * //                 findings: [ // GuardrailAutomatedReasoningFindingList
+ * //                   { // GuardrailAutomatedReasoningFinding Union: only one key present
+ * //                     valid: { // GuardrailAutomatedReasoningValidFinding
+ * //                       translation: { // GuardrailAutomatedReasoningTranslation
+ * //                         premises: [ // GuardrailAutomatedReasoningStatementList
+ * //                           { // GuardrailAutomatedReasoningStatement
+ * //                             logic: "STRING_VALUE",
+ * //                             naturalLanguage: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         claims: [
+ * //                           {
+ * //                             logic: "STRING_VALUE",
+ * //                             naturalLanguage: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         untranslatedPremises: [ // GuardrailAutomatedReasoningInputTextReferenceList
+ * //                           { // GuardrailAutomatedReasoningInputTextReference
+ * //                             text: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         untranslatedClaims: [
+ * //                           {
+ * //                             text: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         confidence: Number("double"),
+ * //                       },
+ * //                       claimsTrueScenario: { // GuardrailAutomatedReasoningScenario
+ * //                         statements: [
+ * //                           {
+ * //                             logic: "STRING_VALUE",
+ * //                             naturalLanguage: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                       },
+ * //                       supportingRules: [ // GuardrailAutomatedReasoningRuleList
+ * //                         { // GuardrailAutomatedReasoningRule
+ * //                           identifier: "STRING_VALUE",
+ * //                           policyVersionArn: "STRING_VALUE",
+ * //                         },
+ * //                       ],
+ * //                       logicWarning: { // GuardrailAutomatedReasoningLogicWarning
+ * //                         type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                         premises: [
+ * //                           {
+ * //                             logic: "STRING_VALUE",
+ * //                             naturalLanguage: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         claims: [
+ * //                           {
+ * //                             logic: "STRING_VALUE",
+ * //                             naturalLanguage: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                       },
+ * //                     },
+ * //                     invalid: { // GuardrailAutomatedReasoningInvalidFinding
+ * //                       translation: {
+ * //                         premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         untranslatedPremises: [
+ * //                           {
+ * //                             text: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         untranslatedClaims: [
+ * //                           {
+ * //                             text: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         confidence: Number("double"),
+ * //                       },
+ * //                       contradictingRules: [
+ * //                         {
+ * //                           identifier: "STRING_VALUE",
+ * //                           policyVersionArn: "STRING_VALUE",
+ * //                         },
+ * //                       ],
+ * //                       logicWarning: {
+ * //                         type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                         premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       },
+ * //                     },
+ * //                     satisfiable: { // GuardrailAutomatedReasoningSatisfiableFinding
+ * //                       translation: {
+ * //                         premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         untranslatedPremises: [
+ * //                           {
+ * //                             text: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         untranslatedClaims: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                         confidence: Number("double"),
+ * //                       },
+ * //                       claimsTrueScenario: {
+ * //                         statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       },
+ * //                       claimsFalseScenario: {
+ * //                         statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       },
+ * //                       logicWarning: {
+ * //                         type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                         premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       },
+ * //                     },
+ * //                     impossible: { // GuardrailAutomatedReasoningImpossibleFinding
+ * //                       translation: {
+ * //                         premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         untranslatedPremises: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                         untranslatedClaims: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                         confidence: Number("double"),
+ * //                       },
+ * //                       contradictingRules: [
+ * //                         {
+ * //                           identifier: "STRING_VALUE",
+ * //                           policyVersionArn: "STRING_VALUE",
+ * //                         },
+ * //                       ],
+ * //                       logicWarning: {
+ * //                         type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                         premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                       },
+ * //                     },
+ * //                     translationAmbiguous: { // GuardrailAutomatedReasoningTranslationAmbiguousFinding
+ * //                       options: [ // GuardrailAutomatedReasoningTranslationOptionList
+ * //                         { // GuardrailAutomatedReasoningTranslationOption
+ * //                           translations: [ // GuardrailAutomatedReasoningTranslationList
+ * //                             {
+ * //                               premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                               claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                               untranslatedPremises: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                               untranslatedClaims: "<GuardrailAutomatedReasoningInputTextReferenceList>",
+ * //                               confidence: Number("double"),
+ * //                             },
+ * //                           ],
+ * //                         },
+ * //                       ],
+ * //                       differenceScenarios: [ // GuardrailAutomatedReasoningDifferenceScenarioList
+ * //                         {
+ * //                           statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         },
+ * //                       ],
+ * //                     },
+ * //                     tooComplex: {},
+ * //                     noTranslations: {},
  * //                   },
  * //                 ],
  * //               },
@@ -356,6 +591,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                   sensitiveInformationPolicyFreeUnits: Number("int"), // required
  * //                   contextualGroundingPolicyUnits: Number("int"), // required
  * //                   contentPolicyImageUnits: Number("int"),
+ * //                   automatedReasoningPolicyUnits: Number("int"),
+ * //                   automatedReasoningPolicies: Number("int"),
  * //                 },
  * //                 guardrailCoverage: { // GuardrailCoverage
  * //                   textCharacters: { // GuardrailTextCharactersCoverage
@@ -378,7 +615,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     {
  * //                       name: "STRING_VALUE", // required
  * //                       type: "DENY", // required
- * //                       action: "BLOCKED", // required
+ * //                       action: "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
  * //                     },
  * //                   ],
  * //                 },
@@ -388,7 +626,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                       type: "INSULTS" || "HATE" || "SEXUAL" || "VIOLENCE" || "MISCONDUCT" || "PROMPT_ATTACK", // required
  * //                       confidence: "NONE" || "LOW" || "MEDIUM" || "HIGH", // required
  * //                       filterStrength: "NONE" || "LOW" || "MEDIUM" || "HIGH",
- * //                       action: "BLOCKED", // required
+ * //                       action: "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
  * //                     },
  * //                   ],
  * //                 },
@@ -396,14 +635,16 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                   customWords: [ // required
  * //                     {
  * //                       match: "STRING_VALUE", // required
- * //                       action: "BLOCKED", // required
+ * //                       action: "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
  * //                     },
  * //                   ],
  * //                   managedWordLists: [ // required
  * //                     {
  * //                       match: "STRING_VALUE", // required
  * //                       type: "PROFANITY", // required
- * //                       action: "BLOCKED", // required
+ * //                       action: "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
  * //                     },
  * //                   ],
  * //                 },
@@ -412,7 +653,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     {
  * //                       match: "STRING_VALUE", // required
  * //                       type: "ADDRESS" || "AGE" || "AWS_ACCESS_KEY" || "AWS_SECRET_KEY" || "CA_HEALTH_NUMBER" || "CA_SOCIAL_INSURANCE_NUMBER" || "CREDIT_DEBIT_CARD_CVV" || "CREDIT_DEBIT_CARD_EXPIRY" || "CREDIT_DEBIT_CARD_NUMBER" || "DRIVER_ID" || "EMAIL" || "INTERNATIONAL_BANK_ACCOUNT_NUMBER" || "IP_ADDRESS" || "LICENSE_PLATE" || "MAC_ADDRESS" || "NAME" || "PASSWORD" || "PHONE" || "PIN" || "SWIFT_CODE" || "UK_NATIONAL_HEALTH_SERVICE_NUMBER" || "UK_NATIONAL_INSURANCE_NUMBER" || "UK_UNIQUE_TAXPAYER_REFERENCE_NUMBER" || "URL" || "USERNAME" || "US_BANK_ACCOUNT_NUMBER" || "US_BANK_ROUTING_NUMBER" || "US_INDIVIDUAL_TAX_IDENTIFICATION_NUMBER" || "US_PASSPORT_NUMBER" || "US_SOCIAL_SECURITY_NUMBER" || "VEHICLE_IDENTIFICATION_NUMBER", // required
- * //                       action: "ANONYMIZED" || "BLOCKED", // required
+ * //                       action: "ANONYMIZED" || "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
  * //                     },
  * //                   ],
  * //                   regexes: [ // required
@@ -420,7 +662,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                       name: "STRING_VALUE",
  * //                       match: "STRING_VALUE",
  * //                       regex: "STRING_VALUE",
- * //                       action: "ANONYMIZED" || "BLOCKED", // required
+ * //                       action: "ANONYMIZED" || "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
  * //                     },
  * //                   ],
  * //                 },
@@ -431,6 +674,65 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                       threshold: Number("double"), // required
  * //                       score: Number("double"), // required
  * //                       action: "BLOCKED" || "NONE", // required
+ * //                       detected: true || false,
+ * //                     },
+ * //                   ],
+ * //                 },
+ * //                 automatedReasoningPolicy: {
+ * //                   findings: [
+ * //                     {//  Union: only one key present
+ * //                       valid: {
+ * //                         translation: "<GuardrailAutomatedReasoningTranslation>",
+ * //                         claimsTrueScenario: {
+ * //                           statements: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         },
+ * //                         supportingRules: [
+ * //                           {
+ * //                             identifier: "STRING_VALUE",
+ * //                             policyVersionArn: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         logicWarning: {
+ * //                           type: "ALWAYS_FALSE" || "ALWAYS_TRUE",
+ * //                           premises: "<GuardrailAutomatedReasoningStatementList>",
+ * //                           claims: "<GuardrailAutomatedReasoningStatementList>",
+ * //                         },
+ * //                       },
+ * //                       invalid: {
+ * //                         translation: "<GuardrailAutomatedReasoningTranslation>",
+ * //                         contradictingRules: [
+ * //                           {
+ * //                             identifier: "STRING_VALUE",
+ * //                             policyVersionArn: "STRING_VALUE",
+ * //                           },
+ * //                         ],
+ * //                         logicWarning: "<GuardrailAutomatedReasoningLogicWarning>",
+ * //                       },
+ * //                       satisfiable: {
+ * //                         translation: "<GuardrailAutomatedReasoningTranslation>",
+ * //                         claimsTrueScenario: "<GuardrailAutomatedReasoningScenario>",
+ * //                         claimsFalseScenario: "<GuardrailAutomatedReasoningScenario>",
+ * //                         logicWarning: "<GuardrailAutomatedReasoningLogicWarning>",
+ * //                       },
+ * //                       impossible: {
+ * //                         translation: "<GuardrailAutomatedReasoningTranslation>",
+ * //                         contradictingRules: "<GuardrailAutomatedReasoningRuleList>",
+ * //                         logicWarning: "<GuardrailAutomatedReasoningLogicWarning>",
+ * //                       },
+ * //                       translationAmbiguous: {
+ * //                         options: [
+ * //                           {
+ * //                             translations: [
+ * //                               "<GuardrailAutomatedReasoningTranslation>",
+ * //                             ],
+ * //                           },
+ * //                         ],
+ * //                         differenceScenarios: [
+ * //                           "<GuardrailAutomatedReasoningScenario>",
+ * //                         ],
+ * //                       },
+ * //                       tooComplex: {},
+ * //                       noTranslations: {},
  * //                     },
  * //                   ],
  * //                 },
@@ -444,6 +746,8 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //                     sensitiveInformationPolicyFreeUnits: Number("int"), // required
  * //                     contextualGroundingPolicyUnits: Number("int"), // required
  * //                     contentPolicyImageUnits: Number("int"),
+ * //                     automatedReasoningPolicyUnits: Number("int"),
+ * //                     automatedReasoningPolicies: Number("int"),
  * //                   },
  * //                   guardrailCoverage: {
  * //                     textCharacters: {
@@ -459,6 +763,7 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * //               },
  * //             ],
  * //           },
+ * //           actionReason: "STRING_VALUE",
  * //         },
  * //         promptRouter: { // PromptRouterTrace
  * //           invokedModelId: "STRING_VALUE",
@@ -497,40 +802,31 @@ export interface ConverseStreamCommandOutput extends ConverseStreamResponse, __M
  * @see {@link BedrockRuntimeClientResolvedConfig | config} for BedrockRuntimeClient's `config` shape.
  *
  * @throws {@link AccessDeniedException} (client fault)
- *  <p>The request is denied because you do not have sufficient permissions to perform the requested action. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-access-denied">AccessDeniedException</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The request is denied because you do not have sufficient permissions to perform the requested action. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-access-denied">AccessDeniedException</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>An internal server error occurred. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-internal-failure">InternalFailure</a> in the Amazon Bedrock User Guide</p>
+ *  <p>An internal server error occurred. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-internal-failure">InternalFailure</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ModelErrorException} (client fault)
  *  <p>The request failed due to an error while processing the model.</p>
  *
  * @throws {@link ModelNotReadyException} (client fault)
- *  <p>The model specified in the request is not ready to serve inference requests. The AWS SDK
- *          will automatically retry the operation up to 5 times. For information about configuring
- *          automatic retries, see <a href="https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html">Retry behavior</a> in the <i>AWS SDKs and Tools</i>
- *       reference guide.</p>
+ *  <p>The model specified in the request is not ready to serve inference requests. The AWS SDK will automatically retry the operation up to 5 times. For information about configuring automatic retries, see <a href="https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html">Retry behavior</a> in the <i>AWS SDKs and Tools</i> reference guide.</p>
  *
  * @throws {@link ModelTimeoutException} (client fault)
  *  <p>The request took too long to process. Processing time exceeded the model timeout length.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
- *  <p>The specified resource ARN was not found. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-resource-not-found">ResourceNotFound</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The specified resource ARN was not found. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-resource-not-found">ResourceNotFound</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ServiceUnavailableException} (server fault)
- *  <p>The service isn't currently available. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-service-unavailable">ServiceUnavailable</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The service isn't currently available. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-service-unavailable">ServiceUnavailable</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ThrottlingException} (client fault)
- *  <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For
- *          troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
+ *  <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link ValidationException} (client fault)
- *  <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
+ *  <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
  *
  * @throws {@link BedrockRuntimeServiceException}
  * <p>Base exception class for all service exceptions from BedrockRuntime service.</p>

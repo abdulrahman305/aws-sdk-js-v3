@@ -239,6 +239,10 @@ import {
 } from "../commands/DescribeDBInstancesCommand";
 import { DescribeDBLogFilesCommandInput, DescribeDBLogFilesCommandOutput } from "../commands/DescribeDBLogFilesCommand";
 import {
+  DescribeDBMajorEngineVersionsCommandInput,
+  DescribeDBMajorEngineVersionsCommandOutput,
+} from "../commands/DescribeDBMajorEngineVersionsCommand";
+import {
   DescribeDBParameterGroupsCommandInput,
   DescribeDBParameterGroupsCommandOutput,
 } from "../commands/DescribeDBParameterGroupsCommand";
@@ -848,6 +852,7 @@ import {
   DBInstanceNotReadyFault,
   DBInstanceRoleNotFoundFault,
   DBLogFileNotFoundFault,
+  DBMajorEngineVersion,
   DBParameterGroupDetails,
   DBParameterGroupNameMessage,
   DBParameterGroupsMessage,
@@ -889,6 +894,8 @@ import {
   DescribeDBLogFilesDetails,
   DescribeDBLogFilesMessage,
   DescribeDBLogFilesResponse,
+  DescribeDBMajorEngineVersionsRequest,
+  DescribeDBMajorEngineVersionsResponse,
   DescribeDBParameterGroupsMessage,
   DescribeDBParametersMessage,
   DescribeDBProxiesRequest,
@@ -1093,6 +1100,7 @@ import {
   StopDBInstanceResult,
   StorageTypeNotAvailableFault,
   SubnetAlreadyInUse,
+  SupportedEngineLifecycle,
   SwitchoverBlueGreenDeploymentRequest,
   SwitchoverBlueGreenDeploymentResponse,
   SwitchoverGlobalClusterMessage,
@@ -2292,6 +2300,23 @@ export const se_DescribeDBLogFilesCommand = async (
   body = buildFormUrlencodedString({
     ...se_DescribeDBLogFilesMessage(input, context),
     [_A]: _DDBLF,
+    [_V]: _,
+  });
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_queryDescribeDBMajorEngineVersionsCommand
+ */
+export const se_DescribeDBMajorEngineVersionsCommand = async (
+  input: DescribeDBMajorEngineVersionsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = SHARED_HEADERS;
+  let body: any;
+  body = buildFormUrlencodedString({
+    ...se_DescribeDBMajorEngineVersionsRequest(input, context),
+    [_A]: _DDBMEV,
     [_V]: _,
   });
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -5231,6 +5256,26 @@ export const de_DescribeDBLogFilesCommand = async (
   let contents: any = {};
   contents = de_DescribeDBLogFilesResponse(data.DescribeDBLogFilesResult, context);
   const response: DescribeDBLogFilesCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_queryDescribeDBMajorEngineVersionsCommand
+ */
+export const de_DescribeDBMajorEngineVersionsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeDBMajorEngineVersionsCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_DescribeDBMajorEngineVersionsResponse(data.DescribeDBMajorEngineVersionsResult, context);
+  const response: DescribeDBMajorEngineVersionsCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -10211,6 +10256,12 @@ const se_CopyDBSnapshotMessage = (input: CopyDBSnapshotMessage, context: __Serde
   if (input[_COG] != null) {
     entries[_COG] = input[_COG];
   }
+  if (input[_SAZ] != null) {
+    entries[_SAZ] = input[_SAZ];
+  }
+  if (input[_ST] != null) {
+    entries[_ST] = input[_ST];
+  }
   return entries;
 };
 
@@ -10539,8 +10590,8 @@ const se_CreateDBClusterMessage = (input: CreateDBClusterMessage, context: __Ser
   if (input[_AS] != null) {
     entries[_AS] = input[_AS];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_I] != null) {
     entries[_I] = input[_I];
@@ -10767,8 +10818,8 @@ const se_CreateDBInstanceMessage = (input: CreateDBInstanceMessage, context: __S
   if (input[_DBCI] != null) {
     entries[_DBCI] = input[_DBCI];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_TCA] != null) {
     entries[_TCA] = input[_TCA];
@@ -10875,8 +10926,8 @@ const se_CreateDBInstanceMessage = (input: CreateDBInstanceMessage, context: __S
   if (input[_NT] != null) {
     entries[_NT] = input[_NT];
   }
-  if (input[_STt] != null) {
-    entries[_STt] = input[_STt];
+  if (input[_STto] != null) {
+    entries[_STto] = input[_STto];
   }
   if (input[_MMUP] != null) {
     entries[_MMUP] = input[_MMUP];
@@ -10966,8 +11017,8 @@ const se_CreateDBInstanceReadReplicaMessage = (
       entries[loc] = value;
     });
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_CTTS] != null) {
     entries[_CTTS] = input[_CTTS];
@@ -11062,11 +11113,14 @@ const se_CreateDBInstanceReadReplicaMessage = (
   if (input[_NT] != null) {
     entries[_NT] = input[_NT];
   }
-  if (input[_STt] != null) {
-    entries[_STt] = input[_STt];
+  if (input[_STto] != null) {
+    entries[_STto] = input[_STto];
   }
   if (input[_ECOI] != null) {
     entries[_ECOI] = input[_ECOI];
+  }
+  if (input[_BTa] != null) {
+    entries[_BTa] = input[_BTa];
   }
   if (input[_AS] != null) {
     entries[_AS] = input[_AS];
@@ -11531,6 +11585,12 @@ const se_CreateTenantDatabaseMessage = (input: CreateTenantDatabaseMessage, cont
   }
   if (input[_NCSN] != null) {
     entries[_NCSN] = input[_NCSN];
+  }
+  if (input[_MMUP] != null) {
+    entries[_MMUP] = input[_MMUP];
+  }
+  if (input[_MUSKKI] != null) {
+    entries[_MUSKKI] = input[_MUSKKI];
   }
   if (input[_T] != null) {
     const memberEntries = se_TagList(input[_T], context);
@@ -12330,6 +12390,29 @@ const se_DescribeDBLogFilesMessage = (input: DescribeDBLogFilesMessage, context:
   }
   if (input[_Ma] != null) {
     entries[_Ma] = input[_Ma];
+  }
+  return entries;
+};
+
+/**
+ * serializeAws_queryDescribeDBMajorEngineVersionsRequest
+ */
+const se_DescribeDBMajorEngineVersionsRequest = (
+  input: DescribeDBMajorEngineVersionsRequest,
+  context: __SerdeContext
+): any => {
+  const entries: any = {};
+  if (input[_E] != null) {
+    entries[_E] = input[_E];
+  }
+  if (input[_MEV] != null) {
+    entries[_MEV] = input[_MEV];
+  }
+  if (input[_Ma] != null) {
+    entries[_Ma] = input[_Ma];
+  }
+  if (input[_MR] != null) {
+    entries[_MR] = input[_MR];
   }
   return entries;
 };
@@ -13714,8 +13797,8 @@ const se_ModifyDBClusterMessage = (input: ModifyDBClusterMessage, context: __Ser
   if (input[_AS] != null) {
     entries[_AS] = input[_AS];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_I] != null) {
     entries[_I] = input[_I];
@@ -13921,8 +14004,8 @@ const se_ModifyDBInstanceMessage = (input: ModifyDBInstanceMessage, context: __S
   if (input[_NDBII] != null) {
     entries[_NDBII] = input[_NDBII];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_TCA] != null) {
     entries[_TCA] = input[_TCA];
@@ -14041,8 +14124,8 @@ const se_ModifyDBInstanceMessage = (input: ModifyDBInstanceMessage, context: __S
   if (input[_NT] != null) {
     entries[_NT] = input[_NT];
   }
-  if (input[_STt] != null) {
-    entries[_STt] = input[_STt];
+  if (input[_STto] != null) {
+    entries[_STto] = input[_STto];
   }
   if (input[_MMUP] != null) {
     entries[_MMUP] = input[_MMUP];
@@ -14425,6 +14508,15 @@ const se_ModifyTenantDatabaseMessage = (input: ModifyTenantDatabaseMessage, cont
   }
   if (input[_NTDBN] != null) {
     entries[_NTDBN] = input[_NTDBN];
+  }
+  if (input[_MMUP] != null) {
+    entries[_MMUP] = input[_MMUP];
+  }
+  if (input[_RMUP] != null) {
+    entries[_RMUP] = input[_RMUP];
+  }
+  if (input[_MUSKKI] != null) {
+    entries[_MUSKKI] = input[_MUSKKI];
   }
   return entries;
 };
@@ -15125,8 +15217,8 @@ const se_RestoreDBClusterFromS3Message = (input: RestoreDBClusterFromS3Message, 
   if (input[_MUSKKI] != null) {
     entries[_MUSKKI] = input[_MUSKKI];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_ELS] != null) {
     entries[_ELS] = input[_ELS];
@@ -15243,8 +15335,8 @@ const se_RestoreDBClusterFromSnapshotMessage = (
   if (input[_DBCIC] != null) {
     entries[_DBCIC] = input[_DBCIC];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_I] != null) {
     entries[_I] = input[_I];
@@ -15389,8 +15481,8 @@ const se_RestoreDBClusterToPointInTimeMessage = (
   if (input[_DBCIC] != null) {
     entries[_DBCIC] = input[_DBCIC];
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_PA] != null) {
     entries[_PA] = input[_PA];
@@ -15499,8 +15591,8 @@ const se_RestoreDBInstanceFromDBSnapshotMessage = (
       entries[loc] = value;
     });
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_TCA] != null) {
     entries[_TCA] = input[_TCA];
@@ -15590,8 +15682,8 @@ const se_RestoreDBInstanceFromDBSnapshotMessage = (
   if (input[_NT] != null) {
     entries[_NT] = input[_NT];
   }
-  if (input[_STt] != null) {
-    entries[_STt] = input[_STt];
+  if (input[_STto] != null) {
+    entries[_STto] = input[_STto];
   }
   if (input[_DBCSI] != null) {
     entries[_DBCSI] = input[_DBCSI];
@@ -15607,6 +15699,12 @@ const se_RestoreDBInstanceFromDBSnapshotMessage = (
   }
   if (input[_ELS] != null) {
     entries[_ELS] = input[_ELS];
+  }
+  if (input[_MMUP] != null) {
+    entries[_MMUP] = input[_MMUP];
+  }
+  if (input[_MUSKKI] != null) {
+    entries[_MUSKKI] = input[_MUSKKI];
   }
   return entries;
 };
@@ -15709,8 +15807,8 @@ const se_RestoreDBInstanceFromS3Message = (input: RestoreDBInstanceFromS3Message
       entries[loc] = value;
     });
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_SE] != null) {
     entries[_SE] = input[_SE];
@@ -15789,8 +15887,8 @@ const se_RestoreDBInstanceFromS3Message = (input: RestoreDBInstanceFromS3Message
   if (input[_NT] != null) {
     entries[_NT] = input[_NT];
   }
-  if (input[_STt] != null) {
-    entries[_STt] = input[_STt];
+  if (input[_STto] != null) {
+    entries[_STto] = input[_STto];
   }
   if (input[_MMUP] != null) {
     entries[_MMUP] = input[_MMUP];
@@ -15879,8 +15977,8 @@ const se_RestoreDBInstanceToPointInTimeMessage = (
       entries[loc] = value;
     });
   }
-  if (input[_ST] != null) {
-    entries[_ST] = input[_ST];
+  if (input[_STt] != null) {
+    entries[_STt] = input[_STt];
   }
   if (input[_TCA] != null) {
     entries[_TCA] = input[_TCA];
@@ -15976,8 +16074,8 @@ const se_RestoreDBInstanceToPointInTimeMessage = (
   if (input[_NT] != null) {
     entries[_NT] = input[_NT];
   }
-  if (input[_STt] != null) {
-    entries[_STt] = input[_STt];
+  if (input[_STto] != null) {
+    entries[_STto] = input[_STto];
   }
   if (input[_AS] != null) {
     entries[_AS] = input[_AS];
@@ -15990,6 +16088,12 @@ const se_RestoreDBInstanceToPointInTimeMessage = (
   }
   if (input[_ELS] != null) {
     entries[_ELS] = input[_ELS];
+  }
+  if (input[_MMUP] != null) {
+    entries[_MMUP] = input[_MMUP];
+  }
+  if (input[_MUSKKI] != null) {
+    entries[_MUSKKI] = input[_MUSKKI];
   }
   return entries;
 };
@@ -16869,8 +16973,8 @@ const de_ClusterPendingModifiedValues = (output: any, context: __SerdeContext): 
   if (output[_I] != null) {
     contents[_I] = __strictParseInt32(output[_I]) as number;
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_CD] != null) {
     contents[_CD] = de_CertificateDetails(output[_CD], context);
@@ -17450,6 +17554,9 @@ const de_DBCluster = (output: any, context: __SerdeContext): DBCluster => {
   } else if (output[_TL] != null && output[_TL][_Tag] != null) {
     contents[_TL] = de_TagList(__getArrayIfSingleItem(output[_TL][_Tag]), context);
   }
+  if (output[_GCI] != null) {
+    contents[_GCI] = __expectString(output[_GCI]);
+  }
   if (output[_GWFS] != null) {
     contents[_GWFS] = __expectString(output[_GWFS]);
   }
@@ -17462,8 +17569,8 @@ const de_DBCluster = (output: any, context: __SerdeContext): DBCluster => {
   if (output[_DBCIC] != null) {
     contents[_DBCIC] = __expectString(output[_DBCIC]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_I] != null) {
     contents[_I] = __strictParseInt32(output[_I]) as number;
@@ -17495,6 +17602,9 @@ const de_DBCluster = (output: any, context: __SerdeContext): DBCluster => {
   if (output[_SVSC] != null) {
     contents[_SVSC] = de_ServerlessV2ScalingConfigurationInfo(output[_SVSC], context);
   }
+  if (output[_SVPV] != null) {
+    contents[_SVPV] = __expectString(output[_SVPV]);
+  }
   if (output[_NT] != null) {
     contents[_NT] = __expectString(output[_NT]);
   }
@@ -17516,8 +17626,8 @@ const de_DBCluster = (output: any, context: __SerdeContext): DBCluster => {
   if (output[_LD] != null) {
     contents[_LD] = de_LimitlessDatabase(output[_LD], context);
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   if (output[_CST] != null) {
     contents[_CST] = __expectString(output[_CST]);
@@ -17612,8 +17722,8 @@ const de_DBClusterAutomatedBackup = (output: any, context: __SerdeContext): DBCl
   if (output[_KKI] != null) {
     contents[_KKI] = __expectString(output[_KKI]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_I] != null) {
     contents[_I] = __strictParseInt32(output[_I]) as number;
@@ -17621,8 +17731,8 @@ const de_DBClusterAutomatedBackup = (output: any, context: __SerdeContext): DBCl
   if (output[_ABRPA] != null) {
     contents[_ABRPA] = __expectString(output[_ABRPA]);
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   return contents;
 };
@@ -18212,14 +18322,14 @@ const de_DBClusterSnapshot = (output: any, context: __SerdeContext): DBClusterSn
   if (output[_DBSI] != null) {
     contents[_DBSI] = __expectString(output[_DBSI]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_DCRI] != null) {
     contents[_DCRI] = __expectString(output[_DCRI]);
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   return contents;
 };
@@ -18630,8 +18740,8 @@ const de_DBInstance = (output: any, context: __SerdeContext): DBInstance => {
   if (output[_NCSN] != null) {
     contents[_NCSN] = __expectString(output[_NCSN]);
   }
-  if (output[_SAZ] != null) {
-    contents[_SAZ] = __expectString(output[_SAZ]);
+  if (output[_SAZe] != null) {
+    contents[_SAZe] = __expectString(output[_SAZe]);
   }
   if (output[_PA] != null) {
     contents[_PA] = __parseBoolean(output[_PA]);
@@ -18641,8 +18751,8 @@ const de_DBInstance = (output: any, context: __SerdeContext): DBInstance => {
   } else if (output[_SIt] != null && output[_SIt][_DBISI] != null) {
     contents[_SIt] = de_DBInstanceStatusInfoList(__getArrayIfSingleItem(output[_SIt][_DBISI]), context);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_TCA] != null) {
     contents[_TCA] = __expectString(output[_TCA]);
@@ -18782,8 +18892,8 @@ const de_DBInstance = (output: any, context: __SerdeContext): DBInstance => {
   if (output[_ASPS] != null) {
     contents[_ASPS] = __expectString(output[_ASPS]);
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   if (output[_DBSI] != null) {
     contents[_DBSI] = __expectString(output[_DBSI]);
@@ -18888,8 +18998,8 @@ const de_DBInstanceAutomatedBackup = (output: any, context: __SerdeContext): DBI
   if (output[_Enc] != null) {
     contents[_Enc] = __parseBoolean(output[_Enc]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_KKI] != null) {
     contents[_KKI] = __expectString(output[_KKI]);
@@ -18917,8 +19027,8 @@ const de_DBInstanceAutomatedBackup = (output: any, context: __SerdeContext): DBI
   if (output[_BTa] != null) {
     contents[_BTa] = __expectString(output[_BTa]);
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   if (output[_ABRPA] != null) {
     contents[_ABRPA] = __expectString(output[_ABRPA]);
@@ -19174,6 +19284,36 @@ const de_DBLogFileNotFoundFault = (output: any, context: __SerdeContext): DBLogF
     contents[_m] = __expectString(output[_m]);
   }
   return contents;
+};
+
+/**
+ * deserializeAws_queryDBMajorEngineVersion
+ */
+const de_DBMajorEngineVersion = (output: any, context: __SerdeContext): DBMajorEngineVersion => {
+  const contents: any = {};
+  if (output[_E] != null) {
+    contents[_E] = __expectString(output[_E]);
+  }
+  if (output[_MEV] != null) {
+    contents[_MEV] = __expectString(output[_MEV]);
+  }
+  if (output.SupportedEngineLifecycles === "") {
+    contents[_SEL] = [];
+  } else if (output[_SEL] != null && output[_SEL][_SELu] != null) {
+    contents[_SEL] = de_SupportedEngineLifecycleList(__getArrayIfSingleItem(output[_SEL][_SELu]), context);
+  }
+  return contents;
+};
+
+/**
+ * deserializeAws_queryDBMajorEngineVersionsList
+ */
+const de_DBMajorEngineVersionsList = (output: any, context: __SerdeContext): DBMajorEngineVersion[] => {
+  return (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_DBMajorEngineVersion(entry, context);
+    });
 };
 
 /**
@@ -19998,8 +20138,8 @@ const de_DBSnapshot = (output: any, context: __SerdeContext): DBSnapshot => {
   if (output[_SDBSI] != null) {
     contents[_SDBSI] = __expectString(output[_SDBSI]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_TCA] != null) {
     contents[_TCA] = __expectString(output[_TCA]);
@@ -20038,11 +20178,11 @@ const de_DBSnapshot = (output: any, context: __SerdeContext): DBSnapshot => {
   if (output[_SDT] != null) {
     contents[_SDT] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_SDT]));
   }
-  if (output[_STna] != null) {
-    contents[_STna] = __expectString(output[_STna]);
+  if (output[_ST] != null) {
+    contents[_ST] = __expectString(output[_ST]);
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   if (output[_DBSI] != null) {
     contents[_DBSI] = __expectString(output[_DBSI]);
@@ -20052,6 +20192,9 @@ const de_DBSnapshot = (output: any, context: __SerdeContext): DBSnapshot => {
   }
   if (output[_MT] != null) {
     contents[_MT] = __parseBoolean(output[_MT]);
+  }
+  if (output[_SAZ] != null) {
+    contents[_SAZ] = __expectString(output[_SAZ]);
   }
   return contents;
 };
@@ -20603,6 +20746,25 @@ const de_DescribeDBLogFilesResponse = (output: any, context: __SerdeContext): De
     contents[_DDBLF] = [];
   } else if (output[_DDBLF] != null && output[_DDBLF][_DDBLFD] != null) {
     contents[_DDBLF] = de_DescribeDBLogFilesList(__getArrayIfSingleItem(output[_DDBLF][_DDBLFD]), context);
+  }
+  if (output[_Ma] != null) {
+    contents[_Ma] = __expectString(output[_Ma]);
+  }
+  return contents;
+};
+
+/**
+ * deserializeAws_queryDescribeDBMajorEngineVersionsResponse
+ */
+const de_DescribeDBMajorEngineVersionsResponse = (
+  output: any,
+  context: __SerdeContext
+): DescribeDBMajorEngineVersionsResponse => {
+  const contents: any = {};
+  if (output.DBMajorEngineVersions === "") {
+    contents[_DBMEV] = [];
+  } else if (output[_DBMEV] != null && output[_DBMEV][_DBMEVa] != null) {
+    contents[_DBMEV] = de_DBMajorEngineVersionsList(__getArrayIfSingleItem(output[_DBMEV][_DBMEVa]), context);
   }
   if (output[_Ma] != null) {
     contents[_Ma] = __expectString(output[_Ma]);
@@ -21226,8 +21388,8 @@ const de_ExportTask = (output: any, context: __SerdeContext): ExportTask => {
   } else if (output[_EO] != null && output[_EO][_me] != null) {
     contents[_EO] = de_StringList(__getArrayIfSingleItem(output[_EO][_me]), context);
   }
-  if (output[_STnap] != null) {
-    contents[_STnap] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_STnap]));
+  if (output[_STna] != null) {
+    contents[_STna] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_STna]));
   }
   if (output[_TSTas] != null) {
     contents[_TSTas] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_TSTas]));
@@ -22951,8 +23113,8 @@ const de_OrderableDBInstanceOption = (output: any, context: __SerdeContext): Ord
   if (output[_SSE] != null) {
     contents[_SSE] = __parseBoolean(output[_SSE]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_SIupp] != null) {
     contents[_SIupp] = __parseBoolean(output[_SIupp]);
@@ -23255,8 +23417,8 @@ const de_PendingModifiedValues = (output: any, context: __SerdeContext): Pending
   if (output[_DBII] != null) {
     contents[_DBII] = __expectString(output[_DBII]);
   }
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output[_CACI] != null) {
     contents[_CACI] = __expectString(output[_CACI]);
@@ -23281,8 +23443,8 @@ const de_PendingModifiedValues = (output: any, context: __SerdeContext): Pending
   if (output[_RFAMT] != null) {
     contents[_RFAMT] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_RFAMT]));
   }
-  if (output[_STt] != null) {
-    contents[_STt] = __strictParseInt32(output[_STt]) as number;
+  if (output[_STto] != null) {
+    contents[_STto] = __strictParseInt32(output[_STto]) as number;
   }
   if (output[_E] != null) {
     contents[_E] = __expectString(output[_E]);
@@ -24521,6 +24683,34 @@ const de_SupportedCharacterSetsList = (output: any, context: __SerdeContext): Ch
 };
 
 /**
+ * deserializeAws_querySupportedEngineLifecycle
+ */
+const de_SupportedEngineLifecycle = (output: any, context: __SerdeContext): SupportedEngineLifecycle => {
+  const contents: any = {};
+  if (output[_LSN] != null) {
+    contents[_LSN] = __expectString(output[_LSN]);
+  }
+  if (output[_LSSD] != null) {
+    contents[_LSSD] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_LSSD]));
+  }
+  if (output[_LSED] != null) {
+    contents[_LSED] = __expectNonNull(__parseRfc3339DateTimeWithOffset(output[_LSED]));
+  }
+  return contents;
+};
+
+/**
+ * deserializeAws_querySupportedEngineLifecycleList
+ */
+const de_SupportedEngineLifecycleList = (output: any, context: __SerdeContext): SupportedEngineLifecycle[] => {
+  return (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_SupportedEngineLifecycle(entry, context);
+    });
+};
+
+/**
  * deserializeAws_querySupportedTimezonesList
  */
 const de_SupportedTimezonesList = (output: any, context: __SerdeContext): Timezone[] => {
@@ -24712,6 +24902,9 @@ const de_TenantDatabase = (output: any, context: __SerdeContext): TenantDatabase
   }
   if (output[_PMV] != null) {
     contents[_PMV] = de_TenantDatabasePendingModifiedValues(output[_PMV], context);
+  }
+  if (output[_MUS] != null) {
+    contents[_MUS] = de_MasterUserSecret(output[_MUS], context);
   }
   if (output.TagList === "") {
     contents[_TL] = [];
@@ -24938,8 +25131,8 @@ const de_ValidDBInstanceModificationsMessage = (
  */
 const de_ValidStorageOptions = (output: any, context: __SerdeContext): ValidStorageOptions => {
   const contents: any = {};
-  if (output[_ST] != null) {
-    contents[_ST] = __expectString(output[_ST]);
+  if (output[_STt] != null) {
+    contents[_STt] = __expectString(output[_STt]);
   }
   if (output.StorageSize === "") {
     contents[_SSt] = [];
@@ -25262,6 +25455,8 @@ const _DBIR = "DBInstanceRole";
 const _DBIS = "DBInstanceStatus";
 const _DBISI = "DBInstanceStatusInfo";
 const _DBIn = "DBInstances";
+const _DBMEV = "DBMajorEngineVersions";
+const _DBMEVa = "DBMajorEngineVersion";
 const _DBN = "DBName";
 const _DBP = "DBProxy";
 const _DBPA = "DBProxyArn";
@@ -25336,6 +25531,7 @@ const _DDBIe = "DescribeDBInstances";
 const _DDBLF = "DescribeDBLogFiles";
 const _DDBLFD = "DescribeDBLogFilesDetails";
 const _DDBLFP = "DownloadDBLogFilePortion";
+const _DDBMEV = "DescribeDBMajorEngineVersions";
 const _DDBP = "DeleteDBProxy";
 const _DDBPE = "DeleteDBProxyEndpoint";
 const _DDBPEe = "DescribeDBProxyEndpoints";
@@ -25539,6 +25735,9 @@ const _LI = "LeaseId";
 const _LM = "LicenseModel";
 const _LRT = "LatestRestorableTime";
 const _LSCS = "ListSupportedCharacterSets";
+const _LSED = "LifecycleSupportEndDate";
+const _LSN = "LifecycleSupportName";
+const _LSSD = "LifecycleSupportStartDate";
 const _LST = "ListSupportedTimezones";
 const _LT = "LatestTime";
 const _LTFR = "ListTagsForResource";
@@ -25772,7 +25971,8 @@ const _SAI = "SourceAccountId";
 const _SAS = "StartActivityStream";
 const _SASM = "SupportedActivityStreamModes";
 const _SASt = "StopActivityStream";
-const _SAZ = "SecondaryAvailabilityZone";
+const _SAZ = "SnapshotAvailabilityZone";
+const _SAZe = "SecondaryAvailabilityZone";
 const _SAZu = "SubnetAvailabilityZone";
 const _SAe = "SecretArn";
 const _SB = "SupportsBabelfish";
@@ -25814,6 +26014,8 @@ const _SDe = "SettingDescription";
 const _SDt = "StatusDetails";
 const _SDta = "StatisticsDetails";
 const _SE = "StorageEncrypted";
+const _SEL = "SupportedEngineLifecycles";
+const _SELu = "SupportedEngineLifecycle";
 const _SEM = "SupportedEngineModes";
 const _SEMu = "SupportsEnhancedMonitoring";
 const _SET = "StartExportTask";
@@ -25867,20 +26069,21 @@ const _SST = "SupportsStorageThroughput";
 const _SSe = "SecretStatus";
 const _SSt = "StorageSize";
 const _SSu = "SubnetStatus";
-const _ST = "StorageType";
+const _ST = "SnapshotTarget";
 const _STA = "SnsTopicArn";
 const _STTIR = "StorageThroughputToIopsRatio";
 const _STn = "SnapshotType";
-const _STna = "SnapshotTarget";
-const _STnap = "SnapshotTime";
+const _STna = "SnapshotTime";
 const _STo = "SourceType";
-const _STt = "StorageThroughput";
+const _STt = "StorageType";
 const _STta = "StartTime";
 const _STtat = "StatusType";
+const _STto = "StorageThroughput";
 const _STu = "SupportedTimezones";
 const _STw = "SwitchoverTimeout";
 const _SUAP = "SecondsUntilAutoPause";
 const _SVFS = "ServerlessV2FeaturesSupport";
+const _SVPV = "ServerlessV2PlatformVersion";
 const _SVSC = "ServerlessV2ScalingConfiguration";
 const _Se = "Severity";
 const _Si = "Size";

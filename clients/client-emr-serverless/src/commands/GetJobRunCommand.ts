@@ -52,6 +52,12 @@ export interface GetJobRunCommandOutput extends GetJobRunResponse, __MetadataBea
  * //     createdAt: new Date("TIMESTAMP"), // required
  * //     updatedAt: new Date("TIMESTAMP"), // required
  * //     executionRole: "STRING_VALUE", // required
+ * //     executionIamPolicy: { // JobRunExecutionIamPolicy
+ * //       policy: "STRING_VALUE",
+ * //       policyArns: [ // PolicyArnList
+ * //         "STRING_VALUE",
+ * //       ],
+ * //     },
  * //     state: "STRING_VALUE", // required
  * //     stateDetails: "STRING_VALUE", // required
  * //     releaseLabel: "STRING_VALUE", // required
@@ -164,8 +170,7 @@ export interface GetJobRunCommandOutput extends GetJobRunResponse, __MetadataBea
  *  <p>The specified resource was not found.</p>
  *
  * @throws {@link ValidationException} (client fault)
- *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services
- *          service.</p>
+ *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>
  *
  * @throws {@link EMRServerlessServiceException}
  * <p>Base exception class for all service exceptions from EMRServerless service.</p>

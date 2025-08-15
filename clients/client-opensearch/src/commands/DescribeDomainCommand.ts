@@ -167,6 +167,11 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //         RolesKey: "STRING_VALUE",
  * //         PublicKey: "STRING_VALUE",
  * //       },
+ * //       IAMFederationOptions: { // IAMFederationOptionsOutput
+ * //         Enabled: true || false,
+ * //         SubjectKey: "STRING_VALUE",
+ * //         RolesKey: "STRING_VALUE",
+ * //       },
  * //       AnonymousAuthDisableDate: new Date("TIMESTAMP"),
  * //       AnonymousAuthEnabled: true || false,
  * //     },
@@ -216,6 +221,9 @@ export interface DescribeDomainCommandOutput extends DescribeDomainResponse, __M
  * //       NaturalLanguageQueryGenerationOptions: { // NaturalLanguageQueryGenerationOptionsOutput
  * //         DesiredState: "ENABLED" || "DISABLED",
  * //         CurrentState: "NOT_ENABLED" || "ENABLE_COMPLETE" || "ENABLE_IN_PROGRESS" || "ENABLE_FAILED" || "DISABLE_COMPLETE" || "DISABLE_IN_PROGRESS" || "DISABLE_FAILED",
+ * //       },
+ * //       S3VectorsEngine: { // S3VectorsEngine
+ * //         Enabled: true || false,
  * //       },
  * //     },
  * //   },

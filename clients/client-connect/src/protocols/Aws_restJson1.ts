@@ -380,6 +380,7 @@ import {
   GetContactAttributesCommandInput,
   GetContactAttributesCommandOutput,
 } from "../commands/GetContactAttributesCommand";
+import { GetContactMetricsCommandInput, GetContactMetricsCommandOutput } from "../commands/GetContactMetricsCommand";
 import {
   GetCurrentMetricDataCommandInput,
   GetCurrentMetricDataCommandOutput,
@@ -856,8 +857,10 @@ import {
   AllowedCapabilities,
   Application,
   AssignContactCategoryActionDefinition,
+  AssignSlaActionDefinition,
   AudioQualityMetricsInfo,
   Campaign,
+  CaseSlaConfiguration,
   Channel,
   CommonAttributeAndCondition,
   ConflictException,
@@ -934,6 +937,7 @@ import {
   SendNotificationActionDefinition,
   ServiceQuotaExceededException,
   SingleSelectQuestionRuleCategoryAutomation,
+  StateTransition,
   StringCondition,
   SubmitAutoEvaluationActionDefinition,
   TagCondition,
@@ -959,9 +963,15 @@ import {
   AttributeCondition,
   AuthenticationProfile,
   AuthenticationProfileSummary,
+  ChatContactMetrics,
+  ChatMetrics,
+  ContactEvaluation,
   ContactFilter,
   ContactFlow,
   ContactFlowNotPublishedException,
+  ContactMetricInfo,
+  ContactMetricResult,
+  ContactMetricValue,
   Credentials,
   CurrentMetric,
   CurrentMetricData,
@@ -1001,18 +1011,17 @@ import {
   MetricInterval,
   MetricResultV2,
   MetricV2,
+  ParticipantMetrics,
   PhoneNumberCountryCode,
   PhoneNumberType,
   PredefinedAttribute,
-  PredefinedAttributeSummary,
   Prompt,
-  PromptSummary,
   QualityMetrics,
   Queue,
   QueueInfo,
   QuickConnect,
-  QuickConnectSummary,
   Range,
+  RecordingInfo,
   RoutingProfile,
   Rule,
   SecurityProfile,
@@ -1033,7 +1042,6 @@ import {
   AttributeAndCondition,
   ChatEvent,
   ChatMessage,
-  ChatParticipantRoleConfig,
   ChatStreamingConfiguration,
   Condition,
   ConditionalOperationFailedException,
@@ -1069,14 +1077,15 @@ import {
   OutboundRawMessage,
   OutputTypeNotFoundException,
   ParticipantDetails,
-  ParticipantTimerConfiguration,
-  ParticipantTimerValue,
   PersistentChat,
+  PredefinedAttributeSummary,
   PromptSearchFilter,
+  PromptSummary,
   QueueInfoInput,
   QueueSearchFilter,
   QueueSummary,
   QuickConnectSearchFilter,
+  QuickConnectSummary,
   RealtimeContactAnalysisSegment,
   RealTimeContactAnalysisSegmentAttachments,
   RealTimeContactAnalysisSegmentEvent,
@@ -1105,7 +1114,6 @@ import {
   TemplatedMessageConfig,
   Transcript,
   TranscriptCriteria,
-  UpdateParticipantRoleConfigChannelInfo,
   UserHierarchyGroupSearchFilter,
   UserSearchFilter,
   UserSummary,
@@ -1114,6 +1122,7 @@ import {
 } from "../models/models_2";
 import {
   AgentStatusSearchCriteria,
+  ChatParticipantRoleConfig,
   Contact,
   ContactFlowModuleSearchCriteria,
   ContactFlowSearchCriteria,
@@ -1127,6 +1136,8 @@ import {
   HierarchyStructureUpdate,
   HoursOfOperationOverrideSearchCriteria,
   HoursOfOperationSearchCriteria,
+  ParticipantTimerConfiguration,
+  ParticipantTimerValue,
   PredefinedAttributeSearchCriteria,
   PromptSearchCriteria,
   QueueSearchCriteria,
@@ -1138,6 +1149,7 @@ import {
   SecurityProfileSearchCriteria,
   SegmentAttributeValue,
   Step,
+  UpdateParticipantRoleConfigChannelInfo,
   UserHierarchyGroupSearchCriteria,
   UserSearchCriteria,
 } from "../models/models_3";
@@ -3772,6 +3784,30 @@ export const se_GetContactAttributesCommand = async (
   b.p("InitialContactId", () => input.InitialContactId!, "{InitialContactId}", false);
   let body: any;
   b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1GetContactMetricsCommand
+ */
+export const se_GetContactMetricsCommand = async (
+  input: GetContactMetricsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/metrics/contact");
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      ContactId: [],
+      InstanceId: [],
+      Metrics: (_) => _json(_),
+    })
+  );
+  b.m("POST").h(headers).b(body);
   return b.build();
 };
 
@@ -10037,6 +10073,29 @@ export const de_GetContactAttributesCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1GetContactMetricsCommand
+ */
+export const de_GetContactMetricsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetContactMetricsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    Arn: __expectString,
+    Id: __expectString,
+    MetricResults: (_) => de_ContactMetricResults(_, context),
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1GetCurrentMetricDataCommand
  */
 export const de_GetCurrentMetricDataCommand = async (
@@ -13989,6 +14048,16 @@ const se_AgentStatusSearchCriteria = (input: AgentStatusSearchCriteria, context:
 
 // se_AssignContactCategoryActionDefinition omitted.
 
+/**
+ * serializeAws_restJson1AssignSlaActionDefinition
+ */
+const se_AssignSlaActionDefinition = (input: AssignSlaActionDefinition, context: __SerdeContext): any => {
+  return take(input, {
+    CaseSlaConfiguration: (_) => se_CaseSlaConfiguration(_, context),
+    SlaAssignmentType: [],
+  });
+};
+
 // se_AttributeAndCondition omitted.
 
 /**
@@ -14010,6 +14079,19 @@ const se_AttributeCondition = (input: AttributeCondition, context: __SerdeContex
 // se_Attributes omitted.
 
 // se_Campaign omitted.
+
+/**
+ * serializeAws_restJson1CaseSlaConfiguration
+ */
+const se_CaseSlaConfiguration = (input: CaseSlaConfiguration, context: __SerdeContext): any => {
+  return take(input, {
+    FieldId: [],
+    Name: [],
+    TargetFieldValues: (_) => se_SlaFieldValueUnionList(_, context),
+    TargetSlaMinutes: [],
+    Type: [],
+  });
+};
 
 // se_ChannelList omitted.
 
@@ -14096,6 +14178,10 @@ const se_ContactFlowSearchCriteria = (input: ContactFlowSearchCriteria, context:
 };
 
 // se_ContactFlowSearchFilter omitted.
+
+// se_ContactMetricInfo omitted.
+
+// se_ContactMetrics omitted.
 
 // se_ContactReferences omitted.
 
@@ -14792,6 +14878,7 @@ const se_RuleAction = (input: RuleAction, context: __SerdeContext): any => {
   return take(input, {
     ActionType: [],
     AssignContactCategoryAction: _json,
+    AssignSlaAction: (_) => se_AssignSlaActionDefinition(_, context),
     CreateCaseAction: (_) => se_CreateCaseActionDefinition(_, context),
     EndAssociatedTasksAction: _json,
     EventBridgeAction: _json,
@@ -14925,6 +15012,17 @@ const se_SegmentAttributeValueMap = (input: Record<string, SegmentAttributeValue
 // se_SingleSelectOptions omitted.
 
 // se_SingleSelectQuestionRuleCategoryAutomation omitted.
+
+/**
+ * serializeAws_restJson1SlaFieldValueUnionList
+ */
+const se_SlaFieldValueUnionList = (input: FieldValueUnion[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_FieldValueUnion(entry, context);
+    });
+};
 
 // se_Sort omitted.
 
@@ -15163,12 +15261,17 @@ const de_AgentContactReferenceList = (output: any, context: __SerdeContext): Age
  */
 const de_AgentInfo = (output: any, context: __SerdeContext): AgentInfo => {
   return take(output, {
+    AfterContactWorkDuration: __expectInt32,
+    AfterContactWorkEndTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    AfterContactWorkStartTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    AgentInitiatedHoldDuration: __expectInt32,
     AgentPauseDurationInSeconds: __expectInt32,
     Capabilities: _json,
     ConnectedToAgentTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     DeviceInfo: _json,
     HierarchyGroups: _json,
     Id: __expectString,
+    StateTransitions: (_: any) => de_StateTransitions(_, context),
   }) as any;
 };
 
@@ -15267,6 +15370,16 @@ const de_AgentStatusSummaryList = (output: any, context: __SerdeContext): AgentS
 // de_Applications omitted.
 
 // de_AssignContactCategoryActionDefinition omitted.
+
+/**
+ * deserializeAws_restJson1AssignSlaActionDefinition
+ */
+const de_AssignSlaActionDefinition = (output: any, context: __SerdeContext): AssignSlaActionDefinition => {
+  return take(output, {
+    CaseSlaConfiguration: (_: any) => de_CaseSlaConfiguration(_, context),
+    SlaAssignmentType: __expectString,
+  }) as any;
+};
 
 /**
  * deserializeAws_restJson1AssociatedContactSummary
@@ -15395,7 +15508,47 @@ const de_AuthenticationProfileSummaryList = (output: any, context: __SerdeContex
 
 // de_Campaign omitted.
 
+/**
+ * deserializeAws_restJson1CaseSlaConfiguration
+ */
+const de_CaseSlaConfiguration = (output: any, context: __SerdeContext): CaseSlaConfiguration => {
+  return take(output, {
+    FieldId: __expectString,
+    Name: __expectString,
+    TargetFieldValues: (_: any) => de_SlaFieldValueUnionList(_, context),
+    TargetSlaMinutes: __expectLong,
+    Type: __expectString,
+  }) as any;
+};
+
 // de_ChannelToCountMap omitted.
+
+/**
+ * deserializeAws_restJson1ChatContactMetrics
+ */
+const de_ChatContactMetrics = (output: any, context: __SerdeContext): ChatContactMetrics => {
+  return take(output, {
+    AgentFirstResponseTimeInMillis: __expectLong,
+    AgentFirstResponseTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    ConversationCloseTimeInMillis: __expectLong,
+    ConversationTurnCount: __expectInt32,
+    MultiParty: __expectBoolean,
+    TotalBotMessageLengthInChars: __expectInt32,
+    TotalBotMessages: __expectInt32,
+    TotalMessages: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ChatMetrics
+ */
+const de_ChatMetrics = (output: any, context: __SerdeContext): ChatMetrics => {
+  return take(output, {
+    AgentMetrics: (_: any) => de_ParticipantMetrics(_, context),
+    ChatContactMetrics: (_: any) => de_ChatContactMetrics(_, context),
+    CustomerMetrics: (_: any) => de_ParticipantMetrics(_, context),
+  }) as any;
+};
 
 // de_ClaimedPhoneNumberSummary omitted.
 
@@ -15410,16 +15563,21 @@ const de_Contact = (output: any, context: __SerdeContext): Contact => {
     AgentInfo: (_: any) => de_AgentInfo(_, context),
     AnsweringMachineDetectionStatus: __expectString,
     Arn: __expectString,
+    Attributes: _json,
     Campaign: _json,
     Channel: __expectString,
+    ChatMetrics: (_: any) => de_ChatMetrics(_, context),
     ConnectedToSystemTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     ContactAssociationId: __expectString,
+    ContactDetails: _json,
+    ContactEvaluations: (_: any) => de_ContactEvaluations(_, context),
     Customer: _json,
     CustomerEndpoint: _json,
     CustomerId: __expectString,
     CustomerVoiceActivity: (_: any) => de_CustomerVoiceActivity(_, context),
     Description: __expectString,
     DisconnectDetails: _json,
+    DisconnectReason: __expectString,
     DisconnectTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     Id: __expectString,
     InitialContactId: __expectString,
@@ -15434,6 +15592,7 @@ const de_Contact = (output: any, context: __SerdeContext): Contact => {
     QueueInfo: (_: any) => de_QueueInfo(_, context),
     QueuePriority: __expectLong,
     QueueTimeAdjustmentSeconds: __expectInt32,
+    Recordings: (_: any) => de_Recordings(_, context),
     RelatedContactId: __expectString,
     RoutingCriteria: (_: any) => de_RoutingCriteria(_, context),
     ScheduledTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -15444,6 +15603,36 @@ const de_Contact = (output: any, context: __SerdeContext): Contact => {
     TotalPauseDurationInSeconds: __expectInt32,
     WisdomInfo: _json,
   }) as any;
+};
+
+// de_ContactDetails omitted.
+
+/**
+ * deserializeAws_restJson1ContactEvaluation
+ */
+const de_ContactEvaluation = (output: any, context: __SerdeContext): ContactEvaluation => {
+  return take(output, {
+    DeleteTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    EndTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    EvaluationArn: __expectString,
+    ExportLocation: __expectString,
+    FormId: __expectString,
+    StartTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    Status: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ContactEvaluations
+ */
+const de_ContactEvaluations = (output: any, context: __SerdeContext): Record<string, ContactEvaluation> => {
+  return Object.entries(output).reduce((acc: Record<string, ContactEvaluation>, [key, value]: [string, any]) => {
+    if (value === null) {
+      return acc;
+    }
+    acc[key as string] = de_ContactEvaluation(value, context);
+    return acc;
+  }, {} as Record<string, ContactEvaluation>);
 };
 
 /**
@@ -15495,6 +15684,38 @@ const de_ContactFlowSearchSummaryList = (output: any, context: __SerdeContext): 
 // de_ContactFlowVersionSummary omitted.
 
 // de_ContactFlowVersionSummaryList omitted.
+
+/**
+ * deserializeAws_restJson1ContactMetricResult
+ */
+const de_ContactMetricResult = (output: any, context: __SerdeContext): ContactMetricResult => {
+  return take(output, {
+    Name: __expectString,
+    Value: (_: any) => de_ContactMetricValue(__expectUnion(_), context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ContactMetricResults
+ */
+const de_ContactMetricResults = (output: any, context: __SerdeContext): ContactMetricResult[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ContactMetricResult(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1ContactMetricValue
+ */
+const de_ContactMetricValue = (output: any, context: __SerdeContext): ContactMetricValue => {
+  if (__limitedParseDouble(output.Number) !== undefined) {
+    return { Number: __limitedParseDouble(output.Number) as any };
+  }
+  return { $unknown: Object.entries(output)[0] };
+};
 
 // de_ContactReferences omitted.
 
@@ -16491,6 +16712,23 @@ const de_MetricV2 = (output: any, context: __SerdeContext): MetricV2 => {
 
 // de_ParticipantCapabilities omitted.
 
+/**
+ * deserializeAws_restJson1ParticipantMetrics
+ */
+const de_ParticipantMetrics = (output: any, context: __SerdeContext): ParticipantMetrics => {
+  return take(output, {
+    ConversationAbandon: __expectBoolean,
+    LastMessageTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    MaxResponseTimeInMillis: __expectLong,
+    MessageLengthInChars: __expectInt32,
+    MessagesSent: __expectInt32,
+    NumResponses: __expectInt32,
+    ParticipantId: __expectString,
+    ParticipantType: __expectString,
+    TotalResponseTimeInMillis: __expectLong,
+  }) as any;
+};
+
 // de_ParticipantTokenCredentials omitted.
 
 // de_PermissionsList omitted.
@@ -16919,6 +17157,36 @@ const de_RealTimeContactAnalysisTimeData = (output: any, context: __SerdeContext
 
 // de_RealTimeContactAnalysisTranscriptItemWithContent omitted.
 
+/**
+ * deserializeAws_restJson1RecordingInfo
+ */
+const de_RecordingInfo = (output: any, context: __SerdeContext): RecordingInfo => {
+  return take(output, {
+    DeletionReason: __expectString,
+    FragmentStartNumber: __expectString,
+    FragmentStopNumber: __expectString,
+    Location: __expectString,
+    MediaStreamType: __expectString,
+    ParticipantType: __expectString,
+    StartTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    Status: __expectString,
+    StopTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    StorageType: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1Recordings
+ */
+const de_Recordings = (output: any, context: __SerdeContext): RecordingInfo[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_RecordingInfo(entry, context);
+    });
+  return retVal;
+};
+
 // de_Reference omitted.
 
 // de_ReferenceSummary omitted.
@@ -17038,6 +17306,7 @@ const de_RuleAction = (output: any, context: __SerdeContext): RuleAction => {
   return take(output, {
     ActionType: __expectString,
     AssignContactCategoryAction: _json,
+    AssignSlaAction: (_: any) => de_AssignSlaActionDefinition(_, context),
     CreateCaseAction: (_: any) => de_CreateCaseActionDefinition(_, context),
     EndAssociatedTasksAction: _json,
     EventBridgeAction: _json,
@@ -17216,6 +17485,41 @@ const de_SegmentAttributeValueMap = (output: any, context: __SerdeContext): Reco
 // de_SingleSelectOptions omitted.
 
 // de_SingleSelectQuestionRuleCategoryAutomation omitted.
+
+/**
+ * deserializeAws_restJson1SlaFieldValueUnionList
+ */
+const de_SlaFieldValueUnionList = (output: any, context: __SerdeContext): FieldValueUnion[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_FieldValueUnion(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1StateTransition
+ */
+const de_StateTransition = (output: any, context: __SerdeContext): StateTransition => {
+  return take(output, {
+    State: __expectString,
+    StateEndTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    StateStartTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1StateTransitions
+ */
+const de_StateTransitions = (output: any, context: __SerdeContext): StateTransition[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_StateTransition(entry, context);
+    });
+  return retVal;
+};
 
 /**
  * deserializeAws_restJson1Step

@@ -147,6 +147,85 @@ export interface AllQueryArguments {}
  * @public
  * @enum
  */
+export const FallbackBehavior = {
+  MATCH: "MATCH",
+  NO_MATCH: "NO_MATCH",
+} as const;
+
+/**
+ * @public
+ */
+export type FallbackBehavior = (typeof FallbackBehavior)[keyof typeof FallbackBehavior];
+
+/**
+ * <p>The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name. </p>
+ *          <note>
+ *             <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
+ *          </note>
+ *          <p>This configuration is used for <a>GeoMatchStatement</a>, <a>AsnMatchStatement</a>, and
+ *          <a>RateBasedStatement</a>. For <a>IPSetReferenceStatement</a>, use <a>IPSetForwardedIPConfig</a> instead. </p>
+ *          <p>WAF only evaluates the first IP address found in the specified HTTP header.
+ *       </p>
+ * @public
+ */
+export interface ForwardedIPConfig {
+  /**
+   * <p>The name of the HTTP header to use for the IP address. For example, to use the X-Forwarded-For (XFF) header, set this to <code>X-Forwarded-For</code>.</p>
+   *          <note>
+   *             <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
+   *          </note>
+   * @public
+   */
+  HeaderName: string | undefined;
+
+  /**
+   * <p>The match status to assign to the web request if the request doesn't have a valid IP address in the specified position.</p>
+   *          <note>
+   *             <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
+   *          </note>
+   *          <p>You can specify the following fallback behaviors:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  FallbackBehavior: FallbackBehavior | undefined;
+}
+
+/**
+ * <p>A rule statement that inspects web traffic based on the Autonomous System Number (ASN) associated with the request's IP address.</p>
+ *          <p>For additional details, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html">ASN match rule statement</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+ * @public
+ */
+export interface AsnMatchStatement {
+  /**
+   * <p>Contains one or more Autonomous System Numbers (ASNs).
+   *          ASNs are unique identifiers assigned to large internet networks managed by organizations such as
+   *          internet service providers, enterprises, universities, or government agencies. </p>
+   * @public
+   */
+  AsnList: number[] | undefined;
+
+  /**
+   * <p>The configuration for inspecting IP addresses to match against an ASN in an HTTP header that you specify,
+   *          instead of using the IP address that's reported by the web request origin. Commonly, this is the X-Forwarded-For (XFF) header,
+   *          but you can specify any header name. </p>
+   * @public
+   */
+  ForwardedIPConfig?: ForwardedIPConfig | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const OversizeHandling = {
   CONTINUE: "CONTINUE",
   MATCH: "MATCH",
@@ -320,7 +399,7 @@ export interface Cookies {
  */
 export interface HeaderOrder {
   /**
-   * <p>What WAF should do if the headers of the request are more numerous or larger than WAF can inspect.
+   * <p>What WAF should do if the headers determined by your match scope are more numerous or larger than WAF can inspect.
    *     WAF does not support inspecting the entire contents of request headers
    *       when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers
    *       and at most 8 KB of header contents to WAF. </p>
@@ -411,7 +490,7 @@ export interface Headers {
   MatchScope: MapMatchScope | undefined;
 
   /**
-   * <p>What WAF should do if the headers of the request are more numerous or larger than WAF can inspect.
+   * <p>What WAF should do if the headers determined by your match scope are more numerous or larger than WAF can inspect.
    *     WAF does not support inspecting the entire contents of request headers
    *       when they exceed 8 KB (8192 bytes) or 200 total headers. The underlying host service forwards a maximum of 200 headers
    *       and at most 8 KB of header contents to WAF. </p>
@@ -436,20 +515,6 @@ export interface Headers {
    */
   OversizeHandling: OversizeHandling | undefined;
 }
-
-/**
- * @public
- * @enum
- */
-export const FallbackBehavior = {
-  MATCH: "MATCH",
-  NO_MATCH: "NO_MATCH",
-} as const;
-
-/**
- * @public
- */
-export type FallbackBehavior = (typeof FallbackBehavior)[keyof typeof FallbackBehavior];
 
 /**
  * <p>Available for use with Amazon CloudFront distributions and Application Load Balancers. Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique identifier for the client's TLS configuration. WAF calculates and logs this fingerprint for each
@@ -1491,47 +1556,6 @@ export const CountryCode = {
 export type CountryCode = (typeof CountryCode)[keyof typeof CountryCode];
 
 /**
- * <p>The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name. </p>
- *          <note>
- *             <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
- *          </note>
- *          <p>This configuration is used for <a>GeoMatchStatement</a> and <a>RateBasedStatement</a>. For <a>IPSetReferenceStatement</a>, use <a>IPSetForwardedIPConfig</a> instead. </p>
- *          <p>WAF only evaluates the first IP address found in the specified HTTP header.
- *       </p>
- * @public
- */
-export interface ForwardedIPConfig {
-  /**
-   * <p>The name of the HTTP header to use for the IP address. For example, to use the X-Forwarded-For (XFF) header, set this to <code>X-Forwarded-For</code>.</p>
-   *          <note>
-   *             <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
-   *          </note>
-   * @public
-   */
-  HeaderName: string | undefined;
-
-  /**
-   * <p>The match status to assign to the web request if the request doesn't have a valid IP address in the specified position.</p>
-   *          <note>
-   *             <p>If the specified header isn't present in the request, WAF doesn't apply the rule to the web request at all.</p>
-   *          </note>
-   *          <p>You can specify the following fallback behaviors:</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>MATCH</code> - Treat the web request as matching the rule statement. WAF applies the rule action to the request.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>NO_MATCH</code> - Treat the web request as not matching the rule statement.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  FallbackBehavior: FallbackBehavior | undefined;
-}
-
-/**
  * <p>A rule statement that labels web requests by country and region and that matches against web requests based on country code. A geo match rule labels every request that it inspects regardless of whether it finds a match.</p>
  *          <ul>
  *             <li>
@@ -2161,6 +2185,10 @@ export interface ResponseInspection {
 
 /**
  * <p>Details for your use of the account creation fraud prevention managed rule group, <code>AWSManagedRulesACFPRuleSet</code>. This configuration is used in <code>ManagedRuleGroupConfig</code>. </p>
+ *          <p>For additional information about this and the other intelligent threat mitigation rule groups,
+ *     see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections">Intelligent threat mitigation in WAF</a>
+ *     and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list">Amazon Web Services Managed Rules rule groups list</a>
+ *     in the <i>WAF Developer Guide</i>. </p>
  * @public
  */
 export interface AWSManagedRulesACFPRuleSet {
@@ -2219,6 +2247,196 @@ export interface AWSManagedRulesACFPRuleSet {
    * @public
    */
   EnableRegexInPath?: boolean | undefined;
+}
+
+/**
+ * <p>A single regular expression. This is used in a <a>RegexPatternSet</a> and
+ *            also in the configuration for the Amazon Web Services Managed Rules rule group <code>AWSManagedRulesAntiDDoSRuleSet</code>.</p>
+ * @public
+ */
+export interface Regex {
+  /**
+   * <p>The string representing the regular expression.</p>
+   * @public
+   */
+  RegexString?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SensitivityToAct = {
+  HIGH: "HIGH",
+  LOW: "LOW",
+  MEDIUM: "MEDIUM",
+} as const;
+
+/**
+ * @public
+ */
+export type SensitivityToAct = (typeof SensitivityToAct)[keyof typeof SensitivityToAct];
+
+/**
+ * @public
+ * @enum
+ */
+export const UsageOfAction = {
+  DISABLED: "DISABLED",
+  ENABLED: "ENABLED",
+} as const;
+
+/**
+ * @public
+ */
+export type UsageOfAction = (typeof UsageOfAction)[keyof typeof UsageOfAction];
+
+/**
+ * <p>This is part of the <code>AWSManagedRulesAntiDDoSRuleSet</code>
+ *             <code>ClientSideActionConfig</code> configuration in <code>ManagedRuleGroupConfig</code>.</p>
+ * @public
+ */
+export interface ClientSideAction {
+  /**
+   * <p>Determines whether to use the <code>AWSManagedRulesAntiDDoSRuleSet</code> rules <code>ChallengeAllDuringEvent</code> and <code>ChallengeDDoSRequests</code> in the rule group evaluation and the related label <code>awswaf:managed:aws:anti-ddos:challengeable-request</code>. </p>
+   *          <ul>
+   *             <li>
+   *                <p>If usage is enabled: </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>The managed rule group adds the label <code>awswaf:managed:aws:anti-ddos:challengeable-request</code> to any web request whose URL does <i>NOT</i> match the regular expressions provided in the
+   *                    <code>ClientSideAction</code> setting <code>ExemptUriRegularExpressions</code>. </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>The two rules are evaluated against web requests for protected resources that are experiencing a DDoS attack.
+   *                The two rules only apply their action to matching requests that have the label <code>awswaf:managed:aws:anti-ddos:challengeable-request</code>.
+   *            </p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>If usage is disabled: </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>The managed rule group doesn't add the label <code>awswaf:managed:aws:anti-ddos:challengeable-request</code> to any web requests. </p>
+   *                   </li>
+   *                   <li>
+   *                      <p>The two rules are not evaluated.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>None of the other <code>ClientSideAction</code> settings have any effect.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *          </ul>
+   *          <note>
+   *             <p>This setting only enables or disables the use of the two anti-DDOS rules <code>ChallengeAllDuringEvent</code> and <code>ChallengeDDoSRequests</code> in the anti-DDoS managed rule group. </p>
+   *             <p>This setting doesn't alter the action setting in the two rules. To override the actions
+   *            used by the rules <code>ChallengeAllDuringEvent</code> and <code>ChallengeDDoSRequests</code>,
+   *                enable this setting, and then override the rule actions in the usual way, in your managed rule group configuration. </p>
+   *          </note>
+   * @public
+   */
+  UsageOfAction: UsageOfAction | undefined;
+
+  /**
+   * <p>The sensitivity that the rule group rule <code>ChallengeDDoSRequests</code> uses when matching against the
+   *            DDoS suspicion labeling on a request. The managed rule group adds the labeling during DDoS events, before the <code>ChallengeDDoSRequests</code> rule runs.
+   *        </p>
+   *          <p>The higher the sensitivity, the more levels of labeling that the rule matches: </p>
+   *          <ul>
+   *             <li>
+   *                <p>Low sensitivity is less sensitive, causing the rule to match only on the most likely participants in an attack, which are the requests with the high suspicion label <code>awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>Medium sensitivity causes the rule to match on the medium and high suspicion labels.</p>
+   *             </li>
+   *             <li>
+   *                <p>High sensitivity causes the rule to match on all of the suspicion labels: low, medium, and high.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Default: <code>HIGH</code>
+   *          </p>
+   * @public
+   */
+  Sensitivity?: SensitivityToAct | undefined;
+
+  /**
+   * <p>The regular expression to match against the web request URI, used to identify requests
+   *        that can't handle a silent browser challenge. When the <code>ClientSideAction</code> setting <code>UsageOfAction</code> is enabled,
+   *        the managed rule group uses this setting to determine which requests to label with
+   *        <code>awswaf:managed:aws:anti-ddos:challengeable-request</code>. If <code>UsageOfAction</code> is disabled, this setting
+   *    has no effect and the managed rule group doesn't add the label to any requests.</p>
+   *          <p>The anti-DDoS managed rule group doesn't
+   *            evaluate the rules <code>ChallengeDDoSRequests</code> or <code>ChallengeAllDuringEvent</code> for web requests whose URIs match this regex. This
+   *        is true regardless of whether you override the rule action for either of the rules in your web ACL configuration. </p>
+   *          <p>Amazon Web Services recommends using a regular expression. </p>
+   *          <p>This setting is required if <code>UsageOfAction</code> is set to <code>ENABLED</code>. If required, you can provide
+   *        between 1 and 5 regex objects in the array of settings. </p>
+   *          <p>Amazon Web Services recommends starting with the following setting. Review and update it for your application's needs:</p>
+   *          <p>
+   *             <code>\/api\/|\.(acc|avi|css|gif|jpe?g|js|mp[34]|ogg|otf|pdf|png|tiff?|ttf|webm|webp|woff2?)$</code>
+   *          </p>
+   * @public
+   */
+  ExemptUriRegularExpressions?: Regex[] | undefined;
+}
+
+/**
+ * <p>This is part of the configuration for the managed rules <code>AWSManagedRulesAntiDDoSRuleSet</code>
+ *                in <code>ManagedRuleGroupConfig</code>.</p>
+ * @public
+ */
+export interface ClientSideActionConfig {
+  /**
+   * <p>Configuration for the use of the <code>AWSManagedRulesAntiDDoSRuleSet</code> rules <code>ChallengeAllDuringEvent</code> and <code>ChallengeDDoSRequests</code>. </p>
+   *          <note>
+   *             <p>This setting isn't related to the configuration of the <code>Challenge</code> action itself. It only
+   *        configures the use of the two anti-DDoS rules named here. </p>
+   *          </note>
+   *          <p>You can enable or disable the use of these rules, and you can configure how to use them when they are enabled. </p>
+   * @public
+   */
+  Challenge: ClientSideAction | undefined;
+}
+
+/**
+ * <p>Configures the use of the anti-DDoS managed rule group, <code>AWSManagedRulesAntiDDoSRuleSet</code>. This configuration is used in <code>ManagedRuleGroupConfig</code>. </p>
+ *          <p>The configuration that you provide here determines whether and how the rules in the rule group are used. </p>
+ *          <p>For additional information about this and the other intelligent threat mitigation rule groups,
+ *     see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections">Intelligent threat mitigation in WAF</a>
+ *     and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list">Amazon Web Services Managed Rules rule groups list</a>
+ *     in the <i>WAF Developer Guide</i>. </p>
+ * @public
+ */
+export interface AWSManagedRulesAntiDDoSRuleSet {
+  /**
+   * <p>Configures the request handling that's applied by the managed rule group rules <code>ChallengeAllDuringEvent</code> and <code>ChallengeDDoSRequests</code> during a distributed denial of service (DDoS) attack.</p>
+   * @public
+   */
+  ClientSideActionConfig: ClientSideActionConfig | undefined;
+
+  /**
+   * <p>The sensitivity that the rule group rule <code>DDoSRequests</code> uses when matching against the
+   *            DDoS suspicion labeling on a request. The managed rule group adds the labeling during DDoS events, before the <code>DDoSRequests</code> rule runs.
+   *        </p>
+   *          <p>The higher the sensitivity, the more levels of labeling that the rule matches: </p>
+   *          <ul>
+   *             <li>
+   *                <p>Low sensitivity is less sensitive, causing the rule to match only on the most likely participants in an attack, which are the requests with the high suspicion label <code>awswaf:managed:aws:anti-ddos:high-suspicion-ddos-request</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>Medium sensitivity causes the rule to match on the medium and high suspicion labels.</p>
+   *             </li>
+   *             <li>
+   *                <p>High sensitivity causes the rule to match on all of the suspicion labels: low, medium, and high.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Default: <code>LOW</code>
+   *          </p>
+   * @public
+   */
+  SensitivityToBlock?: SensitivityToAct | undefined;
 }
 
 /**
@@ -2287,6 +2505,10 @@ export interface RequestInspection {
 
 /**
  * <p>Details for your use of the account takeover prevention managed rule group, <code>AWSManagedRulesATPRuleSet</code>. This configuration is used in <code>ManagedRuleGroupConfig</code>. </p>
+ *          <p>For additional information about this and the other intelligent threat mitigation rule groups,
+ *     see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections">Intelligent threat mitigation in WAF</a>
+ *     and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list">Amazon Web Services Managed Rules rule groups list</a>
+ *     in the <i>WAF Developer Guide</i>. </p>
  * @public
  */
 export interface AWSManagedRulesATPRuleSet {
@@ -2339,6 +2561,10 @@ export type InspectionLevel = (typeof InspectionLevel)[keyof typeof InspectionLe
 
 /**
  * <p>Details for your use of the Bot Control managed rule group, <code>AWSManagedRulesBotControlRuleSet</code>. This configuration is used in <code>ManagedRuleGroupConfig</code>. </p>
+ *          <p>For additional information about this and the other intelligent threat mitigation rule groups,
+ *     see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-managed-protections">Intelligent threat mitigation in WAF</a>
+ *     and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list">Amazon Web Services Managed Rules rule groups list</a>
+ *     in the <i>WAF Developer Guide</i>. </p>
  * @public
  */
 export interface AWSManagedRulesBotControlRuleSet {
@@ -2371,6 +2597,9 @@ export interface AWSManagedRulesBotControlRuleSet {
  *          <ul>
  *             <li>
  *                <p>Use the <code>AWSManagedRulesACFPRuleSet</code> configuration object to configure the account creation fraud prevention managed rule group. The configuration includes the registration and sign-up pages of your application and the locations in the account creation request payload of data, such as the user email and phone number fields. </p>
+ *             </li>
+ *             <li>
+ *                <p>Use the <code>AWSManagedRulesAntiDDoSRuleSet</code> configuration object to configure the anti-DDoS managed rule group. The configuration includes the sensitivity levels to use in the rules that typically block and challenge requests that might be participating in DDoS attacks and the specification to use to indicate whether a request can handle a silent browser challenge. </p>
  *             </li>
  *             <li>
  *                <p>Use the <code>AWSManagedRulesATPRuleSet</code> configuration object to configure the account takeover prevention managed rule group. The configuration includes the sign-in page of your application and the locations in the login request payload of data such as the username and password. </p>
@@ -2458,6 +2687,17 @@ export interface ManagedRuleGroupConfig {
    * @public
    */
   AWSManagedRulesACFPRuleSet?: AWSManagedRulesACFPRuleSet | undefined;
+
+  /**
+   * <p>Additional configuration for using the anti-DDoS managed rule group, <code>AWSManagedRulesAntiDDoSRuleSet</code>.
+   *        Use this to configure anti-DDoS behavior for the rule group. </p>
+   *          <p>For information
+   *        about using the anti-DDoS managed rule group, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-anti-ddos.html">WAF Anti-DDoS rule group</a>
+   *                and <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-anti-ddos.html">Distributed Denial of Service (DDoS) prevention</a>
+   *                in the <i>WAF Developer Guide</i>.</p>
+   * @public
+   */
+  AWSManagedRulesAntiDDoSRuleSet?: AWSManagedRulesAntiDDoSRuleSet | undefined;
 }
 
 /**
@@ -2697,6 +2937,14 @@ export const RateBasedStatementAggregateKeyType = {
  */
 export type RateBasedStatementAggregateKeyType =
   (typeof RateBasedStatementAggregateKeyType)[keyof typeof RateBasedStatementAggregateKeyType];
+
+/**
+ * <p>Specifies an Autonomous System Number (ASN) derived from the request's originating or forwarded IP address as an aggregate key for a rate-based rule.
+ *          Each distinct ASN contributes to the aggregation instance.
+ *          If you use a single ASN as your custom key, then each ASN fully defines an aggregation instance. </p>
+ * @public
+ */
+export interface RateLimitAsn {}
 
 /**
  * <p>Specifies a cookie as an aggregate key for a rate-based rule. Each distinct value in the cookie contributes to the aggregation instance. If you use a single
@@ -2971,6 +3219,13 @@ export interface RateBasedStatementCustomKey {
    * @public
    */
   JA4Fingerprint?: RateLimitJA4Fingerprint | undefined;
+
+  /**
+   * <p>Use an Autonomous System Number (ASN) derived from the request's originating or forwarded IP address as an aggregate key.
+   *          Each distinct ASN contributes to the aggregation instance. </p>
+   * @public
+   */
+  ASN?: RateLimitAsn | undefined;
 }
 
 /**
@@ -3048,7 +3303,7 @@ export interface RuleGroupReferenceStatement {
   /**
    * <p>Action settings to use in the place of the rule actions that are configured inside the rule group. You specify one override for each rule whose action you want to change. </p>
    *          <note>
-   *             <p>Take care to verify the rule names in your overrides. If you provide a rule name that doesn't match the name of any rule in the rule group, WAF doesn't return an error and doesn't apply the override setting.</p>
+   *             <p>Verify the rule names in your overrides carefully. With managed rule groups, WAF silently ignores any override that uses an invalid rule name. With customer-owned rule groups, invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule group.</p>
    *          </note>
    *          <p>You can use overrides for testing, for example you can override all of rule actions to <code>Count</code> and then monitor the resulting count metrics to understand how the rule group would handle your web traffic. You can also permanently override some or all actions, to modify how the rule group manages your web traffic.</p>
    * @public
@@ -3205,6 +3460,36 @@ export interface APIKeySummary {
    * @public
    */
   Version?: number | undefined;
+}
+
+/**
+ * <p>Application details defined during the web ACL creation process. Application attributes help WAF give recommendations for protection packs.</p>
+ * @public
+ */
+export interface ApplicationAttribute {
+  /**
+   * <p>Specifies the attribute name.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>Specifies the attribute value.</p>
+   * @public
+   */
+  Values?: string[] | undefined;
+}
+
+/**
+ * <p>A list of <code>ApplicationAttribute</code>s that contains information about the application.</p>
+ * @public
+ */
+export interface ApplicationConfig {
+  /**
+   * <p>Contains the attribute name and a list of values for that attribute.</p>
+   * @public
+   */
+  Attributes?: ApplicationAttribute[] | undefined;
 }
 
 /**
@@ -3372,6 +3657,7 @@ export const ParameterExceptionField = {
   LABEL_MATCH_STATEMENT: "LABEL_MATCH_STATEMENT",
   LOGGING_FILTER: "LOGGING_FILTER",
   LOG_DESTINATION: "LOG_DESTINATION",
+  LOW_REPUTATION_MODE: "LOW_REPUTATION_MODE",
   MANAGED_RULE_GROUP_CONFIG: "MANAGED_RULE_GROUP_CONFIG",
   MANAGED_RULE_SET: "MANAGED_RULE_SET",
   MANAGED_RULE_SET_STATEMENT: "MANAGED_RULE_SET_STATEMENT",
@@ -4160,18 +4446,6 @@ export class WAFTagOperationInternalErrorException extends __BaseException {
 }
 
 /**
- * <p>A single regular expression. This is used in a <a>RegexPatternSet</a>.</p>
- * @public
- */
-export interface Regex {
-  /**
-   * <p>The string representing the regular expression.</p>
-   * @public
-   */
-  RegexString?: string | undefined;
-}
-
-/**
  * @public
  */
 export interface CreateRegexPatternSetRequest {
@@ -4482,6 +4756,34 @@ export interface DefaultAction {
    * @public
    */
   Allow?: AllowAction | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const LowReputationMode = {
+  ACTIVE_UNDER_DDOS: "ACTIVE_UNDER_DDOS",
+  ALWAYS_ON: "ALWAYS_ON",
+} as const;
+
+/**
+ * @public
+ */
+export type LowReputationMode = (typeof LowReputationMode)[keyof typeof LowReputationMode];
+
+/**
+ * <p>Configures the level of DDoS protection that applies to web ACLs associated with Application Load Balancers.</p>
+ * @public
+ */
+export interface OnSourceDDoSProtectionConfig {
+  /**
+   * <p>The level of DDoS protection that applies to web ACLs associated with Application Load Balancers. <code>ACTIVE_UNDER_DDOS</code> protection is enabled by default whenever a web ACL is associated with an Application Load Balancer.
+   *          In the event that an Application Load Balancer experiences high-load conditions or suspected DDoS attacks, the <code>ACTIVE_UNDER_DDOS</code> protection automatically rate limits traffic from known low reputation sources without disrupting Application Load Balancer availability.
+   *       <code>ALWAYS_ON</code> protection provides constant, always-on monitoring of known low reputation sources for suspected DDoS attacks. While this provides a higher level of protection, there may be potential impacts on legitimate traffic.</p>
+   * @public
+   */
+  ALBLowReputationMode: LowReputationMode | undefined;
 }
 
 /**
@@ -8234,6 +8536,13 @@ export interface Statement {
    * @public
    */
   RegexMatchStatement?: RegexMatchStatement | undefined;
+
+  /**
+   * <p>A rule statement that inspects web traffic based on the Autonomous System Number (ASN) associated with the request's IP address.</p>
+   *          <p>For additional details, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-type-asn-match.html">ASN match rule statement</a> in the <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html">WAF Developer Guide</a>. </p>
+   * @public
+   */
+  AsnMatchStatement?: AsnMatchStatement | undefined;
 }
 
 /**
@@ -8294,6 +8603,9 @@ export interface ManagedRuleGroupStatement {
    *                <p>Use the <code>AWSManagedRulesACFPRuleSet</code> configuration object to configure the account creation fraud prevention managed rule group. The configuration includes the registration and sign-up pages of your application and the locations in the account creation request payload of data, such as the user email and phone number fields. </p>
    *             </li>
    *             <li>
+   *                <p>Use the <code>AWSManagedRulesAntiDDoSRuleSet</code> configuration object to configure the anti-DDoS managed rule group. The configuration includes the sensitivity levels to use in the rules that typically block and challenge requests that might be participating in DDoS attacks and the specification to use to indicate whether a request can handle a silent browser challenge. </p>
+   *             </li>
+   *             <li>
    *                <p>Use the <code>AWSManagedRulesATPRuleSet</code> configuration object to configure the account takeover prevention managed rule group. The configuration includes the sign-in page of your application and the locations in the login request payload of data such as the username and password. </p>
    *             </li>
    *             <li>
@@ -8308,7 +8620,7 @@ export interface ManagedRuleGroupStatement {
   /**
    * <p>Action settings to use in the place of the rule actions that are configured inside the rule group. You specify one override for each rule whose action you want to change. </p>
    *          <note>
-   *             <p>Take care to verify the rule names in your overrides. If you provide a rule name that doesn't match the name of any rule in the rule group, WAF doesn't return an error and doesn't apply the override setting.</p>
+   *             <p>Verify the rule names in your overrides carefully. With managed rule groups, WAF silently ignores any override that uses an invalid rule name. With customer-owned rule groups, invalid rule names in your overrides will cause web ACL updates to fail. An invalid rule name is any name that doesn't exactly match the case-sensitive name of an existing rule in the rule group.</p>
    *          </note>
    *          <p>You can use overrides for testing, for example you can override all of rule actions to <code>Count</code> and then monitor the resulting count metrics to understand how the rule group would handle your web traffic. You can also permanently override some or all actions, to modify how the rule group manages your web traffic.</p>
    * @public
@@ -8917,6 +9229,19 @@ export interface CreateWebACLRequest {
    * @public
    */
   AssociationConfig?: AssociationConfig | undefined;
+
+  /**
+   * <p>Specifies the type of DDoS protection to apply to web request data for a web ACL. For most scenarios, it is recommended to use the default protection level, <code>ACTIVE_UNDER_DDOS</code>.
+   *    If a web ACL is associated with multiple Application Load Balancers, the changes you make to DDoS protection in that web ACL will apply to all associated Application Load Balancers.</p>
+   * @public
+   */
+  OnSourceDDoSProtectionConfig?: OnSourceDDoSProtectionConfig | undefined;
+
+  /**
+   * <p>Configures the ability for the WAF console to store and retrieve application attributes during the web ACL creation process. Application attributes help WAF give recommendations for protection packs.</p>
+   * @public
+   */
+  ApplicationConfig?: ApplicationConfig | undefined;
 }
 
 /**
@@ -9210,6 +9535,13 @@ export interface UpdateWebACLRequest {
    * @public
    */
   AssociationConfig?: AssociationConfig | undefined;
+
+  /**
+   * <p>Specifies the type of DDoS protection to apply to web request data for a web ACL. For most scenarios, it is recommended to use the default protection level, <code>ACTIVE_UNDER_DDOS</code>.
+   *    If a web ACL is associated with multiple Application Load Balancers, the changes you make to DDoS protection in that web ACL will apply to all associated Application Load Balancers.</p>
+   * @public
+   */
+  OnSourceDDoSProtectionConfig?: OnSourceDDoSProtectionConfig | undefined;
 }
 
 /**
@@ -9405,6 +9737,18 @@ export interface WebACL {
    * @public
    */
   RetrofittedByFirewallManager?: boolean | undefined;
+
+  /**
+   * <p>Configures the level of DDoS protection that applies to web ACLs associated with Application Load Balancers.</p>
+   * @public
+   */
+  OnSourceDDoSProtectionConfig?: OnSourceDDoSProtectionConfig | undefined;
+
+  /**
+   * <p>Returns a list of <code>ApplicationAttribute</code>s.</p>
+   * @public
+   */
+  ApplicationConfig?: ApplicationConfig | undefined;
 }
 
 /**

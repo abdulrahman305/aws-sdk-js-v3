@@ -28,8 +28,7 @@ export interface GetStreamingDistributionCommandInput extends GetStreamingDistri
 export interface GetStreamingDistributionCommandOutput extends GetStreamingDistributionResult, __MetadataBearer {}
 
 /**
- * <p>Gets information about a specified RTMP distribution, including the distribution
- * 			configuration.</p>
+ * <p>Gets information about a specified RTMP distribution, including the distribution configuration.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -88,7 +87,7 @@ export interface GetStreamingDistributionCommandOutput extends GetStreamingDistr
  * //           "STRING_VALUE",
  * //         ],
  * //       },
- * //       PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All",
+ * //       PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All" || "None",
  * //       Enabled: true || false, // required
  * //     },
  * //   },

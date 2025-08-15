@@ -43,13 +43,23 @@ export interface GetClusterCommandOutput extends GetClusterOutput, __MetadataBea
  * // { // GetClusterOutput
  * //   identifier: "STRING_VALUE", // required
  * //   arn: "STRING_VALUE", // required
- * //   status: "CREATING" || "ACTIVE" || "UPDATING" || "DELETING" || "DELETED" || "FAILED", // required
+ * //   status: "CREATING" || "ACTIVE" || "IDLE" || "INACTIVE" || "UPDATING" || "DELETING" || "DELETED" || "FAILED" || "PENDING_SETUP" || "PENDING_DELETE", // required
  * //   creationTime: new Date("TIMESTAMP"), // required
  * //   deletionProtectionEnabled: true || false, // required
- * //   witnessRegion: "STRING_VALUE",
- * //   linkedClusterArns: [ // ClusterArnList
- * //     "STRING_VALUE",
- * //   ],
+ * //   multiRegionProperties: { // MultiRegionProperties
+ * //     witnessRegion: "STRING_VALUE",
+ * //     clusters: [ // ClusterArnList
+ * //       "STRING_VALUE",
+ * //     ],
+ * //   },
+ * //   tags: { // TagMap
+ * //     "<keys>": "STRING_VALUE",
+ * //   },
+ * //   encryptionDetails: { // EncryptionDetails
+ * //     encryptionType: "AWS_OWNED_KMS_KEY" || "CUSTOMER_MANAGED_KMS_KEY", // required
+ * //     kmsKeyArn: "STRING_VALUE",
+ * //     encryptionStatus: "ENABLED" || "UPDATING" || "KMS_KEY_INACCESSIBLE" || "ENABLING", // required
+ * //   },
  * // };
  *
  * ```
@@ -67,8 +77,8 @@ export interface GetClusterCommandOutput extends GetClusterOutput, __MetadataBea
  *  <p>You do not have sufficient access to perform this action.</p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>The request processing has failed because of an unknown error,
- *       exception or failure.</p>
+ *  <p>The request processing has failed because of an unknown error, exception or
+ *          failure.</p>
  *
  * @throws {@link ThrottlingException} (client fault)
  *  <p>The request was denied due to request throttling.</p>

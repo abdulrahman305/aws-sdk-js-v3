@@ -60,6 +60,14 @@ import {
   AssociateTrialComponentCommandOutput,
 } from "./commands/AssociateTrialComponentCommand";
 import {
+  AttachClusterNodeVolumeCommandInput,
+  AttachClusterNodeVolumeCommandOutput,
+} from "./commands/AttachClusterNodeVolumeCommand";
+import {
+  BatchAddClusterNodesCommandInput,
+  BatchAddClusterNodesCommandOutput,
+} from "./commands/BatchAddClusterNodesCommand";
+import {
   BatchDeleteClusterNodesCommandInput,
   BatchDeleteClusterNodesCommandOutput,
 } from "./commands/BatchDeleteClusterNodesCommand";
@@ -122,6 +130,10 @@ import {
   CreateFlowDefinitionCommandOutput,
 } from "./commands/CreateFlowDefinitionCommand";
 import { CreateHubCommandInput, CreateHubCommandOutput } from "./commands/CreateHubCommand";
+import {
+  CreateHubContentPresignedUrlsCommandInput,
+  CreateHubContentPresignedUrlsCommandOutput,
+} from "./commands/CreateHubContentPresignedUrlsCommand";
 import {
   CreateHubContentReferenceCommandInput,
   CreateHubContentReferenceCommandOutput,
@@ -374,6 +386,10 @@ import {
 } from "./commands/DescribeAutoMLJobV2Command";
 import { DescribeClusterCommandInput, DescribeClusterCommandOutput } from "./commands/DescribeClusterCommand";
 import {
+  DescribeClusterEventCommandInput,
+  DescribeClusterEventCommandOutput,
+} from "./commands/DescribeClusterEventCommand";
+import {
   DescribeClusterNodeCommandInput,
   DescribeClusterNodeCommandOutput,
 } from "./commands/DescribeClusterNodeCommand";
@@ -526,6 +542,10 @@ import {
   DescribeProcessingJobCommandOutput,
 } from "./commands/DescribeProcessingJobCommand";
 import { DescribeProjectCommandInput, DescribeProjectCommandOutput } from "./commands/DescribeProjectCommand";
+import {
+  DescribeReservedCapacityCommandInput,
+  DescribeReservedCapacityCommandOutput,
+} from "./commands/DescribeReservedCapacityCommand";
 import { DescribeSpaceCommandInput, DescribeSpaceCommandOutput } from "./commands/DescribeSpaceCommand";
 import {
   DescribeStudioLifecycleConfigCommandInput,
@@ -558,6 +578,10 @@ import {
 } from "./commands/DescribeUserProfileCommand";
 import { DescribeWorkforceCommandInput, DescribeWorkforceCommandOutput } from "./commands/DescribeWorkforceCommand";
 import { DescribeWorkteamCommandInput, DescribeWorkteamCommandOutput } from "./commands/DescribeWorkteamCommand";
+import {
+  DetachClusterNodeVolumeCommandInput,
+  DetachClusterNodeVolumeCommandOutput,
+} from "./commands/DetachClusterNodeVolumeCommand";
 import {
   DisableSagemakerServicecatalogPortfolioCommandInput,
   DisableSagemakerServicecatalogPortfolioCommandOutput,
@@ -610,6 +634,7 @@ import {
   ListCandidatesForAutoMLJobCommandInput,
   ListCandidatesForAutoMLJobCommandOutput,
 } from "./commands/ListCandidatesForAutoMLJobCommand";
+import { ListClusterEventsCommandInput, ListClusterEventsCommandOutput } from "./commands/ListClusterEventsCommand";
 import { ListClusterNodesCommandInput, ListClusterNodesCommandOutput } from "./commands/ListClusterNodesCommand";
 import {
   ListClusterSchedulerConfigsCommandInput,
@@ -761,6 +786,10 @@ import {
   ListPipelineParametersForExecutionCommandOutput,
 } from "./commands/ListPipelineParametersForExecutionCommand";
 import { ListPipelinesCommandInput, ListPipelinesCommandOutput } from "./commands/ListPipelinesCommand";
+import {
+  ListPipelineVersionsCommandInput,
+  ListPipelineVersionsCommandOutput,
+} from "./commands/ListPipelineVersionsCommand";
 import { ListProcessingJobsCommandInput, ListProcessingJobsCommandOutput } from "./commands/ListProcessingJobsCommand";
 import { ListProjectsCommandInput, ListProjectsCommandOutput } from "./commands/ListProjectsCommand";
 import {
@@ -790,6 +819,10 @@ import {
   ListTrialComponentsCommandOutput,
 } from "./commands/ListTrialComponentsCommand";
 import { ListTrialsCommandInput, ListTrialsCommandOutput } from "./commands/ListTrialsCommand";
+import {
+  ListUltraServersByReservedCapacityCommandInput,
+  ListUltraServersByReservedCapacityCommandOutput,
+} from "./commands/ListUltraServersByReservedCapacityCommand";
 import { ListUserProfilesCommandInput, ListUserProfilesCommandOutput } from "./commands/ListUserProfilesCommand";
 import { ListWorkforcesCommandInput, ListWorkforcesCommandOutput } from "./commands/ListWorkforcesCommand";
 import { ListWorkteamsCommandInput, ListWorkteamsCommandOutput } from "./commands/ListWorkteamsCommand";
@@ -841,6 +874,7 @@ import {
   StartPipelineExecutionCommandInput,
   StartPipelineExecutionCommandOutput,
 } from "./commands/StartPipelineExecutionCommand";
+import { StartSessionCommandInput, StartSessionCommandOutput } from "./commands/StartSessionCommand";
 import { StopAutoMLJobCommandInput, StopAutoMLJobCommandOutput } from "./commands/StopAutoMLJobCommand";
 import { StopCompilationJobCommandInput, StopCompilationJobCommandOutput } from "./commands/StopCompilationJobCommand";
 import {
@@ -970,6 +1004,10 @@ import {
   UpdatePipelineExecutionCommandInput,
   UpdatePipelineExecutionCommandOutput,
 } from "./commands/UpdatePipelineExecutionCommand";
+import {
+  UpdatePipelineVersionCommandInput,
+  UpdatePipelineVersionCommandOutput,
+} from "./commands/UpdatePipelineVersionCommand";
 import { UpdateProjectCommandInput, UpdateProjectCommandOutput } from "./commands/UpdateProjectCommand";
 import { UpdateSpaceCommandInput, UpdateSpaceCommandOutput } from "./commands/UpdateSpaceCommand";
 import { UpdateTrainingJobCommandInput, UpdateTrainingJobCommandOutput } from "./commands/UpdateTrainingJobCommand";
@@ -999,6 +1037,8 @@ export type ServiceInputTypes =
   | AddAssociationCommandInput
   | AddTagsCommandInput
   | AssociateTrialComponentCommandInput
+  | AttachClusterNodeVolumeCommandInput
+  | BatchAddClusterNodesCommandInput
   | BatchDeleteClusterNodesCommandInput
   | BatchDescribeModelPackageCommandInput
   | CreateActionCommandInput
@@ -1026,6 +1066,7 @@ export type ServiceInputTypes =
   | CreateFeatureGroupCommandInput
   | CreateFlowDefinitionCommandInput
   | CreateHubCommandInput
+  | CreateHubContentPresignedUrlsCommandInput
   | CreateHubContentReferenceCommandInput
   | CreateHumanTaskUiCommandInput
   | CreateHyperParameterTuningJobCommandInput
@@ -1130,6 +1171,7 @@ export type ServiceInputTypes =
   | DescribeAutoMLJobCommandInput
   | DescribeAutoMLJobV2CommandInput
   | DescribeClusterCommandInput
+  | DescribeClusterEventCommandInput
   | DescribeClusterNodeCommandInput
   | DescribeClusterSchedulerConfigCommandInput
   | DescribeCodeRepositoryCommandInput
@@ -1178,6 +1220,7 @@ export type ServiceInputTypes =
   | DescribePipelineExecutionCommandInput
   | DescribeProcessingJobCommandInput
   | DescribeProjectCommandInput
+  | DescribeReservedCapacityCommandInput
   | DescribeSpaceCommandInput
   | DescribeStudioLifecycleConfigCommandInput
   | DescribeSubscribedWorkteamCommandInput
@@ -1189,6 +1232,7 @@ export type ServiceInputTypes =
   | DescribeUserProfileCommandInput
   | DescribeWorkforceCommandInput
   | DescribeWorkteamCommandInput
+  | DetachClusterNodeVolumeCommandInput
   | DisableSagemakerServicecatalogPortfolioCommandInput
   | DisassociateTrialComponentCommandInput
   | EnableSagemakerServicecatalogPortfolioCommandInput
@@ -1208,6 +1252,7 @@ export type ServiceInputTypes =
   | ListAssociationsCommandInput
   | ListAutoMLJobsCommandInput
   | ListCandidatesForAutoMLJobCommandInput
+  | ListClusterEventsCommandInput
   | ListClusterNodesCommandInput
   | ListClusterSchedulerConfigsCommandInput
   | ListClustersCommandInput
@@ -1262,6 +1307,7 @@ export type ServiceInputTypes =
   | ListPipelineExecutionStepsCommandInput
   | ListPipelineExecutionsCommandInput
   | ListPipelineParametersForExecutionCommandInput
+  | ListPipelineVersionsCommandInput
   | ListPipelinesCommandInput
   | ListProcessingJobsCommandInput
   | ListProjectsCommandInput
@@ -1277,6 +1323,7 @@ export type ServiceInputTypes =
   | ListTransformJobsCommandInput
   | ListTrialComponentsCommandInput
   | ListTrialsCommandInput
+  | ListUltraServersByReservedCapacityCommandInput
   | ListUserProfilesCommandInput
   | ListWorkforcesCommandInput
   | ListWorkteamsCommandInput
@@ -1295,6 +1342,7 @@ export type ServiceInputTypes =
   | StartMonitoringScheduleCommandInput
   | StartNotebookInstanceCommandInput
   | StartPipelineExecutionCommandInput
+  | StartSessionCommandInput
   | StopAutoMLJobCommandInput
   | StopCompilationJobCommandInput
   | StopEdgeDeploymentStageCommandInput
@@ -1346,6 +1394,7 @@ export type ServiceInputTypes =
   | UpdatePartnerAppCommandInput
   | UpdatePipelineCommandInput
   | UpdatePipelineExecutionCommandInput
+  | UpdatePipelineVersionCommandInput
   | UpdateProjectCommandInput
   | UpdateSpaceCommandInput
   | UpdateTrainingJobCommandInput
@@ -1362,6 +1411,8 @@ export type ServiceOutputTypes =
   | AddAssociationCommandOutput
   | AddTagsCommandOutput
   | AssociateTrialComponentCommandOutput
+  | AttachClusterNodeVolumeCommandOutput
+  | BatchAddClusterNodesCommandOutput
   | BatchDeleteClusterNodesCommandOutput
   | BatchDescribeModelPackageCommandOutput
   | CreateActionCommandOutput
@@ -1389,6 +1440,7 @@ export type ServiceOutputTypes =
   | CreateFeatureGroupCommandOutput
   | CreateFlowDefinitionCommandOutput
   | CreateHubCommandOutput
+  | CreateHubContentPresignedUrlsCommandOutput
   | CreateHubContentReferenceCommandOutput
   | CreateHumanTaskUiCommandOutput
   | CreateHyperParameterTuningJobCommandOutput
@@ -1493,6 +1545,7 @@ export type ServiceOutputTypes =
   | DescribeAutoMLJobCommandOutput
   | DescribeAutoMLJobV2CommandOutput
   | DescribeClusterCommandOutput
+  | DescribeClusterEventCommandOutput
   | DescribeClusterNodeCommandOutput
   | DescribeClusterSchedulerConfigCommandOutput
   | DescribeCodeRepositoryCommandOutput
@@ -1541,6 +1594,7 @@ export type ServiceOutputTypes =
   | DescribePipelineExecutionCommandOutput
   | DescribeProcessingJobCommandOutput
   | DescribeProjectCommandOutput
+  | DescribeReservedCapacityCommandOutput
   | DescribeSpaceCommandOutput
   | DescribeStudioLifecycleConfigCommandOutput
   | DescribeSubscribedWorkteamCommandOutput
@@ -1552,6 +1606,7 @@ export type ServiceOutputTypes =
   | DescribeUserProfileCommandOutput
   | DescribeWorkforceCommandOutput
   | DescribeWorkteamCommandOutput
+  | DetachClusterNodeVolumeCommandOutput
   | DisableSagemakerServicecatalogPortfolioCommandOutput
   | DisassociateTrialComponentCommandOutput
   | EnableSagemakerServicecatalogPortfolioCommandOutput
@@ -1571,6 +1626,7 @@ export type ServiceOutputTypes =
   | ListAssociationsCommandOutput
   | ListAutoMLJobsCommandOutput
   | ListCandidatesForAutoMLJobCommandOutput
+  | ListClusterEventsCommandOutput
   | ListClusterNodesCommandOutput
   | ListClusterSchedulerConfigsCommandOutput
   | ListClustersCommandOutput
@@ -1625,6 +1681,7 @@ export type ServiceOutputTypes =
   | ListPipelineExecutionStepsCommandOutput
   | ListPipelineExecutionsCommandOutput
   | ListPipelineParametersForExecutionCommandOutput
+  | ListPipelineVersionsCommandOutput
   | ListPipelinesCommandOutput
   | ListProcessingJobsCommandOutput
   | ListProjectsCommandOutput
@@ -1640,6 +1697,7 @@ export type ServiceOutputTypes =
   | ListTransformJobsCommandOutput
   | ListTrialComponentsCommandOutput
   | ListTrialsCommandOutput
+  | ListUltraServersByReservedCapacityCommandOutput
   | ListUserProfilesCommandOutput
   | ListWorkforcesCommandOutput
   | ListWorkteamsCommandOutput
@@ -1658,6 +1716,7 @@ export type ServiceOutputTypes =
   | StartMonitoringScheduleCommandOutput
   | StartNotebookInstanceCommandOutput
   | StartPipelineExecutionCommandOutput
+  | StartSessionCommandOutput
   | StopAutoMLJobCommandOutput
   | StopCompilationJobCommandOutput
   | StopEdgeDeploymentStageCommandOutput
@@ -1709,6 +1768,7 @@ export type ServiceOutputTypes =
   | UpdatePartnerAppCommandOutput
   | UpdatePipelineCommandOutput
   | UpdatePipelineExecutionCommandOutput
+  | UpdatePipelineVersionCommandOutput
   | UpdateProjectCommandOutput
   | UpdateSpaceCommandOutput
   | UpdateTrainingJobCommandOutput
@@ -1909,22 +1969,7 @@ export type SageMakerClientResolvedConfigType = __SmithyResolvedConfiguration<__
 export interface SageMakerClientResolvedConfig extends SageMakerClientResolvedConfigType {}
 
 /**
- * <p>Provides APIs for creating and managing SageMaker resources. </p>
- *          <p>Other Resources:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer
- *                         Guide</a>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <a href="https://docs.aws.amazon.com/augmented-ai/2019-11-07/APIReference/Welcome.html">Amazon Augmented AI
- *                         Runtime API Reference</a>
- *                </p>
- *             </li>
- *          </ul>
+ * <p>Provides APIs for creating and managing SageMaker resources. </p> <p>Other Resources:</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user">SageMaker Developer Guide</a> </p> </li> <li> <p> <a href="https://docs.aws.amazon.com/augmented-ai/2019-11-07/APIReference/Welcome.html">Amazon Augmented AI Runtime API Reference</a> </p> </li> </ul>
  * @public
  */
 export class SageMakerClient extends __Client<

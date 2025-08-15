@@ -2,7 +2,11 @@
 // @ts-ignore: package.json will be imported from dist folders
 import packageInfo from "../../../package.json"; // eslint-disable-line
 
-import { AwsSdkSigV4Signer, emitWarningIfUnsupportedVersion as awsCheckVersion } from "@aws-sdk/core";
+import {
+  AwsSdkSigV4Signer,
+  NODE_AUTH_SCHEME_PREFERENCE_OPTIONS,
+  emitWarningIfUnsupportedVersion as awsCheckVersion,
+} from "@aws-sdk/core";
 
 import { NODE_APP_ID_CONFIG_OPTIONS, createDefaultUserAgentProvider } from "@aws-sdk/util-user-agent-node";
 import {
@@ -34,12 +38,17 @@ export const getRuntimeConfig = (config: STSClientConfig) => {
   const defaultConfigProvider = () => defaultsMode().then(loadConfigsForDefaultMode);
   const clientSharedValues = getSharedRuntimeConfig(config);
   awsCheckVersion(process.version);
-  const profileConfig = { profile: config?.profile };
+  const loaderConfig = {
+    profile: config?.profile,
+    logger: clientSharedValues.logger,
+  };
   return {
     ...clientSharedValues,
     ...config,
     runtime: "node",
     defaultsMode,
+    authSchemePreference:
+      config?.authSchemePreference ?? loadNodeConfig(NODE_AUTH_SCHEME_PREFERENCE_OPTIONS, loaderConfig),
     bodyLengthChecker: config?.bodyLengthChecker ?? calculateBodyLength,
 
     defaultUserAgentProvider:
@@ -63,7 +72,7 @@ export const getRuntimeConfig = (config: STSClientConfig) => {
     maxAttempts: config?.maxAttempts ?? loadNodeConfig(NODE_MAX_ATTEMPT_CONFIG_OPTIONS, config),
     region:
       config?.region ??
-      loadNodeConfig(NODE_REGION_CONFIG_OPTIONS, { ...NODE_REGION_CONFIG_FILE_OPTIONS, ...profileConfig }),
+      loadNodeConfig(NODE_REGION_CONFIG_OPTIONS, { ...NODE_REGION_CONFIG_FILE_OPTIONS, ...loaderConfig }),
     requestHandler: RequestHandler.create(config?.requestHandler ?? defaultConfigProvider),
     retryMode:
       config?.retryMode ??
@@ -77,8 +86,8 @@ export const getRuntimeConfig = (config: STSClientConfig) => {
     sha256: config?.sha256 ?? Hash.bind(null, "sha256"),
     streamCollector: config?.streamCollector ?? streamCollector,
     useDualstackEndpoint:
-      config?.useDualstackEndpoint ?? loadNodeConfig(NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS, profileConfig),
-    useFipsEndpoint: config?.useFipsEndpoint ?? loadNodeConfig(NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS, profileConfig),
-    userAgentAppId: config?.userAgentAppId ?? loadNodeConfig(NODE_APP_ID_CONFIG_OPTIONS, profileConfig),
+      config?.useDualstackEndpoint ?? loadNodeConfig(NODE_USE_DUALSTACK_ENDPOINT_CONFIG_OPTIONS, loaderConfig),
+    useFipsEndpoint: config?.useFipsEndpoint ?? loadNodeConfig(NODE_USE_FIPS_ENDPOINT_CONFIG_OPTIONS, loaderConfig),
+    userAgentAppId: config?.userAgentAppId ?? loadNodeConfig(NODE_APP_ID_CONFIG_OPTIONS, loaderConfig),
   };
 };

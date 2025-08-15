@@ -11,6 +11,7 @@ import {
   _json,
   collectBody,
   decorateServiceException as __decorateServiceException,
+  expectBoolean as __expectBoolean,
   expectInt32 as __expectInt32,
   expectNonNull as __expectNonNull,
   expectObject as __expectObject,
@@ -30,6 +31,8 @@ import {
   DocumentType as __DocumentType,
   Endpoint as __Endpoint,
   EventStreamSerdeContext as __EventStreamSerdeContext,
+  Message as __Message,
+  MessageHeaders as __MessageHeaders,
   ResponseMetadata as __ResponseMetadata,
   SerdeContext as __SerdeContext,
 } from "@smithy/types";
@@ -40,6 +43,10 @@ import { ConverseCommandInput, ConverseCommandOutput } from "../commands/Convers
 import { ConverseStreamCommandInput, ConverseStreamCommandOutput } from "../commands/ConverseStreamCommand";
 import { GetAsyncInvokeCommandInput, GetAsyncInvokeCommandOutput } from "../commands/GetAsyncInvokeCommand";
 import { InvokeModelCommandInput, InvokeModelCommandOutput } from "../commands/InvokeModelCommand";
+import {
+  InvokeModelWithBidirectionalStreamCommandInput,
+  InvokeModelWithBidirectionalStreamCommandOutput,
+} from "../commands/InvokeModelWithBidirectionalStreamCommand";
 import {
   InvokeModelWithResponseStreamCommandInput,
   InvokeModelWithResponseStreamCommandOutput,
@@ -54,6 +61,15 @@ import {
   AsyncInvokeS3OutputDataConfig,
   AsyncInvokeSummary,
   AutoToolChoice,
+  BidirectionalInputPayloadPart,
+  BidirectionalOutputPayloadPart,
+  CachePointBlock,
+  Citation,
+  CitationGeneratedContent,
+  CitationLocation,
+  CitationsConfig,
+  CitationsContentBlock,
+  CitationSourceContent,
   ConflictException,
   ContentBlock,
   ContentBlockDelta,
@@ -66,8 +82,21 @@ import {
   ConverseStreamTrace,
   ConverseTrace,
   DocumentBlock,
+  DocumentCharLocation,
+  DocumentChunkLocation,
+  DocumentContentBlock,
+  DocumentPageLocation,
   DocumentSource,
   GuardrailAssessment,
+  GuardrailAutomatedReasoningFinding,
+  GuardrailAutomatedReasoningImpossibleFinding,
+  GuardrailAutomatedReasoningInvalidFinding,
+  GuardrailAutomatedReasoningPolicyAssessment,
+  GuardrailAutomatedReasoningSatisfiableFinding,
+  GuardrailAutomatedReasoningTranslation,
+  GuardrailAutomatedReasoningTranslationAmbiguousFinding,
+  GuardrailAutomatedReasoningTranslationOption,
+  GuardrailAutomatedReasoningValidFinding,
   GuardrailConfiguration,
   GuardrailContentBlock,
   GuardrailContentQualifier,
@@ -87,6 +116,8 @@ import {
   ImageSource,
   InferenceConfiguration,
   InternalServerException,
+  InvokeModelWithBidirectionalStreamInput,
+  InvokeModelWithBidirectionalStreamOutput,
   Message,
   MessageStartEvent,
   MessageStopEvent,
@@ -140,6 +171,7 @@ export const se_ApplyGuardrailCommand = async (
   body = JSON.stringify(
     take(input, {
       content: (_) => se_GuardrailContentBlockList(_, context),
+      outputScope: [],
       source: [],
     })
   );
@@ -254,6 +286,27 @@ export const se_InvokeModelCommand = async (
 };
 
 /**
+ * serializeAws_restJson1InvokeModelWithBidirectionalStreamCommand
+ */
+export const se_InvokeModelWithBidirectionalStreamCommand = async (
+  input: InvokeModelWithBidirectionalStreamCommandInput,
+  context: __SerdeContext & __EventStreamSerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/model/{modelId}/invoke-with-bidirectional-stream");
+  b.p("modelId", () => input.modelId!, "{modelId}", false);
+  let body: any;
+  if (input.body !== undefined) {
+    body = se_InvokeModelWithBidirectionalStreamInput(input.body, context);
+  }
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1InvokeModelWithResponseStreamCommand
  */
 export const se_InvokeModelWithResponseStreamCommand = async (
@@ -345,6 +398,7 @@ export const de_ApplyGuardrailCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     action: __expectString,
+    actionReason: __expectString,
     assessments: (_) => de_GuardrailAssessmentList(_, context),
     guardrailCoverage: _json,
     outputs: _json,
@@ -445,6 +499,24 @@ export const de_InvokeModelCommand = async (
   });
   const data: any = await collectBody(output.body, context);
   contents.body = data;
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1InvokeModelWithBidirectionalStreamCommand
+ */
+export const de_InvokeModelWithBidirectionalStreamCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext & __EventStreamSerdeContext
+): Promise<InvokeModelWithBidirectionalStreamCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: any = output.body;
+  contents.body = de_InvokeModelWithBidirectionalStreamOutput(data, context);
   return contents;
 };
 
@@ -801,6 +873,34 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 };
 
 /**
+ * serializeAws_restJson1InvokeModelWithBidirectionalStreamInput
+ */
+const se_InvokeModelWithBidirectionalStreamInput = (
+  input: any,
+  context: __SerdeContext & __EventStreamSerdeContext
+): any => {
+  const eventMarshallingVisitor = (event: any): __Message =>
+    InvokeModelWithBidirectionalStreamInput.visit(event, {
+      chunk: (value) => se_BidirectionalInputPayloadPart_event(value, context),
+      _: (value) => value as any,
+    });
+  return context.eventStreamMarshaller.serialize(input, eventMarshallingVisitor);
+};
+const se_BidirectionalInputPayloadPart_event = (
+  input: BidirectionalInputPayloadPart,
+  context: __SerdeContext
+): __Message => {
+  const headers: __MessageHeaders = {
+    ":event-type": { type: "string", value: "chunk" },
+    ":message-type": { type: "string", value: "event" },
+    ":content-type": { type: "string", value: "application/json" },
+  };
+  let body = new Uint8Array();
+  body = se_BidirectionalInputPayloadPart(input, context);
+  body = context.utf8Decoder(JSON.stringify(body));
+  return { headers, body };
+};
+/**
  * deserializeAws_restJson1ConverseStreamOutput
  */
 const de_ConverseStreamOutput = (
@@ -869,7 +969,59 @@ const de_ConverseStreamOutput = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
+  });
+};
+/**
+ * deserializeAws_restJson1InvokeModelWithBidirectionalStreamOutput
+ */
+const de_InvokeModelWithBidirectionalStreamOutput = (
+  output: any,
+  context: __SerdeContext & __EventStreamSerdeContext
+): AsyncIterable<InvokeModelWithBidirectionalStreamOutput> => {
+  return context.eventStreamMarshaller.deserialize(output, async (event) => {
+    if (event["chunk"] != null) {
+      return {
+        chunk: await de_BidirectionalOutputPayloadPart_event(event["chunk"], context),
+      };
+    }
+    if (event["internalServerException"] != null) {
+      return {
+        internalServerException: await de_InternalServerException_event(event["internalServerException"], context),
+      };
+    }
+    if (event["modelStreamErrorException"] != null) {
+      return {
+        modelStreamErrorException: await de_ModelStreamErrorException_event(
+          event["modelStreamErrorException"],
+          context
+        ),
+      };
+    }
+    if (event["validationException"] != null) {
+      return {
+        validationException: await de_ValidationException_event(event["validationException"], context),
+      };
+    }
+    if (event["throttlingException"] != null) {
+      return {
+        throttlingException: await de_ThrottlingException_event(event["throttlingException"], context),
+      };
+    }
+    if (event["modelTimeoutException"] != null) {
+      return {
+        modelTimeoutException: await de_ModelTimeoutException_event(event["modelTimeoutException"], context),
+      };
+    }
+    if (event["serviceUnavailableException"] != null) {
+      return {
+        serviceUnavailableException: await de_ServiceUnavailableException_event(
+          event["serviceUnavailableException"],
+          context
+        ),
+      };
+    }
+    return { $unknown: event as any };
   });
 };
 /**
@@ -921,8 +1073,17 @@ const de_ResponseStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
+};
+const de_BidirectionalOutputPayloadPart_event = async (
+  output: any,
+  context: __SerdeContext
+): Promise<BidirectionalOutputPayloadPart> => {
+  const contents: BidirectionalOutputPayloadPart = {} as any;
+  const data: any = await parseBody(output.body, context);
+  Object.assign(contents, de_BidirectionalOutputPayloadPart(data, context));
+  return contents;
 };
 const de_ContentBlockDeltaEvent_event = async (
   output: any,
@@ -1037,10 +1198,41 @@ const de_ValidationException_event = async (output: any, context: __SerdeContext
 // se_AutoToolChoice omitted.
 
 /**
+ * serializeAws_restJson1BidirectionalInputPayloadPart
+ */
+const se_BidirectionalInputPayloadPart = (input: BidirectionalInputPayloadPart, context: __SerdeContext): any => {
+  return take(input, {
+    bytes: context.base64Encoder,
+  });
+};
+
+// se_CachePointBlock omitted.
+
+// se_Citation omitted.
+
+// se_CitationGeneratedContent omitted.
+
+// se_CitationGeneratedContentList omitted.
+
+// se_CitationLocation omitted.
+
+// se_Citations omitted.
+
+// se_CitationsConfig omitted.
+
+// se_CitationsContentBlock omitted.
+
+// se_CitationSourceContent omitted.
+
+// se_CitationSourceContentList omitted.
+
+/**
  * serializeAws_restJson1ContentBlock
  */
 const se_ContentBlock = (input: ContentBlock, context: __SerdeContext): any => {
   return ContentBlock.visit(input, {
+    cachePoint: (value) => ({ cachePoint: _json(value) }),
+    citationsContent: (value) => ({ citationsContent: _json(value) }),
     document: (value) => ({ document: se_DocumentBlock(value, context) }),
     guardContent: (value) => ({ guardContent: se_GuardrailConverseContentBlock(value, context) }),
     image: (value) => ({ image: se_ImageBlock(value, context) }),
@@ -1069,11 +1261,23 @@ const se_ContentBlocks = (input: ContentBlock[], context: __SerdeContext): any =
  */
 const se_DocumentBlock = (input: DocumentBlock, context: __SerdeContext): any => {
   return take(input, {
+    citations: _json,
+    context: [],
     format: [],
     name: [],
     source: (_) => se_DocumentSource(_, context),
   });
 };
+
+// se_DocumentCharLocation omitted.
+
+// se_DocumentChunkLocation omitted.
+
+// se_DocumentContentBlock omitted.
+
+// se_DocumentContentBlocks omitted.
+
+// se_DocumentPageLocation omitted.
 
 /**
  * serializeAws_restJson1DocumentSource
@@ -1081,6 +1285,9 @@ const se_DocumentBlock = (input: DocumentBlock, context: __SerdeContext): any =>
 const se_DocumentSource = (input: DocumentSource, context: __SerdeContext): any => {
   return DocumentSource.visit(input, {
     bytes: (value) => ({ bytes: context.base64Encoder(value) }),
+    content: (value) => ({ content: _json(value) }),
+    s3Location: (value) => ({ s3Location: _json(value) }),
+    text: (value) => ({ text: value }),
     _: (name, value) => ({ [name]: value } as any),
   });
 };
@@ -1186,6 +1393,7 @@ const se_ImageBlock = (input: ImageBlock, context: __SerdeContext): any => {
 const se_ImageSource = (input: ImageSource, context: __SerdeContext): any => {
   return ImageSource.visit(input, {
     bytes: (value) => ({ bytes: context.base64Encoder(value) }),
+    s3Location: (value) => ({ s3Location: _json(value) }),
     _: (name, value) => ({ [name]: value } as any),
   });
 };
@@ -1262,6 +1470,7 @@ const se_ReasoningContentBlock = (input: ReasoningContentBlock, context: __Serde
  */
 const se_SystemContentBlock = (input: SystemContentBlock, context: __SerdeContext): any => {
   return SystemContentBlock.visit(input, {
+    cachePoint: (value) => ({ cachePoint: _json(value) }),
     guardContent: (value) => ({ guardContent: se_GuardrailConverseContentBlock(value, context) }),
     text: (value) => ({ text: value }),
     _: (name, value) => ({ [name]: value } as any),
@@ -1288,6 +1497,7 @@ const se_SystemContentBlocks = (input: SystemContentBlock[], context: __SerdeCon
  */
 const se_Tool = (input: Tool, context: __SerdeContext): any => {
   return Tool.visit(input, {
+    cachePoint: (value) => ({ cachePoint: _json(value) }),
     toolSpec: (value) => ({ toolSpec: se_ToolSpecification(value, context) }),
     _: (name, value) => ({ [name]: value } as any),
   });
@@ -1446,9 +1656,54 @@ const de_AsyncInvokeSummary = (output: any, context: __SerdeContext): AsyncInvok
 };
 
 /**
+ * deserializeAws_restJson1BidirectionalOutputPayloadPart
+ */
+const de_BidirectionalOutputPayloadPart = (output: any, context: __SerdeContext): BidirectionalOutputPayloadPart => {
+  return take(output, {
+    bytes: context.base64Decoder,
+  }) as any;
+};
+
+// de_CachePointBlock omitted.
+
+// de_Citation omitted.
+
+// de_CitationGeneratedContent omitted.
+
+// de_CitationGeneratedContentList omitted.
+
+// de_CitationLocation omitted.
+
+// de_Citations omitted.
+
+// de_CitationsConfig omitted.
+
+// de_CitationsContentBlock omitted.
+
+// de_CitationsDelta omitted.
+
+// de_CitationSourceContent omitted.
+
+// de_CitationSourceContentDelta omitted.
+
+// de_CitationSourceContentList omitted.
+
+// de_CitationSourceContentListDelta omitted.
+
+/**
  * deserializeAws_restJson1ContentBlock
  */
 const de_ContentBlock = (output: any, context: __SerdeContext): ContentBlock => {
+  if (output.cachePoint != null) {
+    return {
+      cachePoint: _json(output.cachePoint),
+    };
+  }
+  if (output.citationsContent != null) {
+    return {
+      citationsContent: _json(output.citationsContent),
+    };
+  }
   if (output.document != null) {
     return {
       document: de_DocumentBlock(output.document, context),
@@ -1494,6 +1749,11 @@ const de_ContentBlock = (output: any, context: __SerdeContext): ContentBlock => 
  * deserializeAws_restJson1ContentBlockDelta
  */
 const de_ContentBlockDelta = (output: any, context: __SerdeContext): ContentBlockDelta => {
+  if (output.citation != null) {
+    return {
+      citation: _json(output.citation),
+    };
+  }
   if (output.reasoningContent != null) {
     return {
       reasoningContent: de_ReasoningContentBlockDelta(__expectUnion(output.reasoningContent), context),
@@ -1591,11 +1851,23 @@ const de_ConverseTrace = (output: any, context: __SerdeContext): ConverseTrace =
  */
 const de_DocumentBlock = (output: any, context: __SerdeContext): DocumentBlock => {
   return take(output, {
+    citations: _json,
+    context: __expectString,
     format: __expectString,
     name: __expectString,
     source: (_: any) => de_DocumentSource(__expectUnion(_), context),
   }) as any;
 };
+
+// de_DocumentCharLocation omitted.
+
+// de_DocumentChunkLocation omitted.
+
+// de_DocumentContentBlock omitted.
+
+// de_DocumentContentBlocks omitted.
+
+// de_DocumentPageLocation omitted.
 
 /**
  * deserializeAws_restJson1DocumentSource
@@ -1606,6 +1878,19 @@ const de_DocumentSource = (output: any, context: __SerdeContext): DocumentSource
       bytes: context.base64Decoder(output.bytes),
     };
   }
+  if (output.content != null) {
+    return {
+      content: _json(output.content),
+    };
+  }
+  if (output.s3Location != null) {
+    return {
+      s3Location: _json(output.s3Location),
+    };
+  }
+  if (__expectString(output.text) !== undefined) {
+    return { text: __expectString(output.text) as any };
+  }
   return { $unknown: Object.entries(output)[0] };
 };
 
@@ -1614,6 +1899,7 @@ const de_DocumentSource = (output: any, context: __SerdeContext): DocumentSource
  */
 const de_GuardrailAssessment = (output: any, context: __SerdeContext): GuardrailAssessment => {
   return take(output, {
+    automatedReasoningPolicy: (_: any) => de_GuardrailAutomatedReasoningPolicyAssessment(_, context),
     contentPolicy: _json,
     contextualGroundingPolicy: (_: any) => de_GuardrailContextualGroundingPolicyAssessment(_, context),
     invocationMetrics: _json,
@@ -1661,6 +1947,232 @@ const de_GuardrailAssessmentMap = (output: any, context: __SerdeContext): Record
   }, {} as Record<string, GuardrailAssessment>);
 };
 
+// de_GuardrailAutomatedReasoningDifferenceScenarioList omitted.
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningFinding
+ */
+const de_GuardrailAutomatedReasoningFinding = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningFinding => {
+  if (output.impossible != null) {
+    return {
+      impossible: de_GuardrailAutomatedReasoningImpossibleFinding(output.impossible, context),
+    };
+  }
+  if (output.invalid != null) {
+    return {
+      invalid: de_GuardrailAutomatedReasoningInvalidFinding(output.invalid, context),
+    };
+  }
+  if (output.noTranslations != null) {
+    return {
+      noTranslations: _json(output.noTranslations),
+    };
+  }
+  if (output.satisfiable != null) {
+    return {
+      satisfiable: de_GuardrailAutomatedReasoningSatisfiableFinding(output.satisfiable, context),
+    };
+  }
+  if (output.tooComplex != null) {
+    return {
+      tooComplex: _json(output.tooComplex),
+    };
+  }
+  if (output.translationAmbiguous != null) {
+    return {
+      translationAmbiguous: de_GuardrailAutomatedReasoningTranslationAmbiguousFinding(
+        output.translationAmbiguous,
+        context
+      ),
+    };
+  }
+  if (output.valid != null) {
+    return {
+      valid: de_GuardrailAutomatedReasoningValidFinding(output.valid, context),
+    };
+  }
+  return { $unknown: Object.entries(output)[0] };
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningFindingList
+ */
+const de_GuardrailAutomatedReasoningFindingList = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningFinding[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_GuardrailAutomatedReasoningFinding(__expectUnion(entry), context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningImpossibleFinding
+ */
+const de_GuardrailAutomatedReasoningImpossibleFinding = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningImpossibleFinding => {
+  return take(output, {
+    contradictingRules: _json,
+    logicWarning: _json,
+    translation: (_: any) => de_GuardrailAutomatedReasoningTranslation(_, context),
+  }) as any;
+};
+
+// de_GuardrailAutomatedReasoningInputTextReference omitted.
+
+// de_GuardrailAutomatedReasoningInputTextReferenceList omitted.
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningInvalidFinding
+ */
+const de_GuardrailAutomatedReasoningInvalidFinding = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningInvalidFinding => {
+  return take(output, {
+    contradictingRules: _json,
+    logicWarning: _json,
+    translation: (_: any) => de_GuardrailAutomatedReasoningTranslation(_, context),
+  }) as any;
+};
+
+// de_GuardrailAutomatedReasoningLogicWarning omitted.
+
+// de_GuardrailAutomatedReasoningNoTranslationsFinding omitted.
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningPolicyAssessment
+ */
+const de_GuardrailAutomatedReasoningPolicyAssessment = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningPolicyAssessment => {
+  return take(output, {
+    findings: (_: any) => de_GuardrailAutomatedReasoningFindingList(_, context),
+  }) as any;
+};
+
+// de_GuardrailAutomatedReasoningRule omitted.
+
+// de_GuardrailAutomatedReasoningRuleList omitted.
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningSatisfiableFinding
+ */
+const de_GuardrailAutomatedReasoningSatisfiableFinding = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningSatisfiableFinding => {
+  return take(output, {
+    claimsFalseScenario: _json,
+    claimsTrueScenario: _json,
+    logicWarning: _json,
+    translation: (_: any) => de_GuardrailAutomatedReasoningTranslation(_, context),
+  }) as any;
+};
+
+// de_GuardrailAutomatedReasoningScenario omitted.
+
+// de_GuardrailAutomatedReasoningStatement omitted.
+
+// de_GuardrailAutomatedReasoningStatementList omitted.
+
+// de_GuardrailAutomatedReasoningTooComplexFinding omitted.
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningTranslation
+ */
+const de_GuardrailAutomatedReasoningTranslation = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningTranslation => {
+  return take(output, {
+    claims: _json,
+    confidence: __limitedParseDouble,
+    premises: _json,
+    untranslatedClaims: _json,
+    untranslatedPremises: _json,
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningTranslationAmbiguousFinding
+ */
+const de_GuardrailAutomatedReasoningTranslationAmbiguousFinding = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningTranslationAmbiguousFinding => {
+  return take(output, {
+    differenceScenarios: _json,
+    options: (_: any) => de_GuardrailAutomatedReasoningTranslationOptionList(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningTranslationList
+ */
+const de_GuardrailAutomatedReasoningTranslationList = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningTranslation[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_GuardrailAutomatedReasoningTranslation(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningTranslationOption
+ */
+const de_GuardrailAutomatedReasoningTranslationOption = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningTranslationOption => {
+  return take(output, {
+    translations: (_: any) => de_GuardrailAutomatedReasoningTranslationList(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningTranslationOptionList
+ */
+const de_GuardrailAutomatedReasoningTranslationOptionList = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningTranslationOption[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_GuardrailAutomatedReasoningTranslationOption(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_restJson1GuardrailAutomatedReasoningValidFinding
+ */
+const de_GuardrailAutomatedReasoningValidFinding = (
+  output: any,
+  context: __SerdeContext
+): GuardrailAutomatedReasoningValidFinding => {
+  return take(output, {
+    claimsTrueScenario: _json,
+    logicWarning: _json,
+    supportingRules: _json,
+    translation: (_: any) => de_GuardrailAutomatedReasoningTranslation(_, context),
+  }) as any;
+};
+
 // de_GuardrailContentFilter omitted.
 
 // de_GuardrailContentFilterList omitted.
@@ -1676,6 +2188,7 @@ const de_GuardrailContextualGroundingFilter = (
 ): GuardrailContextualGroundingFilter => {
   return take(output, {
     action: __expectString,
+    detected: __expectBoolean,
     score: __limitedParseDouble,
     threshold: __limitedParseDouble,
     type: __expectString,
@@ -1793,6 +2306,7 @@ const de_GuardrailConverseImageSource = (output: any, context: __SerdeContext): 
  */
 const de_GuardrailTraceAssessment = (output: any, context: __SerdeContext): GuardrailTraceAssessment => {
   return take(output, {
+    actionReason: __expectString,
     inputAssessment: (_: any) => de_GuardrailAssessmentMap(_, context),
     modelOutput: _json,
     outputAssessments: (_: any) => de_GuardrailAssessmentListMap(_, context),
@@ -1820,6 +2334,11 @@ const de_ImageSource = (output: any, context: __SerdeContext): ImageSource => {
   if (output.bytes != null) {
     return {
       bytes: context.base64Decoder(output.bytes),
+    };
+  }
+  if (output.s3Location != null) {
+    return {
+      s3Location: _json(output.s3Location),
     };
   }
   return { $unknown: Object.entries(output)[0] };

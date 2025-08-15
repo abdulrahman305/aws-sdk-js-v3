@@ -9,7 +9,7 @@ import {
   UploadReadSetPartRequest,
   UploadReadSetPartRequestFilterSensitiveLog,
   UploadReadSetPartResponse,
-} from "../models/models_0";
+} from "../models/models_1";
 import { OmicsClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../OmicsClient";
 import { de_UploadReadSetPartCommand, se_UploadReadSetPartCommand } from "../protocols/Aws_restJson1";
 
@@ -35,8 +35,7 @@ export interface UploadReadSetPartCommandInput extends Omit<UploadReadSetPartReq
 export interface UploadReadSetPartCommandOutput extends UploadReadSetPartResponse, __MetadataBearer {}
 
 /**
- * <p>This operation uploads a specific part of a read set. If you upload a new part using a previously used part number,
- *       the previously uploaded part will be overwritten.</p>
+ * <p>This operation uploads a specific part of a read set. If you upload a new part using a previously used part number, the previously uploaded part will be overwritten.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -71,9 +70,7 @@ export interface UploadReadSetPartCommandOutput extends UploadReadSetPartRespons
  *  <p>An unexpected error occurred. Try the request again.</p>
  *
  * @throws {@link NotSupportedOperationException} (client fault)
- *  <p>
- *       The operation is not supported by Amazon Omics, or the API does not exist.
- *     </p>
+ *  <p> The operation is not supported by Amazon Omics, or the API does not exist. </p>
  *
  * @throws {@link RequestTimeoutException} (client fault)
  *  <p>The request timed out.</p>

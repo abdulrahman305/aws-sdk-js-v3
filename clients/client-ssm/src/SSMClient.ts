@@ -248,6 +248,7 @@ import {
   DisassociateOpsItemRelatedItemCommandInput,
   DisassociateOpsItemRelatedItemCommandOutput,
 } from "./commands/DisassociateOpsItemRelatedItemCommand";
+import { GetAccessTokenCommandInput, GetAccessTokenCommandOutput } from "./commands/GetAccessTokenCommand";
 import {
   GetAutomationExecutionCommandInput,
   GetAutomationExecutionCommandOutput,
@@ -412,6 +413,7 @@ import {
   SendAutomationSignalCommandOutput,
 } from "./commands/SendAutomationSignalCommand";
 import { SendCommandCommandInput, SendCommandCommandOutput } from "./commands/SendCommandCommand";
+import { StartAccessRequestCommandInput, StartAccessRequestCommandOutput } from "./commands/StartAccessRequestCommand";
 import {
   StartAssociationsOnceCommandInput,
   StartAssociationsOnceCommandOutput,
@@ -560,6 +562,7 @@ export type ServiceInputTypes =
   | DescribePatchPropertiesCommandInput
   | DescribeSessionsCommandInput
   | DisassociateOpsItemRelatedItemCommandInput
+  | GetAccessTokenCommandInput
   | GetAutomationExecutionCommandInput
   | GetCalendarStateCommandInput
   | GetCommandInvocationCommandInput
@@ -619,6 +622,7 @@ export type ServiceInputTypes =
   | ResumeSessionCommandInput
   | SendAutomationSignalCommandInput
   | SendCommandCommandInput
+  | StartAccessRequestCommandInput
   | StartAssociationsOnceCommandInput
   | StartAutomationExecutionCommandInput
   | StartChangeRequestExecutionCommandInput
@@ -709,6 +713,7 @@ export type ServiceOutputTypes =
   | DescribePatchPropertiesCommandOutput
   | DescribeSessionsCommandOutput
   | DisassociateOpsItemRelatedItemCommandOutput
+  | GetAccessTokenCommandOutput
   | GetAutomationExecutionCommandOutput
   | GetCalendarStateCommandOutput
   | GetCommandInvocationCommandOutput
@@ -768,6 +773,7 @@ export type ServiceOutputTypes =
   | ResumeSessionCommandOutput
   | SendAutomationSignalCommandOutput
   | SendCommandCommandOutput
+  | StartAccessRequestCommandOutput
   | StartAssociationsOnceCommandOutput
   | StartAutomationExecutionCommandOutput
   | StartChangeRequestExecutionCommandOutput
@@ -985,7 +991,8 @@ export interface SSMClientResolvedConfig extends SSMClientResolvedConfigType {}
  * <p>Amazon Web Services Systems Manager is the operations hub for your Amazon Web Services applications and resources and a secure
  *    end-to-end management solution for hybrid cloud environments that enables safe and secure
  *    operations at scale.</p>
- *          <p>This reference is intended to be used with the <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User Guide</a>. To get started, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html">Setting up Amazon Web Services Systems Manager</a>.</p>
+ *          <p>This reference is intended to be used with the <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/">Amazon Web Services Systems Manager User Guide</a>. To get started, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-console.html">Setting up
+ *     Amazon Web Services Systems Manager</a>.</p>
  *          <p class="title">
  *             <b>Related resources</b>
  *          </p>
@@ -997,7 +1004,7 @@ export interface SSMClientResolvedConfig extends SSMClientResolvedConfigType {}
  *             <li>
  *                <p>For details about predefined runbooks for Automation, a tool in Amazon Web Services Systems Manager, see the
  *        <i>
- *                      <a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-runbook-reference.html">Systems Manager Automation runbook reference</a>
+ *                      <a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-runbook-reference.html">Systems Manager Automation Runbook Reference</a>
  *                   </i>.</p>
  *             </li>
  *             <li>

@@ -56,6 +56,7 @@ export interface SearchStepsCommandOutput extends SearchStepsResponse, __Metadat
  *         },
  *         searchTermFilter: { // SearchTermFilterExpression
  *           searchTerm: "STRING_VALUE", // required
+ *           matchType: "FUZZY_MATCH" || "CONTAINS",
  *         },
  *         stringFilter: { // StringFilterExpression
  *           name: "STRING_VALUE", // required
@@ -77,6 +78,7 @@ export interface SearchStepsCommandOutput extends SearchStepsResponse, __Metadat
  *               },
  *               searchTermFilter: {
  *                 searchTerm: "STRING_VALUE", // required
+ *                 matchType: "FUZZY_MATCH" || "CONTAINS",
  *               },
  *               stringFilter: {
  *                 name: "STRING_VALUE", // required
@@ -126,14 +128,18 @@ export interface SearchStepsCommandOutput extends SearchStepsResponse, __Metadat
  * //       taskRunStatusCounts: { // TaskRunStatusCounts
  * //         "<keys>": Number("int"),
  * //       },
+ * //       taskFailureRetryCount: Number("int"),
  * //       createdAt: new Date("TIMESTAMP"),
+ * //       createdBy: "STRING_VALUE",
  * //       startedAt: new Date("TIMESTAMP"),
  * //       endedAt: new Date("TIMESTAMP"),
+ * //       updatedAt: new Date("TIMESTAMP"),
+ * //       updatedBy: "STRING_VALUE",
  * //       parameterSpace: { // ParameterSpace
  * //         parameters: [ // StepParameterList // required
  * //           { // StepParameter
  * //             name: "STRING_VALUE", // required
- * //             type: "INT" || "FLOAT" || "STRING" || "PATH", // required
+ * //             type: "INT" || "FLOAT" || "STRING" || "PATH" || "CHUNK_INT", // required
  * //           },
  * //         ],
  * //         combination: "STRING_VALUE",

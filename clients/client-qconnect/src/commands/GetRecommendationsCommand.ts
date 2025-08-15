@@ -29,16 +29,7 @@ export interface GetRecommendationsCommandInput extends GetRecommendationsReques
 export interface GetRecommendationsCommandOutput extends GetRecommendationsResponse, __MetadataBearer {}
 
 /**
- * <important>
- *             <p>This API will be discontinued starting June 1, 2024. To receive generative responses
- *         after March 1, 2024, you will need to create a new Assistant in the Amazon Connect
- *         console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into
- *         your applications.</p>
- *          </important>
- *          <p>Retrieves recommendations for the specified session. To avoid retrieving the same
- *       recommendations in subsequent calls, use <a href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_NotifyRecommendationsReceived.html">NotifyRecommendationsReceived</a>. This API supports long-polling behavior with the
- *         <code>waitTimeSeconds</code> parameter. Short poll is the default behavior and only returns
- *       recommendations already available. To perform a manual query against an assistant, use <a href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_QueryAssistant.html">QueryAssistant</a>.</p>
+ * <important> <p>This API will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024, you will need to create a new Assistant in the Amazon Connect console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into your applications.</p> </important> <p>Retrieves recommendations for the specified session. To avoid retrieving the same recommendations in subsequent calls, use <a href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_NotifyRecommendationsReceived.html">NotifyRecommendationsReceived</a>. This API supports long-polling behavior with the <code>waitTimeSeconds</code> parameter. Short poll is the default behavior and only returns recommendations already available. To perform a manual query against an assistant, use <a href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_QueryAssistant.html">QueryAssistant</a>.</p>
  *
  * @deprecated GetRecommendations API will be discontinued starting June 1, 2024. To receive generative responses after March 1, 2024 you will need to create a new Assistant in the Connect console and integrate the Amazon Q in Connect JavaScript library (amazon-q-connectjs) into your applications.
  * @example
@@ -52,6 +43,7 @@ export interface GetRecommendationsCommandOutput extends GetRecommendationsRespo
  *   sessionId: "STRING_VALUE", // required
  *   maxResults: Number("int"),
  *   waitTimeSeconds: Number("int"),
+ *   nextChunkToken: "STRING_VALUE",
  * };
  * const command = new GetRecommendationsCommand(input);
  * const response = await client.send(command);
@@ -184,6 +176,13 @@ export interface GetRecommendationsCommandOutput extends GetRecommendationsRespo
  * //                       endOffsetExclusive: Number("int"),
  * //                     },
  * //                   },
+ * //                   generativeChunkData: { // GenerativeChunkDataDetails
+ * //                     completion: "STRING_VALUE",
+ * //                     references: [
+ * //                       "<DataSummary>",
+ * //                     ],
+ * //                     nextChunkToken: "STRING_VALUE",
+ * //                   },
  * //                 },
  * //               },
  * //             ],
@@ -208,6 +207,13 @@ export interface GetRecommendationsCommandOutput extends GetRecommendationsRespo
  * //               beginOffsetInclusive: Number("int"),
  * //               endOffsetExclusive: Number("int"),
  * //             },
+ * //           },
+ * //           generativeChunkData: {
+ * //             completion: "STRING_VALUE",
+ * //             references: [
+ * //               "<DataSummary>",
+ * //             ],
+ * //             nextChunkToken: "STRING_VALUE",
  * //           },
  * //         },
  * //       },

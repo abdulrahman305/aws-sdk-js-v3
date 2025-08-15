@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   DescribeVpcEndpointServiceConfigurationsRequest,
   DescribeVpcEndpointServiceConfigurationsResult,
-} from "../models/models_5";
+} from "../models/models_6";
 import {
   de_DescribeVpcEndpointServiceConfigurationsCommand,
   se_DescribeVpcEndpointServiceConfigurationsCommand,
@@ -73,7 +73,10 @@ export interface DescribeVpcEndpointServiceConfigurationsCommandOutput
  * //       ServiceId: "STRING_VALUE",
  * //       ServiceName: "STRING_VALUE",
  * //       ServiceState: "Pending" || "Available" || "Deleting" || "Deleted" || "Failed",
- * //       AvailabilityZones: [ // ValueStringList
+ * //       AvailabilityZoneIds: [ // ValueStringList
+ * //         "STRING_VALUE",
+ * //       ],
+ * //       AvailabilityZones: [
  * //         "STRING_VALUE",
  * //       ],
  * //       AcceptanceRequired: true || false,

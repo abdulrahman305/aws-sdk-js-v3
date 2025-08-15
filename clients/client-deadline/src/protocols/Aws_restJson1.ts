@@ -324,6 +324,7 @@ import {
   FleetCapabilities,
   FleetConfiguration,
   FleetSummary,
+  HostConfiguration,
   HostPropertiesRequest,
   InternalServerErrorException,
   IpAddresses,
@@ -352,13 +353,13 @@ import {
   StepDetailsEntity,
   StepDetailsIdentifiers,
   StepRequiredCapabilities,
-  StepSummary,
-  TaskSummary,
+  TaskRunManifestPropertiesRequest,
   ThrottlingException,
   UpdatedSessionActionInfo,
   UsageTrackingResource,
   ValidationException,
   VCpuCountRange,
+  VpcConfiguration,
   WindowsUser,
   WorkerAmountCapability,
   WorkerAttributeCapability,
@@ -383,8 +384,10 @@ import {
   Statistics,
   Stats,
   StepSearchSummary,
+  StepSummary,
   StringFilterExpression,
   TaskSearchSummary,
+  TaskSummary,
   UsageGroupByField,
   UsageStatistic,
   UserJobsFirst,
@@ -818,6 +821,7 @@ export const se_CreateFleetCommand = async (
       configuration: (_) => se_FleetConfiguration(_, context),
       description: [],
       displayName: [],
+      hostConfiguration: (_) => _json(_),
       maxWorkerCount: [],
       minWorkerCount: [],
       roleArn: [],
@@ -968,6 +972,7 @@ export const se_CreateMonitorCommand = async (
       identityCenterInstanceArn: [],
       roleArn: [],
       subdomain: [],
+      tags: (_) => _json(_),
     })
   );
   let { hostname: resolvedHostname } = await context.endpoint();
@@ -1174,6 +1179,7 @@ export const se_CreateWorkerCommand = async (
   body = JSON.stringify(
     take(input, {
       hostProperties: (_) => _json(_),
+      tags: (_) => _json(_),
     })
   );
   let { hostname: resolvedHostname } = await context.endpoint();
@@ -3307,6 +3313,7 @@ export const se_UpdateFleetCommand = async (
       configuration: (_) => se_FleetConfiguration(_, context),
       description: [],
       displayName: [],
+      hostConfiguration: (_) => _json(_),
       maxWorkerCount: [],
       minWorkerCount: [],
       roleArn: [],
@@ -4641,10 +4648,12 @@ export const de_GetFleetCommand = async (
     displayName: __expectString,
     farmId: __expectString,
     fleetId: __expectString,
+    hostConfiguration: _json,
     maxWorkerCount: __expectInt32,
     minWorkerCount: __expectInt32,
     roleArn: __expectString,
     status: __expectString,
+    statusMessage: __expectString,
     targetWorkerCount: __expectInt32,
     updatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     updatedBy: __expectString,
@@ -4687,6 +4696,7 @@ export const de_GetJobCommand = async (
     startedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     storageProfileId: __expectString,
     targetTaskRunStatus: __expectString,
+    taskFailureRetryCount: __expectInt32,
     taskRunStatus: __expectString,
     taskRunStatusCounts: _json,
     updatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -4954,6 +4964,7 @@ export const de_GetSessionActionCommand = async (
     acquiredLimits: _json,
     definition: (_) => _json(__expectUnion(_)),
     endedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    manifests: _json,
     processExitCode: __expectInt32,
     progressMessage: __expectString,
     progressPercent: __limitedParseFloat32,
@@ -5019,6 +5030,7 @@ export const de_GetStepCommand = async (
     startedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     stepId: __expectString,
     targetTaskRunStatus: __expectString,
+    taskFailureRetryCount: __expectInt32,
     taskRunStatus: __expectString,
     taskRunStatusCounts: _json,
     updatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -6196,6 +6208,7 @@ export const de_UpdateWorkerCommand = async (
   });
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
+    hostConfiguration: _json,
     log: _json,
   });
   Object.assign(contents, doc);
@@ -6504,6 +6517,7 @@ const se_CustomerManagedFleetConfiguration = (
   return take(input, {
     mode: [],
     storageProfileId: [],
+    tagPropagationMode: [],
     workerCapabilities: (_) => se_CustomerManagedWorkerCapabilities(_, context),
   });
 };
@@ -6597,6 +6611,8 @@ const se_FleetConfiguration = (input: FleetConfiguration, context: __SerdeContex
 };
 
 // se_FleetIds omitted.
+
+// se_HostConfiguration omitted.
 
 // se_HostPropertiesRequest omitted.
 
@@ -6697,6 +6713,8 @@ const se_ServiceManagedEc2FleetConfiguration = (
   return take(input, {
     instanceCapabilities: (_) => se_ServiceManagedEc2InstanceCapabilities(_, context),
     instanceMarketOptions: _json,
+    storageProfileId: [],
+    vpcConfiguration: _json,
   });
 };
 
@@ -6733,6 +6751,10 @@ const se_ServiceManagedEc2InstanceCapabilities = (
 
 // se_Tags omitted.
 
+// se_TaskRunManifestPropertiesListRequest omitted.
+
+// se_TaskRunManifestPropertiesRequest omitted.
+
 /**
  * serializeAws_restJson1UpdatedSessionActionInfo
  */
@@ -6740,6 +6762,7 @@ const se_UpdatedSessionActionInfo = (input: UpdatedSessionActionInfo, context: _
   return take(input, {
     completedStatus: [],
     endedAt: __serializeDateTime,
+    manifests: _json,
     processExitCode: [],
     progressMessage: [],
     progressPercent: __serializeFloat,
@@ -6770,6 +6793,10 @@ const se_UpdatedSessionActions = (input: Record<string, UpdatedSessionActionInfo
 // se_UserJobsFirst omitted.
 
 // se_VCpuCountRange omitted.
+
+// se_VpcConfiguration omitted.
+
+// se_VpcResourceConfigurationArns omitted.
 
 // se_WindowsUser omitted.
 
@@ -6938,6 +6965,7 @@ const de_CustomerManagedFleetConfiguration = (
   return take(output, {
     mode: __expectString,
     storageProfileId: __expectString,
+    tagPropagationMode: __expectString,
     workerCapabilities: (_: any) => de_CustomerManagedWorkerCapabilities(_, context),
   }) as any;
 };
@@ -7143,6 +7171,7 @@ const de_FleetSummary = (output: any, context: __SerdeContext): FleetSummary => 
     maxWorkerCount: __expectInt32,
     minWorkerCount: __expectInt32,
     status: __expectString,
+    statusMessage: __expectString,
     targetWorkerCount: __expectInt32,
     updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     updatedBy: __expectString,
@@ -7151,6 +7180,8 @@ const de_FleetSummary = (output: any, context: __SerdeContext): FleetSummary => 
 };
 
 // de_GetJobEntityError omitted.
+
+// de_HostConfiguration omitted.
 
 // de_HostPropertiesResponse omitted.
 
@@ -7261,8 +7292,11 @@ const de_JobSearchSummary = (output: any, context: __SerdeContext): JobSearchSum
     sourceJobId: __expectString,
     startedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     targetTaskRunStatus: __expectString,
+    taskFailureRetryCount: __expectInt32,
     taskRunStatus: __expectString,
     taskRunStatusCounts: _json,
+    updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    updatedBy: __expectString,
   }) as any;
 };
 
@@ -7297,6 +7331,7 @@ const de_JobSummary = (output: any, context: __SerdeContext): JobSummary => {
     sourceJobId: __expectString,
     startedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     targetTaskRunStatus: __expectString,
+    taskFailureRetryCount: __expectInt32,
     taskRunStatus: __expectString,
     taskRunStatusCounts: _json,
     updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -7538,6 +7573,8 @@ const de_ServiceManagedEc2FleetConfiguration = (
   return take(output, {
     instanceCapabilities: (_: any) => de_ServiceManagedEc2InstanceCapabilities(_, context),
     instanceMarketOptions: _json,
+    storageProfileId: __expectString,
+    vpcConfiguration: _json,
   }) as any;
 };
 
@@ -7589,6 +7626,7 @@ const de_SessionActionSummary = (output: any, context: __SerdeContext): SessionA
   return take(output, {
     definition: (_: any) => _json(__expectUnion(_)),
     endedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    manifests: _json,
     progressPercent: __limitedParseFloat32,
     sessionActionId: __expectString,
     startedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -7754,6 +7792,7 @@ const de_StepSearchSummaries = (output: any, context: __SerdeContext): StepSearc
 const de_StepSearchSummary = (output: any, context: __SerdeContext): StepSearchSummary => {
   return take(output, {
     createdAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    createdBy: __expectString,
     endedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     jobId: __expectString,
     lifecycleStatus: __expectString,
@@ -7764,8 +7803,11 @@ const de_StepSearchSummary = (output: any, context: __SerdeContext): StepSearchS
     startedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     stepId: __expectString,
     targetTaskRunStatus: __expectString,
+    taskFailureRetryCount: __expectInt32,
     taskRunStatus: __expectString,
     taskRunStatusCounts: _json,
+    updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    updatedBy: __expectString,
   }) as any;
 };
 
@@ -7796,6 +7838,7 @@ const de_StepSummary = (output: any, context: __SerdeContext): StepSummary => {
     startedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     stepId: __expectString,
     targetTaskRunStatus: __expectString,
+    taskFailureRetryCount: __expectInt32,
     taskRunStatus: __expectString,
     taskRunStatusCounts: _json,
     updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
@@ -7818,6 +7861,10 @@ const de_StepSummary = (output: any, context: __SerdeContext): StepSummary => {
 // de_TaskParameters omitted.
 
 // de_TaskParameterValue omitted.
+
+// de_TaskRunManifestPropertiesListResponse omitted.
+
+// de_TaskRunManifestPropertiesResponse omitted.
 
 // de_TaskRunSessionActionDefinition omitted.
 
@@ -7852,6 +7899,8 @@ const de_TaskSearchSummary = (output: any, context: __SerdeContext): TaskSearchS
     stepId: __expectString,
     targetRunStatus: __expectString,
     taskId: __expectString,
+    updatedAt: (_: any) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
+    updatedBy: __expectString,
   }) as any;
 };
 
@@ -7894,6 +7943,10 @@ const de_TaskSummary = (output: any, context: __SerdeContext): TaskSummary => {
 // de_ValidationExceptionFieldList omitted.
 
 // de_VCpuCountRange omitted.
+
+// de_VpcConfiguration omitted.
+
+// de_VpcResourceConfigurationArns omitted.
 
 // de_WindowsUser omitted.
 

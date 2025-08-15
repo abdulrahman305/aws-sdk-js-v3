@@ -2,12 +2,20 @@
 import { SENSITIVE_STRING } from "@smithy/smithy-client";
 
 import {
+  AccountInfo,
+  AccountInfoFilterSensitiveLog,
+  AccountPoolSummary,
+  AccountPoolSummaryFilterSensitiveLog,
+  AccountSource,
+  AccountSourceFilterSensitiveLog,
   ActionParameters,
   AssetFilterSummary,
   AssetFilterSummaryFilterSensitiveLog,
   AssetListing,
   AssetListingFilterSensitiveLog,
   AssetRevision,
+  AssetScope,
+  AssetTargetNameMap,
   ConfigurableEnvironmentAction,
   ConnectionCredentials,
   ConnectionPropertiesOutput,
@@ -46,13 +54,12 @@ import {
   FormTypeStatus,
   GlossaryStatus,
   GlossaryTermStatus,
-  GrantedEntity,
   GroupProfileStatus,
   ListingStatus,
   ManagedPolicyType,
+  MatchRationaleItem,
   Member,
   Model,
-  OwnerProperties,
   PhysicalEndpoint,
   PhysicalEndpointFilterSensitiveLog,
   PolicyGrantDetail,
@@ -61,24 +68,18 @@ import {
   ProjectStatus,
   ProvisioningProperties,
   RecommendationConfiguration,
+  ResolutionStrategy,
   Resource,
   RuleAction,
   RuleDetail,
   RuleScope,
-  RuleTarget,
-  RuleTargetType,
-  RuleType,
   ScheduleConfiguration,
   SingleSignOn,
   Status,
-  SubscribedAsset,
   SubscribedListing,
   SubscribedListingFilterSensitiveLog,
-  SubscribedListingInput,
   SubscribedPrincipal,
   SubscribedPrincipalFilterSensitiveLog,
-  SubscribedProjectInput,
-  SubscriptionGrantOverallStatus,
   SubscriptionRequestStatus,
   SubscriptionStatus,
   TargetEntityType,
@@ -86,6 +87,576 @@ import {
   TimeSeriesDataPointSummaryFormOutput,
   UserDesignation,
 } from "./models_0";
+
+/**
+ * <p>The target for the domain unit.</p>
+ * @public
+ */
+export interface DomainUnitTarget {
+  /**
+   * <p>The ID of the domain unit.</p>
+   * @public
+   */
+  domainUnitId: string | undefined;
+
+  /**
+   * <p>Specifies whether to apply a rule to the child domain units.</p>
+   * @public
+   */
+  includeChildDomainUnits?: boolean | undefined;
+}
+
+/**
+ * <p>The target of the rule.</p>
+ * @public
+ */
+export type RuleTarget = RuleTarget.DomainUnitTargetMember | RuleTarget.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace RuleTarget {
+  /**
+   * <p>The ID of the domain unit.</p>
+   * @public
+   */
+  export interface DomainUnitTargetMember {
+    domainUnitTarget: DomainUnitTarget;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    domainUnitTarget?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    domainUnitTarget: (value: DomainUnitTarget) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: RuleTarget, visitor: Visitor<T>): T => {
+    if (value.domainUnitTarget !== undefined) return visitor.domainUnitTarget(value.domainUnitTarget);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ */
+export interface CreateRuleInput {
+  /**
+   * <p>The ID of the domain where the rule is created.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The name of the rule.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The target of the rule.</p>
+   * @public
+   */
+  target: RuleTarget | undefined;
+
+  /**
+   * <p>The action of the rule.</p>
+   * @public
+   */
+  action: RuleAction | undefined;
+
+  /**
+   * <p>The scope of the rule.</p>
+   * @public
+   */
+  scope: RuleScope | undefined;
+
+  /**
+   * <p>The detail of the rule.</p>
+   * @public
+   */
+  detail: RuleDetail | undefined;
+
+  /**
+   * <p>The description of the rule.</p>
+   * @public
+   */
+  description?: string | undefined;
+
+  /**
+   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
+   *          request.</p>
+   * @public
+   */
+  clientToken?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RuleType = {
+  METADATA_FORM_ENFORCEMENT: "METADATA_FORM_ENFORCEMENT",
+} as const;
+
+/**
+ * @public
+ */
+export type RuleType = (typeof RuleType)[keyof typeof RuleType];
+
+/**
+ * @public
+ * @enum
+ */
+export const RuleTargetType = {
+  DOMAIN_UNIT: "DOMAIN_UNIT",
+} as const;
+
+/**
+ * @public
+ */
+export type RuleTargetType = (typeof RuleTargetType)[keyof typeof RuleTargetType];
+
+/**
+ * @public
+ */
+export interface CreateRuleOutput {
+  /**
+   * <p>The ID of the rule.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>The name of the rule.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The type of the rule.</p>
+   * @public
+   */
+  ruleType: RuleType | undefined;
+
+  /**
+   * <p>The target of the rule.</p>
+   * @public
+   */
+  target: RuleTarget | undefined;
+
+  /**
+   * <p>The action of the rule.</p>
+   * @public
+   */
+  action: RuleAction | undefined;
+
+  /**
+   * <p>The scope of the rule.</p>
+   * @public
+   */
+  scope: RuleScope | undefined;
+
+  /**
+   * <p>The detail of the rule.</p>
+   * @public
+   */
+  detail: RuleDetail | undefined;
+
+  /**
+   * <p>The target type of the rule.</p>
+   * @public
+   */
+  targetType?: RuleTargetType | undefined;
+
+  /**
+   * <p>The description of the rule.</p>
+   * @public
+   */
+  description?: string | undefined;
+
+  /**
+   * <p>The timestamp at which the rule is created.</p>
+   * @public
+   */
+  createdAt: Date | undefined;
+
+  /**
+   * <p>The user who creates the rule.</p>
+   * @public
+   */
+  createdBy: string | undefined;
+}
+
+/**
+ * <p>A revision to be made to an asset published in a Amazon DataZone catalog.</p>
+ * @public
+ */
+export interface ListingRevisionInput {
+  /**
+   * <p>An identifier of revision to be made to an asset published in a Amazon DataZone
+   *          catalog.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>The details of a revision to be made to an asset published in a Amazon DataZone
+   *          catalog.</p>
+   * @public
+   */
+  revision: string | undefined;
+}
+
+/**
+ * <p>The details of a listing for which a subscription is to be granted.</p>
+ * @public
+ */
+export type GrantedEntityInput = GrantedEntityInput.ListingMember | GrantedEntityInput.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace GrantedEntityInput {
+  /**
+   * <p>The listing for which a subscription is to be granted.</p>
+   * @public
+   */
+  export interface ListingMember {
+    listing: ListingRevisionInput;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    listing?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    listing: (value: ListingRevisionInput) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: GrantedEntityInput, visitor: Visitor<T>): T => {
+    if (value.listing !== undefined) return visitor.listing(value.listing);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ */
+export interface CreateSubscriptionGrantInput {
+  /**
+   * <p>The ID of the Amazon DataZone domain in which the subscription grant is created.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the environment in which the subscription grant is created.</p>
+   * @public
+   */
+  environmentIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the subscription target for which the subscription grant is created.</p>
+   * @public
+   */
+  subscriptionTargetIdentifier?: string | undefined;
+
+  /**
+   * <p>The entity to which the subscription is to be granted.</p>
+   * @public
+   */
+  grantedEntity: GrantedEntityInput | undefined;
+
+  /**
+   * <p>The names of the assets for which the subscription grant is created.</p>
+   * @public
+   */
+  assetTargetNames?: AssetTargetNameMap[] | undefined;
+
+  /**
+   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
+   *          request.</p>
+   * @public
+   */
+  clientToken?: string | undefined;
+}
+
+/**
+ * <p>Specifies the error message that is returned if the operation cannot be successfully
+ *          completed.</p>
+ * @public
+ */
+export interface FailureCause {
+  /**
+   * <p>The description of the error message.</p>
+   * @public
+   */
+  message?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SubscriptionGrantStatus = {
+  GRANTED: "GRANTED",
+  GRANT_FAILED: "GRANT_FAILED",
+  GRANT_IN_PROGRESS: "GRANT_IN_PROGRESS",
+  GRANT_PENDING: "GRANT_PENDING",
+  REVOKED: "REVOKED",
+  REVOKE_FAILED: "REVOKE_FAILED",
+  REVOKE_IN_PROGRESS: "REVOKE_IN_PROGRESS",
+  REVOKE_PENDING: "REVOKE_PENDING",
+} as const;
+
+/**
+ * @public
+ */
+export type SubscriptionGrantStatus = (typeof SubscriptionGrantStatus)[keyof typeof SubscriptionGrantStatus];
+
+/**
+ * <p>The details of the asset for which the subscription grant is created.</p>
+ * @public
+ */
+export interface SubscribedAsset {
+  /**
+   * <p>The identifier of the asset for which the subscription grant is created.</p>
+   * @public
+   */
+  assetId: string | undefined;
+
+  /**
+   * <p>The revision of the asset for which the subscription grant is created.</p>
+   * @public
+   */
+  assetRevision: string | undefined;
+
+  /**
+   * <p>The status of the asset for which the subscription grant is created.</p>
+   * @public
+   */
+  status: SubscriptionGrantStatus | undefined;
+
+  /**
+   * <p>The target name of the asset for which the subscription grant is created.</p>
+   * @public
+   */
+  targetName?: string | undefined;
+
+  /**
+   * <p>The failure cause included in the details of the asset for which the subscription grant
+   *          is created.</p>
+   * @public
+   */
+  failureCause?: FailureCause | undefined;
+
+  /**
+   * <p>The timestamp of when the subscription grant to the asset is created.</p>
+   * @public
+   */
+  grantedTimestamp?: Date | undefined;
+
+  /**
+   * <p>The failure timestamp included in the details of the asset for which the subscription
+   *          grant is created.</p>
+   * @public
+   */
+  failureTimestamp?: Date | undefined;
+
+  /**
+   * <p>The asset scope of the subscribed asset.</p>
+   * @public
+   */
+  assetScope?: AssetScope | undefined;
+}
+
+/**
+ * <p>A revision of an asset published in a Amazon DataZone catalog.</p>
+ * @public
+ */
+export interface ListingRevision {
+  /**
+   * <p>An identifier of a revision of an asset published in a Amazon DataZone catalog.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The details of a revision of an asset published in a Amazon DataZone catalog.</p>
+   * @public
+   */
+  revision: string | undefined;
+}
+
+/**
+ * <p>The details of a listing for which a subscription is granted.</p>
+ * @public
+ */
+export type GrantedEntity = GrantedEntity.ListingMember | GrantedEntity.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace GrantedEntity {
+  /**
+   * <p>The listing for which a subscription is granted.</p>
+   * @public
+   */
+  export interface ListingMember {
+    listing: ListingRevision;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    listing?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    listing: (value: ListingRevision) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: GrantedEntity, visitor: Visitor<T>): T => {
+    if (value.listing !== undefined) return visitor.listing(value.listing);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SubscriptionGrantOverallStatus = {
+  COMPLETED: "COMPLETED",
+  GRANT_AND_REVOKE_FAILED: "GRANT_AND_REVOKE_FAILED",
+  GRANT_FAILED: "GRANT_FAILED",
+  INACCESSIBLE: "INACCESSIBLE",
+  IN_PROGRESS: "IN_PROGRESS",
+  PENDING: "PENDING",
+  REVOKE_FAILED: "REVOKE_FAILED",
+} as const;
+
+/**
+ * @public
+ */
+export type SubscriptionGrantOverallStatus =
+  (typeof SubscriptionGrantOverallStatus)[keyof typeof SubscriptionGrantOverallStatus];
+
+/**
+ * @public
+ */
+export interface CreateSubscriptionGrantOutput {
+  /**
+   * <p>The ID of the subscription grant.</p>
+   * @public
+   */
+  id: string | undefined;
+
+  /**
+   * <p>The Amazon DataZone user who created the subscription grant.</p>
+   * @public
+   */
+  createdBy: string | undefined;
+
+  /**
+   * <p>The Amazon DataZone user who updated the subscription grant.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
+
+  /**
+   * <p>The ID of the Amazon DataZone domain in which the subscription grant is created.</p>
+   * @public
+   */
+  domainId: string | undefined;
+
+  /**
+   * <p>A timestamp of when the subscription grant is created.</p>
+   * @public
+   */
+  createdAt: Date | undefined;
+
+  /**
+   * <p>A timestamp of when the subscription grant was updated.</p>
+   * @public
+   */
+  updatedAt: Date | undefined;
+
+  /**
+   * <p>The ID of the subscription target for which the subscription grant is created.</p>
+   * @public
+   */
+  subscriptionTargetId: string | undefined;
+
+  /**
+   * <p>The entity to which the subscription is granted.</p>
+   * @public
+   */
+  grantedEntity: GrantedEntity | undefined;
+
+  /**
+   * <p>The status of the subscription grant.</p>
+   * @public
+   */
+  status: SubscriptionGrantOverallStatus | undefined;
+
+  /**
+   * <p>The assets for which the subscription grant is created.</p>
+   * @public
+   */
+  assets?: SubscribedAsset[] | undefined;
+
+  /**
+   * <p>The identifier of the subscription grant.</p>
+   *
+   * @deprecated
+   * @public
+   */
+  subscriptionId?: string | undefined;
+}
+
+/**
+ * <p>The published asset for which the subscription grant is to be created.</p>
+ * @public
+ */
+export interface SubscribedListingInput {
+  /**
+   * <p>The identifier of the published asset for which the subscription grant is to be
+   *          created.</p>
+   * @public
+   */
+  identifier: string | undefined;
+}
+
+/**
+ * <p>The project that is to be given a subscription grant.</p>
+ * @public
+ */
+export interface SubscribedProjectInput {
+  /**
+   * <p>The identifier of the project that is to be given a subscription grant.</p>
+   * @public
+   */
+  identifier?: string | undefined;
+}
 
 /**
  * <p>The principal that is to be given a subscriptiong grant.</p>
@@ -791,6 +1362,18 @@ export interface GetDataProductOutput {
 }
 
 /**
+ * <p>The additional attributes of an Amazon DataZone data product.</p>
+ * @public
+ */
+export interface DataProductItemAdditionalAttributes {
+  /**
+   * <p>List of rationales indicating why this item was matched by search.</p>
+   * @public
+   */
+  matchRationale?: MatchRationaleItem[] | undefined;
+}
+
+/**
  * <p>The summary of the listing of the data product.</p>
  * @public
  */
@@ -872,6 +1455,12 @@ export interface DataProductListingItemAdditionalAttributes {
    * @public
    */
   forms?: string | undefined;
+
+  /**
+   * <p>List of rationales indicating why this item was matched by search.</p>
+   * @public
+   */
+  matchRationale?: MatchRationaleItem[] | undefined;
 }
 
 /**
@@ -1046,6 +1635,12 @@ export interface DataProductResultItem {
    * @public
    */
   firstRevisionCreatedBy?: string | undefined;
+
+  /**
+   * <p>The additional attributes of an Amazon DataZone data product.</p>
+   * @public
+   */
+  additionalAttributes?: DataProductItemAdditionalAttributes | undefined;
 }
 
 /**
@@ -2526,6 +3121,28 @@ export interface DataSourceRunActivity {
    */
   updatedAt: Date | undefined;
 }
+
+/**
+ * @public
+ */
+export interface DeleteAccountPoolInput {
+  /**
+   * <p>The ID of the domain where the account pool is deleted.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the account pool to be deleted.</p>
+   * @public
+   */
+  identifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface DeleteAccountPoolOutput {}
 
 /**
  * @public
@@ -4115,6 +4732,98 @@ export interface GetFormTypeOutput {
    * @public
    */
   imports?: Import[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetAccountPoolInput {
+  /**
+   * <p>The ID of the domain in which the account pool lives whose details are to be
+   *          displayed.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the account pool whose details are to be displayed.</p>
+   * @public
+   */
+  identifier: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetAccountPoolOutput {
+  /**
+   * <p>The ID of the domain in which the account pool lives whose details are to be
+   *          displayed.</p>
+   * @public
+   */
+  domainId?: string | undefined;
+
+  /**
+   * <p>The name of the account pool.</p>
+   * @public
+   */
+  name?: string | undefined;
+
+  /**
+   * <p>The ID of the account pool.</p>
+   * @public
+   */
+  id?: string | undefined;
+
+  /**
+   * <p>The description of the account pool.</p>
+   * @public
+   */
+  description?: string | undefined;
+
+  /**
+   * <p>The mechanism used to resolve the account selection from the account pool.</p>
+   * @public
+   */
+  resolutionStrategy?: ResolutionStrategy | undefined;
+
+  /**
+   * <p>The source of accounts for the account pool. In the current release, it's either a
+   *          static list of accounts provided by the customer or a custom Amazon Web Services Lambda
+   *          handler. </p>
+   * @public
+   */
+  accountSource: AccountSource | undefined;
+
+  /**
+   * <p>The user who created the account pool.</p>
+   * @public
+   */
+  createdBy: string | undefined;
+
+  /**
+   * <p>The timestamp at which the account pool was created.</p>
+   * @public
+   */
+  createdAt?: Date | undefined;
+
+  /**
+   * <p>The timestamp at which the account pool was last updated.</p>
+   * @public
+   */
+  lastUpdatedAt?: Date | undefined;
+
+  /**
+   * <p>The user who last updated the account pool.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
+
+  /**
+   * <p>The domain unit ID of the account pool.</p>
+   * @public
+   */
+  domainUnitId?: string | undefined;
 }
 
 /**
@@ -6386,6 +7095,160 @@ export interface UpdateGlossaryTermOutput {
 
 /**
  * @public
+ * @enum
+ */
+export const SortFieldAccountPool = {
+  NAME: "NAME",
+} as const;
+
+/**
+ * @public
+ */
+export type SortFieldAccountPool = (typeof SortFieldAccountPool)[keyof typeof SortFieldAccountPool];
+
+/**
+ * @public
+ * @enum
+ */
+export const SortOrder = {
+  ASCENDING: "ASCENDING",
+  DESCENDING: "DESCENDING",
+} as const;
+
+/**
+ * @public
+ */
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
+
+/**
+ * @public
+ */
+export interface ListAccountPoolsInput {
+  /**
+   * <p>The ID of the domain where exsting account pools are to be listed.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The name of the account pool to be listed.</p>
+   * @public
+   */
+  name?: string | undefined;
+
+  /**
+   * <p>The sort by mechanism in which the existing account pools are to be listed.</p>
+   * @public
+   */
+  sortBy?: SortFieldAccountPool | undefined;
+
+  /**
+   * <p>The sort order in which the existing account pools are to be listed.</p>
+   * @public
+   */
+  sortOrder?: SortOrder | undefined;
+
+  /**
+   * <p>When the number of account pools is greater than the default value for the MaxResults
+   *          parameter, or if you explicitly specify a value for MaxResults that is less than the number
+   *          of account pools, the response includes a pagination token named NextToken. You can specify
+   *          this NextToken value in a subsequent call to ListAccountPools to list the next set of
+   *          account pools.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of account pools to return in a single call to ListAccountPools. When
+   *          the number of account pools to be listed is greater than the value of MaxResults, the
+   *          response contains a NextToken value that you can use in a subsequent call to
+   *          ListAccountPools to list the next set of account pools.</p>
+   * @public
+   */
+  maxResults?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListAccountPoolsOutput {
+  /**
+   * <p>The results of the ListAccountPools operation.</p>
+   * @public
+   */
+  items?: AccountPoolSummary[] | undefined;
+
+  /**
+   * <p>When the number of account pools is greater than the default value for the MaxResults
+   *          parameter, or if you explicitly specify a value for MaxResults that is less than the number
+   *          of account pools, the response includes a pagination token named NextToken. You can specify
+   *          this NextToken value in a subsequent call to ListAccountPools to list the next set of
+   *          account pools.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListAccountsInAccountPoolInput {
+  /**
+   * <p>The ID of the domain in which the accounts in the specified account pool are to be
+   *          listed.</p>
+   * @public
+   */
+  domainIdentifier: string | undefined;
+
+  /**
+   * <p>The ID of the account pool whose accounts are to be listed.</p>
+   * @public
+   */
+  identifier: string | undefined;
+
+  /**
+   * <p>When the number of accounts is greater than the default value for the MaxResults
+   *          parameter, or if you explicitly specify a value for MaxResults that is less than the number
+   *          of accounts, the response includes a pagination token named NextToken. You can specify this
+   *          NextToken value in a subsequent call to ListAccountsInAccountPool to list the next set of
+   *          accounts.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of accounts to return in a single call to ListAccountsInAccountPool.
+   *          When the number of accounts to be listed is greater than the value of MaxResults, the
+   *          response contains a NextToken value that you can use in a subsequent call to
+   *          ListAccountsInAccountPool to list the next set of accounts.</p>
+   * @public
+   */
+  maxResults?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListAccountsInAccountPoolOutput {
+  /**
+   * <p>The results of the ListAccountsInAccountPool operation.</p>
+   * @public
+   */
+  items?: AccountInfo[] | undefined;
+
+  /**
+   * <p>When the number of accounts is greater than the default value for the MaxResults
+   *          parameter, or if you explicitly specify a value for MaxResults that is less than the number
+   *          of accounts, the response includes a pagination token named NextToken. You can specify this
+   *          NextToken value in a subsequent call to ListAccountsInAccountPool to list the next set of
+   *          accounts.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+}
+
+/**
+ * @public
  */
 export interface ListAssetFiltersInput {
   /**
@@ -6522,20 +7385,6 @@ export const SortFieldConnection = {
  * @public
  */
 export type SortFieldConnection = (typeof SortFieldConnection)[keyof typeof SortFieldConnection];
-
-/**
- * @public
- * @enum
- */
-export const SortOrder = {
-  ASCENDING: "ASCENDING",
-  DESCENDING: "DESCENDING",
-} as const;
-
-/**
- * @public
- */
-export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
 
 /**
  * @public
@@ -10229,1000 +11078,26 @@ export interface PostLineageEventInput {
 }
 
 /**
- * @public
+ * @internal
  */
-export interface PostLineageEventOutput {
-  /**
-   * <p>The ID of the lineage event.</p>
-   * @public
-   */
-  id?: string | undefined;
-
-  /**
-   * <p>The ID of the domain.</p>
-   * @public
-   */
-  domainId?: string | undefined;
-}
+export const CreateRuleInputFilterSensitiveLog = (obj: CreateRuleInput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.target && { target: obj.target }),
+  ...(obj.detail && { detail: obj.detail }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+});
 
 /**
- * <p>The time series data points form.</p>
- * @public
+ * @internal
  */
-export interface TimeSeriesDataPointFormInput {
-  /**
-   * <p>The name of the time series data points form.</p>
-   * @public
-   */
-  formName: string | undefined;
-
-  /**
-   * <p>The ID of the type of the time series data points form.</p>
-   * @public
-   */
-  typeIdentifier: string | undefined;
-
-  /**
-   * <p>The revision type of the time series data points form.</p>
-   * @public
-   */
-  typeRevision?: string | undefined;
-
-  /**
-   * <p>The timestamp of the time series data points form.</p>
-   * @public
-   */
-  timestamp: Date | undefined;
-
-  /**
-   * <p>The content of the time series data points form.</p>
-   * @public
-   */
-  content?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface PostTimeSeriesDataPointsInput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which you want to post time series data
-   *          points.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the asset for which you want to post time series data points.</p>
-   * @public
-   */
-  entityIdentifier: string | undefined;
-
-  /**
-   * <p>The type of the asset for which you want to post data points.</p>
-   * @public
-   */
-  entityType: TimeSeriesEntityType | undefined;
-
-  /**
-   * <p>The forms that contain the data points that you want to post.</p>
-   * @public
-   */
-  forms: TimeSeriesDataPointFormInput[] | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface PostTimeSeriesDataPointsOutput {
-  /**
-   * <p>The ID of the Amazon DataZone domain in which you want to post time series data
-   *          points.</p>
-   * @public
-   */
-  domainId?: string | undefined;
-
-  /**
-   * <p>The ID of the asset for which you want to post time series data points.</p>
-   * @public
-   */
-  entityId?: string | undefined;
-
-  /**
-   * <p>The type of the asset for which you want to post data points.</p>
-   * @public
-   */
-  entityType?: TimeSeriesEntityType | undefined;
-
-  /**
-   * <p>The forms that contain the data points that you have posted.</p>
-   * @public
-   */
-  forms?: TimeSeriesDataPointFormOutput[] | undefined;
-}
-
-/**
- * <p>The details of the automatically generated business metadata that is rejected.</p>
- * @public
- */
-export interface RejectChoice {
-  /**
-   * <p>Specifies the target (for example, a column name) where a prediction can be
-   *          rejected.</p>
-   * @public
-   */
-  predictionTarget: string | undefined;
-
-  /**
-   * <p>Specifies the the automatically generated business metadata that can be rejected.</p>
-   * @public
-   */
-  predictionChoices?: number[] | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const RejectRuleBehavior = {
-  ALL: "ALL",
-  NONE: "NONE",
-} as const;
-
-/**
- * @public
- */
-export type RejectRuleBehavior = (typeof RejectRuleBehavior)[keyof typeof RejectRuleBehavior];
-
-/**
- * <p>Specifies the rule and the threshold under which a prediction can be rejected.</p>
- * @public
- */
-export interface RejectRule {
-  /**
-   * <p>Specifies whether you want to reject the top prediction for all targets or none.</p>
-   * @public
-   */
-  rule?: RejectRuleBehavior | undefined;
-
-  /**
-   * <p>The confidence score that specifies the condition at which a prediction can be
-   *          rejected.</p>
-   * @public
-   */
-  threshold?: number | undefined;
-}
-
-/**
- * @public
- */
-export interface RejectPredictionsInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the prediction.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The revision that is to be made to the asset.</p>
-   * @public
-   */
-  revision?: string | undefined;
-
-  /**
-   * <p>Specifies the rule (or the conditions) under which a prediction can be rejected.</p>
-   * @public
-   */
-  rejectRule?: RejectRule | undefined;
-
-  /**
-   * <p>Specifies the prediction (aka, the automatically generated piece of metadata) and the
-   *          target (for example, a column name) that can be rejected.</p>
-   * @public
-   */
-  rejectChoices?: RejectChoice[] | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface RejectPredictionsOutput {
-  /**
-   * <p>The ID of the Amazon DataZone domain.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The ID of the asset.</p>
-   * @public
-   */
-  assetId: string | undefined;
-
-  /**
-   * <p>The revision that is to be made to the asset.</p>
-   * @public
-   */
-  assetRevision: string | undefined;
-}
-
-/**
- * @public
- */
-export interface RejectSubscriptionRequestInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which the subscription request was
-   *          rejected.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the subscription request that was rejected.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The decision comment of the rejected subscription request.</p>
-   * @public
-   */
-  decisionComment?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface RejectSubscriptionRequestOutput {
-  /**
-   * <p>The identifier of the subscription request that was rejected.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The timestamp of when the subscription request was rejected.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The Amazon DataZone user who updated the subscription request.</p>
-   * @public
-   */
-  updatedBy?: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon DataZone domain in which the subscription request was
-   *          rejected.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The status of the subscription request.</p>
-   * @public
-   */
-  status: SubscriptionRequestStatus | undefined;
-
-  /**
-   * <p>The timestamp of when the subscription request was rejected.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The timestamp of when the subscription request was updated.</p>
-   * @public
-   */
-  updatedAt: Date | undefined;
-
-  /**
-   * <p>The reason for the subscription request.</p>
-   * @public
-   */
-  requestReason: string | undefined;
-
-  /**
-   * <p>The subscribed principals of the subscription request.</p>
-   * @public
-   */
-  subscribedPrincipals: SubscribedPrincipal[] | undefined;
-
-  /**
-   * <p>The subscribed listings of the subscription request.</p>
-   * @public
-   */
-  subscribedListings: SubscribedListing[] | undefined;
-
-  /**
-   * <p>The identifier of the subscription request reviewer.</p>
-   * @public
-   */
-  reviewerId?: string | undefined;
-
-  /**
-   * <p>The decision comment of the rejected subscription request.</p>
-   * @public
-   */
-  decisionComment?: string | undefined;
-
-  /**
-   * <p>The ID of the existing subscription.</p>
-   * @public
-   */
-  existingSubscriptionId?: string | undefined;
-
-  /**
-   * <p>Metadata forms included in the subscription request.</p>
-   * @public
-   */
-  metadataForms?: FormOutput[] | undefined;
-}
-
-/**
- * @public
- */
-export interface RemoveEntityOwnerInput {
-  /**
-   * <p>The ID of the domain where you want to remove an owner from an entity.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The type of the entity from which you want to remove an owner.</p>
-   * @public
-   */
-  entityType: DataZoneEntityType | undefined;
-
-  /**
-   * <p>The ID of the entity from which you want to remove an owner.</p>
-   * @public
-   */
-  entityIdentifier: string | undefined;
-
-  /**
-   * <p>The owner that you want to remove from an entity.</p>
-   * @public
-   */
-  owner: OwnerProperties | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface RemoveEntityOwnerOutput {}
-
-/**
- * @public
- */
-export interface RemovePolicyGrantInput {
-  /**
-   * <p>The ID of the domain where you want to remove a policy grant.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The type of the entity from which you want to remove a policy grant.</p>
-   * @public
-   */
-  entityType: TargetEntityType | undefined;
-
-  /**
-   * <p>The ID of the entity from which you want to remove a policy grant.</p>
-   * @public
-   */
-  entityIdentifier: string | undefined;
-
-  /**
-   * <p>The type of the policy that you want to remove.</p>
-   * @public
-   */
-  policyType: ManagedPolicyType | undefined;
-
-  /**
-   * <p>The principal from which you want to remove a policy grant.</p>
-   * @public
-   */
-  principal: PolicyGrantPrincipal | undefined;
-
-  /**
-   * <p>A unique, case-sensitive identifier that is provided to ensure the idempotency of the
-   *          request.</p>
-   * @public
-   */
-  clientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface RemovePolicyGrantOutput {}
-
-/**
- * @public
- */
-export interface RevokeSubscriptionInput {
-  /**
-   * <p>The identifier of the Amazon DataZone domain where you want to revoke a subscription.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The identifier of the revoked subscription.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>Specifies whether permissions are retained when the subscription is revoked.</p>
-   * @public
-   */
-  retainPermissions?: boolean | undefined;
-}
-
-/**
- * @public
- */
-export interface RevokeSubscriptionOutput {
-  /**
-   * <p>The identifier of the revoked subscription.</p>
-   * @public
-   */
-  id: string | undefined;
-
-  /**
-   * <p>The identifier of the user who revoked the subscription.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The Amazon DataZone user who revoked the subscription.</p>
-   * @public
-   */
-  updatedBy?: string | undefined;
-
-  /**
-   * <p>The identifier of the Amazon DataZone domain where you want to revoke a subscription.</p>
-   * @public
-   */
-  domainId: string | undefined;
-
-  /**
-   * <p>The status of the revoked subscription.</p>
-   * @public
-   */
-  status: SubscriptionStatus | undefined;
-
-  /**
-   * <p>The timestamp of when the subscription was revoked.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The timestamp of when the subscription was revoked.</p>
-   * @public
-   */
-  updatedAt: Date | undefined;
-
-  /**
-   * <p>The subscribed principal of the revoked subscription.</p>
-   * @public
-   */
-  subscribedPrincipal: SubscribedPrincipal | undefined;
-
-  /**
-   * <p>The subscribed listing of the revoked subscription.</p>
-   * @public
-   */
-  subscribedListing: SubscribedListing | undefined;
-
-  /**
-   * <p>The identifier of the subscription request for the revoked subscription.</p>
-   * @public
-   */
-  subscriptionRequestId?: string | undefined;
-
-  /**
-   * <p>Specifies whether permissions are retained when the subscription is revoked.</p>
-   * @public
-   */
-  retainPermissions?: boolean | undefined;
-}
-
-/**
- * @public
- */
-export interface DeleteRuleInput {
-  /**
-   * <p>The ID of the domain that where the rule is to be deleted.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the rule that is to be deleted.</p>
-   * @public
-   */
-  identifier: string | undefined;
-}
-
-/**
- * @public
- */
-export interface DeleteRuleOutput {}
-
-/**
- * @public
- */
-export interface GetRuleInput {
-  /**
-   * <p>The ID of the domain where the <code>GetRule</code> action is to be invoked.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the rule.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The revision of the rule.</p>
-   * @public
-   */
-  revision?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface GetRuleOutput {
-  /**
-   * <p>The ID of the rule.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The revision of the rule.</p>
-   * @public
-   */
-  revision: string | undefined;
-
-  /**
-   * <p>The name of the rule.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The type of the rule.</p>
-   * @public
-   */
-  ruleType: RuleType | undefined;
-
-  /**
-   * <p>The target of the rule.</p>
-   * @public
-   */
-  target: RuleTarget | undefined;
-
-  /**
-   * <p>The action of the rule.</p>
-   * @public
-   */
-  action: RuleAction | undefined;
-
-  /**
-   * <p>The scope of the rule.</p>
-   * @public
-   */
-  scope: RuleScope | undefined;
-
-  /**
-   * <p>The detail of the rule.</p>
-   * @public
-   */
-  detail: RuleDetail | undefined;
-
-  /**
-   * <p>The target type of the rule.</p>
-   * @public
-   */
-  targetType?: RuleTargetType | undefined;
-
-  /**
-   * <p>The description of the rule.</p>
-   * @public
-   */
-  description?: string | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was created.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was last updated.</p>
-   * @public
-   */
-  updatedAt: Date | undefined;
-
-  /**
-   * <p>The user who created the rule.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was last updated.</p>
-   * @public
-   */
-  lastUpdatedBy: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListRulesInput {
-  /**
-   * <p>The ID of the domain in which the rules are to be listed.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The target type of the rule.</p>
-   * @public
-   */
-  targetType: RuleTargetType | undefined;
-
-  /**
-   * <p>The target ID of the rule.</p>
-   * @public
-   */
-  targetIdentifier: string | undefined;
-
-  /**
-   * <p>The type of the rule.</p>
-   * @public
-   */
-  ruleType?: RuleType | undefined;
-
-  /**
-   * <p>The action of the rule.</p>
-   * @public
-   */
-  action?: RuleAction | undefined;
-
-  /**
-   * <p>The IDs of projects in which rules are to be listed.</p>
-   * @public
-   */
-  projectIds?: string[] | undefined;
-
-  /**
-   * <p>The asset types of the rule.</p>
-   * @public
-   */
-  assetTypes?: string[] | undefined;
-
-  /**
-   * <p>The data product of the rule.</p>
-   * @public
-   */
-  dataProduct?: boolean | undefined;
-
-  /**
-   * <p>Specifies whether to include cascading rules in the results.</p>
-   * @public
-   */
-  includeCascaded?: boolean | undefined;
-
-  /**
-   * <p>The maximum number of rules to return in a single call to <code>ListRules</code>. When
-   *          the number of rules to be listed is greater than the value of <code>MaxResults</code>, the
-   *          response contains a <code>NextToken</code> value that you can use in a subsequent call to
-   *             <code>ListRules</code> to list the next set of rules.</p>
-   * @public
-   */
-  maxResults?: number | undefined;
-
-  /**
-   * <p>When the number of rules is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of rules, the response includes a
-   *          pagination token named <code>NextToken</code>. You can specify this <code>NextToken</code>
-   *          value in a subsequent call to <code>ListRules</code> to list the next set of rules.</p>
-   * @public
-   */
-  nextToken?: string | undefined;
-}
-
-/**
- * <p>The summary of the rule.</p>
- * @public
- */
-export interface RuleSummary {
-  /**
-   * <p>The ID of the rule.</p>
-   * @public
-   */
-  identifier?: string | undefined;
-
-  /**
-   * <p>The revision of the rule.</p>
-   * @public
-   */
-  revision?: string | undefined;
-
-  /**
-   * <p>The type of the rule.</p>
-   * @public
-   */
-  ruleType?: RuleType | undefined;
-
-  /**
-   * <p>The name of the rule.</p>
-   * @public
-   */
-  name?: string | undefined;
-
-  /**
-   * <p>The target type of the rule.</p>
-   * @public
-   */
-  targetType?: RuleTargetType | undefined;
-
-  /**
-   * <p>The target of the rule.</p>
-   * @public
-   */
-  target?: RuleTarget | undefined;
-
-  /**
-   * <p>The action of the rule.</p>
-   * @public
-   */
-  action?: RuleAction | undefined;
-
-  /**
-   * <p>The scope of the rule.</p>
-   * @public
-   */
-  scope?: RuleScope | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was last updated.</p>
-   * @public
-   */
-  updatedAt?: Date | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was last updated.</p>
-   * @public
-   */
-  lastUpdatedBy?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface ListRulesOutput {
-  /**
-   * <p>The results of the <code>ListRules</code> action.</p>
-   * @public
-   */
-  items: RuleSummary[] | undefined;
-
-  /**
-   * <p>When the number of rules is greater than the default value for the
-   *             <code>MaxResults</code> parameter, or if you explicitly specify a value for
-   *             <code>MaxResults</code> that is less than the number of rules, the response includes a
-   *          pagination token named <code>NextToken</code>. You can specify this <code>NextToken</code>
-   *          value in a subsequent call to <code>ListRules</code> to list the next set of rules.</p>
-   * @public
-   */
-  nextToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateRuleInput {
-  /**
-   * <p>The ID of the domain in which a rule is to be updated.</p>
-   * @public
-   */
-  domainIdentifier: string | undefined;
-
-  /**
-   * <p>The ID of the rule that is to be updated</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The name of the rule.</p>
-   * @public
-   */
-  name?: string | undefined;
-
-  /**
-   * <p>The description of the rule.</p>
-   * @public
-   */
-  description?: string | undefined;
-
-  /**
-   * <p>The scrope of the rule.</p>
-   * @public
-   */
-  scope?: RuleScope | undefined;
-
-  /**
-   * <p>The detail of the rule.</p>
-   * @public
-   */
-  detail?: RuleDetail | undefined;
-
-  /**
-   * <p>Specifies whether to update this rule in the child domain units.</p>
-   * @public
-   */
-  includeChildDomainUnits?: boolean | undefined;
-}
-
-/**
- * @public
- */
-export interface UpdateRuleOutput {
-  /**
-   * <p>The ID of the rule.</p>
-   * @public
-   */
-  identifier: string | undefined;
-
-  /**
-   * <p>The revision of the rule.</p>
-   * @public
-   */
-  revision: string | undefined;
-
-  /**
-   * <p>The name of the rule.</p>
-   * @public
-   */
-  name: string | undefined;
-
-  /**
-   * <p>The type of the rule.</p>
-   * @public
-   */
-  ruleType: RuleType | undefined;
-
-  /**
-   * <p>The target of the rule.</p>
-   * @public
-   */
-  target: RuleTarget | undefined;
-
-  /**
-   * <p>The action of the rule.</p>
-   * @public
-   */
-  action: RuleAction | undefined;
-
-  /**
-   * <p>The scope of the rule.</p>
-   * @public
-   */
-  scope: RuleScope | undefined;
-
-  /**
-   * <p>The detail of the rule.</p>
-   * @public
-   */
-  detail: RuleDetail | undefined;
-
-  /**
-   * <p>The description of the rule.</p>
-   * @public
-   */
-  description?: string | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was created.</p>
-   * @public
-   */
-  createdAt: Date | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was last updated.</p>
-   * @public
-   */
-  updatedAt: Date | undefined;
-
-  /**
-   * <p>The user who created the rule.</p>
-   * @public
-   */
-  createdBy: string | undefined;
-
-  /**
-   * <p>The timestamp at which the rule was last updated.</p>
-   * @public
-   */
-  lastUpdatedBy: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const SearchOutputAdditionalAttribute = {
-  FORMS: "FORMS",
-  TIME_SERIES_DATA_POINT_FORMS: "TIME_SERIES_DATA_POINT_FORMS",
-} as const;
-
-/**
- * @public
- */
-export type SearchOutputAdditionalAttribute =
-  (typeof SearchOutputAdditionalAttribute)[keyof typeof SearchOutputAdditionalAttribute];
-
-/**
- * <p>A search filter in Amazon DataZone.</p>
- * @public
- */
-export interface Filter {
-  /**
-   * <p>A search filter attribute in Amazon DataZone.</p>
-   * @public
-   */
-  attribute: string | undefined;
-
-  /**
-   * <p>A search filter value in Amazon DataZone.</p>
-   * @public
-   */
-  value: string | undefined;
-}
+export const CreateRuleOutputFilterSensitiveLog = (obj: CreateRuleOutput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.target && { target: obj.target }),
+  ...(obj.detail && { detail: obj.detail }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+});
 
 /**
  * @internal
@@ -11343,6 +11218,7 @@ export const DataProductListingItemFilterSensitiveLog = (obj: DataProductListing
   ...(obj.glossaryTerms && {
     glossaryTerms: obj.glossaryTerms.map((item) => DetailedGlossaryTermFilterSensitiveLog(item)),
   }),
+  ...(obj.additionalAttributes && { additionalAttributes: obj.additionalAttributes }),
 });
 
 /**
@@ -11352,6 +11228,7 @@ export const DataProductResultItemFilterSensitiveLog = (obj: DataProductResultIt
   ...obj,
   ...(obj.name && { name: SENSITIVE_STRING }),
   ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.additionalAttributes && { additionalAttributes: obj.additionalAttributes }),
 });
 
 /**
@@ -11510,6 +11387,16 @@ export const GetFormTypeOutputFilterSensitiveLog = (obj: GetFormTypeOutput): any
   ...(obj.model && { model: SENSITIVE_STRING }),
   ...(obj.description && { description: SENSITIVE_STRING }),
   ...(obj.imports && { imports: obj.imports.map((item) => ImportFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
+export const GetAccountPoolOutputFilterSensitiveLog = (obj: GetAccountPoolOutput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+  ...(obj.description && { description: SENSITIVE_STRING }),
+  ...(obj.accountSource && { accountSource: AccountSourceFilterSensitiveLog(obj.accountSource) }),
 });
 
 /**
@@ -11720,6 +11607,30 @@ export const UpdateGlossaryTermOutputFilterSensitiveLog = (obj: UpdateGlossaryTe
   ...(obj.name && { name: SENSITIVE_STRING }),
   ...(obj.shortDescription && { shortDescription: SENSITIVE_STRING }),
   ...(obj.longDescription && { longDescription: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const ListAccountPoolsInputFilterSensitiveLog = (obj: ListAccountPoolsInput): any => ({
+  ...obj,
+  ...(obj.name && { name: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const ListAccountPoolsOutputFilterSensitiveLog = (obj: ListAccountPoolsOutput): any => ({
+  ...obj,
+  ...(obj.items && { items: obj.items.map((item) => AccountPoolSummaryFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
+export const ListAccountsInAccountPoolOutputFilterSensitiveLog = (obj: ListAccountsInAccountPoolOutput): any => ({
+  ...obj,
+  ...(obj.items && { items: obj.items.map((item) => AccountInfoFilterSensitiveLog(item)) }),
 });
 
 /**
@@ -11970,88 +11881,4 @@ export const ListSubscriptionTargetsOutputFilterSensitiveLog = (obj: ListSubscri
 export const PostLineageEventInputFilterSensitiveLog = (obj: PostLineageEventInput): any => ({
   ...obj,
   ...(obj.event && { event: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const RejectSubscriptionRequestInputFilterSensitiveLog = (obj: RejectSubscriptionRequestInput): any => ({
-  ...obj,
-  ...(obj.decisionComment && { decisionComment: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const RejectSubscriptionRequestOutputFilterSensitiveLog = (obj: RejectSubscriptionRequestOutput): any => ({
-  ...obj,
-  ...(obj.requestReason && { requestReason: SENSITIVE_STRING }),
-  ...(obj.subscribedPrincipals && {
-    subscribedPrincipals: obj.subscribedPrincipals.map((item) => SubscribedPrincipalFilterSensitiveLog(item)),
-  }),
-  ...(obj.subscribedListings && {
-    subscribedListings: obj.subscribedListings.map((item) => SubscribedListingFilterSensitiveLog(item)),
-  }),
-  ...(obj.decisionComment && { decisionComment: SENSITIVE_STRING }),
-  ...(obj.metadataForms && { metadataForms: obj.metadataForms.map((item) => FormOutputFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const RevokeSubscriptionOutputFilterSensitiveLog = (obj: RevokeSubscriptionOutput): any => ({
-  ...obj,
-  ...(obj.subscribedPrincipal && {
-    subscribedPrincipal: SubscribedPrincipalFilterSensitiveLog(obj.subscribedPrincipal),
-  }),
-  ...(obj.subscribedListing && { subscribedListing: SubscribedListingFilterSensitiveLog(obj.subscribedListing) }),
-});
-
-/**
- * @internal
- */
-export const GetRuleOutputFilterSensitiveLog = (obj: GetRuleOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.target && { target: obj.target }),
-  ...(obj.detail && { detail: obj.detail }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const RuleSummaryFilterSensitiveLog = (obj: RuleSummary): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.target && { target: obj.target }),
-});
-
-/**
- * @internal
- */
-export const ListRulesOutputFilterSensitiveLog = (obj: ListRulesOutput): any => ({
-  ...obj,
-  ...(obj.items && { items: obj.items.map((item) => RuleSummaryFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const UpdateRuleInputFilterSensitiveLog = (obj: UpdateRuleInput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
-  ...(obj.detail && { detail: obj.detail }),
-});
-
-/**
- * @internal
- */
-export const UpdateRuleOutputFilterSensitiveLog = (obj: UpdateRuleOutput): any => ({
-  ...obj,
-  ...(obj.name && { name: SENSITIVE_STRING }),
-  ...(obj.target && { target: obj.target }),
-  ...(obj.detail && { detail: obj.detail }),
-  ...(obj.description && { description: SENSITIVE_STRING }),
 });

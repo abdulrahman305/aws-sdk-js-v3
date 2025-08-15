@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ECSClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ECSClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { SubmitContainerStateChangeRequest, SubmitContainerStateChangeResponse } from "../models/models_0";
+import { SubmitContainerStateChangeRequest, SubmitContainerStateChangeResponse } from "../models/models_1";
 import { de_SubmitContainerStateChangeCommand, se_SubmitContainerStateChangeCommand } from "../protocols/Aws_json1_1";
 
 /**
@@ -78,16 +78,6 @@ export interface SubmitContainerStateChangeCommandOutput extends SubmitContainer
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
- *          <p>The following list includes additional causes for the error:</p>
- *          <ul>
- *             <li>
- *                <p>The <code>RunTask</code> could not be processed because you use managed
- * 					scaling and there is a capacity error because the quota of tasks in the
- * 						<code>PROVISIONING</code> per cluster has been reached. For information
- * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
- * 						service quotas</a>.</p>
- *             </li>
- *          </ul>
  *
  * @throws {@link ServerException} (server fault)
  *  <p>These errors are usually caused by a server issue.</p>

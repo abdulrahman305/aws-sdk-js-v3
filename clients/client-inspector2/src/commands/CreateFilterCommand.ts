@@ -28,7 +28,8 @@ export interface CreateFilterCommandInput extends CreateFilterRequest {}
 export interface CreateFilterCommandOutput extends CreateFilterResponse, __MetadataBearer {}
 
 /**
- * <p>Creates a filter resource using specified filter criteria. When the filter action is set to <code>SUPPRESS</code> this action creates a suppression rule.</p>
+ * <p>Creates a filter resource using specified filter criteria. When the filter action is set
+ *          to <code>SUPPRESS</code> this action creates a suppression rule.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -117,6 +118,18 @@ export interface CreateFilterCommandOutput extends CreateFilterResponse, __Metad
  *     ecrImageRepositoryName: "<StringFilterList>",
  *     ecrImageTags: "<StringFilterList>",
  *     ecrImageHash: "<StringFilterList>",
+ *     ecrImageLastInUseAt: [
+ *       {
+ *         startInclusive: new Date("TIMESTAMP"),
+ *         endInclusive: new Date("TIMESTAMP"),
+ *       },
+ *     ],
+ *     ecrImageInUseCount: [
+ *       {
+ *         upperInclusive: Number("double"),
+ *         lowerInclusive: Number("double"),
+ *       },
+ *     ],
  *     portRange: [ // PortRangeFilterList
  *       { // PortRangeFilter
  *         beginInclusive: Number("int"),
@@ -149,12 +162,7 @@ export interface CreateFilterCommandOutput extends CreateFilterResponse, __Metad
  *     lambdaFunctionName: "<StringFilterList>",
  *     lambdaFunctionLayers: "<StringFilterList>",
  *     lambdaFunctionRuntime: "<StringFilterList>",
- *     lambdaFunctionLastModifiedAt: [
- *       {
- *         startInclusive: new Date("TIMESTAMP"),
- *         endInclusive: new Date("TIMESTAMP"),
- *       },
- *     ],
+ *     lambdaFunctionLastModifiedAt: "<DateFilterList>",
  *     lambdaFunctionExecutionRoleArn: "<StringFilterList>",
  *     exploitAvailable: "<StringFilterList>",
  *     codeVulnerabilityDetectorName: "<StringFilterList>",
@@ -166,6 +174,8 @@ export interface CreateFilterCommandOutput extends CreateFilterResponse, __Metad
  *         lowerInclusive: Number("double"),
  *       },
  *     ],
+ *     codeRepositoryProjectName: "<StringFilterList>",
+ *     codeRepositoryProviderType: "<StringFilterList>",
  *   },
  *   name: "STRING_VALUE", // required
  *   tags: { // TagMap
@@ -189,6 +199,8 @@ export interface CreateFilterCommandOutput extends CreateFilterResponse, __Metad
  *
  * @throws {@link AccessDeniedException} (client fault)
  *  <p>You do not have sufficient access to perform this action.</p>
+ *          <p> For <code>Enable</code>, you receive this error if you attempt to use a feature in an
+ *          unsupported Amazon Web Services Region. </p>
  *
  * @throws {@link BadRequestException} (client fault)
  *  <p>One or more tags submitted as part of the request is not valid.</p>

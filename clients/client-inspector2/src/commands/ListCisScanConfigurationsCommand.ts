@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { Inspector2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../Inspector2Client";
-import { ListCisScanConfigurationsRequest, ListCisScanConfigurationsResponse } from "../models/models_0";
+import { ListCisScanConfigurationsRequest, ListCisScanConfigurationsResponse } from "../models/models_1";
 import { de_ListCisScanConfigurationsCommand, se_ListCisScanConfigurationsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -124,6 +124,8 @@ export interface ListCisScanConfigurationsCommandOutput extends ListCisScanConfi
  *
  * @throws {@link AccessDeniedException} (client fault)
  *  <p>You do not have sufficient access to perform this action.</p>
+ *          <p> For <code>Enable</code>, you receive this error if you attempt to use a feature in an
+ *          unsupported Amazon Web Services Region. </p>
  *
  * @throws {@link InternalServerException} (server fault)
  *  <p>The request has failed due to an internal failure of the Amazon Inspector service.</p>

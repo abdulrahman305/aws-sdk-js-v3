@@ -156,6 +156,14 @@ export interface DescribeDirectoriesCommandOutput extends DescribeDirectoriesRes
  * //         ],
  * //       },
  * //       OsVersion: "SERVER_2012" || "SERVER_2019",
+ * //       HybridSettings: { // HybridSettingsDescription
+ * //         SelfManagedDnsIpAddrs: [
+ * //           "STRING_VALUE",
+ * //         ],
+ * //         SelfManagedInstanceIds: [ // AssessmentInstanceIds
+ * //           "STRING_VALUE",
+ * //         ],
+ * //       },
  * //     },
  * //   ],
  * //   NextToken: "STRING_VALUE",
@@ -187,6 +195,52 @@ export interface DescribeDirectoriesCommandOutput extends DescribeDirectoriesRes
  * @throws {@link DirectoryServiceServiceException}
  * <p>Base exception class for all service exceptions from DirectoryService service.</p>
  *
+ *
+ * @example To describe one or more directories
+ * ```javascript
+ * // The following example obtains information about a specified directory.
+ * const input = {
+ *   DirectoryIds: [
+ *     "d-92654abfed"
+ *   ],
+ *   Limit: 0
+ * };
+ * const command = new DescribeDirectoriesCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   DirectoryDescriptions: [
+ *     {
+ *       AccessUrl: "myaccess.awsapps.com",
+ *       Alias: "myaccess",
+ *       DirectoryId: "d-92654abfed",
+ *       DnsIpAddrs: [
+ *         "172.30.21.228",
+ *         "172.30.9.82"
+ *       ],
+ *       LaunchTime: 1.469737584772E9,
+ *       Name: "corp.example.com",
+ *       ShortName: "example",
+ *       SsoEnabled: true,
+ *       Stage: "Active",
+ *       StageLastUpdatedDateTime: 1.46973913171E9,
+ *       Type: "MicrosoftAD",
+ *       VpcSettings: {
+ *         AvailabilityZones: [
+ *           "us-west-2a",
+ *           "us-west-2b"
+ *         ],
+ *         SubnetIds: [
+ *           "subnet-ba0146de",
+ *           "subnet-bef46bc8"
+ *         ],
+ *         VpcId: "vpc-45025421"
+ *       }
+ *     }
+ *   ]
+ * }
+ * *\/
+ * ```
  *
  * @public
  */

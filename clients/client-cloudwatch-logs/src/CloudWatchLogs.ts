@@ -260,6 +260,11 @@ import {
   GetLogGroupFieldsCommandOutput,
 } from "./commands/GetLogGroupFieldsCommand";
 import {
+  GetLogObjectCommand,
+  GetLogObjectCommandInput,
+  GetLogObjectCommandOutput,
+} from "./commands/GetLogObjectCommand";
+import {
   GetLogRecordCommand,
   GetLogRecordCommandInput,
   GetLogRecordCommandOutput,
@@ -289,6 +294,11 @@ import {
   ListLogAnomalyDetectorsCommandInput,
   ListLogAnomalyDetectorsCommandOutput,
 } from "./commands/ListLogAnomalyDetectorsCommand";
+import {
+  ListLogGroupsCommand,
+  ListLogGroupsCommandInput,
+  ListLogGroupsCommandOutput,
+} from "./commands/ListLogGroupsCommand";
 import {
   ListLogGroupsForQueryCommand,
   ListLogGroupsForQueryCommandInput,
@@ -482,12 +492,14 @@ const commands = {
   GetLogAnomalyDetectorCommand,
   GetLogEventsCommand,
   GetLogGroupFieldsCommand,
+  GetLogObjectCommand,
   GetLogRecordCommand,
   GetQueryResultsCommand,
   GetTransformerCommand,
   ListAnomaliesCommand,
   ListIntegrationsCommand,
   ListLogAnomalyDetectorsCommand,
+  ListLogGroupsCommand,
   ListLogGroupsForQueryCommand,
   ListTagsForResourceCommand,
   ListTagsLogGroupCommand,
@@ -1381,6 +1393,17 @@ export interface CloudWatchLogs {
   ): void;
 
   /**
+   * @see {@link GetLogObjectCommand}
+   */
+  getLogObject(args: GetLogObjectCommandInput, options?: __HttpHandlerOptions): Promise<GetLogObjectCommandOutput>;
+  getLogObject(args: GetLogObjectCommandInput, cb: (err: any, data?: GetLogObjectCommandOutput) => void): void;
+  getLogObject(
+    args: GetLogObjectCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetLogObjectCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link GetLogRecordCommand}
    */
   getLogRecord(args: GetLogRecordCommandInput, options?: __HttpHandlerOptions): Promise<GetLogRecordCommandOutput>;
@@ -1465,6 +1488,18 @@ export interface CloudWatchLogs {
     args: ListLogAnomalyDetectorsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: ListLogAnomalyDetectorsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link ListLogGroupsCommand}
+   */
+  listLogGroups(): Promise<ListLogGroupsCommandOutput>;
+  listLogGroups(args: ListLogGroupsCommandInput, options?: __HttpHandlerOptions): Promise<ListLogGroupsCommandOutput>;
+  listLogGroups(args: ListLogGroupsCommandInput, cb: (err: any, data?: ListLogGroupsCommandOutput) => void): void;
+  listLogGroups(
+    args: ListLogGroupsCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: ListLogGroupsCommandOutput) => void
   ): void;
 
   /**
@@ -1947,8 +1982,8 @@ export interface CloudWatchLogs {
  *             </li>
  *             <li>
  *                <p>
- *                   <b>Monitor CloudTrail logged events</b>: You can
- *           create alarms in CloudWatch and receive notifications of particular API activity as
+ *                   <b>Monitor CloudTrail logged events</b>: You
+ *           can create alarms in CloudWatch and receive notifications of particular API activity as
  *           captured by CloudTrail. You can use the notification to perform troubleshooting.</p>
  *             </li>
  *             <li>

@@ -5,6 +5,7 @@ import { MediaConvertServiceException as __BaseException } from "./MediaConvertS
 
 import {
   AccelerationSettings,
+  AccelerationStatus,
   AudioDescription,
   AvailBlanking,
   BillingTagsSource,
@@ -14,25 +15,389 @@ import {
   EsamSettings,
   ExtendedDataServices,
   HopDestination,
+  Input,
   InputTemplate,
+  JobMessages,
+  JobPhase,
   KantarWatermarkSettings,
   MotionImageInserter,
   NielsenConfiguration,
   NielsenNonLinearWatermarkSettings,
+  OutputGroupDetail,
+  QueueTransition,
 } from "./models_0";
 
-import {
-  ContainerSettings,
-  Job,
-  JobSettings,
-  JobStatus,
-  OutputGroup,
-  SimulateReservedQueue,
-  StatusUpdateInterval,
-  TimecodeConfig,
-  TimedMetadataInsertion,
-  VideoDescription,
-} from "./models_1";
+import { ContainerSettings, OutputGroup, TimecodeConfig, TimedMetadataInsertion, VideoDescription } from "./models_1";
+
+/**
+ * JobSettings contains all the transcode settings for a job.
+ * @public
+ */
+export interface JobSettings {
+  /**
+   * When specified, this offset (in milliseconds) is added to the input Ad Avail PTS time.
+   * @public
+   */
+  AdAvailOffset?: number | undefined;
+
+  /**
+   * Settings for ad avail blanking. Video can be blanked or overlaid with an image, and audio muted during SCTE-35 triggered ad avails.
+   * @public
+   */
+  AvailBlanking?: AvailBlanking | undefined;
+
+  /**
+   * Use 3D LUTs to specify custom color mapping behavior when you convert from one color space into another. You can include up to 8 different 3D LUTs. For more information, see: https://docs.aws.amazon.com/mediaconvert/latest/ug/3d-luts.html
+   * @public
+   */
+  ColorConversion3DLUTSettings?: ColorConversion3DLUTSetting[] | undefined;
+
+  /**
+   * Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings.
+   * @public
+   */
+  Esam?: EsamSettings | undefined;
+
+  /**
+   * If your source content has EIA-608 Line 21 Data Services, enable this feature to specify what MediaConvert does with the Extended Data Services (XDS) packets. You can choose to pass through XDS packets, or remove them from the output. For more information about XDS, see EIA-608 Line Data Services, section 9.5.1.5 05h Content Advisory.
+   * @public
+   */
+  ExtendedDataServices?: ExtendedDataServices | undefined;
+
+  /**
+   * Specify the input that MediaConvert references for your default output settings.  MediaConvert uses this input's Resolution, Frame rate, and Pixel aspect ratio for all  outputs that you don't manually specify different output settings for. Enabling this setting will disable "Follow source" for all other inputs.  If MediaConvert cannot follow your source, for example if you specify an audio-only input,  MediaConvert uses the first followable input instead. In your JSON job specification, enter an integer from 1 to 150 corresponding  to the order of your inputs.
+   * @public
+   */
+  FollowSource?: number | undefined;
+
+  /**
+   * Use Inputs to define source file used in the transcode job. There can be multiple inputs add in a job. These inputs will be concantenated together to create the output.
+   * @public
+   */
+  Inputs?: Input[] | undefined;
+
+  /**
+   * Use these settings only when you use Kantar watermarking. Specify the values that MediaConvert uses to generate and place Kantar watermarks in your output audio. These settings apply to every output in your job. In addition to specifying these values, you also need to store your Kantar credentials in AWS Secrets Manager. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/kantar-watermarking.html.
+   * @public
+   */
+  KantarWatermark?: KantarWatermarkSettings | undefined;
+
+  /**
+   * Overlay motion graphics on top of your video. The motion graphics that you specify here appear on all outputs in all output groups. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/motion-graphic-overlay.html.
+   * @public
+   */
+  MotionImageInserter?: MotionImageInserter | undefined;
+
+  /**
+   * Settings for your Nielsen configuration. If you don't do Nielsen measurement and analytics, ignore these settings. When you enable Nielsen configuration, MediaConvert enables PCM to ID3 tagging for all outputs in the job.
+   * @public
+   */
+  NielsenConfiguration?: NielsenConfiguration | undefined;
+
+  /**
+   * Ignore these settings unless you are using Nielsen non-linear watermarking. Specify the values that MediaConvert uses to generate and place Nielsen watermarks in your output audio. In addition to specifying these values, you also need to set up your cloud TIC server. These settings apply to every output in your job. The MediaConvert implementation is currently with the following Nielsen versions: Nielsen Watermark SDK Version 6.0.13 Nielsen NLM Watermark Engine Version 1.3.3 Nielsen Watermark Authenticator [SID_TIC] Version [7.0.0]
+   * @public
+   */
+  NielsenNonLinearWatermark?: NielsenNonLinearWatermarkSettings | undefined;
+
+  /**
+   * Contains one group of settings for each set of outputs that share a common package type. All unpackaged files (MPEG-4, MPEG-2 TS, Quicktime, MXF, and no container) are grouped in a single output group as well. Required in is a group of settings that apply to the whole group. This required object depends on the value you set for Type. Type, settings object pairs are as follows. * FILE_GROUP_SETTINGS, FileGroupSettings * HLS_GROUP_SETTINGS, HlsGroupSettings * DASH_ISO_GROUP_SETTINGS, DashIsoGroupSettings * MS_SMOOTH_GROUP_SETTINGS, MsSmoothGroupSettings * CMAF_GROUP_SETTINGS, CmafGroupSettings
+   * @public
+   */
+  OutputGroups?: OutputGroup[] | undefined;
+
+  /**
+   * These settings control how the service handles timecodes throughout the job. These settings don't affect input clipping.
+   * @public
+   */
+  TimecodeConfig?: TimecodeConfig | undefined;
+
+  /**
+   * Insert user-defined custom ID3 metadata at timecodes that you specify. In each output that you want to include this metadata, you must set ID3 metadata to Passthrough.
+   * @public
+   */
+  TimedMetadataInsertion?: TimedMetadataInsertion | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SimulateReservedQueue = {
+  DISABLED: "DISABLED",
+  ENABLED: "ENABLED",
+} as const;
+
+/**
+ * @public
+ */
+export type SimulateReservedQueue = (typeof SimulateReservedQueue)[keyof typeof SimulateReservedQueue];
+
+/**
+ * @public
+ * @enum
+ */
+export const JobStatus = {
+  CANCELED: "CANCELED",
+  COMPLETE: "COMPLETE",
+  ERROR: "ERROR",
+  PROGRESSING: "PROGRESSING",
+  SUBMITTED: "SUBMITTED",
+} as const;
+
+/**
+ * @public
+ */
+export type JobStatus = (typeof JobStatus)[keyof typeof JobStatus];
+
+/**
+ * @public
+ * @enum
+ */
+export const StatusUpdateInterval = {
+  SECONDS_10: "SECONDS_10",
+  SECONDS_12: "SECONDS_12",
+  SECONDS_120: "SECONDS_120",
+  SECONDS_15: "SECONDS_15",
+  SECONDS_180: "SECONDS_180",
+  SECONDS_20: "SECONDS_20",
+  SECONDS_240: "SECONDS_240",
+  SECONDS_30: "SECONDS_30",
+  SECONDS_300: "SECONDS_300",
+  SECONDS_360: "SECONDS_360",
+  SECONDS_420: "SECONDS_420",
+  SECONDS_480: "SECONDS_480",
+  SECONDS_540: "SECONDS_540",
+  SECONDS_60: "SECONDS_60",
+  SECONDS_600: "SECONDS_600",
+} as const;
+
+/**
+ * @public
+ */
+export type StatusUpdateInterval = (typeof StatusUpdateInterval)[keyof typeof StatusUpdateInterval];
+
+/**
+ * Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.
+ * @public
+ */
+export interface Timing {
+  /**
+   * The time, in Unix epoch format, that the transcoding job finished
+   * @public
+   */
+  FinishTime?: Date | undefined;
+
+  /**
+   * The time, in Unix epoch format, that transcoding for the job began.
+   * @public
+   */
+  StartTime?: Date | undefined;
+
+  /**
+   * The time, in Unix epoch format, that you submitted the job.
+   * @public
+   */
+  SubmitTime?: Date | undefined;
+}
+
+/**
+ * Contains any warning codes and their count for the job.
+ * @public
+ */
+export interface WarningGroup {
+  /**
+   * Warning code that identifies a specific warning in the job. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/warning_codes.html
+   * @public
+   */
+  Code: number | undefined;
+
+  /**
+   * The number of times this warning occurred in the job.
+   * @public
+   */
+  Count: number | undefined;
+}
+
+/**
+ * Each job converts an input file into an output file or files. For more information, see the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+ * @public
+ */
+export interface Job {
+  /**
+   * Accelerated transcoding can significantly speed up jobs with long, visually complex content.
+   * @public
+   */
+  AccelerationSettings?: AccelerationSettings | undefined;
+
+  /**
+   * Describes whether the current job is running with accelerated transcoding. For jobs that have Acceleration (AccelerationMode) set to DISABLED, AccelerationStatus is always NOT_APPLICABLE. For jobs that have Acceleration (AccelerationMode) set to ENABLED or PREFERRED, AccelerationStatus is one of the other states. AccelerationStatus is IN_PROGRESS initially, while the service determines whether the input files and job settings are compatible with accelerated transcoding. If they are, AcclerationStatus is ACCELERATED. If your input files and job settings aren't compatible with accelerated transcoding, the service either fails your job or runs it without accelerated transcoding, depending on how you set Acceleration (AccelerationMode). When the service runs your job without accelerated transcoding, AccelerationStatus is NOT_ACCELERATED.
+   * @public
+   */
+  AccelerationStatus?: AccelerationStatus | undefined;
+
+  /**
+   * An identifier for this resource that is unique within all of AWS.
+   * @public
+   */
+  Arn?: string | undefined;
+
+  /**
+   * The tag type that AWS Billing and Cost Management will use to sort your AWS Elemental MediaConvert costs on any billing report that you set up.
+   * @public
+   */
+  BillingTagsSource?: BillingTagsSource | undefined;
+
+  /**
+   * Prevent duplicate jobs from being created and ensure idempotency for your requests. A client request token can be any string that includes up to 64 ASCII characters. If you reuse a client request token within one minute of a successful request, the API returns the job details of the original request instead. For more information see https://docs.aws.amazon.com/mediaconvert/latest/apireference/idempotency.html.
+   * @public
+   */
+  ClientRequestToken?: string | undefined;
+
+  /**
+   * The time, in Unix epoch format in seconds, when the job got created.
+   * @public
+   */
+  CreatedAt?: Date | undefined;
+
+  /**
+   * A job's phase can be PROBING, TRANSCODING OR UPLOADING
+   * @public
+   */
+  CurrentPhase?: JobPhase | undefined;
+
+  /**
+   * Error code for the job
+   * @public
+   */
+  ErrorCode?: number | undefined;
+
+  /**
+   * Error message of Job
+   * @public
+   */
+  ErrorMessage?: string | undefined;
+
+  /**
+   * Optional list of hop destinations.
+   * @public
+   */
+  HopDestinations?: HopDestination[] | undefined;
+
+  /**
+   * A portion of the job's ARN, unique within your AWS Elemental MediaConvert resources
+   * @public
+   */
+  Id?: string | undefined;
+
+  /**
+   * The Job engine version that you requested for your job. Valid versions are in a YYYY-MM-DD format.
+   * @public
+   */
+  JobEngineVersionRequested?: string | undefined;
+
+  /**
+   * The Job engine version that your job used. Job engine versions are in a YYYY-MM-DD format. When you request an expired version, the response for this property will be empty. Requests to create jobs with an expired version result in a regular job, as if no specific Job engine version was requested. When you request an invalid version, the response for this property will be empty. Requests to create jobs with an invalid version result in a 400 error message, and no job is created.
+   * @public
+   */
+  JobEngineVersionUsed?: string | undefined;
+
+  /**
+   * An estimate of how far your job has progressed. This estimate is shown as a percentage of the total time from when your job leaves its queue to when your output files appear in your output Amazon S3 bucket. AWS Elemental MediaConvert provides jobPercentComplete in CloudWatch STATUS_UPDATE events and in the response to GetJob and ListJobs requests. The jobPercentComplete estimate is reliable for the following input containers: Quicktime, Transport Stream, MP4, and MXF. For some jobs, the service can't provide information about job progress. In those cases, jobPercentComplete returns a null value.
+   * @public
+   */
+  JobPercentComplete?: number | undefined;
+
+  /**
+   * The job template that the job is created from, if it is created from a job template.
+   * @public
+   */
+  JobTemplate?: string | undefined;
+
+  /**
+   * Provides messages from the service about jobs that you have already successfully submitted.
+   * @public
+   */
+  Messages?: JobMessages | undefined;
+
+  /**
+   * List of output group details
+   * @public
+   */
+  OutputGroupDetails?: OutputGroupDetail[] | undefined;
+
+  /**
+   * Relative priority on the job.
+   * @public
+   */
+  Priority?: number | undefined;
+
+  /**
+   * When you create a job, you can specify a queue to send it to. If you don't specify, the job will go to the default queue. For more about queues, see the User Guide topic at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+   * @public
+   */
+  Queue?: string | undefined;
+
+  /**
+   * The job's queue hopping history.
+   * @public
+   */
+  QueueTransitions?: QueueTransition[] | undefined;
+
+  /**
+   * The number of times that the service automatically attempted to process your job after encountering an error.
+   * @public
+   */
+  RetryCount?: number | undefined;
+
+  /**
+   * The IAM role you use for creating this job. For details about permissions, see the User Guide topic at the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html
+   * @public
+   */
+  Role: string | undefined;
+
+  /**
+   * JobSettings contains all the transcode settings for a job.
+   * @public
+   */
+  Settings: JobSettings | undefined;
+
+  /**
+   * Enable this setting when you run a test job to estimate how many reserved transcoding slots (RTS) you need. When this is enabled, MediaConvert runs your job from an on-demand queue with similar performance to what you will see with one RTS in a reserved queue. This setting is disabled by default.
+   * @public
+   */
+  SimulateReservedQueue?: SimulateReservedQueue | undefined;
+
+  /**
+   * A job's status can be SUBMITTED, PROGRESSING, COMPLETE, CANCELED, or ERROR.
+   * @public
+   */
+  Status?: JobStatus | undefined;
+
+  /**
+   * Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events. Set the interval, in seconds, between status updates. MediaConvert sends an update at this interval from the time the service begins processing your job to the time it completes the transcode or encounters an error.
+   * @public
+   */
+  StatusUpdateInterval?: StatusUpdateInterval | undefined;
+
+  /**
+   * Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.
+   * @public
+   */
+  Timing?: Timing | undefined;
+
+  /**
+   * User-defined metadata that you want to associate with an MediaConvert job. You specify metadata in key/value pairs.
+   * @public
+   */
+  UserMetadata?: Record<string, string> | undefined;
+
+  /**
+   * Contains any warning messages for the job. Use to help identify potential issues with your input, output, or job. For more information, see https://docs.aws.amazon.com/mediaconvert/latest/ug/warning_codes.html
+   * @public
+   */
+  Warnings?: WarningGroup[] | undefined;
+}
 
 /**
  * Use Job engine versions to run jobs for your production workflow on one version, while you test and validate the latest version. Job engine versions are in a YYYY-MM-DD format.
@@ -343,6 +708,7 @@ export interface ProbeInputFile {
 export const Format = {
   matroska: "matroska",
   mp4: "mp4",
+  mxf: "mxf",
   quicktime: "quicktime",
   webm: "webm",
 } as const;
@@ -426,6 +792,7 @@ export const Codec = {
   EAC3: "EAC3",
   FLAC: "FLAC",
   HEVC: "HEVC",
+  JPEG2000: "JPEG2000",
   MJPEG: "MJPEG",
   MP3: "MP3",
   MP4V: "MP4V",
@@ -676,7 +1043,7 @@ export interface Container {
   Duration?: number | undefined;
 
   /**
-   * The format of your media file. For example: MP4, QuickTime (MOV), Matroska (MKV), or WebM. Note that this will be blank if your media file has a format that the MediaConvert Probe operation does not recognize.
+   * The format of your media file. For example: MP4, QuickTime (MOV), Matroska (MKV), WebM or MXF. Note that this will be blank if your media file has a format that the MediaConvert Probe operation does not recognize.
    * @public
    */
   Format?: Format | undefined;
@@ -1166,7 +1533,7 @@ export interface CreateJobRequest {
   AccelerationSettings?: AccelerationSettings | undefined;
 
   /**
-   * Optional. Choose a tag type that AWS Billing and Cost Management will use to sort your AWS Elemental MediaConvert costs on any billing report that you set up. Any transcoding outputs that don't have an associated tag will appear in your billing report unsorted. If you don't choose a valid value for this field, your job outputs will appear on the billing report unsorted.
+   * Optionally choose a Billing tags source that AWS Billing and Cost Management will use to display tags for individual output costs on any billing report that you set up. Leave blank to use the default value, Job.
    * @public
    */
   BillingTagsSource?: BillingTagsSource | undefined;

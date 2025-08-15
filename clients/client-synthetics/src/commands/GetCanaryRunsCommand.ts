@@ -39,6 +39,8 @@ export interface GetCanaryRunsCommandOutput extends GetCanaryRunsResponse, __Met
  *   Name: "STRING_VALUE", // required
  *   NextToken: "STRING_VALUE",
  *   MaxResults: Number("int"),
+ *   DryRunId: "STRING_VALUE",
+ *   RunType: "CANARY_RUN" || "DRY_RUN",
  * };
  * const command = new GetCanaryRunsCommand(input);
  * const response = await client.send(command);
@@ -46,17 +48,24 @@ export interface GetCanaryRunsCommandOutput extends GetCanaryRunsResponse, __Met
  * //   CanaryRuns: [ // CanaryRuns
  * //     { // CanaryRun
  * //       Id: "STRING_VALUE",
+ * //       ScheduledRunId: "STRING_VALUE",
+ * //       RetryAttempt: Number("int"),
  * //       Name: "STRING_VALUE",
  * //       Status: { // CanaryRunStatus
  * //         State: "RUNNING" || "PASSED" || "FAILED",
  * //         StateReason: "STRING_VALUE",
  * //         StateReasonCode: "CANARY_FAILURE" || "EXECUTION_FAILURE",
+ * //         TestResult: "PASSED" || "FAILED" || "UNKNOWN",
  * //       },
  * //       Timeline: { // CanaryRunTimeline
  * //         Started: new Date("TIMESTAMP"),
  * //         Completed: new Date("TIMESTAMP"),
+ * //         MetricTimestampForRunAndRetries: new Date("TIMESTAMP"),
  * //       },
  * //       ArtifactS3Location: "STRING_VALUE",
+ * //       DryRunConfig: { // CanaryDryRunConfigOutput
+ * //         DryRunId: "STRING_VALUE",
+ * //       },
  * //     },
  * //   ],
  * //   NextToken: "STRING_VALUE",

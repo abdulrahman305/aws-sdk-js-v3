@@ -32,6 +32,7 @@ import {
   CreateCollectionCommandInput,
   CreateCollectionCommandOutput,
 } from "./commands/CreateCollectionCommand";
+import { CreateIndexCommand, CreateIndexCommandInput, CreateIndexCommandOutput } from "./commands/CreateIndexCommand";
 import {
   CreateLifecyclePolicyCommand,
   CreateLifecyclePolicyCommandInput,
@@ -62,6 +63,7 @@ import {
   DeleteCollectionCommandInput,
   DeleteCollectionCommandOutput,
 } from "./commands/DeleteCollectionCommand";
+import { DeleteIndexCommand, DeleteIndexCommandInput, DeleteIndexCommandOutput } from "./commands/DeleteIndexCommand";
 import {
   DeleteLifecyclePolicyCommand,
   DeleteLifecyclePolicyCommandInput,
@@ -92,6 +94,7 @@ import {
   GetAccountSettingsCommandInput,
   GetAccountSettingsCommandOutput,
 } from "./commands/GetAccountSettingsCommand";
+import { GetIndexCommand, GetIndexCommandInput, GetIndexCommandOutput } from "./commands/GetIndexCommand";
 import {
   GetPoliciesStatsCommand,
   GetPoliciesStatsCommandInput,
@@ -163,6 +166,7 @@ import {
   UpdateCollectionCommandInput,
   UpdateCollectionCommandOutput,
 } from "./commands/UpdateCollectionCommand";
+import { UpdateIndexCommand, UpdateIndexCommandInput, UpdateIndexCommandOutput } from "./commands/UpdateIndexCommand";
 import {
   UpdateLifecyclePolicyCommand,
   UpdateLifecyclePolicyCommandInput,
@@ -192,18 +196,21 @@ const commands = {
   BatchGetVpcEndpointCommand,
   CreateAccessPolicyCommand,
   CreateCollectionCommand,
+  CreateIndexCommand,
   CreateLifecyclePolicyCommand,
   CreateSecurityConfigCommand,
   CreateSecurityPolicyCommand,
   CreateVpcEndpointCommand,
   DeleteAccessPolicyCommand,
   DeleteCollectionCommand,
+  DeleteIndexCommand,
   DeleteLifecyclePolicyCommand,
   DeleteSecurityConfigCommand,
   DeleteSecurityPolicyCommand,
   DeleteVpcEndpointCommand,
   GetAccessPolicyCommand,
   GetAccountSettingsCommand,
+  GetIndexCommand,
   GetPoliciesStatsCommand,
   GetSecurityConfigCommand,
   GetSecurityPolicyCommand,
@@ -219,6 +226,7 @@ const commands = {
   UpdateAccessPolicyCommand,
   UpdateAccountSettingsCommand,
   UpdateCollectionCommand,
+  UpdateIndexCommand,
   UpdateLifecyclePolicyCommand,
   UpdateSecurityConfigCommand,
   UpdateSecurityPolicyCommand,
@@ -330,6 +338,17 @@ export interface OpenSearchServerless {
   ): void;
 
   /**
+   * @see {@link CreateIndexCommand}
+   */
+  createIndex(args: CreateIndexCommandInput, options?: __HttpHandlerOptions): Promise<CreateIndexCommandOutput>;
+  createIndex(args: CreateIndexCommandInput, cb: (err: any, data?: CreateIndexCommandOutput) => void): void;
+  createIndex(
+    args: CreateIndexCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: CreateIndexCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link CreateLifecyclePolicyCommand}
    */
   createLifecyclePolicy(
@@ -432,6 +451,17 @@ export interface OpenSearchServerless {
   ): void;
 
   /**
+   * @see {@link DeleteIndexCommand}
+   */
+  deleteIndex(args: DeleteIndexCommandInput, options?: __HttpHandlerOptions): Promise<DeleteIndexCommandOutput>;
+  deleteIndex(args: DeleteIndexCommandInput, cb: (err: any, data?: DeleteIndexCommandOutput) => void): void;
+  deleteIndex(
+    args: DeleteIndexCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: DeleteIndexCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link DeleteLifecyclePolicyCommand}
    */
   deleteLifecyclePolicy(
@@ -529,6 +559,17 @@ export interface OpenSearchServerless {
     args: GetAccountSettingsCommandInput,
     options: __HttpHandlerOptions,
     cb: (err: any, data?: GetAccountSettingsCommandOutput) => void
+  ): void;
+
+  /**
+   * @see {@link GetIndexCommand}
+   */
+  getIndex(args: GetIndexCommandInput, options?: __HttpHandlerOptions): Promise<GetIndexCommandOutput>;
+  getIndex(args: GetIndexCommandInput, cb: (err: any, data?: GetIndexCommandOutput) => void): void;
+  getIndex(
+    args: GetIndexCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: GetIndexCommandOutput) => void
   ): void;
 
   /**
@@ -776,6 +817,17 @@ export interface OpenSearchServerless {
   ): void;
 
   /**
+   * @see {@link UpdateIndexCommand}
+   */
+  updateIndex(args: UpdateIndexCommandInput, options?: __HttpHandlerOptions): Promise<UpdateIndexCommandOutput>;
+  updateIndex(args: UpdateIndexCommandInput, cb: (err: any, data?: UpdateIndexCommandOutput) => void): void;
+  updateIndex(
+    args: UpdateIndexCommandInput,
+    options: __HttpHandlerOptions,
+    cb: (err: any, data?: UpdateIndexCommandOutput) => void
+  ): void;
+
+  /**
    * @see {@link UpdateLifecyclePolicyCommand}
    */
   updateLifecyclePolicy(
@@ -852,7 +904,7 @@ export interface OpenSearchServerless {
  *             configuring, and tuning your OpenSearch clusters. It enables you to easily search and
  *             analyze petabytes of data without having to worry about the underlying infrastructure
  *             and data management.</p>
- *          <p> To learn more about OpenSearch Serverless, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">What is
+ *          <p>To learn more about OpenSearch Serverless, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html">What is
  *                 Amazon OpenSearch Serverless?</a>
  *          </p>
  * @public

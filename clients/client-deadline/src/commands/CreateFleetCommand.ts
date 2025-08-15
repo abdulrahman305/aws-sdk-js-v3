@@ -87,6 +87,7 @@ export interface CreateFleetCommandOutput extends CreateFleetResponse, __Metadat
  *         ],
  *       },
  *       storageProfileId: "STRING_VALUE",
+ *       tagPropagationMode: "NO_PROPAGATION" || "PROPAGATE_TAGS_TO_WORKERS_AT_LAUNCH",
  *     },
  *     serviceManagedEc2: { // ServiceManagedEc2FleetConfiguration
  *       instanceCapabilities: { // ServiceManagedEc2InstanceCapabilities
@@ -140,12 +141,22 @@ export interface CreateFleetCommandOutput extends CreateFleetResponse, __Metadat
  *         ],
  *       },
  *       instanceMarketOptions: { // ServiceManagedEc2InstanceMarketOptions
- *         type: "on-demand" || "spot", // required
+ *         type: "on-demand" || "spot" || "wait-and-save", // required
  *       },
+ *       vpcConfiguration: { // VpcConfiguration
+ *         resourceConfigurationArns: [ // VpcResourceConfigurationArns
+ *           "STRING_VALUE",
+ *         ],
+ *       },
+ *       storageProfileId: "STRING_VALUE",
  *     },
  *   },
  *   tags: { // Tags
  *     "<keys>": "STRING_VALUE",
+ *   },
+ *   hostConfiguration: { // HostConfiguration
+ *     scriptBody: "STRING_VALUE", // required
+ *     scriptTimeoutSeconds: Number("int"),
  *   },
  * };
  * const command = new CreateFleetCommand(input);

@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { StopNotebookInstanceInput } from "../models/models_4";
+import { StopNotebookInstanceInput } from "../models/models_5";
 import { de_StopNotebookInstanceCommand, se_StopNotebookInstanceCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,14 +28,7 @@ export interface StopNotebookInstanceCommandInput extends StopNotebookInstanceIn
 export interface StopNotebookInstanceCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>Terminates the ML compute instance. Before terminating the instance, SageMaker AI disconnects the ML storage volume from it. SageMaker AI preserves the
- *             ML storage volume. SageMaker AI stops charging you for the ML compute instance when
- *             you call <code>StopNotebookInstance</code>.</p>
- *          <p>To access data on the ML storage volume for a notebook instance that has been
- *             terminated, call the <code>StartNotebookInstance</code> API.
- *                 <code>StartNotebookInstance</code> launches another ML compute instance, configures
- *             it, and attaches the preserved ML storage volume so you can continue your work.
- *         </p>
+ * <p>Terminates the ML compute instance. Before terminating the instance, SageMaker AI disconnects the ML storage volume from it. SageMaker AI preserves the ML storage volume. SageMaker AI stops charging you for the ML compute instance when you call <code>StopNotebookInstance</code>.</p> <p>To access data on the ML storage volume for a notebook instance that has been terminated, call the <code>StartNotebookInstance</code> API. <code>StartNotebookInstance</code> launches another ML compute instance, configures it, and attaches the preserved ML storage volume so you can continue your work. </p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

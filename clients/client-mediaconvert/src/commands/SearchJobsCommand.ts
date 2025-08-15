@@ -180,7 +180,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                   ChannelsIn: Number("int"),
  * //                   ChannelsOut: Number("int"),
  * //                 },
- * //                 SelectorType: "PID" || "TRACK" || "LANGUAGE_CODE" || "HLS_RENDITION_GROUP",
+ * //                 SelectorType: "PID" || "TRACK" || "LANGUAGE_CODE" || "HLS_RENDITION_GROUP" || "ALL_PCM",
  * //                 Tracks: [
  * //                   Number("int"),
  * //                 ],
@@ -216,6 +216,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                     SourceFile: "STRING_VALUE",
  * //                     TimeDelta: Number("int"),
  * //                     TimeDeltaUnits: "SECONDS" || "MILLISECONDS",
+ * //                     UpconvertSTLToTeletext: "UPCONVERT" || "DISABLED",
  * //                   },
  * //                   SourceType: "ANCILLARY" || "DVB_SUB" || "EMBEDDED" || "SCTE20" || "SCC" || "TTML" || "STL" || "SRT" || "SMI" || "SMPTE_TT" || "TELETEXT" || "NULL_SOURCE" || "IMSC" || "WEBVTT",
  * //                   TeletextSourceSettings: { // TeletextSourceSettings
@@ -295,6 +296,12 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //             SupplementalImps: [ // __listOf__stringPatternS3ASSETMAPXml
  * //               "STRING_VALUE",
  * //             ],
+ * //             TamsSettings: { // InputTamsSettings
+ * //               AuthConnectionArn: "STRING_VALUE",
+ * //               GapHandling: "SKIP_GAPS" || "FILL_WITH_BLACK" || "HOLD_LAST_FRAME",
+ * //               SourceId: "STRING_VALUE",
+ * //               Timerange: "STRING_VALUE",
+ * //             },
  * //             TimecodeSource: "EMBEDDED" || "ZEROBASED" || "SPECIFIEDSTART",
  * //             TimecodeStart: "STRING_VALUE",
  * //             VideoGenerator: { // InputVideoGenerator
@@ -306,6 +313,13 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //             },
  * //             VideoOverlays: [ // __listOfVideoOverlay
  * //               { // VideoOverlay
+ * //                 Crop: { // VideoOverlayCrop
+ * //                   Height: Number("int"),
+ * //                   Unit: "PIXELS" || "PERCENTAGE",
+ * //                   Width: Number("int"),
+ * //                   X: Number("int"),
+ * //                   Y: Number("int"),
+ * //                 },
  * //                 EndTimecode: "STRING_VALUE",
  * //                 InitialPosition: { // VideoOverlayPosition
  * //                   Height: Number("int"),
@@ -752,6 +766,9 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                 FragmentLengthControl: "EXACT" || "GOP_MULTIPLE",
  * //                 ManifestEncoding: "UTF8" || "UTF16",
  * //               },
+ * //               PerFrameMetrics: [ // __listOfFrameMetricType
+ * //                 "PSNR" || "SSIM" || "MS_SSIM" || "PSNR_HVS" || "VMAF" || "QVBR",
+ * //               ],
  * //               Type: "HLS_GROUP_SETTINGS" || "DASH_ISO_GROUP_SETTINGS" || "FILE_GROUP_SETTINGS" || "MS_SMOOTH_GROUP_SETTINGS" || "CMAF_GROUP_SETTINGS",
  * //             },
  * //             Outputs: [ // __listOfOutput
@@ -780,12 +797,15 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       AacSettings: { // AacSettings
  * //                         AudioDescriptionBroadcasterMix: "BROADCASTER_MIXED_AD" || "NORMAL",
  * //                         Bitrate: Number("int"),
- * //                         CodecProfile: "LC" || "HEV1" || "HEV2",
+ * //                         CodecProfile: "LC" || "HEV1" || "HEV2" || "XHE",
  * //                         CodingMode: "AD_RECEIVER_MIX" || "CODING_MODE_1_0" || "CODING_MODE_1_1" || "CODING_MODE_2_0" || "CODING_MODE_5_1",
+ * //                         LoudnessMeasurementMode: "PROGRAM" || "ANCHOR",
+ * //                         RapInterval: Number("int"),
  * //                         RateControlMode: "CBR" || "VBR",
  * //                         RawFormat: "LATM_LOAS" || "NONE",
  * //                         SampleRate: Number("int"),
  * //                         Specification: "MPEG2" || "MPEG4",
+ * //                         TargetLoudnessRange: Number("int"),
  * //                         VbrQuality: "LOW" || "MEDIUM_LOW" || "MEDIUM_HIGH" || "HIGH",
  * //                       },
  * //                       Ac3Settings: { // Ac3Settings
@@ -945,7 +965,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                         ApplyFontColor: "WHITE_TEXT_ONLY" || "ALL_TEXT",
  * //                         BackgroundColor: "NONE" || "BLACK" || "WHITE" || "AUTO",
  * //                         BackgroundOpacity: Number("int"),
- * //                         DdsHandling: "NONE" || "SPECIFIED" || "NO_DISPLAY_WINDOW",
+ * //                         DdsHandling: "NONE" || "SPECIFIED" || "NO_DISPLAY_WINDOW" || "SPECIFIED_OPTIMAL",
  * //                         DdsXCoordinate: Number("int"),
  * //                         DdsYCoordinate: Number("int"),
  * //                         FallbackFont: "BEST_MATCH" || "MONOSPACED_SANSSERIF" || "MONOSPACED_SERIF" || "PROPORTIONAL_SANSSERIF" || "PROPORTIONAL_SERIF",
@@ -1123,11 +1143,14 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                   },
  * //                   Mp4Settings: { // Mp4Settings
  * //                     AudioDuration: "DEFAULT_CODEC_DURATION" || "MATCH_VIDEO_DURATION",
+ * //                     C2paManifest: "INCLUDE" || "EXCLUDE",
+ * //                     CertificateSecret: "STRING_VALUE",
  * //                     CslgAtom: "INCLUDE" || "EXCLUDE",
  * //                     CttsVersion: Number("int"),
  * //                     FreeSpaceBox: "INCLUDE" || "EXCLUDE",
  * //                     MoovPlacement: "PROGRESSIVE_DOWNLOAD" || "NORMAL",
  * //                     Mp4MajorBrand: "STRING_VALUE",
+ * //                     SigningKmsKey: "STRING_VALUE",
  * //                   },
  * //                   MpdSettings: { // MpdSettings
  * //                     AccessibilityCaptionHints: "INCLUDE" || "EXCLUDE",
@@ -1181,6 +1204,9 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       GopSize: Number("double"),
  * //                       MaxBitrate: Number("int"),
  * //                       NumberBFramesBetweenReferenceFrames: Number("int"),
+ * //                       PerFrameMetrics: [
+ * //                         "PSNR" || "SSIM" || "MS_SSIM" || "PSNR_HVS" || "VMAF" || "QVBR",
+ * //                       ],
  * //                       QvbrSettings: { // Av1QvbrSettings
  * //                         QvbrQualityLevel: Number("int"),
  * //                         QvbrQualityLevelFineTune: Number("double"),
@@ -1199,6 +1225,9 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       FramerateDenominator: Number("int"),
  * //                       FramerateNumerator: Number("int"),
  * //                       InterlaceMode: "PROGRESSIVE" || "TOP_FIELD" || "BOTTOM_FIELD" || "FOLLOW_TOP_FIELD" || "FOLLOW_BOTTOM_FIELD",
+ * //                       PerFrameMetrics: [
+ * //                         "PSNR" || "SSIM" || "MS_SSIM" || "PSNR_HVS" || "VMAF" || "QVBR",
+ * //                       ],
  * //                       ScanTypeConversionMode: "INTERLACED" || "INTERLACED_OPTIMIZE",
  * //                       SlowPal: "DISABLED" || "ENABLED",
  * //                       Telecine: "NONE" || "HARD",
@@ -1249,6 +1278,9 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       ParControl: "INITIALIZE_FROM_SOURCE" || "SPECIFIED",
  * //                       ParDenominator: Number("int"),
  * //                       ParNumerator: Number("int"),
+ * //                       PerFrameMetrics: [
+ * //                         "PSNR" || "SSIM" || "MS_SSIM" || "PSNR_HVS" || "VMAF" || "QVBR",
+ * //                       ],
  * //                       QualityTuningLevel: "SINGLE_PASS" || "SINGLE_PASS_HQ" || "MULTI_PASS_HQ",
  * //                       QvbrSettings: { // H264QvbrSettings
  * //                         MaxAverageBitrate: Number("int"),
@@ -1303,6 +1335,9 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       ParControl: "INITIALIZE_FROM_SOURCE" || "SPECIFIED",
  * //                       ParDenominator: Number("int"),
  * //                       ParNumerator: Number("int"),
+ * //                       PerFrameMetrics: [
+ * //                         "PSNR" || "SSIM" || "MS_SSIM" || "PSNR_HVS" || "VMAF" || "QVBR",
+ * //                       ],
  * //                       QualityTuningLevel: "SINGLE_PASS" || "SINGLE_PASS_HQ" || "MULTI_PASS_HQ",
  * //                       QvbrSettings: { // H265QvbrSettings
  * //                         MaxAverageBitrate: Number("int"),
@@ -1347,6 +1382,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       ParControl: "INITIALIZE_FROM_SOURCE" || "SPECIFIED",
  * //                       ParDenominator: Number("int"),
  * //                       ParNumerator: Number("int"),
+ * //                       PerFrameMetrics: "<__listOfFrameMetricType>",
  * //                       QualityTuningLevel: "SINGLE_PASS" || "MULTI_PASS",
  * //                       RateControlMode: "VBR" || "CBR",
  * //                       ScanTypeConversionMode: "INTERLACED" || "INTERLACED_OPTIMIZE",
@@ -1369,6 +1405,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       ParControl: "INITIALIZE_FROM_SOURCE" || "SPECIFIED",
  * //                       ParDenominator: Number("int"),
  * //                       ParNumerator: Number("int"),
+ * //                       PerFrameMetrics: "<__listOfFrameMetricType>",
  * //                       ScanTypeConversionMode: "INTERLACED" || "INTERLACED_OPTIMIZE",
  * //                       SlowPal: "DISABLED" || "ENABLED",
  * //                       Telecine: "NONE" || "HARD",
@@ -1432,6 +1469,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //                       FramerateConversionAlgorithm: "DUPLICATE_DROP" || "INTERPOLATE" || "FRAMEFORMER" || "MAINTAIN_FRAME_COUNT",
  * //                       FramerateDenominator: Number("int"),
  * //                       FramerateNumerator: Number("int"),
+ * //                       PerFrameMetrics: "<__listOfFrameMetricType>",
  * //                       Profile: "XAVC_HD_INTRA_CBG" || "XAVC_4K_INTRA_CBG" || "XAVC_4K_INTRA_VBR" || "XAVC_HD" || "XAVC_4K",
  * //                       SlowPal: "DISABLED" || "ENABLED",
  * //                       Softness: Number("int"),

@@ -310,6 +310,14 @@ CreateBulkImportJob
 </details>
 <details>
 <summary>
+CreateComputationModel
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/CreateComputationModelCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/CreateComputationModelCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/CreateComputationModelCommandOutput/)
+
+</details>
+<details>
+<summary>
 CreateDashboard
 </summary>
 
@@ -378,6 +386,22 @@ DeleteAssetModelCompositeModel
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DeleteAssetModelCompositeModelCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DeleteAssetModelCompositeModelCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DeleteAssetModelCompositeModelCommandOutput/)
+
+</details>
+<details>
+<summary>
+DeleteAssetModelInterfaceRelationship
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DeleteAssetModelInterfaceRelationshipCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DeleteAssetModelInterfaceRelationshipCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DeleteAssetModelInterfaceRelationshipCommandOutput/)
+
+</details>
+<details>
+<summary>
+DeleteComputationModel
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DeleteComputationModelCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DeleteComputationModelCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DeleteComputationModelCommandOutput/)
 
 </details>
 <details>
@@ -478,6 +502,14 @@ DescribeAssetModelCompositeModel
 </details>
 <details>
 <summary>
+DescribeAssetModelInterfaceRelationship
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DescribeAssetModelInterfaceRelationshipCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeAssetModelInterfaceRelationshipCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeAssetModelInterfaceRelationshipCommandOutput/)
+
+</details>
+<details>
+<summary>
 DescribeAssetProperty
 </summary>
 
@@ -490,6 +522,22 @@ DescribeBulkImportJob
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DescribeBulkImportJobCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeBulkImportJobCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeBulkImportJobCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeComputationModel
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DescribeComputationModelCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeComputationModelCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeComputationModelCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeComputationModelExecutionSummary
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DescribeComputationModelExecutionSummaryCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeComputationModelExecutionSummaryCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeComputationModelExecutionSummaryCommandOutput/)
 
 </details>
 <details>
@@ -514,6 +562,14 @@ DescribeDefaultEncryptionConfiguration
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DescribeDefaultEncryptionConfigurationCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeDefaultEncryptionConfigurationCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeDefaultEncryptionConfigurationCommandOutput/)
+
+</details>
+<details>
+<summary>
+DescribeExecution
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/DescribeExecutionCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeExecutionCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/DescribeExecutionCommandOutput/)
 
 </details>
 <details>
@@ -734,6 +790,30 @@ ListCompositionRelationships
 </details>
 <details>
 <summary>
+ListComputationModelDataBindingUsages
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListComputationModelDataBindingUsagesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListComputationModelDataBindingUsagesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListComputationModelDataBindingUsagesCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListComputationModelResolveToResources
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListComputationModelResolveToResourcesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListComputationModelResolveToResourcesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListComputationModelResolveToResourcesCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListComputationModels
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListComputationModelsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListComputationModelsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListComputationModelsCommandOutput/)
+
+</details>
+<details>
+<summary>
 ListDashboards
 </summary>
 
@@ -750,10 +830,26 @@ ListDatasets
 </details>
 <details>
 <summary>
+ListExecutions
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListExecutionsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListExecutionsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListExecutionsCommandOutput/)
+
+</details>
+<details>
+<summary>
 ListGateways
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListGatewaysCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListGatewaysCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListGatewaysCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListInterfaceRelationships
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListInterfaceRelationshipsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListInterfaceRelationshipsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListInterfaceRelationshipsCommandOutput/)
 
 </details>
 <details>
@@ -794,6 +890,14 @@ ListTimeSeries
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/ListTimeSeriesCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListTimeSeriesCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/ListTimeSeriesCommandOutput/)
+
+</details>
+<details>
+<summary>
+PutAssetModelInterfaceRelationship
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/PutAssetModelInterfaceRelationshipCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/PutAssetModelInterfaceRelationshipCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/PutAssetModelInterfaceRelationshipCommandOutput/)
 
 </details>
 <details>
@@ -874,6 +978,14 @@ UpdateAssetProperty
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/UpdateAssetPropertyCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/UpdateAssetPropertyCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/UpdateAssetPropertyCommandOutput/)
+
+</details>
+<details>
+<summary>
+UpdateComputationModel
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/iotsitewise/command/UpdateComputationModelCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/UpdateComputationModelCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-iotsitewise/Interface/UpdateComputationModelCommandOutput/)
 
 </details>
 <details>

@@ -23,7 +23,6 @@ import {
   FilterGroup,
   FontConfiguration,
   Layout,
-  LegendOptions,
   MeasureField,
   MeasureFieldFilterSensitiveLog,
   NumberScale,
@@ -41,6 +40,7 @@ import {
   URLTargetConfiguration,
   Visibility,
   VisualCustomAction,
+  VisualCustomActionDefaults,
   VisualInteractionOptions,
 } from "./models_0";
 
@@ -52,6 +52,8 @@ import {
   ComboChartVisual,
   ConditionalFormattingColor,
   ConditionalFormattingColorFilterSensitiveLog,
+  ConditionalFormattingIcon,
+  ConditionalFormattingIconFilterSensitiveLog,
   CustomContentVisual,
   EmptyVisual,
   FieldSortOptions,
@@ -70,17 +72,21 @@ import {
   KPIVisualFilterSensitiveLog,
   LayerMapVisual,
   LayerMapVisualFilterSensitiveLog,
+  LegendOptions,
   LineChartVisual,
   PaginationConfiguration,
   PieChartVisual,
-  PivotTableConditionalFormattingScope,
-  PivotTableConfiguration,
+  PivotTableFieldOptions,
+  PivotTableFieldWells,
+  PivotTableOptions,
+  PivotTablePaginatedReportOptions,
+  PivotTableSortConfiguration,
+  PivotTotalOptions,
   RowAlternateColorOptions,
+  SubtotalOptions,
   TableCellStyle,
   TableTotalsPlacement,
   TableTotalsScrollStatus,
-  TextConditionalFormat,
-  TextConditionalFormatFilterSensitiveLog,
   TooltipOptions,
   TotalAggregationOption,
   UnaggregatedField,
@@ -92,6 +98,136 @@ import {
 } from "./models_1";
 
 import { QuickSightServiceException as __BaseException } from "./QuickSightServiceException";
+
+/**
+ * <p>The total options for a pivot table visual.</p>
+ * @public
+ */
+export interface PivotTableTotalOptions {
+  /**
+   * <p>The row subtotal options.</p>
+   * @public
+   */
+  RowSubtotalOptions?: SubtotalOptions | undefined;
+
+  /**
+   * <p>The column subtotal options.</p>
+   * @public
+   */
+  ColumnSubtotalOptions?: SubtotalOptions | undefined;
+
+  /**
+   * <p>The row total options.</p>
+   * @public
+   */
+  RowTotalOptions?: PivotTotalOptions | undefined;
+
+  /**
+   * <p>The column total options.</p>
+   * @public
+   */
+  ColumnTotalOptions?: PivotTotalOptions | undefined;
+}
+
+/**
+ * <p>The configuration for a <code>PivotTableVisual</code>.</p>
+ * @public
+ */
+export interface PivotTableConfiguration {
+  /**
+   * <p>The field wells of the visual.</p>
+   * @public
+   */
+  FieldWells?: PivotTableFieldWells | undefined;
+
+  /**
+   * <p>The sort configuration for a <code>PivotTableVisual</code>.</p>
+   * @public
+   */
+  SortConfiguration?: PivotTableSortConfiguration | undefined;
+
+  /**
+   * <p>The table options for a pivot table visual.</p>
+   * @public
+   */
+  TableOptions?: PivotTableOptions | undefined;
+
+  /**
+   * <p>The total options for a pivot table visual.</p>
+   * @public
+   */
+  TotalOptions?: PivotTableTotalOptions | undefined;
+
+  /**
+   * <p>The field options for a pivot table visual.</p>
+   * @public
+   */
+  FieldOptions?: PivotTableFieldOptions | undefined;
+
+  /**
+   * <p>The paginated report options for a pivot table visual.</p>
+   * @public
+   */
+  PaginatedReportOptions?: PivotTablePaginatedReportOptions | undefined;
+
+  /**
+   * <p>The general visual interactions setup for a visual.</p>
+   * @public
+   */
+  Interactions?: VisualInteractionOptions | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const PivotTableConditionalFormattingScopeRole = {
+  FIELD: "FIELD",
+  FIELD_TOTAL: "FIELD_TOTAL",
+  GRAND_TOTAL: "GRAND_TOTAL",
+} as const;
+
+/**
+ * @public
+ */
+export type PivotTableConditionalFormattingScopeRole =
+  (typeof PivotTableConditionalFormattingScopeRole)[keyof typeof PivotTableConditionalFormattingScopeRole];
+
+/**
+ * <p>The scope of the cell for conditional formatting.</p>
+ * @public
+ */
+export interface PivotTableConditionalFormattingScope {
+  /**
+   * <p>The role (field, field total, grand total) of the cell for conditional formatting.</p>
+   * @public
+   */
+  Role?: PivotTableConditionalFormattingScopeRole | undefined;
+}
+
+/**
+ * <p>The conditional formatting for the text.</p>
+ * @public
+ */
+export interface TextConditionalFormat {
+  /**
+   * <p>The conditional formatting for the text background color.</p>
+   * @public
+   */
+  BackgroundColor?: ConditionalFormattingColor | undefined;
+
+  /**
+   * <p>The conditional formatting for the text color.</p>
+   * @public
+   */
+  TextColor?: ConditionalFormattingColor | undefined;
+
+  /**
+   * <p>The conditional formatting for the icon.</p>
+   * @public
+   */
+  Icon?: ConditionalFormattingIcon | undefined;
+}
 
 /**
  * <p>The cell conditional formatting option for a pivot table.</p>
@@ -373,6 +509,12 @@ export interface PluginVisual {
    * @public
    */
   ChartConfiguration?: PluginVisualConfiguration | undefined;
+
+  /**
+   * <p>The list of custom actions that are configured for a visual.</p>
+   * @public
+   */
+  Actions?: VisualCustomAction[] | undefined;
 
   /**
    * <p>The alt text for the visual.</p>
@@ -2568,6 +2710,12 @@ export interface SheetDefinition {
    * @public
    */
   ContentType?: SheetContentType | undefined;
+
+  /**
+   * <p>A list of visual custom actions for the sheet.</p>
+   * @public
+   */
+  CustomActionDefaults?: VisualCustomActionDefaults | undefined;
 }
 
 /**
@@ -4358,6 +4506,18 @@ export interface AssetBundleImportJobDataSourceCredentials {
 }
 
 /**
+ * <p>The parameters for an IAM Identity Center configuration.</p>
+ * @public
+ */
+export interface IdentityCenterConfiguration {
+  /**
+   * <p>A Boolean option that controls whether Trusted Identity Propagation should be used.</p>
+   * @public
+   */
+  EnableIdentityPropagation?: boolean | undefined;
+}
+
+/**
  * <p>Parameters for Amazon Athena.</p>
  * @public
  */
@@ -4373,6 +4533,13 @@ export interface AthenaParameters {
    * @public
    */
   RoleArn?: string | undefined;
+
+  /**
+   * <p>An optional parameter that configures IAM Identity Center authentication to grant Amazon QuickSight access to your workgroup.</p>
+   *          <p>This parameter can only be specified if your Amazon QuickSight account is configured with IAM Identity Center.</p>
+   * @public
+   */
+  IdentityCenterConfiguration?: IdentityCenterConfiguration | undefined;
 }
 
 /**
@@ -4493,6 +4660,36 @@ export interface ExasolParameters {
    * @public
    */
   Port: number | undefined;
+}
+
+/**
+ * <p>The parameters that are required to connect to a Impala data source.</p>
+ * @public
+ */
+export interface ImpalaParameters {
+  /**
+   * <p>The host name of the Impala data source.</p>
+   * @public
+   */
+  Host: string | undefined;
+
+  /**
+   * <p>The port of the Impala data source.</p>
+   * @public
+   */
+  Port: number | undefined;
+
+  /**
+   * <p>The database of the Impala data source.</p>
+   * @public
+   */
+  Database?: string | undefined;
+
+  /**
+   * <p>The HTTP path of the Impala data source.</p>
+   * @public
+   */
+  SqlEndpointPath: string | undefined;
 }
 
 /**
@@ -4681,18 +4878,6 @@ export interface RedshiftIAMParameters {
    * @public
    */
   AutoCreateDatabaseUser?: boolean | undefined;
-}
-
-/**
- * <p>The parameters for an IAM Identity Center configuration.</p>
- * @public
- */
-export interface IdentityCenterConfiguration {
-  /**
-   * <p>A Boolean option that controls whether Trusted Identity Propagation should be used.</p>
-   * @public
-   */
-  EnableIdentityPropagation?: boolean | undefined;
 }
 
 /**
@@ -5074,6 +5259,7 @@ export type DataSourceParameters =
   | DataSourceParameters.BigQueryParametersMember
   | DataSourceParameters.DatabricksParametersMember
   | DataSourceParameters.ExasolParametersMember
+  | DataSourceParameters.ImpalaParametersMember
   | DataSourceParameters.JiraParametersMember
   | DataSourceParameters.MariaDbParametersMember
   | DataSourceParameters.MySqlParametersMember
@@ -5128,6 +5314,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5162,6 +5349,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5196,6 +5384,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5230,6 +5419,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5264,6 +5454,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5298,6 +5489,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5332,6 +5524,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5366,6 +5559,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5400,6 +5594,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5434,6 +5629,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5468,6 +5664,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5502,6 +5699,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5536,6 +5734,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5570,6 +5769,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5604,6 +5804,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5638,6 +5839,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5672,6 +5874,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5706,6 +5909,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5740,6 +5944,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5774,6 +5979,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5808,6 +6014,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5842,6 +6049,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5876,6 +6084,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5910,6 +6119,7 @@ export namespace DataSourceParameters {
     StarburstParameters: StarburstParameters;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5944,6 +6154,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters: TrinoParameters;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown?: never;
   }
 
@@ -5978,6 +6189,42 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters: BigQueryParameters;
+    ImpalaParameters?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The parameters for Impala.</p>
+   * @public
+   */
+  export interface ImpalaParametersMember {
+    AmazonElasticsearchParameters?: never;
+    AthenaParameters?: never;
+    AuroraParameters?: never;
+    AuroraPostgreSqlParameters?: never;
+    AwsIotAnalyticsParameters?: never;
+    JiraParameters?: never;
+    MariaDbParameters?: never;
+    MySqlParameters?: never;
+    OracleParameters?: never;
+    PostgreSqlParameters?: never;
+    PrestoParameters?: never;
+    RdsParameters?: never;
+    RedshiftParameters?: never;
+    S3Parameters?: never;
+    ServiceNowParameters?: never;
+    SnowflakeParameters?: never;
+    SparkParameters?: never;
+    SqlServerParameters?: never;
+    TeradataParameters?: never;
+    TwitterParameters?: never;
+    AmazonOpenSearchParameters?: never;
+    ExasolParameters?: never;
+    DatabricksParameters?: never;
+    StarburstParameters?: never;
+    TrinoParameters?: never;
+    BigQueryParameters?: never;
+    ImpalaParameters: ImpalaParameters;
     $unknown?: never;
   }
 
@@ -6011,6 +6258,7 @@ export namespace DataSourceParameters {
     StarburstParameters?: never;
     TrinoParameters?: never;
     BigQueryParameters?: never;
+    ImpalaParameters?: never;
     $unknown: [string, any];
   }
 
@@ -6041,6 +6289,7 @@ export namespace DataSourceParameters {
     StarburstParameters: (value: StarburstParameters) => T;
     TrinoParameters: (value: TrinoParameters) => T;
     BigQueryParameters: (value: BigQueryParameters) => T;
+    ImpalaParameters: (value: ImpalaParameters) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -6075,6 +6324,7 @@ export namespace DataSourceParameters {
     if (value.StarburstParameters !== undefined) return visitor.StarburstParameters(value.StarburstParameters);
     if (value.TrinoParameters !== undefined) return visitor.TrinoParameters(value.TrinoParameters);
     if (value.BigQueryParameters !== undefined) return visitor.BigQueryParameters(value.BigQueryParameters);
+    if (value.ImpalaParameters !== undefined) return visitor.ImpalaParameters(value.ImpalaParameters);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -6719,6 +6969,7 @@ export type AuthenticationMethodOption = (typeof AuthenticationMethodOption)[key
  * @enum
  */
 export const ServiceType = {
+  ATHENA: "ATHENA",
   QBUSINESS: "QBUSINESS",
   REDSHIFT: "REDSHIFT",
 } as const;
@@ -8172,205 +8423,21 @@ export interface Logo {
 }
 
 /**
- * @public
- * @enum
+ * @internal
  */
-export const BrandVersionStatus = {
-  CREATE_FAILED: "CREATE_FAILED",
-  CREATE_IN_PROGRESS: "CREATE_IN_PROGRESS",
-  CREATE_SUCCEEDED: "CREATE_SUCCEEDED",
-} as const;
+export const PivotTableConfigurationFilterSensitiveLog = (obj: PivotTableConfiguration): any => ({
+  ...obj,
+});
 
 /**
- * @public
+ * @internal
  */
-export type BrandVersionStatus = (typeof BrandVersionStatus)[keyof typeof BrandVersionStatus];
-
-/**
- * <p>The details of the brand.</p>
- * @public
- */
-export interface BrandDetail {
-  /**
-   * <p>The ID of the Amazon QuickSight brand.</p>
-   * @public
-   */
-  BrandId: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the brand.</p>
-   * @public
-   */
-  Arn?: string | undefined;
-
-  /**
-   * <p>The status of the brand.</p>
-   * @public
-   */
-  BrandStatus?: BrandStatus | undefined;
-
-  /**
-   * <p>The time that the brand was created.</p>
-   * @public
-   */
-  CreatedTime?: Date | undefined;
-
-  /**
-   * <p>The last time the brand was updated.</p>
-   * @public
-   */
-  LastUpdatedTime?: Date | undefined;
-
-  /**
-   * <p>The ID of the version.</p>
-   * @public
-   */
-  VersionId?: string | undefined;
-
-  /**
-   * <p>The status of the version.</p>
-   * @public
-   */
-  VersionStatus?: BrandVersionStatus | undefined;
-
-  /**
-   * <p>A list of errors that occurred during the most recent brand operation.</p>
-   * @public
-   */
-  Errors?: string[] | undefined;
-
-  /**
-   * <p>The logo details.</p>
-   * @public
-   */
-  Logo?: Logo | undefined;
-}
-
-/**
- * <p>A summary of the brand.</p>
- * @public
- */
-export interface BrandSummary {
-  /**
-   * <p>The Amazon Resource Name (ARN) of the brand.</p>
-   * @public
-   */
-  Arn?: string | undefined;
-
-  /**
-   * <p>The ID of the Amazon QuickSight brand.</p>
-   * @public
-   */
-  BrandId?: string | undefined;
-
-  /**
-   * <p>The name of the brand.</p>
-   * @public
-   */
-  BrandName?: string | undefined;
-
-  /**
-   * <p>The description of the brand.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>The status of the brand.</p>
-   * @public
-   */
-  BrandStatus?: BrandStatus | undefined;
-
-  /**
-   * <p>The time that the brand was created.</p>
-   * @public
-   */
-  CreatedTime?: Date | undefined;
-
-  /**
-   * <p>The time when the brand was last updated.</p>
-   * @public
-   */
-  LastUpdatedTime?: Date | undefined;
-}
-
-/**
- * <p>A calculated column for a dataset.</p>
- * @public
- */
-export interface CalculatedColumn {
-  /**
-   * <p>Column name.</p>
-   * @public
-   */
-  ColumnName: string | undefined;
-
-  /**
-   * <p>A unique ID to identify a calculated column. During a dataset update, if the column ID
-   *             of a calculated column matches that of an existing calculated column, Amazon QuickSight
-   *             preserves the existing calculated column.</p>
-   * @public
-   */
-  ColumnId: string | undefined;
-
-  /**
-   * <p>An expression that defines the calculated column.</p>
-   * @public
-   */
-  Expression: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CancelIngestionRequest {
-  /**
-   * <p>The Amazon Web Services account ID.</p>
-   * @public
-   */
-  AwsAccountId: string | undefined;
-
-  /**
-   * <p>The ID of the dataset used in the ingestion.</p>
-   * @public
-   */
-  DataSetId: string | undefined;
-
-  /**
-   * <p>An ID for the ingestion.</p>
-   * @public
-   */
-  IngestionId: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CancelIngestionResponse {
-  /**
-   * <p>The Amazon Resource Name (ARN) for the data ingestion.</p>
-   * @public
-   */
-  Arn?: string | undefined;
-
-  /**
-   * <p>An ID for the ingestion.</p>
-   * @public
-   */
-  IngestionId?: string | undefined;
-
-  /**
-   * <p>The Amazon Web Services request ID for this operation.</p>
-   * @public
-   */
-  RequestId?: string | undefined;
-
-  /**
-   * <p>The HTTP status of the request.</p>
-   * @public
-   */
-  Status?: number | undefined;
-}
+export const TextConditionalFormatFilterSensitiveLog = (obj: TextConditionalFormat): any => ({
+  ...obj,
+  ...(obj.BackgroundColor && { BackgroundColor: ConditionalFormattingColorFilterSensitiveLog(obj.BackgroundColor) }),
+  ...(obj.TextColor && { TextColor: ConditionalFormattingColorFilterSensitiveLog(obj.TextColor) }),
+  ...(obj.Icon && { Icon: ConditionalFormattingIconFilterSensitiveLog(obj.Icon) }),
+});
 
 /**
  * @internal
@@ -8854,12 +8921,4 @@ export const TopicIRMetricFilterSensitiveLog = (obj: TopicIRMetric): any => ({
 export const TopicIRFilterSensitiveLog = (obj: TopicIR): any => ({
   ...obj,
   ...(obj.Metrics && { Metrics: obj.Metrics.map((item) => TopicIRMetricFilterSensitiveLog(item)) }),
-});
-
-/**
- * @internal
- */
-export const CalculatedColumnFilterSensitiveLog = (obj: CalculatedColumn): any => ({
-  ...obj,
-  ...(obj.Expression && { Expression: SENSITIVE_STRING }),
 });

@@ -90,6 +90,7 @@ import {
   BudgetNotificationsForAccount,
   BudgetPerformanceHistory,
   CalculatedSpend,
+  CostCategoryValues,
   CostTypes,
   CreateBudgetActionRequest,
   CreateBudgetRequest,
@@ -124,12 +125,17 @@ import {
   DuplicateRecordException,
   ExecuteBudgetActionRequest,
   ExpiredNextTokenException,
+  Expression,
+  ExpressionDimensionValues,
+  HealthStatus,
   HistoricalOptions,
   IamActionDefinition,
   InternalErrorException,
   InvalidNextTokenException,
   InvalidParameterException,
   ListTagsForResourceRequest,
+  MatchOption,
+  Metric,
   NotFoundException,
   Notification,
   NotificationWithSubscribers,
@@ -141,6 +147,7 @@ import {
   SsmActionDefinition,
   Subscriber,
   TagResourceRequest,
+  TagValues,
   ThrottlingException,
   TimePeriod,
   UntagResourceRequest,
@@ -1034,15 +1041,15 @@ const de_CommandError = async (output: __HttpResponse, context: __SerdeContext):
     case "InvalidParameterException":
     case "com.amazonaws.budgets#InvalidParameterException":
       throw await de_InvalidParameterExceptionRes(parsedOutput, context);
+    case "NotFoundException":
+    case "com.amazonaws.budgets#NotFoundException":
+      throw await de_NotFoundExceptionRes(parsedOutput, context);
     case "ServiceQuotaExceededException":
     case "com.amazonaws.budgets#ServiceQuotaExceededException":
       throw await de_ServiceQuotaExceededExceptionRes(parsedOutput, context);
     case "ThrottlingException":
     case "com.amazonaws.budgets#ThrottlingException":
       throw await de_ThrottlingExceptionRes(parsedOutput, context);
-    case "NotFoundException":
-    case "com.amazonaws.budgets#NotFoundException":
-      throw await de_NotFoundExceptionRes(parsedOutput, context);
     case "ResourceLockedException":
     case "com.amazonaws.budgets#ResourceLockedException":
       throw await de_ResourceLockedExceptionRes(parsedOutput, context);
@@ -1259,13 +1266,17 @@ const se_AutoAdjustData = (input: AutoAdjustData, context: __SerdeContext): any 
 const se_Budget = (input: Budget, context: __SerdeContext): any => {
   return take(input, {
     AutoAdjustData: (_) => se_AutoAdjustData(_, context),
+    BillingViewArn: [],
     BudgetLimit: _json,
     BudgetName: [],
     BudgetType: [],
     CalculatedSpend: _json,
     CostFilters: _json,
     CostTypes: _json,
+    FilterExpression: (_) => se_Expression(_, context),
+    HealthStatus: (_) => se_HealthStatus(_, context),
     LastUpdatedTime: (_) => _.getTime() / 1_000,
+    Metrics: _json,
     PlannedBudgetLimits: _json,
     TimePeriod: (_) => se_TimePeriod(_, context),
     TimeUnit: [],
@@ -1273,6 +1284,8 @@ const se_Budget = (input: Budget, context: __SerdeContext): any => {
 };
 
 // se_CalculatedSpend omitted.
+
+// se_CostCategoryValues omitted.
 
 // se_CostFilters omitted.
 
@@ -1428,7 +1441,45 @@ const se_DescribeSubscribersForNotificationRequest = (
 
 // se_ExecuteBudgetActionRequest omitted.
 
+/**
+ * serializeAws_json1_1Expression
+ */
+const se_Expression = (input: Expression, context: __SerdeContext): any => {
+  return take(input, {
+    And: (_) => se_Expressions(_, context),
+    CostCategories: _json,
+    Dimensions: _json,
+    Not: (_) => se_Expression(_, context),
+    Or: (_) => se_Expressions(_, context),
+    Tags: _json,
+  });
+};
+
+// se_ExpressionDimensionValues omitted.
+
+/**
+ * serializeAws_json1_1Expressions
+ */
+const se_Expressions = (input: Expression[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_Expression(entry, context);
+    });
+};
+
 // se_Groups omitted.
+
+/**
+ * serializeAws_json1_1HealthStatus
+ */
+const se_HealthStatus = (input: HealthStatus, context: __SerdeContext): any => {
+  return take(input, {
+    LastUpdatedTime: (_) => _.getTime() / 1_000,
+    Status: [],
+    StatusReason: [],
+  });
+};
 
 // se_HistoricalOptions omitted.
 
@@ -1437,6 +1488,10 @@ const se_DescribeSubscribersForNotificationRequest = (
 // se_InstanceIds omitted.
 
 // se_ListTagsForResourceRequest omitted.
+
+// se_MatchOptions omitted.
+
+// se_Metrics omitted.
 
 /**
  * serializeAws_json1_1Notification
@@ -1493,6 +1548,8 @@ const se_NotificationWithSubscribersList = (input: NotificationWithSubscribers[]
 // se_Subscribers omitted.
 
 // se_TagResourceRequest omitted.
+
+// se_TagValues omitted.
 
 // se_TargetIds omitted.
 
@@ -1561,6 +1618,8 @@ const se_UpdateSubscriberRequest = (input: UpdateSubscriberRequest, context: __S
 };
 
 // se_Users omitted.
+
+// se_Values omitted.
 
 // de_AccessDeniedException omitted.
 
@@ -1655,13 +1714,17 @@ const de_AutoAdjustData = (output: any, context: __SerdeContext): AutoAdjustData
 const de_Budget = (output: any, context: __SerdeContext): Budget => {
   return take(output, {
     AutoAdjustData: (_: any) => de_AutoAdjustData(_, context),
+    BillingViewArn: __expectString,
     BudgetLimit: _json,
     BudgetName: __expectString,
     BudgetType: __expectString,
     CalculatedSpend: _json,
     CostFilters: _json,
     CostTypes: _json,
+    FilterExpression: (_: any) => de_Expression(_, context),
+    HealthStatus: (_: any) => de_HealthStatus(_, context),
     LastUpdatedTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    Metrics: _json,
     PlannedBudgetLimits: _json,
     TimePeriod: (_: any) => de_TimePeriod(_, context),
     TimeUnit: __expectString,
@@ -1721,6 +1784,7 @@ const de_BudgetNotificationsForAccountList = (
  */
 const de_BudgetPerformanceHistory = (output: any, context: __SerdeContext): BudgetPerformanceHistory => {
   return take(output, {
+    BillingViewArn: __expectString,
     BudgetName: __expectString,
     BudgetType: __expectString,
     BudgetedAndActualAmountsList: (_: any) => de_BudgetedAndActualAmountsList(_, context),
@@ -1743,6 +1807,8 @@ const de_Budgets = (output: any, context: __SerdeContext): Budget[] => {
 };
 
 // de_CalculatedSpend omitted.
+
+// de_CostCategoryValues omitted.
 
 // de_CostFilters omitted.
 
@@ -1895,7 +1961,46 @@ const de_DescribeNotificationsForBudgetResponse = (
 
 // de_ExpiredNextTokenException omitted.
 
+/**
+ * deserializeAws_json1_1Expression
+ */
+const de_Expression = (output: any, context: __SerdeContext): Expression => {
+  return take(output, {
+    And: (_: any) => de_Expressions(_, context),
+    CostCategories: _json,
+    Dimensions: _json,
+    Not: (_: any) => de_Expression(_, context),
+    Or: (_: any) => de_Expressions(_, context),
+    Tags: _json,
+  }) as any;
+};
+
+// de_ExpressionDimensionValues omitted.
+
+/**
+ * deserializeAws_json1_1Expressions
+ */
+const de_Expressions = (output: any, context: __SerdeContext): Expression[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_Expression(entry, context);
+    });
+  return retVal;
+};
+
 // de_Groups omitted.
+
+/**
+ * deserializeAws_json1_1HealthStatus
+ */
+const de_HealthStatus = (output: any, context: __SerdeContext): HealthStatus => {
+  return take(output, {
+    LastUpdatedTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    Status: __expectString,
+    StatusReason: __expectString,
+  }) as any;
+};
 
 // de_HistoricalOptions omitted.
 
@@ -1910,6 +2015,10 @@ const de_DescribeNotificationsForBudgetResponse = (
 // de_InvalidParameterException omitted.
 
 // de_ListTagsForResourceResponse omitted.
+
+// de_MatchOptions omitted.
+
+// de_Metrics omitted.
 
 // de_NotFoundException omitted.
 
@@ -1962,6 +2071,8 @@ const de_Notifications = (output: any, context: __SerdeContext): Notification[] 
 
 // de_TagResourceResponse omitted.
 
+// de_TagValues omitted.
+
 // de_TargetIds omitted.
 
 // de_ThrottlingException omitted.
@@ -1997,6 +2108,8 @@ const de_UpdateBudgetActionResponse = (output: any, context: __SerdeContext): Up
 // de_UpdateSubscriberResponse omitted.
 
 // de_Users omitted.
+
+// de_Values omitted.
 
 const deserializeMetadata = (output: __HttpResponse): __ResponseMetadata => ({
   httpStatusCode: output.statusCode,

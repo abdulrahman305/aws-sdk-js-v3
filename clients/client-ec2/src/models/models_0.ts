@@ -146,6 +146,7 @@ export type AcceleratorType = (typeof AcceleratorType)[keyof typeof AcceleratorT
  * @enum
  */
 export const ResourceType = {
+  capacity_block: "capacity-block",
   capacity_reservation: "capacity-reservation",
   capacity_reservation_fleet: "capacity-reservation-fleet",
   carrier_gateway: "carrier-gateway",
@@ -187,6 +188,7 @@ export const ResourceType = {
   local_gateway_route_table_vpc_association: "local-gateway-route-table-vpc-association",
   local_gateway_virtual_interface: "local-gateway-virtual-interface",
   local_gateway_virtual_interface_group: "local-gateway-virtual-interface-group",
+  mac_modification_task: "mac-modification-task",
   natgateway: "natgateway",
   network_acl: "network-acl",
   network_insights_access_scope: "network-insights-access-scope",
@@ -194,13 +196,18 @@ export const ResourceType = {
   network_insights_analysis: "network-insights-analysis",
   network_insights_path: "network-insights-path",
   network_interface: "network-interface",
+  outpost_lag: "outpost-lag",
   placement_group: "placement-group",
   prefix_list: "prefix-list",
   replace_root_volume_task: "replace-root-volume-task",
   reserved_instances: "reserved-instances",
+  route_server: "route-server",
+  route_server_endpoint: "route-server-endpoint",
+  route_server_peer: "route-server-peer",
   route_table: "route-table",
   security_group: "security-group",
   security_group_rule: "security-group-rule",
+  service_link_virtual_interface: "service-link-virtual-interface",
   snapshot: "snapshot",
   spot_fleet_request: "spot-fleet-request",
   spot_instances_request: "spot-instances-request",
@@ -420,8 +427,8 @@ export interface AcceptCapacityReservationBillingOwnershipResult {
  */
 export interface TargetConfigurationRequest {
   /**
-   * <p>The number of instances the Convertible Reserved Instance offering can be applied to. This parameter is reserved and cannot
-   *       be specified in a request</p>
+   * <p>The number of instances the Convertible Reserved Instance offering can be applied to. This
+   *       parameter is reserved and cannot be specified in a request</p>
    * @public
    */
   InstanceCount?: number | undefined;
@@ -439,23 +446,24 @@ export interface TargetConfigurationRequest {
  */
 export interface AcceptReservedInstancesExchangeQuoteRequest {
   /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *       and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *       Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * <p>Checks whether you have the required permissions for the action, without actually making
+   *       the request, and provides an error response. If you have the required permissions, the error
+   *       response is <code>DryRunOperation</code>. Otherwise, it is
+   *       <code>UnauthorizedOperation</code>.</p>
    * @public
    */
   DryRun?: boolean | undefined;
 
   /**
-   * <p>The IDs of the Convertible Reserved Instances to exchange for another Convertible
-   *             Reserved Instance of the same or higher value.</p>
+   * <p>The IDs of the Convertible Reserved Instances to exchange for another Convertible Reserved
+   *       Instance of the same or higher value.</p>
    * @public
    */
   ReservedInstanceIds: string[] | undefined;
 
   /**
-   * <p>The configuration of the target Convertible Reserved Instance to exchange for your
-   *             current Convertible Reserved Instances.</p>
+   * <p>The configuration of the target Convertible Reserved Instance to exchange for your current
+   *       Convertible Reserved Instances.</p>
    * @public
    */
   TargetConfigurations?: TargetConfigurationRequest[] | undefined;
@@ -511,6 +519,7 @@ export interface AcceptTransitGatewayMulticastDomainAssociationsRequest {
 export const TransitGatewayAttachmentResourceType = {
   connect: "connect",
   direct_connect_gateway: "direct-connect-gateway",
+  network_function: "network-function",
   peering: "peering",
   tgw_peering: "tgw-peering",
   vpc: "vpc",
@@ -1604,6 +1613,12 @@ export interface AnalysisLoadBalancerTarget {
   AvailabilityZone?: string | undefined;
 
   /**
+   * <p>The ID of the Availability Zone.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
+
+  /**
    * <p>Information about the instance.</p>
    * @public
    */
@@ -1871,6 +1886,12 @@ export interface Explanation {
    * @public
    */
   AvailabilityZones?: string[] | undefined;
+
+  /**
+   * <p>The IDs of the Availability Zones.</p>
+   * @public
+   */
+  AvailabilityZoneIds?: string[] | undefined;
 
   /**
    * <p>The CIDR ranges.</p>
@@ -2704,6 +2725,82 @@ export interface ActiveInstance {
  * @public
  * @enum
  */
+export const VpnTunnelProvisioningStatus = {
+  available: "available",
+  failed: "failed",
+  pending: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type VpnTunnelProvisioningStatus =
+  (typeof VpnTunnelProvisioningStatus)[keyof typeof VpnTunnelProvisioningStatus];
+
+/**
+ * <p>Contains information about the current security configuration of an active VPN tunnel.</p>
+ * @public
+ */
+export interface ActiveVpnTunnelStatus {
+  /**
+   * <p>The encryption algorithm negotiated in Phase 1 IKE negotiations.</p>
+   * @public
+   */
+  Phase1EncryptionAlgorithm?: string | undefined;
+
+  /**
+   * <p>The encryption algorithm negotiated in Phase 2 IKE negotiations.</p>
+   * @public
+   */
+  Phase2EncryptionAlgorithm?: string | undefined;
+
+  /**
+   * <p>The integrity algorithm negotiated in Phase 1 IKE negotiations.</p>
+   * @public
+   */
+  Phase1IntegrityAlgorithm?: string | undefined;
+
+  /**
+   * <p>The integrity algorithm negotiated in Phase 2 IKE negotiations.</p>
+   * @public
+   */
+  Phase2IntegrityAlgorithm?: string | undefined;
+
+  /**
+   * <p>The Diffie-Hellman group number being used in Phase 1 IKE negotiations.</p>
+   * @public
+   */
+  Phase1DHGroup?: number | undefined;
+
+  /**
+   * <p>The Diffie-Hellman group number being used in Phase 2 IKE negotiations.</p>
+   * @public
+   */
+  Phase2DHGroup?: number | undefined;
+
+  /**
+   * <p>The version of the Internet Key Exchange (IKE) protocol being used.</p>
+   * @public
+   */
+  IkeVersion?: string | undefined;
+
+  /**
+   * <p>The current provisioning status of the VPN tunnel.</p>
+   * @public
+   */
+  ProvisioningStatus?: VpnTunnelProvisioningStatus | undefined;
+
+  /**
+   * <p>The reason for the current provisioning status.</p>
+   * @public
+   */
+  ProvisioningStatusReason?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
 export const ActivityStatus = {
   ERROR: "error",
   FULFILLED: "fulfilled",
@@ -2860,6 +2957,7 @@ export type DomainType = (typeof DomainType)[keyof typeof DomainType];
 export const ServiceManaged = {
   alb: "alb",
   nlb: "nlb",
+  rnat: "rnat",
 } as const;
 
 /**
@@ -2945,6 +3043,12 @@ export interface Address {
    * @public
    */
   CarrierIp?: string | undefined;
+
+  /**
+   * <p>The ID of the subnet where the IP address is allocated.</p>
+   * @public
+   */
+  SubnetId?: string | undefined;
 
   /**
    * <p>The service that manages the elastic IP address.</p>
@@ -3509,6 +3613,12 @@ export interface AllocateHostsRequest {
   AssetIds?: string[] | undefined;
 
   /**
+   * <p>The ID of the Availability Zone.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
+
+  /**
    * <p>Indicates whether the host accepts any untargeted instance launches that match its
    *             instance type configuration, or if it only accepts Host tenancy instance launches that
    *             specify its unique host ID. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding"> Understanding auto-placement and affinity</a> in the
@@ -3551,7 +3661,7 @@ export interface AllocateHostsRequest {
    * <p>The Availability Zone in which to allocate the Dedicated Host.</p>
    * @public
    */
-  AvailabilityZone: string | undefined;
+  AvailabilityZone?: string | undefined;
 }
 
 /**
@@ -3938,17 +4048,18 @@ export interface AssignIpv6AddressesRequest {
   NetworkInterfaceId: string | undefined;
 
   /**
-   * <p>The IPv6 addresses to be assigned to the network interface. You can't use this option if you're specifying a number of IPv6 addresses.</p>
+   * <p>The IPv6 addresses to be assigned to the network interface. You can't use this option
+   *             if you're specifying a number of IPv6 addresses.</p>
    * @public
    */
   Ipv6Addresses?: string[] | undefined;
 
   /**
-   * <p>The number of additional IPv6 addresses to assign to the network interface.
-   *     		The specified number of IPv6 addresses are assigned in addition to the
-   *     		existing IPv6 addresses that are already assigned to the network interface.
-   *     		Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You
-   *     		can't use this option if specifying specific IPv6 addresses.</p>
+   * <p>The number of additional IPv6 addresses to assign to the network interface. The
+   *             specified number of IPv6 addresses are assigned in addition to the existing IPv6
+   *             addresses that are already assigned to the network interface. Amazon EC2 automatically
+   *             selects the IPv6 addresses from the subnet range. You can't use this option if
+   *             specifying specific IPv6 addresses.</p>
    * @public
    */
   Ipv6AddressCount?: number | undefined;
@@ -3959,8 +4070,8 @@ export interface AssignIpv6AddressesRequest {
  */
 export interface AssignIpv6AddressesResult {
   /**
-   * <p>The new IPv6 addresses assigned to the network interface. Existing IPv6 addresses
-   *         	that were assigned to the network interface before the request are not included.</p>
+   * <p>The new IPv6 addresses assigned to the network interface. Existing IPv6 addresses that
+   *             were assigned to the network interface before the request are not included.</p>
    * @public
    */
   AssignedIpv6Addresses?: string[] | undefined;
@@ -4002,20 +4113,25 @@ export interface AssignPrivateIpAddressesRequest {
   NetworkInterfaceId: string | undefined;
 
   /**
-   * <p>The IP addresses to be assigned as a secondary private IP address to the network interface. You can't specify this parameter when also specifying a number of secondary IP addresses.</p>
-   *          <p>If you don't specify an IP address, Amazon EC2 automatically selects an IP address within the subnet range.</p>
+   * <p>The IP addresses to be assigned as a secondary private IP address to the network
+   *             interface. You can't specify this parameter when also specifying a number of secondary
+   *             IP addresses.</p>
+   *          <p>If you don't specify an IP address, Amazon EC2 automatically selects an IP address within
+   *             the subnet range.</p>
    * @public
    */
   PrivateIpAddresses?: string[] | undefined;
 
   /**
-   * <p>The number of secondary IP addresses to assign to the network interface. You can't specify this parameter when also specifying private IP addresses.</p>
+   * <p>The number of secondary IP addresses to assign to the network interface. You can't
+   *             specify this parameter when also specifying private IP addresses.</p>
    * @public
    */
   SecondaryPrivateIpAddressCount?: number | undefined;
 
   /**
-   * <p>Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface.</p>
+   * <p>Indicates whether to allow an IP address that is already assigned to another network
+   *             interface or instance to be reassigned to the specified network interface.</p>
    * @public
    */
   AllowReassignment?: boolean | undefined;
@@ -5062,12 +5178,95 @@ export interface AssociateNatGatewayAddressResult {
 /**
  * @public
  */
+export interface AssociateRouteServerRequest {
+  /**
+   * <p>The unique identifier for the route server to be associated.</p>
+   * @public
+   */
+  RouteServerId: string | undefined;
+
+  /**
+   * <p>The ID of the VPC to associate with the route server.</p>
+   * @public
+   */
+  VpcId: string | undefined;
+
+  /**
+   * <p>A check for whether you have the required permissions for the action without actually making the request
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerAssociationState = {
+  ASSOCIATED: "associated",
+  ASSOCIATING: "associating",
+  DISASSOCIATING: "disassociating",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerAssociationState =
+  (typeof RouteServerAssociationState)[keyof typeof RouteServerAssociationState];
+
+/**
+ * <p>Describes the association between a route server and a VPC.</p>
+ *          <p>A route server association is the connection established between a route server and a VPC.</p>
+ * @public
+ */
+export interface RouteServerAssociation {
+  /**
+   * <p>The ID of the associated route server.</p>
+   * @public
+   */
+  RouteServerId?: string | undefined;
+
+  /**
+   * <p>The ID of the associated VPC.</p>
+   * @public
+   */
+  VpcId?: string | undefined;
+
+  /**
+   * <p>The current state of the association.</p>
+   * @public
+   */
+  State?: RouteServerAssociationState | undefined;
+}
+
+/**
+ * @public
+ */
+export interface AssociateRouteServerResult {
+  /**
+   * <p>Information about the association between the route server and the VPC.</p>
+   * @public
+   */
+  RouteServerAssociation?: RouteServerAssociation | undefined;
+}
+
+/**
+ * @public
+ */
 export interface AssociateRouteTableRequest {
   /**
    * <p>The ID of the internet gateway or virtual private gateway.</p>
    * @public
    */
   GatewayId?: string | undefined;
+
+  /**
+   * <p>The ID of a public IPv4 pool. A public IPv4 pool is a pool of IPv4 addresses that you've brought to Amazon Web Services with BYOIP.</p>
+   * @public
+   */
+  PublicIpv4Pool?: string | undefined;
 
   /**
    * <p>Checks whether you have the required permissions for the action, without actually making the request,
@@ -5993,23 +6192,31 @@ export interface EnaSrdSpecification {
  */
 export interface AttachNetworkInterfaceRequest {
   /**
-   * <p>The index of the network card. Some instance types support multiple network cards.
-   *             The primary network interface must be assigned to network card index 0.
-   *             The default is network card index 0.</p>
+   * <p>The index of the network card. Some instance types support multiple network cards. The
+   *             primary network interface must be assigned to network card index 0. The default is
+   *             network card index 0.</p>
    * @public
    */
   NetworkCardIndex?: number | undefined;
 
   /**
-   * <p>Configures ENA Express for the network interface that this action attaches to the instance.</p>
+   * <p>Configures ENA Express for the network interface that this action attaches to the
+   *             instance.</p>
    * @public
    */
   EnaSrdSpecification?: EnaSrdSpecification | undefined;
 
   /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *             and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *             Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * <p>The number of ENA queues to be created with the instance.</p>
+   * @public
+   */
+  EnaQueueCount?: number | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually
+   *             making the request, and provides an error response. If you have the required
+   *             permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is
+   *                 <code>UnauthorizedOperation</code>.</p>
    * @public
    */
   DryRun?: boolean | undefined;
@@ -6533,17 +6740,17 @@ export interface VolumeAttachment {
   DeleteOnTermination?: boolean | undefined;
 
   /**
-   * <p>The ARN of the Amazon ECS or Fargate task
+   * <p>The ARN of the Amazon Web Services-managed resource
    *       to which the volume is attached.</p>
    * @public
    */
   AssociatedResource?: string | undefined;
 
   /**
-   * <p>The service principal of Amazon Web Services service that owns the underlying
-   *       instance to which the volume is attached.</p>
+   * <p>The service principal of the Amazon Web Services service that owns the underlying
+   *       resource to which the volume is attached.</p>
    *          <p>This parameter is returned only for volumes that are attached to
-   *       Fargate tasks.</p>
+   *       Amazon Web Services-managed resources.</p>
    * @public
    */
   InstanceOwningService?: string | undefined;
@@ -6556,7 +6763,7 @@ export interface VolumeAttachment {
 
   /**
    * <p>The ID of the instance.</p>
-   *          <p>If the volume is attached to a Fargate task, this parameter
+   *          <p>If the volume is attached to an Amazon Web Services-managed resource, this parameter
    *       returns <code>null</code>.</p>
    * @public
    */
@@ -6564,7 +6771,7 @@ export interface VolumeAttachment {
 
   /**
    * <p>The device name.</p>
-   *          <p>If the volume is attached to a Fargate task, this parameter
+   *          <p>If the volume is attached to an Amazon Web Services-managed resource, this parameter
    *       returns <code>null</code>.</p>
    * @public
    */
@@ -7819,7 +8026,8 @@ export type ListingState = (typeof ListingState)[keyof typeof ListingState];
  */
 export interface InstanceCount {
   /**
-   * <p>The number of listed Reserved Instances in the state specified by the <code>state</code>.</p>
+   * <p>The number of listed Reserved Instances in the state specified by the
+   *       <code>state</code>.</p>
    * @public
    */
   InstanceCount?: number | undefined;
@@ -7850,15 +8058,21 @@ export type CurrencyCodeValues = (typeof CurrencyCodeValues)[keyof typeof Curren
  */
 export interface PriceSchedule {
   /**
-   * <p>The current price schedule, as determined by the term remaining for the Reserved Instance in the listing.</p>
-   *          <p>A specific price schedule is always in effect, but only one price schedule can be active at any time. Take, for example, a Reserved Instance listing that has five months remaining in its term. When you specify price schedules for five months and two months, this means that schedule 1, covering the first three months of the remaining term, will be active during months 5, 4, and 3. Then schedule 2, covering the last two months of the term, will be active for months 2 and 1.</p>
+   * <p>The current price schedule, as determined by the term remaining for the Reserved Instance
+   *       in the listing.</p>
+   *          <p>A specific price schedule is always in effect, but only one price schedule can be active
+   *       at any time. Take, for example, a Reserved Instance listing that has five months remaining in
+   *       its term. When you specify price schedules for five months and two months, this means that
+   *       schedule 1, covering the first three months of the remaining term, will be active during
+   *       months 5, 4, and 3. Then schedule 2, covering the last two months of the term, will be active
+   *       for months 2 and 1.</p>
    * @public
    */
   Active?: boolean | undefined;
 
   /**
-   * <p>The currency for transacting the Reserved Instance resale.
-   * 				At this time, the only supported currency is <code>USD</code>.</p>
+   * <p>The currency for transacting the Reserved Instance resale. At this time, the only
+   *       supported currency is <code>USD</code>.</p>
    * @public
    */
   CurrencyCode?: CurrencyCodeValues | undefined;
@@ -7870,7 +8084,8 @@ export interface PriceSchedule {
   Price?: number | undefined;
 
   /**
-   * <p>The number of months remaining in the reservation. For example, 2 is the second to the last month before the capacity reservation expires.</p>
+   * <p>The number of months remaining in the reservation. For example, 2 is the second to the
+   *       last month before the capacity reservation expires.</p>
    * @public
    */
   Term?: number | undefined;
@@ -7899,7 +8114,8 @@ export type ListingStatus = (typeof ListingStatus)[keyof typeof ListingStatus];
 export interface ReservedInstancesListing {
   /**
    * <p>A unique, case-sensitive key supplied by the client to ensure that the request is
-   * 			idempotent. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.</p>
+   *       idempotent. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+   *       Idempotency</a>.</p>
    * @public
    */
   ClientToken?: string | undefined;
@@ -7941,7 +8157,8 @@ export interface ReservedInstancesListing {
   Status?: ListingStatus | undefined;
 
   /**
-   * <p>The reason for the current status of the Reserved Instance listing. The response can be blank.</p>
+   * <p>The reason for the current status of the Reserved Instance listing. The response can be
+   *       blank.</p>
    * @public
    */
   StatusMessage?: string | undefined;
@@ -8228,359 +8445,6 @@ export interface ConfirmProductInstanceResult {
 }
 
 /**
- * @public
- */
-export interface CopyFpgaImageRequest {
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-
-  /**
-   * <p>The ID of the source AFI.</p>
-   * @public
-   */
-  SourceFpgaImageId: string | undefined;
-
-  /**
-   * <p>The description for the new AFI.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>The name for the new AFI. The default is the name of the source AFI.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>The Region that contains the source AFI.</p>
-   * @public
-   */
-  SourceRegion: string | undefined;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
-   *       	For more information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CopyFpgaImageResult {
-  /**
-   * <p>The ID of the new AFI.</p>
-   * @public
-   */
-  FpgaImageId?: string | undefined;
-}
-
-/**
- * <p>Contains the parameters for CopyImage.</p>
- * @public
- */
-export interface CopyImageRequest {
-  /**
-   * <p>Unique, case-sensitive identifier you provide to ensure idempotency of the request. For
-   *       more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency</a>
-   *       in the <i>Amazon EC2 API Reference</i>.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-
-  /**
-   * <p>A description for the new AMI in the destination Region.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>Specifies whether the destination snapshots of the copied image should be encrypted. You
-   *       can encrypt a copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an
-   *       encrypted snapshot. The default KMS key for Amazon EBS is used unless you specify a non-default
-   *       Key Management Service (KMS) KMS key using <code>KmsKeyId</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with
-   *         EBS-backed AMIs</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  Encrypted?: boolean | undefined;
-
-  /**
-   * <p>The identifier of the symmetric Key Management Service (KMS) KMS key to use when creating encrypted volumes.
-   *       If this parameter is not specified, your Amazon Web Services managed KMS key for Amazon EBS is used. If you
-   *       specify a KMS key, you must also set the encrypted state to <code>true</code>.</p>
-   *          <p>You can specify a KMS key using any of the following:</p>
-   *          <ul>
-   *             <li>
-   *                <p>Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.</p>
-   *             </li>
-   *             <li>
-   *                <p>Key alias. For example, alias/ExampleAlias.</p>
-   *             </li>
-   *             <li>
-   *                <p>Key ARN. For example, arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.</p>
-   *             </li>
-   *             <li>
-   *                <p>Alias ARN. For example, arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.</p>
-   *             </li>
-   *          </ul>
-   *          <p>Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an identifier
-   *       that is not valid, the action can appear to complete, but eventually fails.</p>
-   *          <p>The specified KMS key must exist in the destination Region.</p>
-   *          <p>Amazon EBS does not support asymmetric KMS keys.</p>
-   * @public
-   */
-  KmsKeyId?: string | undefined;
-
-  /**
-   * <p>The name of the new AMI in the destination Region.</p>
-   * @public
-   */
-  Name: string | undefined;
-
-  /**
-   * <p>The ID of the AMI to copy.</p>
-   * @public
-   */
-  SourceImageId: string | undefined;
-
-  /**
-   * <p>The name of the Region that contains the AMI to copy.</p>
-   * @public
-   */
-  SourceRegion: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the Outpost to which to copy the AMI. Only specify this
-   *       parameter when copying an AMI from an Amazon Web Services Region to an Outpost. The AMI must be in the
-   *       Region of the destination Outpost. You cannot copy an AMI from an Outpost to a Region, from
-   *       one Outpost to another, or within the same Outpost.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#copy-amis">Copy AMIs from an Amazon Web Services Region
-   *         to an Outpost</a> in the <i>Amazon EBS User Guide</i>.</p>
-   * @public
-   */
-  DestinationOutpostArn?: string | undefined;
-
-  /**
-   * <p>Indicates whether to include your user-defined AMI tags when copying the AMI.</p>
-   *          <p>The following tags will not be copied:</p>
-   *          <ul>
-   *             <li>
-   *                <p>System tags (prefixed with <code>aws:</code>)</p>
-   *             </li>
-   *             <li>
-   *                <p>For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services
-   *           accounts</p>
-   *             </li>
-   *          </ul>
-   *          <p>Default: Your user-defined AMI tags are not copied.</p>
-   * @public
-   */
-  CopyImageTags?: boolean | undefined;
-
-  /**
-   * <p>The tags to apply to the new AMI and new snapshots. You can tag the AMI, the snapshots, or
-   *       both.</p>
-   *          <ul>
-   *             <li>
-   *                <p>To tag the new AMI, the value for <code>ResourceType</code> must be
-   *           <code>image</code>.</p>
-   *             </li>
-   *             <li>
-   *                <p>To tag the new snapshots, the value for <code>ResourceType</code> must be
-   *             <code>snapshot</code>. The same tag is applied to all the new snapshots.</p>
-   *             </li>
-   *          </ul>
-   *          <p>If you specify other values for <code>ResourceType</code>, the request fails.</p>
-   *          <p>To tag an AMI or snapshot after it has been created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.</p>
-   * @public
-   */
-  TagSpecifications?: TagSpecification[] | undefined;
-
-  /**
-   * <p>Specify a completion duration, in 15 minute increments, to initiate a time-based
-   *       AMI copy. The specified completion duration applies to each of the snapshots associated
-   *       with the AMI. Each snapshot associated with the AMI will be completed within the
-   *       specified completion duration, regardless of their size.</p>
-   *          <p>If you do not specify a value, the AMI copy operation is completed on a best-effort
-   *       basis.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/time-based-copies.html">
-   *       Time-based copies</a>.</p>
-   * @public
-   */
-  SnapshotCopyCompletionDurationMinutes?: number | undefined;
-
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   * 			and provides an error response. If you have the required permissions, the error response is
-   * 			<code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-}
-
-/**
- * <p>Contains the output of CopyImage.</p>
- * @public
- */
-export interface CopyImageResult {
-  /**
-   * <p>The ID of the new AMI.</p>
-   * @public
-   */
-  ImageId?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CopySnapshotRequest {
-  /**
-   * <p>A description for the EBS snapshot.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the Outpost to which to copy the snapshot. Only
-   * 		specify this parameter when copying a snapshot from an Amazon Web Services Region to an Outpost.
-   * 		The snapshot must be in the Region for the destination Outpost. You cannot copy a
-   * 		snapshot from an Outpost to a Region, from one Outpost to another, or within the same
-   * 		Outpost.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#copy-snapshots">
-   *   		Copy snapshots from an Amazon Web Services Region to an Outpost</a> in the
-   *   		<i>Amazon EBS User Guide</i>.</p>
-   * @public
-   */
-  DestinationOutpostArn?: string | undefined;
-
-  /**
-   * <p>The destination Region to use in the <code>PresignedUrl</code> parameter of a snapshot
-   *       copy operation. This parameter is only valid for specifying the destination Region in a
-   *         <code>PresignedUrl</code> parameter, where it is required.</p>
-   *          <p>The snapshot copy is sent to the regional endpoint that you sent the HTTP
-   *     	request to (for example, <code>ec2.us-east-1.amazonaws.com</code>). With the CLI, this is
-   *       specified using the <code>--region</code> parameter or the default Region in your Amazon Web Services
-   *       configuration file.</p>
-   * @public
-   */
-  DestinationRegion?: string | undefined;
-
-  /**
-   * <p>To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled,
-   *       enable encryption using this parameter. Otherwise, omit this parameter. Encrypted snapshots
-   *       are encrypted, even if you omit this parameter and encryption by default is not enabled. You
-   *       cannot set this parameter to false. For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
-   *       <i>Amazon EBS User Guide</i>.</p>
-   * @public
-   */
-  Encrypted?: boolean | undefined;
-
-  /**
-   * <p>The identifier of the KMS key to use for Amazon EBS encryption.
-   *       If this parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is
-   *       specified, the encrypted state must be <code>true</code>.</p>
-   *          <p>You can specify the KMS key using any of the following:</p>
-   *          <ul>
-   *             <li>
-   *                <p>Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.</p>
-   *             </li>
-   *             <li>
-   *                <p>Key alias. For example, alias/ExampleAlias.</p>
-   *             </li>
-   *             <li>
-   *                <p>Key ARN. For example, arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.</p>
-   *             </li>
-   *             <li>
-   *                <p>Alias ARN. For example, arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.</p>
-   *             </li>
-   *          </ul>
-   *          <p>Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid,
-   *       the action can appear to complete, but eventually fails.</p>
-   * @public
-   */
-  KmsKeyId?: string | undefined;
-
-  /**
-   * <p>When you copy an encrypted source snapshot using the Amazon EC2 Query API, you must supply a
-   *       pre-signed URL. This parameter is optional for unencrypted snapshots. For more information,
-   *       see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html">Query
-   *         requests</a>.</p>
-   *          <p>The <code>PresignedUrl</code> should use the snapshot source endpoint, the
-   *         <code>CopySnapshot</code> action, and include the <code>SourceRegion</code>,
-   *         <code>SourceSnapshotId</code>, and <code>DestinationRegion</code> parameters. The
-   *         <code>PresignedUrl</code> must be signed using Amazon Web Services Signature Version 4. Because EBS
-   *       snapshots are stored in Amazon S3, the signing algorithm for this parameter uses the same logic
-   *       that is described in <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html">
-   *         Authenticating Requests: Using Query Parameters (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>. An
-   *       invalid or improperly signed <code>PresignedUrl</code> will cause the copy operation to fail
-   *       asynchronously, and the snapshot will move to an <code>error</code> state.</p>
-   * @public
-   */
-  PresignedUrl?: string | undefined;
-
-  /**
-   * <p>The ID of the Region that contains the snapshot to be copied.</p>
-   * @public
-   */
-  SourceRegion: string | undefined;
-
-  /**
-   * <p>The ID of the EBS snapshot to copy.</p>
-   * @public
-   */
-  SourceSnapshotId: string | undefined;
-
-  /**
-   * <p>The tags to apply to the new snapshot.</p>
-   * @public
-   */
-  TagSpecifications?: TagSpecification[] | undefined;
-
-  /**
-   * <p>Specify a completion duration, in 15 minute increments, to initiate a time-based snapshot
-   *       copy. Time-based snapshot copy operations complete within the specified duration. For more
-   *       information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/time-based-copies.html">
-   *         Time-based copies</a>.</p>
-   *          <p>If you do not specify a value, the snapshot copy operation is completed on a
-   *       best-effort basis.</p>
-   * @public
-   */
-  CompletionDurationMinutes?: number | undefined;
-
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-}
-
-/**
- * @public
- */
-export interface CopySnapshotResult {
-  /**
-   * <p>Any tags applied to the new snapshot.</p>
-   * @public
-   */
-  Tags?: Tag[] | undefined;
-
-  /**
-   * <p>The ID of the new snapshot.</p>
-   * @public
-   */
-  SnapshotId?: string | undefined;
-}
-
-/**
  * @internal
  */
 export const OidcOptionsFilterSensitiveLog = (obj: OidcOptions): any => ({
@@ -8654,12 +8518,4 @@ export const BundleInstanceResultFilterSensitiveLog = (obj: BundleInstanceResult
 export const CancelBundleTaskResultFilterSensitiveLog = (obj: CancelBundleTaskResult): any => ({
   ...obj,
   ...(obj.BundleTask && { BundleTask: BundleTaskFilterSensitiveLog(obj.BundleTask) }),
-});
-
-/**
- * @internal
- */
-export const CopySnapshotRequestFilterSensitiveLog = (obj: CopySnapshotRequest): any => ({
-  ...obj,
-  ...(obj.PresignedUrl && { PresignedUrl: SENSITIVE_STRING }),
 });

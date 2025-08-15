@@ -58,17 +58,24 @@ export interface DescribeCanariesLastRunCommandOutput extends DescribeCanariesLa
  * //       CanaryName: "STRING_VALUE",
  * //       LastRun: { // CanaryRun
  * //         Id: "STRING_VALUE",
+ * //         ScheduledRunId: "STRING_VALUE",
+ * //         RetryAttempt: Number("int"),
  * //         Name: "STRING_VALUE",
  * //         Status: { // CanaryRunStatus
  * //           State: "RUNNING" || "PASSED" || "FAILED",
  * //           StateReason: "STRING_VALUE",
  * //           StateReasonCode: "CANARY_FAILURE" || "EXECUTION_FAILURE",
+ * //           TestResult: "PASSED" || "FAILED" || "UNKNOWN",
  * //         },
  * //         Timeline: { // CanaryRunTimeline
  * //           Started: new Date("TIMESTAMP"),
  * //           Completed: new Date("TIMESTAMP"),
+ * //           MetricTimestampForRunAndRetries: new Date("TIMESTAMP"),
  * //         },
  * //         ArtifactS3Location: "STRING_VALUE",
+ * //         DryRunConfig: { // CanaryDryRunConfigOutput
+ * //           DryRunId: "STRING_VALUE",
+ * //         },
  * //       },
  * //     },
  * //   ],

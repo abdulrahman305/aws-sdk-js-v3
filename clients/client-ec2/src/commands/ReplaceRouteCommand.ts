@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ReplaceRouteRequest } from "../models/models_7";
+import { ReplaceRouteRequest } from "../models/models_8";
 import { de_ReplaceRouteCommand, se_ReplaceRouteCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -48,6 +48,7 @@ export interface ReplaceRouteCommandOutput extends __MetadataBearer {}
  *   LocalGatewayId: "STRING_VALUE",
  *   CarrierGatewayId: "STRING_VALUE",
  *   CoreNetworkArn: "STRING_VALUE",
+ *   OdbNetworkArn: "STRING_VALUE",
  *   DryRun: true || false,
  *   RouteTableId: "STRING_VALUE", // required
  *   DestinationCidrBlock: "STRING_VALUE",

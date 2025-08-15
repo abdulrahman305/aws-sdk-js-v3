@@ -3470,7 +3470,9 @@ export interface CreateDashboardCommandOutput extends CreateDashboardResponse, _
  *                   HeatMapRowItemsLimitConfiguration: "<ItemsLimitConfiguration>",
  *                   HeatMapColumnItemsLimitConfiguration: "<ItemsLimitConfiguration>",
  *                 },
+ *                 RowAxisDisplayOptions: "<AxisDisplayOptions>",
  *                 RowLabelOptions: "<ChartAxisLabelOptions>",
+ *                 ColumnAxisDisplayOptions: "<AxisDisplayOptions>",
  *                 ColumnLabelOptions: "<ChartAxisLabelOptions>",
  *                 ColorScale: { // ColorScale
  *                   Colors: [ // ColorScaleColorList // required
@@ -4581,6 +4583,7 @@ export interface CreateDashboardCommandOutput extends CreateDashboardResponse, _
  *                   },
  *                 },
  *               },
+ *               Actions: "<VisualCustomActionList>",
  *               VisualContentAltText: "STRING_VALUE",
  *             },
  *           },
@@ -4589,6 +4592,11 @@ export interface CreateDashboardCommandOutput extends CreateDashboardResponse, _
  *           { // SheetTextBox
  *             SheetTextBoxId: "STRING_VALUE", // required
  *             Content: "STRING_VALUE",
+ *             Interactions: { // TextBoxInteractionOptions
+ *               TextBoxMenuOption: { // TextBoxMenuOption
+ *                 AvailabilityStatus: "ENABLED" || "DISABLED",
+ *               },
+ *             },
  *           },
  *         ],
  *         Images: [ // SheetImageList
@@ -4860,6 +4868,11 @@ export interface CreateDashboardCommandOutput extends CreateDashboardResponse, _
  *           },
  *         ],
  *         ContentType: "PAGINATED" || "INTERACTIVE",
+ *         CustomActionDefaults: { // VisualCustomActionDefaults
+ *           highlightOperation: { // VisualHighlightOperation
+ *             Trigger: "DATA_POINT_CLICK" || "DATA_POINT_HOVER" || "NONE", // required
+ *           },
+ *         },
  *       },
  *     ],
  *     CalculatedFields: [ // CalculatedFields
@@ -5510,6 +5523,11 @@ export interface CreateDashboardCommandOutput extends CreateDashboardResponse, _
  *       ExcludedDataSetArns: [ // DataSetArnsList
  *         "STRING_VALUE",
  *       ],
+ *       CustomActionDefaults: {
+ *         highlightOperation: {
+ *           Trigger: "DATA_POINT_CLICK" || "DATA_POINT_HOVER" || "NONE", // required
+ *         },
+ *       },
  *     },
  *     StaticFiles: [ // StaticFileList
  *       { // StaticFile

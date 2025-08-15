@@ -9,7 +9,7 @@ import { commonParams } from "../endpoint/EndpointParameters";
 import {
   DisableIpamOrganizationAdminAccountRequest,
   DisableIpamOrganizationAdminAccountResult,
-} from "../models/models_5";
+} from "../models/models_6";
 import {
   de_DisableIpamOrganizationAdminAccountCommand,
   se_DisableIpamOrganizationAdminAccountCommand,

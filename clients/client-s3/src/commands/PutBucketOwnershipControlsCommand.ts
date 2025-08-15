@@ -32,12 +32,10 @@ export interface PutBucketOwnershipControlsCommandOutput extends __MetadataBeare
  * <note>
  *             <p>This operation is not supported for directory buckets.</p>
  *          </note>
- *          <p>Creates or modifies <code>OwnershipControls</code> for an Amazon S3 bucket. To use this
- *          operation, you must have the <code>s3:PutBucketOwnershipControls</code> permission. For
- *          more information about Amazon S3 permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-with-s3-actions.html">Specifying permissions in a
- *             policy</a>. </p>
- *          <p>For information about Amazon S3 Object Ownership, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/about-object-ownership.html">Using object
- *             ownership</a>. </p>
+ *          <p>Creates or modifies <code>OwnershipControls</code> for an Amazon S3 bucket. To use this operation, you
+ *       must have the <code>s3:PutBucketOwnershipControls</code> permission. For more information about Amazon S3
+ *       permissions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/using-with-s3-actions.html">Specifying permissions in a policy</a>. </p>
+ *          <p>For information about Amazon S3 Object Ownership, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/user-guide/about-object-ownership.html">Using object ownership</a>. </p>
  *          <p>The following operations are related to <code>PutBucketOwnershipControls</code>:</p>
  *          <ul>
  *             <li>
@@ -68,6 +66,7 @@ export interface PutBucketOwnershipControlsCommandOutput extends __MetadataBeare
  *       },
  *     ],
  *   },
+ *   ChecksumAlgorithm: "CRC32" || "CRC32C" || "SHA1" || "SHA256" || "CRC64NVME",
  * };
  * const command = new PutBucketOwnershipControlsCommand(input);
  * const response = await client.send(command);
@@ -105,6 +104,7 @@ export class PutBucketOwnershipControlsCommand extends $Command
       getSerdePlugin(config, this.serialize, this.deserialize),
       getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
       getFlexibleChecksumsPlugin(config, {
+        requestAlgorithmMember: { httpHeader: "x-amz-sdk-checksum-algorithm", name: "ChecksumAlgorithm" },
         requestChecksumRequired: true,
       }),
     ];

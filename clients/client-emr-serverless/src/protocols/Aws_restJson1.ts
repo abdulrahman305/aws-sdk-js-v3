@@ -66,6 +66,7 @@ import {
   ConfigurationOverrides,
   ConflictException,
   Hive,
+  IdentityCenterConfigurationInput,
   ImageConfigurationInput,
   InitialCapacityConfig,
   InteractiveConfiguration,
@@ -73,6 +74,7 @@ import {
   JobDriver,
   JobRun,
   JobRunAttemptSummary,
+  JobRunExecutionIamPolicy,
   JobRunSummary,
   ManagedPersistenceMonitoringConfiguration,
   MaximumAllowedResources,
@@ -104,8 +106,11 @@ export const se_CancelJobRunCommand = async (
   b.bp("/applications/{applicationId}/jobruns/{jobRunId}");
   b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
   b.p("jobRunId", () => input.jobRunId!, "{jobRunId}", false);
+  const query: any = map({
+    [_sGPIS]: [() => input.shutdownGracePeriodInSeconds !== void 0, () => input[_sGPIS]!.toString()],
+  });
   let body: any;
-  b.m("DELETE").h(headers).b(body);
+  b.m("DELETE").h(headers).q(query).b(body);
   return b.build();
 };
 
@@ -128,6 +133,7 @@ export const se_CreateApplicationCommand = async (
       autoStartConfiguration: (_) => _json(_),
       autoStopConfiguration: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      identityCenterConfiguration: (_) => _json(_),
       imageConfiguration: (_) => _json(_),
       initialCapacity: (_) => _json(_),
       interactiveConfiguration: (_) => _json(_),
@@ -335,6 +341,7 @@ export const se_StartJobRunCommand = async (
     take(input, {
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       configurationOverrides: (_) => se_ConfigurationOverrides(_, context),
+      executionIamPolicy: (_) => _json(_),
       executionRoleArn: [],
       executionTimeoutMinutes: [],
       jobDriver: (_) => _json(_),
@@ -426,6 +433,7 @@ export const se_UpdateApplicationCommand = async (
       autoStartConfiguration: (_) => _json(_),
       autoStopConfiguration: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      identityCenterConfiguration: (_) => _json(_),
       imageConfiguration: (_) => _json(_),
       initialCapacity: (_) => _json(_),
       interactiveConfiguration: (_) => _json(_),
@@ -938,6 +946,8 @@ const se_ConfigurationOverrides = (input: ConfigurationOverrides, context: __Ser
 
 // se_Hive omitted.
 
+// se_IdentityCenterConfigurationInput omitted.
+
 // se_ImageConfigurationInput omitted.
 
 // se_InitialCapacityConfig omitted.
@@ -947,6 +957,8 @@ const se_ConfigurationOverrides = (input: ConfigurationOverrides, context: __Ser
 // se_InteractiveConfiguration omitted.
 
 // se_JobDriver omitted.
+
+// se_JobRunExecutionIamPolicy omitted.
 
 // se_LogTypeList omitted.
 
@@ -959,6 +971,8 @@ const se_ConfigurationOverrides = (input: ConfigurationOverrides, context: __Ser
 // se_MonitoringConfiguration omitted.
 
 // se_NetworkConfiguration omitted.
+
+// se_PolicyArnList omitted.
 
 // se_PrometheusMonitoringConfiguration omitted.
 
@@ -995,6 +1009,7 @@ const de_Application = (output: any, context: __SerdeContext): Application => {
     autoStartConfiguration: _json,
     autoStopConfiguration: _json,
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    identityCenterConfiguration: _json,
     imageConfiguration: _json,
     initialCapacity: _json,
     interactiveConfiguration: _json,
@@ -1087,6 +1102,8 @@ const de_ConfigurationOverrides = (output: any, context: __SerdeContext): Config
 
 // de_Hive omitted.
 
+// de_IdentityCenterConfiguration omitted.
+
 // de_ImageConfiguration omitted.
 
 // de_InitialCapacityConfig omitted.
@@ -1112,6 +1129,7 @@ const de_JobRun = (output: any, context: __SerdeContext): JobRun => {
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     createdBy: __expectString,
     endedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    executionIamPolicy: _json,
     executionRole: __expectString,
     executionTimeoutMinutes: __expectLong,
     jobDriver: (_: any) => _json(__expectUnion(_)),
@@ -1167,6 +1185,8 @@ const de_JobRunAttemptSummary = (output: any, context: __SerdeContext): JobRunAt
   }) as any;
 };
 
+// de_JobRunExecutionIamPolicy omitted.
+
 /**
  * deserializeAws_restJson1JobRuns
  */
@@ -1214,6 +1234,8 @@ const de_JobRunSummary = (output: any, context: __SerdeContext): JobRunSummary =
 // de_MonitoringConfiguration omitted.
 
 // de_NetworkConfiguration omitted.
+
+// de_PolicyArnList omitted.
 
 // de_PrometheusMonitoringConfiguration omitted.
 
@@ -1281,4 +1303,5 @@ const _m = "mode";
 const _mR = "maxResults";
 const _nT = "nextToken";
 const _s = "states";
+const _sGPIS = "shutdownGracePeriodInSeconds";
 const _tK = "tagKeys";

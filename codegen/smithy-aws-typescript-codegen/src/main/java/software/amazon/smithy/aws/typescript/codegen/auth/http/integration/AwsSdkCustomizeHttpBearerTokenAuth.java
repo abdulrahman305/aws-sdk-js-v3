@@ -6,8 +6,10 @@
 package software.amazon.smithy.aws.typescript.codegen.auth.http.integration;
 
 import static software.amazon.smithy.aws.typescript.codegen.AwsTraitsUtils.isAwsService;
+import static software.amazon.smithy.aws.typescript.codegen.AwsTraitsUtils.isSigV4Service;
 
 import java.util.List;
+import software.amazon.smithy.aws.traits.auth.SigV4Trait;
 import software.amazon.smithy.aws.typescript.codegen.AwsDependency;
 import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.shapes.ServiceShape;
@@ -55,7 +57,21 @@ public final class AwsSdkCustomizeHttpBearerTokenAuth implements HttpAuthTypeScr
                     .addDependency(AwsDependency.TOKEN_PROVIDERS)
                     .addImport("nodeProvider", null, AwsDependency.TOKEN_PROVIDERS)
                     .addImport("FromSsoInit", null, AwsDependency.TOKEN_PROVIDERS)
-                    .write("async (idProps) => await nodeProvider(idProps as FromSsoInit)(idProps)"))
+                    .openBlock("async (idProps) => {", "}", () -> {
+                        String defaultProviderReturn = "return await nodeProvider(idProps as FromSsoInit)(idProps);";
+                        if (useFromEnvSigningName(service)) {
+                            w.openBlock("try {", "}", () -> {
+                                w.addImport("fromEnvSigningName", null, AwsDependency.TOKEN_PROVIDERS);
+                                w.write("return await fromEnvSigningName({ signingName: $S })();",
+                                    service.expectTrait(SigV4Trait.class).getName());
+                            });
+                            w.openBlock("catch (error) {", "}", () -> {
+                                w.write(defaultProviderReturn);
+                            });
+                        } else {
+                            w.write(defaultProviderReturn);
+                        }
+                    }))
                 // Add identityProperties for backward compatibility of the `nodeProvider` default provider.
                 // If adding new properties that need to be passed into `nodeProvider`, make sure
                 // to update the propertiesExtractor below.
@@ -85,5 +101,12 @@ public final class AwsSdkCustomizeHttpBearerTokenAuth implements HttpAuthTypeScr
                 .build();
             supportedHttpAuthSchemesIndex.putHttpAuthScheme(authScheme.getSchemeId(), authScheme);
         }
+    }
+
+    private static boolean useFromEnvSigningName(ServiceShape service) {
+        if (isSigV4Service(service)) {
+            return service.expectTrait(SigV4Trait.class).getName().equals("bedrock");
+        }
+        return false;
     }
 }

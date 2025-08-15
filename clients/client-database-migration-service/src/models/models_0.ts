@@ -1175,6 +1175,18 @@ export interface IbmDb2LuwDataProviderSettings {
    * @public
    */
   CertificateArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1212,6 +1224,18 @@ export interface IbmDb2zOsDataProviderSettings {
    * @public
    */
   CertificateArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1243,6 +1267,18 @@ export interface MariaDbDataProviderSettings {
    * @public
    */
   CertificateArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1280,6 +1316,18 @@ export interface MicrosoftSqlServerDataProviderSettings {
    * @public
    */
   CertificateArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1397,6 +1445,18 @@ export interface MySqlDataProviderSettings {
    * @public
    */
   CertificateArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1472,6 +1532,18 @@ export interface OracleDataProviderSettings {
    * @public
    */
   SecretsManagerSecurityDbEncryptionAccessRoleArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1509,6 +1581,18 @@ export interface PostgreSqlDataProviderSettings {
    * @public
    */
   CertificateArn?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1533,6 +1617,18 @@ export interface RedshiftDataProviderSettings {
    * @public
    */
   DatabaseName?: string | undefined;
+
+  /**
+   * <p>The path for the Amazon S3 bucket that the application uses for accessing the user-defined schema.</p>
+   * @public
+   */
+  S3Path?: string | undefined;
+
+  /**
+   * <p>The ARN for the role the application uses to access its Amazon S3 bucket.</p>
+   * @public
+   */
+  S3AccessRoleArn?: string | undefined;
 }
 
 /**
@@ -1808,6 +1904,12 @@ export interface CreateDataProviderMessage {
   Engine: string | undefined;
 
   /**
+   * <p>Indicates whether the data provider is virtual.</p>
+   * @public
+   */
+  Virtual?: boolean | undefined;
+
+  /**
    * <p>The settings in JSON format for a data provider.</p>
    * @public
    */
@@ -1858,6 +1960,12 @@ export interface DataProvider {
    * @public
    */
   Engine?: string | undefined;
+
+  /**
+   * <p>Indicates whether the data provider is virtual.</p>
+   * @public
+   */
+  Virtual?: boolean | undefined;
 
   /**
    * <p>The settings in JSON format for a data provider.</p>
@@ -3061,6 +3169,20 @@ export interface MongoDbSettings {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const MySQLAuthenticationMethod = {
+  IAM: "iam",
+  Password: "password",
+} as const;
+
+/**
+ * @public
+ */
+export type MySQLAuthenticationMethod = (typeof MySQLAuthenticationMethod)[keyof typeof MySQLAuthenticationMethod];
+
+/**
  * <p>Provides information that defines a MySQL endpoint.</p>
  * @public
  */
@@ -3203,6 +3325,18 @@ export interface MySQLSettings {
    * @public
    */
   ExecuteTimeout?: number | undefined;
+
+  /**
+   * <p>The IAM role you can use to authenticate when connecting to your endpoint. Ensure to include <code>iam:PassRole</code> and <code>rds-db:connect</code> actions in permission policy.</p>
+   * @public
+   */
+  ServiceAccessRoleArn?: string | undefined;
+
+  /**
+   * <p>This attribute allows you to specify the authentication method as "iam auth".</p>
+   * @public
+   */
+  AuthenticationMethod?: MySQLAuthenticationMethod | undefined;
 }
 
 /**
@@ -3732,6 +3866,21 @@ export interface OracleSettings {
  * @public
  * @enum
  */
+export const PostgreSQLAuthenticationMethod = {
+  IAM: "iam",
+  Password: "password",
+} as const;
+
+/**
+ * @public
+ */
+export type PostgreSQLAuthenticationMethod =
+  (typeof PostgreSQLAuthenticationMethod)[keyof typeof PostgreSQLAuthenticationMethod];
+
+/**
+ * @public
+ * @enum
+ */
 export const DatabaseMode = {
   BABELFISH: "babelfish",
   DEFAULT: "default",
@@ -3995,6 +4144,18 @@ export interface PostgreSQLSettings {
    * @public
    */
   DisableUnicodeSourceFilter?: boolean | undefined;
+
+  /**
+   * <p>The IAM role arn you can use to authenticate the connection to your endpoint. Ensure to include <code>iam:PassRole</code> and <code>rds-db:connect</code> actions in permission policy.</p>
+   * @public
+   */
+  ServiceAccessRoleArn?: string | undefined;
+
+  /**
+   * <p>This attribute allows you to specify the authentication method as "iam auth".</p>
+   * @public
+   */
+  AuthenticationMethod?: PostgreSQLAuthenticationMethod | undefined;
 }
 
 /**
@@ -5071,16 +5232,9 @@ export interface S3Settings {
   Rfc4180?: boolean | undefined;
 
   /**
-   * <p>When creating an S3 target endpoint, set <code>DatePartitionTimezone</code> to convert
-   *          the current UTC time into a specified time zone. The conversion occurs when a date
-   *          partition folder is created and a CDC filename is generated. The time zone format is
-   *          Area/Location. Use this parameter when <code>DatePartitionedEnabled</code> is set to
-   *             <code>true</code>, as shown in the following example.</p>
+   * <p>When creating an S3 target endpoint, set <code>DatePartitionTimezone</code> to convert the current UTC time into a specified time zone. The conversion occurs when a date partition folder is created and a CDC filename is generated. The time zone format is Area/Location. Use this parameter when <code>DatePartitionedEnabled</code> is set to true, as shown in the following example:</p>
    *          <p>
-   *             <code>s3-settings='\{"DatePartitionEnabled": true, "DatePartitionSequence": "YYYYMMDDHH",
-   *             "DatePartitionDelimiter": "SLASH",
-   *                "DatePartitionTimezone":"<i>Asia/Seoul</i>", "BucketName":
-   *             "dms-nattarat-test"\}'</code>
+   *             <code>s3-settings='\{"DatePartitionEnabled": true, "DatePartitionSequence": "YYYYMMDDHH", "DatePartitionDelimiter": "SLASH", "DatePartitionTimezone":"Asia/Seoul", "BucketName": "dms-nattarat-test"\}'</code>
    *          </p>
    * @public
    */
@@ -7644,7 +7798,9 @@ export interface CreateReplicationSubnetGroupMessage {
   ReplicationSubnetGroupIdentifier: string | undefined;
 
   /**
-   * <p>The description for the subnet group.</p>
+   * <p>The description for the subnet group.
+   *       </p>
+   *          <p>Constraints: This parameter Must not contain non-printable control characters.</p>
    * @public
    */
   ReplicationSubnetGroupDescription: string | undefined;
@@ -9715,7 +9871,8 @@ export interface DescribeEventSubscriptionsMessage {
 
   /**
    * <p>Filters applied to event subscriptions.</p>
-   *          <p>Valid filter names: event-subscription-arn | event-subscription-id </p>
+   *          <p>Valid filter names: <code>event-subscription-arn</code> | <code>event-subscription-id</code>
+   *          </p>
    * @public
    */
   Filters?: Filter[] | undefined;
@@ -10457,7 +10614,12 @@ export interface DescribeFleetAdvisorSchemaObjectSummaryRequest {
   Filters?: Filter[] | undefined;
 
   /**
-   * <p>Sets the maximum number of records returned in the response.</p>
+   * <important>
+   *             <p>
+   * End of support notice: On May 20, 2026, Amazon Web Services will end support for Amazon Web Services DMS Fleet Advisor;. After May 20, 2026, you will no longer be able to access the Amazon Web Services DMS Fleet Advisor; console or Amazon Web Services DMS Fleet Advisor; resources. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/dms_fleet.advisor-end-of-support.html">Amazon Web Services DMS Fleet Advisor end of support</a>.
+   * </p>
+   *          </important>
+   *          <p>Sets the maximum number of records returned in the response.</p>
    * @public
    */
   MaxRecords?: number | undefined;
@@ -11361,6 +11523,8 @@ export interface DescribePendingMaintenanceActionsResponse {
 export interface DescribeRecommendationLimitationsRequest {
   /**
    * <p>Filters applied to the limitations described in the form of key-value pairs.</p>
+   *          <p>Valid filter names: <code>database-id</code> | <code>engine-name</code>
+   *          </p>
    * @public
    */
   Filters?: Filter[] | undefined;
@@ -11469,6 +11633,8 @@ export interface DescribeRecommendationsRequest {
   /**
    * <p>Filters applied to the target engine recommendations described in the form of
    *             key-value pairs.</p>
+   *          <p>Valid filter names: <code>database-id</code> | <code>engine-name</code>
+   *          </p>
    * @public
    */
   Filters?: Filter[] | undefined;
@@ -11998,6 +12164,8 @@ export interface DescribeReplicationInstanceTaskLogsResponse {
 export interface DescribeReplicationsMessage {
   /**
    * <p>Filters applied to the replications.</p>
+   *          <p> Valid filter names: <code>replication-config-arn</code> | <code>replication-config-id</code>
+   *          </p>
    * @public
    */
   Filters?: Filter[] | undefined;
@@ -12784,6 +12952,56 @@ export interface TableStatistics {
    * @public
    */
   ValidationStateDetails?: string | undefined;
+
+  /**
+   * <p>Records the current state of table resynchronization in the migration task.</p>
+   *          <p>This parameter can have the following values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Not enabled – Resync is not enabled for the table in the migration task.</p>
+   *             </li>
+   *             <li>
+   *                <p>Pending – The tables are waiting for resync.</p>
+   *             </li>
+   *             <li>
+   *                <p>In progress – Resync in progress for some records in the table.</p>
+   *             </li>
+   *             <li>
+   *                <p>No primary key – The table could not be resynced because it has no primary key.</p>
+   *             </li>
+   *             <li>
+   *                <p>Last resync at: <code>date/time</code> – Resync session is finished at time. Time provided in UTC format.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  ResyncState?: string | undefined;
+
+  /**
+   * <p>Records the total number of mismatched data rows where the system attempted to apply
+   *          fixes in the target database.</p>
+   * @public
+   */
+  ResyncRowsAttempted?: number | undefined;
+
+  /**
+   * <p>Records the total number of mismatched data rows where fixes were successfully applied in the target database.</p>
+   * @public
+   */
+  ResyncRowsSucceeded?: number | undefined;
+
+  /**
+   * <p>Records the total number of mismatched data rows where fix attempts failed in the target
+   *          database.</p>
+   * @public
+   */
+  ResyncRowsFailed?: number | undefined;
+
+  /**
+   * <p>Calculates the percentage of failed validations that were successfully resynced to the system.</p>
+   * @public
+   */
+  ResyncProgress?: number | undefined;
 }
 
 /**
@@ -12922,60 +13140,6 @@ export interface DescribeReplicationTaskAssessmentResultsResponse {
    * @public
    */
   ReplicationTaskAssessmentResults?: ReplicationTaskAssessmentResult[] | undefined;
-}
-
-/**
- * <p></p>
- * @public
- */
-export interface DescribeReplicationTaskAssessmentRunsMessage {
-  /**
-   * <p>Filters applied to the premigration assessment runs described in the form of key-value
-   *          pairs.</p>
-   *          <p>Valid filter names: <code>replication-task-assessment-run-arn</code>,
-   *             <code>replication-task-arn</code>, <code>replication-instance-arn</code>,
-   *             <code>status</code>
-   *          </p>
-   * @public
-   */
-  Filters?: Filter[] | undefined;
-
-  /**
-   * <p>The maximum number of records to include in the response. If more records exist than the
-   *          specified <code>MaxRecords</code> value, a pagination token called a marker is included in
-   *          the response so that the remaining results can be retrieved.</p>
-   * @public
-   */
-  MaxRecords?: number | undefined;
-
-  /**
-   * <p>An optional pagination token provided by a previous request. If this parameter is
-   *          specified, the response includes only records beyond the marker, up to the value specified
-   *          by <code>MaxRecords</code>.</p>
-   * @public
-   */
-  Marker?: string | undefined;
-}
-
-/**
- * <p></p>
- * @public
- */
-export interface DescribeReplicationTaskAssessmentRunsResponse {
-  /**
-   * <p>A pagination token returned for you to pass to a subsequent request. If you pass this
-   *          token as the <code>Marker</code> value in a subsequent request, the response includes only
-   *          records beyond the marker, up to the value specified in the request by
-   *             <code>MaxRecords</code>.</p>
-   * @public
-   */
-  Marker?: string | undefined;
-
-  /**
-   * <p>One or more premigration assessment runs as specified by <code>Filters</code>.</p>
-   * @public
-   */
-  ReplicationTaskAssessmentRuns?: ReplicationTaskAssessmentRun[] | undefined;
 }
 
 /**

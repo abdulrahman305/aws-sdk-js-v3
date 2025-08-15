@@ -31,9 +31,9 @@ export interface ModifyNetworkInterfaceAttributeCommandInput extends ModifyNetwo
 export interface ModifyNetworkInterfaceAttributeCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>Modifies the specified network interface attribute. You can specify only one
- *             attribute at a time. You can use this action to attach and detach security groups from
- *             an existing EC2 instance.</p>
+ * <p>Modifies the specified network interface attribute. You can specify only one attribute
+ *             at a time. You can use this action to attach and detach security groups from an existing
+ *             EC2 instance.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -54,6 +54,9 @@ export interface ModifyNetworkInterfaceAttributeCommandOutput extends __Metadata
  *     UdpTimeout: Number("int"),
  *   },
  *   AssociatePublicIpAddress: true || false,
+ *   AssociatedSubnetIds: [ // SubnetIdList
+ *     "STRING_VALUE",
+ *   ],
  *   DryRun: true || false,
  *   NetworkInterfaceId: "STRING_VALUE", // required
  *   Description: { // AttributeValue
@@ -66,6 +69,8 @@ export interface ModifyNetworkInterfaceAttributeCommandOutput extends __Metadata
  *     "STRING_VALUE",
  *   ],
  *   Attachment: { // NetworkInterfaceAttachmentChanges
+ *     DefaultEnaQueueCount: true || false,
+ *     EnaQueueCount: Number("int"),
  *     AttachmentId: "STRING_VALUE",
  *     DeleteOnTermination: true || false,
  *   },

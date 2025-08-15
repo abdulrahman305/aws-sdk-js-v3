@@ -49,12 +49,12 @@ export interface ProbeCommandOutput extends ProbeResponse, __MetadataBearer {}
  * //     { // ProbeResult
  * //       Container: { // Container
  * //         Duration: Number("double"),
- * //         Format: "mp4" || "quicktime" || "matroska" || "webm",
+ * //         Format: "mp4" || "quicktime" || "matroska" || "webm" || "mxf",
  * //         Tracks: [ // __listOfTrack
  * //           { // Track
  * //             AudioProperties: { // AudioProperties
  * //               BitDepth: Number("int"),
- * //               BitRate: Number("int"),
+ * //               BitRate: Number("long"),
  * //               Channels: Number("int"),
  * //               FrameRate: { // FrameRate
  * //                 Denominator: Number("int"),
@@ -63,7 +63,7 @@ export interface ProbeCommandOutput extends ProbeResponse, __MetadataBearer {}
  * //               LanguageCode: "STRING_VALUE",
  * //               SampleRate: Number("int"),
  * //             },
- * //             Codec: "UNKNOWN" || "AAC" || "AC3" || "EAC3" || "FLAC" || "MP3" || "OPUS" || "PCM" || "VORBIS" || "AV1" || "AVC" || "HEVC" || "MJPEG" || "MP4V" || "MPEG2" || "PRORES" || "THEORA" || "VP8" || "VP9" || "C608" || "C708" || "WEBVTT",
+ * //             Codec: "UNKNOWN" || "AAC" || "AC3" || "EAC3" || "FLAC" || "MP3" || "OPUS" || "PCM" || "VORBIS" || "AV1" || "AVC" || "HEVC" || "JPEG2000" || "MJPEG" || "MP4V" || "MPEG2" || "PRORES" || "THEORA" || "VP8" || "VP9" || "C608" || "C708" || "WEBVTT",
  * //             DataProperties: { // DataProperties
  * //               LanguageCode: "STRING_VALUE",
  * //             },
@@ -72,7 +72,7 @@ export interface ProbeCommandOutput extends ProbeResponse, __MetadataBearer {}
  * //             TrackType: "video" || "audio" || "data",
  * //             VideoProperties: { // VideoProperties
  * //               BitDepth: Number("int"),
- * //               BitRate: Number("int"),
+ * //               BitRate: Number("long"),
  * //               ColorPrimaries: "ITU_709" || "UNSPECIFIED" || "RESERVED" || "ITU_470M" || "ITU_470BG" || "SMPTE_170M" || "SMPTE_240M" || "GENERIC_FILM" || "ITU_2020" || "SMPTE_428_1" || "SMPTE_431_2" || "SMPTE_EG_432_1" || "IPT" || "SMPTE_2067XYZ" || "EBU_3213_E" || "LAST",
  * //               FrameRate: {
  * //                 Denominator: Number("int"),

@@ -39,6 +39,14 @@ import {
   AssociateTrialComponentCommandOutput,
 } from "../commands/AssociateTrialComponentCommand";
 import {
+  AttachClusterNodeVolumeCommandInput,
+  AttachClusterNodeVolumeCommandOutput,
+} from "../commands/AttachClusterNodeVolumeCommand";
+import {
+  BatchAddClusterNodesCommandInput,
+  BatchAddClusterNodesCommandOutput,
+} from "../commands/BatchAddClusterNodesCommand";
+import {
   BatchDeleteClusterNodesCommandInput,
   BatchDeleteClusterNodesCommandOutput,
 } from "../commands/BatchDeleteClusterNodesCommand";
@@ -101,6 +109,10 @@ import {
   CreateFlowDefinitionCommandOutput,
 } from "../commands/CreateFlowDefinitionCommand";
 import { CreateHubCommandInput, CreateHubCommandOutput } from "../commands/CreateHubCommand";
+import {
+  CreateHubContentPresignedUrlsCommandInput,
+  CreateHubContentPresignedUrlsCommandOutput,
+} from "../commands/CreateHubContentPresignedUrlsCommand";
 import {
   CreateHubContentReferenceCommandInput,
   CreateHubContentReferenceCommandOutput,
@@ -353,6 +365,10 @@ import {
 } from "../commands/DescribeAutoMLJobV2Command";
 import { DescribeClusterCommandInput, DescribeClusterCommandOutput } from "../commands/DescribeClusterCommand";
 import {
+  DescribeClusterEventCommandInput,
+  DescribeClusterEventCommandOutput,
+} from "../commands/DescribeClusterEventCommand";
+import {
   DescribeClusterNodeCommandInput,
   DescribeClusterNodeCommandOutput,
 } from "../commands/DescribeClusterNodeCommand";
@@ -505,6 +521,10 @@ import {
   DescribeProcessingJobCommandOutput,
 } from "../commands/DescribeProcessingJobCommand";
 import { DescribeProjectCommandInput, DescribeProjectCommandOutput } from "../commands/DescribeProjectCommand";
+import {
+  DescribeReservedCapacityCommandInput,
+  DescribeReservedCapacityCommandOutput,
+} from "../commands/DescribeReservedCapacityCommand";
 import { DescribeSpaceCommandInput, DescribeSpaceCommandOutput } from "../commands/DescribeSpaceCommand";
 import {
   DescribeStudioLifecycleConfigCommandInput,
@@ -537,6 +557,10 @@ import {
 } from "../commands/DescribeUserProfileCommand";
 import { DescribeWorkforceCommandInput, DescribeWorkforceCommandOutput } from "../commands/DescribeWorkforceCommand";
 import { DescribeWorkteamCommandInput, DescribeWorkteamCommandOutput } from "../commands/DescribeWorkteamCommand";
+import {
+  DetachClusterNodeVolumeCommandInput,
+  DetachClusterNodeVolumeCommandOutput,
+} from "../commands/DetachClusterNodeVolumeCommand";
 import {
   DisableSagemakerServicecatalogPortfolioCommandInput,
   DisableSagemakerServicecatalogPortfolioCommandOutput,
@@ -589,6 +613,7 @@ import {
   ListCandidatesForAutoMLJobCommandInput,
   ListCandidatesForAutoMLJobCommandOutput,
 } from "../commands/ListCandidatesForAutoMLJobCommand";
+import { ListClusterEventsCommandInput, ListClusterEventsCommandOutput } from "../commands/ListClusterEventsCommand";
 import { ListClusterNodesCommandInput, ListClusterNodesCommandOutput } from "../commands/ListClusterNodesCommand";
 import {
   ListClusterSchedulerConfigsCommandInput,
@@ -740,6 +765,10 @@ import {
   ListPipelineParametersForExecutionCommandOutput,
 } from "../commands/ListPipelineParametersForExecutionCommand";
 import { ListPipelinesCommandInput, ListPipelinesCommandOutput } from "../commands/ListPipelinesCommand";
+import {
+  ListPipelineVersionsCommandInput,
+  ListPipelineVersionsCommandOutput,
+} from "../commands/ListPipelineVersionsCommand";
 import { ListProcessingJobsCommandInput, ListProcessingJobsCommandOutput } from "../commands/ListProcessingJobsCommand";
 import { ListProjectsCommandInput, ListProjectsCommandOutput } from "../commands/ListProjectsCommand";
 import {
@@ -769,6 +798,10 @@ import {
   ListTrialComponentsCommandOutput,
 } from "../commands/ListTrialComponentsCommand";
 import { ListTrialsCommandInput, ListTrialsCommandOutput } from "../commands/ListTrialsCommand";
+import {
+  ListUltraServersByReservedCapacityCommandInput,
+  ListUltraServersByReservedCapacityCommandOutput,
+} from "../commands/ListUltraServersByReservedCapacityCommand";
 import { ListUserProfilesCommandInput, ListUserProfilesCommandOutput } from "../commands/ListUserProfilesCommand";
 import { ListWorkforcesCommandInput, ListWorkforcesCommandOutput } from "../commands/ListWorkforcesCommand";
 import { ListWorkteamsCommandInput, ListWorkteamsCommandOutput } from "../commands/ListWorkteamsCommand";
@@ -820,6 +853,7 @@ import {
   StartPipelineExecutionCommandInput,
   StartPipelineExecutionCommandOutput,
 } from "../commands/StartPipelineExecutionCommand";
+import { StartSessionCommandInput, StartSessionCommandOutput } from "../commands/StartSessionCommand";
 import { StopAutoMLJobCommandInput, StopAutoMLJobCommandOutput } from "../commands/StopAutoMLJobCommand";
 import { StopCompilationJobCommandInput, StopCompilationJobCommandOutput } from "../commands/StopCompilationJobCommand";
 import {
@@ -949,6 +983,10 @@ import {
   UpdatePipelineExecutionCommandInput,
   UpdatePipelineExecutionCommandOutput,
 } from "../commands/UpdatePipelineExecutionCommand";
+import {
+  UpdatePipelineVersionCommandInput,
+  UpdatePipelineVersionCommandOutput,
+} from "../commands/UpdatePipelineVersionCommand";
 import { UpdateProjectCommandInput, UpdateProjectCommandOutput } from "../commands/UpdateProjectCommand";
 import { UpdateSpaceCommandInput, UpdateSpaceCommandOutput } from "../commands/UpdateSpaceCommand";
 import { UpdateTrainingJobCommandInput, UpdateTrainingJobCommandOutput } from "../commands/UpdateTrainingJobCommand";
@@ -965,6 +1003,8 @@ import {
   ActionSummary,
   AddAssociationRequest,
   AddAssociationResponse,
+  AddClusterNodeSpecification,
+  AdditionalEnis,
   AdditionalInferenceSpecificationDefinition,
   AdditionalModelDataSource,
   AdditionalS3DataSource,
@@ -973,6 +1013,7 @@ import {
   AgentVersion,
   AggregationTransformationValue,
   Alarm,
+  AlarmDetails,
   AlgorithmSpecification,
   AlgorithmStatusDetails,
   AlgorithmStatusItem,
@@ -999,6 +1040,9 @@ import {
   AsyncInferenceOutputConfig,
   AsyncNotificationTopicTypes,
   AthenaDatasetDefinition,
+  AttachClusterNodeVolumeRequest,
+  AttachClusterNodeVolumeResponse,
+  AuthorizedUrl,
   AutoMLAlgorithm,
   AutoMLAlgorithmConfig,
   AutoMLCandidate,
@@ -1027,7 +1071,11 @@ import {
   AutoParameter,
   AutoRollbackConfig,
   Autotune,
+  BatchAddClusterNodesError,
+  BatchAddClusterNodesRequest,
+  BatchAddClusterNodesResponse,
   BatchDataCaptureConfig,
+  BatchDeleteClusterNodeLogicalIdsError,
   BatchDeleteClusterNodesError,
   BatchDeleteClusterNodesRequest,
   BatchDeleteClusterNodesResponse,
@@ -1045,12 +1093,21 @@ import {
   CandidateGenerationConfig,
   CandidateProperties,
   CanvasAppSettings,
+  CapacityReservation,
   CapacitySize,
+  CapacitySizeConfig,
   CaptureContentTypeHeader,
   CaptureOption,
   CategoricalParameter,
   CategoricalParameterRange,
   CategoricalParameterRangeSpecification,
+  CfnCreateTemplateProvider,
+  CfnStackCreateParameter,
+  CfnStackDetail,
+  CfnStackParameter,
+  CfnStackUpdateParameter,
+  CfnTemplateProviderDetail,
+  CfnUpdateTemplateProvider,
   Channel,
   ChannelSpecification,
   CheckpointConfig,
@@ -1062,62 +1119,53 @@ import {
   ClarifyShapConfig,
   ClarifyTextConfig,
   ClusterEbsVolumeConfig,
+  ClusterEventDetail,
+  ClusterEventSummary,
   ClusterInstanceGroupDetails,
   ClusterInstanceGroupSpecification,
   ClusterInstancePlacement,
   ClusterInstanceStatusDetails,
   ClusterInstanceStorageConfig,
   ClusterLifeCycleConfig,
+  ClusterMetadata,
   ClusterNodeDetails,
   ClusterNodeSummary,
   ClusterOrchestrator,
   ClusterOrchestratorEksConfig,
-  ClusterSchedulerConfigSummary,
-  ClusterSummary,
+  ClusterRestrictedInstanceGroupDetails,
+  ClusterRestrictedInstanceGroupSpecification,
   CodeEditorAppImageConfig,
-  CodeEditorAppSettings,
-  CodeRepository,
-  CodeRepositorySummary,
-  CognitoConfig,
-  CognitoMemberDefinition,
-  CollectionConfig,
-  CollectionConfiguration,
-  CompilationJobSummary,
   CompressionType,
-  ComputeQuotaConfig,
-  ComputeQuotaResourceConfig,
-  ComputeQuotaSummary,
-  ComputeQuotaTarget,
-  ConditionStepMetadata,
-  ConflictException,
   ContainerConfig,
-  ContainerDefinition,
-  ContentClassifier,
-  ContextSource,
-  ContextSummary,
-  ContinuousParameterRange,
-  CustomImage,
   DataSource,
   DeepHealthCheckType,
+  DeploymentConfiguration,
   DirectDeploySettings,
   EmrServerlessComputeConfig,
   EmrServerlessSettings,
+  EnvironmentConfig,
+  EnvironmentConfigDetails,
+  EventDetails,
+  EventMetadata,
   FileSystemConfig,
   FileSystemDataSource,
   FillingType,
   FinalAutoMLJobObjectiveMetric,
+  FSxLustreConfig,
   GenerativeAiSettings,
-  GitConfig,
   HolidayConfigAttributes,
   HubAccessConfig,
   IamIdentity,
   IdentityProviderOAuthSetting,
   IdleSettings,
   ImageClassificationJobConfig,
-  ImageConfig,
   InferenceHubAccessConfig,
   InferenceSpecification,
   InstanceGroup,
+  InstanceGroupMetadata,
+  InstanceGroupScalingMetadata,
+  InstanceMetadata,
+  InstancePlacementConfig,
   JupyterLabAppImageConfig,
   KendraSettings,
   KernelGatewayImageConfig,
@@ -1134,18 +1182,19 @@ import {
   MonitoringDatasetFormat,
   MonitoringJsonDatasetFormat,
   MonitoringParquetDatasetFormat,
-  MultiModelConfig,
+  NodeAdditionResult,
   OutputDataConfig,
   OutputParameter,
+  PlacementSpecification,
   ProductionVariantInstanceType,
-  RepositoryAuthConfig,
   ResourceConfig,
   ResourceLimitExceeded,
   ResourceNotFound,
-  ResourceSharingConfig,
   ResourceSpec,
+  RollingDeploymentPolicy,
   S3DataSource,
   S3ModelDataSource,
+  ScheduledUpdateConfig,
   ShuffleConfig,
   StoppingCondition,
   TabularJobConfig,
@@ -1171,12 +1220,33 @@ import {
   TransformOutput,
   TransformResources,
   TransformS3DataSource,
+  UltraServerInfo,
   UserContext,
-  VectorConfig,
   VpcConfig,
   WorkspaceSettings,
 } from "../models/models_0";
 import {
+  ClusterSchedulerConfigSummary,
+  ClusterSummary,
+  CodeEditorAppSettings,
+  CodeRepository,
+  CodeRepositorySummary,
+  CognitoConfig,
+  CognitoMemberDefinition,
+  CollectionConfig,
+  CollectionConfiguration,
+  CompilationJobSummary,
+  ComputeQuotaConfig,
+  ComputeQuotaResourceConfig,
+  ComputeQuotaSummary,
+  ComputeQuotaTarget,
+  ConditionStepMetadata,
+  ConflictException,
+  ContainerDefinition,
+  ContentClassifier,
+  ContextSource,
+  ContextSummary,
+  ContinuousParameterRange,
   ContinuousParameterRangeSpecification,
   ConvergenceDetected,
   CreateActionRequest,
@@ -1224,6 +1294,8 @@ import {
   CreateFeatureGroupResponse,
   CreateFlowDefinitionRequest,
   CreateFlowDefinitionResponse,
+  CreateHubContentPresignedUrlsRequest,
+  CreateHubContentPresignedUrlsResponse,
   CreateHubContentReferenceRequest,
   CreateHubContentReferenceResponse,
   CreateHubRequest,
@@ -1246,24 +1318,10 @@ import {
   CreateLabelingJobResponse,
   CreateMlflowTrackingServerRequest,
   CreateMlflowTrackingServerResponse,
-  CreateModelBiasJobDefinitionRequest,
-  CreateModelBiasJobDefinitionResponse,
-  CreateModelCardExportJobRequest,
-  CreateModelCardExportJobResponse,
-  CreateModelCardRequest,
-  CreateModelCardResponse,
-  CreateModelExplainabilityJobDefinitionRequest,
-  CreateModelExplainabilityJobDefinitionResponse,
   CreateModelInput,
   CreateModelOutput,
-  CreateModelPackageGroupInput,
-  CreateModelPackageGroupOutput,
-  CreateModelPackageInput,
-  CreateModelPackageOutput,
-  CreateModelQualityJobDefinitionRequest,
-  CreateModelQualityJobDefinitionResponse,
-  CreateMonitoringScheduleRequest,
   CustomFileSystemConfig,
+  CustomImage,
   CustomPosixUserConfig,
   DataCaptureConfig,
   DataCatalogConfig,
@@ -1278,11 +1336,6 @@ import {
   DeviceSelectionConfig,
   DockerSettings,
   DomainSettings,
-  DriftCheckBaselines,
-  DriftCheckBias,
-  DriftCheckExplainability,
-  DriftCheckModelDataQuality,
-  DriftCheckModelQuality,
   EdgeDeploymentConfig,
   EdgeDeploymentModelConfig,
   EdgeOutputConfig,
@@ -1292,12 +1345,11 @@ import {
   EndpointInput,
   EndpointInputConfiguration,
   EnvironmentParameterRanges,
-  Explainability,
   ExplainerConfig,
   FeatureDefinition,
-  FileSource,
   FlowDefinitionOutputConfig,
   FSxLustreFileSystemConfig,
+  GitConfig,
   HiddenSageMakerImage,
   HubS3StorageConfig,
   HumanLoopActivationConditionsConfig,
@@ -1315,6 +1367,7 @@ import {
   HyperParameterTuningJobStrategyConfig,
   HyperParameterTuningJobWarmStartConfig,
   HyperParameterTuningResourceConfig,
+  ImageConfig,
   InferenceComponentComputeResourceRequirements,
   InferenceComponentContainerSpecification,
   InferenceComponentRuntimeConfig,
@@ -1341,45 +1394,21 @@ import {
   MetadataProperties,
   MlTools,
   ModelBiasAppSpecification,
-  ModelBiasBaselineConfig,
-  ModelBiasJobInput,
-  ModelCardExportOutputConfig,
-  ModelCardSecurityConfig,
-  ModelDataQuality,
   ModelDeployConfig,
-  ModelExplainabilityAppSpecification,
-  ModelExplainabilityBaselineConfig,
-  ModelExplainabilityJobInput,
   ModelInfrastructureConfig,
   ModelLatencyThreshold,
-  ModelLifeCycle,
-  ModelMetrics,
-  ModelPackageModelCard,
-  ModelPackageSecurityConfig,
-  ModelPackageValidationProfile,
-  ModelPackageValidationSpecification,
-  ModelQuality,
-  ModelQualityAppSpecification,
-  ModelQualityBaselineConfig,
-  ModelQualityJobInput,
   ModelVariantConfig,
-  MonitoringAppSpecification,
-  MonitoringBaselineConfig,
   MonitoringClusterConfig,
   MonitoringConstraintsResource,
-  MonitoringGroundTruthS3Input,
-  MonitoringInput,
-  MonitoringJobDefinition,
   MonitoringNetworkConfig,
   MonitoringOutput,
   MonitoringOutputConfig,
   MonitoringResources,
   MonitoringS3Output,
-  MonitoringScheduleConfig,
   MonitoringStatisticsResource,
   MonitoringStoppingCondition,
+  MultiModelConfig,
   NeoVpcConfig,
-  NetworkConfig,
   OfflineStoreConfig,
   OnlineStoreConfig,
   OnlineStoreSecurityConfig,
@@ -1388,8 +1417,10 @@ import {
   ParameterRanges,
   ParentHyperParameterTuningJob,
   Phase,
+  PresignedUrlAccessConfig,
   PriorityClass,
   ProductionVariant,
+  ProductionVariantCapacityReservationConfig,
   ProductionVariantCoreDumpConfig,
   ProductionVariantManagedInstanceScaling,
   ProductionVariantRoutingConfig,
@@ -1404,21 +1435,21 @@ import {
   RecommendationJobResourceLimit,
   RecommendationJobStoppingConditions,
   RecommendationJobVpcConfig,
+  RepositoryAuthConfig,
   ResourceInUse,
   ResourceLimits,
+  ResourceSharingConfig,
   RetryStrategy,
   RollingUpdatePolicy,
   RSessionAppSettings,
   RStudioServerProAppSettings,
   RStudioServerProDomainSettings,
+  S3FileSystemConfig,
   S3StorageConfig,
-  ScheduleConfig,
   SchedulerConfig,
   ShadowModeConfig,
   ShadowModelVariantConfig,
   SharingSettings,
-  SourceAlgorithm,
-  SourceAlgorithmSpecification,
   Stairs,
   StudioWebPortalSettings,
   TargetPlatform,
@@ -1426,14 +1457,32 @@ import {
   ThroughputConfig,
   TrafficPattern,
   TrainingSpecification,
+  TrustedIdentityPropagationSettings,
   TtlDuration,
   TuningJobCompletionCriteria,
   UiConfig,
   UiTemplate,
+  UnifiedStudioSettings,
   USD,
   UserSettings,
+  VectorConfig,
 } from "../models/models_1";
 import {
+  CreateModelBiasJobDefinitionRequest,
+  CreateModelBiasJobDefinitionResponse,
+  CreateModelCardExportJobRequest,
+  CreateModelCardExportJobResponse,
+  CreateModelCardRequest,
+  CreateModelCardResponse,
+  CreateModelExplainabilityJobDefinitionRequest,
+  CreateModelExplainabilityJobDefinitionResponse,
+  CreateModelPackageGroupInput,
+  CreateModelPackageGroupOutput,
+  CreateModelPackageInput,
+  CreateModelPackageOutput,
+  CreateModelQualityJobDefinitionRequest,
+  CreateModelQualityJobDefinitionResponse,
+  CreateMonitoringScheduleRequest,
   CreateMonitoringScheduleResponse,
   CreateNotebookInstanceInput,
   CreateNotebookInstanceLifecycleConfigInput,
@@ -1461,6 +1510,7 @@ import {
   CreateSpaceResponse,
   CreateStudioLifecycleConfigRequest,
   CreateStudioLifecycleConfigResponse,
+  CreateTemplateProvider,
   CreateTrainingJobRequest,
   CreateTrainingJobResponse,
   CreateTrainingPlanRequest,
@@ -1578,6 +1628,8 @@ import {
   DescribeAutoMLJobResponse,
   DescribeAutoMLJobV2Request,
   DescribeAutoMLJobV2Response,
+  DescribeClusterEventRequest,
+  DescribeClusterEventResponse,
   DescribeClusterNodeRequest,
   DescribeClusterNodeResponse,
   DescribeClusterRequest,
@@ -1587,6 +1639,110 @@ import {
   DescribeCodeRepositoryInput,
   DescribeCodeRepositoryOutput,
   DescribeCompilationJobRequest,
+  DriftCheckBaselines,
+  DriftCheckBias,
+  DriftCheckExplainability,
+  DriftCheckModelDataQuality,
+  DriftCheckModelQuality,
+  EbsStorageSettings,
+  EdgeDeploymentStatus,
+  EFSFileSystem,
+  ExperimentConfig,
+  Explainability,
+  FileSource,
+  FSxLustreFileSystem,
+  IamPolicyConstraints,
+  InfraCheckConfig,
+  InstanceMetadataServiceConfiguration,
+  MemberDefinition,
+  ModelArtifacts,
+  ModelBiasBaselineConfig,
+  ModelBiasJobInput,
+  ModelCardExportOutputConfig,
+  ModelCardSecurityConfig,
+  ModelClientConfig,
+  ModelCompilationConfig,
+  ModelDataQuality,
+  ModelDeployResult,
+  ModelDigests,
+  ModelExplainabilityAppSpecification,
+  ModelExplainabilityBaselineConfig,
+  ModelExplainabilityJobInput,
+  ModelLifeCycle,
+  ModelMetrics,
+  ModelPackageModelCard,
+  ModelPackageSecurityConfig,
+  ModelPackageValidationProfile,
+  ModelPackageValidationSpecification,
+  ModelQuality,
+  ModelQualityAppSpecification,
+  ModelQualityBaselineConfig,
+  ModelQualityJobInput,
+  ModelQuantizationConfig,
+  ModelShardingConfig,
+  MonitoringAppSpecification,
+  MonitoringBaselineConfig,
+  MonitoringGroundTruthS3Input,
+  MonitoringInput,
+  MonitoringJobDefinition,
+  MonitoringScheduleConfig,
+  NetworkConfig,
+  NotebookInstanceAcceleratorType,
+  NotebookInstanceLifecycleHook,
+  NotificationConfiguration,
+  OidcConfig,
+  OidcMemberDefinition,
+  OptimizationConfig,
+  OptimizationJobModelSource,
+  OptimizationJobModelSourceS3,
+  OptimizationJobOutputConfig,
+  OptimizationModelAccessConfig,
+  OptimizationVpcConfig,
+  OwnershipSettings,
+  ParallelismConfiguration,
+  PartnerAppConfig,
+  PartnerAppMaintenanceConfig,
+  PipelineDefinitionS3Location,
+  ProcessingClusterConfig,
+  ProcessingFeatureStoreOutput,
+  ProcessingInput,
+  ProcessingOutput,
+  ProcessingOutputConfig,
+  ProcessingResources,
+  ProcessingS3Input,
+  ProcessingS3Output,
+  ProcessingStoppingCondition,
+  ProfilerConfig,
+  ProfilerRuleConfiguration,
+  ProvisioningParameter,
+  RealTimeInferenceRecommendation,
+  RedshiftDatasetDefinition,
+  RemoteDebugConfig,
+  ResolvedAttributes,
+  RetentionPolicy,
+  S3FileSystem,
+  S3Presign,
+  ScheduleConfig,
+  ServiceCatalogProvisioningDetails,
+  SessionChainingConfig,
+  SourceAlgorithm,
+  SourceAlgorithmSpecification,
+  SourceIpConfig,
+  SpaceAppLifecycleManagement,
+  SpaceCodeEditorAppSettings,
+  SpaceIdleSettings,
+  SpaceJupyterLabAppSettings,
+  SpaceSettings,
+  SpaceSharingSettings,
+  SpaceStorageSettings,
+  TensorBoardOutputConfig,
+  TrialComponentArtifact,
+  TrialComponentParameterValue,
+  TrialComponentStatus,
+  WorkerAccessConfiguration,
+  WorkforceVpcConfigRequest,
+} from "../models/models_2";
+import {
   DescribeCompilationJobResponse,
   DescribeComputeQuotaRequest,
   DescribeComputeQuotaResponse,
@@ -1621,86 +1777,6 @@ import {
   DescribeHubRequest,
   DescribeHubResponse,
   DescribeHumanTaskUiRequest,
-  EbsStorageSettings,
-  EdgeDeploymentStatus,
-  EdgeModel,
-  EdgePresetDeploymentOutput,
-  EFSFileSystem,
-  ExperimentConfig,
-  ExperimentSource,
-  FeatureParameter,
-  FSxLustreFileSystem,
-  HubContentDependency,
-  IamPolicyConstraints,
-  InfraCheckConfig,
-  InstanceMetadataServiceConfiguration,
-  LastUpdateStatus,
-  MemberDefinition,
-  ModelArtifacts,
-  ModelClientConfig,
-  ModelCompilationConfig,
-  ModelDeployResult,
-  ModelDigests,
-  ModelQuantizationConfig,
-  ModelShardingConfig,
-  NotebookInstanceAcceleratorType,
-  NotebookInstanceLifecycleHook,
-  NotificationConfiguration,
-  OfflineStoreStatus,
-  OidcConfig,
-  OidcMemberDefinition,
-  OptimizationConfig,
-  OptimizationJobModelSource,
-  OptimizationJobModelSourceS3,
-  OptimizationJobOutputConfig,
-  OptimizationModelAccessConfig,
-  OptimizationVpcConfig,
-  OwnershipSettings,
-  ParallelismConfiguration,
-  PartnerAppConfig,
-  PartnerAppMaintenanceConfig,
-  PendingDeploymentSummary,
-  PendingProductionVariantSummary,
-  PipelineDefinitionS3Location,
-  ProcessingClusterConfig,
-  ProcessingFeatureStoreOutput,
-  ProcessingInput,
-  ProcessingOutput,
-  ProcessingOutputConfig,
-  ProcessingResources,
-  ProcessingS3Input,
-  ProcessingS3Output,
-  ProcessingStoppingCondition,
-  ProductionVariantStatus,
-  ProductionVariantSummary,
-  ProfilerConfig,
-  ProfilerRuleConfiguration,
-  ProvisioningParameter,
-  RealTimeInferenceRecommendation,
-  RedshiftDatasetDefinition,
-  RemoteDebugConfig,
-  ResolvedAttributes,
-  RetentionPolicy,
-  S3Presign,
-  ServiceCatalogProvisioningDetails,
-  SessionChainingConfig,
-  SourceIpConfig,
-  SpaceAppLifecycleManagement,
-  SpaceCodeEditorAppSettings,
-  SpaceIdleSettings,
-  SpaceJupyterLabAppSettings,
-  SpaceSettings,
-  SpaceSharingSettings,
-  SpaceStorageSettings,
-  TensorBoardOutputConfig,
-  ThroughputConfigDescription,
-  TrialComponentArtifact,
-  TrialComponentParameterValue,
-  TrialComponentStatus,
-  WorkerAccessConfiguration,
-  WorkforceVpcConfigRequest,
-} from "../models/models_2";
-import {
   DescribeHumanTaskUiResponse,
   DescribeHyperParameterTuningJobRequest,
   DescribeHyperParameterTuningJobResponse,
@@ -1756,6 +1832,8 @@ import {
   DescribeProcessingJobResponse,
   DescribeProjectInput,
   DescribeProjectOutput,
+  DescribeReservedCapacityRequest,
+  DescribeReservedCapacityResponse,
   DescribeSpaceRequest,
   DescribeSpaceResponse,
   DescribeStudioLifecycleConfigRequest,
@@ -1779,6 +1857,8 @@ import {
   DescribeWorkteamRequest,
   DescribeWorkteamResponse,
   DesiredWeightAndCapacity,
+  DetachClusterNodeVolumeRequest,
+  DetachClusterNodeVolumeResponse,
   Device,
   DeviceDeploymentSummary,
   DeviceFleetSummary,
@@ -1791,11 +1871,14 @@ import {
   DomainDetails,
   DomainSettingsForUpdate,
   DynamicScalingConfiguration,
+  Ec2CapacityReservation,
   Edge,
   EdgeDeploymentPlanSummary,
+  EdgeModel,
   EdgeModelStat,
   EdgeModelSummary,
   EdgePackagingJobSummary,
+  EdgePresetDeploymentOutput,
   EMRStepMetadata,
   EnableSagemakerServicecatalogPortfolioInput,
   EnableSagemakerServicecatalogPortfolioOutput,
@@ -1810,11 +1893,13 @@ import {
   EnvironmentParameter,
   ErrorInfo,
   Experiment,
+  ExperimentSource,
   ExperimentSummary,
   FailStepMetadata,
   FeatureGroup,
   FeatureGroupSummary,
   FeatureMetadata,
+  FeatureParameter,
   Filter,
   FinalHyperParameterTuningJobObjectiveMetric,
   FlowDefinitionSummary,
@@ -1831,34 +1916,88 @@ import {
   GetSearchSuggestionsRequest,
   GetSearchSuggestionsResponse,
   GitConfigForUpdate,
+  HubContentDependency,
   HubContentInfo,
-  HubInfo,
-  HumanTaskUiSummary,
   HyperParameterTrainingJobSummary,
   HyperParameterTuningJobCompletionDetails,
   HyperParameterTuningJobConsumedResources,
-  HyperParameterTuningJobSearchEntity,
-  HyperParameterTuningJobSummary,
-  Image,
-  ImageVersion,
-  ImportHubContentRequest,
-  ImportHubContentResponse,
   InferenceComponentCapacitySize,
   InferenceComponentContainerSpecificationSummary,
   InferenceComponentDeploymentConfig,
   InferenceComponentRollingUpdatePolicy,
   InferenceComponentRuntimeConfigSummary,
   InferenceComponentSpecificationSummary,
-  InferenceComponentSummary,
-  InferenceExperimentSummary,
   InferenceMetrics,
   InferenceRecommendation,
+  LabelCounters,
+  LabelingJobOutput,
+  LastUpdateStatus,
+  MetricData,
+  MetricSpecification,
+  ModelCardExportArtifacts,
+  ModelConfiguration,
+  ModelPackageStatusDetails,
+  ModelPackageStatusItem,
+  ModelVariantConfigSummary,
+  MonitoringExecutionSummary,
+  MonitoringSchedule,
+  ObjectiveStatusCounters,
+  OfflineStoreStatus,
+  OidcConfigForResponse,
+  OptimizationOutput,
+  PendingDeploymentSummary,
+  PendingProductionVariantSummary,
+  PipelineExperimentConfig,
+  PredefinedMetricSpecification,
+  ProductionVariantCapacityReservationSummary,
+  ProductionVariantServerlessUpdateConfig,
+  ProductionVariantStatus,
+  ProductionVariantSummary,
+  ProfilerRuleEvaluationStatus,
+  PropertyNameQuery,
+  PropertyNameSuggestion,
+  RecommendationMetrics,
+  ReservedCapacitySummary,
+  RStudioServerProDomainSettingsForUpdate,
+  SageMakerResourceName,
+  ScalingPolicy,
+  ScalingPolicyMetric,
+  ScalingPolicyObjective,
+  SecondaryStatusTransition,
+  SelectedStep,
+  SelectiveExecutionConfig,
+  ServiceCatalogProvisionedProductDetails,
+  SubscribedWorkteam,
+  SuggestionQuery,
+  TargetTrackingScalingPolicyConfiguration,
+  TemplateProviderDetail,
+  ThroughputConfigDescription,
+  TrainingJobStatusCounters,
+  TrialComponentMetricSummary,
+  TrialComponentSource,
+  TrialSource,
+  UiTemplateInfo,
+  UltraServerSummary,
+  WarmPoolStatus,
+  Workforce,
+  WorkforceVpcConfigResponse,
+  Workteam,
+} from "../models/models_3";
+import {
+  HubInfo,
+  HumanTaskUiSummary,
+  HyperParameterTuningJobSearchEntity,
+  HyperParameterTuningJobSummary,
+  Image,
+  ImageVersion,
+  ImportHubContentRequest,
+  ImportHubContentResponse,
+  InferenceComponentSummary,
+  InferenceExperimentSummary,
   InferenceRecommendationsJob,
   InferenceRecommendationsJobStep,
-  LabelCounters,
   LabelCountersForWorkteam,
   LabelingJobForWorkteamSummary,
-  LabelingJobOutput,
   LabelingJobSummary,
   LambdaStepMetadata,
   LineageGroupSummary,
@@ -1881,6 +2020,8 @@ import {
   ListAutoMLJobsResponse,
   ListCandidatesForAutoMLJobRequest,
   ListCandidatesForAutoMLJobResponse,
+  ListClusterEventsRequest,
+  ListClusterEventsResponse,
   ListClusterNodesRequest,
   ListClusterNodesResponse,
   ListClusterSchedulerConfigsRequest,
@@ -1895,50 +2036,6 @@ import {
   ListComputeQuotasResponse,
   ListContextsRequest,
   ListContextsResponse,
-  MetricData,
-  MetricSpecification,
-  ModelCardExportArtifacts,
-  ModelConfiguration,
-  ModelPackageStatusDetails,
-  ModelPackageStatusItem,
-  ModelVariantConfigSummary,
-  MonitoringExecutionSummary,
-  MonitoringSchedule,
-  ObjectiveStatusCounters,
-  OidcConfigForResponse,
-  OptimizationOutput,
-  PipelineExperimentConfig,
-  PredefinedMetricSpecification,
-  ProductionVariantServerlessUpdateConfig,
-  ProfilerRuleEvaluationStatus,
-  PropertyNameQuery,
-  PropertyNameSuggestion,
-  RecommendationJobInferenceBenchmark,
-  RecommendationMetrics,
-  ReservedCapacitySummary,
-  RStudioServerProDomainSettingsForUpdate,
-  SageMakerResourceName,
-  ScalingPolicy,
-  ScalingPolicyMetric,
-  ScalingPolicyObjective,
-  SecondaryStatusTransition,
-  SelectedStep,
-  SelectiveExecutionConfig,
-  ServiceCatalogProvisionedProductDetails,
-  SubscribedWorkteam,
-  SuggestionQuery,
-  TargetTrackingScalingPolicyConfiguration,
-  TrainingJobStatusCounters,
-  TrialComponentMetricSummary,
-  TrialComponentSource,
-  TrialSource,
-  UiTemplateInfo,
-  WarmPoolStatus,
-  Workforce,
-  WorkforceVpcConfigResponse,
-  Workteam,
-} from "../models/models_3";
-import {
   ListDataQualityJobDefinitionsRequest,
   ListDataQualityJobDefinitionsResponse,
   ListDeviceFleetsRequest,
@@ -2035,6 +2132,8 @@ import {
   ListPipelineParametersForExecutionResponse,
   ListPipelinesRequest,
   ListPipelinesResponse,
+  ListPipelineVersionsRequest,
+  ListPipelineVersionsResponse,
   ListProcessingJobsRequest,
   ListProcessingJobsResponse,
   ListProjectsInput,
@@ -2063,88 +2162,111 @@ import {
   ListTrialComponentsResponse,
   ListTrialsRequest,
   ListTrialsResponse,
+  ListUltraServersByReservedCapacityRequest,
+  ListUltraServersByReservedCapacityResponse,
   ListUserProfilesRequest,
   ListUserProfilesResponse,
   ListWorkforcesRequest,
-  ListWorkforcesResponse,
-  ListWorkteamsRequest,
-  ListWorkteamsResponse,
-  Model,
-  ModelCard,
   ModelCardExportJobSummary,
   ModelCardSummary,
   ModelCardVersionSummary,
-  ModelDashboardEndpoint,
   ModelDashboardIndicatorAction,
-  ModelDashboardModel,
-  ModelDashboardModelCard,
-  ModelDashboardMonitoringSchedule,
   ModelMetadataFilter,
   ModelMetadataSearchExpression,
   ModelMetadataSummary,
-  ModelPackage,
-  ModelPackageGroup,
   ModelPackageGroupSummary,
   ModelPackageSummary,
   ModelStepMetadata,
   ModelSummary,
-  ModelVariantAction,
   MonitoringAlertActions,
   MonitoringAlertHistorySummary,
   MonitoringAlertSummary,
   MonitoringJobDefinitionSummary,
   MonitoringScheduleSummary,
-  NestedFilters,
   NotebookInstanceLifecycleConfigSummary,
   NotebookInstanceSummary,
-  OnlineStoreConfigUpdate,
   OptimizationJobSummary,
   OwnershipSettingsSummary,
   Parameter,
-  Parent,
   PartnerAppSummary,
-  Pipeline,
-  PipelineExecution,
   PipelineExecutionStep,
   PipelineExecutionStepMetadata,
   PipelineExecutionSummary,
   PipelineSummary,
-  ProcessingJob,
+  PipelineVersionSummary,
   ProcessingJobStepMetadata,
   ProcessingJobSummary,
+  ProjectSummary,
+  QualityCheckStepMetadata,
+  RecommendationJobInferenceBenchmark,
+  RegisterModelStepMetadata,
+  ResourceCatalog,
+  SelectiveExecutionResult,
+  SpaceDetails,
+  SpaceSettingsSummary,
+  SpaceSharingSettingsSummary,
+  StudioLifecycleConfigDetails,
+  TrackingServerSummary,
+  TrainingJobStepMetadata,
+  TrainingJobSummary,
+  TrainingPlanFilter,
+  TrainingPlanSummary,
+  TransformJobStepMetadata,
+  TransformJobSummary,
+  TrialComponentSummary,
+  TrialSummary,
+  TuningJobStepMetaData,
+  UltraServer,
+  UserProfileDetails,
+} from "../models/models_4";
+import {
+  ListWorkforcesResponse,
+  ListWorkteamsRequest,
+  ListWorkteamsResponse,
+  Model,
+  ModelCard,
+  ModelDashboardEndpoint,
+  ModelDashboardModel,
+  ModelDashboardModelCard,
+  ModelDashboardMonitoringSchedule,
+  ModelPackage,
+  ModelPackageGroup,
+  ModelVariantAction,
+  NestedFilters,
+  OnlineStoreConfigUpdate,
+  Parent,
+  Pipeline,
+  PipelineExecution,
+  PipelineVersion,
+  ProcessingJob,
   ProfilerConfigForUpdate,
   Project,
-  ProjectSummary,
   PutModelPackageGroupPolicyInput,
   PutModelPackageGroupPolicyOutput,
-  QualityCheckStepMetadata,
   QueryFilters,
   QueryLineageRequest,
   QueryLineageResponse,
   RegisterDevicesRequest,
-  RegisterModelStepMetadata,
   RemoteDebugConfigForUpdate,
   RenderableTask,
   RenderingError,
   RenderUiTemplateRequest,
   RenderUiTemplateResponse,
   ReservedCapacityOffering,
-  ResourceCatalog,
   ResourceConfigForUpdate,
   RetryPipelineExecutionRequest,
   RetryPipelineExecutionResponse,
+  SearchExpression,
   SearchRecord,
+  SearchRequest,
   SearchResponse,
   SearchTrainingPlanOfferingsRequest,
   SearchTrainingPlanOfferingsResponse,
-  SelectiveExecutionResult,
   SendPipelineExecutionStepFailureRequest,
   SendPipelineExecutionStepFailureResponse,
   SendPipelineExecutionStepSuccessRequest,
   SendPipelineExecutionStepSuccessResponse,
-  SpaceDetails,
-  SpaceSettingsSummary,
-  SpaceSharingSettingsSummary,
+  ServiceCatalogProvisioningUpdateDetails,
   StartEdgeDeploymentStageRequest,
   StartInferenceExperimentRequest,
   StartInferenceExperimentResponse,
@@ -2154,6 +2276,8 @@ import {
   StartNotebookInstanceInput,
   StartPipelineExecutionRequest,
   StartPipelineExecutionResponse,
+  StartSessionRequest,
+  StartSessionResponse,
   StopAutoMLJobRequest,
   StopCompilationJobRequest,
   StopEdgeDeploymentStageRequest,
@@ -2167,33 +2291,6 @@ import {
   StopMlflowTrackingServerResponse,
   StopMonitoringScheduleRequest,
   StopNotebookInstanceInput,
-  StudioLifecycleConfigDetails,
-  TotalHits,
-  TrackingServerSummary,
-  TrainingJob,
-  TrainingJobStepMetadata,
-  TrainingJobSummary,
-  TrainingPlanFilter,
-  TrainingPlanOffering,
-  TrainingPlanSummary,
-  TransformJob,
-  TransformJobStepMetadata,
-  TransformJobSummary,
-  Trial,
-  TrialComponent,
-  TrialComponentSimpleSummary,
-  TrialComponentSourceDetail,
-  TrialComponentSummary,
-  TrialSummary,
-  TuningJobStepMetaData,
-  UserProfileDetails,
-  Vertex,
-  VisibilityConditions,
-} from "../models/models_4";
-import {
-  SearchExpression,
-  SearchRequest,
-  ServiceCatalogProvisioningUpdateDetails,
   StopOptimizationJobRequest,
   StopPipelineExecutionRequest,
   StopPipelineExecutionResponse,
@@ -2201,6 +2298,14 @@ import {
   StopTrainingJobRequest,
   StopTransformJobRequest,
   ThroughputConfigUpdate,
+  TotalHits,
+  TrainingJob,
+  TrainingPlanOffering,
+  TransformJob,
+  Trial,
+  TrialComponent,
+  TrialComponentSimpleSummary,
+  TrialComponentSourceDetail,
   UpdateActionRequest,
   UpdateActionResponse,
   UpdateAppImageConfigRequest,
@@ -2211,6 +2316,7 @@ import {
   UpdateClusterResponse,
   UpdateClusterSchedulerConfigRequest,
   UpdateClusterSchedulerConfigResponse,
+  UpdateClusterSoftwareInstanceGroupSpecification,
   UpdateClusterSoftwareRequest,
   UpdateClusterSoftwareResponse,
   UpdateCodeRepositoryInput,
@@ -2268,10 +2374,13 @@ import {
   UpdatePipelineExecutionResponse,
   UpdatePipelineRequest,
   UpdatePipelineResponse,
+  UpdatePipelineVersionRequest,
+  UpdatePipelineVersionResponse,
   UpdateProjectInput,
   UpdateProjectOutput,
   UpdateSpaceRequest,
   UpdateSpaceResponse,
+  UpdateTemplateProvider,
   UpdateTrainingJobRequest,
   UpdateTrainingJobResponse,
   UpdateTrialComponentRequest,
@@ -2285,6 +2394,8 @@ import {
   UpdateWorkteamRequest,
   UpdateWorkteamResponse,
   VariantProperty,
+  Vertex,
+  VisibilityConditions,
 } from "../models/models_5";
 import { SageMakerServiceException as __BaseException } from "../models/SageMakerServiceException";
 
@@ -2324,6 +2435,32 @@ export const se_AssociateTrialComponentCommand = async (
   const headers: __HeaderBag = sharedHeaders("AssociateTrialComponent");
   let body: any;
   body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1AttachClusterNodeVolumeCommand
+ */
+export const se_AttachClusterNodeVolumeCommand = async (
+  input: AttachClusterNodeVolumeCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("AttachClusterNodeVolume");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1BatchAddClusterNodesCommand
+ */
+export const se_BatchAddClusterNodesCommand = async (
+  input: BatchAddClusterNodesCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("BatchAddClusterNodes");
+  let body: any;
+  body = JSON.stringify(se_BatchAddClusterNodesRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 
@@ -2505,7 +2642,7 @@ export const se_CreateComputeQuotaCommand = async (
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateComputeQuota");
   let body: any;
-  body = JSON.stringify(_json(input));
+  body = JSON.stringify(se_CreateComputeQuotaRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 
@@ -2673,6 +2810,19 @@ export const se_CreateHubCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("CreateHub");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1CreateHubContentPresignedUrlsCommand
+ */
+export const se_CreateHubContentPresignedUrlsCommand = async (
+  input: CreateHubContentPresignedUrlsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("CreateHubContentPresignedUrls");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -4031,6 +4181,19 @@ export const se_DescribeClusterCommand = async (
 };
 
 /**
+ * serializeAws_json1_1DescribeClusterEventCommand
+ */
+export const se_DescribeClusterEventCommand = async (
+  input: DescribeClusterEventCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DescribeClusterEvent");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1DescribeClusterNodeCommand
  */
 export const se_DescribeClusterNodeCommand = async (
@@ -4655,6 +4818,19 @@ export const se_DescribeProjectCommand = async (
 };
 
 /**
+ * serializeAws_json1_1DescribeReservedCapacityCommand
+ */
+export const se_DescribeReservedCapacityCommand = async (
+  input: DescribeReservedCapacityCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DescribeReservedCapacity");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1DescribeSpaceCommand
  */
 export const se_DescribeSpaceCommand = async (
@@ -4792,6 +4968,19 @@ export const se_DescribeWorkteamCommand = async (
   context: __SerdeContext
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("DescribeWorkteam");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1DetachClusterNodeVolumeCommand
+ */
+export const se_DetachClusterNodeVolumeCommand = async (
+  input: DetachClusterNodeVolumeCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("DetachClusterNodeVolume");
   let body: any;
   body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -5041,6 +5230,19 @@ export const se_ListCandidatesForAutoMLJobCommand = async (
   const headers: __HeaderBag = sharedHeaders("ListCandidatesForAutoMLJob");
   let body: any;
   body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1ListClusterEventsCommand
+ */
+export const se_ListClusterEventsCommand = async (
+  input: ListClusterEventsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("ListClusterEvents");
+  let body: any;
+  body = JSON.stringify(se_ListClusterEventsRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 
@@ -5760,6 +5962,19 @@ export const se_ListPipelinesCommand = async (
 };
 
 /**
+ * serializeAws_json1_1ListPipelineVersionsCommand
+ */
+export const se_ListPipelineVersionsCommand = async (
+  input: ListPipelineVersionsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("ListPipelineVersions");
+  let body: any;
+  body = JSON.stringify(se_ListPipelineVersionsRequest(input, context));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1ListProcessingJobsCommand
  */
 export const se_ListProcessingJobsCommand = async (
@@ -5938,6 +6153,19 @@ export const se_ListTrialsCommand = async (
   const headers: __HeaderBag = sharedHeaders("ListTrials");
   let body: any;
   body = JSON.stringify(se_ListTrialsRequest(input, context));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1ListUltraServersByReservedCapacityCommand
+ */
+export const se_ListUltraServersByReservedCapacityCommand = async (
+  input: ListUltraServersByReservedCapacityCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("ListUltraServersByReservedCapacity");
+  let body: any;
+  body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 
@@ -6169,6 +6397,19 @@ export const se_StartPipelineExecutionCommand = async (
   const headers: __HeaderBag = sharedHeaders("StartPipelineExecution");
   let body: any;
   body = JSON.stringify(se_StartPipelineExecutionRequest(input, context));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
+ * serializeAws_json1_1StartSessionCommand
+ */
+export const se_StartSessionCommand = async (
+  input: StartSessionCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("StartSession");
+  let body: any;
+  body = JSON.stringify(_json(input));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 
@@ -6480,7 +6721,7 @@ export const se_UpdateComputeQuotaCommand = async (
 ): Promise<__HttpRequest> => {
   const headers: __HeaderBag = sharedHeaders("UpdateComputeQuota");
   let body: any;
-  body = JSON.stringify(_json(input));
+  body = JSON.stringify(se_UpdateComputeQuotaRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 
@@ -6836,6 +7077,19 @@ export const se_UpdatePipelineExecutionCommand = async (
 };
 
 /**
+ * serializeAws_json1_1UpdatePipelineVersionCommand
+ */
+export const se_UpdatePipelineVersionCommand = async (
+  input: UpdatePipelineVersionCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const headers: __HeaderBag = sharedHeaders("UpdatePipelineVersion");
+  let body: any;
+  body = JSON.stringify(_json(input));
+  return buildHttpRpcRequest(context, headers, "/", undefined, body);
+};
+
+/**
  * serializeAws_json1_1UpdateProjectCommand
  */
 export const se_UpdateProjectCommand = async (
@@ -6993,6 +7247,46 @@ export const de_AssociateTrialComponentCommand = async (
   let contents: any = {};
   contents = de_AssociateTrialComponentResponse(data, context);
   const response: AssociateTrialComponentCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1AttachClusterNodeVolumeCommand
+ */
+export const de_AttachClusterNodeVolumeCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<AttachClusterNodeVolumeCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_AttachClusterNodeVolumeResponse(data, context);
+  const response: AttachClusterNodeVolumeCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1BatchAddClusterNodesCommand
+ */
+export const de_BatchAddClusterNodesCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<BatchAddClusterNodesCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_BatchAddClusterNodesResponse(data, context);
+  const response: BatchAddClusterNodesCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -7524,6 +7818,26 @@ export const de_CreateHubCommand = async (
   let contents: any = {};
   contents = de_CreateHubResponse(data, context);
   const response: CreateHubCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1CreateHubContentPresignedUrlsCommand
+ */
+export const de_CreateHubContentPresignedUrlsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateHubContentPresignedUrlsCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_CreateHubContentPresignedUrlsResponse(data, context);
+  const response: CreateHubContentPresignedUrlsCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -9500,6 +9814,26 @@ export const de_DescribeClusterCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1DescribeClusterEventCommand
+ */
+export const de_DescribeClusterEventCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeClusterEventCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_DescribeClusterEventResponse(data, context);
+  const response: DescribeClusterEventCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1DescribeClusterNodeCommand
  */
 export const de_DescribeClusterNodeCommand = async (
@@ -10460,6 +10794,26 @@ export const de_DescribeProjectCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1DescribeReservedCapacityCommand
+ */
+export const de_DescribeReservedCapacityCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DescribeReservedCapacityCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_DescribeReservedCapacityResponse(data, context);
+  const response: DescribeReservedCapacityCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1DescribeSpaceCommand
  */
 export const de_DescribeSpaceCommand = async (
@@ -10673,6 +11027,26 @@ export const de_DescribeWorkteamCommand = async (
   let contents: any = {};
   contents = de_DescribeWorkteamResponse(data, context);
   const response: DescribeWorkteamCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1DetachClusterNodeVolumeCommand
+ */
+export const de_DetachClusterNodeVolumeCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DetachClusterNodeVolumeCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_DetachClusterNodeVolumeResponse(data, context);
+  const response: DetachClusterNodeVolumeCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -11053,6 +11427,26 @@ export const de_ListCandidatesForAutoMLJobCommand = async (
   let contents: any = {};
   contents = de_ListCandidatesForAutoMLJobResponse(data, context);
   const response: ListCandidatesForAutoMLJobCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1ListClusterEventsCommand
+ */
+export const de_ListClusterEventsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListClusterEventsCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_ListClusterEventsResponse(data, context);
+  const response: ListClusterEventsCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -12160,6 +12554,26 @@ export const de_ListPipelinesCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1ListPipelineVersionsCommand
+ */
+export const de_ListPipelineVersionsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListPipelineVersionsCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_ListPipelineVersionsResponse(data, context);
+  const response: ListPipelineVersionsCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1ListProcessingJobsCommand
  */
 export const de_ListProcessingJobsCommand = async (
@@ -12433,6 +12847,26 @@ export const de_ListTrialsCommand = async (
   let contents: any = {};
   contents = de_ListTrialsResponse(data, context);
   const response: ListTrialsCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1ListUltraServersByReservedCapacityCommand
+ */
+export const de_ListUltraServersByReservedCapacityCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListUltraServersByReservedCapacityCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_ListUltraServersByReservedCapacityResponse(data, context);
+  const response: ListUltraServersByReservedCapacityCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -12781,6 +13215,26 @@ export const de_StartPipelineExecutionCommand = async (
   let contents: any = {};
   contents = de_StartPipelineExecutionResponse(data, context);
   const response: StartPipelineExecutionCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
+ * deserializeAws_json1_1StartSessionCommand
+ */
+export const de_StartSessionCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<StartSessionCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_StartSessionResponse(data, context);
+  const response: StartSessionCommandOutput = {
     $metadata: deserializeMetadata(output),
     ...contents,
   };
@@ -13760,6 +14214,26 @@ export const de_UpdatePipelineExecutionCommand = async (
 };
 
 /**
+ * deserializeAws_json1_1UpdatePipelineVersionCommand
+ */
+export const de_UpdatePipelineVersionCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdatePipelineVersionCommandOutput> => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data: any = await parseBody(output.body, context);
+  let contents: any = {};
+  contents = de_UpdatePipelineVersionResponse(data, context);
+  const response: UpdatePipelineVersionCommandOutput = {
+    $metadata: deserializeMetadata(output),
+    ...contents,
+  };
+  return response;
+};
+
+/**
  * deserializeAws_json1_1UpdateProjectCommand
  */
 export const de_UpdateProjectCommand = async (
@@ -14010,6 +14484,10 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 
 // se_AddAssociationRequest omitted.
 
+// se_AddClusterNodeSpecification omitted.
+
+// se_AddClusterNodeSpecificationList omitted.
+
 // se_AdditionalCodeRepositoryNamesOrUrls omitted.
 
 // se_AdditionalInferenceSpecificationDefinition omitted.
@@ -14027,6 +14505,8 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 // se_AggregationTransformations omitted.
 
 // se_Alarm omitted.
+
+// se_AlarmDetails omitted.
 
 // se_AlarmList omitted.
 
@@ -14069,6 +14549,8 @@ const de_ResourceNotFoundRes = async (parsedOutput: any, context: __SerdeContext
 // se_AsyncNotificationTopicTypeList omitted.
 
 // se_AthenaDatasetDefinition omitted.
+
+// se_AttachClusterNodeVolumeRequest omitted.
 
 // se_AttributeNames omitted.
 
@@ -14132,9 +14614,22 @@ const se_AutoMLJobConfig = (input: AutoMLJobConfig, context: __SerdeContext): an
 
 // se_AutoParameters omitted.
 
+// se_AutoRollbackAlarms omitted.
+
 // se_AutoRollbackConfig omitted.
 
 // se_Autotune omitted.
+
+/**
+ * serializeAws_json1_1BatchAddClusterNodesRequest
+ */
+const se_BatchAddClusterNodesRequest = (input: BatchAddClusterNodesRequest, context: __SerdeContext): any => {
+  return take(input, {
+    ClientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+    ClusterName: [],
+    NodesToAdd: _json,
+  });
+};
 
 // se_BatchDataCaptureConfig omitted.
 
@@ -14174,6 +14669,8 @@ const se_BatchTransformInput = (input: BatchTransformInput, context: __SerdeCont
 
 // se_CapacitySize omitted.
 
+// se_CapacitySizeConfig omitted.
+
 // se_CaptureContentTypeHeader omitted.
 
 // se_CaptureOption omitted.
@@ -14191,6 +14688,18 @@ const se_BatchTransformInput = (input: BatchTransformInput, context: __SerdeCont
 // se_CategoricalParameterRangeValues omitted.
 
 // se_CategoricalParameters omitted.
+
+// se_CfnCreateTemplateProvider omitted.
+
+// se_CfnStackCreateParameter omitted.
+
+// se_CfnStackCreateParameters omitted.
+
+// se_CfnStackUpdateParameter omitted.
+
+// se_CfnStackUpdateParameters omitted.
+
+// se_CfnUpdateTemplateProvider omitted.
 
 // se_Channel omitted.
 
@@ -14234,9 +14743,15 @@ const se_BatchTransformInput = (input: BatchTransformInput, context: __SerdeCont
 
 // se_ClusterNodeIds omitted.
 
+// se_ClusterNodeLogicalIdList omitted.
+
 // se_ClusterOrchestrator omitted.
 
 // se_ClusterOrchestratorEksConfig omitted.
+
+// se_ClusterRestrictedInstanceGroupSpecification omitted.
+
+// se_ClusterRestrictedInstanceGroupSpecifications omitted.
 
 // se_CodeEditorAppImageConfig omitted.
 
@@ -14260,11 +14775,40 @@ const se_BatchTransformInput = (input: BatchTransformInput, context: __SerdeCont
 
 // se_CompressionTypes omitted.
 
-// se_ComputeQuotaConfig omitted.
+/**
+ * serializeAws_json1_1ComputeQuotaConfig
+ */
+const se_ComputeQuotaConfig = (input: ComputeQuotaConfig, context: __SerdeContext): any => {
+  return take(input, {
+    ComputeQuotaResources: (_) => se_ComputeQuotaResourceConfigList(_, context),
+    PreemptTeamTasks: [],
+    ResourceSharingConfig: _json,
+  });
+};
 
-// se_ComputeQuotaResourceConfig omitted.
+/**
+ * serializeAws_json1_1ComputeQuotaResourceConfig
+ */
+const se_ComputeQuotaResourceConfig = (input: ComputeQuotaResourceConfig, context: __SerdeContext): any => {
+  return take(input, {
+    Accelerators: [],
+    Count: [],
+    InstanceType: [],
+    MemoryInGiB: __serializeFloat,
+    VCpu: __serializeFloat,
+  });
+};
 
-// se_ComputeQuotaResourceConfigList omitted.
+/**
+ * serializeAws_json1_1ComputeQuotaResourceConfigList
+ */
+const se_ComputeQuotaResourceConfigList = (input: ComputeQuotaResourceConfig[], context: __SerdeContext): any => {
+  return input
+    .filter((e: any) => e != null)
+    .map((entry) => {
+      return se_ComputeQuotaResourceConfig(entry, context);
+    });
+};
 
 // se_ComputeQuotaTarget omitted.
 
@@ -14347,7 +14891,20 @@ const se_CreateAutoMLJobV2Request = (input: CreateAutoMLJobV2Request, context: _
 
 // se_CreateCompilationJobRequest omitted.
 
-// se_CreateComputeQuotaRequest omitted.
+/**
+ * serializeAws_json1_1CreateComputeQuotaRequest
+ */
+const se_CreateComputeQuotaRequest = (input: CreateComputeQuotaRequest, context: __SerdeContext): any => {
+  return take(input, {
+    ActivationState: [],
+    ClusterArn: [],
+    ComputeQuotaConfig: (_) => se_ComputeQuotaConfig(_, context),
+    ComputeQuotaTarget: _json,
+    Description: [],
+    Name: [],
+    Tags: _json,
+  });
+};
 
 // se_CreateContextRequest omitted.
 
@@ -14421,6 +14978,8 @@ const se_CreateFlowDefinitionRequest = (input: CreateFlowDefinitionRequest, cont
     Tags: _json,
   });
 };
+
+// se_CreateHubContentPresignedUrlsRequest omitted.
 
 // se_CreateHubContentReferenceRequest omitted.
 
@@ -14677,6 +15236,10 @@ const se_CreatePipelineRequest = (input: CreatePipelineRequest, context: __Serde
 
 // se_CreateStudioLifecycleConfigRequest omitted.
 
+// se_CreateTemplateProvider omitted.
+
+// se_CreateTemplateProviderList omitted.
+
 // se_CreateTrainingJobRequest omitted.
 
 // se_CreateTrainingPlanRequest omitted.
@@ -14899,6 +15462,8 @@ const se_DeletePipelineRequest = (input: DeletePipelineRequest, context: __Serde
 
 // se_DeploymentConfig omitted.
 
+// se_DeploymentConfiguration omitted.
+
 // se_DeploymentStage omitted.
 
 // se_DeploymentStages omitted.
@@ -14918,6 +15483,8 @@ const se_DeletePipelineRequest = (input: DeletePipelineRequest, context: __Serde
 // se_DescribeAutoMLJobRequest omitted.
 
 // se_DescribeAutoMLJobV2Request omitted.
+
+// se_DescribeClusterEventRequest omitted.
 
 // se_DescribeClusterNodeRequest omitted.
 
@@ -15017,6 +15584,8 @@ const se_DeletePipelineRequest = (input: DeletePipelineRequest, context: __Serde
 
 // se_DescribeProjectInput omitted.
 
+// se_DescribeReservedCapacityRequest omitted.
+
 // se_DescribeSpaceRequest omitted.
 
 // se_DescribeStudioLifecycleConfigRequest omitted.
@@ -15061,6 +15630,8 @@ const se_DesiredWeightAndCapacityList = (input: DesiredWeightAndCapacity[], cont
       return se_DesiredWeightAndCapacity(entry, context);
     });
 };
+
+// se_DetachClusterNodeVolumeRequest omitted.
 
 // se_Device omitted.
 
@@ -15143,6 +15714,8 @@ const se_EndpointInput = (input: EndpointInput, context: __SerdeContext): any =>
 
 // se_Endpoints omitted.
 
+// se_EnvironmentConfig omitted.
+
 // se_EnvironmentMap omitted.
 
 // se_EnvironmentParameterRanges omitted.
@@ -15186,6 +15759,8 @@ const se_EndpointInput = (input: EndpointInput, context: __SerdeContext): any =>
 // se_FlowDefinitionTaskKeywords omitted.
 
 // se_ForecastQuantiles omitted.
+
+// se_FSxLustreConfig omitted.
 
 // se_FSxLustreFileSystem omitted.
 
@@ -15400,6 +15975,8 @@ const se_InferenceExperimentSchedule = (input: InferenceExperimentSchedule, cont
 
 // se_InstanceMetadataServiceConfiguration omitted.
 
+// se_InstancePlacementConfig omitted.
+
 // se_IntegerParameterRange omitted.
 
 // se_IntegerParameterRanges omitted.
@@ -15554,6 +16131,24 @@ const se_ListAutoMLJobsRequest = (input: ListAutoMLJobsRequest, context: __Serde
 // se_ListCandidatesForAutoMLJobRequest omitted.
 
 /**
+ * serializeAws_json1_1ListClusterEventsRequest
+ */
+const se_ListClusterEventsRequest = (input: ListClusterEventsRequest, context: __SerdeContext): any => {
+  return take(input, {
+    ClusterName: [],
+    EventTimeAfter: (_) => _.getTime() / 1_000,
+    EventTimeBefore: (_) => _.getTime() / 1_000,
+    InstanceGroupName: [],
+    MaxResults: [],
+    NextToken: [],
+    NodeId: [],
+    ResourceType: [],
+    SortBy: [],
+    SortOrder: [],
+  });
+};
+
+/**
  * serializeAws_json1_1ListClusterNodesRequest
  */
 const se_ListClusterNodesRequest = (input: ListClusterNodesRequest, context: __SerdeContext): any => {
@@ -15561,6 +16156,7 @@ const se_ListClusterNodesRequest = (input: ListClusterNodesRequest, context: __S
     ClusterName: [],
     CreationTimeAfter: (_) => _.getTime() / 1_000,
     CreationTimeBefore: (_) => _.getTime() / 1_000,
+    IncludeNodeLogicalIds: [],
     InstanceGroupNameContains: [],
     MaxResults: [],
     NextToken: [],
@@ -16414,6 +17010,20 @@ const se_ListPipelinesRequest = (input: ListPipelinesRequest, context: __SerdeCo
 };
 
 /**
+ * serializeAws_json1_1ListPipelineVersionsRequest
+ */
+const se_ListPipelineVersionsRequest = (input: ListPipelineVersionsRequest, context: __SerdeContext): any => {
+  return take(input, {
+    CreatedAfter: (_) => _.getTime() / 1_000,
+    CreatedBefore: (_) => _.getTime() / 1_000,
+    MaxResults: [],
+    NextToken: [],
+    PipelineName: [],
+    SortOrder: [],
+  });
+};
+
+/**
  * serializeAws_json1_1ListProcessingJobsRequest
  */
 const se_ListProcessingJobsRequest = (input: ListProcessingJobsRequest, context: __SerdeContext): any => {
@@ -16579,6 +17189,8 @@ const se_ListTrialsRequest = (input: ListTrialsRequest, context: __SerdeContext)
     TrialComponentName: [],
   });
 };
+
+// se_ListUltraServersByReservedCapacityRequest omitted.
 
 // se_ListUserProfilesRequest omitted.
 
@@ -16890,6 +17502,12 @@ const se_MonitoringScheduleConfig = (input: MonitoringScheduleConfig, context: _
 
 // se_PipelineDefinitionS3Location omitted.
 
+// se_PlacementSpecification omitted.
+
+// se_PlacementSpecifications omitted.
+
+// se_PresignedUrlAccessConfig omitted.
+
 // se_PriorityClass omitted.
 
 // se_PriorityClassList omitted.
@@ -16924,6 +17542,7 @@ const se_MonitoringScheduleConfig = (input: MonitoringScheduleConfig, context: _
 const se_ProductionVariant = (input: ProductionVariant, context: __SerdeContext): any => {
   return take(input, {
     AcceleratorType: [],
+    CapacityReservationConfig: _json,
     ContainerStartupHealthCheckTimeoutInSeconds: [],
     CoreDumpConfig: _json,
     EnableSSMAccess: [],
@@ -16940,6 +17559,8 @@ const se_ProductionVariant = (input: ProductionVariant, context: __SerdeContext)
     VolumeSizeInGB: [],
   });
 };
+
+// se_ProductionVariantCapacityReservationConfig omitted.
 
 // se_ProductionVariantCoreDumpConfig omitted.
 
@@ -17091,6 +17712,8 @@ const se_RetryPipelineExecutionRequest = (input: RetryPipelineExecutionRequest, 
 
 // se_RetryStrategy omitted.
 
+// se_RollingDeploymentPolicy omitted.
+
 // se_RollingUpdatePolicy omitted.
 
 // se_RSessionAppSettings omitted.
@@ -17105,6 +17728,10 @@ const se_RetryPipelineExecutionRequest = (input: RetryPipelineExecutionRequest, 
 
 // se_S3DataSource omitted.
 
+// se_S3FileSystem omitted.
+
+// se_S3FileSystemConfig omitted.
+
 // se_S3ModelDataSource omitted.
 
 // se_S3Presign omitted.
@@ -17118,6 +17745,8 @@ const se_RetryPipelineExecutionRequest = (input: RetryPipelineExecutionRequest, 
 // se_ScalingPolicyObjective omitted.
 
 // se_ScheduleConfig omitted.
+
+// se_ScheduledUpdateConfig omitted.
 
 // se_SchedulerConfig omitted.
 
@@ -17174,6 +17803,8 @@ const se_SearchTrainingPlanOfferingsRequest = (
     InstanceType: [],
     StartTimeAfter: (_) => _.getTime() / 1_000,
     TargetResources: _json,
+    UltraServerCount: [],
+    UltraServerType: [],
   });
 };
 
@@ -17274,9 +17905,12 @@ const se_StartPipelineExecutionRequest = (input: StartPipelineExecutionRequest, 
     PipelineExecutionDisplayName: [],
     PipelineName: [],
     PipelineParameters: _json,
+    PipelineVersionId: [],
     SelectiveExecutionConfig: _json,
   });
 };
+
+// se_StartSessionRequest omitted.
 
 // se_StopAutoMLJobRequest omitted.
 
@@ -17433,6 +18067,8 @@ const se_TrialComponentParameterValue = (input: TrialComponentParameterValue, co
 
 // se_TrialComponentStatus omitted.
 
+// se_TrustedIdentityPropagationSettings omitted.
+
 // se_TtlDuration omitted.
 
 /**
@@ -17450,6 +18086,8 @@ const se_TuningJobCompletionCriteria = (input: TuningJobCompletionCriteria, cont
 
 // se_UiTemplate omitted.
 
+// se_UnifiedStudioSettings omitted.
+
 // se_UpdateActionRequest omitted.
 
 // se_UpdateAppImageConfigRequest omitted.
@@ -17460,11 +18098,27 @@ const se_TuningJobCompletionCriteria = (input: TuningJobCompletionCriteria, cont
 
 // se_UpdateClusterSchedulerConfigRequest omitted.
 
+// se_UpdateClusterSoftwareInstanceGroups omitted.
+
+// se_UpdateClusterSoftwareInstanceGroupSpecification omitted.
+
 // se_UpdateClusterSoftwareRequest omitted.
 
 // se_UpdateCodeRepositoryInput omitted.
 
-// se_UpdateComputeQuotaRequest omitted.
+/**
+ * serializeAws_json1_1UpdateComputeQuotaRequest
+ */
+const se_UpdateComputeQuotaRequest = (input: UpdateComputeQuotaRequest, context: __SerdeContext): any => {
+  return take(input, {
+    ActivationState: [],
+    ComputeQuotaConfig: (_) => se_ComputeQuotaConfig(_, context),
+    ComputeQuotaId: [],
+    ComputeQuotaTarget: _json,
+    Description: [],
+    TargetVersion: [],
+  });
+};
 
 // se_UpdateContextRequest omitted.
 
@@ -17574,9 +18228,15 @@ const se_UpdatePartnerAppRequest = (input: UpdatePartnerAppRequest, context: __S
 
 // se_UpdatePipelineRequest omitted.
 
+// se_UpdatePipelineVersionRequest omitted.
+
 // se_UpdateProjectInput omitted.
 
 // se_UpdateSpaceRequest omitted.
+
+// se_UpdateTemplateProvider omitted.
+
+// se_UpdateTemplateProviderList omitted.
 
 // se_UpdateTrainingJobRequest omitted.
 
@@ -17700,6 +18360,15 @@ const de_AdditionalCodeRepositoryNamesOrUrls = (output: any, context: __SerdeCon
 };
 
 /**
+ * deserializeAws_json1_1AdditionalEnis
+ */
+const de_AdditionalEnis = (output: any, context: __SerdeContext): AdditionalEnis => {
+  return take(output, {
+    EfaEnis: (_: any) => de_EfaEnis(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1AdditionalInferenceSpecificationDefinition
  */
 const de_AdditionalInferenceSpecificationDefinition = (
@@ -17820,6 +18489,15 @@ const de_AggregationTransformations = (
  * deserializeAws_json1_1Alarm
  */
 const de_Alarm = (output: any, context: __SerdeContext): Alarm => {
+  return take(output, {
+    AlarmName: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1AlarmDetails
+ */
+const de_AlarmDetails = (output: any, context: __SerdeContext): AlarmDetails => {
   return take(output, {
     AlarmName: __expectString,
   }) as any;
@@ -18224,6 +18902,20 @@ const de_AthenaDatasetDefinition = (output: any, context: __SerdeContext): Athen
 };
 
 /**
+ * deserializeAws_json1_1AttachClusterNodeVolumeResponse
+ */
+const de_AttachClusterNodeVolumeResponse = (output: any, context: __SerdeContext): AttachClusterNodeVolumeResponse => {
+  return take(output, {
+    AttachTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    ClusterArn: __expectString,
+    DeviceName: __expectString,
+    NodeId: __expectString,
+    Status: __expectString,
+    VolumeId: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1AttributeNames
  */
 const de_AttributeNames = (output: any, context: __SerdeContext): string[] => {
@@ -18246,6 +18938,28 @@ const de_AuthenticationRequestExtraParams = (output: any, context: __SerdeContex
     acc[key as string] = __expectString(value) as any;
     return acc;
   }, {} as Record<string, string>);
+};
+
+/**
+ * deserializeAws_json1_1AuthorizedUrl
+ */
+const de_AuthorizedUrl = (output: any, context: __SerdeContext): AuthorizedUrl => {
+  return take(output, {
+    LocalPath: __expectString,
+    Url: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1AuthorizedUrlConfigs
+ */
+const de_AuthorizedUrlConfigs = (output: any, context: __SerdeContext): AuthorizedUrl[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_AuthorizedUrl(entry, context);
+    });
+  return retVal;
 };
 
 /**
@@ -18675,6 +19389,18 @@ const de_AutoParameters = (output: any, context: __SerdeContext): AutoParameter[
 };
 
 /**
+ * deserializeAws_json1_1AutoRollbackAlarms
+ */
+const de_AutoRollbackAlarms = (output: any, context: __SerdeContext): AlarmDetails[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_AlarmDetails(entry, context);
+    });
+  return retVal;
+};
+
+/**
  * deserializeAws_json1_1AutoRollbackConfig
  */
 const de_AutoRollbackConfig = (output: any, context: __SerdeContext): AutoRollbackConfig => {
@@ -18693,6 +19419,40 @@ const de_Autotune = (output: any, context: __SerdeContext): Autotune => {
 };
 
 /**
+ * deserializeAws_json1_1BatchAddClusterNodesError
+ */
+const de_BatchAddClusterNodesError = (output: any, context: __SerdeContext): BatchAddClusterNodesError => {
+  return take(output, {
+    ErrorCode: __expectString,
+    FailedCount: __expectInt32,
+    InstanceGroupName: __expectString,
+    Message: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1BatchAddClusterNodesErrorList
+ */
+const de_BatchAddClusterNodesErrorList = (output: any, context: __SerdeContext): BatchAddClusterNodesError[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_BatchAddClusterNodesError(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1BatchAddClusterNodesResponse
+ */
+const de_BatchAddClusterNodesResponse = (output: any, context: __SerdeContext): BatchAddClusterNodesResponse => {
+  return take(output, {
+    Failed: (_: any) => de_BatchAddClusterNodesErrorList(_, context),
+    Successful: (_: any) => de_NodeAdditionResultList(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1BatchDataCaptureConfig
  */
 const de_BatchDataCaptureConfig = (output: any, context: __SerdeContext): BatchDataCaptureConfig => {
@@ -18701,6 +19461,35 @@ const de_BatchDataCaptureConfig = (output: any, context: __SerdeContext): BatchD
     GenerateInferenceId: __expectBoolean,
     KmsKeyId: __expectString,
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1BatchDeleteClusterNodeLogicalIdsError
+ */
+const de_BatchDeleteClusterNodeLogicalIdsError = (
+  output: any,
+  context: __SerdeContext
+): BatchDeleteClusterNodeLogicalIdsError => {
+  return take(output, {
+    Code: __expectString,
+    Message: __expectString,
+    NodeLogicalId: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1BatchDeleteClusterNodeLogicalIdsErrorList
+ */
+const de_BatchDeleteClusterNodeLogicalIdsErrorList = (
+  output: any,
+  context: __SerdeContext
+): BatchDeleteClusterNodeLogicalIdsError[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_BatchDeleteClusterNodeLogicalIdsError(entry, context);
+    });
+  return retVal;
 };
 
 /**
@@ -18732,7 +19521,9 @@ const de_BatchDeleteClusterNodesErrorList = (output: any, context: __SerdeContex
 const de_BatchDeleteClusterNodesResponse = (output: any, context: __SerdeContext): BatchDeleteClusterNodesResponse => {
   return take(output, {
     Failed: (_: any) => de_BatchDeleteClusterNodesErrorList(_, context),
+    FailedNodeLogicalIds: (_: any) => de_BatchDeleteClusterNodeLogicalIdsErrorList(_, context),
     Successful: (_: any) => de_ClusterNodeIds(_, context),
+    SuccessfulNodeLogicalIds: (_: any) => de_ClusterNodeLogicalIdList(_, context),
   }) as any;
 };
 
@@ -18924,9 +19715,29 @@ const de_CanvasAppSettings = (output: any, context: __SerdeContext): CanvasAppSe
 };
 
 /**
+ * deserializeAws_json1_1CapacityReservation
+ */
+const de_CapacityReservation = (output: any, context: __SerdeContext): CapacityReservation => {
+  return take(output, {
+    Arn: __expectString,
+    Type: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1CapacitySize
  */
 const de_CapacitySize = (output: any, context: __SerdeContext): CapacitySize => {
+  return take(output, {
+    Type: __expectString,
+    Value: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1CapacitySizeConfig
+ */
+const de_CapacitySizeConfig = (output: any, context: __SerdeContext): CapacitySizeConfig => {
   return take(output, {
     Type: __expectString,
     Value: __expectInt32,
@@ -19030,6 +19841,52 @@ const de_CategoricalParameters = (output: any, context: __SerdeContext): Categor
       return de_CategoricalParameter(entry, context);
     });
   return retVal;
+};
+
+/**
+ * deserializeAws_json1_1CfnStackDetail
+ */
+const de_CfnStackDetail = (output: any, context: __SerdeContext): CfnStackDetail => {
+  return take(output, {
+    Id: __expectString,
+    Name: __expectString,
+    StatusMessage: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1CfnStackParameter
+ */
+const de_CfnStackParameter = (output: any, context: __SerdeContext): CfnStackParameter => {
+  return take(output, {
+    Key: __expectString,
+    Value: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1CfnStackParameters
+ */
+const de_CfnStackParameters = (output: any, context: __SerdeContext): CfnStackParameter[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_CfnStackParameter(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1CfnTemplateProviderDetail
+ */
+const de_CfnTemplateProviderDetail = (output: any, context: __SerdeContext): CfnTemplateProviderDetail => {
+  return take(output, {
+    Parameters: (_: any) => de_CfnStackParameters(_, context),
+    RoleARN: __expectString,
+    StackDetail: (_: any) => de_CfnStackDetail(_, context),
+    TemplateName: __expectString,
+    TemplateURL: __expectString,
+  }) as any;
 };
 
 /**
@@ -19221,11 +20078,58 @@ const de_ClusterEbsVolumeConfig = (output: any, context: __SerdeContext): Cluste
 };
 
 /**
+ * deserializeAws_json1_1ClusterEventDetail
+ */
+const de_ClusterEventDetail = (output: any, context: __SerdeContext): ClusterEventDetail => {
+  return take(output, {
+    ClusterArn: __expectString,
+    ClusterName: __expectString,
+    Description: __expectString,
+    EventDetails: (_: any) => de_EventDetails(_, context),
+    EventId: __expectString,
+    EventTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    InstanceGroupName: __expectString,
+    InstanceId: __expectString,
+    ResourceType: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ClusterEventSummaries
+ */
+const de_ClusterEventSummaries = (output: any, context: __SerdeContext): ClusterEventSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ClusterEventSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1ClusterEventSummary
+ */
+const de_ClusterEventSummary = (output: any, context: __SerdeContext): ClusterEventSummary => {
+  return take(output, {
+    ClusterArn: __expectString,
+    ClusterName: __expectString,
+    Description: __expectString,
+    EventId: __expectString,
+    EventTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    InstanceGroupName: __expectString,
+    InstanceId: __expectString,
+    ResourceType: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1ClusterInstanceGroupDetails
  */
 const de_ClusterInstanceGroupDetails = (output: any, context: __SerdeContext): ClusterInstanceGroupDetails => {
   return take(output, {
     CurrentCount: __expectInt32,
+    CurrentImageId: __expectString,
+    DesiredImageId: __expectString,
     ExecutionRole: __expectString,
     InstanceGroupName: __expectString,
     InstanceStorageConfigs: (_: any) => de_ClusterInstanceStorageConfigs(_, context),
@@ -19233,6 +20137,7 @@ const de_ClusterInstanceGroupDetails = (output: any, context: __SerdeContext): C
     LifeCycleConfig: (_: any) => de_ClusterLifeCycleConfig(_, context),
     OnStartDeepHealthChecks: (_: any) => de_OnStartDeepHealthChecks(_, context),
     OverrideVpcConfig: (_: any) => de_VpcConfig(_, context),
+    ScheduledUpdateConfig: (_: any) => de_ScheduledUpdateConfig(_, context),
     Status: __expectString,
     TargetCount: __expectInt32,
     ThreadsPerCore: __expectInt32,
@@ -19308,23 +20213,39 @@ const de_ClusterLifeCycleConfig = (output: any, context: __SerdeContext): Cluste
 };
 
 /**
+ * deserializeAws_json1_1ClusterMetadata
+ */
+const de_ClusterMetadata = (output: any, context: __SerdeContext): ClusterMetadata => {
+  return take(output, {
+    EksRoleAccessEntries: (_: any) => de_EksRoleAccessEntries(_, context),
+    FailureMessage: __expectString,
+    SlrAccessEntry: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1ClusterNodeDetails
  */
 const de_ClusterNodeDetails = (output: any, context: __SerdeContext): ClusterNodeDetails => {
   return take(output, {
+    CurrentImageId: __expectString,
+    DesiredImageId: __expectString,
     InstanceGroupName: __expectString,
     InstanceId: __expectString,
     InstanceStatus: (_: any) => de_ClusterInstanceStatusDetails(_, context),
     InstanceStorageConfigs: (_: any) => de_ClusterInstanceStorageConfigs(_, context),
     InstanceType: __expectString,
+    LastSoftwareUpdateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     LaunchTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     LifeCycleConfig: (_: any) => de_ClusterLifeCycleConfig(_, context),
+    NodeLogicalId: __expectString,
     OverrideVpcConfig: (_: any) => de_VpcConfig(_, context),
     Placement: (_: any) => de_ClusterInstancePlacement(_, context),
     PrivateDnsHostname: __expectString,
     PrivatePrimaryIp: __expectString,
     PrivatePrimaryIpv6: __expectString,
     ThreadsPerCore: __expectInt32,
+    UltraServerInfo: (_: any) => de_UltraServerInfo(_, context),
   }) as any;
 };
 
@@ -19332,6 +20253,18 @@ const de_ClusterNodeDetails = (output: any, context: __SerdeContext): ClusterNod
  * deserializeAws_json1_1ClusterNodeIds
  */
 const de_ClusterNodeIds = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1ClusterNodeLogicalIdList
+ */
+const de_ClusterNodeLogicalIdList = (output: any, context: __SerdeContext): string[] => {
   const retVal = (output || [])
     .filter((e: any) => e != null)
     .map((entry: any) => {
@@ -19361,7 +20294,10 @@ const de_ClusterNodeSummary = (output: any, context: __SerdeContext): ClusterNod
     InstanceId: __expectString,
     InstanceStatus: (_: any) => de_ClusterInstanceStatusDetails(_, context),
     InstanceType: __expectString,
+    LastSoftwareUpdateTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     LaunchTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    NodeLogicalId: __expectString,
+    UltraServerInfo: (_: any) => de_UltraServerInfo(_, context),
   }) as any;
 };
 
@@ -19381,6 +20317,46 @@ const de_ClusterOrchestratorEksConfig = (output: any, context: __SerdeContext): 
   return take(output, {
     ClusterArn: __expectString,
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ClusterRestrictedInstanceGroupDetails
+ */
+const de_ClusterRestrictedInstanceGroupDetails = (
+  output: any,
+  context: __SerdeContext
+): ClusterRestrictedInstanceGroupDetails => {
+  return take(output, {
+    CurrentCount: __expectInt32,
+    EnvironmentConfig: (_: any) => de_EnvironmentConfigDetails(_, context),
+    ExecutionRole: __expectString,
+    InstanceGroupName: __expectString,
+    InstanceStorageConfigs: (_: any) => de_ClusterInstanceStorageConfigs(_, context),
+    InstanceType: __expectString,
+    OnStartDeepHealthChecks: (_: any) => de_OnStartDeepHealthChecks(_, context),
+    OverrideVpcConfig: (_: any) => de_VpcConfig(_, context),
+    ScheduledUpdateConfig: (_: any) => de_ScheduledUpdateConfig(_, context),
+    Status: __expectString,
+    TargetCount: __expectInt32,
+    ThreadsPerCore: __expectInt32,
+    TrainingPlanArn: __expectString,
+    TrainingPlanStatus: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ClusterRestrictedInstanceGroupDetailsList
+ */
+const de_ClusterRestrictedInstanceGroupDetailsList = (
+  output: any,
+  context: __SerdeContext
+): ClusterRestrictedInstanceGroupDetails[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ClusterRestrictedInstanceGroupDetails(entry, context);
+    });
+  return retVal;
 };
 
 /**
@@ -19635,8 +20611,11 @@ const de_ComputeQuotaConfig = (output: any, context: __SerdeContext): ComputeQuo
  */
 const de_ComputeQuotaResourceConfig = (output: any, context: __SerdeContext): ComputeQuotaResourceConfig => {
   return take(output, {
+    Accelerators: __expectInt32,
     Count: __expectInt32,
     InstanceType: __expectString,
+    MemoryInGiB: __limitedParseFloat32,
+    VCpu: __limitedParseFloat32,
   }) as any;
 };
 
@@ -20083,6 +21062,19 @@ const de_CreateFeatureGroupResponse = (output: any, context: __SerdeContext): Cr
 const de_CreateFlowDefinitionResponse = (output: any, context: __SerdeContext): CreateFlowDefinitionResponse => {
   return take(output, {
     FlowDefinitionArn: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1CreateHubContentPresignedUrlsResponse
+ */
+const de_CreateHubContentPresignedUrlsResponse = (
+  output: any,
+  context: __SerdeContext
+): CreateHubContentPresignedUrlsResponse => {
+  return take(output, {
+    AuthorizedUrlConfigs: (_: any) => de_AuthorizedUrlConfigs(_, context),
+    NextToken: __expectString,
   }) as any;
 };
 
@@ -20544,6 +21536,11 @@ const de_CustomFileSystem = (output: any, context: __SerdeContext): CustomFileSy
       FSxLustreFileSystem: de_FSxLustreFileSystem(output.FSxLustreFileSystem, context),
     };
   }
+  if (output.S3FileSystem != null) {
+    return {
+      S3FileSystem: de_S3FileSystem(output.S3FileSystem, context),
+    };
+  }
   return { $unknown: Object.entries(output)[0] };
 };
 
@@ -20559,6 +21556,11 @@ const de_CustomFileSystemConfig = (output: any, context: __SerdeContext): Custom
   if (output.FSxLustreFileSystemConfig != null) {
     return {
       FSxLustreFileSystemConfig: de_FSxLustreFileSystemConfig(output.FSxLustreFileSystemConfig, context),
+    };
+  }
+  if (output.S3FileSystemConfig != null) {
+    return {
+      S3FileSystemConfig: de_S3FileSystemConfig(output.S3FileSystemConfig, context),
     };
   }
   return { $unknown: Object.entries(output)[0] };
@@ -21076,6 +22078,17 @@ const de_DeploymentConfig = (output: any, context: __SerdeContext): DeploymentCo
 };
 
 /**
+ * deserializeAws_json1_1DeploymentConfiguration
+ */
+const de_DeploymentConfiguration = (output: any, context: __SerdeContext): DeploymentConfiguration => {
+  return take(output, {
+    AutoRollbackConfiguration: (_: any) => de_AutoRollbackAlarms(_, context),
+    RollingUpdatePolicy: (_: any) => de_RollingDeploymentPolicy(_, context),
+    WaitIntervalInSeconds: __expectInt32,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1DeploymentRecommendation
  */
 const de_DeploymentRecommendation = (output: any, context: __SerdeContext): DeploymentRecommendation => {
@@ -21184,6 +22197,7 @@ const de_DescribeAppResponse = (output: any, context: __SerdeContext): DescribeA
     BuiltInLifecycleConfigArn: __expectString,
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     DomainId: __expectString,
+    EffectiveTrustedIdentityPropagationStatus: __expectString,
     FailureReason: __expectString,
     LastHealthCheckTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     LastUserActivityTimestamp: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
@@ -21275,6 +22289,15 @@ const de_DescribeAutoMLJobV2Response = (output: any, context: __SerdeContext): D
 };
 
 /**
+ * deserializeAws_json1_1DescribeClusterEventResponse
+ */
+const de_DescribeClusterEventResponse = (output: any, context: __SerdeContext): DescribeClusterEventResponse => {
+  return take(output, {
+    EventDetails: (_: any) => de_ClusterEventDetail(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1DescribeClusterNodeResponse
  */
 const de_DescribeClusterNodeResponse = (output: any, context: __SerdeContext): DescribeClusterNodeResponse => {
@@ -21294,8 +22317,10 @@ const de_DescribeClusterResponse = (output: any, context: __SerdeContext): Descr
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     FailureMessage: __expectString,
     InstanceGroups: (_: any) => de_ClusterInstanceGroupDetailsList(_, context),
+    NodeProvisioningMode: __expectString,
     NodeRecovery: __expectString,
     Orchestrator: (_: any) => de_ClusterOrchestrator(_, context),
+    RestrictedInstanceGroups: (_: any) => de_ClusterRestrictedInstanceGroupDetailsList(_, context),
     VpcConfig: (_: any) => de_VpcConfig(_, context),
   }) as any;
 };
@@ -21924,6 +22949,7 @@ const de_DescribeMlflowTrackingServerResponse = (
     MlflowVersion: __expectString,
     RoleArn: __expectString,
     TrackingServerArn: __expectString,
+    TrackingServerMaintenanceStatus: __expectString,
     TrackingServerName: __expectString,
     TrackingServerSize: __expectString,
     TrackingServerStatus: __expectString,
@@ -22258,6 +23284,7 @@ const de_DescribePipelineExecutionResponse = (
     PipelineExecutionDisplayName: __expectString,
     PipelineExecutionStatus: __expectString,
     PipelineExperimentConfig: (_: any) => de_PipelineExperimentConfig(_, context),
+    PipelineVersionId: __expectLong,
     SelectiveExecutionConfig: (_: any) => de_SelectiveExecutionConfig(_, context),
   }) as any;
 };
@@ -22279,6 +23306,8 @@ const de_DescribePipelineResponse = (output: any, context: __SerdeContext): Desc
     PipelineDisplayName: __expectString,
     PipelineName: __expectString,
     PipelineStatus: __expectString,
+    PipelineVersionDescription: __expectString,
+    PipelineVersionDisplayName: __expectString,
     RoleArn: __expectString,
   }) as any;
 };
@@ -22328,6 +23357,31 @@ const de_DescribeProjectOutput = (output: any, context: __SerdeContext): Describ
     ProjectStatus: __expectString,
     ServiceCatalogProvisionedProductDetails: (_: any) => de_ServiceCatalogProvisionedProductDetails(_, context),
     ServiceCatalogProvisioningDetails: (_: any) => de_ServiceCatalogProvisioningDetails(_, context),
+    TemplateProviderDetails: (_: any) => de_TemplateProviderDetailList(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1DescribeReservedCapacityResponse
+ */
+const de_DescribeReservedCapacityResponse = (
+  output: any,
+  context: __SerdeContext
+): DescribeReservedCapacityResponse => {
+  return take(output, {
+    AvailabilityZone: __expectString,
+    AvailableInstanceCount: __expectInt32,
+    DurationHours: __expectLong,
+    DurationMinutes: __expectLong,
+    EndTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    InUseInstanceCount: __expectInt32,
+    InstanceType: __expectString,
+    ReservedCapacityArn: __expectString,
+    ReservedCapacityType: __expectString,
+    StartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    Status: __expectString,
+    TotalInstanceCount: __expectInt32,
+    UltraServerSummary: (_: any) => de_UltraServerSummary(_, context),
   }) as any;
 };
 
@@ -22438,6 +23492,7 @@ const de_DescribeTrainingJobResponse = (output: any, context: __SerdeContext): D
 const de_DescribeTrainingPlanResponse = (output: any, context: __SerdeContext): DescribeTrainingPlanResponse => {
   return take(output, {
     AvailableInstanceCount: __expectInt32,
+    AvailableSpareInstanceCount: __expectInt32,
     CurrencyCode: __expectString,
     DurationHours: __expectLong,
     DurationMinutes: __expectLong,
@@ -22449,8 +23504,10 @@ const de_DescribeTrainingPlanResponse = (output: any, context: __SerdeContext): 
     StatusMessage: __expectString,
     TargetResources: (_: any) => de_SageMakerResourceNames(_, context),
     TotalInstanceCount: __expectInt32,
+    TotalUltraServerCount: __expectInt32,
     TrainingPlanArn: __expectString,
     TrainingPlanName: __expectString,
+    UnhealthyInstanceCount: __expectInt32,
     UpfrontFee: __expectString,
   }) as any;
 };
@@ -22562,6 +23619,20 @@ const de_DescribeWorkforceResponse = (output: any, context: __SerdeContext): Des
 const de_DescribeWorkteamResponse = (output: any, context: __SerdeContext): DescribeWorkteamResponse => {
   return take(output, {
     Workteam: (_: any) => de_Workteam(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1DetachClusterNodeVolumeResponse
+ */
+const de_DetachClusterNodeVolumeResponse = (output: any, context: __SerdeContext): DetachClusterNodeVolumeResponse => {
+  return take(output, {
+    AttachTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    ClusterArn: __expectString,
+    DeviceName: __expectString,
+    NodeId: __expectString,
+    Status: __expectString,
+    VolumeId: __expectString,
   }) as any;
 };
 
@@ -22774,6 +23845,8 @@ const de_DomainSettings = (output: any, context: __SerdeContext): DomainSettings
     ExecutionRoleIdentityConfig: __expectString,
     RStudioServerProDomainSettings: (_: any) => de_RStudioServerProDomainSettings(_, context),
     SecurityGroupIds: (_: any) => de_DomainSecurityGroupIds(_, context),
+    TrustedIdentityPropagationSettings: (_: any) => de_TrustedIdentityPropagationSettings(_, context),
+    UnifiedStudioSettings: (_: any) => de_UnifiedStudioSettings(_, context),
   }) as any;
 };
 
@@ -22850,6 +23923,30 @@ const de_EbsStorageSettings = (output: any, context: __SerdeContext): EbsStorage
   return take(output, {
     EbsVolumeSizeInGb: __expectInt32,
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1Ec2CapacityReservation
+ */
+const de_Ec2CapacityReservation = (output: any, context: __SerdeContext): Ec2CapacityReservation => {
+  return take(output, {
+    AvailableInstanceCount: __expectInt32,
+    Ec2CapacityReservationId: __expectString,
+    TotalInstanceCount: __expectInt32,
+    UsedByCurrentEndpoint: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1Ec2CapacityReservationsList
+ */
+const de_Ec2CapacityReservationsList = (output: any, context: __SerdeContext): Ec2CapacityReservation[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_Ec2CapacityReservation(entry, context);
+    });
+  return retVal;
 };
 
 /**
@@ -23073,6 +24170,18 @@ const de_Edges = (output: any, context: __SerdeContext): Edge[] => {
 };
 
 /**
+ * deserializeAws_json1_1EfaEnis
+ */
+const de_EfaEnis = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
  * deserializeAws_json1_1EFSFileSystem
  */
 const de_EFSFileSystem = (output: any, context: __SerdeContext): EFSFileSystem => {
@@ -23089,6 +24198,18 @@ const de_EFSFileSystemConfig = (output: any, context: __SerdeContext): EFSFileSy
     FileSystemId: __expectString,
     FileSystemPath: __expectString,
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1EksRoleAccessEntries
+ */
+const de_EksRoleAccessEntries = (output: any, context: __SerdeContext): string[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return __expectString(entry) as any;
+    });
+  return retVal;
 };
 
 /**
@@ -23340,6 +24461,16 @@ const de_EndpointSummaryList = (output: any, context: __SerdeContext): EndpointS
 };
 
 /**
+ * deserializeAws_json1_1EnvironmentConfigDetails
+ */
+const de_EnvironmentConfigDetails = (output: any, context: __SerdeContext): EnvironmentConfigDetails => {
+  return take(output, {
+    FSxLustreConfig: (_: any) => de_FSxLustreConfig(_, context),
+    S3OutputPath: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1EnvironmentMap
  */
 const de_EnvironmentMap = (output: any, context: __SerdeContext): Record<string, string> => {
@@ -23392,6 +24523,42 @@ const de_ErrorInfo = (output: any, context: __SerdeContext): ErrorInfo => {
     Code: __expectString,
     Reason: __expectString,
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1EventDetails
+ */
+const de_EventDetails = (output: any, context: __SerdeContext): EventDetails => {
+  return take(output, {
+    EventMetadata: (_: any) => de_EventMetadata(__expectUnion(_), context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1EventMetadata
+ */
+const de_EventMetadata = (output: any, context: __SerdeContext): EventMetadata => {
+  if (output.Cluster != null) {
+    return {
+      Cluster: de_ClusterMetadata(output.Cluster, context),
+    };
+  }
+  if (output.Instance != null) {
+    return {
+      Instance: de_InstanceMetadata(output.Instance, context),
+    };
+  }
+  if (output.InstanceGroup != null) {
+    return {
+      InstanceGroup: de_InstanceGroupMetadata(output.InstanceGroup, context),
+    };
+  }
+  if (output.InstanceGroupScaling != null) {
+    return {
+      InstanceGroupScaling: de_InstanceGroupScalingMetadata(output.InstanceGroupScaling, context),
+    };
+  }
+  return { $unknown: Object.entries(output)[0] };
 };
 
 /**
@@ -23771,6 +24938,16 @@ const de_ForecastQuantiles = (output: any, context: __SerdeContext): string[] =>
       return __expectString(entry) as any;
     });
   return retVal;
+};
+
+/**
+ * deserializeAws_json1_1FSxLustreConfig
+ */
+const de_FSxLustreConfig = (output: any, context: __SerdeContext): FSxLustreConfig => {
+  return take(output, {
+    PerUnitStorageThroughput: __expectInt32,
+    SizeInGiB: __expectInt32,
+  }) as any;
 };
 
 /**
@@ -25097,6 +26274,20 @@ const de_InstanceGroup = (output: any, context: __SerdeContext): InstanceGroup =
 };
 
 /**
+ * deserializeAws_json1_1InstanceGroupMetadata
+ */
+const de_InstanceGroupMetadata = (output: any, context: __SerdeContext): InstanceGroupMetadata => {
+  return take(output, {
+    AmiOverride: __expectString,
+    AvailabilityZoneId: __expectString,
+    CapacityReservation: (_: any) => de_CapacityReservation(_, context),
+    FailureMessage: __expectString,
+    SecurityGroupIds: (_: any) => de_SecurityGroupIds(_, context),
+    SubnetId: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1InstanceGroupNames
  */
 const de_InstanceGroupNames = (output: any, context: __SerdeContext): string[] => {
@@ -25121,6 +26312,31 @@ const de_InstanceGroups = (output: any, context: __SerdeContext): InstanceGroup[
 };
 
 /**
+ * deserializeAws_json1_1InstanceGroupScalingMetadata
+ */
+const de_InstanceGroupScalingMetadata = (output: any, context: __SerdeContext): InstanceGroupScalingMetadata => {
+  return take(output, {
+    FailureMessage: __expectString,
+    InstanceCount: __expectInt32,
+    TargetCount: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1InstanceMetadata
+ */
+const de_InstanceMetadata = (output: any, context: __SerdeContext): InstanceMetadata => {
+  return take(output, {
+    AdditionalEnis: (_: any) => de_AdditionalEnis(_, context),
+    CapacityReservation: (_: any) => de_CapacityReservation(_, context),
+    CustomerEni: __expectString,
+    FailureMessage: __expectString,
+    LcsExecutionState: __expectString,
+    NodeLogicalId: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1InstanceMetadataServiceConfiguration
  */
 const de_InstanceMetadataServiceConfiguration = (
@@ -25129,6 +26345,16 @@ const de_InstanceMetadataServiceConfiguration = (
 ): InstanceMetadataServiceConfiguration => {
   return take(output, {
     MinimumInstanceMetadataServiceVersion: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1InstancePlacementConfig
+ */
+const de_InstancePlacementConfig = (output: any, context: __SerdeContext): InstancePlacementConfig => {
+  return take(output, {
+    EnableMultipleJobs: __expectBoolean,
+    PlacementSpecifications: (_: any) => de_PlacementSpecifications(_, context),
   }) as any;
 };
 
@@ -25612,6 +26838,16 @@ const de_ListCandidatesForAutoMLJobResponse = (
 ): ListCandidatesForAutoMLJobResponse => {
   return take(output, {
     Candidates: (_: any) => de_AutoMLCandidates(_, context),
+    NextToken: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ListClusterEventsResponse
+ */
+const de_ListClusterEventsResponse = (output: any, context: __SerdeContext): ListClusterEventsResponse => {
+  return take(output, {
+    Events: (_: any) => de_ClusterEventSummaries(_, context),
     NextToken: __expectString,
   }) as any;
 };
@@ -26215,6 +27451,16 @@ const de_ListPipelinesResponse = (output: any, context: __SerdeContext): ListPip
 };
 
 /**
+ * deserializeAws_json1_1ListPipelineVersionsResponse
+ */
+const de_ListPipelineVersionsResponse = (output: any, context: __SerdeContext): ListPipelineVersionsResponse => {
+  return take(output, {
+    NextToken: __expectString,
+    PipelineVersionSummaries: (_: any) => de_PipelineVersionSummaryList(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1ListProcessingJobsResponse
  */
 const de_ListProcessingJobsResponse = (output: any, context: __SerdeContext): ListProcessingJobsResponse => {
@@ -26357,6 +27603,19 @@ const de_ListTrialsResponse = (output: any, context: __SerdeContext): ListTrials
   return take(output, {
     NextToken: __expectString,
     TrialSummaries: (_: any) => de_TrialSummaries(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ListUltraServersByReservedCapacityResponse
+ */
+const de_ListUltraServersByReservedCapacityResponse = (
+  output: any,
+  context: __SerdeContext
+): ListUltraServersByReservedCapacityResponse => {
+  return take(output, {
+    NextToken: __expectString,
+    UltraServers: (_: any) => de_UltraServers(_, context),
   }) as any;
 };
 
@@ -27207,6 +28466,7 @@ const de_ModelPackageSummary = (output: any, context: __SerdeContext): ModelPack
   return take(output, {
     CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     ModelApprovalStatus: __expectString,
+    ModelLifeCycle: (_: any) => de_ModelLifeCycle(_, context),
     ModelPackageArn: __expectString,
     ModelPackageDescription: __expectString,
     ModelPackageGroupName: __expectString,
@@ -27869,6 +29129,29 @@ const de_NetworkConfig = (output: any, context: __SerdeContext): NetworkConfig =
     EnableNetworkIsolation: __expectBoolean,
     VpcConfig: (_: any) => de_VpcConfig(_, context),
   }) as any;
+};
+
+/**
+ * deserializeAws_json1_1NodeAdditionResult
+ */
+const de_NodeAdditionResult = (output: any, context: __SerdeContext): NodeAdditionResult => {
+  return take(output, {
+    InstanceGroupName: __expectString,
+    NodeLogicalId: __expectString,
+    Status: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1NodeAdditionResultList
+ */
+const de_NodeAdditionResultList = (output: any, context: __SerdeContext): NodeAdditionResult[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_NodeAdditionResult(entry, context);
+    });
+  return retVal;
 };
 
 /**
@@ -28592,6 +29875,8 @@ const de_PipelineExecution = (output: any, context: __SerdeContext): PipelineExe
     PipelineExecutionStatus: __expectString,
     PipelineExperimentConfig: (_: any) => de_PipelineExperimentConfig(_, context),
     PipelineParameters: (_: any) => de_ParameterList(_, context),
+    PipelineVersionDisplayName: __expectString,
+    PipelineVersionId: __expectLong,
     SelectiveExecutionConfig: (_: any) => de_SelectiveExecutionConfig(_, context),
   }) as any;
 };
@@ -28711,6 +29996,73 @@ const de_PipelineSummaryList = (output: any, context: __SerdeContext): PipelineS
     .filter((e: any) => e != null)
     .map((entry: any) => {
       return de_PipelineSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1PipelineVersion
+ */
+const de_PipelineVersion = (output: any, context: __SerdeContext): PipelineVersion => {
+  return take(output, {
+    CreatedBy: (_: any) => de_UserContext(_, context),
+    CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    LastExecutedPipelineExecutionArn: __expectString,
+    LastExecutedPipelineExecutionDisplayName: __expectString,
+    LastExecutedPipelineExecutionStatus: __expectString,
+    LastModifiedBy: (_: any) => de_UserContext(_, context),
+    LastModifiedTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    PipelineArn: __expectString,
+    PipelineVersionDescription: __expectString,
+    PipelineVersionDisplayName: __expectString,
+    PipelineVersionId: __expectLong,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1PipelineVersionSummary
+ */
+const de_PipelineVersionSummary = (output: any, context: __SerdeContext): PipelineVersionSummary => {
+  return take(output, {
+    CreationTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    LastExecutionPipelineExecutionArn: __expectString,
+    PipelineArn: __expectString,
+    PipelineVersionDescription: __expectString,
+    PipelineVersionDisplayName: __expectString,
+    PipelineVersionId: __expectLong,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1PipelineVersionSummaryList
+ */
+const de_PipelineVersionSummaryList = (output: any, context: __SerdeContext): PipelineVersionSummary[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_PipelineVersionSummary(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1PlacementSpecification
+ */
+const de_PlacementSpecification = (output: any, context: __SerdeContext): PlacementSpecification => {
+  return take(output, {
+    InstanceCount: __expectInt32,
+    UltraServerId: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1PlacementSpecifications
+ */
+const de_PlacementSpecifications = (output: any, context: __SerdeContext): PlacementSpecification[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_PlacementSpecification(entry, context);
     });
   return retVal;
 };
@@ -28954,6 +30306,7 @@ const de_ProcessingStoppingCondition = (output: any, context: __SerdeContext): P
 const de_ProductionVariant = (output: any, context: __SerdeContext): ProductionVariant => {
   return take(output, {
     AcceleratorType: __expectString,
+    CapacityReservationConfig: (_: any) => de_ProductionVariantCapacityReservationConfig(_, context),
     ContainerStartupHealthCheckTimeoutInSeconds: __expectInt32,
     CoreDumpConfig: (_: any) => de_ProductionVariantCoreDumpConfig(_, context),
     EnableSSMAccess: __expectBoolean,
@@ -28968,6 +30321,36 @@ const de_ProductionVariant = (output: any, context: __SerdeContext): ProductionV
     ServerlessConfig: (_: any) => de_ProductionVariantServerlessConfig(_, context),
     VariantName: __expectString,
     VolumeSizeInGB: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ProductionVariantCapacityReservationConfig
+ */
+const de_ProductionVariantCapacityReservationConfig = (
+  output: any,
+  context: __SerdeContext
+): ProductionVariantCapacityReservationConfig => {
+  return take(output, {
+    CapacityReservationPreference: __expectString,
+    MlReservationArn: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1ProductionVariantCapacityReservationSummary
+ */
+const de_ProductionVariantCapacityReservationSummary = (
+  output: any,
+  context: __SerdeContext
+): ProductionVariantCapacityReservationSummary => {
+  return take(output, {
+    AvailableInstanceCount: __expectInt32,
+    CapacityReservationPreference: __expectString,
+    Ec2CapacityReservations: (_: any) => de_Ec2CapacityReservationsList(_, context),
+    MlReservationArn: __expectString,
+    TotalInstanceCount: __expectInt32,
+    UsedByCurrentEndpoint: __expectInt32,
   }) as any;
 };
 
@@ -29058,6 +30441,7 @@ const de_ProductionVariantStatusList = (output: any, context: __SerdeContext): P
  */
 const de_ProductionVariantSummary = (output: any, context: __SerdeContext): ProductionVariantSummary => {
   return take(output, {
+    CapacityReservationConfig: (_: any) => de_ProductionVariantCapacityReservationSummary(_, context),
     CurrentInstanceCount: __expectInt32,
     CurrentServerlessConfig: (_: any) => de_ProductionVariantServerlessConfig(_, context),
     CurrentWeight: __limitedParseFloat32,
@@ -29190,6 +30574,7 @@ const de_Project = (output: any, context: __SerdeContext): Project => {
     ServiceCatalogProvisionedProductDetails: (_: any) => de_ServiceCatalogProvisionedProductDetails(_, context),
     ServiceCatalogProvisioningDetails: (_: any) => de_ServiceCatalogProvisioningDetails(_, context),
     Tags: (_: any) => de_TagList(_, context),
+    TemplateProviderDetails: (_: any) => de_TemplateProviderDetailList(_, context),
   }) as any;
 };
 
@@ -29623,7 +31008,10 @@ const de_ReservedCapacityOffering = (output: any, context: __SerdeContext): Rese
     EndTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     InstanceCount: __expectInt32,
     InstanceType: __expectString,
+    ReservedCapacityType: __expectString,
     StartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    UltraServerCount: __expectInt32,
+    UltraServerType: __expectString,
   }) as any;
 };
 
@@ -29662,9 +31050,12 @@ const de_ReservedCapacitySummary = (output: any, context: __SerdeContext): Reser
     EndTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     InstanceType: __expectString,
     ReservedCapacityArn: __expectString,
+    ReservedCapacityType: __expectString,
     StartTime: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     Status: __expectString,
     TotalInstanceCount: __expectInt32,
+    UltraServerCount: __expectInt32,
+    UltraServerType: __expectString,
   }) as any;
 };
 
@@ -29710,6 +31101,7 @@ const de_ResourceConfig = (output: any, context: __SerdeContext): ResourceConfig
   return take(output, {
     InstanceCount: __expectInt32,
     InstanceGroups: (_: any) => de_InstanceGroups(_, context),
+    InstancePlacementConfig: (_: any) => de_InstancePlacementConfig(_, context),
     InstanceType: __expectString,
     KeepAlivePeriodInSeconds: __expectInt32,
     TrainingPlanArn: __expectString,
@@ -29810,6 +31202,16 @@ const de_RetryStrategy = (output: any, context: __SerdeContext): RetryStrategy =
 };
 
 /**
+ * deserializeAws_json1_1RollingDeploymentPolicy
+ */
+const de_RollingDeploymentPolicy = (output: any, context: __SerdeContext): RollingDeploymentPolicy => {
+  return take(output, {
+    MaximumBatchSize: (_: any) => de_CapacitySizeConfig(_, context),
+    RollbackMaximumBatchSize: (_: any) => de_CapacitySizeConfig(_, context),
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1RollingUpdatePolicy
  */
 const de_RollingUpdatePolicy = (output: any, context: __SerdeContext): RollingUpdatePolicy => {
@@ -29877,6 +31279,25 @@ const de_S3DataSource = (output: any, context: __SerdeContext): S3DataSource => 
     ModelAccessConfig: (_: any) => de_ModelAccessConfig(_, context),
     S3DataDistributionType: __expectString,
     S3DataType: __expectString,
+    S3Uri: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1S3FileSystem
+ */
+const de_S3FileSystem = (output: any, context: __SerdeContext): S3FileSystem => {
+  return take(output, {
+    S3Uri: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1S3FileSystemConfig
+ */
+const de_S3FileSystemConfig = (output: any, context: __SerdeContext): S3FileSystemConfig => {
+  return take(output, {
+    MountPath: __expectString,
     S3Uri: __expectString,
   }) as any;
 };
@@ -29997,6 +31418,16 @@ const de_ScheduleConfig = (output: any, context: __SerdeContext): ScheduleConfig
 };
 
 /**
+ * deserializeAws_json1_1ScheduledUpdateConfig
+ */
+const de_ScheduledUpdateConfig = (output: any, context: __SerdeContext): ScheduledUpdateConfig => {
+  return take(output, {
+    DeploymentConfig: (_: any) => de_DeploymentConfiguration(_, context),
+    ScheduleExpression: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1SchedulerConfig
  */
 const de_SchedulerConfig = (output: any, context: __SerdeContext): SchedulerConfig => {
@@ -30022,6 +31453,7 @@ const de_SearchRecord = (output: any, context: __SerdeContext): SearchRecord => 
     ModelPackageGroup: (_: any) => de_ModelPackageGroup(_, context),
     Pipeline: (_: any) => de_Pipeline(_, context),
     PipelineExecution: (_: any) => de_PipelineExecution(_, context),
+    PipelineVersion: (_: any) => de_PipelineVersion(_, context),
     Project: (_: any) => de_Project(_, context),
     TrainingJob: (_: any) => de_TrainingJob(_, context),
     Trial: (_: any) => de_Trial(_, context),
@@ -30365,6 +31797,8 @@ const de_SpaceSettings = (output: any, context: __SerdeContext): SpaceSettings =
     JupyterLabAppSettings: (_: any) => de_SpaceJupyterLabAppSettings(_, context),
     JupyterServerAppSettings: (_: any) => de_JupyterServerAppSettings(_, context),
     KernelGatewayAppSettings: (_: any) => de_KernelGatewayAppSettings(_, context),
+    RemoteAccess: __expectString,
+    SpaceManagedResources: __expectString,
     SpaceStorageSettings: (_: any) => de_SpaceStorageSettings(_, context),
   }) as any;
 };
@@ -30375,6 +31809,7 @@ const de_SpaceSettings = (output: any, context: __SerdeContext): SpaceSettings =
 const de_SpaceSettingsSummary = (output: any, context: __SerdeContext): SpaceSettingsSummary => {
   return take(output, {
     AppType: __expectString,
+    RemoteAccess: __expectString,
     SpaceStorageSettings: (_: any) => de_SpaceStorageSettings(_, context),
   }) as any;
 };
@@ -30447,6 +31882,17 @@ const de_StartMlflowTrackingServerResponse = (
 const de_StartPipelineExecutionResponse = (output: any, context: __SerdeContext): StartPipelineExecutionResponse => {
   return take(output, {
     PipelineExecutionArn: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1StartSessionResponse
+ */
+const de_StartSessionResponse = (output: any, context: __SerdeContext): StartSessionResponse => {
+  return take(output, {
+    SessionId: __expectString,
+    StreamUrl: __expectString,
+    TokenValue: __expectString,
   }) as any;
 };
 
@@ -30644,6 +32090,27 @@ const de_TaskKeywords = (output: any, context: __SerdeContext): string[] => {
     .filter((e: any) => e != null)
     .map((entry: any) => {
       return __expectString(entry) as any;
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1TemplateProviderDetail
+ */
+const de_TemplateProviderDetail = (output: any, context: __SerdeContext): TemplateProviderDetail => {
+  return take(output, {
+    CfnTemplateProviderDetail: (_: any) => de_CfnTemplateProviderDetail(_, context),
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1TemplateProviderDetailList
+ */
+const de_TemplateProviderDetailList = (output: any, context: __SerdeContext): TemplateProviderDetail[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_TemplateProviderDetail(entry, context);
     });
   return retVal;
 };
@@ -31075,6 +32542,7 @@ const de_TrainingPlanSummary = (output: any, context: __SerdeContext): TrainingP
     StatusMessage: __expectString,
     TargetResources: (_: any) => de_SageMakerResourceNames(_, context),
     TotalInstanceCount: __expectInt32,
+    TotalUltraServerCount: __expectInt32,
     TrainingPlanArn: __expectString,
     TrainingPlanName: __expectString,
     UpfrontFee: __expectString,
@@ -31538,6 +33006,18 @@ const de_TrialSummary = (output: any, context: __SerdeContext): TrialSummary => 
 };
 
 /**
+ * deserializeAws_json1_1TrustedIdentityPropagationSettings
+ */
+const de_TrustedIdentityPropagationSettings = (
+  output: any,
+  context: __SerdeContext
+): TrustedIdentityPropagationSettings => {
+  return take(output, {
+    Status: __expectString,
+  }) as any;
+};
+
+/**
  * deserializeAws_json1_1TtlDuration
  */
 const de_TtlDuration = (output: any, context: __SerdeContext): TtlDuration => {
@@ -31584,6 +33064,75 @@ const de_UiTemplateInfo = (output: any, context: __SerdeContext): UiTemplateInfo
   return take(output, {
     ContentSha256: __expectString,
     Url: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1UltraServer
+ */
+const de_UltraServer = (output: any, context: __SerdeContext): UltraServer => {
+  return take(output, {
+    AvailabilityZone: __expectString,
+    AvailableInstanceCount: __expectInt32,
+    AvailableSpareInstanceCount: __expectInt32,
+    ConfiguredSpareInstanceCount: __expectInt32,
+    HealthStatus: __expectString,
+    InUseInstanceCount: __expectInt32,
+    InstanceType: __expectString,
+    TotalInstanceCount: __expectInt32,
+    UltraServerId: __expectString,
+    UltraServerType: __expectString,
+    UnhealthyInstanceCount: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1UltraServerInfo
+ */
+const de_UltraServerInfo = (output: any, context: __SerdeContext): UltraServerInfo => {
+  return take(output, {
+    Id: __expectString,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1UltraServers
+ */
+const de_UltraServers = (output: any, context: __SerdeContext): UltraServer[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_UltraServer(entry, context);
+    });
+  return retVal;
+};
+
+/**
+ * deserializeAws_json1_1UltraServerSummary
+ */
+const de_UltraServerSummary = (output: any, context: __SerdeContext): UltraServerSummary => {
+  return take(output, {
+    AvailableSpareInstanceCount: __expectInt32,
+    InstanceType: __expectString,
+    UltraServerCount: __expectInt32,
+    UltraServerType: __expectString,
+    UnhealthyInstanceCount: __expectInt32,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1UnifiedStudioSettings
+ */
+const de_UnifiedStudioSettings = (output: any, context: __SerdeContext): UnifiedStudioSettings => {
+  return take(output, {
+    DomainAccountId: __expectString,
+    DomainId: __expectString,
+    DomainRegion: __expectString,
+    EnvironmentId: __expectString,
+    ProjectId: __expectString,
+    ProjectS3Path: __expectString,
+    SingleSignOnApplicationArn: __expectString,
+    StudioWebPortalAccess: __expectString,
   }) as any;
 };
 
@@ -31897,6 +33446,17 @@ const de_UpdatePipelineExecutionResponse = (output: any, context: __SerdeContext
 const de_UpdatePipelineResponse = (output: any, context: __SerdeContext): UpdatePipelineResponse => {
   return take(output, {
     PipelineArn: __expectString,
+    PipelineVersionId: __expectLong,
+  }) as any;
+};
+
+/**
+ * deserializeAws_json1_1UpdatePipelineVersionResponse
+ */
+const de_UpdatePipelineVersionResponse = (output: any, context: __SerdeContext): UpdatePipelineVersionResponse => {
+  return take(output, {
+    PipelineArn: __expectString,
+    PipelineVersionId: __expectLong,
   }) as any;
 };
 
@@ -32152,6 +33712,7 @@ const de_Workforce = (output: any, context: __SerdeContext): Workforce => {
     CognitoConfig: (_: any) => de_CognitoConfig(_, context),
     CreateDate: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     FailureReason: __expectString,
+    IpAddressType: __expectString,
     LastUpdatedDate: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     OidcConfig: (_: any) => de_OidcConfigForResponse(_, context),
     SourceIpConfig: (_: any) => de_SourceIpConfig(_, context),

@@ -65,7 +65,7 @@ export interface GetSessionActionCommandOutput extends GetSessionActionResponse,
  * //       environmentId: "STRING_VALUE", // required
  * //     },
  * //     taskRun: { // TaskRunSessionActionDefinition
- * //       taskId: "STRING_VALUE", // required
+ * //       taskId: "STRING_VALUE",
  * //       stepId: "STRING_VALUE", // required
  * //       parameters: { // TaskParameters // required
  * //         "<keys>": { // TaskParameterValue Union: only one key present
@@ -73,6 +73,7 @@ export interface GetSessionActionCommandOutput extends GetSessionActionResponse,
  * //           float: "STRING_VALUE",
  * //           string: "STRING_VALUE",
  * //           path: "STRING_VALUE",
+ * //           chunkInt: "STRING_VALUE",
  * //         },
  * //       },
  * //     },
@@ -84,6 +85,12 @@ export interface GetSessionActionCommandOutput extends GetSessionActionResponse,
  * //     { // AcquiredLimit
  * //       limitId: "STRING_VALUE", // required
  * //       count: Number("int"), // required
+ * //     },
+ * //   ],
+ * //   manifests: [ // TaskRunManifestPropertiesListResponse
+ * //     { // TaskRunManifestPropertiesResponse
+ * //       outputManifestPath: "STRING_VALUE",
+ * //       outputManifestHash: "STRING_VALUE",
  * //     },
  * //   ],
  * // };

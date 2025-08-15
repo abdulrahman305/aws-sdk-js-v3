@@ -28,8 +28,8 @@ CloudWatch metric that you specify.</p>
 </li>
 <li>
 <p>
-<b>Monitor CloudTrail logged events</b>: You can
-create alarms in CloudWatch and receive notifications of particular API activity as
+<b>Monitor CloudTrail logged events</b>: You
+can create alarms in CloudWatch and receive notifications of particular API activity as
 captured by CloudTrail. You can use the notification to perform troubleshooting.</p>
 </li>
 <li>
@@ -655,6 +655,14 @@ GetLogGroupFields
 </details>
 <details>
 <summary>
+GetLogObject
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/cloudwatch-logs/command/GetLogObjectCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-cloudwatch-logs/Interface/GetLogObjectCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-cloudwatch-logs/Interface/GetLogObjectCommandOutput/)
+
+</details>
+<details>
+<summary>
 GetLogRecord
 </summary>
 
@@ -699,6 +707,14 @@ ListLogAnomalyDetectors
 </summary>
 
 [Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/cloudwatch-logs/command/ListLogAnomalyDetectorsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-cloudwatch-logs/Interface/ListLogAnomalyDetectorsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-cloudwatch-logs/Interface/ListLogAnomalyDetectorsCommandOutput/)
+
+</details>
+<details>
+<summary>
+ListLogGroups
+</summary>
+
+[Command API Reference](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/cloudwatch-logs/command/ListLogGroupsCommand/) / [Input](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-cloudwatch-logs/Interface/ListLogGroupsCommandInput/) / [Output](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/Package/-aws-sdk-client-cloudwatch-logs/Interface/ListLogGroupsCommandOutput/)
 
 </details>
 <details>

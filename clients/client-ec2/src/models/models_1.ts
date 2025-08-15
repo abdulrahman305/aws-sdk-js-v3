@@ -27,6 +27,361 @@ import {
 
 /**
  * @public
+ */
+export interface CopyFpgaImageRequest {
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The ID of the source AFI.</p>
+   * @public
+   */
+  SourceFpgaImageId: string | undefined;
+
+  /**
+   * <p>The description for the new AFI.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>The name for the new AFI. The default is the name of the source AFI.</p>
+   * @public
+   */
+  Name?: string | undefined;
+
+  /**
+   * <p>The Region that contains the source AFI.</p>
+   * @public
+   */
+  SourceRegion: string | undefined;
+
+  /**
+   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+   *       	For more information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">Ensuring idempotency</a>.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CopyFpgaImageResult {
+  /**
+   * <p>The ID of the new AFI.</p>
+   * @public
+   */
+  FpgaImageId?: string | undefined;
+}
+
+/**
+ * <p>Contains the parameters for CopyImage.</p>
+ * @public
+ */
+export interface CopyImageRequest {
+  /**
+   * <p>Unique, case-sensitive identifier you provide to ensure idempotency of the request. For
+   *       more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring idempotency in
+   *           Amazon EC2 API requests</a> in the <i>Amazon EC2 API
+   *       Reference</i>.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+
+  /**
+   * <p>A description for the new AMI in the destination Region.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>Specifies whether the destination snapshots of the copied image should be encrypted. You
+   *       can encrypt a copy of an unencrypted snapshot, but you cannot create an unencrypted copy of an
+   *       encrypted snapshot. The default KMS key for Amazon EBS is used unless you specify a non-default
+   *       Key Management Service (KMS) KMS key using <code>KmsKeyId</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with
+   *         EBS-backed AMIs</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  Encrypted?: boolean | undefined;
+
+  /**
+   * <p>The identifier of the symmetric Key Management Service (KMS) KMS key to use when creating encrypted volumes.
+   *       If this parameter is not specified, your Amazon Web Services managed KMS key for Amazon EBS is used. If you
+   *       specify a KMS key, you must also set the encrypted state to <code>true</code>.</p>
+   *          <p>You can specify a KMS key using any of the following:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.</p>
+   *             </li>
+   *             <li>
+   *                <p>Key alias. For example, alias/ExampleAlias.</p>
+   *             </li>
+   *             <li>
+   *                <p>Key ARN. For example, arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.</p>
+   *             </li>
+   *             <li>
+   *                <p>Alias ARN. For example, arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an identifier
+   *       that is not valid, the action can appear to complete, but eventually fails.</p>
+   *          <p>The specified KMS key must exist in the destination Region.</p>
+   *          <p>Amazon EBS does not support asymmetric KMS keys.</p>
+   * @public
+   */
+  KmsKeyId?: string | undefined;
+
+  /**
+   * <p>The name of the new AMI in the destination Region.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The ID of the AMI to copy.</p>
+   * @public
+   */
+  SourceImageId: string | undefined;
+
+  /**
+   * <p>The name of the Region that contains the AMI to copy.</p>
+   * @public
+   */
+  SourceRegion: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Outpost to which to copy the AMI. Only specify this
+   *       parameter when copying an AMI from an Amazon Web Services Region to an Outpost. The AMI must be in the
+   *       Region of the destination Outpost. You cannot copy an AMI from an Outpost to a Region, from
+   *       one Outpost to another, or within the same Outpost.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#copy-amis">Copy AMIs from an Amazon Web Services Region
+   *         to an Outpost</a> in the <i>Amazon EBS User Guide</i>.</p>
+   * @public
+   */
+  DestinationOutpostArn?: string | undefined;
+
+  /**
+   * <p>Indicates whether to include your user-defined AMI tags when copying the AMI.</p>
+   *          <p>The following tags will not be copied:</p>
+   *          <ul>
+   *             <li>
+   *                <p>System tags (prefixed with <code>aws:</code>)</p>
+   *             </li>
+   *             <li>
+   *                <p>For public and shared AMIs, user-defined tags that are attached by other Amazon Web Services
+   *           accounts</p>
+   *             </li>
+   *          </ul>
+   *          <p>Default: Your user-defined AMI tags are not copied.</p>
+   * @public
+   */
+  CopyImageTags?: boolean | undefined;
+
+  /**
+   * <p>The tags to apply to the new AMI and new snapshots. You can tag the AMI, the snapshots, or
+   *       both.</p>
+   *          <ul>
+   *             <li>
+   *                <p>To tag the new AMI, the value for <code>ResourceType</code> must be
+   *           <code>image</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>To tag the new snapshots, the value for <code>ResourceType</code> must be
+   *             <code>snapshot</code>. The same tag is applied to all the new snapshots.</p>
+   *             </li>
+   *          </ul>
+   *          <p>If you specify other values for <code>ResourceType</code>, the request fails.</p>
+   *          <p>To tag an AMI or snapshot after it has been created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+
+  /**
+   * <p>Specify a completion duration, in 15 minute increments, to initiate a time-based AMI copy.
+   *       The specified completion duration applies to each of the snapshots associated with the AMI.
+   *       Each snapshot associated with the AMI will be completed within the specified completion
+   *       duration, with copy throughput automatically adjusted for each snapshot based on its size to
+   *       meet the timing target.</p>
+   *          <p>If you do not specify a value, the AMI copy operation is completed on a best-effort
+   *       basis.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/time-based-copies.html">Time-based copies for Amazon EBS snapshots and
+   *         EBS-backed AMIs</a>.</p>
+   * @public
+   */
+  SnapshotCopyCompletionDurationMinutes?: number | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   * 			and provides an error response. If you have the required permissions, the error response is
+   * 			<code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+}
+
+/**
+ * <p>Contains the output of CopyImage.</p>
+ * @public
+ */
+export interface CopyImageResult {
+  /**
+   * <p>The ID of the new AMI.</p>
+   * @public
+   */
+  ImageId?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CopySnapshotRequest {
+  /**
+   * <p>A description for the EBS snapshot.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Outpost to which to copy the snapshot. Only
+   * 		specify this parameter when copying a snapshot from an Amazon Web Services Region to an Outpost.
+   * 		The snapshot must be in the Region for the destination Outpost. You cannot copy a
+   * 		snapshot from an Outpost to a Region, from one Outpost to another, or within the same
+   * 		Outpost.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshots-outposts.html#copy-snapshots">
+   *   		Copy snapshots from an Amazon Web Services Region to an Outpost</a> in the
+   *   		<i>Amazon EBS User Guide</i>.</p>
+   * @public
+   */
+  DestinationOutpostArn?: string | undefined;
+
+  /**
+   * <p>The destination Region to use in the <code>PresignedUrl</code> parameter of a snapshot
+   *       copy operation. This parameter is only valid for specifying the destination Region in a
+   *         <code>PresignedUrl</code> parameter, where it is required.</p>
+   *          <p>The snapshot copy is sent to the regional endpoint that you sent the HTTP
+   *     	request to (for example, <code>ec2.us-east-1.amazonaws.com</code>). With the CLI, this is
+   *       specified using the <code>--region</code> parameter or the default Region in your Amazon Web Services
+   *       configuration file.</p>
+   * @public
+   */
+  DestinationRegion?: string | undefined;
+
+  /**
+   * <p>To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled,
+   *       enable encryption using this parameter. Otherwise, omit this parameter. Encrypted snapshots
+   *       are encrypted, even if you omit this parameter and encryption by default is not enabled. You
+   *       cannot set this parameter to false. For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html">Amazon EBS encryption</a> in the
+   *       <i>Amazon EBS User Guide</i>.</p>
+   * @public
+   */
+  Encrypted?: boolean | undefined;
+
+  /**
+   * <p>The identifier of the KMS key to use for Amazon EBS encryption.
+   *       If this parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is
+   *       specified, the encrypted state must be <code>true</code>.</p>
+   *          <p>You can specify the KMS key using any of the following:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.</p>
+   *             </li>
+   *             <li>
+   *                <p>Key alias. For example, alias/ExampleAlias.</p>
+   *             </li>
+   *             <li>
+   *                <p>Key ARN. For example, arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.</p>
+   *             </li>
+   *             <li>
+   *                <p>Alias ARN. For example, arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid,
+   *       the action can appear to complete, but eventually fails.</p>
+   * @public
+   */
+  KmsKeyId?: string | undefined;
+
+  /**
+   * <p>When you copy an encrypted source snapshot using the Amazon EC2 Query API, you must supply a
+   *       pre-signed URL. This parameter is optional for unencrypted snapshots. For more information,
+   *       see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html">Query
+   *         requests</a>.</p>
+   *          <p>The <code>PresignedUrl</code> should use the snapshot source endpoint, the
+   *         <code>CopySnapshot</code> action, and include the <code>SourceRegion</code>,
+   *         <code>SourceSnapshotId</code>, and <code>DestinationRegion</code> parameters. The
+   *         <code>PresignedUrl</code> must be signed using Amazon Web Services Signature Version 4. Because EBS
+   *       snapshots are stored in Amazon S3, the signing algorithm for this parameter uses the same logic
+   *       that is described in <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html">
+   *         Authenticating Requests: Using Query Parameters (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>. An
+   *       invalid or improperly signed <code>PresignedUrl</code> will cause the copy operation to fail
+   *       asynchronously, and the snapshot will move to an <code>error</code> state.</p>
+   * @public
+   */
+  PresignedUrl?: string | undefined;
+
+  /**
+   * <p>The ID of the Region that contains the snapshot to be copied.</p>
+   * @public
+   */
+  SourceRegion: string | undefined;
+
+  /**
+   * <p>The ID of the EBS snapshot to copy.</p>
+   * @public
+   */
+  SourceSnapshotId: string | undefined;
+
+  /**
+   * <p>The tags to apply to the new snapshot.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+
+  /**
+   * <p>Specify a completion duration, in 15 minute increments, to initiate a time-based snapshot
+   *       copy. Time-based snapshot copy operations complete within the specified duration. For more
+   *       information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/time-based-copies.html">
+   *         Time-based copies</a>.</p>
+   *          <p>If you do not specify a value, the snapshot copy operation is completed on a
+   *       best-effort basis.</p>
+   * @public
+   */
+  CompletionDurationMinutes?: number | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CopySnapshotResult {
+  /**
+   * <p>Any tags applied to the new snapshot.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The ID of the new snapshot.</p>
+   * @public
+   */
+  SnapshotId?: string | undefined;
+}
+
+/**
+ * @public
  * @enum
  */
 export const CapacityReservationDeliveryPreference = {
@@ -126,10 +481,11 @@ export interface CreateCapacityReservationRequest {
   /**
    * <p>The instance type for which to reserve capacity.</p>
    *          <note>
-   *             <p>You can request future-dated Capacity Reservations for instance types in the C, M, R, I,
-   * 				and T instance families only.</p>
+   *             <p>You can request future-dated Capacity Reservations for instance types in the C, M,
+   * 				R, I, T, and G instance families only.</p>
    *          </note>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance types</a> in the
+   * 				<i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
   InstanceType: string | undefined;
@@ -174,10 +530,10 @@ export interface CreateCapacityReservationRequest {
   /**
    * <p>The number of instances for which to reserve capacity.</p>
    *          <note>
-   *             <p>You can request future-dated Capacity Reservations for an instance count
-   * 				with a minimum of 100 vCPUs. For example, if you request a future-dated Capacity
-   * 				Reservation for <code>m5.xlarge</code> instances, you must request at least
-   * 				25 instances (<i>25 * m5.xlarge = 100 vCPUs</i>).</p>
+   *             <p>You can request future-dated Capacity Reservations for an instance count with a
+   * 				minimum of 64 vCPUs. For example, if you request a future-dated Capacity
+   * 				Reservation for <code>m5.xlarge</code> instances, you must request at least 25
+   * 				instances (<i>16 * m5.xlarge = 64 vCPUs</i>).</p>
    *          </note>
    *          <p>Valid range: 1 - 1000</p>
    * @public
@@ -205,15 +561,15 @@ export interface CreateCapacityReservationRequest {
   /**
    * <p>The date and time at which the Capacity Reservation expires. When a Capacity
    * 			Reservation expires, the reserved capacity is released and you can no longer launch
-   * 			instances into it. The Capacity Reservation's state changes to <code>expired</code>
-   * 			when it reaches its end date and time.</p>
+   * 			instances into it. The Capacity Reservation's state changes to <code>expired</code> when
+   * 			it reaches its end date and time.</p>
    *          <p>You must provide an <code>EndDate</code> value if <code>EndDateType</code> is
-   * 			<code>limited</code>. Omit <code>EndDate</code> if <code>EndDateType</code> is
-   * 			<code>unlimited</code>.</p>
-   *          <p>If the <code>EndDateType</code> is <code>limited</code>, the Capacity Reservation
-   * 			is cancelled within an hour from the specified time. For example, if you specify
-   * 			5/31/2019, 13:30:55, the Capacity Reservation is guaranteed to end between 13:30:55
-   * 			and 14:30:55 on 5/31/2019.</p>
+   * 				<code>limited</code>. Omit <code>EndDate</code> if <code>EndDateType</code> is
+   * 				<code>unlimited</code>.</p>
+   *          <p>If the <code>EndDateType</code> is <code>limited</code>, the Capacity Reservation is
+   * 			cancelled within an hour from the specified time. For example, if you specify 5/31/2019,
+   * 			13:30:55, the Capacity Reservation is guaranteed to end between 13:30:55 and 14:30:55 on
+   * 			5/31/2019.</p>
    *          <p>If you are requesting a future-dated Capacity Reservation, you can't specify an end
    * 			date and time that is within the commitment duration.</p>
    * @public
@@ -261,7 +617,8 @@ export interface CreateCapacityReservationRequest {
    *             </li>
    *          </ul>
    *          <note>
-   *             <p>If you are requesting a future-dated Capacity Reservation, you must specify <code>targeted</code>.</p>
+   *             <p>If you are requesting a future-dated Capacity Reservation, you must specify
+   * 					<code>targeted</code>.</p>
    *          </note>
    *          <p>Default: <code>open</code>
    *          </p>
@@ -295,11 +652,9 @@ export interface CreateCapacityReservationRequest {
    * <note>
    *             <p>Not supported for future-dated Capacity Reservations.</p>
    *          </note>
-   *          <p>The Amazon Resource Name (ARN) of the cluster placement group in which
-   * 			to create the Capacity Reservation. For more information, see
-   * 			<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html">
-   * 				Capacity Reservations for cluster placement groups</a> in the
-   * 			<i>Amazon EC2 User Guide</i>.</p>
+   *          <p>The Amazon Resource Name (ARN) of the cluster placement group in which to create the
+   * 			Capacity Reservation. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity Reservations for cluster
+   * 				placement groups</a> in the <i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
   PlacementGroupArn?: string | undefined;
@@ -307,11 +662,11 @@ export interface CreateCapacityReservationRequest {
   /**
    * <note>
    *             <p>Required for future-dated Capacity Reservations only. To create a Capacity
-   * 			Reservation for immediate use, omit this parameter. </p>
+   * 				Reservation for immediate use, omit this parameter. </p>
    *          </note>
    *          <p>The date and time at which the future-dated Capacity Reservation should become
    * 			available for use, in the ISO8601 format in the UTC time zone
-   * 			(<code>YYYY-MM-DDThh:mm:ss.sssZ</code>).</p>
+   * 				(<code>YYYY-MM-DDThh:mm:ss.sssZ</code>).</p>
    *          <p>You can request a future-dated Capacity Reservation between 5 and 120 days in
    * 			advance.</p>
    * @public
@@ -321,14 +676,15 @@ export interface CreateCapacityReservationRequest {
   /**
    * <note>
    *             <p>Required for future-dated Capacity Reservations only. To create a Capacity
-   * 			Reservation for immediate use, omit this parameter. </p>
+   * 				Reservation for immediate use, omit this parameter. </p>
    *          </note>
-   *          <p>Specify a commitment duration, in seconds, for the future-dated Capacity Reservation.</p>
+   *          <p>Specify a commitment duration, in seconds, for the future-dated Capacity
+   * 			Reservation.</p>
    *          <p>The commitment duration is a minimum duration for which you commit to having the
-   * 			future-dated Capacity Reservation in the <code>active</code> state in your account
-   * 			after it has been delivered.</p>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-concepts.html#cr-commitment-duration">
-   * 			Commitment duration</a>.</p>
+   * 			future-dated Capacity Reservation in the <code>active</code> state in your account after
+   * 			it has been delivered.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-concepts.html#cr-commitment-duration"> Commitment
+   * 				duration</a>.</p>
    * @public
    */
   CommitmentDuration?: number | undefined;
@@ -336,11 +692,11 @@ export interface CreateCapacityReservationRequest {
   /**
    * <note>
    *             <p>Required for future-dated Capacity Reservations only. To create a Capacity
-   * 			Reservation for immediate use, omit this parameter. </p>
+   * 				Reservation for immediate use, omit this parameter. </p>
    *          </note>
-   *          <p>Indicates that the requested capacity will be delivered in addition to any
-   * 			running instances or reserved capacity that you have in your account at the
-   * 			requested date and time.</p>
+   *          <p>Indicates that the requested capacity will be delivered in addition to any running
+   * 			instances or reserved capacity that you have in your account at the requested date and
+   * 			time.</p>
    *          <p>The only supported value is <code>incremental</code>.</p>
    * @public
    */
@@ -381,8 +737,8 @@ export interface CapacityReservationCommitmentInfo {
   CommittedInstanceCount?: number | undefined;
 
   /**
-   * <p>The date and time at which the commitment duration expires, in the ISO8601 format
-   * 			in the UTC time zone (<code>YYYY-MM-DDThh:mm:ss.sssZ</code>). You can't decrease the
+   * <p>The date and time at which the commitment duration expires, in the ISO8601 format in
+   * 			the UTC time zone (<code>YYYY-MM-DDThh:mm:ss.sssZ</code>). You can't decrease the
    * 			instance count or cancel the Capacity Reservation before this date and time.</p>
    * @public
    */
@@ -418,6 +774,7 @@ export const CapacityReservationState = {
   payment_pending: "payment-pending",
   pending: "pending",
   scheduled: "scheduled",
+  unavailable: "unavailable",
   unsupported: "unsupported",
 } as const;
 
@@ -712,10 +1069,17 @@ export interface CapacityReservation {
   /**
    * <p>The delivery method for a future-dated Capacity Reservation. <code>incremental</code>
    * 			indicates that the requested capacity is delivered in addition to any running instances
-   * 			and reserved capacity that you have in your account at the requested date and time.</p>
+   * 			and reserved capacity that you have in your account at the requested date and
+   * 			time.</p>
    * @public
    */
   DeliveryPreference?: CapacityReservationDeliveryPreference | undefined;
+
+  /**
+   * <p>The ID of the Capacity Block.</p>
+   * @public
+   */
+  CapacityBlockId?: string | undefined;
 }
 
 /**
@@ -978,6 +1342,8 @@ export const _InstanceType = {
   c7i_48xlarge: "c7i.48xlarge",
   c7i_4xlarge: "c7i.4xlarge",
   c7i_8xlarge: "c7i.8xlarge",
+  c7i_flex_12xlarge: "c7i-flex.12xlarge",
+  c7i_flex_16xlarge: "c7i-flex.16xlarge",
   c7i_flex_2xlarge: "c7i-flex.2xlarge",
   c7i_flex_4xlarge: "c7i-flex.4xlarge",
   c7i_flex_8xlarge: "c7i-flex.8xlarge",
@@ -999,6 +1365,30 @@ export const _InstanceType = {
   c8g_metal_24xl: "c8g.metal-24xl",
   c8g_metal_48xl: "c8g.metal-48xl",
   c8g_xlarge: "c8g.xlarge",
+  c8gd_12xlarge: "c8gd.12xlarge",
+  c8gd_16xlarge: "c8gd.16xlarge",
+  c8gd_24xlarge: "c8gd.24xlarge",
+  c8gd_2xlarge: "c8gd.2xlarge",
+  c8gd_48xlarge: "c8gd.48xlarge",
+  c8gd_4xlarge: "c8gd.4xlarge",
+  c8gd_8xlarge: "c8gd.8xlarge",
+  c8gd_large: "c8gd.large",
+  c8gd_medium: "c8gd.medium",
+  c8gd_metal_24xl: "c8gd.metal-24xl",
+  c8gd_metal_48xl: "c8gd.metal-48xl",
+  c8gd_xlarge: "c8gd.xlarge",
+  c8gn_12xlarge: "c8gn.12xlarge",
+  c8gn_16xlarge: "c8gn.16xlarge",
+  c8gn_24xlarge: "c8gn.24xlarge",
+  c8gn_2xlarge: "c8gn.2xlarge",
+  c8gn_48xlarge: "c8gn.48xlarge",
+  c8gn_4xlarge: "c8gn.4xlarge",
+  c8gn_8xlarge: "c8gn.8xlarge",
+  c8gn_large: "c8gn.large",
+  c8gn_medium: "c8gn.medium",
+  c8gn_metal_24xl: "c8gn.metal-24xl",
+  c8gn_metal_48xl: "c8gn.metal-48xl",
+  c8gn_xlarge: "c8gn.xlarge",
   cc1_4xlarge: "cc1.4xlarge",
   cc2_8xlarge: "cc2.8xlarge",
   cg1_4xlarge: "cg1.4xlarge",
@@ -1024,6 +1414,7 @@ export const _InstanceType = {
   f1_4xlarge: "f1.4xlarge",
   f2_12xlarge: "f2.12xlarge",
   f2_48xlarge: "f2.48xlarge",
+  f2_6xlarge: "f2.6xlarge",
   g2_2xlarge: "g2.2xlarge",
   g2_8xlarge: "g2.8xlarge",
   g3_16xlarge: "g3.16xlarge",
@@ -1124,6 +1515,17 @@ export const _InstanceType = {
   i4i_large: "i4i.large",
   i4i_metal: "i4i.metal",
   i4i_xlarge: "i4i.xlarge",
+  i7i_12xlarge: "i7i.12xlarge",
+  i7i_16xlarge: "i7i.16xlarge",
+  i7i_24xlarge: "i7i.24xlarge",
+  i7i_2xlarge: "i7i.2xlarge",
+  i7i_48xlarge: "i7i.48xlarge",
+  i7i_4xlarge: "i7i.4xlarge",
+  i7i_8xlarge: "i7i.8xlarge",
+  i7i_large: "i7i.large",
+  i7i_metal_24xl: "i7i.metal-24xl",
+  i7i_metal_48xl: "i7i.metal-48xl",
+  i7i_xlarge: "i7i.xlarge",
   i7ie_12xlarge: "i7ie.12xlarge",
   i7ie_18xlarge: "i7ie.18xlarge",
   i7ie_24xlarge: "i7ie.24xlarge",
@@ -1132,11 +1534,14 @@ export const _InstanceType = {
   i7ie_48xlarge: "i7ie.48xlarge",
   i7ie_6xlarge: "i7ie.6xlarge",
   i7ie_large: "i7ie.large",
+  i7ie_metal_24xl: "i7ie.metal-24xl",
+  i7ie_metal_48xl: "i7ie.metal-48xl",
   i7ie_xlarge: "i7ie.xlarge",
   i8g_12xlarge: "i8g.12xlarge",
   i8g_16xlarge: "i8g.16xlarge",
   i8g_24xlarge: "i8g.24xlarge",
   i8g_2xlarge: "i8g.2xlarge",
+  i8g_48xlarge: "i8g.48xlarge",
   i8g_4xlarge: "i8g.4xlarge",
   i8g_8xlarge: "i8g.8xlarge",
   i8g_large: "i8g.large",
@@ -1344,6 +1749,8 @@ export const _InstanceType = {
   m7i_48xlarge: "m7i.48xlarge",
   m7i_4xlarge: "m7i.4xlarge",
   m7i_8xlarge: "m7i.8xlarge",
+  m7i_flex_12xlarge: "m7i-flex.12xlarge",
+  m7i_flex_16xlarge: "m7i-flex.16xlarge",
   m7i_flex_2xlarge: "m7i-flex.2xlarge",
   m7i_flex_4xlarge: "m7i-flex.4xlarge",
   m7i_flex_8xlarge: "m7i-flex.8xlarge",
@@ -1365,6 +1772,18 @@ export const _InstanceType = {
   m8g_metal_24xl: "m8g.metal-24xl",
   m8g_metal_48xl: "m8g.metal-48xl",
   m8g_xlarge: "m8g.xlarge",
+  m8gd_12xlarge: "m8gd.12xlarge",
+  m8gd_16xlarge: "m8gd.16xlarge",
+  m8gd_24xlarge: "m8gd.24xlarge",
+  m8gd_2xlarge: "m8gd.2xlarge",
+  m8gd_48xlarge: "m8gd.48xlarge",
+  m8gd_4xlarge: "m8gd.4xlarge",
+  m8gd_8xlarge: "m8gd.8xlarge",
+  m8gd_large: "m8gd.large",
+  m8gd_medium: "m8gd.medium",
+  m8gd_metal_24xl: "m8gd.metal-24xl",
+  m8gd_metal_48xl: "m8gd.metal-48xl",
+  m8gd_xlarge: "m8gd.xlarge",
   mac1_metal: "mac1.metal",
   mac2_m1ultra_metal: "mac2-m1ultra.metal",
   mac2_m2_metal: "mac2-m2.metal",
@@ -1382,6 +1801,8 @@ export const _InstanceType = {
   p5_48xlarge: "p5.48xlarge",
   p5e_48xlarge: "p5e.48xlarge",
   p5en_48xlarge: "p5en.48xlarge",
+  p6_b200_48xlarge: "p6-b200.48xlarge",
+  p6e_gb200_36xlarge: "p6e-gb200.36xlarge",
   r3_2xlarge: "r3.2xlarge",
   r3_4xlarge: "r3.4xlarge",
   r3_8xlarge: "r3.8xlarge",
@@ -1586,6 +2007,18 @@ export const _InstanceType = {
   r8g_metal_24xl: "r8g.metal-24xl",
   r8g_metal_48xl: "r8g.metal-48xl",
   r8g_xlarge: "r8g.xlarge",
+  r8gd_12xlarge: "r8gd.12xlarge",
+  r8gd_16xlarge: "r8gd.16xlarge",
+  r8gd_24xlarge: "r8gd.24xlarge",
+  r8gd_2xlarge: "r8gd.2xlarge",
+  r8gd_48xlarge: "r8gd.48xlarge",
+  r8gd_4xlarge: "r8gd.4xlarge",
+  r8gd_8xlarge: "r8gd.8xlarge",
+  r8gd_large: "r8gd.large",
+  r8gd_medium: "r8gd.medium",
+  r8gd_metal_24xl: "r8gd.metal-24xl",
+  r8gd_metal_48xl: "r8gd.metal-48xl",
+  r8gd_xlarge: "r8gd.xlarge",
   t1_micro: "t1.micro",
   t2_2xlarge: "t2.2xlarge",
   t2_large: "t2.large",
@@ -2265,6 +2698,30 @@ export interface ClientLoginBannerOptions {
 }
 
 /**
+ * <p>Client Route Enforcement is a feature of Client VPN that helps enforce administrator defined
+ * 			routes on devices connected through the VPN. This feature helps improve your security
+ * 			posture by ensuring that network traffic originating from a connected client is not
+ * 			inadvertently sent outside the VPN tunnel.</p>
+ *          <p>Client Route Enforcement works by monitoring the route table of a connected device for
+ * 			routing policy changes to the VPN connection. If the feature detects any VPN routing
+ * 			policy modifications, it will automatically force an update to the route table,
+ * 			reverting it back to the expected route configurations.</p>
+ * @public
+ */
+export interface ClientRouteEnforcementOptions {
+  /**
+   * <p>Enable or disable Client Route Enforcement. The state can either be <code>true</code>
+   * 			(enabled) or <code>false</code> (disabled). The default is <code>false</code>.</p>
+   *          <p>Valid values: <code>true | false</code>
+   *          </p>
+   *          <p>Default value: <code>false</code>
+   *          </p>
+   * @public
+   */
+  Enforced?: boolean | undefined;
+}
+
+/**
  * <p>Describes the client connection logging options for the Client VPN endpoint.</p>
  * @public
  */
@@ -2464,8 +2921,17 @@ export interface CreateClientVpnEndpointRequest {
   ClientLoginBannerOptions?: ClientLoginBannerOptions | undefined;
 
   /**
+   * <p>Client route enforcement is a feature of the Client VPN service that helps enforce administrator defined routes on devices connected through the VPN. T
+   * 		his feature helps improve your security posture by ensuring that network traffic originating from a connected client is not inadvertently sent outside the VPN tunnel.</p>
+   *          <p>Client route enforcement works by monitoring the route table of a connected device for routing policy changes to the VPN connection. If the feature detects any VPN routing policy modifications, it will automatically force an update to the route table,
+   * 			reverting it back to the expected route configurations.</p>
+   * @public
+   */
+  ClientRouteEnforcementOptions?: ClientRouteEnforcementOptions | undefined;
+
+  /**
    * <p>Indicates whether the client VPN session is disconnected after the maximum timeout specified in <code>SessionTimeoutHours</code> is reached. If <code>true</code>, users are prompted to reconnect client VPN. If <code>false</code>, client VPN attempts to reconnect automatically.
-   *                    The default value is <code>false</code>.</p>
+   *                    The default value is <code>true</code>.</p>
    * @public
    */
   DisconnectOnSessionTimeout?: boolean | undefined;
@@ -2867,11 +3333,10 @@ export interface CreateCustomerGatewayRequest {
   DeviceName?: string | undefined;
 
   /**
-   * <p>IPv4 address for the customer gateway device's outside interface. The address must be
+   * <p>The IP address for the customer gateway device's outside interface. The address must be
    *             static. If <code>OutsideIpAddressType</code> in your VPN connection options is set to
    *                 <code>PrivateIpv4</code>, you can use an RFC6598 or RFC1918 private IPv4 address. If
-   *                 <code>OutsideIpAddressType</code> is set to <code>PublicIpv4</code>, you can use a
-   *             public IPv4 address. </p>
+   *                 <code>OutsideIpAddressType</code> is set to <code>Ipv6</code>, you can use an IPv6 address. </p>
    * @public
    */
   IpAddress?: string | undefined;
@@ -2948,7 +3413,8 @@ export interface CustomerGateway {
 
   /**
    * <p>
-   *             IPv4 address for the customer gateway device's outside interface. The address must be static. If <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you can use an RFC6598 or RFC1918 private IPv4 address. If <code>OutsideIpAddressType</code> is set to <code>PublicIpv4</code>, you can use a public IPv4 address.
+   *             The IP address for the customer gateway device's outside interface. The address must be static. If <code>OutsideIpAddressType</code> in your VPN connection options is set to <code>PrivateIpv4</code>, you can use an RFC6598 or RFC1918 private IPv4 address. If
+   *             <code>OutsideIpAddressType</code> is set to <code>PublicIpv4</code>, you can use a public IPv4 address. If <code>OutsideIpAddressType</code> is set to <code>Ipv6</code>, you can use a public IPv6 address.
    *         </p>
    * @public
    */
@@ -2982,9 +3448,11 @@ export interface CreateCustomerGatewayResult {
 export interface CreateDefaultSubnetRequest {
   /**
    * <p>The Availability Zone in which to create the default subnet.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> must be specified,
+   *             but not both.</p>
    * @public
    */
-  AvailabilityZone: string | undefined;
+  AvailabilityZone?: string | undefined;
 
   /**
    * <p>Checks whether you have the required permissions for the action, without actually making the request,
@@ -3000,6 +3468,14 @@ export interface CreateDefaultSubnetRequest {
    * @public
    */
   Ipv6Native?: boolean | undefined;
+
+  /**
+   * <p>The ID of the Availability Zone.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> must be specified,
+   *             but not both.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
 }
 
 /**
@@ -3092,6 +3568,8 @@ export interface PrivateDnsNameOptionsOnLaunch {
  */
 export const SubnetState = {
   available: "available",
+  failed: "failed",
+  failed_insufficient_capacity: "failed-insufficient-capacity",
   pending: "pending",
   unavailable: "unavailable",
 } as const;
@@ -3199,6 +3677,17 @@ export interface Subnet {
   BlockPublicAccessStates?: BlockPublicAccessStates | undefined;
 
   /**
+   * <p>Indicates if this is a subnet used with Amazon Elastic VMware Service (EVS).
+   *             Possible values are <code>Elastic VMware Service</code> or no value. For more
+   *             information about Amazon EVS, see <a href="https://docs.aws.amazon.com/evs/latest/APIReference/Welcome.html">
+   *                <i>Amazon Elastic VMware Service
+   *                     API Reference</i>
+   *             </a>.</p>
+   * @public
+   */
+  Type?: string | undefined;
+
+  /**
    * <p>The ID of the subnet.</p>
    * @public
    */
@@ -3206,6 +3695,18 @@ export interface Subnet {
 
   /**
    * <p>The current state of the subnet.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>failed</code>: The underlying infrastructure to support the subnet failed to provision
+   *                     as expected.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>failed-insufficient-capacity</code>: The underlying infrastructure to support the subnet
+   *                     failed to provision due to a shortage of EC2 instance capacity.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   State?: SubnetState | undefined;
@@ -3330,6 +3831,8 @@ export interface VpcEncryptionControlExclusions {
  */
 export const VpcEncryptionControlState = {
   available: "available",
+  creating: "creating",
+  delete_failed: "delete-failed",
   deleted: "deleted",
   deleting: "deleting",
   enforce_failed: "enforce-failed",
@@ -3467,6 +3970,249 @@ export interface CreateDefaultVpcResult {
    * @public
    */
   Vpc?: Vpc | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateDelegateMacVolumeOwnershipTaskRequest {
+  /**
+   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The ID of the Amazon EC2 Mac instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>Specifies the following credentials:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <b>Internal disk administrative user</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>Username</b> - Only the default administrative user
+   *                      (<code>aws-managed-user</code>) is supported and it is used by default. You can't
+   *                      specify a different administrative user.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>Password</b> - If you did not change the default
+   *                      password for <code>aws-managed-user</code>, specify the default password, which is
+   *                      <i>blank</i>. Otherwise, specify your password.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>Amazon EBS root volume administrative user</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>Username</b> - If you did not change the default
+   *                      administrative user, specify <code>ec2-user</code>. Otherwise, specify the username
+   *                      for your administrative user.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>Password</b> - Specify the password for the
+   *                      administrative user.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *          </ul>
+   *          <p>The credentials must be specified in the following JSON format:</p>
+   *          <p>
+   *             <code>\{
+   *   "internalDiskPassword":"<i>internal-disk-admin_password</i>",
+   *   "rootVolumeUsername":"<i>root-volume-admin_username</i>",
+   *   "rootVolumepassword":"<i>root-volume-admin_password</i>"
+   * \}</code>
+   *          </p>
+   * @public
+   */
+  MacCredentials: string | undefined;
+
+  /**
+   * <p>The tags to assign to the volume ownership delegation task.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const MacSystemIntegrityProtectionSettingStatus = {
+  disabled: "disabled",
+  enabled: "enabled",
+} as const;
+
+/**
+ * @public
+ */
+export type MacSystemIntegrityProtectionSettingStatus =
+  (typeof MacSystemIntegrityProtectionSettingStatus)[keyof typeof MacSystemIntegrityProtectionSettingStatus];
+
+/**
+ * <p>Describes the configuration for a System Integrity Protection (SIP) modification task.</p>
+ * @public
+ */
+export interface MacSystemIntegrityProtectionConfiguration {
+  /**
+   * <p>Indicates whether Apple Internal was enabled or disabled by the task.</p>
+   * @public
+   */
+  AppleInternal?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates whether Base System was enabled or disabled by the task.</p>
+   * @public
+   */
+  BaseSystem?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates whether Debugging Restrictions was enabled or disabled by the task.</p>
+   * @public
+   */
+  DebuggingRestrictions?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates whether Dtrace Restrictions was enabled or disabled by the task.</p>
+   * @public
+   */
+  DTraceRestrictions?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates whether Filesystem Protections was enabled or disabled by the task.</p>
+   * @public
+   */
+  FilesystemProtections?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates whether Kext Signing was enabled or disabled by the task.</p>
+   * @public
+   */
+  KextSigning?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates whether NVRAM Protections was enabled or disabled by the task.</p>
+   * @public
+   */
+  NvramProtections?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Indicates SIP was enabled or disabled by the task.</p>
+   * @public
+   */
+  Status?: MacSystemIntegrityProtectionSettingStatus | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const MacModificationTaskState = {
+  failed: "failed",
+  inprogress: "in-progress",
+  pending: "pending",
+  successful: "successful",
+} as const;
+
+/**
+ * @public
+ */
+export type MacModificationTaskState = (typeof MacModificationTaskState)[keyof typeof MacModificationTaskState];
+
+/**
+ * @public
+ * @enum
+ */
+export const MacModificationTaskType = {
+  SIPModification: "sip-modification",
+  VolumeOwnershipDelegation: "volume-ownership-delegation",
+} as const;
+
+/**
+ * @public
+ */
+export type MacModificationTaskType = (typeof MacModificationTaskType)[keyof typeof MacModificationTaskType];
+
+/**
+ * <p>Information about a System Integrity Protection (SIP) modification task or volume
+ *          ownership delegation task for an Amazon EC2 Mac instance.</p>
+ * @public
+ */
+export interface MacModificationTask {
+  /**
+   * <p>The ID of the Amazon EC2 Mac instance.</p>
+   * @public
+   */
+  InstanceId?: string | undefined;
+
+  /**
+   * <p>The ID of task.</p>
+   * @public
+   */
+  MacModificationTaskId?: string | undefined;
+
+  /**
+   * <p>[SIP modification tasks only] Information about the SIP
+   *          configuration.</p>
+   * @public
+   */
+  MacSystemIntegrityProtectionConfig?: MacSystemIntegrityProtectionConfiguration | undefined;
+
+  /**
+   * <p>The date and time the task was created, in the UTC timezone
+   *          (<code>YYYY-MM-DDThh:mm:ss.sssZ</code>).</p>
+   * @public
+   */
+  StartTime?: Date | undefined;
+
+  /**
+   * <p>The tags assigned to the task.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The state of the task.</p>
+   * @public
+   */
+  TaskState?: MacModificationTaskState | undefined;
+
+  /**
+   * <p>The type of task.</p>
+   * @public
+   */
+  TaskType?: MacModificationTaskType | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateDelegateMacVolumeOwnershipTaskResult {
+  /**
+   * <p>Information about the volume ownership delegation task.</p>
+   * @public
+   */
+  MacModificationTask?: MacModificationTask | undefined;
 }
 
 /**
@@ -3757,10 +4503,10 @@ export interface FleetEbsBlockDeviceRequest {
    *          <p>In no case can you remove encryption from an encrypted volume.</p>
    *          <p>Encrypted volumes can only be attached to instances that support Amazon EBS encryption. For
    *          more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html#ebs-encryption_supported_instances">Supported instance types</a>.</p>
-   *          <p>This parameter is not returned by .</p>
-   *          <p>For  and , whether
-   *          you can include this parameter, and the allowed values differ depending on the type of
-   *          block device mapping you are creating.</p>
+   *          <p>This parameter is not returned by <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute">DescribeImageAttribute</a>.</p>
+   *          <p>For <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateImage">CreateImage</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RegisterImage">RegisterImage</a>, whether you
+   *          can include this parameter, and the allowed values differ depending on the type of block
+   *          device mapping you are creating.</p>
    *          <ul>
    *             <li>
    *                <p>If you are creating a block device mapping for a <b>new (empty)
@@ -4067,7 +4813,7 @@ export interface PerformanceFactorReferenceRequest {
    *          <p>If you enable performance protection by specifying a supported instance family, the
    *          returned instance types will exclude the above unsupported instance families.</p>
    *          <p>If you specify an unsupported instance family as a value for baseline performance, the
-   *          API returns an empty response for  and an exception for , , , and .</p>
+   *          API returns an empty response for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements">GetInstanceTypesFromInstanceRequirements</a> and an exception for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>, <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet">RequestSpotFleet</a>, <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet">ModifyFleet</a>, and <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest">ModifySpotFleetRequest</a>.</p>
    * @public
    */
   InstanceFamily?: string | undefined;
@@ -4592,6 +5338,9 @@ export interface InstanceRequirementsRequest {
    *             <li>
    *                <p>For instance types with GPU accelerators, specify <code>gpu</code>.</p>
    *             </li>
+   *             <li>
+   *                <p>For instance types with Inference accelerators, specify <code>inference</code>.</p>
+   *             </li>
    *          </ul>
    *          <p>Default: Any accelerator type</p>
    * @public
@@ -4754,6 +5503,16 @@ export interface InstanceRequirementsRequest {
  */
 export interface Placement {
   /**
+   * <p>The ID of the Availability Zone of the instance.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> can be
+   *             specified, but not both. If neither is specified, Amazon EC2 automatically selects an
+   *             Availability Zone based on the load balancing criteria for the Region.</p>
+   *          <p>This parameter is not supported for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
+
+  /**
    * <p>The affinity setting for the instance on the Dedicated Host.</p>
    *          <p>This parameter is not supported for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a> or <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html">ImportInstance</a>.</p>
    * @public
@@ -4816,8 +5575,9 @@ export interface Placement {
 
   /**
    * <p>The Availability Zone of the instance.</p>
-   *          <p>If not specified, an Availability Zone will be automatically chosen for you based on
-   *             the load balancing criteria for the Region.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> can be
+   *             specified, but not both. If neither is specified, Amazon EC2 automatically selects an
+   *             Availability Zone based on the load balancing criteria for the Region.</p>
    *          <p>This parameter is not supported for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.</p>
    * @public
    */
@@ -5828,7 +6588,7 @@ export interface PerformanceFactorReference {
    *          <p>If you enable performance protection by specifying a supported instance family, the
    *          returned instance types will exclude the above unsupported instance families.</p>
    *          <p>If you specify an unsupported instance family as a value for baseline performance, the
-   *          API returns an empty response for  and an exception for , , , and .</p>
+   *          API returns an empty response for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements">GetInstanceTypesFromInstanceRequirements</a> and an exception for <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>, <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet">RequestSpotFleet</a>, <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyFleet">ModifyFleet</a>, and <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifySpotFleetRequest">ModifySpotFleetRequest</a>.</p>
    * @public
    */
   InstanceFamily?: string | undefined;
@@ -6281,6 +7041,9 @@ export interface InstanceRequirements {
    *             </li>
    *             <li>
    *                <p>For instance types with GPU accelerators, specify <code>gpu</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>For instance types with Inference accelerators, specify <code>inference</code>.</p>
    *             </li>
    *          </ul>
    *          <p>Default: Any accelerator type</p>
@@ -7209,6 +7972,23 @@ export interface EbsBlockDevice {
   OutpostArn?: string | undefined;
 
   /**
+   * <p>The Availability Zone where the EBS volume will be created (for example,
+   *             <code>us-east-1a</code>).</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> can be specified,
+   *             but not both. If neither is specified, Amazon EC2 automatically selects an Availability Zone within
+   *             the Region.</p>
+   *          <p>This parameter is not supported when using
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html">CreateFleet</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateImage.html">CreateImage</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html">RequestSpotFleet</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html">RequestSpotInstances</a>, and
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
+   * @public
+   */
+  AvailabilityZone?: string | undefined;
+
+  /**
    * <p>Indicates whether the encryption state of an EBS volume is changed while being
    *             restored from a backing snapshot. The effect of setting the encryption state to <code>true</code> depends on
    * the volume origin (new or from a snapshot), starting encryption state, ownership, and whether encryption by default is enabled. For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption.html#encryption-parameters">Amazon EBS encryption</a> in the <i>Amazon EBS User Guide</i>.</p>
@@ -7249,6 +8029,52 @@ export interface EbsBlockDevice {
    * @public
    */
   Encrypted?: boolean | undefined;
+
+  /**
+   * <p>Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization rate), in MiB/s, at which to download
+   *             the snapshot blocks from Amazon S3 to the volume. This is also known as
+   *             <i>volume initialization</i>. Specifying a volume initialization rate ensures that
+   *             the volume is initialized at a predictable and consistent rate after creation.</p>
+   *          <p>This parameter is supported only for volumes created from snapshots. Omit this parameter
+   *             if:</p>
+   *          <ul>
+   *             <li>
+   *                <p>You want to create the volume using fast snapshot restore. You must specify a snapshot
+   *                     that is enabled for fast snapshot restore. In this case, the volume is fully initialized at
+   *                     creation.</p>
+   *                <note>
+   *                   <p>If you specify a snapshot that is enabled for fast snapshot restore and a volume initialization rate,
+   *                         the volume will be initialized at the specified rate instead of fast snapshot restore.</p>
+   *                </note>
+   *             </li>
+   *             <li>
+   *                <p>You want to create a volume that is initialized at the default rate.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html">
+   *             Initialize Amazon EBS volumes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   *          <p>This parameter is not supported when using <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateImage.html">CreateImage</a>.</p>
+   *          <p>Valid range: 100 - 300 MiB/s</p>
+   * @public
+   */
+  VolumeInitializationRate?: number | undefined;
+
+  /**
+   * <p>The ID of the Availability Zone where the EBS volume will be created (for example,
+   *             <code>use1-az1</code>).</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> can be specified,
+   *             but not both. If neither is specified, Amazon EC2 automatically selects an Availability Zone within
+   *             the Region.</p>
+   *          <p>This parameter is not supported when using
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html">CreateFleet</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateImage.html">CreateImage</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotFleet.html">RequestSpotFleet</a>,
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestSpotInstances.html">RequestSpotInstances</a>, and
+   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
 }
 
 /**
@@ -7296,6 +8122,20 @@ export interface BlockDeviceMapping {
 
 /**
  * @public
+ * @enum
+ */
+export const SnapshotLocationEnum = {
+  LOCAL: "local",
+  REGIONAL: "regional",
+} as const;
+
+/**
+ * @public
+ */
+export type SnapshotLocationEnum = (typeof SnapshotLocationEnum)[keyof typeof SnapshotLocationEnum];
+
+/**
+ * @public
  */
 export interface CreateImageRequest {
   /**
@@ -7318,6 +8158,28 @@ export interface CreateImageRequest {
    * @public
    */
   TagSpecifications?: TagSpecification[] | undefined;
+
+  /**
+   * <note>
+   *             <p>Only supported for instances in Local Zones. If the source instance is not in a Local
+   *         Zone, omit this parameter.</p>
+   *          </note>
+   *          <p>The Amazon S3 location where the snapshots will be stored.</p>
+   *          <ul>
+   *             <li>
+   *                <p>To create local snapshots in the same Local Zone as the source instance, specify
+   *           <code>local</code>.</p>
+   *             </li>
+   *             <li>
+   *                <p>To create regional snapshots in the parent Region of the Local Zone, specify
+   *           <code>regional</code> or omit this parameter.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Default: <code>regional</code>
+   *          </p>
+   * @public
+   */
+  SnapshotLocation?: SnapshotLocationEnum | undefined;
 
   /**
    * <p>Checks whether you have the required permissions for the action, without actually making the request,
@@ -7385,7 +8247,7 @@ export interface CreateImageRequest {
    *                <p>You can't modify the encryption status of existing volumes or snapshots. To create an
    *           AMI with volumes or snapshots that have a different encryption status (for example, where
    *           the source volume and snapshots are unencrypted, and you want to create an AMI with
-   *           encrypted volumes or snapshots), use the <a>CopyImage</a> action.</p>
+   *           encrypted volumes or snapshots), copy the image instead.</p>
    *             </li>
    *             <li>
    *                <p>The only option that can be changed for existing mappings or snapshots is
@@ -7407,6 +8269,21 @@ export interface CreateImageResult {
    */
   ImageId?: string | undefined;
 }
+
+/**
+ * @public
+ * @enum
+ */
+export const IpAddressType = {
+  dualstack: "dualstack",
+  ipv4: "ipv4",
+  ipv6: "ipv6",
+} as const;
+
+/**
+ * @public
+ */
+export type IpAddressType = (typeof IpAddressType)[keyof typeof IpAddressType];
 
 /**
  * @public
@@ -7445,6 +8322,12 @@ export interface CreateInstanceConnectEndpointRequest {
    *                   <code>false</code> - Use the network interface IP address as the source.</p>
    *             </li>
    *          </ul>
+   *          <note>
+   *             <p>
+   *                <code>PreserveClientIp</code> is only supported on IPv4 EC2 Instance Connect
+   *                 Endpoints. To use <code>PreserveClientIp</code>, the value for
+   *                     <code>IpAddressType</code> must be <code>ipv4</code>.</p>
+   *          </note>
    *          <p>Default: <code>false</code>
    *          </p>
    * @public
@@ -7462,6 +8345,71 @@ export interface CreateInstanceConnectEndpointRequest {
    * @public
    */
   TagSpecifications?: TagSpecification[] | undefined;
+
+  /**
+   * <p>The IP address type of the endpoint.</p>
+   *          <p>If no value is specified, the default value is determined by the IP address type of
+   *             the subnet:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>dualstack</code> - If the subnet has both IPv4 and IPv6 CIDRs</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>ipv4</code> - If the subnet has only IPv4 CIDRs</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>ipv6</code> - If the subnet has only IPv6 CIDRs</p>
+   *             </li>
+   *          </ul>
+   *          <note>
+   *             <p>
+   *                <code>PreserveClientIp</code> is only supported on IPv4 EC2 Instance Connect
+   *                 Endpoints. To use <code>PreserveClientIp</code>, the value for
+   *                 <code>IpAddressType</code> must be <code>ipv4</code>.</p>
+   *          </note>
+   * @public
+   */
+  IpAddressType?: IpAddressType | undefined;
+}
+
+/**
+ * <p>The DNS names of the endpoint.</p>
+ * @public
+ */
+export interface InstanceConnectEndpointDnsNames {
+  /**
+   * <p>The DNS name of the EC2 Instance Connect Endpoint.</p>
+   * @public
+   */
+  DnsName?: string | undefined;
+
+  /**
+   * <p>The Federal Information Processing Standards (FIPS) compliant DNS name of the EC2 Instance Connect Endpoint.</p>
+   * @public
+   */
+  FipsDnsName?: string | undefined;
+}
+
+/**
+ * <p>The public DNS names of the endpoint, including IPv4-only and dualstack DNS
+ *             names.</p>
+ * @public
+ */
+export interface InstanceConnectEndpointPublicDnsNames {
+  /**
+   * <p>The IPv4-only DNS name of the EC2 Instance Connect Endpoint.</p>
+   * @public
+   */
+  Ipv4?: InstanceConnectEndpointDnsNames | undefined;
+
+  /**
+   * <p>The dualstack DNS name of the EC2 Instance Connect Endpoint. A dualstack DNS name supports connections from both IPv4 and IPv6 clients.</p>
+   * @public
+   */
+  Dualstack?: InstanceConnectEndpointDnsNames | undefined;
 }
 
 /**
@@ -7475,6 +8423,9 @@ export const Ec2InstanceConnectEndpointState = {
   delete_complete: "delete-complete",
   delete_failed: "delete-failed",
   delete_in_progress: "delete-in-progress",
+  update_complete: "update-complete",
+  update_failed: "update-failed",
+  update_in_progress: "update-in-progress",
 } as const;
 
 /**
@@ -7526,7 +8477,8 @@ export interface Ec2InstanceConnectEndpoint {
   DnsName?: string | undefined;
 
   /**
-   * <p></p>
+   * <p>The Federal Information Processing Standards (FIPS) compliant DNS name of the EC2
+   *             Instance Connect Endpoint.</p>
    * @public
    */
   FipsDnsName?: string | undefined;
@@ -7590,6 +8542,18 @@ export interface Ec2InstanceConnectEndpoint {
    * @public
    */
   Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The IP address type of the endpoint.</p>
+   * @public
+   */
+  IpAddressType?: IpAddressType | undefined;
+
+  /**
+   * <p>The public DNS names of the endpoint.</p>
+   * @public
+   */
+  PublicDnsNames?: InstanceConnectEndpointPublicDnsNames | undefined;
 }
 
 /**
@@ -8019,6 +8983,20 @@ export interface CreateInternetGatewayResult {
  * @public
  * @enum
  */
+export const IpamMeteredAccount = {
+  ipam_owner: "ipam-owner",
+  resource_owner: "resource-owner",
+} as const;
+
+/**
+ * @public
+ */
+export type IpamMeteredAccount = (typeof IpamMeteredAccount)[keyof typeof IpamMeteredAccount];
+
+/**
+ * @public
+ * @enum
+ */
 export const IpamTier = {
   advanced: "advanced",
   free: "free",
@@ -8079,6 +9057,23 @@ export interface CreateIpamRequest {
    * @public
    */
   EnablePrivateGua?: boolean | undefined;
+
+  /**
+   * <p>A metered account is an Amazon Web Services account that is charged for active IP addresses managed in IPAM. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/ipam-enable-cost-distro.html">Enable cost distribution</a> in the <i>Amazon VPC IPAM User Guide</i>.</p>
+   *          <p>Possible values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>ipam-owner</code> (default): The Amazon Web Services account which owns the IPAM is charged for all active IP addresses managed in IPAM.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>resource-owner</code>: The Amazon Web Services account that owns the IP address is charged for the active IP address.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  MeteredAccount?: IpamMeteredAccount | undefined;
 }
 
 /**
@@ -8227,6 +9222,23 @@ export interface Ipam {
    * @public
    */
   EnablePrivateGua?: boolean | undefined;
+
+  /**
+   * <p>A metered account is an Amazon Web Services account that is charged for active IP addresses managed in IPAM. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/ipam-enable-cost-distro.html">Enable cost distribution</a> in the <i>Amazon VPC IPAM User Guide</i>.</p>
+   *          <p>Possible values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>ipam-owner</code> (default): The Amazon Web Services account which owns the IPAM is charged for all active IP addresses managed in IPAM.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>resource-owner</code>: The Amazon Web Services account that owns the IP address is charged for the active IP address.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  MeteredAccount?: IpamMeteredAccount | undefined;
 }
 
 /**
@@ -9384,8 +10396,7 @@ export interface LaunchTemplateEbsBlockDeviceRequest {
   Iops?: number | undefined;
 
   /**
-   * <p>Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key
-   *             to use for EBS encryption.</p>
+   * <p>Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key to use for EBS encryption.</p>
    * @public
    */
   KmsKeyId?: string | undefined;
@@ -9439,6 +10450,34 @@ export interface LaunchTemplateEbsBlockDeviceRequest {
    * @public
    */
   Throughput?: number | undefined;
+
+  /**
+   * <p>Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization rate), in MiB/s, at which to download
+   *             the snapshot blocks from Amazon S3 to the volume. This is also known as <i>volume
+   *                 initialization</i>. Specifying a volume initialization rate ensures that the volume is
+   *             initialized at a predictable and consistent rate after creation.</p>
+   *          <p>This parameter is supported only for volumes created from snapshots. Omit this parameter
+   *             if:</p>
+   *          <ul>
+   *             <li>
+   *                <p>You want to create the volume using fast snapshot restore. You must specify a snapshot
+   *                     that is enabled for fast snapshot restore. In this case, the volume is fully initialized
+   *                     at creation.</p>
+   *                <note>
+   *                   <p>If you specify a snapshot that is enabled for fast snapshot restore and a volume initialization rate,
+   *                         the volume will be initialized at the specified rate instead of fast snapshot restore.</p>
+   *                </note>
+   *             </li>
+   *             <li>
+   *                <p>You want to create a volume that is initialized at the default rate.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html">
+   *             Initialize Amazon EBS volumes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   *          <p>Valid range: 100 - 300 MiB/s</p>
+   * @public
+   */
+  VolumeInitializationRate?: number | undefined;
 }
 
 /**
@@ -9948,17 +10987,17 @@ export interface LaunchTemplateInstanceMetadataOptionsRequest {
    *             <li>
    *                <p>
    *                   <code>optional</code> - IMDSv2 is optional. You can choose whether to send a
-   *                     session token in your instance metadata retrieval requests. If you retrieve
-   *                     IAM role credentials without a session token, you receive the IMDSv1 role
+   *                     session token in your instance metadata retrieval requests. If you retrieve IAM
+   *                     role credentials without a session token, you receive the IMDSv1 role
    *                     credentials. If you retrieve IAM role credentials using a valid session token,
    *                     you receive the IMDSv2 role credentials.</p>
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>required</code> - IMDSv2 is required. You must send a session token
-   *                     in your instance metadata retrieval requests. With this option, retrieving the
-   *                     IAM role credentials always returns IMDSv2 credentials; IMDSv1 credentials are
-   *                     not available.</p>
+   *                   <code>required</code> - IMDSv2 is required. You must send a session token in
+   *                     your instance metadata retrieval requests. With this option, retrieving the IAM
+   *                     role credentials always returns IMDSv2 credentials; IMDSv1 credentials are not
+   *                     available.</p>
    *             </li>
    *          </ul>
    *          <p>Default: If the value of <code>ImdsSupport</code> for the Amazon Machine Image (AMI)
@@ -10022,7 +11061,10 @@ export interface LaunchTemplatesMonitoringRequest {
 }
 
 /**
- * <p>A security group connection tracking specification request that enables you to set the idle timeout for connection tracking on an Elastic network interface. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ * <p>A security group connection tracking specification request that enables you to set the
+ *             idle timeout for connection tracking on an Elastic network interface. For more
+ *             information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the
+ *             <i>Amazon EC2 User Guide</i>.</p>
  * @public
  */
 export interface ConnectionTrackingSpecificationRequest {
@@ -10058,30 +11100,29 @@ export interface ConnectionTrackingSpecificationRequest {
  */
 export interface EnaSrdUdpSpecificationRequest {
   /**
-   * <p>Indicates whether UDP traffic uses ENA Express for your instance. To ensure that
-   * 			UDP traffic can use ENA Express when you launch an instance, you must also set
-   * 			<b>EnaSrdEnabled</b> in the <b>EnaSrdSpecificationRequest</b> to <code>true</code> in your
-   * 			launch template.</p>
+   * <p>Indicates whether UDP traffic uses ENA Express for your instance. To ensure that UDP
+   *             traffic can use ENA Express when you launch an instance, you must also set <b>EnaSrdEnabled</b> in the <b>EnaSrdSpecificationRequest</b> to <code>true</code>.</p>
    * @public
    */
   EnaSrdUdpEnabled?: boolean | undefined;
 }
 
 /**
- * <p>Launch instances with ENA Express settings configured
- * 			from your launch template.</p>
+ * <p>Launch instances with ENA Express settings configured from your launch
+ *             template.</p>
  * @public
  */
 export interface EnaSrdSpecificationRequest {
   /**
-   * <p>Specifies whether ENA Express is enabled for the network interface when you
-   * 			launch an instance from your launch template.</p>
+   * <p>Specifies whether ENA Express is enabled for the network interface when you launch an
+   *             instance.</p>
    * @public
    */
   EnaSrdEnabled?: boolean | undefined;
 
   /**
-   * <p>Contains ENA Express settings for UDP network traffic in your launch template.</p>
+   * <p>Contains ENA Express settings for UDP network traffic for the network interface
+   *             attached to the instance.</p>
    * @public
    */
   EnaSrdUdpSpecification?: EnaSrdUdpSpecificationRequest | undefined;
@@ -10181,10 +11222,12 @@ export interface LaunchTemplateInstanceNetworkInterfaceSpecificationRequest {
   Description?: string | undefined;
 
   /**
-   * <p>The device index for the network interface attachment. Each network interface requires
-   *             a device index. If you create a launch template that includes secondary network interfaces
-   *             but not a primary network interface, then you must add a primary network interface as a
-   *             launch parameter when you launch an instance from the template.</p>
+   * <p>The device index for the network interface attachment. The primary network interface
+   *             has a device index of 0. Each network interface is of type <code>interface</code>, you
+   *             must specify a device index. If you create a launch template that includes secondary
+   *             network interfaces but not a primary network interface, then you must add a primary
+   *             network interface as a launch parameter when you launch an instance from the
+   *             template.</p>
    * @public
    */
   DeviceIndex?: number | undefined;
@@ -10293,7 +11336,10 @@ export interface LaunchTemplateInstanceNetworkInterfaceSpecificationRequest {
   Ipv6PrefixCount?: number | undefined;
 
   /**
-   * <p>The primary IPv6 address of the network interface. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached. For more information about primary IPv6 addresses, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
+   * <p>The primary IPv6 address of the network interface. When you enable an IPv6 GUA address
+   *             to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the
+   *             instance is terminated or the network interface is detached. For more information about
+   *             primary IPv6 addresses, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
    * @public
    */
   PrimaryIpv6?: boolean | undefined;
@@ -10307,11 +11353,17 @@ export interface LaunchTemplateInstanceNetworkInterfaceSpecificationRequest {
   /**
    * <p>A security group connection tracking specification that enables you to set the timeout
    *             for connection tracking on an Elastic network interface. For more information, see
-   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Idle connection tracking timeout</a> in the
-   *             <i>Amazon EC2 User Guide</i>.</p>
+   *                 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Idle connection tracking timeout</a> in the
+   *                 <i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
   ConnectionTrackingSpecification?: ConnectionTrackingSpecificationRequest | undefined;
+
+  /**
+   * <p>The number of ENA queues to be created with the instance.</p>
+   * @public
+   */
+  EnaQueueCount?: number | undefined;
 }
 
 /**
@@ -10331,27 +11383,29 @@ export type InstanceBandwidthWeighting = (typeof InstanceBandwidthWeighting)[key
 
 /**
  * <p>When you configure network performance options in your launch template, your instance
- *     		is geared for performance improvements based on the workload that it runs as soon as it's
- *     		available.</p>
+ *             is geared for performance improvements based on the workload that it runs as soon as
+ *             it's available.</p>
  * @public
  */
 export interface LaunchTemplateNetworkPerformanceOptionsRequest {
   /**
-   * <p>Specify the bandwidth weighting option to boost the associated type of baseline bandwidth, as follows:</p>
+   * <p>Specify the bandwidth weighting option to boost the associated type of baseline
+   *             bandwidth, as follows:</p>
    *          <dl>
    *             <dt>default</dt>
    *             <dd>
-   *                <p>This option uses the standard bandwidth configuration for your instance type.</p>
+   *                <p>This option uses the standard bandwidth configuration for your instance
+   *                         type.</p>
    *             </dd>
    *             <dt>vpc-1</dt>
    *             <dd>
    *                <p>This option boosts your networking baseline bandwidth and reduces your EBS
-   *     					baseline bandwidth.</p>
+   *                         baseline bandwidth.</p>
    *             </dd>
    *             <dt>ebs-1</dt>
    *             <dd>
    *                <p>This option boosts your EBS baseline bandwidth and reduces your networking
-   *     					baseline bandwidth.</p>
+   *                         baseline bandwidth.</p>
    *             </dd>
    *          </dl>
    * @public
@@ -10378,9 +11432,17 @@ export interface OperatorRequest {
 export interface LaunchTemplatePlacementRequest {
   /**
    * <p>The Availability Zone for the instance.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> can be specified, but not both</p>
    * @public
    */
   AvailabilityZone?: string | undefined;
+
+  /**
+   * <p>The ID of the Availability Zone for the instance.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> can be specified, but not both</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
 
   /**
    * <p>The affinity setting for an instance on a Dedicated Host.</p>
@@ -10401,8 +11463,8 @@ export interface LaunchTemplatePlacementRequest {
   HostId?: string | undefined;
 
   /**
-   * <p>The tenancy of the instance. An instance with a
-   *             tenancy of dedicated runs on single-tenant hardware.</p>
+   * <p>The tenancy of the instance. An instance with a tenancy of dedicated runs on
+   *             single-tenant hardware.</p>
    * @public
    */
   Tenancy?: Tenancy | undefined;
@@ -10473,12 +11535,12 @@ export interface LaunchTemplatePrivateDnsNameOptionsRequest {
 export interface LaunchTemplateTagSpecificationRequest {
   /**
    * <p>The type of resource to tag.</p>
-   *          <p>Valid Values lists all resource types for Amazon EC2 that can be tagged. When
-   *             you create a launch template, you can specify tags for the following resource types
-   *             only: <code>instance</code> | <code>volume</code> |
-   *                 <code>network-interface</code> | <code>spot-instances-request</code>.
-   *             If the instance does not include the resource type that you specify, the instance
-   *             launch fails. For example, not all instance types include a volume.</p>
+   *          <p>Valid Values lists all resource types for Amazon EC2 that can be tagged. When you
+   *             create a launch template, you can specify tags for the following resource types only:
+   *                 <code>instance</code> | <code>volume</code> |
+   *             <code>network-interface</code> | <code>spot-instances-request</code>. If the instance
+   *             does not include the resource type that you specify, the instance launch fails. For
+   *             example, not all instance types include a volume.</p>
    *          <p>To tag a resource after it has been created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.</p>
    * @public
    */
@@ -10593,7 +11655,8 @@ export interface RequestLaunchTemplateData {
    *                </p>
    *             </li>
    *          </ul>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id">Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id">Use a Systems Manager parameter instead of an AMI ID</a> in the
+   *                 <i>Amazon EC2 User Guide</i>.</p>
    *          <note>
    *             <p>If the launch template will be used for an EC2 Fleet or Spot Fleet, note the
    *                 following:</p>
@@ -10656,11 +11719,11 @@ export interface RequestLaunchTemplateData {
   RamDiskId?: string | undefined;
 
   /**
-   * <p>Indicates whether termination protection is enabled for the instance. The default
-   *             is <code>false</code>, which means that you can terminate the instance using
-   *             the Amazon EC2 console, command line tools, or API. You can enable termination protection
-   *             when you launch an instance, while the instance is running, or while the instance
-   *             is stopped.</p>
+   * <p>Indicates whether termination protection is enabled for the instance. The default is
+   *                 <code>false</code>, which means that you can terminate the instance using the Amazon EC2
+   *             console, command line tools, or API. You can enable termination protection when you
+   *             launch an instance, while the instance is running, or while the instance is
+   *             stopped.</p>
    * @public
    */
   DisableApiTermination?: boolean | undefined;
@@ -10680,14 +11743,15 @@ export interface RequestLaunchTemplateData {
    *                 instance with user data input</a> in the
    *             <i>Amazon EC2 User Guide</i>.</p>
    *          <p>If you are creating the launch template for use with Batch, the user
-   *             data must be provided in the <a href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME multi-part archive format</a>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data">Amazon EC2 user data in launch templates</a> in the <i>Batch User Guide</i>.</p>
+   *             data must be provided in the <a href="https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive">MIME multi-part archive format</a>. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data">Amazon EC2 user data in launch templates</a> in the
+   *                     <i>Batch User Guide</i>.</p>
    * @public
    */
   UserData?: string | undefined;
 
   /**
-   * <p>The tags to apply to the resources that are created during instance launch. These
-   *           tags are not applied to the launch template.</p>
+   * <p>The tags to apply to the resources that are created during instance launch. These tags
+   *             are not applied to the launch template.</p>
    * @public
    */
   TagSpecifications?: LaunchTemplateTagSpecificationRequest[] | undefined;
@@ -10697,6 +11761,8 @@ export interface RequestLaunchTemplateData {
    *          <note>
    *             <p>Amazon Elastic Graphics reached end of life on January 8, 2024.</p>
    *          </note>
+   *
+   * @deprecated
    * @public
    */
   ElasticGpuSpecifications?: ElasticGpuSpecification[] | undefined;
@@ -10709,6 +11775,8 @@ export interface RequestLaunchTemplateData {
    *             accelerators are a resource you can attach to your Amazon EC2 instances to accelerate
    *             your Deep Learning (DL) inference workloads.</p>
    *          <p>You cannot specify accelerators from different generations in the same request.</p>
+   *
+   * @deprecated
    * @public
    */
   ElasticInferenceAccelerators?: LaunchTemplateElasticInferenceAccelerator[] | undefined;
@@ -10775,7 +11843,8 @@ export interface RequestLaunchTemplateData {
   HibernationOptions?: LaunchTemplateHibernationOptionsRequest | undefined;
 
   /**
-   * <p>The metadata options for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure the Instance Metadata Service options</a> in the
+   * <p>The metadata options for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+   *                 the Instance Metadata Service options</a> in the
    *                 <i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
@@ -10856,7 +11925,7 @@ export interface RequestLaunchTemplateData {
 
   /**
    * <p>Contains launch template settings to boost network performance for the type of
-   *         	workload that runs on your instance.</p>
+   *             workload that runs on your instance.</p>
    * @public
    */
   NetworkPerformanceOptions?: LaunchTemplateNetworkPerformanceOptionsRequest | undefined;
@@ -10877,7 +11946,8 @@ export interface CreateLaunchTemplateRequest {
 
   /**
    * <p>Unique, case-sensitive identifier you provide to ensure the idempotency of the
-   *             request. If a client token isn't specified, a randomly generated token is used in the request to ensure idempotency.</p>
+   *             request. If a client token isn't specified, a randomly generated token is used in the
+   *             request to ensure idempotency.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
    *                 idempotency</a>.</p>
    *          <p>Constraint: Maximum 128 ASCII characters.</p>
@@ -10912,8 +11982,9 @@ export interface CreateLaunchTemplateRequest {
   /**
    * <p>The tags to apply to the launch template on creation. To tag the launch template, the
    *             resource type must be <code>launch-template</code>.</p>
-   *          <p>To specify the tags for the resources that are created when an instance is
-   *             launched, you must use the <code>TagSpecifications</code> parameter in the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html">launch template data</a> structure.</p>
+   *          <p>To specify the tags for the resources that are created when an instance is launched,
+   *             you must use the <code>TagSpecifications</code> parameter in the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html">launch template
+   *                 data</a> structure.</p>
    * @public
    */
   TagSpecifications?: TagSpecification[] | undefined;
@@ -11063,7 +12134,8 @@ export interface CreateLaunchTemplateVersionRequest {
 
   /**
    * <p>Unique, case-sensitive identifier you provide to ensure the idempotency of the
-   *             request. If a client token isn't specified, a randomly generated token is used in the request to ensure idempotency.</p>
+   *             request. If a client token isn't specified, a randomly generated token is used in the
+   *             request to ensure idempotency.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
    *                 idempotency</a>.</p>
    *          <p>Constraint: Maximum 128 ASCII characters.</p>
@@ -11073,29 +12145,29 @@ export interface CreateLaunchTemplateVersionRequest {
 
   /**
    * <p>The ID of the launch template.</p>
-   *          <p>You must specify either the launch template ID or the
-   *             launch template name, but not both.</p>
+   *          <p>You must specify either the launch template ID or the launch template name, but not
+   *             both.</p>
    * @public
    */
   LaunchTemplateId?: string | undefined;
 
   /**
    * <p>The name of the launch template.</p>
-   *          <p>You must specify either the launch template ID or the
-   *             launch template name, but not both.</p>
+   *          <p>You must specify either the launch template ID or the launch template name, but not
+   *             both.</p>
    * @public
    */
   LaunchTemplateName?: string | undefined;
 
   /**
-   * <p>The version of the launch template on which to base the new version.
-   *             Snapshots applied to the block device mapping are ignored when creating a new version
-   *             unless they are explicitly included.</p>
+   * <p>The version of the launch template on which to base the new version. Snapshots applied
+   *             to the block device mapping are ignored when creating a new version unless they are
+   *             explicitly included.</p>
    *          <p>If you specify this parameter, the new version inherits the launch parameters from the
    *             source version. If you specify additional launch parameters for the new version, they
    *             overwrite any corresponding launch parameters inherited from the source version.</p>
-   *          <p>If you omit this parameter, the new version contains only the launch parameters
-   *             that you specify for the new version.</p>
+   *          <p>If you omit this parameter, the new version contains only the launch parameters that
+   *             you specify for the new version.</p>
    * @public
    */
   SourceVersion?: string | undefined;
@@ -11148,8 +12220,7 @@ export interface LaunchTemplateEbsBlockDevice {
   Iops?: number | undefined;
 
   /**
-   * <p>Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key
-   *             to use for EBS encryption.</p>
+   * <p>Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key to use for EBS encryption.</p>
    * @public
    */
   KmsKeyId?: string | undefined;
@@ -11177,6 +12248,13 @@ export interface LaunchTemplateEbsBlockDevice {
    * @public
    */
   Throughput?: number | undefined;
+
+  /**
+   * <p>The Amazon EBS Provisioned Rate for Volume Initialization (volume initialization rate) specified for the volume, in MiB/s.
+   *             If no volume initialization rate was specified, the value is <code>null</code>.</p>
+   * @public
+   */
+  VolumeInitializationRate?: number | undefined;
 }
 
 /**
@@ -11513,17 +12591,17 @@ export interface LaunchTemplateInstanceMetadataOptions {
    *             <li>
    *                <p>
    *                   <code>optional</code> - IMDSv2 is optional. You can choose whether to send a
-   *                     session token in your instance metadata retrieval requests. If you retrieve
-   *                     IAM role credentials without a session token, you receive the IMDSv1 role
+   *                     session token in your instance metadata retrieval requests. If you retrieve IAM
+   *                     role credentials without a session token, you receive the IMDSv1 role
    *                     credentials. If you retrieve IAM role credentials using a valid session token,
    *                     you receive the IMDSv2 role credentials.</p>
    *             </li>
    *             <li>
    *                <p>
-   *                   <code>required</code> - IMDSv2 is required. You must send a session token
-   *                     in your instance metadata retrieval requests. With this option, retrieving the
-   *                     IAM role credentials always returns IMDSv2 credentials; IMDSv1 credentials are
-   *                     not available.</p>
+   *                   <code>required</code> - IMDSv2 is required. You must send a session token in
+   *                     your instance metadata retrieval requests. With this option, retrieving the IAM
+   *                     role credentials always returns IMDSv2 credentials; IMDSv1 credentials are not
+   *                     available.</p>
    *             </li>
    *          </ul>
    * @public
@@ -11571,885 +12649,22 @@ export interface LaunchTemplateInstanceMetadataOptions {
 }
 
 /**
- * <p>Describes the monitoring for the instance.</p>
- * @public
+ * @internal
  */
-export interface LaunchTemplatesMonitoring {
-  /**
-   * <p>Indicates whether detailed monitoring is enabled. Otherwise, basic monitoring is
-   *             enabled.</p>
-   * @public
-   */
-  Enabled?: boolean | undefined;
-}
+export const CopySnapshotRequestFilterSensitiveLog = (obj: CopySnapshotRequest): any => ({
+  ...obj,
+  ...(obj.PresignedUrl && { PresignedUrl: SENSITIVE_STRING }),
+});
 
 /**
- * <p>A security group connection tracking specification that enables you to set the idle timeout for connection tracking on an Elastic network interface. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.</p>
- * @public
+ * @internal
  */
-export interface ConnectionTrackingSpecification {
-  /**
-   * <p>Timeout (in seconds) for idle TCP
-   * 						connections in an established state. Min: 60 seconds. Max: 432000 seconds (5
-   * 						days). Default: 432000 seconds. Recommended: Less than 432000 seconds.</p>
-   * @public
-   */
-  TcpEstablishedTimeout?: number | undefined;
-
-  /**
-   * <p>Timeout (in seconds) for idle UDP flows that
-   * 						have seen traffic only in a single direction or a single request-response
-   * 						transaction. Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.</p>
-   * @public
-   */
-  UdpTimeout?: number | undefined;
-
-  /**
-   * <p>Timeout (in seconds) for idle UDP
-   * 						flows classified as streams which have seen more than one request-response
-   * 						transaction. Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180
-   * 						seconds.</p>
-   * @public
-   */
-  UdpStreamTimeout?: number | undefined;
-}
-
-/**
- * <p>ENA Express is compatible with both TCP and UDP transport protocols. When it's enabled, TCP traffic
- * 			automatically uses it. However, some UDP-based applications are designed to handle network packets that are
- * 			out of order, without a need for retransmission, such as live video broadcasting or other near-real-time
- * 			applications. For UDP traffic, you can specify whether to use ENA Express, based on your application
- * 			environment needs.</p>
- * @public
- */
-export interface LaunchTemplateEnaSrdUdpSpecification {
-  /**
-   * <p>Indicates whether UDP traffic to and from the instance uses ENA Express. To specify this setting,
-   * 			you must first enable ENA Express.</p>
-   * @public
-   */
-  EnaSrdUdpEnabled?: boolean | undefined;
-}
-
-/**
- * <p>ENA Express uses Amazon Web Services Scalable Reliable Datagram (SRD) technology to increase the
- * 			maximum bandwidth used per stream and minimize tail latency of network traffic between EC2 instances.
- * 			With ENA Express, you can communicate between two EC2 instances in the same subnet within the same
- * 			account, or in different accounts. Both sending and receiving instances must have ENA Express enabled.</p>
- *          <p>To improve the reliability of network packet delivery, ENA Express reorders network packets on the
- * 			receiving end by default. However, some UDP-based applications are designed to handle network packets
- * 			that are out of order to reduce the overhead for packet delivery at the network layer. When ENA Express
- * 			is enabled, you can specify whether UDP network traffic uses it.</p>
- * @public
- */
-export interface LaunchTemplateEnaSrdSpecification {
-  /**
-   * <p>Indicates whether ENA Express is enabled for the network interface.</p>
-   * @public
-   */
-  EnaSrdEnabled?: boolean | undefined;
-
-  /**
-   * <p>Configures ENA Express for UDP network traffic.</p>
-   * @public
-   */
-  EnaSrdUdpSpecification?: LaunchTemplateEnaSrdUdpSpecification | undefined;
-}
-
-/**
- * <p>Information about the IPv4 delegated prefixes assigned
- *             to a network interface.</p>
- * @public
- */
-export interface Ipv4PrefixSpecificationResponse {
-  /**
-   * <p>The IPv4 delegated prefixes assigned to the network interface.</p>
-   * @public
-   */
-  Ipv4Prefix?: string | undefined;
-}
-
-/**
- * <p>Describes an IPv6 address.</p>
- * @public
- */
-export interface InstanceIpv6Address {
-  /**
-   * <p>The IPv6 address.</p>
-   * @public
-   */
-  Ipv6Address?: string | undefined;
-
-  /**
-   * <p>Determines if an IPv6 address associated with a network interface is the primary IPv6 address. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached.
-   *             For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
-   * @public
-   */
-  IsPrimaryIpv6?: boolean | undefined;
-}
-
-/**
- * <p>Information about the IPv6 delegated prefixes assigned
- *             to a network interface.</p>
- * @public
- */
-export interface Ipv6PrefixSpecificationResponse {
-  /**
-   * <p>The IPv6 delegated prefixes assigned to the network interface.</p>
-   * @public
-   */
-  Ipv6Prefix?: string | undefined;
-}
-
-/**
- * <p>Describes a network interface.</p>
- * @public
- */
-export interface LaunchTemplateInstanceNetworkInterfaceSpecification {
-  /**
-   * <p>Indicates whether to associate a Carrier IP address with eth0 for a new network
-   *             interface.</p>
-   *          <p>Use this option when you launch an instance in a Wavelength Zone and want to associate
-   *             a Carrier IP address with the network interface. For more information about Carrier IP
-   *             addresses, see <a href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip">Carrier IP address</a> in the <i>Wavelength Developer
-   *             Guide</i>.</p>
-   * @public
-   */
-  AssociateCarrierIpAddress?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether to associate a public IPv4 address with eth0 for a new network
-   *             interface.</p>
-   *          <p>Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses
-   * associated with running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.</p>
-   * @public
-   */
-  AssociatePublicIpAddress?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether the network interface is deleted when the instance is
-   *             terminated.</p>
-   * @public
-   */
-  DeleteOnTermination?: boolean | undefined;
-
-  /**
-   * <p>A description for the network interface.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>The device index for the network interface attachment.</p>
-   * @public
-   */
-  DeviceIndex?: number | undefined;
-
-  /**
-   * <p>The IDs of one or more security groups.</p>
-   * @public
-   */
-  Groups?: string[] | undefined;
-
-  /**
-   * <p>The type of network interface.</p>
-   * @public
-   */
-  InterfaceType?: string | undefined;
-
-  /**
-   * <p>The number of IPv6 addresses for the network interface.</p>
-   * @public
-   */
-  Ipv6AddressCount?: number | undefined;
-
-  /**
-   * <p>The IPv6 addresses for the network interface.</p>
-   * @public
-   */
-  Ipv6Addresses?: InstanceIpv6Address[] | undefined;
-
-  /**
-   * <p>The ID of the network interface.</p>
-   * @public
-   */
-  NetworkInterfaceId?: string | undefined;
-
-  /**
-   * <p>The primary private IPv4 address of the network interface.</p>
-   * @public
-   */
-  PrivateIpAddress?: string | undefined;
-
-  /**
-   * <p>One or more private IPv4 addresses.</p>
-   * @public
-   */
-  PrivateIpAddresses?: PrivateIpAddressSpecification[] | undefined;
-
-  /**
-   * <p>The number of secondary private IPv4 addresses for the network interface.</p>
-   * @public
-   */
-  SecondaryPrivateIpAddressCount?: number | undefined;
-
-  /**
-   * <p>The ID of the subnet for the network interface.</p>
-   * @public
-   */
-  SubnetId?: string | undefined;
-
-  /**
-   * <p>The index of the network card.</p>
-   * @public
-   */
-  NetworkCardIndex?: number | undefined;
-
-  /**
-   * <p>One or more IPv4 prefixes assigned to the network interface.</p>
-   * @public
-   */
-  Ipv4Prefixes?: Ipv4PrefixSpecificationResponse[] | undefined;
-
-  /**
-   * <p>The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network
-   *             interface.</p>
-   * @public
-   */
-  Ipv4PrefixCount?: number | undefined;
-
-  /**
-   * <p>One or more IPv6 prefixes assigned to the network interface.</p>
-   * @public
-   */
-  Ipv6Prefixes?: Ipv6PrefixSpecificationResponse[] | undefined;
-
-  /**
-   * <p>The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network
-   *             interface.</p>
-   * @public
-   */
-  Ipv6PrefixCount?: number | undefined;
-
-  /**
-   * <p>The primary IPv6 address of the network interface. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached. For more information about primary IPv6 addresses, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
-   * @public
-   */
-  PrimaryIpv6?: boolean | undefined;
-
-  /**
-   * <p>Contains the ENA Express settings for instances launched from your launch template.</p>
-   * @public
-   */
-  EnaSrdSpecification?: LaunchTemplateEnaSrdSpecification | undefined;
-
-  /**
-   * <p>A security group connection tracking specification that enables you to set the timeout
-   *             for connection tracking on an Elastic network interface. For more information, see
-   *             <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Idle connection tracking timeout</a> in the
-   *             <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  ConnectionTrackingSpecification?: ConnectionTrackingSpecification | undefined;
-}
-
-/**
- * <p>With network performance options, you can adjust your bandwidth preferences to meet
- *     		the needs of the workload that runs on your instance at launch.</p>
- * @public
- */
-export interface LaunchTemplateNetworkPerformanceOptions {
-  /**
-   * <p>When you configure network bandwidth weighting, you can boost baseline bandwidth for either networking
-   *     		or EBS by up to 25%. The total available baseline bandwidth for your instance remains
-   *             the same. The default option uses the standard bandwidth configuration for your instance type.</p>
-   * @public
-   */
-  BandwidthWeighting?: InstanceBandwidthWeighting | undefined;
-}
-
-/**
- * <p>Describes the placement of an instance.</p>
- * @public
- */
-export interface LaunchTemplatePlacement {
-  /**
-   * <p>The Availability Zone of the instance.</p>
-   * @public
-   */
-  AvailabilityZone?: string | undefined;
-
-  /**
-   * <p>The affinity setting for the instance on the Dedicated Host.</p>
-   * @public
-   */
-  Affinity?: string | undefined;
-
-  /**
-   * <p>The name of the placement group for the instance.</p>
-   * @public
-   */
-  GroupName?: string | undefined;
-
-  /**
-   * <p>The ID of the Dedicated Host for the instance.</p>
-   * @public
-   */
-  HostId?: string | undefined;
-
-  /**
-   * <p>The tenancy of the instance. An instance with a
-   *             tenancy of <code>dedicated</code> runs on single-tenant hardware. </p>
-   * @public
-   */
-  Tenancy?: Tenancy | undefined;
-
-  /**
-   * <p>Reserved for future use.</p>
-   * @public
-   */
-  SpreadDomain?: string | undefined;
-
-  /**
-   * <p>The ARN of the host resource group in which to launch the instances. </p>
-   * @public
-   */
-  HostResourceGroupArn?: string | undefined;
-
-  /**
-   * <p>The number of the partition the instance should launch in. Valid only if the placement
-   *             group strategy is set to <code>partition</code>.</p>
-   * @public
-   */
-  PartitionNumber?: number | undefined;
-
-  /**
-   * <p>The Group ID of the placement group. You must specify the Placement Group <b>Group ID</b> to launch an instance in a shared placement
-   *             group.</p>
-   * @public
-   */
-  GroupId?: string | undefined;
-}
-
-/**
- * <p>Describes the options for instance hostnames.</p>
- * @public
- */
-export interface LaunchTemplatePrivateDnsNameOptions {
-  /**
-   * <p>The type of hostname to assign to an instance.</p>
-   * @public
-   */
-  HostnameType?: HostnameType | undefined;
-
-  /**
-   * <p>Indicates whether to respond to DNS queries for instance hostnames with DNS A
-   *             records.</p>
-   * @public
-   */
-  EnableResourceNameDnsARecord?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA
-   *             records.</p>
-   * @public
-   */
-  EnableResourceNameDnsAAAARecord?: boolean | undefined;
-}
-
-/**
- * <p>The tags specification for the launch template.</p>
- * @public
- */
-export interface LaunchTemplateTagSpecification {
-  /**
-   * <p>The type of resource to tag.</p>
-   * @public
-   */
-  ResourceType?: ResourceType | undefined;
-
-  /**
-   * <p>The tags for the resource.</p>
-   * @public
-   */
-  Tags?: Tag[] | undefined;
-}
-
-/**
- * <p>The information for a launch template. </p>
- * @public
- */
-export interface ResponseLaunchTemplateData {
-  /**
-   * <p>The ID of the kernel, if applicable.</p>
-   * @public
-   */
-  KernelId?: string | undefined;
-
-  /**
-   * <p>Indicates whether the instance is optimized for Amazon EBS I/O. </p>
-   * @public
-   */
-  EbsOptimized?: boolean | undefined;
-
-  /**
-   * <p>The IAM instance profile.</p>
-   * @public
-   */
-  IamInstanceProfile?: LaunchTemplateIamInstanceProfileSpecification | undefined;
-
-  /**
-   * <p>The block device mappings.</p>
-   * @public
-   */
-  BlockDeviceMappings?: LaunchTemplateBlockDeviceMapping[] | undefined;
-
-  /**
-   * <p>The network interfaces.</p>
-   * @public
-   */
-  NetworkInterfaces?: LaunchTemplateInstanceNetworkInterfaceSpecification[] | undefined;
-
-  /**
-   * <p>The ID of the AMI or a Systems Manager parameter. The Systems Manager parameter will
-   *             resolve to the ID of the AMI at instance launch.</p>
-   *          <p>The value depends on what you specified in the request. The possible values are:</p>
-   *          <ul>
-   *             <li>
-   *                <p>If an AMI ID was specified in the request, then this is the AMI ID.</p>
-   *             </li>
-   *             <li>
-   *                <p>If a Systems Manager parameter was specified in the request, and
-   *                     <code>ResolveAlias</code> was configured as <code>true</code>, then this is
-   *                     the AMI ID that the parameter is mapped to in the Parameter Store.</p>
-   *             </li>
-   *             <li>
-   *                <p>If a Systems Manager parameter was specified in the request, and <code>ResolveAlias</code> was configured
-   *                     as <code>false</code>, then this is the parameter value.</p>
-   *             </li>
-   *          </ul>
-   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id">Use a Systems Manager parameter instead of an AMI ID</a> in the
-   *                 <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  ImageId?: string | undefined;
-
-  /**
-   * <p>The instance type.</p>
-   * @public
-   */
-  InstanceType?: _InstanceType | undefined;
-
-  /**
-   * <p>The name of the key pair.</p>
-   * @public
-   */
-  KeyName?: string | undefined;
-
-  /**
-   * <p>The monitoring for the instance.</p>
-   * @public
-   */
-  Monitoring?: LaunchTemplatesMonitoring | undefined;
-
-  /**
-   * <p>The placement of the instance.</p>
-   * @public
-   */
-  Placement?: LaunchTemplatePlacement | undefined;
-
-  /**
-   * <p>The ID of the RAM disk, if applicable.</p>
-   * @public
-   */
-  RamDiskId?: string | undefined;
-
-  /**
-   * <p>If set to <code>true</code>, indicates that the instance cannot be terminated using
-   *             the Amazon EC2 console, command line tool, or API.</p>
-   * @public
-   */
-  DisableApiTermination?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether an instance stops or terminates when you initiate shutdown from the
-   *             instance (using the operating system command for system shutdown).</p>
-   * @public
-   */
-  InstanceInitiatedShutdownBehavior?: ShutdownBehavior | undefined;
-
-  /**
-   * <p>The user data for the instance. </p>
-   * @public
-   */
-  UserData?: string | undefined;
-
-  /**
-   * <p>The tags that are applied to the resources that are created during instance
-   *             launch.</p>
-   * @public
-   */
-  TagSpecifications?: LaunchTemplateTagSpecification[] | undefined;
-
-  /**
-   * <p>Deprecated.</p>
-   *          <note>
-   *             <p>Amazon Elastic Graphics reached end of life on January 8, 2024.</p>
-   *          </note>
-   * @public
-   */
-  ElasticGpuSpecifications?: ElasticGpuSpecificationResponse[] | undefined;
-
-  /**
-   * <note>
-   *             <p>Amazon Elastic Inference is no longer available.</p>
-   *          </note>
-   *          <p>An elastic inference accelerator to associate with the instance. Elastic inference
-   *             accelerators are a resource you can attach to your Amazon EC2 instances to accelerate
-   *             your Deep Learning (DL) inference workloads.</p>
-   *          <p>You cannot specify accelerators from different generations in the same request.</p>
-   * @public
-   */
-  ElasticInferenceAccelerators?: LaunchTemplateElasticInferenceAcceleratorResponse[] | undefined;
-
-  /**
-   * <p>The security group IDs.</p>
-   * @public
-   */
-  SecurityGroupIds?: string[] | undefined;
-
-  /**
-   * <p>The security group names.</p>
-   * @public
-   */
-  SecurityGroups?: string[] | undefined;
-
-  /**
-   * <p>The market (purchasing) option for the instances.</p>
-   * @public
-   */
-  InstanceMarketOptions?: LaunchTemplateInstanceMarketOptions | undefined;
-
-  /**
-   * <p>The credit option for CPU usage of the instance.</p>
-   * @public
-   */
-  CreditSpecification?: CreditSpecification | undefined;
-
-  /**
-   * <p>The CPU options for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">CPU
-   *                 options for Amazon EC2 instances</a> in the
-   *             <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  CpuOptions?: LaunchTemplateCpuOptions | undefined;
-
-  /**
-   * <p>Information about the Capacity Reservation targeting option.</p>
-   * @public
-   */
-  CapacityReservationSpecification?: LaunchTemplateCapacityReservationSpecificationResponse | undefined;
-
-  /**
-   * <p>The license configurations.</p>
-   * @public
-   */
-  LicenseSpecifications?: LaunchTemplateLicenseConfiguration[] | undefined;
-
-  /**
-   * <p>Indicates whether an instance is configured for hibernation. For more information, see
-   *                 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
-   *                 your Amazon EC2 instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  HibernationOptions?: LaunchTemplateHibernationOptions | undefined;
-
-  /**
-   * <p>The metadata options for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure the Instance Metadata Service options</a> in the
-   *                 <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  MetadataOptions?: LaunchTemplateInstanceMetadataOptions | undefined;
-
-  /**
-   * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves.</p>
-   * @public
-   */
-  EnclaveOptions?: LaunchTemplateEnclaveOptions | undefined;
-
-  /**
-   * <p>The attributes for the instance types. When you specify instance attributes, Amazon EC2 will
-   *          identify instance types with these attributes.</p>
-   *          <p>If you specify <code>InstanceRequirements</code>, you can't specify
-   *          <code>InstanceTypes</code>.</p>
-   * @public
-   */
-  InstanceRequirements?: InstanceRequirements | undefined;
-
-  /**
-   * <p>The options for the instance hostname.</p>
-   * @public
-   */
-  PrivateDnsNameOptions?: LaunchTemplatePrivateDnsNameOptions | undefined;
-
-  /**
-   * <p>The maintenance options for your instance.</p>
-   * @public
-   */
-  MaintenanceOptions?: LaunchTemplateInstanceMaintenanceOptions | undefined;
-
-  /**
-   * <p>Indicates whether the instance is enabled for stop protection. For more information,
-   *             see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for your EC2 instances</a> in the
-   *                 <i>Amazon EC2 User Guide</i>.</p>
-   * @public
-   */
-  DisableApiStop?: boolean | undefined;
-
-  /**
-   * <p>The entity that manages the launch template.</p>
-   * @public
-   */
-  Operator?: OperatorResponse | undefined;
-
-  /**
-   * <p>Contains the launch template settings for network performance options for
-   *         	your instance.</p>
-   * @public
-   */
-  NetworkPerformanceOptions?: LaunchTemplateNetworkPerformanceOptions | undefined;
-}
-
-/**
- * <p>Describes a launch template version.</p>
- * @public
- */
-export interface LaunchTemplateVersion {
-  /**
-   * <p>The ID of the launch template.</p>
-   * @public
-   */
-  LaunchTemplateId?: string | undefined;
-
-  /**
-   * <p>The name of the launch template.</p>
-   * @public
-   */
-  LaunchTemplateName?: string | undefined;
-
-  /**
-   * <p>The version number.</p>
-   * @public
-   */
-  VersionNumber?: number | undefined;
-
-  /**
-   * <p>The description for the version.</p>
-   * @public
-   */
-  VersionDescription?: string | undefined;
-
-  /**
-   * <p>The time the version was created.</p>
-   * @public
-   */
-  CreateTime?: Date | undefined;
-
-  /**
-   * <p>The principal that created the version.</p>
-   * @public
-   */
-  CreatedBy?: string | undefined;
-
-  /**
-   * <p>Indicates whether the version is the default version.</p>
-   * @public
-   */
-  DefaultVersion?: boolean | undefined;
-
-  /**
-   * <p>Information about the launch template.</p>
-   * @public
-   */
-  LaunchTemplateData?: ResponseLaunchTemplateData | undefined;
-
-  /**
-   * <p>The entity that manages the launch template.</p>
-   * @public
-   */
-  Operator?: OperatorResponse | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateLaunchTemplateVersionResult {
-  /**
-   * <p>Information about the launch template version.</p>
-   * @public
-   */
-  LaunchTemplateVersion?: LaunchTemplateVersion | undefined;
-
-  /**
-   * <p>If the new version of the launch template contains parameters or parameter
-   *             combinations that are not valid, an error code and an error message are returned for
-   *             each issue that's found.</p>
-   * @public
-   */
-  Warning?: ValidationWarning | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateLocalGatewayRouteRequest {
-  /**
-   * <p>The CIDR range used for destination matches. Routing decisions are based on
-   *         the most specific match.</p>
-   * @public
-   */
-  DestinationCidrBlock?: string | undefined;
-
-  /**
-   * <p>The ID of the local gateway route table.</p>
-   * @public
-   */
-  LocalGatewayRouteTableId: string | undefined;
-
-  /**
-   * <p>The ID of the virtual interface group.</p>
-   * @public
-   */
-  LocalGatewayVirtualInterfaceGroupId?: string | undefined;
-
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-
-  /**
-   * <p>The ID of the network interface.</p>
-   * @public
-   */
-  NetworkInterfaceId?: string | undefined;
-
-  /**
-   * <p>
-   *          The ID of the prefix list. Use a prefix list in place of <code>DestinationCidrBlock</code>. You
-   *          cannot use <code>DestinationPrefixListId</code> and <code>DestinationCidrBlock</code> in the same request.
-   *       </p>
-   * @public
-   */
-  DestinationPrefixListId?: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const LocalGatewayRouteState = {
-  active: "active",
-  blackhole: "blackhole",
-  deleted: "deleted",
-  deleting: "deleting",
-  pending: "pending",
-} as const;
-
-/**
- * @public
- */
-export type LocalGatewayRouteState = (typeof LocalGatewayRouteState)[keyof typeof LocalGatewayRouteState];
-
-/**
- * @public
- * @enum
- */
-export const LocalGatewayRouteType = {
-  propagated: "propagated",
-  static: "static",
-} as const;
-
-/**
- * @public
- */
-export type LocalGatewayRouteType = (typeof LocalGatewayRouteType)[keyof typeof LocalGatewayRouteType];
-
-/**
- * <p>Describes a route for a local gateway route table.</p>
- * @public
- */
-export interface LocalGatewayRoute {
-  /**
-   * <p>The CIDR block used for destination matches.</p>
-   * @public
-   */
-  DestinationCidrBlock?: string | undefined;
-
-  /**
-   * <p>The ID of the virtual interface group.</p>
-   * @public
-   */
-  LocalGatewayVirtualInterfaceGroupId?: string | undefined;
-
-  /**
-   * <p>The route type.</p>
-   * @public
-   */
-  Type?: LocalGatewayRouteType | undefined;
-
-  /**
-   * <p>The state of the route.</p>
-   * @public
-   */
-  State?: LocalGatewayRouteState | undefined;
-
-  /**
-   * <p>The ID of the local gateway route table.</p>
-   * @public
-   */
-  LocalGatewayRouteTableId?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the local gateway route table.</p>
-   * @public
-   */
-  LocalGatewayRouteTableArn?: string | undefined;
-
-  /**
-   * <p>The ID of the Amazon Web Services account that owns the local gateway route.</p>
-   * @public
-   */
-  OwnerId?: string | undefined;
-
-  /**
-   * <p>The ID of the subnet.</p>
-   * @public
-   */
-  SubnetId?: string | undefined;
-
-  /**
-   * <p>The ID of the customer-owned address pool.</p>
-   * @public
-   */
-  CoipPoolId?: string | undefined;
-
-  /**
-   * <p>The ID of the network interface.</p>
-   * @public
-   */
-  NetworkInterfaceId?: string | undefined;
-
-  /**
-   * <p>
-   *          The ID of the prefix list.
-   *       </p>
-   * @public
-   */
-  DestinationPrefixListId?: string | undefined;
-}
+export const CreateDelegateMacVolumeOwnershipTaskRequestFilterSensitiveLog = (
+  obj: CreateDelegateMacVolumeOwnershipTaskRequest
+): any => ({
+  ...obj,
+  ...(obj.MacCredentials && { MacCredentials: SENSITIVE_STRING }),
+});
 
 /**
  * @internal
@@ -12484,33 +12699,5 @@ export const CreateLaunchTemplateVersionRequestFilterSensitiveLog = (obj: Create
   ...obj,
   ...(obj.LaunchTemplateData && {
     LaunchTemplateData: RequestLaunchTemplateDataFilterSensitiveLog(obj.LaunchTemplateData),
-  }),
-});
-
-/**
- * @internal
- */
-export const ResponseLaunchTemplateDataFilterSensitiveLog = (obj: ResponseLaunchTemplateData): any => ({
-  ...obj,
-  ...(obj.UserData && { UserData: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const LaunchTemplateVersionFilterSensitiveLog = (obj: LaunchTemplateVersion): any => ({
-  ...obj,
-  ...(obj.LaunchTemplateData && {
-    LaunchTemplateData: ResponseLaunchTemplateDataFilterSensitiveLog(obj.LaunchTemplateData),
-  }),
-});
-
-/**
- * @internal
- */
-export const CreateLaunchTemplateVersionResultFilterSensitiveLog = (obj: CreateLaunchTemplateVersionResult): any => ({
-  ...obj,
-  ...(obj.LaunchTemplateVersion && {
-    LaunchTemplateVersion: LaunchTemplateVersionFilterSensitiveLog(obj.LaunchTemplateVersion),
   }),
 });

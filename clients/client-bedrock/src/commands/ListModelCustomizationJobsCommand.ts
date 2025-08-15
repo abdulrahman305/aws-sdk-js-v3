@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { BedrockClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../BedrockClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListModelCustomizationJobsRequest, ListModelCustomizationJobsResponse } from "../models/models_0";
+import { ListModelCustomizationJobsRequest, ListModelCustomizationJobsResponse } from "../models/models_1";
 import { de_ListModelCustomizationJobsCommand, se_ListModelCustomizationJobsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,9 +28,7 @@ export interface ListModelCustomizationJobsCommandInput extends ListModelCustomi
 export interface ListModelCustomizationJobsCommandOutput extends ListModelCustomizationJobsResponse, __MetadataBearer {}
 
 /**
- * <p>Returns a list of model customization jobs that you have submitted. You can filter the jobs to return based on
- *       one or more criteria.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
+ * <p>Returns a list of model customization jobs that you have submitted. You can filter the jobs to return based on one or more criteria.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html">Custom models</a> in the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Amazon Bedrock User Guide</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -57,12 +55,29 @@ export interface ListModelCustomizationJobsCommandOutput extends ListModelCustom
  * //       baseModelArn: "STRING_VALUE", // required
  * //       jobName: "STRING_VALUE", // required
  * //       status: "InProgress" || "Completed" || "Failed" || "Stopping" || "Stopped", // required
+ * //       statusDetails: { // StatusDetails
+ * //         validationDetails: { // ValidationDetails
+ * //           status: "InProgress" || "Completed" || "Stopping" || "Stopped" || "Failed" || "NotStarted",
+ * //           creationTime: new Date("TIMESTAMP"),
+ * //           lastModifiedTime: new Date("TIMESTAMP"),
+ * //         },
+ * //         dataProcessingDetails: { // DataProcessingDetails
+ * //           status: "InProgress" || "Completed" || "Stopping" || "Stopped" || "Failed" || "NotStarted",
+ * //           creationTime: new Date("TIMESTAMP"),
+ * //           lastModifiedTime: new Date("TIMESTAMP"),
+ * //         },
+ * //         trainingDetails: { // TrainingDetails
+ * //           status: "InProgress" || "Completed" || "Stopping" || "Stopped" || "Failed" || "NotStarted",
+ * //           creationTime: new Date("TIMESTAMP"),
+ * //           lastModifiedTime: new Date("TIMESTAMP"),
+ * //         },
+ * //       },
  * //       lastModifiedTime: new Date("TIMESTAMP"),
  * //       creationTime: new Date("TIMESTAMP"), // required
  * //       endTime: new Date("TIMESTAMP"),
  * //       customModelArn: "STRING_VALUE",
  * //       customModelName: "STRING_VALUE",
- * //       customizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING" || "DISTILLATION",
+ * //       customizationType: "FINE_TUNING" || "CONTINUED_PRE_TRAINING" || "DISTILLATION" || "IMPORTED",
  * //     },
  * //   ],
  * // };

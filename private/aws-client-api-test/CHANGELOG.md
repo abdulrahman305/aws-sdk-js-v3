@@ -3,6 +3,537 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.868.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.867.0...v3.868.0) (2025-08-14)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.866.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.865.0...v3.866.0) (2025-08-12)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.865.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.864.0...v3.865.0) (2025-08-11)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.864.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.863.0...v3.864.0) (2025-08-08)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.863.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.862.0...v3.863.0) (2025-08-07)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.862.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.861.0...v3.862.0) (2025-08-06)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.861.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.860.0...v3.861.0) (2025-08-05)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.859.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.858.0...v3.859.0) (2025-08-01)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.858.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.857.0...v3.858.0) (2025-07-31)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.857.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.856.0...v3.857.0) (2025-07-30)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.856.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.855.0...v3.856.0) (2025-07-29)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.855.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.854.0...v3.855.0) (2025-07-28)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.854.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.853.0...v3.854.0) (2025-07-25)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.852.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.851.0...v3.852.0) (2025-07-23)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.850.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.849.0...v3.850.0) (2025-07-21)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.848.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.847.0...v3.848.0) (2025-07-17)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.846.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.845.0...v3.846.0) (2025-07-16)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.845.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.844.0...v3.845.0) (2025-07-15)
+
+
+### Bug Fixes
+
+* **clients:** upgrade @smithy/middleware-endpoint to fix file/env endpoint resolution ([#7206](https://github.com/aws/aws-sdk-js-v3/issues/7206)) ([37a6275](https://github.com/aws/aws-sdk-js-v3/commit/37a627510bc53ad0ce8d3ef10a2a5ec8ad195ee2))
+
+
+
+
+
+# [3.844.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.843.0...v3.844.0) (2025-07-09)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.843.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.842.0...v3.843.0) (2025-07-03)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.842.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.841.0...v3.842.0) (2025-07-02)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.841.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.840.0...v3.841.0) (2025-07-01)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.840.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.839.0...v3.840.0) (2025-06-30)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.839.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.838.0...v3.839.0) (2025-06-27)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.838.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.837.0...v3.838.0) (2025-06-26)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.837.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.836.0...v3.837.0) (2025-06-25)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.836.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.835.0...v3.836.0) (2025-06-24)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.835.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.834.0...v3.835.0) (2025-06-23)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.832.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.831.0...v3.832.0) (2025-06-18)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.831.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.830.0...v3.831.0) (2025-06-17)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.830.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.829.0...v3.830.0) (2025-06-16)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.828.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.827.1...v3.828.0) (2025-06-11)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.827.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.826.0...v3.827.0) (2025-06-09)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.826.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.825.0...v3.826.0) (2025-06-06)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.825.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.824.0...v3.825.0) (2025-06-05)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.824.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.823.0...v3.824.0) (2025-06-04)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.823.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.822.0...v3.823.0) (2025-06-03)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.821.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.820.0...v3.821.0) (2025-05-30)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.820.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.819.0...v3.820.0) (2025-05-29)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.819.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.818.0...v3.819.0) (2025-05-28)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.818.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.817.0...v3.818.0) (2025-05-27)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.817.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.816.0...v3.817.0) (2025-05-23)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.816.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.815.0...v3.816.0) (2025-05-22)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.815.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.814.0...v3.815.0) (2025-05-21)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.814.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.813.0...v3.814.0) (2025-05-20)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.813.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.812.0...v3.813.0) (2025-05-19)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.812.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.811.0...v3.812.0) (2025-05-16)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.810.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.809.0...v3.810.0) (2025-05-14)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.808.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.807.0...v3.808.0) (2025-05-12)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.806.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.805.0...v3.806.0) (2025-05-08)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.805.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.804.0...v3.805.0) (2025-05-07)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.804.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.803.0...v3.804.0) (2025-05-06)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.803.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.802.0...v3.803.0) (2025-05-05)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.802.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.801.0...v3.802.0) (2025-05-02)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.800.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.799.0...v3.800.0) (2025-04-30)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.799.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.798.0...v3.799.0) (2025-04-29)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.798.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.797.0...v3.798.0) (2025-04-28)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.797.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.796.0...v3.797.0) (2025-04-25)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.796.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.795.0...v3.796.0) (2025-04-24)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.794.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.793.0...v3.794.0) (2025-04-22)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.788.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.787.0...v3.788.0) (2025-04-11)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.787.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.786.0...v3.787.0) (2025-04-10)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.786.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.785.0...v3.786.0) (2025-04-09)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.783.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.782.0...v3.783.0) (2025-04-04)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.782.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.781.0...v3.782.0) (2025-04-03)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
+# [3.779.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.778.0...v3.779.0) (2025-03-31)
+
+**Note:** Version bump only for package @aws-sdk/aws-client-api-test
+
+
+
+
+
 # [3.777.0](https://github.com/aws/aws-sdk-js-v3/compare/v3.776.0...v3.777.0) (2025-03-27)
 
 **Note:** Version bump only for package @aws-sdk/aws-client-api-test

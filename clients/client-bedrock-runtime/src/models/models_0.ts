@@ -6,8 +6,7 @@ import { DocumentType as __DocumentType } from "@smithy/types";
 import { BedrockRuntimeServiceException as __BaseException } from "./BedrockRuntimeServiceException";
 
 /**
- * <p>The request is denied because you do not have sufficient permissions to perform the requested action. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-access-denied">AccessDeniedException</a> in the Amazon Bedrock User Guide</p>
+ * <p>The request is denied because you do not have sufficient permissions to perform the requested action. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-access-denied">AccessDeniedException</a> in the Amazon Bedrock User Guide</p>
  * @public
  */
 export class AccessDeniedException extends __BaseException {
@@ -176,8 +175,7 @@ export interface GetAsyncInvokeResponse {
 }
 
 /**
- * <p>An internal server error occurred. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-internal-failure">InternalFailure</a> in the Amazon Bedrock User Guide</p>
+ * <p>An internal server error occurred. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-internal-failure">InternalFailure</a> in the Amazon Bedrock User Guide</p>
  * @public
  */
 export class InternalServerException extends __BaseException {
@@ -197,8 +195,7 @@ export class InternalServerException extends __BaseException {
 }
 
 /**
- * <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For
- *          troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
+ * <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
  * @public
  */
 export class ThrottlingException extends __BaseException {
@@ -218,8 +215,7 @@ export class ThrottlingException extends __BaseException {
 }
 
 /**
- * <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
+ * <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
  * @public
  */
 export class ValidationException extends __BaseException {
@@ -410,8 +406,7 @@ export class ConflictException extends __BaseException {
 }
 
 /**
- * <p>The specified resource ARN was not found. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-resource-not-found">ResourceNotFound</a> in the Amazon Bedrock User Guide</p>
+ * <p>The specified resource ARN was not found. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-resource-not-found">ResourceNotFound</a> in the Amazon Bedrock User Guide</p>
  * @public
  */
 export class ResourceNotFoundException extends __BaseException {
@@ -451,8 +446,7 @@ export class ServiceQuotaExceededException extends __BaseException {
 }
 
 /**
- * <p>The service isn't currently available. For troubleshooting this error,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-service-unavailable">ServiceUnavailable</a> in the Amazon Bedrock User Guide</p>
+ * <p>The service isn't currently available. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-service-unavailable">ServiceUnavailable</a> in the Amazon Bedrock User Guide</p>
  * @public
  */
 export class ServiceUnavailableException extends __BaseException {
@@ -697,6 +691,20 @@ export namespace GuardrailContentBlock {
  * @public
  * @enum
  */
+export const GuardrailOutputScope = {
+  FULL: "FULL",
+  INTERVENTIONS: "INTERVENTIONS",
+} as const;
+
+/**
+ * @public
+ */
+export type GuardrailOutputScope = (typeof GuardrailOutputScope)[keyof typeof GuardrailOutputScope];
+
+/**
+ * @public
+ * @enum
+ */
 export const GuardrailContentSource = {
   INPUT: "INPUT",
   OUTPUT: "OUTPUT",
@@ -734,6 +742,12 @@ export interface ApplyGuardrailRequest {
    * @public
    */
   content: GuardrailContentBlock[] | undefined;
+
+  /**
+   * <p>Specifies the scope of the output that you get in the response. Set to <code>FULL</code> to return the entire output, including any detected and non-detected entries in the response for enhanced debugging.</p> <p>Note that the full output scope doesn't apply to word filters or regex in sensitive information filters. It does apply to all other filtering policies, including sensitive information with filters that can detect personally identifiable information (PII).</p>
+   * @public
+   */
+  outputScope?: GuardrailOutputScope | undefined;
 }
 
 /**
@@ -751,11 +765,469 @@ export const GuardrailAction = {
 export type GuardrailAction = (typeof GuardrailAction)[keyof typeof GuardrailAction];
 
 /**
+ * <p>References a specific automated reasoning policy rule that was applied during evaluation.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningRule {
+  /**
+   * <p>The unique identifier of the automated reasoning rule.</p>
+   * @public
+   */
+  identifier?: string | undefined;
+
+  /**
+   * <p>The ARN of the automated reasoning policy version that contains this rule.</p>
+   * @public
+   */
+  policyVersionArn?: string | undefined;
+}
+
+/**
+ * <p>A logical statement that includes both formal logic representation and natural language explanation.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningStatement {
+  /**
+   * <p>The formal logical representation of the statement.</p>
+   * @public
+   */
+  logic?: string | undefined;
+
+  /**
+   * <p>The natural language explanation of the logical statement.</p>
+   * @public
+   */
+  naturalLanguage?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const GuardrailAutomatedReasoningLogicWarningType = {
+  ALWAYS_FALSE: "ALWAYS_FALSE",
+  ALWAYS_TRUE: "ALWAYS_TRUE",
+} as const;
+
+/**
+ * @public
+ */
+export type GuardrailAutomatedReasoningLogicWarningType =
+  (typeof GuardrailAutomatedReasoningLogicWarningType)[keyof typeof GuardrailAutomatedReasoningLogicWarningType];
+
+/**
+ * <p>Identifies logical issues in the translated statements that exist independent of any policy rules, such as statements that are always true or always false.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningLogicWarning {
+  /**
+   * <p>The category of the detected logical issue, such as statements that are always true or always false.</p>
+   * @public
+   */
+  type?: GuardrailAutomatedReasoningLogicWarningType | undefined;
+
+  /**
+   * <p>The logical statements that serve as premises under which the claims are validated.</p>
+   * @public
+   */
+  premises?: GuardrailAutomatedReasoningStatement[] | undefined;
+
+  /**
+   * <p>The logical statements that are validated while assuming the policy and premises.</p>
+   * @public
+   */
+  claims?: GuardrailAutomatedReasoningStatement[] | undefined;
+}
+
+/**
+ * <p>References a portion of the original input text that corresponds to logical elements.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningInputTextReference {
+  /**
+   * <p>The specific text from the original input that this reference points to.</p>
+   * @public
+   */
+  text?: string | undefined;
+}
+
+/**
+ * <p>Contains the logical translation of natural language input into formal logical statements, including premises, claims, and confidence scores.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningTranslation {
+  /**
+   * <p>The logical statements that serve as the foundation or assumptions for the claims.</p>
+   * @public
+   */
+  premises?: GuardrailAutomatedReasoningStatement[] | undefined;
+
+  /**
+   * <p>The logical statements that are being validated against the premises and policy rules.</p>
+   * @public
+   */
+  claims?: GuardrailAutomatedReasoningStatement[] | undefined;
+
+  /**
+   * <p>References to portions of the original input text that correspond to the premises but could not be fully translated.</p>
+   * @public
+   */
+  untranslatedPremises?: GuardrailAutomatedReasoningInputTextReference[] | undefined;
+
+  /**
+   * <p>References to portions of the original input text that correspond to the claims but could not be fully translated.</p>
+   * @public
+   */
+  untranslatedClaims?: GuardrailAutomatedReasoningInputTextReference[] | undefined;
+
+  /**
+   * <p>A confidence score between 0 and 1 indicating how certain the system is about the logical translation.</p>
+   * @public
+   */
+  confidence?: number | undefined;
+}
+
+/**
+ * <p>Indicates that no valid claims can be made due to logical contradictions in the premises or rules.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningImpossibleFinding {
+  /**
+   * <p>The logical translation of the input that this finding evaluates.</p>
+   * @public
+   */
+  translation?: GuardrailAutomatedReasoningTranslation | undefined;
+
+  /**
+   * <p>The automated reasoning policy rules that contradict the claims and/or premises in the input.</p>
+   * @public
+   */
+  contradictingRules?: GuardrailAutomatedReasoningRule[] | undefined;
+
+  /**
+   * <p>Indication of a logic issue with the translation without needing to consider the automated reasoning policy rules.</p>
+   * @public
+   */
+  logicWarning?: GuardrailAutomatedReasoningLogicWarning | undefined;
+}
+
+/**
+ * <p>Indicates that the claims are logically false and contradictory to the established rules or premises.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningInvalidFinding {
+  /**
+   * <p>The logical translation of the input that this finding invalidates.</p>
+   * @public
+   */
+  translation?: GuardrailAutomatedReasoningTranslation | undefined;
+
+  /**
+   * <p>The automated reasoning policy rules that contradict the claims in the input.</p>
+   * @public
+   */
+  contradictingRules?: GuardrailAutomatedReasoningRule[] | undefined;
+
+  /**
+   * <p>Indication of a logic issue with the translation without needing to consider the automated reasoning policy rules.</p>
+   * @public
+   */
+  logicWarning?: GuardrailAutomatedReasoningLogicWarning | undefined;
+}
+
+/**
+ * <p>Indicates that no relevant logical information could be extracted from the input for validation.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningNoTranslationsFinding {}
+
+/**
+ * <p>Represents a logical scenario where claims can be evaluated as true or false, containing specific logical assignments.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningScenario {
+  /**
+   * <p>List of logical assignments and statements that define this scenario.</p>
+   * @public
+   */
+  statements?: GuardrailAutomatedReasoningStatement[] | undefined;
+}
+
+/**
+ * <p>Indicates that the claims could be either true or false depending on additional assumptions not provided in the input.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningSatisfiableFinding {
+  /**
+   * <p>The logical translation of the input that this finding evaluates.</p>
+   * @public
+   */
+  translation?: GuardrailAutomatedReasoningTranslation | undefined;
+
+  /**
+   * <p>An example scenario demonstrating how the claims could be logically true.</p>
+   * @public
+   */
+  claimsTrueScenario?: GuardrailAutomatedReasoningScenario | undefined;
+
+  /**
+   * <p>An example scenario demonstrating how the claims could be logically false.</p>
+   * @public
+   */
+  claimsFalseScenario?: GuardrailAutomatedReasoningScenario | undefined;
+
+  /**
+   * <p>Indication of a logic issue with the translation without needing to consider the automated reasoning policy rules.</p>
+   * @public
+   */
+  logicWarning?: GuardrailAutomatedReasoningLogicWarning | undefined;
+}
+
+/**
+ * <p>Indicates that the input exceeds the processing capacity due to the volume or complexity of the logical information.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningTooComplexFinding {}
+
+/**
+ * <p>Represents one possible logical interpretation of ambiguous input content.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningTranslationOption {
+  /**
+   * <p>Example translations that provide this possible interpretation of the input.</p>
+   * @public
+   */
+  translations?: GuardrailAutomatedReasoningTranslation[] | undefined;
+}
+
+/**
+ * <p>Indicates that the input has multiple valid logical interpretations, requiring additional context or clarification.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningTranslationAmbiguousFinding {
+  /**
+   * <p>Different logical interpretations that were detected during translation of the input.</p>
+   * @public
+   */
+  options?: GuardrailAutomatedReasoningTranslationOption[] | undefined;
+
+  /**
+   * <p>Scenarios showing how the different translation options differ in meaning.</p>
+   * @public
+   */
+  differenceScenarios?: GuardrailAutomatedReasoningScenario[] | undefined;
+}
+
+/**
+ * <p>Indicates that the claims are definitively true and logically implied by the premises, with no possible alternative interpretations.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningValidFinding {
+  /**
+   * <p>The logical translation of the input that this finding validates.</p>
+   * @public
+   */
+  translation?: GuardrailAutomatedReasoningTranslation | undefined;
+
+  /**
+   * <p>An example scenario demonstrating how the claims are logically true.</p>
+   * @public
+   */
+  claimsTrueScenario?: GuardrailAutomatedReasoningScenario | undefined;
+
+  /**
+   * <p>The automated reasoning policy rules that support why this result is considered valid.</p>
+   * @public
+   */
+  supportingRules?: GuardrailAutomatedReasoningRule[] | undefined;
+
+  /**
+   * <p>Indication of a logic issue with the translation without needing to consider the automated reasoning policy rules.</p>
+   * @public
+   */
+  logicWarning?: GuardrailAutomatedReasoningLogicWarning | undefined;
+}
+
+/**
+ * <p>Represents a logical validation result from automated reasoning policy evaluation. The finding indicates whether claims in the input are logically valid, invalid, satisfiable, impossible, or have other logical issues.</p>
+ * @public
+ */
+export type GuardrailAutomatedReasoningFinding =
+  | GuardrailAutomatedReasoningFinding.ImpossibleMember
+  | GuardrailAutomatedReasoningFinding.InvalidMember
+  | GuardrailAutomatedReasoningFinding.NoTranslationsMember
+  | GuardrailAutomatedReasoningFinding.SatisfiableMember
+  | GuardrailAutomatedReasoningFinding.TooComplexMember
+  | GuardrailAutomatedReasoningFinding.TranslationAmbiguousMember
+  | GuardrailAutomatedReasoningFinding.ValidMember
+  | GuardrailAutomatedReasoningFinding.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace GuardrailAutomatedReasoningFinding {
+  /**
+   * <p>Indicates that the claims are definitively true and logically implied by the premises, with no possible alternative interpretations.</p>
+   * @public
+   */
+  export interface ValidMember {
+    valid: GuardrailAutomatedReasoningValidFinding;
+    invalid?: never;
+    satisfiable?: never;
+    impossible?: never;
+    translationAmbiguous?: never;
+    tooComplex?: never;
+    noTranslations?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Indicates that the claims are logically false and contradictory to the established rules or premises.</p>
+   * @public
+   */
+  export interface InvalidMember {
+    valid?: never;
+    invalid: GuardrailAutomatedReasoningInvalidFinding;
+    satisfiable?: never;
+    impossible?: never;
+    translationAmbiguous?: never;
+    tooComplex?: never;
+    noTranslations?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Indicates that the claims could be either true or false depending on additional assumptions not provided in the input.</p>
+   * @public
+   */
+  export interface SatisfiableMember {
+    valid?: never;
+    invalid?: never;
+    satisfiable: GuardrailAutomatedReasoningSatisfiableFinding;
+    impossible?: never;
+    translationAmbiguous?: never;
+    tooComplex?: never;
+    noTranslations?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Indicates that no valid claims can be made due to logical contradictions in the premises or rules.</p>
+   * @public
+   */
+  export interface ImpossibleMember {
+    valid?: never;
+    invalid?: never;
+    satisfiable?: never;
+    impossible: GuardrailAutomatedReasoningImpossibleFinding;
+    translationAmbiguous?: never;
+    tooComplex?: never;
+    noTranslations?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Indicates that the input has multiple valid logical interpretations, requiring additional context or clarification.</p>
+   * @public
+   */
+  export interface TranslationAmbiguousMember {
+    valid?: never;
+    invalid?: never;
+    satisfiable?: never;
+    impossible?: never;
+    translationAmbiguous: GuardrailAutomatedReasoningTranslationAmbiguousFinding;
+    tooComplex?: never;
+    noTranslations?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Indicates that the input exceeds the processing capacity due to the volume or complexity of the logical information.</p>
+   * @public
+   */
+  export interface TooComplexMember {
+    valid?: never;
+    invalid?: never;
+    satisfiable?: never;
+    impossible?: never;
+    translationAmbiguous?: never;
+    tooComplex: GuardrailAutomatedReasoningTooComplexFinding;
+    noTranslations?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Indicates that no relevant logical information could be extracted from the input for validation.</p>
+   * @public
+   */
+  export interface NoTranslationsMember {
+    valid?: never;
+    invalid?: never;
+    satisfiable?: never;
+    impossible?: never;
+    translationAmbiguous?: never;
+    tooComplex?: never;
+    noTranslations: GuardrailAutomatedReasoningNoTranslationsFinding;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    valid?: never;
+    invalid?: never;
+    satisfiable?: never;
+    impossible?: never;
+    translationAmbiguous?: never;
+    tooComplex?: never;
+    noTranslations?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    valid: (value: GuardrailAutomatedReasoningValidFinding) => T;
+    invalid: (value: GuardrailAutomatedReasoningInvalidFinding) => T;
+    satisfiable: (value: GuardrailAutomatedReasoningSatisfiableFinding) => T;
+    impossible: (value: GuardrailAutomatedReasoningImpossibleFinding) => T;
+    translationAmbiguous: (value: GuardrailAutomatedReasoningTranslationAmbiguousFinding) => T;
+    tooComplex: (value: GuardrailAutomatedReasoningTooComplexFinding) => T;
+    noTranslations: (value: GuardrailAutomatedReasoningNoTranslationsFinding) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: GuardrailAutomatedReasoningFinding, visitor: Visitor<T>): T => {
+    if (value.valid !== undefined) return visitor.valid(value.valid);
+    if (value.invalid !== undefined) return visitor.invalid(value.invalid);
+    if (value.satisfiable !== undefined) return visitor.satisfiable(value.satisfiable);
+    if (value.impossible !== undefined) return visitor.impossible(value.impossible);
+    if (value.translationAmbiguous !== undefined) return visitor.translationAmbiguous(value.translationAmbiguous);
+    if (value.tooComplex !== undefined) return visitor.tooComplex(value.tooComplex);
+    if (value.noTranslations !== undefined) return visitor.noTranslations(value.noTranslations);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>Contains the results of automated reasoning policy evaluation, including logical findings about the validity of claims made in the input content.</p>
+ * @public
+ */
+export interface GuardrailAutomatedReasoningPolicyAssessment {
+  /**
+   * <p>List of logical validation results produced by evaluating the input content against automated reasoning policies.</p>
+   * @public
+   */
+  findings?: GuardrailAutomatedReasoningFinding[] | undefined;
+}
+
+/**
  * @public
  * @enum
  */
 export const GuardrailContentPolicyAction = {
   BLOCKED: "BLOCKED",
+  NONE: "NONE",
 } as const;
 
 /**
@@ -844,6 +1316,12 @@ export interface GuardrailContentFilter {
    * @public
    */
   action: GuardrailContentPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether content that breaches the guardrail configuration is detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -916,6 +1394,12 @@ export interface GuardrailContextualGroundingFilter {
    * @public
    */
   action: GuardrailContextualGroundingPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether content that fails the contextual grounding evaluation (grounding or relevance score less than the corresponding threshold) was detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -1030,6 +1514,18 @@ export interface GuardrailUsage {
    * @public
    */
   contentPolicyImageUnits?: number | undefined;
+
+  /**
+   * <p>The number of text units processed by the automated reasoning policy.</p>
+   * @public
+   */
+  automatedReasoningPolicyUnits?: number | undefined;
+
+  /**
+   * <p>The number of automated reasoning policies that were processed during the guardrail evaluation.</p>
+   * @public
+   */
+  automatedReasoningPolicies?: number | undefined;
 }
 
 /**
@@ -1063,6 +1559,7 @@ export interface GuardrailInvocationMetrics {
 export const GuardrailSensitiveInformationPolicyAction = {
   ANONYMIZED: "ANONYMIZED",
   BLOCKED: "BLOCKED",
+  NONE: "NONE",
 } as const;
 
 /**
@@ -1136,6 +1633,12 @@ export interface GuardrailPiiEntityFilter {
    * @public
    */
   action: GuardrailSensitiveInformationPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether personally identifiable information (PII) that breaches the guardrail configuration is detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -1166,6 +1669,12 @@ export interface GuardrailRegexFilter {
    * @public
    */
   action: GuardrailSensitiveInformationPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether custom regex entities that breach the guardrail configuration are detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -1192,6 +1701,7 @@ export interface GuardrailSensitiveInformationPolicyAssessment {
  */
 export const GuardrailTopicPolicyAction = {
   BLOCKED: "BLOCKED",
+  NONE: "NONE",
 } as const;
 
 /**
@@ -1234,6 +1744,12 @@ export interface GuardrailTopic {
    * @public
    */
   action: GuardrailTopicPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether topic content that breaches the guardrail configuration is detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -1254,6 +1770,7 @@ export interface GuardrailTopicPolicyAssessment {
  */
 export const GuardrailWordPolicyAction = {
   BLOCKED: "BLOCKED",
+  NONE: "NONE",
 } as const;
 
 /**
@@ -1277,6 +1794,12 @@ export interface GuardrailCustomWord {
    * @public
    */
   action: GuardrailWordPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether custom word content that breaches the guardrail configuration is detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -1314,6 +1837,12 @@ export interface GuardrailManagedWord {
    * @public
    */
   action: GuardrailWordPolicyAction | undefined;
+
+  /**
+   * <p>Indicates whether managed word content that breaches the guardrail configuration is detected.</p>
+   * @public
+   */
+  detected?: boolean | undefined;
 }
 
 /**
@@ -1370,6 +1899,12 @@ export interface GuardrailAssessment {
   contextualGroundingPolicy?: GuardrailContextualGroundingPolicyAssessment | undefined;
 
   /**
+   * <p>The automated reasoning policy assessment results, including logical validation findings for the input content.</p>
+   * @public
+   */
+  automatedReasoningPolicy?: GuardrailAutomatedReasoningPolicyAssessment | undefined;
+
+  /**
    * <p>The invocation metrics for the guardrail assessment.</p>
    * @public
    */
@@ -1405,6 +1940,12 @@ export interface ApplyGuardrailResponse {
   action: GuardrailAction | undefined;
 
   /**
+   * <p>The reason for the action taken when harmful content is detected.</p>
+   * @public
+   */
+  actionReason?: string | undefined;
+
+  /**
    * <p>The output details in the response from the guardrail.</p>
    * @public
    */
@@ -1430,6 +1971,7 @@ export interface ApplyGuardrailResponse {
 export const GuardrailTrace = {
   DISABLED: "disabled",
   ENABLED: "enabled",
+  ENABLED_FULL: "enabled_full",
 } as const;
 
 /**
@@ -1438,7 +1980,7 @@ export const GuardrailTrace = {
 export type GuardrailTrace = (typeof GuardrailTrace)[keyof typeof GuardrailTrace];
 
 /**
- * <p>Configuration information for a guardrail that you use with the  <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> operation.</p>
+ * <p>Configuration information for a guardrail that you use with the <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> operation.</p>
  * @public
  */
 export interface GuardrailConfiguration {
@@ -1462,51 +2004,332 @@ export interface GuardrailConfiguration {
 }
 
 /**
- * <p>Base inference parameters to pass to a model in a call to <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a>. For more information,
- *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>.</p>
- *          <p>If you need to pass additional parameters that the model
- *          supports, use the <code>additionalModelRequestFields</code> request field in the call to <code>Converse</code>
- *          or <code>ConverseStream</code>.
- *          For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Model parameters</a>.</p>
+ * <p>Base inference parameters to pass to a model in a call to <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a>. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>.</p> <p>If you need to pass additional parameters that the model supports, use the <code>additionalModelRequestFields</code> request field in the call to <code>Converse</code> or <code>ConverseStream</code>. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Model parameters</a>.</p>
  * @public
  */
 export interface InferenceConfiguration {
   /**
-   * <p>The maximum number of tokens to allow in the generated response. The default value is
-   *          the maximum allowed value for the model that you are using. For more information, see
-   *             <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>. </p>
+   * <p>The maximum number of tokens to allow in the generated response. The default value is the maximum allowed value for the model that you are using. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>. </p>
    * @public
    */
   maxTokens?: number | undefined;
 
   /**
-   * <p>The likelihood of the model selecting higher-probability options while generating a
-   *          response. A lower value makes the model more likely to choose higher-probability options,
-   *          while a higher value makes the model more likely to choose lower-probability
-   *          options.</p>
-   *          <p>The default value is the default value for the model that
-   *          you are using. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation
-   *             models</a>. </p>
+   * <p>The likelihood of the model selecting higher-probability options while generating a response. A lower value makes the model more likely to choose higher-probability options, while a higher value makes the model more likely to choose lower-probability options.</p> <p>The default value is the default value for the model that you are using. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>. </p>
    * @public
    */
   temperature?: number | undefined;
 
   /**
-   * <p>The percentage of most-likely candidates that the model considers for the next token. For
-   *          example, if you choose a value of 0.8 for <code>topP</code>, the model selects from the top 80% of the
-   *          probability distribution of tokens that could be next in the sequence.</p>
-   *          <p>The default value is the default value for the model that you are using. For more information, see
-   *          <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>. </p>
+   * <p>The percentage of most-likely candidates that the model considers for the next token. For example, if you choose a value of 0.8 for <code>topP</code>, the model selects from the top 80% of the probability distribution of tokens that could be next in the sequence.</p> <p>The default value is the default value for the model that you are using. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters for foundation models</a>. </p>
    * @public
    */
   topP?: number | undefined;
 
   /**
-   * <p>A list of stop sequences. A stop sequence is a sequence of characters that causes the
-   *          model to stop generating the response. </p>
+   * <p>A list of stop sequences. A stop sequence is a sequence of characters that causes the model to stop generating the response. </p>
    * @public
    */
   stopSequences?: string[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const CachePointType = {
+  DEFAULT: "default",
+} as const;
+
+/**
+ * @public
+ */
+export type CachePointType = (typeof CachePointType)[keyof typeof CachePointType];
+
+/**
+ * <p>Defines a section of content to be cached for reuse in subsequent API calls.</p>
+ * @public
+ */
+export interface CachePointBlock {
+  /**
+   * <p>Specifies the type of cache point within the CachePointBlock.</p>
+   * @public
+   */
+  type: CachePointType | undefined;
+}
+
+/**
+ * <p>Specifies a character-level location within a document, providing precise positioning information for cited content using start and end character indices.</p>
+ * @public
+ */
+export interface DocumentCharLocation {
+  /**
+   * <p>The index of the document within the array of documents provided in the request.</p>
+   * @public
+   */
+  documentIndex?: number | undefined;
+
+  /**
+   * <p>The starting character position of the cited content within the document.</p>
+   * @public
+   */
+  start?: number | undefined;
+
+  /**
+   * <p>The ending character position of the cited content within the document.</p>
+   * @public
+   */
+  end?: number | undefined;
+}
+
+/**
+ * <p>Specifies a chunk-level location within a document, providing positioning information for cited content using logical document segments or chunks.</p>
+ * @public
+ */
+export interface DocumentChunkLocation {
+  /**
+   * <p>The index of the document within the array of documents provided in the request.</p>
+   * @public
+   */
+  documentIndex?: number | undefined;
+
+  /**
+   * <p>The starting chunk identifier or index of the cited content within the document.</p>
+   * @public
+   */
+  start?: number | undefined;
+
+  /**
+   * <p>The ending chunk identifier or index of the cited content within the document.</p>
+   * @public
+   */
+  end?: number | undefined;
+}
+
+/**
+ * <p>Specifies a page-level location within a document, providing positioning information for cited content using page numbers.</p>
+ * @public
+ */
+export interface DocumentPageLocation {
+  /**
+   * <p>The index of the document within the array of documents provided in the request.</p>
+   * @public
+   */
+  documentIndex?: number | undefined;
+
+  /**
+   * <p>The starting page number of the cited content within the document.</p>
+   * @public
+   */
+  start?: number | undefined;
+
+  /**
+   * <p>The ending page number of the cited content within the document.</p>
+   * @public
+   */
+  end?: number | undefined;
+}
+
+/**
+ * <p>Specifies the precise location within a source document where cited content can be found. This can include character-level positions, page numbers, or document chunks depending on the document type and indexing method.</p>
+ * @public
+ */
+export type CitationLocation =
+  | CitationLocation.DocumentCharMember
+  | CitationLocation.DocumentChunkMember
+  | CitationLocation.DocumentPageMember
+  | CitationLocation.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace CitationLocation {
+  /**
+   * <p>The character-level location within the document where the cited content is found.</p>
+   * @public
+   */
+  export interface DocumentCharMember {
+    documentChar: DocumentCharLocation;
+    documentPage?: never;
+    documentChunk?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The page-level location within the document where the cited content is found.</p>
+   * @public
+   */
+  export interface DocumentPageMember {
+    documentChar?: never;
+    documentPage: DocumentPageLocation;
+    documentChunk?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The chunk-level location within the document where the cited content is found, typically used for documents that have been segmented into logical chunks.</p>
+   * @public
+   */
+  export interface DocumentChunkMember {
+    documentChar?: never;
+    documentPage?: never;
+    documentChunk: DocumentChunkLocation;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    documentChar?: never;
+    documentPage?: never;
+    documentChunk?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    documentChar: (value: DocumentCharLocation) => T;
+    documentPage: (value: DocumentPageLocation) => T;
+    documentChunk: (value: DocumentChunkLocation) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: CitationLocation, visitor: Visitor<T>): T => {
+    if (value.documentChar !== undefined) return visitor.documentChar(value.documentChar);
+    if (value.documentPage !== undefined) return visitor.documentPage(value.documentPage);
+    if (value.documentChunk !== undefined) return visitor.documentChunk(value.documentChunk);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>Contains the actual text content from a source document that is being cited or referenced in the model's response.</p>
+ * @public
+ */
+export type CitationSourceContent = CitationSourceContent.TextMember | CitationSourceContent.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace CitationSourceContent {
+  /**
+   * <p>The text content from the source document that is being cited.</p>
+   * @public
+   */
+  export interface TextMember {
+    text: string;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    text?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    text: (value: string) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: CitationSourceContent, visitor: Visitor<T>): T => {
+    if (value.text !== undefined) return visitor.text(value.text);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>Contains information about a citation that references a specific source document. Citations provide traceability between the model's generated response and the source documents that informed that response.</p>
+ * @public
+ */
+export interface Citation {
+  /**
+   * <p>The title or identifier of the source document being cited.</p>
+   * @public
+   */
+  title?: string | undefined;
+
+  /**
+   * <p>The specific content from the source document that was referenced or cited in the generated response.</p>
+   * @public
+   */
+  sourceContent?: CitationSourceContent[] | undefined;
+
+  /**
+   * <p>The precise location within the source document where the cited content can be found, including character positions, page numbers, or chunk identifiers.</p>
+   * @public
+   */
+  location?: CitationLocation | undefined;
+}
+
+/**
+ * <p>Contains the generated text content that corresponds to or is supported by a citation from a source document.</p>
+ * @public
+ */
+export type CitationGeneratedContent = CitationGeneratedContent.TextMember | CitationGeneratedContent.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace CitationGeneratedContent {
+  /**
+   * <p>The text content that was generated by the model and is supported by the associated citation.</p>
+   * @public
+   */
+  export interface TextMember {
+    text: string;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    text?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    text: (value: string) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: CitationGeneratedContent, visitor: Visitor<T>): T => {
+    if (value.text !== undefined) return visitor.text(value.text);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>A content block that contains both generated text and associated citation information. This block type is returned when document citations are enabled, providing traceability between the generated content and the source documents that informed the response.</p>
+ * @public
+ */
+export interface CitationsContentBlock {
+  /**
+   * <p>The generated content that is supported by the associated citations.</p>
+   * @public
+   */
+  content?: CitationGeneratedContent[] | undefined;
+
+  /**
+   * <p>An array of citations that reference the source documents used to generate the associated content.</p>
+   * @public
+   */
+  citations?: Citation[] | undefined;
+}
+
+/**
+ * <p>Configuration settings for enabling and controlling document citations in Converse API responses. When enabled, the model can include citation information that links generated content back to specific source documents.</p>
+ * @public
+ */
+export interface CitationsConfig {
+  /**
+   * <p>Specifies whether document citations should be included in the model's response. When set to true, the model can generate citations that reference the source documents used to inform the response.</p>
+   * @public
+   */
+  enabled: boolean | undefined;
 }
 
 /**
@@ -1531,10 +2354,71 @@ export const DocumentFormat = {
 export type DocumentFormat = (typeof DocumentFormat)[keyof typeof DocumentFormat];
 
 /**
+ * <p>Contains the actual content of a document that can be processed by the model and potentially cited in the response.</p>
+ * @public
+ */
+export type DocumentContentBlock = DocumentContentBlock.TextMember | DocumentContentBlock.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace DocumentContentBlock {
+  /**
+   * <p>The text content of the document.</p>
+   * @public
+   */
+  export interface TextMember {
+    text: string;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    text?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    text: (value: string) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: DocumentContentBlock, visitor: Visitor<T>): T => {
+    if (value.text !== undefined) return visitor.text(value.text);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * <p>A storage location in an Amazon S3 bucket.</p>
+ * @public
+ */
+export interface S3Location {
+  /**
+   * <p>An object URI starting with <code>s3://</code>.</p>
+   * @public
+   */
+  uri: string | undefined;
+
+  /**
+   * <p>If the bucket belongs to another AWS account, specify that account's ID.</p>
+   * @public
+   */
+  bucketOwner?: string | undefined;
+}
+
+/**
  * <p>Contains the content of a document.</p>
  * @public
  */
-export type DocumentSource = DocumentSource.BytesMember | DocumentSource.$UnknownMember;
+export type DocumentSource =
+  | DocumentSource.BytesMember
+  | DocumentSource.ContentMember
+  | DocumentSource.S3LocationMember
+  | DocumentSource.TextMember
+  | DocumentSource.$UnknownMember;
 
 /**
  * @public
@@ -1546,6 +2430,45 @@ export namespace DocumentSource {
    */
   export interface BytesMember {
     bytes: Uint8Array;
+    s3Location?: never;
+    text?: never;
+    content?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The location of a document object in an Amazon S3 bucket. To see which models support S3 uploads, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html">Supported models and features for Converse</a>.</p>
+   * @public
+   */
+  export interface S3LocationMember {
+    bytes?: never;
+    s3Location: S3Location;
+    text?: never;
+    content?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The text content of the document source.</p>
+   * @public
+   */
+  export interface TextMember {
+    bytes?: never;
+    s3Location?: never;
+    text: string;
+    content?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The structured content of the document source, which may include various content blocks such as text, images, or other document elements.</p>
+   * @public
+   */
+  export interface ContentMember {
+    bytes?: never;
+    s3Location?: never;
+    text?: never;
+    content: DocumentContentBlock[];
     $unknown?: never;
   }
 
@@ -1554,16 +2477,25 @@ export namespace DocumentSource {
    */
   export interface $UnknownMember {
     bytes?: never;
+    s3Location?: never;
+    text?: never;
+    content?: never;
     $unknown: [string, any];
   }
 
   export interface Visitor<T> {
     bytes: (value: Uint8Array) => T;
+    s3Location: (value: S3Location) => T;
+    text: (value: string) => T;
+    content: (value: DocumentContentBlock[]) => T;
     _: (name: string, value: any) => T;
   }
 
   export const visit = <T>(value: DocumentSource, visitor: Visitor<T>): T => {
     if (value.bytes !== undefined) return visitor.bytes(value.bytes);
+    if (value.s3Location !== undefined) return visitor.s3Location(value.s3Location);
+    if (value.text !== undefined) return visitor.text(value.text);
+    if (value.content !== undefined) return visitor.content(value.content);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -1577,30 +2509,10 @@ export interface DocumentBlock {
    * <p>The format of a document, or its extension.</p>
    * @public
    */
-  format: DocumentFormat | undefined;
+  format?: DocumentFormat | undefined;
 
   /**
-   * <p>A name for the document. The name can only contain the following characters:</p>
-   *          <ul>
-   *             <li>
-   *                <p>Alphanumeric characters</p>
-   *             </li>
-   *             <li>
-   *                <p>Whitespace characters (no more than one in a row)</p>
-   *             </li>
-   *             <li>
-   *                <p>Hyphens</p>
-   *             </li>
-   *             <li>
-   *                <p>Parentheses</p>
-   *             </li>
-   *             <li>
-   *                <p>Square brackets</p>
-   *             </li>
-   *          </ul>
-   *          <note>
-   *             <p>This field is vulnerable to prompt injections, because the model might inadvertently interpret it as instructions. Therefore, we recommend that you specify a neutral name.</p>
-   *          </note>
+   * <p>A name for the document. The name can only contain the following characters:</p> <ul> <li> <p>Alphanumeric characters</p> </li> <li> <p>Whitespace characters (no more than one in a row)</p> </li> <li> <p>Hyphens</p> </li> <li> <p>Parentheses</p> </li> <li> <p>Square brackets</p> </li> </ul> <note> <p>This field is vulnerable to prompt injections, because the model might inadvertently interpret it as instructions. Therefore, we recommend that you specify a neutral name.</p> </note>
    * @public
    */
   name: string | undefined;
@@ -1610,6 +2522,18 @@ export interface DocumentBlock {
    * @public
    */
   source: DocumentSource | undefined;
+
+  /**
+   * <p>Contextual information about how the document should be processed or interpreted by the model when generating citations.</p>
+   * @public
+   */
+  context?: string | undefined;
+
+  /**
+   * <p>Configuration settings that control how citations should be generated for this specific document.</p>
+   * @public
+   */
+  citations?: CitationsConfig | undefined;
 }
 
 /**
@@ -1720,9 +2644,7 @@ export interface GuardrailConverseTextBlock {
 }
 
 /**
- * <p/>
- *          <p>A content block for selective guarding with the <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a> API operations.
- *       </p>
+ * <p/> <p>A content block for selective guarding with the <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a> API operations. </p>
  * @public
  */
 export type GuardrailConverseContentBlock =
@@ -1796,7 +2718,7 @@ export type ImageFormat = (typeof ImageFormat)[keyof typeof ImageFormat];
  * <p>The source for an image.</p>
  * @public
  */
-export type ImageSource = ImageSource.BytesMember | ImageSource.$UnknownMember;
+export type ImageSource = ImageSource.BytesMember | ImageSource.S3LocationMember | ImageSource.$UnknownMember;
 
 /**
  * @public
@@ -1808,6 +2730,17 @@ export namespace ImageSource {
    */
   export interface BytesMember {
     bytes: Uint8Array;
+    s3Location?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The location of an image object in an Amazon S3 bucket. To see which models support S3 uploads, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html">Supported models and features for Converse</a>.</p>
+   * @public
+   */
+  export interface S3LocationMember {
+    bytes?: never;
+    s3Location: S3Location;
     $unknown?: never;
   }
 
@@ -1816,16 +2749,19 @@ export namespace ImageSource {
    */
   export interface $UnknownMember {
     bytes?: never;
+    s3Location?: never;
     $unknown: [string, any];
   }
 
   export interface Visitor<T> {
     bytes: (value: Uint8Array) => T;
+    s3Location: (value: S3Location) => T;
     _: (name: string, value: any) => T;
   }
 
   export const visit = <T>(value: ImageSource, visitor: Visitor<T>): T => {
     if (value.bytes !== undefined) return visitor.bytes(value.bytes);
+    if (value.s3Location !== undefined) return visitor.s3Location(value.s3Location);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -1943,27 +2879,7 @@ export const VideoFormat = {
 export type VideoFormat = (typeof VideoFormat)[keyof typeof VideoFormat];
 
 /**
- * <p>A storage location in an S3 bucket.</p>
- * @public
- */
-export interface S3Location {
-  /**
-   * <p>An object URI starting with <code>s3://</code>.</p>
-   * @public
-   */
-  uri: string | undefined;
-
-  /**
-   * <p>If the bucket belongs to another AWS account, specify that account's ID.</p>
-   * @public
-   */
-  bucketOwner?: string | undefined;
-}
-
-/**
- * <p>A video source. You can upload a smaller video as a base64-encoded string as
- *     long as the encoded file is less than 25MB. You can also transfer videos up to 1GB in size
- *     from an S3 bucket.</p>
+ * <p>A video source. You can upload a smaller video as a base64-encoded string as long as the encoded file is less than 25MB. You can also transfer videos up to 1GB in size from an S3 bucket.</p>
  * @public
  */
 export type VideoSource = VideoSource.BytesMember | VideoSource.S3LocationMember | VideoSource.$UnknownMember;
@@ -1983,7 +2899,7 @@ export namespace VideoSource {
   }
 
   /**
-   * <p>The location of a video object in an S3 bucket.</p>
+   * <p>The location of a video object in an Amazon S3 bucket. To see which models support S3 uploads, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference-supported-models-features.html">Supported models and features for Converse</a>.</p>
    * @public
    */
   export interface S3LocationMember {
@@ -2075,10 +2991,7 @@ export namespace ToolResultContentBlock {
   }
 
   /**
-   * <p>A tool result that is an image.</p>
-   *          <note>
-   *             <p>This field is only supported by Anthropic Claude 3 models.</p>
-   *          </note>
+   * <p>A tool result that is an image.</p> <note> <p>This field is only supported by Anthropic Claude 3 models.</p> </note>
    * @public
    */
   export interface ImageMember {
@@ -2162,8 +3075,7 @@ export const ToolResultStatus = {
 export type ToolResultStatus = (typeof ToolResultStatus)[keyof typeof ToolResultStatus];
 
 /**
- * <p>A tool result block that contains the results for a tool request that
- *       the model previously made.</p>
+ * <p>A tool result block that contains the results for a tool request that the model previously made.</p>
  * @public
  */
 export interface ToolResultBlock {
@@ -2180,18 +3092,14 @@ export interface ToolResultBlock {
   content: ToolResultContentBlock[] | undefined;
 
   /**
-   * <p>The status for the tool result content block.</p>
-   *          <note>
-   *             <p>This field is only supported Anthropic Claude 3 models.</p>
-   *          </note>
+   * <p>The status for the tool result content block.</p> <note> <p>This field is only supported Anthropic Claude 3 models.</p> </note>
    * @public
    */
   status?: ToolResultStatus | undefined;
 }
 
 /**
- * <p>A tool use content block. Contains information about a tool that the model
- *       is requesting be run., The model uses the result from the tool to generate a response. </p>
+ * <p>A tool use content block. Contains information about a tool that the model is requesting be run., The model uses the result from the tool to generate a response. </p>
  * @public
  */
 export interface ToolUseBlock {
@@ -2219,6 +3127,8 @@ export interface ToolUseBlock {
  * @public
  */
 export type ContentBlock =
+  | ContentBlock.CachePointMember
+  | ContentBlock.CitationsContentMember
   | ContentBlock.DocumentMember
   | ContentBlock.GuardContentMember
   | ContentBlock.ImageMember
@@ -2245,15 +3155,14 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
   /**
-   * <p>Image to include in the message. </p>
-   *          <note>
-   *             <p>This field is only supported by Anthropic Claude 3 models.</p>
-   *          </note>
+   * <p>Image to include in the message. </p> <note> <p>This field is only supported by Anthropic Claude 3 models.</p> </note>
    * @public
    */
   export interface ImageMember {
@@ -2264,7 +3173,9 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
@@ -2280,7 +3191,9 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
@@ -2296,7 +3209,9 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
@@ -2312,7 +3227,9 @@ export namespace ContentBlock {
     toolUse: ToolUseBlock;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
@@ -2328,17 +3245,14 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult: ToolResultBlock;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
   /**
-   * <p>Contains the content to assess with the guardrail. If you don't specify
-   *             <code>guardContent</code> in a call to the Converse API, the guardrail (if passed in the
-   *          Converse API) assesses the entire message.</p>
-   *          <p>For more information, see  <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.
-   *
-   *       </p>
+   * <p>Contains the content to assess with the guardrail. If you don't specify <code>guardContent</code> in a call to the Converse API, the guardrail (if passed in the Converse API) assesses the entire message.</p> <p>For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>. </p>
    * @public
    */
   export interface GuardContentMember {
@@ -2349,7 +3263,27 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent: GuardrailConverseContentBlock;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>CachePoint to include in the message.</p>
+   * @public
+   */
+  export interface CachePointMember {
+    text?: never;
+    image?: never;
+    document?: never;
+    video?: never;
+    toolUse?: never;
+    toolResult?: never;
+    guardContent?: never;
+    cachePoint: CachePointBlock;
+    reasoningContent?: never;
+    citationsContent?: never;
     $unknown?: never;
   }
 
@@ -2365,7 +3299,27 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent: ReasoningContentBlock;
+    citationsContent?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>A content block that contains both generated text and associated citation information, providing traceability between the response and source documents.</p>
+   * @public
+   */
+  export interface CitationsContentMember {
+    text?: never;
+    image?: never;
+    document?: never;
+    video?: never;
+    toolUse?: never;
+    toolResult?: never;
+    guardContent?: never;
+    cachePoint?: never;
+    reasoningContent?: never;
+    citationsContent: CitationsContentBlock;
     $unknown?: never;
   }
 
@@ -2380,7 +3334,9 @@ export namespace ContentBlock {
     toolUse?: never;
     toolResult?: never;
     guardContent?: never;
+    cachePoint?: never;
     reasoningContent?: never;
+    citationsContent?: never;
     $unknown: [string, any];
   }
 
@@ -2392,7 +3348,9 @@ export namespace ContentBlock {
     toolUse: (value: ToolUseBlock) => T;
     toolResult: (value: ToolResultBlock) => T;
     guardContent: (value: GuardrailConverseContentBlock) => T;
+    cachePoint: (value: CachePointBlock) => T;
     reasoningContent: (value: ReasoningContentBlock) => T;
+    citationsContent: (value: CitationsContentBlock) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -2404,7 +3362,9 @@ export namespace ContentBlock {
     if (value.toolUse !== undefined) return visitor.toolUse(value.toolUse);
     if (value.toolResult !== undefined) return visitor.toolResult(value.toolResult);
     if (value.guardContent !== undefined) return visitor.guardContent(value.guardContent);
+    if (value.cachePoint !== undefined) return visitor.cachePoint(value.cachePoint);
     if (value.reasoningContent !== undefined) return visitor.reasoningContent(value.reasoningContent);
+    if (value.citationsContent !== undefined) return visitor.citationsContent(value.citationsContent);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -2435,21 +3395,7 @@ export interface Message {
   role: ConversationRole | undefined;
 
   /**
-   * <p>The message content. Note the following restrictions:</p>
-   *          <ul>
-   *             <li>
-   *                <p>You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and 8000 px, respectively.</p>
-   *             </li>
-   *             <li>
-   *                <p>You can include up to five documents. Each document's size must be no more than 4.5 MB.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include a <code>ContentBlock</code> with a <code>text</code> field.</p>
-   *             </li>
-   *             <li>
-   *                <p>You can only include images and documents if the <code>role</code> is <code>user</code>.</p>
-   *             </li>
-   *          </ul>
+   * <p>The message content. Note the following restrictions:</p> <ul> <li> <p>You can include up to 20 images. Each image's size, height, and width must be no more than 3.75 MB, 8000 px, and 8000 px, respectively.</p> </li> <li> <p>You can include up to five documents. Each document's size must be no more than 4.5 MB.</p> </li> <li> <p>If you include a <code>ContentBlock</code> with a <code>document</code> field in the array, you must also include a <code>ContentBlock</code> with a <code>text</code> field.</p> </li> <li> <p>You can only include images and documents if the <code>role</code> is <code>user</code>.</p> </li> </ul>
    * @public
    */
   content: ContentBlock[] | undefined;
@@ -2524,6 +3470,7 @@ export namespace PromptVariableValues {
  * @public
  */
 export type SystemContentBlock =
+  | SystemContentBlock.CachePointMember
   | SystemContentBlock.GuardContentMember
   | SystemContentBlock.TextMember
   | SystemContentBlock.$UnknownMember;
@@ -2539,18 +3486,29 @@ export namespace SystemContentBlock {
   export interface TextMember {
     text: string;
     guardContent?: never;
+    cachePoint?: never;
     $unknown?: never;
   }
 
   /**
-   * <p>A content block to assess with the guardrail. Use with the <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a> API operations. </p>
-   *          <p>For more information, see <i>Use a guardrail with the Converse
-   *             API</i> in the <i>Amazon Bedrock User Guide</i>.</p>
+   * <p>A content block to assess with the guardrail. Use with the <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html">Converse</a> or <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html">ConverseStream</a> API operations. </p> <p>For more information, see <i>Use a guardrail with the Converse API</i> in the <i>Amazon Bedrock User Guide</i>.</p>
    * @public
    */
   export interface GuardContentMember {
     text?: never;
     guardContent: GuardrailConverseContentBlock;
+    cachePoint?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>CachePoint to include in the system prompt.</p>
+   * @public
+   */
+  export interface CachePointMember {
+    text?: never;
+    guardContent?: never;
+    cachePoint: CachePointBlock;
     $unknown?: never;
   }
 
@@ -2560,18 +3518,21 @@ export namespace SystemContentBlock {
   export interface $UnknownMember {
     text?: never;
     guardContent?: never;
+    cachePoint?: never;
     $unknown: [string, any];
   }
 
   export interface Visitor<T> {
     text: (value: string) => T;
     guardContent: (value: GuardrailConverseContentBlock) => T;
+    cachePoint: (value: CachePointBlock) => T;
     _: (name: string, value: any) => T;
   }
 
   export const visit = <T>(value: SystemContentBlock, visitor: Visitor<T>): T => {
     if (value.text !== undefined) return visitor.text(value.text);
     if (value.guardContent !== undefined) return visitor.guardContent(value.guardContent);
+    if (value.cachePoint !== undefined) return visitor.cachePoint(value.cachePoint);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -2583,17 +3544,13 @@ export namespace SystemContentBlock {
 export interface AnyToolChoice {}
 
 /**
- * <p>The Model automatically decides if a tool should be called or whether to generate text instead.
- *          For example, <code>\{"auto" : \{\}\}</code>.</p>
+ * <p>The Model automatically decides if a tool should be called or whether to generate text instead. For example, <code>\{"auto" : \{\}\}</code>.</p>
  * @public
  */
 export interface AutoToolChoice {}
 
 /**
- * <p>The model must request a specific tool.  For example, <code>\{"tool" : \{"name" : "Your tool name"\}\}</code>.</p>
- *          <note>
- *             <p>This field is only supported by Anthropic Claude 3 models.</p>
- *          </note>
+ * <p>The model must request a specific tool. For example, <code>\{"tool" : \{"name" : "Your tool name"\}\}</code>.</p> <note> <p>This field is only supported by Anthropic Claude 3 models.</p> </note>
  * @public
  */
 export interface SpecificToolChoice {
@@ -2605,9 +3562,7 @@ export interface SpecificToolChoice {
 }
 
 /**
- * <p>Determines which tools the model should request in a call to <code>Converse</code> or <code>ConverseStream</code>.
- *          <code>ToolChoice</code> is only supported by
- *       Anthropic Claude 3 models and by Mistral AI Mistral Large.</p>
+ * <p>Determines which tools the model should request in a call to <code>Converse</code> or <code>ConverseStream</code>. <code>ToolChoice</code> is only supported by Anthropic Claude 3 models and by Mistral AI Mistral Large.</p>
  * @public
  */
 export type ToolChoice =
@@ -2643,7 +3598,7 @@ export namespace ToolChoice {
   }
 
   /**
-   * <p>The Model must request the specified tool.  Only supported by Anthropic Claude 3 models. </p>
+   * <p>The Model must request the specified tool. Only supported by Anthropic Claude 3 models. </p>
    * @public
    */
   export interface ToolMember {
@@ -2744,7 +3699,7 @@ export interface ToolSpecification {
  * <p>Information about a tool that you can use with the Converse API. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html">Tool use (function calling)</a> in the Amazon Bedrock User Guide.</p>
  * @public
  */
-export type Tool = Tool.ToolSpecMember | Tool.$UnknownMember;
+export type Tool = Tool.CachePointMember | Tool.ToolSpecMember | Tool.$UnknownMember;
 
 /**
  * @public
@@ -2756,6 +3711,17 @@ export namespace Tool {
    */
   export interface ToolSpecMember {
     toolSpec: ToolSpecification;
+    cachePoint?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>CachePoint to include in the tool configuration.</p>
+   * @public
+   */
+  export interface CachePointMember {
+    toolSpec?: never;
+    cachePoint: CachePointBlock;
     $unknown?: never;
   }
 
@@ -2764,16 +3730,19 @@ export namespace Tool {
    */
   export interface $UnknownMember {
     toolSpec?: never;
+    cachePoint?: never;
     $unknown: [string, any];
   }
 
   export interface Visitor<T> {
     toolSpec: (value: ToolSpecification) => T;
+    cachePoint: (value: CachePointBlock) => T;
     _: (name: string, value: any) => T;
   }
 
   export const visit = <T>(value: Tool, visitor: Visitor<T>): T => {
     if (value.toolSpec !== undefined) return visitor.toolSpec(value.toolSpec);
+    if (value.cachePoint !== undefined) return visitor.cachePoint(value.cachePoint);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -2801,25 +3770,7 @@ export interface ToolConfiguration {
  */
 export interface ConverseRequest {
   /**
-   * <p>Specifies the model or throughput with which to run inference, or the prompt resource to use in inference. The value depends on the resource that you use:</p>
-   *          <ul>
-   *             <li>
-   *                <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a custom model, first purchase Provisioned Throughput for it. Then specify the ARN of the resulting provisioned model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>To include a prompt that was defined in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management</a>, specify the ARN of the prompt version to use.</p>
-   *             </li>
-   *          </ul>
-   *          <p>The Converse API doesn't support <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported models</a>.</p>
+   * <p>Specifies the model or throughput with which to run inference, or the prompt resource to use in inference. The value depends on the resource that you use:</p> <ul> <li> <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a custom model, first purchase Provisioned Throughput for it. Then specify the ARN of the resulting provisioned model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>To include a prompt that was defined in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management</a>, specify the ARN of the prompt version to use.</p> </li> </ul> <p>The Converse API doesn't support <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported models</a>.</p>
    * @public
    */
   modelId: string | undefined;
@@ -2837,17 +3788,13 @@ export interface ConverseRequest {
   system?: SystemContentBlock[] | undefined;
 
   /**
-   * <p>Inference parameters to pass to the model. <code>Converse</code> and <code>ConverseStream</code> support a base
-   *          set of inference parameters. If you need to pass additional parameters that the model
-   *          supports, use the <code>additionalModelRequestFields</code> request field.</p>
+   * <p>Inference parameters to pass to the model. <code>Converse</code> and <code>ConverseStream</code> support a base set of inference parameters. If you need to pass additional parameters that the model supports, use the <code>additionalModelRequestFields</code> request field.</p>
    * @public
    */
   inferenceConfig?: InferenceConfiguration | undefined;
 
   /**
-   * <p>Configuration information for the tools that the model can use when generating a response. </p>
-   *          <p>For information about models that support tool use, see
-   *          <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features">Supported models and model features</a>.</p>
+   * <p>Configuration information for the tools that the model can use when generating a response. </p> <p>For information about models that support tool use, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features">Supported models and model features</a>.</p>
    * @public
    */
   toolConfig?: ToolConfiguration | undefined;
@@ -2859,9 +3806,7 @@ export interface ConverseRequest {
   guardrailConfig?: GuardrailConfiguration | undefined;
 
   /**
-   * <p>Additional inference parameters that the model supports, beyond the
-   *          base set of inference parameters that <code>Converse</code> and <code>ConverseStream</code> support in the <code>inferenceConfig</code>
-   *          field. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Model parameters</a>.</p>
+   * <p>Additional inference parameters that the model supports, beyond the base set of inference parameters that <code>Converse</code> and <code>ConverseStream</code> support in the <code>inferenceConfig</code> field. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Model parameters</a>.</p>
    * @public
    */
   additionalModelRequestFields?: __DocumentType | undefined;
@@ -2873,20 +3818,7 @@ export interface ConverseRequest {
   promptVariables?: Record<string, PromptVariableValues> | undefined;
 
   /**
-   * <p>Additional model parameters field paths to return in the
-   *          response. <code>Converse</code> and <code>ConverseStream</code> return the requested fields as a JSON Pointer object in the
-   *          <code>additionalModelResponseFields</code> field. The following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p>
-   *          <p>
-   *             <code>[
-   *          "/stop_sequence"
-   *          ]</code>
-   *          </p>
-   *          <p>For information about the JSON Pointer syntax, see the
-   *          <a href="https://datatracker.ietf.org/doc/html/rfc6901">Internet Engineering Task Force (IETF)</a> documentation.</p>
-   *          <p>
-   *             <code>Converse</code> and <code>ConverseStream</code> reject an empty JSON Pointer or incorrectly structured
-   *          JSON Pointer with a <code>400</code> error code. if the JSON Pointer is valid, but the requested
-   *          field is not in the model response, it is ignored by <code>Converse</code>.</p>
+   * <p>Additional model parameters field paths to return in the response. <code>Converse</code> and <code>ConverseStream</code> return the requested fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p> <p> <code>[ "/stop_sequence" ]</code> </p> <p>For information about the JSON Pointer syntax, see the <a href="https://datatracker.ietf.org/doc/html/rfc6901">Internet Engineering Task Force (IETF)</a> documentation.</p> <p> <code>Converse</code> and <code>ConverseStream</code> reject an empty JSON Pointer or incorrectly structured JSON Pointer with a <code>400</code> error code. if the JSON Pointer is valid, but the requested field is not in the model response, it is ignored by <code>Converse</code>.</p>
    * @public
    */
   additionalModelResponseFieldPaths?: string[] | undefined;
@@ -2910,8 +3842,7 @@ export interface ConverseRequest {
  */
 export interface ConverseMetrics {
   /**
-   * <p>The latency of the call to <code>Converse</code>, in milliseconds.
-   *          </p>
+   * <p>The latency of the call to <code>Converse</code>, in milliseconds. </p>
    * @public
    */
   latencyMs: number | undefined;
@@ -2995,6 +3926,12 @@ export interface GuardrailTraceAssessment {
    * @public
    */
   outputAssessments?: Record<string, GuardrailAssessment[]> | undefined;
+
+  /**
+   * <p>Provides the reason for the action taken when harmful content is detected.</p>
+   * @public
+   */
+  actionReason?: string | undefined;
 }
 
 /**
@@ -3049,6 +3986,18 @@ export interface TokenUsage {
    * @public
    */
   totalTokens: number | undefined;
+
+  /**
+   * <p>The number of input tokens read from the cache for the request.</p>
+   * @public
+   */
+  cacheReadInputTokens?: number | undefined;
+
+  /**
+   * <p>The number of input tokens written to the cache for the request.</p>
+   * @public
+   */
+  cacheWriteInputTokens?: number | undefined;
 }
 
 /**
@@ -3068,8 +4017,7 @@ export interface ConverseResponse {
   stopReason: StopReason | undefined;
 
   /**
-   * <p>The total number of tokens used in the call to <code>Converse</code>. The total includes
-   *          the tokens input to the model and the tokens generated by the model.</p>
+   * <p>The total number of tokens used in the call to <code>Converse</code>. The total includes the tokens input to the model and the tokens generated by the model.</p>
    * @public
    */
   usage: TokenUsage | undefined;
@@ -3134,10 +4082,7 @@ export class ModelErrorException extends __BaseException {
 }
 
 /**
- * <p>The model specified in the request is not ready to serve inference requests. The AWS SDK
- *          will automatically retry the operation up to 5 times. For information about configuring
- *          automatic retries, see <a href="https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html">Retry behavior</a> in the <i>AWS SDKs and Tools</i>
- *       reference guide.</p>
+ * <p>The model specified in the request is not ready to serve inference requests. The AWS SDK will automatically retry the operation up to 5 times. For information about configuring automatic retries, see <a href="https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html">Retry behavior</a> in the <i>AWS SDKs and Tools</i> reference guide.</p>
  * @public
  */
 export class ModelNotReadyException extends __BaseException {
@@ -3193,8 +4138,7 @@ export type GuardrailStreamProcessingMode =
   (typeof GuardrailStreamProcessingMode)[keyof typeof GuardrailStreamProcessingMode];
 
 /**
- * <p>Configuration information for a guardrail that you use with the <a>ConverseStream</a> action.
- *             </p>
+ * <p>Configuration information for a guardrail that you use with the <a>ConverseStream</a> action. </p>
  * @public
  */
 export interface GuardrailStreamConfiguration {
@@ -3217,9 +4161,7 @@ export interface GuardrailStreamConfiguration {
   trace?: GuardrailTrace | undefined;
 
   /**
-   * <p>The processing mode. </p>
-   *          <p>The processing mode. For more information, see <i>Configure streaming response behavior</i> in the <i>Amazon Bedrock User Guide</i>.
-   *       </p>
+   * <p>The processing mode. </p> <p>The processing mode. For more information, see <i>Configure streaming response behavior</i> in the <i>Amazon Bedrock User Guide</i>. </p>
    * @public
    */
   streamProcessingMode?: GuardrailStreamProcessingMode | undefined;
@@ -3230,25 +4172,7 @@ export interface GuardrailStreamConfiguration {
  */
 export interface ConverseStreamRequest {
   /**
-   * <p>Specifies the model or throughput with which to run inference, or the prompt resource to use in inference. The value depends on the resource that you use:</p>
-   *          <ul>
-   *             <li>
-   *                <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a custom model, first purchase Provisioned Throughput for it. Then specify the ARN of the resulting provisioned model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>To include a prompt that was defined in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management</a>, specify the ARN of the prompt version to use.</p>
-   *             </li>
-   *          </ul>
-   *          <p>The Converse API doesn't support <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported models</a>.</p>
+   * <p>Specifies the model or throughput with which to run inference, or the prompt resource to use in inference. The value depends on the resource that you use:</p> <ul> <li> <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a custom model, first purchase Provisioned Throughput for it. Then specify the ARN of the resulting provisioned model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>To include a prompt that was defined in <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html">Prompt management</a>, specify the ARN of the prompt version to use.</p> </li> </ul> <p>The Converse API doesn't support <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported models</a>.</p>
    * @public
    */
   modelId: string | undefined;
@@ -3266,17 +4190,13 @@ export interface ConverseStreamRequest {
   system?: SystemContentBlock[] | undefined;
 
   /**
-   * <p>Inference parameters to pass to the model. <code>Converse</code> and <code>ConverseStream</code> support a base
-   *          set of inference parameters. If you need to pass additional parameters that the model
-   *          supports, use the <code>additionalModelRequestFields</code> request field.</p>
+   * <p>Inference parameters to pass to the model. <code>Converse</code> and <code>ConverseStream</code> support a base set of inference parameters. If you need to pass additional parameters that the model supports, use the <code>additionalModelRequestFields</code> request field.</p>
    * @public
    */
   inferenceConfig?: InferenceConfiguration | undefined;
 
   /**
-   * <p>Configuration information for the tools that the model can use when generating a response.</p>
-   *          <p>For information about models that support streaming tool use, see
-   *             <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features">Supported models and model features</a>.</p>
+   * <p>Configuration information for the tools that the model can use when generating a response.</p> <p>For information about models that support streaming tool use, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features">Supported models and model features</a>.</p>
    * @public
    */
   toolConfig?: ToolConfiguration | undefined;
@@ -3288,9 +4208,7 @@ export interface ConverseStreamRequest {
   guardrailConfig?: GuardrailStreamConfiguration | undefined;
 
   /**
-   * <p>Additional inference parameters that the model supports, beyond the
-   *          base set of inference parameters that <code>Converse</code> and <code>ConverseStream</code> support in the <code>inferenceConfig</code>
-   *          field. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Model parameters</a>.</p>
+   * <p>Additional inference parameters that the model supports, beyond the base set of inference parameters that <code>Converse</code> and <code>ConverseStream</code> support in the <code>inferenceConfig</code> field. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Model parameters</a>.</p>
    * @public
    */
   additionalModelRequestFields?: __DocumentType | undefined;
@@ -3302,20 +4220,7 @@ export interface ConverseStreamRequest {
   promptVariables?: Record<string, PromptVariableValues> | undefined;
 
   /**
-   * <p>Additional model parameters field paths to return in the
-   *          response. <code>Converse</code> and <code>ConverseStream</code> return the requested fields as a JSON Pointer object in the
-   *          <code>additionalModelResponseFields</code> field. The following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p>
-   *          <p>
-   *             <code>[
-   *          "/stop_sequence"
-   *          ]</code>
-   *          </p>
-   *          <p>For information about the JSON Pointer syntax, see the
-   *          <a href="https://datatracker.ietf.org/doc/html/rfc6901">Internet Engineering Task Force (IETF)</a> documentation.</p>
-   *          <p>
-   *             <code>Converse</code> and <code>ConverseStream</code> reject an empty JSON Pointer or incorrectly structured
-   *          JSON Pointer with a <code>400</code> error code. if the JSON Pointer is valid, but the requested
-   *          field is not in the model response, it is ignored by <code>Converse</code>.</p>
+   * <p>Additional model parameters field paths to return in the response. <code>Converse</code> and <code>ConverseStream</code> return the requested fields as a JSON Pointer object in the <code>additionalModelResponseFields</code> field. The following is example JSON for <code>additionalModelResponseFieldPaths</code>.</p> <p> <code>[ "/stop_sequence" ]</code> </p> <p>For information about the JSON Pointer syntax, see the <a href="https://datatracker.ietf.org/doc/html/rfc6901">Internet Engineering Task Force (IETF)</a> documentation.</p> <p> <code>Converse</code> and <code>ConverseStream</code> reject an empty JSON Pointer or incorrectly structured JSON Pointer with a <code>400</code> error code. if the JSON Pointer is valid, but the requested field is not in the model response, it is ignored by <code>Converse</code>.</p>
    * @public
    */
   additionalModelResponseFieldPaths?: string[] | undefined;
@@ -3331,6 +4236,42 @@ export interface ConverseStreamRequest {
    * @public
    */
   performanceConfig?: PerformanceConfiguration | undefined;
+}
+
+/**
+ * <p>Contains incremental updates to the source content text during streaming responses, allowing clients to build up the cited content progressively.</p>
+ * @public
+ */
+export interface CitationSourceContentDelta {
+  /**
+   * <p>An incremental update to the text content from the source document that is being cited.</p>
+   * @public
+   */
+  text?: string | undefined;
+}
+
+/**
+ * <p>Contains incremental updates to citation information during streaming responses. This allows clients to build up citation data progressively as the response is generated.</p>
+ * @public
+ */
+export interface CitationsDelta {
+  /**
+   * <p>The title or identifier of the source document being cited.</p>
+   * @public
+   */
+  title?: string | undefined;
+
+  /**
+   * <p>The specific content from the source document that was referenced or cited in the generated response.</p>
+   * @public
+   */
+  sourceContent?: CitationSourceContentDelta[] | undefined;
+
+  /**
+   * <p>Specifies the precise location within a source document where cited content can be found. This can include character-level positions, page numbers, or document chunks depending on the document type and indexing method.</p>
+   * @public
+   */
+  location?: CitationLocation | undefined;
 }
 
 /**
@@ -3422,6 +4363,7 @@ export interface ToolUseBlockDelta {
  * @public
  */
 export type ContentBlockDelta =
+  | ContentBlockDelta.CitationMember
   | ContentBlockDelta.ReasoningContentMember
   | ContentBlockDelta.TextMember
   | ContentBlockDelta.ToolUseMember
@@ -3439,6 +4381,7 @@ export namespace ContentBlockDelta {
     text: string;
     toolUse?: never;
     reasoningContent?: never;
+    citation?: never;
     $unknown?: never;
   }
 
@@ -3450,6 +4393,7 @@ export namespace ContentBlockDelta {
     text?: never;
     toolUse: ToolUseBlockDelta;
     reasoningContent?: never;
+    citation?: never;
     $unknown?: never;
   }
 
@@ -3461,6 +4405,19 @@ export namespace ContentBlockDelta {
     text?: never;
     toolUse?: never;
     reasoningContent: ReasoningContentBlockDelta;
+    citation?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>Incremental citation information that is streamed as part of the response generation process.</p>
+   * @public
+   */
+  export interface CitationMember {
+    text?: never;
+    toolUse?: never;
+    reasoningContent?: never;
+    citation: CitationsDelta;
     $unknown?: never;
   }
 
@@ -3471,6 +4428,7 @@ export namespace ContentBlockDelta {
     text?: never;
     toolUse?: never;
     reasoningContent?: never;
+    citation?: never;
     $unknown: [string, any];
   }
 
@@ -3478,6 +4436,7 @@ export namespace ContentBlockDelta {
     text: (value: string) => T;
     toolUse: (value: ToolUseBlockDelta) => T;
     reasoningContent: (value: ReasoningContentBlockDelta) => T;
+    citation: (value: CitationsDelta) => T;
     _: (name: string, value: any) => T;
   }
 
@@ -3485,6 +4444,7 @@ export namespace ContentBlockDelta {
     if (value.text !== undefined) return visitor.text(value.text);
     if (value.toolUse !== undefined) return visitor.toolUse(value.toolUse);
     if (value.reasoningContent !== undefined) return visitor.reasoningContent(value.reasoningContent);
+    if (value.citation !== undefined) return visitor.citation(value.citation);
     return visitor._(value.$unknown[0], value.$unknown[1]);
   };
 }
@@ -3569,7 +4529,7 @@ export namespace ContentBlockStart {
  */
 export interface ContentBlockStartEvent {
   /**
-   * <p>Start information about a content block start event.  </p>
+   * <p>Start information about a content block start event. </p>
    * @public
    */
   start: ContentBlockStart | undefined;
@@ -3892,8 +4852,7 @@ export namespace ConverseStreamOutput {
   }
 
   /**
-   * <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error,
-   *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
+   * <p>The input fails to satisfy the constraints specified by <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-validation-error">ValidationError</a> in the Amazon Bedrock User Guide</p>
    * @public
    */
   export interface ValidationExceptionMember {
@@ -3912,8 +4871,7 @@ export namespace ConverseStreamOutput {
   }
 
   /**
-   * <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For
-   *          troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
+   * <p>Your request was denied due to exceeding the account quotas for <i>Amazon Bedrock</i>. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-throttling-exception">ThrottlingException</a> in the Amazon Bedrock User Guide</p>
    * @public
    */
   export interface ThrottlingExceptionMember {
@@ -3932,8 +4890,7 @@ export namespace ConverseStreamOutput {
   }
 
   /**
-   * <p>The service isn't currently available. For troubleshooting this error,
-   *          see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-service-unavailable">ServiceUnavailable</a> in the Amazon Bedrock User Guide</p>
+   * <p>The service isn't currently available. For troubleshooting this error, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/troubleshooting-api-error-codes.html#ts-service-unavailable">ServiceUnavailable</a> in the Amazon Bedrock User Guide</p>
    * @public
    */
   export interface ServiceUnavailableExceptionMember {
@@ -4021,6 +4978,7 @@ export interface ConverseStreamResponse {
 export const Trace = {
   DISABLED: "DISABLED",
   ENABLED: "ENABLED",
+  ENABLED_FULL: "ENABLED_FULL",
 } as const;
 
 /**
@@ -4039,8 +4997,7 @@ export interface InvokeModelRequest {
   body?: Uint8Array | undefined;
 
   /**
-   * <p>The MIME type of the input data in the request. You must specify
-   *             <code>application/json</code>.</p>
+   * <p>The MIME type of the input data in the request. You must specify <code>application/json</code>.</p>
    * @public
    */
   contentType?: string | undefined;
@@ -4052,25 +5009,7 @@ export interface InvokeModelRequest {
   accept?: string | undefined;
 
   /**
-   * <p>The unique identifier of the model to invoke to run inference.</p>
-   *          <p>The <code>modelId</code> to provide depends on the type of model or throughput that you use:</p>
-   *          <ul>
-   *             <li>
-   *                <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a custom model, first purchase Provisioned Throughput for it. Then specify the ARN of the resulting provisioned model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use an <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported model</a>, specify the ARN of the imported model. You can get the model ARN from a successful call to <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateModelImportJob.html">CreateModelImportJob</a> or from the Imported models page in the Amazon Bedrock console.</p>
-   *             </li>
-   *          </ul>
+   * <p>The unique identifier of the model to invoke to run inference.</p> <p>The <code>modelId</code> to provide depends on the type of model or throughput that you use:</p> <ul> <li> <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a custom model, specify the ARN of the custom model deployment (for on-demand inference) or the ARN of your provisioned model (for Provisioned Throughput). For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use an <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported model</a>, specify the ARN of the imported model. You can get the model ARN from a successful call to <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateModelImportJob.html">CreateModelImportJob</a> or from the Imported models page in the Amazon Bedrock console.</p> </li> </ul>
    * @public
    */
   modelId: string | undefined;
@@ -4082,20 +5021,7 @@ export interface InvokeModelRequest {
   trace?: Trace | undefined;
 
   /**
-   * <p>The unique identifier of the guardrail that you want to use. If you don't provide a value, no guardrail is applied
-   *             to the invocation.</p>
-   *          <p>An error will be thrown in the following situations.</p>
-   *          <ul>
-   *             <li>
-   *                <p>You don't provide a guardrail identifier but you specify the <code>amazon-bedrock-guardrailConfig</code> field in the request body.</p>
-   *             </li>
-   *             <li>
-   *                <p>You enable the guardrail but the <code>contentType</code> isn't <code>application/json</code>.</p>
-   *             </li>
-   *             <li>
-   *                <p>You provide a guardrail identifier, but <code>guardrailVersion</code> isn't specified.</p>
-   *             </li>
-   *          </ul>
+   * <p>The unique identifier of the guardrail that you want to use. If you don't provide a value, no guardrail is applied to the invocation.</p> <p>An error will be thrown in the following situations.</p> <ul> <li> <p>You don't provide a guardrail identifier but you specify the <code>amazon-bedrock-guardrailConfig</code> field in the request body.</p> </li> <li> <p>You enable the guardrail but the <code>contentType</code> isn't <code>application/json</code>.</p> </li> <li> <p>You provide a guardrail identifier, but <code>guardrailVersion</code> isn't specified.</p> </li> </ul>
    * @public
    */
   guardrailIdentifier?: string | undefined;
@@ -4137,6 +5063,261 @@ export interface InvokeModelResponse {
 }
 
 /**
+ * <p>Payload content for the bidirectional input. The input is an audio stream.</p>
+ * @public
+ */
+export interface BidirectionalInputPayloadPart {
+  /**
+   * <p>The audio content for the bidirectional input.</p>
+   * @public
+   */
+  bytes?: Uint8Array | undefined;
+}
+
+/**
+ * <p>Payload content, the speech chunk, for the bidirectional input of the invocation step.</p>
+ * @public
+ */
+export type InvokeModelWithBidirectionalStreamInput =
+  | InvokeModelWithBidirectionalStreamInput.ChunkMember
+  | InvokeModelWithBidirectionalStreamInput.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace InvokeModelWithBidirectionalStreamInput {
+  /**
+   * <p>The audio chunk that is used as input for the invocation step.</p>
+   * @public
+   */
+  export interface ChunkMember {
+    chunk: BidirectionalInputPayloadPart;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    chunk?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    chunk: (value: BidirectionalInputPayloadPart) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: InvokeModelWithBidirectionalStreamInput, visitor: Visitor<T>): T => {
+    if (value.chunk !== undefined) return visitor.chunk(value.chunk);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ */
+export interface InvokeModelWithBidirectionalStreamRequest {
+  /**
+   * <p>The model ID or ARN of the model ID to use. Currently, only <code>amazon.nova-sonic-v1:0</code> is supported.</p>
+   * @public
+   */
+  modelId: string | undefined;
+
+  /**
+   * <p>The prompt and inference parameters in the format specified in the <code>BidirectionalInputPayloadPart</code> in the header. You must provide the body in JSON format. To see the format and content of the request and response bodies for different models, refer to <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html">Inference parameters</a>. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run inference</a> in the Bedrock User Guide.</p>
+   * @public
+   */
+  body: AsyncIterable<InvokeModelWithBidirectionalStreamInput> | undefined;
+}
+
+/**
+ * <p>Output from the bidirectional stream. The output is speech and a text transcription.</p>
+ * @public
+ */
+export interface BidirectionalOutputPayloadPart {
+  /**
+   * <p>The speech output of the bidirectional stream.</p>
+   * @public
+   */
+  bytes?: Uint8Array | undefined;
+}
+
+/**
+ * <p>Output from the bidirectional stream that was used for model invocation.</p>
+ * @public
+ */
+export type InvokeModelWithBidirectionalStreamOutput =
+  | InvokeModelWithBidirectionalStreamOutput.ChunkMember
+  | InvokeModelWithBidirectionalStreamOutput.InternalServerExceptionMember
+  | InvokeModelWithBidirectionalStreamOutput.ModelStreamErrorExceptionMember
+  | InvokeModelWithBidirectionalStreamOutput.ModelTimeoutExceptionMember
+  | InvokeModelWithBidirectionalStreamOutput.ServiceUnavailableExceptionMember
+  | InvokeModelWithBidirectionalStreamOutput.ThrottlingExceptionMember
+  | InvokeModelWithBidirectionalStreamOutput.ValidationExceptionMember
+  | InvokeModelWithBidirectionalStreamOutput.$UnknownMember;
+
+/**
+ * @public
+ */
+export namespace InvokeModelWithBidirectionalStreamOutput {
+  /**
+   * <p>The speech chunk that was provided as output from the invocation step.</p>
+   * @public
+   */
+  export interface ChunkMember {
+    chunk: BidirectionalOutputPayloadPart;
+    internalServerException?: never;
+    modelStreamErrorException?: never;
+    validationException?: never;
+    throttlingException?: never;
+    modelTimeoutException?: never;
+    serviceUnavailableException?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The request encountered an unknown internal error.</p>
+   * @public
+   */
+  export interface InternalServerExceptionMember {
+    chunk?: never;
+    internalServerException: InternalServerException;
+    modelStreamErrorException?: never;
+    validationException?: never;
+    throttlingException?: never;
+    modelTimeoutException?: never;
+    serviceUnavailableException?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The request encountered an error with the model stream.</p>
+   * @public
+   */
+  export interface ModelStreamErrorExceptionMember {
+    chunk?: never;
+    internalServerException?: never;
+    modelStreamErrorException: ModelStreamErrorException;
+    validationException?: never;
+    throttlingException?: never;
+    modelTimeoutException?: never;
+    serviceUnavailableException?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>
+   * @public
+   */
+  export interface ValidationExceptionMember {
+    chunk?: never;
+    internalServerException?: never;
+    modelStreamErrorException?: never;
+    validationException: ValidationException;
+    throttlingException?: never;
+    modelTimeoutException?: never;
+    serviceUnavailableException?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The request was denied due to request throttling.</p>
+   * @public
+   */
+  export interface ThrottlingExceptionMember {
+    chunk?: never;
+    internalServerException?: never;
+    modelStreamErrorException?: never;
+    validationException?: never;
+    throttlingException: ThrottlingException;
+    modelTimeoutException?: never;
+    serviceUnavailableException?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The connection was closed because a request was not received within the timeout period.</p>
+   * @public
+   */
+  export interface ModelTimeoutExceptionMember {
+    chunk?: never;
+    internalServerException?: never;
+    modelStreamErrorException?: never;
+    validationException?: never;
+    throttlingException?: never;
+    modelTimeoutException: ModelTimeoutException;
+    serviceUnavailableException?: never;
+    $unknown?: never;
+  }
+
+  /**
+   * <p>The request has failed due to a temporary failure of the server.</p>
+   * @public
+   */
+  export interface ServiceUnavailableExceptionMember {
+    chunk?: never;
+    internalServerException?: never;
+    modelStreamErrorException?: never;
+    validationException?: never;
+    throttlingException?: never;
+    modelTimeoutException?: never;
+    serviceUnavailableException: ServiceUnavailableException;
+    $unknown?: never;
+  }
+
+  /**
+   * @public
+   */
+  export interface $UnknownMember {
+    chunk?: never;
+    internalServerException?: never;
+    modelStreamErrorException?: never;
+    validationException?: never;
+    throttlingException?: never;
+    modelTimeoutException?: never;
+    serviceUnavailableException?: never;
+    $unknown: [string, any];
+  }
+
+  export interface Visitor<T> {
+    chunk: (value: BidirectionalOutputPayloadPart) => T;
+    internalServerException: (value: InternalServerException) => T;
+    modelStreamErrorException: (value: ModelStreamErrorException) => T;
+    validationException: (value: ValidationException) => T;
+    throttlingException: (value: ThrottlingException) => T;
+    modelTimeoutException: (value: ModelTimeoutException) => T;
+    serviceUnavailableException: (value: ServiceUnavailableException) => T;
+    _: (name: string, value: any) => T;
+  }
+
+  export const visit = <T>(value: InvokeModelWithBidirectionalStreamOutput, visitor: Visitor<T>): T => {
+    if (value.chunk !== undefined) return visitor.chunk(value.chunk);
+    if (value.internalServerException !== undefined)
+      return visitor.internalServerException(value.internalServerException);
+    if (value.modelStreamErrorException !== undefined)
+      return visitor.modelStreamErrorException(value.modelStreamErrorException);
+    if (value.validationException !== undefined) return visitor.validationException(value.validationException);
+    if (value.throttlingException !== undefined) return visitor.throttlingException(value.throttlingException);
+    if (value.modelTimeoutException !== undefined) return visitor.modelTimeoutException(value.modelTimeoutException);
+    if (value.serviceUnavailableException !== undefined)
+      return visitor.serviceUnavailableException(value.serviceUnavailableException);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  };
+}
+
+/**
+ * @public
+ */
+export interface InvokeModelWithBidirectionalStreamResponse {
+  /**
+   * <p>Streaming response from the model in the format specified by the <code>BidirectionalOutputPayloadPart</code> header.</p>
+   * @public
+   */
+  body: AsyncIterable<InvokeModelWithBidirectionalStreamOutput> | undefined;
+}
+
+/**
  * @public
  */
 export interface InvokeModelWithResponseStreamRequest {
@@ -4147,39 +5328,19 @@ export interface InvokeModelWithResponseStreamRequest {
   body?: Uint8Array | undefined;
 
   /**
-   * <p>The MIME type of the input data in the request. You must specify
-   *             <code>application/json</code>.</p>
+   * <p>The MIME type of the input data in the request. You must specify <code>application/json</code>.</p>
    * @public
    */
   contentType?: string | undefined;
 
   /**
-   * <p>The desired MIME type of the inference body in the response. The default value is
-   *             <code>application/json</code>.</p>
+   * <p>The desired MIME type of the inference body in the response. The default value is <code>application/json</code>.</p>
    * @public
    */
   accept?: string | undefined;
 
   /**
-   * <p>The unique identifier of the model to invoke to run inference.</p>
-   *          <p>The <code>modelId</code> to provide depends on the type of model or throughput that you use:</p>
-   *          <ul>
-   *             <li>
-   *                <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use a custom model, first purchase Provisioned Throughput for it. Then specify the ARN of the resulting provisioned model. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p>
-   *             </li>
-   *             <li>
-   *                <p>If you use an <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported model</a>, specify the ARN of the imported model. You can get the model ARN from a successful call to <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateModelImportJob.html">CreateModelImportJob</a> or from the Imported models page in the Amazon Bedrock console.</p>
-   *             </li>
-   *          </ul>
+   * <p>The unique identifier of the model to invoke to run inference.</p> <p>The <code>modelId</code> to provide depends on the type of model or throughput that you use:</p> <ul> <li> <p>If you use a base model, specify the model ID or its ARN. For a list of model IDs for base models, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html#model-ids-arns">Amazon Bedrock base model IDs (on-demand throughput)</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use an inference profile, specify the inference profile ID or its ARN. For a list of inference profile IDs, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html">Supported Regions and models for cross-region inference</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a provisioned model, specify the ARN of the Provisioned Throughput. For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-thru-use.html">Run inference using a Provisioned Throughput</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use a custom model, specify the ARN of the custom model deployment (for on-demand inference) or the ARN of your provisioned model (for Provisioned Throughput). For more information, see <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-use.html">Use a custom model in Amazon Bedrock</a> in the Amazon Bedrock User Guide.</p> </li> <li> <p>If you use an <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-customization-import-model.html">imported model</a>, specify the ARN of the imported model. You can get the model ARN from a successful call to <a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateModelImportJob.html">CreateModelImportJob</a> or from the Imported models page in the Amazon Bedrock console.</p> </li> </ul>
    * @public
    */
   modelId: string | undefined;
@@ -4191,20 +5352,7 @@ export interface InvokeModelWithResponseStreamRequest {
   trace?: Trace | undefined;
 
   /**
-   * <p>The unique identifier of the guardrail that you want to use. If you don't provide a value, no guardrail is applied
-   *             to the invocation.</p>
-   *          <p>An error is thrown in the following situations.</p>
-   *          <ul>
-   *             <li>
-   *                <p>You don't provide a guardrail identifier but you specify the <code>amazon-bedrock-guardrailConfig</code> field in the request body.</p>
-   *             </li>
-   *             <li>
-   *                <p>You enable the guardrail but the <code>contentType</code> isn't <code>application/json</code>.</p>
-   *             </li>
-   *             <li>
-   *                <p>You provide a guardrail identifier, but <code>guardrailVersion</code> isn't specified.</p>
-   *             </li>
-   *          </ul>
+   * <p>The unique identifier of the guardrail that you want to use. If you don't provide a value, no guardrail is applied to the invocation.</p> <p>An error is thrown in the following situations.</p> <ul> <li> <p>You don't provide a guardrail identifier but you specify the <code>amazon-bedrock-guardrailConfig</code> field in the request body.</p> </li> <li> <p>You enable the guardrail but the <code>contentType</code> isn't <code>application/json</code>.</p> </li> <li> <p>You provide a guardrail identifier, but <code>guardrailVersion</code> isn't specified.</p> </li> </ul>
    * @public
    */
   guardrailIdentifier?: string | undefined;
@@ -4493,6 +5641,208 @@ export const ApplyGuardrailRequestFilterSensitiveLog = (obj: ApplyGuardrailReque
 /**
  * @internal
  */
+export const GuardrailAutomatedReasoningStatementFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningStatement
+): any => ({
+  ...obj,
+  ...(obj.logic && { logic: SENSITIVE_STRING }),
+  ...(obj.naturalLanguage && { naturalLanguage: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningLogicWarningFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningLogicWarning
+): any => ({
+  ...obj,
+  ...(obj.premises && {
+    premises: obj.premises.map((item) => GuardrailAutomatedReasoningStatementFilterSensitiveLog(item)),
+  }),
+  ...(obj.claims && { claims: obj.claims.map((item) => GuardrailAutomatedReasoningStatementFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningInputTextReferenceFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningInputTextReference
+): any => ({
+  ...obj,
+  ...(obj.text && { text: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningTranslationFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningTranslation
+): any => ({
+  ...obj,
+  ...(obj.premises && {
+    premises: obj.premises.map((item) => GuardrailAutomatedReasoningStatementFilterSensitiveLog(item)),
+  }),
+  ...(obj.claims && { claims: obj.claims.map((item) => GuardrailAutomatedReasoningStatementFilterSensitiveLog(item)) }),
+  ...(obj.untranslatedPremises && {
+    untranslatedPremises: obj.untranslatedPremises.map((item) =>
+      GuardrailAutomatedReasoningInputTextReferenceFilterSensitiveLog(item)
+    ),
+  }),
+  ...(obj.untranslatedClaims && {
+    untranslatedClaims: obj.untranslatedClaims.map((item) =>
+      GuardrailAutomatedReasoningInputTextReferenceFilterSensitiveLog(item)
+    ),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningImpossibleFindingFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningImpossibleFinding
+): any => ({
+  ...obj,
+  ...(obj.translation && { translation: GuardrailAutomatedReasoningTranslationFilterSensitiveLog(obj.translation) }),
+  ...(obj.logicWarning && {
+    logicWarning: GuardrailAutomatedReasoningLogicWarningFilterSensitiveLog(obj.logicWarning),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningInvalidFindingFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningInvalidFinding
+): any => ({
+  ...obj,
+  ...(obj.translation && { translation: GuardrailAutomatedReasoningTranslationFilterSensitiveLog(obj.translation) }),
+  ...(obj.logicWarning && {
+    logicWarning: GuardrailAutomatedReasoningLogicWarningFilterSensitiveLog(obj.logicWarning),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningScenarioFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningScenario
+): any => ({
+  ...obj,
+  ...(obj.statements && {
+    statements: obj.statements.map((item) => GuardrailAutomatedReasoningStatementFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningSatisfiableFindingFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningSatisfiableFinding
+): any => ({
+  ...obj,
+  ...(obj.translation && { translation: GuardrailAutomatedReasoningTranslationFilterSensitiveLog(obj.translation) }),
+  ...(obj.claimsTrueScenario && {
+    claimsTrueScenario: GuardrailAutomatedReasoningScenarioFilterSensitiveLog(obj.claimsTrueScenario),
+  }),
+  ...(obj.claimsFalseScenario && {
+    claimsFalseScenario: GuardrailAutomatedReasoningScenarioFilterSensitiveLog(obj.claimsFalseScenario),
+  }),
+  ...(obj.logicWarning && {
+    logicWarning: GuardrailAutomatedReasoningLogicWarningFilterSensitiveLog(obj.logicWarning),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningTranslationOptionFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningTranslationOption
+): any => ({
+  ...obj,
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningTranslationAmbiguousFindingFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningTranslationAmbiguousFinding
+): any => ({
+  ...obj,
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningValidFindingFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningValidFinding
+): any => ({
+  ...obj,
+  ...(obj.translation && { translation: GuardrailAutomatedReasoningTranslationFilterSensitiveLog(obj.translation) }),
+  ...(obj.claimsTrueScenario && {
+    claimsTrueScenario: GuardrailAutomatedReasoningScenarioFilterSensitiveLog(obj.claimsTrueScenario),
+  }),
+  ...(obj.logicWarning && {
+    logicWarning: GuardrailAutomatedReasoningLogicWarningFilterSensitiveLog(obj.logicWarning),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningFindingFilterSensitiveLog = (obj: GuardrailAutomatedReasoningFinding): any => {
+  if (obj.valid !== undefined) return { valid: GuardrailAutomatedReasoningValidFindingFilterSensitiveLog(obj.valid) };
+  if (obj.invalid !== undefined)
+    return { invalid: GuardrailAutomatedReasoningInvalidFindingFilterSensitiveLog(obj.invalid) };
+  if (obj.satisfiable !== undefined)
+    return { satisfiable: GuardrailAutomatedReasoningSatisfiableFindingFilterSensitiveLog(obj.satisfiable) };
+  if (obj.impossible !== undefined)
+    return { impossible: GuardrailAutomatedReasoningImpossibleFindingFilterSensitiveLog(obj.impossible) };
+  if (obj.translationAmbiguous !== undefined)
+    return {
+      translationAmbiguous: GuardrailAutomatedReasoningTranslationAmbiguousFindingFilterSensitiveLog(
+        obj.translationAmbiguous
+      ),
+    };
+  if (obj.tooComplex !== undefined) return { tooComplex: obj.tooComplex };
+  if (obj.noTranslations !== undefined) return { noTranslations: obj.noTranslations };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const GuardrailAutomatedReasoningPolicyAssessmentFilterSensitiveLog = (
+  obj: GuardrailAutomatedReasoningPolicyAssessment
+): any => ({
+  ...obj,
+  ...(obj.findings && {
+    findings: obj.findings.map((item) => GuardrailAutomatedReasoningFindingFilterSensitiveLog(item)),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const GuardrailAssessmentFilterSensitiveLog = (obj: GuardrailAssessment): any => ({
+  ...obj,
+  ...(obj.automatedReasoningPolicy && {
+    automatedReasoningPolicy: GuardrailAutomatedReasoningPolicyAssessmentFilterSensitiveLog(
+      obj.automatedReasoningPolicy
+    ),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const ApplyGuardrailResponseFilterSensitiveLog = (obj: ApplyGuardrailResponse): any => ({
+  ...obj,
+  ...(obj.assessments && { assessments: obj.assessments.map((item) => GuardrailAssessmentFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
 export const GuardrailConverseImageSourceFilterSensitiveLog = (obj: GuardrailConverseImageSource): any => {
   if (obj.bytes !== undefined) return { bytes: obj.bytes };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
@@ -4543,7 +5893,9 @@ export const ContentBlockFilterSensitiveLog = (obj: ContentBlock): any => {
   if (obj.toolResult !== undefined) return { toolResult: obj.toolResult };
   if (obj.guardContent !== undefined)
     return { guardContent: GuardrailConverseContentBlockFilterSensitiveLog(obj.guardContent) };
+  if (obj.cachePoint !== undefined) return { cachePoint: obj.cachePoint };
   if (obj.reasoningContent !== undefined) return { reasoningContent: SENSITIVE_STRING };
+  if (obj.citationsContent !== undefined) return { citationsContent: obj.citationsContent };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -4562,6 +5914,7 @@ export const SystemContentBlockFilterSensitiveLog = (obj: SystemContentBlock): a
   if (obj.text !== undefined) return { text: obj.text };
   if (obj.guardContent !== undefined)
     return { guardContent: GuardrailConverseContentBlockFilterSensitiveLog(obj.guardContent) };
+  if (obj.cachePoint !== undefined) return { cachePoint: obj.cachePoint };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -4588,9 +5941,41 @@ export const ConverseOutputFilterSensitiveLog = (obj: ConverseOutput): any => {
 /**
  * @internal
  */
+export const GuardrailTraceAssessmentFilterSensitiveLog = (obj: GuardrailTraceAssessment): any => ({
+  ...obj,
+  ...(obj.inputAssessment && {
+    inputAssessment: Object.entries(obj.inputAssessment).reduce(
+      (acc: any, [key, value]: [string, GuardrailAssessment]) => (
+        (acc[key] = GuardrailAssessmentFilterSensitiveLog(value)), acc
+      ),
+      {}
+    ),
+  }),
+  ...(obj.outputAssessments && {
+    outputAssessments: Object.entries(obj.outputAssessments).reduce(
+      (acc: any, [key, value]: [string, GuardrailAssessment[]]) => (
+        (acc[key] = value.map((item) => GuardrailAssessmentFilterSensitiveLog(item))), acc
+      ),
+      {}
+    ),
+  }),
+});
+
+/**
+ * @internal
+ */
+export const ConverseTraceFilterSensitiveLog = (obj: ConverseTrace): any => ({
+  ...obj,
+  ...(obj.guardrail && { guardrail: GuardrailTraceAssessmentFilterSensitiveLog(obj.guardrail) }),
+});
+
+/**
+ * @internal
+ */
 export const ConverseResponseFilterSensitiveLog = (obj: ConverseResponse): any => ({
   ...obj,
   ...(obj.output && { output: ConverseOutputFilterSensitiveLog(obj.output) }),
+  ...(obj.trace && { trace: ConverseTraceFilterSensitiveLog(obj.trace) }),
 });
 
 /**
@@ -4622,6 +6007,7 @@ export const ContentBlockDeltaFilterSensitiveLog = (obj: ContentBlockDelta): any
   if (obj.text !== undefined) return { text: obj.text };
   if (obj.toolUse !== undefined) return { toolUse: obj.toolUse };
   if (obj.reasoningContent !== undefined) return { reasoningContent: SENSITIVE_STRING };
+  if (obj.citation !== undefined) return { citation: obj.citation };
   if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
 };
 
@@ -4636,6 +6022,22 @@ export const ContentBlockDeltaEventFilterSensitiveLog = (obj: ContentBlockDeltaE
 /**
  * @internal
  */
+export const ConverseStreamTraceFilterSensitiveLog = (obj: ConverseStreamTrace): any => ({
+  ...obj,
+  ...(obj.guardrail && { guardrail: GuardrailTraceAssessmentFilterSensitiveLog(obj.guardrail) }),
+});
+
+/**
+ * @internal
+ */
+export const ConverseStreamMetadataEventFilterSensitiveLog = (obj: ConverseStreamMetadataEvent): any => ({
+  ...obj,
+  ...(obj.trace && { trace: ConverseStreamTraceFilterSensitiveLog(obj.trace) }),
+});
+
+/**
+ * @internal
+ */
 export const ConverseStreamOutputFilterSensitiveLog = (obj: ConverseStreamOutput): any => {
   if (obj.messageStart !== undefined) return { messageStart: obj.messageStart };
   if (obj.contentBlockStart !== undefined) return { contentBlockStart: obj.contentBlockStart };
@@ -4643,7 +6045,7 @@ export const ConverseStreamOutputFilterSensitiveLog = (obj: ConverseStreamOutput
     return { contentBlockDelta: ContentBlockDeltaEventFilterSensitiveLog(obj.contentBlockDelta) };
   if (obj.contentBlockStop !== undefined) return { contentBlockStop: obj.contentBlockStop };
   if (obj.messageStop !== undefined) return { messageStop: obj.messageStop };
-  if (obj.metadata !== undefined) return { metadata: obj.metadata };
+  if (obj.metadata !== undefined) return { metadata: ConverseStreamMetadataEventFilterSensitiveLog(obj.metadata) };
   if (obj.internalServerException !== undefined) return { internalServerException: obj.internalServerException };
   if (obj.modelStreamErrorException !== undefined) return { modelStreamErrorException: obj.modelStreamErrorException };
   if (obj.validationException !== undefined) return { validationException: obj.validationException };
@@ -4675,6 +6077,69 @@ export const InvokeModelRequestFilterSensitiveLog = (obj: InvokeModelRequest): a
 export const InvokeModelResponseFilterSensitiveLog = (obj: InvokeModelResponse): any => ({
   ...obj,
   ...(obj.body && { body: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const BidirectionalInputPayloadPartFilterSensitiveLog = (obj: BidirectionalInputPayloadPart): any => ({
+  ...obj,
+  ...(obj.bytes && { bytes: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const InvokeModelWithBidirectionalStreamInputFilterSensitiveLog = (
+  obj: InvokeModelWithBidirectionalStreamInput
+): any => {
+  if (obj.chunk !== undefined) return { chunk: SENSITIVE_STRING };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const InvokeModelWithBidirectionalStreamRequestFilterSensitiveLog = (
+  obj: InvokeModelWithBidirectionalStreamRequest
+): any => ({
+  ...obj,
+  ...(obj.body && { body: "STREAMING_CONTENT" }),
+});
+
+/**
+ * @internal
+ */
+export const BidirectionalOutputPayloadPartFilterSensitiveLog = (obj: BidirectionalOutputPayloadPart): any => ({
+  ...obj,
+  ...(obj.bytes && { bytes: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const InvokeModelWithBidirectionalStreamOutputFilterSensitiveLog = (
+  obj: InvokeModelWithBidirectionalStreamOutput
+): any => {
+  if (obj.chunk !== undefined) return { chunk: SENSITIVE_STRING };
+  if (obj.internalServerException !== undefined) return { internalServerException: obj.internalServerException };
+  if (obj.modelStreamErrorException !== undefined) return { modelStreamErrorException: obj.modelStreamErrorException };
+  if (obj.validationException !== undefined) return { validationException: obj.validationException };
+  if (obj.throttlingException !== undefined) return { throttlingException: obj.throttlingException };
+  if (obj.modelTimeoutException !== undefined) return { modelTimeoutException: obj.modelTimeoutException };
+  if (obj.serviceUnavailableException !== undefined)
+    return { serviceUnavailableException: obj.serviceUnavailableException };
+  if (obj.$unknown !== undefined) return { [obj.$unknown[0]]: "UNKNOWN" };
+};
+
+/**
+ * @internal
+ */
+export const InvokeModelWithBidirectionalStreamResponseFilterSensitiveLog = (
+  obj: InvokeModelWithBidirectionalStreamResponse
+): any => ({
+  ...obj,
+  ...(obj.body && { body: "STREAMING_CONTENT" }),
 });
 
 /**

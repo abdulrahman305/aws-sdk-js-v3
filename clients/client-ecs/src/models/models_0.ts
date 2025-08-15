@@ -24,6 +24,41 @@ export class AccessDeniedException extends __BaseException {
 }
 
 /**
+ * <p>The advanced settings for a load balancer used in blue/green deployments. Specify the
+ *          alternate target group, listener rules, and IAM role required for traffic shifting during
+ *          blue/green deployments. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-deployment-implementation.html">Required resources for Amazon ECS
+ *             blue/green deployments</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+ * @public
+ */
+export interface AdvancedConfiguration {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the alternate target group for Amazon ECS blue/green deployments.</p>
+   * @public
+   */
+  alternateTargetGroupArn?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) that that identifies the production listener rule (in the case of an Application Load Balancer) or
+   *          listener (in the case for an Network Load Balancer) for routing production traffic.</p>
+   * @public
+   */
+  productionListenerRule?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) that identifies ) that identifies the test listener rule  (in the case of an Application Load Balancer) or
+   *          listener (in the case for an Network Load Balancer) for routing test traffic.</p>
+   * @public
+   */
+  testListenerRule?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS permission to call the Elastic Load Balancing APIs for you.</p>
+   * @public
+   */
+  roleArn?: string | undefined;
+}
+
+/**
  * @public
  * @enum
  */
@@ -45,16 +80,6 @@ export type AgentUpdateStatus = (typeof AgentUpdateStatus)[keyof typeof AgentUpd
  * <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
- *          <p>The following list includes additional causes for the error:</p>
- *          <ul>
- *             <li>
- *                <p>The <code>RunTask</code> could not be processed because you use managed
- * 					scaling and there is a capacity error because the quota of tasks in the
- * 						<code>PROVISIONING</code> per cluster has been reached. For information
- * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
- * 						service quotas</a>.</p>
- *             </li>
- *          </ul>
  * @public
  */
 export class ClientException extends __BaseException {
@@ -476,7 +501,8 @@ export interface CreateCapacityProviderResponse {
 /**
  * <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
- *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service
+ * 				event messages</a>. </p>
  * @public
  */
 export class InvalidParameterException extends __BaseException {
@@ -672,14 +698,23 @@ export interface ExecuteCommandConfiguration {
  */
 export interface ManagedStorageConfiguration {
   /**
-   * <p>Specify a Key Management Service key ID to encrypt the managed storage.</p>
+   * <p>Specify a Key Management Service key ID to encrypt Amazon ECS managed storage.</p>
+   *          <p> When you specify a <code>kmsKeyId</code>, Amazon ECS uses the key to encrypt data volumes
+   * 			managed by Amazon ECS that are attached to tasks in the cluster. The following data volumes
+   * 			are managed by Amazon ECS: Amazon EBS. For more information about encryption of Amazon EBS volumes
+   * 			attached to Amazon ECS tasks, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html">Encrypt data stored in Amazon EBS volumes for Amazon ECS</a> in the
+   * 			<i>Amazon Elastic Container Service Developer Guide</i>.</p>
    *          <p>The key must be a single Region key.</p>
    * @public
    */
   kmsKeyId?: string | undefined;
 
   /**
-   * <p>Specify the Key Management Service key ID for the Fargate ephemeral storage.</p>
+   * <p>Specify the Key Management Service key ID for Fargate ephemeral storage.</p>
+   *          <p>When you specify a <code>fargateEphemeralStorageKmsKeyId</code>, Amazon Web Services Fargate uses
+   * 			the key to encrypt data at rest in ephemeral storage. For more information about
+   * 			Fargate ephemeral storage encryption, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-storage-encryption.html">Customer managed keys for Amazon Web Services Fargate ephemeral storage for
+   * 				Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
    *          <p>The key must be a single Region key.</p>
    * @public
    */
@@ -789,8 +824,8 @@ export interface ClusterServiceConnectDefaultsRequest {
   /**
    * <p>The namespace name or full Amazon Resource Name (ARN) of the Cloud Map namespace that's used when you create a service and don't specify
    * 			a Service Connect configuration. The namespace name can include up to 1024 characters.
-   * 			The name is case-sensitive. The name can't include greater than
-   * 			(>), less than (<), double quotation marks ("), or slash (/).</p>
+   * 			The name is case-sensitive. The name can't include greater than (>), less than
+   * 			(<), double quotation marks ("), or slash (/).</p>
    *          <p>If you enter an existing namespace name or ARN, then that namespace will be used.
    * 			Any namespace type is supported. The namespace must be in this account and this Amazon Web Services
    * 			Region.</p>
@@ -1078,7 +1113,7 @@ export interface Cluster {
   clusterName?: string | undefined;
 
   /**
-   * <p>The execute command configuration for the cluster.</p>
+   * <p>The execute command and managed storage configuration for the cluster.</p>
    * @public
    */
   configuration?: ClusterConfiguration | undefined;
@@ -1358,8 +1393,7 @@ export type AvailabilityZoneRebalancing =
  * 			rollback parameter to have Amazon ECS to roll back your service to the last completed
  * 			deployment after a failure.</p>
  *          <p>You can only use the <code>DeploymentAlarms</code> method to detect failures when the
- * 				<code>DeploymentController</code> is set to <code>ECS</code> (rolling
- * 			update).</p>
+ * 				<code>DeploymentController</code> is set to <code>ECS</code>.</p>
  *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html">Rolling
  * 				update</a> in the <i>
  *                <i>Amazon Elastic Container Service Developer Guide</i>
@@ -1421,6 +1455,108 @@ export interface DeploymentCircuitBreaker {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const DeploymentLifecycleHookStage = {
+  POST_PRODUCTION_TRAFFIC_SHIFT: "POST_PRODUCTION_TRAFFIC_SHIFT",
+  POST_SCALE_UP: "POST_SCALE_UP",
+  POST_TEST_TRAFFIC_SHIFT: "POST_TEST_TRAFFIC_SHIFT",
+  PRE_SCALE_UP: "PRE_SCALE_UP",
+  PRODUCTION_TRAFFIC_SHIFT: "PRODUCTION_TRAFFIC_SHIFT",
+  RECONCILE_SERVICE: "RECONCILE_SERVICE",
+  TEST_TRAFFIC_SHIFT: "TEST_TRAFFIC_SHIFT",
+} as const;
+
+/**
+ * @public
+ */
+export type DeploymentLifecycleHookStage =
+  (typeof DeploymentLifecycleHookStage)[keyof typeof DeploymentLifecycleHookStage];
+
+/**
+ * <p>A deployment lifecycle hook runs custom logic at specific stages of the deployment process. Currently, you can use Lambda functions as hook targets.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-lifecycle-hooks.html">Lifecycle hooks for Amazon ECS service deployments</a> in the <i>
+ *             Amazon Elastic Container Service Developer Guide</i>.</p>
+ * @public
+ */
+export interface DeploymentLifecycleHook {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the hook target. Currently, only Lambda function ARNs are supported.</p>
+   *          <p>You must provide this parameter when configuring a deployment lifecycle hook.</p>
+   * @public
+   */
+  hookTargetArn?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the IAM role that grants Amazon ECS permission to call Lambda functions on your behalf.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/blue-green-permissions.html">Permissions required
+   *             for Lambda functions in Amazon ECS blue/green deployments</a> in the <i>
+   *             Amazon Elastic Container Service Developer Guide</i>.</p>
+   * @public
+   */
+  roleArn?: string | undefined;
+
+  /**
+   * <p>The lifecycle stages at which to run the hook. Choose from these valid values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>RECONCILE_SERVICE</p>
+   *                <p>The reconciliation stage that only happens when you start a new service deployment with more than 1 service revision in an ACTIVE state.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *             <li>
+   *                <p>PRE_SCALE_UP</p>
+   *                <p>The green service revision has not started. The blue service revision is handling 100% of the production traffic. There is no test traffic.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *             <li>
+   *                <p>POST_SCALE_UP</p>
+   *                <p>The green service revision has started. The blue service revision is handling 100% of the production traffic. There is no test traffic.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *             <li>
+   *                <p>TEST_TRAFFIC_SHIFT</p>
+   *                <p>The blue and green service revisions are running. The blue service revision handles 100% of the production traffic. The green service revision is migrating from 0% to 100% of test traffic.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *             <li>
+   *                <p>POST_TEST_TRAFFIC_SHIFT</p>
+   *                <p>The test traffic shift is complete. The green service revision handles 100% of the test traffic.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *             <li>
+   *                <p>PRODUCTION_TRAFFIC_SHIFT</p>
+   *                <p>Production traffic is shifting to the green service revision. The green service revision is migrating from 0% to 100% of production traffic.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *             <li>
+   *                <p>POST_PRODUCTION_TRAFFIC_SHIFT</p>
+   *                <p>The production traffic shift is complete.</p>
+   *                <p>You can use a lifecycle hook for this stage.</p>
+   *             </li>
+   *          </ul>
+   *          <p>You must provide this parameter when configuring a deployment lifecycle hook.</p>
+   * @public
+   */
+  lifecycleStages?: DeploymentLifecycleHookStage[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const DeploymentStrategy = {
+  BLUE_GREEN: "BLUE_GREEN",
+  ROLLING: "ROLLING",
+} as const;
+
+/**
+ * @public
+ */
+export type DeploymentStrategy = (typeof DeploymentStrategy)[keyof typeof DeploymentStrategy];
+
+/**
  * <p>Optional deployment parameters that control how many tasks run during a deployment and
  * 			the ordering of stopping and starting tasks.</p>
  * @public
@@ -1473,9 +1609,10 @@ export interface DeploymentConfiguration {
    * 				uses either the blue/green (<code>CODE_DEPLOY</code>) or <code>EXTERNAL</code>
    * 				deployment types and has tasks that use the EC2 launch type.</p>
    *          </note>
-   *          <p>If the service uses either the blue/green (<code>CODE_DEPLOY</code>) or <code>EXTERNAL</code>
-   * 			deployment types, and the tasks in the service use the Fargate launch type, the maximum
-   * 			percent value is not used. The value is still returned when describing your service.</p>
+   *          <p>If the service uses either the blue/green (<code>CODE_DEPLOY</code>) or
+   * 				<code>EXTERNAL</code> deployment types, and the tasks in the service use the
+   * 			Fargate launch type, the maximum percent value is not used. The value is
+   * 			still returned when describing your service.</p>
    * @public
    */
   maximumPercent?: number | undefined;
@@ -1563,6 +1700,45 @@ export interface DeploymentConfiguration {
    * @public
    */
   alarms?: DeploymentAlarms | undefined;
+
+  /**
+   * <p>The deployment strategy for the service. Choose from these valid values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>ROLLING</code> - When you create a service which uses the rolling update
+   *                   (<code>ROLLING</code>) deployment strategy, the Amazon ECS service scheduler replaces
+   *                the currently running tasks with new tasks. The number of tasks that Amazon ECS adds or
+   *                removes from the service during a rolling update is controlled by the service
+   *                deployment configuration.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>BLUE_GREEN</code> - A blue/green deployment strategy
+   *                   (<code>BLUE_GREEN</code>) is a release methodology that reduces downtime and risk
+   *                by running two identical production environments called blue and green. With Amazon ECS
+   *                blue/green deployments, you can validate new service revisions before directing
+   *                production traffic to them. This approach provides a safer way to deploy changes with
+   *                the ability to quickly roll back if needed.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  strategy?: DeploymentStrategy | undefined;
+
+  /**
+   * <p>The time period when both blue and green service revisions are running simultaneously after the production traffic has shifted.</p>
+   *          <p>You must provide this parameter when you use the <code>BLUE_GREEN</code> deployment
+   *          strategy.</p>
+   * @public
+   */
+  bakeTimeInMinutes?: number | undefined;
+
+  /**
+   * <p>An array of deployment lifecycle hook objects to run custom logic at specific stages of the deployment lifecycle.</p>
+   * @public
+   */
+  lifecycleHooks?: DeploymentLifecycleHook[] | undefined;
 }
 
 /**
@@ -1587,35 +1763,111 @@ export type DeploymentControllerType = (typeof DeploymentControllerType)[keyof t
 export interface DeploymentController {
   /**
    * <p>The deployment controller type to use.</p>
-   *          <p>There are three deployment controller types available:</p>
-   *          <dl>
-   *             <dt>ECS</dt>
-   *             <dd>
-   *                <p>The rolling update (<code>ECS</code>) deployment type involves replacing
-   * 						the current running version of the container with the latest version. The
-   * 						number of containers Amazon ECS adds or removes from the service during a rolling
-   * 						update is controlled by adjusting the minimum and maximum number of healthy
-   * 						tasks allowed during a service deployment, as specified in the <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html">DeploymentConfiguration</a>.</p>
-   *                <p>For more information about rolling deployments, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html">Deploy
-   * 							Amazon ECS services by replacing tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
-   *             </dd>
-   *             <dt>CODE_DEPLOY</dt>
-   *             <dd>
-   *                <p>The blue/green (<code>CODE_DEPLOY</code>) deployment type uses the
-   * 						blue/green deployment model powered by CodeDeploy, which allows you to verify a
-   * 						new deployment of a service before sending production traffic to it.</p>
-   *                <p>For more information about blue/green deployments, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-bluegreen.html">Validate the state of an Amazon ECS service before deployment </a> in
-   * 						the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
-   *             </dd>
-   *             <dt>EXTERNAL</dt>
-   *             <dd>
-   *                <p>The external (<code>EXTERNAL</code>) deployment type enables you to use
-   * 						any third-party deployment controller for full control over the deployment
-   * 						process for an Amazon ECS service.</p>
-   *                <p>For more information about external deployments, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-external.html">Deploy Amazon ECS services using a third-party controller </a> in the
-   * 						<i>Amazon Elastic Container Service Developer Guide</i>.</p>
-   *             </dd>
-   *          </dl>
+   *          <p>The deployment controller is the mechanism that determines how tasks are deployed for
+   * 			your service. The valid options are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>ECS</p>
+   *                <p>When you create a service which uses the <code>ECS</code> deployment controller, you can choose between the following deployment strategies:</p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <code>ROLLING</code>: When you create a service which uses the <i>rolling update</i>
+   * 							(<code>ROLLING</code>) deployment strategy, the Amazon ECS service scheduler replaces the
+   * 							currently running tasks with new tasks. The number of tasks that Amazon ECS adds or
+   * 							removes from the service during a rolling update is controlled by the service
+   * 							deployment configuration. </p>
+   *                      <p>Rolling update deployments are best suited for the following scenarios:</p>
+   *                      <ul>
+   *                         <li>
+   *                            <p>Gradual service updates: You need to
+   * 									update your service incrementally without taking the entire service
+   * 									offline at once.</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Limited resource requirements: You
+   * 									want to avoid the additional resource costs of running two complete
+   * 									environments simultaneously (as required by blue/green
+   * 									deployments).</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Acceptable deployment time: Your
+   * 									application can tolerate a longer deployment process, as rolling updates
+   * 									replace tasks one by one.</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>No need for instant roll back: Your
+   * 									service can tolerate a rollback process that takes minutes rather than
+   * 									seconds.</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Simple deployment process: You prefer
+   * 									a straightforward deployment approach without the complexity of managing
+   * 									multiple environments, target groups, and listeners.</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>No load balancer requirement: Your
+   * 									service doesn't use or require a load balancer, Application Load Balancer, Network Load Balancer, or Service Connect (which are required
+   * 									for blue/green deployments).</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Stateful applications: Your
+   * 									application maintains state that makes it difficult to run two parallel
+   * 									environments.</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Cost sensitivity: You want to
+   * 									minimize deployment costs by not running duplicate environments during
+   * 									deployment.</p>
+   *                         </li>
+   *                      </ul>
+   *                      <p>Rolling updates are the default deployment strategy for services and provide a
+   * 							balance between deployment safety and resource efficiency for many common
+   * 							application scenarios.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <code>BLUE_GREEN</code>: A <i>blue/green</i> deployment strategy (<code>BLUE_GREEN</code>) is a release methodology that reduces downtime and
+   * 							risk by running two identical production environments called blue and green.
+   * 							With Amazon ECS blue/green deployments, you can validate new service revisions before
+   * 							directing production traffic to them. This approach provides a safer way to
+   * 							deploy changes with the ability to quickly roll back if needed.</p>
+   *                      <p>Amazon ECS blue/green deployments are best suited for the following scenarios:</p>
+   *                      <ul>
+   *                         <li>
+   *                            <p>Service validation: When you need to
+   * 									validate new service revisions before directing production traffic to
+   * 									them</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Zero downtime: When your service
+   * 									requires zero-downtime deployments</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Instant roll back: When you
+   * 									need the ability to quickly roll back if issues are detected</p>
+   *                         </li>
+   *                         <li>
+   *                            <p>Load balancer requirement: When your
+   * 									service uses Application Load Balancer, Network Load Balancer, or Service Connect</p>
+   *                         </li>
+   *                      </ul>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>External</p>
+   *                <p>Use a third-party deployment controller.</p>
+   *             </li>
+   *             <li>
+   *                <p>Blue/green deployment (powered by CodeDeploy)</p>
+   *                <p>CodeDeploy installs an updated version of the application as a new replacement task
+   * 					set and reroutes production traffic from the original application task set to
+   * 					the replacement task set. The original task set is terminated after a successful
+   * 					deployment. Use this deployment controller to verify a new deployment of a service
+   * 					before sending production traffic to it.</p>
+   *             </li>
+   *          </ul>
    * @public
    */
   type: DeploymentControllerType | undefined;
@@ -1697,6 +1949,12 @@ export interface LoadBalancer {
    * @public
    */
   containerPort?: number | undefined;
+
+  /**
+   * <p>The advanced settings for the load balancer used in blue/green deployments. Specify the alternate target group, listener rules, and IAM role required for traffic shifting during blue/green deployments.</p>
+   * @public
+   */
+  advancedConfiguration?: AdvancedConfiguration | undefined;
 }
 
 /**
@@ -1745,12 +2003,12 @@ export interface AwsVpcConfiguration {
    *          <p>Consider the following when you set this value:</p>
    *          <ul>
    *             <li>
-   *                <p>When you use <code>create-service</code> or <code>update-service</code>, the default is
-   * 						<code>DISABLED</code>. </p>
+   *                <p>When you use <code>create-service</code> or <code>update-service</code>, the
+   * 					default is <code>DISABLED</code>. </p>
    *             </li>
    *             <li>
-   *                <p>When the service <code>deploymentController</code> is <code>ECS</code>, the value must be
-   * 						<code>DISABLED</code>. </p>
+   *                <p>When the service <code>deploymentController</code> is <code>ECS</code>, the
+   * 					value must be <code>DISABLED</code>. </p>
    *             </li>
    *          </ul>
    * @public
@@ -2054,9 +2312,7 @@ export interface LogConfiguration {
    *             </dd>
    *             <dt>awslogs-stream-prefix</dt>
    *             <dd>
-   *                <p>Required: Yes, when using the Fargate launch
-   * 							type.Optional for the EC2 launch type,
-   * 							required for the Fargate launch type.</p>
+   *                <p>Required: Yes, when using Fargate.Optional when using EC2.</p>
    *                <p>Use the <code>awslogs-stream-prefix</code> option to associate a log
    * 						stream with the specified prefix, the container name, and the ID of the
    * 						Amazon ECS task that the container belongs to. If you specify a prefix with this
@@ -2112,15 +2368,19 @@ export interface LogConfiguration {
    * 							performance.</p>
    *                </note>
    *             </dd>
+   *          </dl>
+   *          <p>The following options apply to all supported log drivers.</p>
+   *          <dl>
    *             <dt>mode</dt>
    *             <dd>
    *                <p>Required: No</p>
    *                <p>Valid values: <code>non-blocking</code> | <code>blocking</code>
    *                </p>
    *                <p>This option defines the delivery mode of log messages from the container
-   * 						to CloudWatch Logs. The delivery mode you choose affects application availability when
-   * 						the flow of logs from container to CloudWatch is interrupted.</p>
-   *                <p>If you use the <code>blocking</code> mode and the flow of logs to CloudWatch is
+   * 						to the log driver specified using <code>logDriver</code>. The delivery mode
+   * 						you choose affects application availability when the flow of logs from
+   * 						container is interrupted.</p>
+   *                <p>If you use the <code>blocking</code> mode and the flow of logs is
    * 						interrupted, calls from container code to write to the <code>stdout</code>
    * 						and <code>stderr</code> streams will block. The logging thread of the
    * 						application will block as a result. This may cause the application to become
@@ -2128,10 +2388,26 @@ export interface LogConfiguration {
    *                <p>If you use the <code>non-blocking</code> mode, the container's logs are
    * 						instead stored in an in-memory intermediate buffer configured with the
    * 							<code>max-buffer-size</code> option. This prevents the application from
-   * 						becoming unresponsive when logs cannot be sent to CloudWatch. We recommend using
-   * 						this mode if you want to ensure service availability and are okay with some
-   * 						log loss. For more information, see <a href="http://aws.amazon.com/blogs/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/">Preventing log loss with non-blocking mode in the <code>awslogs</code>
+   * 						becoming unresponsive when logs cannot be sent. We recommend using this mode
+   * 						if you want to ensure service availability and are okay with some log loss.
+   * 						For more information, see <a href="http://aws.amazon.com/blogs/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/">Preventing log loss with non-blocking mode in the <code>awslogs</code>
    * 							container log driver</a>.</p>
+   *                <p>You can set a default <code>mode</code> for all containers in a specific
+   * 						Amazon Web Services Region by using the <code>defaultLogDriverMode</code> account setting.
+   * 						If you don't specify the <code>mode</code> option or
+   * 						configure the account setting, Amazon ECS will default to the
+   * 							<code>non-blocking</code> mode. For more information about the account setting, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#default-log-driver-mode">Default log driver mode</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+   *                <note>
+   *                   <p>On June 25, 2025, Amazon ECS changed the default log driver mode from <code>blocking</code> to <code>non-blocking</code> to prioritize task availability over logging. To continue using the <code>blocking</code> mode after this change, do one of the following:</p>
+   *                   <ul>
+   *                      <li>
+   *                         <p>Set the <code>mode</code> option in your container definition's <code>logConfiguration</code> as <code>blocking</code>.</p>
+   *                      </li>
+   *                      <li>
+   *                         <p>Set the <code>defaultLogDriverMode</code> account setting to <code>blocking</code>.</p>
+   *                      </li>
+   *                   </ul>
+   *                </note>
    *             </dd>
    *             <dt>max-buffer-size</dt>
    *             <dd>
@@ -2162,8 +2438,9 @@ export interface LogConfiguration {
    *          <p> When you export logs to Amazon OpenSearch Service, you can specify options like <code>Name</code>,
    * 				<code>Host</code> (OpenSearch Service endpoint without protocol), <code>Port</code>,
    * 				<code>Index</code>, <code>Type</code>, <code>Aws_auth</code>,
-   * 				<code>Aws_region</code>, <code>Suppress_Type_Name</code>, and
-   * 			<code>tls</code>. For more information, see <a href="http://aws.amazon.com/blogs/containers/under-the-hood-firelens-for-amazon-ecs-tasks/">Under the hood: FireLens for Amazon ECS Tasks</a>.</p>
+   * 				<code>Aws_region</code>, <code>Suppress_Type_Name</code>, and <code>tls</code>. For
+   * 			more information, see <a href="http://aws.amazon.com/blogs/containers/under-the-hood-firelens-for-amazon-ecs-tasks/">Under the hood:
+   * 				FireLens for Amazon ECS Tasks</a>.</p>
    *          <p>When you export logs to Amazon S3, you can specify the bucket using the <code>bucket</code>
    * 			option. You can also specify <code>region</code>, <code>total_file_size</code>,
    * 				<code>upload_timeout</code>, and <code>use_put_object</code> as options.</p>
@@ -2179,6 +2456,59 @@ export interface LogConfiguration {
    * @public
    */
   secretOptions?: Secret[] | undefined;
+}
+
+/**
+ * <p>The header matching rules for test traffic routing in Amazon ECS blue/green deployments.
+ *          These rules determine how incoming requests are matched based on HTTP headers to route test
+ *          traffic to the new service revision.</p>
+ * @public
+ */
+export interface ServiceConnectTestTrafficHeaderMatchRules {
+  /**
+   * <p>The exact value that the HTTP header must match for the test traffic routing rule to apply. This provides precise control over which requests are routed to the new service revision during blue/green deployments.</p>
+   * @public
+   */
+  exact: string | undefined;
+}
+
+/**
+ * <p>The HTTP header rules used to identify and route test traffic during Amazon ECS blue/green
+ *          deployments. These rules specify which HTTP headers to examine and what values to match for
+ *          routing decisions.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-blue-green.html">Service Connect for Amazon ECS blue/green deployments</a> in the <i>
+ *                Amazon Elastic Container Service Developer Guide</i>.</p>
+ * @public
+ */
+export interface ServiceConnectTestTrafficHeaderRules {
+  /**
+   * <p>The name of the HTTP header to examine for test traffic routing. Common examples include custom headers like <code>X-Test-Version</code> or <code>X-Canary-Request</code> that can be used to identify test traffic.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The header value matching configuration that determines how the HTTP header value is evaluated for test traffic routing decisions.</p>
+   * @public
+   */
+  value?: ServiceConnectTestTrafficHeaderMatchRules | undefined;
+}
+
+/**
+ * <p>The test traffic routing configuration for Amazon ECS blue/green deployments. This
+ *          configuration allows you to define rules for routing specific traffic to the new service
+ *          revision during the deployment process, allowing for safe testing before full production
+ *          traffic shift.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-blue-green.html">Service Connect for Amazon ECS blue/green deployments</a> in the <i>
+ *                Amazon Elastic Container Service Developer Guide</i>.</p>
+ * @public
+ */
+export interface ServiceConnectTestTrafficRules {
+  /**
+   * <p>The HTTP header-based routing rules that determine which requests should be routed to the new service version during blue/green deployment testing. These rules provide fine-grained control over test traffic routing based on request headers.</p>
+   * @public
+   */
+  header: ServiceConnectTestTrafficHeaderRules | undefined;
 }
 
 /**
@@ -2217,6 +2547,12 @@ export interface ServiceConnectClientAlias {
    * @public
    */
   dnsName?: string | undefined;
+
+  /**
+   * <p>The configuration for test traffic routing rules used during blue/green deployments with Amazon ECS Service Connect. This allows you to route a portion of traffic to the new service revision of your service for testing before shifting all production traffic.</p>
+   * @public
+   */
+  testTrafficRules?: ServiceConnectTestTrafficRules | undefined;
 }
 
 /**
@@ -2560,20 +2896,22 @@ export interface EBSTagSpecification {
  */
 export interface ServiceManagedEBSVolumeConfiguration {
   /**
-   * <p>Indicates whether the volume should be encrypted. If no value is specified, encryption
-   * 			is turned on by default. This parameter maps 1:1 with the <code>Encrypted</code>
-   * 			parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
-   * 			the <i>Amazon EC2 API Reference</i>.</p>
+   * <p>Indicates whether the volume should be encrypted. If you turn on Region-level Amazon EBS
+   * 			encryption by default but set this value as <code>false</code>, the setting is
+   * 			overridden and the volume is encrypted with the KMS key specified for Amazon EBS encryption
+   * 			by default. This parameter maps 1:1 with the <code>Encrypted</code> parameter of the
+   * 				<a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in the <i>Amazon EC2 API Reference</i>.</p>
    * @public
    */
   encrypted?: boolean | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption. When
-   * 			encryption is turned on and no Amazon Web Services Key Management Service key is specified, the default Amazon Web Services managed key
-   * 			for Amazon EBS volumes is used. This parameter maps 1:1 with the <code>KmsKeyId</code>
-   * 			parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
-   * 			the <i>Amazon EC2 API Reference</i>.</p>
+   * <p>The Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption. When a key
+   * 			is specified using this parameter, it overrides Amazon EBS default encryption or any KMS key
+   * 			that you specified for cluster-level managed storage encryption. This parameter maps 1:1
+   * 			with the <code>KmsKeyId</code> parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
+   * 			the <i>Amazon EC2 API Reference</i>. For more information about encrypting
+   * 			Amazon EBS volumes attached to tasks, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html">Encrypt data stored in Amazon EBS volumes attached to Amazon ECS tasks</a>.</p>
    *          <important>
    *             <p>Amazon Web Services authenticates the Amazon Web Services Key Management Service key asynchronously. Therefore, if you specify an
    * 				ID, alias, or ARN that is invalid, the action can appear to complete, but
@@ -2647,13 +2985,24 @@ export interface ServiceManagedEBSVolumeConfiguration {
   sizeInGiB?: number | undefined;
 
   /**
-   * <p>The snapshot that Amazon ECS uses to create the volume. You must specify either a snapshot
-   * 			ID or a volume size. This parameter maps 1:1 with the <code>SnapshotId</code> parameter
-   * 			of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
+   * <p>The snapshot that Amazon ECS uses to create volumes for attachment to tasks maintained by
+   * 			the service. You must specify either <code>snapshotId</code> or <code>sizeInGiB</code>
+   * 			in your volume configuration. This parameter maps 1:1 with the <code>SnapshotId</code>
+   * 			parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
    * 			the <i>Amazon EC2 API Reference</i>.</p>
    * @public
    */
   snapshotId?: string | undefined;
+
+  /**
+   * <p>The rate, in MiB/s, at which data is fetched from a snapshot of an existing EBS volume
+   * 			to create new volumes for attachment to the tasks maintained by the service. This
+   * 			property can be specified only if you specify a <code>snapshotId</code>. For more
+   * 			information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html">Initialize Amazon EBS volumes</a> in the <i>Amazon EBS User
+   * 				Guide</i>.</p>
+   * @public
+   */
+  volumeInitializationRate?: number | undefined;
 
   /**
    * <p>The number of I/O operations per second (IOPS). For <code>gp3</code>,
@@ -2716,7 +3065,7 @@ export interface ServiceManagedEBSVolumeConfiguration {
   /**
    * <p>The filesystem type for the volume. For volumes created from a snapshot, you must
    * 			specify the same filesystem type that the volume was using when the snapshot was
-   * 			created. If there is a filesystem type mismatch, the task will fail to start.</p>
+   * 			created. If there is a filesystem type mismatch, the tasks will fail to start.</p>
    *          <p>The available Linux filesystem types are  <code>ext3</code>, <code>ext4</code>, and
    * 				<code>xfs</code>. If no value is specified, the <code>xfs</code> filesystem type is
    * 			used by default.</p>
@@ -3086,7 +3435,7 @@ export interface CreateServiceRequest {
    * <p>Specifies whether to turn on Amazon ECS managed tags for the tasks within the service. For
    * 			more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging your Amazon ECS
    * 				resources</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
-   *          <p>When you use Amazon ECS managed tags, you need to set the <code>propagateTags</code>
+   *          <p>When you use Amazon ECS managed tags, you must set the <code>propagateTags</code>
    * 			request parameter.</p>
    * @public
    */
@@ -3190,7 +3539,7 @@ export interface ServiceConnectServiceResource {
   discoveryName?: string | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) for the namespace in Cloud Map that matches the discovery name for this
+   * <p>The Amazon Resource Name (ARN) for the service in Cloud Map that matches the discovery name for this
    * 			Service Connect resource. You can use this ARN in other integrations with Cloud Map.
    * 			However, Service Connect can't ensure connectivity outside of Amazon ECS.</p>
    * @public
@@ -4295,6 +4644,7 @@ export const SettingName = {
   AWSVPC_TRUNKING: "awsvpcTrunking",
   CONTAINER_INSIGHTS: "containerInsights",
   CONTAINER_INSTANCE_LONG_ARN_FORMAT: "containerInstanceLongArnFormat",
+  DEFAULT_LOG_DRIVER_MODE: "defaultLogDriverMode",
   FARGATE_FIPS_MODE: "fargateFIPSMode",
   FARGATE_TASK_RETIREMENT_WAIT_PERIOD: "fargateTaskRetirementWaitPeriod",
   GUARD_DUTY_ACTIVATE: "guardDutyActivate",
@@ -4325,10 +4675,11 @@ export interface DeleteAccountSettingRequest {
   name: SettingName | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the principal. It can be an user, role, or the
+   * <p>The Amazon Resource Name (ARN) of the principal. It can be a user, role, or the
    * 			root user. If you specify the root user, it disables the account setting for all users, roles,
    * 			and the root user of the account unless a user or role explicitly overrides these settings.
    * 			If this field is omitted, the setting is changed only for the authenticated user.</p>
+   *          <p>In order to use this parameter, you must be the root user, or the principal.</p>
    * @public
    */
   principalArn?: string | undefined;
@@ -5035,6 +5386,60 @@ export interface FirelensConfiguration {
  * 			lifecycle regardless of its health status. For tasks that are part of a service, if the
  * 			task reports as unhealthy then the task will be stopped and the service scheduler will
  * 			replace it.</p>
+ *          <p>When a container health check fails for a task that is part of a service, the following process occurs:</p>
+ *          <ol>
+ *             <li>
+ *                <p>The task is marked as <code>UNHEALTHY</code>.</p>
+ *             </li>
+ *             <li>
+ *                <p>The unhealthy task will be stopped, and during the stopping process, it will go through the following states:</p>
+ *                <ul>
+ *                   <li>
+ *                      <p>
+ *                         <code>DEACTIVATING</code> - In this state, Amazon ECS performs additional steps before stopping the
+ * 							task. For example, for tasks that are part of services configured to use
+ * 							Elastic Load Balancing target groups, target groups will be deregistered
+ * 							in this state.</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <code>STOPPING</code> - The task is in the process of being stopped.</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <code>DEPROVISIONING</code> - Resources associated with the task are being cleaned up.</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <code>STOPPED</code> - The task has been completely stopped.</p>
+ *                   </li>
+ *                </ul>
+ *             </li>
+ *             <li>
+ *                <p>After the old task stops, a new task will be launched to ensure service operation, and the new task will go through the following lifecycle:</p>
+ *                <ul>
+ *                   <li>
+ *                      <p>
+ *                         <code>PROVISIONING</code> - Resources required for the task are being provisioned.</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <code>PENDING</code> - The task is waiting to be placed on a container instance.</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <code>ACTIVATING</code> - In this state, Amazon ECS pulls container images, creates containers,
+ * 							configures task networking, registers load balancer target groups, and
+ * 							configures service discovery status.</p>
+ *                   </li>
+ *                   <li>
+ *                      <p>
+ *                         <code>RUNNING</code> - The task is running and performing its work.</p>
+ *                   </li>
+ *                </ul>
+ *             </li>
+ *          </ol>
+ *          <p>For more detailed information about task lifecycle states, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle-explanation.html">Task lifecycle</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
  *          <p>The following are notes about container health check support:</p>
  *          <ul>
  *             <li>
@@ -5063,7 +5468,8 @@ export interface FirelensConfiguration {
  * 					that's configured to use a Classic Load Balancer.</p>
  *             </li>
  *          </ul>
- *          <p>For an example of how to specify a task definition with multiple containers where container dependency is specified, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/example_task_definitions.html#example_task_definition-containerdependency">Container dependency</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+ *          <p>For an example of how to specify a task definition with multiple containers where
+ * 			container dependency is specified, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/example_task_definitions.html#example_task_definition-containerdependency">Container dependency</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
  * @public
  */
 export interface HealthCheck {
@@ -5089,17 +5495,17 @@ export interface HealthCheck {
   command: string[] | undefined;
 
   /**
-   * <p>The time period in seconds between each health check execution. You may specify between 5
-   * 			and 300 seconds. The default value is 30 seconds. This value applies only when you
-   * 			specify a <code>command</code>. </p>
+   * <p>The time period in seconds between each health check execution. You may specify
+   * 			between 5 and 300 seconds. The default value is 30 seconds. This value applies only when
+   * 			you specify a <code>command</code>. </p>
    * @public
    */
   interval?: number | undefined;
 
   /**
-   * <p>The time period in seconds to wait for a health check to succeed before it is considered a
-   * 			failure. You may specify between 2 and 60 seconds. The default value is 5. This value
-   * 			applies only when you specify a <code>command</code>. </p>
+   * <p>The time period in seconds to wait for a health check to succeed before it is
+   * 			considered a failure. You may specify between 2 and 60 seconds. The default value is 5.
+   * 			This value applies only when you specify a <code>command</code>. </p>
    * @public
    */
   timeout?: number | undefined;
@@ -5131,15 +5537,16 @@ export interface HealthCheck {
  * <p>The Linux capabilities to add or remove from the default Docker configuration for a
  * 			container defined in the task definition. For more detailed information about these
  * 			Linux capabilities, see the <a href="http://man7.org/linux/man-pages/man7/capabilities.7.html">capabilities(7)</a> Linux manual page.</p>
- *          <p>The following describes how Docker processes the Linux capabilities specified in the <code>add</code> and
- * 				<code>drop</code> request parameters. For information about the latest behavior, see
- * 			<a href="https://forums.docker.com/t/docker-compose-order-of-cap-drop-and-cap-add/97136/1">Docker Compose: order of cap_drop and cap_add</a>  in the Docker Community Forum.</p>
+ *          <p>The following describes how Docker processes the Linux capabilities specified in the
+ * 				<code>add</code> and <code>drop</code> request parameters. For information about the
+ * 			latest behavior, see <a href="https://forums.docker.com/t/docker-compose-order-of-cap-drop-and-cap-add/97136/1">Docker Compose: order of cap_drop and cap_add</a> in the Docker Community
+ * 			Forum.</p>
  *          <ul>
  *             <li>
- *                <p>When the container is a privleged container, the container capabilities are all of the
- * 					default Docker capabilities. The capabilities specified in the <code>add</code>
- * 					request parameter, and the <code>drop</code> request parameter are
- * 					ignored.</p>
+ *                <p>When the container is a privleged container, the container capabilities are
+ * 					all of the default Docker capabilities. The capabilities specified in the
+ * 						<code>add</code> request parameter, and the <code>drop</code> request
+ * 					parameter are ignored.</p>
  *             </li>
  *             <li>
  *                <p>When the <code>add</code> request parameter is set to ALL, the container
@@ -5147,17 +5554,19 @@ export interface HealthCheck {
  * 					specified in the <code>drop</code> request parameter.</p>
  *             </li>
  *             <li>
- *                <p>When the <code>drop</code> request parameter is set to ALL, the container capabilities are
- * 					the capabilities specified in the <code>add</code> request parameter.</p>
+ *                <p>When the <code>drop</code> request parameter is set to ALL, the container
+ * 					capabilities are the capabilities specified in the <code>add</code> request
+ * 					parameter.</p>
  *             </li>
  *             <li>
- *                <p>When the <code>add</code> request parameter and the <code>drop</code> request parameter are both empty, the capabilities the container
- * 					capabilities are all of the default Docker capabilities.</p>
+ *                <p>When the <code>add</code> request parameter and the <code>drop</code> request
+ * 					parameter are both empty, the capabilities the container capabilities are all of
+ * 					the default Docker capabilities.</p>
  *             </li>
  *             <li>
- *                <p>The default is to first drop the capabilities specified in the <code>drop</code> request
- * 					parameter, and then add the capabilities specified in the <code>add</code>
- * 					request parameter.</p>
+ *                <p>The default is to first drop the capabilities specified in the
+ * 						<code>drop</code> request parameter, and then add the capabilities specified
+ * 					in the <code>add</code> request parameter.</p>
  *             </li>
  *          </ul>
  * @public
@@ -5777,8 +6186,8 @@ export interface SystemControl {
    * 				<code>"fs.mqueue.*"</code>
    *          </p>
    *          <p>Valid network namespace values: <code>Sysctls</code> that start with
-   * 				<code>"net.*"</code>
-   *          </p>
+   * 				<code>"net.*"</code>. Only namespaced <code>Sysctls</code> that exist within the
+   * 			container starting with "net.* are accepted.</p>
    *          <p>All of these values are supported by Fargate.</p>
    * @public
    */
@@ -5907,7 +6316,7 @@ export interface ContainerDefinition {
    *                <i>repository-url</i>/<i>image</i>:<i>tag</i>
    *             </code> or <code>
    *                <i>repository-url</i>/<i>image</i>@<i>digest</i>
-   *             </code>. Up to 255 letters (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs are allowed. This parameter maps to <code>Image</code> in the docker
+   *             </code>. For images using tags (repository-url/image:tag), up to 255 characters total are allowed, including letters (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs (#). For images using digests (repository-url/image@digest), the 255 character limit applies only to the repository URL and image name (everything before the @ sign). The only supported hash function is sha256, and the hash value after sha256: must be exactly 64 characters (only letters A-F, a-f, and numbers 0-9 are allowed). This parameter maps to <code>Image</code> in the docker
    * 			container create command and the <code>IMAGE</code> parameter of docker run.</p>
    *          <ul>
    *             <li>
@@ -6198,8 +6607,8 @@ export interface ContainerDefinition {
   volumesFrom?: VolumeFrom[] | undefined;
 
   /**
-   * <p>Linux-specific modifications that are applied to the default Docker container configuration, such as Linux kernel
-   * 			capabilities. For more information see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html">KernelCapabilities</a>.</p>
+   * <p>Linux-specific modifications that are applied to the default Docker container
+   * 			configuration, such as Linux kernel capabilities. For more information see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html">KernelCapabilities</a>.</p>
    *          <note>
    *             <p>This parameter is not supported for Windows containers.</p>
    *          </note>
@@ -6885,6 +7294,8 @@ export const OSFamily = {
   WINDOWS_SERVER_2019_FULL: "WINDOWS_SERVER_2019_FULL",
   WINDOWS_SERVER_2022_CORE: "WINDOWS_SERVER_2022_CORE",
   WINDOWS_SERVER_2022_FULL: "WINDOWS_SERVER_2022_FULL",
+  WINDOWS_SERVER_2025_CORE: "WINDOWS_SERVER_2025_CORE",
+  WINDOWS_SERVER_2025_FULL: "WINDOWS_SERVER_2025_FULL",
   WINDOWS_SERVER_20H2_CORE: "WINDOWS_SERVER_20H2_CORE",
 } as const;
 
@@ -7428,35 +7839,8 @@ export interface TaskDefinition {
    *          <p>If you're using the EC2 launch type or the external launch type, this
    * 			field is optional. Supported values are between <code>128</code> CPU units
    * 				(<code>0.125</code> vCPUs) and <code>196608</code> CPU units (<code>192</code>
-   * 			vCPUs). The CPU units cannot be less than 1 vCPU when you use Windows containers on
-   * 			Fargate.</p>
-   *          <ul>
-   *             <li>
-   *                <p>256 (.25 vCPU) - Available <code>memory</code> values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>512 (.5 vCPU) - Available <code>memory</code> values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>1024 (1 vCPU) - Available <code>memory</code> values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>2048 (2 vCPU) - Available <code>memory</code> values: 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>4096 (4 vCPU) - Available <code>memory</code> values: 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>8192 (8 vCPU)  - Available <code>memory</code> values: 16 GB and 60 GB in 4 GB increments</p>
-   *                <p>This option requires Linux platform <code>1.4.0</code> or
-   *                                         later.</p>
-   *             </li>
-   *             <li>
-   *                <p>16384 (16vCPU)  - Available <code>memory</code> values: 32GB and 120 GB in 8 GB increments</p>
-   *                <p>This option requires Linux platform <code>1.4.0</code> or
-   *                                         later.</p>
-   *             </li>
-   *          </ul>
+   * 			vCPUs). </p>
+   *          <p>This field is required for Fargate. For information about the valid values, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_size">Task size</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
    * @public
    */
   cpu?: string | undefined;
@@ -7607,8 +7991,8 @@ export interface TaskDefinition {
   ephemeralStorage?: EphemeralStorage | undefined;
 
   /**
-   * <p>Enables fault injection and allows for fault injection requests to be accepted from the task's containers.
-   * 			The default value is <code>false</code>.</p>
+   * <p>Enables fault injection and allows for fault injection requests to be accepted from
+   * 			the task's containers. The default value is <code>false</code>.</p>
    * @public
    */
   enableFaultInjection?: boolean | undefined;
@@ -7870,7 +8254,7 @@ export interface VersionInfo {
   agentVersion?: string | undefined;
 
   /**
-   * <p>The Git commit hash for the Amazon ECS container agent build on the <a href="https://github.com/aws/amazon-ecs-agent/commits/master">amazon-ecs-agent
+   * <p>The Git commit hash for the Amazon ECS container agent build on the <a href="https://github.com/aws/amazon-ecs-agent">amazon-ecs-agent
    * 			</a> GitHub repository.</p>
    * @public
    */
@@ -8421,6 +8805,29 @@ export interface ServiceDeploymentCircuitBreaker {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const ServiceDeploymentLifecycleStage = {
+  BAKE_TIME: "BAKE_TIME",
+  CLEAN_UP: "CLEAN_UP",
+  POST_PRODUCTION_TRAFFIC_SHIFT: "POST_PRODUCTION_TRAFFIC_SHIFT",
+  POST_SCALE_UP: "POST_SCALE_UP",
+  POST_TEST_TRAFFIC_SHIFT: "POST_TEST_TRAFFIC_SHIFT",
+  PRE_SCALE_UP: "PRE_SCALE_UP",
+  PRODUCTION_TRAFFIC_SHIFT: "PRODUCTION_TRAFFIC_SHIFT",
+  RECONCILE_SERVICE: "RECONCILE_SERVICE",
+  SCALE_UP: "SCALE_UP",
+  TEST_TRAFFIC_SHIFT: "TEST_TRAFFIC_SHIFT",
+} as const;
+
+/**
+ * @public
+ */
+export type ServiceDeploymentLifecycleStage =
+  (typeof ServiceDeploymentLifecycleStage)[keyof typeof ServiceDeploymentLifecycleStage];
+
+/**
  * <p>Information about the service deployment rollback.</p>
  * @public
  */
@@ -8440,12 +8847,6 @@ export interface Rollback {
 
   /**
    * <p>The ARN of the service revision deployed as part of the rollback.</p>
-   *          <p>When the type is <code>GPU</code>, the value is the number of physical
-   * 				<code>GPUs</code> the Amazon ECS container agent reserves for the container. The number
-   * 			of GPUs that's reserved for all containers in a task can't exceed the number of
-   * 			available GPUs on the container instance that the task is launched on.</p>
-   *          <p>When the type is <code>InferenceAccelerator</code>, the <code>value</code> matches the
-   * 				<code>deviceName</code> for an <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html">InferenceAccelerator</a> specified in a task definition.</p>
    * @public
    */
   serviceRevisionArn?: string | undefined;
@@ -8491,6 +8892,7 @@ export const ServiceDeploymentStatus = {
   PENDING: "PENDING",
   ROLLBACK_FAILED: "ROLLBACK_FAILED",
   ROLLBACK_IN_PROGRESS: "ROLLBACK_IN_PROGRESS",
+  ROLLBACK_REQUESTED: "ROLLBACK_REQUESTED",
   ROLLBACK_SUCCESSFUL: "ROLLBACK_SUCCESSFUL",
   STOPPED: "STOPPED",
   STOP_REQUESTED: "STOP_REQUESTED",
@@ -8505,8 +8907,7 @@ export type ServiceDeploymentStatus = (typeof ServiceDeploymentStatus)[keyof typ
 /**
  * <p>Information about the service deployment.</p>
  *          <p>Service deployments provide a comprehensive view of your deployments. For information
- * 			about service deployments, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-deployment.html">View service history
- * 				using Amazon ECS service deployments</a> in the
+ * 			about service deployments, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-deployment.html">View service history using Amazon ECS service deployments</a> in the
  * 			<i>
  *                <i>Amazon Elastic Container Service Developer Guide</i>
  *             </i>.</p>
@@ -8602,6 +9003,54 @@ export interface ServiceDeployment {
   statusReason?: string | undefined;
 
   /**
+   * <p>The current lifecycle stage of the deployment. Possible values include:</p>
+   *          <ul>
+   *             <li>
+   *                <p>RECONCILE_SERVICE</p>
+   *                <p>The reconciliation stage that only happens when you start a new service deployment with more than 1 service revision in an ACTIVE state.</p>
+   *             </li>
+   *             <li>
+   *                <p>PRE_SCALE_UP</p>
+   *                <p>The green service revision has not started. The blue service revision is handling 100% of the production traffic. There is no test traffic.</p>
+   *             </li>
+   *             <li>
+   *                <p>SCALE_UP</p>
+   *                <p>The stage when the green service revision scales up to 100% and launches new tasks. The green service revision is not serving any traffic at this point.</p>
+   *             </li>
+   *             <li>
+   *                <p>POST_SCALE_UP</p>
+   *                <p>The green service revision has started. The blue service revision is handling 100% of the production traffic. There is no test traffic.</p>
+   *             </li>
+   *             <li>
+   *                <p>TEST_TRAFFIC_SHIFT</p>
+   *                <p>The blue and green service revisions are running. The blue service revision handles 100% of the production traffic. The green service revision is migrating from 0% to 100% of test traffic.</p>
+   *             </li>
+   *             <li>
+   *                <p>POST_TEST_TRAFFIC_SHIFT</p>
+   *                <p>The test traffic shift is complete. The green service revision handles 100% of the test traffic.</p>
+   *             </li>
+   *             <li>
+   *                <p>PRODUCTION_TRAFFIC_SHIFT</p>
+   *                <p>Production traffic is shifting to the green service revision. The green service revision is migrating from 0% to 100% of production traffic.</p>
+   *             </li>
+   *             <li>
+   *                <p>POST_PRODUCTION_TRAFFIC_SHIFT</p>
+   *                <p>The production traffic shift is complete.</p>
+   *             </li>
+   *             <li>
+   *                <p>BAKE_TIME</p>
+   *                <p>The stage when both blue and green service revisions are running simultaneously after the production traffic has shifted.</p>
+   *             </li>
+   *             <li>
+   *                <p>CLEAN_UP</p>
+   *                <p>The stage when the blue service revision has completely scaled down to 0 running tasks. The green service revision is now the production service revision after this stage.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  lifecycleStage?: ServiceDeploymentLifecycleStage | undefined;
+
+  /**
    * <p>Optional deployment parameters that control how many tasks run during a deployment and
    * 			the ordering of stopping and starting tasks.</p>
    * @public
@@ -8689,6 +9138,36 @@ export interface ContainerImage {
    * @public
    */
   image?: string | undefined;
+}
+
+/**
+ * <p>The resolved load balancer configuration for a service revision. This includes information about which target groups serve traffic and which listener rules direct traffic to them.</p>
+ * @public
+ */
+export interface ServiceRevisionLoadBalancer {
+  /**
+   * <p>The Amazon Resource Name (ARN) of the target group associated with the service revision.</p>
+   * @public
+   */
+  targetGroupArn?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the production listener rule or listener that directs traffic to the target group associated with the service revision.</p>
+   * @public
+   */
+  productionListenerRule?: string | undefined;
+}
+
+/**
+ * <p>The resolved configuration for a service revision, which contains the actual resources your service revision uses, such as which target groups serve traffic.</p>
+ * @public
+ */
+export interface ResolvedConfiguration {
+  /**
+   * <p>The resolved load balancer configuration for the service revision. This includes information about which target groups serve traffic and which listener rules direct traffic to them.</p>
+   * @public
+   */
+  loadBalancers?: ServiceRevisionLoadBalancer[] | undefined;
 }
 
 /**
@@ -8819,6 +9298,12 @@ export interface ServiceRevision {
    * @public
    */
   vpcLatticeConfigurations?: VpcLatticeConfiguration[] | undefined;
+
+  /**
+   * <p>The resolved configuration for the service revision which contains the actual resources your service revision uses, such as which target groups serve traffic.</p>
+   * @public
+   */
+  resolvedConfiguration?: ResolvedConfiguration | undefined;
 }
 
 /**
@@ -8999,7 +9484,7 @@ export type TaskField = (typeof TaskField)[keyof typeof TaskField];
 export interface DescribeTasksRequest {
   /**
    * <p>The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task or tasks to
-   * 			describe. If you do not specify a cluster, the default cluster is assumed. This parameter is required. If you do not specify a
+   * 			describe. If you do not specify a cluster, the default cluster is assumed. If you do not specify a
    * 			value, the <code>default</code> cluster is used.</p>
    * @public
    */
@@ -9277,8 +9762,8 @@ export interface Container {
   exitCode?: number | undefined;
 
   /**
-   * <p>A short (255 max characters) human-readable string to provide additional details about
-   * 			a running or stopped container.</p>
+   * <p>A short (1024 max characters) human-readable string to provide additional details about a
+   * 			running or stopped container.</p>
    * @public
    */
   reason?: string | undefined;
@@ -9604,38 +10089,7 @@ export interface Task {
    * 			optional. Supported values are between <code>128</code> CPU units (<code>0.125</code>
    * 			vCPUs) and <code>196608</code> CPU units (<code>192</code> vCPUs). If you do not specify
    * 			a value, the parameter is ignored.</p>
-   *          <p>If you're using the Fargate launch type, this field is required. You must use
-   * 			one of the following values. These values determine the range of supported values for
-   * 			the <code>memory</code> parameter:</p>
-   *          <p>The CPU units cannot be less than 1 vCPU when you use Windows containers on
-   * 			Fargate.</p>
-   *          <ul>
-   *             <li>
-   *                <p>256 (.25 vCPU) - Available <code>memory</code> values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>512 (.5 vCPU) - Available <code>memory</code> values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>1024 (1 vCPU) - Available <code>memory</code> values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>2048 (2 vCPU) - Available <code>memory</code> values: 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>4096 (4 vCPU) - Available <code>memory</code> values: 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>8192 (8 vCPU)  - Available <code>memory</code> values: 16 GB and 60 GB in 4 GB increments</p>
-   *                <p>This option requires Linux platform <code>1.4.0</code> or
-   *                                         later.</p>
-   *             </li>
-   *             <li>
-   *                <p>16384 (16vCPU)  - Available <code>memory</code> values: 32GB and 120 GB in 8 GB increments</p>
-   *                <p>This option requires Linux platform <code>1.4.0</code> or
-   *                                         later.</p>
-   *             </li>
-   *          </ul>
+   *          <p>This field is required for Fargate. For information about the valid values, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_size">Task size</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
    * @public
    */
   cpu?: string | undefined;
@@ -10293,6 +10747,7 @@ export interface ListAccountSettingsRequest {
   /**
    * <p>The ARN of the principal, which can be a user, role, or the root user. If this field is
    * 			omitted, the account settings are listed only for the authenticated user.</p>
+   *          <p>In order to use this parameter, you must be the root user, or the principal.</p>
    *          <note>
    *             <p>Federated users assume the account setting of the root user and can't have explicit
    * 				account settings set for them.</p>
@@ -11366,6 +11821,29 @@ export interface PutAccountSettingRequest {
    *             </li>
    *             <li>
    *                <p>
+   *                   <code>defaultLogDriverMode</code> - Amazon ECS supports setting a default delivery
+   * 					mode of log messages from a container to the <code>logDriver</code> that you specify in the container's <code>logConfiguration</code>. The delivery mode affects
+   * 					application stability when the flow of logs from the container to the log driver is
+   * 					interrupted. The <code>defaultLogDriverMode</code> setting supports two values:
+   * 					<code>blocking</code> and <code>non-blocking</code>. If you don't specify a
+   * 					delivery mode in your container definition's <code>logConfiguration</code>, the
+   * 					mode you specify using this account setting will be used as the default. For
+   * 					more information about log delivery modes, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_LogConfiguration.html">LogConfiguration</a>.
+   * 				</p>
+   *                <note>
+   *                   <p>On June 25, 2025, Amazon ECS changed the default log driver mode from <code>blocking</code> to <code>non-blocking</code> to prioritize task availability over logging. To continue using the <code>blocking</code> mode after this change, do one of the following:</p>
+   *                   <ul>
+   *                      <li>
+   *                         <p>Set the <code>mode</code> option in your container definition's <code>logConfiguration</code> as <code>blocking</code>.</p>
+   *                      </li>
+   *                      <li>
+   *                         <p>Set the <code>defaultLogDriverMode</code> account setting to <code>blocking</code>.</p>
+   *                      </li>
+   *                   </ul>
+   *                </note>
+   *             </li>
+   *             <li>
+   *                <p>
    *                   <code>guardDutyActivate</code> - The <code>guardDutyActivate</code> parameter is read-only in Amazon ECS and indicates whether
    * 			Amazon ECS Runtime Monitoring is enabled or disabled by your security administrator in your
    * 			Amazon ECS account. Amazon GuardDuty controls this account setting on your behalf. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-guard-duty-integration.html">Protecting Amazon ECS workloads with Amazon ECS Runtime Monitoring</a>.</p>
@@ -11407,6 +11885,7 @@ export interface PutAccountSettingRequest {
    * 			the root user, it modifies the account setting for all users, roles, and the root user of the
    * 			account unless a user or role explicitly overrides these settings. If this field is
    * 			omitted, the setting is changed only for the authenticated user.</p>
+   *          <p>In order to use this parameter, you must be the root user, or the principal.</p>
    *          <note>
    *             <p>You must use the root user when you set the Fargate wait time
    * 					(<code>fargateTaskRetirementWaitPeriod</code>). </p>
@@ -11528,6 +12007,28 @@ export interface PutAccountSettingDefaultRequest {
    * 					grant explicit permissions to use the <code>ecs:TagResource</code> action. For
    * 					more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/supported-iam-actions-tagging.html">Grant permission to tag resources on creation</a> in the
    * 						<i>Amazon ECS Developer Guide</i>.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>defaultLogDriverMode</code> -Amazon ECS supports setting a default delivery
+   * 					mode of log messages from a container to the <code>logDriver</code> that you specify in the container's <code>logConfiguration</code>. The delivery mode affects
+   * 					application stability when the flow of logs from the container to the log driver is
+   * 					interrupted. The <code>defaultLogDriverMode</code> setting supports two values:
+   * 						<code>blocking</code> and <code>non-blocking</code>. If you don't specify a
+   * 					delivery mode in your container definition's <code>logConfiguration</code>, the
+   * 					mode you specify using this account setting will be used as the default. For
+   * 					more information about log delivery modes, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_LogConfiguration.html">LogConfiguration</a>.</p>
+   *                <note>
+   *                   <p>On June 25, 2025, Amazon ECS changed the default log driver mode from <code>blocking</code> to <code>non-blocking</code> to prioritize task availability over logging. To continue using the <code>blocking</code> mode after this change, do one of the following:</p>
+   *                   <ul>
+   *                      <li>
+   *                         <p>Set the <code>mode</code> option in your container definition's <code>logConfiguration</code> as <code>blocking</code>.</p>
+   *                      </li>
+   *                      <li>
+   *                         <p>Set the <code>defaultLogDriverMode</code> account setting to <code>blocking</code>.</p>
+   *                      </li>
+   *                   </ul>
+   *                </note>
    *             </li>
    *             <li>
    *                <p>
@@ -11953,42 +12454,11 @@ export interface RegisterTaskDefinitionRequest {
    *             <p>Task-level CPU and memory parameters are ignored for Windows containers. We
    * 				recommend specifying container-level resources for Windows containers.</p>
    *          </note>
-   *          <p>If you're using the EC2 launch type or external launch type, this field is
-   * 			optional. Supported values are between <code>128</code> CPU units (<code>0.125</code>
+   *          <p>If you're using the EC2 launch type or external launch type, this field
+   * 			is optional. Supported values are between <code>128</code> CPU units (<code>0.125</code>
    * 			vCPUs) and <code>196608</code> CPU units (<code>192</code> vCPUs). If you do not specify
    * 			a value, the parameter is ignored.</p>
-   *          <p>If you're using the Fargate launch type, this field is required and you
-   * 			must use one of the following values, which determines your range of supported values
-   * 			for the <code>memory</code> parameter:</p>
-   *          <p>The CPU units cannot be less than 1 vCPU when you use Windows containers on
-   * 			Fargate.</p>
-   *          <ul>
-   *             <li>
-   *                <p>256 (.25 vCPU) - Available <code>memory</code> values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>512 (.5 vCPU) - Available <code>memory</code> values: 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>1024 (1 vCPU) - Available <code>memory</code> values: 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>2048 (2 vCPU) - Available <code>memory</code> values: 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>4096 (4 vCPU) - Available <code>memory</code> values: 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB)</p>
-   *             </li>
-   *             <li>
-   *                <p>8192 (8 vCPU)  - Available <code>memory</code> values: 16 GB and 60 GB in 4 GB increments</p>
-   *                <p>This option requires Linux platform <code>1.4.0</code> or
-   *                                         later.</p>
-   *             </li>
-   *             <li>
-   *                <p>16384 (16vCPU)  - Available <code>memory</code> values: 32GB and 120 GB in 8 GB increments</p>
-   *                <p>This option requires Linux platform <code>1.4.0</code> or
-   *                                         later.</p>
-   *             </li>
-   *          </ul>
+   *          <p>This field is required for Fargate. For information about the valid values, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_size">Task size</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
    * @public
    */
   cpu?: string | undefined;
@@ -12188,8 +12658,9 @@ export interface RegisterTaskDefinitionRequest {
   runtimePlatform?: RuntimePlatform | undefined;
 
   /**
-   * <p>Enables fault injection when you register your task definition and allows for fault injection requests
-   * 			to be accepted from the task's containers. The default value is <code>false</code>.</p>
+   * <p>Enables fault injection when you register your task definition and allows for fault
+   * 			injection requests to be accepted from the task's containers. The default value is
+   * 				<code>false</code>.</p>
    * @public
    */
   enableFaultInjection?: boolean | undefined;
@@ -12234,20 +12705,7 @@ export class BlockedException extends __BaseException {
 }
 
 /**
- * <p>The <code>RunTask</code> request could not be processed due to conflicts. The provided
- * 				<code>clientToken</code> is already in use with a different <code>RunTask</code>
- * 			request. The <code>resourceIds</code> are the existing task ARNs which are already
- * 			associated with the <code>clientToken</code>. </p>
- *          <p>To fix this issue:</p>
- *          <ul>
- *             <li>
- *                <p>Run <code>RunTask</code> with a unique <code>clientToken</code>.</p>
- *             </li>
- *             <li>
- *                <p>Run <code>RunTask</code> with the <code>clientToken</code> and the original
- * 					set of parameters</p>
- *             </li>
- *          </ul>
+ * <p>The request could not be processed because of conflict in the current state of the resource. </p>
  * @public
  */
 export class ConflictException extends __BaseException {
@@ -12299,20 +12757,22 @@ export interface TaskManagedEBSVolumeTerminationPolicy {
  */
 export interface TaskManagedEBSVolumeConfiguration {
   /**
-   * <p>Indicates whether the volume should be encrypted. If no value is specified, encryption
-   * 			is turned on by default. This parameter maps 1:1 with the <code>Encrypted</code>
-   * 			parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
-   * 			the <i>Amazon EC2 API Reference</i>.</p>
+   * <p>Indicates whether the volume should be encrypted. If you turn on Region-level Amazon EBS
+   * 			encryption by default but set this value as <code>false</code>, the setting is
+   * 			overridden and the volume is encrypted with the KMS key specified for Amazon EBS encryption
+   * 			by default. This parameter maps 1:1 with the <code>Encrypted</code> parameter of the
+   * 				<a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in the <i>Amazon EC2 API Reference</i>.</p>
    * @public
    */
   encrypted?: boolean | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption. When
-   * 			encryption is turned on and no Amazon Web Services Key Management Service key is specified, the default Amazon Web Services managed key
-   * 			for Amazon EBS volumes is used. This parameter maps 1:1 with the <code>KmsKeyId</code>
-   * 			parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
-   * 			the <i>Amazon EC2 API Reference</i>.</p>
+   * <p>The Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption. When a key
+   * 			is specified using this parameter, it overrides Amazon EBS default encryption or any KMS key
+   * 			that you specified for cluster-level managed storage encryption. This parameter maps 1:1
+   * 			with the <code>KmsKeyId</code> parameter of the <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html">CreateVolume API</a> in
+   * 			the <i>Amazon EC2 API Reference</i>. For more information about encrypting
+   * 			Amazon EBS volumes attached to a task, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-kms-encryption.html">Encrypt data stored in Amazon EBS volumes attached to Amazon ECS tasks</a>.</p>
    *          <important>
    *             <p>Amazon Web Services authenticates the Amazon Web Services Key Management Service key asynchronously. Therefore, if you specify an
    * 				ID, alias, or ARN that is invalid, the action can appear to complete, but
@@ -12393,6 +12853,15 @@ export interface TaskManagedEBSVolumeConfiguration {
    * @public
    */
   snapshotId?: string | undefined;
+
+  /**
+   * <p>The rate, in MiB/s, at which data is fetched from a snapshot of an existing Amazon EBS
+   * 			volume to create a new volume for attachment to the task. This property can be specified
+   * 			only if you specify a <code>snapshotId</code>. For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html">Initialize Amazon EBS volumes</a> in the <i>Amazon EBS User
+   * 				Guide</i>.</p>
+   * @public
+   */
+  volumeInitializationRate?: number | undefined;
 
   /**
    * <p>The number of I/O operations per second (IOPS). For <code>gp3</code>,
@@ -12514,6 +12983,8 @@ export interface RunTaskRequest {
   /**
    * <p>The short name or full Amazon Resource Name (ARN) of the cluster to run your task on.
    * 			If you do not specify a cluster, the default cluster is assumed.</p>
+   *          <p>Each account receives a default cluster the first time you use the service, but you
+   * 			may also create other clusters.</p>
    * @public
    */
   cluster?: string | undefined;
@@ -12908,6 +13379,70 @@ export interface StartTaskResponse {
 }
 
 /**
+ * <p>The service deploy ARN that you specified in the <code>StopServiceDeployment</code> doesn't exist. You can use <code>ListServiceDeployments</code> to retrieve the service deployment ARNs.</p>
+ * @public
+ */
+export class ServiceDeploymentNotFoundException extends __BaseException {
+  readonly name: "ServiceDeploymentNotFoundException" = "ServiceDeploymentNotFoundException";
+  readonly $fault: "client" = "client";
+  /**
+   * @internal
+   */
+  constructor(opts: __ExceptionOptionType<ServiceDeploymentNotFoundException, __BaseException>) {
+    super({
+      name: "ServiceDeploymentNotFoundException",
+      $fault: "client",
+      ...opts,
+    });
+    Object.setPrototypeOf(this, ServiceDeploymentNotFoundException.prototype);
+  }
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const StopServiceDeploymentStopType = {
+  ABORT: "ABORT",
+  ROLLBACK: "ROLLBACK",
+} as const;
+
+/**
+ * @public
+ */
+export type StopServiceDeploymentStopType =
+  (typeof StopServiceDeploymentStopType)[keyof typeof StopServiceDeploymentStopType];
+
+/**
+ * @public
+ */
+export interface StopServiceDeploymentRequest {
+  /**
+   * <p>The ARN of the service deployment that you want to stop.</p>
+   * @public
+   */
+  serviceDeploymentArn: string | undefined;
+
+  /**
+   * <p>How you want Amazon ECS to stop the service. </p>
+   *          <p>The valid values are <code>ROLLBACK</code>.</p>
+   * @public
+   */
+  stopType?: StopServiceDeploymentStopType | undefined;
+}
+
+/**
+ * @public
+ */
+export interface StopServiceDeploymentResponse {
+  /**
+   * <p>The ARN of the stopped service deployment.</p>
+   * @public
+   */
+  serviceDeploymentArn?: string | undefined;
+}
+
+/**
  * @public
  */
 export interface StopTaskRequest {
@@ -12933,373 +13468,6 @@ export interface StopTaskRequest {
    */
   reason?: string | undefined;
 }
-
-/**
- * @public
- */
-export interface StopTaskResponse {
-  /**
-   * <p>The task that was stopped.</p>
-   * @public
-   */
-  task?: Task | undefined;
-}
-
-/**
- * <p>An object representing a change in state for a task attachment.</p>
- * @public
- */
-export interface AttachmentStateChange {
-  /**
-   * <p>The Amazon Resource Name (ARN) of the attachment.</p>
-   * @public
-   */
-  attachmentArn: string | undefined;
-
-  /**
-   * <p>The status of the attachment.</p>
-   * @public
-   */
-  status: string | undefined;
-}
-
-/**
- * @public
- */
-export interface SubmitAttachmentStateChangesRequest {
-  /**
-   * <p>The short name or full ARN of the cluster that hosts the container instance the
-   * 			attachment belongs to.</p>
-   * @public
-   */
-  cluster?: string | undefined;
-
-  /**
-   * <p>Any attachments associated with the state change request.</p>
-   * @public
-   */
-  attachments: AttachmentStateChange[] | undefined;
-}
-
-/**
- * @public
- */
-export interface SubmitAttachmentStateChangesResponse {
-  /**
-   * <p>Acknowledgement of the state change.</p>
-   * @public
-   */
-  acknowledgment?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface SubmitContainerStateChangeRequest {
-  /**
-   * <p>The short name or full ARN of the cluster that hosts the container.</p>
-   * @public
-   */
-  cluster?: string | undefined;
-
-  /**
-   * <p>The task ID or full Amazon Resource Name (ARN) of the task that hosts the container.</p>
-   * @public
-   */
-  task?: string | undefined;
-
-  /**
-   * <p>The name of the container.</p>
-   * @public
-   */
-  containerName?: string | undefined;
-
-  /**
-   * <p>The ID of the Docker container.</p>
-   * @public
-   */
-  runtimeId?: string | undefined;
-
-  /**
-   * <p>The status of the state change request.</p>
-   * @public
-   */
-  status?: string | undefined;
-
-  /**
-   * <p>The exit code that's returned for the state change request.</p>
-   * @public
-   */
-  exitCode?: number | undefined;
-
-  /**
-   * <p>The reason for the state change request.</p>
-   * @public
-   */
-  reason?: string | undefined;
-
-  /**
-   * <p>The network bindings of the container.</p>
-   * @public
-   */
-  networkBindings?: NetworkBinding[] | undefined;
-}
-
-/**
- * @public
- */
-export interface SubmitContainerStateChangeResponse {
-  /**
-   * <p>Acknowledgement of the state change.</p>
-   * @public
-   */
-  acknowledgment?: string | undefined;
-}
-
-/**
- * <p>An object that represents a change in state for a container.</p>
- * @public
- */
-export interface ContainerStateChange {
-  /**
-   * <p>The name of the container.</p>
-   * @public
-   */
-  containerName?: string | undefined;
-
-  /**
-   * <p>The container image SHA 256 digest.</p>
-   * @public
-   */
-  imageDigest?: string | undefined;
-
-  /**
-   * <p>The ID of the Docker container.</p>
-   * @public
-   */
-  runtimeId?: string | undefined;
-
-  /**
-   * <p>The exit code for the container, if the state change is a result of the container
-   * 			exiting.</p>
-   * @public
-   */
-  exitCode?: number | undefined;
-
-  /**
-   * <p>Any network bindings that are associated with the container.</p>
-   * @public
-   */
-  networkBindings?: NetworkBinding[] | undefined;
-
-  /**
-   * <p>The reason for the state change.</p>
-   * @public
-   */
-  reason?: string | undefined;
-
-  /**
-   * <p>The status of the container.</p>
-   * @public
-   */
-  status?: string | undefined;
-}
-
-/**
- * <p>An object representing a change in state for a managed agent.</p>
- * @public
- */
-export interface ManagedAgentStateChange {
-  /**
-   * <p>The name of the container that's associated with the managed agent.</p>
-   * @public
-   */
-  containerName: string | undefined;
-
-  /**
-   * <p>The name of the managed agent.</p>
-   * @public
-   */
-  managedAgentName: ManagedAgentName | undefined;
-
-  /**
-   * <p>The status of the managed agent.</p>
-   * @public
-   */
-  status: string | undefined;
-
-  /**
-   * <p>The reason for the status of the managed agent.</p>
-   * @public
-   */
-  reason?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface SubmitTaskStateChangeRequest {
-  /**
-   * <p>The short name or full Amazon Resource Name (ARN) of the cluster that hosts the task.</p>
-   * @public
-   */
-  cluster?: string | undefined;
-
-  /**
-   * <p>The task ID or full ARN of the task in the state change request.</p>
-   * @public
-   */
-  task?: string | undefined;
-
-  /**
-   * <p>The status of the state change request.</p>
-   * @public
-   */
-  status?: string | undefined;
-
-  /**
-   * <p>The reason for the state change request.</p>
-   * @public
-   */
-  reason?: string | undefined;
-
-  /**
-   * <p>Any containers that's associated with the state change request.</p>
-   * @public
-   */
-  containers?: ContainerStateChange[] | undefined;
-
-  /**
-   * <p>Any attachments associated with the state change request.</p>
-   * @public
-   */
-  attachments?: AttachmentStateChange[] | undefined;
-
-  /**
-   * <p>The details for the managed agent that's associated with the task.</p>
-   * @public
-   */
-  managedAgents?: ManagedAgentStateChange[] | undefined;
-
-  /**
-   * <p>The Unix timestamp for the time when the container image pull started.</p>
-   * @public
-   */
-  pullStartedAt?: Date | undefined;
-
-  /**
-   * <p>The Unix timestamp for the time when the container image pull completed.</p>
-   * @public
-   */
-  pullStoppedAt?: Date | undefined;
-
-  /**
-   * <p>The Unix timestamp for the time when the task execution stopped.</p>
-   * @public
-   */
-  executionStoppedAt?: Date | undefined;
-}
-
-/**
- * @public
- */
-export interface SubmitTaskStateChangeResponse {
-  /**
-   * <p>Acknowledgement of the state change.</p>
-   * @public
-   */
-  acknowledgment?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface TagResourceRequest {
-  /**
-   * <p>The Amazon Resource Name (ARN) of the resource to add tags to. Currently, the supported resources are
-   * 			Amazon ECS capacity providers, tasks, services, task definitions, clusters, and container
-   * 			instances.</p>
-   *          <p>In order to tag a service that has the following ARN format, you need to migrate the
-   * 			service to the long ARN. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-arn-migration.html">Migrate an Amazon ECS short service ARN to a long ARN</a> in the <i>Amazon Elastic Container Service
-   * 				Developer Guide</i>.</p>
-   *          <p>
-   *             <code>arn:aws:ecs:region:aws_account_id:service/service-name</code>
-   *          </p>
-   *          <p>After the migration is complete, the service has the long ARN format, as shown below. Use this ARN to tag the service.</p>
-   *          <p>
-   *             <code>arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name</code>
-   *          </p>
-   *          <p>If you try to tag a service with a short ARN, you receive an <code>InvalidParameterException</code> error.</p>
-   * @public
-   */
-  resourceArn: string | undefined;
-
-  /**
-   * <p>The tags to add to the resource. A tag is an array of key-value pairs.</p>
-   *          <p>The following basic restrictions apply to tags:</p>
-   *          <ul>
-   *             <li>
-   *                <p>Maximum number of tags per resource - 50</p>
-   *             </li>
-   *             <li>
-   *                <p>For each resource, each tag key must be unique, and each tag key can have only
-   *                     one value.</p>
-   *             </li>
-   *             <li>
-   *                <p>Maximum key length - 128 Unicode characters in UTF-8</p>
-   *             </li>
-   *             <li>
-   *                <p>Maximum value length - 256 Unicode characters in UTF-8</p>
-   *             </li>
-   *             <li>
-   *                <p>If your tagging schema is used across multiple services and resources,
-   *                     remember that other services may have restrictions on allowed characters.
-   *                     Generally allowed characters are: letters, numbers, and spaces representable in
-   *                     UTF-8, and the following characters: + - = . _ : / @.</p>
-   *             </li>
-   *             <li>
-   *                <p>Tag keys and values are case-sensitive.</p>
-   *             </li>
-   *             <li>
-   *                <p>Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase
-   *                     combination of such as a prefix for either keys or values as it is reserved for
-   *                     Amazon Web Services use. You cannot edit or delete tag keys or values with this prefix. Tags with
-   *                     this prefix do not count against your tags per resource limit.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  tags: Tag[] | undefined;
-}
-
-/**
- * @public
- */
-export interface TagResourceResponse {}
-
-/**
- * @public
- */
-export interface UntagResourceRequest {
-  /**
-   * <p>The Amazon Resource Name (ARN) of the resource to delete tags from. Currently, the supported resources
-   * 			are Amazon ECS capacity providers, tasks, services, task definitions, clusters, and container
-   * 			instances.</p>
-   * @public
-   */
-  resourceArn: string | undefined;
-
-  /**
-   * <p>The keys of the tags to be removed.</p>
-   * @public
-   */
-  tagKeys: string[] | undefined;
-}
-
-/**
- * @public
- */
-export interface UntagResourceResponse {}
 
 /**
  * @internal

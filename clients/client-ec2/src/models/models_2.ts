@@ -17,6 +17,7 @@ import {
   PortRange,
   Protocol,
   ReservedInstancesListing,
+  ResourceType,
   RouteTableAssociationState,
   SecurityGroupReferencingSupportValue,
   Tag,
@@ -32,23 +33,945 @@ import {
   VerifiedAccessTrustProvider,
   VerifiedAccessTrustProviderFilterSensitiveLog,
   VolumeAttachment,
-  VpcPeeringConnection,
 } from "./models_0";
 
 import {
+  _InstanceType,
   ConnectionTrackingSpecificationRequest,
-  InstanceIpv6Address,
+  CreditSpecification,
+  ElasticGpuSpecificationResponse,
+  HostnameType,
+  InstanceBandwidthWeighting,
+  InstanceRequirements,
+  IpAddressType,
   Ipv4PrefixSpecificationRequest,
   Ipv6PrefixSpecificationRequest,
-  LocalGatewayRoute,
+  LaunchTemplateBlockDeviceMapping,
+  LaunchTemplateCapacityReservationSpecificationResponse,
+  LaunchTemplateCpuOptions,
+  LaunchTemplateElasticInferenceAcceleratorResponse,
+  LaunchTemplateEnclaveOptions,
+  LaunchTemplateHibernationOptions,
+  LaunchTemplateIamInstanceProfileSpecification,
+  LaunchTemplateInstanceMaintenanceOptions,
+  LaunchTemplateInstanceMarketOptions,
+  LaunchTemplateInstanceMetadataOptions,
+  LaunchTemplateLicenseConfiguration,
+  MacModificationTask,
+  MacSystemIntegrityProtectionSettingStatus,
   OperatorRequest,
   OperatorResponse,
   PrivateIpAddressSpecification,
+  ShutdownBehavior,
+  SnapshotLocationEnum,
   Subnet,
   Tenancy,
+  ValidationWarning,
   VolumeType,
   Vpc,
 } from "./models_1";
+
+/**
+ * <p>Describes the monitoring for the instance.</p>
+ * @public
+ */
+export interface LaunchTemplatesMonitoring {
+  /**
+   * <p>Indicates whether detailed monitoring is enabled. Otherwise, basic monitoring is
+   *             enabled.</p>
+   * @public
+   */
+  Enabled?: boolean | undefined;
+}
+
+/**
+ * <p>A security group connection tracking specification that enables you to set the idle
+ *             timeout for connection tracking on an Elastic network interface. For more information,
+ *             see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the
+ *             <i>Amazon EC2 User Guide</i>.</p>
+ * @public
+ */
+export interface ConnectionTrackingSpecification {
+  /**
+   * <p>Timeout (in seconds) for idle TCP
+   * 						connections in an established state. Min: 60 seconds. Max: 432000 seconds (5
+   * 						days). Default: 432000 seconds. Recommended: Less than 432000 seconds.</p>
+   * @public
+   */
+  TcpEstablishedTimeout?: number | undefined;
+
+  /**
+   * <p>Timeout (in seconds) for idle UDP flows that
+   * 						have seen traffic only in a single direction or a single request-response
+   * 						transaction. Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.</p>
+   * @public
+   */
+  UdpTimeout?: number | undefined;
+
+  /**
+   * <p>Timeout (in seconds) for idle UDP
+   * 						flows classified as streams which have seen more than one request-response
+   * 						transaction. Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180
+   * 						seconds.</p>
+   * @public
+   */
+  UdpStreamTimeout?: number | undefined;
+}
+
+/**
+ * <p>ENA Express is compatible with both TCP and UDP transport protocols. When it's enabled, TCP traffic
+ * 			automatically uses it. However, some UDP-based applications are designed to handle network packets that are
+ * 			out of order, without a need for retransmission, such as live video broadcasting or other near-real-time
+ * 			applications. For UDP traffic, you can specify whether to use ENA Express, based on your application
+ * 			environment needs.</p>
+ * @public
+ */
+export interface LaunchTemplateEnaSrdUdpSpecification {
+  /**
+   * <p>Indicates whether UDP traffic to and from the instance uses ENA Express. To specify this setting,
+   * 			you must first enable ENA Express.</p>
+   * @public
+   */
+  EnaSrdUdpEnabled?: boolean | undefined;
+}
+
+/**
+ * <p>ENA Express uses Amazon Web Services Scalable Reliable Datagram (SRD) technology to increase the
+ * 			maximum bandwidth used per stream and minimize tail latency of network traffic between EC2 instances.
+ * 			With ENA Express, you can communicate between two EC2 instances in the same subnet within the same
+ * 			account, or in different accounts. Both sending and receiving instances must have ENA Express enabled.</p>
+ *          <p>To improve the reliability of network packet delivery, ENA Express reorders network packets on the
+ * 			receiving end by default. However, some UDP-based applications are designed to handle network packets
+ * 			that are out of order to reduce the overhead for packet delivery at the network layer. When ENA Express
+ * 			is enabled, you can specify whether UDP network traffic uses it.</p>
+ * @public
+ */
+export interface LaunchTemplateEnaSrdSpecification {
+  /**
+   * <p>Indicates whether ENA Express is enabled for the network interface.</p>
+   * @public
+   */
+  EnaSrdEnabled?: boolean | undefined;
+
+  /**
+   * <p>Configures ENA Express for UDP network traffic.</p>
+   * @public
+   */
+  EnaSrdUdpSpecification?: LaunchTemplateEnaSrdUdpSpecification | undefined;
+}
+
+/**
+ * <p>Information about the IPv4 delegated prefixes assigned to a network interface.</p>
+ * @public
+ */
+export interface Ipv4PrefixSpecificationResponse {
+  /**
+   * <p>The IPv4 delegated prefixes assigned to the network interface.</p>
+   * @public
+   */
+  Ipv4Prefix?: string | undefined;
+}
+
+/**
+ * <p>Describes an IPv6 address.</p>
+ * @public
+ */
+export interface InstanceIpv6Address {
+  /**
+   * <p>The IPv6 address.</p>
+   * @public
+   */
+  Ipv6Address?: string | undefined;
+
+  /**
+   * <p>Determines if an IPv6 address associated with a network interface is the primary IPv6 address. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached.
+   *             For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
+   * @public
+   */
+  IsPrimaryIpv6?: boolean | undefined;
+}
+
+/**
+ * <p>Information about the IPv6 delegated prefixes assigned to a network interface.</p>
+ * @public
+ */
+export interface Ipv6PrefixSpecificationResponse {
+  /**
+   * <p>The IPv6 delegated prefixes assigned to the network interface.</p>
+   * @public
+   */
+  Ipv6Prefix?: string | undefined;
+}
+
+/**
+ * <p>Describes a network interface.</p>
+ * @public
+ */
+export interface LaunchTemplateInstanceNetworkInterfaceSpecification {
+  /**
+   * <p>Indicates whether to associate a Carrier IP address with eth0 for a new network
+   *             interface.</p>
+   *          <p>Use this option when you launch an instance in a Wavelength Zone and want to associate
+   *             a Carrier IP address with the network interface. For more information about Carrier IP
+   *             addresses, see <a href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip">Carrier IP address</a> in the <i>Wavelength Developer
+   *             Guide</i>.</p>
+   * @public
+   */
+  AssociateCarrierIpAddress?: boolean | undefined;
+
+  /**
+   * <p>Indicates whether to associate a public IPv4 address with eth0 for a new network
+   *             interface.</p>
+   *          <p>Amazon Web Services charges for all public IPv4 addresses, including public IPv4 addresses
+   * associated with running instances and Elastic IP addresses. For more information, see the <i>Public IPv4 Address</i> tab on the <a href="http://aws.amazon.com/vpc/pricing/">Amazon VPC pricing page</a>.</p>
+   * @public
+   */
+  AssociatePublicIpAddress?: boolean | undefined;
+
+  /**
+   * <p>Indicates whether the network interface is deleted when the instance is
+   *             terminated.</p>
+   * @public
+   */
+  DeleteOnTermination?: boolean | undefined;
+
+  /**
+   * <p>A description for the network interface.</p>
+   * @public
+   */
+  Description?: string | undefined;
+
+  /**
+   * <p>The device index for the network interface attachment.</p>
+   * @public
+   */
+  DeviceIndex?: number | undefined;
+
+  /**
+   * <p>The IDs of one or more security groups.</p>
+   * @public
+   */
+  Groups?: string[] | undefined;
+
+  /**
+   * <p>The type of network interface.</p>
+   * @public
+   */
+  InterfaceType?: string | undefined;
+
+  /**
+   * <p>The number of IPv6 addresses for the network interface.</p>
+   * @public
+   */
+  Ipv6AddressCount?: number | undefined;
+
+  /**
+   * <p>The IPv6 addresses for the network interface.</p>
+   * @public
+   */
+  Ipv6Addresses?: InstanceIpv6Address[] | undefined;
+
+  /**
+   * <p>The ID of the network interface.</p>
+   * @public
+   */
+  NetworkInterfaceId?: string | undefined;
+
+  /**
+   * <p>The primary private IPv4 address of the network interface.</p>
+   * @public
+   */
+  PrivateIpAddress?: string | undefined;
+
+  /**
+   * <p>One or more private IPv4 addresses.</p>
+   * @public
+   */
+  PrivateIpAddresses?: PrivateIpAddressSpecification[] | undefined;
+
+  /**
+   * <p>The number of secondary private IPv4 addresses for the network interface.</p>
+   * @public
+   */
+  SecondaryPrivateIpAddressCount?: number | undefined;
+
+  /**
+   * <p>The ID of the subnet for the network interface.</p>
+   * @public
+   */
+  SubnetId?: string | undefined;
+
+  /**
+   * <p>The index of the network card.</p>
+   * @public
+   */
+  NetworkCardIndex?: number | undefined;
+
+  /**
+   * <p>One or more IPv4 prefixes assigned to the network interface.</p>
+   * @public
+   */
+  Ipv4Prefixes?: Ipv4PrefixSpecificationResponse[] | undefined;
+
+  /**
+   * <p>The number of IPv4 prefixes that Amazon Web Services automatically assigned to the network
+   *             interface.</p>
+   * @public
+   */
+  Ipv4PrefixCount?: number | undefined;
+
+  /**
+   * <p>One or more IPv6 prefixes assigned to the network interface.</p>
+   * @public
+   */
+  Ipv6Prefixes?: Ipv6PrefixSpecificationResponse[] | undefined;
+
+  /**
+   * <p>The number of IPv6 prefixes that Amazon Web Services automatically assigned to the network
+   *             interface.</p>
+   * @public
+   */
+  Ipv6PrefixCount?: number | undefined;
+
+  /**
+   * <p>The primary IPv6 address of the network interface. When you enable an IPv6 GUA address
+   *             to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the
+   *             instance is terminated or the network interface is detached. For more information about
+   *             primary IPv6 addresses, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html">RunInstances</a>.</p>
+   * @public
+   */
+  PrimaryIpv6?: boolean | undefined;
+
+  /**
+   * <p>Contains the ENA Express settings for instances launched from your launch
+   *             template.</p>
+   * @public
+   */
+  EnaSrdSpecification?: LaunchTemplateEnaSrdSpecification | undefined;
+
+  /**
+   * <p>A security group connection tracking specification that enables you to set the timeout
+   *             for connection tracking on an Elastic network interface. For more information, see
+   *                 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Idle connection tracking timeout</a> in the
+   *                 <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  ConnectionTrackingSpecification?: ConnectionTrackingSpecification | undefined;
+
+  /**
+   * <p>The number of ENA queues created with the instance.</p>
+   * @public
+   */
+  EnaQueueCount?: number | undefined;
+}
+
+/**
+ * <p>With network performance options, you can adjust your bandwidth preferences to meet
+ *             the needs of the workload that runs on your instance at launch.</p>
+ * @public
+ */
+export interface LaunchTemplateNetworkPerformanceOptions {
+  /**
+   * <p>When you configure network bandwidth weighting, you can boost baseline bandwidth for
+   *             either networking or EBS by up to 25%. The total available baseline bandwidth for your
+   *             instance remains the same. The default option uses the standard bandwidth configuration
+   *             for your instance type.</p>
+   * @public
+   */
+  BandwidthWeighting?: InstanceBandwidthWeighting | undefined;
+}
+
+/**
+ * <p>Describes the placement of an instance.</p>
+ * @public
+ */
+export interface LaunchTemplatePlacement {
+  /**
+   * <p>The Availability Zone of the instance.</p>
+   * @public
+   */
+  AvailabilityZone?: string | undefined;
+
+  /**
+   * <p>The ID of the Availability Zone of the instance.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
+
+  /**
+   * <p>The affinity setting for the instance on the Dedicated Host.</p>
+   * @public
+   */
+  Affinity?: string | undefined;
+
+  /**
+   * <p>The name of the placement group for the instance.</p>
+   * @public
+   */
+  GroupName?: string | undefined;
+
+  /**
+   * <p>The ID of the Dedicated Host for the instance.</p>
+   * @public
+   */
+  HostId?: string | undefined;
+
+  /**
+   * <p>The tenancy of the instance. An instance with a tenancy of <code>dedicated</code> runs
+   *             on single-tenant hardware. </p>
+   * @public
+   */
+  Tenancy?: Tenancy | undefined;
+
+  /**
+   * <p>Reserved for future use.</p>
+   * @public
+   */
+  SpreadDomain?: string | undefined;
+
+  /**
+   * <p>The ARN of the host resource group in which to launch the instances. </p>
+   * @public
+   */
+  HostResourceGroupArn?: string | undefined;
+
+  /**
+   * <p>The number of the partition the instance should launch in. Valid only if the placement
+   *             group strategy is set to <code>partition</code>.</p>
+   * @public
+   */
+  PartitionNumber?: number | undefined;
+
+  /**
+   * <p>The Group ID of the placement group. You must specify the Placement Group <b>Group ID</b> to launch an instance in a shared placement
+   *             group.</p>
+   * @public
+   */
+  GroupId?: string | undefined;
+}
+
+/**
+ * <p>Describes the options for instance hostnames.</p>
+ * @public
+ */
+export interface LaunchTemplatePrivateDnsNameOptions {
+  /**
+   * <p>The type of hostname to assign to an instance.</p>
+   * @public
+   */
+  HostnameType?: HostnameType | undefined;
+
+  /**
+   * <p>Indicates whether to respond to DNS queries for instance hostnames with DNS A
+   *             records.</p>
+   * @public
+   */
+  EnableResourceNameDnsARecord?: boolean | undefined;
+
+  /**
+   * <p>Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA
+   *             records.</p>
+   * @public
+   */
+  EnableResourceNameDnsAAAARecord?: boolean | undefined;
+}
+
+/**
+ * <p>The tags specification for the launch template.</p>
+ * @public
+ */
+export interface LaunchTemplateTagSpecification {
+  /**
+   * <p>The type of resource to tag.</p>
+   * @public
+   */
+  ResourceType?: ResourceType | undefined;
+
+  /**
+   * <p>The tags for the resource.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+}
+
+/**
+ * <p>The information for a launch template. </p>
+ * @public
+ */
+export interface ResponseLaunchTemplateData {
+  /**
+   * <p>The ID of the kernel, if applicable.</p>
+   * @public
+   */
+  KernelId?: string | undefined;
+
+  /**
+   * <p>Indicates whether the instance is optimized for Amazon EBS I/O. </p>
+   * @public
+   */
+  EbsOptimized?: boolean | undefined;
+
+  /**
+   * <p>The IAM instance profile.</p>
+   * @public
+   */
+  IamInstanceProfile?: LaunchTemplateIamInstanceProfileSpecification | undefined;
+
+  /**
+   * <p>The block device mappings.</p>
+   * @public
+   */
+  BlockDeviceMappings?: LaunchTemplateBlockDeviceMapping[] | undefined;
+
+  /**
+   * <p>The network interfaces.</p>
+   * @public
+   */
+  NetworkInterfaces?: LaunchTemplateInstanceNetworkInterfaceSpecification[] | undefined;
+
+  /**
+   * <p>The ID of the AMI or a Systems Manager parameter. The Systems Manager parameter will
+   *             resolve to the ID of the AMI at instance launch.</p>
+   *          <p>The value depends on what you specified in the request. The possible values
+   *             are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>If an AMI ID was specified in the request, then this is the AMI ID.</p>
+   *             </li>
+   *             <li>
+   *                <p>If a Systems Manager parameter was specified in the request, and
+   *                         <code>ResolveAlias</code> was configured as <code>true</code>, then this is
+   *                     the AMI ID that the parameter is mapped to in the Parameter Store.</p>
+   *             </li>
+   *             <li>
+   *                <p>If a Systems Manager parameter was specified in the request, and
+   *                         <code>ResolveAlias</code> was configured as <code>false</code>, then this is
+   *                     the parameter value.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#use-an-ssm-parameter-instead-of-an-ami-id">Use a Systems Manager parameter instead of an AMI ID</a> in the
+   *                 <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  ImageId?: string | undefined;
+
+  /**
+   * <p>The instance type.</p>
+   * @public
+   */
+  InstanceType?: _InstanceType | undefined;
+
+  /**
+   * <p>The name of the key pair.</p>
+   * @public
+   */
+  KeyName?: string | undefined;
+
+  /**
+   * <p>The monitoring for the instance.</p>
+   * @public
+   */
+  Monitoring?: LaunchTemplatesMonitoring | undefined;
+
+  /**
+   * <p>The placement of the instance.</p>
+   * @public
+   */
+  Placement?: LaunchTemplatePlacement | undefined;
+
+  /**
+   * <p>The ID of the RAM disk, if applicable.</p>
+   * @public
+   */
+  RamDiskId?: string | undefined;
+
+  /**
+   * <p>If set to <code>true</code>, indicates that the instance cannot be terminated using
+   *             the Amazon EC2 console, command line tool, or API.</p>
+   * @public
+   */
+  DisableApiTermination?: boolean | undefined;
+
+  /**
+   * <p>Indicates whether an instance stops or terminates when you initiate shutdown from the
+   *             instance (using the operating system command for system shutdown).</p>
+   * @public
+   */
+  InstanceInitiatedShutdownBehavior?: ShutdownBehavior | undefined;
+
+  /**
+   * <p>The user data for the instance. </p>
+   * @public
+   */
+  UserData?: string | undefined;
+
+  /**
+   * <p>The tags that are applied to the resources that are created during instance
+   *             launch.</p>
+   * @public
+   */
+  TagSpecifications?: LaunchTemplateTagSpecification[] | undefined;
+
+  /**
+   * <p>Deprecated.</p>
+   *          <note>
+   *             <p>Amazon Elastic Graphics reached end of life on January 8, 2024.</p>
+   *          </note>
+   * @public
+   */
+  ElasticGpuSpecifications?: ElasticGpuSpecificationResponse[] | undefined;
+
+  /**
+   * <note>
+   *             <p>Amazon Elastic Inference is no longer available.</p>
+   *          </note>
+   *          <p>An elastic inference accelerator to associate with the instance. Elastic inference
+   *             accelerators are a resource you can attach to your Amazon EC2 instances to accelerate
+   *             your Deep Learning (DL) inference workloads.</p>
+   *          <p>You cannot specify accelerators from different generations in the same request.</p>
+   * @public
+   */
+  ElasticInferenceAccelerators?: LaunchTemplateElasticInferenceAcceleratorResponse[] | undefined;
+
+  /**
+   * <p>The security group IDs.</p>
+   * @public
+   */
+  SecurityGroupIds?: string[] | undefined;
+
+  /**
+   * <p>The security group names.</p>
+   * @public
+   */
+  SecurityGroups?: string[] | undefined;
+
+  /**
+   * <p>The market (purchasing) option for the instances.</p>
+   * @public
+   */
+  InstanceMarketOptions?: LaunchTemplateInstanceMarketOptions | undefined;
+
+  /**
+   * <p>The credit option for CPU usage of the instance.</p>
+   * @public
+   */
+  CreditSpecification?: CreditSpecification | undefined;
+
+  /**
+   * <p>The CPU options for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">CPU
+   *                 options for Amazon EC2 instances</a> in the
+   *             <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  CpuOptions?: LaunchTemplateCpuOptions | undefined;
+
+  /**
+   * <p>Information about the Capacity Reservation targeting option.</p>
+   * @public
+   */
+  CapacityReservationSpecification?: LaunchTemplateCapacityReservationSpecificationResponse | undefined;
+
+  /**
+   * <p>The license configurations.</p>
+   * @public
+   */
+  LicenseSpecifications?: LaunchTemplateLicenseConfiguration[] | undefined;
+
+  /**
+   * <p>Indicates whether an instance is configured for hibernation. For more information, see
+   *                 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate
+   *                 your Amazon EC2 instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  HibernationOptions?: LaunchTemplateHibernationOptions | undefined;
+
+  /**
+   * <p>The metadata options for the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+   *                 the Instance Metadata Service options</a> in the
+   *                 <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  MetadataOptions?: LaunchTemplateInstanceMetadataOptions | undefined;
+
+  /**
+   * <p>Indicates whether the instance is enabled for Amazon Web Services Nitro Enclaves.</p>
+   * @public
+   */
+  EnclaveOptions?: LaunchTemplateEnclaveOptions | undefined;
+
+  /**
+   * <p>The attributes for the instance types. When you specify instance attributes, Amazon EC2 will
+   *          identify instance types with these attributes.</p>
+   *          <p>If you specify <code>InstanceRequirements</code>, you can't specify
+   *          <code>InstanceTypes</code>.</p>
+   * @public
+   */
+  InstanceRequirements?: InstanceRequirements | undefined;
+
+  /**
+   * <p>The options for the instance hostname.</p>
+   * @public
+   */
+  PrivateDnsNameOptions?: LaunchTemplatePrivateDnsNameOptions | undefined;
+
+  /**
+   * <p>The maintenance options for your instance.</p>
+   * @public
+   */
+  MaintenanceOptions?: LaunchTemplateInstanceMaintenanceOptions | undefined;
+
+  /**
+   * <p>Indicates whether the instance is enabled for stop protection. For more information,
+   *             see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html">Enable stop protection for your EC2 instances</a> in the
+   *                 <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  DisableApiStop?: boolean | undefined;
+
+  /**
+   * <p>The entity that manages the launch template.</p>
+   * @public
+   */
+  Operator?: OperatorResponse | undefined;
+
+  /**
+   * <p>Contains the launch template settings for network performance options for your
+   *             instance.</p>
+   * @public
+   */
+  NetworkPerformanceOptions?: LaunchTemplateNetworkPerformanceOptions | undefined;
+}
+
+/**
+ * <p>Describes a launch template version.</p>
+ * @public
+ */
+export interface LaunchTemplateVersion {
+  /**
+   * <p>The ID of the launch template.</p>
+   * @public
+   */
+  LaunchTemplateId?: string | undefined;
+
+  /**
+   * <p>The name of the launch template.</p>
+   * @public
+   */
+  LaunchTemplateName?: string | undefined;
+
+  /**
+   * <p>The version number.</p>
+   * @public
+   */
+  VersionNumber?: number | undefined;
+
+  /**
+   * <p>The description for the version.</p>
+   * @public
+   */
+  VersionDescription?: string | undefined;
+
+  /**
+   * <p>The time the version was created.</p>
+   * @public
+   */
+  CreateTime?: Date | undefined;
+
+  /**
+   * <p>The principal that created the version.</p>
+   * @public
+   */
+  CreatedBy?: string | undefined;
+
+  /**
+   * <p>Indicates whether the version is the default version.</p>
+   * @public
+   */
+  DefaultVersion?: boolean | undefined;
+
+  /**
+   * <p>Information about the launch template.</p>
+   * @public
+   */
+  LaunchTemplateData?: ResponseLaunchTemplateData | undefined;
+
+  /**
+   * <p>The entity that manages the launch template.</p>
+   * @public
+   */
+  Operator?: OperatorResponse | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateLaunchTemplateVersionResult {
+  /**
+   * <p>Information about the launch template version.</p>
+   * @public
+   */
+  LaunchTemplateVersion?: LaunchTemplateVersion | undefined;
+
+  /**
+   * <p>If the new version of the launch template contains parameters or parameter
+   *             combinations that are not valid, an error code and an error message are returned for
+   *             each issue that's found.</p>
+   * @public
+   */
+  Warning?: ValidationWarning | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateLocalGatewayRouteRequest {
+  /**
+   * <p>The CIDR range used for destination matches. Routing decisions are based on
+   *         the most specific match.</p>
+   * @public
+   */
+  DestinationCidrBlock?: string | undefined;
+
+  /**
+   * <p>The ID of the local gateway route table.</p>
+   * @public
+   */
+  LocalGatewayRouteTableId: string | undefined;
+
+  /**
+   * <p>The ID of the virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroupId?: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The ID of the network interface.</p>
+   * @public
+   */
+  NetworkInterfaceId?: string | undefined;
+
+  /**
+   * <p>
+   *          The ID of the prefix list. Use a prefix list in place of <code>DestinationCidrBlock</code>. You
+   *          cannot use <code>DestinationPrefixListId</code> and <code>DestinationCidrBlock</code> in the same request.
+   *       </p>
+   * @public
+   */
+  DestinationPrefixListId?: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const LocalGatewayRouteState = {
+  active: "active",
+  blackhole: "blackhole",
+  deleted: "deleted",
+  deleting: "deleting",
+  pending: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type LocalGatewayRouteState = (typeof LocalGatewayRouteState)[keyof typeof LocalGatewayRouteState];
+
+/**
+ * @public
+ * @enum
+ */
+export const LocalGatewayRouteType = {
+  propagated: "propagated",
+  static: "static",
+} as const;
+
+/**
+ * @public
+ */
+export type LocalGatewayRouteType = (typeof LocalGatewayRouteType)[keyof typeof LocalGatewayRouteType];
+
+/**
+ * <p>Describes a route for a local gateway route table.</p>
+ * @public
+ */
+export interface LocalGatewayRoute {
+  /**
+   * <p>The CIDR block used for destination matches.</p>
+   * @public
+   */
+  DestinationCidrBlock?: string | undefined;
+
+  /**
+   * <p>The ID of the virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroupId?: string | undefined;
+
+  /**
+   * <p>The route type.</p>
+   * @public
+   */
+  Type?: LocalGatewayRouteType | undefined;
+
+  /**
+   * <p>The state of the route.</p>
+   * @public
+   */
+  State?: LocalGatewayRouteState | undefined;
+
+  /**
+   * <p>The ID of the local gateway route table.</p>
+   * @public
+   */
+  LocalGatewayRouteTableId?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the local gateway route table.</p>
+   * @public
+   */
+  LocalGatewayRouteTableArn?: string | undefined;
+
+  /**
+   * <p>The ID of the Amazon Web Services account that owns the local gateway route.</p>
+   * @public
+   */
+  OwnerId?: string | undefined;
+
+  /**
+   * <p>The ID of the subnet.</p>
+   * @public
+   */
+  SubnetId?: string | undefined;
+
+  /**
+   * <p>The ID of the customer-owned address pool.</p>
+   * @public
+   */
+  CoipPoolId?: string | undefined;
+
+  /**
+   * <p>The ID of the network interface.</p>
+   * @public
+   */
+  NetworkInterfaceId?: string | undefined;
+
+  /**
+   * <p>
+   *          The ID of the prefix list.
+   *       </p>
+   * @public
+   */
+  DestinationPrefixListId?: string | undefined;
+}
 
 /**
  * @public
@@ -466,6 +1389,471 @@ export interface CreateLocalGatewayRouteTableVpcAssociationResult {
    * @public
    */
   LocalGatewayRouteTableVpcAssociation?: LocalGatewayRouteTableVpcAssociation | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateLocalGatewayVirtualInterfaceRequest {
+  /**
+   * <p>The ID of the local gateway virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroupId: string | undefined;
+
+  /**
+   * <p>References the Link Aggregation Group (LAG) that connects the Outpost to on-premises network devices.</p>
+   * @public
+   */
+  OutpostLagId: string | undefined;
+
+  /**
+   * <p>The virtual local area network (VLAN) used for the local gateway virtual interface.</p>
+   * @public
+   */
+  Vlan: number | undefined;
+
+  /**
+   * <p>The IP address assigned to the local gateway virtual interface on the Outpost side. Only IPv4 is supported.</p>
+   * @public
+   */
+  LocalAddress: string | undefined;
+
+  /**
+   * <p>The peer IP address for the local gateway virtual interface. Only IPv4 is
+   *          supported.</p>
+   * @public
+   */
+  PeerAddress: string | undefined;
+
+  /**
+   * <p>The Autonomous System Number (ASN) of the Border Gateway Protocol (BGP) peer.</p>
+   * @public
+   */
+  PeerBgpAsn?: number | undefined;
+
+  /**
+   * <p>The tags to apply to a resource when the local gateway virtual interface is being created. </p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The extended 32-bit ASN of the BGP peer for use with larger ASN values.</p>
+   * @public
+   */
+  PeerBgpAsnExtended?: number | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const LocalGatewayVirtualInterfaceConfigurationState = {
+  available: "available",
+  deleted: "deleted",
+  deleting: "deleting",
+  pending: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type LocalGatewayVirtualInterfaceConfigurationState =
+  (typeof LocalGatewayVirtualInterfaceConfigurationState)[keyof typeof LocalGatewayVirtualInterfaceConfigurationState];
+
+/**
+ * <p>Describes a local gateway virtual interface.</p>
+ * @public
+ */
+export interface LocalGatewayVirtualInterface {
+  /**
+   * <p>The ID of the virtual interface.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceId?: string | undefined;
+
+  /**
+   * <p>The ID of the local gateway.</p>
+   * @public
+   */
+  LocalGatewayId?: string | undefined;
+
+  /**
+   * <p>The ID of the local gateway virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroupId?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Number (ARN) of the local gateway virtual interface.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceArn?: string | undefined;
+
+  /**
+   * <p>The Outpost LAG ID.</p>
+   * @public
+   */
+  OutpostLagId?: string | undefined;
+
+  /**
+   * <p>The ID of the VLAN.</p>
+   * @public
+   */
+  Vlan?: number | undefined;
+
+  /**
+   * <p>The local address.</p>
+   * @public
+   */
+  LocalAddress?: string | undefined;
+
+  /**
+   * <p>The peer address.</p>
+   * @public
+   */
+  PeerAddress?: string | undefined;
+
+  /**
+   * <p>The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local gateway.</p>
+   * @public
+   */
+  LocalBgpAsn?: number | undefined;
+
+  /**
+   * <p>The peer BGP ASN.</p>
+   * @public
+   */
+  PeerBgpAsn?: number | undefined;
+
+  /**
+   * <p>The extended 32-bit ASN of the BGP peer for use with larger ASN values.</p>
+   * @public
+   */
+  PeerBgpAsnExtended?: number | undefined;
+
+  /**
+   * <p>The ID of the Amazon Web Services account that owns the local gateway virtual interface.</p>
+   * @public
+   */
+  OwnerId?: string | undefined;
+
+  /**
+   * <p>The tags assigned to the virtual interface.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The current state of the local gateway virtual interface.</p>
+   * @public
+   */
+  ConfigurationState?: LocalGatewayVirtualInterfaceConfigurationState | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateLocalGatewayVirtualInterfaceResult {
+  /**
+   * <p>Information about the local gateway virtual interface.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterface?: LocalGatewayVirtualInterface | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateLocalGatewayVirtualInterfaceGroupRequest {
+  /**
+   * <p>The ID of the local gateway.</p>
+   * @public
+   */
+  LocalGatewayId: string | undefined;
+
+  /**
+   * <p>The Autonomous System Number(ASN) for the local Border Gateway Protocol (BGP).</p>
+   * @public
+   */
+  LocalBgpAsn?: number | undefined;
+
+  /**
+   * <p>The extended 32-bit ASN for the local BGP configuration.</p>
+   * @public
+   */
+  LocalBgpAsnExtended?: number | undefined;
+
+  /**
+   * <p>The tags to apply to the local gateway virtual interface group when the resource is
+   *          being created.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request,
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const LocalGatewayVirtualInterfaceGroupConfigurationState = {
+  available: "available",
+  deleted: "deleted",
+  deleting: "deleting",
+  incomplete: "incomplete",
+  pending: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type LocalGatewayVirtualInterfaceGroupConfigurationState =
+  (typeof LocalGatewayVirtualInterfaceGroupConfigurationState)[keyof typeof LocalGatewayVirtualInterfaceGroupConfigurationState];
+
+/**
+ * <p>Describes a local gateway virtual interface group.</p>
+ * @public
+ */
+export interface LocalGatewayVirtualInterfaceGroup {
+  /**
+   * <p>The ID of the virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroupId?: string | undefined;
+
+  /**
+   * <p>The IDs of the virtual interfaces.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceIds?: string[] | undefined;
+
+  /**
+   * <p>The ID of the local gateway.</p>
+   * @public
+   */
+  LocalGatewayId?: string | undefined;
+
+  /**
+   * <p>The ID of the Amazon Web Services account that owns the local gateway virtual interface group.</p>
+   * @public
+   */
+  OwnerId?: string | undefined;
+
+  /**
+   * <p>The Autonomous System Number(ASN) for the local Border Gateway Protocol (BGP).</p>
+   * @public
+   */
+  LocalBgpAsn?: number | undefined;
+
+  /**
+   * <p>The extended 32-bit ASN for the local BGP configuration.</p>
+   * @public
+   */
+  LocalBgpAsnExtended?: number | undefined;
+
+  /**
+   * <p>The Amazon Resource Number (ARN) of the local gateway virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroupArn?: string | undefined;
+
+  /**
+   * <p>The tags assigned to the virtual interface group.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The current state of the local gateway virtual interface group.</p>
+   * @public
+   */
+  ConfigurationState?: LocalGatewayVirtualInterfaceGroupConfigurationState | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateLocalGatewayVirtualInterfaceGroupResult {
+  /**
+   * <p>Information about the created local gateway virtual interface group.</p>
+   * @public
+   */
+  LocalGatewayVirtualInterfaceGroup?: LocalGatewayVirtualInterfaceGroup | undefined;
+}
+
+/**
+ * <p>Describes a custom configuration for a System Integrity Protection (SIP) modification task.</p>
+ * @public
+ */
+export interface MacSystemIntegrityProtectionConfigurationRequest {
+  /**
+   * <p>Enables or disables Apple Internal.</p>
+   * @public
+   */
+  AppleInternal?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Enables or disables Base System.</p>
+   * @public
+   */
+  BaseSystem?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Enables or disables Debugging Restrictions.</p>
+   * @public
+   */
+  DebuggingRestrictions?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Enables or disables Dtrace Restrictions.</p>
+   * @public
+   */
+  DTraceRestrictions?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Enables or disables Filesystem Protections.</p>
+   * @public
+   */
+  FilesystemProtections?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Enables or disables Kext Signing.</p>
+   * @public
+   */
+  KextSigning?: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Enables or disables Nvram Protections.</p>
+   * @public
+   */
+  NvramProtections?: MacSystemIntegrityProtectionSettingStatus | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateMacSystemIntegrityProtectionModificationTaskRequest {
+  /**
+   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+
+  /**
+   * <p>Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The ID of the Amazon EC2 Mac instance.</p>
+   * @public
+   */
+  InstanceId: string | undefined;
+
+  /**
+   * <p>
+   *             <b>[Apple silicon Mac instances only]</b> Specifies the
+   *          following credentials:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <b>Internal disk administrative user</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>Username</b> - Only the default administrative
+   *                      user (<code>aws-managed-user</code>) is supported and it is used by default. You
+   *                      can't specify a different administrative user.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>Password</b> - If you did not change the default
+   *                      password for <code>aws-managed-user</code>, specify the default password, which
+   *                      is <i>blank</i>. Otherwise, specify your password.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>Amazon EBS root volume administrative user</b>
+   *                </p>
+   *                <ul>
+   *                   <li>
+   *                      <p>
+   *                         <b>Username</b> - If you did not change the default
+   *                      administrative user, specify <code>ec2-user</code>. Otherwise, specify the username
+   *                      for your administrative user.</p>
+   *                   </li>
+   *                   <li>
+   *                      <p>
+   *                         <b>Password</b> - Specify the password for the
+   *                      administrative user.</p>
+   *                   </li>
+   *                </ul>
+   *             </li>
+   *          </ul>
+   *          <p>The credentials must be specified in the following JSON format:</p>
+   *          <p>
+   *             <code>\{
+   *   "internalDiskPassword":"<i>internal-disk-admin_password</i>",
+   *   "rootVolumeUsername":"<i>root-volume-admin_username</i>",
+   *   "rootVolumepassword":"<i>root-volume-admin_password</i>"
+   * \}</code>
+   *          </p>
+   * @public
+   */
+  MacCredentials?: string | undefined;
+
+  /**
+   * <p>Specifies the overrides to selectively enable or disable individual SIP settings.
+   *          The individual settings you specify here override the overall SIP status you specify
+   *          for <b>MacSystemIntegrityProtectionStatus</b>.</p>
+   * @public
+   */
+  MacSystemIntegrityProtectionConfiguration?: MacSystemIntegrityProtectionConfigurationRequest | undefined;
+
+  /**
+   * <p>Specifies the overall SIP status for the instance. To enable all SIP settings, specify
+   *          <code>enabled</code>. To disable all SIP settings, specify <code>disabled</code>.</p>
+   * @public
+   */
+  MacSystemIntegrityProtectionStatus: MacSystemIntegrityProtectionSettingStatus | undefined;
+
+  /**
+   * <p>Specifies tags to apply to the SIP modification task.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateMacSystemIntegrityProtectionModificationTaskResult {
+  /**
+   * <p>Information about the SIP modification task.</p>
+   * @public
+   */
+  MacModificationTask?: MacModificationTask | undefined;
 }
 
 /**
@@ -1611,14 +2999,16 @@ export type NetworkInterfaceCreationType =
 export interface CreateNetworkInterfaceRequest {
   /**
    * <p>The IPv4 prefixes assigned to the network interface.</p>
-   *          <p>You can't specify IPv4 prefixes if you've specified one of the following:
-   *             a count of IPv4 prefixes, specific private IPv4 addresses, or a count of private IPv4 addresses.</p>
+   *          <p>You can't specify IPv4 prefixes if you've specified one of the following: a count of
+   *             IPv4 prefixes, specific private IPv4 addresses, or a count of private IPv4
+   *             addresses.</p>
    * @public
    */
   Ipv4Prefixes?: Ipv4PrefixSpecificationRequest[] | undefined;
 
   /**
-   * <p>The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface.</p>
+   * <p>The number of IPv4 prefixes that Amazon Web Services automatically assigns to the
+   *             network interface.</p>
    *          <p>You can't specify a count of IPv4 prefixes if you've specified one of the following:
    *             specific IPv4 prefixes, specific private IPv4 addresses, or a count of private IPv4
    *             addresses.</p>
@@ -1628,14 +3018,15 @@ export interface CreateNetworkInterfaceRequest {
 
   /**
    * <p>The IPv6 prefixes assigned to the network interface.</p>
-   *          <p>You can't specify IPv6 prefixes if you've specified one of the following:
-   *             a count of IPv6 prefixes, specific IPv6 addresses, or a count of IPv6 addresses.</p>
+   *          <p>You can't specify IPv6 prefixes if you've specified one of the following: a count of
+   *             IPv6 prefixes, specific IPv6 addresses, or a count of IPv6 addresses.</p>
    * @public
    */
   Ipv6Prefixes?: Ipv6PrefixSpecificationRequest[] | undefined;
 
   /**
-   * <p>The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface.</p>
+   * <p>The number of IPv6 prefixes that Amazon Web Services automatically assigns to the
+   *             network interface.</p>
    *          <p>You can't specify a count of IPv6 prefixes if you've specified one of the following:
    *             specific IPv6 prefixes, specific IPv6 addresses, or a count of IPv6 addresses.</p>
    * @public
@@ -1646,7 +3037,8 @@ export interface CreateNetworkInterfaceRequest {
    * <p>The type of network interface. The default is <code>interface</code>.</p>
    *          <p>If you specify <code>efa-only</code>, do not assign any IP addresses to the network
    *             interface. EFA-only network interfaces do not support IP addresses.</p>
-   *          <p>The only supported values are <code>interface</code>, <code>efa</code>, <code>efa-only</code>, and <code>trunk</code>.</p>
+   *          <p>The only supported values are <code>interface</code>, <code>efa</code>,
+   *                 <code>efa-only</code>, and <code>trunk</code>.</p>
    * @public
    */
   InterfaceType?: NetworkInterfaceCreationType | undefined;
@@ -1666,16 +3058,16 @@ export interface CreateNetworkInterfaceRequest {
   /**
    * <p>If you’re creating a network interface in a dual-stack or IPv6-only subnet, you have
    *             the option to assign a primary IPv6 IP address. A primary IPv6 address is an IPv6 GUA
-   *             address associated with an ENI that you have enabled to use a primary IPv6 address. Use this option if the instance that
-   *             this ENI will be attached to relies on its IPv6 address not changing. Amazon Web Services
-   *             will automatically assign an IPv6 address associated with the ENI attached to your
-   *             instance to be the primary IPv6 address. Once you enable an IPv6 GUA address to be a
-   *             primary IPv6, you cannot disable it. When you enable an IPv6 GUA address to be a primary
-   *             IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is
-   *             terminated or the network interface is detached. If you have multiple IPv6 addresses
-   *             associated with an ENI attached to your instance and you enable a primary IPv6 address,
-   *             the first IPv6 GUA address associated with the ENI becomes the primary IPv6
-   *             address.</p>
+   *             address associated with an ENI that you have enabled to use a primary IPv6 address. Use
+   *             this option if the instance that this ENI will be attached to relies on its IPv6 address
+   *             not changing. Amazon Web Services will automatically assign an IPv6 address associated
+   *             with the ENI attached to your instance to be the primary IPv6 address. Once you enable
+   *             an IPv6 GUA address to be a primary IPv6, you cannot disable it. When you enable an IPv6
+   *             GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6
+   *             address until the instance is terminated or the network interface is detached. If you
+   *             have multiple IPv6 addresses associated with an ENI attached to your instance and you
+   *             enable a primary IPv6 address, the first IPv6 GUA address associated with the ENI
+   *             becomes the primary IPv6 address.</p>
    * @public
    */
   EnablePrimaryIpv6?: boolean | undefined;
@@ -1708,7 +3100,7 @@ export interface CreateNetworkInterfaceRequest {
    * <p>The primary private IPv4 address of the network interface. If you don't specify an
    *             IPv4 address, Amazon EC2 selects one for you from the subnet's IPv4 CIDR range. If you
    *             specify an IP address, you cannot indicate any IP addresses specified in
-   *             <code>privateIpAddresses</code> as primary (only one IP address can be designated as
+   *                 <code>privateIpAddresses</code> as primary (only one IP address can be designated as
    *             primary).</p>
    * @public
    */
@@ -1722,8 +3114,9 @@ export interface CreateNetworkInterfaceRequest {
 
   /**
    * <p>The private IPv4 addresses.</p>
-   *          <p>You can't specify private IPv4 addresses if you've specified one of the following:
-   *             a count of private IPv4 addresses, specific IPv4 prefixes, or a count of IPv4 prefixes.</p>
+   *          <p>You can't specify private IPv4 addresses if you've specified one of the following: a
+   *             count of private IPv4 addresses, specific IPv4 prefixes, or a count of IPv4
+   *             prefixes.</p>
    * @public
    */
   PrivateIpAddresses?: PrivateIpAddressSpecification[] | undefined;
@@ -1733,8 +3126,9 @@ export interface CreateNetworkInterfaceRequest {
    *             you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses
    *             within the subnet's IPv4 CIDR range. You can't specify this option and specify more than
    *             one private IP address using <code>privateIpAddresses</code>.</p>
-   *          <p>You can't specify a count of private IPv4 addresses if you've specified one of the following:
-   *             specific private IPv4 addresses, specific IPv4 prefixes, or a count of IPv4 prefixes.</p>
+   *          <p>You can't specify a count of private IPv4 addresses if you've specified one of the
+   *             following: specific private IPv4 addresses, specific IPv4 prefixes, or a count of IPv4
+   *             prefixes.</p>
    * @public
    */
   SecondaryPrivateIpAddressCount?: number | undefined;
@@ -1742,7 +3136,8 @@ export interface CreateNetworkInterfaceRequest {
   /**
    * <p>The IPv6 addresses from the IPv6 CIDR block range of your subnet.</p>
    *          <p>You can't specify IPv6 addresses using this parameter if you've specified one of the
-   *             following: a count of IPv6 addresses, specific IPv6 prefixes, or a count of IPv6 prefixes.</p>
+   *             following: a count of IPv6 addresses, specific IPv6 prefixes, or a count of IPv6
+   *             prefixes.</p>
    * @public
    */
   Ipv6Addresses?: InstanceIpv6Address[] | undefined;
@@ -1751,7 +3146,8 @@ export interface CreateNetworkInterfaceRequest {
    * <p>The number of IPv6 addresses to assign to a network interface. Amazon EC2
    *             automatically selects the IPv6 addresses from the subnet range.</p>
    *          <p>You can't specify a count of IPv6 addresses using this parameter if you've specified
-   *             one of the following: specific IPv6 addresses, specific IPv6 prefixes, or a count of IPv6 prefixes.</p>
+   *             one of the following: specific IPv6 addresses, specific IPv6 prefixes, or a count of
+   *             IPv6 prefixes.</p>
    *          <p>If your subnet has the <code>AssignIpv6AddressOnCreation</code> attribute set, you can
    *             override that setting by specifying 0 as the IPv6 address count.</p>
    * @public
@@ -1759,9 +3155,10 @@ export interface CreateNetworkInterfaceRequest {
   Ipv6AddressCount?: number | undefined;
 
   /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *             and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *             Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * <p>Checks whether you have the required permissions for the action, without actually
+   *             making the request, and provides an error response. If you have the required
+   *             permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is
+   *                 <code>UnauthorizedOperation</code>.</p>
    * @public
    */
   DryRun?: boolean | undefined;
@@ -1799,8 +3196,7 @@ export interface NetworkInterfaceAssociation {
   PublicDnsName?: string | undefined;
 
   /**
-   * <p>The address of the Elastic IP address bound to the network
-   *             interface.</p>
+   * <p>The address of the Elastic IP address bound to the network interface.</p>
    * @public
    */
   PublicIp?: string | undefined;
@@ -1813,7 +3209,8 @@ export interface NetworkInterfaceAssociation {
 
   /**
    * <p>The carrier IP address associated with the network interface.</p>
-   *          <p>This option is only available when the network interface is in a subnet which is associated with a Wavelength Zone.</p>
+   *          <p>This option is only available when the network interface is in a subnet which is
+   *             associated with a Wavelength Zone.</p>
    * @public
    */
   CarrierIp?: string | undefined;
@@ -1879,7 +3276,8 @@ export interface NetworkInterfaceAttachment {
   AttachmentId?: string | undefined;
 
   /**
-   * <p>Indicates whether the network interface is deleted when the instance is terminated.</p>
+   * <p>Indicates whether the network interface is deleted when the instance is
+   *             terminated.</p>
    * @public
    */
   DeleteOnTermination?: boolean | undefined;
@@ -1915,14 +3313,24 @@ export interface NetworkInterfaceAttachment {
   Status?: AttachmentStatus | undefined;
 
   /**
-   * <p>Configures ENA Express for the network interface that this action attaches to the instance.</p>
+   * <p>Configures ENA Express for the network interface that this action attaches to the
+   *             instance.</p>
    * @public
    */
   EnaSrdSpecification?: AttachmentEnaSrdSpecification | undefined;
+
+  /**
+   * <p>The number of ENA queues created with the instance.</p>
+   * @public
+   */
+  EnaQueueCount?: number | undefined;
 }
 
 /**
- * <p>A security group connection tracking configuration that enables you to set the idle timeout for connection tracking on an Elastic network interface. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ * <p>A security group connection tracking configuration that enables you to set the idle
+ *             timeout for connection tracking on an Elastic network interface. For more information,
+ *             see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the
+ *             <i>Amazon EC2 User Guide</i>.</p>
  * @public
  */
 export interface ConnectionTrackingConfiguration {
@@ -2012,8 +3420,16 @@ export interface NetworkInterfaceIpv6Address {
   Ipv6Address?: string | undefined;
 
   /**
-   * <p>Determines if an IPv6 address associated with a network interface is the primary IPv6 address. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the primary IPv6 address until the instance is terminated or the network interface is detached.
-   *             For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyNetworkInterfaceAttribute.html">ModifyNetworkInterfaceAttribute</a>.</p>
+   * <p>An IPv6-enabled public hostname for a network interface. Requests from within the VPC or from the internet resolve to the IPv6 GUA of the network interface. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html">EC2 instance hostnames, DNS names, and domains</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  PublicIpv6DnsName?: string | undefined;
+
+  /**
+   * <p>Determines if an IPv6 address associated with a network interface is the primary IPv6
+   *             address. When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA
+   *             will be made the primary IPv6 address until the instance is terminated or the network
+   *             interface is detached. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyNetworkInterfaceAttribute.html">ModifyNetworkInterfaceAttribute</a>.</p>
    * @public
    */
   IsPrimaryIpv6?: boolean | undefined;
@@ -2037,13 +3453,15 @@ export interface Ipv6PrefixSpecification {
  */
 export interface NetworkInterfacePrivateIpAddress {
   /**
-   * <p>The association information for an Elastic IP address (IPv4) associated with the network interface.</p>
+   * <p>The association information for an Elastic IP address (IPv4) associated with the
+   *             network interface.</p>
    * @public
    */
   Association?: NetworkInterfaceAssociation | undefined;
 
   /**
-   * <p>Indicates whether this IPv4 address is the primary private IPv4 address of the network interface.</p>
+   * <p>Indicates whether this IPv4 address is the primary private IPv4 address of the network
+   *             interface.</p>
    * @public
    */
   Primary?: boolean | undefined;
@@ -2059,6 +3477,36 @@ export interface NetworkInterfacePrivateIpAddress {
    * @public
    */
   PrivateIpAddress?: string | undefined;
+}
+
+/**
+ * <p>Public hostname type options. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html">EC2 instance hostnames, DNS names, and domains</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ * @public
+ */
+export interface PublicIpDnsNameOptions {
+  /**
+   * <p>The public hostname type. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html">EC2 instance hostnames, DNS names, and domains</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  DnsHostnameType?: string | undefined;
+
+  /**
+   * <p>An IPv4-enabled public hostname for a network interface. Requests from within the VPC resolve to the private primary IPv4 address of the network interface. Requests from the internet resolve to the public IPv4 address of the network interface.</p>
+   * @public
+   */
+  PublicIpv4DnsName?: string | undefined;
+
+  /**
+   * <p>An IPv6-enabled public hostname for a network interface. Requests from within the VPC or from the internet resolve to the IPv6 GUA of the network interface.</p>
+   * @public
+   */
+  PublicIpv6DnsName?: string | undefined;
+
+  /**
+   * <p>A dual-stack public hostname for a network interface. Requests from within the VPC resolve to both the private IPv4 address and the IPv6 Global Unicast Address of the network interface. Requests from the internet resolve to both the public IPv4 and the IPv6 GUA address of the network interface.</p>
+   * @public
+   */
+  PublicDualStackDnsName?: string | undefined;
 }
 
 /**
@@ -2084,7 +3532,8 @@ export type NetworkInterfaceStatus = (typeof NetworkInterfaceStatus)[keyof typeo
  */
 export interface NetworkInterface {
   /**
-   * <p>The association information for an Elastic IP address (IPv4) associated with the network interface.</p>
+   * <p>The association information for an Elastic IP address (IPv4) associated with the
+   *             network interface.</p>
    * @public
    */
   Association?: NetworkInterfaceAssociation | undefined;
@@ -2102,7 +3551,10 @@ export interface NetworkInterface {
   AvailabilityZone?: string | undefined;
 
   /**
-   * <p>A security group connection tracking configuration that enables you to set the timeout for connection tracking on an Elastic network interface. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * <p>A security group connection tracking configuration that enables you to set the timeout
+   *             for connection tracking on an Elastic network interface. For more information, see
+   *                 <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts">Connection tracking timeouts</a> in the
+   *             <i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
   ConnectionTrackingConfiguration?: ConnectionTrackingConfiguration | undefined;
@@ -2156,10 +3608,22 @@ export interface NetworkInterface {
   OwnerId?: string | undefined;
 
   /**
-   * <p>The private DNS name.</p>
+   * <p>The private hostname. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html">EC2 instance hostnames, DNS names, and domains</a> in the <i>Amazon EC2 User Guide</i>.</p>
    * @public
    */
   PrivateDnsName?: string | undefined;
+
+  /**
+   * <p>A public hostname. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html">EC2 instance hostnames, DNS names, and domains</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  PublicDnsName?: string | undefined;
+
+  /**
+   * <p>Public hostname type options. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html">EC2 instance hostnames, DNS names, and domains</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   * @public
+   */
+  PublicIpDnsNameOptions?: PublicIpDnsNameOptions | undefined;
 
   /**
    * <p>The IPv4 address of the network interface within the subnet.</p>
@@ -2186,7 +3650,8 @@ export interface NetworkInterface {
   Ipv6Prefixes?: Ipv6PrefixSpecification[] | undefined;
 
   /**
-   * <p>The alias or Amazon Web Services account ID of the principal or service that created the network interface.</p>
+   * <p>The alias or Amazon Web Services account ID of the principal or service that created
+   *             the network interface.</p>
    * @public
    */
   RequesterId?: string | undefined;
@@ -2229,8 +3694,8 @@ export interface NetworkInterface {
 
   /**
    * <p>Indicates whether a network interface with an IPv6 address is unreachable from the
-   *             public internet. If the value is <code>true</code>, inbound traffic from the internet
-   *             is dropped and you cannot assign an elastic IP address to the network interface. The
+   *             public internet. If the value is <code>true</code>, inbound traffic from the internet is
+   *             dropped and you cannot assign an elastic IP address to the network interface. The
    *             network interface is reachable from peered VPCs and resources connected through a
    *             transit gateway, including on-premises networks.</p>
    * @public
@@ -2254,6 +3719,12 @@ export interface NetworkInterface {
    * @public
    */
   Operator?: OperatorResponse | undefined;
+
+  /**
+   * <p>The subnets associated with this network interface.</p>
+   * @public
+   */
+  AssociatedSubnets?: string[] | undefined;
 }
 
 /**
@@ -2317,9 +3788,10 @@ export interface CreateNetworkInterfacePermissionRequest {
   Permission: InterfacePermissionType | undefined;
 
   /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   * 			and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   * 			Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * <p>Checks whether you have the required permissions for the action, without actually
+   *             making the request, and provides an error response. If you have the required
+   *             permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is
+   *                 <code>UnauthorizedOperation</code>.</p>
    * @public
    */
   DryRun?: boolean | undefined;
@@ -2679,6 +4151,33 @@ export interface CreateReplaceRootVolumeTaskRequest {
    * @public
    */
   DeleteReplacedRootVolume?: boolean | undefined;
+
+  /**
+   * <p>Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization rate), in MiB/s, at which to download
+   *       the snapshot blocks from Amazon S3 to the replacement root volume. This is also known as
+   *       <i>volume initialization</i>. Specifying a volume initialization rate ensures that
+   *       the volume is initialized at a predictable and consistent rate after creation.</p>
+   *          <p>Omit this parameter if:</p>
+   *          <ul>
+   *             <li>
+   *                <p>You want to create the volume using fast snapshot restore. You must specify a snapshot
+   *           that is enabled for fast snapshot restore. In this case, the volume is fully initialized at
+   *           creation.</p>
+   *                <note>
+   *                   <p>If you specify a snapshot that is enabled for fast snapshot restore and a volume initialization rate,
+   *             the volume will be initialized at the specified rate instead of fast snapshot restore.</p>
+   *                </note>
+   *             </li>
+   *             <li>
+   *                <p>You want to create a volume that is initialized at the default rate.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html">
+   *       Initialize Amazon EBS volumes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   *          <p>Valid range: 100 - 300 MiB/s</p>
+   * @public
+   */
+  VolumeInitializationRate?: number | undefined;
 }
 
 /**
@@ -2812,7 +4311,8 @@ export interface CreateReplaceRootVolumeTaskResult {
  */
 export interface PriceScheduleSpecification {
   /**
-   * <p>The number of months remaining in the reservation. For example, 2 is the second to the last month before the capacity reservation expires.</p>
+   * <p>The number of months remaining in the reservation. For example, 2 is the second to the
+   *       last month before the capacity reservation expires.</p>
    * @public
    */
   Term?: number | undefined;
@@ -2824,8 +4324,8 @@ export interface PriceScheduleSpecification {
   Price?: number | undefined;
 
   /**
-   * <p>The currency for transacting the Reserved Instance resale.
-   * 				At this time, the only supported currency is <code>USD</code>.</p>
+   * <p>The currency for transacting the Reserved Instance resale. At this time, the only
+   *       supported currency is <code>USD</code>.</p>
    * @public
    */
   CurrencyCode?: CurrencyCodeValues | undefined;
@@ -2843,21 +4343,24 @@ export interface CreateReservedInstancesListingRequest {
   ReservedInstancesId: string | undefined;
 
   /**
-   * <p>The number of instances that are a part of a Reserved Instance account to be listed in the Reserved Instance Marketplace. This number should be less than or equal to the instance count associated with the Reserved Instance ID specified in this call.</p>
+   * <p>The number of instances that are a part of a Reserved Instance account to be listed in the
+   *       Reserved Instance Marketplace. This number should be less than or equal to the instance count
+   *       associated with the Reserved Instance ID specified in this call.</p>
    * @public
    */
   InstanceCount: number | undefined;
 
   /**
-   * <p>A list specifying the price of the Standard Reserved Instance for each month remaining in the Reserved Instance term.</p>
+   * <p>A list specifying the price of the Standard Reserved Instance for each month remaining in
+   *       the Reserved Instance term.</p>
    * @public
    */
   PriceSchedules: PriceScheduleSpecification[] | undefined;
 
   /**
-   * <p>Unique, case-sensitive identifier you provide to ensure idempotency of your
-   * 				listings. This helps avoid duplicate listings. For more information, see
-   * 				<a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.</p>
+   * <p>Unique, case-sensitive identifier you provide to ensure idempotency of your listings. This
+   *       helps avoid duplicate listings. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
+   *       Idempotency</a>.</p>
    * @public
    */
   ClientToken: string | undefined;
@@ -2909,7 +4412,7 @@ export interface CreateRestoreImageTaskRequest {
    *             </li>
    *             <li>
    *                <p>To tag the snapshots, the value for <code>ResourceType</code> must be
-   *             <code>snapshot</code>. The same tag is applied to all of the snapshots that are
+   *           <code>snapshot</code>. The same tag is applied to all of the snapshots that are
    *           created.</p>
    *             </li>
    *          </ul>
@@ -2977,6 +4480,12 @@ export interface CreateRouteRequest {
    * @public
    */
   CoreNetworkArn?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the ODB network.</p>
+   * @public
+   */
+  OdbNetworkArn?: string | undefined;
 
   /**
    * <p>Checks whether you have the required permissions for the action, without actually making the request,
@@ -3055,6 +4564,611 @@ export interface CreateRouteResult {
 
 /**
  * @public
+ * @enum
+ */
+export const RouteServerPersistRoutesAction = {
+  DISABLE: "disable",
+  ENABLE: "enable",
+  RESET: "reset",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerPersistRoutesAction =
+  (typeof RouteServerPersistRoutesAction)[keyof typeof RouteServerPersistRoutesAction];
+
+/**
+ * @public
+ */
+export interface CreateRouteServerRequest {
+  /**
+   * <p>The private Autonomous System Number (ASN) for the Amazon side of the BGP session. Valid values are from 1 to 4294967295. We recommend using a private ASN in the 64512–65534 (16-bit ASN) or 4200000000–4294967294 (32-bit ASN) range.</p>
+   * @public
+   */
+  AmazonSideAsn: number | undefined;
+
+  /**
+   * <p>Unique, case-sensitive identifier to ensure idempotency of the request.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+
+  /**
+   * <p>A check for whether you have the required permissions for the action without actually making the request
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>Indicates whether routes should be persisted after all BGP sessions are terminated.</p>
+   * @public
+   */
+  PersistRoutes?: RouteServerPersistRoutesAction | undefined;
+
+  /**
+   * <p>The number of minutes a route server will wait after BGP is re-established to unpersist the routes in the FIB and RIB. Value must be in the range of 1-5. Required if PersistRoutes is <code>enabled</code>.</p>
+   *          <p>If you set the duration to 1 minute, then when your network appliance re-establishes BGP with route server, it has 1 minute to relearn it's adjacent network and advertise those routes to route server before route server resumes normal functionality. In most cases, 1 minute is probably sufficient. If, however, you have concerns that your BGP network may not be capable of fully re-establishing and re-learning everything in 1 minute, you can increase the duration up to 5 minutes.</p>
+   * @public
+   */
+  PersistRoutesDuration?: number | undefined;
+
+  /**
+   * <p>Indicates whether SNS notifications should be enabled for route server events. Enabling SNS notifications persists BGP status changes to an SNS topic provisioned by Amazon Web Services.</p>
+   * @public
+   */
+  SnsNotificationsEnabled?: boolean | undefined;
+
+  /**
+   * <p>The tags to apply to the route server during creation.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerPersistRoutesState = {
+  DISABLED: "disabled",
+  DISABLING: "disabling",
+  ENABLED: "enabled",
+  ENABLING: "enabling",
+  MODIFYING: "modifying",
+  RESETTING: "resetting",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerPersistRoutesState =
+  (typeof RouteServerPersistRoutesState)[keyof typeof RouteServerPersistRoutesState];
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerState = {
+  AVAILABLE: "available",
+  DELETED: "deleted",
+  DELETING: "deleting",
+  MODIFYING: "modifying",
+  PENDING: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerState = (typeof RouteServerState)[keyof typeof RouteServerState];
+
+/**
+ * <p>Describes a route server and its configuration.</p>
+ *          <p>Amazon VPC Route Server simplifies routing for traffic between workloads that are deployed within a VPC and its internet gateways. With this feature,
+ * VPC Route Server dynamically updates VPC and internet gateway route tables with your preferred IPv4 or IPv6 routes to achieve routing fault tolerance for those workloads. This enables you to automatically reroute traffic within a VPC, which increases the manageability of VPC routing and interoperability with third-party workloads.</p>
+ *          <p>Route server supports the follow route table types:</p>
+ *          <ul>
+ *             <li>
+ *                <p>VPC route tables not associated with subnets</p>
+ *             </li>
+ *             <li>
+ *                <p>Subnet route tables</p>
+ *             </li>
+ *             <li>
+ *                <p>Internet gateway route tables</p>
+ *             </li>
+ *          </ul>
+ *          <p>Route server does not support route tables associated with virtual private gateways. To propagate routes into a transit gateway route table, use <a href="https://docs.aws.amazon.com/vpc/latest/tgw/tgw-connect.html">Transit Gateway Connect</a>.</p>
+ * @public
+ */
+export interface RouteServer {
+  /**
+   * <p>The unique identifier of the route server.</p>
+   * @public
+   */
+  RouteServerId?: string | undefined;
+
+  /**
+   * <p>The Border Gateway Protocol (BGP) Autonomous System Number (ASN) for the appliance. Valid values are from 1 to 4294967295. We recommend using a private ASN in the 64512–65534 (16-bit ASN) or 4200000000–4294967294 (32-bit ASN) range.</p>
+   * @public
+   */
+  AmazonSideAsn?: number | undefined;
+
+  /**
+   * <p>The current state of the route server.</p>
+   * @public
+   */
+  State?: RouteServerState | undefined;
+
+  /**
+   * <p>Any tags assigned to the route server.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+
+  /**
+   * <p>The current state of route persistence for the route server.</p>
+   * @public
+   */
+  PersistRoutesState?: RouteServerPersistRoutesState | undefined;
+
+  /**
+   * <p>The number of minutes a route server will wait after BGP is re-established to unpersist the routes in the FIB and RIB. Value must be in the range of 1-5. The default value is 1. Only valid if <code>persistRoutesState</code> is 'enabled'.</p>
+   *          <p>If you set the duration to 1 minute, then when your network appliance re-establishes BGP with route server, it has 1 minute to relearn it's adjacent network and advertise those routes to route server before route server resumes normal functionality. In most cases, 1 minute is probably sufficient. If, however, you have concerns that your BGP network may not be capable of fully re-establishing and re-learning everything in 1 minute, you can increase the duration up to 5 minutes.</p>
+   * @public
+   */
+  PersistRoutesDuration?: number | undefined;
+
+  /**
+   * <p>Indicates whether SNS notifications are enabled for the route server. Enabling SNS notifications persists BGP status changes to an SNS topic provisioned by Amazon Web Services.</p>
+   * @public
+   */
+  SnsNotificationsEnabled?: boolean | undefined;
+
+  /**
+   * <p>The ARN of the SNS topic where notifications are published.</p>
+   * @public
+   */
+  SnsTopicArn?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateRouteServerResult {
+  /**
+   * <p>Information about the created route server.</p>
+   * @public
+   */
+  RouteServer?: RouteServer | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateRouteServerEndpointRequest {
+  /**
+   * <p>The ID of the route server for which to create an endpoint.</p>
+   * @public
+   */
+  RouteServerId: string | undefined;
+
+  /**
+   * <p>The ID of the subnet in which to create the route server endpoint.</p>
+   * @public
+   */
+  SubnetId: string | undefined;
+
+  /**
+   * <p>Unique, case-sensitive identifier to ensure idempotency of the request.</p>
+   * @public
+   */
+  ClientToken?: string | undefined;
+
+  /**
+   * <p>A check for whether you have the required permissions for the action without actually making the request
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The tags to apply to the route server endpoint during creation.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerEndpointState = {
+  AVAILABLE: "available",
+  DELETED: "deleted",
+  DELETE_FAILED: "delete-failed",
+  DELETING: "deleting",
+  FAILED: "failed",
+  FAILING: "failing",
+  PENDING: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerEndpointState = (typeof RouteServerEndpointState)[keyof typeof RouteServerEndpointState];
+
+/**
+ * <p>Describes a route server endpoint and its properties.</p>
+ *          <p>A route server endpoint is an Amazon Web Services-managed component inside a subnet that facilitates <a href="https://en.wikipedia.org/wiki/Border_Gateway_Protocol">BGP (Border Gateway Protocol)</a> connections between your route server and your BGP peers.</p>
+ * @public
+ */
+export interface RouteServerEndpoint {
+  /**
+   * <p>The ID of the route server associated with this endpoint.</p>
+   * @public
+   */
+  RouteServerId?: string | undefined;
+
+  /**
+   * <p>The unique identifier of the route server endpoint.</p>
+   * @public
+   */
+  RouteServerEndpointId?: string | undefined;
+
+  /**
+   * <p>The ID of the VPC containing the endpoint.</p>
+   * @public
+   */
+  VpcId?: string | undefined;
+
+  /**
+   * <p>The ID of the subnet to place the route server endpoint into.</p>
+   * @public
+   */
+  SubnetId?: string | undefined;
+
+  /**
+   * <p>The ID of the Elastic network interface for the endpoint.</p>
+   * @public
+   */
+  EniId?: string | undefined;
+
+  /**
+   * <p>The IP address of the Elastic network interface for the endpoint.</p>
+   * @public
+   */
+  EniAddress?: string | undefined;
+
+  /**
+   * <p>The current state of the route server endpoint.</p>
+   * @public
+   */
+  State?: RouteServerEndpointState | undefined;
+
+  /**
+   * <p>The reason for any failure in endpoint creation or operation.</p>
+   * @public
+   */
+  FailureReason?: string | undefined;
+
+  /**
+   * <p>Any tags assigned to the route server endpoint.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateRouteServerEndpointResult {
+  /**
+   * <p>Information about the created route server endpoint.</p>
+   * @public
+   */
+  RouteServerEndpoint?: RouteServerEndpoint | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerPeerLivenessMode = {
+  BFD: "bfd",
+  BGP_KEEPALIVE: "bgp-keepalive",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerPeerLivenessMode =
+  (typeof RouteServerPeerLivenessMode)[keyof typeof RouteServerPeerLivenessMode];
+
+/**
+ * <p>The BGP configuration options requested for a route server peer.</p>
+ * @public
+ */
+export interface RouteServerBgpOptionsRequest {
+  /**
+   * <p>The Border Gateway Protocol (BGP) Autonomous System Number (ASN) for the appliance. Valid values are from 1 to 4294967295. We recommend using a private ASN in the 64512–65534 (16-bit ASN) or 4200000000–4294967294 (32-bit ASN) range.</p>
+   * @public
+   */
+  PeerAsn: number | undefined;
+
+  /**
+   * <p>The requested liveness detection protocol for the BGP peer.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>bgp-keepalive</code>: The standard BGP keep alive mechanism (<a href="https://www.rfc-editor.org/rfc/rfc4271#page-21">RFC4271</a>) that is stable but may take longer to fail-over in cases of network impact or router failure.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>bfd</code>: An additional Bidirectional Forwarding Detection (BFD) protocol (<a href="https://www.rfc-editor.org/rfc/rfc5880">RFC5880</a>) that enables fast failover by using more sensitive liveness detection.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Defaults to <code>bgp-keepalive</code>.</p>
+   * @public
+   */
+  PeerLivenessDetection?: RouteServerPeerLivenessMode | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateRouteServerPeerRequest {
+  /**
+   * <p>The ID of the route server endpoint for which to create a peer.</p>
+   * @public
+   */
+  RouteServerEndpointId: string | undefined;
+
+  /**
+   * <p>The IPv4 address of the peer device.</p>
+   * @public
+   */
+  PeerAddress: string | undefined;
+
+  /**
+   * <p>The BGP options for the peer, including ASN (Autonomous System Number) and BFD (Bidrectional Forwarding Detection) settings.</p>
+   * @public
+   */
+  BgpOptions: RouteServerBgpOptionsRequest | undefined;
+
+  /**
+   * <p>A check for whether you have the required permissions for the action without actually making the request
+   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
+   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
+   * @public
+   */
+  DryRun?: boolean | undefined;
+
+  /**
+   * <p>The tags to apply to the route server peer during creation.</p>
+   * @public
+   */
+  TagSpecifications?: TagSpecification[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerBfdState = {
+  DOWN: "down",
+  UP: "up",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerBfdState = (typeof RouteServerBfdState)[keyof typeof RouteServerBfdState];
+
+/**
+ * <p>The current status of Bidirectional Forwarding Detection (BFD) for a BGP session.</p>
+ * @public
+ */
+export interface RouteServerBfdStatus {
+  /**
+   * <p>The operational status of the BFD session.</p>
+   * @public
+   */
+  Status?: RouteServerBfdState | undefined;
+}
+
+/**
+ * <p>The BGP configuration options for a route server peer.</p>
+ * @public
+ */
+export interface RouteServerBgpOptions {
+  /**
+   * <p>The Border Gateway Protocol (BGP) Autonomous System Number (ASN) for the appliance. Valid values are from 1 to 4294967295. We recommend using a private ASN in the 64512–65534 (16-bit ASN) or 4200000000–4294967294 (32-bit ASN) range.</p>
+   * @public
+   */
+  PeerAsn?: number | undefined;
+
+  /**
+   * <p>The liveness detection protocol used for the BGP peer.</p>
+   *          <p>The requested liveness detection protocol for the BGP peer.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>bgp-keepalive</code>: The standard BGP keep alive mechanism (<a href="https://www.rfc-editor.org/rfc/rfc4271#page-21">RFC4271</a>) that is stable but may take longer to fail-over in cases of network impact or router failure.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>bfd</code>: An additional Bidirectional Forwarding Detection (BFD) protocol (<a href="https://www.rfc-editor.org/rfc/rfc5880">RFC5880</a>) that enables fast failover by using more sensitive liveness detection.</p>
+   *             </li>
+   *          </ul>
+   *          <p>Defaults to <code>bgp-keepalive</code>.</p>
+   * @public
+   */
+  PeerLivenessDetection?: RouteServerPeerLivenessMode | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerBgpState = {
+  DOWN: "down",
+  UP: "up",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerBgpState = (typeof RouteServerBgpState)[keyof typeof RouteServerBgpState];
+
+/**
+ * <p>The current status of a BGP session.</p>
+ * @public
+ */
+export interface RouteServerBgpStatus {
+  /**
+   * <p>The operational status of the BGP session. The status enables you to monitor session liveness if you lack monitoring on your router/appliance.</p>
+   * @public
+   */
+  Status?: RouteServerBgpState | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const RouteServerPeerState = {
+  AVAILABLE: "available",
+  DELETED: "deleted",
+  DELETING: "deleting",
+  FAILED: "failed",
+  FAILING: "failing",
+  PENDING: "pending",
+} as const;
+
+/**
+ * @public
+ */
+export type RouteServerPeerState = (typeof RouteServerPeerState)[keyof typeof RouteServerPeerState];
+
+/**
+ * <p>Describes a BGP peer configuration for a route server endpoint.</p>
+ *          <p>A route server peer is a session between a route server endpoint and the device deployed in Amazon Web Services (such as a firewall appliance or other network security function running on an EC2 instance). The device must meet these requirements:</p>
+ *          <ul>
+ *             <li>
+ *                <p>Have an elastic network interface in the VPC</p>
+ *             </li>
+ *             <li>
+ *                <p>Support BGP (Border Gateway Protocol)</p>
+ *             </li>
+ *             <li>
+ *                <p>Can initiate BGP sessions</p>
+ *             </li>
+ *          </ul>
+ * @public
+ */
+export interface RouteServerPeer {
+  /**
+   * <p>The unique identifier of the route server peer.</p>
+   * @public
+   */
+  RouteServerPeerId?: string | undefined;
+
+  /**
+   * <p>The ID of the route server endpoint associated with this peer.</p>
+   * @public
+   */
+  RouteServerEndpointId?: string | undefined;
+
+  /**
+   * <p>The ID of the route server associated with this peer.</p>
+   * @public
+   */
+  RouteServerId?: string | undefined;
+
+  /**
+   * <p>The ID of the VPC containing the route server peer.</p>
+   * @public
+   */
+  VpcId?: string | undefined;
+
+  /**
+   * <p>The ID of the subnet containing the route server peer.</p>
+   * @public
+   */
+  SubnetId?: string | undefined;
+
+  /**
+   * <p>The current state of the route server peer.</p>
+   * @public
+   */
+  State?: RouteServerPeerState | undefined;
+
+  /**
+   * <p>The reason for any failure in peer creation or operation.</p>
+   * @public
+   */
+  FailureReason?: string | undefined;
+
+  /**
+   * <p>The ID of the Elastic network interface for the route server endpoint.</p>
+   * @public
+   */
+  EndpointEniId?: string | undefined;
+
+  /**
+   * <p>The IP address of the Elastic network interface for the route server endpoint.</p>
+   * @public
+   */
+  EndpointEniAddress?: string | undefined;
+
+  /**
+   * <p>The IPv4 address of the peer device.</p>
+   * @public
+   */
+  PeerAddress?: string | undefined;
+
+  /**
+   * <p>The BGP configuration options for this peer, including ASN (Autonomous System Number) and BFD (Bidrectional Forwarding Detection) settings.</p>
+   * @public
+   */
+  BgpOptions?: RouteServerBgpOptions | undefined;
+
+  /**
+   * <p>The current status of the BGP session with this peer.</p>
+   * @public
+   */
+  BgpStatus?: RouteServerBgpStatus | undefined;
+
+  /**
+   * <p>The current status of the BFD session with this peer.</p>
+   * @public
+   */
+  BfdStatus?: RouteServerBfdStatus | undefined;
+
+  /**
+   * <p>Any tags assigned to the route server peer.</p>
+   * @public
+   */
+  Tags?: Tag[] | undefined;
+}
+
+/**
+ * @public
+ */
+export interface CreateRouteServerPeerResult {
+  /**
+   * <p>Information about the created route server peer.</p>
+   * @public
+   */
+  RouteServerPeer?: RouteServerPeer | undefined;
+}
+
+/**
+ * @public
  */
 export interface CreateRouteTableRequest {
   /**
@@ -3119,6 +5233,12 @@ export interface RouteTableAssociation {
    * @public
    */
   GatewayId?: string | undefined;
+
+  /**
+   * <p>The ID of a public IPv4 pool. A public IPv4 pool is a pool of IPv4 addresses that you've brought to Amazon Web Services with BYOIP.</p>
+   * @public
+   */
+  PublicIpv4Pool?: string | undefined;
 
   /**
    * <p>The state of the association.</p>
@@ -3284,6 +5404,19 @@ export interface Route {
    * @public
    */
   CoreNetworkArn?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the ODB network.</p>
+   * @public
+   */
+  OdbNetworkArn?: string | undefined;
+
+  /**
+   * <p>The next hop IP address for routes propagated by VPC Route
+   *             Server into VPC route tables.</p>
+   * @public
+   */
+  IpAddress?: string | undefined;
 }
 
 /**
@@ -3414,20 +5547,6 @@ export interface CreateSecurityGroupResult {
    */
   SecurityGroupArn?: string | undefined;
 }
-
-/**
- * @public
- * @enum
- */
-export const SnapshotLocationEnum = {
-  LOCAL: "local",
-  REGIONAL: "regional",
-} as const;
-
-/**
- * @public
- */
-export type SnapshotLocationEnum = (typeof SnapshotLocationEnum)[keyof typeof SnapshotLocationEnum];
 
 /**
  * @public
@@ -3672,8 +5791,8 @@ export interface Snapshot {
   SnapshotId?: string | undefined;
 
   /**
-   * <p>The ID of the volume that was used to create the snapshot. Snapshots created by the <a>CopySnapshot</a> action have an arbitrary volume ID that should not be used for any
-   *       purpose.</p>
+   * <p>The ID of the volume that was used to create the snapshot. Snapshots created by a copy
+   *       snapshot operation have an arbitrary volume ID that you should not use for any purpose.</p>
    * @public
    */
   VolumeId?: string | undefined;
@@ -3854,7 +5973,7 @@ export interface CreateSnapshotsRequest {
    *           <code>local</code>.</p>
    *             </li>
    *             <li>
-   *                <p>To create a regional snapshots in the parent Region of the Local Zone, specify
+   *                <p>To create regional snapshots in the parent Region of the Local Zone, specify
    *           <code>regional</code> or omit this parameter.</p>
    *             </li>
    *          </ul>
@@ -5244,7 +7363,11 @@ export interface TransitGatewayOptions {
   AutoAcceptSharedAttachments?: AutoAcceptSharedAttachmentsValue | undefined;
 
   /**
-   * <p>Indicates whether resource attachments are automatically associated with the default association route table.</p>
+   * <p>Indicates whether resource attachments are automatically associated with the default
+   *          association route table. Enabled by default. If <code>defaultRouteTableAssociation</code>
+   *          is set to <code>enable</code>,
+   *          Amazon Web Services Transit Gateway will create the default transit gateway route
+   *          table.</p>
    * @public
    */
   DefaultRouteTableAssociation?: DefaultRouteTableAssociationValue | undefined;
@@ -5256,7 +7379,11 @@ export interface TransitGatewayOptions {
   AssociationDefaultRouteTableId?: string | undefined;
 
   /**
-   * <p>Indicates whether resource attachments automatically propagate routes to the default propagation route table.</p>
+   * <p>Indicates whether resource attachments automatically propagate routes to the default
+   *          propagation route table. Enabled by default. If <code>defaultRouteTablePropagation</code>
+   *          is set to <code>enable</code>,
+   *          Amazon Web Services Transit Gateway will create the default transit gateway route
+   *          table.</p>
    * @public
    */
   DefaultRouteTablePropagation?: DefaultRouteTablePropagationValue | undefined;
@@ -7812,9 +9939,19 @@ export interface CreateVerifiedAccessTrustProviderResult {
 export interface CreateVolumeRequest {
   /**
    * <p>The ID of the Availability Zone in which to create the volume. For example, <code>us-east-1a</code>.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> must be specified,
+   *       but not both.</p>
    * @public
    */
-  AvailabilityZone: string | undefined;
+  AvailabilityZone?: string | undefined;
+
+  /**
+   * <p>The ID of the Availability Zone in which to create the volume. For example, <code>use1-az1</code>.</p>
+   *          <p>Either <code>AvailabilityZone</code> or <code>AvailabilityZoneId</code> must be specified,
+   *       but not both.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
 
   /**
    * <p>Indicates whether the volume should be encrypted.
@@ -7996,6 +10133,34 @@ export interface CreateVolumeRequest {
   ClientToken?: string | undefined;
 
   /**
+   * <p>Specifies the Amazon EBS Provisioned Rate for Volume Initialization (volume initialization rate), in MiB/s, at which to download
+   *       the snapshot blocks from Amazon S3 to the volume. This is also known as <i>volume
+   *         initialization</i>. Specifying a volume initialization rate ensures that the volume is
+   *       initialized at a predictable and consistent rate after creation.</p>
+   *          <p>This parameter is supported only for volumes created from snapshots. Omit this parameter
+   *       if:</p>
+   *          <ul>
+   *             <li>
+   *                <p>You want to create the volume using fast snapshot restore. You must specify a snapshot
+   *           that is enabled for fast snapshot restore. In this case, the volume is fully initialized at
+   *           creation.</p>
+   *                <note>
+   *                   <p>If you specify a snapshot that is enabled for fast snapshot restore and a volume initialization rate,
+   *             the volume will be initialized at the specified rate instead of fast snapshot restore.</p>
+   *                </note>
+   *             </li>
+   *             <li>
+   *                <p>You want to create a volume that is initialized at the default rate.</p>
+   *             </li>
+   *          </ul>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/ebs/latest/userguide/initalize-volume.html">
+   *       Initialize Amazon EBS volumes</a> in the <i>Amazon EC2 User Guide</i>.</p>
+   *          <p>Valid range: 100 - 300 MiB/s</p>
+   * @public
+   */
+  VolumeInitializationRate?: number | undefined;
+
+  /**
    * <p>Reserved for internal use.</p>
    * @public
    */
@@ -8033,6 +10198,12 @@ export type VolumeState = (typeof VolumeState)[keyof typeof VolumeState];
  * @public
  */
 export interface Volume {
+  /**
+   * <p>The ID of the Availability Zone for the volume.</p>
+   * @public
+   */
+  AvailabilityZoneId?: string | undefined;
+
   /**
    * <p>The Amazon Resource Name (ARN) of the Outpost.</p>
    * @public
@@ -8094,6 +10265,13 @@ export interface Volume {
    * @public
    */
   Operator?: OperatorResponse | undefined;
+
+  /**
+   * <p>The Amazon EBS Provisioned Rate for Volume Initialization (volume initialization rate) specified for the volume during creation,
+   *       in MiB/s. If no volume initialization rate was specified, the value is <code>null</code>.</p>
+   * @public
+   */
+  VolumeInitializationRate?: number | undefined;
 
   /**
    * <p>The ID of the volume.</p>
@@ -8466,21 +10644,6 @@ export interface DnsOptionsSpecification {
 }
 
 /**
- * @public
- * @enum
- */
-export const IpAddressType = {
-  dualstack: "dualstack",
-  ipv4: "ipv4",
-  ipv6: "ipv6",
-} as const;
-
-/**
- * @public
- */
-export type IpAddressType = (typeof IpAddressType)[keyof typeof IpAddressType];
-
-/**
  * <p>Describes the configuration of a subnet for a VPC endpoint.</p>
  * @public
  */
@@ -8621,8 +10784,6 @@ export interface CreateVpcEndpointRequest {
    *             <code>true</code>: <code>enableDnsHostnames</code> and
    *             <code>enableDnsSupport</code>. Use <a>ModifyVpcAttribute</a> to set the VPC
    *             attributes.</p>
-   *          <p>Default: <code>true</code>
-   *          </p>
    * @public
    */
   PrivateDnsEnabled?: boolean | undefined;
@@ -8751,1677 +10912,42 @@ export interface LastError {
 }
 
 /**
- * @public
- * @enum
+ * @internal
  */
-export const State = {
-  Available: "Available",
-  Deleted: "Deleted",
-  Deleting: "Deleting",
-  Expired: "Expired",
-  Failed: "Failed",
-  Partial: "Partial",
-  Pending: "Pending",
-  PendingAcceptance: "PendingAcceptance",
-  Rejected: "Rejected",
-} as const;
+export const ResponseLaunchTemplateDataFilterSensitiveLog = (obj: ResponseLaunchTemplateData): any => ({
+  ...obj,
+  ...(obj.UserData && { UserData: SENSITIVE_STRING }),
+});
 
 /**
- * @public
+ * @internal
  */
-export type State = (typeof State)[keyof typeof State];
+export const LaunchTemplateVersionFilterSensitiveLog = (obj: LaunchTemplateVersion): any => ({
+  ...obj,
+  ...(obj.LaunchTemplateData && {
+    LaunchTemplateData: ResponseLaunchTemplateDataFilterSensitiveLog(obj.LaunchTemplateData),
+  }),
+});
 
 /**
- * <p>Describes a VPC endpoint.</p>
- * @public
+ * @internal
  */
-export interface VpcEndpoint {
-  /**
-   * <p>The ID of the endpoint.</p>
-   * @public
-   */
-  VpcEndpointId?: string | undefined;
-
-  /**
-   * <p>The type of endpoint.</p>
-   * @public
-   */
-  VpcEndpointType?: VpcEndpointType | undefined;
-
-  /**
-   * <p>The ID of the VPC to which the endpoint is associated.</p>
-   * @public
-   */
-  VpcId?: string | undefined;
-
-  /**
-   * <p>The name of the service to which the endpoint is associated.</p>
-   * @public
-   */
-  ServiceName?: string | undefined;
-
-  /**
-   * <p>The state of the endpoint.</p>
-   * @public
-   */
-  State?: State | undefined;
-
-  /**
-   * <p>The policy document associated with the endpoint, if applicable.</p>
-   * @public
-   */
-  PolicyDocument?: string | undefined;
-
-  /**
-   * <p>(Gateway endpoint) The IDs of the route tables associated with the endpoint.</p>
-   * @public
-   */
-  RouteTableIds?: string[] | undefined;
-
-  /**
-   * <p>(Interface endpoint) The subnets for the endpoint.</p>
-   * @public
-   */
-  SubnetIds?: string[] | undefined;
-
-  /**
-   * <p>(Interface endpoint) Information about the security groups that are associated with
-   *             the network interface.</p>
-   * @public
-   */
-  Groups?: SecurityGroupIdentifier[] | undefined;
-
-  /**
-   * <p>The IP address type for the endpoint.</p>
-   * @public
-   */
-  IpAddressType?: IpAddressType | undefined;
-
-  /**
-   * <p>The DNS options for the endpoint.</p>
-   * @public
-   */
-  DnsOptions?: DnsOptions | undefined;
-
-  /**
-   * <p>(Interface endpoint) Indicates whether the VPC is associated with a private hosted zone.</p>
-   * @public
-   */
-  PrivateDnsEnabled?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether the endpoint is being managed by its service.</p>
-   * @public
-   */
-  RequesterManaged?: boolean | undefined;
-
-  /**
-   * <p>(Interface endpoint) The network interfaces for the endpoint.</p>
-   * @public
-   */
-  NetworkInterfaceIds?: string[] | undefined;
-
-  /**
-   * <p>(Interface endpoint) The DNS entries for the endpoint.</p>
-   * @public
-   */
-  DnsEntries?: DnsEntry[] | undefined;
-
-  /**
-   * <p>The date and time that the endpoint was created.</p>
-   * @public
-   */
-  CreationTimestamp?: Date | undefined;
-
-  /**
-   * <p>The tags assigned to the endpoint.</p>
-   * @public
-   */
-  Tags?: Tag[] | undefined;
-
-  /**
-   * <p>The ID of the Amazon Web Services account that owns the endpoint.</p>
-   * @public
-   */
-  OwnerId?: string | undefined;
-
-  /**
-   * <p>The last error that occurred for endpoint.</p>
-   * @public
-   */
-  LastError?: LastError | undefined;
-
-  /**
-   * <p>Array of IPv4 prefixes.</p>
-   * @public
-   */
-  Ipv4Prefixes?: SubnetIpPrefixes[] | undefined;
-
-  /**
-   * <p>Array of IPv6 prefixes.</p>
-   * @public
-   */
-  Ipv6Prefixes?: SubnetIpPrefixes[] | undefined;
-
-  /**
-   * <p>Reason for the failure.</p>
-   * @public
-   */
-  FailureReason?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the service network.</p>
-   * @public
-   */
-  ServiceNetworkArn?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the resource configuration.</p>
-   * @public
-   */
-  ResourceConfigurationArn?: string | undefined;
-
-  /**
-   * <p>The Region where the service is hosted.</p>
-   * @public
-   */
-  ServiceRegion?: string | undefined;
-}
+export const CreateLaunchTemplateVersionResultFilterSensitiveLog = (obj: CreateLaunchTemplateVersionResult): any => ({
+  ...obj,
+  ...(obj.LaunchTemplateVersion && {
+    LaunchTemplateVersion: LaunchTemplateVersionFilterSensitiveLog(obj.LaunchTemplateVersion),
+  }),
+});
 
 /**
- * @public
+ * @internal
  */
-export interface CreateVpcEndpointResult {
-  /**
-   * <p>Information about the endpoint.</p>
-   * @public
-   */
-  VpcEndpoint?: VpcEndpoint | undefined;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the
-   *             request.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVpcEndpointConnectionNotificationRequest {
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-
-  /**
-   * <p>The ID of the endpoint service.</p>
-   * @public
-   */
-  ServiceId?: string | undefined;
-
-  /**
-   * <p>The ID of the endpoint.</p>
-   * @public
-   */
-  VpcEndpointId?: string | undefined;
-
-  /**
-   * <p>The ARN of the SNS topic for the notifications.</p>
-   * @public
-   */
-  ConnectionNotificationArn: string | undefined;
-
-  /**
-   * <p>The endpoint events for which to receive notifications. Valid values are
-   *                 <code>Accept</code>, <code>Connect</code>, <code>Delete</code>, and
-   *                 <code>Reject</code>.</p>
-   * @public
-   */
-  ConnectionEvents: string[] | undefined;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the
-   *             request. For more information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
-   *                 idempotency</a>.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const ConnectionNotificationState = {
-  Disabled: "Disabled",
-  Enabled: "Enabled",
-} as const;
-
-/**
- * @public
- */
-export type ConnectionNotificationState =
-  (typeof ConnectionNotificationState)[keyof typeof ConnectionNotificationState];
-
-/**
- * @public
- * @enum
- */
-export const ConnectionNotificationType = {
-  Topic: "Topic",
-} as const;
-
-/**
- * @public
- */
-export type ConnectionNotificationType = (typeof ConnectionNotificationType)[keyof typeof ConnectionNotificationType];
-
-/**
- * <p>Describes a connection notification for a VPC endpoint or VPC endpoint
- *             service.</p>
- * @public
- */
-export interface ConnectionNotification {
-  /**
-   * <p>The ID of the notification.</p>
-   * @public
-   */
-  ConnectionNotificationId?: string | undefined;
-
-  /**
-   * <p>The ID of the endpoint service.</p>
-   * @public
-   */
-  ServiceId?: string | undefined;
-
-  /**
-   * <p>The ID of the VPC endpoint.</p>
-   * @public
-   */
-  VpcEndpointId?: string | undefined;
-
-  /**
-   * <p>The type of notification.</p>
-   * @public
-   */
-  ConnectionNotificationType?: ConnectionNotificationType | undefined;
-
-  /**
-   * <p>The ARN of the SNS topic for the notification.</p>
-   * @public
-   */
-  ConnectionNotificationArn?: string | undefined;
-
-  /**
-   * <p>The events for the notification. Valid values are <code>Accept</code>,
-   *             <code>Connect</code>, <code>Delete</code>, and <code>Reject</code>.</p>
-   * @public
-   */
-  ConnectionEvents?: string[] | undefined;
-
-  /**
-   * <p>The state of the notification.</p>
-   * @public
-   */
-  ConnectionNotificationState?: ConnectionNotificationState | undefined;
-
-  /**
-   * <p>The Region for the endpoint service.</p>
-   * @public
-   */
-  ServiceRegion?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVpcEndpointConnectionNotificationResult {
-  /**
-   * <p>Information about the notification.</p>
-   * @public
-   */
-  ConnectionNotification?: ConnectionNotification | undefined;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the
-   *             request.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVpcEndpointServiceConfigurationRequest {
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether requests from service consumers to create an endpoint to your service must
-   *             be accepted manually.</p>
-   * @public
-   */
-  AcceptanceRequired?: boolean | undefined;
-
-  /**
-   * <p>(Interface endpoint configuration) The private DNS name to assign to the VPC endpoint service.</p>
-   * @public
-   */
-  PrivateDnsName?: string | undefined;
-
-  /**
-   * <p>The Amazon Resource Names (ARNs) of the Network Load Balancers.</p>
-   * @public
-   */
-  NetworkLoadBalancerArns?: string[] | undefined;
-
-  /**
-   * <p>The Amazon Resource Names (ARNs) of the Gateway Load Balancers.</p>
-   * @public
-   */
-  GatewayLoadBalancerArns?: string[] | undefined;
-
-  /**
-   * <p>The supported IP address types. The possible values are <code>ipv4</code> and <code>ipv6</code>.</p>
-   * @public
-   */
-  SupportedIpAddressTypes?: string[] | undefined;
-
-  /**
-   * <p>The Regions from which service consumers can access the service.</p>
-   * @public
-   */
-  SupportedRegions?: string[] | undefined;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
-   *             For more information, see <a href="https://docs.aws.amazon.com/ec2/latest/devguide/ec2-api-idempotency.html">How to ensure
-   *                 idempotency</a>.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-
-  /**
-   * <p>The tags to associate with the service.</p>
-   * @public
-   */
-  TagSpecifications?: TagSpecification[] | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const PayerResponsibility = {
-  ServiceOwner: "ServiceOwner",
-} as const;
-
-/**
- * @public
- */
-export type PayerResponsibility = (typeof PayerResponsibility)[keyof typeof PayerResponsibility];
-
-/**
- * @public
- * @enum
- */
-export const DnsNameState = {
-  Failed: "failed",
-  PendingVerification: "pendingVerification",
-  Verified: "verified",
-} as const;
-
-/**
- * @public
- */
-export type DnsNameState = (typeof DnsNameState)[keyof typeof DnsNameState];
-
-/**
- * <p>Information about the private DNS name for the service endpoint.</p>
- * @public
- */
-export interface PrivateDnsNameConfiguration {
-  /**
-   * <p>The verification state of the VPC endpoint service.</p>
-   *          <p>>Consumers
-   *             of the endpoint service can use the private name only when the state is
-   *                 <code>verified</code>.</p>
-   * @public
-   */
-  State?: DnsNameState | undefined;
-
-  /**
-   * <p>The endpoint service verification type, for example TXT.</p>
-   * @public
-   */
-  Type?: string | undefined;
-
-  /**
-   * <p>The value the service provider adds to the private DNS name domain record before verification.</p>
-   * @public
-   */
-  Value?: string | undefined;
-
-  /**
-   * <p>The name of the record subdomain the service provider needs to create. The service provider adds the <code>value</code> text to the <code>name</code>.</p>
-   * @public
-   */
-  Name?: string | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const ServiceState = {
-  Available: "Available",
-  Deleted: "Deleted",
-  Deleting: "Deleting",
-  Failed: "Failed",
-  Pending: "Pending",
-} as const;
-
-/**
- * @public
- */
-export type ServiceState = (typeof ServiceState)[keyof typeof ServiceState];
-
-/**
- * @public
- * @enum
- */
-export const ServiceType = {
-  Gateway: "Gateway",
-  GatewayLoadBalancer: "GatewayLoadBalancer",
-  Interface: "Interface",
-} as const;
-
-/**
- * @public
- */
-export type ServiceType = (typeof ServiceType)[keyof typeof ServiceType];
-
-/**
- * <p>Describes the type of service for a VPC endpoint.</p>
- * @public
- */
-export interface ServiceTypeDetail {
-  /**
-   * <p>The type of service.</p>
-   * @public
-   */
-  ServiceType?: ServiceType | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const ServiceConnectivityType = {
-  ipv4: "ipv4",
-  ipv6: "ipv6",
-} as const;
-
-/**
- * @public
- */
-export type ServiceConnectivityType = (typeof ServiceConnectivityType)[keyof typeof ServiceConnectivityType];
-
-/**
- * <p>Describes a supported Region.</p>
- * @public
- */
-export interface SupportedRegionDetail {
-  /**
-   * <p>The Region code.</p>
-   * @public
-   */
-  Region?: string | undefined;
-
-  /**
-   * <p>The service state. The possible values are <code>Pending</code>, <code>Available</code>,
-   *             <code>Deleting</code>, <code>Deleted</code>, <code>Failed</code>, and <code>Closed</code>.</p>
-   * @public
-   */
-  ServiceState?: string | undefined;
-}
-
-/**
- * <p>Describes a service configuration for a VPC endpoint service.</p>
- * @public
- */
-export interface ServiceConfiguration {
-  /**
-   * <p>The type of service.</p>
-   * @public
-   */
-  ServiceType?: ServiceTypeDetail[] | undefined;
-
-  /**
-   * <p>The ID of the service.</p>
-   * @public
-   */
-  ServiceId?: string | undefined;
-
-  /**
-   * <p>The name of the service.</p>
-   * @public
-   */
-  ServiceName?: string | undefined;
-
-  /**
-   * <p>The service state.</p>
-   * @public
-   */
-  ServiceState?: ServiceState | undefined;
-
-  /**
-   * <p>The Availability Zones in which the service is available.</p>
-   * @public
-   */
-  AvailabilityZones?: string[] | undefined;
-
-  /**
-   * <p>Indicates whether requests from other Amazon Web Services accounts to create an endpoint to the service must first be accepted.</p>
-   * @public
-   */
-  AcceptanceRequired?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether the service manages its VPC endpoints. Management of the service VPC
-   *             endpoints using the VPC endpoint API is restricted.</p>
-   * @public
-   */
-  ManagesVpcEndpoints?: boolean | undefined;
-
-  /**
-   * <p>The Amazon Resource Names (ARNs) of the Network Load Balancers for the service.</p>
-   * @public
-   */
-  NetworkLoadBalancerArns?: string[] | undefined;
-
-  /**
-   * <p>The Amazon Resource Names (ARNs) of the Gateway Load Balancers for the service.</p>
-   * @public
-   */
-  GatewayLoadBalancerArns?: string[] | undefined;
-
-  /**
-   * <p>The supported IP address types.</p>
-   * @public
-   */
-  SupportedIpAddressTypes?: ServiceConnectivityType[] | undefined;
-
-  /**
-   * <p>The DNS names for the service.</p>
-   * @public
-   */
-  BaseEndpointDnsNames?: string[] | undefined;
-
-  /**
-   * <p>The private DNS name for the service.</p>
-   * @public
-   */
-  PrivateDnsName?: string | undefined;
-
-  /**
-   * <p>Information about the endpoint service private DNS name configuration.</p>
-   * @public
-   */
-  PrivateDnsNameConfiguration?: PrivateDnsNameConfiguration | undefined;
-
-  /**
-   * <p>The payer responsibility.</p>
-   * @public
-   */
-  PayerResponsibility?: PayerResponsibility | undefined;
-
-  /**
-   * <p>The tags assigned to the service.</p>
-   * @public
-   */
-  Tags?: Tag[] | undefined;
-
-  /**
-   * <p>The supported Regions.</p>
-   * @public
-   */
-  SupportedRegions?: SupportedRegionDetail[] | undefined;
-
-  /**
-   * <p>Indicates whether consumers can access the service from a Region other than the
-   *             Region where the service is hosted.</p>
-   * @public
-   */
-  RemoteAccessEnabled?: boolean | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVpcEndpointServiceConfigurationResult {
-  /**
-   * <p>Information about the service configuration.</p>
-   * @public
-   */
-  ServiceConfiguration?: ServiceConfiguration | undefined;
-
-  /**
-   * <p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the
-   *             request.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVpcPeeringConnectionRequest {
-  /**
-   * <p>The Region code for the accepter VPC, if the accepter VPC is located in a Region
-   *             other than the Region in which you make the request.</p>
-   *          <p>Default: The Region in which you make the request.</p>
-   * @public
-   */
-  PeerRegion?: string | undefined;
-
-  /**
-   * <p>The tags to assign to the peering connection.</p>
-   * @public
-   */
-  TagSpecifications?: TagSpecification[] | undefined;
-
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually making the request,
-   *    and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>.
-   *    Otherwise, it is <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-
-  /**
-   * <p>The ID of the requester VPC. You must specify this parameter in the
-   * 			request.</p>
-   * @public
-   */
-  VpcId: string | undefined;
-
-  /**
-   * <p>The ID of the VPC with which you are creating the VPC peering connection. You must
-   * 			specify this parameter in the request.</p>
-   * @public
-   */
-  PeerVpcId?: string | undefined;
-
-  /**
-   * <p>The Amazon Web Services account ID of the owner of the accepter VPC.</p>
-   *          <p>Default: Your Amazon Web Services account ID</p>
-   * @public
-   */
-  PeerOwnerId?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface CreateVpcPeeringConnectionResult {
-  /**
-   * <p>Information about the VPC peering connection.</p>
-   * @public
-   */
-  VpcPeeringConnection?: VpcPeeringConnection | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const TunnelInsideIpVersion = {
-  ipv4: "ipv4",
-  ipv6: "ipv6",
-} as const;
-
-/**
- * @public
- */
-export type TunnelInsideIpVersion = (typeof TunnelInsideIpVersion)[keyof typeof TunnelInsideIpVersion];
-
-/**
- * <p>The IKE version that is permitted for the VPN tunnel.</p>
- * @public
- */
-export interface IKEVersionsRequestListValue {
-  /**
-   * <p>The IKE version.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>Options for sending VPN tunnel logs to CloudWatch.</p>
- * @public
- */
-export interface CloudWatchLogOptionsSpecification {
-  /**
-   * <p>Enable or disable VPN tunnel logging feature. Default value is <code>False</code>.</p>
-   *          <p>Valid values: <code>True</code> | <code>False</code>
-   *          </p>
-   * @public
-   */
-  LogEnabled?: boolean | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the CloudWatch log group to send logs to.</p>
-   * @public
-   */
-  LogGroupArn?: string | undefined;
-
-  /**
-   * <p>Set log format. Default format is <code>json</code>.</p>
-   *          <p>Valid values: <code>json</code> | <code>text</code>
-   *          </p>
-   * @public
-   */
-  LogOutputFormat?: string | undefined;
-}
-
-/**
- * <p>Options for logging VPN tunnel activity.</p>
- * @public
- */
-export interface VpnTunnelLogOptionsSpecification {
-  /**
-   * <p>Options for sending VPN tunnel logs to CloudWatch.</p>
-   * @public
-   */
-  CloudWatchLogOptions?: CloudWatchLogOptionsSpecification | undefined;
-}
-
-/**
- * <p>Specifies a Diffie-Hellman group number for the VPN tunnel for phase 1 IKE
- *             negotiations.</p>
- * @public
- */
-export interface Phase1DHGroupNumbersRequestListValue {
-  /**
-   * <p>The Diffie-Hellmann group number.</p>
-   * @public
-   */
-  Value?: number | undefined;
-}
-
-/**
- * <p>Specifies the encryption algorithm for the VPN tunnel for phase 1 IKE
- *             negotiations.</p>
- * @public
- */
-export interface Phase1EncryptionAlgorithmsRequestListValue {
-  /**
-   * <p>The value for the encryption algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>Specifies the integrity algorithm for the VPN tunnel for phase 1 IKE
- *             negotiations.</p>
- * @public
- */
-export interface Phase1IntegrityAlgorithmsRequestListValue {
-  /**
-   * <p>The value for the integrity algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>Specifies a Diffie-Hellman group number for the VPN tunnel for phase 2 IKE
- *             negotiations.</p>
- * @public
- */
-export interface Phase2DHGroupNumbersRequestListValue {
-  /**
-   * <p>The Diffie-Hellmann group number.</p>
-   * @public
-   */
-  Value?: number | undefined;
-}
-
-/**
- * <p>Specifies the encryption algorithm for the VPN tunnel for phase 2 IKE
- *             negotiations.</p>
- * @public
- */
-export interface Phase2EncryptionAlgorithmsRequestListValue {
-  /**
-   * <p>The encryption algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>Specifies the integrity algorithm for the VPN tunnel for phase 2 IKE
- *             negotiations.</p>
- * @public
- */
-export interface Phase2IntegrityAlgorithmsRequestListValue {
-  /**
-   * <p>The integrity algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>The tunnel options for a single VPN tunnel.</p>
- * @public
- */
-export interface VpnTunnelOptionsSpecification {
-  /**
-   * <p>The range of inside IPv4 addresses for the tunnel. Any specified CIDR blocks must be
-   *             unique across all VPN connections that use the same virtual private gateway. </p>
-   *          <p>Constraints: A size /30 CIDR block from the <code>169.254.0.0/16</code> range. The
-   *             following CIDR blocks are reserved and cannot be used:</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.0.0/30</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.1.0/30</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.2.0/30</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.3.0/30</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.4.0/30</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.5.0/30</code>
-   *                </p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>169.254.169.252/30</code>
-   *                </p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  TunnelInsideCidr?: string | undefined;
-
-  /**
-   * <p>The range of inside IPv6 addresses for the tunnel. Any specified CIDR blocks must be
-   *             unique across all VPN connections that use the same transit gateway.</p>
-   *          <p>Constraints: A size /126 CIDR block from the local <code>fd00::/8</code> range.</p>
-   * @public
-   */
-  TunnelInsideIpv6Cidr?: string | undefined;
-
-  /**
-   * <p>The pre-shared key (PSK) to establish initial authentication between the virtual
-   *             private gateway and customer gateway.</p>
-   *          <p>Constraints: Allowed characters are alphanumeric characters, periods (.), and
-   *             underscores (_). Must be between 8 and 64 characters in length and cannot start with
-   *             zero (0).</p>
-   * @public
-   */
-  PreSharedKey?: string | undefined;
-
-  /**
-   * <p>The lifetime for phase 1 of the IKE negotiation, in seconds.</p>
-   *          <p>Constraints: A value between 900 and 28,800.</p>
-   *          <p>Default: <code>28800</code>
-   *          </p>
-   * @public
-   */
-  Phase1LifetimeSeconds?: number | undefined;
-
-  /**
-   * <p>The lifetime for phase 2 of the IKE negotiation, in seconds.</p>
-   *          <p>Constraints: A value between 900 and 3,600. The value must be less than the value for
-   *                 <code>Phase1LifetimeSeconds</code>.</p>
-   *          <p>Default: <code>3600</code>
-   *          </p>
-   * @public
-   */
-  Phase2LifetimeSeconds?: number | undefined;
-
-  /**
-   * <p>The margin time, in seconds, before the phase 2 lifetime expires, during which the
-   *                 Amazon Web Services side of the VPN connection performs an IKE rekey. The exact time
-   *             of the rekey is randomly selected based on the value for
-   *                 <code>RekeyFuzzPercentage</code>.</p>
-   *          <p>Constraints: A value between 60 and half of <code>Phase2LifetimeSeconds</code>.</p>
-   *          <p>Default: <code>270</code>
-   *          </p>
-   * @public
-   */
-  RekeyMarginTimeSeconds?: number | undefined;
-
-  /**
-   * <p>The percentage of the rekey window (determined by <code>RekeyMarginTimeSeconds</code>)
-   *             during which the rekey time is randomly selected.</p>
-   *          <p>Constraints: A value between 0 and 100.</p>
-   *          <p>Default: <code>100</code>
-   *          </p>
-   * @public
-   */
-  RekeyFuzzPercentage?: number | undefined;
-
-  /**
-   * <p>The number of packets in an IKE replay window.</p>
-   *          <p>Constraints: A value between 64 and 2048.</p>
-   *          <p>Default: <code>1024</code>
-   *          </p>
-   * @public
-   */
-  ReplayWindowSize?: number | undefined;
-
-  /**
-   * <p>The number of seconds after which a DPD timeout occurs.</p>
-   *          <p>Constraints: A value greater than or equal to 30.</p>
-   *          <p>Default: <code>30</code>
-   *          </p>
-   * @public
-   */
-  DPDTimeoutSeconds?: number | undefined;
-
-  /**
-   * <p>The action to take after DPD timeout occurs. Specify <code>restart</code> to restart
-   *             the IKE initiation. Specify <code>clear</code> to end the IKE session.</p>
-   *          <p>Valid Values: <code>clear</code> | <code>none</code> | <code>restart</code>
-   *          </p>
-   *          <p>Default: <code>clear</code>
-   *          </p>
-   * @public
-   */
-  DPDTimeoutAction?: string | undefined;
-
-  /**
-   * <p>One or more encryption algorithms that are permitted for the VPN tunnel for phase 1
-   *             IKE negotiations.</p>
-   *          <p>Valid values: <code>AES128</code> | <code>AES256</code> | <code>AES128-GCM-16</code> |
-   *                 <code>AES256-GCM-16</code>
-   *          </p>
-   * @public
-   */
-  Phase1EncryptionAlgorithms?: Phase1EncryptionAlgorithmsRequestListValue[] | undefined;
-
-  /**
-   * <p>One or more encryption algorithms that are permitted for the VPN tunnel for phase 2
-   *             IKE negotiations.</p>
-   *          <p>Valid values: <code>AES128</code> | <code>AES256</code> | <code>AES128-GCM-16</code> |
-   *                 <code>AES256-GCM-16</code>
-   *          </p>
-   * @public
-   */
-  Phase2EncryptionAlgorithms?: Phase2EncryptionAlgorithmsRequestListValue[] | undefined;
-
-  /**
-   * <p>One or more integrity algorithms that are permitted for the VPN tunnel for phase 1 IKE
-   *             negotiations.</p>
-   *          <p>Valid values: <code>SHA1</code> | <code>SHA2-256</code> | <code>SHA2-384</code> |
-   *                 <code>SHA2-512</code>
-   *          </p>
-   * @public
-   */
-  Phase1IntegrityAlgorithms?: Phase1IntegrityAlgorithmsRequestListValue[] | undefined;
-
-  /**
-   * <p>One or more integrity algorithms that are permitted for the VPN tunnel for phase 2 IKE
-   *             negotiations.</p>
-   *          <p>Valid values: <code>SHA1</code> | <code>SHA2-256</code> | <code>SHA2-384</code> |
-   *                 <code>SHA2-512</code>
-   *          </p>
-   * @public
-   */
-  Phase2IntegrityAlgorithms?: Phase2IntegrityAlgorithmsRequestListValue[] | undefined;
-
-  /**
-   * <p>One or more Diffie-Hellman group numbers that are permitted for the VPN tunnel for
-   *             phase 1 IKE negotiations.</p>
-   *          <p>Valid values: <code>2</code> | <code>14</code> | <code>15</code> | <code>16</code> |
-   *                 <code>17</code> | <code>18</code> | <code>19</code> | <code>20</code> |
-   *                 <code>21</code> | <code>22</code> | <code>23</code> | <code>24</code>
-   *          </p>
-   * @public
-   */
-  Phase1DHGroupNumbers?: Phase1DHGroupNumbersRequestListValue[] | undefined;
-
-  /**
-   * <p>One or more Diffie-Hellman group numbers that are permitted for the VPN tunnel for
-   *             phase 2 IKE negotiations.</p>
-   *          <p>Valid values: <code>2</code> | <code>5</code> | <code>14</code> | <code>15</code> |
-   *                 <code>16</code> | <code>17</code> | <code>18</code> | <code>19</code> |
-   *                 <code>20</code> | <code>21</code> | <code>22</code> | <code>23</code> |
-   *                 <code>24</code>
-   *          </p>
-   * @public
-   */
-  Phase2DHGroupNumbers?: Phase2DHGroupNumbersRequestListValue[] | undefined;
-
-  /**
-   * <p>The IKE versions that are permitted for the VPN tunnel.</p>
-   *          <p>Valid values: <code>ikev1</code> | <code>ikev2</code>
-   *          </p>
-   * @public
-   */
-  IKEVersions?: IKEVersionsRequestListValue[] | undefined;
-
-  /**
-   * <p>The action to take when the establishing the tunnel for the VPN connection. By
-   *             default, your customer gateway device must initiate the IKE negotiation and bring up the
-   *             tunnel. Specify <code>start</code> for Amazon Web Services to initiate the IKE
-   *             negotiation.</p>
-   *          <p>Valid Values: <code>add</code> | <code>start</code>
-   *          </p>
-   *          <p>Default: <code>add</code>
-   *          </p>
-   * @public
-   */
-  StartupAction?: string | undefined;
-
-  /**
-   * <p>Options for logging VPN tunnel activity.</p>
-   * @public
-   */
-  LogOptions?: VpnTunnelLogOptionsSpecification | undefined;
-
-  /**
-   * <p>Turn on or off tunnel endpoint lifecycle control feature.</p>
-   * @public
-   */
-  EnableTunnelLifecycleControl?: boolean | undefined;
-}
-
-/**
- * <p>Describes VPN connection options.</p>
- * @public
- */
-export interface VpnConnectionOptionsSpecification {
-  /**
-   * <p>Indicate whether to enable acceleration for the VPN connection.</p>
-   *          <p>Default: <code>false</code>
-   *          </p>
-   * @public
-   */
-  EnableAcceleration?: boolean | undefined;
-
-  /**
-   * <p>Indicate whether the VPN tunnels process IPv4 or IPv6 traffic.</p>
-   *          <p>Default: <code>ipv4</code>
-   *          </p>
-   * @public
-   */
-  TunnelInsideIpVersion?: TunnelInsideIpVersion | undefined;
-
-  /**
-   * <p>The tunnel options for the VPN connection.</p>
-   * @public
-   */
-  TunnelOptions?: VpnTunnelOptionsSpecification[] | undefined;
-
-  /**
-   * <p>The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.</p>
-   *          <p>Default: <code>0.0.0.0/0</code>
-   *          </p>
-   * @public
-   */
-  LocalIpv4NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The IPv4 CIDR on the Amazon Web Services side of the VPN connection.</p>
-   *          <p>Default: <code>0.0.0.0/0</code>
-   *          </p>
-   * @public
-   */
-  RemoteIpv4NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.</p>
-   *          <p>Default: <code>::/0</code>
-   *          </p>
-   * @public
-   */
-  LocalIpv6NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The IPv6 CIDR on the Amazon Web Services side of the VPN connection.</p>
-   *          <p>Default: <code>::/0</code>
-   *          </p>
-   * @public
-   */
-  RemoteIpv6NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The type of IPv4 address assigned to the outside interface of the customer gateway device.</p>
-   *          <p>Valid values: <code>PrivateIpv4</code> | <code>PublicIpv4</code>
-   *          </p>
-   *          <p>Default: <code>PublicIpv4</code>
-   *          </p>
-   * @public
-   */
-  OutsideIpAddressType?: string | undefined;
-
-  /**
-   * <p>The transit gateway attachment ID to use for the VPN tunnel.</p>
-   *          <p>Required if <code>OutsideIpAddressType</code> is set to <code>PrivateIpv4</code>.</p>
-   * @public
-   */
-  TransportTransitGatewayAttachmentId?: string | undefined;
-
-  /**
-   * <p>Indicate whether the VPN connection uses static routes only. If you are creating a VPN
-   *             connection for a device that does not support BGP, you must specify <code>true</code>.
-   *             Use <a>CreateVpnConnectionRoute</a> to create a static route.</p>
-   *          <p>Default: <code>false</code>
-   *          </p>
-   * @public
-   */
-  StaticRoutesOnly?: boolean | undefined;
-}
-
-/**
- * <p>Contains the parameters for CreateVpnConnection.</p>
- * @public
- */
-export interface CreateVpnConnectionRequest {
-  /**
-   * <p>The ID of the customer gateway.</p>
-   * @public
-   */
-  CustomerGatewayId: string | undefined;
-
-  /**
-   * <p>The type of VPN connection (<code>ipsec.1</code>).</p>
-   * @public
-   */
-  Type: string | undefined;
-
-  /**
-   * <p>The ID of the virtual private gateway. If you specify a virtual private gateway, you
-   *             cannot specify a transit gateway.</p>
-   * @public
-   */
-  VpnGatewayId?: string | undefined;
-
-  /**
-   * <p>The ID of the transit gateway. If you specify a transit gateway, you cannot specify a virtual private
-   *             gateway.</p>
-   * @public
-   */
-  TransitGatewayId?: string | undefined;
-
-  /**
-   * <p>The tags to apply to the VPN connection.</p>
-   * @public
-   */
-  TagSpecifications?: TagSpecification[] | undefined;
-
-  /**
-   * <p>Checks whether you have the required permissions for the action, without actually
-   *             making the request, and provides an error response. If you have the required
-   *             permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is
-   *                 <code>UnauthorizedOperation</code>.</p>
-   * @public
-   */
-  DryRun?: boolean | undefined;
-
-  /**
-   * <p>The options for the VPN connection.</p>
-   * @public
-   */
-  Options?: VpnConnectionOptionsSpecification | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const GatewayAssociationState = {
-  associated: "associated",
-  associating: "associating",
-  disassociating: "disassociating",
-  not_associated: "not-associated",
-} as const;
-
-/**
- * @public
- */
-export type GatewayAssociationState = (typeof GatewayAssociationState)[keyof typeof GatewayAssociationState];
-
-/**
- * <p>The internet key exchange (IKE) version permitted for the VPN tunnel.</p>
- * @public
- */
-export interface IKEVersionsListValue {
-  /**
-   * <p>The IKE version.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>Options for sending VPN tunnel logs to CloudWatch.</p>
- * @public
- */
-export interface CloudWatchLogOptions {
-  /**
-   * <p>Status of VPN tunnel logging feature. Default value is <code>False</code>.</p>
-   *          <p>Valid values: <code>True</code> | <code>False</code>
-   *          </p>
-   * @public
-   */
-  LogEnabled?: boolean | undefined;
-
-  /**
-   * <p>The Amazon Resource Name (ARN) of the CloudWatch log group to send logs to.</p>
-   * @public
-   */
-  LogGroupArn?: string | undefined;
-
-  /**
-   * <p>Configured log format. Default format is <code>json</code>.</p>
-   *          <p>Valid values: <code>json</code> | <code>text</code>
-   *          </p>
-   * @public
-   */
-  LogOutputFormat?: string | undefined;
-}
-
-/**
- * <p>Options for logging VPN tunnel activity.</p>
- * @public
- */
-export interface VpnTunnelLogOptions {
-  /**
-   * <p>Options for sending VPN tunnel logs to CloudWatch.</p>
-   * @public
-   */
-  CloudWatchLogOptions?: CloudWatchLogOptions | undefined;
-}
-
-/**
- * <p>The Diffie-Hellmann group number for phase 1 IKE negotiations.</p>
- * @public
- */
-export interface Phase1DHGroupNumbersListValue {
-  /**
-   * <p>The Diffie-Hellmann group number.</p>
-   * @public
-   */
-  Value?: number | undefined;
-}
-
-/**
- * <p>The encryption algorithm for phase 1 IKE negotiations.</p>
- * @public
- */
-export interface Phase1EncryptionAlgorithmsListValue {
-  /**
-   * <p>The value for the encryption algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>The integrity algorithm for phase 1 IKE negotiations.</p>
- * @public
- */
-export interface Phase1IntegrityAlgorithmsListValue {
-  /**
-   * <p>The value for the integrity algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>The Diffie-Hellmann group number for phase 2 IKE negotiations.</p>
- * @public
- */
-export interface Phase2DHGroupNumbersListValue {
-  /**
-   * <p>The Diffie-Hellmann group number.</p>
-   * @public
-   */
-  Value?: number | undefined;
-}
-
-/**
- * <p>The encryption algorithm for phase 2 IKE negotiations.</p>
- * @public
- */
-export interface Phase2EncryptionAlgorithmsListValue {
-  /**
-   * <p>The encryption algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>The integrity algorithm for phase 2 IKE negotiations.</p>
- * @public
- */
-export interface Phase2IntegrityAlgorithmsListValue {
-  /**
-   * <p>The integrity algorithm.</p>
-   * @public
-   */
-  Value?: string | undefined;
-}
-
-/**
- * <p>The VPN tunnel options.</p>
- * @public
- */
-export interface TunnelOption {
-  /**
-   * <p>The external IP address of the VPN tunnel.</p>
-   * @public
-   */
-  OutsideIpAddress?: string | undefined;
-
-  /**
-   * <p>The range of inside IPv4 addresses for the tunnel.</p>
-   * @public
-   */
-  TunnelInsideCidr?: string | undefined;
-
-  /**
-   * <p>The range of inside IPv6 addresses for the tunnel.</p>
-   * @public
-   */
-  TunnelInsideIpv6Cidr?: string | undefined;
-
-  /**
-   * <p>The pre-shared key (PSK) to establish initial authentication between the virtual
-   *             private gateway and the customer gateway.</p>
-   * @public
-   */
-  PreSharedKey?: string | undefined;
-
-  /**
-   * <p>The lifetime for phase 1 of the IKE negotiation, in seconds.</p>
-   * @public
-   */
-  Phase1LifetimeSeconds?: number | undefined;
-
-  /**
-   * <p>The lifetime for phase 2 of the IKE negotiation, in seconds.</p>
-   * @public
-   */
-  Phase2LifetimeSeconds?: number | undefined;
-
-  /**
-   * <p>The margin time, in seconds, before the phase 2 lifetime expires, during which the
-   *                 Amazon Web Services side of the VPN connection performs an IKE rekey.</p>
-   * @public
-   */
-  RekeyMarginTimeSeconds?: number | undefined;
-
-  /**
-   * <p>The percentage of the rekey window determined by <code>RekeyMarginTimeSeconds</code>
-   *             during which the rekey time is randomly selected.</p>
-   * @public
-   */
-  RekeyFuzzPercentage?: number | undefined;
-
-  /**
-   * <p>The number of packets in an IKE replay window.</p>
-   * @public
-   */
-  ReplayWindowSize?: number | undefined;
-
-  /**
-   * <p>The number of seconds after which a DPD timeout occurs.</p>
-   * @public
-   */
-  DpdTimeoutSeconds?: number | undefined;
-
-  /**
-   * <p>The action to take after a DPD timeout occurs.</p>
-   * @public
-   */
-  DpdTimeoutAction?: string | undefined;
-
-  /**
-   * <p>The permitted encryption algorithms for the VPN tunnel for phase 1 IKE
-   *             negotiations.</p>
-   * @public
-   */
-  Phase1EncryptionAlgorithms?: Phase1EncryptionAlgorithmsListValue[] | undefined;
-
-  /**
-   * <p>The permitted encryption algorithms for the VPN tunnel for phase 2 IKE
-   *             negotiations.</p>
-   * @public
-   */
-  Phase2EncryptionAlgorithms?: Phase2EncryptionAlgorithmsListValue[] | undefined;
-
-  /**
-   * <p>The permitted integrity algorithms for the VPN tunnel for phase 1 IKE
-   *             negotiations.</p>
-   * @public
-   */
-  Phase1IntegrityAlgorithms?: Phase1IntegrityAlgorithmsListValue[] | undefined;
-
-  /**
-   * <p>The permitted integrity algorithms for the VPN tunnel for phase 2 IKE
-   *             negotiations.</p>
-   * @public
-   */
-  Phase2IntegrityAlgorithms?: Phase2IntegrityAlgorithmsListValue[] | undefined;
-
-  /**
-   * <p>The permitted Diffie-Hellman group numbers for the VPN tunnel for phase 1 IKE
-   *             negotiations.</p>
-   * @public
-   */
-  Phase1DHGroupNumbers?: Phase1DHGroupNumbersListValue[] | undefined;
-
-  /**
-   * <p>The permitted Diffie-Hellman group numbers for the VPN tunnel for phase 2 IKE
-   *             negotiations.</p>
-   * @public
-   */
-  Phase2DHGroupNumbers?: Phase2DHGroupNumbersListValue[] | undefined;
-
-  /**
-   * <p>The IKE versions that are permitted for the VPN tunnel.</p>
-   * @public
-   */
-  IkeVersions?: IKEVersionsListValue[] | undefined;
-
-  /**
-   * <p>The action to take when the establishing the VPN tunnels for a VPN connection.</p>
-   * @public
-   */
-  StartupAction?: string | undefined;
-
-  /**
-   * <p>Options for logging VPN tunnel activity.</p>
-   * @public
-   */
-  LogOptions?: VpnTunnelLogOptions | undefined;
-
-  /**
-   * <p>Status of tunnel endpoint lifecycle control feature.</p>
-   * @public
-   */
-  EnableTunnelLifecycleControl?: boolean | undefined;
-}
-
-/**
- * <p>Describes VPN connection options.</p>
- * @public
- */
-export interface VpnConnectionOptions {
-  /**
-   * <p>Indicates whether acceleration is enabled for the VPN connection.</p>
-   * @public
-   */
-  EnableAcceleration?: boolean | undefined;
-
-  /**
-   * <p>Indicates whether the VPN connection uses static routes only. Static routes must be
-   *             used for devices that don't support BGP.</p>
-   * @public
-   */
-  StaticRoutesOnly?: boolean | undefined;
-
-  /**
-   * <p>The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.</p>
-   * @public
-   */
-  LocalIpv4NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The IPv4 CIDR on the Amazon Web Services side of the VPN connection.</p>
-   * @public
-   */
-  RemoteIpv4NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.</p>
-   * @public
-   */
-  LocalIpv6NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The IPv6 CIDR on the Amazon Web Services side of the VPN connection.</p>
-   * @public
-   */
-  RemoteIpv6NetworkCidr?: string | undefined;
-
-  /**
-   * <p>The type of IPv4 address assigned to the outside interface of the customer gateway.</p>
-   *          <p>Valid values: <code>PrivateIpv4</code> | <code>PublicIpv4</code>
-   *          </p>
-   *          <p>Default: <code>PublicIpv4</code>
-   *          </p>
-   * @public
-   */
-  OutsideIpAddressType?: string | undefined;
-
-  /**
-   * <p>The transit gateway attachment ID in use for the VPN tunnel.</p>
-   * @public
-   */
-  TransportTransitGatewayAttachmentId?: string | undefined;
-
-  /**
-   * <p>Indicates whether the VPN tunnels process IPv4 or IPv6 traffic.</p>
-   * @public
-   */
-  TunnelInsideIpVersion?: TunnelInsideIpVersion | undefined;
-
-  /**
-   * <p>Indicates the VPN tunnel options.</p>
-   * @public
-   */
-  TunnelOptions?: TunnelOption[] | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const VpnStaticRouteSource = {
-  Static: "Static",
-} as const;
-
-/**
- * @public
- */
-export type VpnStaticRouteSource = (typeof VpnStaticRouteSource)[keyof typeof VpnStaticRouteSource];
-
-/**
- * @public
- * @enum
- */
-export const VpnState = {
-  available: "available",
-  deleted: "deleted",
-  deleting: "deleting",
-  pending: "pending",
-} as const;
-
-/**
- * @public
- */
-export type VpnState = (typeof VpnState)[keyof typeof VpnState];
-
-/**
- * <p>Describes a static route for a VPN connection.</p>
- * @public
- */
-export interface VpnStaticRoute {
-  /**
-   * <p>The CIDR block associated with the local subnet of the customer data center.</p>
-   * @public
-   */
-  DestinationCidrBlock?: string | undefined;
-
-  /**
-   * <p>Indicates how the routes were provided.</p>
-   * @public
-   */
-  Source?: VpnStaticRouteSource | undefined;
-
-  /**
-   * <p>The current state of the static route.</p>
-   * @public
-   */
-  State?: VpnState | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const TelemetryStatus = {
-  DOWN: "DOWN",
-  UP: "UP",
-} as const;
-
-/**
- * @public
- */
-export type TelemetryStatus = (typeof TelemetryStatus)[keyof typeof TelemetryStatus];
+export const CreateMacSystemIntegrityProtectionModificationTaskRequestFilterSensitiveLog = (
+  obj: CreateMacSystemIntegrityProtectionModificationTaskRequest
+): any => ({
+  ...obj,
+  ...(obj.MacCredentials && { MacCredentials: SENSITIVE_STRING }),
+});
 
 /**
  * @internal
@@ -10470,46 +10996,4 @@ export const CreateVerifiedAccessTrustProviderResultFilterSensitiveLog = (
   ...(obj.VerifiedAccessTrustProvider && {
     VerifiedAccessTrustProvider: VerifiedAccessTrustProviderFilterSensitiveLog(obj.VerifiedAccessTrustProvider),
   }),
-});
-
-/**
- * @internal
- */
-export const VpnTunnelOptionsSpecificationFilterSensitiveLog = (obj: VpnTunnelOptionsSpecification): any => ({
-  ...obj,
-  ...(obj.PreSharedKey && { PreSharedKey: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const VpnConnectionOptionsSpecificationFilterSensitiveLog = (obj: VpnConnectionOptionsSpecification): any => ({
-  ...obj,
-  ...(obj.TunnelOptions && {
-    TunnelOptions: obj.TunnelOptions.map((item) => VpnTunnelOptionsSpecificationFilterSensitiveLog(item)),
-  }),
-});
-
-/**
- * @internal
- */
-export const CreateVpnConnectionRequestFilterSensitiveLog = (obj: CreateVpnConnectionRequest): any => ({
-  ...obj,
-  ...(obj.Options && { Options: VpnConnectionOptionsSpecificationFilterSensitiveLog(obj.Options) }),
-});
-
-/**
- * @internal
- */
-export const TunnelOptionFilterSensitiveLog = (obj: TunnelOption): any => ({
-  ...obj,
-  ...(obj.PreSharedKey && { PreSharedKey: SENSITIVE_STRING }),
-});
-
-/**
- * @internal
- */
-export const VpnConnectionOptionsFilterSensitiveLog = (obj: VpnConnectionOptions): any => ({
-  ...obj,
-  ...(obj.TunnelOptions && { TunnelOptions: obj.TunnelOptions.map((item) => TunnelOptionFilterSensitiveLog(item)) }),
 });

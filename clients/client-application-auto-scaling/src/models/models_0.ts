@@ -77,6 +77,7 @@ export const ScalableDimension = {
   EC2SpotFleetRequestTargetCapacity: "ec2:spot-fleet-request:TargetCapacity",
   ECSServiceDesiredCount: "ecs:service:DesiredCount",
   EMRInstanceGroupInstanceCount: "elasticmapreduce:instancegroup:InstanceCount",
+  ElastiCacheCacheClusterNodes: "elasticache:cache-cluster:Nodes",
   ElastiCacheReplicationGroupNodeGroups: "elasticache:replication-group:NodeGroups",
   ElastiCacheReplicationGroupReplicas: "elasticache:replication-group:Replicas",
   KafkaBrokerStorageVolumeSize: "kafka:broker-storage:VolumeSize",
@@ -202,6 +203,10 @@ export interface DeleteScalingPolicyRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -291,6 +296,10 @@ export interface DeleteScalingPolicyRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -479,6 +488,10 @@ export interface DeleteScheduledActionRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -568,6 +581,10 @@ export interface DeleteScheduledActionRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -679,6 +696,10 @@ export interface DeregisterScalableTargetRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -769,6 +790,10 @@ export interface DeregisterScalableTargetRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -880,6 +905,10 @@ export interface DescribeScalableTargetsRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -970,6 +999,10 @@ export interface DescribeScalableTargetsRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -1126,6 +1159,10 @@ export interface ScalableTarget {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -1216,6 +1253,10 @@ export interface ScalableTarget {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -1408,6 +1449,10 @@ export interface DescribeScalingActivitiesRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -1498,6 +1543,10 @@ export interface DescribeScalingActivitiesRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -1707,6 +1756,10 @@ export interface ScalingActivity {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -1796,6 +1849,10 @@ export interface ScalingActivity {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -1975,6 +2032,10 @@ export interface DescribeScalingPoliciesRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -2065,6 +2126,10 @@ export interface DescribeScalingPoliciesRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -2332,6 +2397,54 @@ export interface PredictiveScalingCustomizedMetricSpecification {
  *          <p>When returned in the output of <code>DescribePolicies</code>, it indicates that a
  *          predictive scaling policy uses individually specified load and scaling metrics instead
  *          of a metric pair.</p>
+ *          <p>The following predefined metrics are available for predictive scaling:</p>
+ *          <ul>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceAverageCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceAverageMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceTotalCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceTotalMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ALBRequestCount</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ALBRequestCountPerTarget</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>TotalALBRequestCount</code>
+ *                </p>
+ *             </li>
+ *          </ul>
  * @public
  */
 export interface PredictiveScalingPredefinedLoadMetricSpecification {
@@ -2356,6 +2469,54 @@ export interface PredictiveScalingPredefinedLoadMetricSpecification {
  * <p>
  *          Represents a metric pair for a predictive scaling policy.
  *       </p>
+ *          <p>The following predefined metrics are available for predictive scaling:</p>
+ *          <ul>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceAverageCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceAverageMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceTotalCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceTotalMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ALBRequestCount</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ALBRequestCountPerTarget</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>TotalALBRequestCount</code>
+ *                </p>
+ *             </li>
+ *          </ul>
  * @public
  */
 export interface PredictiveScalingPredefinedMetricPairSpecification {
@@ -2385,6 +2546,54 @@ export interface PredictiveScalingPredefinedMetricPairSpecification {
  *          <p>When returned in the output of <code>DescribePolicies</code>, it indicates that a
  *          predictive scaling policy uses individually specified load and scaling metrics instead
  *          of a metric pair.</p>
+ *          <p>The following predefined metrics are available for predictive scaling:</p>
+ *          <ul>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceAverageCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceAverageMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceTotalCPUUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ECSServiceTotalMemoryUtilization</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ALBRequestCount</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>ALBRequestCountPerTarget</code>
+ *                </p>
+ *             </li>
+ *             <li>
+ *                <p>
+ *                   <code>TotalALBRequestCount</code>
+ *                </p>
+ *             </li>
+ *          </ul>
  * @public
  */
 export interface PredictiveScalingPredefinedScalingMetricSpecification {
@@ -2958,6 +3167,8 @@ export const MetricType = {
   ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage:
     "ElastiCacheDatabaseCapacityUsageCountedForEvictPercentage",
   ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage: "ElastiCacheDatabaseMemoryUsageCountedForEvictPercentage",
+  ElastiCacheDatabaseMemoryUsagePercentage: "ElastiCacheDatabaseMemoryUsagePercentage",
+  ElastiCacheEngineCPUUtilization: "ElastiCacheEngineCPUUtilization",
   ElastiCachePrimaryEngineCPUUtilization: "ElastiCachePrimaryEngineCPUUtilization",
   ElastiCacheReplicaEngineCPUUtilization: "ElastiCacheReplicaEngineCPUUtilization",
   KafkaBrokerStorageUtilization: "KafkaBrokerStorageUtilization",
@@ -3174,6 +3385,10 @@ export interface ScalingPolicy {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -3266,6 +3481,10 @@ export interface ScalingPolicy {
    *             </li>
    *             <li>
    *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
    *                   <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache replication group.</p>
    *             </li>
    *             <li>
@@ -3301,6 +3520,8 @@ export interface ScalingPolicy {
    *          <p>
    *             <code>StepScaling</code>—Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces, Amazon MSK, Amazon ElastiCache, or
    *       Neptune.</p>
+   *          <p>
+   *             <code>PredictiveScaling</code>—Only supported for Amazon ECS</p>
    * @public
    */
   PolicyType: PolicyType | undefined;
@@ -3462,6 +3683,10 @@ export interface DescribeScheduledActionsRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -3552,6 +3777,10 @@ export interface DescribeScheduledActionsRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -3750,6 +3979,10 @@ export interface ScheduledAction {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -3839,6 +4072,10 @@ export interface ScheduledAction {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -4217,6 +4454,10 @@ export interface PutScalingPolicyRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -4309,6 +4550,10 @@ export interface PutScalingPolicyRequest {
    *             </li>
    *             <li>
    *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
    *                   <code>elasticache:replication-group:NodeGroups</code> - The number of node groups for an Amazon ElastiCache replication group.</p>
    *             </li>
    *             <li>
@@ -4345,8 +4590,11 @@ export interface PutScalingPolicyRequest {
    *          <p>
    *             <code>StepScaling</code>—Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces, Amazon MSK, Amazon ElastiCache, or
    *       Neptune.</p>
+   *          <p>
+   *             <code>PredictiveScaling</code>—Only supported for Amazon ECS.</p>
    *          <p>For more information, see <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html">Target
-   *         tracking scaling policies</a> and <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html">Step scaling policies</a> in the <i>Application Auto Scaling User Guide</i>.</p>
+   *         tracking scaling policies</a>, <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html">Step scaling policies</a>, and <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/aas-create-predictive-scaling-policy.html">Predictive scaling policies</a>
+   *         in the <i>Application Auto Scaling User Guide</i>.</p>
    * @public
    */
   PolicyType?: PolicyType | undefined;
@@ -4512,6 +4760,10 @@ export interface PutScheduledActionRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -4601,6 +4853,10 @@ export interface PutScheduledActionRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>
@@ -4733,6 +4989,10 @@ export interface RegisterScalableTargetRequest {
    *                Example: <code>replication-group/mycluster</code>.</p>
    *             </li>
    *             <li>
+   *                <p>Amazon ElastiCache cache cluster - The resource type is <code>cache-cluster</code> and the unique identifier is the cache cluster name.
+   *                Example: <code>cache-cluster/mycluster</code>.</p>
+   *             </li>
+   *             <li>
    *                <p>Neptune cluster - The resource type is <code>cluster</code> and the unique identifier is the cluster name. Example: <code>cluster:mycluster</code>.</p>
    *             </li>
    *             <li>
@@ -4823,6 +5083,10 @@ export interface RegisterScalableTargetRequest {
    *             <li>
    *                <p>
    *                   <code>kafka:broker-storage:VolumeSize</code> - The provisioned volume size (in GiB) for brokers in an Amazon MSK cluster.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>elasticache:cache-cluster:Nodes</code> - The number of nodes for an Amazon ElastiCache cache cluster.</p>
    *             </li>
    *             <li>
    *                <p>

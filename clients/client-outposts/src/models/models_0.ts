@@ -34,13 +34,13 @@ export interface Address {
    * <p>The name of the contact.</p>
    * @public
    */
-  ContactName?: string | undefined;
+  ContactName: string | undefined;
 
   /**
    * <p>The phone number of the contact.</p>
    * @public
    */
-  ContactPhoneNumber?: string | undefined;
+  ContactPhoneNumber: string | undefined;
 
   /**
    * <p>The first line of the address.</p>
@@ -228,7 +228,8 @@ export interface ComputeAttributes {
  */
 export interface AssetInfo {
   /**
-   * <p> The ID of the asset. </p>
+   * <p> The ID of the asset. An Outpost asset can be a single server within an Outposts rack or
+   *       an Outposts server configuration.</p>
    * @public
    */
   AssetId?: string | undefined;
@@ -294,7 +295,8 @@ export interface AssetInstance {
   InstanceType?: string | undefined;
 
   /**
-   * <p>The ID of the asset.</p>
+   * <p>The ID of the asset. An Outpost asset can be a single server within an Outposts rack or an
+   *       Outposts server configuration.</p>
    * @public
    */
   AssetId?: string | undefined;
@@ -583,6 +585,13 @@ export interface CapacityTaskSummary {
   OrderId?: string | undefined;
 
   /**
+   * <p>The ID of the asset. An Outpost asset can be a single server within an Outposts rack or an
+   *       Outposts server configuration.</p>
+   * @public
+   */
+  AssetId?: string | undefined;
+
+  /**
    * <p>The status of the capacity task.</p>
    * @public
    */
@@ -846,7 +855,8 @@ export interface CreateOrderInput {
  */
 export interface LineItemAssetInformation {
   /**
-   * <p> The ID of the asset. </p>
+   * <p> The ID of the asset. An Outpost asset can be a single server within an Outposts rack or
+   *       an Outposts server configuration.</p>
    * @public
    */
   AssetId?: string | undefined;
@@ -1775,6 +1785,13 @@ export interface GetCapacityTaskOutput {
   OrderId?: string | undefined;
 
   /**
+   * <p>The ID of the Outpost asset. An Outpost asset can be a single server within an Outposts
+   *       rack or an Outposts server configuration.</p>
+   * @public
+   */
+  AssetId?: string | undefined;
+
+  /**
    * <p>List of instance pools requested in the capacity task.</p>
    * @public
    */
@@ -1809,9 +1826,26 @@ export interface GetCapacityTaskOutput {
    *             </li>
    *             <li>
    *                <p>
+   *                   <code>FAILED</code> - The capacity task could not be completed.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>COMPLETED</code> - The capacity task has completed successfully.</p>
+   *             </li>
+   *             <li>
+   *                <p>
    *                   <code>WAITING_FOR_EVACUATION</code> - The capacity task requires capacity to run. You
    *           must stop the recommended EC2 running instances to free up capacity for the task to
    *           run.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>CANCELLATION_IN_PROGRESS</code> - The capacity task has been cancelled and is in
+   *           the process of cleaning up resources.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>CANCELLED</code> - The capacity task is cancelled.</p>
    *             </li>
    *          </ul>
    * @public
@@ -1938,7 +1972,7 @@ export interface GetOrderOutput {
  */
 export interface GetOutpostInput {
   /**
-   * <p> The ID or ARN of the Outpost. </p>
+   * <p>The ID or ARN of the Outpost.</p>
    * @public
    */
   OutpostId: string | undefined;
@@ -1953,6 +1987,171 @@ export interface GetOutpostOutput {
    * @public
    */
   Outpost?: Outpost | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetOutpostBillingInformationInput {
+  /**
+   * <p>The pagination token.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The maximum page size.</p>
+   * @public
+   */
+  MaxResults?: number | undefined;
+
+  /**
+   * <p>The ID or ARN of the Outpost.</p>
+   * @public
+   */
+  OutpostIdentifier: string | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const SubscriptionStatus = {
+  ACTIVE: "ACTIVE",
+  CANCELLED: "CANCELLED",
+  INACTIVE: "INACTIVE",
+} as const;
+
+/**
+ * @public
+ */
+export type SubscriptionStatus = (typeof SubscriptionStatus)[keyof typeof SubscriptionStatus];
+
+/**
+ * @public
+ * @enum
+ */
+export const SubscriptionType = {
+  CAPACITY_INCREASE: "CAPACITY_INCREASE",
+  ORIGINAL: "ORIGINAL",
+  RENEWAL: "RENEWAL",
+} as const;
+
+/**
+ * @public
+ */
+export type SubscriptionType = (typeof SubscriptionType)[keyof typeof SubscriptionType];
+
+/**
+ * <p>Provides information about your Amazon Web Services Outposts subscriptions.</p>
+ * @public
+ */
+export interface Subscription {
+  /**
+   * <p>The ID of the subscription that appears on the Amazon Web Services Billing Center console.</p>
+   * @public
+   */
+  SubscriptionId?: string | undefined;
+
+  /**
+   * <p>The type of subscription which can be one of the following:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <b>ORIGINAL</b> - The first order on the Amazon Web Services Outposts.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>RENEWAL</b> - Renewal requests, both month to month and
+   *           longer term.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>CAPACITY_INCREASE</b> - Capacity scaling orders.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  SubscriptionType?: SubscriptionType | undefined;
+
+  /**
+   * <p>The status of subscription which can be one of the following:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <b>INACTIVE</b> - Subscription requests that are
+   *           inactive.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>ACTIVE</b> - Subscription requests that are in progress
+   *           and have an end date in the future.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <b>CANCELLED</b> - Subscription requests that are
+   *           cancelled.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  SubscriptionStatus?: SubscriptionStatus | undefined;
+
+  /**
+   * <p>The order ID for your subscription.</p>
+   * @public
+   */
+  OrderIds?: string[] | undefined;
+
+  /**
+   * <p>The date your subscription starts.</p>
+   * @public
+   */
+  BeginDate?: Date | undefined;
+
+  /**
+   * <p>The date your subscription ends.</p>
+   * @public
+   */
+  EndDate?: Date | undefined;
+
+  /**
+   * <p>The amount you are billed each month in the subscription period.</p>
+   * @public
+   */
+  MonthlyRecurringPrice?: number | undefined;
+
+  /**
+   * <p>The amount billed when the subscription is created. This is a one-time charge.</p>
+   * @public
+   */
+  UpfrontPrice?: number | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GetOutpostBillingInformationOutput {
+  /**
+   * <p>The pagination token.</p>
+   * @public
+   */
+  NextToken?: string | undefined;
+
+  /**
+   * <p>The subscription details for the specified Outpost.</p>
+   * @public
+   */
+  Subscriptions?: Subscription[] | undefined;
+
+  /**
+   * <p>The date the current contract term ends for the specified Outpost. You must start the renewal or
+   *       decommission process at least 5 business days before the current term for your
+   *       Amazon Web Services Outposts ends. Failing to complete these steps at least 5 business days before the
+   *       current term ends might result in unanticipated charges.</p>
+   * @public
+   */
+  ContractEndDate?: string | undefined;
 }
 
 /**
@@ -2040,6 +2239,13 @@ export interface GetOutpostSupportedInstanceTypesInput {
    * @public
    */
   OrderId?: string | undefined;
+
+  /**
+   * <p>The ID of the Outpost asset. An Outpost asset can be a single server within an Outposts
+   *       rack or an Outposts server configuration.</p>
+   * @public
+   */
+  AssetId?: string | undefined;
 
   /**
    * <p>The maximum page size.</p>
@@ -2654,6 +2860,13 @@ export interface StartCapacityTaskInput {
   OrderId?: string | undefined;
 
   /**
+   * <p>The ID of the Outpost asset. An Outpost asset can be a single server within an Outposts
+   *       rack or an Outposts server configuration.</p>
+   * @public
+   */
+  AssetId?: string | undefined;
+
+  /**
    * <p>The instance pools specified in the capacity task.</p>
    * @public
    */
@@ -2714,6 +2927,13 @@ export interface StartCapacityTaskOutput {
    * @public
    */
   OrderId?: string | undefined;
+
+  /**
+   * <p>The ID of the asset. An Outpost asset can be a single server within an Outposts rack or an
+   *       Outposts server configuration.</p>
+   * @public
+   */
+  AssetId?: string | undefined;
 
   /**
    * <p>List of the instance pools requested in the specified capacity task.</p>
@@ -2795,7 +3015,7 @@ export interface StartConnectionRequest {
   DeviceSerialNumber?: string | undefined;
 
   /**
-   * <p> The ID of the Outpost server. </p>
+   * <p> The ID of the Outpost server.</p>
    * @public
    */
   AssetId: string | undefined;
@@ -3057,7 +3277,8 @@ export interface UpdateSiteRackPhysicalPropertiesInput {
    *                   </li>
    *                   <li>
    *                      <p>
-   *                         <b>CS8365C</b> – (common in US); 3P+E, 50A; three phase</p>
+   *                         <b>CS8365C</b> – (common in US); 3P+E, 50A; three
+   *               phase</p>
    *                   </li>
    *                </ul>
    *             </li>

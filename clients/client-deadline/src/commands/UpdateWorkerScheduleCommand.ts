@@ -53,6 +53,12 @@ export interface UpdateWorkerScheduleCommandOutput extends UpdateWorkerScheduleR
  *       endedAt: new Date("TIMESTAMP"),
  *       updatedAt: new Date("TIMESTAMP"),
  *       progressPercent: Number("float"),
+ *       manifests: [ // TaskRunManifestPropertiesListRequest
+ *         { // TaskRunManifestPropertiesRequest
+ *           outputManifestPath: "STRING_VALUE",
+ *           outputManifestHash: "STRING_VALUE",
+ *         },
+ *       ],
  *     },
  *   },
  * };
@@ -74,7 +80,7 @@ export interface UpdateWorkerScheduleCommandOutput extends UpdateWorkerScheduleR
  * //               environmentId: "STRING_VALUE", // required
  * //             },
  * //             taskRun: { // AssignedTaskRunSessionActionDefinition
- * //               taskId: "STRING_VALUE", // required
+ * //               taskId: "STRING_VALUE",
  * //               stepId: "STRING_VALUE", // required
  * //               parameters: { // TaskParameters // required
  * //                 "<keys>": { // TaskParameterValue Union: only one key present
@@ -82,6 +88,7 @@ export interface UpdateWorkerScheduleCommandOutput extends UpdateWorkerScheduleR
  * //                   float: "STRING_VALUE",
  * //                   string: "STRING_VALUE",
  * //                   path: "STRING_VALUE",
+ * //                   chunkInt: "STRING_VALUE",
  * //                 },
  * //               },
  * //             },

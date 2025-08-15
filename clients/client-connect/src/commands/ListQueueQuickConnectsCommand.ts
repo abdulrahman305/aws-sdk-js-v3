@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ConnectClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ConnectClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListQueueQuickConnectsRequest, ListQueueQuickConnectsResponse } from "../models/models_1";
+import { ListQueueQuickConnectsRequest, ListQueueQuickConnectsResponse } from "../models/models_2";
 import { de_ListQueueQuickConnectsCommand, se_ListQueueQuickConnectsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,8 +28,7 @@ export interface ListQueueQuickConnectsCommandInput extends ListQueueQuickConnec
 export interface ListQueueQuickConnectsCommandOutput extends ListQueueQuickConnectsResponse, __MetadataBearer {}
 
 /**
- * <p>This API is in preview release for Amazon Connect and is subject to change.</p>
- *          <p>Lists the quick connects associated with a queue.</p>
+ * <p>Lists the quick connects associated with a queue.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

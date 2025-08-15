@@ -6,6 +6,7 @@ import {
   DateTimeFilterExpression,
   DeadlinePrincipalType,
   DefaultQueueBudgetAction,
+  DependencyCounts,
   EnvironmentTemplateType,
   FileSystemLocation,
   HostPropertiesResponse,
@@ -28,6 +29,297 @@ import {
   TaskTargetRunStatus,
   WorkerStatus,
 } from "./models_0";
+
+/**
+ * <p>The details for a step.</p>
+ * @public
+ */
+export interface StepSummary {
+  /**
+   * <p>The step ID.</p>
+   * @public
+   */
+  stepId: string | undefined;
+
+  /**
+   * <p>The name of the step.</p>
+   * @public
+   */
+  name: string | undefined;
+
+  /**
+   * <p>The life cycle status.</p>
+   * @public
+   */
+  lifecycleStatus: StepLifecycleStatus | undefined;
+
+  /**
+   * <p>A message that describes the lifecycle of the step.</p>
+   * @public
+   */
+  lifecycleStatusMessage?: string | undefined;
+
+  /**
+   * <p>The task run status for the job.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>PENDING</code>–pending and waiting for resources.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>READY</code>–ready to process.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>ASSIGNED</code>–assigned and will run next on a worker.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>SCHEDULED</code>–scheduled to run on a worker.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>INTERRUPTING</code>–being interrupted.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>RUNNING</code>–running on a worker.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>SUSPENDED</code>–the task is suspended.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>CANCELED</code>–the task has been canceled.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>FAILED</code>–the task has failed.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>SUCCEEDED</code>–the task has succeeded.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  taskRunStatus: TaskRunStatus | undefined;
+
+  /**
+   * <p>The number of tasks running on the job.</p>
+   * @public
+   */
+  taskRunStatusCounts: Partial<Record<TaskRunStatus, number>> | undefined;
+
+  /**
+   * <p>The total number of times tasks from the step failed and were retried.</p>
+   * @public
+   */
+  taskFailureRetryCount?: number | undefined;
+
+  /**
+   * <p>The task status to start with on the job.</p>
+   * @public
+   */
+  targetTaskRunStatus?: StepTargetTaskRunStatus | undefined;
+
+  /**
+   * <p>The date and time the resource was created.</p>
+   * @public
+   */
+  createdAt: Date | undefined;
+
+  /**
+   * <p>The user or system that created this resource.</p>
+   * @public
+   */
+  createdBy: string | undefined;
+
+  /**
+   * <p>The date and time the resource was updated.</p>
+   * @public
+   */
+  updatedAt?: Date | undefined;
+
+  /**
+   * <p>The user or system that updated this resource.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
+
+  /**
+   * <p>The date and time the resource started running.</p>
+   * @public
+   */
+  startedAt?: Date | undefined;
+
+  /**
+   * <p>The date and time the resource ended running.</p>
+   * @public
+   */
+  endedAt?: Date | undefined;
+
+  /**
+   * <p>The number of dependencies for the step.</p>
+   * @public
+   */
+  dependencyCounts?: DependencyCounts | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListStepsResponse {
+  /**
+   * <p>The steps on the list.</p>
+   * @public
+   */
+  steps: StepSummary[] | undefined;
+
+  /**
+   * <p>If Deadline Cloud returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an HTTP 400 <code>ValidationException</code> error.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListTasksRequest {
+  /**
+   * <p>The farm ID connected to the tasks.</p>
+   * @public
+   */
+  farmId: string | undefined;
+
+  /**
+   * <p>The queue ID connected to the tasks.</p>
+   * @public
+   */
+  queueId: string | undefined;
+
+  /**
+   * <p>The job ID for the tasks.</p>
+   * @public
+   */
+  jobId: string | undefined;
+
+  /**
+   * <p>The step ID for the tasks.</p>
+   * @public
+   */
+  stepId: string | undefined;
+
+  /**
+   * <p>The token for the next set of results, or <code>null</code> to start from the beginning.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+
+  /**
+   * <p>The maximum number of results to return. Use this parameter with <code>NextToken</code> to get results as a set of sequential pages.</p>
+   * @public
+   */
+  maxResults?: number | undefined;
+}
+
+/**
+ * <p>The details of a task.</p>
+ * @public
+ */
+export interface TaskSummary {
+  /**
+   * <p>The task ID.</p>
+   * @public
+   */
+  taskId: string | undefined;
+
+  /**
+   * <p>The date and time the resource was created.</p>
+   * @public
+   */
+  createdAt: Date | undefined;
+
+  /**
+   * <p>The user or system that created this resource.</p>
+   * @public
+   */
+  createdBy: string | undefined;
+
+  /**
+   * <p>The run status of the task.</p>
+   * @public
+   */
+  runStatus: TaskRunStatus | undefined;
+
+  /**
+   * <p>The run status on which the started.</p>
+   * @public
+   */
+  targetRunStatus?: TaskTargetRunStatus | undefined;
+
+  /**
+   * <p>The number of times that the task failed and was retried.</p>
+   * @public
+   */
+  failureRetryCount?: number | undefined;
+
+  /**
+   * <p>The task parameters.</p>
+   * @public
+   */
+  parameters?: Record<string, TaskParameterValue> | undefined;
+
+  /**
+   * <p>The date and time the resource started running.</p>
+   * @public
+   */
+  startedAt?: Date | undefined;
+
+  /**
+   * <p>The date and time the resource ended running.</p>
+   * @public
+   */
+  endedAt?: Date | undefined;
+
+  /**
+   * <p>The date and time the resource was updated.</p>
+   * @public
+   */
+  updatedAt?: Date | undefined;
+
+  /**
+   * <p>The user or system that updated this resource.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
+
+  /**
+   * <p>The latest session action for the task.</p>
+   * @public
+   */
+  latestSessionActionId?: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface ListTasksResponse {
+  /**
+   * <p>Tasks for the job.</p>
+   * @public
+   */
+  tasks: TaskSummary[] | undefined;
+
+  /**
+   * <p>If Deadline Cloud returns <code>nextToken</code>, then there are more results available. The value of <code>nextToken</code> is a unique pagination token for each page. To retrieve the next page, call the operation again using the returned token. Keep all other arguments unchanged. If no results remain, then <code>nextToken</code> is set to <code>null</code>. Each pagination token expires after 24 hours. If you provide a token that isn't valid, then you receive an HTTP 400 <code>ValidationException</code> error.</p>
+   * @public
+   */
+  nextToken?: string | undefined;
+}
 
 /**
  * @public
@@ -2135,6 +2427,20 @@ export interface ParameterFilterExpression {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const SearchTermMatchingType = {
+  CONTAINS: "CONTAINS",
+  FUZZY_MATCH: "FUZZY_MATCH",
+} as const;
+
+/**
+ * @public
+ */
+export type SearchTermMatchingType = (typeof SearchTermMatchingType)[keyof typeof SearchTermMatchingType];
+
+/**
  * <p>Searches for a particular search term.</p>
  * @public
  */
@@ -2144,6 +2450,25 @@ export interface SearchTermFilterExpression {
    * @public
    */
   searchTerm: string | undefined;
+
+  /**
+   * <p>Specifies how Deadline Cloud matches your search term in the results. If you don't
+   *          specify a <code>matchType</code> the default is <code>FUZZY_MATCH</code>.</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>FUZZY_MATCH</code> - Matches if a portion of the search term is found in the
+   *                result.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>CONTAINS</code> - Matches if the exact search term is contained in the
+   *                result.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  matchType?: SearchTermMatchingType | undefined;
 }
 
 /**
@@ -2414,6 +2739,12 @@ export interface JobSearchSummary {
   taskRunStatusCounts?: Partial<Record<TaskRunStatus, number>> | undefined;
 
   /**
+   * <p>The total number of times tasks from the job failed and were retried.</p>
+   * @public
+   */
+  taskFailureRetryCount?: number | undefined;
+
+  /**
    * <p>The job priority.</p>
    * @public
    */
@@ -2454,6 +2785,18 @@ export interface JobSearchSummary {
    * @public
    */
   startedAt?: Date | undefined;
+
+  /**
+   * <p>The date and time the resource was updated.</p>
+   * @public
+   */
+  updatedAt?: Date | undefined;
+
+  /**
+   * <p>The user or system that updated this resource.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
 
   /**
    * <p>The job parameters.</p>
@@ -2604,10 +2947,22 @@ export interface StepSearchSummary {
   taskRunStatusCounts?: Partial<Record<TaskRunStatus, number>> | undefined;
 
   /**
+   * <p>The total number of times tasks from the step failed and were retried.</p>
+   * @public
+   */
+  taskFailureRetryCount?: number | undefined;
+
+  /**
    * <p>The date and time the resource was created.</p>
    * @public
    */
   createdAt?: Date | undefined;
+
+  /**
+   * <p>The user or system that created this resource.</p>
+   * @public
+   */
+  createdBy?: string | undefined;
 
   /**
    * <p>The date and time the resource started running.</p>
@@ -2620,6 +2975,18 @@ export interface StepSearchSummary {
    * @public
    */
   endedAt?: Date | undefined;
+
+  /**
+   * <p>The date and time the resource was updated.</p>
+   * @public
+   */
+  updatedAt?: Date | undefined;
+
+  /**
+   * <p>The user or system that updated this resource.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
 
   /**
    * <p>The parameters and combination expressions for the search.</p>
@@ -2715,6 +3082,18 @@ export interface TaskSearchSummary {
    * @public
    */
   endedAt?: Date | undefined;
+
+  /**
+   * <p>The date and time the resource was updated.</p>
+   * @public
+   */
+  updatedAt?: Date | undefined;
+
+  /**
+   * <p>The user or system that updated this resource.</p>
+   * @public
+   */
+  updatedBy?: string | undefined;
 }
 
 /**
@@ -3463,11 +3842,25 @@ export interface SearchWorkersRequest {
 /**
  * @internal
  */
+export const TaskSummaryFilterSensitiveLog = (obj: TaskSummary): any => ({
+  ...obj,
+  ...(obj.parameters && { parameters: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const ListTasksResponseFilterSensitiveLog = (obj: ListTasksResponse): any => ({
+  ...obj,
+  ...(obj.tasks && { tasks: obj.tasks.map((item) => TaskSummaryFilterSensitiveLog(item)) }),
+});
+
+/**
+ * @internal
+ */
 export const UpdateQueueRequestFilterSensitiveLog = (obj: UpdateQueueRequest): any => ({
   ...obj,
   ...(obj.description && { description: SENSITIVE_STRING }),
-  ...(obj.requiredFileSystemLocationNamesToAdd && { requiredFileSystemLocationNamesToAdd: SENSITIVE_STRING }),
-  ...(obj.requiredFileSystemLocationNamesToRemove && { requiredFileSystemLocationNamesToRemove: SENSITIVE_STRING }),
 });
 
 /**

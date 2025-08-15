@@ -165,10 +165,14 @@ import {
   AllQueryArguments,
   AndStatement,
   APIKeySummary,
+  ApplicationAttribute,
+  ApplicationConfig,
+  AsnMatchStatement,
   AssociatedResourceType,
   AssociateWebACLRequest,
   AssociationConfig,
   AWSManagedRulesACFPRuleSet,
+  AWSManagedRulesAntiDDoSRuleSet,
   AWSManagedRulesATPRuleSet,
   AWSManagedRulesBotControlRuleSet,
   BlockAction,
@@ -179,6 +183,8 @@ import {
   ChallengeAction,
   ChallengeConfig,
   CheckCapacityRequest,
+  ClientSideAction,
+  ClientSideActionConfig,
   Condition,
   CookieMatchPattern,
   Cookies,
@@ -276,6 +282,7 @@ import {
   MobileSdkRelease,
   NoneAction,
   NotStatement,
+  OnSourceDDoSProtectionConfig,
   OrStatement,
   OverrideAction,
   PasswordField,
@@ -286,6 +293,7 @@ import {
   QueryString,
   RateBasedStatement,
   RateBasedStatementCustomKey,
+  RateLimitAsn,
   RateLimitCookie,
   RateLimitForwardedIP,
   RateLimitHeader,
@@ -2546,11 +2554,25 @@ const se_AndStatement = (input: AndStatement, context: __SerdeContext): any => {
 
 // se_APIKeyTokenDomains omitted.
 
+// se_ApplicationAttribute omitted.
+
+// se_ApplicationAttributes omitted.
+
+// se_ApplicationConfig omitted.
+
+// se_AsnList omitted.
+
+// se_AsnMatchStatement omitted.
+
 // se_AssociateWebACLRequest omitted.
 
 // se_AssociationConfig omitted.
 
+// se_AttributeValues omitted.
+
 // se_AWSManagedRulesACFPRuleSet omitted.
+
+// se_AWSManagedRulesAntiDDoSRuleSet omitted.
 
 // se_AWSManagedRulesATPRuleSet omitted.
 
@@ -2589,6 +2611,10 @@ const se_CheckCapacityRequest = (input: CheckCapacityRequest, context: __SerdeCo
     Scope: [],
   });
 };
+
+// se_ClientSideAction omitted.
+
+// se_ClientSideActionConfig omitted.
 
 // se_Condition omitted.
 
@@ -2631,6 +2657,7 @@ const se_CreateRuleGroupRequest = (input: CreateRuleGroupRequest, context: __Ser
  */
 const se_CreateWebACLRequest = (input: CreateWebACLRequest, context: __SerdeContext): any => {
   return take(input, {
+    ApplicationConfig: _json,
     AssociationConfig: _json,
     CaptchaConfig: _json,
     ChallengeConfig: _json,
@@ -2639,6 +2666,7 @@ const se_CreateWebACLRequest = (input: CreateWebACLRequest, context: __SerdeCont
     DefaultAction: _json,
     Description: [],
     Name: [],
+    OnSourceDDoSProtectionConfig: _json,
     Rules: (_) => se_Rules(_, context),
     Scope: [],
     Tags: _json,
@@ -2844,6 +2872,8 @@ const se_NotStatement = (input: NotStatement, context: __SerdeContext): any => {
   });
 };
 
+// se_OnSourceDDoSProtectionConfig omitted.
+
 /**
  * serializeAws_json1_1OrStatement
  */
@@ -2886,6 +2916,8 @@ const se_RateBasedStatement = (input: RateBasedStatement, context: __SerdeContex
 // se_RateBasedStatementCustomKey omitted.
 
 // se_RateBasedStatementCustomKeys omitted.
+
+// se_RateLimitAsn omitted.
 
 // se_RateLimitCookie omitted.
 
@@ -3003,6 +3035,7 @@ const se_Rules = (input: Rule[], context: __SerdeContext): any => {
 const se_Statement = (input: Statement, context: __SerdeContext): any => {
   return take(input, {
     AndStatement: (_) => se_AndStatement(_, context),
+    AsnMatchStatement: _json,
     ByteMatchStatement: (_) => se_ByteMatchStatement(_, context),
     GeoMatchStatement: _json,
     IPSetReferenceStatement: _json,
@@ -3109,6 +3142,7 @@ const se_UpdateWebACLRequest = (input: UpdateWebACLRequest, context: __SerdeCont
     Id: [],
     LockToken: [],
     Name: [],
+    OnSourceDDoSProtectionConfig: _json,
     Rules: (_) => se_Rules(_, context),
     Scope: [],
     TokenDomains: _json,
@@ -3175,11 +3209,25 @@ const de_APIKeySummary = (output: any, context: __SerdeContext): APIKeySummary =
   }) as any;
 };
 
+// de_ApplicationAttribute omitted.
+
+// de_ApplicationAttributes omitted.
+
+// de_ApplicationConfig omitted.
+
+// de_AsnList omitted.
+
+// de_AsnMatchStatement omitted.
+
 // de_AssociateWebACLResponse omitted.
 
 // de_AssociationConfig omitted.
 
+// de_AttributeValues omitted.
+
 // de_AWSManagedRulesACFPRuleSet omitted.
+
+// de_AWSManagedRulesAntiDDoSRuleSet omitted.
 
 // de_AWSManagedRulesATPRuleSet omitted.
 
@@ -3214,6 +3262,10 @@ const de_ByteMatchStatement = (output: any, context: __SerdeContext): ByteMatchS
 // de_ChallengeResponse omitted.
 
 // de_CheckCapacityResponse omitted.
+
+// de_ClientSideAction omitted.
+
+// de_ClientSideActionConfig omitted.
 
 // de_Condition omitted.
 
@@ -3638,6 +3690,8 @@ const de_NotStatement = (output: any, context: __SerdeContext): NotStatement => 
   }) as any;
 };
 
+// de_OnSourceDDoSProtectionConfig omitted.
+
 /**
  * deserializeAws_json1_1OrStatement
  */
@@ -3695,6 +3749,8 @@ const de_RateBasedStatement = (output: any, context: __SerdeContext): RateBasedS
 // de_RateBasedStatementCustomKeys omitted.
 
 // de_RateBasedStatementManagedKeysIPSet omitted.
+
+// de_RateLimitAsn omitted.
 
 // de_RateLimitCookie omitted.
 
@@ -3901,6 +3957,7 @@ const de_SampledHTTPRequests = (output: any, context: __SerdeContext): SampledHT
 const de_Statement = (output: any, context: __SerdeContext): Statement => {
   return take(output, {
     AndStatement: (_: any) => de_AndStatement(_, context),
+    AsnMatchStatement: _json,
     ByteMatchStatement: (_: any) => de_ByteMatchStatement(_, context),
     GeoMatchStatement: _json,
     IPSetReferenceStatement: _json,
@@ -4030,6 +4087,7 @@ const de_UpdateManagedRuleSetVersionExpiryDateResponse = (
 const de_WebACL = (output: any, context: __SerdeContext): WebACL => {
   return take(output, {
     ARN: __expectString,
+    ApplicationConfig: _json,
     AssociationConfig: _json,
     Capacity: __expectLong,
     CaptchaConfig: _json,
@@ -4042,6 +4100,7 @@ const de_WebACL = (output: any, context: __SerdeContext): WebACL => {
     LabelNamespace: __expectString,
     ManagedByFirewallManager: __expectBoolean,
     Name: __expectString,
+    OnSourceDDoSProtectionConfig: _json,
     PostProcessFirewallManagerRuleGroups: (_: any) => de_FirewallManagerRuleGroups(_, context),
     PreProcessFirewallManagerRuleGroups: (_: any) => de_FirewallManagerRuleGroups(_, context),
     RetrofittedByFirewallManager: __expectBoolean,

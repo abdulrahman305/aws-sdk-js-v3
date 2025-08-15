@@ -1,5 +1,10 @@
 // smithy-typescript generated code
 import {
+  EventStreamInputConfig,
+  EventStreamResolvedConfig,
+  resolveEventStreamConfig,
+} from "@aws-sdk/middleware-eventstream";
+import {
   getHostHeaderPlugin,
   HostHeaderInputConfig,
   HostHeaderResolvedConfig,
@@ -13,6 +18,8 @@ import {
   UserAgentInputConfig,
   UserAgentResolvedConfig,
 } from "@aws-sdk/middleware-user-agent";
+import { resolveWebSocketConfig, WebSocketInputConfig, WebSocketResolvedConfig } from "@aws-sdk/middleware-websocket";
+import { EventStreamPayloadHandlerProvider as __EventStreamPayloadHandlerProvider } from "@aws-sdk/types";
 import { RegionInputConfig, RegionResolvedConfig, resolveRegionConfig } from "@smithy/config-resolver";
 import {
   DefaultIdentityProviderConfig,
@@ -65,6 +72,10 @@ import { ConverseStreamCommandInput, ConverseStreamCommandOutput } from "./comma
 import { GetAsyncInvokeCommandInput, GetAsyncInvokeCommandOutput } from "./commands/GetAsyncInvokeCommand";
 import { InvokeModelCommandInput, InvokeModelCommandOutput } from "./commands/InvokeModelCommand";
 import {
+  InvokeModelWithBidirectionalStreamCommandInput,
+  InvokeModelWithBidirectionalStreamCommandOutput,
+} from "./commands/InvokeModelWithBidirectionalStreamCommand";
+import {
   InvokeModelWithResponseStreamCommandInput,
   InvokeModelWithResponseStreamCommandOutput,
 } from "./commands/InvokeModelWithResponseStreamCommand";
@@ -90,6 +101,7 @@ export type ServiceInputTypes =
   | ConverseStreamCommandInput
   | GetAsyncInvokeCommandInput
   | InvokeModelCommandInput
+  | InvokeModelWithBidirectionalStreamCommandInput
   | InvokeModelWithResponseStreamCommandInput
   | ListAsyncInvokesCommandInput
   | StartAsyncInvokeCommandInput;
@@ -103,6 +115,7 @@ export type ServiceOutputTypes =
   | ConverseStreamCommandOutput
   | GetAsyncInvokeCommandOutput
   | InvokeModelCommandOutput
+  | InvokeModelWithBidirectionalStreamCommandOutput
   | InvokeModelWithResponseStreamCommandOutput
   | ListAsyncInvokesCommandOutput
   | StartAsyncInvokeCommandOutput;
@@ -261,6 +274,12 @@ export interface ClientDefaults extends Partial<__SmithyConfiguration<__HttpHand
    * The {@link @smithy/smithy-client#DefaultsMode} that will be used to determine how certain default configuration options are resolved in the SDK.
    */
   defaultsMode?: __DefaultsMode | __Provider<__DefaultsMode>;
+
+  /**
+   * The function that provides necessary utilities for handling request event stream.
+   * @internal
+   */
+  eventStreamPayloadHandlerProvider?: __EventStreamPayloadHandlerProvider;
 }
 
 /**
@@ -275,6 +294,8 @@ export type BedrockRuntimeClientConfigType = Partial<__SmithyConfiguration<__Htt
   EndpointInputConfig<EndpointParameters> &
   EventStreamSerdeInputConfig &
   HttpAuthSchemeInputConfig &
+  EventStreamInputConfig &
+  WebSocketInputConfig &
   ClientInputEndpointParameters;
 /**
  * @public
@@ -296,6 +317,8 @@ export type BedrockRuntimeClientResolvedConfigType = __SmithyResolvedConfigurati
   EndpointResolvedConfig<EndpointParameters> &
   EventStreamSerdeResolvedConfig &
   HttpAuthSchemeResolvedConfig &
+  EventStreamResolvedConfig &
+  WebSocketResolvedConfig &
   ClientResolvedEndpointParameters;
 /**
  * @public
@@ -331,8 +354,10 @@ export class BedrockRuntimeClient extends __Client<
     const _config_6 = resolveEndpointConfig(_config_5);
     const _config_7 = resolveEventStreamSerdeConfig(_config_6);
     const _config_8 = resolveHttpAuthSchemeConfig(_config_7);
-    const _config_9 = resolveRuntimeExtensions(_config_8, configuration?.extensions || []);
-    this.config = _config_9;
+    const _config_9 = resolveEventStreamConfig(_config_8);
+    const _config_10 = resolveWebSocketConfig(_config_9);
+    const _config_11 = resolveRuntimeExtensions(_config_10, configuration?.extensions || []);
+    this.config = _config_11;
     this.middlewareStack.use(getUserAgentPlugin(this.config));
     this.middlewareStack.use(getRetryPlugin(this.config));
     this.middlewareStack.use(getContentLengthPlugin(this.config));
@@ -345,6 +370,7 @@ export class BedrockRuntimeClient extends __Client<
         identityProviderConfigProvider: async (config: BedrockRuntimeClientResolvedConfig) =>
           new DefaultIdentityProviderConfig({
             "aws.auth#sigv4": config.credentials,
+            "smithy.api#httpBearerAuth": config.token,
           }),
       })
     );

@@ -41,7 +41,7 @@ export interface RunTaskCommandOutput extends RunTaskResponse, __MetadataBearer 
  *          <p>Alternatively, you can use <code>StartTask</code> to use your own scheduler or place
  * 			tasks manually on specific container instances.</p>
  *          <p>You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when creating or
- * 			updating a service. For more infomation, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+ * 			updating a service. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
  *          <p>The Amazon ECS API follows an eventual consistency model. This is because of the
  * 			distributed nature of the system supporting the API. This means that the result of an
  * 			API command you run that affects your Amazon ECS resources might not be immediately visible
@@ -64,6 +64,25 @@ export interface RunTaskCommandOutput extends RunTaskResponse, __MetadataBearer 
  * 					minutes of wait time.</p>
  *             </li>
  *          </ul>
+ *          <p>If you get a <code>ConflictException</code> error, the <code>RunTask</code> request could
+ * 			not be processed due to conflicts. The provided <code>clientToken</code> is already in
+ * 			use with a different <code>RunTask</code> request. The <code>resourceIds</code> are the
+ * 			existing task ARNs which are already associated with the <code>clientToken</code>. </p>
+ *          <p>To fix this issue:</p>
+ *          <ul>
+ *             <li>
+ *                <p>Run <code>RunTask</code> with a unique <code>clientToken</code>.</p>
+ *             </li>
+ *             <li>
+ *                <p>Run <code>RunTask</code> with the <code>clientToken</code> and the original
+ * 					set of parameters</p>
+ *             </li>
+ *          </ul>
+ *          <p>If you get a <code>ClientException</code>error, the <code>RunTask</code> could not be processed because you use managed
+ * 					scaling and there is a capacity error because the quota of tasks in the
+ * 					<code>PROVISIONING</code> per cluster has been reached. For information
+ * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
+ * 						service quotas</a>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -172,6 +191,7 @@ export interface RunTaskCommandOutput extends RunTaskResponse, __MetadataBearer 
  *         volumeType: "STRING_VALUE",
  *         sizeInGiB: Number("int"),
  *         snapshotId: "STRING_VALUE",
+ *         volumeInitializationRate: Number("int"),
  *         iops: Number("int"),
  *         throughput: Number("int"),
  *         tagSpecifications: [ // EBSTagSpecifications
@@ -388,40 +408,18 @@ export interface RunTaskCommandOutput extends RunTaskResponse, __MetadataBearer 
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
- *          <p>The following list includes additional causes for the error:</p>
- *          <ul>
- *             <li>
- *                <p>The <code>RunTask</code> could not be processed because you use managed
- * 					scaling and there is a capacity error because the quota of tasks in the
- * 						<code>PROVISIONING</code> per cluster has been reached. For information
- * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
- * 						service quotas</a>.</p>
- *             </li>
- *          </ul>
  *
  * @throws {@link ClusterNotFoundException} (client fault)
  *  <p>The specified cluster wasn't found. You can view your available clusters with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListClusters.html">ListClusters</a>. Amazon ECS clusters are Region specific.</p>
  *
  * @throws {@link ConflictException} (client fault)
- *  <p>The <code>RunTask</code> request could not be processed due to conflicts. The provided
- * 				<code>clientToken</code> is already in use with a different <code>RunTask</code>
- * 			request. The <code>resourceIds</code> are the existing task ARNs which are already
- * 			associated with the <code>clientToken</code>. </p>
- *          <p>To fix this issue:</p>
- *          <ul>
- *             <li>
- *                <p>Run <code>RunTask</code> with a unique <code>clientToken</code>.</p>
- *             </li>
- *             <li>
- *                <p>Run <code>RunTask</code> with the <code>clientToken</code> and the original
- * 					set of parameters</p>
- *             </li>
- *          </ul>
+ *  <p>The request could not be processed because of conflict in the current state of the resource. </p>
  *
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
- *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service
+ * 				event messages</a>. </p>
  *
  * @throws {@link PlatformTaskDefinitionIncompatibilityException} (client fault)
  *  <p>The specified platform version doesn't satisfy the required capabilities of the task

@@ -64,6 +64,7 @@ import {
   CreateCalculatedAttributeDefinitionCommandOutput,
 } from "./commands/CreateCalculatedAttributeDefinitionCommand";
 import { CreateDomainCommandInput, CreateDomainCommandOutput } from "./commands/CreateDomainCommand";
+import { CreateDomainLayoutCommandInput, CreateDomainLayoutCommandOutput } from "./commands/CreateDomainLayoutCommand";
 import { CreateEventStreamCommandInput, CreateEventStreamCommandOutput } from "./commands/CreateEventStreamCommand";
 import { CreateEventTriggerCommandInput, CreateEventTriggerCommandOutput } from "./commands/CreateEventTriggerCommand";
 import {
@@ -83,11 +84,13 @@ import {
   CreateSegmentSnapshotCommandInput,
   CreateSegmentSnapshotCommandOutput,
 } from "./commands/CreateSegmentSnapshotCommand";
+import { CreateUploadJobCommandInput, CreateUploadJobCommandOutput } from "./commands/CreateUploadJobCommand";
 import {
   DeleteCalculatedAttributeDefinitionCommandInput,
   DeleteCalculatedAttributeDefinitionCommandOutput,
 } from "./commands/DeleteCalculatedAttributeDefinitionCommand";
 import { DeleteDomainCommandInput, DeleteDomainCommandOutput } from "./commands/DeleteDomainCommand";
+import { DeleteDomainLayoutCommandInput, DeleteDomainLayoutCommandOutput } from "./commands/DeleteDomainLayoutCommand";
 import { DeleteEventStreamCommandInput, DeleteEventStreamCommandOutput } from "./commands/DeleteEventStreamCommand";
 import { DeleteEventTriggerCommandInput, DeleteEventTriggerCommandOutput } from "./commands/DeleteEventTriggerCommand";
 import { DeleteIntegrationCommandInput, DeleteIntegrationCommandOutput } from "./commands/DeleteIntegrationCommand";
@@ -123,6 +126,7 @@ import {
   GetCalculatedAttributeForProfileCommandOutput,
 } from "./commands/GetCalculatedAttributeForProfileCommand";
 import { GetDomainCommandInput, GetDomainCommandOutput } from "./commands/GetDomainCommand";
+import { GetDomainLayoutCommandInput, GetDomainLayoutCommandOutput } from "./commands/GetDomainLayoutCommand";
 import { GetEventStreamCommandInput, GetEventStreamCommandOutput } from "./commands/GetEventStreamCommand";
 import { GetEventTriggerCommandInput, GetEventTriggerCommandOutput } from "./commands/GetEventTriggerCommand";
 import {
@@ -150,6 +154,8 @@ import {
 } from "./commands/GetSegmentMembershipCommand";
 import { GetSegmentSnapshotCommandInput, GetSegmentSnapshotCommandOutput } from "./commands/GetSegmentSnapshotCommand";
 import { GetSimilarProfilesCommandInput, GetSimilarProfilesCommandOutput } from "./commands/GetSimilarProfilesCommand";
+import { GetUploadJobCommandInput, GetUploadJobCommandOutput } from "./commands/GetUploadJobCommand";
+import { GetUploadJobPathCommandInput, GetUploadJobPathCommandOutput } from "./commands/GetUploadJobPathCommand";
 import { GetWorkflowCommandInput, GetWorkflowCommandOutput } from "./commands/GetWorkflowCommand";
 import { GetWorkflowStepsCommandInput, GetWorkflowStepsCommandOutput } from "./commands/GetWorkflowStepsCommand";
 import {
@@ -164,6 +170,7 @@ import {
   ListCalculatedAttributesForProfileCommandInput,
   ListCalculatedAttributesForProfileCommandOutput,
 } from "./commands/ListCalculatedAttributesForProfileCommand";
+import { ListDomainLayoutsCommandInput, ListDomainLayoutsCommandOutput } from "./commands/ListDomainLayoutsCommand";
 import { ListDomainsCommandInput, ListDomainsCommandOutput } from "./commands/ListDomainsCommand";
 import { ListEventStreamsCommandInput, ListEventStreamsCommandOutput } from "./commands/ListEventStreamsCommand";
 import { ListEventTriggersCommandInput, ListEventTriggersCommandOutput } from "./commands/ListEventTriggersCommand";
@@ -201,6 +208,7 @@ import {
   ListTagsForResourceCommandInput,
   ListTagsForResourceCommandOutput,
 } from "./commands/ListTagsForResourceCommand";
+import { ListUploadJobsCommandInput, ListUploadJobsCommandOutput } from "./commands/ListUploadJobsCommand";
 import { ListWorkflowsCommandInput, ListWorkflowsCommandOutput } from "./commands/ListWorkflowsCommand";
 import { MergeProfilesCommandInput, MergeProfilesCommandOutput } from "./commands/MergeProfilesCommand";
 import { PutIntegrationCommandInput, PutIntegrationCommandOutput } from "./commands/PutIntegrationCommand";
@@ -210,6 +218,8 @@ import {
   PutProfileObjectTypeCommandOutput,
 } from "./commands/PutProfileObjectTypeCommand";
 import { SearchProfilesCommandInput, SearchProfilesCommandOutput } from "./commands/SearchProfilesCommand";
+import { StartUploadJobCommandInput, StartUploadJobCommandOutput } from "./commands/StartUploadJobCommand";
+import { StopUploadJobCommandInput, StopUploadJobCommandOutput } from "./commands/StopUploadJobCommand";
 import { TagResourceCommandInput, TagResourceCommandOutput } from "./commands/TagResourceCommand";
 import { UntagResourceCommandInput, UntagResourceCommandOutput } from "./commands/UntagResourceCommand";
 import {
@@ -217,6 +227,7 @@ import {
   UpdateCalculatedAttributeDefinitionCommandOutput,
 } from "./commands/UpdateCalculatedAttributeDefinitionCommand";
 import { UpdateDomainCommandInput, UpdateDomainCommandOutput } from "./commands/UpdateDomainCommand";
+import { UpdateDomainLayoutCommandInput, UpdateDomainLayoutCommandOutput } from "./commands/UpdateDomainLayoutCommand";
 import { UpdateEventTriggerCommandInput, UpdateEventTriggerCommandOutput } from "./commands/UpdateEventTriggerCommand";
 import { UpdateProfileCommandInput, UpdateProfileCommandOutput } from "./commands/UpdateProfileCommand";
 import {
@@ -239,6 +250,7 @@ export type ServiceInputTypes =
   | BatchGetProfileCommandInput
   | CreateCalculatedAttributeDefinitionCommandInput
   | CreateDomainCommandInput
+  | CreateDomainLayoutCommandInput
   | CreateEventStreamCommandInput
   | CreateEventTriggerCommandInput
   | CreateIntegrationWorkflowCommandInput
@@ -246,8 +258,10 @@ export type ServiceInputTypes =
   | CreateSegmentDefinitionCommandInput
   | CreateSegmentEstimateCommandInput
   | CreateSegmentSnapshotCommandInput
+  | CreateUploadJobCommandInput
   | DeleteCalculatedAttributeDefinitionCommandInput
   | DeleteDomainCommandInput
+  | DeleteDomainLayoutCommandInput
   | DeleteEventStreamCommandInput
   | DeleteEventTriggerCommandInput
   | DeleteIntegrationCommandInput
@@ -262,6 +276,7 @@ export type ServiceInputTypes =
   | GetCalculatedAttributeDefinitionCommandInput
   | GetCalculatedAttributeForProfileCommandInput
   | GetDomainCommandInput
+  | GetDomainLayoutCommandInput
   | GetEventStreamCommandInput
   | GetEventTriggerCommandInput
   | GetIdentityResolutionJobCommandInput
@@ -274,11 +289,14 @@ export type ServiceInputTypes =
   | GetSegmentMembershipCommandInput
   | GetSegmentSnapshotCommandInput
   | GetSimilarProfilesCommandInput
+  | GetUploadJobCommandInput
+  | GetUploadJobPathCommandInput
   | GetWorkflowCommandInput
   | GetWorkflowStepsCommandInput
   | ListAccountIntegrationsCommandInput
   | ListCalculatedAttributeDefinitionsCommandInput
   | ListCalculatedAttributesForProfileCommandInput
+  | ListDomainLayoutsCommandInput
   | ListDomainsCommandInput
   | ListEventStreamsCommandInput
   | ListEventTriggersCommandInput
@@ -292,16 +310,20 @@ export type ServiceInputTypes =
   | ListRuleBasedMatchesCommandInput
   | ListSegmentDefinitionsCommandInput
   | ListTagsForResourceCommandInput
+  | ListUploadJobsCommandInput
   | ListWorkflowsCommandInput
   | MergeProfilesCommandInput
   | PutIntegrationCommandInput
   | PutProfileObjectCommandInput
   | PutProfileObjectTypeCommandInput
   | SearchProfilesCommandInput
+  | StartUploadJobCommandInput
+  | StopUploadJobCommandInput
   | TagResourceCommandInput
   | UntagResourceCommandInput
   | UpdateCalculatedAttributeDefinitionCommandInput
   | UpdateDomainCommandInput
+  | UpdateDomainLayoutCommandInput
   | UpdateEventTriggerCommandInput
   | UpdateProfileCommandInput;
 
@@ -314,6 +336,7 @@ export type ServiceOutputTypes =
   | BatchGetProfileCommandOutput
   | CreateCalculatedAttributeDefinitionCommandOutput
   | CreateDomainCommandOutput
+  | CreateDomainLayoutCommandOutput
   | CreateEventStreamCommandOutput
   | CreateEventTriggerCommandOutput
   | CreateIntegrationWorkflowCommandOutput
@@ -321,8 +344,10 @@ export type ServiceOutputTypes =
   | CreateSegmentDefinitionCommandOutput
   | CreateSegmentEstimateCommandOutput
   | CreateSegmentSnapshotCommandOutput
+  | CreateUploadJobCommandOutput
   | DeleteCalculatedAttributeDefinitionCommandOutput
   | DeleteDomainCommandOutput
+  | DeleteDomainLayoutCommandOutput
   | DeleteEventStreamCommandOutput
   | DeleteEventTriggerCommandOutput
   | DeleteIntegrationCommandOutput
@@ -337,6 +362,7 @@ export type ServiceOutputTypes =
   | GetCalculatedAttributeDefinitionCommandOutput
   | GetCalculatedAttributeForProfileCommandOutput
   | GetDomainCommandOutput
+  | GetDomainLayoutCommandOutput
   | GetEventStreamCommandOutput
   | GetEventTriggerCommandOutput
   | GetIdentityResolutionJobCommandOutput
@@ -349,11 +375,14 @@ export type ServiceOutputTypes =
   | GetSegmentMembershipCommandOutput
   | GetSegmentSnapshotCommandOutput
   | GetSimilarProfilesCommandOutput
+  | GetUploadJobCommandOutput
+  | GetUploadJobPathCommandOutput
   | GetWorkflowCommandOutput
   | GetWorkflowStepsCommandOutput
   | ListAccountIntegrationsCommandOutput
   | ListCalculatedAttributeDefinitionsCommandOutput
   | ListCalculatedAttributesForProfileCommandOutput
+  | ListDomainLayoutsCommandOutput
   | ListDomainsCommandOutput
   | ListEventStreamsCommandOutput
   | ListEventTriggersCommandOutput
@@ -367,16 +396,20 @@ export type ServiceOutputTypes =
   | ListRuleBasedMatchesCommandOutput
   | ListSegmentDefinitionsCommandOutput
   | ListTagsForResourceCommandOutput
+  | ListUploadJobsCommandOutput
   | ListWorkflowsCommandOutput
   | MergeProfilesCommandOutput
   | PutIntegrationCommandOutput
   | PutProfileObjectCommandOutput
   | PutProfileObjectTypeCommandOutput
   | SearchProfilesCommandOutput
+  | StartUploadJobCommandOutput
+  | StopUploadJobCommandOutput
   | TagResourceCommandOutput
   | UntagResourceCommandOutput
   | UpdateCalculatedAttributeDefinitionCommandOutput
   | UpdateDomainCommandOutput
+  | UpdateDomainLayoutCommandOutput
   | UpdateEventTriggerCommandOutput
   | UpdateProfileCommandOutput;
 

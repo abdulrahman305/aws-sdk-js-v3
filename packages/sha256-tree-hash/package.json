@@ -1,6 +1,6 @@
 {
   "name": "@aws-sdk/sha256-tree-hash",
-  "version": "3.775.0",
+  "version": "3.862.0",
   "scripts": {
     "build": "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
     "build:cjs": "node ../../scripts/compilation/inline sha256-tree-hash",
@@ -22,7 +22,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@aws-sdk/types": "*",
-    "@smithy/types": "^4.2.0",
+    "@smithy/types": "^4.3.2",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "concurrently": "7.0.0",
     "downlevel-dts": "0.10.1",
     "rimraf": "3.0.2",
-    "typescript": "~5.2.2"
+    "typescript": "~5.8.3"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -1572,6 +1572,10 @@ export interface SidewalkCreateDeviceProfile {}
 export interface CreateDeviceProfileRequest {
   /**
    * <p>The name of the new resource.</p>
+   *          <note>
+   *             <p>The following special characters aren't accepted: <code><>^#~$</code>
+   *             </p>
+   *          </note>
    * @public
    */
   Name?: string | undefined;
@@ -2086,6 +2090,38 @@ export interface LoRaWANServiceProfile {
    * @public
    */
   RaAllowed?: boolean | undefined;
+
+  /**
+   * <p>The Transmit Power Index minimum.</p>
+   *          <p>Default: <code>0</code>
+   *          </p>
+   * @public
+   */
+  TxPowerIndexMin?: number | undefined;
+
+  /**
+   * <p>The Transmit Power Index maximum.</p>
+   *          <p>Default: <code>15</code>
+   *          </p>
+   * @public
+   */
+  TxPowerIndexMax?: number | undefined;
+
+  /**
+   * <p>The minimum number of transmissions.</p>
+   *          <p>Default: <code>0</code>
+   *          </p>
+   * @public
+   */
+  NbTransMin?: number | undefined;
+
+  /**
+   * <p>The maximum number of transmissions.</p>
+   *          <p>Default: <code>3</code>
+   *          </p>
+   * @public
+   */
+  NbTransMax?: number | undefined;
 }
 
 /**
@@ -2094,6 +2130,10 @@ export interface LoRaWANServiceProfile {
 export interface CreateServiceProfileRequest {
   /**
    * <p>The name of the new resource.</p>
+   *          <note>
+   *             <p>The following special characters aren't accepted: <code><>^#~$</code>
+   *             </p>
+   *          </note>
    * @public
    */
   Name?: string | undefined;
@@ -2365,6 +2405,10 @@ export interface CreateWirelessDeviceRequest {
 
   /**
    * <p>The name of the new resource.</p>
+   *          <note>
+   *             <p>The following special characters aren't accepted: <code><>^#~$</code>
+   *             </p>
+   *          </note>
    * @public
    */
   Name?: string | undefined;
@@ -2494,6 +2538,10 @@ export interface LoRaWANGateway {
 export interface CreateWirelessGatewayRequest {
   /**
    * <p>The name of the new resource.</p>
+   *          <note>
+   *             <p>The following special characters aren't accepted: <code><>^#~$</code>
+   *             </p>
+   *          </note>
    * @public
    */
   Name?: string | undefined;
@@ -3595,7 +3643,6 @@ export interface EventNotificationItemConfigurations {
  */
 export const IdentifierType = {
   DevEui: "DevEui",
-  FuotaTaskId: "FuotaTaskId",
   GatewayEui: "GatewayEui",
   PartnerAccountId: "PartnerAccountId",
   WirelessDeviceId: "WirelessDeviceId",
@@ -3656,7 +3703,6 @@ export interface EventConfigurationItem {
  * @enum
  */
 export const EventNotificationResourceType = {
-  FuotaTask: "FuotaTask",
   SidewalkAccount: "SidewalkAccount",
   WirelessDevice: "WirelessDevice",
   WirelessGateway: "WirelessGateway",
@@ -4750,6 +4796,11 @@ export interface LoRaWANMulticastSession {
 
   /**
    * <p>How long before a multicast group session is to timeout.</p>
+   *          <note>
+   *             <p>We recommend that you provide a timeout value that is a power-of-two (such as 64,
+   *                 128, 256). If a non-power-of-two value is provided, it will automatically be rounded
+   *                 up to the next supported power-of-two within the allowed range.</p>
+   *          </note>
    * @public
    */
   SessionTimeout?: number | undefined;
@@ -5538,6 +5589,38 @@ export interface LoRaWANGetServiceProfileInfo {
    * @public
    */
   MinGwDiversity?: number | undefined;
+
+  /**
+   * <p>The Transmit Power Index minimum value.</p>
+   *          <p>Default: <code>0</code>
+   *          </p>
+   * @public
+   */
+  TxPowerIndexMin?: number | undefined;
+
+  /**
+   * <p>The Transmit Power Index maximum value.</p>
+   *          <p>Default: <code>15</code>
+   *          </p>
+   * @public
+   */
+  TxPowerIndexMax?: number | undefined;
+
+  /**
+   * <p>The minimum number of transmissions.</p>
+   *          <p>Default: <code>0</code>
+   *          </p>
+   * @public
+   */
+  NbTransMin?: number | undefined;
+
+  /**
+   * <p>The maximum number of transmissions.</p>
+   *          <p>Default: <code>3</code>
+   *          </p>
+   * @public
+   */
+  NbTransMax?: number | undefined;
 }
 
 /**

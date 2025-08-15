@@ -57,6 +57,7 @@ export interface ListDistributionsByWebACLIdCommandOutput extends ListDistributi
  * //       { // DistributionSummary
  * //         Id: "STRING_VALUE", // required
  * //         ARN: "STRING_VALUE", // required
+ * //         ETag: "STRING_VALUE",
  * //         Status: "STRING_VALUE", // required
  * //         LastModifiedTime: new Date("TIMESTAMP"), // required
  * //         DomainName: "STRING_VALUE", // required
@@ -84,6 +85,7 @@ export interface ListDistributionsByWebACLIdCommandOutput extends ListDistributi
  * //               },
  * //               S3OriginConfig: { // S3OriginConfig
  * //                 OriginAccessIdentity: "STRING_VALUE", // required
+ * //                 OriginReadTimeout: Number("int"),
  * //               },
  * //               CustomOriginConfig: { // CustomOriginConfig
  * //                 HTTPPort: Number("int"), // required
@@ -105,6 +107,7 @@ export interface ListDistributionsByWebACLIdCommandOutput extends ListDistributi
  * //               },
  * //               ConnectionAttempts: Number("int"),
  * //               ConnectionTimeout: Number("int"),
+ * //               ResponseCompletionTimeout: Number("int"),
  * //               OriginShield: { // OriginShield
  * //                 Enabled: true || false, // required
  * //                 OriginShieldRegion: "STRING_VALUE",
@@ -324,14 +327,14 @@ export interface ListDistributionsByWebACLIdCommandOutput extends ListDistributi
  * //           ],
  * //         },
  * //         Comment: "STRING_VALUE", // required
- * //         PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All", // required
+ * //         PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All" || "None", // required
  * //         Enabled: true || false, // required
  * //         ViewerCertificate: { // ViewerCertificate
  * //           CloudFrontDefaultCertificate: true || false,
  * //           IAMCertificateId: "STRING_VALUE",
  * //           ACMCertificateArn: "STRING_VALUE",
  * //           SSLSupportMethod: "sni-only" || "vip" || "static-ip",
- * //           MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021",
+ * //           MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021" || "TLSv1.3_2025",
  * //           Certificate: "STRING_VALUE",
  * //           CertificateSource: "cloudfront" || "iam" || "acm",
  * //         },
@@ -354,6 +357,7 @@ export interface ListDistributionsByWebACLIdCommandOutput extends ListDistributi
  * //           },
  * //         ],
  * //         Staging: true || false, // required
+ * //         ConnectionMode: "direct" || "tenant-only",
  * //         AnycastIpListId: "STRING_VALUE",
  * //       },
  * //     ],
@@ -372,11 +376,7 @@ export interface ListDistributionsByWebACLIdCommandOutput extends ListDistributi
  *  <p>An argument is invalid.</p>
  *
  * @throws {@link InvalidWebACLId} (client fault)
- *  <p>A web ACL ID specified is not valid. To specify a web ACL created using the latest
- * 			version of WAF, use the ACL ARN, for example
- * 				<code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>.
- * 			To specify a web ACL created using WAF Classic, use the ACL ID, for example
- * 				<code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.</p>
+ *  <p>A web ACL ID specified is not valid. To specify a web ACL created using the latest version of WAF, use the ACL ARN, for example <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>. To specify a web ACL created using WAF Classic, use the ACL ID, for example <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.</p>
  *
  * @throws {@link CloudFrontServiceException}
  * <p>Base exception class for all service exceptions from CloudFront service.</p>

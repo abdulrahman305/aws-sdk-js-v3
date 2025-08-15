@@ -63,6 +63,12 @@ export interface RemoveFromGlobalClusterCommandOutput extends RemoveFromGlobalCl
  * //         IsWriter: true || false,
  * //       },
  * //     ],
+ * //     FailoverState: { // FailoverState
+ * //       Status: "pending" || "failing-over" || "cancelling",
+ * //       FromDbClusterArn: "STRING_VALUE",
+ * //       ToDbClusterArn: "STRING_VALUE",
+ * //       IsDataLossAllowed: true || false,
+ * //     },
  * //   },
  * // };
  *

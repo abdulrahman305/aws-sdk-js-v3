@@ -57,6 +57,7 @@ export interface GetCatalogCommandOutput extends GetCatalogResponse, __MetadataB
  * //     FederatedCatalog: { // FederatedCatalog
  * //       Identifier: "STRING_VALUE",
  * //       ConnectionName: "STRING_VALUE",
+ * //       ConnectionType: "STRING_VALUE",
  * //     },
  * //     CatalogProperties: { // CatalogPropertiesOutput
  * //       DataLakeAccessProperties: { // DataLakeAccessPropertiesOutput
@@ -69,9 +70,20 @@ export interface GetCatalogCommandOutput extends GetCatalogResponse, __MetadataB
  * //         StatusMessage: "STRING_VALUE",
  * //         CatalogType: "STRING_VALUE",
  * //       },
- * //       CustomProperties: {
- * //         "<keys>": "STRING_VALUE",
+ * //       IcebergOptimizationProperties: { // IcebergOptimizationPropertiesOutput
+ * //         RoleArn: "STRING_VALUE",
+ * //         Compaction: {
+ * //           "<keys>": "STRING_VALUE",
+ * //         },
+ * //         Retention: {
+ * //           "<keys>": "STRING_VALUE",
+ * //         },
+ * //         OrphanFileDeletion: {
+ * //           "<keys>": "STRING_VALUE",
+ * //         },
+ * //         LastUpdatedTime: new Date("TIMESTAMP"),
  * //       },
+ * //       CustomProperties: "<ParametersMap>",
  * //     },
  * //     CreateTableDefaultPermissions: [ // PrincipalPermissionsList
  * //       { // PrincipalPermissions

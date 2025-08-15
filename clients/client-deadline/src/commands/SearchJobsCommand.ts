@@ -55,6 +55,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  *         },
  *         searchTermFilter: { // SearchTermFilterExpression
  *           searchTerm: "STRING_VALUE", // required
+ *           matchType: "FUZZY_MATCH" || "CONTAINS",
  *         },
  *         stringFilter: { // StringFilterExpression
  *           name: "STRING_VALUE", // required
@@ -76,6 +77,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  *               },
  *               searchTermFilter: {
  *                 searchTerm: "STRING_VALUE", // required
+ *                 matchType: "FUZZY_MATCH" || "CONTAINS",
  *               },
  *               stringFilter: {
  *                 name: "STRING_VALUE", // required
@@ -124,6 +126,7 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //       taskRunStatusCounts: { // TaskRunStatusCounts
  * //         "<keys>": Number("int"),
  * //       },
+ * //       taskFailureRetryCount: Number("int"),
  * //       priority: Number("int"),
  * //       maxFailedTasksCount: Number("int"),
  * //       maxRetriesPerTask: Number("int"),
@@ -131,6 +134,8 @@ export interface SearchJobsCommandOutput extends SearchJobsResponse, __MetadataB
  * //       createdAt: new Date("TIMESTAMP"),
  * //       endedAt: new Date("TIMESTAMP"),
  * //       startedAt: new Date("TIMESTAMP"),
+ * //       updatedAt: new Date("TIMESTAMP"),
+ * //       updatedBy: "STRING_VALUE",
  * //       jobParameters: { // JobParameters
  * //         "<keys>": { // JobParameter Union: only one key present
  * //           int: "STRING_VALUE",

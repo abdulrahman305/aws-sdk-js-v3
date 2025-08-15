@@ -62,6 +62,7 @@ export interface ListDistributionsByAnycastIpListIdCommandOutput
  * //       { // DistributionSummary
  * //         Id: "STRING_VALUE", // required
  * //         ARN: "STRING_VALUE", // required
+ * //         ETag: "STRING_VALUE",
  * //         Status: "STRING_VALUE", // required
  * //         LastModifiedTime: new Date("TIMESTAMP"), // required
  * //         DomainName: "STRING_VALUE", // required
@@ -89,6 +90,7 @@ export interface ListDistributionsByAnycastIpListIdCommandOutput
  * //               },
  * //               S3OriginConfig: { // S3OriginConfig
  * //                 OriginAccessIdentity: "STRING_VALUE", // required
+ * //                 OriginReadTimeout: Number("int"),
  * //               },
  * //               CustomOriginConfig: { // CustomOriginConfig
  * //                 HTTPPort: Number("int"), // required
@@ -110,6 +112,7 @@ export interface ListDistributionsByAnycastIpListIdCommandOutput
  * //               },
  * //               ConnectionAttempts: Number("int"),
  * //               ConnectionTimeout: Number("int"),
+ * //               ResponseCompletionTimeout: Number("int"),
  * //               OriginShield: { // OriginShield
  * //                 Enabled: true || false, // required
  * //                 OriginShieldRegion: "STRING_VALUE",
@@ -329,14 +332,14 @@ export interface ListDistributionsByAnycastIpListIdCommandOutput
  * //           ],
  * //         },
  * //         Comment: "STRING_VALUE", // required
- * //         PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All", // required
+ * //         PriceClass: "PriceClass_100" || "PriceClass_200" || "PriceClass_All" || "None", // required
  * //         Enabled: true || false, // required
  * //         ViewerCertificate: { // ViewerCertificate
  * //           CloudFrontDefaultCertificate: true || false,
  * //           IAMCertificateId: "STRING_VALUE",
  * //           ACMCertificateArn: "STRING_VALUE",
  * //           SSLSupportMethod: "sni-only" || "vip" || "static-ip",
- * //           MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021",
+ * //           MinimumProtocolVersion: "SSLv3" || "TLSv1" || "TLSv1_2016" || "TLSv1.1_2016" || "TLSv1.2_2018" || "TLSv1.2_2019" || "TLSv1.2_2021" || "TLSv1.3_2025",
  * //           Certificate: "STRING_VALUE",
  * //           CertificateSource: "cloudfront" || "iam" || "acm",
  * //         },
@@ -359,6 +362,7 @@ export interface ListDistributionsByAnycastIpListIdCommandOutput
  * //           },
  * //         ],
  * //         Staging: true || false, // required
+ * //         ConnectionMode: "direct" || "tenant-only",
  * //         AnycastIpListId: "STRING_VALUE",
  * //       },
  * //     ],

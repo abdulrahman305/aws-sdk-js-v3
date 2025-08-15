@@ -78,6 +78,9 @@ export interface RestartChannelPipelinesCommandOutput extends RestartChannelPipe
  * //           Url: "STRING_VALUE",
  * //         },
  * //       ],
+ * //       LogicalInterfaceNames: [ // __listOf__string
+ * //         "STRING_VALUE",
+ * //       ],
  * //     },
  * //   ],
  * //   EgressEndpoints: [ // __listOfChannelEgressEndpoint
@@ -542,6 +545,20 @@ export interface RestartChannelPipelinesCommandOutput extends RestartChannelPipe
  * //             Scte35NameModifier: "STRING_VALUE",
  * //             Id3Behavior: "DISABLED" || "ENABLED",
  * //             Id3NameModifier: "STRING_VALUE",
+ * //             CaptionLanguageMappings: [ // __listOfCmafIngestCaptionLanguageMapping
+ * //               { // CmafIngestCaptionLanguageMapping
+ * //                 CaptionChannel: Number("int"), // required
+ * //                 LanguageCode: "STRING_VALUE", // required
+ * //               },
+ * //             ],
+ * //             TimedMetadataId3Frame: "NONE" || "PRIV" || "TDRL",
+ * //             TimedMetadataId3Period: Number("int"),
+ * //             TimedMetadataPassthrough: "DISABLED" || "ENABLED",
+ * //             AdditionalDestinations: [ // __listOfAdditionalDestinations
+ * //               { // AdditionalDestinations
+ * //                 Destination: "<OutputLocationRef>", // required
+ * //               },
+ * //             ],
  * //           },
  * //           SrtGroupSettings: { // SrtGroupSettings
  * //             InputLossAction: "DROP_PROGRAM" || "DROP_TS" || "EMIT_PROGRAM",
@@ -549,7 +566,7 @@ export interface RestartChannelPipelinesCommandOutput extends RestartChannelPipe
  * //         },
  * //         Outputs: [ // __listOfOutput // required
  * //           { // Output
- * //             AudioDescriptionNames: [ // __listOf__string
+ * //             AudioDescriptionNames: [
  * //               "STRING_VALUE",
  * //             ],
  * //             CaptionDescriptionNames: [
@@ -1051,6 +1068,8 @@ export interface RestartChannelPipelinesCommandOutput extends RestartChannelPipe
  * //               Position: "BOTTOM_CENTER" || "BOTTOM_LEFT" || "BOTTOM_RIGHT" || "MIDDLE_CENTER" || "MIDDLE_LEFT" || "MIDDLE_RIGHT" || "TOP_CENTER" || "TOP_LEFT" || "TOP_RIGHT", // required
  * //               Prefix: "STRING_VALUE",
  * //             },
+ * //             Bitrate: Number("int"),
+ * //             RateControlMode: "CBR" || "QVBR",
  * //           },
  * //         },
  * //         Height: Number("int"),

@@ -6,7 +6,11 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { DeadlineClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../DeadlineClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListSessionActionsRequest, ListSessionActionsResponse } from "../models/models_0";
+import {
+  ListSessionActionsRequest,
+  ListSessionActionsResponse,
+  ListSessionActionsResponseFilterSensitiveLog,
+} from "../models/models_0";
 import { de_ListSessionActionsCommand, se_ListSessionActionsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -63,13 +67,28 @@ export interface ListSessionActionsCommandOutput extends ListSessionActionsRespo
  * //           environmentId: "STRING_VALUE", // required
  * //         },
  * //         taskRun: { // TaskRunSessionActionDefinitionSummary
- * //           taskId: "STRING_VALUE", // required
+ * //           taskId: "STRING_VALUE",
  * //           stepId: "STRING_VALUE", // required
+ * //           parameters: { // TaskParameters
+ * //             "<keys>": { // TaskParameterValue Union: only one key present
+ * //               int: "STRING_VALUE",
+ * //               float: "STRING_VALUE",
+ * //               string: "STRING_VALUE",
+ * //               path: "STRING_VALUE",
+ * //               chunkInt: "STRING_VALUE",
+ * //             },
+ * //           },
  * //         },
  * //         syncInputJobAttachments: { // SyncInputJobAttachmentsSessionActionDefinitionSummary
  * //           stepId: "STRING_VALUE",
  * //         },
  * //       },
+ * //       manifests: [ // TaskRunManifestPropertiesListResponse
+ * //         { // TaskRunManifestPropertiesResponse
+ * //           outputManifestPath: "STRING_VALUE",
+ * //           outputManifestHash: "STRING_VALUE",
+ * //         },
+ * //       ],
  * //     },
  * //   ],
  * //   nextToken: "STRING_VALUE",
@@ -122,7 +141,7 @@ export class ListSessionActionsCommand extends $Command
   })
   .s("Deadline", "ListSessionActions", {})
   .n("DeadlineClient", "ListSessionActionsCommand")
-  .f(void 0, void 0)
+  .f(void 0, ListSessionActionsResponseFilterSensitiveLog)
   .ser(se_ListSessionActionsCommand)
   .de(de_ListSessionActionsCommand)
   .build() {

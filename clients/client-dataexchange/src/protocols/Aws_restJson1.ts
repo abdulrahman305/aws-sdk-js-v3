@@ -248,6 +248,7 @@ export const se_CreateEventActionCommand = async (
     take(input, {
       Action: (_) => _json(_),
       Event: (_) => _json(_),
+      Tags: (_) => _json(_),
     })
   );
   b.m("POST").h(headers).b(body);
@@ -686,17 +687,17 @@ export const se_SendApiAssetCommand = async (
 ): Promise<__HttpRequest> => {
   const b = rb(input, context);
   const headers: any = map({}, isSerializableHeaderValue, {
+    ...(input.RequestHeaders !== undefined &&
+      Object.keys(input.RequestHeaders).reduce((acc: any, suffix: string) => {
+        acc[`x-amzn-dataexchange-header-${suffix.toLowerCase()}`] = input.RequestHeaders![suffix];
+        return acc;
+      }, {})),
     "content-type": "text/plain",
     [_xadai]: input[_AI]!,
     [_xaddsi]: input[_DSI]!,
     [_xadhm]: input[_M]!,
     [_xadp]: input[_P]!,
     [_xadri]: input[_RI]!,
-    ...(input.RequestHeaders !== undefined &&
-      Object.keys(input.RequestHeaders).reduce((acc: any, suffix: string) => {
-        acc[`x-amzn-dataexchange-header-${suffix.toLowerCase()}`] = input.RequestHeaders![suffix];
-        return acc;
-      }, {})),
   });
   b.bp("/v1");
   const query: any = map({
@@ -1036,6 +1037,7 @@ export const de_CreateEventActionCommand = async (
     CreatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     Event: _json,
     Id: __expectString,
+    Tags: _json,
     UpdatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
   });
   Object.assign(contents, doc);
@@ -1303,6 +1305,7 @@ export const de_GetEventActionCommand = async (
     CreatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
     Event: _json,
     Id: __expectString,
+    Tags: _json,
     UpdatedAt: (_) => __expectNonNull(__parseRfc3339DateTimeWithOffset(_)),
   });
   Object.assign(contents, doc);

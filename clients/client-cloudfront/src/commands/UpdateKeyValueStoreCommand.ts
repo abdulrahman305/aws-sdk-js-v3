@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { CloudFrontClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../CloudFrontClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateKeyValueStoreRequest, UpdateKeyValueStoreResult } from "../models/models_1";
+import { UpdateKeyValueStoreRequest, UpdateKeyValueStoreResult } from "../models/models_2";
 import { de_UpdateKeyValueStoreCommand, se_UpdateKeyValueStoreCommand } from "../protocols/Aws_restXml";
 
 /**
@@ -75,8 +75,7 @@ export interface UpdateKeyValueStoreCommandOutput extends UpdateKeyValueStoreRes
  *  <p>The <code>If-Match</code> version is missing or not valid.</p>
  *
  * @throws {@link PreconditionFailed} (client fault)
- *  <p>The precondition in one or more of the request fields evaluated to
- * 			<code>false</code>.</p>
+ *  <p>The precondition in one or more of the request fields evaluated to <code>false</code>.</p>
  *
  * @throws {@link UnsupportedOperation} (client fault)
  *  <p>This operation is not supported in this Amazon Web Services Region.</p>

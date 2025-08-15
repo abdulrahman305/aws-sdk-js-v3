@@ -28,26 +28,29 @@ export interface CreateCapacityReservationCommandInput extends CreateCapacityRes
 export interface CreateCapacityReservationCommandOutput extends CreateCapacityReservationResult, __MetadataBearer {}
 
 /**
- * <p>Creates a new Capacity Reservation with the specified attributes. Capacity Reservations enable
- * 			you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any
- * 			duration.</p>
- *          <p>You can create a Capacity Reservation at any time, and you can choose when it starts. You can create a
- * 			Capacity Reservation for immediate use or you can request a Capacity Reservation for a future date.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html">
- * 			Reserve compute capacity with On-Demand Capacity Reservations</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ * <p>Creates a new Capacity Reservation with the specified attributes. Capacity
+ * 			Reservations enable you to reserve capacity for your Amazon EC2 instances in a specific
+ * 			Availability Zone for any duration.</p>
+ *          <p>You can create a Capacity Reservation at any time, and you can choose when it starts.
+ * 			You can create a Capacity Reservation for immediate use or you can request a Capacity
+ * 			Reservation for a future date.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html"> Reserve compute
+ * 				capacity with On-Demand Capacity Reservations</a> in the
+ * 				<i>Amazon EC2 User Guide</i>.</p>
  *          <p>Your request to create a Capacity Reservation could fail if:</p>
  *          <ul>
  *             <li>
- *                <p>Amazon EC2 does not have sufficient capacity. In this case, try again at a later
- * 					time, try in a different Availability Zone, or request a smaller Capacity Reservation. If
- * 					your workload is flexible across instance types and sizes, try with different instance
- * 					attributes.</p>
+ *                <p>Amazon EC2 does not have sufficient capacity. In this case, try again
+ * 					at a later time, try in a different Availability Zone, or request a smaller
+ * 					Capacity Reservation. If your workload is flexible across instance types and
+ * 					sizes, try with different instance attributes.</p>
  *             </li>
  *             <li>
- *                <p>The requested quantity exceeds your On-Demand Instance quota. In this case, increase your
- * 					On-Demand Instance quota for the requested instance type and try again. For more information,
- * 					see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">
- * 						Amazon EC2 Service Quotas</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ *                <p>The requested quantity exceeds your On-Demand Instance quota. In this case,
+ * 					increase your On-Demand Instance quota for the requested instance type and try
+ * 					again. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html">
+ * 						Amazon EC2 Service Quotas</a> in the
+ * 						<i>Amazon EC2 User Guide</i>.</p>
  *             </li>
  *          </ul>
  * @example
@@ -71,7 +74,7 @@ export interface CreateCapacityReservationCommandOutput extends CreateCapacityRe
  *   InstanceMatchCriteria: "open" || "targeted",
  *   TagSpecifications: [ // TagSpecificationList
  *     { // TagSpecification
- *       ResourceType: "capacity-reservation" || "client-vpn-endpoint" || "customer-gateway" || "carrier-gateway" || "coip-pool" || "declarative-policies-report" || "dedicated-host" || "dhcp-options" || "egress-only-internet-gateway" || "elastic-ip" || "elastic-gpu" || "export-image-task" || "export-instance-task" || "fleet" || "fpga-image" || "host-reservation" || "image" || "import-image-task" || "import-snapshot-task" || "instance" || "instance-event-window" || "internet-gateway" || "ipam" || "ipam-pool" || "ipam-scope" || "ipv4pool-ec2" || "ipv6pool-ec2" || "key-pair" || "launch-template" || "local-gateway" || "local-gateway-route-table" || "local-gateway-virtual-interface" || "local-gateway-virtual-interface-group" || "local-gateway-route-table-vpc-association" || "local-gateway-route-table-virtual-interface-group-association" || "natgateway" || "network-acl" || "network-interface" || "network-insights-analysis" || "network-insights-path" || "network-insights-access-scope" || "network-insights-access-scope-analysis" || "placement-group" || "prefix-list" || "replace-root-volume-task" || "reserved-instances" || "route-table" || "security-group" || "security-group-rule" || "snapshot" || "spot-fleet-request" || "spot-instances-request" || "subnet" || "subnet-cidr-reservation" || "traffic-mirror-filter" || "traffic-mirror-session" || "traffic-mirror-target" || "transit-gateway" || "transit-gateway-attachment" || "transit-gateway-connect-peer" || "transit-gateway-multicast-domain" || "transit-gateway-policy-table" || "transit-gateway-route-table" || "transit-gateway-route-table-announcement" || "volume" || "vpc" || "vpc-endpoint" || "vpc-endpoint-connection" || "vpc-endpoint-service" || "vpc-endpoint-service-permission" || "vpc-peering-connection" || "vpn-connection" || "vpn-gateway" || "vpc-flow-log" || "capacity-reservation-fleet" || "traffic-mirror-filter-rule" || "vpc-endpoint-connection-device-type" || "verified-access-instance" || "verified-access-group" || "verified-access-endpoint" || "verified-access-policy" || "verified-access-trust-provider" || "vpn-connection-device-type" || "vpc-block-public-access-exclusion" || "ipam-resource-discovery" || "ipam-resource-discovery-association" || "instance-connect-endpoint" || "verified-access-endpoint-target" || "ipam-external-resource-verification-token",
+ *       ResourceType: "capacity-reservation" || "client-vpn-endpoint" || "customer-gateway" || "carrier-gateway" || "coip-pool" || "declarative-policies-report" || "dedicated-host" || "dhcp-options" || "egress-only-internet-gateway" || "elastic-ip" || "elastic-gpu" || "export-image-task" || "export-instance-task" || "fleet" || "fpga-image" || "host-reservation" || "image" || "import-image-task" || "import-snapshot-task" || "instance" || "instance-event-window" || "internet-gateway" || "ipam" || "ipam-pool" || "ipam-scope" || "ipv4pool-ec2" || "ipv6pool-ec2" || "key-pair" || "launch-template" || "local-gateway" || "local-gateway-route-table" || "local-gateway-virtual-interface" || "local-gateway-virtual-interface-group" || "local-gateway-route-table-vpc-association" || "local-gateway-route-table-virtual-interface-group-association" || "natgateway" || "network-acl" || "network-interface" || "network-insights-analysis" || "network-insights-path" || "network-insights-access-scope" || "network-insights-access-scope-analysis" || "outpost-lag" || "placement-group" || "prefix-list" || "replace-root-volume-task" || "reserved-instances" || "route-table" || "security-group" || "security-group-rule" || "service-link-virtual-interface" || "snapshot" || "spot-fleet-request" || "spot-instances-request" || "subnet" || "subnet-cidr-reservation" || "traffic-mirror-filter" || "traffic-mirror-session" || "traffic-mirror-target" || "transit-gateway" || "transit-gateway-attachment" || "transit-gateway-connect-peer" || "transit-gateway-multicast-domain" || "transit-gateway-policy-table" || "transit-gateway-route-table" || "transit-gateway-route-table-announcement" || "volume" || "vpc" || "vpc-endpoint" || "vpc-endpoint-connection" || "vpc-endpoint-service" || "vpc-endpoint-service-permission" || "vpc-peering-connection" || "vpn-connection" || "vpn-gateway" || "vpc-flow-log" || "capacity-reservation-fleet" || "traffic-mirror-filter-rule" || "vpc-endpoint-connection-device-type" || "verified-access-instance" || "verified-access-group" || "verified-access-endpoint" || "verified-access-policy" || "verified-access-trust-provider" || "vpn-connection-device-type" || "vpc-block-public-access-exclusion" || "route-server" || "route-server-endpoint" || "route-server-peer" || "ipam-resource-discovery" || "ipam-resource-discovery-association" || "instance-connect-endpoint" || "verified-access-endpoint-target" || "ipam-external-resource-verification-token" || "capacity-block" || "mac-modification-task",
  *       Tags: [ // TagList
  *         { // Tag
  *           Key: "STRING_VALUE",
@@ -103,7 +106,7 @@ export interface CreateCapacityReservationCommandOutput extends CreateCapacityRe
  * //     AvailableInstanceCount: Number("int"),
  * //     EbsOptimized: true || false,
  * //     EphemeralStorage: true || false,
- * //     State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed" || "assessing" || "delayed" || "unsupported",
+ * //     State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed" || "assessing" || "delayed" || "unsupported" || "unavailable",
  * //     StartDate: new Date("TIMESTAMP"),
  * //     EndDate: new Date("TIMESTAMP"),
  * //     EndDateType: "unlimited" || "limited",
@@ -131,6 +134,7 @@ export interface CreateCapacityReservationCommandOutput extends CreateCapacityRe
  * //       CommitmentEndDate: new Date("TIMESTAMP"),
  * //     },
  * //     DeliveryPreference: "fixed" || "incremental",
+ * //     CapacityBlockId: "STRING_VALUE",
  * //   },
  * // };
  *

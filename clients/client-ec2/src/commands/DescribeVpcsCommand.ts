@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeVpcsRequest, DescribeVpcsResult } from "../models/models_5";
+import { DescribeVpcsRequest, DescribeVpcsResult } from "../models/models_6";
 import { de_DescribeVpcsCommand, se_DescribeVpcsCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -90,7 +90,7 @@ export interface DescribeVpcsCommandOutput extends DescribeVpcsResult, __Metadat
  * //         VpcId: "STRING_VALUE",
  * //         VpcEncryptionControlId: "STRING_VALUE",
  * //         Mode: "monitor" || "enforce",
- * //         State: "enforce-in-progress" || "monitor-in-progress" || "enforce-failed" || "monitor-failed" || "deleting" || "deleted" || "available",
+ * //         State: "enforce-in-progress" || "monitor-in-progress" || "enforce-failed" || "monitor-failed" || "deleting" || "deleted" || "available" || "creating" || "delete-failed",
  * //         StateMessage: "STRING_VALUE",
  * //         ResourceExclusions: { // VpcEncryptionControlExclusions
  * //           InternetGateway: { // VpcEncryptionControlExclusion

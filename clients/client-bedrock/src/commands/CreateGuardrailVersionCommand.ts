@@ -10,7 +10,7 @@ import {
   CreateGuardrailVersionRequest,
   CreateGuardrailVersionRequestFilterSensitiveLog,
   CreateGuardrailVersionResponse,
-} from "../models/models_0";
+} from "../models/models_1";
 import { de_CreateGuardrailVersionCommand, se_CreateGuardrailVersionCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -32,8 +32,7 @@ export interface CreateGuardrailVersionCommandInput extends CreateGuardrailVersi
 export interface CreateGuardrailVersionCommandOutput extends CreateGuardrailVersionResponse, __MetadataBearer {}
 
 /**
- * <p>Creates a version of the guardrail. Use this API to create a snapshot of the
- *       guardrail when you are satisfied with a configuration, or to compare the configuration with another version.</p>
+ * <p>Creates a version of the guardrail. Use this API to create a snapshot of the guardrail when you are satisfied with a configuration, or to compare the configuration with another version.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

@@ -5,7 +5,8 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { ListWorkforcesRequest, ListWorkforcesResponse } from "../models/models_4";
+import { ListWorkforcesRequest } from "../models/models_4";
+import { ListWorkforcesResponse } from "../models/models_5";
 import { de_ListWorkforcesCommand, se_ListWorkforcesCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,8 +29,7 @@ export interface ListWorkforcesCommandInput extends ListWorkforcesRequest {}
 export interface ListWorkforcesCommandOutput extends ListWorkforcesResponse, __MetadataBearer {}
 
 /**
- * <p>Use this operation to list all private and vendor workforces in an Amazon Web Services Region. Note that you can only
- *            have one private workforce per Amazon Web Services Region.</p>
+ * <p>Use this operation to list all private and vendor workforces in an Amazon Web Services Region. Note that you can only have one private workforce per Amazon Web Services Region.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -87,6 +87,7 @@ export interface ListWorkforcesCommandOutput extends ListWorkforcesResponse, __M
  * //       },
  * //       Status: "Initializing" || "Updating" || "Deleting" || "Failed" || "Active",
  * //       FailureReason: "STRING_VALUE",
+ * //       IpAddressType: "ipv4" || "dualstack",
  * //     },
  * //   ],
  * //   NextToken: "STRING_VALUE",

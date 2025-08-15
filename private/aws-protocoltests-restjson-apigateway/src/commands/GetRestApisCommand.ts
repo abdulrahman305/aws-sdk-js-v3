@@ -1,9 +1,11 @@
 // smithy-typescript generated code
+import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { APIGatewayClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../APIGatewayClient";
+import { commonParams } from "../endpoint/EndpointParameters";
 import { GetRestApisRequest, RestApis } from "../models/models_0";
 import { de_GetRestApisCommand, se_GetRestApisCommand } from "../protocols/Aws_restJson1";
 
@@ -82,11 +84,11 @@ export interface GetRestApisCommandOutput extends RestApis, __MetadataBearer {}
  * @see {@link GetRestApisCommandOutput} for command's `response` shape.
  * @see {@link APIGatewayClientResolvedConfig | config} for APIGatewayClient's `config` shape.
  *
+ * @throws {@link BadRequestException} (client fault)
+ *
  * @throws {@link TooManyRequestsException} (client fault)
  *
  * @throws {@link UnauthorizedException} (client fault)
- *
- * @throws {@link BadRequestException} (client fault)
  *
  * @throws {@link APIGatewayServiceException}
  * <p>Base exception class for all service exceptions from APIGateway service.</p>
@@ -101,8 +103,12 @@ export class GetRestApisCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: APIGatewayClientResolvedConfig, o: any) {
-    return [getSerdePlugin(config, this.serialize, this.deserialize)];
+    return [
+      getSerdePlugin(config, this.serialize, this.deserialize),
+      getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+    ];
   })
   .s("BackplaneControlService", "GetRestApis", {})
   .n("APIGatewayClient", "GetRestApisCommand")

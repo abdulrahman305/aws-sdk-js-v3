@@ -138,6 +138,9 @@ export interface CreateApplicationCommandOutput extends CreateApplicationRespons
  *     queueTimeoutMinutes: Number("int"),
  *     maxConcurrentRuns: Number("int"),
  *   },
+ *   identityCenterConfiguration: { // IdentityCenterConfigurationInput
+ *     identityCenterInstanceArn: "STRING_VALUE",
+ *   },
  * };
  * const command = new CreateApplicationCommand(input);
  * const response = await client.send(command);
@@ -156,8 +159,7 @@ export interface CreateApplicationCommandOutput extends CreateApplicationRespons
  * @see {@link EMRServerlessClientResolvedConfig | config} for EMRServerlessClient's `config` shape.
  *
  * @throws {@link ConflictException} (client fault)
- *  <p>The request could not be processed because of conflict in the current state of the
- *          resource.</p>
+ *  <p>The request could not be processed because of conflict in the current state of the resource.</p>
  *
  * @throws {@link InternalServerException} (server fault)
  *  <p>Request processing failed because of an error or failure with the service.</p>
@@ -166,8 +168,7 @@ export interface CreateApplicationCommandOutput extends CreateApplicationRespons
  *  <p>The specified resource was not found.</p>
  *
  * @throws {@link ValidationException} (client fault)
- *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services
- *          service.</p>
+ *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>
  *
  * @throws {@link EMRServerlessServiceException}
  * <p>Base exception class for all service exceptions from EMRServerless service.</p>

@@ -72,6 +72,60 @@ import {
  * <p></p>
  * @public
  */
+export interface DescribeReplicationTaskAssessmentRunsMessage {
+  /**
+   * <p>Filters applied to the premigration assessment runs described in the form of key-value
+   *          pairs.</p>
+   *          <p>Valid filter names: <code>replication-task-assessment-run-arn</code>,
+   *             <code>replication-task-arn</code>, <code>replication-instance-arn</code>,
+   *             <code>status</code>
+   *          </p>
+   * @public
+   */
+  Filters?: Filter[] | undefined;
+
+  /**
+   * <p>The maximum number of records to include in the response. If more records exist than the
+   *          specified <code>MaxRecords</code> value, a pagination token called a marker is included in
+   *          the response so that the remaining results can be retrieved.</p>
+   * @public
+   */
+  MaxRecords?: number | undefined;
+
+  /**
+   * <p>An optional pagination token provided by a previous request. If this parameter is
+   *          specified, the response includes only records beyond the marker, up to the value specified
+   *          by <code>MaxRecords</code>.</p>
+   * @public
+   */
+  Marker?: string | undefined;
+}
+
+/**
+ * <p></p>
+ * @public
+ */
+export interface DescribeReplicationTaskAssessmentRunsResponse {
+  /**
+   * <p>A pagination token returned for you to pass to a subsequent request. If you pass this
+   *          token as the <code>Marker</code> value in a subsequent request, the response includes only
+   *          records beyond the marker, up to the value specified in the request by
+   *             <code>MaxRecords</code>.</p>
+   * @public
+   */
+  Marker?: string | undefined;
+
+  /**
+   * <p>One or more premigration assessment runs as specified by <code>Filters</code>.</p>
+   * @public
+   */
+  ReplicationTaskAssessmentRuns?: ReplicationTaskAssessmentRun[] | undefined;
+}
+
+/**
+ * <p></p>
+ * @public
+ */
 export interface DescribeReplicationTaskIndividualAssessmentsMessage {
   /**
    * <p>Filters applied to the individual assessments described in the form of key-value
@@ -683,6 +737,12 @@ export interface ModifyDataProviderMessage {
    * @public
    */
   Engine?: string | undefined;
+
+  /**
+   * <p>Indicates whether the data provider is virtual.</p>
+   * @public
+   */
+  Virtual?: boolean | undefined;
 
   /**
    * <p>If this attribute is Y, the current call to <code>ModifyDataProvider</code> replaces all
@@ -2317,18 +2377,16 @@ export interface StartReplicationTaskMessage {
 
   /**
    * <p>The type of replication task to start.</p>
-   *          <p>When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the
-   *          only valid value for the first run of the task is <code>start-replication</code>. This
-   *          option will start the migration.</p>
-   *          <p>You can also use <a>ReloadTables</a> to reload specific tables that failed
-   *          during migration instead of restarting the task.</p>
-   *          <p>The <code>resume-processing</code> option isn't applicable for a full-load task, because
-   *          you can't resume partially loaded tables during the full load phase.</p>
-   *          <p>For a <code>full-load-and-cdc</code> task, DMS migrates table data, and then applies
-   *          data changes that occur on the source. To load all the tables again, and start capturing
-   *          source changes, use <code>reload-target</code>. Otherwise use
-   *             <code>resume-processing</code>, to replicate the changes from the last stop
-   *          position.</p>
+   *          <p>
+   *             <code>start-replication</code> is the only valid action that can be used for the first time a task with the migration type of <code>full-load</code>full-load, <code>full-load-and-cdc</code> or <code>cdc</code> is run. Any other action used for the first time on a given task, such as <code>resume-processing</code> and reload-target will result in data errors.</p>
+   *          <p>You can also use <a>ReloadTables</a> to reload specific tables that failed during migration instead of restarting the task.</p>
+   *          <p>For a <code>full-load</code> task, the resume-processing option will reload any tables that were partially loaded or not yet loaded during the full load phase.</p>
+   *          <p>For a <code>full-load-and-cdc</code> task, DMS migrates table data, and then applies data changes that occur on the source. To load all the tables again, and start capturing source changes, use <code>reload-target</code>. Otherwise use <code>resume-processing</code>, to replicate the changes from the last stop position.</p>
+   *          <p>For a <code>cdc</code> only task, to start from a specific position, you must use start-replication and also specify the start position. Check the source endpoint DMS documentation for any limitations. For example, not all sources support starting from a time.</p>
+   *          <note>
+   *             <p>
+   *                <code>resume-processing</code> is only available for previously executed tasks.</p>
+   *          </note>
    * @public
    */
   StartReplicationTaskType: StartReplicationTaskTypeValue | undefined;

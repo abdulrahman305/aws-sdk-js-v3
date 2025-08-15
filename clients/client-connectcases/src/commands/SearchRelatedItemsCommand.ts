@@ -6,7 +6,12 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ConnectCasesClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ConnectCasesClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { SearchRelatedItemsRequest, SearchRelatedItemsResponse } from "../models/models_0";
+import {
+  SearchRelatedItemsRequest,
+  SearchRelatedItemsRequestFilterSensitiveLog,
+  SearchRelatedItemsResponse,
+  SearchRelatedItemsResponseFilterSensitiveLog,
+} from "../models/models_0";
 import { de_SearchRelatedItemsCommand, se_SearchRelatedItemsCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,11 +33,7 @@ export interface SearchRelatedItemsCommandInput extends SearchRelatedItemsReques
 export interface SearchRelatedItemsCommandOutput extends SearchRelatedItemsResponse, __MetadataBearer {}
 
 /**
- * <p>Searches for related items that are associated with a case.</p>
- *          <note>
- *             <p>If no filters are provided, this returns all related items associated with a
- *         case.</p>
- *          </note>
+ * <p>Searches for related items that are associated with a case.</p> <note> <p>If no filters are provided, this returns all related items associated with a case.</p> </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -55,6 +56,10 @@ export interface SearchRelatedItemsCommandOutput extends SearchRelatedItemsRespo
  *       comment: {},
  *       file: { // FileFilter
  *         fileArn: "STRING_VALUE",
+ *       },
+ *       sla: { // SlaFilter
+ *         name: "STRING_VALUE",
+ *         status: "STRING_VALUE",
  *       },
  *     },
  *   ],
@@ -81,12 +86,32 @@ export interface SearchRelatedItemsCommandOutput extends SearchRelatedItemsRespo
  * //         file: { // FileContent
  * //           fileArn: "STRING_VALUE", // required
  * //         },
+ * //         sla: { // SlaContent
+ * //           slaConfiguration: { // SlaConfiguration
+ * //             name: "STRING_VALUE", // required
+ * //             type: "STRING_VALUE", // required
+ * //             status: "STRING_VALUE", // required
+ * //             fieldId: "STRING_VALUE",
+ * //             targetFieldValues: [ // SlaFieldValueUnionList
+ * //               { // FieldValueUnion Union: only one key present
+ * //                 stringValue: "STRING_VALUE",
+ * //                 doubleValue: Number("double"),
+ * //                 booleanValue: true || false,
+ * //                 emptyValue: {},
+ * //                 userArnValue: "STRING_VALUE",
+ * //               },
+ * //             ],
+ * //             targetTime: new Date("TIMESTAMP"), // required
+ * //             completionTime: new Date("TIMESTAMP"),
+ * //           },
+ * //         },
  * //       },
  * //       tags: { // Tags
  * //         "<keys>": "STRING_VALUE",
  * //       },
  * //       performedBy: { // UserUnion Union: only one key present
  * //         userArn: "STRING_VALUE",
+ * //         customEntity: "STRING_VALUE",
  * //       },
  * //     },
  * //   ],
@@ -104,12 +129,10 @@ export interface SearchRelatedItemsCommandOutput extends SearchRelatedItemsRespo
  *  <p>You do not have sufficient access to perform this action.</p>
  *
  * @throws {@link InternalServerException} (server fault)
- *  <p>We couldn't process your request because of an issue with the server. Try again
- *       later.</p>
+ *  <p>We couldn't process your request because of an issue with the server. Try again later.</p>
  *
  * @throws {@link ResourceNotFoundException} (client fault)
- *  <p>We couldn't find the requested resource. Check that your resources exists and were created
- *       in the same Amazon Web Services Region as your request, and try your request again.</p>
+ *  <p>We couldn't find the requested resource. Check that your resources exists and were created in the same Amazon Web Services Region as your request, and try your request again.</p>
  *
  * @throws {@link ThrottlingException} (client fault)
  *  <p>The rate has been exceeded for this API. Please try again after a few minutes.</p>
@@ -140,7 +163,7 @@ export class SearchRelatedItemsCommand extends $Command
   })
   .s("AmazonConnectCases", "SearchRelatedItems", {})
   .n("ConnectCasesClient", "SearchRelatedItemsCommand")
-  .f(void 0, void 0)
+  .f(SearchRelatedItemsRequestFilterSensitiveLog, SearchRelatedItemsResponseFilterSensitiveLog)
   .ser(se_SearchRelatedItemsCommand)
   .de(de_SearchRelatedItemsCommand)
   .build() {

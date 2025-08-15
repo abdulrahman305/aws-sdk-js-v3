@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { CloudFrontClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../CloudFrontClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { CreatePublicKeyRequest, CreatePublicKeyResult } from "../models/models_0";
+import { CreatePublicKeyRequest, CreatePublicKeyResult } from "../models/models_1";
 import { de_CreatePublicKeyCommand, se_CreatePublicKeyCommand } from "../protocols/Aws_restXml";
 
 /**
@@ -75,8 +75,7 @@ export interface CreatePublicKeyCommandOutput extends CreatePublicKeyResult, __M
  *  <p>The specified public key already exists.</p>
  *
  * @throws {@link TooManyPublicKeys} (client fault)
- *  <p>The maximum number of public keys for field-level encryption have been created. To
- * 			create a new public key, delete one of the existing keys.</p>
+ *  <p>The maximum number of public keys for field-level encryption have been created. To create a new public key, delete one of the existing keys.</p>
  *
  * @throws {@link CloudFrontServiceException}
  * <p>Base exception class for all service exceptions from CloudFront service.</p>

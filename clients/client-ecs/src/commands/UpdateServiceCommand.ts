@@ -38,11 +38,11 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * 			constraints and strategies, and task definition. When you update any of these
  * 			parameters, Amazon ECS starts new tasks with the new configuration. </p>
  *          <p>You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when starting or
- * 			running a task, or when creating or updating a service. For more infomation, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. You can update
+ * 			running a task, or when creating or updating a service. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>. You can update
  * 			your volume configurations and trigger a new deployment.
  * 				<code>volumeConfigurations</code> is only supported for REPLICA service and not
  * 			DAEMON service. If you leave <code>volumeConfigurations</code>
- *             <code>null</code>, it doesn't trigger a new deployment. For more infomation on volumes,
+ *             <code>null</code>, it doesn't trigger a new deployment. For more information on volumes,
  * 			see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
  *          <p>For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller,
  * 			only the desired count, deployment configuration, health check grace period, task
@@ -59,7 +59,7 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * 			service by specifying the cluster that the service is running in and a new
  * 				<code>desiredCount</code> parameter.</p>
  *          <p>You can attach Amazon EBS volumes to Amazon ECS tasks by configuring the volume when starting or
- * 			running a task, or when creating or updating a service. For more infomation, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+ * 			running a task, or when creating or updating a service. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volume-types">Amazon EBS volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
  *          <p>If you have updated the container image of your application, you can create a new task
  * 			definition with that image and deploy it to your service. The service scheduler uses the
  * 			minimum healthy percent and maximum percent parameters (in the service's deployment
@@ -145,25 +145,6 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * 					running tasks for this service.</p>
  *             </li>
  *          </ul>
- *          <note>
- *             <p>You must have a service-linked role when you update any of the following service
- * 				properties:</p>
- *             <ul>
- *                <li>
- *                   <p>
- *                      <code>loadBalancers</code>,</p>
- *                </li>
- *                <li>
- *                   <p>
- *                      <code>serviceRegistries</code>
- *                   </p>
- *                </li>
- *             </ul>
- *             <p>For more information about the role see the <code>CreateService</code> request
- * 				parameter <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html#ECS-CreateService-request-role">
- *                   <code>role</code>
- *                </a>. </p>
- *          </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -196,6 +177,17 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *       rollback: true || false, // required
  *       enable: true || false, // required
  *     },
+ *     strategy: "ROLLING" || "BLUE_GREEN",
+ *     bakeTimeInMinutes: Number("int"),
+ *     lifecycleHooks: [ // DeploymentLifecycleHookList
+ *       { // DeploymentLifecycleHook
+ *         hookTargetArn: "STRING_VALUE",
+ *         roleArn: "STRING_VALUE",
+ *         lifecycleStages: [ // DeploymentLifecycleHookStageList
+ *           "RECONCILE_SERVICE" || "PRE_SCALE_UP" || "POST_SCALE_UP" || "TEST_TRAFFIC_SHIFT" || "POST_TEST_TRAFFIC_SHIFT" || "PRODUCTION_TRAFFIC_SHIFT" || "POST_PRODUCTION_TRAFFIC_SHIFT",
+ *         ],
+ *       },
+ *     ],
  *   },
  *   availabilityZoneRebalancing: "ENABLED" || "DISABLED",
  *   networkConfiguration: { // NetworkConfiguration
@@ -224,6 +216,9 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *   platformVersion: "STRING_VALUE",
  *   forceNewDeployment: true || false,
  *   healthCheckGracePeriodSeconds: Number("int"),
+ *   deploymentController: { // DeploymentController
+ *     type: "ECS" || "CODE_DEPLOY" || "EXTERNAL", // required
+ *   },
  *   enableExecuteCommand: true || false,
  *   enableECSManagedTags: true || false,
  *   loadBalancers: [ // LoadBalancers
@@ -232,6 +227,12 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *       loadBalancerName: "STRING_VALUE",
  *       containerName: "STRING_VALUE",
  *       containerPort: Number("int"),
+ *       advancedConfiguration: { // AdvancedConfiguration
+ *         alternateTargetGroupArn: "STRING_VALUE",
+ *         productionListenerRule: "STRING_VALUE",
+ *         testListenerRule: "STRING_VALUE",
+ *         roleArn: "STRING_VALUE",
+ *       },
  *     },
  *   ],
  *   propagateTags: "TASK_DEFINITION" || "SERVICE" || "NONE",
@@ -254,6 +255,14 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *           { // ServiceConnectClientAlias
  *             port: Number("int"), // required
  *             dnsName: "STRING_VALUE",
+ *             testTrafficRules: { // ServiceConnectTestTrafficRules
+ *               header: { // ServiceConnectTestTrafficHeaderRules
+ *                 name: "STRING_VALUE", // required
+ *                 value: { // ServiceConnectTestTrafficHeaderMatchRules
+ *                   exact: "STRING_VALUE", // required
+ *                 },
+ *               },
+ *             },
  *           },
  *         ],
  *         ingressPortOverride: Number("int"),
@@ -292,6 +301,7 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *         volumeType: "STRING_VALUE",
  *         sizeInGiB: Number("int"),
  *         snapshotId: "STRING_VALUE",
+ *         volumeInitializationRate: Number("int"),
  *         iops: Number("int"),
  *         throughput: Number("int"),
  *         tagSpecifications: [ // EBSTagSpecifications
@@ -332,6 +342,12 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //         loadBalancerName: "STRING_VALUE",
  * //         containerName: "STRING_VALUE",
  * //         containerPort: Number("int"),
+ * //         advancedConfiguration: { // AdvancedConfiguration
+ * //           alternateTargetGroupArn: "STRING_VALUE",
+ * //           productionListenerRule: "STRING_VALUE",
+ * //           testListenerRule: "STRING_VALUE",
+ * //           roleArn: "STRING_VALUE",
+ * //         },
  * //       },
  * //     ],
  * //     serviceRegistries: [ // ServiceRegistries
@@ -371,6 +387,17 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //         rollback: true || false, // required
  * //         enable: true || false, // required
  * //       },
+ * //       strategy: "ROLLING" || "BLUE_GREEN",
+ * //       bakeTimeInMinutes: Number("int"),
+ * //       lifecycleHooks: [ // DeploymentLifecycleHookList
+ * //         { // DeploymentLifecycleHook
+ * //           hookTargetArn: "STRING_VALUE",
+ * //           roleArn: "STRING_VALUE",
+ * //           lifecycleStages: [ // DeploymentLifecycleHookStageList
+ * //             "RECONCILE_SERVICE" || "PRE_SCALE_UP" || "POST_SCALE_UP" || "TEST_TRAFFIC_SHIFT" || "POST_TEST_TRAFFIC_SHIFT" || "PRODUCTION_TRAFFIC_SHIFT" || "POST_PRODUCTION_TRAFFIC_SHIFT",
+ * //           ],
+ * //         },
+ * //       ],
  * //     },
  * //     taskSets: [ // TaskSets
  * //       { // TaskSet
@@ -414,6 +441,12 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //             loadBalancerName: "STRING_VALUE",
  * //             containerName: "STRING_VALUE",
  * //             containerPort: Number("int"),
+ * //             advancedConfiguration: {
+ * //               alternateTargetGroupArn: "STRING_VALUE",
+ * //               productionListenerRule: "STRING_VALUE",
+ * //               testListenerRule: "STRING_VALUE",
+ * //               roleArn: "STRING_VALUE",
+ * //             },
  * //           },
  * //         ],
  * //         serviceRegistries: [
@@ -486,6 +519,14 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //                 { // ServiceConnectClientAlias
  * //                   port: Number("int"), // required
  * //                   dnsName: "STRING_VALUE",
+ * //                   testTrafficRules: { // ServiceConnectTestTrafficRules
+ * //                     header: { // ServiceConnectTestTrafficHeaderRules
+ * //                       name: "STRING_VALUE", // required
+ * //                       value: { // ServiceConnectTestTrafficHeaderMatchRules
+ * //                         exact: "STRING_VALUE", // required
+ * //                       },
+ * //                     },
+ * //                   },
  * //                 },
  * //               ],
  * //               ingressPortOverride: Number("int"),
@@ -530,6 +571,7 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * //               volumeType: "STRING_VALUE",
  * //               sizeInGiB: Number("int"),
  * //               snapshotId: "STRING_VALUE",
+ * //               volumeInitializationRate: Number("int"),
  * //               iops: Number("int"),
  * //               throughput: Number("int"),
  * //               tagSpecifications: [ // EBSTagSpecifications
@@ -618,16 +660,6 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  *  <p>These errors are usually caused by a client action. This client action might be using
  * 			an action or resource on behalf of a user that doesn't have permissions to use the
  * 			action or resource. Or, it might be specifying an identifier that isn't valid.</p>
- *          <p>The following list includes additional causes for the error:</p>
- *          <ul>
- *             <li>
- *                <p>The <code>RunTask</code> could not be processed because you use managed
- * 					scaling and there is a capacity error because the quota of tasks in the
- * 						<code>PROVISIONING</code> per cluster has been reached. For information
- * 					about the service quotas, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html">Amazon ECS
- * 						service quotas</a>.</p>
- *             </li>
- *          </ul>
  *
  * @throws {@link ClusterNotFoundException} (client fault)
  *  <p>The specified cluster wasn't found. You can view your available clusters with <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListClusters.html">ListClusters</a>. Amazon ECS clusters are Region specific.</p>
@@ -635,7 +667,8 @@ export interface UpdateServiceCommandOutput extends UpdateServiceResponse, __Met
  * @throws {@link InvalidParameterException} (client fault)
  *  <p>The specified parameter isn't valid. Review the available parameters for the API
  * 			request.</p>
- *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service event messages</a>. </p>
+ *          <p>For more information about service event errors, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-event-messages-list.html">Amazon ECS service
+ * 				event messages</a>. </p>
  *
  * @throws {@link NamespaceNotFoundException} (client fault)
  *  <p>The specified namespace wasn't found.</p>

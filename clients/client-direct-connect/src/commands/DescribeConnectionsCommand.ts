@@ -37,6 +37,8 @@ export interface DescribeConnectionsCommandOutput extends Connections, __Metadat
  * const client = new DirectConnectClient(config);
  * const input = { // DescribeConnectionsRequest
  *   connectionId: "STRING_VALUE",
+ *   maxResults: Number("int"),
+ *   nextToken: "STRING_VALUE",
  * };
  * const command = new DescribeConnectionsCommand(input);
  * const response = await client.send(command);
@@ -77,8 +79,10 @@ export interface DescribeConnectionsCommandOutput extends Connections, __Metadat
  * //           startOn: "STRING_VALUE",
  * //         },
  * //       ],
+ * //       partnerInterconnectMacSecCapable: true || false,
  * //     },
  * //   ],
+ * //   nextToken: "STRING_VALUE",
  * // };
  *
  * ```

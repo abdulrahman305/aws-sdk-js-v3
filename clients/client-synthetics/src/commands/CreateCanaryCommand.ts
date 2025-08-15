@@ -56,12 +56,21 @@ export interface CreateCanaryCommandOutput extends CreateCanaryResponse, __Metad
  *     S3Version: "STRING_VALUE",
  *     ZipFile: new Uint8Array(), // e.g. Buffer.from("") or new TextEncoder().encode("")
  *     Handler: "STRING_VALUE", // required
+ *     Dependencies: [ // Dependencies
+ *       { // Dependency
+ *         Type: "LambdaLayer",
+ *         Reference: "STRING_VALUE", // required
+ *       },
+ *     ],
  *   },
  *   ArtifactS3Location: "STRING_VALUE", // required
  *   ExecutionRoleArn: "STRING_VALUE", // required
  *   Schedule: { // CanaryScheduleInput
  *     Expression: "STRING_VALUE", // required
  *     DurationInSeconds: Number("long"),
+ *     RetryConfig: { // RetryConfigInput
+ *       MaxRetries: Number("int"), // required
+ *     },
  *   },
  *   RunConfig: { // CanaryRunConfigInput
  *     TimeoutInSeconds: Number("int"),
@@ -70,6 +79,7 @@ export interface CreateCanaryCommandOutput extends CreateCanaryResponse, __Metad
  *     EnvironmentVariables: { // EnvironmentVariablesMap
  *       "<keys>": "STRING_VALUE",
  *     },
+ *     EphemeralStorage: Number("int"),
  *   },
  *   SuccessRetentionPeriodInDays: Number("int"),
  *   FailureRetentionPeriodInDays: Number("int"),
@@ -106,16 +116,26 @@ export interface CreateCanaryCommandOutput extends CreateCanaryResponse, __Metad
  * //     Code: { // CanaryCodeOutput
  * //       SourceLocationArn: "STRING_VALUE",
  * //       Handler: "STRING_VALUE",
+ * //       Dependencies: [ // Dependencies
+ * //         { // Dependency
+ * //           Type: "LambdaLayer",
+ * //           Reference: "STRING_VALUE", // required
+ * //         },
+ * //       ],
  * //     },
  * //     ExecutionRoleArn: "STRING_VALUE",
  * //     Schedule: { // CanaryScheduleOutput
  * //       Expression: "STRING_VALUE",
  * //       DurationInSeconds: Number("long"),
+ * //       RetryConfig: { // RetryConfigOutput
+ * //         MaxRetries: Number("int"),
+ * //       },
  * //     },
  * //     RunConfig: { // CanaryRunConfigOutput
  * //       TimeoutInSeconds: Number("int"),
  * //       MemoryInMB: Number("int"),
  * //       ActiveTracing: true || false,
+ * //       EphemeralStorage: Number("int"),
  * //     },
  * //     SuccessRetentionPeriodInDays: Number("int"),
  * //     FailureRetentionPeriodInDays: Number("int"),
@@ -163,6 +183,10 @@ export interface CreateCanaryCommandOutput extends CreateCanaryResponse, __Metad
  * //         EncryptionMode: "SSE_S3" || "SSE_KMS",
  * //         KmsKeyArn: "STRING_VALUE",
  * //       },
+ * //     },
+ * //     DryRunConfig: { // DryRunConfigOutput
+ * //       DryRunId: "STRING_VALUE",
+ * //       LastDryRunExecutionStatus: "STRING_VALUE",
  * //     },
  * //   },
  * // };

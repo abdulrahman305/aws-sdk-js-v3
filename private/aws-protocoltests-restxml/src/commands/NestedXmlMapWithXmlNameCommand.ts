@@ -1,9 +1,11 @@
 // smithy-typescript generated code
+import { getEndpointPlugin } from "@smithy/middleware-endpoint";
 import { getSerdePlugin } from "@smithy/middleware-serde";
 import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
-import { NestedXmlMapWithXmlNameInputOutput } from "../models/models_0";
+import { commonParams } from "../endpoint/EndpointParameters";
+import { NestedXmlMapWithXmlNameRequest, NestedXmlMapWithXmlNameResponse } from "../models/models_0";
 import { de_NestedXmlMapWithXmlNameCommand, se_NestedXmlMapWithXmlNameCommand } from "../protocols/Aws_restXml";
 import { RestXmlProtocolClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../RestXmlProtocolClient";
 
@@ -17,13 +19,13 @@ export { $Command };
  *
  * The input for {@link NestedXmlMapWithXmlNameCommand}.
  */
-export interface NestedXmlMapWithXmlNameCommandInput extends NestedXmlMapWithXmlNameInputOutput {}
+export interface NestedXmlMapWithXmlNameCommandInput extends NestedXmlMapWithXmlNameRequest {}
 /**
  * @public
  *
  * The output of {@link NestedXmlMapWithXmlNameCommand}.
  */
-export interface NestedXmlMapWithXmlNameCommandOutput extends NestedXmlMapWithXmlNameInputOutput, __MetadataBearer {}
+export interface NestedXmlMapWithXmlNameCommandOutput extends NestedXmlMapWithXmlNameResponse, __MetadataBearer {}
 
 /**
  * Nested Xml Maps with key/values with @xmlName
@@ -33,7 +35,7 @@ export interface NestedXmlMapWithXmlNameCommandOutput extends NestedXmlMapWithXm
  * import { RestXmlProtocolClient, NestedXmlMapWithXmlNameCommand } from "@aws-sdk/aws-protocoltests-restxml"; // ES Modules import
  * // const { RestXmlProtocolClient, NestedXmlMapWithXmlNameCommand } = require("@aws-sdk/aws-protocoltests-restxml"); // CommonJS import
  * const client = new RestXmlProtocolClient(config);
- * const input = { // NestedXmlMapWithXmlNameInputOutput
+ * const input = { // NestedXmlMapWithXmlNameRequest
  *   nestedXmlMapWithXmlNameMap: { // NestedXmlMapWithXmlNameMap
  *     "<keys>": { // NestedXmlMapWithXmlNameInnerMap
  *       "<keys>": "STRING_VALUE",
@@ -42,7 +44,7 @@ export interface NestedXmlMapWithXmlNameCommandOutput extends NestedXmlMapWithXm
  * };
  * const command = new NestedXmlMapWithXmlNameCommand(input);
  * const response = await client.send(command);
- * // { // NestedXmlMapWithXmlNameInputOutput
+ * // { // NestedXmlMapWithXmlNameResponse
  * //   nestedXmlMapWithXmlNameMap: { // NestedXmlMapWithXmlNameMap
  * //     "<keys>": { // NestedXmlMapWithXmlNameInnerMap
  * //       "<keys>": "STRING_VALUE",
@@ -72,8 +74,12 @@ export class NestedXmlMapWithXmlNameCommand extends $Command
     ServiceInputTypes,
     ServiceOutputTypes
   >()
+  .ep(commonParams)
   .m(function (this: any, Command: any, cs: any, config: RestXmlProtocolClientResolvedConfig, o: any) {
-    return [getSerdePlugin(config, this.serialize, this.deserialize)];
+    return [
+      getSerdePlugin(config, this.serialize, this.deserialize),
+      getEndpointPlugin(config, Command.getEndpointParameterInstructions()),
+    ];
   })
   .s("RestXml", "NestedXmlMapWithXmlName", {})
   .n("RestXmlProtocolClient", "NestedXmlMapWithXmlNameCommand")
@@ -84,8 +90,8 @@ export class NestedXmlMapWithXmlNameCommand extends $Command
   /** @internal type navigation helper, not in runtime. */
   protected declare static __types: {
     api: {
-      input: NestedXmlMapWithXmlNameInputOutput;
-      output: NestedXmlMapWithXmlNameInputOutput;
+      input: NestedXmlMapWithXmlNameRequest;
+      output: NestedXmlMapWithXmlNameResponse;
     };
     sdk: {
       input: NestedXmlMapWithXmlNameCommandInput;

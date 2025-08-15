@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DisableImageDeprecationRequest, DisableImageDeprecationResult } from "../models/models_5";
+import { DisableImageDeprecationRequest, DisableImageDeprecationResult } from "../models/models_6";
 import { de_DisableImageDeprecationCommand, se_DisableImageDeprecationCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -29,8 +29,8 @@ export interface DisableImageDeprecationCommandOutput extends DisableImageDeprec
 
 /**
  * <p>Cancels the deprecation of the specified AMI.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-deprecate.html">Deprecate an AMI</a> in the
- *         <i>Amazon EC2 User Guide</i>.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-deprecate.html">Deprecate an Amazon EC2 AMI</a> in the
+ *       <i>Amazon EC2 User Guide</i>.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

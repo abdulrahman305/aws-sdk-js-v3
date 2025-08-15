@@ -2459,6 +2459,33 @@ export interface CopyDBSnapshotMessage {
    * @public
    */
   CopyOptionGroup?: boolean | undefined;
+
+  /**
+   * <p>Specifies the name of the Availability Zone where RDS stores the DB snapshot. This value is valid only for snapshots that RDS stores on a Dedicated Local Zone.</p>
+   * @public
+   */
+  SnapshotAvailabilityZone?: string | undefined;
+
+  /**
+   * <p>Configures the location where RDS will store copied snapshots.</p>
+   *          <p>Valid Values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>local</code> (Dedicated Local Zone)</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>outposts</code> (Amazon Web Services Outposts)</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>region</code> (Amazon Web Services Region)</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  SnapshotTarget?: string | undefined;
 }
 
 /**
@@ -2761,7 +2788,7 @@ export interface DBSnapshot {
   SnapshotDatabaseTime?: Date | undefined;
 
   /**
-   * <p>Specifies where manual snapshots are stored: Amazon Web Services Outposts or the Amazon Web Services Region.</p>
+   * <p>Specifies where manual snapshots are stored: Dedicated Local Zones, Amazon Web Services Outposts or the Amazon Web Services Region.</p>
    * @public
    */
   SnapshotTarget?: string | undefined;
@@ -2791,6 +2818,12 @@ export interface DBSnapshot {
    * @public
    */
   MultiTenant?: boolean | undefined;
+
+  /**
+   * <p>Specifies the name of the Availability Zone where RDS stores the DB snapshot. This value is valid only for snapshots that RDS stores on a Dedicated Local Zone.</p>
+   * @public
+   */
+  SnapshotAvailabilityZone?: string | undefined;
 }
 
 /**
@@ -3968,7 +4001,7 @@ export interface CustomDBEngineVersionAMI {
 }
 
 /**
- * <p>Specifies any Aurora Serverless v2 properties or limits that differ between Aurora engine versions.
+ * <p>Specifies any Aurora Serverless v2 properties or limits that differ between Aurora engine versions and platform versions.
  *         You can test the values of this attribute when deciding which Aurora version to use in a new or upgraded
  *         DB cluster. You can also retrieve the version of an existing DB cluster and check whether that version
  *         supports certain Aurora Serverless v2 features before you attempt to use those features.
@@ -3977,7 +4010,7 @@ export interface CustomDBEngineVersionAMI {
  */
 export interface ServerlessV2FeaturesSupport {
   /**
-   * <p>If the minimum capacity is 0 ACUs, the engine version supports the automatic pause/resume
+   * <p>If the minimum capacity is 0 ACUs, the engine version or platform version supports the automatic pause/resume
    *          feature of Aurora Serverless v2.</p>
    * @public
    */
@@ -3985,7 +4018,7 @@ export interface ServerlessV2FeaturesSupport {
 
   /**
    * <p>
-   *          Specifies the upper Aurora Serverless v2 capacity limit for a particular engine version.
+   *          Specifies the upper Aurora Serverless v2 capacity limit for a particular engine version or platform version.
    *          Depending on the engine version, the maximum capacity for an Aurora Serverless v2 cluster might be
    *          <code>256</code> or <code>128</code>.
    *          </p>
@@ -4523,7 +4556,7 @@ export interface ServerlessV2ScalingConfiguration {
   /**
    * <p>The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless v2 cluster.
    *             You can specify ACU values in half-step increments, such as 32, 32.5, 33, and so on. The largest value
-   *             that you can use is 256 for recent Aurora versions, or 128 for older versions.</p>
+   *             that you can use is 256 for recent Aurora versions, or 128 for older versions. You can check the attributes of your engine version or platform version to determine the specific maximum capacity supported.</p>
    * @public
    */
   MaxCapacity?: number | undefined;
@@ -5218,7 +5251,8 @@ export interface CreateDBClusterMessage {
   /**
    * <p>Specifies whether minor engine upgrades are applied automatically to the DB cluster during the maintenance window.
    *             By default, minor engine upgrades are applied automatically.</p>
-   *          <p>Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster</p>
+   *          <p>Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB cluster.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -5419,11 +5453,11 @@ export interface CreateDBClusterMessage {
    *         you can run the selected major engine version on your DB cluster past the end of standard support for that engine version. For more information, see the following sections:</p>
    *          <ul>
    *             <li>
-   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon Aurora User Guide</i>
+   *                <p>Amazon Aurora - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Amazon RDS Extended Support with Amazon Aurora</a> in the <i>Amazon Aurora User Guide</i>
    *                </p>
    *             </li>
    *             <li>
-   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>
+   *                <p>Amazon RDS - <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>
    *                </p>
    *             </li>
    *          </ul>
@@ -5900,7 +5934,7 @@ export interface ServerlessV2ScalingConfigurationInfo {
   /**
    * <p>The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless v2 cluster.
    *             You can specify ACU values in half-step increments, such as 32, 32.5, 33, and so on. The largest value
-   *             that you can use is 256 for recent Aurora versions, or 128 for older versions.</p>
+   *             that you can use is 256 for recent Aurora versions, or 128 for older versions. You can check the attributes of your engine version or platform version to determine the specific maximum capacity supported.</p>
    * @public
    */
   MaxCapacity?: number | undefined;
@@ -5951,7 +5985,7 @@ export interface DBClusterStatusInfo {
 }
 
 /**
- * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+ * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
  *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
  *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
  *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -6358,6 +6392,13 @@ export interface DBCluster {
   TagList?: Tag[] | undefined;
 
   /**
+   * <p>Contains a user-supplied global database cluster identifier. This identifier is the unique key that
+   *         identifies a global database cluster.</p>
+   * @public
+   */
+  GlobalClusterIdentifier?: string | undefined;
+
+  /**
    * <p>The status of write forwarding for a secondary cluster in an Aurora global database.</p>
    * @public
    */
@@ -6414,6 +6455,7 @@ export interface DBCluster {
   /**
    * <p>Indicates whether minor version patches are applied automatically.</p>
    *          <p>This setting is for Aurora DB clusters and Multi-AZ DB clusters.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -6486,6 +6528,12 @@ export interface DBCluster {
    * @public
    */
   ServerlessV2ScalingConfiguration?: ServerlessV2ScalingConfigurationInfo | undefined;
+
+  /**
+   * <p>The version of the Aurora Serverless V2 platform used by the DB cluster. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html">Using Aurora Serverless v2</a> in the <i>Amazon Aurora User Guide</i>.</p>
+   * @public
+   */
+  ServerlessV2PlatformVersion?: string | undefined;
 
   /**
    * <p>The network type of the DB instance.</p>
@@ -6571,7 +6619,7 @@ export interface DBCluster {
   CertificateDetails?: CertificateDetails | undefined;
 
   /**
-   * <p>The life cycle type for the DB cluster.</p>
+   * <p>The lifecycle type for the DB cluster.</p>
    *          <p>For more information, see CreateDBCluster.</p>
    * @public
    */
@@ -6583,7 +6631,7 @@ export interface DBCluster {
  */
 export interface CreateDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -8057,6 +8105,7 @@ export interface CreateDBInstanceMessage {
    *           By default, minor engine upgrades are applied automatically.</p>
    *          <p>If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to
    *           <code>false</code>.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -8595,6 +8644,10 @@ export interface CreateDBInstanceMessage {
    *          <ul>
    *             <li>
    *                <p>
+   *                   <code>local</code> (Dedicated Local Zone)</p>
+   *             </li>
+   *             <li>
+   *                <p>
    *                   <code>outposts</code> (Amazon Web Services Outposts)</p>
    *             </li>
    *             <li>
@@ -8722,7 +8775,7 @@ export interface CreateDBInstanceMessage {
    *          </note>
    *          <p>This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB instances, the life cycle type is managed by the DB cluster.</p>
    *          <p>You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With RDS Extended Support,
-   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon RDS User Guide</i>.</p>
+   *         you can run the selected major engine version on your DB instance past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html">Amazon RDS Extended Support with Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.</p>
    *          <p>Valid Values: <code>open-source-rds-extended-support | open-source-rds-extended-support-disabled</code>
    *          </p>
    *          <p>Default: <code>open-source-rds-extended-support</code>
@@ -8975,7 +9028,9 @@ export interface DBSubnetGroup {
   SubnetGroupStatus?: string | undefined;
 
   /**
-   * <p>Contains a list of <code>Subnet</code> elements.</p>
+   * <p>Contains a list of <code>Subnet</code> elements. The list of subnets shown
+   *             here might not reflect the current state of your VPC. For the most up-to-date information,
+   *             we recommend checking your VPC configuration directly.</p>
    * @public
    */
   Subnets?: Subnet[] | undefined;
@@ -9423,6 +9478,7 @@ export interface DBInstance {
 
   /**
    * <p>Indicates whether minor version patches are applied automatically.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -9455,11 +9511,13 @@ export interface DBInstance {
   ReadReplicaDBClusterIdentifiers?: string[] | undefined;
 
   /**
-   * <p>The open mode of an Oracle read replica. The default is <code>open-read-only</code>.
-   *             For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with Oracle Read Replicas for Amazon RDS</a>
-   *             in the <i>Amazon RDS User Guide</i>.</p>
+   * <p>The open mode of a Db2 or an Oracle read replica. The default is
+   *                 <code>open-read-only</code>. For more information, see  <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-replication.html">Working with read replicas for
+   *                 Amazon RDS for Db2</a>  and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with read replicas
+   *                 for Amazon RDS for Oracle</a> in the <i>Amazon RDS User Guide</i>. </p>
    *          <note>
-   *             <p>This attribute is only supported in RDS for Oracle.</p>
+   *             <p>This attribute is only supported in RDS for Db2, RDS for Oracle, and RDS Custom
+   *                 for Oracle.</p>
    *          </note>
    * @public
    */
@@ -9839,7 +9897,7 @@ export interface DBInstance {
   CustomIamInstanceProfile?: string | undefined;
 
   /**
-   * <p>The location where automated backups and manual snapshots are stored: Amazon Web Services Outposts or the Amazon Web Services Region.</p>
+   * <p>The location where automated backups and manual snapshots are stored: Dedicated Local Zones, Amazon Web Services Outposts or the Amazon Web Services Region.</p>
    * @public
    */
   BackupTarget?: string | undefined;
@@ -9933,7 +9991,7 @@ export interface DBInstance {
   MultiTenant?: boolean | undefined;
 
   /**
-   * <p>The life cycle type for the DB instance.</p>
+   * <p>The lifecycle type for the DB instance.</p>
    *          <p>For more information, see CreateDBInstance.</p>
    * @public
    */
@@ -10070,8 +10128,19 @@ export interface CreateDBInstanceReadReplicaMessage {
 
   /**
    * <p>The identifier of the DB instance that will act as the source for the read replica.
-   *             Each DB instance can have up to 15 read replicas, with the exception of Oracle and SQL
-   *             Server, which can have up to five.</p>
+   *             Each DB instance can have up to 15 read replicas, except for the following
+   *             engines:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Db2 - Can have up to three replicas.</p>
+   *             </li>
+   *             <li>
+   *                <p>Oracle - Can have up to five read replicas.</p>
+   *             </li>
+   *             <li>
+   *                <p>SQL Server - Can have up to five read replicas.</p>
+   *             </li>
+   *          </ul>
    *          <p>Constraints:</p>
    *          <ul>
    *             <li>
@@ -10152,6 +10221,7 @@ export interface CreateDBInstanceReadReplicaMessage {
    *             read replica during the maintenance window.</p>
    *          <p>This setting doesn't apply to RDS Custom DB instances.</p>
    *          <p>Default: Inherits the value from the source DB instance.</p>
+   *          <p>For more information about automatic minor version upgrades, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html#USER_UpgradeDBInstance.Upgrading.AutoMinorVersionUpgrades">Automatically upgrading the minor engine version</a>.</p>
    * @public
    */
   AutoMinorVersionUpgrade?: boolean | undefined;
@@ -10176,6 +10246,14 @@ export interface CreateDBInstanceReadReplicaMessage {
   /**
    * <p>The name of the DB parameter group to associate with this read replica DB
    *             instance.</p>
+   *          <p>For the Db2 DB engine, if your source DB instance uses the Bring Your Own License
+   *             model, then a custom parameter group must be associated with the replica. For a same
+   *             Amazon Web Services Region replica, if you don't specify a custom parameter group, Amazon RDS
+   *             associates the custom parameter group associated with the source DB instance. For a
+   *             cross-Region replica, you must specify a custom parameter group. This custom parameter
+   *             group must include your IBM Site ID and IBM Customer ID. For more information, see
+   *                 <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-licensing.html#db2-prereqs-ibm-info"> IBM IDs
+   *                 for Bring Your Own License for Db2</a>. </p>
    *          <p>For Single-AZ or Multi-AZ DB instance read replica instances, if you don't specify a
    *             value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
    *                 <code>DBParameterGroup</code> of the source DB instance for a same Region read
@@ -10186,8 +10264,8 @@ export interface CreateDBInstanceReadReplicaMessage {
    *                 <code>DBParameterGroup</code>.</p>
    *          <p>Specifying a parameter group for this operation is only supported for MySQL DB
    *             instances for cross-Region read replicas, for Multi-AZ DB cluster read replica
-   *             instances, and for Oracle DB instances. It isn't supported for MySQL DB instances for
-   *             same Region read replicas or for RDS Custom.</p>
+   *             instances, for Db2 DB instances, and for Oracle DB instances. It isn't supported for
+   *             MySQL DB instances for same Region read replicas or for RDS Custom.</p>
    *          <p>Constraints:</p>
    *          <ul>
    *             <li>
@@ -10572,19 +10650,39 @@ export interface CreateDBInstanceReadReplicaMessage {
   DomainDnsIps?: string[] | undefined;
 
   /**
-   * <p>The open mode of the replica database: mounted or read-only.</p>
+   * <p>The open mode of the replica database.</p>
    *          <note>
-   *             <p>This parameter is only supported for Oracle DB instances.</p>
+   *             <p>This parameter is only supported for Db2 DB instances and Oracle DB
+   *                 instances.</p>
    *          </note>
-   *          <p>Mounted DB replicas are included in Oracle Database Enterprise Edition. The main use case for
-   *             mounted replicas is cross-Region disaster recovery. The primary database doesn't use Active
-   *             Data Guard to transmit information to the mounted replica. Because it doesn't accept
-   *             user connections, a mounted replica can't serve a read-only workload.</p>
-   *          <p>You can create a combination of mounted and read-only DB replicas for the same primary DB instance.
-   *             For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with Oracle Read Replicas for Amazon RDS</a>
-   *             in the <i>Amazon RDS User Guide</i>.</p>
-   *          <p>For RDS Custom, you must specify this parameter and set it to <code>mounted</code>. The value won't be set by default.
-   *             After replica creation, you can manage the open mode manually.</p>
+   *          <dl>
+   *             <dt>Db2</dt>
+   *             <dd>
+   *                <p>Standby DB replicas are included in Db2 Advanced Edition (AE) and Db2
+   *                         Standard Edition (SE). The main use case for standby replicas is
+   *                         cross-Region disaster recovery. Because it doesn't accept user
+   *                         connections, a standby replica can't serve a read-only workload.</p>
+   *                <p>You can create a combination of standby and read-only DB replicas for the
+   *                         same primary DB instance. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-replication.html">Working with read
+   *                             replicas for Amazon RDS for Db2</a> in the <i>Amazon RDS User
+   *                             Guide</i>.</p>
+   *                <p>To create standby DB replicas for RDS for Db2, set this parameter to
+   *                             <code>mounted</code>.</p>
+   *             </dd>
+   *             <dt>Oracle</dt>
+   *             <dd>
+   *                <p>Mounted DB replicas are included in Oracle Database Enterprise Edition. The main use case for
+   *                     mounted replicas is cross-Region disaster recovery. The primary database doesn't use Active
+   *                     Data Guard to transmit information to the mounted replica. Because it doesn't accept
+   *                     user connections, a mounted replica can't serve a read-only workload.</p>
+   *                <p>You can create a combination of mounted and read-only DB replicas for the same primary DB instance.
+   *                     For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html">Working with read replicas for Amazon RDS for Oracle</a>
+   *                     in the <i>Amazon RDS User Guide</i>.</p>
+   *                <p>For RDS Custom, you must specify this parameter and set it to
+   *                         <code>mounted</code>. The value won't be set by default. After replica
+   *                         creation, you can manage the open mode manually.</p>
+   *             </dd>
+   *          </dl>
    * @public
    */
   ReplicaMode?: ReplicaMode | undefined;
@@ -10668,6 +10766,23 @@ export interface CreateDBInstanceReadReplicaMessage {
    * @public
    */
   EnableCustomerOwnedIp?: boolean | undefined;
+
+  /**
+   * <p>The location where RDS stores automated backups and manual snapshots.</p>
+   *          <p>Valid Values:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>local</code> for Dedicated Local Zones</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>region</code> for Amazon Web Services Region</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  BackupTarget?: string | undefined;
 
   /**
    * <p>The amount of storage (in gibibytes) to allocate initially for the read replica.
@@ -10993,7 +11108,21 @@ export interface UserAuthConfig {
   IAMAuth?: IAMAuthMode | undefined;
 
   /**
-   * <p>The type of authentication the proxy uses for connections from clients.</p>
+   * <p>The type of authentication the proxy uses for connections from clients. The following values are defaults for the corresponding engines:</p>
+   *          <ul>
+   *             <li>
+   *                <p>RDS for MySQL: <code>MYSQL_CACHING_SHA2_PASSWORD</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>RDS for SQL Server: <code>SQL_SERVER_AUTHENTICATION</code>
+   *                </p>
+   *             </li>
+   *             <li>
+   *                <p>RDS for PostgreSQL: <code>POSTGRES_SCRAM_SHA2_256</code>
+   *                </p>
+   *             </li>
+   *          </ul>
    * @public
    */
   ClientPasswordAuthType?: ClientPasswordAuthType | undefined;
@@ -11689,16 +11818,17 @@ export interface CreateDBShardGroupMessage {
   DBClusterIdentifier: string | undefined;
 
   /**
-   * <p>Specifies whether to create standby DB shard groups for the DB shard group. Valid values are the following:</p>
+   * <p>Specifies whether to create standby standby DB data access shard for the DB shard group.
+   *             Valid values are the following:</p>
    *          <ul>
    *             <li>
-   *                <p>0 - Creates a DB shard group without a standby DB shard group. This is the default value.</p>
+   *                <p>0 - Creates a DB shard group without a standby DB data access shard. This is the default value.</p>
    *             </li>
    *             <li>
-   *                <p>1 - Creates a DB shard group with a standby DB shard group in a different Availability Zone (AZ).</p>
+   *                <p>1 - Creates a DB shard group with a standby DB data access shard in a different Availability Zone (AZ).</p>
    *             </li>
    *             <li>
-   *                <p>2 - Creates a DB shard group with two standby DB shard groups in two different AZs.</p>
+   *                <p>2 - Creates a DB shard group with two standby DB data access shard in two different AZs.</p>
    *             </li>
    *          </ul>
    * @public
@@ -12403,7 +12533,7 @@ export interface CreateGlobalClusterMessage {
    *          </note>
    *          <p>This setting only applies to Aurora PostgreSQL-based global databases.</p>
    *          <p>You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With RDS Extended Support,
-   *         you can run the selected major engine version on your global cluster past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Using Amazon RDS Extended Support</a> in the <i>Amazon Aurora User Guide</i>.</p>
+   *         you can run the selected major engine version on your global cluster past the end of standard support for that engine version. For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html">Amazon RDS Extended Support with Amazon Aurora</a> in the <i>Amazon Aurora User Guide</i>.</p>
    *          <p>Valid Values: <code>open-source-rds-extended-support | open-source-rds-extended-support-disabled</code>
    *          </p>
    *          <p>Default: <code>open-source-rds-extended-support</code>
@@ -12618,7 +12748,7 @@ export interface GlobalCluster {
   EngineVersion?: string | undefined;
 
   /**
-   * <p>The life cycle type for the global cluster.</p>
+   * <p>The lifecycle type for the global cluster.</p>
    *          <p>For more information, see CreateGlobalCluster.</p>
    * @public
    */
@@ -13162,10 +13292,14 @@ export interface CreateTenantDatabaseMessage {
    *                     (<code>/</code>), double quote (<code>"</code>), at symbol (<code>@</code>),
    *                     ampersand (<code>&</code>), or single quote (<code>'</code>).</p>
    *             </li>
+   *             <li>
+   *                <p>Can't be specified when <code>ManageMasterUserPassword</code> is
+   *                     enabled.</p>
+   *             </li>
    *          </ul>
    * @public
    */
-  MasterUserPassword: string | undefined;
+  MasterUserPassword?: string | undefined;
 
   /**
    * <p>The character set for your tenant database. If you don't specify a value, the
@@ -13179,6 +13313,39 @@ export interface CreateTenantDatabaseMessage {
    * @public
    */
   NcharCharacterSetName?: string | undefined;
+
+  /**
+   * <p>Specifies whether to manage the master user password with Amazon Web Services Secrets Manager.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon RDS User Guide.</i>
+   *          </p>
+   *          <p>Constraints:</p>
+   *          <ul>
+   *             <li>
+   *                <p>Can't manage the master user password with Amazon Web Services Secrets Manager if <code>MasterUserPassword</code>
+   *                     is specified.</p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  ManageMasterUserPassword?: boolean | undefined;
+
+  /**
+   * <p>The Amazon Web Services KMS key identifier to encrypt a secret that is automatically generated and
+   *             managed in Amazon Web Services Secrets Manager.</p>
+   *          <p>This setting is valid only if the master user password is managed by RDS in Amazon Web Services Secrets
+   *             Manager for the DB instance.</p>
+   *          <p>The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+   *             To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.</p>
+   *          <p>If you don't specify <code>MasterUserSecretKmsKeyId</code>, then the <code>aws/secretsmanager</code>
+   *             KMS key is used to encrypt the secret. If the secret is in a different Amazon Web Services account, then you can't
+   *             use the <code>aws/secretsmanager</code> KMS key to encrypt the secret, and you must use a customer
+   *             managed KMS key.</p>
+   *          <p>There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account
+   *             has a different default KMS key for each Amazon Web Services Region.</p>
+   * @public
+   */
+  MasterUserSecretKmsKeyId?: string | undefined;
 
   /**
    * <p>A list of tags.</p>
@@ -13287,6 +13454,16 @@ export interface TenantDatabase {
    * @public
    */
   PendingModifiedValues?: TenantDatabasePendingModifiedValues | undefined;
+
+  /**
+   * <p>Contains the secret managed by RDS in Amazon Web Services Secrets Manager for the master user password.</p>
+   *          <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon RDS User Guide</i> and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html">Password management with Amazon Web Services Secrets Manager</a>
+   *             in the <i>Amazon Aurora User Guide.</i>
+   *          </p>
+   * @public
+   */
+  MasterUserSecret?: MasterUserSecret | undefined;
 
   /**
    * <p>A list of tags.</p>
@@ -13568,7 +13745,7 @@ export interface DeleteDBClusterMessage {
  */
 export interface DeleteDBClusterResult {
   /**
-   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.</p>
+   * <p>Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster. </p>
    *          <p>For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
    *           <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
    *           <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
@@ -14304,7 +14481,7 @@ export interface DBInstanceAutomatedBackup {
   DBInstanceAutomatedBackupsReplications?: DBInstanceAutomatedBackupsReplication[] | undefined;
 
   /**
-   * <p>The location where automated backups are stored: Amazon Web Services Outposts or the Amazon Web Services Region.</p>
+   * <p>The location where automated backups are stored: Dedicated Local Zones, Amazon Web Services Outposts or the Amazon Web Services Region.</p>
    * @public
    */
   BackupTarget?: string | undefined;

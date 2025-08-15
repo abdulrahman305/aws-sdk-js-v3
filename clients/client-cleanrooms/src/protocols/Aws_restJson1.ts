@@ -425,6 +425,8 @@ import {
   ProtectedJobStatistics,
   ProtectedJobSummary,
   ProtectedQuery,
+  ProtectedQueryDistributeOutputConfiguration,
+  ProtectedQueryDistributeOutputConfigurationLocation,
   ProtectedQueryMemberOutputConfiguration,
   ProtectedQueryOutputConfiguration,
   ProtectedQueryResultConfiguration,
@@ -1983,6 +1985,7 @@ export const se_UpdateCollaborationCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      analyticsEngine: [],
       description: [],
       name: [],
     })
@@ -2039,10 +2042,12 @@ export const se_UpdateConfiguredTableCommand = async (
   let body: any;
   body = JSON.stringify(
     take(input, {
+      allowedColumns: (_) => _json(_),
       analysisMethod: [],
       description: [],
       name: [],
       selectedAnalysisMethods: (_) => _json(_),
+      tableReference: (_) => _json(_),
     })
   );
   b.m("PATCH").h(headers).b(body);
@@ -4354,6 +4359,12 @@ const de_ValidationExceptionRes = async (parsedOutput: any, context: __SerdeCont
 
 // se_ProtectedJobS3OutputConfigurationInput omitted.
 
+// se_ProtectedQueryDistributeOutputConfiguration omitted.
+
+// se_ProtectedQueryDistributeOutputConfigurationLocation omitted.
+
+// se_ProtectedQueryDistributeOutputConfigurationLocations omitted.
+
 // se_ProtectedQueryMemberOutputConfiguration omitted.
 
 // se_ProtectedQueryOutputConfiguration omitted.
@@ -5661,6 +5672,14 @@ const de_ProtectedQuery = (output: any, context: __SerdeContext): ProtectedQuery
     status: __expectString,
   }) as any;
 };
+
+// de_ProtectedQueryDistributeOutput omitted.
+
+// de_ProtectedQueryDistributeOutputConfiguration omitted.
+
+// de_ProtectedQueryDistributeOutputConfigurationLocation omitted.
+
+// de_ProtectedQueryDistributeOutputConfigurationLocations omitted.
 
 // de_ProtectedQueryError omitted.
 

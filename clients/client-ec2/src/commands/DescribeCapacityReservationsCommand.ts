@@ -6,7 +6,8 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { EC2ClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../EC2Client";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeCapacityReservationsRequest, DescribeCapacityReservationsResult } from "../models/models_3";
+import { DescribeCapacityReservationsRequest } from "../models/models_3";
+import { DescribeCapacityReservationsResult } from "../models/models_4";
 import { de_DescribeCapacityReservationsCommand, se_DescribeCapacityReservationsCommand } from "../protocols/Aws_ec2";
 
 /**
@@ -73,7 +74,7 @@ export interface DescribeCapacityReservationsCommandOutput
  * //       AvailableInstanceCount: Number("int"),
  * //       EbsOptimized: true || false,
  * //       EphemeralStorage: true || false,
- * //       State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed" || "assessing" || "delayed" || "unsupported",
+ * //       State: "active" || "expired" || "cancelled" || "pending" || "failed" || "scheduled" || "payment-pending" || "payment-failed" || "assessing" || "delayed" || "unsupported" || "unavailable",
  * //       StartDate: new Date("TIMESTAMP"),
  * //       EndDate: new Date("TIMESTAMP"),
  * //       EndDateType: "unlimited" || "limited",
@@ -101,6 +102,7 @@ export interface DescribeCapacityReservationsCommandOutput
  * //         CommitmentEndDate: new Date("TIMESTAMP"),
  * //       },
  * //       DeliveryPreference: "fixed" || "incremental",
+ * //       CapacityBlockId: "STRING_VALUE",
  * //     },
  * //   ],
  * // };

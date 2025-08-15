@@ -32,12 +32,6 @@ export interface RegisterImageCommandOutput extends RegisterImageResult, __Metad
  *       is the final step in the creation process. For more information about creating AMIs, see
  *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot">Create an AMI from a snapshot</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-instance-store.html">Create an instance-store
  *         backed AMI</a> in the <i>Amazon EC2 User Guide</i>.</p>
- *          <note>
- *             <p>For Amazon EBS-backed instances, <a>CreateImage</a> creates and registers the AMI
- *         in a single request, so you don't have to register the AMI yourself. We recommend that you
- *         always use <a>CreateImage</a> unless you have a specific reason to use
- *         RegisterImage.</p>
- *          </note>
  *          <p>If needed, you can deregister an AMI at any time. Any modifications you make to an AMI
  *       backed by an instance store volume invalidates its registration. If you make changes to an
  *       image, deregister the previous image and register the new image.</p>
@@ -49,8 +43,8 @@ export interface RegisterImageCommandOutput extends RegisterImageResult, __Metad
  *       the encryption state of the volume using the block device mapping. If the snapshot is
  *       encrypted, or encryption by default is enabled, the root volume of an instance launched from
  *       the AMI is encrypted.</p>
- *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot">Create an AMI from a snapshot</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with Amazon EBS-backed
- *         AMIs</a> in the <i>Amazon EC2 User Guide</i>.</p>
+ *          <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot">Create an AMI from a snapshot</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with EBS-backed AMIs</a>
+ *       in the <i>Amazon EC2 User Guide</i>.</p>
  *          <p>
  *             <b>Amazon Web Services Marketplace product codes</b>
  *          </p>
@@ -63,12 +57,13 @@ export interface RegisterImageCommandOutput extends RegisterImageResult, __Metad
  *       verify if the correct billing information was applied, check the <code>PlatformDetails</code>
  *       field on the new AMI. If the field is empty or doesn't match the expected operating system
  *       code (for example, Windows, RedHat, SUSE, or SQL), the AMI creation was unsuccessful, and you
- *       should discard the AMI and instead create the AMI from an instance using <a>CreateImage</a>. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#how-to-create-ebs-ami">Create an AMI
+ *       should discard the AMI and instead create the AMI from an instance.
+ *         For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#how-to-create-ebs-ami">Create an AMI
  *         from an instance </a> in the <i>Amazon EC2 User Guide</i>.</p>
  *          <p>If you purchase a Reserved Instance to apply to an On-Demand Instance that was launched
  *       from an AMI with a billing product code, make sure that the Reserved Instance has the matching
  *       billing product code. If you purchase a Reserved Instance without the matching billing product
- *       code, the Reserved Instance will not be applied to the On-Demand Instance. For information
+ *       code, the Reserved Instance is not applied to the On-Demand Instance. For information
  *       about how to obtain the platform details and billing information of an AMI, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understand AMI
  *         billing information</a> in the <i>Amazon EC2 User Guide</i>.</p>
  * @example
@@ -88,7 +83,7 @@ export interface RegisterImageCommandOutput extends RegisterImageResult, __Metad
  *   ImdsSupport: "v2.0",
  *   TagSpecifications: [ // TagSpecificationList
  *     { // TagSpecification
- *       ResourceType: "capacity-reservation" || "client-vpn-endpoint" || "customer-gateway" || "carrier-gateway" || "coip-pool" || "declarative-policies-report" || "dedicated-host" || "dhcp-options" || "egress-only-internet-gateway" || "elastic-ip" || "elastic-gpu" || "export-image-task" || "export-instance-task" || "fleet" || "fpga-image" || "host-reservation" || "image" || "import-image-task" || "import-snapshot-task" || "instance" || "instance-event-window" || "internet-gateway" || "ipam" || "ipam-pool" || "ipam-scope" || "ipv4pool-ec2" || "ipv6pool-ec2" || "key-pair" || "launch-template" || "local-gateway" || "local-gateway-route-table" || "local-gateway-virtual-interface" || "local-gateway-virtual-interface-group" || "local-gateway-route-table-vpc-association" || "local-gateway-route-table-virtual-interface-group-association" || "natgateway" || "network-acl" || "network-interface" || "network-insights-analysis" || "network-insights-path" || "network-insights-access-scope" || "network-insights-access-scope-analysis" || "placement-group" || "prefix-list" || "replace-root-volume-task" || "reserved-instances" || "route-table" || "security-group" || "security-group-rule" || "snapshot" || "spot-fleet-request" || "spot-instances-request" || "subnet" || "subnet-cidr-reservation" || "traffic-mirror-filter" || "traffic-mirror-session" || "traffic-mirror-target" || "transit-gateway" || "transit-gateway-attachment" || "transit-gateway-connect-peer" || "transit-gateway-multicast-domain" || "transit-gateway-policy-table" || "transit-gateway-route-table" || "transit-gateway-route-table-announcement" || "volume" || "vpc" || "vpc-endpoint" || "vpc-endpoint-connection" || "vpc-endpoint-service" || "vpc-endpoint-service-permission" || "vpc-peering-connection" || "vpn-connection" || "vpn-gateway" || "vpc-flow-log" || "capacity-reservation-fleet" || "traffic-mirror-filter-rule" || "vpc-endpoint-connection-device-type" || "verified-access-instance" || "verified-access-group" || "verified-access-endpoint" || "verified-access-policy" || "verified-access-trust-provider" || "vpn-connection-device-type" || "vpc-block-public-access-exclusion" || "ipam-resource-discovery" || "ipam-resource-discovery-association" || "instance-connect-endpoint" || "verified-access-endpoint-target" || "ipam-external-resource-verification-token",
+ *       ResourceType: "capacity-reservation" || "client-vpn-endpoint" || "customer-gateway" || "carrier-gateway" || "coip-pool" || "declarative-policies-report" || "dedicated-host" || "dhcp-options" || "egress-only-internet-gateway" || "elastic-ip" || "elastic-gpu" || "export-image-task" || "export-instance-task" || "fleet" || "fpga-image" || "host-reservation" || "image" || "import-image-task" || "import-snapshot-task" || "instance" || "instance-event-window" || "internet-gateway" || "ipam" || "ipam-pool" || "ipam-scope" || "ipv4pool-ec2" || "ipv6pool-ec2" || "key-pair" || "launch-template" || "local-gateway" || "local-gateway-route-table" || "local-gateway-virtual-interface" || "local-gateway-virtual-interface-group" || "local-gateway-route-table-vpc-association" || "local-gateway-route-table-virtual-interface-group-association" || "natgateway" || "network-acl" || "network-interface" || "network-insights-analysis" || "network-insights-path" || "network-insights-access-scope" || "network-insights-access-scope-analysis" || "outpost-lag" || "placement-group" || "prefix-list" || "replace-root-volume-task" || "reserved-instances" || "route-table" || "security-group" || "security-group-rule" || "service-link-virtual-interface" || "snapshot" || "spot-fleet-request" || "spot-instances-request" || "subnet" || "subnet-cidr-reservation" || "traffic-mirror-filter" || "traffic-mirror-session" || "traffic-mirror-target" || "transit-gateway" || "transit-gateway-attachment" || "transit-gateway-connect-peer" || "transit-gateway-multicast-domain" || "transit-gateway-policy-table" || "transit-gateway-route-table" || "transit-gateway-route-table-announcement" || "volume" || "vpc" || "vpc-endpoint" || "vpc-endpoint-connection" || "vpc-endpoint-service" || "vpc-endpoint-service-permission" || "vpc-peering-connection" || "vpn-connection" || "vpn-gateway" || "vpc-flow-log" || "capacity-reservation-fleet" || "traffic-mirror-filter-rule" || "vpc-endpoint-connection-device-type" || "verified-access-instance" || "verified-access-group" || "verified-access-endpoint" || "verified-access-policy" || "verified-access-trust-provider" || "vpn-connection-device-type" || "vpc-block-public-access-exclusion" || "route-server" || "route-server-endpoint" || "route-server-peer" || "ipam-resource-discovery" || "ipam-resource-discovery-association" || "instance-connect-endpoint" || "verified-access-endpoint-target" || "ipam-external-resource-verification-token" || "capacity-block" || "mac-modification-task",
  *       Tags: [ // TagList
  *         { // Tag
  *           Key: "STRING_VALUE",
@@ -115,7 +110,10 @@ export interface RegisterImageCommandOutput extends RegisterImageResult, __Metad
  *         KmsKeyId: "STRING_VALUE",
  *         Throughput: Number("int"),
  *         OutpostArn: "STRING_VALUE",
+ *         AvailabilityZone: "STRING_VALUE",
  *         Encrypted: true || false,
+ *         VolumeInitializationRate: Number("int"),
+ *         AvailabilityZoneId: "STRING_VALUE",
  *       },
  *       NoDevice: "STRING_VALUE",
  *       DeviceName: "STRING_VALUE",

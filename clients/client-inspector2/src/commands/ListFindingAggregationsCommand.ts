@@ -85,6 +85,18 @@ export interface ListFindingAggregationsCommandOutput extends ListFindingAggrega
  *       imageTags: "<StringFilterList>",
  *       sortOrder: "STRING_VALUE",
  *       sortBy: "STRING_VALUE",
+ *       lastInUseAt: [ // DateFilterList
+ *         { // DateFilter
+ *           startInclusive: new Date("TIMESTAMP"),
+ *           endInclusive: new Date("TIMESTAMP"),
+ *         },
+ *       ],
+ *       inUseCount: [ // NumberFilterList
+ *         { // NumberFilter
+ *           upperInclusive: Number("double"),
+ *           lowerInclusive: Number("double"),
+ *         },
+ *       ],
  *     },
  *     ec2InstanceAggregation: { // Ec2InstanceAggregation
  *       amis: "<StringFilterList>",
@@ -152,6 +164,13 @@ export interface ListFindingAggregationsCommandOutput extends ListFindingAggrega
  *       sortOrder: "STRING_VALUE",
  *       sortBy: "STRING_VALUE",
  *     },
+ *     codeRepositoryAggregation: { // CodeRepositoryAggregation
+ *       projectNames: "<StringFilterList>",
+ *       providerTypes: "<StringFilterList>",
+ *       sortOrder: "STRING_VALUE",
+ *       sortBy: "STRING_VALUE",
+ *       resourceIds: "<StringFilterList>",
+ *     },
  *   },
  * };
  * const command = new ListFindingAggregationsCommand(input);
@@ -197,6 +216,8 @@ export interface ListFindingAggregationsCommandOutput extends ListFindingAggrega
  * //           high: Number("long"),
  * //           critical: Number("long"),
  * //         },
+ * //         lastInUseAt: new Date("TIMESTAMP"),
+ * //         inUseCount: Number("long"),
  * //       },
  * //       ec2InstanceAggregation: { // Ec2InstanceAggregationResponse
  * //         instanceId: "STRING_VALUE", // required
@@ -266,6 +287,15 @@ export interface ListFindingAggregationsCommandOutput extends ListFindingAggrega
  * //         accountId: "STRING_VALUE",
  * //         severityCounts: "<SeverityCounts>",
  * //         lastModifiedAt: new Date("TIMESTAMP"),
+ * //       },
+ * //       codeRepositoryAggregation: { // CodeRepositoryAggregationResponse
+ * //         projectNames: "STRING_VALUE", // required
+ * //         providerType: "STRING_VALUE",
+ * //         severityCounts: "<SeverityCounts>",
+ * //         exploitAvailableActiveFindingsCount: Number("long"),
+ * //         fixAvailableActiveFindingsCount: Number("long"),
+ * //         accountId: "STRING_VALUE",
+ * //         resourceId: "STRING_VALUE",
  * //       },
  * //     },
  * //   ],

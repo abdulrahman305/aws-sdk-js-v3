@@ -44,43 +44,31 @@ export type StatementEffect = (typeof StatementEffect)[keyof typeof StatementEff
  */
 export interface AddPolicyStatementInput {
   /**
-   * <p>The Amazon Resource Name (ARN) of the resource that will be accessed by the
-   *          principal.</p>
+   * <p>The Amazon Resource Name (ARN) of the resource that will be accessed by the principal.</p>
    * @public
    */
   arn: string | undefined;
 
   /**
-   * <p>A statement identifier that differentiates the statement from others in the same
-   *          policy.</p>
+   * <p>A statement identifier that differentiates the statement from others in the same policy.</p>
    * @public
    */
   statementId: string | undefined;
 
   /**
-   * <p>Determines whether the permissions specified in the policy are to be allowed
-   *             (<code>Allow</code>) or denied (<code>Deny</code>).</p>
-   *          <important>
-   *             <p> If you set the value of the <code>effect</code> parameter to <code>Deny</code> for
-   *             the <code>AddPolicyStatement</code> operation, you must also set the value of the
-   *                <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the
-   *                <code>PutPolicy</code> operation.</p>
-   *          </important>
+   * <p>Determines whether the permissions specified in the policy are to be allowed (<code>Allow</code>) or denied (<code>Deny</code>).</p> <important> <p> If you set the value of the <code>effect</code> parameter to <code>Deny</code> for the <code>AddPolicyStatement</code> operation, you must also set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation.</p> </important>
    * @public
    */
   effect: StatementEffect | undefined;
 
   /**
-   * <p>The action that the principal can use on the resource. </p>
-   *          <p>For example, <code>entityresolution:GetIdMappingJob</code>,
-   *             <code>entityresolution:GetMatchingJob</code>.</p>
+   * <p>The action that the principal can use on the resource. </p> <p>For example, <code>entityresolution:GetIdMappingJob</code>, <code>entityresolution:GetMatchingJob</code>.</p>
    * @public
    */
   action: string[] | undefined;
 
   /**
-   * <p>The Amazon Web Services service or Amazon Web Services account that can access the
-   *          resource defined as ARN.</p>
+   * <p>The Amazon Web Services service or Amazon Web Services account that can access the resource defined as ARN.</p>
    * @public
    */
   principal: string[] | undefined;
@@ -97,8 +85,7 @@ export interface AddPolicyStatementInput {
  */
 export interface AddPolicyStatementOutput {
   /**
-   * <p>The Amazon Resource Name (ARN) of the resource that will be accessed by the
-   *          principal.</p>
+   * <p>The Amazon Resource Name (ARN) of the resource that will be accessed by the principal.</p>
    * @public
    */
   arn: string | undefined;
@@ -117,9 +104,7 @@ export interface AddPolicyStatementOutput {
 }
 
 /**
- * <p>The request could not be processed because of conflict in the current state of the
- *          resource. Example: Workflow already exists, Schema already exists, Workflow is currently
- *          running, etc. </p>
+ * <p>The request could not be processed because of conflict in the current state of the resource. Example: Workflow already exists, Schema already exists, Workflow is currently running, etc. </p>
  * @public
  */
 export class ConflictException extends __BaseException {
@@ -139,8 +124,7 @@ export class ConflictException extends __BaseException {
 }
 
 /**
- * <p>This exception occurs when there is an internal failure in the Entity Resolution
- *          service. </p>
+ * <p>This exception occurs when there is an internal failure in the Entity Resolution service. </p>
  * @public
  */
 export class InternalServerException extends __BaseException {
@@ -362,24 +346,19 @@ export const IdMappingType = {
 export type IdMappingType = (typeof IdMappingType)[keyof typeof IdMappingType];
 
 /**
- * <p>The Amazon S3 location that temporarily stores your data while it processes.
- *          Your information won't be saved permanently.</p>
+ * <p>The Amazon S3 location that temporarily stores your data while it processes. Your information won't be saved permanently.</p>
  * @public
  */
 export interface IntermediateSourceConfiguration {
   /**
-   * <p>The Amazon S3 location (bucket and prefix). For example:
-   *             <code>s3://provider_bucket/DOC-EXAMPLE-BUCKET</code>
-   *          </p>
+   * <p>The Amazon S3 location (bucket and prefix). For example: <code>s3://provider_bucket/DOC-EXAMPLE-BUCKET</code> </p>
    * @public
    */
   intermediateS3Path: string | undefined;
 }
 
 /**
- * <p>An object containing the <code>providerServiceARN</code>,
- *             <code>intermediateSourceConfiguration</code>, and
- *          <code>providerConfiguration</code>.</p>
+ * <p>An object containing the <code>providerServiceARN</code>, <code>intermediateSourceConfiguration</code>, and <code>providerConfiguration</code>.</p>
  * @public
  */
 export interface ProviderProperties {
@@ -396,8 +375,7 @@ export interface ProviderProperties {
   providerConfiguration?: __DocumentType | undefined;
 
   /**
-   * <p>The Amazon S3 location that temporarily stores your data while it processes.
-   *          Your information won't be saved permanently.</p>
+   * <p>The Amazon S3 location that temporarily stores your data while it processes. Your information won't be saved permanently.</p>
    * @public
    */
   intermediateSourceConfiguration?: IntermediateSourceConfiguration | undefined;
@@ -433,7 +411,7 @@ export type IdMappingWorkflowRuleDefinitionType =
   (typeof IdMappingWorkflowRuleDefinitionType)[keyof typeof IdMappingWorkflowRuleDefinitionType];
 
 /**
- * <p>An object containing <code>RuleName</code>, and <code>MatchingKeys</code>.</p>
+ * <p>An object containing the <code>ruleName</code> and <code>matchingKeys</code>.</p>
  * @public
  */
 export interface Rule {
@@ -444,17 +422,14 @@ export interface Rule {
   ruleName: string | undefined;
 
   /**
-   * <p>A list of <code>MatchingKeys</code>. The <code>MatchingKeys</code> must have been
-   *          defined in the <code>SchemaMapping</code>. Two records are considered to match according to
-   *          this rule if all of the <code>MatchingKeys</code> match.</p>
+   * <p>A list of <code>MatchingKeys</code>. The <code>MatchingKeys</code> must have been defined in the <code>SchemaMapping</code>. Two records are considered to match according to this rule if all of the <code>MatchingKeys</code> match.</p>
    * @public
    */
   matchingKeys: string[] | undefined;
 }
 
 /**
- * <p> An object that defines the list of matching rules to run in an ID mapping
- *          workflow.</p>
+ * <p> An object that defines the list of matching rules to run in an ID mapping workflow.</p>
  * @public
  */
 export interface IdMappingRuleBasedProperties {
@@ -465,41 +440,26 @@ export interface IdMappingRuleBasedProperties {
   rules?: Rule[] | undefined;
 
   /**
-   * <p> The set of rules you can use in an ID mapping workflow. The limitations specified for
-   *          the source or target to define the match rules must be compatible.</p>
+   * <p> The set of rules you can use in an ID mapping workflow. The limitations specified for the source or target to define the match rules must be compatible.</p>
    * @public
    */
   ruleDefinitionType: IdMappingWorkflowRuleDefinitionType | undefined;
 
   /**
-   * <p>The comparison type. You can either choose <code>ONE_TO_ONE</code> or
-   *             <code>MANY_TO_MANY</code> as the <code>attributeMatchingModel</code>. </p>
-   *          <p>If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the
-   *          sub-types of an attribute type. For example, if the value of the <code>Email</code> field
-   *          of Profile A matches the value of the <code>BusinessEmail</code> field of Profile B, the
-   *          two profiles are matched on the <code>Email</code> attribute type. </p>
-   *          <p>If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the
-   *          sub-types are an exact match. For example, for the <code>Email</code> attribute type, the
-   *          system will only consider it a match if the value of the <code>Email</code> field of
-   *          Profile A matches the value of the <code>Email</code> field of Profile B.</p>
+   * <p>The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the <code>attributeMatchingModel</code>. </p> <p>If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match. For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.</p> <p>If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A matches the value of the <code>BusinessEmail</code> field of Profile B, the two profiles are matched on the <code>Email</code> attribute type. </p>
    * @public
    */
   attributeMatchingModel: AttributeMatchingModel | undefined;
 
   /**
-   * <p> The type of matching record that is allowed to be used in an ID mapping workflow. </p>
-   *          <p>If the value is set to <code>ONE_SOURCE_TO_ONE_TARGET</code>, only one record in the
-   *          source can be matched to the same record in the target.</p>
-   *          <p>If the value is set to <code>MANY_SOURCE_TO_ONE_TARGET</code>, multiple records in the
-   *          source can be matched to one record in the target.</p>
+   * <p> The type of matching record that is allowed to be used in an ID mapping workflow. </p> <p>If the value is set to <code>ONE_SOURCE_TO_ONE_TARGET</code>, only one record in the source can be matched to the same record in the target.</p> <p>If the value is set to <code>MANY_SOURCE_TO_ONE_TARGET</code>, multiple records in the source can be matched to one record in the target.</p>
    * @public
    */
   recordMatchingModel: RecordMatchingModel | undefined;
 }
 
 /**
- * <p>An object which defines the ID mapping technique and any additional
- *          configurations.</p>
+ * <p>An object which defines the ID mapping technique and any additional configurations.</p>
  * @public
  */
 export interface IdMappingTechniques {
@@ -510,15 +470,13 @@ export interface IdMappingTechniques {
   idMappingType: IdMappingType | undefined;
 
   /**
-   * <p> An object which defines any additional configurations required by rule-based
-   *          matching.</p>
+   * <p> An object which defines any additional configurations required by rule-based matching.</p>
    * @public
    */
   ruleBasedProperties?: IdMappingRuleBasedProperties | undefined;
 
   /**
-   * <p>An object which defines any additional configurations required by the provider
-   *          service.</p>
+   * <p>An object which defines any additional configurations required by the provider service.</p>
    * @public
    */
   providerProperties?: ProviderProperties | undefined;
@@ -539,14 +497,12 @@ export const IdNamespaceType = {
 export type IdNamespaceType = (typeof IdNamespaceType)[keyof typeof IdNamespaceType];
 
 /**
- * <p>An object containing <code>InputSourceARN</code>, <code>SchemaName</code>, and
- *             <code>Type</code>.</p>
+ * <p>An object containing <code>inputSourceARN</code>, <code>schemaName</code>, and <code>type</code>.</p>
  * @public
  */
 export interface IdMappingWorkflowInputSource {
   /**
-   * <p>An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for
-   *          the input source table.</p>
+   * <p>An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.</p>
    * @public
    */
   inputSourceARN: string | undefined;
@@ -558,12 +514,7 @@ export interface IdMappingWorkflowInputSource {
   schemaName?: string | undefined;
 
   /**
-   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and
-   *             <code>TARGET</code>. </p>
-   *          <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will
-   *          be processed in an ID mapping workflow. </p>
-   *          <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> which all
-   *             <code>sourceIds</code> will resolve to.</p>
+   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p> <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID mapping workflow. </p> <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will resolve to.</p>
    * @public
    */
   type?: IdNamespaceType | undefined;
@@ -581,8 +532,7 @@ export interface IdMappingWorkflowOutputSource {
   outputS3Path: string | undefined;
 
   /**
-   * <p>Customer KMS ARN for encryption at rest. If not provided, system will use
-   *          an Entity Resolution managed KMS key.</p>
+   * <p>Customer KMS ARN for encryption at rest. If not provided, system will use an Entity Resolution managed KMS key.</p>
    * @public
    */
   KMSArn?: string | undefined;
@@ -593,8 +543,7 @@ export interface IdMappingWorkflowOutputSource {
  */
 export interface CreateIdMappingWorkflowInput {
   /**
-   * <p>The name of the workflow. There can't be multiple <code>IdMappingWorkflows</code> with
-   *          the same name.</p>
+   * <p>The name of the workflow. There can't be multiple <code>IdMappingWorkflows</code> with the same name.</p>
    * @public
    */
   workflowName: string | undefined;
@@ -606,29 +555,25 @@ export interface CreateIdMappingWorkflowInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: IdMappingWorkflowInputSource[] | undefined;
 
   /**
-   * <p>A list of <code>IdMappingWorkflowOutputSource</code> objects, each of which contains
-   *          fields <code>OutputS3Path</code> and <code>Output</code>.</p>
+   * <p>A list of <code>IdMappingWorkflowOutputSource</code> objects, each of which contains fields <code>outputS3Path</code> and <code>KMSArn</code>.</p>
    * @public
    */
   outputSourceConfig?: IdMappingWorkflowOutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the ID mapping technique and any additional
-   *          configurations.</p>
+   * <p>An object which defines the ID mapping technique and any additional configurations.</p>
    * @public
    */
   idMappingTechniques: IdMappingTechniques | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to create resources on your behalf as part of workflow execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to create resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -651,8 +596,7 @@ export interface CreateIdMappingWorkflowOutput {
   workflowName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>IDMappingWorkflow</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>IDMappingWorkflow</code>.</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -664,38 +608,32 @@ export interface CreateIdMappingWorkflowOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: IdMappingWorkflowInputSource[] | undefined;
 
   /**
-   * <p>A list of <code>IdMappingWorkflowOutputSource</code> objects, each of which contains
-   *          fields <code>OutputS3Path</code> and <code>Output</code>.</p>
+   * <p>A list of <code>IdMappingWorkflowOutputSource</code> objects, each of which contains fields <code>outputS3Path</code> and <code>KMSArn</code>.</p>
    * @public
    */
   outputSourceConfig?: IdMappingWorkflowOutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the ID mapping technique and any additional
-   *          configurations.</p>
+   * <p>An object which defines the ID mapping technique and any additional configurations.</p>
    * @public
    */
   idMappingTechniques: IdMappingTechniques | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to create resources on your behalf as part of workflow execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to create resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn?: string | undefined;
 }
 
 /**
- * <p>The request was rejected because it attempted to create resources beyond the current
- *             Entity Resolution account limits. The error message describes the limit exceeded.
- *       </p>
+ * <p>The request was rejected because it attempted to create resources beyond the current Entity Resolution account limits. The error message describes the limit exceeded. </p>
  * @public
  */
 export class ExceedsLimitException extends __BaseException {
@@ -729,8 +667,7 @@ export class ExceedsLimitException extends __BaseException {
 }
 
 /**
- * <p>An object containing <code>ProviderConfiguration</code> and
- *             <code>ProviderServiceArn</code>.</p>
+ * <p>An object containing <code>providerConfiguration</code> and <code>providerServiceArn</code>.</p>
  * @public
  */
 export interface NamespaceProviderProperties {
@@ -741,16 +678,14 @@ export interface NamespaceProviderProperties {
   providerServiceArn: string | undefined;
 
   /**
-   * <p>An object which defines any additional configurations required by the provider
-   *          service.</p>
+   * <p>An object which defines any additional configurations required by the provider service.</p>
    * @public
    */
   providerConfiguration?: __DocumentType | undefined;
 }
 
 /**
- * <p> The rule-based properties of an ID namespace. These properties define how the ID
- *          namespace can be used in an ID mapping workflow.</p>
+ * <p> The rule-based properties of an ID namespace. These properties define how the ID namespace can be used in an ID mapping workflow.</p>
  * @public
  */
 export interface NamespaceRuleBasedProperties {
@@ -761,41 +696,26 @@ export interface NamespaceRuleBasedProperties {
   rules?: Rule[] | undefined;
 
   /**
-   * <p> The sets of rules you can use in an ID mapping workflow. The limitations specified for
-   *          the source and target must be compatible.</p>
+   * <p> The sets of rules you can use in an ID mapping workflow. The limitations specified for the source and target must be compatible.</p>
    * @public
    */
   ruleDefinitionTypes?: IdMappingWorkflowRuleDefinitionType[] | undefined;
 
   /**
-   * <p>The comparison type. You can either choose <code>ONE_TO_ONE</code> or
-   *             <code>MANY_TO_MANY</code> as the <code>attributeMatchingModel</code>. </p>
-   *          <p>If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the
-   *          sub-types of an attribute type. For example, if the value of the <code>Email</code> field
-   *          of Profile A matches the value of <code>BusinessEmail</code> field of Profile B, the two
-   *          profiles are matched on the <code>Email</code> attribute type. </p>
-   *          <p>If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the
-   *          sub-types are an exact match. For example, for the <code>Email</code> attribute type, the
-   *          system will only consider it a match if the value of the <code>Email</code> field of
-   *          Profile A matches the value of the <code>Email</code> field of Profile B.</p>
+   * <p>The comparison type. You can either choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the <code>attributeMatchingModel</code>. </p> <p>If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match. For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.</p> <p>If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A matches the value of <code>BusinessEmail</code> field of Profile B, the two profiles are matched on the <code>Email</code> attribute type. </p>
    * @public
    */
   attributeMatchingModel?: AttributeMatchingModel | undefined;
 
   /**
-   * <p> The type of matching record that is allowed to be used in an ID mapping workflow. </p>
-   *          <p>If the value is set to <code>ONE_SOURCE_TO_ONE_TARGET</code>, only one record in the
-   *          source is matched to one record in the target. </p>
-   *          <p>If the value is set to <code>MANY_SOURCE_TO_ONE_TARGET</code>, all matching records in
-   *          the source are matched to one record in the target.</p>
+   * <p> The type of matching record that is allowed to be used in an ID mapping workflow. </p> <p>If the value is set to <code>ONE_SOURCE_TO_ONE_TARGET</code>, only one record in the source is matched to one record in the target. </p> <p>If the value is set to <code>MANY_SOURCE_TO_ONE_TARGET</code>, all matching records in the source are matched to one record in the target.</p>
    * @public
    */
   recordMatchingModels?: RecordMatchingModel[] | undefined;
 }
 
 /**
- * <p>An object containing <code>IdMappingType</code>, <code>ProviderProperties</code>, and
- *             <code>RuleBasedProperties</code>.</p>
+ * <p>An object containing <code>idMappingType</code>, <code>providerProperties</code>, and <code>ruleBasedProperties</code>.</p>
  * @public
  */
 export interface IdNamespaceIdMappingWorkflowProperties {
@@ -806,28 +726,25 @@ export interface IdNamespaceIdMappingWorkflowProperties {
   idMappingType: IdMappingType | undefined;
 
   /**
-   * <p> An object which defines any additional configurations required by rule-based
-   *          matching.</p>
+   * <p> An object which defines any additional configurations required by rule-based matching.</p>
    * @public
    */
   ruleBasedProperties?: NamespaceRuleBasedProperties | undefined;
 
   /**
-   * <p>An object which defines any additional configurations required by the provider
-   *          service.</p>
+   * <p>An object which defines any additional configurations required by the provider service.</p>
    * @public
    */
   providerProperties?: NamespaceProviderProperties | undefined;
 }
 
 /**
- * <p>An object containing <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+ * <p>An object containing <code>inputSourceARN</code> and <code>schemaName</code>.</p>
  * @public
  */
 export interface IdNamespaceInputSource {
   /**
-   * <p>An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for
-   *          the input source table.</p>
+   * <p>An Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source table.</p>
    * @public
    */
   inputSourceARN: string | undefined;
@@ -856,35 +773,25 @@ export interface CreateIdNamespaceInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig?: IdNamespaceInputSource[] | undefined;
 
   /**
-   * <p>Determines the properties of <code>IdMappingWorflow</code> where this
-   *             <code>IdNamespace</code> can be used as a <code>Source</code> or a
-   *          <code>Target</code>.</p>
+   * <p>Determines the properties of <code>IdMappingWorflow</code> where this <code>IdNamespace</code> can be used as a <code>Source</code> or a <code>Target</code>.</p>
    * @public
    */
   idMappingWorkflowProperties?: IdNamespaceIdMappingWorkflowProperties[] | undefined;
 
   /**
-   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and
-   *             <code>TARGET</code>. </p>
-   *          <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will
-   *          be processed in an ID mapping workflow. </p>
-   *          <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-   *             <code>sourceIds</code> will resolve to.</p>
+   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>. </p> <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID mapping workflow. </p> <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code> will resolve to.</p>
    * @public
    */
   type: IdNamespaceType | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access the resources defined in this <code>IdNamespace</code> on your behalf
-   *          as part of the workflow run.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access the resources defined in this <code>IdNamespace</code> on your behalf as part of the workflow run.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -919,35 +826,25 @@ export interface CreateIdNamespaceOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig?: IdNamespaceInputSource[] | undefined;
 
   /**
-   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this
-   *             <code>IdNamespace</code> can be used as a <code>Source</code> or a
-   *          <code>Target</code>.</p>
+   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this <code>IdNamespace</code> can be used as a <code>Source</code> or a <code>Target</code>.</p>
    * @public
    */
   idMappingWorkflowProperties?: IdNamespaceIdMappingWorkflowProperties[] | undefined;
 
   /**
-   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and
-   *             <code>TARGET</code>.</p>
-   *          <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will
-   *          be processed in an ID mapping workflow. </p>
-   *          <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-   *             <code>sourceIds</code> will resolve to.</p>
+   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.</p> <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID mapping workflow. </p> <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code> will resolve to.</p>
    * @public
    */
   type: IdNamespaceType | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access the resources defined in <code>inputSourceConfig</code> on your behalf
-   *          as part of the workflow run.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access the resources defined in <code>inputSourceConfig</code> on your behalf as part of the workflow run.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -985,27 +882,24 @@ export const IncrementalRunType = {
 export type IncrementalRunType = (typeof IncrementalRunType)[keyof typeof IncrementalRunType];
 
 /**
- * <p>An object which defines an incremental run type and has only
- *             <code>incrementalRunType</code> as a field.</p>
+ * <p>Optional. An object that defines the incremental run type. This object contains only the <code>incrementalRunType</code> field, which appears as "Automatic" in the console. </p> <important> <p>For workflows where <code>resolutionType</code> is <code>ML_MATCHING</code>, incremental processing is not supported. </p> </important>
  * @public
  */
 export interface IncrementalRunConfig {
   /**
-   * <p>The type of incremental run. It takes only one value: <code>IMMEDIATE</code>.</p>
+   * <p>The type of incremental run. The only valid value is <code>IMMEDIATE</code>. This appears as "Automatic" in the console.</p> <important> <p>For workflows where <code>resolutionType</code> is <code>ML_MATCHING</code>, incremental processing is not supported. </p> </important>
    * @public
    */
   incrementalRunType?: IncrementalRunType | undefined;
 }
 
 /**
- * <p>An object containing <code>InputSourceARN</code>, <code>SchemaName</code>, and
- *             <code>ApplyNormalization</code>.</p>
+ * <p>An object containing <code>inputSourceARN</code>, <code>schemaName</code>, and <code>applyNormalization</code>.</p>
  * @public
  */
 export interface InputSource {
   /**
-   * <p>An Glue table Amazon Resource Name (ARN) for the input source
-   *          table.</p>
+   * <p>An Glue table Amazon Resource Name (ARN) for the input source table.</p>
    * @public
    */
   inputSourceARN: string | undefined;
@@ -1017,25 +911,19 @@ export interface InputSource {
   schemaName: string | undefined;
 
   /**
-   * <p>Normalizes the attributes defined in the schema in the input data. For example, if an
-   *          attribute has an <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in
-   *          the input table is in a format of 1234567890, Entity Resolution will normalize this field
-   *          in the output to (123)-456-7890.</p>
+   * <p>Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.</p>
    * @public
    */
   applyNormalization?: boolean | undefined;
 }
 
 /**
- * <p>A list of <code>OutputAttribute</code> objects, each of which have the fields
- *             <code>Name</code> and <code>Hashed</code>. Each of these objects selects a column to be
- *          included in the output table, and whether the values of the column should be hashed.</p>
+ * <p>A list of <code>OutputAttribute</code> objects, each of which have the fields <code>Name</code> and <code>Hashed</code>. Each of these objects selects a column to be included in the output table, and whether the values of the column should be hashed.</p>
  * @public
  */
 export interface OutputAttribute {
   /**
-   * <p>A name of a column to be written to the output. This must be an <code>InputField</code>
-   *          name in the schema mapping.</p>
+   * <p>A name of a column to be written to the output. This must be an <code>InputField</code> name in the schema mapping.</p>
    * @public
    */
   name: string | undefined;
@@ -1048,9 +936,7 @@ export interface OutputAttribute {
 }
 
 /**
- * <p>A list of <code>OutputAttribute</code> objects, each of which have the fields
- *             <code>Name</code> and <code>Hashed</code>. Each of these objects selects a column to be
- *          included in the output table, and whether the values of the column should be hashed.</p>
+ * <p>A list of <code>OutputAttribute</code> objects, each of which have the fields <code>Name</code> and <code>Hashed</code>. Each of these objects selects a column to be included in the output table, and whether the values of the column should be hashed.</p>
  * @public
  */
 export interface OutputSource {
@@ -1067,18 +953,13 @@ export interface OutputSource {
   KMSArn?: string | undefined;
 
   /**
-   * <p>A list of <code>OutputAttribute</code> objects, each of which have the fields
-   *             <code>Name</code> and <code>Hashed</code>. Each of these objects selects a column to be
-   *          included in the output table, and whether the values of the column should be hashed.</p>
+   * <p>A list of <code>OutputAttribute</code> objects, each of which have the fields <code>Name</code> and <code>Hashed</code>. Each of these objects selects a column to be included in the output table, and whether the values of the column should be hashed.</p>
    * @public
    */
   output: OutputAttribute[] | undefined;
 
   /**
-   * <p>Normalizes the attributes defined in the schema in the input data. For example, if an
-   *          attribute has an <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in
-   *          the input table is in a format of 1234567890, Entity Resolution will normalize this field
-   *          in the output to (123)-456-7890.</p>
+   * <p>Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.</p>
    * @public
    */
   applyNormalization?: boolean | undefined;
@@ -1114,64 +995,81 @@ export const MatchPurpose = {
 export type MatchPurpose = (typeof MatchPurpose)[keyof typeof MatchPurpose];
 
 /**
- * <p>An object which defines the list of matching rules to run in a matching workflow.
- *          RuleBasedProperties contain a <code>Rules</code> field, which is a list of rule
- *          objects.</p>
+ * <p>An object which defines the list of matching rules to run in a matching workflow. </p>
  * @public
  */
 export interface RuleBasedProperties {
   /**
-   * <p>A list of <code>Rule</code> objects, each of which have fields <code>RuleName</code> and
-   *             <code>MatchingKeys</code>.</p>
+   * <p>A list of <code>Rule</code> objects, each of which have fields <code>RuleName</code> and <code>MatchingKeys</code>.</p>
    * @public
    */
   rules: Rule[] | undefined;
 
   /**
-   * <p>The comparison type. You can either choose <code>ONE_TO_ONE</code> or
-   *             <code>MANY_TO_MANY</code> as the <code>attributeMatchingModel</code>. </p>
-   *          <p>If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the
-   *          sub-types of an attribute type. For example, if the value of the <code>Email</code> field
-   *          of Profile A and the value of <code>BusinessEmail</code> field of Profile B matches, the
-   *          two profiles are matched on the <code>Email</code> attribute type. </p>
-   *          <p>If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the
-   *          sub-types are an exact match. For example, for the <code>Email</code> attribute type, the
-   *          system will only consider it a match if the value of the <code>Email</code> field of
-   *          Profile A matches the value of the <code>Email</code> field of Profile B.</p>
+   * <p>The comparison type. You can choose <code>ONE_TO_ONE</code> or <code>MANY_TO_MANY</code> as the <code>attributeMatchingModel</code>. </p> <p>If you choose <code>ONE_TO_ONE</code>, the system can only match attributes if the sub-types are an exact match. For example, for the <code>Email</code> attribute type, the system will only consider it a match if the value of the <code>Email</code> field of Profile A matches the value of the <code>Email</code> field of Profile B.</p> <p>If you choose <code>MANY_TO_MANY</code>, the system can match attributes across the sub-types of an attribute type. For example, if the value of the <code>Email</code> field of Profile A and the value of <code>BusinessEmail</code> field of Profile B matches, the two profiles are matched on the <code>Email</code> attribute type. </p>
    * @public
    */
   attributeMatchingModel: AttributeMatchingModel | undefined;
 
   /**
-   * <p> An indicator of whether to generate IDs and index the data or not.</p>
-   *          <p>If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes
-   *          the data.</p>
-   *          <p>If you choose <code>INDEXING</code>, the process indexes the data without generating
-   *          IDs.</p>
+   * <p> An indicator of whether to generate IDs and index the data or not.</p> <p>If you choose <code>IDENTIFIER_GENERATION</code>, the process generates IDs and indexes the data.</p> <p>If you choose <code>INDEXING</code>, the process indexes the data without generating IDs.</p>
    * @public
    */
   matchPurpose?: MatchPurpose | undefined;
 }
 
 /**
- * <p>An object which defines the <code>resolutionType</code> and the
- *             <code>ruleBasedProperties</code>.</p>
+ * <p>An object that defines the <code>ruleCondition</code> and the <code>ruleName</code> to use in a matching workflow.</p>
+ * @public
+ */
+export interface RuleCondition {
+  /**
+   * <p>A name for the matching rule.</p> <p>For example: <code>Rule1</code> </p>
+   * @public
+   */
+  ruleName: string | undefined;
+
+  /**
+   * <p>A statement that specifies the conditions for a matching rule.</p> <p>If your data is accurate, use an Exact matching function: <code>Exact</code> or <code>ExactManyToMany</code>. </p> <p>If your data has variations in spelling or pronunciation, use a Fuzzy matching function: <code>Cosine</code>, <code>Levenshtein</code>, or <code>Soundex</code>. </p> <p>Use operators if you want to combine (<code>AND</code>), separate (<code>OR</code>), or group matching functions <code>(...)</code>.</p> <p>For example: <code>(Cosine(a, 10) AND Exact(b, true)) OR ExactManyToMany(c, d)</code> </p>
+   * @public
+   */
+  condition: string | undefined;
+}
+
+/**
+ * <p>The properties of a rule condition that provides the ability to use more complex syntax.</p>
+ * @public
+ */
+export interface RuleConditionProperties {
+  /**
+   * <p> A list of rule objects, each of which have fields <code>ruleName</code> and <code>condition</code>. </p>
+   * @public
+   */
+  rules: RuleCondition[] | undefined;
+}
+
+/**
+ * <p>An object which defines the <code>resolutionType</code> and the <code>ruleBasedProperties</code>.</p>
  * @public
  */
 export interface ResolutionTechniques {
   /**
-   * <p>The type of matching. There are three types of matching: <code>RULE_MATCHING</code>,
-   *             <code>ML_MATCHING</code>, and <code>PROVIDER</code>.</p>
+   * <p>The type of matching. There are three types of matching: <code>RULE_MATCHING</code>, <code>ML_MATCHING</code>, and <code>PROVIDER</code>.</p>
    * @public
    */
   resolutionType: ResolutionType | undefined;
 
   /**
-   * <p>An object which defines the list of matching rules to run and has a field
-   *             <code>Rules</code>, which is a list of rule objects.</p>
+   * <p>An object which defines the list of matching rules to run and has a field <code>rules</code>, which is a list of rule objects.</p>
    * @public
    */
   ruleBasedProperties?: RuleBasedProperties | undefined;
+
+  /**
+   * <p>An object containing the <code>rules</code> for a matching workflow.</p>
+   * @public
+   */
+  ruleConditionProperties?: RuleConditionProperties | undefined;
 
   /**
    * <p>The properties of the provider service.</p>
@@ -1185,8 +1083,7 @@ export interface ResolutionTechniques {
  */
 export interface CreateMatchingWorkflowInput {
   /**
-   * <p>The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with
-   *          the same name.</p>
+   * <p>The name of the workflow. There can't be multiple <code>MatchingWorkflows</code> with the same name.</p>
    * @public
    */
   workflowName: string | undefined;
@@ -1198,37 +1095,31 @@ export interface CreateMatchingWorkflowInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: InputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code>, <code>ApplyNormalization</code>, and
-   *          <code>Output</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code>, <code>applyNormalization</code>, <code>KMSArn</code>, and <code>output</code>.</p>
    * @public
    */
   outputSourceConfig: OutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the <code>resolutionType</code> and the
-   *             <code>ruleBasedProperties</code>.</p>
+   * <p>An object which defines the <code>resolutionType</code> and the <code>ruleBasedProperties</code>.</p>
    * @public
    */
   resolutionTechniques: ResolutionTechniques | undefined;
 
   /**
-   * <p>An object which defines an incremental run type and has only
-   *             <code>incrementalRunType</code> as a field.</p>
+   * <p>Optional. An object that defines the incremental run type. This object contains only the <code>incrementalRunType</code> field, which appears as "Automatic" in the console. </p> <important> <p>For workflows where <code>resolutionType</code> is <code>ML_MATCHING</code>, incremental processing is not supported. </p> </important>
    * @public
    */
   incrementalRunConfig?: IncrementalRunConfig | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to create resources on your behalf as part of workflow execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to create resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -1251,8 +1142,7 @@ export interface CreateMatchingWorkflowOutput {
   workflowName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>MatchingWorkflow</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>MatchingWorkflow</code>.</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -1264,37 +1154,31 @@ export interface CreateMatchingWorkflowOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: InputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code>, <code>ApplyNormalization</code>, and
-   *          <code>Output</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code>, <code>applyNormalization</code>, <code>KMSArn</code>, and <code>output</code>.</p>
    * @public
    */
   outputSourceConfig: OutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the <code>resolutionType</code> and the
-   *             <code>ruleBasedProperties</code>.</p>
+   * <p>An object which defines the <code>resolutionType</code> and the <code>ruleBasedProperties</code>.</p>
    * @public
    */
   resolutionTechniques: ResolutionTechniques | undefined;
 
   /**
-   * <p>An object which defines an incremental run type and has only
-   *             <code>incrementalRunType</code> as a field.</p>
+   * <p>An object which defines an incremental run type and has only <code>incrementalRunType</code> as a field.</p>
    * @public
    */
   incrementalRunConfig?: IncrementalRunConfig | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to create resources on your behalf as part of workflow execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to create resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -1315,6 +1199,9 @@ export const SchemaAttributeType = {
   ADDRESS_STREET3: "ADDRESS_STREET3",
   DATE: "DATE",
   EMAIL_ADDRESS: "EMAIL_ADDRESS",
+  IPV4: "IPV4",
+  IPV6: "IPV6",
+  MAID: "MAID",
   NAME: "NAME",
   NAME_FIRST: "NAME_FIRST",
   NAME_LAST: "NAME_LAST",
@@ -1333,8 +1220,7 @@ export const SchemaAttributeType = {
 export type SchemaAttributeType = (typeof SchemaAttributeType)[keyof typeof SchemaAttributeType];
 
 /**
- * <p>An object containing <code>FieldName</code>, <code>Type</code>, <code>GroupName</code>,
- *             <code>MatchKey</code>, <code>Hashing</code>, and <code>SubType</code>.</p>
+ * <p>A configuration object for defining input data fields in Entity Resolution. The <code>SchemaInputAttribute</code> specifies how individual fields in your input data should be processed and matched.</p>
  * @public
  */
 export interface SchemaInputAttribute {
@@ -1345,30 +1231,19 @@ export interface SchemaInputAttribute {
   fieldName: string | undefined;
 
   /**
-   * <p>The type of the attribute, selected from a list of values.</p>
+   * <p>The type of the attribute, selected from a list of values.</p> <p>LiveRamp supports: <code>NAME</code> | <code>NAME_FIRST</code> | <code>NAME_MIDDLE</code> | <code>NAME_LAST</code> | <code>ADDRESS</code> | <code>ADDRESS_STREET1</code> | <code>ADDRESS_STREET2</code> | <code>ADDRESS_STREET3</code> | <code>ADDRESS_CITY</code> | <code>ADDRESS_STATE</code> | <code>ADDRESS_COUNTRY</code> | <code>ADDRESS_POSTALCODE</code> | <code>PHONE</code> | <code>PHONE_NUMBER</code> | <code>EMAIL_ADDRESS</code> | <code>UNIQUE_ID</code> | <code>PROVIDER_ID</code> </p> <p>TransUnion supports: <code>NAME</code> | <code>NAME_FIRST</code> | <code>NAME_LAST</code> | <code>ADDRESS</code> | <code>ADDRESS_CITY</code> | <code>ADDRESS_STATE</code> | <code>ADDRESS_COUNTRY</code> | <code>ADDRESS_POSTALCODE</code> | <code>PHONE_NUMBER</code> | <code>EMAIL_ADDRESS</code> | <code>UNIQUE_ID</code> | <code>IPV4</code> | <code>IPV6</code> | <code>MAID</code> </p> <p>Unified ID 2.0 supports: <code>PHONE_NUMBER</code> | <code>EMAIL_ADDRESS</code> | <code>UNIQUE_ID</code> </p> <note> <p>Normalization is only supported for <code>NAME</code>, <code>ADDRESS</code>, <code>PHONE</code>, and <code>EMAIL_ADDRESS</code>. </p> <p>If you want to normalize <code>NAME_FIRST</code>, <code>NAME_MIDDLE</code>, and <code>NAME_LAST</code>, you must group them by assigning them to the <code>NAME</code> <code>groupName</code>. </p> <p>If you want to normalize <code>ADDRESS_STREET1</code>, <code>ADDRESS_STREET2</code>, <code>ADDRESS_STREET3</code>, <code>ADDRESS_CITY</code>, <code>ADDRESS_STATE</code>, <code>ADDRESS_COUNTRY</code>, and <code>ADDRESS_POSTALCODE</code>, you must group them by assigning them to the <code>ADDRESS</code> <code>groupName</code>. </p> <p>If you want to normalize <code>PHONE_NUMBER</code> and <code>PHONE_COUNTRYCODE</code>, you must group them by assigning them to the <code>PHONE</code> <code>groupName</code>. </p> </note>
    * @public
    */
   type: SchemaAttributeType | undefined;
 
   /**
-   * <p>A string that instructs Entity Resolution to combine several columns into a unified
-   *          column with the identical attribute type. </p>
-   *          <p>For example, when working with columns such as <code>first_name</code>,
-   *             <code>middle_name</code>, and <code>last_name</code>, assigning them a common
-   *             <code>groupName</code> will prompt Entity Resolution to concatenate them into a single
-   *          value.</p>
+   * <p>A string that instructs Entity Resolution to combine several columns into a unified column with the identical attribute type. </p> <p>For example, when working with columns such as <code>NAME_FIRST</code>, <code>NAME_MIDDLE</code>, and <code>NAME_LAST</code>, assigning them a common <code>groupName</code> will prompt Entity Resolution to concatenate them into a single value.</p>
    * @public
    */
   groupName?: string | undefined;
 
   /**
-   * <p>A key that allows grouping of multiple input attributes into a unified matching group. </p>
-   *          <p>For example, consider a scenario where the source table contains various addresses, such
-   *          as <code>business_address</code> and <code>shipping_address</code>.  By assigning a
-   *             <code>matchKey</code> called <code>address</code> to both attributes, Entity Resolution
-   *          will match records across these fields to create a consolidated matching group.</p>
-   *          <p>If no <code>matchKey</code> is specified for a column, it won't be utilized for matching
-   *          purposes but will still be included in the output table.</p>
+   * <p>A key that allows grouping of multiple input attributes into a unified matching group. </p> <p>For example, consider a scenario where the source table contains various addresses, such as <code>business_address</code> and <code>shipping_address</code>. By assigning a <code>matchKey</code> called <code>address</code> to both attributes, Entity Resolution will match records across these fields to create a consolidated matching group.</p> <p>If no <code>matchKey</code> is specified for a column, it won't be utilized for matching purposes but will still be included in the output table.</p>
    * @public
    */
   matchKey?: string | undefined;
@@ -1380,9 +1255,7 @@ export interface SchemaInputAttribute {
   subType?: string | undefined;
 
   /**
-   * <p> Indicates if the column values are hashed in the schema input. If the value is set to
-   *             <code>TRUE</code>, the column values are hashed. If the value is set to
-   *             <code>FALSE</code>, the column values are cleartext.</p>
+   * <p> Indicates if the column values are hashed in the schema input. </p> <p>If the value is set to <code>TRUE</code>, the column values are hashed. </p> <p>If the value is set to <code>FALSE</code>, the column values are cleartext.</p>
    * @public
    */
   hashed?: boolean | undefined;
@@ -1393,8 +1266,7 @@ export interface SchemaInputAttribute {
  */
 export interface CreateSchemaMappingInput {
   /**
-   * <p>The name of the schema. There can't be multiple <code>SchemaMappings</code> with the
-   *          same name.</p>
+   * <p>The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.</p>
    * @public
    */
   schemaName: string | undefined;
@@ -1406,9 +1278,7 @@ export interface CreateSchemaMappingInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds
-   *          to a column the source data table, and contains column name plus additional information
-   *          that Entity Resolution uses for matching.</p>
+   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds to a column the source data table, and contains column name plus additional information that Entity Resolution uses for matching.</p>
    * @public
    */
   mappedInputFields: SchemaInputAttribute[] | undefined;
@@ -1431,8 +1301,7 @@ export interface CreateSchemaMappingOutput {
   schemaName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>SchemaMapping</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>SchemaMapping</code>.</p>
    * @public
    */
   schemaArn: string | undefined;
@@ -1444,9 +1313,7 @@ export interface CreateSchemaMappingOutput {
   description: string | undefined;
 
   /**
-   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds
-   *          to a column the source data table, and contains column name plus additional information
-   *          that Entity Resolution uses for matching.</p>
+   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds to a column the source data table, and contains column name plus additional information that Entity Resolution uses for matching.</p>
    * @public
    */
   mappedInputFields: SchemaInputAttribute[] | undefined;
@@ -1529,8 +1396,7 @@ export interface DeletePolicyStatementInput {
   arn: string | undefined;
 
   /**
-   * <p>A statement identifier that differentiates the statement from others in the same
-   *          policy.</p>
+   * <p>A statement identifier that differentiates the statement from others in the same policy.</p>
    * @public
    */
   statementId: string | undefined;
@@ -1583,6 +1449,151 @@ export interface DeleteSchemaMappingOutput {
 
 /**
  * @public
+ * @enum
+ */
+export const ProcessingType = {
+  CONSISTENT: "CONSISTENT",
+  EVENTUAL: "EVENTUAL",
+  EVENTUAL_NO_LOOKUP: "EVENTUAL_NO_LOOKUP",
+} as const;
+
+/**
+ * @public
+ */
+export type ProcessingType = (typeof ProcessingType)[keyof typeof ProcessingType];
+
+/**
+ * <p> The record.</p>
+ * @public
+ */
+export interface _Record {
+  /**
+   * <p> The input source ARN of the record.</p>
+   * @public
+   */
+  inputSourceARN: string | undefined;
+
+  /**
+   * <p> The unique ID of the record.</p>
+   * @public
+   */
+  uniqueId: string | undefined;
+
+  /**
+   * <p> The record's attribute map.</p>
+   * @public
+   */
+  recordAttributeMap: Record<string, string> | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GenerateMatchIdInput {
+  /**
+   * <p> The name of the rule-based matching workflow.</p>
+   * @public
+   */
+  workflowName: string | undefined;
+
+  /**
+   * <p> The records to match.</p>
+   * @public
+   */
+  records: _Record[] | undefined;
+
+  /**
+   * <p>The processing mode that determines how Match IDs are generated and results are saved. Each mode provides different levels of accuracy, response time, and completeness of results.</p> <p>If not specified, defaults to <code>CONSISTENT</code>.</p> <p> <code>CONSISTENT</code>: Performs immediate lookup and matching against all existing records, with results saved synchronously. Provides highest accuracy but slower response time.</p> <p> <code>EVENTUAL</code> (shown as <i>Background</i> in the console): Performs initial match ID lookup or generation immediately, with record updates processed asynchronously in the background. Offers faster initial response time, with complete matching results available later in S3. </p> <p> <code>EVENTUAL_NO_LOOKUP</code> (shown as <i>Quick ID generation</i> in the console): Generates new match IDs without checking existing matches, with updates processed asynchronously. Provides fastest response time but should only be used for records known to be unique. </p>
+   * @public
+   */
+  processingType?: ProcessingType | undefined;
+}
+
+/**
+ * <p>The record that didn't generate a Match ID.</p>
+ * @public
+ */
+export interface FailedRecord {
+  /**
+   * <p> The input source ARN of the record that didn't generate a Match ID.</p>
+   * @public
+   */
+  inputSourceARN: string | undefined;
+
+  /**
+   * <p> The unique ID of the record that didn't generate a Match ID.</p>
+   * @public
+   */
+  uniqueId: string | undefined;
+
+  /**
+   * <p> The error message for the record that didn't generate a Match ID.</p>
+   * @public
+   */
+  errorMessage: string | undefined;
+}
+
+/**
+ * <p> The matched record.</p>
+ * @public
+ */
+export interface MatchedRecord {
+  /**
+   * <p> The input source ARN of the matched record.</p>
+   * @public
+   */
+  inputSourceARN: string | undefined;
+
+  /**
+   * <p> The record ID of the matched record.</p>
+   * @public
+   */
+  recordId: string | undefined;
+}
+
+/**
+ * <p>The match group.</p>
+ * @public
+ */
+export interface MatchGroup {
+  /**
+   * <p> The matched records.</p>
+   * @public
+   */
+  records: MatchedRecord[] | undefined;
+
+  /**
+   * <p> The match ID.</p>
+   * @public
+   */
+  matchId: string | undefined;
+
+  /**
+   * <p> The match rule of the match group.</p>
+   * @public
+   */
+  matchRule: string | undefined;
+}
+
+/**
+ * @public
+ */
+export interface GenerateMatchIdOutput {
+  /**
+   * <p> The match groups from the generated match ID.</p>
+   * @public
+   */
+  matchGroups: MatchGroup[] | undefined;
+
+  /**
+   * <p> The records that didn't receive a generated Match ID.</p>
+   * @public
+   */
+  failedRecords: FailedRecord[] | undefined;
+}
+
+/**
+ * @public
  */
 export interface GetIdMappingJobInput {
   /**
@@ -1611,9 +1622,7 @@ export interface ErrorDetails {
 }
 
 /**
- * <p>An object containing <code>InputRecords</code>, <code>RecordsNotProcessed</code>,
- *             <code>TotalRecordsProcessed</code>, <code>TotalMappedRecords</code>,
- *             <code>TotalMappedSourceRecords</code>, and <code>TotalMappedTargetRecords</code>.</p>
+ * <p>An object that contains metrics about an ID mapping job, including counts of input records, processed records, and mapped records between source and target identifiers. </p>
  * @public
  */
 export interface IdMappingJobMetrics {
@@ -1652,18 +1661,21 @@ export interface IdMappingJobMetrics {
    * @public
    */
   totalMappedTargetRecords?: number | undefined;
+
+  /**
+   * <p>The number of records remaining after loading and aggregating duplicate records. Duplicates are determined by the field marked as UNIQUE_ID in your schema mapping - records sharing the same value in this field are considered duplicates. For example, if you specified "customer_id" as a UNIQUE_ID field and had three records with the same customer_id value, they would count as one unique record in this metric. </p>
+   * @public
+   */
+  uniqueRecordsLoaded?: number | undefined;
 }
 
 /**
- * <p>An object containing <code>KMSArn</code>, <code>OutputS3Path</code>, and
- *             <code>RoleARN</code>.</p>
+ * <p>An object containing <code>KMSArn</code>, <code>outputS3Path</code>, and <code>roleARN</code>.</p>
  * @public
  */
 export interface IdMappingJobOutputSource {
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access Amazon Web Services resources on your behalf as part of workflow
-   *          execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -1675,8 +1687,7 @@ export interface IdMappingJobOutputSource {
   outputS3Path: string | undefined;
 
   /**
-   * <p>Customer KMS ARN for encryption at rest. If not provided, system will use
-   *          an Entity Resolution managed KMS key.</p>
+   * <p>Customer KMS ARN for encryption at rest. If not provided, system will use an Entity Resolution managed KMS key.</p>
    * @public
    */
   KMSArn?: string | undefined;
@@ -1727,8 +1738,7 @@ export interface GetIdMappingJobOutput {
   endTime?: Date | undefined;
 
   /**
-   * <p>Metrics associated with the execution, specifically total records processed, unique IDs
-   *          generated, and records the execution skipped.</p>
+   * <p>Metrics associated with the execution, specifically total records processed, unique IDs generated, and records the execution skipped.</p>
    * @public
    */
   metrics?: IdMappingJobMetrics | undefined;
@@ -1768,8 +1778,7 @@ export interface GetIdMappingWorkflowOutput {
   workflowName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>IdMappingWorkflow</code> .</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>IdMappingWorkflow</code> .</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -1781,22 +1790,19 @@ export interface GetIdMappingWorkflowOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: IdMappingWorkflowInputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code> and <code>KMSArn</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code> and <code>KMSArn</code>.</p>
    * @public
    */
   outputSourceConfig?: IdMappingWorkflowOutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the ID mapping technique and any additional
-   *          configurations.</p>
+   * <p>An object which defines the ID mapping technique and any additional configurations.</p>
    * @public
    */
   idMappingTechniques: IdMappingTechniques | undefined;
@@ -1814,8 +1820,7 @@ export interface GetIdMappingWorkflowOutput {
   updatedAt: Date | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access Amazon Web Services resources on your behalf.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -1861,35 +1866,25 @@ export interface GetIdNamespaceOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig?: IdNamespaceInputSource[] | undefined;
 
   /**
-   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this
-   *             <code>IdNamespace</code> can be used as a <code>Source</code> or a
-   *          <code>Target</code>.</p>
+   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this <code>IdNamespace</code> can be used as a <code>Source</code> or a <code>Target</code>.</p>
    * @public
    */
   idMappingWorkflowProperties?: IdNamespaceIdMappingWorkflowProperties[] | undefined;
 
   /**
-   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and
-   *             <code>TARGET</code>.</p>
-   *          <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will
-   *          be processed in an ID mapping workflow. </p>
-   *          <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-   *             <code>sourceIds</code> will resolve to.</p>
+   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.</p> <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID mapping workflow. </p> <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code> will resolve to.</p>
    * @public
    */
   type: IdNamespaceType | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access the resources defined in this <code>IdNamespace</code> on your behalf
-   *          as part of a workflow run.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access the resources defined in this <code>IdNamespace</code> on your behalf as part of a workflow run.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -1930,10 +1925,7 @@ export interface GetMatchIdInput {
   record: Record<string, string> | undefined;
 
   /**
-   * <p>Normalizes the attributes defined in the schema in the input data. For example, if an
-   *          attribute has an <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in
-   *          the input table is in a format of 1234567890, Entity Resolution will normalize this field
-   *          in the output to (123)-456-7890.</p>
+   * <p>Normalizes the attributes defined in the schema in the input data. For example, if an attribute has an <code>AttributeType</code> of <code>PHONE_NUMBER</code>, and the data in the input table is in a format of 1234567890, Entity Resolution will normalize this field in the output to (123)-456-7890.</p>
    * @public
    */
   applyNormalization?: boolean | undefined;
@@ -1974,8 +1966,7 @@ export interface GetMatchingJobInput {
 }
 
 /**
- * <p>An object containing <code>InputRecords</code>, <code>TotalRecordsProcessed</code>,
- *             <code>MatchIDs</code>, and <code>RecordsNotProcessed</code>.</p>
+ * <p>An object containing <code>inputRecords</code>, <code>totalRecordsProcessed</code>, <code>matchIDs</code>, and <code>recordsNotProcessed</code>.</p>
  * @public
  */
 export interface JobMetrics {
@@ -2005,15 +1996,12 @@ export interface JobMetrics {
 }
 
 /**
- * <p>An object containing <code>KMSArn</code>, <code>OutputS3Path</code>, and
- *             <code>RoleArn</code>.</p>
+ * <p>An object containing <code>KMSArn</code>, <code>outputS3Path</code>, and <code>roleArn</code>.</p>
  * @public
  */
 export interface JobOutputSource {
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access Amazon Web Services resources on your behalf as part of workflow
-   *          execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -2025,8 +2013,7 @@ export interface JobOutputSource {
   outputS3Path: string | undefined;
 
   /**
-   * <p>Customer KMS ARN for encryption at rest. If not provided, system will use
-   *          an Entity Resolution managed KMS key.</p>
+   * <p>Customer KMS ARN for encryption at rest. If not provided, system will use an Entity Resolution managed KMS key.</p>
    * @public
    */
   KMSArn?: string | undefined;
@@ -2037,7 +2024,7 @@ export interface JobOutputSource {
  */
 export interface GetMatchingJobOutput {
   /**
-   * <p>The ID of the job.</p>
+   * <p>The unique identifier of the matching job.</p>
    * @public
    */
   jobId: string | undefined;
@@ -2061,8 +2048,7 @@ export interface GetMatchingJobOutput {
   endTime?: Date | undefined;
 
   /**
-   * <p>Metrics associated with the execution, specifically total records processed, unique IDs
-   *          generated, and records the execution skipped.</p>
+   * <p>Metrics associated with the execution, specifically total records processed, unique IDs generated, and records the execution skipped.</p>
    * @public
    */
   metrics?: JobMetrics | undefined;
@@ -2102,8 +2088,7 @@ export interface GetMatchingWorkflowOutput {
   workflowName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>MatchingWorkflow</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>MatchingWorkflow</code>.</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -2115,23 +2100,19 @@ export interface GetMatchingWorkflowOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: InputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code>, <code>ApplyNormalization</code>, and
-   *          <code>Output</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code>, <code>applyNormalization</code>, <code>KMSArn</code>, and <code>output</code>.</p>
    * @public
    */
   outputSourceConfig: OutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the <code>resolutionType</code> and the
-   *             <code>ruleBasedProperties</code>.</p>
+   * <p>An object which defines the <code>resolutionType</code> and the <code>ruleBasedProperties</code>.</p>
    * @public
    */
   resolutionTechniques: ResolutionTechniques | undefined;
@@ -2149,15 +2130,13 @@ export interface GetMatchingWorkflowOutput {
   updatedAt: Date | undefined;
 
   /**
-   * <p>An object which defines an incremental run type and has only
-   *             <code>incrementalRunType</code> as a field.</p>
+   * <p>An object which defines an incremental run type and has only <code>incrementalRunType</code> as a field.</p>
    * @public
    */
   incrementalRunConfig?: IncrementalRunConfig | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access Amazon Web Services resources on your behalf.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -2174,8 +2153,7 @@ export interface GetMatchingWorkflowOutput {
  */
 export interface GetPolicyInput {
   /**
-   * <p>The Amazon Resource Name (ARN) of the resource for which the policy need to be
-   *          returned.</p>
+   * <p>The Amazon Resource Name (ARN) of the resource for which the policy need to be returned.</p>
    * @public
    */
   arn: string | undefined;
@@ -2233,7 +2211,7 @@ export interface ProviderSchemaAttribute {
   fieldName: string | undefined;
 
   /**
-   * <p>The type of the provider schema attribute.</p>
+   * <p>The type of the provider schema attribute.</p> <p>LiveRamp supports: <code>NAME</code> | <code>NAME_FIRST</code> | <code>NAME_MIDDLE</code> | <code>NAME_LAST</code> | <code>ADDRESS</code> | <code>ADDRESS_STREET1</code> | <code>ADDRESS_STREET2</code> | <code>ADDRESS_STREET3</code> | <code>ADDRESS_CITY</code> | <code>ADDRESS_STATE</code> | <code>ADDRESS_COUNTRY</code> | <code>ADDRESS_POSTALCODE</code> | <code>PHONE</code> | <code>PHONE_NUMBER</code> | <code>EMAIL_ADDRESS</code> | <code>UNIQUE_ID</code> | <code>PROVIDER_ID</code> </p> <p>TransUnion supports: <code>NAME</code> | <code>NAME_FIRST</code> | <code>NAME_LAST</code> | <code>ADDRESS</code> | <code>ADDRESS_CITY</code> | <code>ADDRESS_STATE</code> | <code>ADDRESS_COUNTRY</code> | <code>ADDRESS_POSTALCODE</code> | <code>PHONE_NUMBER</code> | <code>EMAIL_ADDRESS</code> | <code>UNIQUE_ID</code> | <code>DATE</code> | <code>IPV4</code> | <code>IPV6</code> | <code>MAID</code> </p> <p>Unified ID 2.0 supports: <code>PHONE_NUMBER</code> | <code>EMAIL_ADDRESS</code> | <code>UNIQUE_ID</code> </p>
    * @public
    */
   type: SchemaAttributeType | undefined;
@@ -2365,14 +2343,12 @@ export interface ProviderIdNameSpaceConfiguration {
 }
 
 /**
- * <p>The required configuration fields to give intermediate access to a provider
- *          service.</p>
+ * <p>The required configuration fields to give intermediate access to a provider service.</p>
  * @public
  */
 export interface ProviderIntermediateDataAccessConfiguration {
   /**
-   * <p>The Amazon Web Services account that provider can use to read or write data into the
-   *          customer's intermediate S3 bucket.</p>
+   * <p>The Amazon Web Services account that provider can use to read or write data into the customer's intermediate S3 bucket.</p>
    * @public
    */
   awsAccountIds?: string[] | undefined;
@@ -2427,8 +2403,7 @@ export interface GetProviderServiceOutput {
   providerServiceType: ServiceType | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the provider
-   *          service.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the provider service.</p>
    * @public
    */
   providerServiceArn: string | undefined;
@@ -2458,11 +2433,7 @@ export interface GetProviderServiceOutput {
   providerEndpointConfiguration: ProviderEndpointConfiguration | undefined;
 
   /**
-   * <p>Specifies whether output data from the provider is anonymized. A value of
-   *             <code>TRUE</code> means the output will be anonymized and you can't relate the data that
-   *          comes back from the provider to the identifying input. A value of <code>FALSE</code> means
-   *          the output won't be anonymized and you can relate the data that comes back from the
-   *          provider to your source data. </p>
+   * <p>Specifies whether output data from the provider is anonymized. A value of <code>TRUE</code> means the output will be anonymized and you can't relate the data that comes back from the provider to the identifying input. A value of <code>FALSE</code> means the output won't be anonymized and you can relate the data that comes back from the provider to your source data. </p>
    * @public
    */
   anonymizedOutput: boolean | undefined;
@@ -2474,8 +2445,7 @@ export interface GetProviderServiceOutput {
   providerEntityOutputDefinition: __DocumentType | undefined;
 
   /**
-   * <p>The Amazon Web Services accounts and the S3 permissions that are required by some
-   *          providers to create an S3 bucket for intermediate data storage.</p>
+   * <p>The Amazon Web Services accounts and the S3 permissions that are required by some providers to create an S3 bucket for intermediate data storage.</p>
    * @public
    */
   providerIntermediateDataAccessConfiguration?: ProviderIntermediateDataAccessConfiguration | undefined;
@@ -2509,8 +2479,7 @@ export interface GetSchemaMappingOutput {
   schemaName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *          SchemaMapping.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the SchemaMapping.</p>
    * @public
    */
   schemaArn: string | undefined;
@@ -2522,9 +2491,7 @@ export interface GetSchemaMappingOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds
-   *          to a column the source data table, and contains column name plus additional information
-   *          Venice uses for matching.</p>
+   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds to a column the source data table, and contains column name plus additional information Entity Resolution uses for matching.</p>
    * @public
    */
   mappedInputFields: SchemaInputAttribute[] | undefined;
@@ -2578,8 +2545,7 @@ export interface ListIdMappingJobsInput {
 }
 
 /**
- * <p>An object containing the <code>JobId</code>, <code>Status</code>,
- *          <code>StartTime</code>, and <code>EndTime</code> of a job.</p>
+ * <p>An object containing the <code>jobId</code>, <code>status</code>, <code>startTime</code>, and <code>endTime</code> of a job.</p>
  * @public
  */
 export interface JobSummary {
@@ -2643,9 +2609,7 @@ export interface ListIdMappingWorkflowsInput {
 }
 
 /**
- * <p>A list of <code>IdMappingWorkflowSummary</code> objects, each of which contain the
- *          fields <code>WorkflowName</code>, <code>WorkflowArn</code>, <code>CreatedAt</code>, and
- *             <code>UpdatedAt</code>.</p>
+ * <p>A list of <code>IdMappingWorkflowSummary</code> objects, each of which contain the fields <code>WorkflowName</code>, <code>WorkflowArn</code>, <code>CreatedAt</code>, and <code>UpdatedAt</code>.</p>
  * @public
  */
 export interface IdMappingWorkflowSummary {
@@ -2656,8 +2620,7 @@ export interface IdMappingWorkflowSummary {
   workflowName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>IdMappingWorkflow</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>IdMappingWorkflow</code>.</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -2745,19 +2708,13 @@ export interface IdNamespaceSummary {
   description?: string | undefined;
 
   /**
-   * <p>An object which defines any additional configurations required by the ID mapping
-   *          workflow.</p>
+   * <p>An object which defines any additional configurations required by the ID mapping workflow.</p>
    * @public
    */
   idMappingWorkflowProperties?: IdNamespaceIdMappingWorkflowMetadata[] | undefined;
 
   /**
-   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and
-   *             <code>TARGET</code>.</p>
-   *          <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will
-   *          be processed in an ID mapping workflow. </p>
-   *          <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> which all
-   *             <code>sourceIds</code> will resolve to.</p>
+   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.</p> <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID mapping workflow. </p> <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> which all <code>sourceIds</code> will resolve to.</p>
    * @public
    */
   type: IdNamespaceType | undefined;
@@ -2820,8 +2777,7 @@ export interface ListMatchingJobsInput {
  */
 export interface ListMatchingJobsOutput {
   /**
-   * <p>A list of <code>JobSummary</code> objects, each of which contain the ID, status, start
-   *          time, and end time of a job.</p>
+   * <p>A list of <code>JobSummary</code> objects, each of which contain the ID, status, start time, and end time of a job.</p>
    * @public
    */
   jobs?: JobSummary[] | undefined;
@@ -2851,9 +2807,7 @@ export interface ListMatchingWorkflowsInput {
 }
 
 /**
- * <p>A list of <code>MatchingWorkflowSummary</code> objects, each of which contain the fields
- *             <code>WorkflowName</code>, <code>WorkflowArn</code>, <code>CreatedAt</code>,
- *             <code>UpdatedAt</code>.</p>
+ * <p>A list of <code>MatchingWorkflowSummary</code> objects, each of which contain the fields <code>workflowName</code>, <code>workflowArn</code>, <code>resolutionType</code>, <code>createdAt</code>, <code>updatedAt</code>.</p>
  * @public
  */
 export interface MatchingWorkflowSummary {
@@ -2864,8 +2818,7 @@ export interface MatchingWorkflowSummary {
   workflowName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>MatchingWorkflow</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>MatchingWorkflow</code>.</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -2883,8 +2836,7 @@ export interface MatchingWorkflowSummary {
   updatedAt: Date | undefined;
 
   /**
-   * <p>The method that has been specified for data matching, either using matching provided by
-   *             Entity Resolution or through a provider service.</p>
+   * <p>The method that has been specified for data matching, either using matching provided by Entity Resolution or through a provider service.</p>
    * @public
    */
   resolutionType: ResolutionType | undefined;
@@ -2895,9 +2847,7 @@ export interface MatchingWorkflowSummary {
  */
 export interface ListMatchingWorkflowsOutput {
   /**
-   * <p>A list of <code>MatchingWorkflowSummary</code> objects, each of which contain the fields
-   *             <code>WorkflowName</code>, <code>WorkflowArn</code>, <code>CreatedAt</code>, and
-   *             <code>UpdatedAt</code>.</p>
+   * <p>A list of <code>MatchingWorkflowSummary</code> objects, each of which contain the fields <code>workflowName</code>, <code>workflowArn</code>, <code>resolutionType</code>, <code>createdAt</code>, and <code>updatedAt</code>.</p>
    * @public
    */
   workflowSummaries?: MatchingWorkflowSummary[] | undefined;
@@ -2933,15 +2883,12 @@ export interface ListProviderServicesInput {
 }
 
 /**
- * <p>A list of <code>ProviderService</code> objects, each of which contain the fields
- *             <code>providerName</code>, <code>providerServiceArn</code>,
- *             <code>providerServiceName</code>, and <code>providerServiceType</code>.</p>
+ * <p>A list of <code>ProviderService</code> objects, each of which contain the fields <code>providerName</code>, <code>providerServiceArn</code>, <code>providerServiceName</code>, and <code>providerServiceType</code>.</p>
  * @public
  */
 export interface ProviderServiceSummary {
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>providerService</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>providerService</code>.</p>
    * @public
    */
   providerServiceArn: string | undefined;
@@ -3006,8 +2953,7 @@ export interface ListSchemaMappingsInput {
 }
 
 /**
- * <p>An object containing <code>SchemaName</code>, <code>SchemaArn</code>,
- *             <code>CreatedAt</code>, and<code>UpdatedAt</code>.</p>
+ * <p>An object containing <code>schemaName</code>, <code>schemaArn</code>, <code>createdAt</code>, <code>updatedAt</code>, and <code>hasWorkflows</code>.</p>
  * @public
  */
 export interface SchemaMappingSummary {
@@ -3018,8 +2964,7 @@ export interface SchemaMappingSummary {
   schemaName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>SchemaMapping</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>SchemaMapping</code>.</p>
    * @public
    */
   schemaArn: string | undefined;
@@ -3048,9 +2993,7 @@ export interface SchemaMappingSummary {
  */
 export interface ListSchemaMappingsOutput {
   /**
-   * <p>A list of <code>SchemaMappingSummary</code> objects, each of which contain the fields
-   *             <code>SchemaName</code>, <code>SchemaArn</code>, <code>CreatedAt</code>,
-   *             <code>UpdatedAt</code>.</p>
+   * <p>A list of <code>SchemaMappingSummary</code> objects, each of which contain the fields <code>SchemaName</code>, <code>SchemaArn</code>, <code>CreatedAt</code>, <code>UpdatedAt</code>.</p>
    * @public
    */
   schemaList?: SchemaMappingSummary[] | undefined;
@@ -3089,8 +3032,7 @@ export interface ListTagsForResourceOutput {
  */
 export interface PutPolicyInput {
   /**
-   * <p>The Amazon Resource Name (ARN) of the resource for which the policy needs to be
-   *          updated.</p>
+   * <p>The Amazon Resource Name (ARN) of the resource for which the policy needs to be updated.</p>
    * @public
    */
   arn: string | undefined;
@@ -3102,13 +3044,7 @@ export interface PutPolicyInput {
   token?: string | undefined;
 
   /**
-   * <p>The resource-based policy.</p>
-   *          <important>
-   *             <p>If you set the value of the <code>effect</code> parameter in the <code>policy</code>
-   *             to <code>Deny</code> for the <code>PutPolicy</code> operation, you must also set the
-   *             value of the <code>effect</code> parameter to <code>Deny</code> for the
-   *                <code>AddPolicyStatement</code> operation.</p>
-   *          </important>
+   * <p>The resource-based policy.</p> <important> <p>If you set the value of the <code>effect</code> parameter in the <code>policy</code> to <code>Deny</code> for the <code>PutPolicy</code> operation, you must also set the value of the <code>effect</code> parameter to <code>Deny</code> for the <code>AddPolicyStatement</code> operation.</p> </important>
    * @public
    */
   policy: string | undefined;
@@ -3254,29 +3190,25 @@ export interface UpdateIdMappingWorkflowInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: IdMappingWorkflowInputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code> and <code>KMSArn</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code> and <code>KMSArn</code>.</p>
    * @public
    */
   outputSourceConfig?: IdMappingWorkflowOutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the ID mapping technique and any additional
-   *          configurations.</p>
+   * <p>An object which defines the ID mapping technique and any additional configurations.</p>
    * @public
    */
   idMappingTechniques: IdMappingTechniques | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access Amazon Web Services resources on your behalf.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -3293,8 +3225,7 @@ export interface UpdateIdMappingWorkflowOutput {
   workflowName: string | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role
-   *          to access Amazon Web Services resources on your behalf.</p>
+   * <p>The Amazon Resource Name (ARN) of the workflow role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf.</p>
    * @public
    */
   workflowArn: string | undefined;
@@ -3306,29 +3237,25 @@ export interface UpdateIdMappingWorkflowOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: IdMappingWorkflowInputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code> and <code>KMSArn</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code> and <code>KMSArn</code>.</p>
    * @public
    */
   outputSourceConfig?: IdMappingWorkflowOutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the ID mapping technique and any additional
-   *          configurations.</p>
+   * <p>An object which defines the ID mapping technique and any additional configurations.</p>
    * @public
    */
   idMappingTechniques: IdMappingTechniques | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access Amazon Web Services resources on your behalf.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access Amazon Web Services resources on your behalf.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -3351,24 +3278,19 @@ export interface UpdateIdNamespaceInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig?: IdNamespaceInputSource[] | undefined;
 
   /**
-   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this
-   *             <code>IdNamespace</code> can be used as a <code>Source</code> or a
-   *          <code>Target</code>.</p>
+   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this <code>IdNamespace</code> can be used as a <code>Source</code> or a <code>Target</code>.</p>
    * @public
    */
   idMappingWorkflowProperties?: IdNamespaceIdMappingWorkflowProperties[] | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access the resources defined in this <code>IdNamespace</code> on your behalf
-   *          as part of a workflow run.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access the resources defined in this <code>IdNamespace</code> on your behalf as part of a workflow run.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -3397,35 +3319,25 @@ export interface UpdateIdNamespaceOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig?: IdNamespaceInputSource[] | undefined;
 
   /**
-   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this
-   *             <code>IdNamespace</code> can be used as a <code>Source</code> or a
-   *          <code>Target</code>.</p>
+   * <p>Determines the properties of <code>IdMappingWorkflow</code> where this <code>IdNamespace</code> can be used as a <code>Source</code> or a <code>Target</code>.</p>
    * @public
    */
   idMappingWorkflowProperties?: IdNamespaceIdMappingWorkflowProperties[] | undefined;
 
   /**
-   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and
-   *             <code>TARGET</code>.</p>
-   *          <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will
-   *          be processed in an ID mapping workflow. </p>
-   *          <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all
-   *             <code>sourceIds</code> will resolve to.</p>
+   * <p>The type of ID namespace. There are two types: <code>SOURCE</code> and <code>TARGET</code>.</p> <p>The <code>SOURCE</code> contains configurations for <code>sourceId</code> data that will be processed in an ID mapping workflow. </p> <p>The <code>TARGET</code> contains a configuration of <code>targetId</code> to which all <code>sourceIds</code> will resolve to.</p>
    * @public
    */
   type: IdNamespaceType | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to access the resources defined in this <code>IdNamespace</code> on your behalf
-   *          as part of a workflow run.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to access the resources defined in this <code>IdNamespace</code> on your behalf as part of a workflow run.</p>
    * @public
    */
   roleArn?: string | undefined;
@@ -3460,37 +3372,31 @@ export interface UpdateMatchingWorkflowInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: InputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code>, <code>ApplyNormalization</code>, and
-   *          <code>Output</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code>, <code>applyNormalization</code>, <code>KMSArn</code>, and <code>output</code>.</p>
    * @public
    */
   outputSourceConfig: OutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the <code>resolutionType</code> and the
-   *             <code>ruleBasedProperties</code>.</p>
+   * <p>An object which defines the <code>resolutionType</code> and the <code>ruleBasedProperties</code>.</p>
    * @public
    */
   resolutionTechniques: ResolutionTechniques | undefined;
 
   /**
-   * <p>An object which defines an incremental run type and has only
-   *             <code>incrementalRunType</code> as a field.</p>
+   * <p>Optional. An object that defines the incremental run type. This object contains only the <code>incrementalRunType</code> field, which appears as "Automatic" in the console. </p> <important> <p>For workflows where <code>resolutionType</code> is <code>ML_MATCHING</code>, incremental processing is not supported. </p> </important>
    * @public
    */
   incrementalRunConfig?: IncrementalRunConfig | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to
-   *          create resources on your behalf as part of workflow execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to create resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -3513,38 +3419,31 @@ export interface UpdateMatchingWorkflowOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>InputSource</code> objects, which have the fields
-   *             <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
+   * <p>A list of <code>InputSource</code> objects, which have the fields <code>InputSourceARN</code> and <code>SchemaName</code>.</p>
    * @public
    */
   inputSourceConfig: InputSource[] | undefined;
 
   /**
-   * <p>A list of <code>OutputSource</code> objects, each of which contains fields
-   *             <code>OutputS3Path</code>, <code>ApplyNormalization</code>, and
-   *          <code>Output</code>.</p>
+   * <p>A list of <code>OutputSource</code> objects, each of which contains fields <code>outputS3Path</code>, <code>applyNormalization</code>, <code>KMSArn</code>, and <code>output</code>.</p>
    * @public
    */
   outputSourceConfig: OutputSource[] | undefined;
 
   /**
-   * <p>An object which defines the <code>resolutionType</code> and the
-   *             <code>ruleBasedProperties</code>
-   *          </p>
+   * <p>An object which defines the <code>resolutionType</code> and the <code>ruleBasedProperties</code>.</p>
    * @public
    */
   resolutionTechniques: ResolutionTechniques | undefined;
 
   /**
-   * <p>An object which defines an incremental run type and has only
-   *             <code>incrementalRunType</code> as a field.</p>
+   * <p>An object which defines an incremental run type and has only <code>incrementalRunType</code> as a field.</p>
    * @public
    */
   incrementalRunConfig?: IncrementalRunConfig | undefined;
 
   /**
-   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes
-   *          this role to create resources on your behalf as part of workflow execution.</p>
+   * <p>The Amazon Resource Name (ARN) of the IAM role. Entity Resolution assumes this role to create resources on your behalf as part of workflow execution.</p>
    * @public
    */
   roleArn: string | undefined;
@@ -3555,8 +3454,7 @@ export interface UpdateMatchingWorkflowOutput {
  */
 export interface UpdateSchemaMappingInput {
   /**
-   * <p>The name of the schema. There can't be multiple <code>SchemaMappings</code> with the
-   *          same name.</p>
+   * <p>The name of the schema. There can't be multiple <code>SchemaMappings</code> with the same name.</p>
    * @public
    */
   schemaName: string | undefined;
@@ -3568,9 +3466,7 @@ export interface UpdateSchemaMappingInput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds
-   *          to a column the source data table, and contains column name plus additional information
-   *          that Entity Resolution uses for matching.</p>
+   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds to a column the source data table, and contains column name plus additional information that Entity Resolution uses for matching.</p>
    * @public
    */
   mappedInputFields: SchemaInputAttribute[] | undefined;
@@ -3587,8 +3483,7 @@ export interface UpdateSchemaMappingOutput {
   schemaName: string | undefined;
 
   /**
-   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the
-   *             <code>SchemaMapping</code>.</p>
+   * <p>The ARN (Amazon Resource Name) that Entity Resolution generated for the <code>SchemaMapping</code>.</p>
    * @public
    */
   schemaArn: string | undefined;
@@ -3600,13 +3495,27 @@ export interface UpdateSchemaMappingOutput {
   description?: string | undefined;
 
   /**
-   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds
-   *          to a column the source data table, and contains column name plus additional information
-   *          that Entity Resolution uses for matching.</p>
+   * <p>A list of <code>MappedInputFields</code>. Each <code>MappedInputField</code> corresponds to a column the source data table, and contains column name plus additional information that Entity Resolution uses for matching.</p>
    * @public
    */
   mappedInputFields: SchemaInputAttribute[] | undefined;
 }
+
+/**
+ * @internal
+ */
+export const _RecordFilterSensitiveLog = (obj: _Record): any => ({
+  ...obj,
+  ...(obj.recordAttributeMap && { recordAttributeMap: SENSITIVE_STRING }),
+});
+
+/**
+ * @internal
+ */
+export const GenerateMatchIdInputFilterSensitiveLog = (obj: GenerateMatchIdInput): any => ({
+  ...obj,
+  ...(obj.records && { records: obj.records.map((item) => _RecordFilterSensitiveLog(item)) }),
+});
 
 /**
  * @internal

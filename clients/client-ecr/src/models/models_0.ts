@@ -836,7 +836,7 @@ export interface CreatePullThroughCacheRuleRequest {
    *          <ul>
    *             <li>
    *                <p>Amazon ECR (<code>ecr</code>) –
-   *                     <code>dkr.ecr.<region>.amazonaws.com</code>
+   *                     <code><accountId>.dkr.ecr.<region>.amazonaws.com</code>
    *                </p>
    *             </li>
    *             <li>
@@ -1152,13 +1152,47 @@ export interface ImageScanningConfiguration {
  */
 export const ImageTagMutability = {
   IMMUTABLE: "IMMUTABLE",
+  IMMUTABLE_WITH_EXCLUSION: "IMMUTABLE_WITH_EXCLUSION",
   MUTABLE: "MUTABLE",
+  MUTABLE_WITH_EXCLUSION: "MUTABLE_WITH_EXCLUSION",
 } as const;
 
 /**
  * @public
  */
 export type ImageTagMutability = (typeof ImageTagMutability)[keyof typeof ImageTagMutability];
+
+/**
+ * @public
+ * @enum
+ */
+export const ImageTagMutabilityExclusionFilterType = {
+  WILDCARD: "WILDCARD",
+} as const;
+
+/**
+ * @public
+ */
+export type ImageTagMutabilityExclusionFilterType =
+  (typeof ImageTagMutabilityExclusionFilterType)[keyof typeof ImageTagMutabilityExclusionFilterType];
+
+/**
+ * <p>Overrides the default image tag mutability setting of the repository for image tags that match the specified filters.</p>
+ * @public
+ */
+export interface ImageTagMutabilityExclusionFilter {
+  /**
+   * <p>Specifies the type of filter to use for excluding image tags from the repository's mutability setting.</p>
+   * @public
+   */
+  filterType: ImageTagMutabilityExclusionFilterType | undefined;
+
+  /**
+   * <p>The value to use when filtering image tags. Must be either a regular expression pattern or a tag prefix value based on the specified filter type.</p>
+   * @public
+   */
+  filter: string | undefined;
+}
 
 /**
  * <p>The metadata to apply to a resource to help you categorize and organize them. Each tag
@@ -1221,6 +1255,12 @@ export interface CreateRepositoryRequest {
   imageTagMutability?: ImageTagMutability | undefined;
 
   /**
+   * <p>Creates a repository with a list of filters that define which image tags can override the default image tag mutability setting.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
+
+  /**
    * <p>The image scanning configuration for the repository. This determines whether images
    *             are scanned for known vulnerabilities after being pushed to the repository.</p>
    * @public
@@ -1278,6 +1318,12 @@ export interface Repository {
    * @public
    */
   imageTagMutability?: ImageTagMutability | undefined;
+
+  /**
+   * <p>The image tag mutability exclusion filters associated with the repository. These filters specify which image tags can override the repository's default image tag mutability setting.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
 
   /**
    * <p>The image scanning configuration for a repository.</p>
@@ -1468,6 +1514,12 @@ export interface CreateRepositoryCreationTemplateRequest {
   imageTagMutability?: ImageTagMutability | undefined;
 
   /**
+   * <p>Creates a repository creation template with a list of filters that define which image tags can override the default image tag mutability setting.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
+
+  /**
    * <p>The repository policy to apply to repositories created using the template. A
    *             repository policy is a permissions policy associated with a repository to control access
    *             permissions. </p>
@@ -1534,12 +1586,18 @@ export interface RepositoryCreationTemplate {
 
   /**
    * <p>The tag mutability setting for the repository. If this parameter is omitted, the
-   *             default setting of MUTABLE will be used which will allow image tags to be overwritten.
-   *             If IMMUTABLE is specified, all image tags within the repository will be immutable which
+   *             default setting of <code>MUTABLE</code> will be used which will allow image tags to be overwritten.
+   *             If <code>IMMUTABLE</code> is specified, all image tags within the repository will be immutable which
    *             will prevent them from being overwritten.</p>
    * @public
    */
   imageTagMutability?: ImageTagMutability | undefined;
+
+  /**
+   * <p>Defines the image tag mutability exclusion filters to apply when creating repositories from this template. These filters specify which image tags can override the repository's default image tag mutability setting.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
 
   /**
    * <p>The repository policy to apply to repositories created using the template. A
@@ -2308,7 +2366,7 @@ export interface ImageDetail {
    *             <p>Starting with Docker version 1.9, the Docker client compresses image layers before
    *                 pushing them to a V2 Docker registry. The output of the <code>docker images</code>
    *                 command shows the uncompressed image size. Therefore, Docker might return a larger
-   *                 image than the image sizes returned by <a>DescribeImages</a>.</p>
+   *                 image than the image shown in the Amazon Web Services Management Console.</p>
    *          </note>
    * @public
    */
@@ -2659,6 +2717,19 @@ export interface AwsEcrContainerImageDetails {
    * @public
    */
   pushedAt?: Date | undefined;
+
+  /**
+   * <p>The most recent date and time a cluster was running the image.</p>
+   * @public
+   */
+  lastInUseAt?: Date | undefined;
+
+  /**
+   * <p>The number of Amazon ECS or Amazon EKS clusters currently running the
+   *             image.</p>
+   * @public
+   */
+  inUseCount?: number | undefined;
 
   /**
    * <p>The registry the Amazon ECR container image belongs to.</p>
@@ -3518,6 +3589,10 @@ export interface GetAuthorizationTokenResponse {
   /**
    * <p>A list of authorization token data objects that correspond to the
    *                 <code>registryIds</code> values in the request.</p>
+   *          <note>
+   *             <p>The size of the authorization token returned by Amazon ECR is not fixed. We recommend
+   *                 that you don't make assumptions about the maximum size.</p>
+   *          </note>
    * @public
    */
   authorizationData?: AuthorizationData[] | undefined;
@@ -3728,8 +3803,8 @@ export interface GetLifecyclePolicyPreviewRequest {
    *             <code>nextToken</code>  response element. The remaining results of the initial request
    *             can be seen by sending  another <code>GetLifecyclePolicyPreviewRequest</code> request
    *             with the returned <code>nextToken</code>  value. This value can be between
-   *             1 and 1000. If this  parameter is not used, then
-   *                 <code>GetLifecyclePolicyPreviewRequest</code> returns up to  100
+   *             1 and 100. If this  parameter is not used, then
+   *                 <code>GetLifecyclePolicyPreviewRequest</code> returns up to 100
    *             results and a <code>nextToken</code> value, if  applicable. This option cannot be used
    *             when you specify images with <code>imageIds</code>.</p>
    * @public
@@ -4447,6 +4522,12 @@ export interface PutImageTagMutabilityRequest {
    * @public
    */
   imageTagMutability: ImageTagMutability | undefined;
+
+  /**
+   * <p>Creates or updates a repository with filters that define which image tags can override the default image tag mutability setting.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
 }
 
 /**
@@ -4470,6 +4551,12 @@ export interface PutImageTagMutabilityResponse {
    * @public
    */
   imageTagMutability?: ImageTagMutability | undefined;
+
+  /**
+   * <p>Returns a list of filters that were defined for a repository. These filters determine which image tags can override the default image tag mutability setting of the repository.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
 }
 
 /**
@@ -4984,6 +5071,12 @@ export interface UpdateRepositoryCreationTemplateRequest {
    * @public
    */
   imageTagMutability?: ImageTagMutability | undefined;
+
+  /**
+   * <p>Updates a repository with filters that define which image tags can override the default image tag mutability setting.</p>
+   * @public
+   */
+  imageTagMutabilityExclusionFilters?: ImageTagMutabilityExclusionFilter[] | undefined;
 
   /**
    * <p>Updates the repository policy created using the template. A repository policy is a

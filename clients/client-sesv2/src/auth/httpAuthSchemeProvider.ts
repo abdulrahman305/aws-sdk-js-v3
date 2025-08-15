@@ -9,7 +9,7 @@ import {
   resolveAwsSdkSigV4AConfig,
   resolveAwsSdkSigV4Config,
 } from "@aws-sdk/core";
-import { signatureV4CrtContainer } from "@aws-sdk/signature-v4-multi-region";
+import { SignatureV4MultiRegion } from "@aws-sdk/signature-v4-multi-region";
 import { EndpointParameterInstructions, resolveParams } from "@smithy/middleware-endpoint";
 import {
   EndpointV2,
@@ -21,6 +21,7 @@ import {
   HttpAuthSchemeParametersProvider,
   HttpAuthSchemeProvider,
   Logger,
+  Provider,
 } from "@smithy/types";
 import { getSmithyContext, normalizeProvider } from "@smithy/util-middleware";
 
@@ -234,7 +235,7 @@ const createEndpointRuleSetHttpAuthSchemeProvider = <
           const name = s.name.toLowerCase();
           return name !== "sigv4a" && name.startsWith("sigv4");
         });
-        if (!signatureV4CrtContainer.CrtSignerV4 && sigv4Present) {
+        if (SignatureV4MultiRegion.sigv4aDependency() === "none" && sigv4Present) {
           // sigv4a -> sigv4 fallback.
           continue;
         }
@@ -284,6 +285,14 @@ export const defaultSESv2HttpAuthSchemeProvider: SESv2HttpAuthSchemeProvider =
  */
 export interface HttpAuthSchemeInputConfig extends AwsSdkSigV4AuthInputConfig, AwsSdkSigV4AAuthInputConfig {
   /**
+   * A comma-separated list of case-sensitive auth scheme names.
+   * An auth scheme name is a fully qualified auth scheme ID with the namespace prefix trimmed.
+   * For example, the auth scheme with ID aws.auth#sigv4 is named sigv4.
+   * @public
+   */
+  authSchemePreference?: string[] | Provider<string[]>;
+
+  /**
    * Configuration of HttpAuthSchemes for a client which provides default identity providers and signers per auth scheme.
    * @internal
    */
@@ -300,6 +309,14 @@ export interface HttpAuthSchemeInputConfig extends AwsSdkSigV4AuthInputConfig, A
  * @internal
  */
 export interface HttpAuthSchemeResolvedConfig extends AwsSdkSigV4AuthResolvedConfig, AwsSdkSigV4AAuthResolvedConfig {
+  /**
+   * A comma-separated list of case-sensitive auth scheme names.
+   * An auth scheme name is a fully qualified auth scheme ID with the namespace prefix trimmed.
+   * For example, the auth scheme with ID aws.auth#sigv4 is named sigv4.
+   * @public
+   */
+  readonly authSchemePreference: Provider<string[]>;
+
   /**
    * Configuration of HttpAuthSchemes for a client which provides default identity providers and signers per auth scheme.
    * @internal
@@ -321,5 +338,7 @@ export const resolveHttpAuthSchemeConfig = <T>(
 ): T & HttpAuthSchemeResolvedConfig => {
   const config_0 = resolveAwsSdkSigV4Config(config);
   const config_1 = resolveAwsSdkSigV4AConfig(config_0);
-  return Object.assign(config_1, {}) as T & HttpAuthSchemeResolvedConfig;
+  return Object.assign(config_1, {
+    authSchemePreference: normalizeProvider(config.authSchemePreference ?? []),
+  }) as T & HttpAuthSchemeResolvedConfig;
 };

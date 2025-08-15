@@ -77,7 +77,19 @@ import { BatchPutDocumentCommandInput, BatchPutDocumentCommandOutput } from "./c
 import { CancelSubscriptionCommandInput, CancelSubscriptionCommandOutput } from "./commands/CancelSubscriptionCommand";
 import { ChatCommandInput, ChatCommandOutput } from "./commands/ChatCommand";
 import { ChatSyncCommandInput, ChatSyncCommandOutput } from "./commands/ChatSyncCommand";
+import {
+  CheckDocumentAccessCommandInput,
+  CheckDocumentAccessCommandOutput,
+} from "./commands/CheckDocumentAccessCommand";
+import {
+  CreateAnonymousWebExperienceUrlCommandInput,
+  CreateAnonymousWebExperienceUrlCommandOutput,
+} from "./commands/CreateAnonymousWebExperienceUrlCommand";
 import { CreateApplicationCommandInput, CreateApplicationCommandOutput } from "./commands/CreateApplicationCommand";
+import {
+  CreateChatResponseConfigurationCommandInput,
+  CreateChatResponseConfigurationCommandOutput,
+} from "./commands/CreateChatResponseConfigurationCommand";
 import { CreateDataAccessorCommandInput, CreateDataAccessorCommandOutput } from "./commands/CreateDataAccessorCommand";
 import { CreateDataSourceCommandInput, CreateDataSourceCommandOutput } from "./commands/CreateDataSourceCommand";
 import { CreateIndexCommandInput, CreateIndexCommandOutput } from "./commands/CreateIndexCommand";
@@ -95,6 +107,10 @@ import {
   DeleteChatControlsConfigurationCommandInput,
   DeleteChatControlsConfigurationCommandOutput,
 } from "./commands/DeleteChatControlsConfigurationCommand";
+import {
+  DeleteChatResponseConfigurationCommandInput,
+  DeleteChatResponseConfigurationCommandOutput,
+} from "./commands/DeleteChatResponseConfigurationCommand";
 import { DeleteConversationCommandInput, DeleteConversationCommandOutput } from "./commands/DeleteConversationCommand";
 import { DeleteDataAccessorCommandInput, DeleteDataAccessorCommandOutput } from "./commands/DeleteDataAccessorCommand";
 import { DeleteDataSourceCommandInput, DeleteDataSourceCommandOutput } from "./commands/DeleteDataSourceCommand";
@@ -116,8 +132,13 @@ import {
   GetChatControlsConfigurationCommandInput,
   GetChatControlsConfigurationCommandOutput,
 } from "./commands/GetChatControlsConfigurationCommand";
+import {
+  GetChatResponseConfigurationCommandInput,
+  GetChatResponseConfigurationCommandOutput,
+} from "./commands/GetChatResponseConfigurationCommand";
 import { GetDataAccessorCommandInput, GetDataAccessorCommandOutput } from "./commands/GetDataAccessorCommand";
 import { GetDataSourceCommandInput, GetDataSourceCommandOutput } from "./commands/GetDataSourceCommand";
+import { GetDocumentContentCommandInput, GetDocumentContentCommandOutput } from "./commands/GetDocumentContentCommand";
 import { GetGroupCommandInput, GetGroupCommandOutput } from "./commands/GetGroupCommand";
 import { GetIndexCommandInput, GetIndexCommandOutput } from "./commands/GetIndexCommand";
 import { GetMediaCommandInput, GetMediaCommandOutput } from "./commands/GetMediaCommand";
@@ -128,6 +149,10 @@ import { GetUserCommandInput, GetUserCommandOutput } from "./commands/GetUserCom
 import { GetWebExperienceCommandInput, GetWebExperienceCommandOutput } from "./commands/GetWebExperienceCommand";
 import { ListApplicationsCommandInput, ListApplicationsCommandOutput } from "./commands/ListApplicationsCommand";
 import { ListAttachmentsCommandInput, ListAttachmentsCommandOutput } from "./commands/ListAttachmentsCommand";
+import {
+  ListChatResponseConfigurationsCommandInput,
+  ListChatResponseConfigurationsCommandOutput,
+} from "./commands/ListChatResponseConfigurationsCommand";
 import { ListConversationsCommandInput, ListConversationsCommandOutput } from "./commands/ListConversationsCommand";
 import { ListDataAccessorsCommandInput, ListDataAccessorsCommandOutput } from "./commands/ListDataAccessorsCommand";
 import { ListDataSourcesCommandInput, ListDataSourcesCommandOutput } from "./commands/ListDataSourcesCommand";
@@ -177,6 +202,10 @@ import {
   UpdateChatControlsConfigurationCommandInput,
   UpdateChatControlsConfigurationCommandOutput,
 } from "./commands/UpdateChatControlsConfigurationCommand";
+import {
+  UpdateChatResponseConfigurationCommandInput,
+  UpdateChatResponseConfigurationCommandOutput,
+} from "./commands/UpdateChatResponseConfigurationCommand";
 import { UpdateDataAccessorCommandInput, UpdateDataAccessorCommandOutput } from "./commands/UpdateDataAccessorCommand";
 import { UpdateDataSourceCommandInput, UpdateDataSourceCommandOutput } from "./commands/UpdateDataSourceCommand";
 import { UpdateIndexCommandInput, UpdateIndexCommandOutput } from "./commands/UpdateIndexCommand";
@@ -209,7 +238,10 @@ export type ServiceInputTypes =
   | CancelSubscriptionCommandInput
   | ChatCommandInput
   | ChatSyncCommandInput
+  | CheckDocumentAccessCommandInput
+  | CreateAnonymousWebExperienceUrlCommandInput
   | CreateApplicationCommandInput
+  | CreateChatResponseConfigurationCommandInput
   | CreateDataAccessorCommandInput
   | CreateDataSourceCommandInput
   | CreateIndexCommandInput
@@ -221,6 +253,7 @@ export type ServiceInputTypes =
   | DeleteApplicationCommandInput
   | DeleteAttachmentCommandInput
   | DeleteChatControlsConfigurationCommandInput
+  | DeleteChatResponseConfigurationCommandInput
   | DeleteConversationCommandInput
   | DeleteDataAccessorCommandInput
   | DeleteDataSourceCommandInput
@@ -233,8 +266,10 @@ export type ServiceInputTypes =
   | DisassociatePermissionCommandInput
   | GetApplicationCommandInput
   | GetChatControlsConfigurationCommandInput
+  | GetChatResponseConfigurationCommandInput
   | GetDataAccessorCommandInput
   | GetDataSourceCommandInput
+  | GetDocumentContentCommandInput
   | GetGroupCommandInput
   | GetIndexCommandInput
   | GetMediaCommandInput
@@ -245,6 +280,7 @@ export type ServiceInputTypes =
   | GetWebExperienceCommandInput
   | ListApplicationsCommandInput
   | ListAttachmentsCommandInput
+  | ListChatResponseConfigurationsCommandInput
   | ListConversationsCommandInput
   | ListDataAccessorsCommandInput
   | ListDataSourceSyncJobsCommandInput
@@ -270,6 +306,7 @@ export type ServiceInputTypes =
   | UntagResourceCommandInput
   | UpdateApplicationCommandInput
   | UpdateChatControlsConfigurationCommandInput
+  | UpdateChatResponseConfigurationCommandInput
   | UpdateDataAccessorCommandInput
   | UpdateDataSourceCommandInput
   | UpdateIndexCommandInput
@@ -289,7 +326,10 @@ export type ServiceOutputTypes =
   | CancelSubscriptionCommandOutput
   | ChatCommandOutput
   | ChatSyncCommandOutput
+  | CheckDocumentAccessCommandOutput
+  | CreateAnonymousWebExperienceUrlCommandOutput
   | CreateApplicationCommandOutput
+  | CreateChatResponseConfigurationCommandOutput
   | CreateDataAccessorCommandOutput
   | CreateDataSourceCommandOutput
   | CreateIndexCommandOutput
@@ -301,6 +341,7 @@ export type ServiceOutputTypes =
   | DeleteApplicationCommandOutput
   | DeleteAttachmentCommandOutput
   | DeleteChatControlsConfigurationCommandOutput
+  | DeleteChatResponseConfigurationCommandOutput
   | DeleteConversationCommandOutput
   | DeleteDataAccessorCommandOutput
   | DeleteDataSourceCommandOutput
@@ -313,8 +354,10 @@ export type ServiceOutputTypes =
   | DisassociatePermissionCommandOutput
   | GetApplicationCommandOutput
   | GetChatControlsConfigurationCommandOutput
+  | GetChatResponseConfigurationCommandOutput
   | GetDataAccessorCommandOutput
   | GetDataSourceCommandOutput
+  | GetDocumentContentCommandOutput
   | GetGroupCommandOutput
   | GetIndexCommandOutput
   | GetMediaCommandOutput
@@ -325,6 +368,7 @@ export type ServiceOutputTypes =
   | GetWebExperienceCommandOutput
   | ListApplicationsCommandOutput
   | ListAttachmentsCommandOutput
+  | ListChatResponseConfigurationsCommandOutput
   | ListConversationsCommandOutput
   | ListDataAccessorsCommandOutput
   | ListDataSourceSyncJobsCommandOutput
@@ -350,6 +394,7 @@ export type ServiceOutputTypes =
   | UntagResourceCommandOutput
   | UpdateApplicationCommandOutput
   | UpdateChatControlsConfigurationCommandOutput
+  | UpdateChatResponseConfigurationCommandOutput
   | UpdateDataAccessorCommandOutput
   | UpdateDataSourceCommandOutput
   | UpdateIndexCommandOutput
@@ -565,45 +610,7 @@ export type QBusinessClientResolvedConfigType = __SmithyResolvedConfiguration<__
 export interface QBusinessClientResolvedConfig extends QBusinessClientResolvedConfigType {}
 
 /**
- * <p>This is the <i>Amazon Q Business</i> API Reference. Amazon Q Business is a fully
- *             managed, generative-AI powered enterprise chat assistant that you can deploy within your
- *             organization. Amazon Q Business enhances employee productivity by supporting key tasks such
- *             as question-answering, knowledge discovery, writing email messages, summarizing text,
- *             drafting document outlines, and brainstorming ideas. Users ask questions of
- *             Amazon Q Business and get answers that are presented in a conversational manner. For an
- *             introduction to the service, see the <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html">
- *                <i>Amazon Q Business User Guide</i>
- *             </a>.</p>
- *          <p>For an overview of the Amazon Q Business APIs, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q Business API operations</a>.</p>
- *          <p>For information about the IAM access control permissions you need to
- *             use this API, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q Business</a> in the
- *                 <i>Amazon Q Business User Guide</i>.</p>
- *          <p>The following resources provide additional information about using the Amazon Q Business
- *             API:</p>
- *          <ul>
- *             <li>
- *                <p>
- *                   <i>
- *                      <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for
- *                             Amazon Q Business</a>
- *                   </i>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <i>
- *                      <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q Business CLI Reference</a>
- *                   </i>
- *                </p>
- *             </li>
- *             <li>
- *                <p>
- *                   <i>
- *                      <a href="https://docs.aws.amazon.com/general/latest/gr/amazonq.html">Amazon Web Services General Reference</a>
- *                   </i>
- *                </p>
- *             </li>
- *          </ul>
+ * <p>This is the <i>Amazon Q Business</i> API Reference. Amazon Q Business is a fully managed, generative-AI powered enterprise chat assistant that you can deploy within your organization. Amazon Q Business enhances employee productivity by supporting key tasks such as question-answering, knowledge discovery, writing email messages, summarizing text, drafting document outlines, and brainstorming ideas. Users ask questions of Amazon Q Business and get answers that are presented in a conversational manner. For an introduction to the service, see the <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/what-is.html"> <i>Amazon Q Business User Guide</i> </a>.</p> <p>For an overview of the Amazon Q Business APIs, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/api-ref.html#api-overview">Overview of Amazon Q Business API operations</a>.</p> <p>For information about the IAM access control permissions you need to use this API, see <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/iam-roles.html">IAM roles for Amazon Q Business</a> in the <i>Amazon Q Business User Guide</i>.</p> <p>The following resources provide additional information about using the Amazon Q Business API:</p> <ul> <li> <p> <i> <a href="https://docs.aws.amazon.com/amazonq/latest/business-use-dg/setting-up.html">Setting up for Amazon Q Business</a> </i> </p> </li> <li> <p> <i> <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/qbusiness/index.html">Amazon Q Business CLI Reference</a> </i> </p> </li> <li> <p> <i> <a href="https://docs.aws.amazon.com/general/latest/gr/amazonq.html">Amazon Web Services General Reference</a> </i> </p> </li> </ul>
  * @public
  */
 export class QBusinessClient extends __Client<

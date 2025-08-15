@@ -49,7 +49,19 @@ import { BatchPutDocumentCommandInput, BatchPutDocumentCommandOutput } from "../
 import { CancelSubscriptionCommandInput, CancelSubscriptionCommandOutput } from "../commands/CancelSubscriptionCommand";
 import { ChatCommandInput, ChatCommandOutput } from "../commands/ChatCommand";
 import { ChatSyncCommandInput, ChatSyncCommandOutput } from "../commands/ChatSyncCommand";
+import {
+  CheckDocumentAccessCommandInput,
+  CheckDocumentAccessCommandOutput,
+} from "../commands/CheckDocumentAccessCommand";
+import {
+  CreateAnonymousWebExperienceUrlCommandInput,
+  CreateAnonymousWebExperienceUrlCommandOutput,
+} from "../commands/CreateAnonymousWebExperienceUrlCommand";
 import { CreateApplicationCommandInput, CreateApplicationCommandOutput } from "../commands/CreateApplicationCommand";
+import {
+  CreateChatResponseConfigurationCommandInput,
+  CreateChatResponseConfigurationCommandOutput,
+} from "../commands/CreateChatResponseConfigurationCommand";
 import { CreateDataAccessorCommandInput, CreateDataAccessorCommandOutput } from "../commands/CreateDataAccessorCommand";
 import { CreateDataSourceCommandInput, CreateDataSourceCommandOutput } from "../commands/CreateDataSourceCommand";
 import { CreateIndexCommandInput, CreateIndexCommandOutput } from "../commands/CreateIndexCommand";
@@ -67,6 +79,10 @@ import {
   DeleteChatControlsConfigurationCommandInput,
   DeleteChatControlsConfigurationCommandOutput,
 } from "../commands/DeleteChatControlsConfigurationCommand";
+import {
+  DeleteChatResponseConfigurationCommandInput,
+  DeleteChatResponseConfigurationCommandOutput,
+} from "../commands/DeleteChatResponseConfigurationCommand";
 import { DeleteConversationCommandInput, DeleteConversationCommandOutput } from "../commands/DeleteConversationCommand";
 import { DeleteDataAccessorCommandInput, DeleteDataAccessorCommandOutput } from "../commands/DeleteDataAccessorCommand";
 import { DeleteDataSourceCommandInput, DeleteDataSourceCommandOutput } from "../commands/DeleteDataSourceCommand";
@@ -88,8 +104,13 @@ import {
   GetChatControlsConfigurationCommandInput,
   GetChatControlsConfigurationCommandOutput,
 } from "../commands/GetChatControlsConfigurationCommand";
+import {
+  GetChatResponseConfigurationCommandInput,
+  GetChatResponseConfigurationCommandOutput,
+} from "../commands/GetChatResponseConfigurationCommand";
 import { GetDataAccessorCommandInput, GetDataAccessorCommandOutput } from "../commands/GetDataAccessorCommand";
 import { GetDataSourceCommandInput, GetDataSourceCommandOutput } from "../commands/GetDataSourceCommand";
+import { GetDocumentContentCommandInput, GetDocumentContentCommandOutput } from "../commands/GetDocumentContentCommand";
 import { GetGroupCommandInput, GetGroupCommandOutput } from "../commands/GetGroupCommand";
 import { GetIndexCommandInput, GetIndexCommandOutput } from "../commands/GetIndexCommand";
 import { GetMediaCommandInput, GetMediaCommandOutput } from "../commands/GetMediaCommand";
@@ -100,6 +121,10 @@ import { GetUserCommandInput, GetUserCommandOutput } from "../commands/GetUserCo
 import { GetWebExperienceCommandInput, GetWebExperienceCommandOutput } from "../commands/GetWebExperienceCommand";
 import { ListApplicationsCommandInput, ListApplicationsCommandOutput } from "../commands/ListApplicationsCommand";
 import { ListAttachmentsCommandInput, ListAttachmentsCommandOutput } from "../commands/ListAttachmentsCommand";
+import {
+  ListChatResponseConfigurationsCommandInput,
+  ListChatResponseConfigurationsCommandOutput,
+} from "../commands/ListChatResponseConfigurationsCommand";
 import { ListConversationsCommandInput, ListConversationsCommandOutput } from "../commands/ListConversationsCommand";
 import { ListDataAccessorsCommandInput, ListDataAccessorsCommandOutput } from "../commands/ListDataAccessorsCommand";
 import { ListDataSourcesCommandInput, ListDataSourcesCommandOutput } from "../commands/ListDataSourcesCommand";
@@ -149,6 +174,10 @@ import {
   UpdateChatControlsConfigurationCommandInput,
   UpdateChatControlsConfigurationCommandOutput,
 } from "../commands/UpdateChatControlsConfigurationCommand";
+import {
+  UpdateChatResponseConfigurationCommandInput,
+  UpdateChatResponseConfigurationCommandOutput,
+} from "../commands/UpdateChatResponseConfigurationCommand";
 import { UpdateDataAccessorCommandInput, UpdateDataAccessorCommandOutput } from "../commands/UpdateDataAccessorCommand";
 import { UpdateDataSourceCommandInput, UpdateDataSourceCommandOutput } from "../commands/UpdateDataSourceCommand";
 import { UpdateIndexCommandInput, UpdateIndexCommandOutput } from "../commands/UpdateIndexCommand";
@@ -188,6 +217,8 @@ import {
   BrowserExtensionConfiguration,
   ChatModeConfiguration,
   ChatOutputStream,
+  ChatResponseConfiguration,
+  ChatResponseConfigurationDetail,
   ConflictException,
   ContentBlockerRule,
   ContentRetrievalRule,
@@ -199,6 +230,9 @@ import {
   CustomizationConfiguration,
   CustomPluginConfiguration,
   DataAccessor,
+  DataAccessorAuthenticationConfiguration,
+  DataAccessorAuthenticationDetail,
+  DataAccessorIdcTrustedTokenIssuerConfiguration,
   DataSource,
   DataSourceSyncJob,
   DataSourceVpcConfiguration,
@@ -219,7 +253,7 @@ import {
   EndOfInputEvent,
   ExternalResourceException,
   FailedAttachmentEvent,
-  GroupStatusDetail,
+  HallucinationReductionConfiguration,
   HookConfiguration,
   IdcAuthConfiguration,
   IdentityProviderConfiguration,
@@ -227,18 +261,18 @@ import {
   Index,
   IndexCapacityConfiguration,
   InlineDocumentEnrichmentConfiguration,
+  InstructionCollection,
   InternalServerException,
   KendraIndexConfiguration,
   LicenseNotFoundException,
   MediaExtractionConfiguration,
-  MediaTooLargeException,
-  Message,
   MetadataEvent,
   NativeIndexConfiguration,
   NoAuthConfiguration,
   NumberAttributeBoostingConfiguration,
   OAuth2ClientCredentialConfiguration,
   OpenIDConnectProviderConfiguration,
+  PermissionCondition,
   PersonalizationConfiguration,
   Plugin,
   PluginAuthConfiguration,
@@ -249,6 +283,8 @@ import {
   QAppsConfiguration,
   QuickSightConfiguration,
   ResourceNotFoundException,
+  ResponseConfiguration,
+  ResponseConfigurationType,
   RetrieverConfiguration,
   RetrieverContentSource,
   Rule,
@@ -281,8 +317,11 @@ import {
   ChatInputStream,
   ConfigurationEvent,
   GroupMembers,
+  GroupStatusDetail,
+  MediaTooLargeException,
   MemberGroup,
   MemberUser,
+  Message,
   MessageUsefulnessFeedback,
   OrchestrationConfiguration,
   RelevantContent,
@@ -306,6 +345,7 @@ export const se_AssociatePermissionCommand = async (
   body = JSON.stringify(
     take(input, {
       actions: (_) => _json(_),
+      conditions: (_) => _json(_),
       principal: [],
       statementId: [],
     })
@@ -448,6 +488,52 @@ export const se_ChatSyncCommand = async (
 };
 
 /**
+ * serializeAws_restJson1CheckDocumentAccessCommand
+ */
+export const se_CheckDocumentAccessCommand = async (
+  input: CheckDocumentAccessCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/applications/{applicationId}/index/{indexId}/users/{userId}/documents/{documentId}/check-document-access");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  b.p("indexId", () => input.indexId!, "{indexId}", false);
+  b.p("userId", () => input.userId!, "{userId}", false);
+  b.p("documentId", () => input.documentId!, "{documentId}", false);
+  const query: any = map({
+    [_dSI]: [, input[_dSI]!],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1CreateAnonymousWebExperienceUrlCommand
+ */
+export const se_CreateAnonymousWebExperienceUrlCommand = async (
+  input: CreateAnonymousWebExperienceUrlCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/applications/{applicationId}/experiences/{webExperienceId}/anonymous-url");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  b.p("webExperienceId", () => input.webExperienceId!, "{webExperienceId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      sessionDurationInMinutes: [],
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1CreateApplicationCommand
  */
 export const se_CreateApplicationCommand = async (
@@ -483,6 +569,32 @@ export const se_CreateApplicationCommand = async (
 };
 
 /**
+ * serializeAws_restJson1CreateChatResponseConfigurationCommand
+ */
+export const se_CreateChatResponseConfigurationCommand = async (
+  input: CreateChatResponseConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/applications/{applicationId}/chatresponseconfigurations");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      displayName: [],
+      responseConfigurations: (_) => _json(_),
+      tags: (_) => _json(_),
+    })
+  );
+  b.m("POST").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1CreateDataAccessorCommand
  */
 export const se_CreateDataAccessorCommand = async (
@@ -499,6 +611,7 @@ export const se_CreateDataAccessorCommand = async (
   body = JSON.stringify(
     take(input, {
       actionConfigurations: (_) => se_ActionConfigurationList(_, context),
+      authenticationDetail: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       displayName: [],
       principal: [],
@@ -764,6 +877,23 @@ export const se_DeleteChatControlsConfigurationCommand = async (
 };
 
 /**
+ * serializeAws_restJson1DeleteChatResponseConfigurationCommand
+ */
+export const se_DeleteChatResponseConfigurationCommand = async (
+  input: DeleteChatResponseConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/applications/{applicationId}/chatresponseconfigurations/{chatResponseConfigurationId}");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  b.p("chatResponseConfigurationId", () => input.chatResponseConfigurationId!, "{chatResponseConfigurationId}", false);
+  let body: any;
+  b.m("DELETE").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1DeleteConversationCommand
  */
 export const se_DeleteConversationCommand = async (
@@ -978,6 +1108,23 @@ export const se_GetChatControlsConfigurationCommand = async (
 };
 
 /**
+ * serializeAws_restJson1GetChatResponseConfigurationCommand
+ */
+export const se_GetChatResponseConfigurationCommand = async (
+  input: GetChatResponseConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/applications/{applicationId}/chatresponseconfigurations/{chatResponseConfigurationId}");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  b.p("chatResponseConfigurationId", () => input.chatResponseConfigurationId!, "{chatResponseConfigurationId}", false);
+  let body: any;
+  b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
  * serializeAws_restJson1GetDataAccessorCommand
  */
 export const se_GetDataAccessorCommand = async (
@@ -1009,6 +1156,28 @@ export const se_GetDataSourceCommand = async (
   b.p("dataSourceId", () => input.dataSourceId!, "{dataSourceId}", false);
   let body: any;
   b.m("GET").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1GetDocumentContentCommand
+ */
+export const se_GetDocumentContentCommand = async (
+  input: GetDocumentContentCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/applications/{applicationId}/index/{indexId}/documents/{documentId}/content");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  b.p("indexId", () => input.indexId!, "{indexId}", false);
+  b.p("documentId", () => input.documentId!, "{documentId}", false);
+  const query: any = map({
+    [_dSI]: [, input[_dSI]!],
+    [_oF]: [, input[_oF]!],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
   return b.build();
 };
 
@@ -1188,6 +1357,26 @@ export const se_ListAttachmentsCommand = async (
     [_uI]: [, input[_uI]!],
     [_nT]: [, input[_nT]!],
     [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+  });
+  let body: any;
+  b.m("GET").h(headers).q(query).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1ListChatResponseConfigurationsCommand
+ */
+export const se_ListChatResponseConfigurationsCommand = async (
+  input: ListChatResponseConfigurationsCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {};
+  b.bp("/applications/{applicationId}/chatresponseconfigurations");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  const query: any = map({
+    [_mR]: [() => input.maxResults !== void 0, () => input[_mR]!.toString()],
+    [_nT]: [, input[_nT]!],
   });
   let body: any;
   b.m("GET").h(headers).q(query).b(body);
@@ -1738,6 +1927,7 @@ export const se_UpdateChatControlsConfigurationCommand = async (
       blockedPhrasesConfigurationUpdate: (_) => _json(_),
       clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
       creatorModeConfiguration: (_) => _json(_),
+      hallucinationReductionConfiguration: (_) => _json(_),
       orchestrationConfiguration: (_) => _json(_),
       responseScope: [],
       topicConfigurationsToCreateOrUpdate: (_) => _json(_),
@@ -1745,6 +1935,32 @@ export const se_UpdateChatControlsConfigurationCommand = async (
     })
   );
   b.m("PATCH").h(headers).b(body);
+  return b.build();
+};
+
+/**
+ * serializeAws_restJson1UpdateChatResponseConfigurationCommand
+ */
+export const se_UpdateChatResponseConfigurationCommand = async (
+  input: UpdateChatResponseConfigurationCommandInput,
+  context: __SerdeContext
+): Promise<__HttpRequest> => {
+  const b = rb(input, context);
+  const headers: any = {
+    "content-type": "application/json",
+  };
+  b.bp("/applications/{applicationId}/chatresponseconfigurations/{chatResponseConfigurationId}");
+  b.p("applicationId", () => input.applicationId!, "{applicationId}", false);
+  b.p("chatResponseConfigurationId", () => input.chatResponseConfigurationId!, "{chatResponseConfigurationId}", false);
+  let body: any;
+  body = JSON.stringify(
+    take(input, {
+      clientToken: [true, (_) => _ ?? generateIdempotencyToken()],
+      displayName: [],
+      responseConfigurations: (_) => _json(_),
+    })
+  );
+  b.m("PUT").h(headers).b(body);
   return b.build();
 };
 
@@ -1766,6 +1982,7 @@ export const se_UpdateDataAccessorCommand = async (
   body = JSON.stringify(
     take(input, {
       actionConfigurations: (_) => se_ActionConfigurationList(_, context),
+      authenticationDetail: (_) => _json(_),
       displayName: [],
     })
   );
@@ -2101,6 +2318,51 @@ export const de_ChatSyncCommand = async (
 };
 
 /**
+ * deserializeAws_restJson1CheckDocumentAccessCommand
+ */
+export const de_CheckDocumentAccessCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CheckDocumentAccessCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    documentAcl: _json,
+    hasAccess: __expectBoolean,
+    userAliases: _json,
+    userGroups: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1CreateAnonymousWebExperienceUrlCommand
+ */
+export const de_CreateAnonymousWebExperienceUrlCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateAnonymousWebExperienceUrlCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    anonymousUrl: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
  * deserializeAws_restJson1CreateApplicationCommand
  */
 export const de_CreateApplicationCommand = async (
@@ -2117,6 +2379,28 @@ export const de_CreateApplicationCommand = async (
   const doc = take(data, {
     applicationArn: __expectString,
     applicationId: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1CreateChatResponseConfigurationCommand
+ */
+export const de_CreateChatResponseConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<CreateChatResponseConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    chatResponseConfigurationArn: __expectString,
+    chatResponseConfigurationId: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -2338,6 +2622,23 @@ export const de_DeleteChatControlsConfigurationCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<DeleteChatControlsConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1DeleteChatResponseConfigurationCommand
+ */
+export const de_DeleteChatResponseConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<DeleteChatResponseConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -2574,10 +2875,37 @@ export const de_GetChatControlsConfigurationCommand = async (
   const doc = take(data, {
     blockedPhrases: _json,
     creatorModeConfiguration: _json,
+    hallucinationReductionConfiguration: _json,
     nextToken: __expectString,
     orchestrationConfiguration: _json,
     responseScope: __expectString,
     topicConfigurations: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1GetChatResponseConfigurationCommand
+ */
+export const de_GetChatResponseConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetChatResponseConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    chatResponseConfigurationArn: __expectString,
+    chatResponseConfigurationId: __expectString,
+    createdAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    displayName: __expectString,
+    inUseConfiguration: (_) => de_ChatResponseConfigurationDetail(_, context),
+    lastUpdateConfiguration: (_) => de_ChatResponseConfigurationDetail(_, context),
   });
   Object.assign(contents, doc);
   return contents;
@@ -2600,6 +2928,7 @@ export const de_GetDataAccessorCommand = async (
   const doc = take(data, {
     actionConfigurations: (_) => de_ActionConfigurationList(_, context),
     applicationId: __expectString,
+    authenticationDetail: _json,
     createdAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     dataAccessorArn: __expectString,
     dataAccessorId: __expectString,
@@ -2644,6 +2973,28 @@ export const de_GetDataSourceCommand = async (
     type: __expectString,
     updatedAt: (_) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     vpcConfiguration: _json,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1GetDocumentContentCommand
+ */
+export const de_GetDocumentContentCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<GetDocumentContentCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    mimeType: __expectString,
+    presignedUrl: __expectString,
   });
   Object.assign(contents, doc);
   return contents;
@@ -2906,6 +3257,28 @@ export const de_ListAttachmentsCommand = async (
   const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
   const doc = take(data, {
     attachments: (_) => de_AttachmentList(_, context),
+    nextToken: __expectString,
+  });
+  Object.assign(contents, doc);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1ListChatResponseConfigurationsCommand
+ */
+export const de_ListChatResponseConfigurationsCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<ListChatResponseConfigurationsCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  const data: Record<string, any> = __expectNonNull(__expectObject(await parseBody(output.body, context)), "body");
+  const doc = take(data, {
+    chatResponseConfigurations: (_) => de_ChatResponseConfigurations(_, context),
     nextToken: __expectString,
   });
   Object.assign(contents, doc);
@@ -3415,6 +3788,23 @@ export const de_UpdateChatControlsConfigurationCommand = async (
   output: __HttpResponse,
   context: __SerdeContext
 ): Promise<UpdateChatControlsConfigurationCommandOutput> => {
+  if (output.statusCode !== 200 && output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const contents: any = map({
+    $metadata: deserializeMetadata(output),
+  });
+  await collectBody(output.body, context);
+  return contents;
+};
+
+/**
+ * deserializeAws_restJson1UpdateChatResponseConfigurationCommand
+ */
+export const de_UpdateChatResponseConfigurationCommand = async (
+  output: __HttpResponse,
+  context: __SerdeContext
+): Promise<UpdateChatResponseConfigurationCommandOutput> => {
   if (output.statusCode !== 200 && output.statusCode >= 300) {
     return de_CommandError(output, context);
   }
@@ -3941,7 +4331,7 @@ const de_ChatOutputStream = (
         ),
       };
     }
-    return { $unknown: output };
+    return { $unknown: event as any };
   });
 };
 const de_ActionReviewEvent_event = async (output: any, context: __SerdeContext): Promise<ActionReviewEvent> => {
@@ -4182,6 +4572,14 @@ const se_ConfigurationEvent = (input: ConfigurationEvent, context: __SerdeContex
 
 // se_CustomPluginConfiguration omitted.
 
+// se_DataAccessorAuthenticationConfiguration omitted.
+
+// se_DataAccessorAuthenticationDetail omitted.
+
+// se_DataAccessorExternalIds omitted.
+
+// se_DataAccessorIdcTrustedTokenIssuerConfiguration omitted.
+
 /**
  * serializeAws_restJson1DataSourceConfiguration
  */
@@ -4324,6 +4722,8 @@ const se_Documents = (input: Document[], context: __SerdeContext): any => {
 
 // se_GroupMembers omitted.
 
+// se_HallucinationReductionConfiguration omitted.
+
 /**
  * serializeAws_restJson1HookConfiguration
  */
@@ -4372,6 +4772,8 @@ const se_InlineDocumentEnrichmentConfigurations = (
     });
 };
 
+// se_InstructionCollection omitted.
+
 // se_KendraIndexConfiguration omitted.
 
 // se_MediaExtractionConfiguration omitted.
@@ -4408,6 +4810,12 @@ const se_MessageUsefulnessFeedback = (input: MessageUsefulnessFeedback, context:
 
 // se_OrchestrationConfiguration omitted.
 
+// se_PermissionCondition omitted.
+
+// se_PermissionConditions omitted.
+
+// se_PermissionConditionValues omitted.
+
 // se_PersonalizationConfiguration omitted.
 
 // se_PluginAuthConfiguration omitted.
@@ -4427,6 +4835,10 @@ const se_MessageUsefulnessFeedback = (input: MessageUsefulnessFeedback, context:
 // se_QIamActions omitted.
 
 // se_QuickSightConfiguration omitted.
+
+// se_ResponseConfiguration omitted.
+
+// se_ResponseConfigurations omitted.
 
 // se_RetrieverConfiguration omitted.
 
@@ -4690,6 +5102,14 @@ const de_Applications = (output: any, context: __SerdeContext): Application[] =>
 
 // de_AppliedOrchestrationConfiguration omitted.
 
+// de_AssociatedGroup omitted.
+
+// de_AssociatedGroups omitted.
+
+// de_AssociatedUser omitted.
+
+// de_AssociatedUsers omitted.
+
 /**
  * deserializeAws_restJson1Attachment
  */
@@ -4774,6 +5194,46 @@ const de_AttributeFilters = (output: any, context: __SerdeContext): AttributeFil
 
 // de_BrowserExtensionList omitted.
 
+/**
+ * deserializeAws_restJson1ChatResponseConfiguration
+ */
+const de_ChatResponseConfiguration = (output: any, context: __SerdeContext): ChatResponseConfiguration => {
+  return take(output, {
+    chatResponseConfigurationArn: __expectString,
+    chatResponseConfigurationId: __expectString,
+    createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+    displayName: __expectString,
+    responseConfigurationSummary: __expectString,
+    status: __expectString,
+    updatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ChatResponseConfigurationDetail
+ */
+const de_ChatResponseConfigurationDetail = (output: any, context: __SerdeContext): ChatResponseConfigurationDetail => {
+  return take(output, {
+    error: _json,
+    responseConfigurationSummary: __expectString,
+    responseConfigurations: _json,
+    status: __expectString,
+    updatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
+  }) as any;
+};
+
+/**
+ * deserializeAws_restJson1ChatResponseConfigurations
+ */
+const de_ChatResponseConfigurations = (output: any, context: __SerdeContext): ChatResponseConfiguration[] => {
+  const retVal = (output || [])
+    .filter((e: any) => e != null)
+    .map((entry: any) => {
+      return de_ChatResponseConfiguration(entry, context);
+    });
+  return retVal;
+};
+
 // de_ClientIdsForOIDC omitted.
 
 // de_ContentBlockerRule omitted.
@@ -4816,6 +5276,7 @@ const de_Conversations = (output: any, context: __SerdeContext): Conversation[] 
  */
 const de_DataAccessor = (output: any, context: __SerdeContext): DataAccessor => {
   return take(output, {
+    authenticationDetail: _json,
     createdAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
     dataAccessorArn: __expectString,
     dataAccessorId: __expectString,
@@ -4825,6 +5286,14 @@ const de_DataAccessor = (output: any, context: __SerdeContext): DataAccessor => 
     updatedAt: (_: any) => __expectNonNull(__parseEpochTimestamp(__expectNumber(_))),
   }) as any;
 };
+
+// de_DataAccessorAuthenticationConfiguration omitted.
+
+// de_DataAccessorAuthenticationDetail omitted.
+
+// de_DataAccessorExternalIds omitted.
+
+// de_DataAccessorIdcTrustedTokenIssuerConfiguration omitted.
 
 /**
  * deserializeAws_restJson1DataAccessors
@@ -4903,6 +5372,22 @@ const de_DataSourceSyncJobs = (output: any, context: __SerdeContext): DataSource
 // de_DataSourceVpcConfiguration omitted.
 
 // de_DateAttributeBoostingConfiguration omitted.
+
+// de_DocumentAcl omitted.
+
+// de_DocumentAclCondition omitted.
+
+// de_DocumentAclConditions omitted.
+
+// de_DocumentAclGroup omitted.
+
+// de_DocumentAclGroups omitted.
+
+// de_DocumentAclMembership omitted.
+
+// de_DocumentAclUser omitted.
+
+// de_DocumentAclUsers omitted.
 
 /**
  * deserializeAws_restJson1DocumentAttribute
@@ -5060,6 +5545,8 @@ const de_GroupStatusDetails = (output: any, context: __SerdeContext): GroupStatu
 
 // de_GroupSummaryList omitted.
 
+// de_HallucinationReductionConfiguration omitted.
+
 /**
  * deserializeAws_restJson1HookConfiguration
  */
@@ -5137,6 +5624,8 @@ const de_InlineDocumentEnrichmentConfigurations = (
     });
   return retVal;
 };
+
+// de_InstructionCollection omitted.
 
 // de_KendraIndexConfiguration omitted.
 
@@ -5259,6 +5748,10 @@ const de_RelevantContentList = (output: any, context: __SerdeContext): RelevantC
   return retVal;
 };
 
+// de_ResponseConfiguration omitted.
+
+// de_ResponseConfigurations omitted.
+
 // de_Retriever omitted.
 
 // de_RetrieverConfiguration omitted.
@@ -5289,6 +5782,9 @@ const de_RelevantContentList = (output: any, context: __SerdeContext): RelevantC
 const de_SourceAttribution = (output: any, context: __SerdeContext): SourceAttribution => {
   return take(output, {
     citationNumber: __expectInt32,
+    datasourceId: __expectString,
+    documentId: __expectString,
+    indexId: __expectString,
     snippet: __expectString,
     textMessageSegments: _json,
     title: __expectString,
@@ -5410,6 +5906,7 @@ const _dSIa = "dataSourceIds";
 const _eT = "endTime";
 const _mR = "maxResults";
 const _nT = "nextToken";
+const _oF = "outputFormat";
 const _pMI = "parentMessageId";
 const _s = "sync";
 const _sF = "statusFilter";

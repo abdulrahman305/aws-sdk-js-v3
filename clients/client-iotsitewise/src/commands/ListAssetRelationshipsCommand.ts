@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
 import { IoTSiteWiseClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../IoTSiteWiseClient";
-import { ListAssetRelationshipsRequest, ListAssetRelationshipsResponse } from "../models/models_0";
+import { ListAssetRelationshipsRequest, ListAssetRelationshipsResponse } from "../models/models_1";
 import { de_ListAssetRelationshipsCommand, se_ListAssetRelationshipsCommand } from "../protocols/Aws_restJson1";
 
 /**

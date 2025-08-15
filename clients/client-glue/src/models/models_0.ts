@@ -100,6 +100,7 @@ export interface Action {
  */
 export const AdditionalOptionKeys = {
   CacheOption: "performanceTuning.caching",
+  CompositeOption: "compositeRuleEvaluation.method",
   ObservationsOption: "observations.scope",
 } as const;
 
@@ -592,6 +593,12 @@ export interface GlueStudioSchemaColumn {
    * @public
    */
   Type?: string | undefined;
+
+  /**
+   * <p>The data type of the column as defined in Glue Studio.</p>
+   * @public
+   */
+  GlueStudioType?: string | undefined;
 }
 
 /**
@@ -1044,6 +1051,25 @@ export interface AuthenticationConfigurationInput {
    * @public
    */
   CustomAuthenticationCredentials?: Record<string, string> | undefined;
+}
+
+/**
+ * <p>Specifies configuration options for automatic data quality evaluation in Glue jobs. This structure enables automated data quality
+ *       checks and monitoring during ETL operations, helping to ensure data integrity and reliability without manual intervention.</p>
+ * @public
+ */
+export interface AutoDataQuality {
+  /**
+   * <p>Specifies whether automatic data quality evaluation is enabled. When set to <code>true</code>, data quality checks are performed automatically.</p>
+   * @public
+   */
+  IsEnabled?: boolean | undefined;
+
+  /**
+   * <p>The evaluation context for the automatic data quality checks. This defines the scope and parameters for the data quality evaluation.</p>
+   * @public
+   */
+  EvaluationContext?: string | undefined;
 }
 
 /**
@@ -2787,6 +2813,48 @@ export interface BatchGetDataQualityResultRequest {
 }
 
 /**
+ * <p>A summary of metrics showing the total counts of processed rows and rules, including their pass/fail statistics based on row-level results.</p>
+ * @public
+ */
+export interface DataQualityAggregatedMetrics {
+  /**
+   * <p>The total number of rows that were processed during the data quality evaluation.</p>
+   * @public
+   */
+  TotalRowsProcessed?: number | undefined;
+
+  /**
+   * <p>The total number of rows that passed all applicable data quality rules.</p>
+   * @public
+   */
+  TotalRowsPassed?: number | undefined;
+
+  /**
+   * <p>The total number of rows that failed one or more data quality rules.</p>
+   * @public
+   */
+  TotalRowsFailed?: number | undefined;
+
+  /**
+   * <p>The total number of data quality rules that were evaluated.</p>
+   * @public
+   */
+  TotalRulesProcessed?: number | undefined;
+
+  /**
+   * <p>The total number of data quality rules that passed their evaluation criteria.</p>
+   * @public
+   */
+  TotalRulesPassed?: number | undefined;
+
+  /**
+   * <p>The total number of data quality rules that failed their evaluation criteria.</p>
+   * @public
+   */
+  TotalRulesFailed?: number | undefined;
+}
+
+/**
  * <p>Describes the result of the evaluation of a data quality analyzer.</p>
  * @public
  */
@@ -3008,6 +3076,12 @@ export interface DataQualityRuleResult {
    * @public
    */
   EvaluatedRule?: string | undefined;
+
+  /**
+   * <p>A map containing metrics associated with the evaluation of the rule based on row-level results. </p>
+   * @public
+   */
+  RuleMetrics?: Record<string, number> | undefined;
 }
 
 /**
@@ -3098,6 +3172,12 @@ export interface DataQualityResult {
    * @public
    */
   Observations?: DataQualityObservation[] | undefined;
+
+  /**
+   * <p> A summary of <code>DataQualityAggregatedMetrics</code> objects showing the total counts of processed rows and rules, including their pass/fail statistics based on row-level results. </p>
+   * @public
+   */
+  AggregatedMetrics?: DataQualityAggregatedMetrics | undefined;
 }
 
 /**
@@ -3461,6 +3541,42 @@ export interface CatalogHudiSource {
 }
 
 /**
+ * <p>Specifies an Apache Iceberg data source that is registered in the Glue Data Catalog.</p>
+ * @public
+ */
+export interface CatalogIcebergSource {
+  /**
+   * <p>The name of the Iceberg data source.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The name of the database to read from.</p>
+   * @public
+   */
+  Database: string | undefined;
+
+  /**
+   * <p>The name of the table in the database to read from.</p>
+   * @public
+   */
+  Table: string | undefined;
+
+  /**
+   * <p>Specifies additional connection options for the Iceberg data source.</p>
+   * @public
+   */
+  AdditionalIcebergOptions?: Record<string, string> | undefined;
+
+  /**
+   * <p>Specifies the data schema for the Iceberg source.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
+}
+
+/**
  * <p>Specifies options related to data preview for viewing a sample of your data.</p>
  * @public
  */
@@ -3796,6 +3912,13 @@ export interface KinesisStreamingSourceOptions {
    * @public
    */
   StartingTimestamp?: Date | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Kinesis Data Streams enhanced fan-out consumer. When specified, enables enhanced fan-out for
+   *       dedicated throughput and lower latency data consumption.</p>
+   * @public
+   */
+  FanoutConsumerARN?: string | undefined;
 }
 
 /**
@@ -3868,6 +3991,20 @@ export interface CatalogSource {
    * @public
    */
   Table: string | undefined;
+
+  /**
+   * <p>
+   *       Partitions satisfying this predicate are deleted. Files within the retention period in these partitions are not deleted.
+   *     </p>
+   * @public
+   */
+  PartitionPredicate?: string | undefined;
+
+  /**
+   * <p>Specifies the data schema for the catalog source.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
 }
 
 /**
@@ -4141,6 +4278,12 @@ export interface DirectJDBCSource {
    * @public
    */
   RedshiftTmpDir?: string | undefined;
+
+  /**
+   * <p>Specifies the data schema for the direct JDBC source.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
 }
 
 /**
@@ -4476,6 +4619,24 @@ export interface DynamicTransform {
 }
 
 /**
+ * <p>Specifies additional options for DynamoDB ELT catalog operations.</p>
+ * @public
+ */
+export interface DDBELTCatalogAdditionalOptions {
+  /**
+   * <p>Specifies the DynamoDB export configuration for the ELT operation.</p>
+   * @public
+   */
+  DynamodbExport?: string | undefined;
+
+  /**
+   * <p>Specifies whether to unnest DynamoDB JSON format. When set to <code>true</code>, nested JSON structures in DynamoDB items are flattened.</p>
+   * @public
+   */
+  DynamodbUnnestDDBJson?: boolean | undefined;
+}
+
+/**
  * <p>Specifies a DynamoDB data source in the Glue Data Catalog.</p>
  * @public
  */
@@ -4497,6 +4658,113 @@ export interface DynamoDBCatalogSource {
    * @public
    */
   Table: string | undefined;
+
+  /**
+   * <p>Specifies whether Point-in-Time Recovery (PITR) is enabled for the DynamoDB table. When set to <code>true</code>,
+   *       allows reading from a specific point in time. The default value is <code>false</code>.</p>
+   * @public
+   */
+  PitrEnabled?: boolean | undefined;
+
+  /**
+   * <p>Specifies additional connection options for the DynamoDB data source.</p>
+   * @public
+   */
+  AdditionalOptions?: DDBELTCatalogAdditionalOptions | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const DdbExportType = {
+  ddb: "ddb",
+  s3: "s3",
+} as const;
+
+/**
+ * @public
+ */
+export type DdbExportType = (typeof DdbExportType)[keyof typeof DdbExportType];
+
+/**
+ * <p>Specifies connection options for DynamoDB ELT (Extract, Load, Transform) operations. This structure contains configuration parameters for connecting
+ *       to and extracting data from DynamoDB tables using the ELT connector.</p>
+ * @public
+ */
+export interface DDBELTConnectionOptions {
+  /**
+   * <p>Specifies the export type for DynamoDB data extraction. This parameter determines how data is exported from the DynamoDB table during the ELT process.</p>
+   * @public
+   */
+  DynamodbExport?: DdbExportType | undefined;
+
+  /**
+   * <p>A boolean value that specifies whether to unnest DynamoDB JSON format during data extraction. When set to <code>true</code>, the connector will
+   *       flatten nested JSON structures from DynamoDB items. When set to <code>false</code>, the original DynamoDB JSON structure is preserved.</p>
+   * @public
+   */
+  DynamodbUnnestDDBJson?: boolean | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the DynamoDB table to extract data from. This parameter specifies the source table for the ELT operation.
+   *       </p>
+   * @public
+   */
+  DynamodbTableArn: string | undefined;
+
+  /**
+   * <p>The name of the Amazon S3 bucket used for intermediate storage during the DynamoDB ELT process. This bucket is used to temporarily store exported
+   *       DynamoDB data before it is processed by the ELT job.</p>
+   * @public
+   */
+  DynamodbS3Bucket?: string | undefined;
+
+  /**
+   * <p>The S3 object key prefix for files stored in the intermediate S3 bucket during the DynamoDB ELT process. This prefix helps organize and identify the
+   *       temporary files created during data extraction.</p>
+   * @public
+   */
+  DynamodbS3Prefix?: string | undefined;
+
+  /**
+   * <p>The Amazon Web Services account ID of the owner of the S3 bucket specified in <code>DynamodbS3Bucket</code>. This parameter is required when the S3 bucket is owned by
+   *       a different Amazon Web Services account than the one running the ELT job, enabling cross-account access to the intermediate storage bucket.</p>
+   * @public
+   */
+  DynamodbS3BucketOwner?: string | undefined;
+
+  /**
+   * <p>The Amazon Resource Name (ARN) of the Amazon Web Services Security Token Service (STS) role to assume for accessing DynamoDB and S3 resources during
+   *       the ELT operation.
+   *       This role must have the necessary permissions to read from the DynamoDB table and write to the intermediate S3 bucket. </p>
+   * @public
+   */
+  DynamodbStsRoleArn?: string | undefined;
+}
+
+/**
+ * <p>Specifies a DynamoDB ELT connector source for extracting data from DynamoDB tables.</p>
+ * @public
+ */
+export interface DynamoDBELTConnectorSource {
+  /**
+   * <p>The name of the DynamoDB ELT connector source.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The connection options for the DynamoDB ELT connector source.</p>
+   * @public
+   */
+  ConnectionOptions?: DDBELTConnectionOptions | undefined;
+
+  /**
+   * <p>Specifies the data schema for the DynamoDB ELT connector source.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
 }
 
 /**
@@ -5439,9 +5707,12 @@ export interface OracleSQLCatalogTarget {
  */
 export const PiiType = {
   ColumnAudit: "ColumnAudit",
+  ColumnHashing: "ColumnHashing",
   ColumnMasking: "ColumnMasking",
   RowAudit: "RowAudit",
+  RowHashing: "RowHashing",
   RowMasking: "RowMasking",
+  RowPartialMasking: "RowPartialMasking",
 } as const;
 
 /**
@@ -5506,6 +5777,48 @@ export interface PIIDetection {
    * @public
    */
   MaskValue?: string | undefined;
+
+  /**
+   * <p>Specifies whether to redact the detected PII text. When set to <code>true</code>, PII content is replaced with redaction characters.</p>
+   * @public
+   */
+  RedactText?: string | undefined;
+
+  /**
+   * <p>The character used to replace detected PII content when redaction is enabled. The default redaction character is <code>*</code>.</p>
+   * @public
+   */
+  RedactChar?: string | undefined;
+
+  /**
+   * <p>A regular expression pattern used to identify additional PII content beyond the standard detection algorithms.</p>
+   * @public
+   */
+  MatchPattern?: string | undefined;
+
+  /**
+   * <p>The number of characters to exclude from redaction on the left side of detected PII content. This allows preserving context around the sensitive data.</p>
+   * @public
+   */
+  NumLeftCharsToExclude?: number | undefined;
+
+  /**
+   * <p>The number of characters to exclude from redaction on the right side of detected PII content. This allows preserving context around the sensitive data.</p>
+   * @public
+   */
+  NumRightCharsToExclude?: number | undefined;
+
+  /**
+   * <p>Additional parameters for configuring PII detection behavior and sensitivity settings.</p>
+   * @public
+   */
+  DetectionParameters?: string | undefined;
+
+  /**
+   * <p>The sensitivity level for PII detection. Higher sensitivity levels detect more potential PII but may result in more false positives.</p>
+   * @public
+   */
+  DetectionSensitivity?: string | undefined;
 }
 
 /**
@@ -5833,6 +6146,54 @@ export interface RenameField {
 }
 
 /**
+ * <p>Specifies a group of filters with a logical operator that determines how the filters are combined to evaluate routing conditions.</p>
+ * @public
+ */
+export interface GroupFilters {
+  /**
+   * <p>The name of the filter group.</p>
+   * @public
+   */
+  GroupName: string | undefined;
+
+  /**
+   * <p>A list of filter expressions that define the conditions for this group.</p>
+   * @public
+   */
+  Filters: FilterExpression[] | undefined;
+
+  /**
+   * <p>The logical operator used to combine the filters in this group. Determines whether all filters must match (AND) or any filter can match (OR).</p>
+   * @public
+   */
+  LogicalOperator: FilterLogicalOperator | undefined;
+}
+
+/**
+ * <p>Specifies a route node that directs data to different output paths based on defined filtering conditions.</p>
+ * @public
+ */
+export interface Route {
+  /**
+   * <p>The name of the route node.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The input connection for the route node.</p>
+   * @public
+   */
+  Inputs: string[] | undefined;
+
+  /**
+   * <p>A list of group filters that define the routing conditions and criteria for directing data to different output paths.</p>
+   * @public
+   */
+  GroupFiltersList: GroupFilters[] | undefined;
+}
+
+/**
  * <p>Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be stored in Amazon S3.</p>
  * @public
  */
@@ -5899,6 +6260,42 @@ export interface S3CatalogHudiSource {
 
   /**
    * <p>Specifies the data schema for the Hudi source.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
+}
+
+/**
+ * <p>Specifies an Apache Iceberg data source that is registered in the Glue Data Catalog. The Iceberg data source must be stored in Amazon S3.</p>
+ * @public
+ */
+export interface S3CatalogIcebergSource {
+  /**
+   * <p>The name of the Iceberg data source.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The name of the database to read from.</p>
+   * @public
+   */
+  Database: string | undefined;
+
+  /**
+   * <p>The name of the table in the database to read from.</p>
+   * @public
+   */
+  Table: string | undefined;
+
+  /**
+   * <p>Specifies additional connection options for the Iceberg data source.</p>
+   * @public
+   */
+  AdditionalIcebergOptions?: Record<string, string> | undefined;
+
+  /**
+   * <p>Specifies the data schema for the Iceberg source.</p>
    * @public
    */
   OutputSchemas?: GlueSchema[] | undefined;
@@ -5980,6 +6377,13 @@ export interface S3CatalogTarget {
    * @public
    */
   SchemaChangePolicy?: CatalogSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 catalog target.
+   *       When set to <code>true</code>, data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
 }
 
 /**
@@ -6225,6 +6629,19 @@ export interface S3DeltaCatalogTarget {
    * @public
    */
   SchemaChangePolicy?: CatalogSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Delta catalog target. When set to <code>true</code>,
+   *       data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
+
+  /**
+   * <p>Specifies the data schema for the S3 Delta catalog target.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
 }
 
 /**
@@ -6250,9 +6667,12 @@ export const TargetFormat = {
   CSV: "csv",
   DELTA: "delta",
   HUDI: "hudi",
+  HYPER: "hyper",
+  ICEBERG: "iceberg",
   JSON: "json",
   ORC: "orc",
   PARQUET: "parquet",
+  XML: "xml",
 } as const;
 
 /**
@@ -6326,6 +6746,12 @@ export interface S3DeltaDirectTarget {
   Compression: DeltaTargetCompressionType | undefined;
 
   /**
+   * <p>Specifies the number of target partitions for distributing Delta Lake dataset files across Amazon S3.</p>
+   * @public
+   */
+  NumberTargetPartitions?: string | undefined;
+
+  /**
    * <p>Specifies the data output format for the target.</p>
    * @public
    */
@@ -6342,6 +6768,13 @@ export interface S3DeltaDirectTarget {
    * @public
    */
   SchemaChangePolicy?: DirectSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Delta direct target. When set to <code>true</code>,
+   *       data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
 }
 
 /**
@@ -6416,6 +6849,12 @@ export interface S3DirectTarget {
   Compression?: string | undefined;
 
   /**
+   * <p>Specifies the number of target partitions when writing data directly to Amazon S3.</p>
+   * @public
+   */
+  NumberTargetPartitions?: string | undefined;
+
+  /**
    * <p>Specifies the data output format for the target.</p>
    * @public
    */
@@ -6426,6 +6865,19 @@ export interface S3DirectTarget {
    * @public
    */
   SchemaChangePolicy?: DirectSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 direct target. When set to <code>true</code>,
+   *       data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
+
+  /**
+   * <p>Specifies the data schema for the S3 direct target.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
 }
 
 /**
@@ -6433,7 +6885,9 @@ export interface S3DirectTarget {
  * @enum
  */
 export const ParquetCompressionType = {
+  BROTLI: "brotli",
   GZIP: "gzip",
+  LZ4: "lz4",
   LZO: "lzo",
   NONE: "none",
   SNAPPY: "snappy",
@@ -6444,6 +6898,90 @@ export const ParquetCompressionType = {
  * @public
  */
 export type ParquetCompressionType = (typeof ParquetCompressionType)[keyof typeof ParquetCompressionType];
+
+/**
+ * <p>Specifies an S3 Excel data source.</p>
+ * @public
+ */
+export interface S3ExcelSource {
+  /**
+   * <p>The name of the S3 Excel data source.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The S3 paths where the Excel files are located.</p>
+   * @public
+   */
+  Paths: string[] | undefined;
+
+  /**
+   * <p>The compression format used for the Excel files.</p>
+   * @public
+   */
+  CompressionType?: ParquetCompressionType | undefined;
+
+  /**
+   * <p>Patterns to exclude specific files or paths from processing.</p>
+   * @public
+   */
+  Exclusions?: string[] | undefined;
+
+  /**
+   * <p>Defines the size of file groups for batch processing.</p>
+   * @public
+   */
+  GroupSize?: string | undefined;
+
+  /**
+   * <p>Specifies how files should be grouped for processing.</p>
+   * @public
+   */
+  GroupFiles?: string | undefined;
+
+  /**
+   * <p>Indicates whether to recursively process subdirectories.</p>
+   * @public
+   */
+  Recurse?: boolean | undefined;
+
+  /**
+   * <p>The maximum number of processing bands to use.</p>
+   * @public
+   */
+  MaxBand?: number | undefined;
+
+  /**
+   * <p>The maximum number of files to process in each band.</p>
+   * @public
+   */
+  MaxFilesInBand?: number | undefined;
+
+  /**
+   * <p>Additional configuration options for S3 direct source processing.</p>
+   * @public
+   */
+  AdditionalOptions?: S3DirectSourceAdditionalOptions | undefined;
+
+  /**
+   * <p>The number of rows to process from each Excel file.</p>
+   * @public
+   */
+  NumberRows?: number | undefined;
+
+  /**
+   * <p>The number of rows to skip at the end of each Excel file.</p>
+   * @public
+   */
+  SkipFooter?: number | undefined;
+
+  /**
+   * <p>The Glue schemas to apply to the processed data.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
+}
 
 /**
  * <p>Specifies a data target that writes to Amazon S3 in Apache Parquet columnar storage.</p>
@@ -6481,10 +7019,23 @@ export interface S3GlueParquetTarget {
   Compression?: ParquetCompressionType | undefined;
 
   /**
+   * <p>Specifies the number of target partitions for Parquet files when writing to Amazon S3 using Glue.</p>
+   * @public
+   */
+  NumberTargetPartitions?: string | undefined;
+
+  /**
    * <p>A policy that specifies update behavior for the crawler.</p>
    * @public
    */
   SchemaChangePolicy?: DirectSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Glue Parquet target. When set to <code>true</code>,
+   *       data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
 }
 
 /**
@@ -6533,6 +7084,19 @@ export interface S3HudiCatalogTarget {
    * @public
    */
   SchemaChangePolicy?: CatalogSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Hudi catalog target. When set to <code>true</code>,
+   *       data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
+
+  /**
+   * <p>Specifies the data schema for the S3 Hudi catalog target.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
 }
 
 /**
@@ -6581,6 +7145,12 @@ export interface S3HudiDirectTarget {
   Compression: HudiTargetCompressionType | undefined;
 
   /**
+   * <p>Specifies the number of target partitions for distributing Hudi dataset files across Amazon S3.</p>
+   * @public
+   */
+  NumberTargetPartitions?: string | undefined;
+
+  /**
    * <p>Specifies native partitioning using a sequence of keys.</p>
    * @public
    */
@@ -6603,6 +7173,13 @@ export interface S3HudiDirectTarget {
    * @public
    */
   SchemaChangePolicy?: DirectSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Hudi direct target. When set to <code>true</code>,
+   *       data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
 }
 
 /**
@@ -6636,6 +7213,223 @@ export interface S3HudiSource {
 
   /**
    * <p>Specifies the data schema for the Hudi source.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const HyperTargetCompressionType = {
+  UNCOMPRESSED: "uncompressed",
+} as const;
+
+/**
+ * @public
+ */
+export type HyperTargetCompressionType = (typeof HyperTargetCompressionType)[keyof typeof HyperTargetCompressionType];
+
+/**
+ * <p>Specifies a HyperDirect data target that writes to Amazon S3.</p>
+ * @public
+ */
+export interface S3HyperDirectTarget {
+  /**
+   * <p>The unique identifier for the HyperDirect target node.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>Specifies the input source for the HyperDirect target.</p>
+   * @public
+   */
+  Inputs: string[] | undefined;
+
+  /**
+   * <p>Specifies the data output format for the HyperDirect target.</p>
+   * @public
+   */
+  Format?: TargetFormat | undefined;
+
+  /**
+   * <p>Defines the partitioning strategy for the output data.</p>
+   * @public
+   */
+  PartitionKeys?: string[][] | undefined;
+
+  /**
+   * <p>The S3 location where the output data will be written.</p>
+   * @public
+   */
+  Path: string | undefined;
+
+  /**
+   * <p>The compression type to apply to the output data.</p>
+   * @public
+   */
+  Compression?: HyperTargetCompressionType | undefined;
+
+  /**
+   * <p>Defines how schema changes are handled during write operations.</p>
+   * @public
+   */
+  SchemaChangePolicy?: DirectSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Hyper direct target. When set to <code>true</code>, data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
+
+  /**
+   * <p>Specifies the data schema for the S3 Hyper direct target.</p>
+   * @public
+   */
+  OutputSchemas?: GlueSchema[] | undefined;
+}
+
+/**
+ * <p>Specifies an Apache Iceberg catalog target that writes data to Amazon S3 and registers the table in the Glue Data Catalog.</p>
+ * @public
+ */
+export interface S3IcebergCatalogTarget {
+  /**
+   * <p>The name of the Iceberg catalog target.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>The input connection for the Iceberg catalog target.</p>
+   * @public
+   */
+  Inputs: string[] | undefined;
+
+  /**
+   * <p>A list of partition keys for the Iceberg table.</p>
+   * @public
+   */
+  PartitionKeys?: string[][] | undefined;
+
+  /**
+   * <p>The name of the table to write to in the catalog.</p>
+   * @public
+   */
+  Table: string | undefined;
+
+  /**
+   * <p>The name of the database to write to.</p>
+   * @public
+   */
+  Database: string | undefined;
+
+  /**
+   * <p>Specifies additional connection options for the Iceberg catalog target.</p>
+   * @public
+   */
+  AdditionalOptions?: Record<string, string> | undefined;
+
+  /**
+   * <p>The policy for handling schema changes in the catalog target.</p>
+   * @public
+   */
+  SchemaChangePolicy?: CatalogSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies whether to automatically enable data quality evaluation for the S3 Iceberg catalog target. When set to <code>true</code>, data quality checks are performed automatically during the write operation.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
+}
+
+/**
+ * @public
+ * @enum
+ */
+export const IcebergTargetCompressionType = {
+  GZIP: "gzip",
+  LZO: "lzo",
+  SNAPPY: "snappy",
+  UNCOMPRESSED: "uncompressed",
+} as const;
+
+/**
+ * @public
+ */
+export type IcebergTargetCompressionType =
+  (typeof IcebergTargetCompressionType)[keyof typeof IcebergTargetCompressionType];
+
+/**
+ * <p>Specifies a target that writes to an Iceberg data source in Amazon S3.</p>
+ * @public
+ */
+export interface S3IcebergDirectTarget {
+  /**
+   * <p>Specifies the unique identifier for the Iceberg target node in your data pipeline.</p>
+   * @public
+   */
+  Name: string | undefined;
+
+  /**
+   * <p>Defines the single input source that provides data to this Iceberg target.</p>
+   * @public
+   */
+  Inputs: string[] | undefined;
+
+  /**
+   * <p>Specifies the columns used to partition the Iceberg table data in S3.</p>
+   * @public
+   */
+  PartitionKeys?: string[][] | undefined;
+
+  /**
+   * <p>Defines the S3 location where the Iceberg table data will be stored.</p>
+   * @public
+   */
+  Path: string | undefined;
+
+  /**
+   * <p>Specifies the file format used for storing Iceberg table data (e.g., Parquet, ORC).</p>
+   * @public
+   */
+  Format: TargetFormat | undefined;
+
+  /**
+   * <p>Provides additional configuration options for customizing the Iceberg table behavior.</p>
+   * @public
+   */
+  AdditionalOptions?: Record<string, string> | undefined;
+
+  /**
+   * <p>Defines how schema changes are handled when writing data to the Iceberg table.</p>
+   * @public
+   */
+  SchemaChangePolicy?: DirectSchemaChangePolicy | undefined;
+
+  /**
+   * <p>Specifies configuration options for automatic data quality evaluation in Glue jobs. This structure enables automated data quality
+   *       checks and monitoring during ETL operations, helping to ensure data integrity and reliability without manual intervention.</p>
+   * @public
+   */
+  AutoDataQuality?: AutoDataQuality | undefined;
+
+  /**
+   * <p>Specifies the compression codec used for Iceberg table files in S3.</p>
+   * @public
+   */
+  Compression: IcebergTargetCompressionType | undefined;
+
+  /**
+   * <p>Sets the number of target partitions for distributing Iceberg table files across S3.</p>
+   * @public
+   */
+  NumberTargetPartitions?: string | undefined;
+
+  /**
+   * <p>Specifies the data schema for the S3 Iceberg direct target.</p>
    * @public
    */
   OutputSchemas?: GlueSchema[] | undefined;
@@ -7777,6 +8571,81 @@ export interface BatchGetTableOptimizerError {
 }
 
 /**
+ * @public
+ * @enum
+ */
+export const CompactionStrategy = {
+  BINPACK: "binpack",
+  SORT: "sort",
+  ZORDER: "z-order",
+} as const;
+
+/**
+ * @public
+ */
+export type CompactionStrategy = (typeof CompactionStrategy)[keyof typeof CompactionStrategy];
+
+/**
+ * <p>The configuration for an Iceberg compaction optimizer. This configuration defines parameters for optimizing the layout of data files in Iceberg tables.</p>
+ * @public
+ */
+export interface IcebergCompactionConfiguration {
+  /**
+   * <p>The strategy to use for compaction. Valid values are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>binpack</code>: Combines small files into larger files, typically targeting sizes over 100MB, while applying any pending deletes.
+   *           This is the recommended compaction strategy for most use cases.
+   *         </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>sort</code>: Organizes data based on specified columns which are sorted hierarchically during compaction, improving query
+   *         performance for filtered operations. This strategy is recommended when your queries frequently filter on specific columns. To use this strategy,
+   *         you must first define a sort order in your Iceberg table properties using the <code>sort_order</code> table property.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>z-order</code>: Optimizes data organization by blending multiple attributes into a single scalar value that can be used for sorting,
+   *           allowing efficient querying across multiple dimensions. This strategy is recommended when you need to query data across multiple dimensions
+   *           simultaneously. To use this strategy, you must first define a sort order in your Iceberg table properties using the
+   *           <code>sort_order</code> table property.
+   *         </p>
+   *             </li>
+   *          </ul>
+   *          <p>If an input is not provided, the default value 'binpack' will be used.</p>
+   * @public
+   */
+  strategy?: CompactionStrategy | undefined;
+
+  /**
+   * <p>The minimum number of data files that must be present in a partition before compaction will actually compact files. This parameter helps control when compaction is triggered, preventing unnecessary compaction operations on partitions with few files. If an input is not provided, the default value 100 will be used.</p>
+   * @public
+   */
+  minInputFiles?: number | undefined;
+
+  /**
+   * <p>The minimum number of deletes that must be present in a data file to make it eligible for compaction. This parameter helps optimize compaction by focusing on files that contain a significant number of delete operations, which can improve query performance by removing deleted records. If an input is not provided, the default value 1 will be used.</p>
+   * @public
+   */
+  deleteFileThreshold?: number | undefined;
+}
+
+/**
+ * <p>The configuration for a compaction optimizer. This configuration defines how data files in your table will be compacted to improve
+ *       query performance and reduce storage costs.</p>
+ * @public
+ */
+export interface CompactionConfiguration {
+  /**
+   * <p>The configuration for an Iceberg compaction optimizer.</p>
+   * @public
+   */
+  icebergConfiguration?: IcebergCompactionConfiguration | undefined;
+}
+
+/**
  * <p>The configuration for an Iceberg orphan file deletion optimizer.</p>
  * @public
  */
@@ -7792,6 +8661,12 @@ export interface IcebergOrphanFileDeletionConfiguration {
    * @public
    */
   location?: string | undefined;
+
+  /**
+   * <p>The interval in hours between orphan file deletion job runs. This parameter controls how frequently the orphan file deletion optimizer will run to clean up orphan files. The value must be between 3 and 168 hours (7 days). If an input is not provided, the default value 24 will be used.</p>
+   * @public
+   */
+  runRateInHours?: number | undefined;
 }
 
 /**
@@ -7828,6 +8703,12 @@ export interface IcebergRetentionConfiguration {
    * @public
    */
   cleanExpiredFiles?: boolean | undefined;
+
+  /**
+   * <p>The interval in hours between retention job runs. This parameter controls how frequently the retention optimizer will run to clean up expired snapshots. The value must be between 3 and 168 hours (7 days). If an input is not provided, the default value 24 will be used.</p>
+   * @public
+   */
+  runRateInHours?: number | undefined;
 }
 
 /**
@@ -7908,6 +8789,13 @@ export interface TableOptimizerConfiguration {
   vpcConfiguration?: TableOptimizerVpcConfiguration | undefined;
 
   /**
+   * <p>The configuration for a compaction optimizer. This configuration defines how data files in your table will be compacted to
+   *       improve query performance and reduce storage costs.</p>
+   * @public
+   */
+  compactionConfiguration?: CompactionConfiguration | undefined;
+
+  /**
    * <p>The configuration for a snapshot retention optimizer.</p>
    * @public
    */
@@ -7919,6 +8807,20 @@ export interface TableOptimizerConfiguration {
    */
   orphanFileDeletionConfiguration?: OrphanFileDeletionConfiguration | undefined;
 }
+
+/**
+ * @public
+ * @enum
+ */
+export const ConfigurationSource = {
+  CATALOG: "catalog",
+  TABLE: "table",
+} as const;
+
+/**
+ * @public
+ */
+export type ConfigurationSource = (typeof ConfigurationSource)[keyof typeof ConfigurationSource];
 
 /**
  * <p>Compaction metrics for Iceberg for the optimizer run.</p>
@@ -7939,6 +8841,12 @@ export interface IcebergCompactionMetrics {
 
   /**
    * <p>The number of DPU hours consumed by the job.</p>
+   * @public
+   */
+  DpuHours?: number | undefined;
+
+  /**
+   * <p>The number of DPUs consumed by the job, rounded up to the nearest whole number.</p>
    * @public
    */
   NumberOfDpus?: number | undefined;
@@ -7997,7 +8905,7 @@ export interface RunMetrics {
   NumberOfFilesCompacted?: string | undefined;
 
   /**
-   * <p>The number of DPU hours consumed by the job.</p>
+   * <p>The number of DPUs consumed by the job, rounded up to the nearest whole number.</p>
    * @public
    */
   NumberOfDpus?: string | undefined;
@@ -8022,6 +8930,12 @@ export interface IcebergOrphanFileDeletionMetrics {
 
   /**
    * <p>The number of DPU hours consumed by the job.</p>
+   * @public
+   */
+  DpuHours?: number | undefined;
+
+  /**
+   * <p>The number of DPUs consumed by the job, rounded up to the nearest whole number.</p>
    * @public
    */
   NumberOfDpus?: number | undefined;
@@ -8070,6 +8984,12 @@ export interface IcebergRetentionMetrics {
 
   /**
    * <p>The number of DPU hours consumed by the job.</p>
+   * @public
+   */
+  DpuHours?: number | undefined;
+
+  /**
+   * <p>The number of DPUs consumed by the job, rounded up to the nearest whole number.</p>
    * @public
    */
   NumberOfDpus?: number | undefined;
@@ -8138,6 +9058,35 @@ export interface TableOptimizerRun {
   compactionMetrics?: CompactionMetrics | undefined;
 
   /**
+   * <p>The strategy used for the compaction run. Indicates which algorithm was applied to determine how files were selected and combined during the
+   *       compaction process. Valid values are:</p>
+   *          <ul>
+   *             <li>
+   *                <p>
+   *                   <code>binpack</code>: Combines small files into larger files, typically targeting sizes over 100MB, while applying any pending deletes.
+   *           This is the recommended compaction strategy for most use cases.
+   *         </p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>sort</code>: Organizes data based on specified columns which are sorted hierarchically during compaction, improving query
+   *           performance for filtered operations. This strategy is recommended when your queries frequently filter on specific columns. To use this strategy,
+   *           you must first define a sort order in your Iceberg table properties using the <code>sort_order</code> table property.</p>
+   *             </li>
+   *             <li>
+   *                <p>
+   *                   <code>z-order</code>: Optimizes data organization by blending multiple attributes into a single scalar value that can be used for sorting,
+   *           allowing efficient querying across multiple dimensions. This strategy is recommended when you need to query data across multiple dimensions
+   *           simultaneously. To use this strategy, you must first define a sort order in your Iceberg table properties using the
+   *           <code>sort_order</code> table property.
+   *         </p>
+   *             </li>
+   *          </ul>
+   * @public
+   */
+  compactionStrategy?: CompactionStrategy | undefined;
+
+  /**
    * <p>A <code>RetentionMetrics</code> object containing metrics for the optimizer run.</p>
    * @public
    */
@@ -8186,6 +9135,15 @@ export interface TableOptimizer {
    * @public
    */
   lastRun?: TableOptimizerRun | undefined;
+
+  /**
+   * <p>
+   *       Specifies the source of the optimizer configuration. This indicates how the table optimizer was configured and which entity or service
+   *       initiated the configuration.
+   *     </p>
+   * @public
+   */
+  configurationSource?: ConfigurationSource | undefined;
 }
 
 /**
@@ -8573,796 +9531,6 @@ export interface BlueprintDetails {
 }
 
 /**
- * <p>An edge represents a directed connection between two Glue components that are part of the workflow the
- *       edge belongs to.</p>
- * @public
- */
-export interface Edge {
-  /**
-   * <p>The unique of the node within the workflow where the edge starts.</p>
-   * @public
-   */
-  SourceId?: string | undefined;
-
-  /**
-   * <p>The unique of the node within the workflow where the edge ends.</p>
-   * @public
-   */
-  DestinationId?: string | undefined;
-}
-
-/**
- * <p>The details of a crawl in the workflow.</p>
- * @public
- */
-export interface Crawl {
-  /**
-   * <p>The state of the crawler.</p>
-   * @public
-   */
-  State?: CrawlState | undefined;
-
-  /**
-   * <p>The date and time on which the crawl started.</p>
-   * @public
-   */
-  StartedOn?: Date | undefined;
-
-  /**
-   * <p>The date and time on which the crawl completed.</p>
-   * @public
-   */
-  CompletedOn?: Date | undefined;
-
-  /**
-   * <p>The error message associated with the crawl.</p>
-   * @public
-   */
-  ErrorMessage?: string | undefined;
-
-  /**
-   * <p>The log group associated with the crawl.</p>
-   * @public
-   */
-  LogGroup?: string | undefined;
-
-  /**
-   * <p>The log stream associated with the crawl.</p>
-   * @public
-   */
-  LogStream?: string | undefined;
-}
-
-/**
- * <p>The details of a Crawler node present in the workflow.</p>
- * @public
- */
-export interface CrawlerNodeDetails {
-  /**
-   * <p>A list of crawls represented by the crawl node.</p>
-   * @public
-   */
-  Crawls?: Crawl[] | undefined;
-}
-
-/**
- * <p>A job run that was used in the predicate of a conditional trigger
- *       that triggered this job run.</p>
- * @public
- */
-export interface Predecessor {
-  /**
-   * <p>The name of the job definition used by the predecessor job run.</p>
-   * @public
-   */
-  JobName?: string | undefined;
-
-  /**
-   * <p>The job-run ID of the predecessor job run.</p>
-   * @public
-   */
-  RunId?: string | undefined;
-}
-
-/**
- * <p>Contains information about a job run.</p>
- * @public
- */
-export interface JobRun {
-  /**
-   * <p>The ID of this job run.</p>
-   * @public
-   */
-  Id?: string | undefined;
-
-  /**
-   * <p>The number of the attempt to run this job.</p>
-   * @public
-   */
-  Attempt?: number | undefined;
-
-  /**
-   * <p>The ID of the previous run of this job. For example, the <code>JobRunId</code> specified
-   *       in the <code>StartJobRun</code> action.</p>
-   * @public
-   */
-  PreviousRunId?: string | undefined;
-
-  /**
-   * <p>The name of the trigger that started this job run.</p>
-   * @public
-   */
-  TriggerName?: string | undefined;
-
-  /**
-   * <p>The name of the job definition being used in this run.</p>
-   * @public
-   */
-  JobName?: string | undefined;
-
-  /**
-   * <p>A mode that describes how a job was created. Valid values are:</p>
-   *          <ul>
-   *             <li>
-   *                <p>
-   *                   <code>SCRIPT</code> - The job was created using the Glue Studio script editor.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>VISUAL</code> - The job was created using the Glue Studio visual editor.</p>
-   *             </li>
-   *             <li>
-   *                <p>
-   *                   <code>NOTEBOOK</code> - The job was created using an interactive sessions notebook.</p>
-   *             </li>
-   *          </ul>
-   *          <p>When the <code>JobMode</code> field is missing or null, <code>SCRIPT</code> is assigned as the default value.</p>
-   * @public
-   */
-  JobMode?: JobMode | undefined;
-
-  /**
-   * <p>Specifies whether job run queuing is enabled for the job run.</p>
-   *          <p>A value of true means job run queuing is enabled for the job run. If false or not populated, the job run will not be considered for queueing.</p>
-   * @public
-   */
-  JobRunQueuingEnabled?: boolean | undefined;
-
-  /**
-   * <p>The date and time at which this job run was started.</p>
-   * @public
-   */
-  StartedOn?: Date | undefined;
-
-  /**
-   * <p>The last time that this job run was modified.</p>
-   * @public
-   */
-  LastModifiedOn?: Date | undefined;
-
-  /**
-   * <p>The date and time that this job run completed.</p>
-   * @public
-   */
-  CompletedOn?: Date | undefined;
-
-  /**
-   * <p>The current state of the job run. For more information about the statuses of jobs that have terminated abnormally, see <a href="https://docs.aws.amazon.com/glue/latest/dg/job-run-statuses.html">Glue Job Run Statuses</a>.</p>
-   * @public
-   */
-  JobRunState?: JobRunState | undefined;
-
-  /**
-   * <p>The job arguments associated with this run. For this job run, they replace the default
-   *       arguments set in the job definition itself.</p>
-   *          <p>You can specify arguments here that your own job-execution script
-   *       consumes, as well as arguments that Glue itself consumes.</p>
-   *          <p>Job arguments may be logged. Do not pass plaintext secrets as arguments. Retrieve secrets
-   *       from a Glue Connection, Secrets Manager or other secret management
-   *       mechanism if you intend to keep them within the Job. </p>
-   *          <p>For information about how to specify and consume your own Job arguments, see the <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling Glue APIs in Python</a> topic in the developer guide.</p>
-   *          <p>For information about the arguments you can provide to this field when configuring Spark jobs,
-   *      see the <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by Glue</a> topic in the developer guide.</p>
-   *          <p>For information about the arguments you can provide to this field when configuring Ray
-   *       jobs, see <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job-ray-job-parameters.html">Using
-   *       job parameters in Ray jobs</a> in the developer guide.</p>
-   * @public
-   */
-  Arguments?: Record<string, string> | undefined;
-
-  /**
-   * <p>An error message associated with this job run.</p>
-   * @public
-   */
-  ErrorMessage?: string | undefined;
-
-  /**
-   * <p>A list of predecessors to this job run.</p>
-   * @public
-   */
-  PredecessorRuns?: Predecessor[] | undefined;
-
-  /**
-   * <p>This field is deprecated. Use <code>MaxCapacity</code> instead.</p>
-   *          <p>The number of Glue data processing units (DPUs) allocated to this JobRun.
-   *       From 2 to 100 DPUs can be allocated; the default is 10. A DPU is a relative measure
-   *       of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-   *       For more information, see the <a href="https://aws.amazon.com/glue/pricing/">Glue
-   *         pricing page</a>.</p>
-   *
-   * @deprecated
-   * @public
-   */
-  AllocatedCapacity?: number | undefined;
-
-  /**
-   * <p>The amount of time (in seconds) that the job run consumed resources.</p>
-   * @public
-   */
-  ExecutionTime?: number | undefined;
-
-  /**
-   * <p>The <code>JobRun</code> timeout in minutes. This is the maximum time that a job run can
-   *       consume resources before it is terminated and enters <code>TIMEOUT</code> status. This value overrides the timeout value set in the parent job.</p>
-   *          <p>Jobs must have timeout values less than 7 days or 10080 minutes. Otherwise, the jobs will throw an exception.</p>
-   *          <p>When the value is left blank, the timeout is defaulted to 2880 minutes.</p>
-   *          <p>Any existing Glue jobs that had a timeout value greater than 7 days will be defaulted to 7 days. For instance if you have specified a timeout of 20 days for a batch job, it will be stopped on the 7th day.</p>
-   *          <p>For streaming jobs, if you have set up a maintenance window, it will be restarted during the maintenance window after 7 days.</p>
-   * @public
-   */
-  Timeout?: number | undefined;
-
-  /**
-   * <p>For Glue version 1.0 or earlier jobs, using the standard worker type, the number of
-   *       Glue data processing units (DPUs) that can be allocated when this job runs. A DPU is
-   *       a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB
-   *       of memory. For more information, see the <a href="https://aws.amazon.com/glue/pricing/">
-   *         Glue pricing page</a>.</p>
-   *          <p>For Glue version 2.0+ jobs, you cannot specify a <code>Maximum capacity</code>.
-   *       Instead, you should specify a <code>Worker type</code> and the <code>Number of workers</code>.</p>
-   *          <p>Do not set <code>MaxCapacity</code> if using <code>WorkerType</code> and <code>NumberOfWorkers</code>.</p>
-   *          <p>The value that can be allocated for <code>MaxCapacity</code> depends on whether you are
-   *       running a Python shell job, an Apache Spark ETL job, or an Apache Spark streaming ETL
-   *       job:</p>
-   *          <ul>
-   *             <li>
-   *                <p>When you specify a Python shell job (<code>JobCommand.Name</code>="pythonshell"), you can
-   *           allocate either 0.0625 or 1 DPU. The default is 0.0625 DPU.</p>
-   *             </li>
-   *             <li>
-   *                <p>When you specify an Apache Spark ETL job (<code>JobCommand.Name</code>="glueetl") or Apache
-   *         Spark streaming ETL job (<code>JobCommand.Name</code>="gluestreaming"), you can allocate from 2 to 100 DPUs.
-   *         The default is 10 DPUs. This job type cannot have a fractional DPU allocation.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  MaxCapacity?: number | undefined;
-
-  /**
-   * <p>The type of predefined worker that is allocated when a job runs. Accepts a value of
-   *           G.1X, G.2X, G.4X, G.8X or G.025X for Spark jobs. Accepts the value Z.2X for Ray jobs.</p>
-   *          <ul>
-   *             <li>
-   *                <p>For the <code>G.1X</code> worker type, each worker maps to 1 DPU (4 vCPUs, 16 GB of memory) with 94GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.2X</code> worker type, each worker maps to 2 DPU (8 vCPUs, 32 GB of memory) with 138GB disk, and provides 1 executor per worker. We recommend this worker type for workloads such as data transforms, joins, and queries, to offers a scalable and cost effective way to run most jobs.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.4X</code> worker type, each worker maps to 4 DPU (16 vCPUs, 64 GB of memory) with 256GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs in the following Amazon Web Services Regions: US East (Ohio), US East (N. Virginia), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), Europe (Ireland), and Europe (Stockholm).</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.8X</code> worker type, each worker maps to 8 DPU (32 vCPUs, 128 GB of memory) with 512GB disk, and provides 1 executor per worker. We recommend this worker type for jobs whose workloads contain your most demanding transforms, aggregations, joins, and queries. This worker type is available only for Glue version 3.0 or later Spark ETL jobs, in the same Amazon Web Services Regions as supported for the <code>G.4X</code> worker type.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>G.025X</code> worker type, each worker maps to 0.25 DPU (2 vCPUs, 4 GB of memory) with 84GB disk, and provides 1 executor per worker. We recommend this worker type for low volume streaming jobs. This worker type is only available for Glue version 3.0 or later streaming jobs.</p>
-   *             </li>
-   *             <li>
-   *                <p>For the <code>Z.2X</code> worker type, each worker maps to 2 M-DPU (8vCPUs, 64 GB of memory) with 128 GB disk, and provides up to 8 Ray workers based on the autoscaler.</p>
-   *             </li>
-   *          </ul>
-   * @public
-   */
-  WorkerType?: WorkerType | undefined;
-
-  /**
-   * <p>The number of workers of a defined <code>workerType</code> that are allocated when a job runs.</p>
-   * @public
-   */
-  NumberOfWorkers?: number | undefined;
-
-  /**
-   * <p>The name of the <code>SecurityConfiguration</code> structure to be used with this job
-   *       run.</p>
-   * @public
-   */
-  SecurityConfiguration?: string | undefined;
-
-  /**
-   * <p>The name of the log group for secure logging that can be server-side encrypted in Amazon
-   *       CloudWatch using KMS. This name can be <code>/aws-glue/jobs/</code>, in which case the
-   *       default encryption is <code>NONE</code>. If you add a role name and
-   *       <code>SecurityConfiguration</code> name (in other words,
-   *       <code>/aws-glue/jobs-yourRoleName-yourSecurityConfigurationName/</code>), then that security
-   *       configuration is used to encrypt the log group.</p>
-   * @public
-   */
-  LogGroupName?: string | undefined;
-
-  /**
-   * <p>Specifies configuration properties of a job run notification.</p>
-   * @public
-   */
-  NotificationProperty?: NotificationProperty | undefined;
-
-  /**
-   * <p>In Spark jobs, <code>GlueVersion</code> determines the versions of Apache Spark and Python
-   *       that Glue available in a job. The Python version indicates the version
-   *       supported for jobs of type Spark. </p>
-   *          <p>Ray jobs should set <code>GlueVersion</code> to <code>4.0</code> or greater. However,
-   *     the versions of Ray, Python and additional libraries available in your Ray job are determined
-   *     by the <code>Runtime</code> parameter of the Job command.</p>
-   *          <p>For more information about the available Glue versions and corresponding
-   *       Spark and Python versions, see <a href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html">Glue version</a> in the developer
-   *       guide.</p>
-   *          <p>Jobs that are created without specifying a Glue version default to Glue 0.9.</p>
-   * @public
-   */
-  GlueVersion?: string | undefined;
-
-  /**
-   * <p>This field can be set for either job runs with execution class <code>FLEX</code> or when Auto Scaling is enabled, and represents the total time each executor ran during the lifecycle of a job run in seconds, multiplied by a DPU factor (1 for <code>G.1X</code>, 2 for <code>G.2X</code>, or 0.25 for <code>G.025X</code> workers). This value may be different than the <code>executionEngineRuntime</code> * <code>MaxCapacity</code> as in the case of Auto Scaling jobs, as the number of executors running at a given time may be less than the <code>MaxCapacity</code>. Therefore, it is possible that the value of <code>DPUSeconds</code> is less than <code>executionEngineRuntime</code> * <code>MaxCapacity</code>.</p>
-   * @public
-   */
-  DPUSeconds?: number | undefined;
-
-  /**
-   * <p>Indicates whether the job is run with a standard or flexible execution class. The standard execution-class is ideal for time-sensitive workloads that require fast job startup and dedicated resources.</p>
-   *          <p>The flexible execution class is appropriate for time-insensitive jobs whose start and completion times may vary. </p>
-   *          <p>Only jobs with Glue version 3.0 and above and command type <code>glueetl</code> will be allowed to set <code>ExecutionClass</code> to <code>FLEX</code>. The flexible execution class is available for Spark jobs.</p>
-   * @public
-   */
-  ExecutionClass?: ExecutionClass | undefined;
-
-  /**
-   * <p>This field specifies a day of the week and hour for a maintenance window for streaming jobs. Glue periodically performs maintenance activities. During these maintenance windows, Glue will need to restart your streaming jobs.</p>
-   *          <p>Glue will restart the job within 3 hours of the specified maintenance window. For instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted between 10:00AM GMT to 1:00PM GMT.</p>
-   * @public
-   */
-  MaintenanceWindow?: string | undefined;
-
-  /**
-   * <p>The name of an Glue usage profile associated with the job run.</p>
-   * @public
-   */
-  ProfileName?: string | undefined;
-
-  /**
-   * <p>This field holds details that pertain to the state of a job run. The field is nullable.</p>
-   *          <p>For example, when a job run is in a WAITING state as a result of job run queuing, the field has the reason why the job run is in that state.</p>
-   * @public
-   */
-  StateDetail?: string | undefined;
-}
-
-/**
- * <p>The details of a Job node present in the workflow.</p>
- * @public
- */
-export interface JobNodeDetails {
-  /**
-   * <p>The information for the job runs represented by the job node.</p>
-   * @public
-   */
-  JobRuns?: JobRun[] | undefined;
-}
-
-/**
- * <p>The details of a Trigger node present in the workflow.</p>
- * @public
- */
-export interface TriggerNodeDetails {
-  /**
-   * <p>The information of the trigger represented by the trigger node.</p>
-   * @public
-   */
-  Trigger?: Trigger | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const NodeType = {
-  CRAWLER: "CRAWLER",
-  JOB: "JOB",
-  TRIGGER: "TRIGGER",
-} as const;
-
-/**
- * @public
- */
-export type NodeType = (typeof NodeType)[keyof typeof NodeType];
-
-/**
- * <p>A node represents an Glue component (trigger, crawler, or job) on a workflow graph.</p>
- * @public
- */
-export interface Node {
-  /**
-   * <p>The type of Glue component represented by the node.</p>
-   * @public
-   */
-  Type?: NodeType | undefined;
-
-  /**
-   * <p>The name of the Glue component represented by the node.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>The unique Id assigned to the node within the workflow.</p>
-   * @public
-   */
-  UniqueId?: string | undefined;
-
-  /**
-   * <p>Details of the Trigger when the node represents a Trigger.</p>
-   * @public
-   */
-  TriggerDetails?: TriggerNodeDetails | undefined;
-
-  /**
-   * <p>Details of the Job when the node represents a Job.</p>
-   * @public
-   */
-  JobDetails?: JobNodeDetails | undefined;
-
-  /**
-   * <p>Details of the crawler when the node represents a crawler.</p>
-   * @public
-   */
-  CrawlerDetails?: CrawlerNodeDetails | undefined;
-}
-
-/**
- * <p>A workflow graph represents the complete workflow containing all the Glue components present in the
- *       workflow and all the directed connections between them.</p>
- * @public
- */
-export interface WorkflowGraph {
-  /**
-   * <p>A list of the the Glue components belong to the workflow represented as nodes.</p>
-   * @public
-   */
-  Nodes?: Node[] | undefined;
-
-  /**
-   * <p>A list of all the directed connections between the nodes belonging to the workflow.</p>
-   * @public
-   */
-  Edges?: Edge[] | undefined;
-}
-
-/**
- * <p>The batch condition that started the workflow run. Either the number of events in the batch size arrived,
- *       in which case the BatchSize member is non-zero, or the batch window expired, in which case the BatchWindow
- *       member is non-zero.</p>
- * @public
- */
-export interface StartingEventBatchCondition {
-  /**
-   * <p>Number of events in the batch.</p>
-   * @public
-   */
-  BatchSize?: number | undefined;
-
-  /**
-   * <p>Duration of the batch window in seconds.</p>
-   * @public
-   */
-  BatchWindow?: number | undefined;
-}
-
-/**
- * <p>Workflow run statistics provides statistics about the workflow run.</p>
- * @public
- */
-export interface WorkflowRunStatistics {
-  /**
-   * <p>Total number of Actions in the workflow run.</p>
-   * @public
-   */
-  TotalActions?: number | undefined;
-
-  /**
-   * <p>Total number of Actions that timed out.</p>
-   * @public
-   */
-  TimeoutActions?: number | undefined;
-
-  /**
-   * <p>Total number of Actions that have failed.</p>
-   * @public
-   */
-  FailedActions?: number | undefined;
-
-  /**
-   * <p>Total number of Actions that have stopped.</p>
-   * @public
-   */
-  StoppedActions?: number | undefined;
-
-  /**
-   * <p>Total number of Actions that have succeeded.</p>
-   * @public
-   */
-  SucceededActions?: number | undefined;
-
-  /**
-   * <p>Total number Actions in running state.</p>
-   * @public
-   */
-  RunningActions?: number | undefined;
-
-  /**
-   * <p>Indicates the count of job runs in the ERROR state in the workflow run.</p>
-   * @public
-   */
-  ErroredActions?: number | undefined;
-
-  /**
-   * <p>Indicates the count of job runs in WAITING state in the workflow run.</p>
-   * @public
-   */
-  WaitingActions?: number | undefined;
-}
-
-/**
- * @public
- * @enum
- */
-export const WorkflowRunStatus = {
-  COMPLETED: "COMPLETED",
-  ERROR: "ERROR",
-  RUNNING: "RUNNING",
-  STOPPED: "STOPPED",
-  STOPPING: "STOPPING",
-} as const;
-
-/**
- * @public
- */
-export type WorkflowRunStatus = (typeof WorkflowRunStatus)[keyof typeof WorkflowRunStatus];
-
-/**
- * <p>A workflow run is an execution of a workflow providing all the runtime information.</p>
- * @public
- */
-export interface WorkflowRun {
-  /**
-   * <p>Name of the workflow that was run.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>The ID of this workflow run.</p>
-   * @public
-   */
-  WorkflowRunId?: string | undefined;
-
-  /**
-   * <p>The ID of the previous workflow run.</p>
-   * @public
-   */
-  PreviousRunId?: string | undefined;
-
-  /**
-   * <p>The workflow run properties which were set during the run.</p>
-   * @public
-   */
-  WorkflowRunProperties?: Record<string, string> | undefined;
-
-  /**
-   * <p>The date and time when the workflow run was started.</p>
-   * @public
-   */
-  StartedOn?: Date | undefined;
-
-  /**
-   * <p>The date and time when the workflow run completed.</p>
-   * @public
-   */
-  CompletedOn?: Date | undefined;
-
-  /**
-   * <p>The status of the workflow run.</p>
-   * @public
-   */
-  Status?: WorkflowRunStatus | undefined;
-
-  /**
-   * <p>This error message describes any error that may have occurred in starting the workflow run. Currently the only error message is "Concurrent runs exceeded for workflow: <code>foo</code>."</p>
-   * @public
-   */
-  ErrorMessage?: string | undefined;
-
-  /**
-   * <p>The statistics of the run.</p>
-   * @public
-   */
-  Statistics?: WorkflowRunStatistics | undefined;
-
-  /**
-   * <p>The graph representing all the Glue components that belong to the workflow as nodes and directed
-   *       connections between them as edges.</p>
-   * @public
-   */
-  Graph?: WorkflowGraph | undefined;
-
-  /**
-   * <p>The batch condition that started the workflow run.</p>
-   * @public
-   */
-  StartingEventBatchCondition?: StartingEventBatchCondition | undefined;
-}
-
-/**
- * <p>A workflow is a collection of multiple dependent Glue
- *       jobs and crawlers that are run to complete a complex ETL task. A
- *       workflow manages the execution and monitoring of all its jobs and crawlers.</p>
- * @public
- */
-export interface Workflow {
-  /**
-   * <p>The name of the workflow.</p>
-   * @public
-   */
-  Name?: string | undefined;
-
-  /**
-   * <p>A description of the workflow.</p>
-   * @public
-   */
-  Description?: string | undefined;
-
-  /**
-   * <p>A collection of properties to be used as part of each execution of the workflow.
-   *     The run properties are made available to each job in the workflow. A job can modify
-   *     the properties for the next jobs in the flow.</p>
-   * @public
-   */
-  DefaultRunProperties?: Record<string, string> | undefined;
-
-  /**
-   * <p>The date and time when the workflow was created.</p>
-   * @public
-   */
-  CreatedOn?: Date | undefined;
-
-  /**
-   * <p>The date and time when the workflow was last modified.</p>
-   * @public
-   */
-  LastModifiedOn?: Date | undefined;
-
-  /**
-   * <p>The information about the last execution of the workflow.</p>
-   * @public
-   */
-  LastRun?: WorkflowRun | undefined;
-
-  /**
-   * <p>The graph representing all the Glue components that belong to the workflow as nodes and directed
-   *       connections between them as edges.</p>
-   * @public
-   */
-  Graph?: WorkflowGraph | undefined;
-
-  /**
-   * <p>You can use this parameter to prevent unwanted multiple updates to data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.</p>
-   * @public
-   */
-  MaxConcurrentRuns?: number | undefined;
-
-  /**
-   * <p>This structure indicates the details of the blueprint that this particular workflow is created from.</p>
-   * @public
-   */
-  BlueprintDetails?: BlueprintDetails | undefined;
-}
-
-/**
- * @public
- */
-export interface BatchGetWorkflowsResponse {
-  /**
-   * <p>A list of workflow resource metadata.</p>
-   * @public
-   */
-  Workflows?: Workflow[] | undefined;
-
-  /**
-   * <p>A list of names of workflows not found.</p>
-   * @public
-   */
-  MissingWorkflows?: string[] | undefined;
-}
-
-/**
- * <p>An Inclusion Annotation.</p>
- * @public
- */
-export interface DatapointInclusionAnnotation {
-  /**
-   * <p>The ID of the data quality profile the statistic belongs to.</p>
-   * @public
-   */
-  ProfileId?: string | undefined;
-
-  /**
-   * <p>The Statistic ID.</p>
-   * @public
-   */
-  StatisticId?: string | undefined;
-
-  /**
-   * <p>The inclusion annotation value to apply to the statistic.</p>
-   * @public
-   */
-  InclusionAnnotation?: InclusionAnnotationValue | undefined;
-}
-
-/**
- * @public
- */
-export interface BatchPutDataQualityStatisticAnnotationRequest {
-  /**
-   * <p>A list of <code>DatapointInclusionAnnotation</code>'s.</p>
-   * @public
-   */
-  InclusionAnnotations: DatapointInclusionAnnotation[] | undefined;
-
-  /**
-   * <p>Client Token.</p>
-   * @public
-   */
-  ClientToken?: string | undefined;
-}
-
-/**
- * @public
- */
-export interface BatchPutDataQualityStatisticAnnotationResponse {
-  /**
-   * <p>A list of <code>AnnotationError</code>'s.</p>
-   * @public
-   */
-  FailedInclusionAnnotations?: AnnotationError[] | undefined;
-}
-
-/**
- * @public
- */
-export interface BatchStopJobRunRequest {
-  /**
-   * <p>The name of the job definition for which to stop job runs.</p>
-   * @public
-   */
-  JobName: string | undefined;
-
-  /**
-   * <p>A list of the <code>JobRunIds</code> that should be stopped for that job
-   *       definition.</p>
-   * @public
-   */
-  JobRunIds: string[] | undefined;
-}
-
-/**
  * @internal
  */
 export const BasicAuthenticationCredentialsFilterSensitiveLog = (obj: BasicAuthenticationCredentials): any => ({
@@ -9441,6 +9609,7 @@ export const DataQualityRuleResultFilterSensitiveLog = (obj: DataQualityRuleResu
   ...(obj.EvaluationMessage && { EvaluationMessage: SENSITIVE_STRING }),
   ...(obj.EvaluatedMetrics && { EvaluatedMetrics: SENSITIVE_STRING }),
   ...(obj.EvaluatedRule && { EvaluatedRule: SENSITIVE_STRING }),
+  ...(obj.RuleMetrics && { RuleMetrics: SENSITIVE_STRING }),
 });
 
 /**

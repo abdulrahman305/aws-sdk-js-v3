@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { DescribeFeatureGroupRequest, DescribeFeatureGroupResponse } from "../models/models_2";
+import { DescribeFeatureGroupRequest, DescribeFeatureGroupResponse } from "../models/models_3";
 import { de_DescribeFeatureGroupCommand, se_DescribeFeatureGroupCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,9 +28,7 @@ export interface DescribeFeatureGroupCommandInput extends DescribeFeatureGroupRe
 export interface DescribeFeatureGroupCommandOutput extends DescribeFeatureGroupResponse, __MetadataBearer {}
 
 /**
- * <p>Use this operation to describe a <code>FeatureGroup</code>. The response includes
- *          information on the creation time, <code>FeatureGroup</code> name, the unique identifier for
- *          each <code>FeatureGroup</code>, and more.</p>
+ * <p>Use this operation to describe a <code>FeatureGroup</code>. The response includes information on the creation time, <code>FeatureGroup</code> name, the unique identifier for each <code>FeatureGroup</code>, and more.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

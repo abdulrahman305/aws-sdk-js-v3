@@ -5,7 +5,7 @@ import { Command as $Command } from "@smithy/smithy-client";
 import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { commonParams } from "../endpoint/EndpointParameters";
-import { StartMonitoringScheduleRequest } from "../models/models_4";
+import { StartMonitoringScheduleRequest } from "../models/models_5";
 import { de_StartMonitoringScheduleCommand, se_StartMonitoringScheduleCommand } from "../protocols/Aws_json1_1";
 import { SageMakerClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../SageMakerClient";
 
@@ -28,11 +28,7 @@ export interface StartMonitoringScheduleCommandInput extends StartMonitoringSche
 export interface StartMonitoringScheduleCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>Starts a previously stopped monitoring schedule.</p>
- *          <note>
- *             <p>By default, when you successfully create a new schedule, the status of a monitoring
- *             schedule is <code>scheduled</code>.</p>
- *          </note>
+ * <p>Starts a previously stopped monitoring schedule.</p> <note> <p>By default, when you successfully create a new schedule, the status of a monitoring schedule is <code>scheduled</code>.</p> </note>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

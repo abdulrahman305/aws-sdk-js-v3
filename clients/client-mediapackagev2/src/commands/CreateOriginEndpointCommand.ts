@@ -39,7 +39,7 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *   ChannelGroupName: "STRING_VALUE", // required
  *   ChannelName: "STRING_VALUE", // required
  *   OriginEndpointName: "STRING_VALUE", // required
- *   ContainerType: "TS" || "CMAF", // required
+ *   ContainerType: "TS" || "CMAF" || "ISM", // required
  *   Segment: { // Segment
  *     SegmentDurationSeconds: Number("int"),
  *     SegmentName: "STRING_VALUE",
@@ -56,8 +56,10 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *       EncryptionMethod: { // EncryptionMethod
  *         TsEncryptionMethod: "AES_128" || "SAMPLE_AES",
  *         CmafEncryptionMethod: "CENC" || "CBCS",
+ *         IsmEncryptionMethod: "CENC",
  *       },
  *       KeyRotationIntervalSeconds: Number("int"),
+ *       CmafExcludeSegmentDrmMetadata: true || false,
  *       SpekeKeyProvider: { // SpekeKeyProvider
  *         EncryptionContractConfiguration: { // EncryptionContractConfiguration
  *           PresetSpeke20Audio: "PRESET_AUDIO_1" || "PRESET_AUDIO_2" || "PRESET_AUDIO_3" || "SHARED" || "UNENCRYPTED", // required
@@ -147,6 +149,57 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *         TimingMode: "HTTP_HEAD" || "HTTP_ISO" || "HTTP_XSDATE" || "UTC_DIRECT",
  *         TimingSource: "STRING_VALUE",
  *       },
+ *       Profiles: [ // DashProfiles
+ *         "DVB_DASH",
+ *       ],
+ *       BaseUrls: [ // DashBaseUrls
+ *         { // DashBaseUrl
+ *           Url: "STRING_VALUE", // required
+ *           ServiceLocation: "STRING_VALUE",
+ *           DvbPriority: Number("int"),
+ *           DvbWeight: Number("int"),
+ *         },
+ *       ],
+ *       ProgramInformation: { // DashProgramInformation
+ *         Title: "STRING_VALUE",
+ *         Source: "STRING_VALUE",
+ *         Copyright: "STRING_VALUE",
+ *         LanguageCode: "STRING_VALUE",
+ *         MoreInformationUrl: "STRING_VALUE",
+ *       },
+ *       DvbSettings: { // DashDvbSettings
+ *         FontDownload: { // DashDvbFontDownload
+ *           Url: "STRING_VALUE",
+ *           MimeType: "STRING_VALUE",
+ *           FontFamily: "STRING_VALUE",
+ *         },
+ *         ErrorMetrics: [ // DashDvbErrorMetrics
+ *           { // DashDvbMetricsReporting
+ *             ReportingUrl: "STRING_VALUE", // required
+ *             Probability: Number("int"),
+ *           },
+ *         ],
+ *       },
+ *       Compactness: "STANDARD" || "NONE",
+ *       SubtitleConfiguration: { // DashSubtitleConfiguration
+ *         TtmlConfiguration: { // DashTtmlConfiguration
+ *           TtmlProfile: "IMSC_1" || "EBU_TT_D_101", // required
+ *         },
+ *       },
+ *     },
+ *   ],
+ *   MssManifests: [ // CreateMssManifests
+ *     { // CreateMssManifestConfiguration
+ *       ManifestName: "STRING_VALUE", // required
+ *       ManifestWindowSeconds: Number("int"),
+ *       FilterConfiguration: {
+ *         ManifestFilter: "STRING_VALUE",
+ *         Start: new Date("TIMESTAMP"),
+ *         End: new Date("TIMESTAMP"),
+ *         TimeDelaySeconds: Number("int"),
+ *         ClipStartTime: new Date("TIMESTAMP"),
+ *       },
+ *       ManifestLayout: "FULL" || "COMPACT",
  *     },
  *   ],
  *   ForceEndpointErrorConfiguration: { // ForceEndpointErrorConfiguration
@@ -165,7 +218,7 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  * //   ChannelGroupName: "STRING_VALUE", // required
  * //   ChannelName: "STRING_VALUE", // required
  * //   OriginEndpointName: "STRING_VALUE", // required
- * //   ContainerType: "TS" || "CMAF", // required
+ * //   ContainerType: "TS" || "CMAF" || "ISM", // required
  * //   Segment: { // Segment
  * //     SegmentDurationSeconds: Number("int"),
  * //     SegmentName: "STRING_VALUE",
@@ -182,8 +235,10 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  * //       EncryptionMethod: { // EncryptionMethod
  * //         TsEncryptionMethod: "AES_128" || "SAMPLE_AES",
  * //         CmafEncryptionMethod: "CENC" || "CBCS",
+ * //         IsmEncryptionMethod: "CENC",
  * //       },
  * //       KeyRotationIntervalSeconds: Number("int"),
+ * //       CmafExcludeSegmentDrmMetadata: true || false,
  * //       SpekeKeyProvider: { // SpekeKeyProvider
  * //         EncryptionContractConfiguration: { // EncryptionContractConfiguration
  * //           PresetSpeke20Audio: "PRESET_AUDIO_1" || "PRESET_AUDIO_2" || "PRESET_AUDIO_3" || "SHARED" || "UNENCRYPTED", // required
@@ -277,6 +332,58 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  * //         TimingMode: "HTTP_HEAD" || "HTTP_ISO" || "HTTP_XSDATE" || "UTC_DIRECT",
  * //         TimingSource: "STRING_VALUE",
  * //       },
+ * //       Profiles: [ // DashProfiles
+ * //         "DVB_DASH",
+ * //       ],
+ * //       BaseUrls: [ // DashBaseUrls
+ * //         { // DashBaseUrl
+ * //           Url: "STRING_VALUE", // required
+ * //           ServiceLocation: "STRING_VALUE",
+ * //           DvbPriority: Number("int"),
+ * //           DvbWeight: Number("int"),
+ * //         },
+ * //       ],
+ * //       ProgramInformation: { // DashProgramInformation
+ * //         Title: "STRING_VALUE",
+ * //         Source: "STRING_VALUE",
+ * //         Copyright: "STRING_VALUE",
+ * //         LanguageCode: "STRING_VALUE",
+ * //         MoreInformationUrl: "STRING_VALUE",
+ * //       },
+ * //       DvbSettings: { // DashDvbSettings
+ * //         FontDownload: { // DashDvbFontDownload
+ * //           Url: "STRING_VALUE",
+ * //           MimeType: "STRING_VALUE",
+ * //           FontFamily: "STRING_VALUE",
+ * //         },
+ * //         ErrorMetrics: [ // DashDvbErrorMetrics
+ * //           { // DashDvbMetricsReporting
+ * //             ReportingUrl: "STRING_VALUE", // required
+ * //             Probability: Number("int"),
+ * //           },
+ * //         ],
+ * //       },
+ * //       Compactness: "STANDARD" || "NONE",
+ * //       SubtitleConfiguration: { // DashSubtitleConfiguration
+ * //         TtmlConfiguration: { // DashTtmlConfiguration
+ * //           TtmlProfile: "IMSC_1" || "EBU_TT_D_101", // required
+ * //         },
+ * //       },
+ * //     },
+ * //   ],
+ * //   MssManifests: [ // GetMssManifests
+ * //     { // GetMssManifestConfiguration
+ * //       ManifestName: "STRING_VALUE", // required
+ * //       Url: "STRING_VALUE", // required
+ * //       FilterConfiguration: {
+ * //         ManifestFilter: "STRING_VALUE",
+ * //         Start: new Date("TIMESTAMP"),
+ * //         End: new Date("TIMESTAMP"),
+ * //         TimeDelaySeconds: Number("int"),
+ * //         ClipStartTime: new Date("TIMESTAMP"),
+ * //       },
+ * //       ManifestWindowSeconds: Number("int"),
+ * //       ManifestLayout: "FULL" || "COMPACT",
  * //     },
  * //   ],
  * //   ForceEndpointErrorConfiguration: { // ForceEndpointErrorConfiguration
@@ -299,7 +406,9 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  * @see {@link MediaPackageV2ClientResolvedConfig | config} for MediaPackageV2Client's `config` shape.
  *
  * @throws {@link AccessDeniedException} (client fault)
- *  <p>You don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide.</p>
+ *  <p>Access is denied because either you don't have permissions to perform the requested operation or MediaPackage is getting throttling errors with CDN authorization. The user or role that is making the request must have at least
+ *          one IAM permissions policy attached that grants the required permissions. For more information, see Access Management in the IAM User Guide. Or, if you're using CDN authorization, you will receive this exception
+ *          if MediaPackage receives a throttling error from Secrets Manager.</p>
  *
  * @throws {@link ConflictException} (client fault)
  *  <p>Updating or deleting this resource can cause an inconsistent state.</p>
@@ -533,7 +642,29 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *   ContainerType: "CMAF",
  *   DashManifests: [
  *     {
+ *       BaseUrls: [
+ *         {
+ *           DvbPriority: 1,
+ *           DvbWeight: 3,
+ *           ServiceLocation: "A",
+ *           Url: "http://example.com/"
+ *         }
+ *       ],
+ *       Compactness: "STANDARD",
  *       DrmSignaling: "INDIVIDUAL",
+ *       DvbSettings: {
+ *         ErrorMetrics: [
+ *           {
+ *             Probability: 500,
+ *             ReportingUrl: "https://example.com/dvb-errors/errors"
+ *           }
+ *         ],
+ *         FontDownload: {
+ *           FontFamily: "SubtitleDisplay",
+ *           MimeType: "application/font",
+ *           Url: "https://example.com/fonts/SubtitleDisplay.woff"
+ *         }
+ *       },
  *       ManifestName: "exampleDashManifest1",
  *       ManifestWindowSeconds: 300,
  *       MinBufferTimeSeconds: 30,
@@ -541,14 +672,50 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *       PeriodTriggers: [
  *         "AVAILS"
  *       ],
+ *       Profiles: [
+ *         "DVB_DASH"
+ *       ],
+ *       ProgramInformation: {
+ *         Copyright: "(c) Example. All rights reserved",
+ *         LanguageCode: "en",
+ *         MoreInformationUrl: "https://example.com/more-information",
+ *         Source: "exampleSource",
+ *         Title: "exampleTitle"
+ *       },
  *       ScteDash: {
  *         AdMarkerDash: "XML"
  *       },
  *       SegmentTemplateFormat: "NUMBER_WITH_TIMELINE",
- *       SuggestedPresentationDelaySeconds: 2
+ *       SuggestedPresentationDelaySeconds: 2,
+ *       UtcTiming: {
+ *         TimingMode: "HTTP_HEAD",
+ *         TimingSource: "example"
+ *       }
  *     },
  *     {
+ *       BaseUrls: [
+ *         {
+ *           DvbPriority: 2,
+ *           DvbWeight: 2,
+ *           ServiceLocation: "B",
+ *           Url: "http://example2.com/"
+ *         }
+ *       ],
+ *       Compactness: "STANDARD",
  *       DrmSignaling: "INDIVIDUAL",
+ *       DvbSettings: {
+ *         ErrorMetrics: [
+ *           {
+ *             Probability: 600,
+ *             ReportingUrl: "https://example2.com/dvb-errors/errors"
+ *           }
+ *         ],
+ *         FontDownload: {
+ *           FontFamily: "SubtitleDisplay",
+ *           MimeType: "application/font",
+ *           Url: "https://example.com/fonts/SubtitleDisplay.woff"
+ *         }
+ *       },
  *       ManifestName: "exampleDashManifest2",
  *       ManifestWindowSeconds: 60,
  *       MinBufferTimeSeconds: 9,
@@ -559,11 +726,25 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *         "SOURCE_CHANGES",
  *         "SOURCE_DISRUPTIONS"
  *       ],
+ *       Profiles: [
+ *         "DVB_DASH"
+ *       ],
+ *       ProgramInformation: {
+ *         Copyright: "(c) Example. All rights reserved",
+ *         LanguageCode: "en",
+ *         MoreInformationUrl: "https://example2.com/more-information",
+ *         Source: "exampleSource2",
+ *         Title: "exampleTitle2"
+ *       },
  *       ScteDash: {
  *         AdMarkerDash: "XML"
  *       },
  *       SegmentTemplateFormat: "NUMBER_WITH_TIMELINE",
- *       SuggestedPresentationDelaySeconds: 12
+ *       SuggestedPresentationDelaySeconds: 12,
+ *       UtcTiming: {
+ *         TimingMode: "HTTP_HEAD",
+ *         TimingSource: "example"
+ *       }
  *     }
  *   ],
  *   ForceEndpointErrorConfiguration: {
@@ -663,7 +844,29 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *   CreatedAt: "2022-10-18T09:36:00.00Z",
  *   DashManifests: [
  *     {
+ *       BaseUrls: [
+ *         {
+ *           DvbPriority: 1,
+ *           DvbWeight: 3,
+ *           ServiceLocation: "A",
+ *           Url: "http://example.com/"
+ *         }
+ *       ],
+ *       Compactness: "STANDARD",
  *       DrmSignaling: "INDIVIDUAL",
+ *       DvbSettings: {
+ *         ErrorMetrics: [
+ *           {
+ *             Probability: 500,
+ *             ReportingUrl: "https://example.com/dvb-errors/errors"
+ *           }
+ *         ],
+ *         FontDownload: {
+ *           FontFamily: "SubtitleDisplay",
+ *           MimeType: "application/font",
+ *           Url: "https://example.com/fonts/SubtitleDisplay.woff"
+ *         }
+ *       },
  *       ManifestName: "exampleDashManifest1",
  *       ManifestWindowSeconds: 300,
  *       MinBufferTimeSeconds: 30,
@@ -671,15 +874,51 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *       PeriodTriggers: [
  *         "AVAILS"
  *       ],
+ *       Profiles: [
+ *         "DVB_DASH"
+ *       ],
+ *       ProgramInformation: {
+ *         Copyright: "(c) Example. All rights reserved",
+ *         LanguageCode: "en",
+ *         MoreInformationUrl: "https://example.com/more-information",
+ *         Source: "exampleSource",
+ *         Title: "exampleTitle"
+ *       },
  *       ScteDash: {
  *         AdMarkerDash: "XML"
  *       },
  *       SegmentTemplateFormat: "NUMBER_WITH_TIMELINE",
  *       SuggestedPresentationDelaySeconds: 2,
- *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointCMAF/exampleDashManifest1.mpd"
+ *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointCMAF/exampleDashManifest1.mpd",
+ *       UtcTiming: {
+ *         TimingMode: "HTTP_HEAD",
+ *         TimingSource: "example"
+ *       }
  *     },
  *     {
+ *       BaseUrls: [
+ *         {
+ *           DvbPriority: 2,
+ *           DvbWeight: 2,
+ *           ServiceLocation: "B",
+ *           Url: "http://example2.com/"
+ *         }
+ *       ],
+ *       Compactness: "STANDARD",
  *       DrmSignaling: "INDIVIDUAL",
+ *       DvbSettings: {
+ *         ErrorMetrics: [
+ *           {
+ *             Probability: 600,
+ *             ReportingUrl: "https://example2.com/dvb-errors/errors"
+ *           }
+ *         ],
+ *         FontDownload: {
+ *           FontFamily: "SubtitleDisplay",
+ *           MimeType: "application/font",
+ *           Url: "https://example.com/fonts/SubtitleDisplay.woff"
+ *         }
+ *       },
  *       ManifestName: "exampleDashManifest2",
  *       ManifestWindowSeconds: 60,
  *       MinBufferTimeSeconds: 9,
@@ -690,12 +929,26 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *         "SOURCE_CHANGES",
  *         "SOURCE_DISRUPTIONS"
  *       ],
+ *       Profiles: [
+ *         "DVB_DASH"
+ *       ],
+ *       ProgramInformation: {
+ *         Copyright: "(c) Example. All rights reserved",
+ *         LanguageCode: "en",
+ *         MoreInformationUrl: "https://example2.com/more-information",
+ *         Source: "exampleSource2",
+ *         Title: "exampleTitle2"
+ *       },
  *       ScteDash: {
  *         AdMarkerDash: "XML"
  *       },
  *       SegmentTemplateFormat: "NUMBER_WITH_TIMELINE",
  *       SuggestedPresentationDelaySeconds: 12,
- *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointCMAF/exampleDashManifest2.mpd"
+ *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointCMAF/exampleDashManifest2.mpd",
+ *       UtcTiming: {
+ *         TimingMode: "HTTP_HEAD",
+ *         TimingSource: "example"
+ *       }
  *     }
  *   ],
  *   ETag: "GlfT+dwAyGIR4wuy8nKWl1RDPwSrjQej9qUutLZxoxk=",
@@ -782,6 +1035,116 @@ export interface CreateOriginEndpointCommandOutput extends CreateOriginEndpointR
  *       ]
  *     },
  *     SegmentDurationSeconds: 6,
+ *     SegmentName: "segmentName"
+ *   },
+ *   StartoverWindowSeconds: 300,
+ *   Tags: {
+ *     key1: "value1",
+ *     key2: "value2"
+ *   }
+ * }
+ * *\/
+ * ```
+ *
+ * @example Creating an OriginEndpoint with container type ISM, and encryption enabled
+ * ```javascript
+ * //
+ * const input = {
+ *   ChannelGroupName: "exampleChannelGroup",
+ *   ChannelName: "exampleChannel",
+ *   ContainerType: "ISM",
+ *   Description: "Description for exampleOriginEndpointISM",
+ *   ForceEndpointErrorConfiguration: {
+ *     EndpointErrorConditions: [
+ *       "STALE_MANIFEST",
+ *       "INCOMPLETE_MANIFEST",
+ *       "MISSING_DRM_KEY",
+ *       "SLATE_INPUT"
+ *     ]
+ *   },
+ *   MssManifests: [
+ *     {
+ *       ManifestLayout: "FULL",
+ *       ManifestName: "exampleMssManifest1",
+ *       ManifestWindowSeconds: 60
+ *     }
+ *   ],
+ *   OriginEndpointName: "exampleOriginEndpointISM",
+ *   Segment: {
+ *     Encryption: {
+ *       EncryptionMethod: {
+ *         IsmEncryptionMethod: "CENC"
+ *       },
+ *       SpekeKeyProvider: {
+ *         DrmSystems: [
+ *           "PLAYREADY"
+ *         ],
+ *         EncryptionContractConfiguration: {
+ *           PresetSpeke20Audio: "SHARED",
+ *           PresetSpeke20Video: "SHARED"
+ *         },
+ *         ResourceId: "ResourceId",
+ *         RoleArn: "arn:aws:iam::123456789012:role/empRole",
+ *         Url: "https://speke-key-provider.example.com"
+ *       }
+ *     },
+ *     SegmentDurationSeconds: 2,
+ *     SegmentName: "segmentName"
+ *   },
+ *   StartoverWindowSeconds: 300,
+ *   Tags: {
+ *     key1: "value1",
+ *     key2: "value2"
+ *   }
+ * };
+ * const command = new CreateOriginEndpointCommand(input);
+ * const response = await client.send(command);
+ * /* response is
+ * {
+ *   Arn: "arn:aws:mediapackagev2:us-west-2:123456789012:channelGroup/exampleChannelGroup/channel/exampleChannel/originEndpoint/exampleOriginEndpointISM",
+ *   ChannelGroupName: "exampleChannelGroup",
+ *   ChannelName: "exampleChannel",
+ *   ContainerType: "ISM",
+ *   CreatedAt: "2022-10-18T09:36:00.00Z",
+ *   Description: "Description for exampleOriginEndpointISM",
+ *   ETag: "GlfT+dwAyGIR4wuy8nKWl1RDPwSrjQej9qUutLZxoxk=",
+ *   ForceEndpointErrorConfiguration: {
+ *     EndpointErrorConditions: [
+ *       "STALE_MANIFEST",
+ *       "INCOMPLETE_MANIFEST",
+ *       "MISSING_DRM_KEY",
+ *       "SLATE_INPUT"
+ *     ]
+ *   },
+ *   ModifiedAt: "2022-10-18T09:36:00.00Z",
+ *   MssManifests: [
+ *     {
+ *       ManifestLayout: "FULL",
+ *       ManifestName: "exampleMssManifest1",
+ *       ManifestWindowSeconds: 60,
+ *       Url: "https://abcde.egress.vwxyz.mediapackagev2.us-west-2.amazonaws.com/out/v1/exampleChannelGroup/exampleChannel/exampleOriginEndpointISM/exampleMssManifest1.ism/Manifest"
+ *     }
+ *   ],
+ *   OriginEndpointName: "exampleOriginEndpointISM",
+ *   Segment: {
+ *     Encryption: {
+ *       EncryptionMethod: {
+ *         IsmEncryptionMethod: "CENC"
+ *       },
+ *       SpekeKeyProvider: {
+ *         DrmSystems: [
+ *           "PLAYREADY"
+ *         ],
+ *         EncryptionContractConfiguration: {
+ *           PresetSpeke20Audio: "SHARED",
+ *           PresetSpeke20Video: "SHARED"
+ *         },
+ *         ResourceId: "ResourceId",
+ *         RoleArn: "arn:aws:iam::123456789012:role/empRole",
+ *         Url: "https://speke-key-provider.example.com"
+ *       }
+ *     },
+ *     SegmentDurationSeconds: 2,
  *     SegmentName: "segmentName"
  *   },
  *   StartoverWindowSeconds: 300,

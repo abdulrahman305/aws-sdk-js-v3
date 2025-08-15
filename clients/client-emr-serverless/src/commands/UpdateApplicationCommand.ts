@@ -33,8 +33,7 @@ export interface UpdateApplicationCommandInput extends UpdateApplicationRequest 
 export interface UpdateApplicationCommandOutput extends UpdateApplicationResponse, __MetadataBearer {}
 
 /**
- * <p>Updates a specified application. An application has to be in a stopped or created state
- *          in order to be updated.</p>
+ * <p>Updates a specified application. An application has to be in a stopped or created state in order to be updated.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript
@@ -135,6 +134,9 @@ export interface UpdateApplicationCommandOutput extends UpdateApplicationRespons
  *   schedulerConfiguration: { // SchedulerConfiguration
  *     queueTimeoutMinutes: Number("int"),
  *     maxConcurrentRuns: Number("int"),
+ *   },
+ *   identityCenterConfiguration: { // IdentityCenterConfigurationInput
+ *     identityCenterInstanceArn: "STRING_VALUE",
  *   },
  * };
  * const command = new UpdateApplicationCommand(input);
@@ -246,6 +248,10 @@ export interface UpdateApplicationCommandOutput extends UpdateApplicationRespons
  * //       queueTimeoutMinutes: Number("int"),
  * //       maxConcurrentRuns: Number("int"),
  * //     },
+ * //     identityCenterConfiguration: { // IdentityCenterConfiguration
+ * //       identityCenterInstanceArn: "STRING_VALUE",
+ * //       identityCenterApplicationArn: "STRING_VALUE",
+ * //     },
  * //   },
  * // };
  *
@@ -264,8 +270,7 @@ export interface UpdateApplicationCommandOutput extends UpdateApplicationRespons
  *  <p>The specified resource was not found.</p>
  *
  * @throws {@link ValidationException} (client fault)
- *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services
- *          service.</p>
+ *  <p>The input fails to satisfy the constraints specified by an Amazon Web Services service.</p>
  *
  * @throws {@link EMRServerlessServiceException}
  * <p>Base exception class for all service exceptions from EMRServerless service.</p>

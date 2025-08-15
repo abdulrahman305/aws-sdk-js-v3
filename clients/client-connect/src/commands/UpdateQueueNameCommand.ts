@@ -6,7 +6,7 @@ import { MetadataBearer as __MetadataBearer } from "@smithy/types";
 
 import { ConnectClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../ConnectClient";
 import { commonParams } from "../endpoint/EndpointParameters";
-import { UpdateQueueNameRequest } from "../models/models_2";
+import { UpdateQueueNameRequest } from "../models/models_3";
 import { de_UpdateQueueNameCommand, se_UpdateQueueNameCommand } from "../protocols/Aws_restJson1";
 
 /**
@@ -28,8 +28,7 @@ export interface UpdateQueueNameCommandInput extends UpdateQueueNameRequest {}
 export interface UpdateQueueNameCommandOutput extends __MetadataBearer {}
 
 /**
- * <p>This API is in preview release for Amazon Connect and is subject to change.</p>
- *          <p>Updates the name and description of a queue. At least <code>Name</code> or <code>Description</code> must be provided.</p>
+ * <p>Updates the name and description of a queue. At least <code>Name</code> or <code>Description</code> must be provided.</p>
  * @example
  * Use a bare-bones client and the command you need to make an API call.
  * ```javascript

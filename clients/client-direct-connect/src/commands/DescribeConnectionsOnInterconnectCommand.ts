@@ -88,8 +88,10 @@ export interface DescribeConnectionsOnInterconnectCommandOutput extends Connecti
  * //           startOn: "STRING_VALUE",
  * //         },
  * //       ],
+ * //       partnerInterconnectMacSecCapable: true || false,
  * //     },
  * //   ],
+ * //   nextToken: "STRING_VALUE",
  * // };
  *
  * ```
