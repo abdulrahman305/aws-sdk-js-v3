@@ -1,7 +1,7 @@
 {
   "name": "@aws-sdk/client-cloudwatch",
   "description": "AWS SDK for JavaScript Cloudwatch Client for Node.js, Browser and React Native",
-  "version": "3.864.0",
+  "version": "3.872.0",
   "scripts": {
     "build": "concurrently 'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
     "build:cjs": "node ../../scripts/compilation/inline client-cloudwatch",
@@ -12,8 +12,8 @@
     "clean": "rimraf ./dist-* && rimraf *.tsbuildinfo",
     "extract:docs": "api-extractor run --local",
     "generate:client": "node ../../scripts/generate-clients/single-service --solo cloudwatch",
-    "test:e2e": "yarn g:vitest run -c vitest.config.e2e.ts",
-    "test:e2e:watch": "yarn g:vitest watch -c vitest.config.e2e.ts"
+    "test:e2e": "yarn g:vitest run -c vitest.config.e2e.mts",
+    "test:e2e:watch": "yarn g:vitest watch -c vitest.config.e2e.mts"
   },
   "main": "./dist-cjs/index.js",
   "types": "./dist-types/index.d.ts",
